@@ -1,0 +1,87 @@
+;     Date: Mon, 15 Sep 2003 10:39:40 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-09-03 (Slinky [8])
+;       Id: <1.5.4.16.20030915104016.0d973374@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 15, 2003 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; All the talk today in the F.C. area today is about a hurricane 
+; that appears headed directly this way.  Nothing has happened 
+; yet, but by Thursday it could be a different story.  We'll see 
+; how things work out.
+; 
+; The parent fractal of today's 8-rated image was created by 
+; combining one negative portion of Z with one negative portion of 
+; Z^4.  It resembles an angel, complete with wings and a halo that 
+; is divided into two parts.  Today's image lies in the narrow 
+; isthmus that separates the two halves of the halo.
+; 
+; Much of the image consists of 'inside' material made visible by 
+; the 'fmod' inside fill option.  This effect of this inside fill 
+; reminds me of those toys which consist of nothing more than a 
+; large floppy spring that can do things like walk down stairs.  I 
+; named the image "Slinky" accordingly.
+; 
+; The render time of 24 minutes is a bit slow, but the image is 
+; worth it.  The fastest to see the image is to download it in 
+; completed form from one of the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather Sunday was actually quite pleasant here at Fractal 
+; Central, with partly cloudy skies and a temperature of 81F 27C.  
+; The cats made up their differences overnight and spent a 
+; pleasant afternoon in the yard, enjoying the pleasant condi-
+; tions.  It remains to be seen how they can handle a hurricane.
+; 
+; I've got a bit of work to finish before I can enjoy pleasant 
+; conditions, and the way to finish is to start.  So until next 
+; time, take care, and don't get caught with your fractals down.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Slinky { ; time=0:24:19.09--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.20033578028784250/+0.346991742483397\
+  9/1139769 params=-1/1/-1/4/0/0 float=y maxiter=1200
+  inside=fmod periodicity=10
+  colors=000RUKRTKQRKPQLOOLONLNLLMKLLILKHLKFLJEMICMH\
+  BMH9MG8MF6ME5ME4MD5LD6LD7KD8KD8JD9JDAJDBIDCIDCHDDH\
+  DEHDFGDFGDGFDHFDIEDJEDJEDKDDLDDMCDMCCNCCOBCPBCQACQ\
+  ACRACS9CT9CU8CU8CV7CW7CX7CX6CY6CZ5C_5C`5C`4Ca4Cb3C\
+  c3Cc3Fd5Hd6Jd7Ld9NdAPdBReDTeEVeFXeHZeI`eJadIacIbcI\
+  bbIcbIcaIdaId`Ie`Ie_If_IfZIgZIgYIgXHhXHhWHiWHiVHjV\
+  HjUHkUHkTHlTHlSHmSHmRHnRHnQGnPGoPGoOGpOGpNGqNGqMGr\
+  MGrLGsLGsKGtKGtJGuIFtJGtKHtLHtMItNIsOJsPKsQKsRLsSL\
+  rTMrUNrVNrWOrXOqYPqZPq_Qq_Rq`RpaSpbSpcTpdUpeUofVog\
+  VohWoiWojXnkYnlYnmZnnZno_mp`mq`mramsamtbmsbkhckgck\
+  fdkedkdekcekbekafk`gk_gkZgkYgkXhkWhkVikUikUhkThjTh\
+  iTghTfgTefTdeTcdTbcTabT`aT_`TZ_TYZTXYTWXTVWTUVTTUT\
+  STTRSTQRTOQTNPTMOTLNTKMTJLTIKTHJSGIRFHQEGQDFQCEQBD\
+  QACQ9BQ8AQ79Q68Q56P28Q49R6BT8CV9EXBFZDH`EIbGKdILfJ\
+  NhLOjNPlOPmOPmOOnOOoPNoPNpPMqPMrPMrPLsPLtPKtPKuPKv\
+  PJwPJwPIxPIyPHzOIyPIyQIyR }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

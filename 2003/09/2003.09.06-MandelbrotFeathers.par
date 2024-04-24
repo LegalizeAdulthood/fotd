@@ -1,0 +1,99 @@
+;     Date: Sat, 06 Sep 2003 09:21:34 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-09-03 (Mandelbrot Feathers [9])
+;       Id: <1.5.4.16.20030906092205.0d773ce0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 06, 2003 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A FOTD fractal with a rating of 9 is rare indeed, but today we 
+; have found one.  It is a scene in the fractal that results when 
+; Z^(1.1) is subtracted from (1/Z) and (1/C) is added.  This parent 
+; fractal consists of two large Mandeloids surrounded by scattered 
+; fractal debris.  Today's scene is located at the point where a 
+; continuous filament breaks up into a series of disconnected bits.
+; 
+; The scene is unusual in that nearly all the outside rendering 
+; options work well with it.  I happened to choose the 'fmod' 
+; option with a proximity of 3, though I could just as well have 
+; chosen the 'summ' or the 'imag' options, or any of the others.  
+; It's just an easy scene from which to get a good fractal.
+; 
+; When I was studying the image in search of a name, I thought of 
+; ostrich feathers and found the name "Mandelbrot Feathers".  I was 
+; undecided as to whether the image rates an 8 or a 9.  But since I 
+; have had a run of sub-par images lately, I decided on a rating 
+; of an exceptional 9, which might be stretching it a bit.  But 
+; regardless, the image is still well above average.
+; 
+; The image also benefits from a relatively fast render time of 
+; 7 minutes.  And as always, the completed GIF image is posted on 
+; the internet at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Take a trip to one of the sites.  You will not regret the 
+; journey.
+; 
+; With mostly sunny skies, a high temperature of 77F 25C, and no 
+; rain, Friday was a near perfect day here at Fractal Central.  
+; The fractal cats took full advantage of the perfection by 
+; enjoying the yard from 11am until evening.  They were near 
+; perfect angels, the only imperfection coming when Tippy returned 
+; with a burdock burr stuck in his tail.  The burr was easily 
+; removed and the day ended peacefully with the duo's noses in 
+; their food dishes.
+; 
+; Today is starting even more perfect.  Since perfection cannot be 
+; improved upon, I hope for a repeat of Friday.  To see if my ex-
+; pectations are fulfilled, check back in 24 hours.  Until then, 
+; take care, and unless I am mistaken, burdock burrs gave the 
+; inventor the idea for Velcro.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+MandelbrotFeathers { ; time=0:07:07.54--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=-0.16918139027290410/+0.463847222461736\
+  50/6.731712e+011/1/90/3.88578058618804789e-016
+  params=1/-1/-1/1.1/0/525/0/0 float=y maxiter=900
+  inside=0 proximity=3 outside=fmod periodicity=10
+  colors=000NYNNTGON9OI3LN6JR9HWBF_EDcGE_IEXJETKEQLE\
+  MNFJQFFTFCVF8XF5_F2bG3`G4XH4UH5PI6MI6IZHNoRUnUTmWT\
+  lYTk_TjaTicTheTghTfjTelTdnTcpTbrTatTcqVdoXflYgj_ig\
+  `jeblbcm`enZgpWhqUjsRktPmvMnwKpxIqMhAPdCT`DVQHURHS\
+  TGRUGQWGPXGNZGM_FLaFJbFIcFHeFFfEEhEDiEBkEAlE9nD7oD\
+  6qD5rD4sD6rE7rE9qEAqECqFDpFEpFGoFHoGJoGKnGLnGNnHOm\
+  HQmHRlHSlHUlIVkIXkIYjI_jJ`jJaiJciJdiKfhKghKhgKjgLk\
+  gLmfLnfLofLneMmdMlcMlbMkaMj`Mj_NiZNhYNhXNgWNfVNfUN\
+  eTOdSOdROcQObPObOOaNO`MP`LP_KPZJPZIPYHPXGPXFQWEQVD\
+  QVCQUBQTAQTAQUBRVCSWDSWETXETYFUZGUZHV_HV`IWaJWaKXb\
+  LYcLYdMZdNZeO_fO_gP`gQ`hRaiRajSbjTckUclVdmVdmWenXe\
+  oYfpYfpZgq_gr`hsaisaitbjucjvdkvdkwelxflygmygmxhnxh\
+  nxhoxhoxhoxhpxipxiqxiqxiqxirxirxirwjswjswjtwjtwjtw\
+  juwkuwkvwkvwkvwkwwkwwkwuiuthtsgsrfrqeqpdpoconbnmal\
+  l`kk_jjZiiYhhXggVffUeeTcdSbcRabQ`aP__OZZNYYMXXLWWK\
+  UVJTUISSVUPaZNhcLngMh`McU }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,104 @@
+;     Date: Fri, 26 Sep 2003 09:22:03 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-04-98 (Pink Midget)
+;       Id: <1.5.4.16.20030926092248.29efbeda@pop.mindspring.com>
+; ---------
+; 
+; F.O.T.D., April 09, 1998 (Pink Midget)
+; 
+; Fractal visionaries:
+; 
+; I had planned on discussing in today's FOTD the ultimate ques-
+; tion of life, and the way it relates to the realm of fractal 
+; geometry.  But I just couldn't muster the proper degree of 
+; profundity that one must feel before tackling such a life-
+; altering topic.  So instead, I dredged up a picture of a baby 
+; Mandelbrot.
+; 
+; The guilty formula is my MandelbrotMix4, which automatically 
+; calculates a critical point of the formula and sets that value 
+; as the starting point of Z.  The actual equation being iterated 
+; is (4*Z^3)+(2*Z)+C.  These values draw a small Mandelbrot set 
+; rotated 90 degrees, with a curious tail dropping down from the 
+; cleft of East (Elephant) Valley, which has now become a South 
+; Valley.
+; 
+; The main Mandelbrot figure is fairly conventional, but the East 
+; Valley tail is filled with cut-off bits and pieces that demand 
+; further investigation.  Only a slight magnification is needed 
+; to reveal the tell-tale patterns that lead to hidden midgets.
+; 
+; At first glance, today's image appears to have come from a 
+; spiral in Elephant Valley itself.  A quick examination, how-
+; ever, will show that the pattern around the midget is more 
+; delicate, with more fine, hairline detail than that which 
+; appears around the midgets in Elephant Valley.  Also, the 
+; features are broken rather than connected, as they are in the 
+; valley.
+; 
+; I gave the image a pastel-like palette of colors, which empha-
+; sizes the more delicate nature of this midget.  The tendrils 
+; curving away from the central midget are themselves filled with 
+; midgets, but alas, these midgets are beyond the reach of conven-
+; tional DP math.  (Hint, hint . . . Fractint developers, 
+; wouldn't it be great if arbitrary precision math could be 
+; applied to formula type fractals?)
+; 
+; Today's harmless little midget has been posted to the usual 
+; sites -- alt.fractals.pictures and alt.binaries.pictures.fractals
+; It is also available at Paul Lee's web site at:
+; 
+;       http://home.att.net/~Paul.N.Lee/FotD/FotD.html
+; 
+; and Scott's site at:
+; 
+;       http://sdboyd.dyndns.org/~sdboyd/fotd/index.html
+; 
+; Tomorrow, I might gather my profundity and discuss the ultimate 
+; question of life, or then again, I might blather on about some-
+; thing of little consequence, but whatever I do, I will have 
+; another fractal ready and waiting.  Until then, take care, and 
+; the next time you see a fractal, view it with reverence, for 
+; that fractal might encode the answer to the riddle of the 
+; universe.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE===========================
+
+Pink_Midget { ; 7min on a P200, SF5
+  reset=1960 type=formula formulafile=apr-98.par
+  formulaname=MandelbrotMix4 passes=1 function=ident
+  center-mag=-0.00218445795113323/-0.2346673882601\
+  9790/9.192243e+010/1/-160/1.5611329691467279e-005
+  params=4/3/2/1/0/0 float=y maxiter=6000 bailout=9
+  inside=0 logmap=123 colors=00016727929A2CB2EC2FD\
+  3HF3IG3KH3LI3MJ4NL4OM4PN4QO4SP4SQ4SR5TT5TU5TV9VX\
+  DXZHZaL`cPbeUehYhlbkognrlqupsxstxutyuqvuottlrukq\
+  ujpvhnvgmwflxckxajyZhyXgzVfzUewUbuU`rUYoVVmUTjUQ\
+  gTNeTLbRI`OGYMDVJATH8QG5OF3PE4QD5SE6TF7VG8WH9YIA\
+  ZJB_KC_LD`PE_TFbVFcXFeYFe_FV`FVaFVbFVcFVcFTdEReD\
+  PfCOfBMhALjAJl9Hm8Fp7Dr6Cs6Au59w47w35w24v2KncQam\
+  VQxO9xOCvOEsNHqNJnNMlNPjNRgNUeMWbMZ`M`YMcWMfUMhR\
+  LkPLmMLpKFeOWV_bLia5obAobFocKpcOpdTpeYpebpfgpflq\
+  gpqguqhzqcvn_qjVmgRhdMdaI_YDWV9WSEXZI`dMdkQhqRco\
+  R_lSVjSRgTMeTHbUD`U8YU4WT3UT3TS3SS3RR3QR3PQ3OQ3N\
+  P2MP2LO2KO2JN2IN2HM2GM2FM2EN4FO6FO7FP9FQGFRIFSKF\
+  SMFTOFUQFVSFVUFWWFXXFYZFY`FZbF_dF`fF`hFajFblFcnF\
+  cqFbrJ`sO_tSYuXXv`VwdUxiSymUymVymXymZym`ylaylcyl\
+  eylgylhzljzllzlnzlozlqzkszkuzkvzkxzkuzlrzmoznlzo\
+  izofzpczq`zrXzsUztRzuOzvLzvIzwFzxCzyEzyGzyIzyKzy\
+  MzxOzxQzxSzxEzz0zz0zz1zz1zz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=============================
+; 
