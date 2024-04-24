@@ -1,0 +1,90 @@
+;     Date: Thu, 29 Apr 2004 10:42:08 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-04-04 (Beyond the Limit [5])
+;       Id: <1.5.4.16.20040429104537.302f8dec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 29, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has been named "Beyond the Limit".  But don't 
+; succumb to skeptic's panic.  We are not headed into the 
+; supernatural.  Since fractals have no limit of their own, the 
+; limit mentioned in the name is the resolution limit of the math 
+; routine used by the program to generate the image.  The diagonal 
+; smearing visible in the image is the first sign of resolution 
+; breakdown.
+; 
+; I needed to include the mathtolerance entry in the parameter 
+; file to be sure that the image is drawn at the correct magnitude 
+; on all machines at all screen resolutions.  When this is done, 
+; we find ourselves with a rather pleasant star-like image, which, 
+; if it were not afflicted with resolution breakdown, would rate a 
+; 7.  As it is, I can rate the image no higher than a 5.  The 
+; render time of 6 minutes makes the overall value an 82.
+; 
+; Don't even think of checking the midget at the center of the 
+; image.  Nothing but colored splotches are down there.  The 
+; midget needs a few more magnitudes of resolution before it will 
+; reveal itself.
+; 
+; The best way of viewing the image is to download it from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and then step back a bit from the screen to where the impending 
+; breakdown is not visible.
+; 
+; A sunny but chilly day here at Fractal Central on Wednesday was 
+; marginally satisfactory for the cat duo, who would have 
+; preferred a temperature of 70F 21C rather than the 59F 15C that 
+; actually prevailed.  Today is starting equally sunny and notably 
+; warmer.  The two ex-tomcats should be happy.
+; 
+; For me it's just another routine day of too much work and too 
+; little play.  But the work *will* be finished, and 24 hours from 
+; now the next FOTD fractal *will* appear.  Until then, take care, 
+; and we don't even know what we don't know.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Beyond_the_Limit { ; time=0:06:07.62--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+3.429528921055553/+0.2562473412832469/\
+  1.909924e+012 params=1/-1.5/0.01/-150/0/0 float=y
+  maxiter=1200 inside=0 logmap=135 periodicity=10
+  mathtolerance=/1 colors=000N5CN8IMANMCVLFYLHdKJiKM\
+  qJOvJQzDSw7UvFZkMc`ThQ_zFzq5ki4ob4tW3xP3sRAnTHiVNe\
+  XU`Z_W`fSal`g`XUYTGVQ3ST9YWFbZKgaQldVqedczmRfzEzlJ\
+  hbNiTRiJVgKReLOcMLaMH_NEYOBXO8YPBYQEZRHZRK_SN_TQ`T\
+  T`UW`VZaVaaWdbXgbXjcYmcZpcZsWaqPdoIgmBil6OC9QEBSGE\
+  TIGVKIXLLYNN_PQaRSbTUdUXfWZgYai_ckaelbdjecigbgiafk\
+  `en_cpZbrZatXZrVWqTTpRQnPNmNKlLHkJEiHBhF8gD5fLLiS`\
+  kRbiRdhRefQgeQhcQjbQkaqhcskZunUwqPytKzwFozKdzPVzUU\
+  zWUzXUzYUzZUz`UzaUzbUzcUzeUzfUzgUzhUzjUzkUzlUzm`zr\
+  fzwmzhtzUzzFwzJtzNqzRozVlzZizbfzfdzjaznZzrWzvUzyWz\
+  vXztZzr_zpazmbzkcziezgfzehzbiz`kzZlzXmzVYz`Ize2zj6\
+  zf9zcDz`GzYKzVNzSRzPUzLYzI`zFdzCgz9kz6nz3qz0sz9uzH\
+  vzPxzXyzdyzVyzLyzCuzBqzBmzAjzAfz9bz9Zz8Wz8Sz7Oz7Lz\
+  7Oz9RzBUzDWzFZzHazJczL`zOZzQWzSUzURzWPzYMz`KzbHzdF\
+  zfCzhAzj8zlAzfBzaCzXEzSFzNGzIHzDSzMazUZzTWzSTzSPzW\
+  MzZJzaGzdDzgAzj7zm4zp7zk9zgszzhzeZzLPz1Oz7 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

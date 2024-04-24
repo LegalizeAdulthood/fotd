@@ -1,0 +1,82 @@
+;     Date: Sun, 25 Apr 2004 12:29:26 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-04-04 (Illusory Minibrot [5])
+;       Id: <1.5.4.16.20040425123253.2ca74ee2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 25, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; All creation is an illusion.  'Reality' is a human invention.  
+; This is especially true with the visual semi-realities we know 
+; as fractals.  Rational skeptics will disagree, irrational 
+; mystics will agree, but proof or disproof is part of the 
+; illusion, so none of this will mean a thing.  The big question 
+; remains, 'what is the human mind?'
+; 
+; Today's harmless image was created by combining various negative 
+; portions of Z^(-1.5) and Z^(-5.1), and adding (1/C).  I named it 
+; "Illusory Minibrot" because the image, like all fractals and 
+; indeed all math, is an artifact of the way the human mind 
+; functions.  Then I studied the image for a few minutes, and 
+; after deciding that it lacks something, I rated it at an average 
+; 5.  I did not concern myself with what it is that the image 
+; lacks.  When I considered the running time of 6-1/2 minutes, the 
+; overall value came in at a 76, which makes running the parameter 
+; file not a total waste.
+; 
+; There's not much more to be said about today's FOTD other than 
+; the fastest way to see and hopefully enjoy it is to download the 
+; finished image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Bright sun and mild temperatures gave the cats an enjoyable day 
+; in the yard on Saturday.  Clouds and cooler temperatures will 
+; make today less enjoyable.  The good news is that the next FOTD 
+; will appear right here in less than 24 hours.  Until then, take 
+; care, and fractals hold the wisdom of the ages.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Illusory_Minibrot { ; time=0:06:33.81--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.13020483280054180/-2.013785067982037\
+  00/1897110/1/-132.5/5.76382413255971393e-008
+  params=-1/-1.5/-0.29/-5.1/0/0 float=y maxiter=1200
+  inside=0 logmap=124 periodicity=10
+  colors=000MTMLVOKXPKYRJ_SIaUIcVHdXGfYGg_Fi`EjbEkcD\
+  leCmfCohBpiAqkArl9sn8uo8vq7wr6xt6yuCvvHsvMqvRnwXlw\
+  aiwfgxkdxpbxjhsknnmtiyzdwybux`swZqvYotWmrUkpSioRgm\
+  PelNfkMfiKfgIfeGggFghDgiBgkAhkCiiDhgEgeFedGdbHb`Ib\
+  ZJbXKcWLcUMdSOdQPePQeNRfLSfJTgHUgGVhEWhCXiAYi9ZiGV\
+  iNRiUNi`JigFinChoCgpCgpCfqCfrCerCesCdsCdtCcuCbuCbv\
+  CavCawC`xC`xC_yC_yCaqBbjBdcBeXBgQBhJBfHEdGHbFK`DNZ\
+  CQXBTVAWT8ZR7aP6dO5gN4hM4hL4hL3hK3hJ3hI3hI2hH2hG2i\
+  G1iF1iE1iD1iD0iC0iB0iB0iA4g97e8Bc7Ea7H_6LY5OW4SU3V\
+  S3YRCVWLT_UQdbOh`Qi_RiYTiXUiVVjUXjSYjRZjP`jOakMckL\
+  dkKekIgkHhlFilEklCllBnl9om8pm6rm5sm4tm8piClfFhcJd`\
+  M`YQXVTTRXPO_LLcHIfDFj9Cm59kAAjEAiIAgNAfRBeVBc_Bbc\
+  BagC_lCZpCYtCXxCWyBWzBXzBYzBZzB_zBbzBezBhzBkzBnzBq\
+  zBtzBwzBzzBzzBzzBzzBzzBzzBzzBzzBzzBzzCzzDzzDzzEzzF\
+  zzFzzGzzHzzHzzIzzJzzJzzKzzLzzLzzMzzMzzNzzOzzOzzPzz\
+  PzzQzzczzgzzczz_zzXzzTzzP }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

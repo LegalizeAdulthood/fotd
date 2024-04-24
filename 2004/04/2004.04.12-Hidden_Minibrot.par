@@ -1,0 +1,104 @@
+;     Date: Mon, 12 Apr 2004 10:02:36 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-04-04 (Hidden Minibrot [5])
+;       Id: <1.5.4.16.20040412100554.0d7f524a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 12, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we have a fractal where anything goes.  Don't bother 
+; looking for a theme -- there is none.  The image jumbles 
+; together almost all the elements that appear in fractals, and 
+; comes up with a dish with a little bit of everything for 
+; everyone.  Unfortunately, a little bit of everything equals a 
+; lot of nothing, and an image with a lot of nothing can hardly be 
+; considered above average.  I rated the image at an average 5, 
+; which, due to the slow render time of 28 minutes, gives an 
+; overall value of only 17.
+; 
+; The parent fractal was created by combining (1/Z) with 0.5 as 
+; much Z^(-2) and adding (1/C).  I partially evaporated the 
+; fractal by raising the escape radius to 3600.  Today's scene is 
+; located on a string of debris that runs down the shredded 
+; remains of a valley in the parent fractal.
+; 
+; The image has a midget Mandelbrot set at the center, as do most 
+; of my FOTD images.  But unlike most of the images, this midget 
+; is nearly impossible to find.  It is so hard to pick out that I 
+; have named the image "Hidden Minibrot".
+; 
+; Part of the difficulty in finding the midget is because it has 
+; almost none of the usual symmetry surrounding it.  The fact that 
+; the image is a mixture of inside and outside material, with the 
+; inside colored by the 'bof61' option, adds to the difficulty.  
+; The difficulty is further increased because the midget is not in 
+; the 'normal' position, with the main stem pointing west.  But 
+; the midget is there, and can be easily spotted if the image is 
+; re-rendered with the inside set to 'inside=0' and the imag(p3) 
+; parameter reset to -50.  When this is done, much of the 
+; evaporated material re-condenses and the dead-black central 
+; midget becomes strikingly obvious.
+; 
+; The 28 minutes required for the image to render may be avoided 
+; by downloading the finished product from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The clouds hung thick all day Sunday here at Fractal Central, 
+; while the temperature hovered around 43F 6C and the rain fell 
+; lightly at intervals.  All this unpleasantness kept the cat duo 
+; confined to the porch for the entire afternoon.  The cats took 
+; the poor conditions better than expected.  Most likely, they are 
+; getting used to indoor and porch life.  Today is starting 
+; cloudy, cool and rainy.  The cats' day will likely be no better.
+; 
+; After a boring day of doing nothing but watching TV on Sunday, I 
+; will be a little busier today.  The true fun will begin when the 
+; real work has been completed and I enter Fractal Land.  Tomorrow 
+; at this time I will report on what I find there.  Until then, 
+; take care, and be aware.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Hidden_Minibrot { ; time=0:28:05.15--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=+3.43578575292992600/+0.629786955360460\
+  60/130.7805/1/160/-9.45222372594756166e-012
+  params=1/-1/0.5/-2/0/3500 maxiter=1200 inside=bof61
+  float=y outside=tdis periodicity=10
+  colors=000BJSBIPAHMAGJ9FG9ED8DA8C77B47B16D26E36G46\
+  H56I66K76L86N96OA5PB5RC5SD5UE5VF5WG5YH5ZI5_I6`J6`J\
+  7aJ7aK8aM8bO9bP9bQAcRAcSBcTBdUCdVCeWDeXDeYEfZEf_Ff\
+  `FgaGgbGgcHhdHie3jfAkgHlh6miGljIkkKjlMimOhmQgmSfmU\
+  fmWjmYlm_mmanmcnmeomfplgpkhqjirijrhlsgmtfnteoudpvc\
+  qvbrwasx`xxctx`pvZltWirUepRaoPYmMVkKRiHNgFJfCGdACb\
+  78`54Z21Y02X13W13V14U24T25S25R36Q37P37O38N48M49L49\
+  K5AJ5BI5BH6CG6CF6DE6DD7EC7FB7FA8G98G88H79H69I59I49\
+  J5AJ6AK7BK7BL8CL9CM9CMADNBDNBEOCEODFPDFPEFQFGQFGRG\
+  HRHHSHHSIITJITJJUKJULKVLKVMKWNLWNLXOMXPMTNEVOIXPMZ\
+  QQ`RUbRYdSafTehUijVmlUqkVpjVoiVniVnhVmgVlgVlfWkeWj\
+  dWidWicWhbWgbWgaXf`Xe_Xd_XdZXcYXbXYaYXbZWb_Vc`VcaU\
+  dbTdcSecPjdRgdSeeTceUafV_fWYgYVgZTh_Rh`PiaNibLjdIj\
+  eGkfEkgClhAli8pk2lj6hj9djC`jFXiITiLPiOLiRHhUDhX9h_\
+  4id5hb6ha6h`7gZ7gY8gX8gW9eU9cTAaSB_RBYQCWPCUOBTNAS\
+  MARLAQKAPKAOKANKAMKALKAKK }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

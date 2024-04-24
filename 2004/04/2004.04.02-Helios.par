@@ -1,0 +1,95 @@
+;     Date: Fri, 02 Apr 2004 09:47:55 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-04-04 (Helios [7])
+;       Id: <1.5.4.16.20040402095106.391fe2e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 02, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a view of a sub-midget that lies in the 'East 
+; Valley' area of a larger midget situated near the main bay of 
+; the Z^(1.55)+C Mandeloid.  I put the words east valley in quotes 
+; because the valley might or might not be an actual East Valley.  
+; I consider it an east valley because it appears to be connected 
+; to the main body of the parent fractal by a broken series of 
+; elements.  The thing that appears in today's image is a close-up 
+; of the center of one of these disconnected elements.
+; 
+; When I saw the completed image, I was immediately reminded of a 
+; strange alien sun bursting through storm clouds.  The name 
+; "Helios" quickly came to mind.  I rated the image at a 7 because 
+; it is rather striking when viewed for the first time.  When the 
+; render time of 9-1/3 minutes is figured in, the overall value 
+; rates a 75.
+; 
+; To see the alien sun, run the included parameter file, or let 
+; Paul do the work, and download the image from his FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The rain fell steadily all day Thursday here at Fractal Central, 
+; with a temperature than never made it above 46F 8C.  The dynamic 
+; fractal cats were most dis-satisfied with the conditions, and 
+; let their frustration be known by getting into a fight.  The 
+; fight started when Thomas tried to take the spot on the couch 
+; that Tippy had already settled in.  Thomas received a scratched 
+; head; Tippy got a nick on his ear.  When they made up, I treated 
+; them to some tuna, and they ended the day peacefully.  Today is 
+; starting cloudy and quite cool, with occasional light rain 
+; showers.  Hopefully, the duo will get through the day without 
+; fighting.
+; 
+; My work is reasonably light, but even this small amount of work 
+; will never be finished unless it is started.  Until next 
+; fractal, take care, and watch out for alien fractals invading 
+; from outer space.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Helios { ; time=0:09:18.09--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=-0.7\
+  9192732503137/-0.10521279334263/1625891/1/-82.5/-1\
+  .3239373070073e-009 params=1.55/0/0/0 float=y
+  maxiter=2500 inside=0 logmap=263 periodicity=10
+  colors=000O0AO0AP0AP0AQ0AQ0AR0AR0AS2AS4AT6AT8AUAAU\
+  AAVAAVAAWAAX8AY6AZ4A_2A`0Ab0Ad0Af0Ah0Aj0Az0zzbevzG\
+  rzJpzLlzNjuPgoTeiVcdX_ZZYTbUNdSHeQCg_HeiNdpRbzXbz`\
+  `zeZziZneeFbmH`oJZoJXoLVoLToMToORqOPqQNqQLqSJqSJqc\
+  PdlTTvXHzbPzgXzXXzNX5PzMHzjCzz4zz0zz0zz0zz0zz0zz0z\
+  z0zv0zr0zl0zg0zc0zg0zj0zn0ur0ov0iz2dz6ZzATzENzHHzL\
+  CzP6zT0zX0z`0zd0ze0zg0zk0zm0zo0zs0zu0zv0zz0zz0zz0z\
+  z0zz0zz0zz0zz0xz0tz0rv0ns0jo2ik4ee6ab8YZ8WVASRCONE\
+  MJESRHWXLabNegRimTnsXrxZvzbzzdzzgzzipzzjzzezz_uzUq\
+  zQmzLgzFdz9`z5Vz5Rz5Nz5Hz5Ez5Az58zQ8zn8zz8xz8vz6uz\
+  4sz2sz0qz0qz0oz0mz0mz0kv0gz0sz0i_0eY0dY2bY6ZWCXYGV\
+  SJTMNPHRNBXL5`H5eG5uE5uC5sH5qN5qR5eX5eb5de5dk5bq5`\
+  u5`z5Zz5Zz5Xz5XzM0xzkLzT8tzPWze9zuFzsJzsOzsSzqWzqa\
+  zqezojzonzorzmxzmzzmzzkzzkzzkxzTgzASz0az0jz0tz0zz2\
+  zz4zz6zz8zzGWzLQzELz6Hz0Bz05z05z05z05z05z27zC7zJ9z\
+  R9z`_zb_zeaziazmazqOz0Mz4 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,90 @@
+;     Date: Tue, 13 Apr 2004 11:12:16 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-04-04 (Numbers Playtown [6])
+;       Id: <1.5.4.16.20040413111534.0d6f125a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 13, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's discussion will be brief, as I am having a printing 
+; problem with one of the non-fractal machines, which needs to be 
+; worked out.  First, let me put to rest any rumors that I am 
+; quitting the FOTD.  The FOTD will continue on a daily basis into 
+; the foreseeable future.  I am not losing enthusiasm for fractals 
+; -- this happens only to mathematicians -- but my non-fractal 
+; work is picking up, and this may mean an occasional missed FOTD. 
+; When the FOTD does not appear on schedule, be patient.  It will 
+; reappear in a day or so when the other work is caught up.
+; 
+; Today's image is an 'evaporated' scene in the fractal that 
+; results when Z^(-2) is combined with 2/3 as much Z^(-3) and 
+; (1/C) is added.  The resulting blank screen has been brought to 
+; life by rendering it with the inside option set to 'bof61'.  
+; The 'outside=summ', which appears in the parameter file is 
+; meaningless.  There is no outside material remaining in the 
+; image.
+; 
+; For some reason now forgotten I named the image "Numbers 
+; Playtown".  I gave it a rating of 6.  The render time of 11-3/4 
+; minutes gives an overall value of 51.
+; 
+; The value may be increased by letting Paul do the job of 
+; rendering the image, and downloading the finished product from 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Rain and a temperature of 43F 6C kept the fractal cats indoors 
+; all day Monday.  Their moods were surprisingly good however for 
+; such a bad day.  Today is still cloudy, but the rain has stopped 
+; and it is not as cool.  The cats should be in a somewhat better 
+; mood.
+; 
+; As is always the case, my mood will improve when the equipment 
+; is working and the work is behind me.  Until next fractal, take 
+; care, and there is a great mystery hidden in these fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Numbers_Playtown { ; time=0:11:46.40--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=t
+  center-mag=+1.21706565054569500/+0.178731599667830\
+  70/5.016175e+007/1/22.5/1.47126556840349032e-007
+  params=1/-2/0.67/-3/0/1e+100 float=y maxiter=1200
+  inside=bof61 outside=summ periodicity=10
+  colors=0000vL4vTAvbGviLvqRozXgzb_zeezgizkmzmqzqtzs\
+  vzvvzxvzzvzwwzzvzzvzzvzRvX0v00v40v60v80vA0vE2vG4vH\
+  8vJCvLGvPHvRLvTPvVRvXZvZev`kv`svbzvdzvdxvXsvRmvLgv\
+  GbvAVo2Pi0Ja0EW08P02J0AR0GW0Lc0Ri0Xo0bv4ivAovEuvJz\
+  vPzvTzvZzvbzvgxvmovseoxXczLFNAF0HF0PH0MNUbeHiqRqvZ\
+  vvezvZzvTzoNzeHzYCzP4zF0zF0zF0zF0zF0zF0zF6zFEzFLuF\
+  VqFbmFiiFqeFxbFzXFzTFzPFzLNzGVzCaz8kz4sz0vz0vz0vz0\
+  vz0vu0vk0v`0vR0vG2v66v08v0Av08s06i04_02R00H00F00F0\
+  0F00F00F80600HR0JN0Pb0Vm6_sCezHkzNqzg_VzL0vH0sF0oF\
+  6kFCgFHbFNZFTVFZRFdNFiVFo`FseNvkVzqazvizznzzozztzz\
+  szzpzznzzpzzosxkkueds_XqWPoRHmLAkH2kF6gF8dFA`FEXFG\
+  VFHRFLPFNNFPLFTLFVJFXHF`GFbEFdEFeJJgPNgVRg`Vge_gkc\
+  gqggukgvmdxo`xqXzsTztRzvNzvJzvGzvEzvAzv6zv2zv0zv0z\
+  v0zv0kNzqTzvYzzazzgzzmzzszzvzzvzztzztzzszzszzquzoo\
+  zokzmezmbzkXziRziNzgHzgEze8zc2zc0za0zW0za0zg0zk0zq\
+  4ztAzvGzvJ2vs0wb0vL0v40vE }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,97 @@
+;     Date: Tue, 27 Apr 2004 10:52:08 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-04-04 (Iterative Hyperbolae [8])
+;       Id: <1.5.4.16.20040427105536.2997b8e4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 27, 2004 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With today's image we return to the image quality that makes 
+; fractals worth the effort.  The rating of an 8 is the highest 
+; in some time.  Hopefully, this is a sign of things to come.
+; 
+; To create the parent fractal, I mixed together Z^(-1.77) and 
+; Z^(-7.71), added (1/C) and let the mixture iterate for 1200 
+; cycles.  The resulting fractal is beyond description, an 
+; oversized thing consisting of numerous bays, valleys, long 
+; looping filaments, scattered bits and pieces, a curious almost-
+; midget, as well as assorted other items of interest.
+; 
+; The east side of the main bay is decorated with a prominent 
+; valley, which at first glance might be taken to be an East 
+; Valley.  From the center of this valley extends a zig-zag 
+; filament strung with dewdrop-like nodes.  Today's scene lies 
+; rather deep in one of these nodes.  Surprisingly, the area has 
+; almost none of the typical 'East Valley' features.
+; 
+; The standard equal-iteration-band rendering gives a good-enough 
+; image, but the evaporated version of the scene is better.  It is 
+; this evaporated version that I used as today's FOTD.  I made the 
+; totally-inside material visible by using the bof61 inside fill.  
+; Other fills might work equally well, but I have not yet tried 
+; any of them.
+; 
+; When searching for a name, I noticed the hyperbolic elements and 
+; named the image "Iterative Hyperbolae".  When figured into the 
+; 6-minute render time, the rating of an 8 gives an overall value 
+; of 135.  What the overall value might be when the image is 
+; downloaded is up to the individual to decide.
+; 
+; The download is available at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Rain fell all day here at Fractal Central on Monday, while the 
+; temperature reached only 59F 15C.  The cats did not approve and 
+; showed their disapproval by flipping into their sulking modes.  
+; A treat of tuna in the evening helped a bit, but a dish of fish 
+; cannot make up for a missed afternoon in the yard.  Today looks 
+; somewhat better, so we'll see how it goes.
+; 
+; For me it's a day of work before fun.  Until next FOTD fractal, 
+; take care, and be at ease.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+IterativeHyperbole { ; time=0:05:55.50--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.40024400180910400/-0.000531620471100\
+  73/3.385291e+010/1/15/0.000876059279207246078
+  params=1/-1.77/0.23/-7.71/0/1e+100 float=y
+  maxiter=1200 inside=bof61 periodicity=10
+  colors=0000V`0b_0jY0rW0mQ0iL7dGC_BIW5OS2qty`nfLjP`\
+  `YqTdzLmzGdzCYz7Pz3Hz0Az03zD2zY2yq2uiFq`QmTciLpfDz\
+  iKwkQqnYkqcfti`pfZmcYj`WgZVdWTbTS_QQYOP_WS`bTbiVcp\
+  WdwYfzZLg0Wj0dk0nn0xp0zq0zjTudutgwtixrkyrmzqnzqqzp\
+  rzptznpynmumjpmgkkdgkbbj_ZjYVzW`zVgrVnjVubVzWVzTSt\
+  QPfPMTMKGLH3GCIB7Z52n00zceC3OI0OF0OB0M80LD3LHADMGB\
+  QOAWV8_`5cg4ip3mw0rz0wz0zz0yu0ym0rf0uZ2rS2qK3mD3mC\
+  7mBBnAFo8IpAMqFPsKTuPYwU`xZdycgzhkzmpzrtzrzzrzzrzz\
+  muzhrzcpzZmzUjzPgzKfyFcxH`xIZwLWuOTuPQtSOrTMrTItTF\
+  tTAtT5uT2uT0uP5qMDmKKiHSdD_`OYzPVzPTuPSpPQkPPfPO`P\
+  MYTOVWOSZPP`PMcPKtYbzdtzfpzgkzigzjdzk`zmYzmVgZ`PKg\
+  75n00tSTjzzbzxWwqPrkKndDjZ7fT2gV0gW0iW0iY0jZ0jZ0k_\
+  0k_0fT7bMDZGKTAQP3YL0cH0jO0dV0``2Yf4Tm8OtBKzFGzHCr\
+  Y7fk2Vz0Tt5SmFQfMP_WPVcMPVKLMIGDGC5F80PAD_BSjCftDu\
+  pFqmGmjHigHdcI``KYZLTWLQPOWKQ_DTd8Wi2Zn0`r0cwitCfq\
+  GdpKcnObmS80m50j35g0Dd0Lc }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

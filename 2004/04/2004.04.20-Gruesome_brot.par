@@ -1,0 +1,97 @@
+;     Date: Tue, 20 Apr 2004 10:38:46 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-04-04 (Gruesome-brot [3])
+;       Id: <1.5.4.16.20040420104210.38ff6cf8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 20, 2004 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to the northeast shoreline of the main 
+; bay of the Mandelbrot set, where we examine the valley leading 
+; to the large period-4 bud there.
+; 
+; This valley is centered at 0.25+0.5i, and the slope of the main 
+; bay at this point is 45 degrees, which makes it quite simple to 
+; examine the area from all kinds of strange four-dimensional 
+; directions.  Today's view is halfway between the Parabolic and 
+; the Oblate directions.
+; 
+; The tiny buds that line the edges of the valley do appear in the 
+; image, but they no longer appear as tiny empty circles.  The 
+; circles have been stretched in one of their dimensions to 
+; infinity, and appear as parallel slits partially obscured by 
+; fractal debris.
+; 
+; By changing the imag(p1) parameter, we can see many different 
+; views of the scene, all of which show the buds as slits.  If 
+; imag(p1) is set at 180, the image is the same, but we are 
+; looking at it from the opposite direction.  Some of these other 
+; views are quite interesting, though I had little time to 
+; investigate them.  I might do so sometime in the future, but 
+; with today's image rating only a measly 3, I will be in no great 
+; rush.  With a render time of almost 8 minutes, the image has an 
+; overall value of 39.
+; 
+; I named the image "Gruesome-brot", not because it is horrifying 
+; to look at, but because it's not a very good example of fractal 
+; art.  The completed GIF image is available on the FOTD web site 
+; at:.
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; It reached 91F 33C here at Fractal Central on Monday, a 
+; temperature that left the fractal cats with nothing to do but 
+; sleep.  They passed the afternoon sleeping in the yard, dreaming 
+; whatever it is that cats dream.  Their moods were good when the 
+; time came to come indoors, so I guess their day was satisfac-
+; tory.  Today is starting cooler, but still mild.  We'll see how 
+; the duo takes things.
+; 
+; I managed to trim half the grass yesterday.  The second half 
+; will be finished sometime this afternoon.  Until next FOTD, take 
+; care, and look for the best.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Gruesome-brot { ; time=0:07:45.55--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=multirot-XZ-YW-new passes=1 float=y
+  center-mag=-2.2204e-016/-0.00217442/11.20316/0.2086
+  params=-45/0/2/0/0/0/0.25/0.5 maxiter=32000
+  inside=0 logmap=6 symmetry=yaxis periodicity=10
+  colors=000ZZh__i``jaakablbcmcdndeoefpfgqehqegpdfod\
+  encdlbckbbjaaha`g`_f_Zd_YcZXbZWaYV_XUZXTYWSWVRVVQU\
+  UPSUORTNQSMOSLNRKMRKLSLMTMMUNNUONVPOWQOXROXRPYSPZT\
+  Q_UQ_VR`WRaXRbYSbYScZTd_Te`TeaUfbUgcVhdVhdWieWjfWk\
+  gXkhXliYmjYlkamjYmfVmcSm_PmXMmQVmJbmCjc6rU7qK8pD9p\
+  DAoDBnDCnDDmDElDFlDGkDHkDIjDJiDKiDLhDMgDNgDOfDPeDQ\
+  eDRdDSdDTcDUbDVbDWaDX`DY`DZ_D_ZD`ZDaYDbYDcXDdWDeWD\
+  fVDgUDhUDiTBkUDjTFjTGjTIjTJjTLjTMiTOiTPiSRiSSiSUiS\
+  ViSXhSYhS_hS`hSbhRdhRehRggRhgRjgRkgRmgRngQpgQqfQsf\
+  QtfQvfQwfQyfQyhHzjQzlYznexmfvmfulgslgrkhpkhojimjil\
+  ijjijiijghkfhkdglcglafm`fmZenYenWdoVdoTdoScpQcpPbq\
+  NbqMarKarJ`sH`sF`wG`sH`pI`mJ`jK`gL`cMZ`NXYOVVOTUOR\
+  S4PB6NC7LD9JEAJFCKGDKGELHGLIHMJJMKKMLLNLNNMOONQOOR\
+  PPTPQUQQVQRXQSYRT_RU`SVaSVcTWdTXfU_hWbjYel_hnakpcn\
+  reotfoveowenxdnycozcqzbszbuzawz`yz`zz_zzZzzZzzYzzY\
+  zzXzzWzzWzzVzzUzzUzzTkzSz }
+
+frm:multirot-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE==================================
+; 
+; 

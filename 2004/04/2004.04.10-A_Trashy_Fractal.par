@@ -1,0 +1,109 @@
+;     Date: Sat, 10 Apr 2004 09:57:39 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-04-04 (A Trashy Fractal [5])
+;       Id: <1.5.4.16.20040410100056.0da72260@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 10, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's picture of a scene in the Z^2.05+C Mandeloid is simply 
+; trashy.  It looks like a pile of trash, and I have named it 
+; "A Trashy Fractal".  But it is trash with class that appears 
+; in the image.
+; 
+; The parent fractal is a distorted Mandelbrot set, with a main 
+; bud that has split into two twin buds.  The two branches of 
+; Seahorse Valley have spread quite far apart, and a third branch 
+; has appeared between the twin buds, while the north branch of 
+; the valley has broadened into an infinitely divided wedge.  
+; Today's scene lies in this broad north branch of what once was 
+; Seahorse Valley.
+; 
+; Perhaps the most striking feature of the image is the absolute 
+; lack of any sense of order around the distorted midget near the 
+; center, with the surrounding features appearing unaffected by 
+; the presence of the midget.  The left side of the image is of a 
+; far higher iteration count than the right side, where the most 
+; obvious fragments lie.  Here again, the midget seems to have 
+; little effect on its surroundings.
+; 
+; I have checked the smaller midget that lies a short distance 
+; north of the large midget, and found it less interesting.  Many 
+; other even smaller midgets lie scattered about the scene 
+; however, and any one of these could be a real winner.  Unfortu-
+; nately, the number of midgets that lie hidden in the scene is 
+; infinite, and I do not have an eternity of time to check every 
+; one.
+; 
+; Since the image is quite average, I rated it at an average 5.  
+; When the render time of just under 11 minutes is taken into 
+; consideration, the overall value jumps to a 46.  When the 
+; rendering is avoided by viewing the image on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; the overall value becomes trivial.
+; 
+; Friday turned out to be a rather pleasant day here at Fractal 
+; Central.  The warm sun and temperature of 65F 18C were just what 
+; the aging cats needed to keep them in a good mood.  They spent 
+; several hours prowling in the yard and sleeping on the porch.  
+; This morning is starting cloudy, with rain due by evening.  
+; We'll see how it goes for the cats.
+; 
+; For me, the work is still a little backed up, cutting into my 
+; fractal-searching time.  But by this evening I hope to have it 
+; caught up.  The next FOTD fractal will appear in 24 hours, so 
+; until then, take care, and don't be disappointed if every FOTD 
+; does not rate a 10.  Remember that almost no FOTD's rate a 10.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Trashy_Fractal { ; time=0:10:51.25--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.60630187793427350/+0.506089672233819\
+  30/475.1722 params=2.05/0/0/0 float=y maxiter=5000
+  inside=0 logmap=29 periodicity=10
+  colors=000eXAg_9ic8kg6mk5qp3on4nm5ml6lk6kj7ii8hh8g\
+  g9ffAeeBcdBbcCabD`aD_`EYZFXYGWXGVWHUVISUIRTJQSKPRL\
+  OQLMPMLONKNNJMOILPHKPINRIPTISUIUWIWXIZZJ`_JcaJebJg\
+  dJjfJlgKoiKqjKslKvmKxoKzpJxnJvlJujJshJrfJpdInbIm`I\
+  kZIjXIhVIgUHeSHcQHbOH`MH_KHYIGWGGVEGTCGSAGQ8GP7IO6\
+  JN6KN6LM6MM6NL6OL6PK6QK6RJ6SJ6TI6TF5UH6UI6VJ6VK7WL\
+  7WM7WN7XO8XP8YQ8YR9ZS9ZT9ZU9_YD``G`cJafMaiPblSapTb\
+  oUboVbnWcnXcmYcmYclZdl_dk`dkadkaejbejceideiefhffhf\
+  fggfghggigfjgfjhekhelhdmhdnicoicoicpibqjbrjasjasj`\
+  tk`uk_vk_wk_wiYshWofUleShcQebOa`MZ_KVYISXGOfJFWFLM\
+  CZC9`26a37b48c59d5Ae6Bf7Cg7Dh8Ei9FjAGkAHlBImCJnCKo\
+  DLpEMqFNrFOsGPtHQuHRvISwJTxJUyKVzLWzMXzMYzNZzO_zO`\
+  zPazQbzRczRdzSezTfzTgzUhzVizWhzVizVizVizVizVizVizV\
+  jzVjzVjzVjzVjzVjzVjzVkzVkzVkzVkzVkzVkzVkzUlzUlzUlz\
+  UlzUlzUlzUlzUmzUmzUmzUmzUmzUmzUmzUnzUnzUnzUnzUnzUn\
+  zWpzVozUnzUnzTmzTmzSlzRlz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

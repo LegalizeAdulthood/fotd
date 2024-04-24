@@ -1,0 +1,97 @@
+;     Date: Sun, 18 Apr 2004 12:14:46 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-04-04 (Fractal Splendor [7])
+;       Id: <1.5.4.16.20040418121809.38ffd586@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 18, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Take (1/Z), mix it with 1/2 as much Z^(-2), and add (1/C).  What 
+; do you get?  Why, a fractal of course -- an oversized fractal 
+; that is too large to fit on the default screen and needs to be 
+; shrunk by an outzoom before it becomes completely visible.  This 
+; fractal has X-axis symmetry, but only because the exponents of Z 
+; are whole numbers.  Changing (1/Z) to Z^(-1.1) or Z^(-2) to 
+; Z^(-2.1) gives a pair of entirely new fractals with no symmetry.
+; 
+; This parent fractal is far richer in detail that the classic 
+; Mandelbrot set.  The detail might not be any more varied, but it 
+; covers a far larger area.  The fractal has an interesting area 
+; around +7 on the real axis, where two graceful arcs of delicate 
+; filaments come together.  Today's scene is located in one of 
+; these arcs, very near the point where it touches the X-axis.
+; 
+; I have colored the image to resemble something like a brilliant 
+; star blazing away in empty space, and named it "Fractal 
+; Splendor".  I seem to remember a somewhat similar FOTD image 
+; from several years past, but if today's image is a near-repeat, 
+; I will consider it simply a variation on a splendid theme.
+; 
+; I rated today's image at a 7, mostly because of the extra effort 
+; I put into the coloring.  The render time of 11 minutes gives 
+; the image an overall value of 59.  As always, the image may be 
+; seen most conveniently by downloading it from the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Saturday was as close to being a perfect day as we have come in 
+; quite a few months here at Fractal Central.  Warm sun, light 
+; winds and a temperature of 84F 29C gave the fractal cats all 
+; they could ask for.  If they had been 10 years younger, they 
+; would have romped all afternoon.  But being 14-year-old cats, 
+; they slept in the shade of the holly trees most all afternoon, 
+; and romped, (if what they did can be called romping), only a few 
+; minutes.  Today is starting just like yesterday.  I assume the 
+; cats will have an equal day.
+; 
+; As for me, I'll put off the grass trimming one more day, and 
+; take it easy.  The work is light and I should have lots of time 
+; to get it done on Monday.  The next FOTD will appear in 24 
+; hours.  Until then, take care, and try to prove that fractals 
+; are not real without defining reality.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractal_Splendor { ; time=0:11:55.35--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+7.02311504952539200/+0.000296216423795\
+  89/7.833267e+008/1/-142.5/0.00233171123971526173
+  params=1/-1/0.5/-2/0/0 float=y maxiter=2000
+  inside=0 logmap=248 periodicity=10
+  colors=0007LK7LK7LK7LK7LL7LL6LL6KM6KM6KM6KN6KN6KN6\
+  KN6JO6JO6JO6JP5JP5JP5JP5IQ5IQ5IQ5IR5IR5IR5HS5HS5HS\
+  4HS4HT4HT4HT4GU4GU4GU4GU4GV4GV4GV4FW3FW3FW3FX3FX3F\
+  X3FX3EY3EY3EY3EZ3EZ3EZ3EZ4F_4G_5H`5I`6Ia6Ja7Kb7Lb8\
+  Lc8Mc9Nd9OdAOeAPeBQeBRfCSfCSgDTgDUhEVhEViFWiFXjGYj\
+  GYkHZkH_lI`lI`lIamJbmJcnKdnLeoMfoNgpOhpPiqQjqRkrSl\
+  rTmsUnsVosWptXqtYruZsu_tv`uvauwbvwcvxdwxewyfxygxzh\
+  yziyzjzzkzzlzzmzznzzmzzlzzkzzjzzizzhzzgyzfxzewzdvz\
+  cuzbuzatz`tz_szZszYrzXrzWqzVqzUpzTpzSpzRozQozPozOn\
+  zNnzMnzLmzKmzJmzIlzHlzGlzGkzGkzFjzFjzEjzEizEizDizD\
+  izChzChzChzBgzBgzBgzAgzAfz9fz9fz9ez8ez8ez7fz8ez8ez\
+  8dz9dz9cz9cz9bzAbzAazAazB`zB`zB_zBZzCZzDZzEZzFZzG_\
+  zH`zIazJbzKczLczMdzNdzOdzPezQezRezSfzTfzUgzVgzWgzX\
+  hzYhzZhz_iz_iz_izZjzZjzZkzYkzYkzXlzXlzXlzWmzWmzVnz\
+  VnzVnzUozUozTozTpzTpzSpzSqzRqzRrzRrzQrzQszPszPszPt\
+  zOtzOuzNuzNuzNvzMvzMvzLwz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

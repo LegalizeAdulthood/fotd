@@ -1,0 +1,99 @@
+;     Date: Fri, 09 Apr 2004 10:44:38 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-04-04 (Jet Blast [4])
+;       Id: <1.5.4.16.20040409104754.29afeb7e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 09, 2004 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; When you run today's parameter file, do not be concerned when 
+; the first line appears, then nothing more seems to happen.  This 
+; is normal.  I have used the passes=t option with today's image, 
+; and the bottom line, which draws next, is very slow and mostly 
+; black.  After a minute or so, the image will continue developing 
+; normally.
+; 
+; Today is the Good Friday semi-holiday here at Fractal Central, 
+; but from the amount of work lying before me, one would never 
+; guess it.  Once again, I find myself giving short shrift to the 
+; fractal side of life.
+; 
+; Today's image shows a lively little Mandelbrot midget located in 
+; the parent fractal that results when 1.8 parts of Z^(-1.2) are 
+; subtracted from Z^(-1.8) and (1/C) is added.  I named the image 
+; "Jet Blast" because of the curious string of trapped points that 
+; appears to be blasting from the East Valley of the midget.  A 
+; few other names came to mind, which are best left un-mentioned.
+; 
+; In addition to our large midget, the scene is filled with other 
+; midgets, most of which lack the typical organized 2,4,8... 
+; pattern of elements surrounding them.  When an area grows 
+; chaotic, the regular pattern breaks down.  This is true even in 
+; the classic Mandelbrot set.
+; 
+; Since I basically used the first object I found as today's FOTD, 
+; I could rate the image no higher than a 4.  The slow render time 
+; of 32-1/2 minutes results in an overall value of 12.  Those who 
+; think it worth the effort will run the parameter file included 
+; at the bottom of this letter.  Others will save time by viewing 
+; the finished GIF image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Cool temperatures in the low 50's (around 11C), thick clouds, 
+; chilly winds, and occasional sprinkles on Thursday kept the 
+; fractal cats confined to the porch, where they were somewhat 
+; sheltered from the unpleasant conditions.  Tippy ventured down 
+; into the wet grass once or twice, but retreated to the porch 
+; when he felt the wetness.  Thomas merely slept in his porch 
+; chair.  The good news is that today is starting sunny.  Perhaps 
+; the duo will have a good day.
+; 
+; My day will be quite busy, especially for a day that is supposed 
+; to be a holiday.  Until next FOTD, take care, and if the U.S.A. 
+; really does keep church and state separate, why are so many 
+; people on a holiday today?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Jet-Blast { ; time=0:32:35.62--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=t
+  center-mag=1.77561/4.48651/1.612403 params=1/-1.8/\
+  -1.8/-1.2/0/525 float=y maxiter=32767
+  inside=0 logmap=11 periodicity=10
+  colors=000UFMVGNWGPXHQYHSZIT_JU`JW`KW`KX_LX_LY_MY_\
+  NY_NZ_OZ_O__P__P_`Q``Q``Q``R``R``R``S`aS`aS`aS`aT`\
+  aT`aT`aU`aU`bU`bV`bV`bV`bV`bW`bW`bW`cXacXacXacYacY\
+  acYacYacZadZadZad_ad_ad_ad`ad`ad`ae`aeaaeaaeaaebae\
+  baebafc`ebadaac`bb_ba_b`Zc_YcZXcYWdXWdWVeVUeUTeUSf\
+  TSfSRfRQgQPgPOhOOhNNhMMiLLiKKiJKjIJjIIkHHkGGkFGlEF\
+  lDElCDmBCmACn9Bn9AnA9oB8oC8oDFnELmFMmGNmHOmIPmKQmM\
+  QmORmQSmSTmUUlWUkYVj_WiaXhcYgeYfgZgi_gk`gmagobgqbh\
+  schudhzehxfhyfizgizhiziizjizjmzjkzjizhgzgezedzcbza\
+  `z`ZzZYzXWzWUzUSzSQzQPzPNzNLzLJzJIzIGzIEzJCzKCyLBy\
+  MByNByOByPBxQBxRBxSAxTAxUAwVAwWAwXAwYAwZAv_9v`9va9\
+  vb9vc9ud9ue9uf8ug8uh8ti8tj8tk8tl8tm8sm7sm7sm7sm7sm\
+  7rm7rm7rm6rm6rm6qm6qm6qm6qm6rm5qm6qm6qm6qm7qm7qm7q\
+  m8qm8qm8qm9qm9qm9qmAqmAqmAqmBqmBpmBpnCpoCppCpqDprD\
+  psDptEpuEpvEpwFpxFpyFpzGpzGpzGpzGozFozFozFnzFnzFnz\
+  FmzFmzFmzElzElzElzEkzEkzE }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 
