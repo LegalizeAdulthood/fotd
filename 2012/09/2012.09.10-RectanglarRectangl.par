@@ -1,0 +1,105 @@
+;     Date: Mon, 10 Sep 2012 17:49:58 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-09-12 (Rectangular Rectangle [7])
+;       Id: <1.5.4.16.20120910175345.2a7767a2@earthlink.net>
+; ---------
+; 
+; FOTD -- September 10, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we check the Rectangular aspect of the strange rectangle.  
+; Not surprisingly, it much resembles the Oblate aspect, though it 
+; is now rotated 90 degrees.
+; 
+; The name "Rectangular Rectangle" is a statement of fact.
+; 
+; The rating of an average 7 indicates that the current rectangle 
+; theme is starting to grow stale.  We still have a few more 
+; aspects to check however before we move on.
+; 
+; The calculation time of 4-3/4 minutes is rather slow; visiting 
+; one of the web sites is quick however.
+; 
+; The finished image is posted for convenience at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; An early sample of autumn arrived at Fractal Central today, when 
+; the temperature reached a high of only 72F 27C and scattered 
+; lumpy gray clouds filled the sky.  The fractal cats took to 
+; their window shelf just after noon.  They seemed satisfied, but 
+; I felt they would have preferred more sun.
+; 
+; The fractal humans had an uneventful day...boring to read about 
+; but relaxing to experience.  The next FOTD, most likely another 
+; of those rectangles, will be posted soon.  In this case, 'soon' 
+; does mean about 24 hours.  Until then, take care, and, IMO, the 
+; DNA molecule is far too complex to have evolved by accident in a 
+; mere 4,000,000,000 years.  At the same time, IMO of course, to 
+; assume that DNA was intelligently designed stretches credulity 
+; beyond the limit.  So, once again IMO, there must be a third 
+; possibility.  Whatever that might be is the question.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+RectanglarRectangl { ; time=0:04:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/-0.0052445\
+  6022229875/102.1781/58.786/180 params=90/0/0/90/\
+  -1.7435/0/0.000175/0.073883/2.003/0 float=y
+  maxiter=72000 inside=0 logmap=66 periodicity=6
+  colors=000KGiKIkKKmKMoIOqGPsEQuBQwDRvERuGSuHStJTuK\
+  TvLTwNUxOUyQVzRVzSVzUWzVWzXXzYXz_Yz`YzaYzc_zd`zfbz\
+  gcziezhezhdzgbzgazg_zfZzfZzeXzeWzeVzdUzdSzdRzcRzcQ\
+  zbPzbQzbSzaUzaWzaYxc_ve`tgaribpkcnmdmjehgfdeg_bhW`\
+  iSYjN_kJblEemAho6kqMnsaquVtwPwyJzzDwwKtuQqsknqWkoi\
+  hmwekubis_gqXeo_crRanI_k9`g0if1gd1eb2d`2bZ3aY3_W4Z\
+  U4XS5VQ5UP6SN6RL7PJ9RH7SI6NJ4JK0EL3KL5QL7QL9RLBRLD\
+  SLFSLHTLJULIVKHWJGZIFaHEdGEgFFfIGfKHfMHeOIeQJeSJeU\
+  KdXLdZLd`MdbNcdNcfOchPbkPbmQboRbqRasSauTawTayDczCc\
+  zCczCczCczBczBczBczBczAczmZzmZzmZzmZzmZzmZzmZzmZzm\
+  ZzmZzmYzmXzmWzmVzmUzmUzhPNkPOnPPpPPmOMmOKmNImNFmMD\
+  mMBmL8mL6mK4mK2mJ6mI9mHDmGGmFKmENmERmDUmCYmB`mAdm9\
+  gm6km9jmBimDimGhmIhzKgzMgzPfzRfzTezVezYdz_czaczdbz\
+  fbzhazjazm`zo`zq_zuZzs_zq_zo`zn`zl`zjaziazgbzebzdb\
+  zbcz`czZdzYdzWdzUezTezRfzPfzSfzRgzQizPjzNkzMmzLnzK\
+  ozIqzHrzGszDsK8aKAcKCeKEg }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

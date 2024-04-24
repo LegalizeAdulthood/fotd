@@ -1,0 +1,116 @@
+;     Date: Thu, 06 Sep 2012 14:30:19 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-09-12 (Broken Rectangles [8])
+;       Id: <1.5.4.16.20120906143403.3867ec9a@earthlink.net>
+; ---------
+; 
+; FOTD -- September 06, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another trip into the Z^(2.003)+C Mandeloid.  
+; Or perhaps it would be more proper to say one of the Z^(2.003)+C 
+; Mandeloids, for like so many other things in the world of 
+; fractals, there are an infinity of Z^(2.003)+C Mandeloids.
+; 
+; In today's case the parent Mandeloid is the one that appears 
+; when Z^(2.003)+C is iterated 0.00941066196782 levels down the 
+; hyperladder with no function applied.  This parent fractal is 
+; much like the 'normal' one, but the two branches of the main 
+; spike are spread a bit wider, and the large minibrot is broken 
+; into two totally separate and unusually distorted ones.  Today's 
+; scene is located in an un-named valley of the northern minibrot.
+; 
+; The point at a mere 0.00941066196782 levels down the hyperladder 
+; might appear unusually fussy, but it was carefully chosen.  This 
+; is the point where the parent fractal has perfect X-axis 
+; symmetry.  The symmetry probably has no special significance, 
+; but being of an artistic nature, I prefer the symmetry.
+; 
+; Surprisingly, no open rectangles lie in this area, (at least, I 
+; have not yet found any), but there are geometric open holes 
+; aplenty.  Today's little minibrot lies in the middle of a field 
+; of these holes.
+; 
+; The rating of an 8 indicates an above-average image that might 
+; have been better if I had put a little more time into the 
+; coloring.  The name "Broken Rectangles" refers to the twisted 
+; quadrilaterals that might have once been rectangles.  The 
+; calculation time of 2-3/4 minutes is about average, and should 
+; cause little restlessness.
+; 
+; Check the finished image at the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with a high-definition rendering at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back FOTD's are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds, and a temperature of 82F 28C made today 
+; quite pleasant here at Fractal Central.  The fractal cats were 
+; puzzled about being locked out of their favorite spare room, 
+; where a new window was being installed.  The next FOTD will be 
+; posted in due time.  Until whenever, take care, and do we really 
+; believe that something as complicated as the DNA molecule could 
+; have evolved spontaneously and totally by accident in 13-billion 
+; years? . . . Or do we really believe that some super being 
+; intentionally designed it in some multiverse laboratory?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Broken_Rectangles { ; time=0:02:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-1.750919845393386/+0.0200660824764789/\
+  1.419367e+008/1/-107.5/0 params=2.003/0/-0.0094106\
+  6196782/0 float=y maxiter=2500 inside=0
+  logmap=291 periodicity=6
+  colors=000YdYXbXU_VSXTQSRNNPLJNJELB9J04Hi2Bd1C_1DV\
+  1EQ0EL0FG0Gp5jk4fg4cc3`_3YW2VS2SO1PK1MG0JSyIQsHPmH\
+  NhHMbHKXHJSGHMGGGGEBGD5GVFuRClN9dJ6WF3OgGJbDIYBIU9\
+  HP6HL4GG2GoM52aj7JV6Dg7Ce7Bc8Aa89_98Y97W96UA5SA4QB\
+  3OB2MC1KC0IVzRSqPPhNM_MKRKHIJE9HF_IESHDLHDEGC7zrgz\
+  XMzmjvfbn`VgVN`OFUI7NiKRkHDgFEdDEaCEYAFV9F3Ob3VY3a\
+  T3gO8ePCcQGbRL`RP_STYTXXTaVUeTViSWnQWrPXvNYzMYbUQG\
+  `IIaMKaQLaTNaXOa_SZkT_hT_eT_bT__U`XU`UU`SU`PU`MVaJ\
+  VaGVaDVnAVe8b`A__CW_ERZFQZHPYJOXLNXMMWOLWQKVSJUTIU\
+  VHTXGTYIVXKXWMZWO_VQaURcUTeTVfSXhSZjR`lQamQXcWTU`Q\
+  SbORdMPeKOgIMiGLjFEjzo6XRP43g85dC6bGE_G0Il9WRATVBR\
+  ZCPbDMeEKiFImGFqHDtIBoGCkECE2IgDDcBD_9EW8ES6FO4FK3\
+  GG1GESrDEZAzqKtmUnjchfmccuY_zSXzMTzHUzBUz5UzbUzZUz\
+  WUzTUzQUzMUzJUzGUzDUz9Uz6Uz3UzcUzYczSczUczUczUczUc\
+  zcczcczczzczzczzmzzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

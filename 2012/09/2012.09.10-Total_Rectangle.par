@@ -1,0 +1,110 @@
+;     Date: Mon, 10 Sep 2012 08:52:18 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 07-09-12 (Total Rectangle [7.5])
+;       Id: <1.5.4.16.20120910085605.370715e0@earthlink.net>
+; ---------
+; 
+; FOTD -- September 07, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Total Rectangle".  I gave it this name 
+; because every square millimeter of it lies inside a larger 
+; rectangle.  A minor outzoom will reveal the edges and near-
+; perfect shape of the unseen larger figure.
+; 
+; The image, which is oriented at an angle rotated 2 degrees from 
+; the Julia toward the Oblate direction, has been highly stretched 
+; and skewed to return the elements to recognizable proportions.
+; 
+; The square-spiral shapes filling the frame are quite common 
+; inside Z^(2.003)+C rectangles.  They remind me of something 
+; fractal that I have seen previously, though at the moment I 
+; cannot recall where.
+; 
+; I rated the image at a 7-1/2, mostly for the unusual near-
+; monochrome coloring, which required almost an hour to work out.
+; 
+; The calculation time of 3-1/2 minutes will simply fly by, at 
+; least for those who live and breathe fractals in the fractal 
+; multiverse in which we exist.
+; 
+; Be free of both calculation worries and excess pontification.  
+; View the finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; See the image in the crystal clarity of high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And check the thousands of back images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; After a noisy thunder-storm and lightning show at midnight last 
+; night, fine warm late summer weather prevailed here at Fractal 
+; Central today, with mostly blue skies, puffy white clouds and a 
+; temperature of 88F 31C.  The fractal cats spent hours gazing at 
+; the outside world that they never get to enjoy.  The humans 
+; spent the day occupied with mostly indoor things.  The next FOTD 
+; will be posted in the proper cosmic time, but until that moment 
+; arrives, take care, and wonder intensely about the things that 
+; are worth being wondered about.  Try to ignore the rest.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Total_Rectangle { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=slicejulibrot4 passes=1
+  center-mag=-0.01026601878632473/+0.001090051691336\
+  55/6101232/7.5631/45.6182041810158836/-19.25480371\
+  52274709 params=88/0/90/0/-1.7435/0.0001/0.000175/\
+  0.073883/2.003/0 float=y maxiter=4800 inside=255
+  logmap=438 periodicity=6 mathtolerance=0.05/1
+  colors=000wzzwzztzzrzzrwzrwzrwzrtzrtxrturrsrrprrnr\
+  pkppirpgrmdrmbrm_rk_rkbrkbrhbrhbrhbrfbrfbrfbrhirfd\
+  rfbrf_rfYrfWrfUrfSrdQrdOpdKpdIpdGndFnbDk`BkX9kV8iT\
+  6iO4fO2fO0dO0dO0dM0bM0bM0_F0_F0_F0XF0XF0VF0VF0VF0T\
+  A0TA0RA0RA0PA0RA0RA0RA0RA0RA0RA0RA0RA0TA0TA0TA0TI0\
+  TI0TI0TI0TI0VI0VI0VI0VI0VN0VN0VN0VN0XN0XN0XN0XT0XT\
+  0XT0XT0XT0XT0_R0_R0_R0_R0_R0_R0_R0_R2bP2bP3bP3bP4b\
+  P4bP6bP6bP8dO8dO9dO9dOBdOBdODdODdOFfPDdOFdOGdMGbMI\
+  bMIbKKbKK_KM_IM_IOXIOXHQXHQXHSVFSVFUVFWQDKODKODKOC\
+  KMCKMCKMBKMBKKBAK9AK9AI9AI8AI8AI8AG8AG8KG8KG8KE8KE\
+  8KE8KC8KC8KC8KC8KA8KA8KA8K88KA8KA8KF8gF8dH8dH8dH8d\
+  H8bJ8bJ8bJ9_J9_LB_LC_LCYLDYNFYNFYNHgNIgPIgPKdPMdPM\
+  dROdRPbRPbRRbRT_TT_TV_TX_TXYVZYVRiVRiVTgXVgXVgXXdX\
+  Zd_Zd_Rd_Tb_TbbVbbX_bX_bZ_d`_d`YdbYddYbhWdfYddYdbY\
+  d`_dZ_dX_dVbfbbf`bfZbfZdfXdfddfbgi`giZgiXgiViiTiiR\
+  iiRkkPkkOkkMnkKnkInkHnJZQ }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

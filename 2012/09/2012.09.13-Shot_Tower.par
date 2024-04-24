@@ -1,0 +1,97 @@
+;     Date: Thu, 13 Sep 2012 21:16:51 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-09-12 (Shot Tower [7])
+;       Id: <1.5.4.16.20120913212040.2f6f0784@earthlink.net>
+; ---------
+; 
+; FOTD -- September 13, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; There was no FOTD for yesterday, September 12.  It was an 
+; unfortunate break due to an unexpected rush job that arrived at 
+; FC.
+; 
+; Yesterday's fractal lack is hopefully made up for by today's 
+; image, which shows what happens to our strange open rectangle 
+; when it is viewed in its Parabolic orientation.
+; 
+; The rectangle, or at least three sides of it, lies at the apex 
+; of the tall brownish central tower.  This tower consists 
+; entirely of inside stuff made visible by the FMOD inside fill.  
+; When the rectangle is made visible in this way, we can see that 
+; its effects extend artificially well beyond its assumed bounds.
+; 
+; I named the image "Shot Tower".  It reminds me of a historic 
+; shot tower in Downtown Baltimore that fascinated me when I was 
+; an impressionable and very curious youngster.
+; 
+; The rating of a 7 might be more than the image is actually 
+; worth.  After all, a fractal rectangle can be stretched only so 
+; far.  But the calculation time of only one brief minute is a 
+; bargain price for any image.
+; 
+; Perfect weather prevailed here at Fractal Central today, with 
+; wispy clouds and a temperature of 82F 28C.  The fractal cats had 
+; an unusually lazy day, sleeping from 10am until after 3pm.  The 
+; humans had a few words to say about politics, but for a change 
+; we pretty much agreed.  The next FOTD will be posted when it is 
+; ready.  To find when that might be, keep checking.  Until when-
+; ever, take care, and the U.S. says it wants to defend freedom.  
+; Does this include the freedom of nations that do not wish to be 
+; 'defended' to expel U.S. military forces from their territory?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Shot_Tower { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.000548662\
+  20215659/-0.00012616493069158/655.6835/0.02004/90/0
+  params=0/90/0/0/-1.7435/0/0.000175/0.073883/2.003/0
+  float=y maxiter=326 inside=fmod periodicity=6
+  colors=000UUcVUcVVcWVbWWbXWbXXbXXbXXbKgl7rv8pu9ouA\
+  ntBmtC03D04E05F06G07H08I09J0AK0BL0CL0DM0EN0FO0GP1H\
+  Q2IR3JS4KT5LU6MV7NW8OX9PYAQZBR_CS`DTaEUbFVcGWdHXeI\
+  YfHXgGXhFXiEWjDWkCVlBVlAWmCWmDXnEYnFYoHZoI_pJ_pK`q\
+  MaqN`rO`rP`sR_sS_sT_tUZtVZuXZuYYvZYv_YwaXwbXxcXxdW\
+  yfWygWzhVziVzjVyiUxhUwhTwgTvfSufSteStdRsdRrcQqcQqb\
+  QpaPoaPn`On_Om_NlZNkYNkYMjXMiXLhWLhVLgVKfUKeTJeTJd\
+  SIcSIbRIbQHaQH`PG_OG_OGZNFYMFXMEXLEWLDVKDUJDUJCTIC\
+  SHBRHBRGBQFAPFAOE9OE9ND8MC8LC8LB7KA7JA6I96I96HA7HA\
+  8HB9HBAHBAHCBHCCHCDHDEGDEGDFGEGGEHGEIGFIGFJGFKGGLG\
+  GMFGMFHNFHOFHPFIQFIQFIRFJSFJTEIUFJTFJSFKSFKRFLQGLQ\
+  GLPGMPGMOGNNHNNHNMHOMHOLHPKIPKIQJIQJIQIIRHJRHJSGJS\
+  FJSFJTEKTEKUDKUCKVCKVBLVBLWALW9LX9LX8MW7LX8LX8LX8L\
+  X8LX9LX9KX9KX9KXAKXAKXAKXAJXBJXBJXBJXBJXCJXCIXCIXC\
+  IXDIXDIXDIXDHXEHXEHXEHXEHXFHXFGXFGXFGXGGXGGXGGXGFX\
+  HFXHFXHFXHFXIFXIEXIEXIEXJ }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

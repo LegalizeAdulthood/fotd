@@ -1,0 +1,113 @@
+;     Date: Thu, 20 Sep 2012 18:03:43 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-09-12 (Busy Busier Busiest [6])
+;       Id: <1.5.4.16.20120920180739.2a2fb310@earthlink.net>
+; ---------
+; 
+; FOTD -- September 20, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; This FOTD is posted a second time because the original posting
+; included the wrong formula in the parameter file.  Please delete
+; the first posting.
+; 
+; We have another rush in progress here at Fractal Central today.
+; And when time is lacking, the accuracy of the image sometimes
+; suffers.
+; 
+; The name of today's image, "Busy Busier Busiest", explains the
+; lowly rating of a modest 6 points.  The image las a lot of
+; color action, that's for sure, but like so many current movies,
+; it has too much action and not enough plot.  Even the addition
+; of the 'tdis' rendering fails to bring life to the moribund
+; image.
+; 
+; The only thing worth noting in the image is the central
+; minibrot, shaped suspiciously like a peanut.  The formula behind
+; the scene is Z^(1.7)+C, which I iterated 69 levels up the
+; hyperladder with the 'ident' function applied.  This mixture
+; creates a parent fractal that somehow reminds me of a mermaid.
+; A very prominent cut-off minibrot lies south of the main body,
+; with today's image located in a valley of this minibrot.
+; 
+; The too-long calculation time of 7 minutes merely adds to the
+; disappointment.  But at least with this time aspect, relief may
+; be found on the FOTD web sites.
+; 
+; View the completed image online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back FOTD's are at:
+; 
+;        <http://www.Nahee.com/FOTD/ <http://www.nahee.com/FOTD/>>
+; 
+; After the early morning fog cleared off here at Fractal Central
+; today, the rest of the day was near ideal, with mostly sunny
+; skies and a temperature of 70F 21C.  The fractal cats enjoyed
+; the outside conditions from the inside, but when an unwanted cat
+; wandered by, the dynamic duo leaped to the window and growled
+; their warnings at the intruder.
+; 
+; Except for a slightly heated lunch time exchange of opinions
+; about politics and culture, the humans had a quiet day.  The
+; next FOTD will be posted in due time.  Until whenever, take
+; care, and if only one of the thousands of claims about alien
+; abduction is true, then aliens from space actually are visiting
+; earth.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+BusyBusierBusiest { ; time=0:07:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.5231137961416107/-1.34126660456844/\
+  1.53e+008/1/125/0 params=1.7/0/69/0 float=y
+  maxiter=12000 inside=0 outside=tdis periodicity=6
+  colors=000_ldakbbkadk`fkZgkYikXmmZjkWhiUegRceP`cNZ\
+  aKW_IUYFRWDQX8PVBOUDNTFMRILQKKPMJNPIMRHLTGJWFIYEH_\
+  DFbCEdCDfEFcGGaIH_KIXMJVOKTQMQSNOUOMWPJYQH_RFlJH`S\
+  DP`ADh7Fi9HzBJzDKzFMzHOzIQzKRzMTjOVjQXkRYkT_kVakXc\
+  kZac2dk__eeVgnW`kXUiYOgZHec5d`8cZBcXDcUGbSJbQLbNOa\
+  LRaDOXGR_JTaLWcOYeR`gTbiWekZgn`jpclrfothqvktxmvzmt\
+  xzrzzzzzzzzzzfzodznzKlzdjzKiz`gzKezsozhiZYdaNZdCUf\
+  2Pg9OgGOgNNgTNh_MhfMhmLkwKhsLepLblL_iMXeMUbMRZMOWN\
+  LSNIPNAD9DIGGMNJRUMV_P_fScm_jwVgsRdoNakJ_hFXdBU`7S\
+  Y9SXASXBSXCSWDSWESWFSWGSVHSVISVJSUKSULSUQMWMSUIYSE\
+  bQAhO5kOmlN6mNmnN7nNmoN8pN8pMmqMmrMmrMAsMmtM9wJmtM\
+  ArPBpRBnUClWCjZDh`DfcEdeEbhBdhDbiE`jFZkHXlIVmJTnLR\
+  oMPpSRuPPsNOqLMpJLnHJmFIkCGiAFh8Df6Ce4Ac29b9TZFkWF\
+  lVFlVFmUFmUGnTGnTGoSGoSGpRGpRMeLSWGYMAcC5aD8`DB_EE\
+  ZEHYFKWFMVGPUGSTGVSHYQH_PIbOauObtOcsPerPfqPgpPhoQj\
+  nQkmQllQmlSljUliVlhXlfZle }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

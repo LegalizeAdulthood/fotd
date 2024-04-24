@@ -1,0 +1,113 @@
+;     Date: Tue, 04 Sep 2012 23:10:12 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-09-12 (Rectangle Toyland [9])
+;       Id: <1.5.4.16.20120904231355.2b9ff15c@earthlink.net>
+; ---------
+; 
+; FOTD -- September 04, 2012 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'm back!  Let the fractal celebration begin!
+; 
+; I bring with me a rectangle.  Yes, it's the strange little 
+; rectangle in the Z^(2.003)+C Julia sets.  Only today we do not 
+; see the pure, unadulterated rectangle, we see the rectangle as 
+; it appears when viewed slightly off-center in the imag(Z) 
+; direction and rotated 2 degrees toward the Oblate orientation
+; 
+; >From this angle the rectangle cannot be described; it must be 
+; seen.  To begin, it is no longer rectangular, though it does 
+; retain four relatively well-defined sides.  And it is no longer 
+; empty, but filled in its upper part with chaotic debris.  The 
+; outer parts surrounding the rectangle are no longer unbroken.  
+; They have begun to stretch out and break up as part of the main 
+; bay of the nearby Mandelbrot minibrot comes into view.
+; 
+; The result rates a 9, most of which is due to the random 
+; coloring feature of Fractint.  My part involved nothing more 
+; than a minor tweaking of a few color registers.
+; 
+; The name "Rectangle Toyland" came about when shut off my 
+; thinking apparatus, a thing I do often.  The calculation time of 
+; 1-5/6 minutes will pass swiftly once a recognizable part of the 
+; image appears on the screen.
+; 
+; To see the finished image without the task of calculating it, 
+; surf over to the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And check the high definition rendering at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted on the venerable FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; High humidity and lots of clouds left much to be desired here at 
+; Fractal Central today.  Occasional periods of rain kept things 
+; wet.  The temperature of 84F 29C felt much warmer due to the 
+; humidity.  The fractal cats passed the day keeping watch over 
+; the local pigeons, while the humans spent the day clearing a 
+; minor work backup.  The next FOTD will be another venture into 
+; rectangle land, and will be posted in about 24 hours, (with no 
+; guarantee given or implied).  Until next time, take care, and 
+; intelligent people realize there are no such things as ghosts.  
+; Too bad the ghosts have not heard the news.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rectangle_Toyland { ; time=0:01:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 inside=0
+  center-mag=0/0/100 params=88/0/90/0/-1.7435/0.0001\
+  /0.000175/0.073883/2.003/0 float=y maxiter=3600
+  logmap=-54 periodicity=6
+  colors=000YQwYQwWRuURtSRsRSrPSqNSpMToKTnITmHUlFUkD\
+  UjCUiBReAOa9MY8JU7HR6EN5BJ49F36B34855B76D97GB8ID8L\
+  F9NHAQJBSLBVNCXPD_REaTEcVFaXG_YHZ_HX`IWbJUcKTeKRfL\
+  QhMOiNNkNLlOKnPIoPHnQKnRNnSQmSTmTWmUZmValVclWflXil\
+  YlkYokZrk_uk_wjcsifohjkgmgfqcft`ip_lm_niZqfZsbYv_Y\
+  xXYuYWrZUoZSm_Qj`Og`MeaKbbI_bGXcEVdCSdAPe8Ne6SiBXm\
+  G`pKetPiwTfxZdxdbxj`xpZxu_wt_ws`wr`vqavpavobuobunc\
+  umctldtkdtjdtjaqhZngWkeTidQfcNcaKa`HZZEWYknzjnzjnz\
+  jnzinzinzhnzhnzhnzgnzgnzgnzfnzfnzenzenzenzdnzdnzcn\
+  zcnzcnzbnzbnzbnzanzaoz`oz`oz`oz_oz_ozcozcozcozcozc\
+  ozcozcozcozcozcozcozcozcozcozcozcozmozmozmozmozmoz\
+  mpzmqzmrzmszmtzmuzmvzmwzmxzmyzmzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

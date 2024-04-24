@@ -1,0 +1,112 @@
+;     Date: Thu, 20 Sep 2012 11:04:42 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-09-12 (Reciprocal of Infinity [7])
+;       Id: <1.5.4.16.20120920110838.2adf513c@earthlink.net>
+; ---------
+; 
+; FOTD -- September 19, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene is a trip into the parent fractal that results 
+; when three negative parts of Z^(-2.3) are combined with one 
+; negative part of Z^(-5.6) on each iteration before (1/C) is 
+; added.
+; 
+; This parent roughly resembles a diamond filled with debris.  The 
+; southeast point of the diamond has strong Mandelbrot features 
+; including a pseudo-main bay and a very prominent straight main 
+; spike pointing southeast, which terminates as a filament in the 
+; shape of a large broken circle.  Today's scene is located near 
+; the evaporating southwest edge of the shore line of the 'main 
+; bay'.
+; 
+; A good part of the image is actually 'inside' stuff made visible 
+; by the 'zmag' inside fill.  The black inside of the large 
+; central minibrot is hand colored.  Luckily, none of the inside-
+; the-minibrot color registers also appear outside the minibrot.
+; 
+; The name "Reciprocal of Infinity" is a phrase that came to mind 
+; as I studied the image.  The actual reciprocal of infinity is 
+; zero, though there might be different orders of zero (are they 
+; technically called infinitesimals?) for the different orders of 
+; infinity.  I lack the knowledge to recognize the difference.
+; 
+; With a rating of a 7, the worth of the image falls right in the 
+; middle of the FOTD range.
+; 
+; The calculation time of 4-1/4 minutes is a slight drag, but 
+; headache relief is always available on the web sites.
+; 
+; To avoid a calculation headache check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the FOTD back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; After yesterday's washout, when over 3-inches or 8-cm of rain 
+; fell, today seemed quite pleasant.  The sky cleared just after 
+; sunrise, leading to a partly cloudy invigorating day with a high 
+; temperature of 68F 21C.  The fractal cats, fully invigorated, 
+; got into a lively tussle over something only they were aware of. 
+; Little Cassie came out on top, while oversized Nicholas sulked 
+; away his defeat.
+; 
+; The humans passed the mid-week doing totally human things such 
+; as finishing the unexpectedly heavy work.  The next FOTD will 
+; certainly be posted, but I am not saying exactly when.  Until 
+; whenever, take care, and don't forget to add rice to the list of 
+; foods that are hazardous to one's health.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Recip_of_Infinity { ; time=0:04:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+0.4271053768113824/-1.341152341307607/\
+  41582/1/-105/0 params=-3/-2.3/-1/-5.6/0/0/0/0
+  float=y maxiter=1500 inside=zmag periodicity=6
+  colors=000SimOhkKhiGggCgeBdbBa`BZZBXXBUUBRSBOQBMOZ\
+  X9US8PN8LI8GE7C97747307BXxDUoERfGOYHLPSVSbdVmnYww`\
+  qrbkndeif_ehVaiXUbZMX`ERa7LUETNL`GSh9Zp2dw9hvGluMp\
+  uTttZxt`weavRbvCYnKTgSP`_SbVUdRWfN`jUdm_hpe0000000\
+  00UUUmZZUUUhbaeXWbRR_LLXFG_DIbBKe9Mg7Nj5Pm3Rp1Tr0U\
+  fEOVRIH4NH4RJ4VL5ZN6bP7fR8lT7nV7rWDqWJqWPpWUpW_pWe\
+  oWhoWkoXnlXqiXqfXqcXq`XqYXqVXqTe_BhaAjb9mc8od7qe6t\
+  f5vg4xh4wZ5vQ6vH6rGCoFIlEOiDUfC_cCd`KaZSZW_WUgTSoQ\
+  RiUQdYP_aOVeNQiMLmMGpXSefbWb`XZZXWYXSWXOUXLTXORSQP\
+  OSOKVMGXKCZJ8kKZxLxZVr9dmCejFfgHfdKgbMg_PhXRhVNfZJ\
+  daGbeC`h8Zl5XoCVpJTqQRrWPsbNtiLuoKvjGkeC``8RW4GS06\
+  tS`oUYkVWgWTcXRZZPV_MR`KNaIQcOSdUUeZWgdYhj_ioWgpSe\
+  qOdqKbrHarSPgbDXm1Nl6PkARjESjIUiNWhRXgVZgZ_a_TX_MS\
+  _FN_9WgLdnXlugciiVYjMNkDBl50m76n9BnAHnCMnESnFXnHbn\
+  IgnMhmPimTilWjl_kkbkkfljiljdfb``VWVNSQFTRCUSAVT8WU\
+  6XV4YV2RN4LF5F76907PXd0x3 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,111 @@
+;     Date: Tue, 11 Sep 2012 13:51:01 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 11-09-12 (Gateway to the Future [8])
+;       Id: <1.5.4.16.20120911135448.2a071302@earthlink.net>
+; ---------
+; 
+; FOTD -- September 11, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows our strange rectangle at an angle in the 
+; fourth dimension impossible to imagine.  All I can say about the 
+; angle of the slice is that it is closest to the Rectangular 
+; orientation.  At this strange angle, the rectangle is no longer 
+; rectangular.  It has stretched into a tall trapezoid with what 
+; resembles a marshy pathway leading up to it.
+; 
+; I named the image "Gateway to the Future", leaving it to the 
+; viewer to decide what might lie beyond.  It might be total 
+; technological breakdown followed by a collapse of civilization, 
+; or it might be the elimination of military weapons and the 
+; coming together of all the peoples of earth into one peaceful 
+; and harmonious family.  But to me it remains a mystery.
+; 
+; Even though today's image shows just another aspect of the same 
+; rectangle and uses the same color palette, it is a very unique 
+; aspect, well worth the rating of an 8 that I have given it.
+; 
+; The calculation time of 3-1/2 minutes is a fair price to pay for 
+; the image.  Bargain hunters may save some time by checking one 
+; of the web sites.
+; 
+; The basic finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Fancier hi-def renderings are online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Another early hint of Autumn made itself felt here at Fractal 
+; Central today, when the sun rose with the temperature at 48F 
+; +9C.  The rest of the day brought sun with only a few wispy 
+; clouds and a temperature of 75F 24C.
+; 
+; To the humans, it appeared that the fractal cats spent the day 
+; considering the coming winter.  The cats more likely spent the 
+; day considering getting an extra treat.  The next FOTD will be 
+; posted when the proper time has passed.  Until then, take care, 
+; be happy with your fractals, and don't worry about what might 
+; lie beyond the gateway.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+GatewayToTheFuture { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=+0.000000688\
+  48264664/+0.00213981581517682/111.3773/58.786/180
+  params=82/85/0/90/-1.7435/0/0.000175/0.073883/\
+  2.003/0 float=y maxiter=54000 inside=0 logmap=68
+  periodicity=6
+  colors=000KGiKIkKKmKMoIOqGPsEQuBQwDRvERuGSuHStJTuK\
+  TvLTwNUxOUyQVzRVzSVzUWzVWzXXzYXz_Yz`YzaYzc_zd`zfbz\
+  gcziezhezhdzgbzgazg_zfZzfZzeXzeWzeVzdUzdSzdRzcRzcQ\
+  zbPzbQzbSzaUzaWzaYxc_ve`tgaribpkcnmdmjehgfdeg_bhW`\
+  iSYjN_kJblEemAho6kqMnsaquVtwPwyJzzDwwKtuQqsknqWkoi\
+  hmwekubis_gqXeo_crRanI_k9`g0if1gd1eb2d`2bZ3aY3_W4Z\
+  U4XS5VQ5UP6SN6RL7PJ9RH7SI6NJ4JK0EL3KL5QL7QL9RLBRLD\
+  SLFSLHTLJULIVKHWJGZIFaHEdGEgFFfIGfKHfMHeOIeQJeSJeU\
+  KdXLdZLd`MdbNcdNcfOchPbkPbmQboRbqRasSauTawTayDczCc\
+  zCczCczCczBczBczBczBczAczmZzmZzmZzmZzmZzmZzmZzmZzm\
+  ZzmZzmYzmXzmWzmVzmUzmUzhPNkPOnPPpPPmOMmOKmNImNFmMD\
+  mMBmL8mL6mK4mK2mJ6mI9mHDmGGmFKmENmERmDUmCYmB`mAdm9\
+  gm6km9jmBimDimGhmIhzKgzMgzPfzRfzTezVezYdz_czaczdbz\
+  fbzhazjazm`zo`zq_zuZzs_zq_zo`zn`zl`zjaziazgbzebzdb\
+  zbcz`czZdzYdzWdzUezTezRfzPfzSfzRgzQizPjzNkzMmzLnzK\
+  ozIqzHrzGszDsK8aKAcKCeKEg }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

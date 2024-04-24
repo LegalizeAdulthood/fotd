@@ -1,0 +1,115 @@
+;     Date: Fri, 14 Sep 2012 16:04:17 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-09-12 (Ultimate Rectangle [8])
+;       Id: <1.5.4.16.20120914160807.38e7d4f2@earthlink.net>
+; ---------
+; 
+; FOTD -- September 14, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As the name implies, today's rectangle is the ultimate, at least 
+; of the current string of images if not of quality.  It lies in 
+; the Elliptic orientation, which is determined by the real(c),
+; imag(z) axes, and is located in the interior of the original 
+; Julia rectangle.  In my opinion however, it *is* the best of the 
+; current rectangle lot, well worth the rating of an 8.
+; 
+; To bring the rectangle to recognizable proportions, I stretched 
+; and skewed the image about as far as possible.  At this degree 
+; of distortion, (the skewing is over 89.9), strange things 
+; sometimes start to happen with the program, though so far I have 
+; noticed none in today's scene.
+; 
+; The coloring is a bit quirky, but this merely adds to the 
+; overall effect.
+; 
+; The calculation time of 1-3/4 minutes is fast enough to keep 
+; boredom at bay, but there is still the minor chore of setting up 
+; and running the included parameter file.
+; 
+; So enjoy life without the calculation.  Check the finished image 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and the high-definition versions at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Near perfect conditions continued today here at Fractal Central, 
+; with low humidity and a temperature of 79F 26C.  The only flaw 
+; was an increase in clouds.  The fractal cats spent the day 
+; looking for trouble they might get into.  Cassie finally found 
+; it when she got herself locked in a closet, where she stayed 
+; over an hour before she was found and released.  She never cries 
+; when locked somewhere.  Nicholas' problem is his tendency to eat 
+; strange stuff such as plastic, but he was well behaved, at least 
+; for today.
+; 
+; The humans had another typical day, agreeing on some things, 
+; disagreeing on others.  The next FOTD will be posted in about 
+; two days.  It will be something other than a rectangle.  Until 
+; then, take care, and why does religion, which preaches goodness, 
+; bring about so much evil?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ultimate_Rectangle { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=+0.000484087\
+  85092349/+0.00218988416650909/8.820301e+010/0.0070\
+  22/-70.7667429766036236/89.9210014763847312
+  params=90/90/0/0/-1.7435/0/0.000175/0.073883/2.003\
+  /0 float=y maxiter=15000 inside=0 logmap=226
+  periodicity=6 mathtolerance=0.05/1
+  colors=000E9EEADDBDCCDBD9BF8DGAGHDJIDLJGOKJQMNSORU\
+  RVWTZYWa__dacgcfmyGUoFMgBFbA7XA0RB2UB4YC6aC8eC9`B7\
+  WB6RB5MB4HB3CB27B13B0DL5NVAWdEenJnwNltLqeSihYbkcVn\
+  jUnBUsAUwAcuCcvDcwFcxGmyImzJmzLmzMzzOzzPzzRzzSzzUz\
+  zVzzXzzYzzZzzZzzZzzZzz_zz_zz_zz_zz_zzRzzIzz9zz0Y`o\
+  Z`oZ`oZ`o_`o_`o__o`_n`_n`_na_na_na_nbZnbZncZncZncZ\
+  ndZndZndZneYneYneYnfYnfYmfYmgYmgXmhXmhXmhXmiXmiXmi\
+  XmjXmjWmjWmkWmkWmkWmlWmlWmmXnlWmlWmkWlkVljVkjVkiUj\
+  iUjhUihTigThgThfSgfSgfSgeRfeRfdRedQecQdcQdbPcbPcaP\
+  baOb`Oa`Oa_N`_N`_N`ZN_ZM_YMZYMZXLYXLYWLXWKXVKWVKWU\
+  JVUJVTJUTIUTIUSITSHTRHSRHSQGRQGRPGQPFQOFPOFPNEONEO\
+  MENMDNMDNLDMLDMKCLKCLJCKJBKIBJIBJHAcHAcGAcG9cF9cF9\
+  cF8cE8cE8cD7cD7cC7cC6cB6cB6cA5cA5U95U94U84U84U73U8\
+  4U84U84U94U95U95U95UA5UA5UA6UA6KB6KB6KB7KB7KC7KC7K\
+  C7KD8KD8KD8KD8KE8KE9KE9KE9KF9AFAAFAAFAAGAAGAAGBAHB\
+  AHBAHBAHBAICAICAICAICAJDA }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

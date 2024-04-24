@@ -1,0 +1,116 @@
+;     Date: Mon, 10 Sep 2012 08:52:20 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-09-12 (Truncated Rectangle [8])
+;       Id: <1.5.4.16.20120910085607.38ffd7f0@earthlink.net>
+; ---------
+; 
+; FOTD -- September 08, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is part of the Julia set of a rectangle in the 
+; Z^(2.003)+C Mandelbrot set.  Surprisingly, there is no rectangle 
+; at the center of the image, but rather an octagon with in-curved 
+; sides.  The Julia set of a rectangle would normally be expected 
+; to be another rectangle, but fractals, like so many theories of 
+; modern physics, do not always do the intuitive things.  For some 
+; reason, objects that appear as rectangles in their Mandelbrot 
+; aspect appear as octagons when viewed in their broader Julia 
+; aspects.
+; 
+; This Julia doubling is not actually so surprising, considering 
+; that the Julia sets of the Mandelbrot radical 'stars' have 
+; double the number of arms as the Mandelbrot stars themselves.  
+; Thus, the Julia set of the two-branched star located around 
+; -1.543 on the main spike of the M-set has four main branches.
+; 
+; The name "Truncated Rectangle" is another way of describing an 
+; "Octagon", which to be more precise, is a truncated square.
+; 
+; I rated the image at an 8, due mostly to the coloring, which is 
+; a combination of my efforts and a random shot of the Fractint 
+; program.
+; 
+; The calculation time of 4 minutes borders on slowness, but at 
+; least IMO, the image is worth the effort.  And the web sites can 
+; remove even most of that effort.
+; 
+; So take life easy.  View the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And experience the thrill of high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Finally, check the past at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The pleasant late summer weather took a break here at Fractal 
+; Central today, when heavy clouds moved in, followed by lively 
+; thunder-showers.  The temperature of 84F 29C felt warmer than 
+; usual due to the high humidity.  The fractal cats got into a bit 
+; of a spat when they both wanted to lie on the table beside my 
+; favorite chair, but reason finally prevailed and they agreed to 
+; share the space with tails thrashing in unison.  The next FOTD 
+; is soon to be posted.  Until whenever that might be, take care, 
+; and if we only go around once in life, as conventional wisdom 
+; says, then when do we get to use the lessons we have struggled 
+; so hard to learn during our time on earth?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TruncatedRectangle { ; time=0:04:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.000021470\
+  16991775/+0.00000106606499224/269396.1/1/-12.5/0
+  params=90/0/90/0/-1.743492647282116/2.074078440319\
+  529e-008/0/0/2.003/0 float=y maxiter=3200 inside=0
+  logmap=994 periodicity=6 mathtolerance=0.05/1
+  colors=000BBCFFHIINLMSOR`RWfUZmW`wYdz`gzcjzfmzirzm\
+  vzrzzmszhmzccpZUfVKUSJKPJPMIVJI_GHeDHjccEYgOTjXOmf\
+  JpoLiiNbdOW_QQURJPTCKU6FfDScLO`TLY`HVhESpAQw7cVMp3\
+  `bVfQvkPqlOmlNimNemQhlSkkUnjWhfXcbYZZ_UV`PRaKNZLKW\
+  LHTMERMBON8LN5IO2GO0HL9IIIJFRKC_LAhXDihGjsJkmPhhVf\
+  c`dZfbnLPkQUhVYf_acce`hjZmnWrrUvvdbmoJdkIXgIPcIH_I\
+  AWNHSRNPWTL_ZIddEhjBlpLngVoZdpQmqInkGofFpaEqXDrRBs\
+  MAtH9uC8zSgzVbzYYz`TzcPzfKziFzkBzfAzaAzXAzSAzNAzJA\
+  zSHz`NgiUfr__iSTaLMTEGL7KJEOHKRGRVEXYDb`9fc6if3mh0\
+  pnXHmbPlgXlldkqlkvthuuftvcswarxZqyXqyUrwSsuQtsOuqM\
+  voKwnNsoQppTmqVirYfs`ctb`ucdqdgmejifnegqahtYiwUakP\
+  U_LUOKECC618G4AP7BZ9DgCEpEFfMUXUhN`wO`rO`nO`jO`fO`\
+  bPaZQbWRcSScPUvN`xcfzs`uzWqpRmoLinGemBal6YkFxrLpqQ\
+  ipVao_VndNmiGln8ks1kt3kt4ku6ku7ktDhsJesPcrV`r`ZqfW\
+  qlUhiY`gaSeeKciBam3_p7XoAUnDRmGOmJLlMIkPFjSDjTAfU7\
+  bV5ZW2VW0SX4VGJV5PK8JEBE8 }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

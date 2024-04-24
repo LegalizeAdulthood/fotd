@@ -1,0 +1,111 @@
+;     Date: Mon, 10 Sep 2012 08:52:22 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 09-09-12 (Oblate Rectangle [7.5])
+;       Id: <1.5.4.16.20120910085609.37073ee0@earthlink.net>
+; ---------
+; 
+; FOTD -- September 09, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We have found the strange Z^(2.003)+C rectangle in the Julia 
+; sets and in the Mandelbrot set.  But what about the four 
+; remaining perpendicular directions through the Julibrot?  Well, 
+; as today's image shows, the rectangle also appears in the Oblate 
+; orientation, where, with the proper stretching and skewing, it 
+; makes quite a striking appearance.
+; 
+; At first glance the image appears to have origin symmetry, but a 
+; close inspection will reveal that the symmetry is only apparent, 
+; and not exact.
+; 
+; I named the image "Oblate Rectangle" for the obvious reason.  
+; The rating of a 7-1/2 includes the usual bonus for my coloring 
+; work, which creates a good part of the overall effect.
+; 
+; The calculation time of 3-1/2 minutes might seem slow to those 
+; who are growing bored with rectangles.  The web sites bring 
+; total relief from boredom however.
+; 
+; The next three FOTD's will feature the rectangle in its 
+; remaining three aspects.  Then we'll move on to other fractal 
+; wonders.
+; 
+; The completed image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A near perfect day prevailed here at Fractal Central today, with 
+; a temperature of 75F 24C and a Photoshop (aka Kodachrome) blue 
+; sky dotted with small, puffy white, chamber-of-commerce cumulus 
+; clouds.  The fractal cats enjoyed the outside conditions from 
+; inside, spending much time on the shelf in the southwest window, 
+; where the sun, at its lower angle, is again starting to come in.
+; 
+; The humans made it through the day without incident.  The next 
+; FOTD image will be posted in 24 hours.  Until then, take care, 
+; and, if the world is a dream, then the evidence that it is a 
+; dream is also a dream.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Oblate_Rectangle { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/3620/\
+  0.01375/0/-77.0000000000000995 params=0/0/90/0/\
+  -1.7435/0/0.000175/0.073883/2.003/0 float=y
+  maxiter=72000 inside=0 logmap=54 periodicity=6
+  colors=000K8aKAcKCeKEgKGiKIkKKmKMoIOqGPsEQuBQwDRvE\
+  RuGSuHStJTuKTvLTwNUxOUyQVzRVzSVzUWzVWzXXzYXz_Yz`Yz\
+  aYzc_zd`zfbzgcziezhezhdzgbzgazg_zfZzfZzeXzeWzeVzdU\
+  zdSzdRzcRzcQzbPzbQzbSzaUzaWzaYxc_ve`tgaribpkcnmdmj\
+  ehgfdeg_bhW`iSYjN_kJblEemAho6kqMnsaquVtwPwyJzzDwwK\
+  tuQqsknqWkoihmwekubis_gqXeo_crRanI_k9`g0if1gd1eb2d\
+  `2bZ3aY3_W4ZU4XS5VQ5UP6SN6RL7PJ9RH7SI6NJ4JK0EL3KL5\
+  QL7QL9RLBRLDSLFSLHTLJULIVKHWJGZIFaHEdGEgFFfIGfKHfM\
+  HeOIeQJeSJeUKdXLdZLd`MdbNcdNcfOchPbkPbmQboRbqRasSa\
+  uTawTayDczCczCczCczCczBczBczBczBczAczmZzmZzmZzmZzm\
+  ZzmZzmZzmZzmZzmZzmYzmXzmWzmVzmUzmUzhPNkPOnPPpPPmOM\
+  mOKmNImNFmMDmMBmL8mL6mK4mK2mJ6mI9mHDmGGmFKmENmERmD\
+  UmCYmB`mAdm9gm6km9jmBimDimGhmIhzKgzMgzPfzRfzTezVez\
+  Ydz_czaczdbzfbzhazjazm`zo`zq_zuZzs_zq_zo`zn`zl`zja\
+  ziazgbzebzdbzbcz`czZdzYdzWdzUezTezRfzPfzSfzRgzQizP\
+  jzNkzMmzLnzKozIqzHrzGszDs }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
