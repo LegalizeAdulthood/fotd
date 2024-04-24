@@ -1,0 +1,102 @@
+;     Date: Sun, 25 Aug 2013 18:44:33 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-08-13 (Pentagonal Paradise [A-7,M-6])
+;       Id: <1.5.4.16.20130825184531.2a37419e@earthlink.net>
+; ---------
+; 
+; FOTD -- August 25, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's speedy image is a Julia set of a MandelbrotBC Mandeloid. 
+; The corresponding Mandelbrot set came about when I calculated 
+; the Z^(1.11)+C Mandeloid 111 levels up the hyperladder with the 
+; floor rounding function applied.  This Mandeloid is shaped like 
+; a torpedo, as are so many Mandeloid fractals in the range just 
+; above Z^1, or unity.
+; 
+; The formula is the original JuliaBC formula posted to the 
+; Fractint list a number of years ago by Andrew Coppin and 
+; reworked by myself several times since then.  The MandelbrotBC 
+; version is one of the most prolific formulas of all time.  
+; (formulae for the over-educated) 
+; 
+; The artistic worth of a 7 and math worth of a 6 might be a bit 
+; conservative, the image, with its electric blue highlights, is 
+; really rather striking, but at least IMO the over-familiarity 
+; holds down the values.
+; 
+; The name "Pentagonal Paradise" has nothing to do with heaven.  
+; It refers to the few smaller inner highlights, which have 
+; somehow formed themselves into near-perfect pentagons.
+; 
+; The calculation time of 30 seconds will appear to pass in a 
+; flash.  This blinding flash may be avoided by viewing the 
+; finished image on one of the web sites.
+; 
+; The FOTD web sites are at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The perfect weather keeps coming here at Fractal Central.  Today 
+; brought tons of sun and a temperature of 82F 28C, which kept 
+; both cat and humans happy.  The next FOTD will be posted when 
+; the aliens from outer space appear, and from what I read, this 
+; will most likely be within a day or so.  Until whenever, take 
+; care, and maybe the aliens are already among us.
+; 
+; 
+; Jim (I am not an alien) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+PentagonalParadise { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=-0.120052/\
+  -0.119167/0.7668/1/-87.5/0 params=1.11/0/111/0/\
+  -0.041/0.146/0/0 float=y maxiter=256 inside=bof60
+  logmap=yes periodicity=6
+  colors=0000Kz0Fv0Ar07m05h02c00Z00U00P00K00F00D00C0\
+  0A009007006Uzz00000600A00C00F40I60Q80V90Z90c90hA0m\
+  A0rB4vA5zA6zA7zA8zA9zAAzABzACzADzAEzAFzAGzAHzAIzAJ\
+  zAKzALz4aG5ZL6XQ7UU8SZ9QbANgBLlCIpDGujgqzv0zt0zr0z\
+  pVznWzlYzjZzhUzgPzeKzcAza0z_0zY0zW0zU0zT0zR0zP0INr\
+  HLsGJuFHvEFxHs4Gq7Go9GmCGlEGjHGhJFfLFeOFcQFaTF_VFZ\
+  XEX_EVaETdESfEQiEOkDMmDLpDJrDHuDFwJW1IT9HRHGPOGNWF\
+  KcEIjDGruLIpKNkJSfIXaHaXHfSGkNFpIEu5QZ6P`6Ob7Nc7Ne\
+  8Mf8Lh9Lj9KkAJmAInBIpBHrCGsCGuDFvDExaoeZjhWfjTblQZ\
+  nOUqLQsIMuoQDhVGa`KVeNNjQGpU9uX2z_EybQxe`xhlwkwwno\
+  shgpc_lZTiTLeODbJ6_EG`HQaJZbLc_KhYJmVIrTIsUPtVWuVb\
+  vWiwXpwXvoVuhUuaTtVRtOQsHPsKSlMVfPY`R`VUcOWfIZiC`k\
+  6Xj9UiCQhFNgIKgLEcG8_B3W76YE8_LAaRG_MMZISYEYW9cV5h\
+  U1bW3YX5TZ7O_9JaBEbD9cETQHkCJeBL`ANW9PR8QM7SH6UC6V\
+  BQKBh9LiIViRdj_njhwjpWV`4FM8INCKOGMPJOPNRQRTRVVSYX\
+  S`aWbf_dkcfpghukjzorh`ySM }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

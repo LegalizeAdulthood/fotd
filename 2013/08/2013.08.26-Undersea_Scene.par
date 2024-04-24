@@ -1,0 +1,103 @@
+;     Date: Mon, 26 Aug 2013 14:27:59 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 26-08-13 (Undersea Scene [A-8,M-7])
+;       Id: <1.5.4.16.20130826142858.2c07f118@earthlink.net>
+; ---------
+; 
+; FOTD -- August 26, 2013 (Rating A-8,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is evaporated, which means the escape radius has 
+; been increased until nothing but trapped 'inside' stuff remains. 
+; The blank scene was then rendered with the inside set to 
+; 'bof61', bringing to life the apparently dead inside stuff.
+; 
+; Something in the resulting image reminds me of an undersea 
+; scene, which is what I named it.
+; 
+; The parent fractal combines 0.7 part of Z^(-0.5) with 0.1 part 
+; of Z^(-5.5), then adds (1/C) on each iteration.  The resulting 
+; figure resembles an oversized peanut with a larger area of 
+; squiggly chaos to its northeast.  Today's scene lies in the 
+; outer part of this squiggly chaos.
+; 
+; Thanks to my extra coloring effort, the artistic rating of the 
+; image is a very respectful 8.  The evaporated nature of the 
+; parent fractal raises the math interest to a not-too-bad 7.
+; 
+; The calculation time of 1-3/4 minutes will seem to pass quickly 
+; after the top part of the image appears.  Those who do not 
+; calculate fractals may view the finished image at one of the web 
+; sites.
+; 
+; The completely calculated image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today brought lots of clouds to Fractal Central, and even a few 
+; minor sprinkles of rain.  The temperature of 82F 28C must have 
+; been perfect, at least for the fractal cat, who passed the 
+; afternoon sleeping and eating while the fractal humans worked.
+; 
+; The next FOTD *will* be posted.  Exactly when is anybody's 
+; guess, but it will not be too long.  Until whenever, take care, 
+; and due to the limited speed of light it is currently 
+; scientifically impossible for aliens from distant stars to reach 
+; us here on earth.  Yet many people claim to see alien ships in 
+; our skies.  Either science is missing something big or a lot of 
+; people are mistaken.  Or perhaps the aliens are unfamiliar with 
+; our earth science and visit us despite the impossibility.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Undersea_Scene { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+46.67800906092363/+32.51216039765313/\
+  1.2e+08/1/-15/0 params=0.7/-0.5/0.1/-5.5/0/1e+100/\
+  0/0 float=y maxiter=1500 inside=bof61 periodicity=6
+  colors=000amZeoWipUmmQmlRmlTlkUlkVlkXkjYkjZkj_gqid\
+  wrfupgtoirmjqlkokmninlhokgqiesgbrhduz4tR9tTDtWItYM\
+  s`RsbVse_BB7HGCNKGSOKYSOcWSh_WMqKVfFbWAjL5rB0qJApR\
+  KpZUofconmqhhrccsYZtTVuOQvILwDGx8CvRFuhItzLmsIglG`\
+  eEVZCOSAIL8BE6574DIGLSSTab`knhuydqtanoZkjVgeSd`PaW\
+  Kh_GnchugFzjRpb5fV5`N4NF3E7350A41H47O3DV3JZ2Pb2Vc2\
+  `j2ah2am2am2at2au2av2azLfzVkzUoz`RzVSzQSpVTzZXzZTz\
+  ZQzZNzhKzhHzhEzhBzr9zr8zr8zr8zr8zr8mr8mr8zzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzvzzwzzwzzw\
+  zzwzzwzzwzzwzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

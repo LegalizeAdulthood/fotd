@@ -1,0 +1,99 @@
+;     Date: Tue, 13 Aug 2013 09:17:15 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 12-08-13 (Smickey Algebro [A-7,M-5])
+;       Id: <1.5.4.16.20130813091803.369fba1e@earthlink.net>
+; ---------
+; 
+; FOTD -- August 12, 2013 (Rating A-7,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's dark moody image is a slight improvement over 
+; yesterday's, but still leaves much room for further improvement. 
+; The scene lies in the East Valley of the largest minibrot on the 
+; west branch of the filament extending from the large period-3 
+; bud on the northeast shore line of the main bay of the 
+; (-Z)^(1.5)+C Mandeloid.
+; 
+; The name "Smickey Algebro" means whatever the fractalist wishes. 
+; To me it is a fun trick to get people to try to find a meaning 
+; that does not exist.
+; 
+; The calculation time of 2-3/4 minutes is more than the image is 
+; really worth.  To save effort, I recommend visiting one of the 
+; web sites.
+; 
+; Freedom from calculation may be found at the following web sites:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of sun and clouds, reasonable humidity and a temperature 
+; of 86F 30C made today quite pleasant here at Fractal Central.  
+; Nicholas, the fractal cat, spent the afternoon as a lump under 
+; a chair cover.  The humans spent the day doing human things.
+; 
+; The next FOTD is due to be posted in 24 hours.  It might make 
+; it; it might not.  Until whenever, take care, and I wonder where 
+; the music went.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Smickey_Algebro { ; time=0:02:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1
+  center-mag=+0.5728187623328764/+1.220849119432405/\
+  2.601307e+009/1/90/0 params=0/0/0/0/0/0/0/0/1.5/0
+  float=y maxiter=1350 inside=0 logmap=425
+  periodicity=6 mathtolerance=0.05/1
+  colors=000YXYWVVTSTQPQONNLKLIIIGFFDCDAAA877555000s\
+  EXpDVmCUjCTgBRdBQaAPZAOW9MT9LR8KP8JN7HL7GJ6FH5DF5C\
+  D4BB4A9387375263251130120015ud4qa4n_4jX3gV3cS3`Q2Y\
+  O2UL2RJ2NG1KE1HC1D90A7064032tfqSLRYC2VB1SA1Q91U81c\
+  71K61F50D40A30720510200RpKLeGGVCAL85A4dH5WD4OA3G62\
+  831FzOEzNDzMDzLCzKCzJBzIBzIAzHAzG9zF9zE8zD8zC7zC6z\
+  B6zA5z95z84z74z63z63z52z42z31z21z1PvDOrEOoFNmFNmGM\
+  mHLmHLmIKmJKmKJmKImLImMHmMHmNGkOGiOFgNFePEcMEaLD_K\
+  CZJCXIBVHATGASF9QE8OD8MC7LB7JA6H95F85E74C63A538427\
+  3152131000L7mJ6XI6VP5mG5SF5QE4OD4MC4LB3JA3H93F82E7\
+  2C62A518417315203101WTeSP_OLVKIQGELCAF87A4351kv0fp\
+  0bk0Ye0U`0QW0LQ0HL0DG08A045iM9fK8dJ8bI7`H7ZG6WF6UE\
+  6SD5QC5OB4LA4J93H83F73D62A528416314202100Kz01W01z0\
+  1S01Q01P01N01L01J01H00G00E00C00A008007005003001nnC\
+  zkBzhAze9zb9z_8zX7zU7zR6zO5zU4zU4zU3zU2zK2zK1zU0zt\
+  uzqrznozlmzijzggzdezabz__ }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

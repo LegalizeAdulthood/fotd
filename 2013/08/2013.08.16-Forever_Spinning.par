@@ -1,0 +1,56 @@
+;     Date: Fri, 16 Aug 2013 20:12:22 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-08-13 (Forever Spinning [A-6,M-6])
+;       Id: <1.5.4.16.20130816201312.2bf7ebb0@earthlink.net>
+; ---------
+; 
+; FOTD -- August 15, 2013 (Rating A-6,M-6)
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Forever_Spinning { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident float=y 
+  center-mag=+0.9845519352355383/+1.236523568822507\
+  /1.232872e+007/1/-117.5/0 params=1.618/0/4/0
+  maxiter=1500 inside=0 logmap=62 periodicity=6
+  colors=000bPS`MUZKWYHYWF_UCaSAcR8eTAfVBgWCgYDh_Eh`\
+  FibGicHjeIjgJkhKk00030040A649769979A98CA8DC7FD7GF7\
+  IG6JH6KI6MJ5NP5PQ4QR4SS4TT3VZ3W_2Y`2Za2`b1ac1b_1c`\
+  1dW1eW1eW1kW1lW1mW1mX1nX1oX1oX1pX1qX1rX1rY1sY1oY1u\
+  b1ub1vb1wb1wc1xc1yc1zh1zh1zh1wh1wh1xcGxhUxmhxrvuot\
+  rmsokqlipignfemcck`ajZ_hWYgTWeQUdNSbKQaHO_EMZBKX9I\
+  W8HU8GS8GR8FP8FO8EM8DK8DJ8CH8CG7BF7BF7AE7AE6AD69D6\
+  9C69C58B58B57A57A479469468E0E468357357346346245235\
+  234234123123112112011001000fTsdRpbQnaPl_OjYNhXMfVL\
+  cTKaSI_QHYOGWNFULESJDPICNGBLEAJD8HB7F96C85A6484363\
+  24112SlXOeSKZNGSICLE8E9474j__hYYgXXeWWdVVbUUaTT_SS\
+  ZURXUPWUOUUNTUMRcLQcKOcJNcIMcGKcFJcEHcDGcCEcBDcABc\
+  9Ah78h67h55h44m32m21m1Px9Kz7Gz6Cz48z34z19zC8zB8zA7\
+  zA7z97z96z86z85z75z75z64z64z53z53z43z42z32z31z21z2\
+  1z10z10z0XzDVzCUzCTzBSzBRzAQzAPz9Nz9Mz8Lz8Kz8Jz7Iz\
+  7Hz6Fz6Ez5Dz5Cz4Bz4Az49z3 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

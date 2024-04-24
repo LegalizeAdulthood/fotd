@@ -1,0 +1,61 @@
+;     Date: Fri, 16 Aug 2013 20:12:20 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-08-13 (Sharpness [A-7,M-6])
+;       Id: <1.5.4.16.20130816201310.2bf7b676@earthlink.net>
+; ---------
+; 
+; FOTD -- August 14, 2013 (Rating A-7,M-6)
+; 
+; The lack of a discussion for the next three days does not mean a 
+; permanent change in FOTD format.  Due to a lack of time, the 
+; FOTD's for the 14th, 15th and 16th will be posted without the 
+; usual discussion.  For convenience, the parameter files will be 
+; included however.
+; 
+; START PARAMETER FILE=======================================
+
+Sharpness { ; time=0:01:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident inside=0
+  center-mag=-1.751865815501035/-0.00876262863845408\
+  /4.362643e+012/1/89/0 params=1.997/0/0/0 float=y
+  maxiter=5000 periodicity=6 mathtolerance=0.05/1
+  colors=000zsz_QUziJz`EnT9`L4OB08000H40C00800400000\
+  00zzpvpbbZPGE86T20B0LQtCHe69Q0090L0060WH0OB0G60800\
+  000H_nz0zi0eL0Hzrt4ez0HXz42k00M00znzUstPklLeeGXZBQ\
+  Q6HH099000fCcZ8WA4PJ0H908000HHQCCL88E4490020000Jz0\
+  9k00MAFEA79CC46400004f60J0us0lj0cb0WU0ML0CB0000lC0\
+  b80S20G00200Czt8xi2iX0TL0B6TxzPpsLikG`bBTU6LM0BB00\
+  0zurzlirc`7APWMLJCB4004KK0mx0nn0cc0TT0HHA6ASWzol8g\
+  e4_X2SQ0JH0990000r_TZMHE64zXzjOvUCbB0GJgezn_ycSjTJ\
+  TH9B40f0z_0rT0iM0_E0P60E002_zzPntEX`2CGMjQHbLCWG8P\
+  B4G60800000eW0HC0Uz0Lv0Bb00GioJbgEX`BQU8LO4CG06800\
+  00fXzZQzQLoJCb96O008zizzZyjPjUETB2BQ0LM0GH0CC09906\
+  400000zzzpz0kz8fuL`nWWffQZpLQzGHzzCpuMXfEO002S6C90\
+  0L0zC0j60U00Bz0`g0OJ08064022000000000000000000ZbzL\
+  On68Oj08c04X02S00L00C00600000oXecPWTHMH8C400TzZHfL\
+  4J6Qzz9ZbUWnPQgLM`GHUBCO66G008000rzzcukPbU8GB`b0z0\
+  tW0QlzyctnWicMXTCLH064sEk }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

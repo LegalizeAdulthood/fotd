@@ -1,0 +1,101 @@
+;     Date: Thu, 01 Aug 2013 15:53:50 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-08-13 (Planetary Nebula [A-7,M-7])
+;       Id: <1.5.4.16.20130801155427.2bff4c76@earthlink.net>
+; ---------
+; 
+; FOTD -- August 01, 2013 (Rating A-7,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we *subtract* 0.0000000000000001 part of Z^(-2) 
+; from 100 parts of Z^2.  This combination creates a tiny 
+; Mandelbrot set 1/100 of the normal size, which, when blown up, 
+; appears on the surface to be perfectly normal, but does strange 
+; things in its deepest depths.  And at a magnitude of over 10^15, 
+; you can't go much deeper, at least with DOS Fractint.
+; 
+; Today's scene lies in the East Valley area of the large minibrot 
+; on the west branch of the filament extending from the period-3 
+; bud on the north side of the main bay of the tiny parent M-set.  
+; Traces of East Valley stuff abound in the scene, but the overall 
+; donut-like pattern is quite unexpected.
+; 
+; The four brilliant red areas are fine examples of what I call 
+; 'peaks of anti-bifurcation', where the iteration count grows 
+; smaller as the center is approached, while the number of 
+; elements is cut in half instead of doubling.
+; 
+; I named the image "Planetary Nebula" when I was reminded of the 
+; gaseous shells puffed off by dying stars.  The art and math 
+; ratings are both a 7, indicating near average interest.  The 
+; calculation time of 2-3/4 minutes can be avoided by checking one 
+; (or all) of the FOTD web sites.
+; 
+; FOTD images are available on the following web sites.
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Lots of clouds and occasional periods of rain prevailed here at 
+; Fractal Central today.  The fractal cat enjoyed the near perfect 
+; temperature of 79F 26C.  The humans, not being quite as fractal 
+; as the cat, spent the day doing what needed to be done.
+; 
+; The next FOTD will be posted soon.  Until we find out now much 
+; time 'soon' implies, take care, and since all the world's 
+; problems are caused by someone else, no one needs to do anything 
+; about the problems.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Planetary_Nebula { ; time=0:02:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.00153754810877916/+0.010303790076819\
+  72/1.344536e+015/1/-70/0 params=100/2/-1e-016/-2/0\
+  /0/0/0 float=y maxiter=1500 inside=0 logmap=190
+  periodicity=6 mathtolerance=0.05/1
+  colors=000z0Lx0Lm0Mc0MU1OK230000000000000000010120\
+  2303404505606707808919A2AB3BC4CD6DE8EGAFICGKCILBKM\
+  BNLAQK9UJ9ZI8cH8hGDjHIlINnISoJXpJaqKksXku`mwdrzhzz\
+  lzzptzdovTmrImmHmhGhcFcZEZUDUPDQKIMKNILSFOWCU`F_eH\
+  ejJknGlqElsClvAlx8lzDktIjoNiiShdXgZafUfeOjdJdbL_`M\
+  U_NPYOJWQEVR8TS3STAYRGcPMhOQjUTl_WmdZoj_qnapobopdn\
+  qemqflrhksijttemlnxjitieqh`ngXkkRihShfThdThbUh`UhZ\
+  VhtbhXVhANhBSgBXgBagBfgBkgBpgBug5uhIlYVdOfXENdJ4kO\
+  l5EKoVRePYWJdMDjC7nRHreRdZVSTZEMb1GeoeneiiWmdNp_Vn\
+  UblPjjKrhFpkJVZWoEgdQaVaWAqSGoRLmQQlPVjO_iOddXh`dl\
+  XlrNvqQupTtoWsoZsnarmdqlbsmgqmkojkymonosdtyPqwVou`\
+  ltfjrlgprdwxeowehwfawfVwgOwgHwgAwhGqiLkjQekV`l`Vme\
+  PnjJrnHnoEkoCho9dp7ap4Wu1Zp2ak3df4fa5iX6lS7oN8xT0t\
+  O5qJ9mFEjAIg6Me9SdCXbFbaIgkQm`LlRGkGBj67jLHdPGh_Q_\
+  i_RqpAshJuaRwU_yNgfrRpZczGojLdWQVHVLN`OTeQZjSUYaPM\
+  kLAuPWjVueTq`SmXQjSPfO1zA }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,119 @@
+;     Date: Sat, 31 Aug 2013 14:47:19 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-08-13 (Zexpe of the North [A-6,M-6])
+;       Id: <1.5.4.16.20130831144820.21cffb9c@earthlink.net>
+; ---------
+; 
+; FOTD -- August 31, 2013 (Rating A-6,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has a curious appearance, which is actually the 
+; beginning of definition breakdown.  In today's case however, the 
+; breakdown produces a soft, rather pleasant fuzzy effect that 
+; raises the image's artistic worth to a 6, making it worthy of 
+; being declared FOTD for today.
+; 
+; The name "Zexpe of the North" points out that the exponent of Z 
+; is the number epsilon, and that the scene lies at the northern 
+; extremity of the parent fractal.
+; 
+; The parent fractal is actually the 'zexpe' fractal, or more 
+; accurately, one of the 'zexpe' fractals.  Due to the multi-
+; valued nature of the complex logarithmic function, there are an 
+; infinity of 'zexpe' fractals.
+; 
+; Today's 'zexpe' fractal resulted when I iterated Z^(epsilon) 
+; nine levels up the complex hyperladder with no function applied. 
+; It is shaped much like the classic 'zexpe' fractal, with two 
+; large period-2 buds.  There is no X-axis symmetry however, and 
+; the northern bud more closely resembles a quadratic bud, with a 
+; single nearly straight main spike pointing northwest.  Today's 
+; scene lies near the tip of this spike.
+; 
+; Since there is nothing really outstanding about the image and 
+; the breakdown of definition could be considered detrimental as 
+; easily as beneficial, I could rate the artistic worth no higher 
+; than a 6.  The complex-log math trick is so shopworn that I 
+; could rate the math value also no higher than a 6.
+; 
+; The calculation time of 1-1/2 minutes is fast enough to keep 
+; boredom and ultimate disappointment at bay.  And the web sites 
+; can always remove the wait entirely.
+; 
+; Save some time by checking the web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; More clouds than sun marked the first day of the three-day Labor 
+; Day holiday weekend here at Fractal Central today.  As of post 
+; time, the threat of rain never materialized, but there is still 
+; no guarantee the rest of the day will be dry.  The fractal cat 
+; was a bit cranky, probably due to the humidity, but the fractal 
+; humans simply took things in stride.
+; 
+; The next FOTD, a FMOD specialty, will not be posted until next 
+; month, which luckily is only one day away.  Until it actually 
+; appears, take care, and when we elected our president, we were 
+; so enthusiastic about how he would "save the nation".  It now 
+; looks like we made a big (but predictable) mistake.
+; 
+; 
+; Jim (I never make mistakes.) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Zexpe_of_the_North { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.6026507393347338/+1.366413693704379/\
+  3.395445e+012/1/-25.5/0 params=2.71828182845905/0/\
+  9/0 float=y maxiter=5500 inside=0
+  logmap=97 periodicity=6
+  colors=00000K00K00K00K00K00K00K00K00K00K00K00K00K0\
+  0K00K00K00K11K22K33K44K55K66K77K88K99KAAKBBLCCMDDN\
+  EEOFFOGGOHHNIINJJNKJMIKMHKMFKLEKLCKLAKIBKKBKLCKMCL\
+  NCMODOPDQQDSREUTEXUE_VFbWFeXFhYGkZGn_Gq`HtaIraIpaJ\
+  nbJlbKjbKhcLfcLdcMbdM`dNZdOWeOUePSePQfQOfQMfRKgRIg\
+  SGgSEhTChTAhWHbZNXaTRdZLgdFjj9km4lp3lp3lp3mp3mpAmo\
+  AnoAnoAnoKnoKooKonKonUpnUpnUpnUpncqocqocqocqomrpmr\
+  pmrpmsqzrpzqnzpkzoivofrndmmahl_ckXZkVUjSPiQMhNJgLJ\
+  gIKfGKeDKdBLc8Lf91d7Bc6La5V`4d_3n`6l`8k`Aj`Ch`Eg`G\
+  f`Id`Kc`Nb`Pa`R_`TZ`VY`XW`ZV``UbcS`bT_aTZ`TY_TX_TW\
+  ZUVYUcXUcWUcWUcVUcUVcTVcTVcSVcRVcQVhPWhPWhOWhNWhMW\
+  mLZmKamIWmGQmDNmBKmCLmDMmEOmFPmFQzGSzHUzIWzJYzJ_zK\
+  azLczMezNgzOizOkzPmzQozRqzSszSvzTzzTzzUzzUzzUzzVzz\
+  VzzVzzWzzWzzWzzXzzXzzYzzYzzYzzZzzZzzZzz_zz_zzdzzaz\
+  z_zzYzzVzzTzzRzzOzzMzzKzzIzzFzzDzzBzz8zz6zz4zzlzzj\
+  zzhzzfzzczzazz_zzYzzVzzTz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
