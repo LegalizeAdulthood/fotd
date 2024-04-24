@@ -1,0 +1,107 @@
+;     Date: Mon, 20 Jan 2003 11:04:17 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-01-03 (Bad Boy [6])
+;       Id: <1.5.4.16.20030120110708.0db723ee@pop.mindspring.com>
+; ---------
+; FOTD -- January 20 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is titled "Bad Boy".  This name does not allude to 
+; a reggae song; it refers to the fact that at one point there are 
+; 12 elements surrounding the central midget, which is quadratic 
+; in nature and therefore not expected to have rings that consist 
+; of a number of elements that is a non-integral power of 2.
+; 
+; The image might also be considered bad because it is unstable.  
+; The slightest change in the real(p2) parameter causes the entire 
+; scene to vanish.  Finally, the two satellites in the northeast 
+; and southwest corners have six elements surrounding them, which 
+; is another wrong number.  This image certainly earns its bad 
+; reputation.  I don't know what it's going to do when they come 
+; for it.
+; 
+; The generating formula is unusually simple.  It takes Z^3 and 
+; adds somewhat more than half as much Z^5 before adding C.  The 
+; resulting parent fractal is rather routine, except when the 
+; value of the parameters is near today's, at which point the area 
+; of the fractal where today's image lies becomes unstable.  Like 
+; everything else in the world of fractals, this localized 
+; instability happens because of the things numbers do.  Given the 
+; nature of complex numbers, it could not be otherwise.
+; 
+; I rated the image at a 6, a rating that might be considered 
+; generous.  The coloring is only moderately impressive, and the 
+; math interest is worth only slightly more.  But then, a 6 is 
+; only slightly above average, so the rating will remain.
+; 
+; The attached parameter file renders in under 6 minutes on my 
+; tired old P200 machine, which might soon be replaced as my 
+; fractal-dedicated unit.  Those who would rather not wait 6 
+; minutes to see the image may download it, already completed, 
+; from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; I continue to find interesting things in variations I am 
+; creating of the recently posted Tman formula.  Regardless of the 
+; number of dimensions, the images are out of this world.  In 
+; fact, they're in the fractal world.  Some unusual images could 
+; be coming in the near-future FOTD's.
+; 
+; The Fractal Central weather turned milder, but remained too cold 
+; on Sunday for the dynamic cats to venture outdoors.  There was 
+; some sun, but also flurries of snow, and a temperature that 
+; never reached freezing.  The dynamic ones were surprisingly 
+; pleasant in the midst of their confinement.
+; 
+; Today is starting milder yet.  Could this be the day when the 
+; cats' paws reach the turf of the yard?  Check in 24 hours to 
+; see.  Until then, take care, and go where the fractals take you.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Bad-Boy { ; time=0:05:40.20--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+1.09529517003905100/+0.003871516957443\
+  89/856841.9/1/155/2.75135829397310516e-009
+  params=1/3/-0.599/5/0/0 float=y maxiter=1200
+  inside=0 logmap=112 periodicity=10
+  colors=0004EO4FS3GX3H`2Ie2Ji2Jm6HmAGmEFmHEmLDmPBmT\
+  AmW9m_8mc7mg5mj4mn3mr2mv1my0mw6cvCUpCPkCLfCHaCCXC8\
+  SC4NC0ME2MF4MG5MH7MI9LJALKCLLELMFLNHLOIJPKIQLHQNGR\
+  OFSQESRDTSCUUEXVG_XIbYKeZMhYOk`QldUmhYmkcmnhmpnmrs\
+  mtrhprclrZhrUdrP`qKXqFTqAPq5Lq0HsAEtKCuU9vc7reDofI\
+  kgNhhTdjYakbYlhVmmSnrRonRokQohQodPoaPoZXbbcRfjEjq2\
+  np7npCnoHnoLnoQnnVnn_nncnmhnmmnmqninhfkcbiZ_fUWcPT\
+  aKPZFMWAJU5PT9UTCZTFdSJiSMnSPsSSi3uj5qj7mk9ikBfkCb\
+  lEZlGVmISmKOmLKnNGnPDoR9oT5oU2nW6nX9nYCmZFm_Im`Lma\
+  OibPfbPbbQ_bQWcRTcRPcSMcSIdTFdTBdU8dU7bV7`W7ZW7XX6\
+  VY6TY6RZ6P_6N_6N_7O_7O_7O`7O`7O`7O`7OaKOaLOaMOaNOa\
+  OObPObQObRObSOcTOcUOcVOcWOdXPdYQfZPd_Pd`PdaPebPecP\
+  ecPecPfcPfcPfcPfcPfcPgcPgcPgdPgePhfPhgPhhQhiQhjQik\
+  QilQimQioRjqSjsTjuUjwVjyWkzXkzYkzZkz_lz`lzalzblzcm\
+  zcnzcozcpzcqzcrzcszctzcuzcvzcxzcyzczzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzcz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

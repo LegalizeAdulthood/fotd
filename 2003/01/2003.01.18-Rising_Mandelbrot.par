@@ -1,0 +1,108 @@
+;     Date: Sat, 18 Jan 2003 11:17:11 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-01-03 (Rising mandelbrot [6])
+;       Id: <1.5.4.16.20030118112001.0dd75c10@pop.mindspring.com>
+; ---------
+; FOTD -- January 18, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A formula that draws the 3-D triternion Mandelbrot set was 
+; posted yesterday to the Fractint list by Russell Walsmith.  As 
+; posted, the formula draws slices in the XY orientation of the 
+; 3-D M-set.  After seeing what the formula would do, and being 
+; unable to resist experimentation, I made a slight modification 
+; to it.  I flipped the value of initial c1 from real to 
+; imaginary, and named the modified formula TMan1.  The change 
+; enables the formula to draw what I assume is the YZ orientation. 
+; Of course, it could be the XZ orientation, or something in 
+; between.  I have no idea how triternions work.
+; 
+; But regardless of the orientation, the revised formula draws 
+; slices with intact midgets.  Many of these midgets duplicate 
+; scenes in the classic M-set, but some midgets are entirely 
+; different, doing strange things even while we watch.  Today's 
+; image illustrates one of these new and unusual midgets.
+; 
+; The midget (or half-midget) appears to be rising above a horizon 
+; that consists of part of another, larger midget.  The fragment 
+; of a larger midget is stretched, most likely because the larger 
+; midget lies in a different plane.  In the 2-D M-set, midgets are 
+; oriented in every possible direction. I assume the same thing 
+; happens with an even greater degree of freedom in the 3-D M-set. 
+; Overlapping features such as those pictured in today's scene are 
+; common in the hypercomplex M-set, but I have never seen both 
+; stretched and unstretched Mandelbrot features overlapping.
+; 
+; I need to do much more experimenting with this three-dimensional 
+; Mandelbrot set.  For now however, I'll settle for a FOTD image 
+; that rates a 6.  The rating reflects the mathematical worth of 
+; the image.  The artistic worth barely rates a 4.
+; 
+; The name "Rising Mandelbrot" was inspired by the impression of 
+; one Mandelbrot midget rising above the horizon-like edge of 
+; another.  The render time of 10 minutes can be avoided by down-
+; loading the completed GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather was cold here at Fractal Central on Friday.  
+; With a temperature of 25F -4C, brisk winds, and occasional 
+; showers of snow waiting for them, the cats didn't even think of 
+; going out.  They were quite contented lying by their radiators.  
+; Today is even colder, (the 8am temperature was 7F -14C), so 
+; they will be housebound for at least another day.
+; 
+; As for me, I've got a bit of work to wrap up, then a day with 
+; little to do but wander through FractalLand.  If I find anything 
+; worthwhile, it will appear as tomorrow's FOTD.  Until then, take 
+; care, and when the going gets tough, get a fractal going.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Rising_Mandelbrot { ; time=0:10:14.45--SF5 on a P200
+  reset=2002 type=formula formulafile=triter.frm
+  formulaname=TMan1 center-mag=-0.33019260452431920/\
+  +0.53369254258170410/2256.431/3.3373/149.75/-15.93\
+  32167459564502 params=-0.4/0 float=y maxiter=18000
+  inside=0 logmap=94 periodicity=10
+  colors=000UKATKASKARKAQKAPKAOKANKAMKBLJCKKDJKEIKGH\
+  KHGLIFLKELLDLNCMODMPDMREMSFNUGNVHNWINYJOZKO`LOaMOb\
+  NPdNPeOPgPPhQQiRQkSQlTQnURoVRpWRrXRsXRtWSsWSsWSsWT\
+  sWTsWTsWTsWUsVUsVUsVVsVVsVVsVVsVWsVWsUWsUWsUXsUXsU\
+  XrUYrUYrUYrTYrTZrTZrTZrTZrT_rT_rT_rS`rS`rS`rS`rSar\
+  SarSarVbvTatSarR`pQ`nP_lO_jN_hMZfLZdKYbJY`IYZHXXGX\
+  VFWUEWSDVQCVOBVMAUK9UI8TG7TE6TC5SA4S83R62R41R33Q55\
+  Q77P89PAAOBCODENFGNGHMIJMJLLLNLMOLOQKQSKRUJTWJUXIW\
+  ZIX`HZbH`cGaeGcgFdiFflDhjFgiGfhHegIdfJcdKbcLabM`aO\
+  _`PZZQYYRXXSXWTWVUVTVUSWTRYSQZRP_QN`PMaOLbNKcMJdLH\
+  dKIeLIeLJeLJeMKeMKfMKfMLfNLfNMfNMfNMgONgONgOOgPOgP\
+  OhPPhPPhQQhQQhQUfPQhQNiRJjRGkSCmT9nT2oU4qS6pT8pUAp\
+  VCpVEpWGpXIpYKp_MpaOpcQpeSpgUpiWpjYpk_plapmcpnepog\
+  pphpqiprjpskptlpumpvmpwmpxmpympzmpzmpzmpzmpzmpzmpz\
+  mpzmpzmpzmozmozmozmozmozmozmnzmnzmnzmnzmnzmnzmmzmm\
+  zmmzmmzmmzmmzmlzmlzmlzmlz }
+
+frm:TMan1 {
+c1=flip(real(pixel)),c2=imag(pixel),c3=p1
+z1=z2=z3=0:
+t1=z1*z1+2*z2*z3
+t2=z3*z3+2*z1*z2
+t3=z2*z2+2*z3*z1
+z1=t1+c1,z2=t2-c2*c2,z3=t3+c3
+z=z1+z2+z3
+|z| < 8 }
+
+; END PARAMETER FILE==================================
+; 
+; 

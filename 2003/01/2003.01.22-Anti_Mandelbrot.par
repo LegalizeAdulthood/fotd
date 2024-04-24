@@ -1,0 +1,82 @@
+;     Date: Wed, 22 Jan 2003 10:39:49 EST
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 22-01-03 (Antibrot [6])
+;       Id: <165.1a0fcc5f.2b601545@aol.com>
+; ---------
+; FOTD -- January 22, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Antibrot".  I named it when I noticed 
+; the almost-Mandelbrot shapes surrounding the obvious Mandelbrot 
+; shape at the center.  It is another of my evaporated scenes 
+; consisting totally of trapped inside points made visible by the 
+; < fmod > inside option.  The scene was created by combining 
+; Z^(-0.7), Z^(-6.4) and (1/C).
+; 
+; The rating of a 6 might be a bit generous for an image that uses 
+; so few colors of the palette, but those colors create a good 
+; impression of fractal objects floating in space, so the rating 
+; could be considered appropriate.
+; 
+; The render time of 59 minutes is quite slow.  The download from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; A fresh dusting of snow and a temperature of 26F -3C kept the 
+; dynamic fractal cats confined to the indoors all day Tuesday.  
+; But they endured their hardship intrepidly, and slept most of 
+; the time by the heat.  Today is starting sunny but even colder.  
+; I hope they can maintain their intrepidness.
+; 
+; As for me, I'm ready to have an intrepid day at the work desk.  
+; When I finish, I'll take a trip to Fractal Land.  The best thing 
+; I find there will appear as tomorrow's FOTD.  Until then, take 
+; care, and when drowning, strap on a fractal.  They weigh almost 
+; nothing and will keep you afloat indefinitely.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Anti_Mandelbrot { ; time=0:59:10.93--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=t
+  center-mag=+1.7148895301837/-0.0375140875302/29702\
+  .9/1/57.5/-2.1386011017643369e-010 params=0.6/-0.7\
+  /0.7/-6.4/0/1e+100 float=y maxiter=1800 inside=fmod
+  proximity=0.45 logmap=yes periodicity=10
+  colors=000Kgj`UWCjbXVUF7FKyoWidfVV4GITGKhJJkIKmHKo\
+  GLQySXmQcbOjRMRl0dWBk9maLhcSfdZcfeahlZisXai`V`dOSh\
+  GIl99p20s43p66m88jABgCEdEGaFJ_HLXJOULRRNTOPWLQYJZS\
+  KhMLS28d9F9NLnOooMgpK_qISoQRpNPpLOqIMUmhJjj8hkBmjE\
+  riHwhAV`lmhqn_uoRypJCyIDoWEeiFXvpaNhOIqUMqNLfRlJvz\
+  ``efXViSSlOQoKNmaYoUTpNP7VGMhnU`faU_iNSD0wVHQfGNcZ\
+  ZeQEgujl`Y6EsIFjUFaeGTXOS`9aiDTbPbjKUT3tIz9RnC_bFh\
+  RIlw`nlXoaTpRPQkrSDqdF`7TeJP_VMVfJQebQpKlNqubZbDo8\
+  RcDdSHneLoZLpTLqMLMHwaGcKkX`WR7tGNfIbTKC8yNAnXCdgE\
+  VW`jfQYaCaEFbjShlPbnMXpJRKpa`YT2k3SWC0y5YL3bJ8gICl\
+  HH`9QeBOiDNmFMOH6YGBgGGUcDeSHLi0aVBNzwYjjgVYehbiZX\
+  mPRY8YgCRzmUz_RqMOA7A`ADpCGhEJcxaglXjaTnRPMX58f_qQ\
+  e3oRky_miVoVQ1k3Fc8SWCdOH1lxSWd7kLVWL_avS6idBXQyx_\
+  ijhVYptiqf`qTT0IbRHUm_geZGiSImMKNpZVfVbYSjPO4gyMSr\
+  aMawe_uXVsOQSUk`PbiKUtzerbVcHGE13S69dBFgzZ7ozknQnX\
+  NfejjXanOT4epJ8G`CJpnh3us }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,94 @@
+;     Date: Sun, 26 Jan 2003 11:24:01 EST
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 26-01-03 (Un-Named [3])
+;       Id: <12b.2127bf6c.2b6565a1@aol.com>
+; ---------
+; FOTD -- January 26, 2003 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has no name.  I studied it for several minutes, 
+; trying to find a name for such an unfocused image that rates a 
+; lowly 3, but came up with nothing.  At one time I thought I saw 
+; a design for the cover of a hypothetical vampire novel, and 
+; considered naming the image "Dracula".  Then I thought I would 
+; name it after one of those large but less repulsive fruit bats 
+; that inhabit the tropical Asian regions.  Since the image has a 
+; metallic sheen about it, I also considered several metallic 
+; names.  Then I remembered the invisible midget at the center, 
+; and considered a name such as "Enigma".  But ultimately, all the 
+; potential names proved unsatisfactory, and I let the picture 
+; remain without a name.
+; 
+; The generating formula takes Z^(-17), adds 10 times as much 
+; Z^(-1.7), then adds (1/C).  The rendering was done with the 
+; outside set to < atan >, which is not one of my favorite 
+; options, though in this case, it works better than the basic 
+; equal-iteration bands.  (I also tried evaporating the image, 
+; but found that this gives little more than chaos.)
+; 
+; The render time of 18 minutes is a bit excessive for such a 
+; lowly image.  But relief can be found on the WWW, which hope-
+; fully is recovering from the latest hack attack.  The completed 
+; GIF image can be accessed at Paul's site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather was milder on Saturday, but still rather 
+; cold, with a high temperature of 34F 1C.  Since no one was at 
+; home most of the day, the cats passed the time sleeping by the 
+; heat.  When we arrived at the door later in the evening, a loud 
+; scolding was heard from the inside.  It was Thomas, who was 
+; irate because he had not been fed all afternoon.  Today is a bit 
+; milder yet, and no unnecessary shopping trips are planned, so 
+; the dynamic duo should have a much-improved day.
+; 
+; Until next FOTD, which will appear in 23 hours or so, take care, 
+; and go with the flow, never forgetting that those who make no 
+; waves accomplish nothing.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+An_UnNamed_Fractal { ; time=0:18:03.95--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.204807016015608/-0.01223600675442206\
+  /1.486447e+009/1/162.5/-1.62304540859345425e-005
+  params=10/-1.7/1/-17/0/525 float=y maxiter=1200
+  inside=0 outside=atan periodicity=10
+  colors=000KIJLIJLIJLHKMHKMHKNHKNHLOHLOHLNFKOGLOHLP\
+  HMPIMQJNQJNQKNRKORLOSMPSMPSNPTOQTOQUPRUPRVQSVRSVRS\
+  WSTWSTXTUXUUXUUYVVYWVZWWZXW_XX_YX_ZX`ZY`_Ya_Za`Zaa\
+  Zba_bb_cc`cc`ddaddadeaefbefbfgcfgcfhcgidgidhjehkei\
+  kfilfilfjmgjngknhkohlrimrjkohikfggdecbc_`aWZ_SXYOV\
+  XKSWLTWLTWLTWLTVLTVLTVMTVMTVMTUMTUMTUMTUNUTNUTNUTN\
+  UTNUTNUSOUSOUSOUSOUROUROURPVRPVRPVQPVQPVQPVQQVQQVP\
+  QVPQVPQVPQVORWORWORWORWORWNRWNSWNSWNSWMSWMSWMSWMTX\
+  MTXLTXLTXLTXLTXKUXKUXKUXKUXKUXJUXJVYJVYJVYJVYIVYIV\
+  YIWYIWYHWYHWYHWYHWYHXZGXZGXZGXZGXZFXZFYZFYZFYZFYZE\
+  YZEYZEZ_EZ_DZ_DZ_DZ_DZ_D__C__C__C__C__B`ZC__D__E__\
+  F__GZ`HZ`IZ`JZ`KZ`LYaMYaNYaOYaPYaQXbRXbSXbTXbTXbUW\
+  cVWcWWcXWcYVdZVd_Vd`VdaVdbUecUedUeeUefUegTfhTfiTfj\
+  TflUemVdjTffQhcOk_LmWIoTGrPDtLAvG8zI8xJ8vL8uM8sN8r\
+  P8pQ8oS8mT8kU8jW8hX8gZ8e_8d`8bb8`c8_e8Yf8Xg8Vi8Uj8\
+  Sl8Qm8Pn8Np8Mq8Kr8Jq9Kq9K }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

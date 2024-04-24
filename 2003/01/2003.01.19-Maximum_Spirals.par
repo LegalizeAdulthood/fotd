@@ -1,0 +1,109 @@
+;     Date: Sun, 19 Jan 2003 09:38:47 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-01-03 (Maximum Spirals [5])
+;       Id: <1.5.4.16.20030119094138.0db72528@pop.mindspring.com>
+; ---------
+; FOTD -- January 19, 2003 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Since yesterday's FOTD I have continued to work with a variation 
+; of the Tman formula that was posted on Friday.  Working with 
+; this formula gives the impression that more than three dimen-
+; sions are involved.  I can get no clear mental image of slicing 
+; through a single 3-D object.  And if there is only one dimension 
+; in addition to the two on the screen, why are the two variable 
+; parameters needed to fully explore it?.  Morgan has also commen-
+; ted on this, but for now, we'll assume that we're dealing with a 
+; three-dimensional M-set (and a six-dimensional Julibrot?).
+; 
+; Today's image lies in the default fractal created by the TMan1 
+; variation, near the point at the northern edge, where the two 
+; straight stretched arms criss-cross.  I named the image "Maximum 
+; Spirals".  I have rarely seen an image with so many spirals 
+; surrounding a midget.
+; 
+; In the parent fractal, the scene is stretched, (foreshortened 
+; actually), and skewed.  So in order to have a normal image I 
+; needed to unstretch and unskew the scene.  When this was done, I 
+; was left with an image that rates a 5.
+; 
+; I could rate the image no higher than a 5 because it duplicates 
+; scenes that lie in spirals in many valleys of the classic M-set. 
+; I don't expect to find any totally new Mandelbrot features in 
+; this formula or its variations.  The interest lies in discover-
+; ing which parts of the classic M-set are reflected in which 
+; parts of the new-shaped Mandelbrot fractals.
+; 
+; I'll continue working with these fractals of ambiguous dimension 
+; for a few days, then it will be back to the ever-fruitful M-Mix4 
+; formula.
+; 
+; The render time of 9 minutes can be avoided by downloading the 
+; GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather was sunny but very cold and breezy all day here at 
+; Fractal Central.  The temperature in the teens F, around -9C, 
+; kept the dynamic cats glued to the warmest spots they could 
+; find.  They moved around enough to ask for food and eat, but 
+; retired as soon as their meal was done.  It's cold again this 
+; morning, with clouds and a few flakes of snow in the air.  But 
+; it is not as cold as yesterday.  Only time will tell if the 
+; snow will turn heavier and if the intrepid cats will venture 
+; outdoors.
+; 
+; I find myself with nothing to do again today.  If I play my 
+; cards right, I'll get through the entire day without doing 
+; anything that can be considered work.  Until next FOTD, take 
+; care, and one must work hard to be truly lazy.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Maximum_Spirals { ; time=0:09:08.43--SF5 on a P200
+  reset=2002 type=formula formulafile=triter.frm
+  formulaname=TMan1 passes=1 center-mag=-0.003218524\
+  4524517/+0.7498998373975185/2.623604e+007/4.125/-4\
+  6.9647077347951267/-9.94802466789319162 params=0/0
+  float=y maxiter=4200 inside=0 periodicity=0
+  colors=000kRElLInRFoXDqaBrg8tm6tt1ur4uq6up9uoBunDu\
+  mGulIukLujNuiPuhSvgUvfXveZvd`vccvbevahv`jv_lvZovYq\
+  vXsuWruWquWpuVouVnuVmuUluUkuUjtTitThtTgtSftSetSdtR\
+  ctRbtRasQasQ`sQ_sPZsPYsPXsOWsOVsOUrNTrNSrNRrMQrMPr\
+  MOrLNrLMrLLvJJrLLoNMkOOhQPeRRaTSZVUVWVSYXOYXPZYQZZ\
+  QZZRZ_SZ_SZ`TZaUZaU_bV_bW_cW_dX_dY_eY_eZ_fZ_f_`g_`\
+  g_ah`ah`ai`bi`biacjacjackbdkbdkbdlbelcemcfmcfmdfnd\
+  gndgodgoehoehpeipfiqfiqfjqfkrgkrgksglshlshlthlvhlu\
+  ikwikuikvjkxjkyjkwjjwijuhjsgjsfiqehodgmcflbejadi`c\
+  g_afZ`dY_bXZaWY_VWZUVXTUWTTUSSTRRRQPQPOOONNNMLMLJL\
+  JIKIGJHFIGDHFCGDAFC9EB7DA6C94B71C83D95EA7FA9GBBHCD\
+  IDFJDGKEILFKMGMNGOOHQPISQJUQJVRKXSLZTM`UMbVNdWOfXP\
+  hYPiZQk_Rm`SoaSqbTscUudVwcWwdVxdVxeVxeVxeUyfUyfUyg\
+  UygTzgTzhTzhTzhTziUwiVuiWsiXqiYojZmjZkj_ij`gjaekbc\
+  kcakc_kdYkeWlfUlgSlhQlhOliMmjKmkImlGmmEnoBmmCmlClk\
+  CljCkiCkhCjgDjfDidDicDhbD }
+
+frm:TMan1 {
+c1=flip(real(pixel)),c2=imag(pixel),c3=p1
+z1=z2=z3=0:
+t1=z1*z1+2*z2*z3
+t2=z3*z3+2*z1*z2
+t3=z2*z2+2*z3*z1
+z1=t1+c1,z2=t2-c2*c2,z3=t3+c3
+z=z1+z2+z3
+|z| < 8 }
+
+; END PARAMETER FILE==================================
+; 
+; 
