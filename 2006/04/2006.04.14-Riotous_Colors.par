@@ -1,0 +1,83 @@
+;     Date: Sat, 15 Apr 2006 00:21:15 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-04-06 (Riotous Colors [NO RATING])
+;       Id: <1.5.4.16.20060415002446.2b477648@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 15, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's visit to the Z^(2.1)+C Mandeloid as it appears 10 levels 
+; up the ladder is nothing but chaos and riotous colors, which in 
+; fact is what I named it.  Such blatant gaudiness deserves no 
+; rating, and indeed the image has none.
+; 
+; The scene is located in a chaotic area of a bud on the southwest 
+; shoreline of the main bay of the parent fractal, which is a some-
+; what distorted and rotated Mandelbrot set.  The rotation puts 
+; the bud on the northwest shoreline of the main bay.
+; 
+; The 15-minute render time of the included parameter file may be 
+; avoided by downloading the pre-rendered image from the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Morning clouds and sprinkles gave way to afternoon sun and warm 
+; temperatures in the 70's F, low 20's C.  The cats' morning 
+; displeasure turned to afternoon happiness.  By the time the day 
+; ended, they had enjoyed several trips to the holly thicket.
+; 
+; My day was very busy, which has become the rule rather than the 
+; exception.  The next FOTD will likely but not certainly appear 
+; right here in 24 hours.  Until then, take care, and count your 
+; iterations.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Riotous_Colors { ; time=0:14:55.83--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.5235822350823086/+0.513556913055923/\
+  1.91465e+008/1/-57.5/4.85735774e-006 params=2.1/0/\
+  10/0 float=y maxiter=5000 inside=0 periodicity=10
+  colors=000NSCLS7JS2MT5OT7RUATUCVUFYVH_VKbWMdWPfWRe\
+  UTdSUcQVbOXaMY`LZaNYbOYcQYdRYeTYfUYgVXhXXiYXj_Xk`X\
+  kaXG01H35H68H8CHBFHDJHGMHJQHLTHOXHQ_GLUFGOEBJD6DC1\
+  8F59H8AJCAMFBOJBQMCSQCVTDXXDZ_E`bEZaHYaJXaMW`OV`RU\
+  `TT_WS_YR__XQVaGQf6Lh7Ki8Kj8Kk9Kl9JmAJoBJpBJqCIrCI\
+  sDItDIuGKuIMuKOvMQvOSvQUwTWwVYwX_xZax`cxbduafrago`\
+  hl`ji`kf_lc_maZoZZpWZqTYrQYtNXuKXvIXwCMu7BsECnKCjQ\
+  DfWDbaEZgEVmFRsFNYa_CxlLyeUyZbySkyMjxMixMixMhxMhxM\
+  gwMgwMfwMfwMewMevMdvMdvMcvMcvMlmLueKsbJr_JpXJoVJmS\
+  IlPIkNIiKIhHIfEHeCHc9Hb6Ha4H`AI`FJ`KJ`QK`VL`_LO9KT\
+  HIXPH`WGdcFhkEkw6lrDmmJmiPndWn`aoWgoSnpNtpJzjIhdHR\
+  fM9ZHARDBK9CC5D51D84CB6BD9BGBAJE9LG9OI8RL7TN7WQ6ZS\
+  5`U5YY7W`8TcARgBOjDMmEHuEKpFMlFOgFQcGSZGYi6UVGRGQO\
+  1ZN5XN8WMBVMEULHTLKSKMQLNRLORMPSMQSNRTNSTOTUOTUPUU\
+  PVVQWVQXWRYWRZXS_XNo8S_X_GzWLuSQpPVkLZgIcbEhYBlUOc\
+  Q`WMyKMmOJaRHQVF5Z6STNQSH }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

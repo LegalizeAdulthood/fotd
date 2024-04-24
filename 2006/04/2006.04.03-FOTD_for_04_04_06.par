@@ -1,0 +1,83 @@
+;     Date: Mon, 03 Apr 2006 22:20:19 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-04-06 (FOTD for 04-04-06 [8])
+;       Id: <1.5.4.16.20060403222341.0d47c688@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 04, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Despite the paltry 6 minutes spent finding today's image, the 
+; result rates an 8.  The parent fractal came about when I 
+; subtracted 11(Z^2.1) from 11(Z^1.9) and added (C).  Today's 
+; image appeared when I checked the spurious bay at the Elephant 
+; Valley end of the main bay.
+; 
+; Though it took only 6 minutes to find today's image, it took 
+; almost 1/4 hour to render the scene.  My suggestion is to 
+; download the finished product from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; It really is a rather attractive fractal, consisting of half 
+; inside and half outside.
+; 
+; Since we were away from Old Fractal Central all weekend, setting 
+; up the soon-to-be New Fractal Central, I can not give a full 
+; report on the fractal cats.  But my sister, who watched over 
+; them while we were away, says they were as happy as aging cats 
+; can be.  And I see she spared no tuna.  A hailstorm struck OFC 
+; at 8pm Monday, sending the duo scurrying for cover behind the 
+; cartons in the closet.  When the noisy storm moved off, the duo 
+; re-appeared, none the worse for their fright.
+; 
+; For me, the work is starting to back up, making a regular 
+; appearance of the FOTD questionable, but I'll do as good as I 
+; can until the big move is accomplished sometime in May.  The 
+; next FOTD is due in 24 hours.  Most likely, it will appear on 
+; schedule.  But there is no guarantee.  Until whenever, take 
+; care, and forge a new beginning.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_04-04-06 { ; time=0:14:29.69--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.05287552292142255/+0.007267408830809\
+  27/3.881075e+009/1/-62.5/-3.14821221869543422e-008
+  params=1/1.9/-1/2.1/10/0 float=y maxiter=1000
+  inside=bof61 periodicity=10
+  colors=000RqdVp_YpWaoREZkD_rC`yGYuJWrMToPRlSOiVMfY\
+  Kc`H_cFXfCUiARl7Oo5Lr3Iq4Mq5Qq6Tq7Xq8_q9cpAgpBjpCn\
+  pDqpEupFxoEtoDqoCmnBjnAfn9cm8_m7Xm6Tm6QhAWcD`ZGeUJ\
+  jQMoSPpTSqUVrVXsW_tXbtZeu_gv`jwamxbpycryhmflhOpd6W\
+  oCCyIEuLGrOHoRJlTKiWMfZNc`P`cRYfSVhUSkVPnXMpYJs_Gv\
+  `DxZIqXNkVSeTX_S`Uhbbe_abXa_U`YS``VWcYRe`MhcHjfCmi\
+  7ok3qi9rgEseKtcPuaVv__wYexWjyUouSprQpoPplNpiMpfKpb\
+  Ip_HpXFpUEpRCpOBpULqZVrddsintnxuqkftZThMFaA1bB4cC6\
+  dDDfEFbFMZGOXHVUIXRJcPKeMLlIMnFNpBOr7Pt4Pv8OtCOrFO\
+  pJOnNNlQNjUNdXNb`MWdMPgMIkMBnMAcZSTkiIwzFcpCKfA1X9\
+  4Z96`89b8Bc8Ee7Gg7Ih7Lj6Nl6Qn6So5Vq5Xs5Vt7Uo9QkAMf\
+  CIbEEZFAUH6QI2MFAICGF9MC6T83Z50b20a40_60Y70W90UA0R\
+  C0PE0NF0LH0JI2JJ3KJ5LK6MK8NL9OLBPLCPMEQMFQNHRNIROK\
+  SOLTOOURRVUUXXW__Zbaaedcggfijillknonprqrustwnorjjn\
+  fejbaeZXaVSYRNTNJPJELF9GB4C70860B60E60H60K60N60Q60\
+  T60WEemGhmHkmInmJqmKsmOrh }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
