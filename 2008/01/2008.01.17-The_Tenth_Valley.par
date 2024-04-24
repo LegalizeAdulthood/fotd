@@ -1,0 +1,99 @@
+;     Date: Wed, 16 Jan 2008 23:54:59 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 17-01-08 (The Tenth Valley [5])
+; 
+;       Id: <1.5.4.16.20080116234450.2a671a8c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 17, 2008 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today brings another trip to a Seahorse Valley, this time to one 
+; of the 9 Seahorse Valleys of the (-Z)^10+C Mandeloid.  The 
+; valley I chose is naturally the one centered on the negative 
+; X-axis, which is by far the easiest to work with.
+; 
+; Another new formula was required to do the job, so another new 
+; formula was created.  The formula is included at the bottom of 
+; today's parameter file.  It does the same job as the 'More 
+; Slices' formula, but can calculate any power of negative-Z.  I 
+; chose (-Z) instead of (+Z) because the fractals created when it 
+; is raised to powers between 1 and 2 are far more interesting, 
+; and the images drawn by the integer powers of (-Z) are identical 
+; to those drawn by the customary (+Z).
+; 
+; In today's image I chose a near-Julia set of a Seahorse Valley 
+; of the (-Z)^10+C Mandeloid.  A grossly magnified but reasonably 
+; undistorted image of the valley fills the inside of the order-10 
+; Julia set.  I named the image "The Tenth Valley" for obvious 
+; reasons.  Then I rated the whole thing at a rather boring 5.  I 
+; really cannot find too much to get excited about in the image.
+; 
+; The calculation time of 6-1/2 minutes does border on the tire-
+; some side.  But perhaps the best news of the day is that the 
+; finished image is or soon will be posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A fairly typical midwinter day prevailed here at Fractal Central 
+; on Wednesday, with a temperature of 36F 2C and partial sunshine. 
+; The fractal cats, who remained in bad moods, paid no attention 
+; to the outside conditions.  My day was a little busy but still 
+; under control.  The next trip to a seahorse-type valley will 
+; appear in 24 hours.  Until then, take care, and live a life of 
+; fractal joy.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Tenth_Valley   { ; time=0:06:37.28-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=EvenMoreSlices passes=t
+  center-mag=0.2845/0/0.93
+  params=10/0/1.5e-005/0/-0.851698/0.00144/-0.2845/0
+  float=y maxiter=5200 inside=0 outside=tdis
+  logmap=yes periodicity=10
+  colors=000XEZskFrgGrcIr_JqWKqSLqONpKOpGPpCQp8RoCSn\
+  FSnISmLSmOSlRTlUTkYTUdGUYGQRGKHGGUKO_NWeRckUkqXmnU\
+  olRqjOsgLueIwcFxaDYaM7aU8`U9`UA`UB`UC`UD`UD`UH_GK_\
+  3S`C_aLgbUocbwcjsalo_mkYngWocUq_SrWQsSPtWkbViZVgVU\
+  fRUdNTcJTaFT`CVlWWwn`qhdlbhfXmaRqWLuRFyM9oRIeVRX_Z\
+  NcgEgoAjf7lY4nP5iS6eU7`W7XYDZUJ`QPaMVcI`eEffAbgGZg\
+  MVhRShXOhbkFclOXnXRoeKpmERZD1LCAMGJNJSOM`OQiPTrQWz\
+  QZrOWkMUdKSYIPRGNKFLJRTIa_HlgHwnCiW7XECOUHGhOOaVWW\
+  acQhkKosEvbsdTmOKh7Bc6G`5KY5PW4TT4YR3aO3eMBm_JulQm\
+  kWekaYkgQjmIjsBjOr6ThHX_SaQbeHmdJlcKlbMlaNl`Ok_QkZ\
+  RkYSkZRi_Rh_Rg`Re`RdaQcWXDTcDSfEShESkFRmFRpGRrGRtG\
+  WqE_oCdlAhj80nC69hJKdWU`hdXtnUuiRvePw`NwXLxSJyOHzJ\
+  FzFDmb_cYZUUYKPYALX0HXlNfoRarVXuZSwaNk`L`_KPZIEYH3\
+  YGDRRMKaVDlYCk_CibBheAgg9ej8dl8ceKb_WbTgaNraLnbKjb\
+  JgbIcbH`bGXbFUbEQbDNbCJbBGbACb99b85b72b84V86O88H8A\
+  A8C37D77DB7DF7DJ7DN7DR7DV }
+
+frm:EvenMoreSlices {; Jim Muth
+; P1--exponent, P2--angle,
+; P3--M center, P4--J center,
+z=pixel+(p4), c=p3+(pixel*p2):
+z=(-z)^(p1)+c,
+|z| < 16 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

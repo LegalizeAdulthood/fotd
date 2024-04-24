@@ -1,0 +1,106 @@
+;     Date: Tue, 22 Jan 2008 17:44:54 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 23-01-08 (Fractured Seahorses [6])
+; 
+;       Id: <1.5.4.16.20080122173451.2b3f44fa@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 23, 2008 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a scene in Seahorse Valley of the Z^2.001+C 
+; Mandeloid as it appears at a level 0.03 up the logarithmic 
+; ladder when the function is eliminated.  At this quite unlofty 
+; level, the parent fractal, which appears as a perfectly normal 
+; Mandelbrot set, is rotated clockwise just far enough for the 
+; southern arm of Seahorse Valley to intersect the negative X-axis.
+; 
+; In the area of the X-axis some rather unusual things often 
+; happen to fractals with fractional exponents of Z, and today's 
+; image is no exception.  The unfamiliar features are all caused 
+; by the nearness of the scene to the X-axis, which lies only 
+; 0.00001 to the south.
+; 
+; Unable to find anything of knockout value in the image, I could 
+; rate it at only an everyday 6.  The name "Fractured Seahorses" 
+; indicates that the scene lies in a very fractured part of its 
+; parent's Seahorse Valley.
+; 
+; The calculation time of just under 10 minutes is a bit slow, but 
+; relief is at hand on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image has been or soon will be posted for immediate 
+; gratification.
+; 
+; Heavy clouds that threatened snow and a temperature that hovered 
+; around freezing all day made Tuesday rather unpleasant here at 
+; Fractal Central.  The fractal cats made their day as pleasant as 
+; possible by hovering around the heat all day.
+; 
+; Except for the fractal, which put up a bit of a fight, my day 
+; was peaceful enough.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and knowing the future is the same thing 
+; as changing the past, though it is now seen from the opposite 
+; direction.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FracturedSeahorses { ; time=0:09:55.84-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.76117950836326/+0.00001163773987/\
+  8.014934e+008/1/-60/0 params=2.001/0/0.03/0 float=y
+  maxiter=6250 inside=0 logmap=1075 periodicity=10
+  colors=000GGGFzzBrwCmsDihDjiEjiFjjFkjGkkGkkHllIllI\
+  mmJmmKmnKnnLnoLnoUibbdQk_DtV1qU7oUClUHjUMhUReTXcTa\
+  `TfZTkXTp`WncYmf`libjleioghrjfulexndijeld_o_UrUOtP\
+  JsOMsNPrNSrMVqLYqL`qKbpJepJhoIkoHnnHqnGtnGvhHubItX\
+  JtRKsMLsQRrUWrY`qafqekpippV_fGJX23N76QC9TGCVLFYQI_\
+  UKbZNecQggTjlWlqZou`qr_noZllYjiXhfWedWcaVaZU_WTXTS\
+  VQRTORRMOPLMOKKMJHLIFJGDIFAGE8FD6DC4CG5FJ5HM5JP5LS\
+  6NV6PY6S`6Uc7Wf7Yi7_l7ao7cmAdkCeiEfgGgeIhcLiaNj`Pj\
+  ZRkXTlVWmTYnR_oPapNcqMeqOgmPhjQigRjcSk`UUYVXVW_RXa\
+  OYcLZcIVcGRbENaCJ`AF_9EZGEYMDXTDWZCPdCIyYB_B4zG7pK\
+  9iPBcTDXXGQaIKeKDZH7zZBgOFfPJeQNeRRhUQjXQl_QnbPqdP\
+  sgPujOwmOyoOsmQnlRikSdiT_hVVgWQOXLdYGcZIc_Kc`Mc`Oc\
+  aQcaScbUccWccYcd_Odacecced`ceYbfVafT`gQ_hNZhLYhKui\
+  ItiHtjGtjFtkEtkDtlBslAsm9sm8sn7sn6soUWoq9peJpvYqv_\
+  qvarvbruast`ts_us_vrZwqYxpXypXzoWznVznVzmUzlTzkSzk\
+  SzjRz_GziQziQzhPzgOzfNzfN }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

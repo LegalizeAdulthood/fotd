@@ -1,0 +1,109 @@
+;     Date: Mon, 14 Jan 2008 18:41:16 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 15-01-08 (Festive Julia Set [7.5])
+; 
+;       Id: <1.5.4.16.20080114183105.0dc7e0d2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 15, 2008 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Who knows what absurdities lurk in the heart of Seahorse Valley? 
+; (No one but The Shadow knows, and I don't see him around here!)  
+; I certainly never expected anything like the indescribable mass 
+; that fills the almost-Julia set of Seahorse Valley in today's 
+; image.
+; 
+; The image is centered at the same point as yesterday's image, 
+; though the orientation of the slice, as well as the generating 
+; formula, is totally different.
+; 
+; I named the image "Festive Julia Set" and rated it at a 7-1/2.  
+; Actually, the extra half-point is a bit liberal, since the color 
+; palette came about through the efforts of the Fractint program-
+; mer who decided that striking the 'enter' key while in color 
+; cycling mode would create a totally new and random palette.  One 
+; quick click produced the colors.
+; 
+; The orientation of today's slice is rotated 0.01 of one degree 
+; toward a 90-degree rotation of the Mandelbrot set.  This is a 
+; very small rotation indeed, but small rotations produce big 
+; changes this close to the Julia direction.
+; 
+; There is nothing unusual about the calculation time, which at 
+; 2-3/4 minutes is close to the FOTD average.  But as always, the 
+; most convenient way to see the image is to view it on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The forecasted snowfall failed to materialize here at Fractal 
+; Central on Monday, not that the fractal cats were bothered by 
+; the busted forecast.  But the cloudy day with occasional light 
+; rain and a temperature of 43F 6C, kept things still a bit on 
+; the unpleasant side.
+; 
+; My day was busy enough to keep boredom at bay.  The next FOTD in 
+; the Seahorse Valley series will appear in 24 hours.  Until then, 
+; take care, and keep alert.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Festive_Julia_Set  { ; time=0:02:43.51-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 center-mag=0/0/0.87
+  params=89.99/89.99/89.99/90/-0.7500101/0.004/0/0
+  float=y maxiter=250000 inside=0 periodicity=10
+  colors=000JGl5HjJOjWUjeWjkXgpYcsVYrSSqOMqKGpIMpHSp\
+  GYsFbvLTyPKzSBtO9iJ7ZD5R63A01Y6c_8g`AkbCncDqeFtfHw\
+  hJxiKy5K58JCBJIEIPHIVKHaNHgQGnSGtOmYNgTMaOLWJKQFJK\
+  AIE5Y4iidOVOCXjhUc`RYUPRNMLFJE8FzTGsPGlMGeIGZFHSBH\
+  L8HE4N87L85K84I828KfAI_BGTDEMECFGA8sSokOdcKVWGLOCB\
+  pB6kA5gA4b94Z93U92Q82L81UU26lg9aXCSMFIBAuSDdJFOAdw\
+  oaphZjbWcWTYQQRKNLDKE75mua4HbwrZniVe`SYSOPJKGANEvL\
+  CjKBZJAOI9C9kICYCFL6GM6HK5HI4HG3HE3HC2HA1ZwOQYCjfT\
+  9QiDHNDBaEAXEASF9OF9JG9EG8AH85MNHKJDJF9IB5W7BT89Q8\
+  7N85K83zTgcIMytnpjdg`VZRLQHBC3cF6KDmNEdIFXEGO9HG5u\
+  fNn`JgVF`PCUJ8ND4O2DM4AK57I743_GAphCh`DaUEUNFNFGF8\
+  KLcJIXJGRIEKICEHA7OffM_YLTQJMHIF9WgWUbSSZOQUKOQGML\
+  CKH8IC4DcDFO7eWn`SeXOYTKQPGHLC9zpJtjGndEh_CcUAYO7S\
+  J5MD3bfCg90MUc3nG8_BDM6ofTfYMYPFPG8HMJHJFHGBHD8HA4\
+  _68W76T75Q74N83K82HZiHVbHRXHNQHJKHFDHB7n6bg7V`7NU8\
+  GN88z`ClY9bR6TO3UK8FDHYFn }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

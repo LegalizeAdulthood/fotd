@@ -1,0 +1,107 @@
+;     Date: Fri, 25 Jan 2008 19:05:41 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-01-08 (Pentagon Heptagon [8])
+;       Id: <1.5.4.16.20080125185540.0da72ece@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 26, 2008 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA ALERT!
+; 
+; Today's image uses a new formula, which is simply yesterday's 
+; formula with initial 'b' generalized rather than set to 0,0.  
+; This might give a little more variety to the images it draws.  
+; I named the new formula HyperMandelbrot2.
+; 
+; Today's image is named "Pentagon Heptagon" because of the very 
+; prominent pentagon.  And there is also a heptagon, much smaller 
+; and closer to the center.  And yes, the series of polygons with 
+; an odd number of sides does continue indefinitely.  An outzoom 
+; will reveal a triangle, while a couple inzooms will reveal a 
+; nonagon, a hendecagon, and a tridecagon.  (I think these are the 
+; right names for polygons of 9, 11 and 13 sides.)  How far the 
+; series goes beyond this point is anybody's guess, but I suspect 
+; that, like so much else in the world of fractals, it continues 
+; without limit.
+; 
+; I have made no effort to figure out the number series of the 
+; arms stretching between the polygons, though it probably has a 
+; logical order.  But at the same time, I see that the arms within 
+; the pentagon are unevenly distributed.  Two of the pentagon 
+; vertexes have arms connecting with them from within, while the 
+; other three are cut off from the center.
+; 
+; Today's coordinates define a blank area in the classic Mandel-
+; brot set.  If real(p3) and real(p4) are set to zero, the result 
+; is a flat black screen.  The area actually lies somewhat inside 
+; the main bay of the M-set.
+; 
+; Even though I have no idea how today's image ranks among Sea-
+; horse Valley images of the HyperMandelbrot set, I have rated it 
+; at an 8.  Its mathematical interest is enough to be worth at 
+; least that rating.
+; 
+; The calculation time of 4-1/4 minutes is fast enough to keep 
+; impatience at bay.  And if it is not, the finished image will 
+; soon be available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Friday was bright and sunny here at Fractal Central, but it was 
+; also cold and blustery, making it a rather unpleasant day to be 
+; outside.  The high temperature of 27F -3C fely cold even in the 
+; strongest sun.  With numerous sources of heat inside F.C., the 
+; fractal cats had their problem deciding where to spend the day.
+; 
+; I had no such problem however.  I spent the day working, then 
+; searching for a FOTD.  As today's image shows, I was successful. 
+; And the next FOTD image will be posted in 24 hours.  Until then, 
+; take care, and where's it at?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pentagon-Heptagon { ; time=0:04:14.05-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=HyperMandelbrot2 passes=t
+  center-mag=-0.749480813398176/+0.031703452082799/\
+  3.321327e+010/1/89/0 params=0/0/0/0/0.2/0/1e-020/0
+  float=y maxiter=3600 inside=0 periodicity=0
+  colors=000mL6lM9lNBlODlPFlQIlRKlSMlTOlURlVTlWVlXXk\
+  `_lYZmWYnUXnSXoQWpOVpMVqKUrITtCTrGTqJToMTnPTlSTkVT\
+  iYTh`TfcTjcYecT`cPXcKScGNcBMc4Jc7HcAEcCCcF9cI7cK4d\
+  N2cQ0cSgcaXcZKcVNcXQcZSc`VcbYcc_cebdgefigikjklmnno\
+  pzrszuuzzzzvtzvrzupvunrtkmtihsgcse`sbYr`VrZTqXQqUN\
+  pSLpQIpOGrJPsFYuBev7nt9Bw3vu4ss5pq6mo7jm8gk9di9agA\
+  ZeBWcCTaDQ_ENa7GZEKWKOURSRXWzz_zzczzfzzbzzZzzVzzRz\
+  zOifKndGrcCva8z`5tb6oc7ie8df9ZhAUiBOkCJlDDnE8oEAnF\
+  CmFEmGGlGIlHKkHMkIOjIUiJZiJchKhhKmgLrgLvkMwkMwlRwq\
+  NwrJwwGwxCws8wt6vt5rp4mp3hq7cmAZmKUnUPmcKmmFlvAnz5\
+  oz3pz3qz4lz4gm4bc5ZZ5UZ6UY6dY7dY7dY5sa7nY9jVBfRDaO\
+  FYKDUFGUHJUILUKOULQUNTUOVUQYUR_UTbUUdUWgUXiUYkRalO\
+  dnLgoJjlMeiOagRYdTUaWP_YLX`HUbDPb8Sd9VeAXgB_hCbiDd\
+  kEglFjmBimFijIhgLhcOg`RgYVfUYfR`eOceKfdHjdEmcApc7s\
+  c4va5r`5o_6kY6hX6dW7aV7YT7VS8RR8OV4RQ8LLBGGFA8H2CI\
+  5GI8KIBNJERJHVJKZJNaKQeKT }
+
+frm:HyperMandelbrot2 {; periodicity must be turned off
+a=(p1),b=(p2):
+q=sqr(a)-sqr(b)+pixel,
+b=(p3+2)*a*b+p4,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

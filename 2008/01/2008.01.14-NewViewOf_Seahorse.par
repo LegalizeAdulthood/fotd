@@ -1,0 +1,110 @@
+;     Date: Sun, 13 Jan 2008 19:42:51 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 14-01-08 (New View of Seahorse [7])
+; 
+;       Id: <1.5.4.16.20080113193240.0dd7f7ae@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 14, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we introduce a new formula, which draws the slices of the 
+; Julibrot that are missed by the other odd-slice and oblique-
+; slice formulas.  This formula draws only the oblique slices in 
+; which there is no annoying stretching or skewing that must be 
+; unstretched to be properly seen.
+; 
+; I named the image "New View of Seahorse", and indeed, this is 
+; what it is.  In the image we see the entire Julia set of 
+; Seahorse Valley as well as an enlarged view of a deep part of 
+; the valley itself in the same frame.  And don't miss the peanut 
+; holes where the vertical valley meets the edges of the Julia 
+; parts of the image. 
+; 
+; The blank outer shape is immediately recognizable as one of the 
+; Julia sets of Seahorse Valley, while the colorful vertical inner 
+; stripe is a grossly enlarged but unstretched view of Seahorse 
+; Valley as it appears at a depth of y=0.004.  The sides of the 
+; valley are parallel not because it is stretched, but because it 
+; is sliced at a depth where its sides actually are parallel.
+; 
+; The inner part of the image is enlarged for the same reason that 
+; a 2-D slice of a circular cylinder can appear as anything from a 
+; circle to a stripe with straight and parallel edges.  A cross-
+; section of a similar 4-D cylinder is a sphere, and the cylinder 
+; can be sliced by a 2-D plane in a direction that stretches the 
+; projection equally in 2 dimensions.  Such a two-dimensional 
+; stretching appears as a simple magnification.
+; 
+; I rated the image at a nominal 7, a fair rating for an image 
+; with a rather slow calculation time of around 22 minutes.  But 
+; why not forget about calculating by going to the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the image there?
+; 
+; Sunday turned out pleasant but a bit colder here at Fractal 
+; Central.  The clouds that moved in during the afternoon held the 
+; temperature to 43F 6C and led to a cold rain mixed with snow 
+; after nightfall.  The fractal cats and myself as well spent most 
+; of the day taking it easy in front of the TV.  The next FOTD 
+; will appear in 24 hours.  Until then, take care, and I wonder 
+; what happened to all the wonder I once felt as I read those 
+; early books about the wonders of science and the physical world.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+NewViewOf_Seahorse { ; time=0:21:58.54-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MoreSlices passes=t center-mag=0/0/0.86
+  params=-0.7500101/0.004/0.00014/0/0/0 float=y
+  maxiter=40000 inside=0 outside=tdis logmap=yes
+  symmetry=none periodicity=10
+  colors=000LQmKPjJNhIMeHKbGJ_FHX8FXCIWFLVJOU_LnaNld\
+  PjXdTVbVS`XQZZNX`LVbNWcOXcPXcQYcRZdSZdT_dU_dV`eWae\
+  XaeYbeZbeYcbXc`XcZWcXWcVVdTVdRUdPUdNTdLTdJSbNR`QQZ\
+  UPXXOV`NTcMRfLPjKNmJLqIJtIHwHJtHLrGNpGPmFRkFTiEVgE\
+  XdDZbD``DbZEZaEWcETeFPgFMiFJkGFmGCoG9qEDrDGrBKrANs\
+  8Qs7Us5Xs4_t2ct1ft0itBblMWdXPYgIQrBJnAMj9Pf9Sb8VZ8\
+  YV7`R7cN6fJ5iF5lB4o74r33u03x5At9HpDOlHVhLadPgaNcVL\
+  _OJYHHSAFk4DmcHc`K8YNBVQESTHPWKMZNJaQGdTDgWAjY7nbB\
+  rgFzmJvfLvaMvXUvScvNmvJmuKmuLmuMmuMmuNmtOrtOvtPztQ\
+  ztQzsRzsSzsSzsTzsUzsUztSzuQzvOtwMrxKqyIpyHouKpqMqn\
+  OrjQrgSscUt`WtXYuT_vQavMcwJexFgxCiy8kz5mz7Zz9YzAXz\
+  BWzDVzEUzFTzGSzISzJRzKQzLPzNOzONzPMzQMzOOzNQzMRzKT\
+  zJUzIWzGXzFZzE_zCazBbzAdz9ezCbzF_zIYzLVzOTzRQzUOlX\
+  Lj_IhbGfeDdhBbk8`n6_oDYoJWpPUpVTq`RqfPrlNrrMkmKdiJ\
+  ZeISaHLXFFTE8PD2LC6JGAHJDGMHEQLCTOBWS9_W7bZ6eb4if2\
+  li1okBgmL_oVSqdKO_vNYsMXp }
+
+frm:MoreSlices {; Jim Muth
+; P1 -- M-center of slice
+; P2 -- angle of slice
+; P3 -- J-center of slice
+z=pixel+(p3), c=p1+(pixel*p2):
+z=sqr(z)+c,
+|z| < 16 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

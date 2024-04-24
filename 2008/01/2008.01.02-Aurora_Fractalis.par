@@ -1,0 +1,103 @@
+;     Date: Tue, 01 Jan 2008 21:55:28 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 02-01-08 (Aurora Fractalis [9.5])
+; 
+;       Id: <1.5.4.16.20080101215745.2b87ea6e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 02, 2008 (Rating 9.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's FOTD I did much talking and little coloring.  In 
+; today's I have done much coloring and little talking.  But then, 
+; an image that rates a 9-1/2 and calculates in one minute doesn't 
+; need words to get its message across.  
+; 
+; The image is an oblique slice of Seahorse Valley.  The orienta-
+; tion is halfway between the Oblique and Rectangular directions.  
+; A moderate amount of skewing and a slight stretching was neces-
+; sary to create the cold mystical effect.
+; 
+; The rating of 9-1/2 might be a bit liberal, but I really do 
+; think the image rises above the normal mass of FOTD fractals.
+; 
+; The name "Aurora Fractalis" is a phrase that came to mind as I 
+; studied the image.  The calculation time of 1-1/4 minute will be 
+; no problem for even the most hurried fractalist.  And as always, 
+; the finished image is or soon will be posted for instant viewing 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Tuesday was really not such a bad day here at Fractal Central.  
+; There was lots of sun and the temperature reached 43F 6C.  Only 
+; a brisk wind kept the day from being near perfect for early 
+; winter.  The fractal cats did not worry about the weather.  For 
+; some reason, they were too busy sulking at each other.
+; 
+; My day was slow, which gave ample time to find and work on the 
+; FOTD fractal.  The next FOTD will be posted in 24 hours.  By 
+; then the familiar old work-day routine will be back in effect.  
+; Until next time, take care, and be at peace with the universe.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Aurora_Fractalis   { ; time=0:01:14.43-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 center-mag=-0.155155/\
+  0.643015/3.45136/1.0763/-90/20.2819418025888787
+  params=45/90/0/90/-0.7505/0/0/-0.35 float=y
+  maxiter=32767 inside=0 logmap=5 periodicity=10
+  colors=000EPSFKSFKSFKSGKSGKTHKTHKTIKTIKTIKUJKUJKUK\
+  KUKKUKKVLKVLKVMJVMJVMJVNJWOKWOLWPLWPMWQNWQNXROXRPX\
+  SPXSQXTQXTRXURYUSYVTYVUYWVYXVYXWYYXZYXZZYZZY__Z`__\
+  a`_b`_ca`daaebafbbgcdhbfiahhcjieljhnkkqlnqnqtqtvtw\
+  wwzzzwxwtutqtqoqnmpmkpmiomholgnlfmkemkdljckjbkjaji\
+  `ji_ihZhhYhgXggWggVffUefTeeSdeRcdQcdPbdObcNacM`bL`\
+  bK_aJZaIZaHY`GY`FX_EW_DWZCVZ9WYBVZCV_DU`EUaFTbGTcH\
+  SdISeJRfKRgLRhMQiNQjOPkPPlQOnROoSNrTNtUNvVNuUNuTNu\
+  TMsSLqRLoRKmQKkPJiOIhOIgNHfMHeMGdLFcKFbKEaKE`KD_KC\
+  ZKCXKBWKAVKAUK9TK9SK8RK7QK7PK6OK6NK5MK4LK4KK3JK3IK\
+  2HK1GK1FK0EK0DK0EK0EK0EK0EK0EK0EK0EK0EK0EK0EK0EK0F\
+  K0FK0FK0FK0FK0FK0FK0FK0FK0FK0FK0GK0GK0GK0GK0GK0GK0\
+  GK0GM0GO0GQ0GS3HS5HS7HS9HSBHSDIRFIRHIRJIRLIRNJRPJR\
+  RJQTJQVJQXKQZKQ`KQbKQcKQdKZOVYPTXPSWQRWQQVROURNTRM\
+  TSLSSJRTIQTHQTGPUEOUDNVCNVBMW9LW8KW7KX6JX4IY3HY2E_\
+  0GZ1HY1IY2JX2DRRDQRDQREQR }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
