@@ -1,0 +1,116 @@
+;     Date: Tue, 18 Jan 2011 22:14:23 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-01-11 (Seeing Triple [7])
+;       Id: <1.5.4.16.20110118221426.10d72738@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 19, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the same spread-out, wedge-shaped valley 
+; as yesterday's image, and it shows much the same kind of 
+; features.  But while yesterday's image was located on the south 
+; side of the valley, today's image lies on the north side.
+; 
+; A good part of today's image consists of 'inside' areas brought 
+; to life by the inside=zmag option.  The inside stuff is so 
+; arranged that it's rather hard to tell where the outside ends 
+; and the inside begins.
+; 
+; The rating of a 7 reflects my opinion of the basic worth of the 
+; image.  I did put some effort into the coloring, but not enough 
+; earn a reward of a half-point coloring bonus.
+; 
+; The name "Seeing Triple" refers to the cubic nature of the 
+; poorly-defined minibrot at the center.  (The image should have 
+; a higher maxiter.)  When I thought of the name, I was wondering 
+; how many eyes a four-dimensional being would need for 4-dimen-
+; sional vision in his 4-D space.  I decided on three eyes, but 
+; two might be sufficient.  Regardless, the name refers to the 
+; minibrot, not a hypothetical hyperbeing.
+; 
+; The calculation time of 2-1/3 minutes is about average for a 
+; fractal.  Time may be saved by viewing the finished image on the 
+; current FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; is still waiting for Paul to recover.
+; 
+; The snow and ice on Tuesday prevented any further work on the 
+; upcoming FOTD web site.
+; 
+; Two inches, 5cm, of snow fell overnight Monday here at Fractal 
+; Central.  The snow changed to freezing rain Tuesday morning, 
+; leaving a crunchy coating on the snow before ending by noon.
+; 
+; The temperature finally rose one degree C above freezing in the 
+; afternoon, making the job of clearing the fractal sidewalk much 
+; easier.  The fractal cats watched the outdoor action with much 
+; interest, but took frequent breaks on their shelf over the hall 
+; heater to keep warm.
+; 
+; My day was occupied by moving snow and ice, while FL kept the 
+; commercial work moving and the coffee hot.  The next FOTD will 
+; be posted in 24 hours.  Until then, take care, and when the 
+; going gets tough, the tough look for help.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seeing_Triple { ; time=0:02:22.25-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident float=y
+  center-mag=-1.089025340083513/+0.00811676821096749\
+  /2.088175e+011/1/-100/0 params=3.001/0/0.001/0
+  maxiter=1500 inside=zmag logmap=406 
+  periodicity=6 mathtolerance=0.05/1
+  colors=000A8FIgWDga9ag4Wm0Ps2Ni3L`5IR6GO7FO7EO8CR9\
+  AU9ASAATAAWEAXIAXMCYPEYZHQghIppAyw2ppBhiK_bTSX`TZc\
+  T_eU`hUbjVcmVdoQahMZbHWWDTQ8QJ4ND0K7ML7TOAZRCdUEjX\
+  GpZIjUNdQRZMWTH_NDdI9hNFeSLbXR`aXYfbVkhTpnQttOhqLY\
+  oINlFCjC1h97`LCUW9PY7L_5G`3Cb18c4Cd7Fd9JdCMeFQeHTe\
+  MQcQNbVLaZI_cGZgDYkBXgHYcMZ`SZXX_Ta`Qg`MlaJqaSgV_Z\
+  OaWMcTLeQKgNJiKIkHHUK_CMrLWsUesboskxsmttomuqbusSvu\
+  Ivw0wyOwpUshbo`kkTwgizcuz_zzWzz`LkdTfh_almAxXTpKIa\
+  JQcIXeHdgEU4F_IGeWecgTghu47gJKUYXECDFOOG_ZWFrSOoOW\
+  mKckN3HLFPKQWI`bVhBOjTotLan4WmFRlPMk_WPuSVrO`oKfl8\
+  zIBvPDrWFnb3m9dSeuPpUhxNjp7U9AZJCbSFg`lYRXd`c80YIC\
+  SSNMaZ7qxAotCnpFllMC1KLDJUOBMLGYE0CM5HW9LdEPnITwEW\
+  ILKPR9VQF_PLcOQgNWlM`pLftLyzNjyPjyRiyTizVhzXhzYhzW\
+  grVgjTgbSfVQfNPfGVj8_m1fWUmEvdY`XqFRrDMsBH09Cu77v6\
+  Iw6Sx6by6lz6vz6XzI7zTCzQHzNzzLzzIzzFzzDzzLzzSzzZzz\
+  ezzlzz`zzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,102 @@
+;     Date: Tue, 11 Jan 2011 22:22:30 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-01-11 (A Brot in a Spot [6])
+;       Id: <1.5.4.16.20110111222234.10871566@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 12, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's excursion into the HyperMandelbrot set takes us to the 
+; East Valley area, where we check the condition of the large 
+; minibrot on the shoulder of the period-32 elephant on the 
+; southern side of East Valley.
+; 
+; What we find is "A MiniBrot in a Spot".  Minibrots are supposed 
+; to be empty on the inside -- this emptiness is what defines a 
+; minibrot.  But the minibrot in today's image is filled with 
+; superfluous, concentric rings of curious stuff that makes me 
+; wonder whether it is still proper to call it a minibrot at all.
+; 
+; I suspect that this extra stuff is not truly real.  It easily 
+; might be an artifact of the math routine, when such tiny values 
+; as 10^(-100) are entered into it.  But wherever the stuff comes 
+; from, it is one of the most curious things I have stumbled upon 
+; in all my 20-some years of fractal exploration.  In tomorrow's 
+; image I will see what unexpected surprise goodies I can find on 
+; the inside of today's minibrot.
+; 
+; The rating of a 6 is not as high as I would have preferred, but 
+; the fast calculation time of just over 2 minutes means that 
+; little effort will be required to run the attached parameter 
+; file.
+; 
+; And for those with calculation problems, the finished image is 
+; available on the currently active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site, maintained by Paul Lee for almost 14 
+; years, may be accessed at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; but it is probably not up to date.
+; 
+; Heavy clouds hung over Fractal Central all day Tuesday, and to 
+; make matters worse, snow began at 3pm.  The temperature rose 
+; from 16F -9C at daybreak to an afternoon high of 28F -2C.  The 
+; fractal cats checked the outside a couple times to keep track of 
+; the snow, then settled on their shelf by the heat.  My day was 
+; about normal, which means everything stayed well under control.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and it seems as though the more I learn, the less I know.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Brot_in_a_Spot { ; time=0:02:06.93-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=HyperMandelbrot2 passes=1 float=y
+  center-mag=+0.2596401989/-0.0015216554/33755.27/1\
+  /-162.5/0 params=0/0/0/0/-4.4/0/1e-100/0
+  maxiter=3000 inside=0 logmap=84 periodicity=0
+  colors=000MUWMTWNSVNSUNRUOQTOPTOPSPORPNRPMQPMQNPRM\
+  RRLTSJVSIXTHZTGaUEcUDeVCgVAiW9kW8nX7pX5rY4tY3vZ2xZ\
+  4vX6tW8rUAqTCoSEmQGkPIjOKhMMfLOdKQcISaHU_GWYEYXD_V\
+  CaTAcR9eQ8eO9eM9eL9eJAeIAeGAeFAeDBeCBeABe9BfACfADf\
+  BEfBEfCFfCGfDHfDHfEIfEJfFKfFKfGLfGMfHMfHNfIOfIPfJP\
+  fJQfKRfKSfLSfLTfMUfMUgNVhOVhPWiQWiRWjSXjSXkTXkUYlV\
+  YlWZmXZmYZnY_nZ_o__o``pa`pbaqcaqcardbrebsfbsgcthct\
+  hcpgdmfeifffegceh_diXdjUckQclNbmKbnHZhFVcDRZBOU9KO\
+  7GJ5CE3994BA5DA6EA6GA7HA8JA9LB9MBAOBBPBCRBCSBDUCEW\
+  CFXCFZCG_CHaCIcDIdDJfDKgDLiDLjDNkFPkHRkJSkLUkNWkPX\
+  kQZkS`kUbkWckYek_gkahkbil`il_ilZimYjmXjmWjnVjnUknT\
+  koSkoRkoQlpOlpNlpMlqLmqKmqJmrImsHntGpwFrzEtzDvzCxz\
+  DzyEzxKzwPzvUzuZztczshzrmzqrzpvzozznzzmzzmzzmzzmzz\
+  mzzmzzmzzmzzmzzmzumzymzzmzzmzzmzKOfPWyVUj`PUmOHzVz\
+  czzzz0tlJUzCz`khPzcDzcDzg2zQZzXcz0hzTmzXmz`mzHmzNm\
+  zTmzZmzFmzPmzZmzgmzlmzpmz }
+
+frm:HyperMandelbrot2 {; periodicity must be turned off
+a=(p1),b=(p2):
+q=sqr(a)-sqr(b)+pixel,
+b=(p3+2)*a*b+p4,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

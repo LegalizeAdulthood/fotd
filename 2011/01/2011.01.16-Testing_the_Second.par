@@ -1,0 +1,113 @@
+;     Date: Sun, 16 Jan 2011 22:33:30 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-01-11 (Testing the Second [?])
+;       Id: <1.5.4.16.20110116223330.138f1566@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 17, 2011 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's quick fractal lies on the southwest shore line of the 
+; main bud of the Z^(2.002)+C Mandeloid.  But it's not what would 
+; be expected at this location.  The entire parent fractal has 
+; been rotated so that the negative X-axis cuts through the bud at 
+; this point, and things almost always get somewhat chaotic near 
+; the X-axis of fractals with fractional exponents of Z.
+; 
+; The rating of a ? means that I was undecided on how to rate the 
+; image.  On one hand, it's something never before seen; on the 
+; other hand, it's just another picture of a minibrot with a fancy 
+; basin around it.
+; 
+; The name "Testing the Second" is a re-arrangement of the first 
+; title that came to mind -- "The Second Test".  There was a first 
+; version of the same scene that failed miserably.  The whole 
+; image is still little more than a test, which is another reason 
+; why I could not decide on a rating.
+; 
+; The calculation time of 1/100 second under 2 minutes is fast 
+; enough to keep boredom at bay, yet slow enough to allow time to 
+; pour a drink in preparation for the grand revelation of the 
+; never-before-seen image.
+; 
+; Those who would rather not run a parameter file may view the 
+; full image in hi-def, rendered by Hal Lane and posted to the 
+; current FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Paul's original FOTD web site is still at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; though it has not been updated in a while.
+; 
+; I think we'll begin uploading stuff to my own FOTD web site on 
+; Monday, so be prepared for an upcoming announcement.
+; 
+; Except for a heavy but brief snow shower in the morning, Sunday 
+; was a typical midwinter day here at Fractal Central, with ample 
+; sun and a temperature of 34F +1C.  The fractal cats took full 
+; advantage of the sun while it was shining, and fled to the 
+; warmth of the shelf over the heat when the sun sank beneath the 
+; top branches of a tree across the road.  The humans had an 
+; active but not hectic day.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and sometimes the answer to a 
+; perplexing problem is found where least expected.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Testing_the_Second { ; time=0:01:59.99-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident logmap=214
+  center-mag=-1.189344865796988/+0.00123281218592462\
+  /2.17847e+010/1/2.57/-0 params=2.002/0/0.1/0
+  float=y maxiter=1200 periodicity=6
+  inside=255 mathtolerance=0.05/1
+  colors=000Q0PS0QU0RW0SY0T_0Ua0Vc0We1Xg2Yi3Zk4_m5an\
+  6bm7ci7`f6Yb6V_6SW5PT5MP5JM4GI4DF4AB37834531762892\
+  AB2BE2DG2EJ2GM3HO3JR3KT3MW3NY3CyFHsDMnCQhAVc9_Z8cT\
+  6hO5mJ4qD2v81z30t6Do9PjC`eFlaMnYSpUYrQctMivIoxEuya\
+  VucWaeXJfX0d`3bc6`g8ZjBZmEdqGjtJlwLjtJdqIZnGUkFPiD\
+  LfCHcAF`9EZ7DW6BT4AQ39O2DS5HV8LYBO`EScHWfK_iNblQfo\
+  TjrWmuYjp_gl`egbbcc_ZeYVfVRgSMiQIjNDlK9mI5ncFTxP7s\
+  SCoVGpZJqaMrdPshStkVunYri_odal_biVdfQf8GV8GV8GU7GU\
+  7FU7FU7FU7FU7FU7FU7FU7EU7EU7EU7EU7EU6EU6DU6DU6DU6D\
+  U6DU6DU6DU6CT6CT6CT6CT5CT5CT5BT5BT5BT5BT5BT5BT5BT5\
+  AT5AT5AT4AT4AT4AT4AT49T49T49S49S49S49S48S48S48S38S\
+  38S38S38S37S37S37S37S37S37S36S36S26S26S26S26R26R25\
+  R25R25R25R25R25R24R14R14R14R14R14R14R13R13R13R13R1\
+  3R13R22Q13R13R13R14R14R14S15S15S15S16S16T16T17T17T\
+  17T18T18U18U18U19U19U19V1AV1AV1AV1BV1BV1BW1CW1CW1C\
+  W1DW1DX1DX1DX1EX1EX1EXzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

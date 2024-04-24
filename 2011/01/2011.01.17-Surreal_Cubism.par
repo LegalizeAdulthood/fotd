@@ -1,0 +1,113 @@
+;     Date: Mon, 17 Jan 2011 19:17:30 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-01-11 (Surreal Cubism [7.5])
+;       Id: <1.5.4.16.20110117191732.168739a2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 18, 2011 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image differs from the usual image in that the minibrot 
+; at its center is cubic rather than the much more common quad-
+; ratic.  Its parent fractal is a small variation of the Z^3+C Man-
+; deloid.  The variation is that the exponent is 3.001 and the 
+; parent is calculated at a level 0.001 turns up the logarithmic 
+; hyperspiral.  The parent fractal also is rotated 90 degrees, so 
+; that it lies on its side.
+; 
+; As a result of all these differences, the negative X-axis cuts 
+; through the valley that normally would lie at the center of the 
+; large period-2 northern bud.  This valley appears as a wedge, 
+; trying to split the bud down its center, and is of a type that 
+; does not exist in the classic Mandelbrot set
+; 
+; In today's parent, the small departure from the true ground-
+; level Z^3 Mandeloid causes the negative X-axis to be infinitely 
+; divided, which does strange things to the parts of the fractal 
+; that happen to fall there.  Exactly what kind of strangeness 
+; takes place is apparent in today's image.
+; 
+; I named the image "Surreal Cubism", which must mean something, 
+; though I doubt that it has any connection to early 20th-century 
+; art forms.  The rating of a 7-1/2 includes a half-point for the 
+; coloring.  The image might or might not be worth it.
+; 
+; The calculation time is quite brief -- under 1-3/4 minutes.  
+; This will keep impatience suppressed.  The task of calculation 
+; may be totally eliminated by viewing the finished image on the 
+; active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site may be found at:
+; 
+;         <http://www.Nahee.com/FOTD/>
+; 
+; though it is not up to date.
+; 
+; Bleak gray skies and a temperature around 23F -5C kept the 
+; fractal cats very near the heat all day Monday here at Fractal 
+; Central.  The forecast of snow overnight and ice on Tuesday 
+; promises another bleak day to come.  The fractal cats are 
+; unconcerned.  They live in the present, and never worry about 
+; the future until it actually happens.
+; 
+; The Monday of the humans, (a good name for a horror movie), was 
+; busier than expected, which left no time to get involved in the 
+; upcoming web site.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and keep the controversy at a minimum.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Surreal_Cubism { ; time=0:01:43.53-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident inside=0
+  center-mag=-1.097220314469322/+0.00347417864711567\
+  /9.5e+011/1/-45/0 params=3.001/0/0.001/0 logmap=166
+  float=y maxiter=1200 passes=1 mathtolerance=0.05/1
+  colors=000fVgdWebXc`XdVYeN_f9bg5bZ5WQ2IH0C8LHtABSY\
+  QqRLfKHWDDL69A_RDSMALI7ED5792zzzu_pfHXYCNP9HL7DG68\
+  C70060F6RD6NA6I75D559254vF5Cgw9Yh6OU3EFsDIlCFeBDZA\
+  BS99r86zK4rF2lCDfHAYF8QC6HA487216O05K05H05D05A0560\
+  53XLVOHNGDF897DA5A94783572261z7QV6Diao_VdROVIIK9BA\
+  6cT5YO4SJ3ME2G91A43xcnZaeUVYPPPKJHFC8A616M05I05F05\
+  C059056053mxzmxzExzB_T7QJ3F9pgnZVYHIHLGMHEIECEAAB7\
+  87363PYAIQ7CJ56C25AifMQZJLSGHLDDEA8774KzezzdzzdLzc\
+  zgcLzbzzbLzbMfaMzaMf`Mz`Ne_Nz_NeZNeZNzZOeYOeYOdXOd\
+  XPdWPdWPdVPdVWBWSQVPdVNrXMsWMsVMsUMsUMtTMtSMtRMtRM\
+  uQMuPMuOMuOMvNMvMMvLHxNMvLQrKVoIZkH`jEaiFbhGcgGdfH\
+  eeHfdIgcIhbJiaKj`Kk_LkZLlYMmXMnWNoVOpUOqTPrSPsRQtQ\
+  QuPRuPRsRTqSUoUVmVWlXYjYZh__f``dbacccaed_feYhfXigV\
+  jiTljRmkPolOpnMroKspIuqGvrFxtDxuBxv9xw7xz8xy8xx9xw\
+  9xw9xvAxuAxuBxtBwsBvsCurCuqDtpDspDroEqnEpnFpmFolFn\
+  lGmkGljHkiHkiHjhIigIhgJgf }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

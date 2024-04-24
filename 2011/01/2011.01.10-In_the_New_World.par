@@ -1,0 +1,105 @@
+;     Date: Mon, 10 Jan 2011 22:14:35 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-01-11 (In the New World [?])
+;       Id: <1.5.4.16.20110110221435.113f1566@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 11, 2011 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Since I have no idea what's happening in today's image, I'll not 
+; try to analyze it to find out what's going on.  All I know about 
+; it is that the parent fractal is a Mandelbrot set with a lot of 
+; extra stuff along the shorelines of the bays and buds.  Today's 
+; image lies in the extra stuff that clogs the Seahorse Valley 
+; area of the parent.  The bud in the image is like none I have 
+; seen anywhere.
+; 
+; One thing certain is that the image lies in the Hypercomplex 
+; Mandelbrot set, though I have no idea why the ridiculously tiny 
+; real(p4) parameter makes such a difference.  The image might be 
+; an artifact of imprecision, but even if this is so, it has all 
+; the attributes of a 'real' fractal, (whatever a real fractal 
+; might be).
+; 
+; The rating of a ? expresses my confusion about such images.  
+; Also, the artistic worth is lacking, and I did not want to give 
+; an embarrassingly low rating.
+; 
+; The name "In the New World" does not refer to the era of explora-
+; tion.  It indicates that the image exists in an entirely new 
+; world of fractals, a world that, BTW, is in need of quite a bit 
+; of exploration.
+; 
+; The calculation time of 7-1/2 minutes is a bit expensive for the 
+; result.  The slowness is necessary because periodicity must be 
+; turned off when the HyperMandelbrot2 formula is used.  A better 
+; time bargain may be found on the active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; where the finished image is or soon will be posted.
+; 
+; The original FOTD web site at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; is not up to date.
+; 
+; Monday here at Fractal Central began with a temperature of 14F 
+; -10C, and reached an afternoon high of 34F +1C.  The fractal 
+; cats enjoyed the sun that filtered through the high clouds.  My 
+; day was kept busy trying to explain the Boltzmann brain problem 
+; to FL.  (In fact, I'm still trying to explain it to myself.)  If 
+; all goes well, the next FOTD will be posted in 24 hours.  Until 
+; then, take care, and when I grow up, I'm going to be a Boltzmann 
+; brain.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+In_the_New_World { ; time=0:07:31.05-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=HyperMandelbrot2 passes=t float=y
+  center-mag=-0.7500761333772764/-0.0002675458948816\
+  /8.292033e+009/1/-31.5/0 params=0/0/0/0/-4.3/0/\
+  1e-150/0 maxiter=5000 logmap=2556 periodicity=0
+  colors=0000006ET5EV5EW4EY4E_3E`3Eb2Ed2Fe6Gf9IfCKgF\
+  MgIOhLQhOSiRUiUWiYYb`_WcaPfcIieBjgDjiEkkFkmGloIloJ\
+  mpKmpLnoNnnOomPolQokRmjVkiZihaggeeficeladp_csYboWa\
+  kV`gUbcTe`SiXSlURpRQsNPwKPzHQpORgURZ`SQfSHlTJkULjV\
+  NiWPhXRgYTfZVeZWe_Yd`_caabbcace`dg_dh_ZkUUnOPqJSlK\
+  VhKYcL`_LcVLfRMiMMlIMoDNr9Nu5NsCMqILoPKmVJlaJjgIhn\
+  HftGezGAwWBuWBsWCqWDoWCmYDmWEmVFmTGmSHmRImPJmOKmNL\
+  mLMmKNmJOmHPmGQmERmDSmCTmAUm9Vm8Wm6Xm5Zm1Ym4Xm7XmA\
+  WmCVmFVmIUmKUmNTmQSmSSmVRmYRm_SmZTmYUmYVmUVmUWmUXm\
+  UYmUZmUYmUYmUYmU_mUYmUXmUVmUUmUSmURmUUmmUmmUmmUmmU\
+  mmUmmUmmUmmUmmUmmUmmUmmUmmUmmUmmUmmcmzcmzcmzcmzcmz\
+  cmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzmmzmmzmmzmmzmmzmm\
+  zmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzzmzzmzzmzzmzzmzzmzz\
+  mzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmz\
+  zmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzEmzFmz }
+
+frm:HyperMandelbrot2 {; periodicity must be turned off
+a=(p1),b=(p2):
+q=sqr(a)-sqr(b)+pixel,
+b=(p3+2)*a*b+p4,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

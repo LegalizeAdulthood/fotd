@@ -1,0 +1,97 @@
+;     Date: Wed, 19 Jan 2011 22:07:01 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-01-11 (Ancient Symmetries [6])
+;       Id: <1.5.4.16.20110119220707.10bf2c48@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 20, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene near the large minibrot on the main 
+; stem of a distorted Mandelbrot set.  Actually, the main stem of 
+; this parent Mandeloid is infinitely divided, with assorted parts 
+; of several large minibrots visible.
+; 
+; Do not be deceived by the poetic name "Ancient Symmetries".  I 
+; wrote it in a spate of poetic inspiration, but the image fails 
+; to live up to the promise.  (The FOTD writer believes in truth 
+; in advertising.)
+; 
+; The rating of a 6 is merely adequate.  There is nothing outstand-
+; ing in the image to make it worth the calculation time of over 
+; 6-1/2 minutes, so I recommend viewing the finished image on the 
+; currently active web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; you also might want to check the original FOTD web site at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; It is currently not up to date, but one of these days Paul will 
+; be up and about, ready to bring things up to date.
+; 
+; My own FOTD web site is still a work in progress, but progress 
+; *is* being made.
+; 
+; The temperature of 41F +5C here at Fractal Central on Wednesday 
+; was reasonable, but the cloudy sky and melting slush made things 
+; unpleasant.  Early in the day the fractal cats decided on the 
+; shelf by the heat.  My day was about average; FL's also.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and wait for the sunrise.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ancient_Symmetries { ; time=0:06:37.28-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-1.765864849188624/-0.00353536043588884\
+  /1.92565e+009/1/85/0 params=2.001/0/0.001/0 float=y
+  maxiter=3600 inside=0 logmap=668 periodicity=6
+  colors=300E2LE7NB9OBBRAET9JUCR_F_fZnscszhzzgqz`kvS\
+  emNZcHQWBLO9HH5EH3AH34H36R32`90nAAhBGfBOoCHmEAlE4k\
+  JGcNTYaeTmsNtzHgzJ`tJapKaiKaeLc_LcWNdQNdLOdGOeCQe7\
+  Qe4Qg6Nh9KjBHkCFmFCoHBpJ9rL6tO4uQ1vT0xW0zX0z_0zb0z\
+  c0zh0zp5zx4zz2zz2zz1zz1zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz1zz7zzCzzJzzQzzWzzbzzizzpzznzzmzxmzpkzpktpitp\
+  htphtpftpftpetpctpczpbzpbzpYzpUzpQzpLzsHzqGtpGtnFt\
+  nFtmEtkEtkCtiCzhBzhBzfAzeAzeAzcBrbBj`BzLpS_xAnzEiz\
+  GexK`tNXqPTpmzzozppyYrxHrv2hq9amEVhKOcQH_XBWbAUcAT\
+  e9Rf9Qh9Oi8Nk8Lm8KnKJbWJR`FUdCXeA_h6`k4co1fr0hg6eZ\
+  CbQJ_HRXAYU3eR3mQ3BJF9WY6hr4vz1zz0xz0mz0cu0UzAQzTK\
+  zmFzzpzyFznKtcRkUXdKcYBiQ2qK2cE2R92F5244103963GK3O\
+  _3Yp3Up3Qp5Lp9HpEEzJAzO6zQ6zdEzZ4iaCveAxj0yo0zkBch\
+  OHeb0eX1dR5cL9cFCaAG`5KZ0OZ0NY0zY1zW1zW2zV4zU5zS5z\
+  P5zN5zL5zJ5zz40zR0zq0zf0zX0zNzzEzz5zz0zz0zzszzmzzh\
+  zzbzzYzzUzzOzzKzzGzzCzz9z }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

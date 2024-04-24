@@ -1,0 +1,114 @@
+;     Date: Sat, 01 Jan 2011 20:21:49 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-01-11 (The Least of the Beast [6])
+;       Id: <1.5.4.16.20110101202111.125fc1d2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 02, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is the parent fractal that results when 3 parts of 
+; Z^(-2.1) are mixed with 0.9 part of Z^(-4.2) and (1/C) is added. 
+; Actually, it is not accurate to call it a 'parent' because it 
+; has not yet produced any children.  But this is no cause for 
+; alarm; the fractal is obviously filled with interesting nooks 
+; and crannies that hold infinite goodies.
+; 
+; Perhaps the most interesting thing about the fractal is that it 
+; appears to be in 2 parts -- the chaotic low-iteration, greenish 
+; outer part and the far more organized high-iteration, brilliant-
+; pinkish inner part.  The overall impression is that the initial 
+; value of Z is not critical, though the abundance of minibrots 
+; indicates that it is indeed critical.  Perhaps the generating 
+; formula has more than one critical value, but if this is so, I 
+; have yet to find the value that would clear away the overlying 
+; stuff and bring the ghostly submerged stuff to the surface.
+; 
+; The name of the image -- "The Least of the Beast" -- originally 
+; had some meaning.  Whatever it was, I have forgotten it.  The 
+; rating of a 6 is above average but nothing to get excited about.
+; 
+; The calculation time of 40 seconds makes running the included 
+; parameter file a very small chore.  Those with machine problems 
+; such as incompatible operating systems, retarded vesa-impared 
+; video cards, or merely spoiled machines that panic at the sight 
+; of DOS will find their satisfaction in the form of the pre-
+; calculated image at the currently active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; is currently inactive, though when Paul recovers, it will be 
+; brought up to date.
+; 
+; The first day of the new year started sunny enough here at Frac-
+; tal Central, but clouds moved in before noon, and rain showers 
+; arrived later in the afternoon.  The fractal cats approved of 
+; the temperature of 48F +9C but wished there had been more sun-
+; light.  (Actually their greatest wish is for someone to let them 
+; go into that immense forbidden area on the outside of the three 
+; doors they never get to go through.)
+; 
+; The humans has a peaceful enough day.  The new year arrived on 
+; schedule at FC and nothing much changed.  The next FOTD image 
+; will be posted in 24 hours.  Until then, take care, and:
+; 
+;         I never saw a Boltzmann brain,
+;         I hope I never see one,
+;         But I can tell you anyhow,
+;         I'd rather see than be one.
+; 
+; (I'll have a lot to say about these strange creatures in a few 
+; days.)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheLeastOfTheBeast { ; time=0:00:40.75-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=0.107083/0/0.6/1/90/0 params=3/-2.1/0.9\
+  /-4.2/0/0/0/0 float=y maxiter=22500 inside=0
+  logmap=yes symmetry=none periodicity=6
+  colors=000FEKFFKFGKFGKFHJFIIFJIFKHFKHFKHFKHFKHFLHF\
+  LHFMHLNGLMEMMKMMPNMUNLZPMcULhZLmcKrcKvcJzcKzcKzcLz\
+  cNz_dzaczbbzcazd_zeZzgYzhXziWzjUzlTzmSznRzoQzpOzrN\
+  zsMztLzuKzyIzwJzvJztJzsJzrJzpJzoJzmJzmJzmJzmJzmJzm\
+  KzmKzmKzmKzmKzmKzmKzmKzmKzmKzmKzmKzmKzmLzmLzmLzmLz\
+  mLzmLzmLzmLzmLzmLzmLzmLzmLzmMzmNzmOzmPzmQzmRzmSzmT\
+  zmUzmVzmWzmXzmYzmZzm_zm`zmazmbzmczmdzmezmezifzjfzk\
+  gzlgzmgznhzoizpizqizrjzsjzsjzskztkztkzulzulzulzvmz\
+  vmzxlzwmzvmzvmzunztnztnzsozsozrozqpzqpzpozopzoqznr\
+  znszmtzluzlvzkwzjxzjyzizzizzhzzgzzgzzfzzezzezzdzzd\
+  zzczzbzzbzzazz`zz`zz_zz_zzZzzYzzYzzXzzWzzWzzVzzVzz\
+  UzzTzzTzzSzzSzzTzzTzzTzzTzzUzzUzzUzzUzzVzzVzzVzzVz\
+  zWzzWzzWzzWzzXzzXzzXzzXzzXzzYzzYzzYzzYzzZzzZzzZzzZ\
+  zz_zz_zz_zz_zz`zz`zz`zz`zz_zz`zz`zz`zzazzazzazzbzz\
+  bzzbzzbzzczzczzczzdzzdzzdzzezzezzezzezzfzzfzzfzzgz\
+  zgzzgzzhzzhzzhzzhzzizzizz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
