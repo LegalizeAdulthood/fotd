@@ -1,0 +1,82 @@
+;     Date: Fri, 12 Jan 2007 22:56:56 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-01-07 (Bare Tree [8])
+;       Id: <1.5.4.16.20070112225922.2b279386@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 13, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a virtual tree I stumbled upon in the 
+; fractal that results when 0.5 part of Z^(-4.5) is subtracted 
+; from 5 parts of Z^(-1.4) and (1/C) is added.
+; 
+; The parent fractal resembles a Mandelbrot set that is rotated 
+; about 180 degrees and located a bit too close to the bailout 
+; radius.  Today's image is found on the southwest shoreline of 
+; the main bay, which is on the west side of the parent fractal.
+; 
+; The resemblance to a tree in winter, with the branches covered 
+; in ice, is so striking that no other name but "Bare Tree" would 
+; be satisfactory.  All in all, the image is worth a rating of a 
+; lofty 8, at least in my opinion.
+; 
+; One of the best features of the image is its super speed.  The 
+; calculation finishes in a matter of 34 seconds even on my slow 
+; old 200mhz machine.  And the image is or soon will be posted on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Friday began with light rain here at Fractal Central.  By 9am 
+; the rain ended, leading to a mostly cloudy day with a tempera-
+; ture of 46F 8C.  For some reason the fractal cats seemed annoyed 
+; most of the day, and spent a good part of the time sulking.  
+; Their good spirits didn't return until they had finished their 
+; evening treats.
+; 
+; My day was totally uneventful.  What more could one ask for?  
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and don't get haunted by the spirit of a lost fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Bare_Tree { ; time=0:00:34.00--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=-2.88099/-0.760467/31.83/1/65/3.435e-013
+  params=5/-1.4/0.5/-4.5/0/0 float=y maxiter=128
+  colors=000_ez0EP0EP0EP0EP0EP0EP0000EP0000CP0000CP1\
+  004CP911CCSECSHCSKCSP9SS9SU9SYCS_CSbESgJSjMSmMSpPS\
+  rPSuRSxWUxXUz_YzaYzdYzg_zj_zm_zpbzrbzuezuezuezugzu\
+  gzxgzzjzzjzzjzzmzzmzzpzzpzzpzzrzzrzzrzzuzzuzzuYz0_\
+  z1_z1bz1bz4ez4ez4gz6gz6jz6jz9mz9mz9pzCpzCpzCrzErzE\
+  uzEuzHxxHxuHzrKzpKzmKzjMzgMzeMzbPz_PzYPzUSzSSzPSzM\
+  UzKUzHUzEYzCYz9Yz6_z4_z1_z0_z0bz0bz0bz0bz0bz0bu0br\
+  0bm0bj0be0eb0eY0eU0eP0eM0eH0eE0e90e60e10e00g00g00g\
+  00g00g00g00g00g00g00g00g00m00p10uE0xU0zg6zuEzzMzzK\
+  zzHzzHzzEzxEzuCzu9zr9zp6xp6xm4uj1uj1rg0re0pe0mb0m_\
+  0j_0jY0gU0gU0eS0bP0bM0_M0_K0YH0YH0UE0SC0SC0P90P60M\
+  60M40K10H10H00E00E00C00C00900900600600600600610610\
+  4404404604904904C04C01E01M0EE01H01H01K01zzzzzzzzzz\
+  xzzuzzrxzpxzmuzjrzjpzgmzemzbjz_gzYezUbxS_uS_rPYpMU\
+  mKSjHPjEPgCMe9Kb9H_6EY4CU1CS09P06M04K010z00x00u00r\
+  00p00m00j00e00b00_00Y00U0 periodicity=10 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

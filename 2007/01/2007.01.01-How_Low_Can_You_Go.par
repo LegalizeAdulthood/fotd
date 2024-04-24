@@ -1,0 +1,97 @@
+;     Date: Mon, 01 Jan 2007 23:22:22 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-01-07 (How Low Can You Go [6])
+;       Id: <1.5.4.16.20070101232440.29a7797c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 02, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a midget of a very low order, located in the 
+; fractal that results when the formula Z^(1.075)+C is calculated 
+; 175 levels up the complex logarithmic ladder.  I named it "How 
+; Low Can You Go".  I gave it this name because one of my current 
+; fractal quests is to see how close to unity I can set the expo-
+; nent of Z and still find midgets in the resulting fractal.  The 
+; current record is Z^(1.045), but the midget I found there lacks 
+; the quality to be a FOTD.
+; 
+; Today's parent fractal, like so many other very-low-order frac-
+; tals, is little more than an elongated oval surrounded by large 
+; areas of sandy fractal chaos.  The midget in today's scene, 
+; which is located in the chaos of its parent, was found by using 
+; the 'fmod' outside option.  Without this feature, midgets in 
+; such low-order fractals would be impossible to find.
+; 
+; I rated the image at a 6, more to show my satisfaction at find-
+; ing the midget than to comment on the quality of the image.  But 
+; this does not mean I consider the image to be worthless.  It is 
+; in fact quite an interesting scene to come from a power of Z so 
+; close to a straight line.
+; 
+; The calculation time of 8-1/2 minutes is slightly slow for an 
+; image that is only a little above average, but relief from the 
+; impatience is at hand on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image has been calculated and posted for instant easy 
+; viewing.
+; 
+; The New Year's Day weather was dreary here at Fractal Central.  
+; Thick clouds covered the sky all day, with occasional periods of 
+; light mist and a temperature of a most un-winter-like 50F 10C.  
+; The cats of the fractal variety spent the day looking for 
+; trouble but finding little now that the last of their left-over 
+; Christmas play things have been cleared away.  My day was quite 
+; relaxing, but the work today should pick up dramatically.  The 
+; next FOTD will appear in 24 short hours.  Until then, take care, 
+; and feel free as a sea gull.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+How_Low_Can_You_Go { ; time=0:08:30.14--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.72919018137204830/+5.829204067242754\
+  00/150370/1/112.5/-1.98509829407722549e-009
+  params=1.075/0/175/525 float=y maxiter=6000
+  inside=0 logmap=122 periodicity=10
+  colors=000lUAlVAkWAkXAjYAjZAi_Ai`AhaAhbAgcAfdAeeAd\
+  fAcgAbh9ai8`j6_j4Zj2Yj3Xi4Wg5Vf6Uc7Sa8PZ9NXALVAJSB\
+  HQCFNDCLEAIF8GG6DH4BI07G29I4BK6DM8EOAGQCISDJUFLWHN\
+  YJV_LW`NYbP_dQafSbhUcjWdlYen_fpagrbhsairajrairahr`\
+  hr`gr`fr`er`er_dr_cr_cr_ar_arZaqZ_qZ_qZZqYZqYZqYYq\
+  YYqYXqXXqXXqXWqXWqXWqYUoYTmYSkZRjZQhZPfZOd_Nc_La_K\
+  __JY`IX`HV`GTaFSaEQaDOaBMbALb9Jb8Hb7Fc6Ec5Cc4Ac39U\
+  DjLMkMKlMJmNInNHoNFpOEqODrOCsPBtP9uP8vQ7wQ6wQ5wP8w\
+  PAwPCwPFwPHwPJwPMwPOwOQwOTwOVwOXwO_wOawOcwOewQbwR`\
+  wSZwTXwUVwVTwWRwXPwZMw_Kw`IwaGwbEwcCwdAwe8w_9wUAwO\
+  AwIBw68wCBwHDwNFwSHwXKwbMwgOwoPwlQwjQwhRwfRwdSwbSv\
+  `TuZTtXUsVUrTVqRVpPWoNWnLXmJXlHYkGWmFYkFZjE_hE`gDa\
+  fDbdCccCdaBe`Bf_AgYAhXAiW9kU9lT8mR8nQ7oP7pN6qM6rK5\
+  sJ5tI4uG4vF5yB4zE4zG4zI4zK4zM4zO4zQ4zS4zU4zW3zZ3z`\
+  3zb3zd3zf3zh3zj3zl3zn2zo3zp4zp5zp6zp7zp7zp8zq9zqAz\
+  qBzqCzqCzqDzrEzrFzrGzrHzr }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

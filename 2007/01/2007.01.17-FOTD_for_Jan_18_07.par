@@ -1,0 +1,82 @@
+;     Date: Wed, 17 Jan 2007 22:35:08 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-01-07 (FOTD for Jan 18 2007 [No rating])
+;       Id: <1.5.4.16.20070117223737.0d2ffdd6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 18, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; An unexpectedly busy day cut into the time available for fractal 
+; work, but I still managed to find an image worth looking at. 
+; 
+; The marginally worthwhile image came about when I combined 
+; Z^(-1.6) with 0.4 part of Z^(-6.1) and added (1/C) to create a 
+; parent fractal that cannot be described in words.  Today's image 
+; was found, as so many fractals are, in a valley of the parent 
+; fractal.  Most of the action was achieved by rendering the image 
+; with the 'outside' set to 'tdis' and the 'inside' set to 'fmod'.
+; 
+; I gave the final image neither name nor rating.  I could not 
+; honestly rate or name a FOTD that had so little effort put into 
+; it.
+; 
+; The calculation time of 5-1/2 minutes may be conveniently 
+; avoided by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the pre-calculated image there.  But before going to 
+; the web site, allow an hour or so for the image to be posted.
+; 
+; A sunny but cold day, with a high temperature of only 32F 0C 
+; here at Fractal Central on Wednesday, was ignored by the fractal 
+; cats, who would rather warm themselves by the radiators than 
+; watch the action outdoors.  My day was unexpectedly busy, and 
+; tomorrow will likely be the same.  But regardless, the next FOTD 
+; will appear in 24 hours, give or take a few.  Until then, take 
+; care, and remember that clouds are fractals also.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Jan_18_07 { ; time=0:05:24.66--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=+1.73575563050452200/+0.002592534686354\
+  98/337094/1/-90/3.885780586188e-016 params=1/-1.6/\
+  0.4/-6.1/0/0 float=y maxiter=1600 inside=fmod
+  proximity=0.7 outside=tdis periodicity=10
+  colors=000PAbW8fb6mk4rr2vz1zz0zz0zz0zz0zz0zz0zz0vz\
+  0ty0rv0pp0th2vb8zWGzRNzLVzGbzAkz8hz8hy8hp8hh8h`8hS\
+  8fN8fG8f88f48f08f08f06`05W04R02N41H80DB08H05N01R00\
+  W00`00b01d44f66hBAkGDmLHpPLpNNmNNmNPkLPkLPhLRhJRfJ\
+  SfJSdJSdv0Vy0Rz2PzBNzNLzbHzrGzzDzzBtzVdzdPzpBzz0yz\
+  0vz0mz0f02`06S0BN0HH0NB4P81R50S20V00W00Z00`00b00d0\
+  0f00h00k00zR0zV0zV0zV0z00z00z00z00z00z01z02z05z06z\
+  0Az0Bz0Df02N505P00k00BH00z20z60zA0zG0zJ0zP0zS0yL0r\
+  D0k80d20Z02S08N0DH0LB0R60Z20d00`10W26S4BV5GV6JV8PW\
+  8SWAWWBbZDfZDkZGr`Hv`Jz`JrWHkVHdSHZRHRNHLLHGJHAHH4\
+  DH0BH0AH08H05H04H02H01H04J05J08L0AL0DN0GN0HP0LP0NR\
+  0RR0SS0WS0ZV0`VzzVyh2VPD00P00b00p00Z00L1466D0DP0LZ\
+  0NN0PD0R40S02V0AV0HJ0RA0`2Ak0Lv0Zz0kz0dz0Zp0Sb0NR0\
+  HG0B5060020000000000000000000000000000000000000000\
+  0006D05A048015004002000000000000000000000000000000\
+  000000000000000000040f20b }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

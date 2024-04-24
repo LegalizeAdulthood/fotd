@@ -1,0 +1,98 @@
+;     Date: Mon, 08 Jan 2007 22:48:51 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-01-07 (Forever Flappable [6])
+;       Id: <1.5.4.16.20070108225114.2a5f343e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 09, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I calculated the Z^(1.5874)+C 
+; fractal at a level 34 turns down the complex logarithmic ladder. 
+; The number 1.5874 is the cube root of 4, though this has nothing 
+; to do with the appearance of the parent fractal.
+; 
+; This parent fractal is a very recognizable Mandeloid standing on 
+; its head, with a curiously distorted large period-2 bud.  
+; Today's image is located in the fractal chaos surrounding this 
+; period-2 bud.
+; 
+; I chose this image to be the FOTD because the pattern around the 
+; midget at the center is unusually interesting.  Most midgets in 
+; fractals in this range appear as centers of discontinuities, 
+; with explosive-like features radiating outward.  The pattern 
+; surrounding the midget in today's image actually tries to do 
+; something different.
+; 
+; After not-so-careful consideration, I rated the image at a 6, 
+; which is just slightly above FOTD average.  I do not comment on 
+; how the FOTD average compares to the average in the wider world 
+; of fractals.
+; 
+; The name I chose for the image, "Forever Flappable", has no 
+; connection at all to the image.  It is simply a nonsense phrase 
+; that came to mind as I studied it.
+; 
+; The calculation time of 3-1/2 minutes is fast enough for an 
+; average fractal.  An even faster way to see the image is to 
+; visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the fractal scene there.
+; 
+; Early morning rain on Monday here at Fractal Central gave way to 
+; a clearing afternoon with strong winds and a temperature of a 
+; mild 46F 8C.  The fractal cats, who do not concern themselves 
+; with weather, were unusually quiet most of the day.
+; 
+; My day had nothing out of the ordinary happen.  The next FOTD 
+; will appear in 24 hours.  Until then, take care, and be one of 
+; them.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Forever_Flappable { ; time=0:03:28.77--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.00720760543061133/-1.434410808461740\
+  00/7110435/1/180 params=1.5874/0/-34/0 float=y
+  maxiter=4500 inside=0 logmap=86 periodicity=10
+  colors=000OSVKPP04n9Fd0tU0pS0kR1gP4bO9ZMEXLAexCaoE\
+  YgFV`cRSqP0hO0cO2YO7UOC0OHzz_wwPorOgkOYcMPVL_C0VF4\
+  SH7PIAMLFKMIO`zKUl0OI0OKzxKzwKzkLzOLz`VxxSgWR`xPUS\
+  OMPMR2zh_jVUYaz0Rl9zCl6W0CSAzu_soWlkVeeS`aRUWOMSM0\
+  wF1oH6hI9aKEVLz0os2d`EV0yl2lcA`UYg0ChgEdaF`YFWUHSP\
+  ROeYE2VF6UH7RIAPKCMLFLMHIOK0Rl1Pg4Pc7P_AOUEOPz7yuC\
+  qkFh`I`RLSz40eF6MRzLPzLPzKPsKPlIOeIO_HOSeP6a02Y26V\
+  69SACPEEMIHKLKdkzWclOV_`0lR9_aYEYWFVVHSUIPSIMRKKPL\
+  zgzj99VHF04CoFgjHdeIaaK_YKWULUPMRLOOCc1E`6EY9FVCFS\
+  FHPIaKI_LKWLKUMKRMKOMLLOLIOLzrxqgj_YYLxVKwSKuRIzPI\
+  zOHzMVz0cz2mz7vzCzzHzzOzzMzzMzzMzzLzzLzzLzzazzUzz0\
+  zzozzgzz`zzSzzEzzFzzHzzIzzIzzKzzLzz_zzWzzVzzUzzSzz\
+  PzzOzzMzzkzzazzUzz9zzCzzEzzFzzIEzKRzzLze4zc2zF1z00\
+  z10zC0zM0zW0zI0zK1zK4zK7zLAzLAzWEzLkzdezaaz_YzWUzU\
+  PzRLzOzznwzgkzaazWRzRKzVIzPzzcrzYezUUzPdz``zYYzWVz\
+  USzSPzRMzOKzMczo_zjVzdSz` }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

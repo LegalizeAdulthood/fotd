@@ -1,0 +1,91 @@
+;     Date: Fri, 26 Jan 2007 05:11:17 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-01-07 (FOTD for Jan 26, 2007 [8])
+;       Id: <1.5.4.16.20070126051354.0d3f41fc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 26, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The rush continued here at F.C. on Thursday, but one would never 
+; guess it from the quality of the fractal, which I generously 
+; rated at an 8 even though I declined to give it a name.  To 
+; produce the image I combined Z^(-1.7) with 0.3 part of Z^(-5.5) 
+; and added (1/C).  The resulting parent fractal resembles a snow-
+; man with a gash in his head and a prominent Mandelbrot set 
+; floating above his head like a halo.  Today's scene is located 
+; at the edge of the gash in the snowman's head.
+; 
+; The special effects were hastily created by calculating the 
+; image with the inside set to 'fmod' with a proximity of 0.615, 
+; which is critical.  The rather spidery outside parts were 
+; rendered with the 'tdis' option in effect.
+; 
+; With two negative exponents of Z in the generating formula, the 
+; image can be 'evaporated'.  Tomorrow's FOTD, if it appears at 
+; all, will feature one of these 'evaporated' versions of today's 
+; scene.
+; 
+; The one bad feature of today's image is the calculation time, 
+; which is well over 38 minutes.  But relief is at hand on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the already-rendered image is or soon will be posted for 
+; instant viewing.
+; 
+; Partly cloudy skies unleashed several heavy snow showers here at 
+; Fractal Central on Thursday, leaving behind about 3cm of powdery 
+; snow, while the temperature of 23F -5C made things feel quite 
+; winter-like.  The Fractal Cats survived the cold by keeping warm 
+; next to the large radiator in the hall -- the one with the hole 
+; where the mouse appeared a few months ago.  My day was suitably 
+; busy, but not too busy to produce a fine fractal.  Unless some-
+; thing unexpected comes up, the next FOTD will appear in 24 hours 
+; or so.  Until then, take care, and be of good cheer even though 
+; the holidays are gone.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Jan_26_07 { ; time=0:38:21.99--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.06957785400914100/-0.090007019263467\
+  45/256004.2/1/140/3.1329924162e-007 params=1/-1.7/\
+  0.3/-5.5/0/0 float=y maxiter=1500 inside=fmod
+  proximity=0.615 outside=tdis periodicity=10
+  colors=000H47HMEHPLHSSHVZHYeH`lHcrVgfhkWkmVnnUqpTt\
+  qSwrSerfPrtQnmQkfRh_ReTSbMS_GVnVXsiSp_NdQITGEI72sc\
+  7phCdmHSrMGtJPsHXpEdmClk9lk6lkEtaDubDvbDwbCwbCxcCx\
+  cCxcBxcBxdBxdBxdAxdAxeAxeAxe9xe9xe9xf9xf8xf8xf8xg8\
+  xg7xg7xg7xh7xh6xh6wh6wh6vi5vi5ui5ui5tj4tj4sj4sj4rk\
+  3rk3qkFshEsiDskCsmBsnCsoCspCpqCmqCjrDgsDdsDatDZtDW\
+  tIXqMXnQXkUXgYXdaXaeYYiYVmYSqYOuYLwYIYnA6s4SdCmGLl\
+  JMlMNlOOlRPlTQlWRlYSl`TlbUleVlgWljXllYicNgWCeO4_N9\
+  VNGQMNLMUGL`BLgtSIuNLpYRkgWfqabsfZsgWsgSsgPsgUsfYs\
+  ebsdfscjsbgsaes`bs_`sZYsYWsXTsWRsWNsSJsOFsKCsG8sC4\
+  s82s4DsDOnLZhUibatXirbdpg`nmXmrSksOisKhsGasJWsLPsN\
+  JsQCqS6nU4iV3eW2`X2XYIiPZsGos7js9fsAbsBZsCVsDcsPls\
+  `tskssmrsnrooqhpqbql_mhYjcWg_UcVS`RQYUZWXgUZoSasQc\
+  sOdsPesPfnPghQhbQiXQjSQbOXVKcNHjSJiXKh`LgeMfjNenOd\
+  dKTVHHLE6MJFMNNNSVNWcO`kOdsIirDxt7wt2vp9uqGsqNnrUk\
+  r`hsgesjbogXg`RdVK`PIXzz0 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

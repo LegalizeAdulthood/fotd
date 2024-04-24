@@ -1,0 +1,87 @@
+;     Date: Tue, 16 Jan 2007 22:37:07 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-01-07 (Fractal Filters [No rating])
+;       Id: <1.5.4.16.20070116223936.391f523c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 17, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image reminds me of an array of filters, so I named it 
+; "Fractal Filters".  The parent fractal was created by the 
+; formula Z^(1.1)+Z^(2.9)+C.  This parent fractal is a Mandelbrot 
+; set nearly but not quite symmetrical around the Y-axis, with its 
+; normally west side facing south and a lot more activity than 
+; would be expected beyond its East Valley, which in this case is 
+; on the north side of the M-set.
+; 
+; Today's scene is located in a kind of herringbone pattern near 
+; the northern edge of the western wedge that sets off all the 
+; extra stuff beyond East Valley.  But this description in words 
+; really gives little idea of the situation.  The best way to see 
+; how the image is situated in its parent is to back out of the 
+; image until its location in the parent fractal becomes clear.
+; 
+; Unsure of what rating to give the image, I gave it no rating at 
+; all.  But it is still worth a look, especially with its calcula-
+; tion time of under 2 minutes.
+; 
+; And the already-calculated image is or soon will be posted on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it may be studied at leisure.
+; 
+; A blustery chilly day, with occasional light flurries of snow 
+; here at Fractal Central on Tuesday, brought the fractal cats to 
+; the window several times to watch the flakes blow by.  But when 
+; treat time arrived, they had totally forgotten about the outside 
+; conditions.  My day was satisfactorily normal.
+; 
+; The next FOTD fractal will appear in 24 hours.  Until then, take 
+; care, and be attentive to the fractals in the world around you.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Filters { ; time=0:01:50.73--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-0.03352327101578768/+0.052097250592470\
+  47/91634.29/1/-10/3.45052403316614686e-010
+  params=1/1.1/1/2.9/0/0 float=y maxiter=500
+  inside=0 periodicity=10
+  colors=000WUnTRnWUjYXf__bbb_deWfhShjPbhOYfOTdNOcNJ\
+  aME_M9ZMDVQHRULNYPJaTFeXBi`7md3qXDsPMuHWv9dx2myKqd\
+  `uLqy1hqG`iUTagLVuIZqGbmEejCif9mb7p_5tW3wT4wZ5wd5w\
+  iBKwGLyIIwKFvMCrNAkIDbEGUAIK6LA2N0zzznozqivmfthbre\
+  YtcXnaCj_6iWBcSFYOKSLOMHTGDXAA`5B`7C`9D`BrmCFzEGzG\
+  GvHKrFOmEShCWeB_fA`fBagCahCziDziEzjEzkFzlGH`KD55HA\
+  7KF8NK9QPAUUCXZD_cEbhF9VQCXPEYOHZNJ`NLaMObLQcLSeKV\
+  fJXgIZiIajHckGHh3Ki5Mi6Pj7Rj9UjAWkBZkD`lEclFd8EeCF\
+  eFFeJFeMFeQFeTFeWGe_GebGefGeiG_ndamYbmSdlMJWNJ_QJd\
+  TJhWJlZHd_GYaFRcEJmDCmC5mF6mH7mJ8mL9mNAmPBmRCmTDmP\
+  HmLLmHPmDSmIOmMLmQImUFmYCma9me6mi3mj5ok7qk9slBulDw\
+  mFxmHynJzoLzoNzpPzpRzqTzqUzrXzs_zsbztezthzukzumznp\
+  zgsz`uzcozfjzhdzk_zmVzpPzsKzuEzx9zz4zy6zx7zx8zw9zv\
+  AzvBzuCztDztEzuDzuDzuCzuCzvCzvBzvBzvBzvAzwAzwAzw9z\
+  w9zw9zwBzwCzwEzwFzwGzwIzwJzwKzwMzwNzwPzwQzwRzwTzwU\
+  zwVzqWzlXzfXzaYzWZzRZzZYz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

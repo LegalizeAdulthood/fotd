@@ -1,0 +1,87 @@
+;     Date: Sun, 14 Jan 2007 22:33:13 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-01-07 (Flying Mandelbrot [7])
+;       Id: <1.5.4.16.20070114223541.0d4750be@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 15, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image can best be described as 'different'.  True, there 
+; is a Mandelbrot midget at the center, but, unlike most mini-
+; brots, this midget is actually doing something.  As I see it, 
+; the midget is skimming through the lower part of a cloud of 
+; fractal debris, with mostly clear air under it and even denser 
+; debris above.
+; 
+; The formula behind all this madness combines 0.4 part of Z^(3.3) 
+; with 4 parts of Z^(0.1) then adds C to create a parent fractal 
+; consisting of two large bays, three large buds and numerous 
+; rather large lakes surrounding the main figure.  Today's scene 
+; is located in a fragmentary valley separating the two bays.
+; 
+; To add life to the scene I rendered it with the inside parts set 
+; to 'fmod'.  The proximity factor of 0.38245, which controls the 
+; amount of background debris, is rather critical.
+; 
+; I named the image "Flying Mandelbrot", which is what it looks 
+; like, and rated it at a 7, which might be a bit generous.
+; 
+; The render time however is a very speedy 2-1/2 minutes, which 
+; should try the patience of no one.  For extra convenience, the 
+; completed GIF image will soon be posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Continued heavy clouds and occasional light rain kept a damper 
+; on things here at Fractal Central on Sunday.  The temperature of 
+; 46F 8C made little difference to the fractal cats, who, unlike 
+; their normal selves, behaved pretty much like angels.  My day 
+; was slow, with little to do but take it easy, watch TV and 
+; explore the world of fractals.  The next FOTD will appear in 24 
+; hours.  Until then, take care, and ponder the nature of reality.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Flying_Mandelbrot { ; time=0:02:25.60--SF5 on a P200
+                     ;  Fractint Version 2004 Patchlevel 1
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-3.44089298109485600/+0.172087524022466\
+  40/3642.29/1/-10/1.4766555894718536e-009
+  params=4/0.1/0.4/3.3/0/0 float=y maxiter=1600
+  inside=fmod proximity=0.38245 periodicity=10
+  colors=0007sFCtOGuXLvdPwmTwuKjmcAU_DTWFTTISPKSLNRI\
+  PRLNQNMQQKPSJPVIPXGO_FOaEOdEMgELjEJlEIoEHrEFuEEwED\
+  qCCkACe8B_6BU7RP8fK8uV7ed7Rn7CgAAaD8WG6QJ5KM3EP18R\
+  07U67WC7ZH7`N6cT6eY6hc6jh5ca4YV4SO3MH2GA2A4SBPqCik\
+  FqfHxnLS38Z8HUCQQHZMLgIQkFVnC_rAdu7rz5esAcoFakKZgP\
+  XcUV_ZTWcWYWY_P`aHbcASx4RMQWPP`ROeTOjVNoXNtZMx`Msa\
+  RnaVjb_ebcabgidmqfsxgxlay`XyPSyDNy1Iy3Ep4Bg67_74R8\
+  1JAAQCJXERcG_jIgp9Ze1RV`1`a7bbDcbJecPfdVhd`iefkell\
+  XhWOeGFb0Cf89iG6mO3pW1scUjhualubhubducaucYudUudRob\
+  QiaPc`OY_NSZMMYLGXK_IiYGgXFfVEeUDdSCcRBbXHfbNihSln\
+  YosbrsgntkkibH__IQXJGUK7SL9WMA_MCcMDgMFkMGoMCfU9Z`\
+  6Rg5Sd4Sa3TZ3TX2UU1UR0VO0VM5WJAXHFXEJYCOZ9TZ7Y_4a_\
+  2_l7ZxBUwKPwTLvaGvjCvrAts9st8rt7qu6ov5nv4mw3lw8jpD\
+  hjHfdSjibnnlqremiZi`TeSMaJGYBEXACX9AW98W86W74V72V6\
+  1V65WB8WFBWJEXNHXRKXVNXZaajofuximzPivMarJUnGMjDEfB\
+  7aABY9FT8IP8ML7QG6TC5XcKz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

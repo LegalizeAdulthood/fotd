@@ -1,0 +1,94 @@
+;     Date: Sun, 14 Jan 2007 07:17:26 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-01-07 (Spirals of Desire [7])
+;       Id: <1.5.4.16.20070114071954.2f9f2dec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 14, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's rather unusual image is a scene in the Z^(1.5)+C Mandel-
+; oid as it appears 111 levels up the logarithmic ladder.  At this 
+; level the parent fractal, much like yesterday's parent fractal, 
+; resembles a distorted Mandelbrot set rotated 180 degrees.  
+; Today's scene is located near the tip of a cluster of filaments 
+; on the southwest shoreline of what passes for a main bay.
+; 
+; Today's FOTD is unusual for an image in the Z^1.5 range.  It 
+; actually shows some detail other than radiating discontinuities.
+; 
+; The near-perfect spirals twisting from the midget are what 
+; brings the image to a rating of a 7.
+; 
+; The name "Spirals of Desire" came to mind while I was standing 
+; in line at the local market this afternoon, and happened to 
+; glance at the title of one of those junky romance paperbacks 
+; that flood the shelves of book stores.
+; 
+; The render time of 2-1/4 minutes is thankfully brief.  The only 
+; thing briefer would be a visit to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the pre-rendered image will soon be posted, if it is not 
+; already posted, for quick and easy viewing.
+; 
+; Clouds and occasional sprinkles of rain, with a temperature of 
+; 46F 8C, kept a damper on things here at Fractal Central on 
+; Saturday.  The fractal cats were still out of sorts with each 
+; other for most of the day, but their evening treat seemed to 
+; restore their good moods.  Tomorrow will tell how permanent the 
+; good moods are.
+; 
+; My day was fair enough.  My bum ankle is about 80-percent 
+; recovered, and the work is light.  This could be good news in 
+; the fractal department.  To be sure the news is good, check 
+; back here in 24 hours, when the next FOTD appears.  Until then, 
+; take care, and be of good cheer.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spirals_of_Desire { ; time=0:02:13.52--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=-0.5958111136\
+  4785320/-1.17229704386987500/2.423165e+009
+  params=1.5/0/111/0 float=y maxiter=2000
+  inside=0 logmap=104 periodicity=10
+  colors=00080670470270081582983E84I95M96R97V98_A9cA\
+  AgABlA9pA8tECqHFnKJkNMhRQeUTbXX_m_XzcUzfRzsOzmMzeS\
+  zYXzcazmgzwlX2cZ5c_7c`9haBjbDicFidHieKhfKhhKgtmlvm\
+  kxckzmkwmjtmjqminmikmihmheShcSh`RgYRgVQfSQfPPfMPeJ\
+  OeHOeFSfDVzCYzA`z9czD`zHZhLWiOUiSRjWPk_NlbKlfImjFn\
+  nDoqBocMnRWmDfl0pl3oi6ng8mdBlbDk_GjYIjVLiTOhQQgOTf\
+  LVeJYdG_dEbcLdbSfbZiaek`lm`rm`nm`jm`fm`bm`Zm`Vm`Rm\
+  `Nm`KndGogDpkAqn7rr4ru1heEZRRPCbMJ`KP_IWYGaXEgWCnU\
+  AtT8zSAyQBxODxMEwKGwIHvGJuEKuDMtBNt9Ps7Qr5Ss3Tt1Uu\
+  0Xv3Zw6`x9byCdzFfzIhzLjzOlzRnzUpzXrzZszUtzPuzKvzFw\
+  zAxz5yz0zz4zz7zzAzzEzzHzzKzzNzzRzzUzzXzz`zzczzfzzi\
+  zzfzzczzazzZzzWzzUzzRzzOzzMzzJzzGKzEIzBGz8Ez6Fz7Fz\
+  8Fz9GzAGzBGzCHzDHzEHzEKzCMzBPzARz9Tz8`zdZzaYz_WzXV\
+  zUTzSSzPRzNSzKSzHTzETzBUz8Uz5Uz2_z4dz5Yz7Sz9MzBGzD\
+  AzEFzJKzOPzSUzXYz`bzegzilznpzrqzorzlrziszfszctz`uz\
+  YuzVvzSvzQuzStzUtzWszY8z8 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

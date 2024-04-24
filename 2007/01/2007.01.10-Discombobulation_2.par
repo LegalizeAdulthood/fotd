@@ -1,0 +1,98 @@
+;     Date: Wed, 10 Jan 2007 22:49:07 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-01-07 (Discombobulation-2 [5])
+;       Id: <1.5.4.16.20070110225131.0cdfd0ca@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 11, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The fractal for today came about when I iterated the expression 
+; Z^(1.5874)+C, 35 levels down the logarithmic ladder.  The number 
+; 1.5974 is the cube root of 4.  This is the same number that was 
+; used for the 'Forever Flappable' fractal that appeared on 
+; January 9th, 2 days ago, but that fractal was calculated 34 
+; levels down the log ladder.  Both resulting parent fractals are 
+; obvious Mandeloids, though they are shaped entirely differently.
+; 
+; Today's image is named "Discombobulation-2".  I'm not sure if 
+; there ever was a "Discombobulation-1", but I kind of like big 
+; words with little meaning.  The name must have been inspired by 
+; the typical fractured low-order chaos that surrounds the midget 
+; near the center.
+; 
+; The scene of today's image is located in a large area of com-
+; plexity on the southwestern shore line of its parent fractal.
+; 
+; I was not going to rate today's image, but at the last minute I 
+; gave it a reprieve and rated it at a very average 5.  The 
+; included parameter file renders in under 1-1/2 minutes, about 
+; the same time it takes to visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the finished image there.  If the image is not yet 
+; posted, be a little patient.  It soon will be posted.  It is not 
+; always possible to calculate and post fractal images the moment 
+; the discussion appears.
+; 
+; Winter arrived in full force on Wednesday here at Fractal 
+; Central as a morning snow shower dropped 2 inches, 5cm, of snow 
+; in one hour.  The fractal cats interrupted their play activities 
+; for a few minutes to watch the big flakes fall.  The sun 
+; appeared in the afternoon, but the brisk winds and temperature 
+; of 30F -1C made it feel quite cold.  By this time, the cats were 
+; more interested in their tuna and cheddar treats.
+; 
+; In between fractals I kept busy working and clearing the side-
+; walk.  The next FOTD will appear in 24 hours.  Until then, take 
+; care, and great fractals are not always there when you want them 
+; to be.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Discombobulation-2 { ; time=0:01:21.29--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.83822789924444010/-0.411647447821357\
+  10/9746.991/1/117.5/-5.08849906655228779e-012
+  params=1.5874/0/-35/0 float=y maxiter=1800
+  inside=0 logmap=32 periodicity=10
+  colors=000bD6ZBAVADR8HO7KUFM_NNeVOkaPzwHy_6rXAlVEf\
+  SI_QMUNQOLUIJXGOWFSWEXVCaUBfTAjT7WO4HJ23E2UM2tUmzS\
+  mzQJuPPuNVuL_uK`mY`fj`_wJgk1o_3qc4rg6sk7to8usSZeLa\
+  gEch7ej1gkAffJeaSeX`dSicNrcJs_HtWGuTFvPEwLDwICuNUt\
+  RjsVgrZerbbqf`pjZpnWorUouS0R05Y5Ad9FkDKrHPyLOtRNoW\
+  Mk`LfeLbjN`ZOZNQXBRV0NeFJoTGyfIvaKtYMqTOoPQlLSjGUg\
+  CWe8VbEU`JTZPTXUSVZRTdQRiQPnPaqZRlgHh`E`UBUN8NG5GF\
+  BKEHODNSCTWBZ_AccAbbAbbAbbAbaAbaAbaDebGgcJidMkdPne\
+  SpfVrgXtgWkXWcNWWCWO2TEugPTv_1wY5xW8xUCySFyVIwZJvc\
+  KthLsmMqrNpvNGzdJzfMzhPziSzkVzmYzn`zpbzq9z8CzCFzGH\
+  zKKzOMzSPzWRzZOzSLzMJzGPzOUzV_zbdziuzfvzYvzPvzGkzJ\
+  `zMQzPFzS4zUUziszyqzqpziozbnzVmzOlzGkz9bzCVzFNzITz\
+  EYzBXzGWzLVzPUzUTzZTzb`zShzIlzLpzOszQwzTzzVmzRazNP\
+  zJDzFHzELzDPzCTzBXzA`z9dz8hz7RzE9zL8zX8zgrzUszStzQ\
+  uzPvzNwzMxzKxzJszWnzgizsczoYzkTzgNzdIz`CzX7zUUzSUz\
+  QUzOUzNjz`gzYdzVazTbzLbzD }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

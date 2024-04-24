@@ -1,0 +1,88 @@
+;     Date: Sun, 07 Jan 2007 22:38:29 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-01-07 (Orchids in Bloom [No Rating])
+;       Id: <1.5.4.16.20070107224051.225f3fac@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 08, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's formula, Z^(1.2)-Z^(1.8)+C, draws a Mandelbrot set 
+; rotated 180 degrees, with its east valley on the west side.  
+; This East Valley does not terminate in a point however.  It 
+; terminates in a kind of wedge.  Today's scene is located in 
+; a small valley on the southern edge of this wedge.
+; 
+; I named the image "Orchids in Bloom", though now I can see 
+; little reason for such a name.  I made no effort to rate the 
+; image.  I simply felt lazy.
+; 
+; The image was calculated in the normal inside=0, outside=iter 
+; method.  Other outside options give somewhat different versions 
+; of the scene, though it is a toss-up whether any of them are 
+; better than today's effort.
+; 
+; The calculation time of 22 minutes is slow enough to cause 
+; impatience.  But the cure for any fractal impatience is on the 
+; internet at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the GIF image has been calculated and posted for all con-
+; cerned fractalists to view at their leisure.
+; 
+; The daytime weather was fair enough here at Fractal Central on 
+; Sunday, with partly sunny skies and a temperature of 48F 9C.  
+; But toward evening, clouds moved in fast, and by 7pm a chilly 
+; rain set in.  The fractal cats stopped their play long enough to 
+; notice the raindrops on the window.  Then they asked for their 
+; evening treats.
+; 
+; My day was average.  There was no rush work to do, so I spent 
+; most of the afternoon watching TV and exploring Fractal Land.  
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and walk among the stars.  (The stars in the sky, that is.)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Orchids_in_Bloom { ; time=0:22:09.53--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-0.02911492426083489/-0.044631566427070\
+  93/9.007721e+009/1/125/0.000522074649377417266
+  params=1/1.2/-1/1.8/0/0 float=y maxiter=3600
+  inside=0 periodicity=10
+  colors=000_OoaNqcLteKv6gPAdTDbWH`ZKYbNWeRUhUSkXPo`\
+  NrcLuZGh_Hi_Hj`HknNFlQDkTCjWAhZ9ga7fd6ef5ee4ed4ec4\
+  ec4eb4ea4ea4bcC_dKYeRVQZSRfS5GV7IXNHVTHWZHWcHXfIYe\
+  JZcJZ`K_ZK`XL`VLdQchLvcItZFsWHlTJfRL_ONULPOJRHGTBE\
+  U5EY5E`5Ec5Eg5Ej5Em5MSIT6UPESLMRIUQLVRNWRPXSRYSUZT\
+  W_TY`U_aUaeNchGek9ciGbhM`fS_eYYdcXbiVaoU`uRZpPXkMW\
+  fKUaITYOZWTcVZhTcmSefUg_ViTWkMXlFYzm_dT``_bXfcTmeP\
+  tfLzgNkZOYQPKHQ69_7Xh8sZ6lP5eF4Z63S9CNCKJFSEH_AMdB\
+  RiBVmC_rCcvC_qFWlISgLOcOKZRGUUCQWziPz_IzLBrK4kG7dD\
+  AYADR6GK3JD0L6HSPXYV_bSYeQcaOiZMoWLtTrmteovUpwIrx6\
+  sycvHbrLbnObjRbfUZeYVdaRceNbhJalF`pB_t7ZwH`uRbs`dq\
+  jfojgnihliikhjihkhglfgmegndflefkffigfhhfgieMwfejfd\
+  kfbkfalf`mfZnfYofWpfVqfUrfSrfRsfPtfOufNvfLwfKxe4Zf\
+  5`f6af7cf8df9ff9gfAifBjfCkfDmfEnfEpfFqfGsfHtfIvfJw\
+  PYySWxUUxWSxYQx`OxbMxdKx6lB8jEAiGCgJEfLFdNHcQJbSL`\
+  VM_XOYZQXaSVcTUeVThXRjZQm }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

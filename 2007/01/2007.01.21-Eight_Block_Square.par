@@ -1,0 +1,91 @@
+;     Date: Sun, 21 Jan 2007 23:40:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-01-07 (Eight Block Square [No rating])
+;       Id: <1.5.4.16.20070121234245.0da741d2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 22, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A very busy day leaves little time for discussion.
+; 
+; Today's unrated image is named "Eight Block Square".  I gave it 
+; this name when I noticed the eight blocky, black areas surround-
+; ing the compulsory midget at the center.
+; 
+; The parent fractal was created by iterating a formula combining 
+; a little Z^(-25) with a little more Z^(2.5), then adding C.  This 
+; parent is a most unusual fractal, basically a crescent ox-bow 
+; lake.  Today's image was found at the edge of a large flat disk 
+; filling the center of the parent.
+; 
+; The image consists of partially inside and partially outside 
+; 'stuff'.  I added interest by calculating it with the outside 
+; set to 'tdis' and the inside set to 'fmod'.  These options 
+; appear to give the best image.
+; 
+; The render time of 2-3/4 minutes is brief enough, but it may be 
+; reduced to zero by going to the FOTD web site at"
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; Sunday turned cloudy and colder here at Fractal Central.  The 
+; temperature reached only 25F -4C, but this did not deter the 
+; fractal cats from having fun indoors.  By the time their evening 
+; treat was served, they were totally tired out and ready to 
+; settle down to eat.
+; 
+; My day was very busy, and from the looks of things, the next 3 
+; or 4 days will be even busier.  I cannot guarantee that an 
+; unbroken series of FOTD's will appear, but I'll do my best.  As 
+; of this evening, I give the Jan 23 to the Jan 26 FOTD's a 50-
+; percent chance of appearing.  Check back to see how right I am.  
+; Until next time, take care, and help save the fractals.  Give 
+; to the fractal iteration fund.
+; 
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Eight_Block_Square { ; time=0:02:46.81--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=mandelbrotmix4 function=ident
+  center-mag=-1.14717972591420600/+0.000972653997114\
+  75/7.785374e+009/1/-12.5/-7.49948414110260253e-005
+  params=0.025/-25/0.25/2.5/0/0 float=y maxiter=1000
+  inside=fmod proximity=1 outside=tdis periodicity=10
+  colors=000`GBVFFQFJKENEDRB7j9DV8JF7P04TW2Xz4Zq5_h6\
+  ``8bS9cKAdB9h2Be3Cc3E`3FZ3HX3IU3JS3LQ4MN4OL4PJ4RG4\
+  SE4f24TC4FM2GM4HM6IM8IMAJMCKMELMGOR2LMHIIVFEh7AuCA\
+  vGAvKAvOAvTAwXAw`AwdAwhAwfDtdGrbJp`LmZOkYRiWUfUWdS\
+  ZbQa_OdYNfWMbVMZUMVTLRS000000000000005K9PbHguPzqSw\
+  nVujYrg`pdcm`fkYihVlfcsPzzhzr9nsAopBolCpiEqfFqbGr_\
+  HsXJsTKtQLuNMuJOvGPwDQwARuDTtGVrJXqLZoO`nRblTdkWfi\
+  ZhhajfclefncipbkrZjoWjmTjkPjhMifJidFiaCi_3mW9iYFe_\
+  KaaQYbVUd`QffMgkIiqEkyAovBltBjqBgoCelCcjC`gCZeDWbD\
+  U`DSYDPWENTEKREIPEGYJFeOFnTFvXF1EY6IZAMZEQ_IU_NX`R\
+  ``VdaZhabkaa_baPcfCaaEdXGfTHhOJjJLlzzsFMnLOiRQdaVd\
+  XR_SOWNKRLIQIHNFGKDGHAFE8FB5E83E59G7FH9zzzRKDWMFaN\
+  HgPJmQLsSNxTOsWNoYMk`LgbKceJ_gIWjHSlGOnGQlJRjLThNU\
+  fPVdRXbUY`W_ZY`X_aVa_VYYVVANW8MQ7LK6KF5J94I43NA3SF\
+  3WK3`Q3eV3i_3ze3zj3zo4zl5zj5bg6We7Pb7I`8BY85WB9YED\
+  _HHaKLbMPdPTfSXgV`iYdk_gl }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
