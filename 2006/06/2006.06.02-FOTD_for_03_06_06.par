@@ -1,0 +1,77 @@
+;     Date: Sat, 03 Jun 2006 01:04:26 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-06-06 (FOTD for 03-06-06 [No Rating])
+;       Id: <1.5.4.16.20060603010830.0d47ecda@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 03, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We're not really caught up here at New Fractal Central, but I 
+; did manage to find time for a routine fractal.
+; 
+; Today's quickie image is a venture into the Z^1.5+C Mandeloid as 
+; it appears 151 levels up the log ladder.  The scene is located 
+; in a rudimentary East Valley.  Since I put almost no effort into 
+; the image, I have neither named nor rated it.
+; 
+; The render time of under 11 minutes is a bit slow for such a 
+; humdrum fractal, but the wait may be bypassed by downloading the 
+; finished GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was cloudy and humid with heavy showers here at New 
+; Fractal Central on Friday.  Sadly, we do not yet have fractal 
+; cats to complain about the rain.  The next FOTD will appear in a 
+; couple days.  We expect to have new fractal cats within a week.  
+; Until the next FOTD, take care, and keep your fractals dry.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_03-06-06 { ; time=0:10:48.01--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=+0.16449934740290990/-0.004064514184239\
+  98/6515270/1/-7.5/-2.31263181521557e-009 logmap=175
+  params=1.5/0/151/0 float=y maxiter=5000 inside=0
+  colors=000LXUPXRTWNXVK`VGdUDhT9iS6iQ5hP5gO5fN5eN5d\
+  N5bN5aN5`N5_O5ZP5YQ5XR6VS4US5TS5ST5RU5QV5PW5RY7SZ9\
+  T`BUaDVcFWdHYeJZeL_fN`fPagRbgTdhVehXfiZgi`hjbijdkk\
+  flkhmljnllomnpmpokonjnmimlglkflkekjcjibihahg_hfZgf\
+  YfeWedVdcUdbScaRbaQa`O`_N`ZM_YKZXJYXIXWGXVFWUEVTCU\
+  SBTSATTATUBUVBUWCUXCUYCUZDV_DV`EVaEVbFWcFWdGWeGWeF\
+  VfGWfHXfIXfJYgKZgLZgL_gM`hN`hOahPbhQbhQciRdiSdiTei\
+  UfjVfjWgjWhjXhkYikZjk_jk`klajk`kj`ki`kh`lg`lf`lf`l\
+  e`md_mc_mb_na_na_n`_n__oZ_oYZoXZpWZpWZpVZpUZqTZqSZ\
+  qRYrRYrQYrPYrOYsNYsMYsNXuMYsLYqLZoKZnJ_lJ_jI_iH`gH\
+  `eGadFabFa`Eb_DbYDcWCcVBcTBdRAdP9eO9eM8eK7fJ7fH6gF\
+  RXiRWhQVfQVePUcOTbOS`NR_NRYMQXMPVLOULOTQVSU`RYgQam\
+  QdlOfkNhkMjjLmjJoiIqiHshGugBuhFuiIuiLujPujSukVukYo\
+  ibjhgdgl_fqUevPdzNexMfvLguKgsIhqHipGinFjmDkkCkiBlh\
+  Amf8md7nc6oa5o`7mZ9lYAjWCiVDgTFfSGdQIcPJaNL`MMZLOY\
+  JQWIRVGTTFUSDWQCXPAZN9HgY }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

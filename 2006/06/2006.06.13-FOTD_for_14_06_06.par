@@ -1,0 +1,83 @@
+;     Date: Wed, 14 Jun 2006 00:17:48 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-06-06 (FOTD for 14-06-06 [No Rating])
+;       Id: <1.5.4.16.20060614002203.389f5adc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 14, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's minor emerald effort is a scene in the fractal that 
+; results when Z^(-3.5) is subtracted from Z^(-0.85) and (1/C) is 
+; added.  The image has been partly 'evaporated' by raising the 
+; escape radius to 1300, resulting in a fractal that consists of 
+; half inside and half outside stuff.
+; 
+; The inside parts have been rendered with the 'bof61' option, 
+; while the outside parts have been rendered with the 'tdis' 
+; option, resulting in a kind of bubbling effect.  Once again I 
+; have neither named nor rated the image, which calculates in 4 
+; minutes on my machine.
+; 
+; This 4-minute render time may be eliminated by downloading the 
+; finished GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A near perfect day here at New Fractal Central on Tuesday was 
+; enjoyed by the new fractal cats from their table by the large 
+; living room window.  They watched birds until big boy decided he 
+; would rather pull at the drapes, and little lady did nothing to 
+; stop the mischief.
+; 
+; The cats have indeed chosen their names, but to add to the 
+; suspense I will not reveal what they have chosen until the next 
+; FOTD appears, if all goes according to plan, in 2 days.  There 
+; will be no FOTD tomorrow because we are taking a trip back to 
+; Old Fractal Central to gather some things that were inadverten-
+; tly left behind in the big move.  Until then, take care, and 
+; wait with bated cat breath for the great revelation.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_14-06-06 { ; time=0:04:09.58--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.53127146459365400/+1.617905671158664\
+  00/10938.25/1/152.5/-7.97390464768454876e-009
+  params=1/-0.85/-1/-3.5/0/1200 float=y maxiter=255
+  inside=bof61 outside=tdis logmap=yes periodicity=10
+  colors=000aSbSUXJWR9YL0ZF4`H8aICcJGdLKeMOgNShPViQZ\
+  kRblTfnUjoVnpXrrYvshztmzpchmQ`jMSfHKcDC`84Z4Aa8GeC\
+  MiGSgJQbHOTGMJFK9JJEPJIUJMZIRcIVhIZmHcrHgvHkzFivEh\
+  rDfmCehBdcAbZ8aW7_U6ZS5YQ4XO3XP2YUL_ZKZcJZhIYhHYhG\
+  YhFXhEXhEWgDWgCWgBVgAVg9Ug8Ug8UgwAdoKghUi`ckUlmMXb\
+  FIS83ID6LI8NNAPSDRXFTaHVfJXkMZpO`uQbySdvUbsWapY`m_\
+  _kaZhcYedWbfV`hUYjTVlSSnRQoQOiSMdULZWJUYIO_GJaFEcG\
+  IfHLhIPkJSmKVpLZrMauMdwo`xlXvjUthQrfNqcKoaGm_DkYAj\
+  U9kR8lN7mK6nH5oD4pA3q73qA5jC6cE7XH9QJAJLBCNC6TH8ZL\
+  AdPBjTDpXFv`GodNhgUaj`VmgPpmRjhTecU`ZWWVYRQZML`HGa\
+  CCRLRGTeXWjlYnfSfaN_XISRCLM7DH26K6AM9EPCIRFLUIPWLT\
+  YOW`S_bVceYgg`jjcnlfrokvniumgtlfsldskbrjaqj_qiZphX\
+  ohVogUnfSmfRmlP_qONTsQSoTRkWRhYQd`PacPYeOVhNRkNOm_\
+  XllelgY_bRO`H8YKCVNFSQIPTLNWOKZSHaVEdYBg`7kb9icAhd\
+  BgeDffEegFchHbiIajJ`kGYoK_kO`gRacVb_YcWadSdeOhfKkg\
+  GohCri8vj4yk0mn8sOntOnjQh }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

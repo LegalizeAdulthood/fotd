@@ -1,0 +1,83 @@
+;     Date: Thu, 08 Jun 2006 23:13:11 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-06-06 (FOTD for 09-06-06 [No Rating])
+;       Id: <1.5.4.16.20060608231720.2d47d856@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 09, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Re-organization has been going better than anticipated here at 
+; New Fractal Central.  As a result, we are close to the point 
+; where the FOTD can resume its daily schedule, with new and even 
+; greater fractal scenes to come.  But we are not quite yet at 
+; that point, so there could easily be occasional missing FOTD's 
+; over the next few weeks.
+; 
+; Today's image shows what the Fractint biomorph option can do.  
+; I applied to a midget deep in the fractal that results when 
+; Z^(-2.8) is subtracted from Z^(-1.1) and (1/C) is added.  The 
+; image resembles nothing so much as a fancy floral arrangement.  
+; Since I put very little effort into the image, I have given it 
+; no name or rating, but it really is worth a quick look.
+; 
+; The render time of under 5 minutes is brief enough to make 
+; running the included parameter file almost enjoyable.  Total 
+; enjoyment may be found by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and downloading the finished GIF image from there.
+; 
+; Clouds, cool temperatures and occasional showers continued here 
+; at New Fractal Central on Thursday.  Sadly, we do not yet have 
+; fractal cats to report on, but I expect a couple eager new guys 
+; to appear within a week or so.  The next FOTD is due in 24 
+; hours.  From the way things are going, it might actually make it.
+; 
+; Until next time, take care, and if everything is fractal, then 
+; nothing is not fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_09-06-06 { ; time=0:04:45.61--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.79509290661266600/+0.647436916998275\
+  10/1.618019e+011/1/50.141304887470767/0.1568350234\
+  20098 params=1/-1.1/-1/-2.8/0/0 float=y maxiter=800
+  inside=0 biomorph=120 symmetry=none periodicity=10
+  colors=000C0dA2`dv2PzgAzzb0AJCZ2Vv0mz0`z0Ns0Ae40T8\
+  0GbNHzzHzz4zz0zmHzTgvPZkLP`HGPG6EC02800600G00N00V4\
+  0bC2kJ4sR6zZ8ze0uJ0i00Z0Cv0Zz0sv2zb4qT8VJA8AE00G22\
+  HH4HX6Hk6Hb4ET2AJ08A040020000000606E2HL4TT8d`AogCd\
+  kHTmNHoT6qZ0sd0ui0vm0ou0gz0`z6TzENzGbuGoTGz0Gz08s0\
+  2VT06u00z02z0Jz0`q0sg0zZ0zP0zZ0ze0zm0zu0zzGigbTNxC\
+  2z00ddZ0zzJVzb0oi0Go00V02C0N08i0GzLXdzmEzqPzs`zukz\
+  vvmzzzzzzmzzszzizA00L00z00T00X60bE0eg0iP0mV0kZ0gb0\
+  ed0kX0oP0sJ0vC8z6Hz0Pz0zz0zz0mz0gz0dsC`kLXeXTZePRq\
+  LJzHCzE6zA2zG0zL0zR0zX0zb0xg0uk0qq0mv0iz0ez0bz0Zz0\
+  Xz0Zz0`z0bz4dzAezGgzLizTkzZmxdoviqudek`XbVNVRCLL2E\
+  H04E00z4zz0zz0zs0zm0ze0zZ0zR0zL0zE0z60z00z00z00z00\
+  u20o60g80`C0VE0NH0GJ0AL0GN2JPANRHRTPVVZ`XedZmg`ukb\
+  zoXzmTzkPziLzgHzeEzdAzb6z`2zZ0zX0zV0ze0zo0zq2zq6zq\
+  AzqEzqHzqLzqPzsTzsXzs`zsdzsgzskzsmzsvsizebzTTzGLzC\
+  Pz8Tu4Xm2`d0dX0gN0kG0oE0i }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
