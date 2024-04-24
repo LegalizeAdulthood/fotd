@@ -1,0 +1,108 @@
+;     Date: Wed, 01 Aug 2012 14:05:10 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 30-07-12 (Triangular Entity [No rating])
+;       Id: <1.5.4.16.20120801140827.38df3ec0@earthlink.net>
+; ---------
+; 
+; FOTD -- July 30, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a quickie found in a hurry to bring the FOTD up 
+; to date.  It is a Julia set of a valley of the Z^(1.5)+C 
+; Mandeloid as calculated by the MandelbrotBC1 formula 15 levels 
+; up the hyperladder, with the floor function in effect.
+; 
+; Since the image is such a hasty one, I could give it no official 
+; rating, though if I were to rate it, a rating of a 6 would be 
+; about right.  The colors are consistent with the deep blues of 
+; the fractal artistic period I am currently going through.
+; 
+; The name "Triangular Entity" refers to the series of brilliant 
+; but blatantly inconsistent triangles down the center of the 
+; large fractal object, which might be some undersea creature 
+; crawling along the sea floor.
+; 
+; The calculation time of one minute even will pass a little 
+; slower than anticipated.  The unusually dark top part of the 
+; frame will delay the build-up of anticipation.
+; 
+; The image may be viewed already calculated on the official FOTD 
+; web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high definition rendering and other goodies may be accessed at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; At this point I should add that the entire series of BC formulas 
+; was conceived by Andrew Coppin.  (Is he still on the list?)  My 
+; part in the BC series amounts to little more than tweaking.
+; 
+; We experienced another near perfect day here at Fractal Central 
+; today, with a temperature of 88F 31C and skies straight from the 
+; Caribbean.  Only the humidity, which was a little too high for 
+; total comfort, kept the day from being absolutely perfect.
+; 
+; The fractal cats had a quiet day most of the time, though Cassie 
+; began swearing at Nicholas when she had too much catnip.  The 
+; humans accomplished the usual commercial work without incident.  
+; When the trap under the kitchen sink sprang a leak, we repaired 
+; it with duct tape.  The next FOTD will be posted whenever it is. 
+; Until whenever, take care, and maybe the ghosts of the dead that 
+; are so widely reported are the same entities as the space aliens 
+; supposedly visiting earth in UFO's.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Triangular_Entity { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=0.240745/0.0073673/\
+  1.041667/1/5/0 params=1.5/0/15/0/-0.2492/0.0617/0/0
+  float=y maxiter=1500 inside=bof60 logmap=yes
+  colors=00000E00G00I00K00M00O00Q00T00W13Z27b4Bf6Fj8\
+  KnAOrBUtDZuFbuHevJivLlwMowRqwVrwZrwbswftwjtwnuwrvw\
+  vvwrutourkuphumeukauiZufVtdStbPt_LtYItWEtTBtR8tPEo\
+  TKjWQfZWaa`XdfTglOjrJmwFpylYx_lxOzwTywYxwbxwfwvkvv\
+  pvvuuvyurxnoxgkw`hwUevNavGZu9Wu2YmA_fH`_ObTVcMaeLc\
+  fKdgJeiIgjHhkHimGknFloEmqDorDpsCquBsvAtw9ux9vuCusE\
+  upGunIukKtiMtgOtdQtbSs_UsYWsWYsXXpYWnZVl_Uj`UhaTfa\
+  SdbRacQ_dQYePWfOUgNSgNQbSPZWOV`ORdNNiMJmMFrLBvK7zK\
+  AxLDvLFtLIrMLpMNnMQlMTjNVhNYfN_eNWbdVacU`bU_bTZaSY\
+  aSX`RW`QW_QV_PUZOTZOSYNRYMQXMQXVKPcFIl9Bu44p75l96h\
+  B7cE8_G9WIASKAROEQSIPWLO_PObSUPhZBx`Tsainbfoccoc`p\
+  dYpeVqeTqfQqgNrgKrhHsiEsiCsjCrkCrlBqmBqnBpoBppBoqB\
+  orBnrBnsAms9ls9kt8kt8jt7it7iu6hu6gu5gu5fv4ev4ev3dv\
+  3cw2cw2bw1aw1at4`r6`p8_nA_lC_jEZhHZfJZdLYbNY`PXZRX\
+  WUXUWWSYWQ_WOaVMcVKfUIhUGjUElTCnTApT9mS9kR8iQ8fQ7d\
+  P7bO7_N6YNEdPAfR6hT3iU2eX }
+
+frm:JuliaBC   { ; BC formulas by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

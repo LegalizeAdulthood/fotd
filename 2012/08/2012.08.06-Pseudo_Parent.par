@@ -1,0 +1,108 @@
+;     Date: Mon, 06 Aug 2012 18:35:11 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-08-12 (Pseudo Parent [6])
+;       Id: <1.5.4.16.20120806183832.308f2be0@earthlink.net>
+; ---------
+; 
+; FOTD -- August 06, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the parent fractal that results when 
+; the formula Z^(1.618034)+C is iterated by the MandelbrotBC3 
+; formula at ground level with no function applied.  To see this 
+; parent fractal, shut off the logmap and back out to a magnitude 
+; of 20.  You will also see that the image is located rather deep 
+; in the East Valley section of this parent.
+; 
+; But wait!  The image is named "Pseudo Parent".  The reason is 
+; that this parent fractal is not the true parent at all.  It is a 
+; large satellite on the south side of the full true parent, which 
+; can be viewed by backing farther out to a magnitude of 0.4.
+; 
+; I could give the image a rating no higher than a 6.  I have 
+; posted entirely too many similar images to rate it any higher.
+; 
+; The calculation time of 1-3/4 minutes will make short work of 
+; any impatience.  Visiting the web sites will totally eliminate 
+; it.
+; 
+; Save calculation effort by viewing the finished image on the 
+; FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Increase your pleasure by viewing it in hi-def at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And be sure to check the back images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The humidity departed today, leaving Fractal Central with a 
+; fine, partly cloudy day with a temperature of 84F 29C.  The 
+; fractal cats had a peaceful day except for a brief squabble over 
+; ownership of the laundry basket, which ended with Nicholas 
+; getting hit in the nose and Cassie happily in control of the 
+; basket.
+; 
+; The humans had a typical partly-enjoyable FC day, with the work 
+; light.  During the lunch break, FL told me that I might have an 
+; 'asparagus' personality.  This is good, since asparagus is my 
+; favorite vegetable.  The next FOTD will be posted before it has 
+; time to be missed.  Until whenever, take care, and would the 
+; next mass murderer please give prior warning.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pseudo_Parent { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.3977288274687551/-1.316635244157792/\
+  2.18479e+007/1/50/0 params=1.618034/0/0/0 float=y
+  maxiter=1000 inside=0 logmap=365 periodicity=6
+  colors=000916A27B38C49D5AE6CF7EG8GH9IIAKJBMKCOLDQM\
+  ESLGULIWLKYLM_LOaLScLUeLWgLYiL_kLamCcoAerewYcfTPze\
+  OgXpTkl`h_VZdjerdSLu`NeVgrrbjjYccTXWifg1gBDZIcxDYl\
+  HT`L`qW72kC8eGE_KKURHuQKjPN_rVrbScLnNMeONYPh__bXXY\
+  VUTSRNSwEL6XZWUnajAlbHaVNRNUGG_6I`IJ`ULaeMaqJU_GMI\
+  DE1NH9WKGdNNmPUoR_qTdsViZFUF0EK4NP8VUCcZFkOCYDALKO\
+  NQ`PWmRazSgm`m`hsOpyCxmOrb_mSkgHwbRuPLfUo9YbHZRO_F\
+  W`3b`9ZYDfSEWVJTSftS6pwCgkIZ_z3volDedHXXLIuROM8OOH\
+  37hAEeHKZDtwGlnJdeMXX6LpFObXZzSUgDXTrQXbQToqz39SlD\
+  9qUOgSPYRPPPZOQVOQS80kTqWRjUQcSPXQyv0feDS4kRAeQF_P\
+  LUt8xkDocHfWMYodPG8IJELMKNZutWmlTedQYXmUBfTF`SIURM\
+  aEMVKODpwHgkLZ_gqeYcX0m0CaD5X2AV8FTEKRKI5pKBiLGbNL\
+  W`_VWWTLuuX1BSEIAWcEU_HTWLRSAFr6o7FbG9f951zFEgtdXi\
+  _UZVRmjHMTLSl8ctPbxQZwPWwPTvPQvPXX4PS4IN4AI43D4GB3\
+  TA2mc1pm0mc2cE4XH5QL7JO8CRA5UBJYGXaLJhVPaVUWV_QVdK\
+  VjEVo8VuHOzQIiLYzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

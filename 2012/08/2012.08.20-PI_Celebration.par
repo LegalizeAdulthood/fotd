@@ -1,0 +1,113 @@
+;     Date: Mon, 20 Aug 2012 14:45:03 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-08-12 (PI Celebration[7.5])
+;       Id: <1.5.4.16.20120820144834.2baf8196@earthlink.net>
+; ---------
+; 
+; FOTD -- August 19, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's venture into the PI family of fractals takes us to the 
+; parent fractal that results when Z^(PI)+C is iterated PI levels 
+; up the hyperladder with the 'ceil' function applied.  This 
+; parent resembles the familiar ground level PI fractal rotated 
+; about 30 degrees so that the north bud faces northeast.  Today's 
+; image is located in the debris surrounding a small distorted bud 
+; on the fractured western shore line of the southern lobe of the 
+; main bay, just north of the negative X-axis.
+; 
+; I usually avoid spirals in my fractals, since currently trendy 
+; fractals are over-populated with them, but today's fractal is so 
+; unusual that I just had to show it.  Instead of consisting of 
+; continuous unbroken arms, the spiral surrounding the minibrot in 
+; today's image consists of isolated patches of debris spotted in 
+; a spiral pattern.  This plus the coloring raises the rating to a 
+; respectable 7-1/2.
+; 
+; The name "PI Celebration" needs no explanation.  The calculation 
+; time of 1-1/4 minutes leaves only a tiny opening for impatience 
+; and boredom to creep in.  And even this tiny possibility may be 
+; eliminated by visiting the web sites.
+; 
+; The image is posted already calculated on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day began with a bank of river fog obscuring the sky, but by 
+; mid-morning the fog cleared off, revealing a higher layer of 
+; clouds that prevailed for the rest of the day.  The temperature 
+; of 73F 23C and lack of hot sun kept it quite comfortable for the 
+; middle of August.
+; 
+; The house watch cats, Cassie and Nicholas, being indoor cats, 
+; had little to say about the outside conditions.  The humans, 
+; being at least marginally human, had other things, such as 
+; discussing politics, to occupy their time.
+; 
+; The next in the unending series of FOTD fractals will soon be 
+; posted.  Until whenever, take care, and is the FOTD finally 
+; running out of steam after 15 years?  Stay tuned for the next 15 
+; years to find out.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+PI_Celebration { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ceil
+  center-mag=-0.6252176739160485/+0.0538719225787179\
+  /3.284e+009/1/147.5/0 params=3.14159265358979/0/\
+  3.14159265358979/0 float=y maxiter=2000 inside=0
+  logmap=142 periodicity=6
+  colors=000Kx0Kw0Kv0Ku0Kt0Ks0Kr0Kq0Kp0Ko3Kn4Km4Ii5G\
+  f5Eb6C_6AW78T76P84M82I90F91E81D81B71A7186176266245\
+  23530420420480AEJGKOMQSSWXYa`cgeimiopnzrzzrwwqmzpk\
+  lrihpfcod_mbVl`RkZNc`LWbJOdHGfFFhDKbKPYQUTWZOacIhh\
+  Dnn8tq3zo4xm4wk5vi5ug6te6sc7ra7q_ApYFoWKnUPnQUnMZz\
+  KczIhzGmzErzCwzHrzMmzQhzVdzZbzc`zhZulXvqVwuUxnYyha\
+  ybezXizVgxUewTcvRauQ_tPYsNWrMUqLTpMVnNWlOXjPZiQ_gR\
+  `eRbdScbTd`Uf_VgYWhWWiVXhTYgSZfR_fQ`ePadNbdMccLdbK\
+  ebJb`N`_RZZUXYYVX`TWdRVgNSTPOVRKWTHXRIWPIVNIULJTJJ\
+  SIJSGJREKQCKPAKO9KOBJNCIMEHMFGLHFKIEKKDJLCINBIOAHQ\
+  9GR8GT7FU6EV6EU8GT9ISBKSCMREOQFQQHSPUUOUWcUYcU_cUa\
+  cUchUehTgmUhmRdmU`mUXmUUrUQrUMvUJzUFzUBzU8zU8zU8zU\
+  8zc8zc8zc8zc8zc8zc8zh8zm8zr9zvAzzBzzCzzCzzDzzEzzFz\
+  zGzzGzzHzzIzzJzzKzzKzzUzzbzzlDzzFzzHzzJzzKzzMzzOzz\
+  QzzRzzTzzVzzXzzYzzXzzWzzVzzUzbTzcSzdRzeQzePzfOzgNz\
+  hNzhMzgLzfLzfKzeJzeJzdIzd }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,105 @@
+;     Date: Sat, 18 Aug 2012 00:13:23 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-08-12 (Primary PI [6])
+;       Id: <1.5.4.16.20120818001653.2c1758bc@earthlink.net>
+; ---------
+; 
+; FOTD -- August 17, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we check the 'Zexpi' fractal, or at least one of the 
+; infinity of Zexpi fractals.  The one we are checking looks 
+; nothing at all like the familiar one, which closely resembles 
+; the cubic Mandelbrot set.  Instead of sitting upright, today's 
+; parent Zexpi has been turned on its side, with two main buds on 
+; the western lobe of the main bay and only half of a bud on the 
+; eastern lobe.
+; 
+; I created this parent by calculating the formula Z^(PI)+C at a 
+; level 15.5 rungs up the logarithmic hyperladded with the 'ceil' 
+; function in effect.  I think this is the first time I have used 
+; this function, which is one of the rounding functions.  Today's 
+; scene is located on the west side of the main bay, in the debris 
+; near the X-axis.
+; 
+; The rating of a 6 is average and indicates that I see nothing in 
+; the image to get excited about.  The name "Primarily PI" shows 
+; that this is the first in a series of images based on the Zexpi 
+; fractal.  The calculation time of a mere 20 seconds is about 
+; what the image is worth.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Increasing clouds marred the early part of the day here at 
+; Fractal Central, and rain spoiled the latter part.  The fractal 
+; cats approved of the temperature of 86F 30C however.
+; 
+; The humans made it through the day with little of the excitement 
+; that makes interesting reading.  The next FOTD will be posted 
+; before too long.  Until whenever, take care, and why are the 
+; 99-percent so offended by the wealth of the 1-percent?  Could it 
+; be envy?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Primarily_PI { ; time=0:00:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ceil logmap=37
+  center-mag=-0.9369868294821131/+0.0378608092734622\
+  /1.568021e+011/1/132.5/0 params=3.14159265358979/0\
+  /15.5/0 float=y maxiter=2400 inside=0 periodicity=6
+  colors=0000FI0EL0DN0CP0BR0AT08V56aA4iG3tM8wTBwUEwV\
+  HxWKxXMxYOxZQt_Tq`UnaXja_gbzdzz`bzYzzVczRzzOczLous\
+  lrrmzqrzpvzozznzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzTzz\
+  QzpOzpMzqJzrHzrFzsCztAzt8zqCznFzkIzhLzeOzbRz_UzYXz\
+  WWzVVzUUzTUzRTzQSzPSzORzMQzLQzKPzJOzHOzGNzFMzEMzCL\
+  zBKzAKz9Jz7Iz6Iz5Hz4Gz3Gz5Hz7Hz9HzBHzCHzEHzGHzIHzJ\
+  HzLHzNHzPHzRHzSHzUHzWHzYHzZHzUGzQGzLGzHGzCGz8Gz4Gz\
+  AHzGIzLJzRKzWKzaLzgMzlNzrOzwOztPzqQznRzkRPwzOwzOwz\
+  NvzNvzMvzMvzLvzLvzKvzJvzJuzIuzIuzHuzHuzGuzGuzFuzFt\
+  zEtzEtzDtzCtzCtzBtzBtzAszAsz9sz9sz8sz8sz7sz7sz8sz9\
+  szAszAszBszCszDszDszEszFszGszGszHszIzzJzzJzzIrzIzz\
+  IzzIzzIzzIzzIzzIzzIzzIzzIzzIzzIzzIzAIzBIzBIzCIzCIz\
+  DIzDIzEIzEIzFIzFIzGIzGIzHIzHIzIIzIIzJIzJIzKIzKIzLI\
+  zLHzLHzMHzMHzNHzNHzOHzOHzPHzPHzQHzQHzRHzRHzSHzSHzT\
+  HzTHzUHzUHzVHzVHzWHzWHzXHzXHzYHzYHzZHzZHz_Hz_Hz`Hz\
+  `HzaHzaHzaHzdHzgHziIzhJzh }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,114 @@
+;     Date: Fri, 24 Aug 2012 17:10:59 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-08-12 (Ribbon Cutting ceremony [7])
+;       Id: <1.5.4.16.20120824171457.38ff139a@earthlink.net>
+; ---------
+; 
+; FOTD -- August 24, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is a bit late, mostly because of the hour or so it 
+; took me to read and try to decipher a group of e-mails I 
+; received from Sebastien, who appears to have interesting things 
+; to say but has so much trouble saying them.  When my deductive 
+; overload became too severe, I turned to the world of fractals.
+; 
+; The exponent of Z in today's fractal is 1.189207115, which is 
+; the square root of the square root of 2, or the 4th root of 2.  
+; This unlikely value was iterated 2 levels up the hyperladder 
+; with the 'recip' function applied.  The resulting parent fractal 
+; appears as a large, almost budless, bay with the southwest side 
+; cut off and a single period-3 bud on the northeast shore line.  
+; I can find no trace of the period-2 but that would be expected.  
+; A series of chaotic stripes extends southwest from the bay, with 
+; today's image located somewhere in this chaos.
+; 
+; The name "Ribbon-Cutting Ceremony" refers to the effect of 
+; curled satin ribbons, which was achieved by rendering the scene 
+; with the outside set to 'tdis'
+; 
+; The rating of a 7 indicates that I consider the image average.  
+; The calculation time of 35 seconds guarantees no thrill, but it 
+; does guarantee that little time will be spent on the way to a 
+; possible letdown.
+; 
+; The finished image is at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The hi-def version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Hazy sun, increased humidity and a temperature of 86F 30C made 
+; the day a typical late August one here at Fractal Central.  The 
+; fractal cats enjoyed the conditions from inside.  They never 
+; worry about things like T.S. Isaac.  The people of New Orleans 
+; will supply all the worry the storm demands.
+; 
+; The humans concerned themselves with more mundane things such as 
+; the slow response the CrossScan puzzles are getting.  My opinion 
+; is that we should mix in some number stuff, but FL doesn't like 
+; numbers.  The next FOTD *WILL* be posted.  The exact time will 
+; be revealed when the image appears.  Until whenever, take care, 
+; and I see there has been another big-news shooting.  Maybe we 
+; should pass another law.  How about making it a hate crime to 
+; kill anyone with a firearm?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+RibonCutingCermony { ; time=0:00:35.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-0.21817277/-1.24188131/255/1/127.5/0
+  params=1.189207115/0/2/0 float=y maxiter=5000
+  inside=0 outside=tdis periodicity=6
+  colors=000qERoKXmQckWjjapgbmdbkaciZcgXceUdcRd`OeZM\
+  eXJeVGfTDfRBfPHaQNXRTSSZNTdIUjEVkIWlLXmOXnRYoUYoXZ\
+  p`_qc_rf`si`tlatoasl_siZsfYrcXr`WrYVqVUqSTqPRpMQpJ\
+  PpGOoDNoAMo7Lo5KkBLgGMcMN`RNXWOTaPPfQMkQBDwIGnPIeV\
+  LYaNPgPHhOJiOKjOLkOMlONmOOnOQoORpOSqOTrOUsOV`7o_Gk\
+  ZOgYXcXd_WlWUjUShTRfSPdRNbQM`PKZOJXNHVLFTKERJCPIAN\
+  H9LG7JF6HE7IS7Jd7KqNOraSsYVrVXqRZpO`pKboHcnFbnPZrZ\
+  TuhQoqNjuWdvd_wlUxqPuoNrlMoiLlfKicIf`HcYG`VFYSDVPC\
+  SMBPJAMG8JD7GA6D75HFNKMcRQbYTbdWbkZbrabxdbt_YqVUnQ\
+  QkLMgGHdBDa69Z25`C8bMBdVEfdHhnKjwNdcSabUmbWmaXmaZm\
+  a`S`aQ`cO_eM_fK_zIZzGZzEYzCYzAmp9mm8mj8mh7me6bb6z`\
+  5dY4dV4eTuuQzvNzwLzxIzyFzyDzoJzfPzIVz9`zQbzfczXbzO\
+  bGFbJHcMJcPLcSNcUOcXQd_SdbUdeWdgXdjZem`epbesdeueet\
+  bfs`grZhqWiqUjpSkoQlnNmmLnmJolGpkEqjCrjAsjYSjt0gr1\
+  ep2cn3al4_j4Xh5Vf6Td7Rb8P`8TXAXTD_OFcKHgGKkCMn8Oo7\
+  Pp6Qq5Rr5Ss4Ts3Ut2Vu2Wv1X }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

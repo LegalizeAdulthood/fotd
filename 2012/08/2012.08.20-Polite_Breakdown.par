@@ -1,0 +1,114 @@
+;     Date: Mon, 20 Aug 2012 19:49:26 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-08-12 (Polite Breakdown [No Rating])
+;       Id: <1.5.4.16.20120820195257.2c079fa2@earthlink.net>
+; ---------
+; 
+; FOTD -- August 20, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image might or might not be a fractal.  It's all in the 
+; opinion of the beholder.  The image is actually a scene in one 
+; of the spiral patches of yesterday's image, but what we see is 
+; not a legitimate fractal, it is an image created at a magnitude 
+; of almost 10^14, which is beyond the range of resolution of the 
+; Fractint math routine.
+; 
+; This presents difficulties in calculating today's image with 
+; programs other than Fractint.  The resolution breakdown, which 
+; creates the venitian-blinds effect, is particular to the 
+; Fractint math routine, and if the parameter file is run under 
+; other programs, a different image will result.  A program using 
+; a routine with a greater resolution limit will produce an image 
+; with full resolution, which will be a more accurate image for 
+; sure, but will miss the particular distortion that is featured 
+; in today's image.
+; 
+; I chose today's imperfect image to be the FOTD because I have 
+; never seen such a curious math breakdown before this.  Since the 
+; image is artificial, I could not give it a rating, but this does 
+; not mean it is totally worthless.
+; 
+; The calculation time of 2-2/3 minutes is admittedly slow.  The 
+; web sites will eliminate most of the wait however.
+; 
+; To view the finished image without the wait, check it on the 
+; official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Enjoy the rendering in hi-def at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And don't forget the back FOTD's at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A temperature of 68F 20C accompanied by clouds and rain showers 
+; left today with much to be desired here at Fractal Central.  The 
+; fractal cats checked the outside conditions once, then found 
+; more important things to concern themselves with.  The big event 
+; in the human department was a friendly discussion about the 
+; so-called 'war on women', FL and I taking opposing sides.
+; 
+; Provided a victory is achieved, the next FOTD will be posted 
+; soon, with the usual omission of a guarantee of promptness.  
+; Until whenever, take care, and let's stop protesting about a 
+; thousand minor injustices and organize a protest against the 
+; greatest injustice of all -- human mortality.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Polite_Breakdown { ; time=0:02:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ceil passes=1
+  center-mag=-0.6252176735794789/+0.053871922630012\
+  61/8.4635e+013/1/-175/0 params=3.14159265358979/0\
+  /3.14159265358979/0 float=y maxiter=2000 inside=0
+  logmap=310 periodicity=6 mathtolerance=0.05/1
+  colors=000mc0jc0gc0dc0ac0Zc0Wc0Tc0Qc0Nc3Kc4Hc4Ec5B\
+  c59c60_60W70T70P80M80I90F90E80D80B70A7086076066045\
+  03530420420480AEJGKOMQSSWXYa`cgeimiopnzrzzrwwqmzpk\
+  lrihpfcod_mbVl`RkZNc`LWbJOdHGfFFhDKbKPYQUTWZOacIhh\
+  Dnn8tq3zo4xm4wk5vi5ug6te6sc7ra7q_ApYFoWKnUPnQUnMZz\
+  KczIhzGmzErzCwzHrzMmzQhzVdzZbzc`zhZulXvqVwuUxnYyha\
+  ybezXizVgxUewTcvRauQ_tPYsNWrMUqLTpMVnNWlOXjPZiQ_gR\
+  `eRbdScbTd`Uf_VgYWhWWiVXhTYgSZfR_fQ`ePadNbdMccLdbK\
+  ebJb`N`_RZZUXYYVX`TWdRVgNSTPOVRKWTHXRIWPIVNIULJTJJ\
+  SIJSGJREKQCKPAKO9KOBJNCIMEHMFGLHFKIEKKDJLCINBIOAHQ\
+  9GR8GT7FU6EV6EU8GT9ISBKSCMREOQFQQHSPUUOUWcUYcU_cUa\
+  cUchUehTgmUhmRdmU`mUXmUUrUQrUMvUJzUFzUBzU8zU8zU8zU\
+  8zc8zc8zc8zc8zc8zc8zh8zm8zr9zvAzzBzzCzzCzzDzzEzzFz\
+  zGzzGzzHzzIzzJzzKzzKzzUzzbzzlDzzFzzHzzJzzKzzMzzOzz\
+  QzzRzzTzzVzzXzzYzzXzzWzzVzzUzbTzcSzdRzeQzePzfOzgNz\
+  hNzhMzgLzfLzfKzeJzeJzdIzd }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

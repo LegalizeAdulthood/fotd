@@ -1,0 +1,116 @@
+;     Date: Wed, 15 Aug 2012 13:12:35 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-08-12 (Penultimate Zexpe [8])
+;       Id: <1.5.4.16.20120815131621.2b67865a@earthlink.net>
+; ---------
+; 
+; FOTD -- August 14, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As the name of today's image, "Penultimate Zexpe", implies, it 
+; is the next to last in the series of Zexpe images, and is also 
+; supposedly the next to best in the series, with tomorrow's image 
+; hopefully being the best.  The problem is that I have not yet 
+; found an ultimate Zexpe, and am not sure that I will find one.
+; 
+; The parent Zexpe fractal came about when I brought up the 
+; TrueMandelbrotBC formula and checked a mere 1/2 level down the 
+; hyperladder.  This parent is shaped much like the minibrot at 
+; the center of today's image.  It is rotated so that the single 
+; large bud lies on the southwest side of the main bay.  A main 
+; spike, much like that of the Mandelbrot set, emerges from this 
+; large bud, and a large minibrot lies on this spike.  A field of 
+; smaller mis-shapen minibrots is scattered mostly north of this 
+; minibrot, with today's scene located in a valley of one of these 
+; smaller minibrots.
+; 
+; The pattern surrounding the minibrot in today's image is unlike 
+; anything found in the M-set.  It holds almost no recognizable 
+; near-doubling series of elements.  The image holds many smaller 
+; minibrots however that are withing reach.  Some of them might be 
+; interesting, though I have not yet checked.
+; 
+; I feel that the rating of an 8 is justified, mostly because 
+; today's image truly is something different.
+; 
+; The calculation time of 3 minutes borders on slowness.  
+; Hopefully, the result will make the effort worthwhile.
+; 
+; The finished image may be viewed without the task of calculating 
+; it by visiting the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back FOTD's are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of clouds but some sun and a temperature of 84F 29C made 
+; today a typical mid-august day here at Fractal Central.  The 
+; fractal cats took it easy most of the day, with only a minor 
+; interruption as Cassie had a hairball attack.  When the hairball 
+; was eliminated, all went well for the rest of the day.
+; 
+; The humans had a typical day, which makes for relaxing living, 
+; but hardly supplies material for an exciting novel.  The next 
+; FOTD will be posted in a typical length of time.  Until when-
+; ever, take care, and all we need is for one single unexplained 
+; UFO sighting to be a space craft of visiting aliens.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Penultimate_Zexpe { ; time=0:03:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=TrueMandelbrotBC center-mag=-0.4253781\
+  781908645/-1.336766771358537/8.92526e+007/1/156/0
+  params=2.71828182845905/0/-0.5/0 float=y
+  maxiter=5000 inside=0 logmap=394 periodicity=6
+  colors=0009KAKKABKAMKADKAOKAFKAQKAHKASKAJKFUKFLKGT\
+  NANKANPAJPAEP89PIOP2WU9LU8KU7IU7HU6FU6EU5CU5BU4AR3\
+  8N37J25F24B127113025714614614513513413412302302201\
+  2011011000000uGmqEimDfiCceB_aAXY9UU8QR7NN6KJ5GF4DB\
+  3A726313wI1hD0U90F40CpzBmwAktAiq9fo9dl8bi8_f7Yd7Wa\
+  6TZ6RW5PU5NR4KO4IL3GJ3DG2BD29A168145022EQGDOFCNEBM\
+  DBKCAJC9IB9GA8F97E87D86B75A6495474364253232121010d\
+  ycat`ZpYWkVTgSQbPNZMKVKHQHEMEBHB8D8585242y8dt7`o6Y\
+  j6Ve5Sa4PX4MS3IN3FJ2CE19`zzUzz0ys0to0pk0lg0hd0d`0`\
+  X0XT0SQ0OM0KI0GE0CB087043JNyGJpDGgADZ89Q56H238ujum\
+  dmfZf_T_TNTLHLEBE757za4nR3YM2QG2HB1850SmbQj`PhZOeX\
+  McVLaTKZRzzzpeesfazwZzwWzwUzwTzgSngRkfQifOffNdfMae\
+  LZeKXeIUeHRdGPdFMeEKfCHgBEhACi99j87k7Ul6Um5Un5Uo4c\
+  p4cq3cr3cs2ct2cu0mv1mw1mx0myIzzGzzEzzczzczzmzzmzzm\
+  zzmzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:TrueMandelbrotBC  { ; Most accurate multi-valued complex logs
+  e=p1, a=imag(p2)+100,
+  p=real(p2)+PI,
+  q=2*PI*trunc(p/(2*PI)),
+  r=real(p2)-q,
+  Z=C=Pixel:
+  Z=log(Z)
+  IF(imag(Z)>r)
+  Z=Z+flip(2*PI)
+  ENDIF
+  Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,105 @@
+;     Date: Thu, 23 Aug 2012 17:33:14 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 23-08-12 (Square Root Reciprocal [6])
+;       Id: <1.5.4.16.20120823173648.2bdff1c4@earthlink.net>
+; ---------
+; 
+; FOTD -- August 23, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To produce today's little masterwork, I took the expression 
+; Z^(sqrt(2))+C and calculated it 0.707106781 levels up the 
+; logarithmic hyperspiral.  (The hyperspiral is another name for 
+; the hyperladded.)  By no strange coincidence, 0.707106781 is the 
+; reciprocal of 1.4142135624, the square root of 2.
+; 
+; The resulting parent fractal is a monster with more convolutions 
+; than a street map of Tokyo.  Today's image lies in the Seahorse 
+; Valley area of the parent, though one would never guess it by 
+; looking at the parent.  Rarely have I seen such an obscure 
+; Seahorse Valley.
+; 
+; The rating of a 6 is a sign that I am not very impressed with 
+; the image.  We have seen too many similar images over the past 
+; 15 years of the FOTD.
+; 
+; The name "Square Root Reciprocal" describes the expression that 
+; created the image.
+; 
+; The calculation time of 3-1/4 minutes is slow, though still 
+; faster than yesterday's.  Visit the web sites for a speedier way 
+; to view the image.
+; 
+; View the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A near perfect day passed by peacefully here at Fractal Central 
+; today.  The fractal cats heartily approved of the near cloudless 
+; skies and temperature of 84F 29C.  The humans went through the 
+; day with nothing exceptional to report.  The next FOTD will be 
+; posted in more than an hour but not as much as a week.  Until 
+; whenever that might be, take care, and it seems we're becoming 
+; so frantic to stay healthy that we have forgotten how to live.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sqrt_reciprocal { ; time=0:03:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=cosxx passes=1
+  center-mag=+0.8559664295/-0.0636040039/13101/1/\
+  50/0 params=1.4142135624/0/0.707106781/0 float=y
+  maxiter=3750 inside=0 logmap=146 periodicity=6
+  colors=000JBKIAII9HH8FG8EF7CE6AE59D57C46B34B33C43C\
+  53C63C73C83C93GA6KB9OCCSDEWEH_EKcFNgGPkHSoIVsIXoHW\
+  lGVhFUeEUaDTZDSVCRSBRPAQL9PI9OE8OB7N76M45L15L4BS6G\
+  Y8McARiCQoRPjQKeQFaPAYPAUQCPRELSGHTHITJJULKVMLWONW\
+  QzXRzYTzZVz_Wz_Yz`_za`zbbzbdzcezdgzeizejzZdzTZzMUz\
+  GOzAJzAIzAIzAHzAHzAGzAGsAFsAFsAFrAErAEqADqADqACzAC\
+  z99zACzAEzBHzBJzCLzCOzDQzDSzEVzEXz9PzCUzEZzGbVJgaL\
+  lhFqpJpoNpoQpoUooXoo`ondnngnnknnqppnnnklmhjlehkbgj\
+  `eiYchVagS`fPZeMXzKVzHUzESzBQz8Oz7Rz4Mz6Nz7Oz8Pz9Q\
+  zBRzCRzDSzETzGUzHVzIVzJWzLXzMYzNZzOZzQ_nR`oSapTbqY\
+  etUbqR`nOYkLWzHTzERzBOz4Lz6Mz8MzAMzCMmDMmFMmHMmJMm\
+  LMmMMmOMmQMmSMmUMmVMmXMmZMm`MmbMmzMEzMDzMCzMBzIBzK\
+  AzMAzO9zQ9zS8zU8pWmrYms_mtamvcmwecxgcyiczgczeczdcz\
+  bcz`czczzczzczzczzczzczzczzczzcbzcezcgzcjzclzcozcq\
+  zcszmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzzmzzmz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

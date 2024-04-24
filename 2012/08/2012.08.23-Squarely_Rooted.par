@@ -1,0 +1,113 @@
+;     Date: Thu, 23 Aug 2012 10:55:34 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-08-12 (Squarely Rooted [6.5])
+;       Id: <1.5.4.16.20120823105907.30dfb71c@earthlink.net>
+; ---------
+; 
+; FOTD -- August 22, 2012 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We have had our share of PI.  It's time to move on to the square 
+; root of 2.  Today's image shows a sample of what can happen when 
+; the formula Z^(sqrt(2))+C is iterated sqrt(2) levels up the 
+; hyperladder when no function is applied.
+; 
+; The first thing that happens is the parent fractal, which is a 
+; shapeless mass of large bays with a very long zig-zagging 
+; filament (main spike) extending north.  Today's scene lies near 
+; the point where this filament connects to one of the smaller 
+; bays.
+; 
+; The minibrot that lies at the center of today's image is even 
+; more shapeless than its parent, and to make things worse, it 
+; lies in a rather difficult area of the parent, where the very 
+; high maxiter makes the calculation go slow.  Luckily, the web 
+; sites can speed up the viewing considerably.
+; 
+; Considering all this, I rated the image at a 6-1/2, one-half 
+; point of which is a reward for the not-quite-successful coloring 
+; effort.
+; 
+; The name "Squarely Rooted" explains itself.
+; 
+; Get in there with the big-time thinkers by viewing the finished 
+; image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Become another Einstein by viewing the hi-def version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Solve the ultimate mysteries of the universe and become a super 
+; hero by checking the FOTD back images and discussions at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of sun and a temperature of 84F 29C made today's conditions 
+; near ideal here at Fractal Central.  A few minor showers popped 
+; up in the afternoon around the area, but they stayed away from 
+; FC.  The fractal cats were unusually restless most of the day, 
+; leading me to suspect that an unwanted cat was prowling nearby.
+; 
+; The day of the humans was nothing at all like the day of the 
+; cats (or the night of the living dead).  It consisted mostly of 
+; totally routine stuff made only a little more interesting by 
+; unwarranted references to flesh-eating zombies.  The next FOTD 
+; will be posted when I consider it ready.  Until that uncertain 
+; time arrives, take care, and fight for truth in advertising.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Squarely_Rooted { ; time=0:08:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.4396111301623483/+1.590005669004912/\
+  21703/1/17.5/0 params=1.4142135624/0/1.4142135624/0
+  float=y maxiter=35000 inside=0 logmap=-753
+  symmetry=none periodicity=6 mathtolerance=0.05/1
+  colors=000KCTKDWKEYKF`KGcKHeMIgNJhPJiQKjRLkTLlUMnW\
+  MoXNpYOq_Or`Ps_PrZNpWLlTJhQHdNGaKEYHCUEAQB8M97JBAL\
+  CCMDENEGOFIPGLQINRKPSMRTOTUQWWSYXU_YWaZYc_`f`chafj\
+  bilcmndmlcqkbtiavh`wf_xeZycYzbYz`Xz_WzZVzXUzWTzUSz\
+  TSzRRzQQzOPzNOzLNzKMzJMzLLzNLzPKzRKzTKzUJzWJzYJz_I\
+  zaIzcIzdHzfHzhHzjGzlGznGzoFzqFzsFzuEzwEzxEziMzWUzZ\
+  WzaYzd_mgamjcmjcmjcmiccicciccicciccicTicSicSimRimR\
+  imQimPimPimOimOimNimNimOjmPjmQjmQkmRkmSkmSlzTlzUlz\
+  VmzVmzWmzXnzXnzYnzZozZoz_oz`pzapzapzbqzcqzcqzdrzer\
+  zfrzfszgszhszhtzitzjtzjuzkuzluzmvzmvznvzowzowzpwzq\
+  xzrxzrxzsyztyztyzuzzvzzvzzuyzuxzuwzuvzuvzuuzutztsz\
+  trztrztqztpztoztnztnzsmzslzskzsjzszzszzszzszzrzzrz\
+  zrzzrzzrzzrzzrzzrzzqzzqzzqzzqzzqzzqzzqzzqzzpzzpzzp\
+  zzpzzpzzpzzpzzpzzozzozzozzozzozzozzozzozzpzzpzzqzz\
+  qzzrzzrzzszzszzszztzztzzuzzuzzvzzvzzvzzuzzuzztzztz\
+  zszzszzrzzrzzrzzqzzqzzpzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

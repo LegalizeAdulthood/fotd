@@ -1,0 +1,117 @@
+;     Date: Wed, 08 Aug 2012 17:59:12 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-08-12 (Asteroid Impact [8]) CORRECT VERSION
+;       Id: <1.5.4.16.20120808180251.2be759c4@earthlink.net>
+; ---------
+; 
+; FOTD -- August 08, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have just realized that I have an old formula in the files 
+; with the name MandelbrotBC4.  Please discard the formula I sent 
+; earlier with today's FOTD and use this version with the formula 
+; name changed to TrueMandelbrotBC.
+; 
+; NEW FORMULA ALERT! -- I think this is the first time I have used 
+; the TrueMandelbrotBC formula for an FOTD image.  The formula 
+; claims to be the most accurate way to create images using the 
+; many values of the complex logarithm function.  Maybe it is; 
+; maybe not.  Maybe there is no absolutely accurate way to find 
+; the alternate values.  One thing for certain however is that, 
+; whether the new formula is mathematically accurate or not, it 
+; does draw interesting fractal images.
+; 
+; In today's image the new formula calculates the Z^(1.195)+C 
+; Mandeloid 4.671 levels up the complex hyperladder to produce a 
+; Mandeloid that resembles a kidney bean with an immense, 
+; wandering filament extending from its northern edge.  The 
+; minibrot in today's scene lies in a kink on this filament.
+; 
+; With all the doomsday shows on TV, I thought that, with today's 
+; image, I might add my own little bit to the deluge of doom.  
+; Perhaps the most popular way the world might end is for an 
+; asteroid to strike the earth and send mankind the way of the 
+; dinosaurs.  Today's image shows what might be a rogue asteroid 
+; tearing through the earth's atmosphere on its way to strike the 
+; surface and end life as we know it.  I named the fiery red image 
+; "Asteroid Impact".
+; 
+; The rating of an 8 might be a bit much for the image, which 
+; certainly is lurid enough if not an entirely new idea, but the 
+; incredibly brief calculation time of 20 seconds easily makes up 
+; for any short-coming.  And of course, the finished image is 
+; always available on the web sites.
+; 
+; The explosive finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And in high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the FOTD back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today turned a little warmer and more humid here at Fractal 
+; Central, but remained within the range of midsummer comfort.  
+; The brilliant sun and temperature of 88F 31C were just what the 
+; fractal cats ordered; the humans were too distracted by work and 
+; world events to enjoy the conditions.  The next FOTD will be 
+; posted close to on schedule.  Until whenever, take care, and why 
+; doesn't somebody pass a law making crime illegal?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Asteroid_Impact { ; time=0:00:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.par
+  formulaname=TrueMandelbrotBC center-mag=-2.7295930\
+  23664788/+9.289409131709448/74.45881/1/90/0
+  params=1.195/0/4.671/0 float=y maxiter=75000
+  inside=255 logmap=22 periodicity=6
+  colors=000900900B00C00E00G00K00M00O00U00U00X00_00Z\
+  00b00e00b00f00h00g00i00j00j00k00k00l10l10m10m10o10\
+  o10p20p20q40q40r40r60s60s60t70u70v90v90w90xB0yB0zB\
+  0zD0zD0zE1zE1zE1zG2zG2zG4zI4zK6zM6zO6zQ7zS7zU9zW9z\
+  YBz_Bza7zcBzcDzcEzcGzcHzcJzcMzcOzcPzcRzcSzcUzcXzcZ\
+  zc_zcazcbzcdzcezchzcjzckzcmzcnzcpzcrzctzcvzcwzcyzc\
+  zzczzczzczzczzczzczzczzczzezzgyzirzkkzmezm_zmYzmYz\
+  mXzmXzmVzmVzmRzmVzmYzmazmdzmgzmjzmmzmozmrzkmzmmznm\
+  zpmzqmzrmztmyvmzwmzymzymzymzymzymzymzzmzyzzyzzyzzy\
+  zzyzzzzzzyzzyzzyzzyzzyzzyzzyzzyzzyzzyzzyzzyzzyzzyz\
+  zyzzyzzyzzyzzzzzyzzvzzrzzpzzkzzhzzezzbzzYzzVzzSzzP\
+  zzLzzHzzEzzBzz6zz2zz0zz0zz0zz2zz4zz4zz4zz4zz6zz6zz\
+  6wz6tz7qz7pz7mz7kz7kz9kz9kz9kz9nzBqzBtzBwzBzzDzzDz\
+  zDzzDzzBzzDzzDzzDzzEzzEzzEzzEzzEzzEzzGzzGzzGzzGzzH\
+  zzHzzHzzHzzHzzJzzJzzJzzJzzJzzLzzLzzLzzLzzMzzMzzMzz\
+  MzzMzzOzzOzzOzzOzzOzzSszz }
+
+frm:TrueMandelbrotBC  { ; Most accurate multi-valued complex logs
+  e=p1, a=imag(p2)+100,
+  p=real(p2)+PI,
+  q=2*PI*trunc(p/(2*PI)),
+  r=real(p2)-q,
+  Z=C=Pixel:
+  Z=log(Z)
+  IF(imag(Z)>r)
+  Z=Z+flip(2*PI)
+  ENDIF
+  Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,106 @@
+;     Date: Mon, 13 Aug 2012 16:02:00 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-08-12 (A Different Zexpe [7])
+;       Id: <1.5.4.16.20120813160526.227f5d44@earthlink.net>
+; ---------
+; 
+; FOTD -- August 13, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another Zexpe minibrot.  I named it 
+; "A Different Zexpe" because the parent fractal is one of the 
+; infinity of alternate Zexpe fractals, this one from 1.5 levels 
+; up the hyperladder with the recip function applied.
+; 
+; Today's Zexpe parent is rotated so that the upper half, which is 
+; pretty much intact, faces northeast.  The lower half faces 
+; southwest, but it is so distorted by discontinuities that the 
+; parts are barely recognizable.  Today's scene lies in the East 
+; Valley of a much less distorted minibrot lying some distance 
+; southwest of the main body of the parent.
+; 
+; The rating of a 7 is average.  The series of Zexpe fractals 
+; continues bringing adequate but unexceptional images.  The 
+; calculation time of 40 seconds will make impatience very 
+; unlikely however.
+; 
+; All risk of impatience may be avoided by viewing the finished 
+; image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; though no guarantee is given of feeling fractal awe and wonder.
+; 
+; A high-definition rendering is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Partly cloudy skies and a temperature of 82F 28C made today a 
+; near normal one for mid-August here at Fractal Central.  The 
+; fractal cats' big thrill came when a stray cat we call 'Mister 
+; Cool' wandered by.  Our dynamic duo watched him from their 
+; window with their tails thrashing, sending him on his way.
+; 
+; The humans had a typical day, with no thrashing tails involved.  
+; The next FOTD will be posted when an appropriate amount of time 
+; has passed.  Until whenever, take care, and one second of time 
+; is 186,000 miles of the fourth dimension of space perceived from 
+; a different angle and measured in a different way.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Different_Zexpe { ; time=0:00:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip float=y
+  center-mag=-1.236449781061332/-0.2384755846638699/\
+  8.1e+010/1/-75/0 params=2.71828182845905/0/1.5/0
+  maxiter=1800 inside=0 logmap=122 periodicity=6
+  colors=00056857A59D5BG5DJ5FM5HP9JSCLVFMXILYLL_OL`R\
+  LbTLcWLeZMeaMfdMfgMgjMglMgmMenMcnMaoM_pMYpMXrMUsMR\
+  tNOuDMqCLnBLkALh9Le8Kb7KZ7KW6KT5JQ4JN3JK2JH2JJ4GK6\
+  DL7AM97OB4PC9QEDRFIXKNbOIgT_eJd`LQR7MlYkiXjfVhc`y`\
+  kzYczVQzSP`PNZMMYJLWGKVGKUFJTFJSFIRFIQEHPEHOEGNDGM\
+  DFLDFKCEJCEICDHCDGBCFBCEBBDABCABBAABAAAAA999899798\
+  6885874873762761750750640640630530520520OunNtnNsnN\
+  rnNzmMzlMplMokMzjLxiLXhLmhLlgKkfKjeKjdKidJVcJgbJga\
+  Jf`Ie`Ie_IdZIcYHbXHbXHaWH`VG_UG_TGZTGYSFYRFXQFWPFV\
+  PEVOEUNETMESLDSKDRKDQJDQICPHCOGCNGCNFBMEBLDBKCBKCA\
+  JBAIAAI9AH89G89F79F69E58D48C48C38B27A17A0790780670\
+  670660650540540530520zBUzATyASxASwKRwKRvKQuUQtUPsU\
+  PsUOrUOqcNpcNocMocMncLmcLlcKkcKzcJzcJzcIzcIzcHzcHz\
+  cGzcGzmFzmFzmEzmEzmDzmDzmCzmCzzBzzBzzAzz9zz9zz8zz8\
+  zz7zz7zz6zz6zz5zz5zz4zz4zz3zz3zz2zz2zz1zz1zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

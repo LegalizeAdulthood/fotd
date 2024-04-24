@@ -1,0 +1,111 @@
+;     Date: Tue, 21 Aug 2012 23:14:24 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 21-08-12 (Cotangent PI [8])
+;       Id: <1.5.4.16.20120821231757.2a37a158@earthlink.net>
+; ---------
+; 
+; FOTD -- August 21, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we apply the cotangent function to the Z^(PI)+C fractal 
+; and calculate it PI levels up the hyperladder.  The result is a 
+; fractal that closely resembles the 'true' PI fractal, though it 
+; is skewed and rotated a bit to the right.
+; 
+; Today's 'mammoth' minibrot lies near a much larger minibrot in a 
+; tiny disconnected bit of debris just north of the negative 
+; X-axis of the parent fractal.
+; 
+; The rating of an 8 indicates that I consider the image to be an 
+; improvement over previous PI fractal attempts.
+; 
+; The name "Cotangent PI" tells where the image came from.
+; 
+; The calculation time of 4-4/5 minutes is disagreeably slow, but 
+; the image is worth it, at least IMO.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; to take the effort from viewing it.
+; 
+; A rendering in spectacular high definition is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The entire collection of back images and discussions is at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day here at Fractal Central began with low clouds and fog.  
+; The fog and clouds cleared away by late morning, leading to a 
+; very pleasant afternoon with lots of photoshop (aka Kodachrome) 
+; blue sky decorated with the puffy white clouds that make a 
+; picture postcard so picturesque.  The temperature of 81F 27C 
+; just made things better.  The fractal cats had a relaxing day 
+; basking in the tiny sliver of sunlight that is just starting to 
+; come in their window as the sun angle grows lower.
+; 
+; The humans had an uneventful day.  FL still feels a bit 
+; triumphant over yesterday's victory in our little disagreement.  
+; I let her feel she had won, while still claiming a morale 
+; victory for myself however.  The next FOTD will be posted when 
+; the right time arrives.  Until whenever that might be, take 
+; care, and fight for what you know is right, but when you find 
+; it is wrong, be ready to switch.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cotangent_PI { ; time=0:04:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=cotan
+  center-mag=-0.6484451764762189/+0.1809410427501681\
+  /1.650617e+010/1/135/0 params=3.14159265358979/0/\
+  3.14159265358979/0 float=y maxiter=5000 inside=0
+  logmap=470 periodicity=6 mathtolerance=0.05/1
+  colors=000JOqJOqJOqJOqJOqJOqJOqJOqJOqJPqJQqJQqJSqJ\
+  TqJUqJWqJWqJXqJYqJ_qJ`qKaoLbmMckNciOdhIdfDfd7hf3ih\
+  2ki0mj1ik1gm1fm2co2ao3`q3Ys3Xs4Vt4St4Rv4Pv6Ox6Mz6K\
+  z7Jz8Hz8Gz9Gz9EzACzABzAAzU9zC9za9ze9zK8zN8zi8zV8zd\
+  7zW7z_7zb6zm6zj6zg6zj5zn5zs5zn5zt6zr6zr6zp6zp6zn5z\
+  m5zl6xi6vj6tg6sg7qf6of6oj9kk9ihAfdBdaDa_E_XEXUHVRI\
+  SPPQMLNLLLKKKJKKHNKEWHDSHCTF9VE7YC6_B4`92d81f74hB6\
+  iD9iGAkIDmMGmOIoSKoUNqXQs`RscVtfYti_micxodjmhqqjst\
+  ctnVfbSmYKaPHfJBcC2k48f79Q6GYAKVBPWDQPGMYJSQLTUMTS\
+  PVURVTTXXXXXXYZYdadhhhloqnpqktzpszuzzvzzzzzzzzyzwl\
+  omShUK_YCTS5GO0EG08F09I0EG0IN0MQ0OS1SX3VY4Y_6aa8dc\
+  Bek9fd8f_7hW6iR6kM6kI5mE4m93o62o22q15q28q2Bq2Eq2Iq\
+  2Mq2Pq2Tq2Xq2`q2bq2eq2gq2jq2nqCqqOqqaqqpyzixzYxz`w\
+  zQvzOwzMvzLvzKvzIvzHvzGvzFvzEzzCzzCzzAzzCzzEzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

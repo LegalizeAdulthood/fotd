@@ -1,0 +1,109 @@
+;     Date: Fri, 31 Aug 2012 16:10:01 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-08-12 (Shattered Dreams [8])
+;       Id: <1.5.4.16.20120831161341.2bbfe668@earthlink.net>
+; ---------
+; 
+; FOTD -- August 31, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that results when the 
+; expression Z^(1.7)+C is iterated 11 levels up the complex 
+; logarithmic hyperladder with the recip function applied.  (The 
+; 'hyperladder' could more correctly be called a hyperspiral or 
+; hyperhelix.)
+; 
+; This parent fractal resembles a distorted Mandelbrot set that 
+; has been rotated so that its East Valley lies on the northwest 
+; side of the main bay, while its main period-2 bud sprouts from 
+; the southwest side.  A long, twisting filament with a large 
+; minibrot extends southwest from this bud, but we are not 
+; interested in this filament.  For today's image we check the 
+; southeast shore line of the misplaced East Valley.
+; 
+; We find some curious elephant pieces in this area, but we bypass 
+; the pachyderms to check a high-order star, where we find today's 
+; scene.  The rating of an 8 indicates that I consider the image 
+; to be an above average one found in the range of exponents 
+; between 1 and 2.
+; 
+; The name "Shattered Dreams" is un-necessarily foreboding.  The 
+; image is actually rather bright and cheerful.  The calculation 
+; time of 6 minutes drags a bit, but relief lies at the web sites.
+; 
+; The finished image is posted for all to see on the FOTD web site 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition rendering is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The morning fog cleared off by 10am, leading to a sunny hot 
+; afternoon with a temperature of 91F 33C.  The fractal cats 
+; remained in full summer mode all day, except for a brief moment 
+; of excitement when Nicholas got wind of an unwanted tomcat in 
+; the area.  The humans spent much of the day preparing for the 
+; big week-end.  The next FOTD is not scheduled to be posted until 
+; September 4, but even then, no guarantee is given or implied.  
+; Until whenever, take care, and be extremely cautious before you 
+; believe the promises of the political candidates.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Shattered_Dreams { ; time=0:06:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-0.1238618515707104/+0.2069993477786224\
+  /2.660665e+007/1/-177.5/0 params=1.7/0/11/0 float=y
+  maxiter=5000 inside=0 logmap=702 periodicity=6
+  colors=000000988AA9BCACEBDFCEGDFIEGKFHMGFOHEQICSJB\
+  UBJPNRJYZDhf8sfAqfCofEmfGmfImhKmjMmmOmpQmqSmuSmrQe\
+  oLYjHQgCIe8Ac43dCEiKOnRZsZhwertbpr_opXnmUmkRliOkfL\
+  idIhbFg_CfY9eW7dUAaTC_SFYRHWPJUOMSNOQMQOKTLJVJIXHH\
+  _FFaDEcBDf9Ch7Bj5sksohplfniclfajcZh_XeXUcUSaRP_ONY\
+  PMXQMWQMVRMURMTSLSSLRTLRULQULPVKOVKNWKMWKLXKKXKKZM\
+  J_OI`QHbRHcTGdVFfWFgYEh_Dj`DkbCldBmeBldCkcDjbEiaFh\
+  `Fg_GfZHeYIdXIcWJbVKaUL`TL_SMZRNPQ`QR`RT_SV_yJQzMS\
+  oURdaQUiQJqP9xP8`mITaRMQ`EEi73kE9lKFmRLnXRpbXqibro\
+  hsunopikkegfacaX_XTXTPYNMZIJ_CG`7D`2BpVHevMoyiMuhD\
+  ShN`hNbhOehOahLbgIcfGcfDdeBde0ikEejRbjc_jpXjkdhfkg\
+  aszXzzRrzMkhGUjBKl6Am8Kh9UdBc_CcWDwSFwNzzJzrFzdazR\
+  wsOuqLspIqnFomCmk9kj7jmFhoMfqTes`cugbwn`yu_0cs1cp2\
+  cm2ckAcjImiQmhYmgemflmemmanmYnzUozQozNizSczWYz_Tzd\
+  NzhzzlzzpzzqzzqzzqzzrzzrzzrczXbzXbzWazW`zMczIgzEjz\
+  Anz6qz2kzIpzGuzEvzHwzKxzN }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

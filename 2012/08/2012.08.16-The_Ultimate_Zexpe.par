@@ -1,0 +1,112 @@
+;     Date: Thu, 16 Aug 2012 15:31:21 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-08-12 (The Ultimate Zexpe [8])
+;       Id: <1.5.4.16.20120816153450.0d87bb50@earthlink.net>
+; ---------
+; 
+; FOTD -- August 16, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The name of today's image, "The Ultimate Zexpe", is more a wish 
+; than a fact.  It took two days to find a Zexpe fractal that 
+; qualified for the status of ultimate, and even after finding it, 
+; I'm not so sure how ultimate it is.  If ultimate is taken to 
+; mean 'the best', its supremacy is quite doubtful, but if 
+; ultimate is taken to mean 'final', then today's image certainly 
+; is the last, at least in the present series.  Tomorrow's FOTD 
+; will feature the first in a similar series of 'Zexpi' (exponent 
+; PI) fractals.  (You ain't seen nothing yet.)
+; 
+; Today's parent double-Zexpe came about when I calculated 
+; Z^(epsilon) at a level of epsilon steps up the hyperladder with 
+; no function applied.  I omitted the function for the sake of 
+; simplicity.  This parent has both main buds on the same side 
+; (the northeast side) of the single main bay.  The scene lies 
+; in a minor valley on the west side of the main bay.  (I often 
+; choose to explore valleys because they emphasize the mathemati-
+; cal characteristics of the particular area in which they lie.)
+; 
+; The first impression of today's image is its brilliance, which 
+; earns it the rating of an 8.  The calculation time of 3 minutes 
+; is slower than I would have preferred, but still well within 
+; reason.  The web sites take the effort from viewing the image.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is posted at"
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images and discussions are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A near perfect summer day was fully appreciated here at Fractal 
+; Central today.  The temperature of 81F 27C, low humidity and 
+; Photoshop blue skies decorated with puffy white clouds were just 
+; what the fractal cats ordered.  They spent a good bit of time 
+; gazing out the window, wishing they could get outside to 
+; explore that big forbidden room.
+; 
+; The humans had too many other things to do to appreciate the 
+; weather.  (By the time humans have enough free time to enjoy good 
+; weather, it's too late in life to enjoy very much of anything 
+; [except fractals]).  The next FOTD will be posted in a proper 
+; amount of time.  Until whenever, take care, and make that big 
+; decision today.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Ultimate_Zexpe { ; time=0:03:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident float=y
+  center-mag=-0.332850274478/+0.147018580443/5e+007\
+  /1/-172.5/0 params=2.718281828459/0/2.718281828459\
+  /0 maxiter=6400 inside=0 logmap=272 periodicity=6
+  colors=000BooCjmCfkDaiEXgETeFOcGJaFE`GF_HFZIFZJFYK\
+  FYLFXMGXNGWOGWPGVQGURGUSGTTHTUHSVHSWHRXFRVFQV77_HL\
+  dRhiWzjayjbykcxkdxlewlfwmgvmhvniunjuoktoktlhqieogb\
+  ld_jbXh_UeXRcVO`SLZQJXRIUSHRTGOTGLUFIVEFVECWD9XC6X\
+  C4YF5ZH5_K5`M6aP6bR6cT6dW7eY7f`7gb8he8ig8ji8ijAhjC\
+  gkEfkGelIdlKcmMbmOamQ`nS_nUZoWYoYXp_WpaVpbXo`YnZZm\
+  Y_lW`kUajTbiRchQdgOefMfeLgdJj`DhcIfeNdgSbiX`laZnfX\
+  pkVrpTtuRprPmoOjlMgiLdgJadHZaGWZETWDQUCRSCRQCSPCSN\
+  CSLCTKCTIBUGBUFBUDBVBBVABW8BW6CX2BW5BW7ATAAPC9NE9K\
+  H8NJ8QM7TO7WQ6WT6WV5WX5W_4Wa4Wg3Wm3Wz2Wz2Wz2Wz5Xz7\
+  _z9azCczEegGgfJidLkcNmaPm`SmZUmYWmXZmV`mUbmSdmRgmP\
+  imOkmMnmLpmJrkInkHhmOimQimRimSimTilUikVjjWjiXjhYjg\
+  _jf`jeakdbkcckbdkbekbfjchkbgkbgkaglagm`gn`go_gp`gq\
+  agrbgscftdfuefvffwgfxhfyifzjfzkfzlizmfznczo`zpYzqV\
+  zrTzsQztNzuKzvHzwFzxCzy9zz6zz3zzVzzXzzZzz`zzazzczz\
+  ezzgzzizzjzzlzznzzpzztzzq }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
