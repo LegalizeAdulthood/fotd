@@ -1,0 +1,74 @@
+; July 12, 1997: The Stem Gone Nertz 
+;
+; nertz
+;
+; Fractal visionaries:
+; Today's fractal is a real quickie -- it draws in under 25 seconds -- but
+; don't let its speed deceive you.  It's quite an unusual image.
+; For quite some time now I've been involved with the four-dimensional
+; julibrot figure, (or object, or whatever it is), and the more I explore,
+; the more bizarre become the objects I find.  The midget pictured in
+; today's fractal is one of the most bizarre.
+; The julibrot figure is like a swiss cheese, with midgets sprinkled all
+; through it.  Many of these midgets do not exist in the plane of the
+; classic Mandelbrot set, and today's picture shows one of these obscure
+; midgets that live in the remote outskirts of the julibrot.
+; I have examined this midget from other angles, and so far have been
+; unable to find a slice that resembles the expected Mandelbrot midget
+; shape.  This may mean that it doesn't have such a slice, or simply that
+; I have not yet located it.
+; The attached image shows the midget sliced in the XW plane direction.
+; In this direction, the midget resembles neither a Mandelbrot nor a Julia
+; plane object.  My first impression was of an arrow or chevron.  So I
+; named it "Arrow".  Bits and pieces of Mandelbrot and Julia debris lie
+; scattered around the midget, mixed together in a most unexpected
+; fashion.
+; Almost all objects in these odd planes are stretched, sometimes by a
+; factor of tens of thousands.  When exploring in these planes, one must
+; become skilled at unstretching, (or stretching in the opposite
+; direction).  Luckily, Fractint makes this simple.
+; Today's image has been posted to a.b.p.f. and a.f.p. for the convenience
+; of those who can't spare the 25 seconds it takes to draw it.  Tomorrow,
+; I'll post a series of six fractals, all of another way-out midget, this
+; one sliced in the six perpendicular directions.
+; Before ending, I'd like to recommend Benno Schmid's Julibrot web site.
+; It's still at an early stage of development, but already quite
+; interesting.  The URL is
+;     <http://www.shop.de/priv/hp/3133>
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START 19.6 FILE=============================================
+
+TheStem_Gone_Nertz { ; time=0:00:08.29-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=XWplane passes=1
+  center-mag=-1.74179/-1.11022e-016/51.50983/0.5395
+  params=-1.7442/0 float=y maxiter=1500 inside=0
+  logmap=yes periodicity=10 sound=off
+  colors=000Ieqs0VF0dF0tF0vF0ZF0ZF0ZF0ZF0ZF0ZF0ZF0ZF\
+  0ZG3YH3XI3XJ3WK3VL3VM3UT7S_BQgIPkQNobLslczzzwmcthe\
+  uddvZcvWawT`xQZyNYvKUsIQqFMnCIkAEh7Af56eACdFIdKOcP\
+  TcUZbZdL4FL9GKEHKJIJOJJTKIYLIbMLZQNUUQQYTM`WIdYDh`\
+  9leCjkFgpIekFieCm`AqV7uQ4yR4oT3dU3VW2KX2AJMbLKZOIV\
+  QFQSDMUDWWEfYEp_Ki`RcbXXdcQfiJgpDiv6ebAaKEXMFSOGMQ\
+  HHSICUJK_RTf_`lgispqyxrssslnsfit_duU_VGM53878E8CKA\
+  HQCMXDQbFVhGZnIct2Y64ZE7_M9`UBa`EbhGcpY_6U`KQaXMbj\
+  `ceXciTcmPcpLctck6`jDYiKVhRTgXQfcNejKdqY4fUDjQMoMV\
+  sFvtGquHlvIgwx1VmBabLiSVpjn_dldZjiTgnNesEpgR_PP`VO\
+  a`MafLblJcrSlctXylZyd_xXaxPbwx_xbawhNJaRTVWcO_myRR\
+  rTXjVacYgW_lPar0799OZLpiLnkKmmKkoJipJgrIftIdvL`PPn\
+  ReZfUao2u88oQDifQawObwMbwKcwprgiojblnWiqPftdQL_TTW\
+  W`RZhMapFfZGecHehHdmIcrQt1OqDNmPLj`Jfl4`E6aL8aRAbY\
+  CbdEcjGcqDkMEiWGgdHenwSwiWwW_wWqvUovSmvQkwOiwMgwKe\
+  wvqMajdV2uNsJMpQLnXKkcJhj }
+
+frm:XWplane {; Jim Muth
+z=flip(imag(pixel))+real(p1),
+c=real(pixel)+flip(imag(p1)):
+z=sqr(z)+c,
+|z| <= 36 }
+
+; END 19.6 FILE===============================================
+;

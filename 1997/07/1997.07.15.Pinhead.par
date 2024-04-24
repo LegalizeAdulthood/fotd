@@ -1,0 +1,63 @@
+; July 15, 1997: Pinhead 
+;
+; pinhead
+;
+; Fractal visionaries:
+; Today's fractal was drawn with a formula still in the testing stage.  I
+; usually don't like to draw finished images from formulas still in
+; development, because then I must keep a copy of the unfinished formula
+; on file so that the fractal does not become an orphan without a formula.
+; But except for the drawing of the parallel planes, which still doesn't
+; work as I'd like, this version of the formula works pretty well, and it
+; makes some very striking images, so I decided to go ahead and use it.
+; The fractal shows a midget on the negative tail of the classic
+; Mandelbrot set, sliced at an angle rotated 55 degrees toward the YZ
+; plane.  The midgets on the negative tail are shaped like long, hollow
+; tubes in the Z dimension.  This is why the oblique slice stretches the
+; midget horizontally.
+; Since the midget's main bud has become scrunched into a narrow funnel, I
+; named the picture "Pinhead".  The finished image is waiting on a.b.p.f.
+; and a.f.p. for those who would rather pick it up that way.
+; Tomorrow, I'll go for a fractal that's more art than theory.  But before
+; I go, let me make one comment on "Jazzy on the Outside", a fractal which
+; was posted by Les St Clair earlier today.  My one comment is, "wow! how
+; do they do that stuff!"
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START 19.6 FILE=============================================
+
+Stretched_Out      { ; time=0:00:10.27-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=XY-YZ-test02 passes=1 center-mag=-2.57\
+  838/0/47.75037 params=55/0/0.7/0/0/0 float=y
+  maxiter=250 inside=bof60 logmap=yes symmetry=xaxis
+  periodicity=10
+  colors=00000PeIRdHQdGOcGNcFLbEKbDIB9NA8O98P98Q99R8\
+  9S89T89U8AV8AW8AX7AY7BZ7B_7B`7Ba6Cb6Cd6Ce7EfBHfDKg\
+  FNgIRhKUiMYiO`jRckTfnViqYlt_owarzbnzbkwbhtbeqbbnb_\
+  kbXhbUebRbbQYZSZUX`Q`bLeeHigCni8rkBqkDpkGojJnjLnjO\
+  mjRliTkiWjiZii`hicghffhhfhkehndgpcgsbgscfscesddrec\
+  rfbrf`rg_rhZriYriXrjWqkVqlUqlTqmSqnRqoQqoOqpNpqMpr\
+  LprKpsJpsInrKmqLkqMjpNipOhoPfoQenRdmScmTalU`lV_kWZ\
+  kXXjYWjZVi_Uh`ShaRgbQgcPfdNfeMefKgfIjfGlfEofCqfFkf\
+  IfgK`gNVgQQhTKhVEhY9i`3iZ9hYEhWKgVPgTVfR`fRbFUdCWf\
+  AZg7`i4bj2ce6ca9dYDdUGeQJeLNfHQfDTg9Xg5_h9ZhDYiGXj\
+  KWkOVkSUlWTmZSmbRnfQmgPliOkjMjkLilKhnJgoIepGdrFcsE\
+  btDauB`wA_x9ZwAYuCXtDXsFWrGVpHUoJTnKSlMSkNRjOQhQPg\
+  ROfTNeUMcVMbXLaYK__JZ`MXaQWbTUbXSc_RdbPefNfiLfmKgp\
+  IhpKgpMgpNfoPeoRdoTdoVcoWboYao_ana`nc_ndZnfZnhYnjX\
+  mlWmmWmoVmqUmnWllYliZkg`kdbjbdj_eiYgiViiTjhShhRggQ\
+  egQdgPbgOafN_fMZfMXeLWeKU }
+
+frm:XY-YZ-test02 {; Jim Muth
+; p1 = rotation angle in degrees
+; p2 and p3 = parallel planes
+z=sin(p1*.0174533333333)*real(pixel)+p2,
+c=cos(p1*.0174533333333)*real(pixel)+flip(imag(pixel))+p3:
+z=sqr(z)+c
+|z| <= 16 }
+
+; END 19.6 FILE===============================================
+;

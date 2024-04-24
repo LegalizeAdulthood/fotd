@@ -1,0 +1,60 @@
+; July 11, 1997: Omelette 
+;
+; omelette
+;
+; Fractal visionaries:
+; Things are slowing down lately, but not here at fractal central, where
+; the fractals keep coming.  One good point about fractals is that you
+; never run out of them, regardless of how many you find.
+; Today's fractal may not be a great one, but it's a funny one.  When I
+; saw it, I thought at once of broken eggs.  What do you do when you drop
+; the eggs on the way home from the market?  You make an omelette.
+; So I've made a fractal omelette, complete with spilled eggs.  It didn't
+; start out as an omelette, but it turned into one.  The image is actually
+; a scene in one of the obscure planes of the Z^(-2) mandeloid.
+; For those who would like to see the omelette, (a western omelette, of
+; course), without the need to wait for it to cook, the finished product
+; has been posted appetizingly to a.b.p.f. and a.f.p.
+; Tomorrow, I'll try out a new formula I've been working on, and see if I
+; can find anything of interest in it.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START 19.6 FILE=============================================
+
+Omelette           { ; time=0:00:46.08-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm float=y
+  formulaname=ManN-YZ-XZ passes=t periodicity=10
+  center-mag=-1.0170875179/+1.887719599/63531.56/\
+  2.263e-005/0.001/89.995999999941958 logmap=yes
+  params=0.8/0/-2/0/0.5/0 maxiter=300 inside=bof60
+  colors=000FRKGPIHOGIMEJKBKJ9LH7QMDVRK_WQd`XiebhVdf\
+  UbcT`aR__QYXPWVOUTMTRLROKPMJNKHMHGKFFIHFLIFOKFRLFU\
+  NFXPF_QFbSFeTFhVFkWFnYFqZFsaJtcMtfQthTtjWtm_tobtqe\
+  ttitvltNJfPJaQKXSKTTKOVLJWLEXPIXTLYXPZ`TZdW_h__lbb\
+  dgdXlfQphIuiQpjYlkVnlSqmPsdPtWOuNOuENv5NwCYxIgxDms\
+  7tm2zhGxfVwchuavsZts_rs`oramrbkrbircfqddqebqf`qgYp\
+  hWpiUpiSpjPokNolYRRYTQXVOXXNWZLW`KVbIVdHVfFUhEUjCT\
+  lBTn9Sp8Sr6Ss5Qo9PkDNhGMdKzzNKYRIVUHRYGO`FKdDHgCDk\
+  GCjJAhN9gR8eU6dY5b`3ad2_aAV_JQXRLV_GSgBQo7Pn9OmAOm\
+  BNlCMkDMkELjFKiGJhHJhIIgJLeOOcTSaYV_bYYgY_gXbhXdhX\
+  fiWhiWkjWmjVojVqkVtkUvlUxlMuhErdDo`BlWAiS9eN7bJ6_E\
+  5aI4cM3eQ2gUmm0zz03eT4cS4aQ4_O4YM5XL5VJ5TH5RF6PE6N\
+  C6MG7LK7KO7JS8JX8I`8Hd8Gh9Fl9EpLJbXNPhSBfREdPHbOJ`\
+  NMZLPXKSVJVTHXRG_PEbNDeLCgJAjH9mRKf`W_ifTsqMqlKnfI\
+  laGjWEhRDeMBcG9aB7Z55X03Z55_B7aG9bLBdREeWGg`IhfKzz\
+  z7ca8a_9`XAZVBXTCVRDUOESM }
+
+frm:ManN-YZ-XZ {; Jim Muth, Thanks to Benno
+; p3 = 0 = Julibrot YZ plane
+; p3 = 1 = Julibrot XZ plane
+; p3 = >0 <1 = Oblique planes
+ z=real(pixel)+flip(real(p1)),
+ c=imag(pixel)+flip(imag(p1)),
+ a=p3, b=flip(cos(asin(p3))):
+  z=z^p2+((a+b)*c),
+   |z| <= 25 }
+
+; END 19.6 FILE===============================================
+;

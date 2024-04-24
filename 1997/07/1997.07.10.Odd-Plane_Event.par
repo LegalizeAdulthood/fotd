@@ -1,0 +1,67 @@
+; July 10, 1997: Odd-Plane Event 
+;
+; oddplane
+;
+; Fractal visionaries:
+; Today's fractal, named Filigree, is a rather attractive scene featuring
+; a midget in the YZ plane of the Z^2.015 mandeloid.  The midget itself
+; isn't much to look at, hardly more than a misshapen hole with ragged
+; bands stretched across it, but the decoration around it is spectacular.
+; When I first saw it, I was reminded of that delicate, lacy ironwork I so
+; admired when I visited New Orleans a few years ago.  Thus the name.
+; Actually it's a scene between the split negative tail of the parent
+; figure, which is quite attractive in this same area in both the
+; Mandelbrot and Julia planes.
+; I have such interest in fractals because I realize that exploring
+; fractals is as close as I will ever come to exploring an unknown world.
+; Like most of us in the middle-age group, I was born too late to explore
+; the unknown regions of this world and too early to explore the great
+; unknown beyond.  But I'm just in time to explore the world of fractals,
+; which is as real to me as the scenes the little rover is sending back
+; from Mars.
+; So go, little rover, go, and keep sending back those pictures which are
+; inspiring the children who one day will launch out into space on the
+; greatest expedition mankind will ever know.  As for me, I'm going to
+; keep my eyes on my monitor and continue to find those elusive fractals.
+; Today's image has been posted to alt.binaries.pictures.fractals and
+; alt.fractals.pictures, where those who can't tear themselves from the
+; Mars rover can pick it up in a hurry.
+; For tomorrow, maybe I'll post a Newton's fractal.  I don't know.  I'll
+; decide when the time comes.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START 19.6 FILE=============================================
+
+Odd_Plane_Event    { ; time=0:00:22.52-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=ManN-YZ passes=1 center-mag=0/+0.07266\
+  271220361059/24581.01/0.008717 params=0/-1.48/\
+  2.015/0/1/0 float=y maxiter=2048 inside=0
+  logmap=yes symmetry=xyaxis periodicity=10
+  colors=00078R67R67R56R56R45R45R34R24R25S25S25S25S2\
+  5S25R25R25R25R25R25R25R25R25Q25Q24Q24Q24Q24Q24Q24Q\
+  24P24P24P24P24P24P24P24P24O24O24O24O24O24O24O24O24\
+  N24N24N24N24N24N23N23N23M23M23M23M23M23M23M23M23L2\
+  3L23L23L23L34M35N46O47O47P58Q59R6AR6BS6CT7CU7DV7EV\
+  8FW8GX8HY9HY9IZAJ_AK`ALaBMaBMbBNcCOdCPdCQeDRfDRgDS\
+  hEThEUiFVjFWkEWkEXlDWmCVmBTmARn9Px8Px8Qx8Qw8Qw8Qw9\
+  Rw9Rw9Rw9Rv9Sv9Sv9Sv9Sv9Tv9TuATuATuAUuAUuAUuAUtAVt\
+  AVtAVtAVtBWsBWsBWsBWsBXsBXsBXrBXrBYrBYrBYrCYrCZqCZ\
+  qCZqCZqC_qC_pC_pC_pC`pD`pD`pD`oDaoDaoDaoDaoDboDbnD\
+  bnEbnEcnEcnEcnEcmEdmEdmEdmEdmEelFelFelFelFflFflFfk\
+  FfkFgkFgkFgkFgkGhjGhjGhjGhjGijGiiGiiGiiGjiGjiHjiHj\
+  hHkhHkhHkhHkhHlhHlgHmgHngIogIpgIqgIrfIsfItfIufJvgJ\
+  wgJxgMygPzfUzfZzfczfhzfmzfrzfwzfwzewzezzezzezzezze\
+  zzezzezzdzzdzzdzzdzzdzzdzzdzzczzczzczzczzczzczzczz\
+  czzbzzbzzbzzbzzRzzRzzRzzR }
+
+frm:ManN-YZ {
+z=real(pixel)+flip(real(p1)),
+c=flip(imag(pixel))+imag(p1):
+z=z^p2+(p3*c),
+|z| <= 16 }
+
+; END 19.6 FILE===============================================
+;

@@ -1,0 +1,60 @@
+; July 26, 1997: Elephant Pieces 
+;
+; elephant pieces
+;
+; Fractal visionaries:
+; The other day I stumbled upon these two ponderous and playful pink
+; pachyderms parading peacefully past my screen.  Papa pachyderm on the
+; left is keeping a watchful eye on baby pachyderm playing on the right.
+; These are not your usual East valley elephants.  These jumbos live in
+; the East Valley area sure enough, but this picture views them from a
+; different angle, in this case 4 degrees from the XW plane.  As can be
+; seen, the elephant patterns hold their shape surprisingly well this
+; close to the XW plane, in fact they are visible through an entire 360
+; degree rotation.
+; The scattered debris floating above papa elephant appears to be parts of
+; a third elephant that never came together.  Perhaps it exists in a
+; nearby plane, but I haven't looked.
+; The elefants.gif file is posted to a.b.p.f. and a.f.p., where hopefully
+; it will be available for all who wish to pick it up.  Tomorrow's fractal
+; will be something peaceful -- a fractal to meditate by.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START 19.6 FILE=============================================
+
+Elephant_Pieces    { ; time=0:01:15.41-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jul-97.par
+  formulaname=XY-XWrotation passes=t
+  center-mag=+0.00661952037813060/-0.024026416475318\
+  98/2579.362/0.1044/87.388/-80.414 params=86/0/0/0/\
+  -1.7545/0 float=y maxiter=5000 inside=253
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000jeqjdqidpicphboleOnfNpfMoeNmdOlcPkcQibRh\
+  aSg`Te_UdZVbZWaYX`XYZWZYV_XU`VUaUTbTScRRdQQePPfNPg\
+  MOhKNiJMjILkGKlFKmEJnCIoBHpBIpAJpALpAMpANq9Oq9Qq9R\
+  q8Sq8Tq8Uq7Wq7Xq7Yr7Zr6`r6ar6br5cr5dr5fr4gr4hs4is4\
+  ks3ls3ms3ls2kq2go2bm1Zk1Ui1Pg0Le0Hc0Da09`1AZ2BW3CU\
+  3DR4EP5FM6GK7HH8IF8JC9KAAL7BM5BN3ERAHVHKZOMaVPeaSi\
+  hUlnVilVfjVchV`fVZeVWcVTaVQ_WNYWKWWHUWESWCRW9PW6NW\
+  3LW5LW7KW9KXBKXCJXEJXGIXIIXKIXMHXOHYQHYRGYTGYVFYXF\
+  YYFXWHXVIWTJWSKVRLVQMUONUNOTMPTLQSJRSISSHTRFUREVQD\
+  WQCXPAYP9ZO8_O7`N5aN4bVCeaJiiRlpYopWnoVloTkoSinQhn\
+  OfnNenLcmJbmI`mG_lFYlDXlBVkAUk8Sk7RhIYfTdfTdfTdfTd\
+  fTdfTdfTdgUdgUdgUdgUdgUdgUdgUdgUegUegUegUegUegUegU\
+  ehVehVehVehVehVehVehVehVehVegWdgXdgYcfZcf_cf`cf`be\
+  abebbecbedaeeadfadg`dh`di`cj`cj_ck_cl_bm_bnZboZRZl\
+  FJzMHrTFjZEceCWlAOlDQlFTlIVmKYmN_mQamSdmVfmYhn_knb\
+  mndpngrnitmhslgsU0ukfrkeq }
+
+frm:XY-XWrotation {; Jim Muth, thanks to Benno Schmid
+; p1 = rotation angle in degrees, p2 = parallel planes
+; p3 = point of rotation and parallel planes
+z=sin(p1*.01745329251994)*flip(imag(pixel))+p2,
+c=cos(p1*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+z=sqr(z)+c
+|z| <= 16 }
+
+; END 19.6 FILE===============================================
+;

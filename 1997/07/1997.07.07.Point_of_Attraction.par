@@ -1,0 +1,62 @@
+; July 7, 1997: Point of Attraction 
+;
+; attraction
+;
+; Fractal visionaries:
+; We're entering the summer doldrums, (at least here in the northern
+; hemisphere), and things are slowing down all around.  In honor of the
+; occasion I've posted a hot fractal.  I named it "Dawning" because it
+; vaguely reminds me of a sunrise.  But it looks like no sunrise I've ever
+; seen on Earth.  Perhaps it's a sunrise on Mars.
+; Actually, it's a scene in a four-dimensional Mandelbrot set.  This is
+; not the four-dimensional julibrot figure I talk about so much, but an
+; actual 4-D Mandelbrot figure, where if the Julia sets are considered, we
+; have an eight-dimensional figure.
+; No, I am not able to picture this object in my mind; I'm not even going
+; to try.  The 4-D julibrot monster is hard enough.  But at least by
+; taking that figure one 3-D slice at a time I'm making progress.
+; The formula is a slightly modified version of the Hypermandel formula in
+; Fractint.  Being as obsessed as I am with the julibrot figure, I haven't
+; done much exploring of the HyperSquare formula, but I do know that it's
+; full of surprises.  Maybe one of these days I'll really dive down deep
+; into it and find something entirely unexpected.
+; Today's image has been honorably posted to a.b.p.f. and a.f.p.
+; Tomorrow's fractal will be a surprise I found in the XZ plane.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START 19.6 FILE=============================================
+
+Point_of_Atraction { ; time=0:00:56.24-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=HyperSquare passes=t center-mag=+0.011\
+  68689983424549/+0.1087448950599747/71.4165
+  params=0/0.9993/10/0/1e-010/0 float=y maxiter=1600
+  bailout=100 inside=0 logmap=yes periodicity=0
+  colors=000O`LQ_KSZJVYIXXHZWG`VFcUEeTDgSCiRBlQAnP9p\
+  O8rN7wM5uM5rM5pM5nM6kN6iN6gN6dN6bN6`N7ZN7WN7UN7SN7\
+  PO7NO8LO8IO8GO8007008008008318628938C48E59G69I79K8\
+  9L99MA9NB9OC9PCAQDARDASDATDAUDAUEAUEBUEBUEBUEBVEBW\
+  EBWEBXEBXEBYEBZECZEC_EC`EC`ECaDCbDCbDDcDDcCDdCDeCD\
+  eCDfBDgBEgBEhAEiAEiAEjAEk9Ek9El9Fm8Fm8Fn8Fo8Fo7Fp7\
+  Fp7Gq7Gr6Gr6Gs6Gt5Gt5Gu5Hv5Hv4Hw4Hx4Hy2Fy3Hx4Jx5Kx\
+  6Mx7Ow8Qw9SwAUvCVvDXvEZuF`uGbuHduIetJgtKitLktMlsNm\
+  rNmqOmqOnpPnoPnnQnnQnmRnlRokSokSojToiTohUogUpgVpfV\
+  peWpdWpdXpcXqbYqaYq`Zq`Zq__qZ_rY`rY`rXarWarVbrVbsU\
+  csTcsScsRdsRdtQetPetOftOftNgtMguLhuLhuKiuJiuIjuHjv\
+  HkvGkvFlvElvEmvDmwCnwBnwAowAow9pw8px7qx7qx6rx5rx4s\
+  x4sy3ty2ty2ty3sv4st4sr5ro5rm6rk6ri7rg7re8qb8q`9qZ9\
+  qXAqVApSBpQBpOCpMCpKDpIDoFEoDEoBEp9Uq5Ur6Us8Ut9cuA\
+  cvBcwDcxEhyFhzGhzImzJmzKmzLrzNrzOvzNvzcvzcvzczzczz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:HyperSquare {; Jim Muth
+ a=(p1),b=(0,0):
+  q=sqr(a)-sqr(b)+pixel
+  b=p2*a*b+p3
+  a=q,
+   |a|+|b| <= 100 }
+
+; END 19.6 FILE===============================================
+;

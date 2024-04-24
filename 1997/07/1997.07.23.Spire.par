@@ -1,0 +1,64 @@
+; July 23, 1997: Spire 
+;
+; spire
+;
+; Fractal visionaries:
+; In yesterday's posting, I mentioned that iterated points of the
+; Mandelbrot plane, no matter where they start, unless they escape first,
+; will eventually settle into the same orbits as the points that start at
+; 0,0.  This tendency of points to converge on the same orbits is the
+; cause of the high-iteration horizontal bands in the odd planes of the
+; julibrot.  In the Mandelbrot planes this tendency to converge creates
+; ghost images of the true set in the high-iteration background of the
+; perturbed sets.  Today's fractal takes advantage of this phenomenon.
+; I named the scene "Spire" because of the prominent green spire that
+; points right.  The purplish low-iteration parts in the foreground
+; converge on the greenish background of high-iteration remnants.  In this
+; case, the image is part of the "true" set.  The greenish background is
+; the ghost of an even more true set that doesn't exist in the 0,0
+; Mandelbrot plane.
+; The formula mixes parts of the Z^2 and Z^3 Mandelbrot sets.  The mixture
+; warps the entire julibrot figure, pulling the "true" part of the
+; Mandelbrot aspect away from the 0,0 plane.  One of these days I'm going
+; to hunt up the "truer" set, and see that green background in its
+; unobscured glory.
+; Today's image is posted on a.b.p.f. and a.f.p.  Tomorrow I'll have
+; another great, (IMHO), fractal, and I'll explain my technique for
+; getting today's coloring effects.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START 19.6 FILE=============================================
+
+Spire              { ; time=0:00:27.08-SF5 on P4-2000
+  reset=2004 type=formula formulafile=jim.frm
+  formulaname=ObliqueMixPlus passes=t
+  center-mag=-0.66879/-0.211436/3.031269/1/85/0
+  params=0/0/-4.159/0.103/0/0.3 float=y maxiter=1500
+  inside=253 periodicity=10 ranges=0/-1/100/110/125\
+  /150/200/300/450/650/900/1200/1500 sound=off
+  colors=000gKZIAK0XPK`PPdPUgPanSisZqvZzzzzzzzzz0000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000080070060050030020010000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000002C02C02C02C03C03C03C03C03\
+  C03C03C04D04D04D04D04D04D04D05D05D05D05D0000000000\
+  00011011011011011011012012022022022022023023023033\
+  03303303303403403403404404404504504504504504505605\
+  605605606307000300G000000 }
+
+frm:ObliqueMixPlus {;Jim Muth
+z=(p1+pixel), c=p2+(p3*pixel):
+z=sqr(z)+(0.2*(z*z*z))+c,
+|z| <=100 }
+
+; END 19.6 FILE===============================================
+;

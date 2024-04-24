@@ -1,0 +1,67 @@
+; July 22, 1997: Bullet 
+;
+; bullet
+;
+; Fractal visionaries:
+; Today's fractal looks like a burgundy bullet caught by a stop-action
+; camera.  Even the shock wave is visible, so I named it "Bullet".
+; Actually, it's a midget in the XW plane, where everything resembles a
+; parabola with the open end in the positive direction.  Don't let the
+; maxiter of 3,000,000 worry you; all the open areas are periodic, and the
+; picture draws in under 2 minutes.
+; The picture raises an interesting question -- what feature is to be
+; considered the entire midget -- the bullet-shaped central area, or the
+; vertical band partially obscured yet still clearly visible through the
+; parabolic chaos?  This band must be part of the midget because it forms
+; part of the midget's boundary.
+; The breaks in the overlying chaos, where this dark band shows through,
+; represent all the perturbed Mandelbrot sets with purely imaginary
+; starting points, where parts of this particular midget are visible.
+; Here again, we have an example of the totally different behavior of the
+; low and high iteration parts of the fractal.  This different behavior
+; demonstrates that regardless of where a point starts, if it doesn't
+; escape first, it will eventually settle into the same orbit as a point
+; that started at 0,0.
+; And right now, I'm going to settle into my favorite chair to watch the
+; evening news on TV.  Today's finished product has been posted to
+; a.b.p.f. and a.f.p. as always.  For tomorrow -- I don't know.  We'll see
+; when the time comes.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START 19.6 FILE=============================================
+
+Bullet             { ; time=0:00:13.40-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=XY-XWrotation passes=1
+  center-mag=-0.00594679/0/3.26976/5.4395
+  params=89.99/0/0/0/-1.7545/0 float=y
+  maxiter=3000000 inside=0 logmap=yes periodicity=10
+  colors=000OFFNFELFCKFBIE9HE8FE6DE5AF3CF4DE5FE6HE7I\
+  E8KD9MDANDBPDCRCDSCEUCFWCGXBHZBI_BJaAKcALdAMfANh9O\
+  i9Pk9Qm9Rn8Sp8Tr8Uv3Qs7TqCXnG_kKbiPffTicXl``oZesWi\
+  vXiuXhuYhtZgs_gr_fr`fqafpaepbeocdnddmdcmeclfbkgbkg\
+  bjhaiiahi`hj`gk_fl_el_emZdnZcnYcoYbpXaqX`qW`rW_sWZ\
+  vU_tVZqXYoYYlZXj`WgaVebUbcT`eTYfSWgRTiQRjPOkOMmOJn\
+  NHoMEpLCrK9sJ7tJ4vI2wH2vI3tJ3sK3qL3pM4nN4mN4kO5jP5\
+  hQ5gR5eS6dT6bU6aV6_W7ZX7XY7WY8UZ8T_8R`8Qa9Ob9Nc9Mc\
+  8Lb8La8K`7K_7KZ7JY7JX7JW7JW6IV6IU6IT6HS6HR6HQ5GP5G\
+  O5GN5FM5FL5FK4EJ4EJ4EI4EH4DG4DF3DE3CD3CC2BB3CC3CD4\
+  CE4CF4CF4CG5CH5CI5DJ6DK6DK6DL6DM7DN7DO7DP7DP8DQ8DR\
+  8DS9DT9DU9EU9EVAEWAEXAEYBEZBEZBE_BE`CEaCEbCEcCEcDE\
+  dDFeDFfEFgEFhEFhEFiFFjFFkFFlEElFFlFFlGGlHHlHHlIIlI\
+  JlJJlKKlKLlLLlMMlMNlNNlNOlOPlPPlPQlQQlRRlRSlSSlSTl\
+  TUlUUlUVlVWlWWlWXlXYlXYlYZlZ_lZ_l_`lAPC8PA7P98OAbI\
+  T`IS_IQYHPXHNVHMTHKSGJQGH }
+
+frm:XY-XWrotation {; Jim Muth, thanks to Benno Schmid
+; p1 = rotation angle in degrees, p2 = parallel planes
+; p3 = point of rotation and parallel planes
+z=sin(p1*.01745329251994)*flip(imag(pixel))+p2,
+c=cos(p1*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+z=sqr(z)+c
+|z| <= 16 }
+
+; END 19.6 FILE===============================================
+;

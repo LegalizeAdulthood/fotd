@@ -1,0 +1,60 @@
+; July 30, 1997: Dingbat 
+;
+; dingbat
+;
+; Fractal visionaries:
+; Today's fractal, which I assume will be posted on time, takes up where
+; yesterday's left off -- in the spread-out East Valley area of the
+; negative X-axis midget of the Z^2.003 mandeloid -- this time sliced in
+; the YW direction.  Although I drew the picture with XY-axis symmetry,
+; the Y-axis is not actually symmetrical.  It is, however, so close to
+; being symmetrical that the difference is insignificant.
+; Some of the swirling patterns scattered throughout the image are quite
+; attractive.  They remind me of those old hot-metal printer's ornaments I
+; once worked with, so I named the fractal "Dingbat".  The colors could
+; probably be improved upon if anyone cares to try.
+; In a day or so, I'll decide on better names for the other four slices of
+; the julibrot figure.  "Mandelbrot" and "Julia" are well defined, but the
+; terms XZ, XW, YZ, and YW are ambiguous, meaning different things to
+; different people.  As it is now, even I am constantly getting mixed up
+; with those clumsy axis names.
+; Today's image has been faithfully posted to the two fractal picture
+; groups.  Tomorrow's fractal will be on time, but that's all I know about
+; it at the moment.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START 19.6 FILE=============================================
+
+Dingbat            { ; time=0:00:05.60-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jul-97.par
+  formulaname=ManN-YW passes=1 center-mag=0/0/54.404\
+  36/0.1176 params=0/-1.7431/2.003/0 float=y
+  maxiter=500 inside=253 logmap=yes symmetry=xyaxis
+  periodicity=10
+  colors=000I52I52I42I42H32H32H22H22G11H22I32J42J53K\
+  53L63M73N84N94OA4PB4QB5RC5SD5SE5TF6UG6VH6WH6WI7XJ7\
+  YK7UI5WJ6YK7_K8aL9cMAeNAgOBiPCkPDmQEoRFnSFmSFlTFkT\
+  EjUEiVEhVEhWEgWEfXEeYDdYDcZDbZDa_D``D_`DZaCYaCXbCW\
+  cCWcCVdCUeCTeCSfBRfBQgBPhBOhBNiBMiBLjAKkAJkAJlAIlA\
+  HmAGnAFn9Eo9Do9Cp9Cp9DpBEpCFpDFqEGqGHqHIqIJqJJrKKr\
+  LLrNMrONrPNsQOsRPsSQsTRsVRtWStXTtYUtZUu_VuaWubXucY\
+  udYveZvf_vg`viavjawkbwlcwmdwnewpexqfxrgxshxtjzwiyv\
+  hwtgvsfuretqdrocqnapm`nk_mjZliYkhXifWheVgdUgcTgbSm\
+  aRk_QjZPnYOmXNlWMjULiTKmSJlRIjQHiOGgNFfMEjKDiJCgIB\
+  fHAjG9iF8hE7fC6eB2a63b85c96eB8fC9gEAcGBdICeJEfLFgM\
+  GhOHiQIjRKkTLlUMmWNnXMjWMjWLkWLkWKfVKfVJgVJgUIgUIh\
+  UHhUHhUGiTGiTFiTFjTEjTEjSDkSDkSCgSCgSBhRBhRAhRAiQ9\
+  iQ9dQ8dQ2a13c45d76fA8hD9iFBkICmLEnOFpRHnUIoXJoVKlS\
+  KhMKiFKe9Lh4Kg3Kg3Kk3Kk3Kj3Kj3Ji3Ji3Ji3Jh3Jh2Jg2Jg\
+  2Jg2If2If2Ie2Ie2zzzId2Ic2 }
+
+frm:ManN-YW {
+z=real(p1)+flip(real(pixel)),
+c=imag(p1)+flip(imag(pixel)):
+z=z^p2+c,
+|z| <= 16 }
+
+; END 19.6 FILE===============================================
+;
