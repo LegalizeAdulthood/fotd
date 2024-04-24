@@ -1,0 +1,90 @@
+;     Date: Wed, 06 Jan 2010 22:41:45 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-01-10 (Rising Mist-Sprite [7.5])
+;       Id: <1.5.4.16.20100106224215.2b0ffa5a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 06, 2010 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Things are still running behind here at Fractal Central, which 
+; makes it necessary to take a break of a few days in the FOTD to 
+; give me a chance to clear away the piled-up work.  The next FOTD 
+; will be posted on January 11.
+; 
+; Meanwhile, today's very-low-order minibrot is certainly worth a 
+; peek.  I named it "Rising Mist-Sprite" because it reminds me of 
+; a wisp of spirit-vapor rising from a witches' cauldron.  I rated 
+; the image at a 7.5, the extra half-point being a reward for the 
+; coloring effort.
+; 
+; The calculation time of 5-2/3 minutes is a bit slow, but the 
+; result is worth the effort.  And as always, those with no time 
+; or with new-fangled, DOS-deprived machines may avoid the calcula-
+; tion altogether by viewing the finished image on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Today here at Fractal Central began with 1 inch, 2.5cm of fresh 
+; fluffy snow.  The snow ended by 10am, leading to a partly cloudy 
+; afternoon with a temperature just above freezing.  The fractal 
+; cats watched the action from the front window as I swept away 
+; the fluffy snow.  Then they retired to their chosen sleeping 
+; places for the better part of the day.  Because of a backlog of 
+; work which must be cleared away, the next FOTD will be delayed 
+; until January 11.  Until then, take care, and live life.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rising_Mist-Sprite { ; time=0:05:40.13-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-1.703119592946421/+1.737103617719614/\
+  5.644377e+011/1/95/0 params=1.15/0/15/0 float=y
+  maxiter=15000 inside=0 logmap=-470 periodicity=6
+  colors=00080U20S40T50L60E707750VAjT9gR9dP9aO9ZM9WK\
+  9TI9QH9NF9KD9HB9EA5CA9BACBAFBAIBALBAOBARBAUBFXBK`A\
+  PcAUfAZiAclAhoAmrAruAvz1zxAwwJuwRsw_qwgowfmseerddj\
+  cbhdage`eg_diYbkX`mW_mVbmKemFhm9im8km7mm6oz5qz5sz9\
+  pzDnzHmzLmzPmzTmzXmz`mzdmzhmzomzlmzimzfmzdmzamzZkz\
+  XizUgzRgzPhzMjzJlzHmzJnzKnzLnzMnzNozOozQozRozSp5Tp\
+  6Up6Vp6Wm7Xm8Xm9YmAZmBZmC_mD_mD`mE`mEamEamFamFbmFb\
+  mGcmGcmGcmHdmHdmIemIemIemJfmJfmJgmKgmKgmKemJdmJcmI\
+  bmIamH`mH_mGZmGYmFXmFWmFVmEUmETmDSeDRfCQgCPhBOiBNi\
+  BNkBQlETmHVmKYnN`oQboTepWhqZjqamzdozfmzckzajz_hzXg\
+  zVezTdzQbzOazM_zJZzHXzFWzD`zEezEjzEnzEhzFczGZzHUzH\
+  PzIKzJFzJAzK5zL0zL8zSGzZNzeVzlazrbzobzlcziczfczcdz\
+  `dzYdzVezSezPezN_zOVzOQzPLzPFzPAzQ5zQ0zQ1zS2zT2zU3\
+  zW3zX4zY4zZ5z`6za6zb7zd7ze8zf8zgAzfCzfDzeFzeHzdIzd\
+  KzcLzcNzbPzbQzaSzaTzaHziFzkEznDzpCzrFzpIznLzmOzkRz\
+  iUzhXzfZzeUzcQzaLz_HzYCzW }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

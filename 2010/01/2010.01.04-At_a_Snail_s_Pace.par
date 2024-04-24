@@ -1,0 +1,99 @@
+;     Date: Mon, 04 Jan 2010 22:19:46 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-01-10 (At a Snail's Pace [5])
+;       Id: <1.5.4.16.20100104222014.2b07ea74@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 05, 2010 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows another low-order minibrot, this one in the 
+; parent fractal that results when the formula Z^(1.15)+C is calcu-
+; lated 115 levels up the logarithmic hyperladder with the 'floor' 
+; function applied.
+; 
+; The parent fractal of today's image is shaped like an oversized 
+; torpedo.  The image is located in an area of chaos near the 
+; northwestern shore line of the parent.  The minibrot at the 
+; center of the image is shaped more like a snail, which explains 
+; the name "At a Snail's Pace".
+; 
+; All things considered, the image is merely average and rates an 
+; average 5.  The image might have rated higher, but we have seen 
+; so many similar minibrots surrounded by near-circular herring-
+; bone patterns that all the novelty is gone.
+; 
+; An unusually active, narrow-banded color palette creates most of 
+; the feeling that something important is going on.
+; 
+; The calculation time of 2 minutes is brief enough to allow 
+; plenty time for other computerized activities.  Those who cannot 
+; spare even the 2 minutes may view the finished image on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy clouds, a temperature of 28F -2C, a brisk north wind and 
+; flurries of snow describes the weather here at Fractal Central 
+; on Monday.  Warm and cozy describes the state of the fractal 
+; cats.  Busier than expected describes my state, while FL seemed 
+; rather sulky, probably because I told her on Sunday why my 
+; attitude is not totally positive.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and don't wish too hard for what you want.  You might 
+; actually get it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+At_a_Snail's_Pace { ; time=0:02:01.08-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=-1.94878787911748/-0.04035578893278759/\
+  1.1577e+008/1/177.5/0 params=1.15/0/115/525 float=y
+  maxiter=3000 inside=0 logmap=222 periodicity=6
+  colors=000G_E8I7nNsP244Uc2FKmi7IagDSX9JM49BRp_IZO9\
+  HCxJOcCGK68fnWdyIKV9PjZGVN8FB3iJzF_jBRV7IF3982x41U\
+  rlOb_IVOC9C6OxgQhiDMNBuOFzMLDxsN4h45zKC0N2gSH0E107\
+  0qamRJPbIiTDYJ9N94BHPP8CCcTgKEMj2YAGAZIB1TW0JL09A_\
+  WaROSIGJ989rXwRGUHMkjYaVMPFBCvSxFSPBLI7EC376zzcaOQ\
+  JCDFKWULeFALzmwp`6qO4HC2eY_vYi`PORIIICC966URny`5VI\
+  2tTGeLCSE8E74NbyBJVgg7MM3xz21V60K40A2GW0CO08G0480F\
+  aQBSJ7JD396k6l_4__ECkGEwIGlQDaYASd7UgFWjNXmUan`fog\
+  kpnppuTUZ68CvZmbNXJBGgvATb6EJ3xLRD869646433219pR6b\
+  K4QD2D6EgOAXI7MC3B6TcnEKP4fr2S_1EI4e42S21E1MIfOSl4\
+  oD2Y81H43k62_41O30C1gFTM7ED8h64MOTLGJE897nqfPRLW58\
+  G24x_VUIFzy7ji5jV3zF1zdEzFKzzrze_zcIzcLzcAzchzzMzz\
+  NzzHzzBzz5zzsWzEzz9zz4zz3zz1zze8zzzzzezzLzz0zz0zz0\
+  zz0zzKzzAzzyzzdzzKzzTzzJzz9zzvzzMzz_zzOzzCzzXzzTzz\
+  EzzSzzIzz9zzMzzBzzyzzVzzqzzcz8Rz5Dz2Azb7zT5zJ2z93z\
+  3izeNzLezQIzSDzL9zE4z7PzL }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

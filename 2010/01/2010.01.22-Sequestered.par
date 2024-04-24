@@ -1,0 +1,97 @@
+;     Date: Fri, 22 Jan 2010 18:46:45 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-01-10 (Sequestered [7.5])
+;       Id: <1.5.4.16.20100122184727.392f2476@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 23, 2010 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another fractured one that lies between unity 
+; and Z^2.  The power of Z is 1.5 to be exact, and we check the 
+; Mandeloid that is created by Z^1.5 when it is calculated by the 
+; MandelbrotBC3 formula 33 levels up the logarithmic ladder when 
+; no function is applied.
+; 
+; The parent fractal is nothing exceptional -- an everyday 
+; Mandeloid with one large bay and one distorted large bud on the 
+; south side of the bay.  Today's scene is located in a spiral-
+; shaped string of debris on the east side of the main bay.
+; 
+; I rated the image at a 7-1/2, which includes an extra half-point 
+; for the extra 15 minutes or so I spent on the coloring.  The 
+; name "Sequestered" can mean most anything the imaginative 
+; fractalist wishes.
+; 
+; The calculation time of 1-1/3 minutes is quite speedy, and will 
+; keep the risk of fractal disappointment to a minimum.  The risk 
+; may be eliminated entirely by surfing out to the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and checking the pre-calculated image posted there.
+; 
+; Lots of clouds, a lack of sun and a temperature of 39F +4C left 
+; much to be desired here at Fractal Central on Friday.  The 
+; fractal cats never even tried to find the sun.  They spent the 
+; day in the vicinity of the heat.  My day was quite average, and 
+; now that FL has recovered from the shock of seeing just so much 
+; more politics as usual, I expect we'll take an antiquing expedi-
+; tion on Saturday.  So don't be surprised if the FOTD for January 
+; 24 is late or doesn't appear at all.  Until whenever, take care, 
+; and will disappointed leftists please queue up on the right.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sequestered { ; time=0:01:20.34-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.7796928496155245/-0.559506159308004/\
+  7.474797e+007/1/7.5/0 params=1.5/0/33/0 float=y
+  maxiter=1800 inside=0 logmap=113 periodicity=6
+  colors=000dWxhYxk_xnaxpaxraxn`rhZmbWhXVbSTYMRTGPNA\
+  NI5LDBIBHEANF8TK7ZP5cU4eZBfcHhhNilTmo_rqevvkzzqvul\
+  rphmkdkd`j`XgXSdTOaPKZLGWHCVD8XGCYJGZMK`OOcRSeUVfX\
+  ZgZbhafhdjhlnhgpicrjesjctkbuk`vlZwlYxmWynUznSzoRzz\
+  PzzNzzMzzPzzSzzVzzXzfIzO4zR3zU2zX2zZ1za1zd0zf0ze1z\
+  e2ze2ze3ze3zd4zd4zd5zd6zd6zc7zc7zc8zc8zc9zc9zd8ze8\
+  ze7zf7zg6zg6zh5zh5zi4zj4zj3zk3zl2zl2zm1zm1zn5dn8dn\
+  BdnEdoHdoKdoNdoQdpUdpXdp_dpbdqedqhdqkdqndricrdbs_b\
+  sVatQatL`tG`rEUoCMmBFhDEdFE`HDWJDSLCONCKOCOKPSGaVC\
+  n`Aje8gj6dp4au2Zz1WvGOsVHoi9lx2jfKhQacMh_IoWEvVJsU\
+  NpTRmTVjS_gRcdQgaQi_PkeOnjNqpMtuMwzzzsWzzzzT_zzzzZ\
+  PzzzzBIzzzzHRzzzzM_zzzzR1zzzzGHzz4z2Bz7IzBPzGWzKbz\
+  PkzwmzEkzJizO8z`EzZJzYOzXUzWZzVczUSzxYzmczb8zhFzeL\
+  zbRz`XzYbzVez_fzYfzXgzWgzVhzUGzyQzn_zcDzFIzHNzJRzL\
+  WzN_zPdzRzz0qzFXzS_zTbzTezT`zhqz3oz8nzClzGkzLizPXz\
+  BbzKyz4vz8tzCqzFozJlzMjzQ }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

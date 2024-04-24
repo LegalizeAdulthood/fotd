@@ -1,0 +1,94 @@
+;     Date: Sun, 03 Jan 2010 14:06:44 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-01-10 (Recursive Rhapsody [8])
+;       Id: <1.5.4.16.20100103140711.0d8f9f56@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 03, 2010 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is late for the usual reason -- FL and I went on an 
+; antiquing expedition on Saturday.  It's getting to be a FC 
+; tradition.  The trek was not a total loss,  I found a perfectly 
+; good, well-aligned pair of Bushnell binoculars for 12 dollars, 
+; and FL found a pleasing decorative pillow.
+; 
+; The image for today, with its limited palette of colors, rates 
+; an honest 8.  The name "Recursive Rhapsody" has little meaning 
+; beyond its poetic effect.
+; 
+; The parent fractal was created by subtracting Z^(-1.5) from 
+; Z^(1.5).  This parent comes in two parts -- a twisted Mandelbrot 
+; set and a separate, smaller and partially occluded set lying 
+; some distance to the southwest.  Today's image lies in the East 
+; Valley of this smaller set, which is the only recognizable part 
+; of it that remains.
+; 
+; The unusual effect was achieved by rendering the image with the 
+; outside set to 'tdis'.  The normal outside=tdis rendering is far 
+; less impressive.
+; 
+; The calculation time of just over 2 minutes is a bargain when 
+; the resulting image rates an 8.  And even this minor wait may be 
+; avoided by viewing the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Lots of clouds, blustery winds, snow-covered ground, and a 
+; temperature of 27F -3C made Saturday quite a winterish day here 
+; at Fractal Central.  The fractal cats ignored the cold, seeking 
+; comfort in the warmest spots they could find.  My day was spent 
+; bargain hunting.
+; 
+; The next FOTD is due to be posted in around 9 hours.  There's a 
+; fair chance it might actually be posted on time.  Until then, 
+; take care, and don't ask me why the laws of nature work as they 
+; do.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Recursive_Rhapsody { ; time=0:02:08.12-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.97539331598/-2.10693345459/1690985/1\
+  /-147.5/0 params=1/1.5/-1/-1.5/0/0/0/0 float=y
+  maxiter=1500 inside=0 outside=tdis periodicity=6
+  colors=0001be7`aCZZHXWMVTSTQXRNaPKfNHXFMNDQEBKCEHI\
+  6JN9LaJMcLOeNQjRRpUTtYVzaWwVVvTUtRTrQSpPRnNQlMPjLO\
+  hKNfJMgILiLNkNPlPRnSToUVqWXrYZs``sbbtddtffuihukjvm\
+  lzonzpkzqhzrezsbztczudzvezwfzxgzyhzzizzjzzkzzlzzmz\
+  znzzozzpzzqzzqzzizzazzUzzUzzUzzUzzUvzUrzVmzVhzVczV\
+  ZzWUzWPzWKzWFzZAz`5zc5ze4zh4zj4zm4zo4zqBznHzkmzhmz\
+  emzbmz_mz`mzamzbmzdmzfzzhzzjzzlzzmzzozzqzzszzuzzwz\
+  zxzzrzzlzzgzzazzWzzRzzLzzFzzAzzHzzOzzVzzazohzrnzri\
+  zrdzr`zrWzrRzrNzrIzrDzr9zr4zr0zi6zaCzUHFMN6ES8DR9C\
+  QBBPCAPE9OF8NH8NI7MK6LL5KN4KO3JQ2IR2IS7GTCEUHCVLAW\
+  Q8XV6XZ4W`6Vb8UcAUeCTfEShFRjHRkJQmLPnNOpPOqQQqQRpP\
+  TpPVpPWoOYoO_oO`nNbnNdnNemMgmMimMjmMhjPggSeeVdbXb`\
+  _aYb_WdZTgXRjWOlUMoTJrSHtTIoUIkVIgWIcXJ_YJWZJS_JO`\
+  JKco6bm7bl8bk9bjAaiBahCafDaeE`dF`cG`bH`aIZ`JX`JV`J\
+  U`JS`KQ`KO`KN`KL`LJ`LH`LG`LF_SE_YE_cD_jC_pC_vG`rJa\
+  nMbkPcgSdcwhckfd_edOdeCce }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

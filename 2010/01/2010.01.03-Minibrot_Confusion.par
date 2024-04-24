@@ -1,0 +1,105 @@
+;     Date: Sun, 03 Jan 2010 23:34:52 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-01-10 (Minibrot Confusion [No rating])
+;       Id: <1.5.4.16.20100103233519.225f11f2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 04, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the fractal that comes about when the 
+; formula Z^(1.56)+C is calculated 30 levels up the complex 
+; logarithmic ladder with the 'floor' function applied.  I think 
+; this function gives the most accurate calculation, though many 
+; other functions also create interesting fractals.
+; 
+; The parent fractal resembles a fat opening quotation mark.  
+; Today's scene is located in the east valley leading to a large 
+; bud on the southeastern shore line of the main bay of its parent.
+; 
+; The image shows an unusually impressive minibrot with a 
+; satellite minibrot close to its lower right shore line.  I have 
+; not checked this satellite, though I doubt that it equals the 
+; main minibrot.
+; 
+; Since minibrots are old stuff, I gave the image no rating.  The 
+; name "Minibrot Confusion" refers to the chaotic pattern filling 
+; the frame.
+; 
+; The calculation time of 5 minutes requires a bit of patience.  
+; Those with no patience or over-qualified machines may view the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; On Sunday, FL asked me why I so often seem to be upset about 
+; something.  It took nearly three hours to answer her question, 
+; and I think she dozed off during the third hour.  Maybe I'll 
+; write an article about the things I am dis-satisfied with in the 
+; world.
+; 
+; Heavy clouds, intermittent light snow, a blustery wind and a 
+; temperature of 23F -5C made Sunday a day to be indoors here at 
+; Fractal Central in central Pennsylvania.  The fractal cats, 
+; definitely not of the Cheshire variety, had no smiles for the 
+; outside conditions.  They spent the day seeking the warmest 
+; place they could find.
+; 
+; My day was largely spent in rather futile discussion, but I feel 
+; I might have made just a tiny difference.  And tomorrow is 
+; 'back-to-normal' day.  The next FOTD will be posted in 24 hours. 
+; Until then, take care, and you cannot possibly do all of it by 
+; yourself.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Minibrot_Confusion { ; time=0:05:06.70-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=floor inside=0
+  center-mag=+0.3509677418/-0.5390467156/46683.71/1\
+  /180 params=1.56/0/30/0 float=y maxiter=32767
+  colors=000FDkFDkEEjEEjEEiEFiEFhDEiEFhEGhEHgFIgFJgF\
+  KfGLfGMfGNeHOeHPeHQdIRdISdIScITcJUcJVbJWbKXbKYaKZa\
+  L_aL``La`Mb`Mc_Md_EeuIdjMd_PdPTdEWd4Vc7Vc9VcBVbDVb\
+  FVbHVbJUaMUaOUaQU`SU`UU`WU`YT_`T_bT_dTZfTZhTZjTZlS\
+  YjRYiQYhPYgPXfOXeNXdMXcLWbLWaKW`JW_IVYHVXHVWGVVFUU\
+  EUTDUSDURCTQBTPATOATN8OQ7JT6FW5AZ45a31d53d64d86d97\
+  dB9dCAdDCdFDdGFdIGdJIdLJdMLdNMdPOdQPdSRdTSdVUdWVdX\
+  WdZYd_Zda`dbaddcdeddffdhgdiidkjdlldnndopdpqdrsdsvd\
+  uydzzdyzcxxdwwdwvdvuduteusetrespesoernfqmfqlfpkfpj\
+  gohgnggnfgmegldhlchkbhj`hj_iiZiiYihXigWigVjfTjeSje\
+  RjdQkcPkcOkbNk`IpaKmbMkcNidPfdRdeSbfU_gWYgXWhZTi_R\
+  jaPkcMkdKlfImhFniDnkBom8UCUUDUUEUUFUUGUUHUUIUUJUUK\
+  UULUUMUUNUUOUUPUUQUURUUSUUTUUUUVUUWUUXUUYUUZUU_UU`\
+  UUaUUbUWcTXdSYeRZfQ`gPahObiNcjMekMclMamM_nMYoMWpMU\
+  qNSoOQmPOlQPmRQmRRmRSmRTnRUnRUnRVnRWnRXoSYoSZoSZoS\
+  _oS`pSapSbpScFCmFCmFClFDl }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
