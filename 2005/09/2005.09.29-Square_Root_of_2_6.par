@@ -1,0 +1,93 @@
+;     Date: Thu, 29 Sep 2005 09:42:11 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-09-05 (Square Root of 2-6 [4])
+;       Id: <1.5.4.16.20050929094442.2f87c712@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 29, 2005 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Things are still a bit too busy here at Fractal Central for 
+; maximum FOTD efficiency, but I did manage to scrounge up an 
+; image worth being christened FOTD for September 29.
+; 
+; To find today's image, I searched the chaos on the northern 
+; shoreline of the +36 version of the square-root-of-two 
+; Mandeloid, a parent fractal that rather reminds me of an old-
+; fashioned string of sausages.
+; 
+; The image features a midget at the center.  Well, it could more 
+; accurately be described as a hole surrounded by the fractal soil 
+; that was dug away to create it.  There appears to be no 
+; organized pattern at all surrounding the midget, only bits and 
+; pieces of rather nasty-looking debris left over from its 
+; creation.
+; 
+; But all fractals, like all stories, should have a theme.  And 
+; without a theme, today's image must be rated under average.  I 
+; gave it a rating of 4, the highest under-average rating I could.
+; 
+; Luckily, the image is a fast one, rendering in 2 minutes on my 
+; old machine, and in under 1 minute on the newest units.  For the 
+; convenience of those who do not render, the already-rendered 
+; image is available for download on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Perfect weather here at Fractal Central on both Tuesday and 
+; Wednesday kept the Fractal Cats quite happy.  Having too much 
+; work kept me unhappy.  Today is starting cloudy with rain in the 
+; forecast, so I doubt there will be another perfect day for the 
+; cats.  For me, the work is under control, but still heavy.  The 
+; next FOTD will appear in 24 hours.  Until then, take care, and 
+; be fractalish.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Square_Root_of_2-6 { ; time=0:02:00.23--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=mandelbrotbc2 passes=1
+  center-mag=-0.27721719749208490/+0.227484603426743\
+  80/354.5796/1/-47.5/-8.13835110413663188e-013
+  params=1.414213562373/0/36/0 float=y maxiter=1600
+  inside=0 logmap=yes periodicity=10
+  colors=000gHqeHqcIqbIq`IqZJpYJpWKpUKpTKpOagKsZNp_Q\
+  n`Sl`VjaXha_fbbdcdbcg`diZdlXenVekTchSaeQ_bPY_OWXMU\
+  ULSRKROIPLHNIFLFEJCDH9BF6AD39C6GI8NOATUD_ZFedHljJr\
+  oMpjPofRmaUlYXjTZiPWeOTbOQZONWOKSNHPNEMNBIN8FM5BM2\
+  8M05M36O67P97RC8SF8TI9VL9WOAXRBZUB_XC`_CbbDceDdcHc\
+  aKc_NcYQbWTbUWbSZbQaaOdaMgaKjaIm`Gp`Es`Dv`Ht_Ks_Nr\
+  _Qq_Up_Xo__n_bm_fl_ik_lj_oi_ohcohfohjohmohpWOYD4GI\
+  7IMAKRDLVGNZIOVNTSSYOWaL`fIdjJehKegLefLfeMfcNfbOga\
+  Og`PgZQhYRhXRhW8qdAodBndCmdDldEjdFidGhdHgdIfdJddKc\
+  dLbdMadN`dLVgJQjHLmFGpDBrHFqKIpNLoQOnTRmWUl_Ykb`je\
+  cihfhkignlfqoflpdhqcdrb`saWt_StZOuYKvXFwVBxU7yT3yS\
+  RcQmJPjLQgNRdPSbRT_TTXVUVXVSZWP`XMbXKdYHfZEh_Cj_Fn\
+  dIqiKtnNwsPzwNrtLjqJbnHVlFNiDFfB7dDAcEDcFGcGJbHMbI\
+  PbJSbKVaLYaM`aNcafSZmPYsMXyJWj1xf5sc8n`BiYEdVH`TLb\
+  SOdQSePVgNZiMajKdlJhnHkoGoqErsDutHtpLslPriTqeXpbOb\
+  QGQEKPFOPGRPHVPIZPJjGrhGr }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

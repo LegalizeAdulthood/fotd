@@ -1,0 +1,71 @@
+;     Date: Sat, 03 Sep 2005 09:50:25 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-09-05 (03-09-05 [NA])
+;       Id: <1.5.4.16.20050903095246.387f8806@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 03, 2005 (Rating NONE)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The fractal part of today's discussion is very brief.  The part 
+; that appears in only the philofractal version is far longer and 
+; rather controversial.
+; 
+; Today's image shows a scene in the fractal created by the 
+; formula (Z^2)+(0.3*Z^4.1)+C.  I gave it no rating and no name.  
+; It renders in 15 minutes from the included parameter file.  The 
+; finished image is available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A political-philosophy rant appears at this point in the 
+; philofractal version.
+; 
+; On the cat front, the weather on Friday was perfect and the cats 
+; had a great day.  The next FOTD will appear in 24 hours, but be 
+; warned, politics is still the hot topic around F.C., and I am 
+; not in the mood to remain silent.  Until next time, take care, 
+; and walk with fractals.
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+03-09-05 { ; time=0:15:00.29--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.37989719666519010/+0.158850406431823\
+  90/3996.859/1/180 params=1/2/0.3/4.1/0/0
+  float=y maxiter=600 inside=bof60 outside=tdis
+  symmetry=none periodicity=10 sound=off
+  colors=000MNEFJB7E70A42CB3EI5FP6HW8Jb9KiBMpCNvELqG\
+  KlIIgKHcMFZOEUPDQUigSeeRacQZaOV_NRYMOWSUZY_abechkf\
+  000swktmYucKvU6gP9UKCGFEMJKRMQXPVaS`fWflZkqaqvdv4a\
+  vE`iO`YY`MVgVSmbPtjNzrQwnStjUqfWnbYkZ_hWWiSTiOQiKN\
+  iHKiDHi9Ei6Fh8Gg9GfAHeBIdCIdDGfHEhKCjNBlQ9nT7pW5rZ\
+  4taJpYYlUlhQzdNOwK2I54J75J96JB8KD9KFAKHBKIJILRHNZG\
+  PeFRNKg4Ox9JsDEoH9kL5gR8eXAcbCahF_nHYtJWqKUoLTlMRj\
+  NQhOP89ZAFaBKdDQfEViF`lHenIkqJpsS`k`Lcdfomlnvrntmj\
+  rigpedoaamYYkUViQShMPgRSfWVe`Xdd_ciabndbrf_pbXn_Ul\
+  XSkUPiQMgNJeKHdHK`KNYNQVPTSSWPUZMXaJZgSbm_fshjxpmj\
+  edXWXJLP6BHCHFINEOTCTZBZd9dj8io7rjTzfmycoxapw_rwYs\
+  vWuuUvtSxtQylGvkMskRqkWok`mkejkjhkofktdjnaih_ibYhY\
+  VhSTgMRgHP8qpwJpkTr`bsQltFvuDnvBgw9`w8Tx6Mx4Fy38y8\
+  GqDOjIWbNbWSjOXrH`yAVhSQTiLDz1w79x5Hx4Py2Xy1_t2bp3\
+  el4hh5kc6n_7qW8tS9pTElUIhUMeVQaVUYWYVWaXWbYWb_Wc`W\
+  cbWccWdeWdfWdb`ijgba_SUSI }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,71 @@
+;     Date: Wed, 07 Sep 2005 12:36:23 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-09-05 (07-09-05 [NA])
+;       Id: <1.5.4.16.20050907123846.29d74ae6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 07, 2005 (Rating NA)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the fractal that results when 
+; Z^(0.06) and Z^2 are combined, and C is added.  The bubbly 
+; effect was achieved by rendering the image with the outside set 
+; to 'fmod' and the proximity set to 0.5.  Since almost all my 
+; energy went into the writing of the philofractal discussion, I 
+; gave the image no name other than the date.  The render time of 
+; 2 minutes is fair enough.  The pre-rendered GIF image will be 
+; available before long on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Deep blue sky, puffy white clouds, gentle winds, low humidity, a 
+; temperature of 81F 27C -- all this combined to make the day 
+; absolutely perfect here at Fractal Central on Tuesday.  The cats 
+; were so happy that they paused to give thanks to the great cat.  
+; For me, the day was on the slow side.  Today promises to be the 
+; same.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and look toward the light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+07-09-05 { ; time=0:02:09.12--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-2.78868307814481100/+0.206703675744196\
+  10/4.78215e+009/1/-90/3.88578e-016 params=1/0.06/1\
+  /2/0/0 float=y maxiter=500 inside=0 proximity=0.5
+  outside=fmod logmap=yes periodicity=10
+  colors=000vc3ub4ta4s`5r_5qZ5pY6oX6oW7nV7mU7lT8kS8j\
+  R8iQ9iQ9hPAgOAfNAeMBdLBcKBcJCbICaHD`GD_FDZEEYDEYDE\
+  bGDfJDkMDoPDwPCsRDpSElTEiUFeWFbXGZYGWZHSaIT_HUZHVY\
+  HWXHXWHXUHYTHZSH_RG`QGaPGaNGbMGcLGdKGeJGhGIfHHeIGc\
+  IGbJF`JF_KEZKDXLDWLCUMCTMBSNAQNAPO9NO9MP8KP8JQ7IQ6\
+  GR6FR5DS5CS4BT39T38U26U25V14V15U45U65U95TB6TD6TG6S\
+  I6SL7SN7RP7RS7RU8QW8QZ8Q`8Pc9Pe9Pg9Oj9Ol9OnISaRVPZ\
+  YC`ZBa_Bb`BdaBebBfcBhdBieBjfBlfBmgBnhBpiBqjBrkBtlB\
+  umBvnByo9xnAwnBvmBumCtlDtlDslErkFqkFpjGojHoiHniImi\
+  IlhJkhKkgKjgLifMhfMgfNfeOfeOedPddQccQbcRdfPbcRa`T`\
+  ZV_WWYUYXR_WP`VMbTKdSHeRFgQCiPAjL8eI7`F6WB4R83M52I\
+  57J5BJ5FJ5JJ5NJ5RJ5VK5ZK5bK5fK5jK5nK5jR5fX5cc5_i4W\
+  q5Xo6Yn6Ym7Zl7_k8_j8`i9ah9afAbeAcdBccBdbCeaDe`Df_E\
+  gZEgXFhWFiVGiUGjTHkSHkRIlQDjKGkNIlPLlRNmTPmVSnXUoZ\
+  Wo`Zpb`pdbqferhgrjisllsnntpptrnrqlqpkooinnhlmfklei\
+  kchjpaFqaDraCraAsa8sa7ta5 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

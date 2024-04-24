@@ -1,0 +1,76 @@
+;     Date: Sun, 11 Sep 2005 11:55:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-09-05 (11-09-05 [NA])
+;       Id: <1.5.4.16.20050911115746.29c789ba@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 11, 2005 (Rating NA)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene along the eastern shoreline of the main 
+; bay of the fractal that results when the formula Z^(1.9)+C is 
+; iterated by the MandelbrotBC2 formula.  I gave it no name and no 
+; rating.  Its render time is a short 3-3/4 minutes, but even this 
+; short time may be cut further by downloading the completed GIF 
+; image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Most of today's discussion does not directly concern fractals, 
+; and appears only in the philofractal version.
+; 
+; The weather on Saturday here at Fractal Central was quite 
+; perfect.  But the fractal cats seemed unusually subdued.  They 
+; must be mourning all the cats that perished in the disaster.  
+; I'll be pondering various things for the rest of the day.  The 
+; next FOTD will appear in 24 hours.  Until then, take care and 
+; all one needs to do is be himself.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+11-09-05 { ; time=0:03:42.12--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2
+  center-mag=+0.19278290085102230/+0.157030841853844\
+  90/2.836628e+008 params=1.9/0/0/0 float=y
+  maxiter=1000 inside=0 periodicity=10
+  colors=000hfZie`jcakbbladm_enZfr`fnYgjWhfUibSjZPkV\
+  NlRLmNJnJGoFEpBCq7Ar48r58n58k68h68e78b78_88X88U98R\
+  98OA8LA8IKDEUIBbP6cN8cMAcLCcKDcJFdIHdHJdGKdEMdDOeC\
+  QeBReATe9Ve8X_8Pe7Yj6fo6on9pmCplEplHpkKqjMqiPqiRqh\
+  UrgXrfZrfaredsdfsciscks_flWaeSYZPTSLOLHKEDF7AB1BA4\
+  CA6CA8D9AE9CE9EF8GF8IG8LH7NH7PI7RJ6TJ6VK6XK6ZN8YPA\
+  YRCXUDXWFWYHW`IVbKVdMUgNUiPTkRTnSSpUSrWRtXRsWQsVPs\
+  VOsUNsUMsTLsTKsSJsSIsRHtTCsRGsQKsOOsNRsLVsKZsIasHe\
+  sFisElsCpsBtsAwtButCsuDquEpvFnvGlvHjwIiwJgxKexLcxL\
+  bvPauS`sW_rZZpbYoeXmiWllVjpUisTjuQhtSgrTfnVdkWcgYb\
+  cZ```_XaZTbXQdWMeVIgUIhSBjR7kR0hO4fK8bECY8GT2KQ4NN\
+  6PQ8ST9VWBYZD`aEcdGfgIijJjlLjkNikOikQhkRgkTgkUfkWe\
+  kXekZdk`dn_dk_dhZdeZdbYd_YdXXdUXdRWdOUc4WdLraZr`ap\
+  _`nYZlWYjUXhSVfRUdPSbNR`LQZJOXHNVGMQFPMFRHFUDFW8FZ\
+  4F`p4N0Fb6H`BJ_GLZLNYAzhQPXQOZQNaQMcQLfQKhQJkW8tQI\
+  mKRfF__bnRcmTdlUejVfiXghY }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

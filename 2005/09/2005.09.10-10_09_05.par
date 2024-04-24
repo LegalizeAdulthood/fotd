@@ -1,0 +1,76 @@
+;     Date: Sat, 10 Sep 2005 10:42:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-09-05 (10-09-05 [NA])
+;       Id: <1.5.4.16.20050910104457.29ef0ab2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 10, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image subtracts 10 parts of Z^(-0.4) from Z and adds 
+; (1/C).  The resulting parent fractal is a Mandelbrot set distor-
+; ted into a hyperbola.  The scene is located on the shoreline of 
+; this hyperbola.  The special effects were achieved by rendering 
+; the scene with the outside set to 'atan'.  Since I put almost no 
+; effort into the image, I gave it no name or rating.  The render 
+; time of 22 minutes is a bit dragging.  The most efficient way of 
+; viewing the image is to visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and download the completed GIF image from there.
+; 
+; The philosophy appears in the philofractal version of this 
+; discussion.
+; 
+; Only some haze and a few clouds kept the day from being absolute-
+; ly perfect here at Fractal Central on Friday.  The fractal cats 
+; were angelic.  Today is starting the same but with light fog.  I 
+; expect good things from the duo.  For me the work is minimal, 
+; which should give lots of time to ponder my philosophy. The next 
+; FOTD will appear in 24 hours.  Until then, take care, and what 
+; would it mean if nothing but nothing really were real?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+10-09-05 { ; time=0:22:07.22--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.27895512845111370/+0.137434054018250\
+  30/801544.6/1/-37.5/1.57385299515144794e-008
+  params=-10/-0.4/1/1/0/1500 float=y maxiter=3500
+  inside=0 outside=atan periodicity=10
+  colors=000UYgUXfUXfNckHipAou4uz5jo5_d6PU6EJ9GICIHF\
+  KGIMGLOFOQERSEUPJWMNYJR_HVaEZcBbe9fSUPFn7jyf7LCBKK\
+  FJRIIYMHdQGkTGrREjPCbNAVM8OK6GI48H21O98UFF_LLcPRfT\
+  XjXbm`hqdnthtwkzUeg1_P3WT5SW7PZ9LaBHdDEgEKiEPjFUkF\
+  ZlKYoOYrSYuWYx_YzdXshXmlXgpWatWWxWQqVSjVUcVWXVYQV_\
+  JVaDVcG`gIfjLlmNqpOtqPwqQulQsgRrbRpZSnUSmPTkKTjG_d\
+  Ie_JlVLrQMxLNyLMyLLyLKyLJyLIyLHyLGyLGnSRdZaVelLlvS\
+  hhYeVcbHi_3aU8VPDOJIB5NA9UKLWUU_cecmsfksdhsb4Mt4Mt\
+  4Mu4Mv4Mv5Ot5Ps6Qr6RqJsL6Sp7Tn7Um8Vl8Wk8Xj9Yi9ZgA_\
+  fA`eAadBbcBcaCd`Ce_CfZDgYDhXEiVEjUEkTFlSFmRGnPGoOG\
+  pNHqMHrLwwkuvjtvisvhrvgqvgovfnvemvdlvdkuciubhuagu`\
+  fu`eu_cuZbuYauY`tX_tWYtVXtUWtUVtTUtSStRRtRQsQPsPOs\
+  OMsNLsNKsMJsLIsKQNxPQtOTpNWlMZiLaeLdaKgYJjVImRHpNc\
+  4zb6ya7xa8w`9v`Bu_Ct_DsZErZFqYHpYIoXJnXKmWLlVNkVOj\
+  UPiUQhTRgTTfSUeSVdRWcRYbQZaQ_`P`_PaZOcYNdXNeWMfVMg\
+  ULiTLjSKkRKlQV`kV_jVZiUZh }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

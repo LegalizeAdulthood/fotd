@@ -1,0 +1,111 @@
+;     Date: Sat, 24 Sep 2005 10:13:13 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-09-05 (Square Root of 2-2 [7])
+;       Id: <1.5.4.16.20050924101543.29efbbcc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 24, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Things are still a little busier than I would like here at 
+; Fractal Central today, so there will be no time for a long 
+; rambling discussion.
+; 
+; The parent fractal of today's image, which is based on the 
+; square root of 2, is sliced 1234 levels down the complex log 
+; spiral.  At this lowly level, the parent fractal is little more 
+; than a lopsided circle with hints of tiny buds, but as today's 
+; FOTD shows, it holds no shortage of midgets.
+; 
+; The rather striking scene is located in some explosive chaos on 
+; the western shore of the main and only bay of its parent.
+; 
+; I am losing track of the number of consecutive 7-rated images we 
+; have had.  I think today's is number 8 in a row.
+; 
+; The name "Square Root of 2-2" indicates that the image is the 
+; second in the series of images investigating fractals generated 
+; with the expression Z^(sqrt(2))+C.  The series will continue 
+; until I grow bored.
+; 
+; The render time of 4+ minutes is within reason, but those who 
+; are having an unreasonably impatient day may download the 
+; finished GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; In a recent letter to the list, someone wondered where I get the 
+; color maps I use in the FOTD fractals.  The answer is, anywhere 
+; I can find them.  Sometimes the program produces a satisfactory 
+; color map with a strike of the 'enter' key, and all I need to do 
+; is tweak a few troublesome registers.  At the other extreme, I 
+; occasionally create the entire map one register at a time, which 
+; is a slow process.  Occasionally I run the FOTD images through 
+; an image-processing program such as Photoshop, though I never 
+; make changes that cannot be entered into a Fractint parameter 
+; file.  And finally, though my humility prevents me from admit-
+; ting it, my profession does require at least a bit of artistic 
+; sensitivity.  Some of it unavoidably rubs off on the FOTD 
+; fractals.
+; 
+; With a high temperature of 93F 34C and increased humidity here 
+; at Fractal Central on Friday, it was a bit too oppressive for 
+; cat comfort.  But the showers never arrived, and the duo made 
+; the best of the marginal conditions, lurking for several hours 
+; in the holly thicket.  To ease their displeasure, I gave them a 
+; bit of extra tuna in the evening.  Today is starting with 
+; clouds and cooler temperatures.  I see no reason why the duo 
+; should complain.
+; 
+; The next FOTD will appear, as it almost always does, in 24 
+; hours.  Until then, take care, and be peaceful.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Square_Root_of_2-2 { ; time=0:04:17.49--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.40565767597375290/+0.069646715730597\
+  94/5129615/1/62.5/-6.2025166898405093e-008
+  params=1.414213562373/0/-1234/0 float=y
+  maxiter=3200 inside=0 periodicity=10
+  colors=000xFvwFuvFuuEtsEtrEsqDspDroDrkEphFneGmbHkZ\
+  IiWJhTKfQLdNMcJNaGO_DPZAQX7RW9TUBVTDXSFZRG_PIaOKcN\
+  MeMOgLPhJRjITlHVnGWoFUnGSnGQmGOmHMlHLlHJkIHkIFjIDj\
+  JCiJAiJ8hK6hK4gK3gK6dJ8bIA`HCZGFWFHUEJSELQDNOCQLBS\
+  JAUH9WF8YD8`GCbJFeLIgOMjQPlTSoVWqYZs_a2mn4ff5_Z6TS\
+  7UR8VQ9VP9WOAWNBXNCXMCYLDZKEZJF_JF_IG`HH`GIaFIaFGU\
+  MENTCG_A9f92l81g71b61Y51T41O30J20E109113004r43d32R\
+  21D105ID4GC4FB3DA3C93B8297286165154143022nAXlAXjAU\
+  e9R`8NV7KQ6HL4DF3AA2651307006005005004004003002002\
+  00100100005av4Yp4Uj3Qd3MZ2JT2FN1BH17B035jXwm0wuzep\
+  ubkq_glXbhUZcRU_ORVLNRIJMFFICBD9796343RcKO_IMWGKSF\
+  IPDGLCEIACG9AD78A6684453221LTsJRoIPkGNgFLdEJ`CHXBF\
+  T9DQ8BM79I57E45B2371135mq4im4ei3be3Za3WY2SU2PR2LN1\
+  HJ1EF1AB077033N9yI7lD5`93O41CERfCObBMZAKW9IS8FP7DL\
+  5BH49E36A247123ImGEcCAU97K63A3c3M_2JW2HS2FO1DK1BG1\
+  8C068044020jq0NRr0ol0ig0d }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

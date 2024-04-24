@@ -1,0 +1,105 @@
+;     Date: Thu, 22 Sep 2005 10:18:55 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-09-05 (The Fourth Root [7])
+;       Id: <1.5.4.16.20050922102125.3907718a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 22, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In the northern hemisphere today is the first day of autumn.  
+; In the southern hemisphere it is the first day of spring.  At 
+; 2223 GMT the sun stands directly over the equator somewhere not 
+; too far south of Hawaii.  For a brief moment, everything is in 
+; balance, the great world fractal is motionless, and it is said 
+; an egg will balance on its end.
+; 
+; This might be true in some parts of the world, but not here at 
+; Fractal Central.  The only way I can make an egg stand upright 
+; is to place it on a flat surface and prop it up with a few 
+; grains of salt.  The big question would seem to be how the story 
+; got started.  It is also said that the entire universe might be 
+; a fractal, which would mean that eggs are fractals also.  But 
+; there is nothing egg-like in today's striking image.
+; 
+; Today's fractal is part of the larger fractal that results when 
+; the formula Z^(1.1892)+C is iterated at ground zero level of the 
+; logarithmic spiral.  Actually, I should say 3.14159 levels down 
+; the complex logarithmic hyperspiral spiral, for the number pi is 
+; actually best considered ground level of the spiral.  (I might 
+; write another formula, one that correctly sets ground level.)
+; 
+; The exponent of Z in today's image is 1.1892, and it is no acci-
+; dent that this number is the fourth root of 2.  I chose this 
+; value because the midgets are easier to find in fractals whose Z 
+; exponents are roots of 2.  I really did not need to choose a 
+; root of 2 however, for I have discovered a simple method of 
+; finding those elusive hidden midgets in fractals with exponents 
+; of Z between 1 and 2.
+; 
+; After giving today's image full consideration, I rated it at a 
+; 7.  This is about the 6th consecutive rating of a 7, which is a 
+; sign that, at least in my opinion, I am on a fractal roll.  The 
+; name "The Fourth Root" is a simple description of the exponent 
+; of Z.  The render time of 2 minutes is thankfully brief.  And as 
+; for those with Fractint-deprived machines -- they can see the 
+; image by downloading it from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; An absolutely perfect day (we sure have been having a lot of 
+; them lately) here at Fractal Central on Wednesday kept the 
+; fractal cats contented.  Finishing the work early and finding a 
+; good fractal kept me contented also.  Today is starting sunny 
+; and only the slightest bit cooler.  It seems another good day 
+; is coming up.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and don't ignore the minutiae.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Fourth_Root { ; time=0:02:05.01--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=+1.99538087334197200/+1.392766250999284\
+  00/37712.73/1/-17.5/2.84751282275675e-009 logmap=55
+  params=1.1892/0/0/0 float=y maxiter=1500 inside=0
+  colors=000VTVTQTQOQOMTMKRKEOI7LH0HB0HD0OB7UHMZX_fl\
+  nnzzttlzlXzdHzX2zQ0zvazzzizzizzinqiaeiQViFKiXMvlOz\
+  zQzzTzzOzzMdqKHtIDvH9xH5xF2zF0zD0zD0zM2xXBveMtoXqz\
+  gqzqizvazxXzzOzzIzzBzz5zzBXzH0zM0zT0tY0dd0Qi0Bo00z\
+  03z09z03q70eK0V_0In07z0Fz0Mx0Tv2_t5eqBnoHtoKxvMzzO\
+  zzQzzTzzTzzKzzDzz7zz0zz0zz0zz2zzFzzTzzzzztzznzzgzz\
+  azz3zz0zzlzzezzazzXzzTzzOzzIzzFzzBzzHzzKzzIzzIzzIz\
+  zlzzzzzlzzKzzQzzV0zY3zaBzgKzlTzo_ztQzxIzzBzz3zz0zz\
+  0zz0zz0za0z00z30z90zD0zI0zM0zBBz0Tz0iz00zT0zK0zD0z\
+  70z00z02z0Qz0nzDzzQzzVvzYnzaezdYzgQzlIzoDzqDzzDzzD\
+  zzHzzIzzMzqOziQzdIzaDza5za0za0za0za0za0zO0zB0zO0za\
+  2zo3zz0zz0zz0zz0zz0zz_zzgzznzttzdzzOzzBzzDxzDtzFoz\
+  FlzHgzHdzIazIYzHXzFVzFQzDOzDMzBKzB9z20z00z00z0zzMg\
+  z29z0zzXzzXzz0vz0ez0Oz39zF0zQ0za0zF0z07z0Kz0Yz3lzI\
+  zz_zzozzazzOzzBzz0zz2zz5zz9zzDzzHzzKzzOzz_vzioztgz\
+  zazzXzzVzzVzzVzzvzYozYizY }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

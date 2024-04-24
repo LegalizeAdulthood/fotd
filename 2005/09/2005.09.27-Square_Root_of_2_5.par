@@ -1,0 +1,103 @@
+;     Date: Tue, 27 Sep 2005 10:16:57 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-09-05 (Square Root of 2-5 [7])
+;       Id: <1.5.4.16.20050927101927.0d2ff470@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 27, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's discussion is terse, not because I was busy, but because 
+; I spent several hours writing a rather lengthy reply to a letter 
+; about dreams that was posted recently to the philofractal list.  
+; The reply will appear later today on that list.
+; 
+; Well, I finally found a midget worth a rating of 7 in the +4321 
+; version of the Z^(sqrt(2))+C fractal.  I found it on the long, 
+; meandering filament that extends south and east from what passes 
+; for a large south bud.  It lies in the East Valley of a much 
+; larger midget on the filament.  True, much of the worth of 
+; today's image is due to my coloring effort, but what's wrong 
+; with the human element in the world of fractals?
+; 
+; Tomorrow, we'll move on to another interesting version of the 
+; Z^(sqrt(2))+C fractal to see what goodies we can find there.
+; 
+; BTW, it's too bad that the classic Mandelbrot set comes in only 
+; one version.  I guess this makes it kind of the god of fractals.
+; 
+; I gave today's image only a catalog listing.  Maybe I'm starting 
+; to run out of names.  But a worthwhile visual artist really 
+; should not need to give names to his works.  The works should 
+; speak for themselves.  (Not in words of course.)
+; 
+; In my opinion, the 8-minute render time of today's image is 
+; worth the effort.  But my opinion is not universal, so the 
+; already-completed image is posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; from where it may quickly and effortlessly be downloaded.
+; 
+; Mostly cloudy skies in the early afternoon turned into light 
+; rain by the late afternoon here at Fractal Central on Monday.  
+; The high temperature of 82F 28C was not too bad, but the high 
+; humidity made things feel muggy, especially for the fractal 
+; cats, who cut short their outdoor adventure even before the rain 
+; set in.  The evening tuna treat eased their troubles.  Today is 
+; starting breezy, with sun and cooler temperatures.  I expect a 
+; better day is coming.
+; 
+; The next FOTD will be coming also -- in 24 hours that is -- so 
+; don't miss the excitement.  Until then, take care, and see the 
+; fractal sights.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Square_Root_of_2-5 { ; time=0:08:02.19--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.87374438186114160/-1.340159768589525\
+  00/1.286642e+010/1/87.5/-0.000489708418479985197
+  params=1.414213562373/0/4321/0 float=y maxiter=1500
+  inside=0 logmap=241 periodicity=10
+  colors=0009Jh7Kg4Lf2Me0Md3Lb5L`8L_ALYCLXEJUFISHHPI\
+  GNJELLDIMCGOBDP9BQ89S76T64UK2VSIguYHU1LI5OK9SNDWPH\
+  _SLbUPfXTjZXma`qcdtfhzhlzjpwelraioYfnTckP`gLXcHU_C\
+  RY8OW4LU0IN1NG2SF3X84a24e47f5Af6Cf7Ff8If9GeAEbBPfH\
+  RcNT`UVY`XVgZSn`PuaMpdWkgefinbhj_hfYhcVh_ShXQhTNcQ\
+  L_MIXJFUFDUCAU88U58UB8UH8UM8US8UY8Ub8Zh8cn8ds9er9f\
+  q9fp9go9hn9hmAilAikAjjAkiAkhAlgAlgBjhBhhCghCehDdiD\
+  biEaiE_iFZjFXjGWjGUjGTjFQkFNkELkDIkDFlCDlBAlB8lA9k\
+  99k89k8Ak7Ak6Ak6Ak8Fk9JkBOkCSkEWkF`kHdkIhkJbgKXcKS\
+  `LMXMGTMBQN5MN0JNIARJEVJIYKMaKPdLThLXkM`oMcrNgvNky\
+  NnzMZzLJzK4cL66L76L86LA6LB6LC5ME5MF5MG5MI5MJ5MK5ML\
+  6ON7PP8QR8RS9SUATWAUXOXUYZS``PcbNheKmgIriFwkDzmBvl\
+  CqlCmlChkDejDaiDYhEUgERgEUhGWhHZiJ`iKbiMekNgkPilQl\
+  mSnnTpnUqpKrqGssDtt9uu6vv7ww8xz8yz9zz9zzAzzAzzBzzC\
+  zzCzzDzzDzzEzzEzzNzzVzzbzzczzczzczzczzdzzdzzdzzdzz\
+  ezzezzezzezzfzzfzzfzzfzzc }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

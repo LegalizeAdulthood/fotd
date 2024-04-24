@@ -1,0 +1,107 @@
+;     Date: Wed, 21 Sep 2005 09:26:45 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-09-05 (Chambered Nautili [7])
+;       Id: <1.5.4.16.20050921092914.29bfb412@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 21, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Toward the center of today's image, I see a feature that reminds 
+; me of a nautilus.  And nautili always remind me of school.  In 
+; Saint Martin's Catholic elementary school we studied the poem 
+; "The Chambered Nautilus", a poem that is obviously about reincar-
+; nation.  But reincarnation conflicts with the doctrine of the 
+; Catholic Church, which teaches that we are given only one life 
+; on earth, so the class somehow finished studying the poem 
+; without hearing of the possibility that individuals might have 
+; more than one life on earth in which to get it right.
+; 
+; Actually, there is no nautilus in today's image.  There is 
+; nothing in it but paths taken by iterated points, which have 
+; been colored according to the whims of one human being -- myself.
+; 
+; The image is a scene in the fractal that results when the 
+; formula Z^(1.75)+C is iterated at a point 8 levels down the 
+; logarithmic hyperspiral.  This parent fractal is a rather 
+; unimpressive thing, kind of a half-there main bay of a lost 
+; Mandelbrot set.  But it does have the remnants of an East 
+; Valley, and the northern shore of this valley is filled with 
+; debris containing midgets such as the one which appears at the 
+; center of today's image.
+; 
+; I named the image "Chambered Nautili".  Actually, I see only one 
+; nautilus in the image, but in the world of fractals, things 
+; often come in infinities, so I made the assumption that more 
+; nautili are hiding in the scene.
+; 
+; I rendered the image with the passes set to 'b'.  I chose this 
+; method because it is always the most fun to watch in action, and 
+; with this particular image it works correctly and is actually 
+; faster than passes=g.
+; 
+; The rating of a 7 might be based on the fact that the color 
+; theme of the image is blue and orange, my high-school colors.  
+; The render time of 9-1/2 minutes is not too bad.  But it could 
+; be better.  Perhaps the best way to see the nautilus is to 
+; download the finished GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The clouds were plentiful here at Fractal Central on Tuesday, 
+; and the temperature reached 88F 31C, but no rain fell, and the 
+; fractal cats enjoyed a near-perfect day in the yard.  Today is 
+; starting slightly cooler with full sun.  Another good day 
+; appears to be on the way for the duo.  For me, little of note 
+; is expected.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and be at ease.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Chambered_Nautili { ; time=0:09:38.81--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=b
+  center-mag=+0.20871287866934790/+0.000681991233797\
+  58/2.109281e+010/1/85/1.37199649671848611e-006
+  params=1.75/0/-8/0 float=y maxiter=2750 inside=255
+  logmap=493 periodicity=10
+  colors=00099gX8rdQmlgityejqfajfTcgJWgAPh1Ih3Of5Td6\
+  Yb8c`9hZBmXCrWKp`Soe_njgmooltwkyqfmlabgXSbSHyhQxgV\
+  xgZwgcwggwfkvfpvftvfxognhgdagWVgMPgDQjCRlBSoATq9Us\
+  8Vv7Wx6Wz6Sv9OrBLnEHjGEfJwcLvZNuUEtS5sU7rX8q`9pfAo\
+  lBoqCisRcueYwtF4yKEuPOrUXoUUnTQlTMkTJiSFhSBfS8ePFh\
+  MLjJSlGYnDdpAjr7pt10oE9fRIYcRPp_GjVNeQU`L`WGgf7ffA\
+  gfChfFifHjfJkHaXKcONeGPg8NbDLZHKULIQPGMTFHXDD`C9dR\
+  MNPEIO6EKZMGzTEoaCdiQWccNYpFSvL9qMGmNMiOSePZaQdYQj\
+  XOhWMfVKdUJbTH`SFZREXQDZQC`QBaQAcP9eP8fP7hP7iTDgXJ\
+  e_PccVaf`_jfYmkXZWQLHJJFGIDDGBAF97E74KIDPSLVaU_kad\
+  uiYncRhZLbUEXO7RJ1LEHSKWYPakGgy8c9zQHWCP2AV99_F7dL\
+  6iR5nX7mY9lZAkZCj_Ei`Fi`TbXeXUrRRnQSjPSfOTbOTZNTVM\
+  URLUOLUPMXPMZPMaPMcPMfPMhHNe9Nc1Na8R`EV_KZZQbYWfYV\
+  gYVgYVgYVhYVhYVhYXf`Zdb_bea`gcZidXlfVngUp`WkVYgO_b\
+  IaZP`bV`e`_ig_lmZpsZsyZvmcpahjQldEqZ2uTBmBFmEImHLm\
+  KOmN7mq4mq9mrEmrJmrOmr000 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

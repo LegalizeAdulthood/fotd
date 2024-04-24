@@ -1,0 +1,85 @@
+;     Date: Mon, 26 Sep 2005 09:58:13 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-09-05 (Square Root of 2-4 [5])
+;       Id: <1.5.4.16.20050926100045.0d471830@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 26, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fourth venture into the world of the square root of 2 
+; did not turn out as well as I had hoped.  I could give the image 
+; a rating no higher than a 5.  But a rating of a 5 is average, 
+; and an average fractal is always worth a look.  I will search 
+; the +4321 parent fractal one more time before moving on to other 
+; levels.  I am still confident that it holds some better scenes 
+; than the two I have found so far.
+; 
+; Today's scene lies in a 5-pointed star near the tip of a 
+; filament extending from the third largest bud of the main bay of 
+; the parent, which is located on the eastern shoreline.  The 
+; overly gaudy coloring makes the image look more like a wild 
+; carnival decoration than a dignified fractal, but the render 
+; time of 3 minutes is brief enough to keep computer time and 
+; inconvenience to a minimum.
+; 
+; The finished image is available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Lots of clouds and a temperature of 77F 25C kept the cats 
+; contented on Sunday here at Fractal Central.  Today is starting 
+; cloudy with showers in the forecast.  But no rain has fallen 
+; yet, so maybe things will turn out not so bad for the duo.  For 
+; me the work is average.  The next FOTD will appear in 24 hours.  
+; Until then, take care, and why is it that we never know what 
+; Nostradamus predicted until after the event happens.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Square_Root_of_2-4 { ; time=0:03:05.76--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=+1.23304309865560900/+0.079861728742448\
+  12/2328363/1/90/3.88578058618804789e-016 inside=0
+  params=1.414213562373/0/4321/0 float=y maxiter=1500
+  colors=000IhYMiSQjMiXMSml9zuIxuPvuWrubouimuYsuLxu6\
+  zu0zu9zuPzubzuozukzuizujzujzujtujnujfuj_rjTpjMnY4p\
+  G4W048MCKePUx_czjkzflzclzalzXnzUnzSnzXqzauzeuziuzm\
+  uzpuyluvhqsbhpZ`nTSjPHhI6eD6WT6MfCDrJ0zP0zV0zd0ln0\
+  Wu4UrEUqOTpWTndSlkSksSjrAFoKKnSOlZRkeUimWhsZfyaezd\
+  iyZktVnoPpjKscFuZ8`T6iN6xT6uX6sa6pe6j_6dW6YS6SN6QK\
+  6NJ6KI6GH6AIJEXWOjhVwtz4cz4Wz4Pi8PLMPYWJheErm6zv6z\
+  z6zx8vtJpoSilcakpVfzMezEdzG`yJZxLWwMUvPQuQQmTPhVPc\
+  YNUZNK_MAoMnjAde4WiCOp6Pv4Pz4Pz4PzCMpQJhbFYmEOxABz\
+  60z6VTjaPofMrkHurDuv8uz4uz4uzHuzUuyfuvrotzjnzkhxka\
+  vlVslOplGnn8ln0jn8ogDtaIyWMzRQzKVzEQzCOzCLzAGzADz8\
+  9z8Iw6Pb6WF6TPAQXJOeRLlWTccaWjhNpoDuu4unKufZuZluQx\
+  uIzuJzrJykJtcJnVJiMJcCJZ6LU6MS8OPCOMEPHFQDJSAKS6Ma\
+  IajSos_uzhupWuhKuZ6ul8uzAuzAtz_czvKzz6zz6zz6uz6pz6\
+  lz6Qb604A0bF0zJ0yU9scImlQftY_udTujMueWu_euVnuPwqJz\
+  kZw8VsFQpMMmSIjYDfc8chDfc }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

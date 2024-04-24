@@ -1,0 +1,88 @@
+;     Date: Sun, 25 Sep 2005 09:02:18 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-09-05 (Square Root of 2-3 [5])
+;       Id: <1.5.4.16.20050925090449.387ff3b6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 25, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the Z^(sqrt(2))+C fractal as it 
+; appears 4321 levels up the complex logarithmic hyper-spiral.  
+; The parent fractal resembles a Mandelbrot set sitting on its 
+; butt, or maybe Bozo the clown, waiting to be punched.  A small 
+; cut-off area lies to the right of the main bud.  Today's scene 
+; was found in this area.
+; 
+; It's not that great an image, rating only a 5.  In fact, the 
+; outside=iter version is so dull that I needed to add a bit of 
+; artificial interest by rendering the scene with the outside set 
+; to 'tdis'.  But this particular parent fractal has far more 
+; impressive scenes in it -- of this I am certain.  So be sure to 
+; see tomorrow's FOTD for something far better, which I have 
+; missed in today's FOTD.
+; 
+; No merely average image should take longer than 3 minutes to 
+; render.  With its render time of a brief 2-3/4 minutes, today's 
+; image meets that requirement handily.  Perhaps the best news of 
+; all is that the completed GIF image is, or shortly will be, 
+; available for download on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A cloudy and much cooler day here at Fractal Central on Saturday 
+; kept the two fractal cats happy in the holly patch.  Wrapping up 
+; the remainder of the real work kept the fractalist happy.  Today 
+; is again starting with clouds, and it is cooler still.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and do not 
+; get lost amid the iterations.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Square_Root_of_2-3 { ; time=0:02:46.59--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.60322350296554590/+1.350727040560627\
+  00/7341.363/1/72.5/2.16663215146795096e-011
+  params=1.414213562373/0/4321/0 float=y maxiter=1500
+  inside=0 outside=tdis periodicity=10
+  colors=000AjNBlPCoRCqTDtVDvXDrZDo`DlbDidDffDchD_jD\
+  XlDUnDRpDOrDLt8FyDIvILsNOqRRnWUl`XidZgfWchU_jSWlPS\
+  nNOpLKxKCqJGjIJcINYHQRHUKGXEG_ALT6PM1VH3TG5SG6RF8P\
+  FAOFBNEDLEEKEGJDIHDJGCLFCNDCOCBQBBZ0ARABMH6KKCJNHI\
+  PMHSRGUWFX`E_eDajCdo8dvBftEgrGhqJioMjnOklRlkUmiWnh\
+  Zof`pecjVfeKikCh`AgR9fG8g18e67cA7aE7_I7ZM7XR6VV6TZ\
+  6Rb6Rh3Qf6Qd9PcCPaFO`IOZLNYONWRMVUMTXLS_LQbKPeKNhK\
+  MjLTiLShMUgMXgNZjG`iDahDajD`lC`nCZpBXqAWk9Xo8Wi7Wd\
+  6V_5UU4UP3TJ2SE2S97XECaJHfOMmTVqbRpYNjUKbPGXLDQG9J\
+  C6D8AC9ECAIBBMBCQADTAEX9F`9Gd8Hh8In7Gk8Jh9MfAPcBSa\
+  BV_HTYNRXTPVYOTcMSiKQoIPtHSsLVsPYsT`sWcs_fscisgzzj\
+  zznzzrzzxtvutsstoqsmoskmrikrgiregsceu_iuacucZueTug\
+  OtiIrj7skDtlJulPvmUwm_xnexnjwmhwlfvlevkcukauj`tjZt\
+  iYsiWshUrhTrgRrhSrgQrgOrgNrgLf`JeUIdUGbUEaUD_UBZU9\
+  XUSYU8VUCTUFQUJOUMMUPJ_THdWFdZIbZL`ZNZZQXZUZYSVZRS\
+  ZQPZOM_NJ_MG_KD`8bG9eJAgL }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

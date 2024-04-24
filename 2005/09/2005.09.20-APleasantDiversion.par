@@ -1,0 +1,97 @@
+;     Date: Tue, 20 Sep 2005 10:01:08 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-09-05 (A Pleasant Diversion [7])
+;       Id: <1.5.4.16.20050920100336.0d771496@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 20, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's image we return to the parent fractal of yesterday's 
+; image.  But instead of investigating the Seahorse Valley area, 
+; we check the area near what passes for an East Valley.  We 
+; travel a short distance inland to find today's scene.
+; 
+; It is a typical scene in a Mandeloid in the exponent range 
+; between 1 and 2.  The very tiny central midget lies at the point 
+; where the discontinuities converge.  There is no perfectly 
+; arranged and unbroken pattern surrounding the midget, but we are 
+; given a hint of what the pattern would look like if it were not 
+; so broken up.
+; 
+; The mathtolerance entry in the parameter file assures that the 
+; image will be rendered at the correct magnitude.  The magnitude 
+; of 2.6*(10^12) is very near the limit of resolution.
+; 
+; I put enough effort into the coloring to raise the image to a 
+; rating of a 7.  I chose the name "A Pleasant Diversion" when the 
+; image reminded me of nothing at all.  The render time of 6-3/4 
+; minutes is about average for a quality FOTD fractal.
+; 
+; There are always the machines that don't like Fractint however, 
+; and for the convenience of those with such units, as well as for 
+; those who prefer their fractals pre-cooked, the finished image 
+; is available for download on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Except for a few clouds, Monday turned out absolutely perfect 
+; here at Fractal Central.  The fractal cats heartily agreed by 
+; spending most of the afternoon hiding in the holly thicket.  
+; When the day ended, Thomas came inside without hesitation.  
+; Tippy needed to be shown the can of tuna before he decided to 
+; come in.  Today is starting much the same, though there is a 
+; vague mention of showers for later this afternoon.  But my guess 
+; is that the weather experts are wrong and it will remain dry.  
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and win a lottery.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+APleasantDiversion { ; time=0:06:44.48--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.40781590287284080/+0.217917337155537\
+  50/2.669789e+012 params=1.75/0/-3/0 float=y
+  maxiter=1800 inside=0 logmap=192
+  periodicity=10 mathtolerance=0.05/1
+  colors=000Q0zN0zL0zJ1zI2zH3zG4zG5zF6zE7zD8zD9yCAxB\
+  BwBCvCDrCDoCDlDDiDDfDEcDE`EEXEFUEFREGPFGMFGKFHHFIF\
+  IJIKLLMNOOPRQSUTUXVX_XZbZ`e`chcekehngjqimtkowmpzjn\
+  uhlqfimcghadd_b`_`b_Zb_Xc_Vd_Te_Re_Pe_Nf_Lf_Jf_Hf_\
+  Ff_Df_Bf`Ec`Ga`I`aKZaMYaOYaQXbSWbUWbWVbYUc_UcaTccS\
+  ceR`eQZfPWfOUgNThMYhLbiKgiJljIojHskGqkFllEglDbkEYj\
+  ETjEOiEJiFEhFChFDgFEfFFfGGeGHeGIdGJdGJcHKbHLbHMaHN\
+  aHO`IP`IQ_IRZISZITYJUYJVXJWXJWWJXVKXVKYVKZUK_UK`TL\
+  aTLbSLcRLdRLeQMfQMgPMhPMiOMiNNjNNkMNlMNmLNnLOoKOpJ\
+  OqJOrIOsIPtHPuHPvGPBmADkBFjCHhCJgDLfDNdEPcFRbFT`GV\
+  _GXZHZXI_WIaUJcTJeSKgQLiPLkOMmMMoLNqKOsIOuHPZjL_iM\
+  `hM`gMagMafMbeMbdMcdMdcMdbMeaNeaNf`Nf_NgZNhZNhYNiX\
+  NiWNjWNjVNkUOlUOlTOmSOmROnROnQOoPOpOOpOOqNPqMPrLPr\
+  LPsKPtJPtIPuIPuHPvGPjPskOrkOrkOqkOqkOplOplNolNolNn\
+  lNnmNmmNmmNlmMlmMknMknMjnMjnMinMioLhoLhoLgoLgoLfpL\
+  fpLepKepKdpKdpKcqKcqKbSNp }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,93 @@
+;     Date: Fri, 23 Sep 2005 10:23:09 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-09-05 (Square Root of 2-1 [7])
+;       Id: <1.5.4.16.20050923102539.229fbb86@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 23, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to an unexpected small but rushed job, which needs to be 
+; delivered by this afternoon, today's discussion will be brief.
+; 
+; Starting with today's image we will begin a series of FOTD's 
+; that explore scenes in the fractals created by the formula 
+; Z^(sqrt(2))+C.  These fractals are infinite in number, and all 
+; are broken by discontinuities, but the midgets in them are 
+; relatively easy to find, and though not as varied as those in 
+; the classic Mandelbrot set, the midgets still have much variety. 
+; The names will merely indicate the number of each image in the 
+; series.  The name of today's image is "Square Root of 2-1", 
+; which indicates it is the first in the series of images based on 
+; the square root of 2.
+; 
+; Today's parent fractal is the one at ground level of the 
+; MandelbrotBC2 formula.  In future FOTD's we will investigate 
+; other levels reached by this formula.
+; 
+; The rating of a 7 is the seventh consecutive such rating.  The 
+; render time of 1-1/2 minutes is blessedly brief.  The finished 
+; image is posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With lots of sun, reasonable humidity, and a high temperature of 
+; 86F 30C, Thursday turned out virtually perfect here at Fractal 
+; Central, especially for the cats, who spent the afternoon hiding 
+; in the holly thicket, making sure the cat from two doors down 
+; the hill kept his distance.  With only a moderately heavy load 
+; of work to finish, my day was not quite perfect, but it came 
+; close.  Today is starting with some clouds and quite warm.  
+; Possible showers are forecast for later.  We'll see how it goes. 
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and dream of fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SquareRoot_of_2-1 { ; time=0:01:30.66--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2
+  center-mag=+0.56788044566820710/+1.699692341050198\
+  00/884217.7/1/-10/4.03226944195589354e-009
+  params=1.414213562373/0/0/0 float=y maxiter=4200
+  inside=255 logmap=67 periodicity=10
+  colors=000G5CC6DE7EG8FI9GJAHKBILCIMDJNEK9FMAGNBHOC\
+  IODIQFMVHQ`JUgLYjNaoPeuRhzMjwHltCmq7on2plvI1wVLwgd\
+  NkPPiVQh_SgeTfjVepWduXczW`oVYeUVWTSMSPCRTJRXQQ`WQd\
+  bPhiPkoLmqHorDps9rt6suEgbMXKUMmfFzr9zmFzhKzcQzZVzU\
+  ``PeXRiRSlLToFQhENaEKVEHODEHDBAD94DEASIGeMMsf1RcFJ\
+  `TCZe5hdDqcLkbIfaF``CW`ATbDQcGOdJLeMIfPGgRDhTAhU7h\
+  W4hX7gU9fSCePEdNGcLJbILaGNaEQXCSTBVP9XL8_H6aD5d93f\
+  52gH3hT3id3g_8fWCdRHcNLH70JC2KG4LK6MO7NS9OWBP_DQcE\
+  TeKWgPYiV`k_cmdeojhqojrtdso_tjVueQv`LwWGwRHsTIpUJl\
+  VKiWKfXOcURaRVZPYXMaUJdSHhPEkNCcJOXGZPCiI9tUQZefDh\
+  YLkQTnI`qAhHXPGXPGXPGXPGXOFWOFWOFXOFYOE_OEaOEcOEeO\
+  EgODiNDkNDmNDoN0qICsNCuNCwNCxNByNBzNBzMBzMBzMAzMAz\
+  MAzMAzM9zM9zM9zM9zL8zL8zL8zL8zL8zL7zL7zL7zL7zL6zK6\
+  zK6zK6zK5zK5zK5zK5zK5zK4zK4zJ4zJ4zJ3zJ3zJ3zJ3zJ2zJ\
+  2zJ2zJ2zI2zI1zI1zI1zI1zI0zI0zI0zI0zI7zn6zm6zm6zm6z\
+  m6zm6zm6zl6zl6zl6zlgzWszs }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
