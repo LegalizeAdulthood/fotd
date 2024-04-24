@@ -1,0 +1,107 @@
+;     Date: Sun, 17 Jun 2012 19:44:38 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-06-12 (Broken Seven [7.5])
+;       Id: <1.5.4.16.20120617194723.2b5790c2@earthlink.net>
+; ---------
+; 
+; FOTD -- June 17, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; There is no FOTD for June 16.  The reason is the usual.  An 
+; antiquing expedition erupted on the 16th, which left no time for 
+; fractaling.
+; 
+; Today's image is a rather quick one.  It's not great, but still 
+; worth the measly 35 seconds required to calculate it.
+; 
+; The scene lies in the same area of the same Julibrot that gave 
+; us the image for June 15.
+; 
+; I named the image "Broken Seven" because it reminds me of the 
+; roman numeral 'VII' with the two I's misplaced horizontally 
+; below the 'V'.
+; 
+; Most of the effect is created by the coloring, which I did 
+; almost automatically, making the orangish 'V' and I's stand out 
+; prominently against the dark blue background.  They stand out 
+; well enough, but the very basic neophyte-level palette holds 
+; down the rating.
+; 
+; Those whose curiosity is aroused but find calculation too much 
+; of a chore can check the finished image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Mostly sunny skies and a temperature of 79F 26C made today a 
+; near perfect Fathers' Day here at Fractal Central, where there 
+; are no fathers.  The fractal cats, who couldn't care less about 
+; fatherhood, had a good time demolishing the cube complex we set 
+; up for them.  Meanwhile, the humans had a good time doing 
+; nothing.  The next FOTD will be posted in the near future.  
+; Until whenever, take care, and if what you are trying has not 
+; worked, keep trying anyway.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Broken_Seven { ; time=0:00:35.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip
+  center-mag=+0.00091904773321/+0.072147297813375/19\
+  12468/1/180 params=2.5/100/90/0/90/0/-1.74964/0/0/0
+  float=y maxiter=15000 inside=0
+  colors=000`VXcSTePPgNMkSPnXSqaUtfXwk_zoapuPfzCjtMn\
+  nWrheubntaitadta_taWnYYhV_bSaYPcSLeMIgGFiBCjLJoVQt\
+  dXxfbvhhtjnsltqnzpididJbeMefPhdLebIb`F`cJZfNXhRVkV\
+  TnZRpbPsfNujMokNikNdlNZlOUmOOmOJmOPiSUeVZaYdYaiUdn\
+  QglYbjdYhkThpThuShyScxPZwMUwKPvHLuFGuCBtA6s72s5FdO\
+  SQf00W10T22O31N41M53K64I75G75F75E75D85C96BA9ADBCGD\
+  EJHKMLOPPRSUVUZYTc`ShcQlgPojOrmNupTxqZzsezukzwqzxv\
+  vuzrrommdchUUcJK09H0G90NB0TD0_FIfHFqJCzZ9zf7pJ6gG5\
+  0A4ZD4Q93H62831p0qh0i`0aU0UM0NF0F7070Um0FPV3wK2cS_\
+  ZZT_eM_lF_s8_z2_vAXsHVoOTlVRhaPehNaoLZvJSqZLmmFoq9\
+  quHprOooWnmbmjimhhjjhglhdnhaphZrajsWusYfq_Tp`FoaDh\
+  aBba9Xa7Qa5Ka3Ea18J1R01i34d56`89WABSCENFGJHJEJLATE\
+  Pb8cl2qm4om5mm6ln7jn8hn9giEZeJQaOHYT9SUBNVDIWFDXGR\
+  jMdxSaqV_jXXcZVY`TRcQKeODgM7iV5Yb3Mj2Ad3BZ4CT5CN6D\
+  H7EB8E59F0AF8EKGHOOKSWOXcR`kUdrXhsZ`t_UuaMvbFwd7xe\
+  0rb4l`8fZBaXFWUJQSMKQQFOT }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

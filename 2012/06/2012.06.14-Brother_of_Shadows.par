@@ -1,0 +1,110 @@
+;     Date: Thu, 14 Jun 2012 09:21:59 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-06-12 (Brother of Shadows [7.5])
+;       Id: <1.5.4.16.20120614092442.2b7f51f6@earthlink.net>
+; ---------
+; 
+; FOTD -- June 13, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Those who checked the parent fractal of yesterday's image, which 
+; I said resembles 'pac-man', might have been surprised when they 
+; found an everyday Mandelbrot set instead.  But do not despair.  
+; The pac-man figure really exists.  It is the large minibrot on 
+; the main stem of the full Mandelbrot-set parent.
+; 
+; As for today's image, it is another scene in a Mandelbrot set 
+; corrupted in its depths by Z^(3.5) energies, though in today's 
+; case the corruption is deeper and better hidden.
+; 
+; The scene of today's action is very deep in the East Valley of 
+; the parent fractal, at a magnitude of over 6*(10^13).  At this 
+; magnitude we are at the absolute extremity of resolution, and 
+; the first traces of breakdown are already beginning to appear 
+; along the band edges, which makes the mathtolerance entry in the 
+; parameter file necessary.
+; 
+; The elements surrounding the central minibrot, which is of order 
+; 3.5, are arranged in a doubling 3.5...7...14... series, though 
+; except for the very prominent 7 spirals, the orderliness is 
+; quite subtle.
+; 
+; The necessary discontinuities are also unusually subtle, since 
+; they are mixed with Z^2 energies.  The only obvious one is in 
+; the upper right quadrant of the image.
+; 
+; The name "Brother of Shadows" sounds more important than it is.  
+; The words popped into my head when I shut off my thinking.  The 
+; calculation time of 3-1/2 minutes could lead to some impatience, 
+; so if impatience rears its head, check the FOTD web sites.
+; 
+; The finished image is available at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Yesterday's rain moved out overnight here at Fractal Central, 
+; leading to a sunny and breezy day with a temperature of 72F 22C 
+; and a kodachrome blue sky decorated with cotton-puff clouds.  
+; The fractal cats, who approved of the conditions, came out of 
+; hot-weather stretch-out mode and entered cold-weather curl-up 
+; mode.
+; 
+; The humans, who are always in the same mode regardless of the 
+; temperature, made it through the day uneventfully.  The next 
+; FOTD will be posted in a measurable time.  Until then, take 
+; care, and to make a real change, try something different.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Brother_of_Shadows { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula  formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip logmap=375
+  center-mag=+0.2732104661940538/-0.0057831395457811\
+  /6.84471e+013/1/-64.5/0 params=3.5/3500/0/0 float=y
+  maxiter=1800 inside=0 mathtolerance=0.05/1
+  colors=000Q0CP0BO0BN0AM09L08K07J06I06I05K14M23O32Q\
+  42S65U87WA9YCB_EDaGFcIHeKJgLLiMNkNPlORmPTnQVoRXpSZ\
+  qT`rUbsVdtWfuXhvYjwZlx_nvaotcoseoqgopionkommokoojq\
+  ohsoguoewodxoevmftlfrkgqjhoihmhilfijejhdkgckeblcal\
+  b`jb_hb_gbZebZdbYbbYabX_bXZbWXbWWbVUbVSbURbUPbTObT\
+  MbSLbSJbRIbRGbQFbQDbPCbPB`QB_QBZRBYRBXSAWSAVTAUTAT\
+  TASU9RU9QV9OV9NW9MW8LX8KX8JX8IY8HY7GZ7FZ7E_7D_7C_A\
+  BZCBYEBXGBWJBVLBUNBTPBSSARUAQWAPYAO`ANbAMdALfAKeBL\
+  eCMeDNeEOeFPeGQeHReISeJTeKUeLVdMVdNWdOXdPYdQZdR_dS\
+  `dTadUbdVcdWddWdbXbaY``ZZ_ZYZ_WY`UW`SVaRUbPTbNScLR\
+  dKPdIOeGNfEMfDLhBKm9Jr8IvAIzCHzDHvFGrGGmIFmKFmLEmN\
+  EmODmQDmSCmTCmVBmWBmYAh_Ah`9hb9hc8de8dg7ch7bj6ak6`\
+  m6_n7Zl8Yj9Xh9WfAVdBVcBUaCV_DWYDcWEc_FccFchGhmHhrH\
+  hvImzJmzJmzKrzLrzLrzKvvJvrMvmPzhUzcZzZczUhzPmzKrzL\
+  vzMzzNzzOzzPzzQzzRzzSzzTzzUzzVzzUzzUzzUzzTzzTzzTzz\
+  TzzSzzSzzSzzSzzRzzRzzRzzQ }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

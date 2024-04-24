@@ -1,0 +1,109 @@
+;     Date: Thu, 21 Jun 2012 18:17:51 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 21-06-12 (Total failure [4])
+;       Id: <1.5.4.16.20120621182040.382ff7be@earthlink.net>
+; ---------
+; 
+; FOTD -- June 21, 2012 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Maybe I'm losing my ability to find fractals.  Either that or I 
+; am becoming a lot more critical in my older years (which are 
+; piling up far too fast).  There was no FOTD for June 20 because 
+; I could not find one that satisfied me.  Today's image doesn't 
+; really satisfy me either, but to avoid skipping two days in a 
+; row, I gave the colors a minor tweaking and let it go.
+; 
+; As the one-googol value of imag(p3) shows, the image is an 
+; evaporated one.  The parent fractal came about when, on a whim, 
+; I combined 2.2 negative parts of Z^(-5.5) with 5.5 negative 
+; parts of Z^(-2.2) and added (1/C) on each iteration.  This 
+; parent vaguely resembles a Mandelbrot set with its main spike 
+; facing northeast.  Today's image is located at the northern edge 
+; of the obviously critical area in the northeastern part of the 
+; parent.
+; 
+; I intentionally gave the image a rating of a lowly 4.  Its flaws 
+; are too numerous to mention.  But it still might be worth the 
+; 3-3/4 minutes required to calculate it, if only to illustrate 
+; one of the thousands of fractals I find which usually never make 
+; the grade.
+; 
+; The name "Total Failure" is blunt, but accurately states my 
+; opinion of the image.
+; 
+; Those who wish to spend 3-3/4 minutes for little reward can run 
+; the included parameter file and be patient.  I recommend 
+; checking the web sites however.
+; 
+; The moderate-resolution finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A semi-glorious high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Most are a notable improvement over today's.
+; 
+; Today brought the second consecutive day of blazing sun and heat 
+; that reached 95F 35C to Fractal Central, causing the fractal 
+; cats to stretch out to record lengths and the humans to do a 
+; record amount of nothing.  In the evening a few showers appeared 
+; on the horizon, but remained far away.  The next FOTD will be 
+; posted whenever I find one good enough.  Until then, take care, 
+; and why do colonies of ants always come up on the sidewalk 
+; rather than in the grass?  My guess is that they do appear in 
+; the grass, but we don't notice them when they're in the grass.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Total_Failure { ; time=0:03:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+0.4027689074369498/+1.233832091437321/\
+  4.760246e+010/1/17.5/0 params=-2.2/-5.5/-5.5/-2.2/\
+  0/1e+100/0/0 float=y maxiter=1000 inside=bof61
+  colors=000Hc_Gc_Fc`EcaEbaDbbCbcBbcBadAae9ae8af8af9\
+  `dA_cBZbBYaCY_DXZDWYEVXFUWFUUGTTHSSHRRIQQJQOJPNKOM\
+  LNLLNKTPE`R9gS3oU0vV0sX0qY0oZ0m`0ka2ib3gd5ee7cf8ah\
+  A_iCYjDVlFTmHRnIPpKNqMLrNJtPHuRFvSDxUByW9zXAyWAxWA\
+  wWBvWBuWBtWBsVCrVCqVCpVCoVDnVDmUDlUDkUEjUEiUEhUEgT\
+  FfTFeTFdTFcTGbTGaSG`SG_SHZSHYSHXSHXSJYQKYPLYNMYMNY\
+  KOZJPZHQZGRZFSZDTZCU_AV_9W_7X_6Y_5Z_3_`2``0a`0b`0c\
+  `0d`0f_2h_9iZFkZMmYTnYZgSX`NWUHVNCUG6T91SB3TD4TF6U\
+  H7UJ9ULAVNCVODWQEWSGWUHXWJXYKY_MYaNYbOZdQZfR_hT_jU\
+  _lW`nX`oY`iRScLJYFAS91N30P20R20S20U20W20X20Z20`20a\
+  20c20e20f20h20j20k20m20n20k20h20f20c20`20Z00X00W00\
+  V00T00S00R00Q00O0070870800800800800000800000800000\
+  8008708708708708706704701700700C20F40H63L88MADNAIO\
+  BNPBSQBXSBaTBfUCjVCnWCnYCnZDn_Dn`DnXDnUDnQEnMEnIEn\
+  JEnKEnLGnLInLKnQMnVOn`QneSnjUOjWNjYNk_MkaLkbLkdKkf\
+  JlhJljIllHlnHlpGmrFmtFRjP }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,104 @@
+;     Date: Wed, 06 Jun 2012 12:59:42 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-06-12 (They All Look the Same [6])
+;       Id: <1.5.4.16.20120606130217.2b5760b4@earthlink.net>
+; ---------
+; 
+; FOTD -- June 05, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We remain mired in below-average ratings today, with an image 
+; that rates a not-very-impressive 6.
+; 
+; Today's image shows a minibrot.  It looks nothing at all like a 
+; typical quadratic minibrot however, because it's not one.  It is 
+; a minibrot in the parent fractal that results when the formula 
+; Z^(1.09)+C is iterated 86 levels up the complex logarithmic 
+; hyperladder with the 'floor' function applied.
+; 
+; This parent fractal is shaped much like today's minibrot.  It is 
+; an oversized torpedo running southeast and leaving a trail of 
+; bubbles behind it.  Today's image is not located in the main 
+; part of the parent however.  It lies in a tiny inconspicuous, 
+; disconnected feature well north of the main body of the parent.
+; 
+; The name "They All Look the Same" came about when I remembered 
+; how similar most of these very-low-order minibrots appear.  
+; Basically, they all look the same because they all are the same.
+; 
+; The calculation time of 3-3/4 minutes is slow, but the FOTD web 
+; sites can eliminate the stress of losing almost 4 minutes when 
+; calculating a fractal that rates a mere 6.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The past FOTD images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of clouds, meager sun and a temperature of only 68F 20C 
+; gave the humans ample things to grumble about here at Fractal 
+; Central.  The fractal cats spent most of the time assaulting 
+; their cat cubes, and had no time to worry about the weather.  
+; The next FOTD will be posted relatively soon.  Until whenever, 
+; take care, and all will be well when the ship comes in.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheyAllLookTheSame { ; time=0:03:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=floor
+  center-mag=-1.889752570681019/+16.75353040763128/\
+  3531808/1/-80/0 params=1.09/0/86/3500 float=y
+  maxiter=32767 inside=0 logmap=144 periodicity=6
+  colors=0005f85aC5XF5SJ5NM5IQ5DT58X54_H9aSEbbJcmOdx\
+  TesQcoNajK`fIZbFYYCWUAUP7TL4RH2QI5RJ8SJBSKETLHULKU\
+  MNVNQWNTWOWXOZXR_ZT`_VaaYbb_cdadedegfehhfjkgkmhmoi\
+  nctztvqvlsxltvjqtiomglpojndglcejabh``f`YddWbXUcVTc\
+  TTcSSdQSdXSdNRdLReJReIQeGQeFQhGNjGLmHJoHHrHEtICwIA\
+  yI8xL7xO7xR7xU7xW6xZ6xa6wd6wg6wi5wl5wo5wr5wt5tpAql\
+  EnhJkdNh`ReXWbT__PdXLhUHlYGf`GacGWgGRjFLmFGqFAtF5w\
+  F0sH4pI7mJAjKDgLGdMJaNMZOPVQTSRWPSZMTaJUdGVgDWjAUm\
+  DUpFUrIUuKUwMUyKmzKmzKmzKmzKmzKmzKmzKmzZTSTYLOcEIh\
+  7Dm1Ck4Bi7Bh9AfCAeF9cH8aK8`N7ZP7YS6WV5UX5T_4Rb4Qd6\
+  Rb7S`8SZ9TXAUWBUUCVSDWQEWPGYNI_MK`LMbKNcJPeIRgHThG\
+  VjFWkEYmFZnF_oF`pFaqFbrFdtGeuGfvGgwGhxGiyGjzGhtKgo\
+  OfjSdeVc`ZbVbaQf_LiZGmYBqX6tW4vzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzmzzmzzmzz\
+  mzzczzczzczzczzUzzUzzUzzUzz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0mz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

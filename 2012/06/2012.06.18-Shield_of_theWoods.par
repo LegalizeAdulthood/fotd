@@ -1,0 +1,111 @@
+;     Date: Mon, 18 Jun 2012 19:31:47 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-06-12 (Shield of the Woods [8])
+;       Id: <1.5.4.16.20120618193435.2bbfb1d0@earthlink.net>
+; ---------
+; 
+; FOTD -- June 18, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image is a Mandelbrot set rather 
+; heavily infested with Z^(1.5) energies.  The infestation has 
+; caused the main spike to be largely swallowed up into a higher 
+; dimension and the large minibrot to squeeze down into a kind of 
+; 'pac-man' shape.  Today's image is a Julia set of the blunt 
+; valley that serves as pac-man's throat.
+; 
+; I named the image "Shield of the Woods" because of the forest of 
+; trees that appears to surround the central shield.  The rating 
+; of an 8 includes a half point coloring bonus, which might or 
+; might not have been earned.
+; 
+; The tree-like features in today's image are quite common in the 
+; Julia sets of certain types of valleys in Mandeloids of 
+; fractional values.  For a brief time I considered subtracting a 
+; point from the rating because of the familiarity of these 
+; fractal trees, but then I decided the image was attractive 
+; enough to honestly rate the 8.
+; 
+; There is no debate however about the calculation time.  At a 
+; brief 40 seconds, the time will pass before impatience can even 
+; be thought about.
+; 
+; See the finished image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition version is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; An early morning shower ended by 9am but left heavy clouds 
+; overhead for the rest of the day.  The clouds held the 
+; temperature to a chilly 70F 21C and depressed the fractal cats, 
+; who slept through a good part of the day, taking a break only to 
+; explore the latest arrangement of their cubes.
+; 
+; The humans had a typical day, except for a minor squabble over a 
+; negative political ad.  The next FOTD will be posted soon; 
+; nothing more definite is promised.  Until whenever, take care, 
+; and I'm still waiting for the candidates to explain why they 
+; should be elected instead of why the other guys should not.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Shield_of_theWoods { ; time=0:00:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip
+  center-mag=0/0/8 params=1.5/400/90/0/90/0/-1.7571/\
+  0/0/0 float=y maxiter=15000 inside=0 periodicity=6
+  colors=00002F00C0080050020000000000000000200400740\
+  850C70F82IA7LDDPFIUHNYIUaK`cFebAaa5WY2PU2MO2KM2KJ0\
+  IH0HF0GD0FC0DA0C80B50940820700500400400200lezlHzhz\
+  liugipciiZkdVkYRkSMlLIlFDl78l04m48m7DmAIoDMoHRoKVo\
+  MZpPcpSgpVkpYoqaqsdttguuixwmyxpzyszzuzzyzzzzzzzzzz\
+  zzzwzzszxpyslxmhuhetcaqYYpSVoMRlHMkAKi4Mk5Pk7Rk8Ul\
+  8VlAYlC`mDamDdmFeoHhoIkoIlpKopLppLslKthKudKx`IyWIz\
+  SIzOIzKHzFHzAHz7HzFKuMMoUPhZSaeVVlYOs`Hxc8ze0zh0zk\
+  4zmCzoKupRosYhtdaugZthZsiYskXqlWpoWppZoqWmsVmtUlwS\
+  kxPkyNizMhzKhzKhzKizIizNizNkzMkzMlzKlzPmzPmzOozOoz\
+  OozMpzMpzMqzKqzPszPszPssPtrKtrFuqEuo8wm5wo0wq0up0t\
+  n0sk0qi0ph0of0md0mc0l`0kZ0iY0hW0gW0eV0dU0dS0cR0aP0\
+  `O0ZM0YL0WK0VI0VH0UF0SD0RD0PC0OC0MC0LC0LC0KC0IC0HC\
+  0FC0DC0CC0AA0A808807705504402200000000000000000000\
+  000000000pzMozLmyLmyLlxKlwKkwKkuKitIitIhsIhsIgqHgp\
+  HepHeoHdmF08V07R05O04L04I }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

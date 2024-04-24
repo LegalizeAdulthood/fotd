@@ -1,0 +1,121 @@
+;     Date: Tue, 19 Jun 2012 17:09:40 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-06-12 (Creature from the Pit [8.5])
+;       Id: <1.5.4.16.20120619171227.2b475d52@earthlink.net>
+; ---------
+; 
+; FOTD -- June 19, 2012 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday's image is part of a Julia set.  Today's image shows 
+; the same scene sliced at a slightly different angle, so it is 
+; not a pure Julia set.  The angular difference amounts to a mere 
+; -0.02,+0.02 degrees of arc, but what a change this tiny offset 
+; produces.
+; 
+; Instead of a shield surrounded by a ring of trees, we have some 
+; kind of blobby creature from deep in an unpleasant pit, which is 
+; probably bubbling as it releases foul underground vapors.  A few 
+; remnants of yesterday's trees are still visible around the 
+; edges of the creature, but the intact ring of trees is gone.
+; 
+; I named the image as I saw it -- "Creature from the Pit".
+; 
+; The rating of an 8.5 does not imply that I prefer bubbling pits 
+; or blobs to lush forests.  It merely states that I consider 
+; today's image to be a small improvement over yesterday's.  And I 
+; did work on yesterday's colors.
+; 
+; The calculation time of 50 seconds will pass in a flash, though 
+; the duration of fractal flashes is quite vague, and can vary 
+; from the infinitesimal duration of some sub-atomic resonance 
+; particles to the duration of the energy flash of the 'big-bang', 
+; which is still detectable even after 13.7-billion years.
+; 
+; Luckily, all this flashiness may be avoided by viewing the image 
+; on the web sites.
+; 
+; Check the finished image on the official FOTD, (and cross-scan), 
+; web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And check it in outstandingly clear high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today, like yesterday, began with a brief rain shower that left 
+; clouds to spoil the rest of the morning.  But unlike yesterday, 
+; the sun broke through at midday, leading to a muggy afternoon 
+; with a temperature of 82F 28C.
+; 
+; The fractal cats paid little attention to the weather as they 
+; went about their daily routine of sleeping, playing, and asking 
+; for food.  Meanwhile, the humans went about their everyday work 
+; routine without sleeping or playing.
+; 
+; The next FOTD will appear whenever it does.  Twenty-four hours 
+; is the best bet.  Until whenever, take care, and even with a 
+; billion people carrying cell-phone cameras, I'm still waiting 
+; for someone to take a clear photograph of an alien space ship.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+CreatureFromThePit { ; time=0:00:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip passes=1
+  center-mag=0/0/8 params=1.5/400/89.98/0/90.02/0/\
+  -1.7571/0/0/0 float=y maxiter=5000 inside=0
+  symmetry=xaxis periodicity=6
+  colors=0000000000000000000000100300400500600700840\
+  A50C70F82IA7LDDPFKVHR_IZdKggFjgAhe5fc2d_2bX2_U2XO0\
+  UN0WF0RF0OC0KA0I80G50E40C20A00800600400200lezlHzhz\
+  liugipciiZkdVkYRkSMlLIlFDl78l04m48m7DmAIoDMoHRoKVo\
+  MZpPcpSgpVkpYoqaqsdttguuixwmyxpzyszzuzzyzzzzzzzzzz\
+  zzzwzzszxpyslxmhuhetcaqYYpSVoMRlHMkAKi4Mk5Pk7Rk8Ul\
+  8VlAYlC`mDamDdmFeoHhoIkoIlpKopLppLslKthKudKx`IyWIz\
+  SIzOIzKHzFHzAHz7HzFKuMMoUPhZSaeVVlYOs`Hxc8ze0zh0zk\
+  4zmCzoKupRosYhtdaugZthZsiYskXqlWpoWppZoqWmsVmtUlwS\
+  kxPkyNizMhzKhzKhzKizIizNizNkzMkzMlzKlzPmzPmzOozOoz\
+  OozMpzMpzMqzKqzPszPszUssUtrOtrJuqHuoBwm7wo2wq1up1t\
+  n0sk0qi0ph0of0ld0kc0i`0gZ0eY0cW0aW0_V0YU0WS0UR0UP0\
+  UO0UM0UL0UK0UI0UH0UF0SD0RD0PC0OC0MC0LC0LC0KC0IC0HC\
+  0FC0DC0CC0AA0A808807705504402200000000000000000000\
+  000000000pzMozLmyLmyLlxKlwKkwKkuKitIitIhsIhsIgqHgp\
+  HepHeoHdmF08V07R05O04L04I }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

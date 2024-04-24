@@ -1,0 +1,103 @@
+;     Date: Fri, 22 Jun 2012 17:31:13 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-06-12 (Stars in the Night [8])
+;       Id: <1.5.4.16.20120622173402.2bc79e2e@earthlink.net>
+; ---------
+; 
+; FOTD -- June 22, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We're out of the doldrums, and more worthy images will soon be 
+; coming.  Today's effort, which rates an 8, is hopefully a hint 
+; of things to come.
+; 
+; The image comes from the same parent fractal as yesterday's, 
+; which vaguely resembles a Mandelbrot set.  But today we check 
+; the southwestern side of the parent, in an area that would be 
+; East Valley if the parent were a true M-set.  Hidden deep in a 
+; tiny area of chaos in this pseudoEast-Valley we find today's 
+; scene.
+; 
+; I named the image "Stars in the Night" when I imagined the 
+; energies of the cosmos swirling through it.
+; 
+; The calculation time of 15 seconds is one of the fastest.  But 
+; it is still necessary to set up and run the parameter file 
+; before enjoying the speed.
+; 
+; The image may be viewed on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; without the need to run the parameter file.
+; 
+; A high-definition rendering is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original, now classic, FOTD web site with all the past 
+; images and discussions is online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Another warm, muggy day prevailed here at Fractal Central today, 
+; with a mix of sunny and cloudy periods.  The temperature reached 
+; 88F 31C by 1:00pm, but a light thunder-shower moved in shortly 
+; after that, and by 3:00pm the temperature was down to 75F 24C.  
+; The fractal cats, who never get outside, complained in the 
+; morning, but settled for an extra treat of tuna.  When it cooled 
+; down, they never noticed the difference.
+; 
+; The humans kept their cool, which is always the best way to pass 
+; a day.  The next FOTD will be posted any time after 24 hours 
+; from now.  Until whenever, take care, and those who look to the 
+; bright side of a bad situation should be sure it's not darkness 
+; in disguise that they find.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Stars_in_the_Night { ; time=0:00:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=-0.163659528353/-0.380974714518/3721707\
+  /1/-7.5/0 params=-2.2/-5.5/-5.5/-2.2/0/0/0/0
+  maxiter=400 inside=0 logmap=-13 periodicity=6
+  colors=00050460670A80C90EA0EB0GC0ID0KE0MF0OG2QH4SI\
+  6UJ7WJ9XJBXKDXKEXLGXLIYMKZMLZNN_NP_NR`OS`PUaQWaRYb\
+  SZbX`cabcfddmjdmqemxzmwzmwzmwzmwzpzzpzzpzzpzzpzzpz\
+  zmwzmwzmwzmwzmwzmwzowzqwzrwzswzswzswzswzswzswzswzt\
+  zitzitzitzitzitzitzitzitzitziuziuziuziuziuziuziuzz\
+  uzzuzzuzzuzzvzzvzzvzzvzzvzzvzzvzzvzzvzzvzzvzztzzrz\
+  zpzznzzlPfjPehPdfPdePccPczzz_PaYOaWO`UO`SO_ROZPOZN\
+  OYLOYJOXHOWzzzDOVCOVBMWBKXAJYAHZAG_9E`9Da8Ba8Ab88c\
+  77d75e64f62g61g72h83h94hA5hB6hC7hD8hE9hFAhGBhHChID\
+  hJDhKEhLFhMGhNHhOIhPJhQKhRLhSMhTNhUOhVOhUPgTPfTQfS\
+  QeSQeRRdRRdQScQSbPSbPTaOTaOU`NU`NU_MV_MVZLWYLWYKWX\
+  KXXJXWJYWIYVIYVJWWKVWLUWLTWMSWNQWNPWOOWPNWPMWQLWRJ\
+  WRIWSHWTGWTFWUDWVCWVBWWAWX9WX8WYAVZBVZDV_EU_GU`HUa\
+  ITaKTbLTbNScOSdPSdRReSReURfVRgWQgYQhZQh`PiaPjbPjdO\
+  keOkgOlhNmiNmkNnlMnnMooMopMmoOlnPkmRjmSilTgkVfkWej\
+  XdiZch_aha`gb_fcZfeYefXdg }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

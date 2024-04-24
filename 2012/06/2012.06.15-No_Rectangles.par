@@ -1,0 +1,109 @@
+;     Date: Fri, 15 Jun 2012 19:22:14 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-06-12 (No Rectangles [7])
+;       Id: <1.5.4.16.20120615192458.2baf68f0@earthlink.net>
+; ---------
+; 
+; FOTD -- June 15, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's FOTD I wondered whether the Julia aspect of the 
+; image held rectangles.  Since then, my curiosity has gotten the 
+; better of me.  To satisfy the curiosity, I calculated the Julia 
+; aspect and, as the name of today's image implies, found no 
+; rectangles.  I did find the same basic large shape however, plus 
+; lots of other unexpected smaller shapes, only a few of which 
+; appear in today's image.  An outzoom or two will reveal many 
+; more of these unexpected shapes.
+; 
+; The most obvious shapes in the image are the two scalloped-edged 
+; squares that appear ready to merge.  A very slight change in the 
+; real(c) parameter (real(p4)) will either merge them or move them 
+; farther apart.
+; 
+; The rating of a 7 indicates that I consider the image only 
+; adequate.  More work on the color could have made an improvement.
+; 
+; The name "No Rectangles" obviously indicates that I found no 
+; rectangles.
+; 
+; The calculation time of only one brief minute will try the 
+; patience of no one.
+; 
+; The finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds, low humidity, gentle breezes and a 
+; temperature of 81F 27C made the day delightful here at Fractal 
+; Central.  The fractal cats' thrill came when we put out their 
+; cat cubes and let them have their fun.  Other than the cats' 
+; fun, little of note happened in the humans' world.  The next 
+; FOTD will be posted in a number of hours.  Until whenever, take 
+; care, and is it the Tea-Party's fault or the Progressives' 
+; fault?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+No_Rectangles { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip float=y
+  center-mag=+0.0009022201/+0.0696080662/4811.939/1/\
+  0.5/0 params=2.5/100/90/0/90/0/-1.7506789/0/0/0
+  maxiter=1500 inside=0 logmap=86 periodicity=6
+  colors=0009O_9Ra8Uc8WdAVdCUdETdGSdIRdKQdMPdOOdQNdS\
+  MdIPi9Rn0Ts5Vt9WtDXtHYtLZuP_uT`uYauabuecvidvmevqfv\
+  ugvihXYh8`Z6cQ4eH2fL3fP4fS4fW5fZ5fb6ff7fi7fm8fp8gn\
+  GhlNijUjh`kfgkenlcombonaoo`op_oqZprYprXpsWptVpuUqv\
+  TqwSqxRqxQqqSrjUrcWsXYsRZsQXqQWpQVoPUmPTlPRkOQiOPh\
+  OOgNNeNLdNKcMJaMI`MH_PJYRKWUMUWNSZOR`QPcRNeTLhUKjV\
+  ImXGoYEqZDp`FpbHpcJpeLogNohPojRolTomVnoXnqZnr`ntbn\
+  udjpggkicfl`anXXqUSsQNvNIxOFvOCuP9tP6sP4rR7lTAfUDa\
+  WGWYJQZMLQNOHOR9OTBNVDMXELZGK`IJbJIdLHfNGhOGjMEjLC\
+  jKFgKIdKLaJNZJQXJTUIVRIYOI`MHbJHeGHhDHjBMeDRaEVXF_\
+  TGcPH_NPWLXSJcOHkLFrNHrPJrRLrSNrUPrWRrYTrZVr`XrbZr\
+  d`rearc`ob`ma`k`_i__gZ_eY_cXZaWZ_VZYUZWTYUSYSRYQQY\
+  OPWRPUUPTWORZOP`OOcOMeNKhNJkNHmMFpMErMCuMBwNDxNExN\
+  GxNHxNJxNKyNMyNNyNPyNQyNRyQTwSUvVWtXXs_Zra_pdaofbm\
+  idlkekhbge_dbXa_UZXRWUOTSLPPIMMFJJCGG9DD6AB37R45e4\
+  4XKFPZPHmZOh_Vd`a`ahXafWW }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
