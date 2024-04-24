@@ -1,0 +1,102 @@
+;     Date: Sun, 13 Jul 2008 11:01:49 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 13-07-08 (Back to Basics [6])
+; 
+;       Id: <1.5.4.16.20080713110208.2bf7d2ec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 13, 2008 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's modest effort takes us back to the warhorse formula, the 
+; MandAutoCritInZ.  I was away from this formula for so long that 
+; I almost forgot how it works.  After a few minutes trial and 
+; error however, my memory was refreshed, and I found today's 
+; image in the fractal that results when various negative portions 
+; of Z^(-1.6) and Z^(-6) are combined and (1/C) is added.
+; 
+; The parent fractal is a string of four large north-south 
+; oriented bays, with today's image located just inland from the 
+; western shoreline of the southernmost bay -- the bay with the 
+; shoreline that most closely resembles the shoreline of the M-set.
+; 
+; The scene lies in a field of scattered and disconnected debris.  
+; The character of this debris is reflected in the patterns of 
+; today's image.
+; 
+; I named the image "Back to Basics" because it is a return to the 
+; basic workhorse formula.  I rated it at a 6 because I think it's 
+; worth no more.
+; 
+; The calculation time of 20 seconds is blessedly brief, as is the 
+; trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; to view the pre-calculated image there.  But due to the unusual 
+; hour of this posting, give Paul a chance to get the image up.
+; 
+; Saturday here at Fractal Central was on the hot side, but the 
+; temperature of 91F 33C was made bearable by a moderate breeze 
+; and humidity that was not too high.  The fractal cats spent much 
+; of the afternoon playing with a few japanese beetles that some-
+; how got inside.
+; 
+; After clearing the beetles from FL's roses and giving the plants 
+; a good spraying, I had an acceptable day.  The next FOTD, good 
+; or bad, will be posted in 24 hours.  Until then, take care, and 
+; if the world is not really out there, then where is it?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Back_to_Basics     { ; time=0:00:20.36-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip inside=0
+  center-mag=+0.3555098124098118/-1.390142792952676/\
+  5.287551e+009/1/83.5/0 params=-6/-1.6/-1.6/-6/0/0/\
+  0/0 float=y maxiter=500 logmap=46 periodicity=10
+  colors=00000000000000200600820C60EE0CL0AH08P06N24J\
+  62RA0eC0zKCzcNzkZzvimobXbVERN0EGz2AzPHziNzzm0zczz`\
+  0zz0xb0od0gdu`0oe6kiHgoVdseZxsVzzRzzNzzRzzVszZizb`\
+  qeRggH`eH`eJ`eJZeJZeJZeJZdJXdJXdJXdLVdLVdLVbLVbLTb\
+  LTbLTbNRbNRCz4Rz0ez0ux0zu0zs0zqPzqvzzTmz0szEvzRzzd\
+  zzqzvzzszmsqNsR0s04o0Cm0Jk0Ri0Ze0ed0mb0s`0X0iV0gT0\
+  eT6dRHbPT`Pb`NeeNiiLkoLosLsvJuzJxzJzzdsqvk`zeJ0Cz0\
+  kg0zL0xv0dz0JzGXzbizxvzimgVdRGXAVi8iu6xz4zz2zz0zzJ\
+  vzbgzuTzzVzzVzzVzuVxoXugXqbXmXXkRZdV`XZbRbdVXeZRg`\
+  LidHkgCmi6om0qo0xg0zb4zX8ddzZizVmzPqzLuzHzzCzz8zz4\
+  zzEvzLizVXzbHzk4zs0zg0kZ0TN0AE00G00G00G02G06H4AHAC\
+  HGGHLHRRJZVJeZLodLvgNzkNzoNzmNzmNzmNzkNzkNzkNzkNzi\
+  NziNziNzgNzgNzgNzgNzeNzeNzePxdPxdPvdPvdPvbPubPubPs\
+  `Ps`Ps`Pq`PqZPqZPoZPoXPmXPmXPmXPkVPkVPiVPiTPiTPgTP\
+  gTPeRPeRPeRPdPPdPPbPPbPPbNP`NP`NP2zz4xz6vz6uz8uzAs\
+  zAqzzz4quEb`LNGT0RE0HA0A4 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

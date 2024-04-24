@@ -1,0 +1,108 @@
+;     Date: Thu, 17 Jul 2008 23:03:49 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 18-07-08 (Too Much Too Early [5.5])
+; 
+;       Id: <1.5.4.16.20080717230412.2b271c70@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 18, 2008 (Rating 5.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us back to the Z^(1.875)+C Mandeloid.  This 
+; time we examine the version that appears 1 level down the 
+; complex logarithmic ladder when the 'floor' function is applied.
+; 
+; At this basement level, the formula produces a fractal shaped 
+; like a puffed-up kidney bean with a large bud hanging from its 
+; bottom.  Today's image is located in a curiously striated area 
+; on the western shore of this bud.
+; 
+; When I delved into this area, I did not find the infinitely 
+; divided striations I expected.  I found an area exceedingly rich 
+; in random detail but with no unifying theme, leading me to the 
+; name "Too Much Too Early".  The rating of 5.5 indicates my dis-
+; satisfaction with the plethora of detail, while including a half-
+; point bonus for my modest coloring effort.
+; 
+; The calculation time of 7-3/4 minutes is somewhat slow, so why 
+; not speed up things by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished GIF image there.
+; 
+; An uncomfortably muggy day here at Fractal Central on Thursday 
+; was mitigated by a brief but heavy thunder-shower in the late 
+; afternoon.  The rain dropped the temperature from 90F 32C to 73F 
+; 23C, and made the fractal cats happy in the process.
+; 
+; My day was once again on the busy side, but better things could 
+; happen tomorrow, when the next FOTD fractal appears.  Until 
+; then, take care, and now, even some physicists are saying that 
+; the universe, as well as empty space itself, might be a great 
+; fractal.  Maybe the skeptics and Atheists are wrong when they 
+; claim it's all a meaningless accident; maybe the believers are 
+; wrong when they claim that a supernatural God did it.  Or, maybe 
+; I'm wrong when I think the answer lies far beyond the ability of 
+; the human intellect to comprehend.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Too_Much_Too_Early { ; time=0:07:48.57-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=-0.331401349423654/-0.801267905838342/\
+  2.180413e+007/1/-10/0 params=1.875/0/-1/0 float=y
+  maxiter=7200 inside=0 logmap=725 periodicity=10
+  colors=000NASOASPASQASRASSASTASUASVASWASXASYASZBS_\
+  CS`DSaCSbBSbASc9Rd9Qd9Pe9Oe8Nf8Mg8Lg8Kh7Jh7Ii7Hi7H\
+  WQBNRMCQVFRWIRWLRWOSWRSWUSWXSWZTWaTWdTWgTWjUWmUWpU\
+  WrUWhWW_XWQZWH_WN0RT7NZ8JaBFl88jGBiNDhVFgaIfiKepMd\
+  wOetPerPeoPemPejPehPeePecPdcQeaPe_OeYNeWMfULfSKfQK\
+  fOJgMIgKHgIGgGFgEFhGJhINiKRiMViOZjQbjSfjUjkWnkYrjY\
+  ykZvk_sk`qkanlbklcildfledmfamgZmgXmhUniRnjPnkMnlKo\
+  mHonEooCop9op7loAjnDhmGelIckLajOZiQXhTVgWSfYQe`Odc\
+  LceJbhHakE`mC_pAZs7Zy8Yu9XrAWnBVkCUgCQZDUdEYiEanFe\
+  sFhxGcuH_rIWpJSmIPnJOkKOiKOfLOdLObLO_NOYNOWNOTOORO\
+  OPRRRUTSXVT_XUbZVdXXgcYjeZmg_pi`tt`rvaqkapwankbmkb\
+  ljbkjbischjcgjcfjcdidvndbid`ie_ieZheYseWhfVhfUZfQf\
+  hThfVieXjdZkc`mbbnado`fp_hrZjsYltXuuanvWgwQ`xKUyEO\
+  z9QzBVzDZzFczHhzJmzKrzMvzOzzQzzSzzUzzVzzRzzOzzLzzI\
+  zzFzzCzz2zz9zzFzzLzzRzzXzz`zzbzzdzzfzzhzzizzkzzmzz\
+  ozzpzzLzzMzzNzzOzzPzzQzzR }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

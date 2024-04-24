@@ -1,0 +1,107 @@
+;     Date: Sun, 27 Jul 2008 22:45:41 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 28-07-08 (Pyramidal Ribbons [7])
+; 
+;       Id: <1.5.4.16.20080727224611.2bd79ec0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 28, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Before giving up on the almost-linear Mandeloids, I ran the 
+; Z^(1.009)+C Mandeloid through the Fractint evolver feature and 
+; found a fractal with enough variety to actually be interesting.  
+; The real(p2) parameter reveals that I let the program find the 
+; parameters.  I would never enter such a value on my own.
+; 
+; This parent fractal is shaped like most Mandeloids in this range 
+; -- somewhat like a roughly parabolic, stone-age arrowhead.  It 
+; has a bit of chaos on its southeastern shoreline.  Today's scene 
+; is located in this chaos.
+; 
+; I surprised even myself when I found today's image, which 
+; resembles festive colored ribbons twisting around the apex of a 
+; dark brooding, sickly green pyramid.  I thought of the name 
+; "Pyramidal Ribbons" almost at once.
+; 
+; The magenta-ish background pattern is truly fractal, with the 
+; herringbone pattern continuing unchanged at ever smaller scales, 
+; apparently without limit.
+; 
+; Whether the image truly deserves its rating of 7 is up to the 
+; individual viewer to decide.  In my opinion, the image is well 
+; worth the rating.
+; 
+; The calculation time of just over 4 minutes could be a bit 
+; faster, but it is not beyond the range of reason.  Another 
+; reasonable way to see the image is to surf over to the FOTD 
+; web page at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the image already calculated and posted there.
+; 
+; The next FOTD will appear in 24 hours.  At this time I have no 
+; plans as to the theme, so check in then for a possible surprise. 
+; Until that glorious moment, take care, and keep your fractals 
+; simple.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pyramidal_Ribbons  { ; time=0:04:04.65-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident float=y
+  center-mag=-6.9182776751/-18.4032734921/11051.95/\
+  1/-33/0 params=1.009/0/922.5954466383862/3500
+  maxiter=2500 inside=0 logmap=410 periodicity=10
+  colors=000KJAKJAKJAKJAKJAKJAO9AQ8CS8EV7FX6E_5Da4Cb\
+  29c4Cd5Fe7Hf8Kg9MgBPhCRiDUjFXkGZkIalJcmKfnMhoNkoOm\
+  nNlmNllNlkMljMliMkhLkgLkfLkeLkdKjcKjbKjaJj`Jj_JiZI\
+  iYIiXIiYGhXIiXJjXLkXMlXNlXPmXQnXSoXTpXUpXWqXXrXZsX\
+  _tXYxX`tXbpXnmXfiXhf`qbXmZXoWctSXsPcuLhvHswIkvIptI\
+  msJcqJoqJVoJUmKkmKTjKTiKghLSfLSdLbdMRbMQ`MX`MPYNPX\
+  NWXNOUNOUSWUONQOOSSUSMNPOMUTUUSJVUJXXHYYG__EaaDccC\
+  deBfg9hi8jk7jm7lq6mo6mm6mk6mi6mg6mf6md6mb6m`6nZ6oX\
+  6pW6qU6rS6sQ6tO6uN6vL6wJ6wH6wF6wD6wC6wA6z86z66z46z\
+  37z67z88zA8zCBzQ9zP4zQ7zPAziCziEyiGxjHwzJuzLszNqzP\
+  ozRmzTmzUmzWmzYmz_mzamzcmzemzemzfmzglzgkzhizigziez\
+  jczjazkZzlUzlSzmQzmPznPzoOzoOzpNzlNzlMzmMzmLznKzoK\
+  zoJzpJzmIzmIzmHzmHzmGzmGzmHzmHztIzsIzrJzqJzoKznKzm\
+  KzlLzkLzjMzhMzgNzfNzeOzdOzcOzjazrczqczpczocznczmcz\
+  lczkczjcziczhczgczfczeczdczcczbczacz`cz_czZczYczQc\
+  zQczPczPczOczOczNczNczMcz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

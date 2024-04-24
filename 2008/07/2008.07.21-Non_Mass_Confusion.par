@@ -1,0 +1,93 @@
+;     Date: Mon, 21 Jul 2008 21:34:25 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-07-08 (Non-Mass Confusion [5])
+;       Id: <1.5.4.16.20080721213452.2ba7bde6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 22, 2008 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is found in the Z^(1.875)+C Mandeloid as it 
+; appears when calculated 25.5 levels up the log ladder with no 
+; function applied.  This parent fractal reminds me of nothing 
+; more than a Mandelbrot set with a hernia, rotated 180 degrees.  
+; The exact scene is located in a small valley on the southeast 
+; edge of the parent's main bay.
+; 
+; I named the image "Non-Mass Confusion" for some reason that I 
+; have now forgotten.  I rated it at a 5 because I consider it 
+; worth little if anything more.
+; 
+; The minibrot at the center is nearly an exact replica of its 
+; parent fractal.  Considering the appearance of the parent, this 
+; is nothing to brag about.
+; 
+; The image takes a little under 5 minutes to calculate on the 
+; fireball 2000mhz computer.  This is the very first time this 
+; particular scene has ever been viewed by human eyes, so the 
+; calculation time is well within reason.  But to assure that 
+; unreason has no opportunity at all to raise its ugly head, the 
+; finished GIF image is available for instant viewing on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A fairly pleasant midsummer day at Fractal Central went un-
+; noticed by the fractal cats, who were more interested in 
+; watching the local pigeons.  My day was fairly average also.  
+; The next fairly average FOTD fractal will be posted in 24 hours. 
+; Until then, take care, and ask every question.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Non-Mass_Confusion { ; time=0:04:59.04-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.852267427778726/-0.442482399993808/\
+  2523215/1/-172.5/0 params=1.875/0/25.5/0 float=y
+  maxiter=5200 inside=0 logmap=333 periodicity=10
+  colors=000A0KE0MH0OM0QR0SU0V_0Yb0_g0fj0jo0lt0mx0oz\
+  0qz0sz0tz0tzHozojzzeyz_szSlzNezHYz4_zC_zK_yR`u_`tg\
+  `smboubmzYhzblzeozjqzmtzqxzuyzyzxzzuzztzzqzzozzmzz\
+  lzzhzzestbzhhzlcjm_gj`ehbcgcbce`bgY`hWYjUWjSUlRRmN\
+  PoMNqKKsIItHHtb_WzR2uo7cz1ez5gzAgzEhzIjzNjzRlzWmy`\
+  ozlmzgmxcmo`mhYmbUmURmNNmHKjFNhEPeERcCS`AW_AYW9_U9\
+  `S7cP5eN5gK4hI2lF2mE1oH0zE0uC1qAAl9Kg7U`5cW4mR2uM2\
+  lW2bc2Ul2Yo2`q2bs2et2gu2jx0xz0qz2ly7gxAbxFWuIRtNMs\
+  RHsWAqz5zt1zt0zo0xg0mY0eP0YF0Q40450970E92IA4NC7SEA\
+  YFEbFFeHIjIMoKPtMRyNUzPYzR`zS`zjuzqszZtz_ozPcxNcsN\
+  cmNehMecMe_9PFFMNMeW0ocxzeSxb0yR0qW0h_4`bASeFKhAEc\
+  FChKClPCqUCtYCxbCzgCzlCzqCzx7ztCzsHzqMzoRzmWzl`uje\
+  shjmgohetecy`bzY`zSbz0`z4_zP0zzCzzIPxHRzHRzHSzHUzI\
+  MzHUzF`zEgzCmzAtx5yzAztFzmKzgzz`zzUzzNzzHzzAzz4zz0\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzz1zz1zz1zz1zz0zz1zz5zz\
+  9zzEzzAzzEzzHzzKzzNzzRzzU }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

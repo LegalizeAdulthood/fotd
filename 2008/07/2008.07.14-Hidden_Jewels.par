@@ -1,0 +1,86 @@
+;     Date: Sun, 13 Jul 2008 22:43:13 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 14-07-08 (Hidden Jewels [6.5])
+; 
+;       Id: <1.5.4.16.20080713224333.2b9fe56e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 14, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the curious fractal that results when 0.4 
+; part of (1/Z) is combined with Z^100 and straight C is added.  
+; This parent fractal appears as a circle with an open bay filling 
+; the right quarter of its interior.  Today's scene is located on 
+; the X-axis in the rich detail at the left edge of this bay.
+; 
+; I named the image "Hidden Jewels" for no good reason, and rated 
+; it at a 6.5, allowing myself a half point bonus for the extra 
+; coloring effort.
+; 
+; The calculation time of a minute will seem more like 10 seconds 
+; once the scene starts to appear on the screen.  For added 
+; convenience, the finished image is posted on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A hot muggy morning with ample sunshine led to clouds and rain 
+; showers in the afternoon on Sunday here at Fractal Central.  The 
+; dynamic cats slept through most of the non-excitement.  The next 
+; FOTD will be posted in 24 hours.  Until then, take care, and for 
+; insomnia, read "Finnegan's Wake".
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Hidden_Jewels      { ; time=0:01:08.12-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.03805276306469168/0/198852
+  params=1/100/0.4/-1/0/0/0/0 float=y maxiter=1500
+  inside=0 logmap=32 symmetry=xaxis periodicity=10
+  colors=0000iM0eO0cO0_P0WR0RU0PU2OcMMmaKkmIcsGczGcz\
+  Pcy_viizUszDzz0zz0zz7zzUzzozzzzzzy0Dm09c05R00I0050\
+  0000000009O7UzGRzUPz_OziOzsMzzKzzKzzauuqeUzP0z90z2\
+  0zU0sc0wm0zm0zm0zK2zR9zYGzeMzkPoIMO0Kc0Oq0Rz0Wz0Yz\
+  0Uw0Rm0Oc0MU0IK5G99DRGYiKqzOz00z00z9DzOWz_mzz09z0G\
+  z5KzBPzGUzMYzRczYgzakz_gzYczW_zUWzRRzRPo55e000c00Y\
+  00RG0MU0Ie0Bs05z00z0Bz0Mm0WY0eI0o00y00m07cGIRUPIg_\
+  5ug0zq0uy0gz0Uz0Gz00z00z02z5IzGWzPiz_wwizqszkzzayz\
+  RwzIuu7qi0oW0mI0k50oD0sK0wR0zY0zc5zk9zqDzw9zm5sc0g\
+  U0WK0M9G50_00q00i00a00U02M0D052MG9cOGwWKzcPzkUzcYz\
+  YasPceKgUDiOOyDyz9zcOz0Iz0Bz5Oz9IzDBzI7zKmzDzz7zzP\
+  zzezzuzzmYzg2za0zWGz0Oz0WzGczUkzeKz0Rz9YzOczaizmuz\
+  _zzMzz7zz0zz0zz0zz00z07zUKzzUzz_zmezRkz5wzDzzKzzP0\
+  z70zM7zYIziRzuizazzIzz0zz2zz7zz9zzYzzszzzzzzazzWzz\
+  RzzOzzKzz7zz0zgIzoczwyzzzzzozzOzz0zz0zi0zBRzWszozz\
+  zyzsMzPgzePzRKz07zz0zI0zK }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

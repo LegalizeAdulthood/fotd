@@ -1,0 +1,107 @@
+;     Date: Tue, 15 Jul 2008 19:11:53 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 16-07-08 (Naturally Fractal [7])
+; 
+;       Id: <1.5.4.16.20080715191215.2af715e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 16, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image returns us to the complex logarithmic hyperspiral, 
+; which we have not visited in about a month.  The parent fractal 
+; was created by the formula Z^(1.875)+C as it appears 33 levels 
+; up this abstract spiral when the 'floor' function is used.  This 
+; parent resembles a ragged, somewhat squashed Mandelbrot set 
+; rotated so that its main spike points northeast.
+; 
+; I chose the exponent 1.875 because it is 7/8 of the way from 1 
+; to 2, which is close enough to 2 to create minibrots resembling 
+; recognizable quadratic ones, yet far enough from 2 to create 
+; fractals of infinite variety.
+; 
+; Today's scene is located in a filament extending from the 
+; period-5 bud on the southwest shore line of the large minibrot 
+; on the main spike of the parent fractal, very near the point 
+; where the hairline filament emerges from the chaos.
+; 
+; I named the image "Naturally Fractal" in recognition of the fact 
+; that nature is filled with and possibly made of fractals.  I 
+; rated it at a 7 because it not only leads to pondering, it also 
+; is attractive in its own way.  And no one will complain about 
+; the calculation time of a mere 30 seconds.
+; 
+; For added convenience, the finished image is posted for fast if 
+; not instant viewing on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another perfect midsummer day went unrecognized by the fractal 
+; cats of Fractal Central on Tuesday.  The temperature of 86F 30C 
+; was made quite bearable by the low humidity.  My day was a bit 
+; too busy for total enjoyment, but I still managed a half-hour 
+; under the mulberry tree, pondering the mysteries of the outer 
+; world and man's pathetic efforts to comprehend it.  The next 
+; FOTD, which BTW is still a mystery, will be posted in 24 hours.  
+; Until then, take care, and fractals can cause deep thinking.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Naturally_Fractal  { ; time=0:00:29.98-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor
+  center-mag=+1.298046570238266/+1.385392696646682/\
+  1.09e+007/1/65/0 params=1.875/0/33/0 float=y
+  maxiter=1200 inside=0 logmap=70 periodicity=10
+  colors=000OKOOKNOKNOKLOKKOKKOKKOKKOKKNKJMKILKEKKAJ\
+  J9II8HH7GG7FF6EA5B54814K46P77V99bCAgJCiHDzfCoJEzzD\
+  f3Fh0JimNj2Qk2Ul2Xm2`p1_n2cm2fl2ij3mi3ph3sg3va8uXc\
+  tSGsMLrHcrCTv1mz7mvCXrHWmMWhRWRWVL`VEdY3eV8fSCfPHg\
+  MLgJPiKRkKSmKUoKVzXNpKWb6og8dlAVqCKvEAzF0qO3iW5ad8\
+  UlAMdMEYYIZVMZTP_RT_PX_N_`Lc`Jf`HlRQrHYqMXpQXoUWnZ\
+  WmbVlfVqhPljVhl_cnd_oiVqnRssNtxHskBs_5rO0rC2cQ4Qc0\
+  Aw5CpAEjFGcE6XKHYPRYU`YswSZjY5eiEYbMQXUIQ`CGaAKa8N\
+  b6Rb5Uc3Yc1`c0cbDgaPk`ao_ms_ywfyjmyYtyLzy82i7czQ`r\
+  RZjSXbTVVUTOUTOUTOUTNTTNTTNTTNTTMTTMTTMTTMTTLTTLTT\
+  LTzLTzKTzKTzKTzKTzWkzTfzQazNXzgfzfeueetddscdrccqbc\
+  zabz`bz`az_azZazY`zX`zX_zW_zVZzUZzUYzzYzzXzRXzzXzQ\
+  WzzWzzVzzVzzUzMUVzTzzTzz2zz3Cz3Cz4zz4zz5zS5zz5zR6z\
+  z6Ez7Fz7Fz8zz8zz8zQ9Gz9zzAHzAHzBzzBzQBzPCzzCzPDJzD\
+  zPEJzEzPEzOFKzFKzGLzGLzHLzHLzHzzIMzIzzJzzJzzKNzKzz\
+  KzzLzzLOzMzzMPzNPzNPzNQzO }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

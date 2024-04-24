@@ -1,0 +1,101 @@
+;     Date: Tue, 01 Jul 2008 22:02:18 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 02-07-08 (Creepy Crawlies [No Rating])
+; 
+;       Id: <1.5.4.16.20080701220228.2b97bce2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 02, 2008 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Because of a big rush that we expect in, I will post no FOTD for 
+; July 3.  The FOTD for July 4 will return on or near schedule.
+; 
+; Today's image lies in the fractal that results when the formula 
+; Z^sqrt(2)+C is iterated 5 levels up the logarithmic spiral when 
+; the function 'one' is applied.  Actually, I'm not convinced that 
+; this is a function at all, but it makes some rather interesting 
+; fractals, so we'll let it go.
+; 
+; This parent fractal resembles nothing as much as a duck with a 
+; turned-up bill.  Today's scene is located far out on a filament 
+; extending eastward from the duck's breast.
+; 
+; I named the image "Creepy Crawlies" because of the cloud of 
+; hairy filaments surrounding the sorry excuse of a minibrot at 
+; the center.  But try as I might, I could not decide on a rating.
+; 
+; The calculation time of 1-1/2 minutes if fast enough to keep 
+; everyone happy.  Happiness may also be found on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the completed image is posted.
+; 
+; The Tuesday weather was totally perfect here at Fractal Central. 
+; The fractal cats enjoyed the near perfection to the utmost.  My 
+; day was busier than usual due to squeezing three days' work into 
+; one day.  Since there will be no FOTD for July 3, the next FOTD 
+; will appear in 48 hours.  Until 2 days have passed, take care, 
+; and be eager to discover the next fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Creepy_Crawlies    { ; time=0:01:34.27-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=one passes=1
+  center-mag=+1.126434310277434/-0.0602249097173638/\
+  1.282804e+008/1/-35/0 params=1.4142/0/5/0 float=y
+  maxiter=2500 inside=0 periodicity=10
+  colors=000bXYbXZbX_bY`bYabYbbYcbYccYbcYacYacY`dY_d\
+  Y_dYZdYZdYYeYXeYXeYWeYWfYVfYUfYUfYTfYTgYSgYRgYRgYQ\
+  hYPhYPhYOhYOhYNiYMiYMiYLiYLjYKjYJjYJjYIjYIkYHkYGkY\
+  GkYFkYFjXGiXHiXHhXIhXIgXJgXJfXKeXKeXLdXLdWMcWMcWNb\
+  WNaWOaWO`WP`WP_WQ_WQZWRZWRXUTWSVVRWUPYTO_SM`RLbQJd\
+  PIeOGgNFhMDjLClKAmJ9oI7qH6rG4tF3uG5vG7vG8vGAvGBvGD\
+  vGEvGGvGHvGJwGJwGIwGIwGHwGHwGIwGKwGLwHNxHQxHSxHVxH\
+  XxH_xHaxHdxHfxHiyHlyHmyHoyHpyHryHsyHuyHvyIwzIxzJyz\
+  JzzJxvKvsKsqLomLkiLgfMcbM__NXYNVWNTUORROPPPNNPLLPJ\
+  JQHHQFFQEDOFGNFKLGPKGUJHZHHcGHhFImDIr7LvCJzBJz9Kz8\
+  KzTcERaGQ`IP_KNZMMYOLWQJVSIUUHTVGSXERZDP`CObANd9Mf\
+  8Lhsseqqfppfnofmnfkmfjlfhkfgjffigdhgcggafg`egZdgYc\
+  gWbgVagU_hSZhRYhPXhOWhMVhLUhJThISiHRiFQiEPiCOiBNi9\
+  Mi8LiWt2Vr4Uq5Tp6So8Sn9RmAQlCPkDPiEOhGNgHMfIMeKLdL\
+  KcMJbOJ`PI_QHZSGYTGXUFWWEVXDUYDS_CR`BQaAPcAOd9Ne8M\
+  g7Lhkssenq`jpWeoRanMXlHTk }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,108 @@
+;     Date: Sun, 06 Jul 2008 18:54:07 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 07-07-08 (Elephant Ring [8])
+; 
+;       Id: <1.5.4.16.20080706185422.2c576b5a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 07, 2008 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a scene obviously lying in East Valley of 
+; its parent Mandelbrot set.  The elephants with their spiralling 
+; trunks are there as expected, and the minibrots are found as 
+; expected where the trunk-spirals come together symmetrically.  
+; But what has happened to those minibrots?
+; 
+; The minibrots are not the quadratic ones that would be expected, 
+; they are order-32 ones that would never be expected.  This is 
+; because I have contaminated the parent Mandelbrot set with some 
+; Z^32 stuff, which becomes prominent only at a considerable depth.
+; 
+; This mixture has the top halves of four proto-elephants arranged 
+; in a ring around the circular minibrot at the center, with 
+; various bits and pieces of other elephants scattered randomly 
+; through the rest of the scene.
+; 
+; Once again I have gone to a very large magnitude to find the 
+; image, which is why the mathtolerance entry is included in the 
+; parameter file.  These high-order minibrots grow more interest-
+; ing the deeper they lie.  It's too bad that arbitrary precision 
+; does not work with type=formula.  It's probably due to the DOS 
+; memory limit.  (When, if ever, we have a S.O.T.A. Windows ver-
+; sion of Fractint, I assume this will be changed.)
+; 
+; The ring of elephants inspired the name "Elephant Ring".  I 
+; rated the image at an 8 because I like rings of elephants.  The 
+; calculation time of 2 minutes will bring peace and contentment 
+; to all fractal visionaries.  Fractal enthusiasts can find peace 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the already-rendered GIF image is or soon will be posted 
+; for instant viewing.
+; 
+; A muggy high temperature of 86F 30C made Sunday feel more like a 
+; July day here at Fractal Central in central Pennsylvania.  The 
+; local fractal cats kept the holiday spirit alive as they dashed 
+; up and down the long hallway and attacked their catnip rats.  My 
+; day was slow enough to keep the philosophical pot aboil.
+; 
+; The next in the apparently endless string of FOTD's will be due 
+; in 24 hours.  Until then, take care, and when you make colorful 
+; philosophy, be sure that your conclusion is not colored by 
+; wishful thinking.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Elephant_Ring      { ; time=0:02:03.47-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideBrot5 passes=1 center-mag=+14.46\
+  740554090629/-0.678528302118716/1.90372e+012/1/-40\
+  0 params=32/50 float=y maxiter=1800 inside=0
+  logmap=218 periodicity=10 mathtolerance=0.05/1
+  colors=000nv_ovcqvfsviuvmwvpxvsvspqqmlnigkfahcYf`S\
+  eYPdYRdYSeYUfYVgYWiZYjZZkZ_lZamZbo_cp_eq_fr_gs_iq`\
+  jpakoblmcmlcnkdoiephfqgfregsdhtciubirZgpWfnTelPcjM\
+  bhJafG`dCZb9Y`6XZ3WUDZQM`LVbHcdDlf_`TvQGwPDxPByO8z\
+  O6zO4tP5oP5jP5eP5`P5WP5RP5MP5HP5FOCDNICMPALV8Ka7Jg\
+  5In3Ht2Gz4Jx5Lw6Ov7Qt8Ss9VrAXpB_oCanDcmC`jBZgAXdAV\
+  a9TZ8RW7PT7NR6LO5JL4HI4FF3DC2B92973E84J85O86T87X88\
+  a89f8Ak8Bo8ApAAqB9rC9sD9tF8uG8uH7vI7wK7xL6yM6zN6zO\
+  pesrdmschuccvbZxaUyaPrYQkURdQSYMTRIUKEVDAW66X03Y75\
+  XD7WJ9VPBUVDT`FSfHRlIRiHSgHTdGUbGV_FVYFWWEXTEYRDZO\
+  DZMC_JC`HBaFBaED`EE_EFZEHYEIXEJWEKVEMUENTEOSEPRIWN\
+  NcI9U89`79g59n49u38nI7hW6bi6XwBam`t4GfdLjWQoMVtDvF\
+  HnVCfi8w_bohRgpm3qmAsmHtmzvmzwmztmzumzvmzvmzw5zw5z\
+  x4zo3zZ0zb1ze1zh2zk2zo3zr3zu4zMyzbfzf_zjUzmNzqHzuA\
+  zPa9XVzcOzjHzqAzrhztYzuOzwEzIHzXCzj8zXRzbMzhHzmDzs\
+  8zdizgczjYzmSzpMzsGzvAz6K }
+
+frm:DivideBrot5   { ; Jim Muth
+z=0, c=pixel, a=real(p1)-2,
+b=imag(p1)+0.00000000000000000001:
+z=sqr(z)/(z^(-a)+b)+c
+|z| < 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

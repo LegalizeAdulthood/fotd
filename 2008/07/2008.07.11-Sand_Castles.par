@@ -1,0 +1,102 @@
+;     Date: Thu, 10 Jul 2008 19:40:09 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 11-07-08 (Sand Castles [7])
+; 
+;       Id: <1.5.4.16.20080710194028.2a5712b8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 11, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image reverts back to version 4 of the DivideBrot series 
+; of formulas (formulae for the well-educated).  I needed to go 
+; back to version-4 because it allows control over the bailout 
+; radius.  Today's image uses a negative exponent of Z, and nega-
+; tive powers of Z create fractals that tend to evaporate at very 
+; large bailout radii, such as the one-million of the version 5 
+; formula.
+; 
+; The parent fractal is a variation of the Z^(-3)+C Mandeloid, 
+; with a Mandelbrot set lying in the sandy fractal stuff at its 
+; center.  Today's scene is located in an elephant-trunk spiral in 
+; the East Valley of this Mandelbrot set.
+; 
+; The sandy stuff filling this area of the parent has infested the 
+; entire image, rendering the typical East Valley pattern almost 
+; invisible.  Only the broad but careful coloring makes the spiral 
+; pattern visible.
+; 
+; I named the image "Sand Castles" after the overall sandy effect. 
+; I rated it at a 7 because . . . well, I think it's worth it.
+; 
+; The calculation time of 2-2/3 minutes makes the job of running 
+; the included parameter file, if not a gale, at least a breeze.  
+; And I'm not blowing hot air when I say that the finished image 
+; is available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Absolutely perfect weather conditions prevailed here at Fractal 
+; Central all day Thursday.  The deep blue sky and total sun were 
+; made even more enjoyable by a temperature of 79F 26C and the low 
+; humidity.  The fractal cats must have agreed, for they got into 
+; a minor squabble over who would sleep in the spot of sunlight on 
+; the living room floor.
+; 
+; My day was satisfactory.  Tomorrow should be the same.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and the 
+; world is what you make of it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sand_Castles       { ; time=0:02:41.15-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideBrot4 passes=1
+  center-mag=+0.04014873876952896/-0.000578747776991\
+  23/1.679661e+008/1/177.5/0 params=-3/0.15/-90/0
+  float=y maxiter=5000 inside=0 logmap=172
+  periodicity=10 mathtolerance=0.05/1
+  colors=020IQzIQzISzIUzIUzIWzIZyIZyI_yIavIdvIdtIftI\
+  htIhrIirnktwkzwnzmpzIpzIrzItzItzIwzIyzIyzIzzIzzMzz\
+  KzzIzzIzzGzzGzzEyzEyzCwzCtzAtzczzczz7wz7nz5kz5kz3i\
+  z3hw1hs1fq0do0dn0am0_l0_k0Zi0Wg0We0Uc0Sa0S_0QY0OW0\
+  OU0MU0KU0KU0IU0GU0GU0Ez0Cz0Cz0Bz09z0Bz09z09z09z09v\
+  07r07m07h07c05Z05U05R05O03M03K13I33G52C72A827A25C2\
+  3E25E25E25G25G27G27G27I27I27I28I28K28K28K2AK2AM2AM\
+  2AM2AO2CO2CO2CO2CQ2EQ2EQ2EQ2ES2ES2GS2GS2GU2GU2IU2I\
+  X2IX2IX2IX2KY2KY2KY2KY2M_2M_2M_2MX2UY2QY2O_2M_2Kb2\
+  Ib2Gb2Ed3Cd5Ae98eB7gC5gE3gG1jI0jK0lM0lO0nS0nU0nW0p\
+  Z0p_0ra0rd0tf0th0nr0pn0rk0ti0vh0yf0zd0zf0zh0zi0zk0\
+  zn0zp0zr0zt0zw0zy0zz0zw0zr0zn0zi0zf0zf0zf0zf0zf0zf\
+  0zf0zf0zf0zf0zf1zf1zf3zf5zf7zf7zf8zfAzfCzfGzfEzfCz\
+  fCzfAzfAzf8zf8zf7zf7zf5zf5zf3zf3zf1zf1zf0zf0zf0zf0\
+  zf1zf1zf1zf3zf3zf3zf5zf5zf5zf7zf7zf7zf8zf8zf8zfAzf\
+  AzfAzfCzfCzfCzfEzfEzfEzfG }
+
+frm:DivideBrot4   { ; Jim Muth
+z=0, c=pixel, a=real(p1)-2,
+b=imag(p1), d=real(p2)+100:
+z=sqr(z)/(z^(-a)+b)+c
+|z| < d }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

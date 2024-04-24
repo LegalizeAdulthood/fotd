@@ -1,0 +1,105 @@
+;     Date: Wed, 16 Jul 2008 23:08:28 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 17-07-08 (Eastern Lights [7])
+; 
+;       Id: <1.5.4.16.20080716230851.28073974@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 17, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to an excess amount of real work, the fun work of fractals 
+; was cut short on Wednesday.  But I did find time to delve into 
+; the parent fractal that results when the formula Z^(1.875)+C is 
+; calculated 36 levels up the logarithmic ladder with the 'floor' 
+; function in effect.
+; 
+; This parent fractal resembles a Mandelbrot set that has been 
+; put through a wringer.  Its most interesting feature is a much 
+; smaller distorted Mandelbrot set just to the east of the main 
+; set.  Today's image is located in the East Valley area of this 
+; mini-M-set, which curiously lies on the mini's west side.
+; 
+; There is not much more to be said about the image, though there 
+; is much to be seen when viewing it.
+; 
+; I named the image "Eastern Lights" because it's on the eastern 
+; side of its parent, and rated it at a 7 because that's what I 
+; think it's worth.
+; 
+; The calculation time of a nominal 2-1/2 minutes may be avoided 
+; by viewing the finished fractal on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With added haze, higher humidity and a temperature of 88F 31C, 
+; Wednesday was a comedown from the previous day here at Fractal 
+; Central.  The fractal-cat duo showed their displeasure by 
+; camping most of the day under the cool-air vent.
+; 
+; My day was busier than I would have preferred.  With any luck at 
+; all however, tomorrow, when the next FOTD will ne posted, will 
+; be an improvement.  Until then, take care, and speak softly with 
+; nature.  I hear that, at its smallest scale, it may well be a 
+; fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Eastern_Lights     { ; time=0:02:27.61-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=+0.786337062833908/+0.5106500816556531/\
+  70165.7/1/40/0 params=1.875/0/36/0 float=y
+  maxiter=2400 inside=0 logmap=175 periodicity=10
+  colors=000AAwAAtAApAAlAAhAAdAA`AAX8AU7AQ57M43N55L6\
+  7M78Q8AP8BR9DTAEUBGVCHWCJYDK_EIbFNbGPcGJgHLcIMbJKa\
+  JI`KG_LEZMCYMAXKCVJETIGRHHPGJOELMDMKCOIBQGARFCTHDV\
+  JEXKFZMG_NHaPIcQJeSKgULhVMjXNlYOn_Po`WdVaUQhJKn9Fl\
+  BIjCLhDOfERdFTbHW`IZZJaXKdVLfTNiROlPPoNQrMRtKPrJOq\
+  INpGLoFKnEJmDIlGMkJPjMSiPVhUZgZafcdehgdmjcrnbvqazt\
+  `zw_zz_zwYztXzqWvnVrkTmhShfRccQ``PYYNWVMUSLSPKQNJO\
+  QKMTLKVMIYNG_OEbPDdQCgRCiSClTCnUBjYBg`BddBagHeZNiR\
+  SlJTkIUjIUjIViIWiIWhIXhIYgIYfIZfI_eI_eI`dI`dIgZRnT\
+  _tNhpPelRciT`eUZbWXZYUWZSS`PPbNLcLIeIEgGBhEDeHFbJG\
+  `LIYNJVQLTSMQUONWQLYRI`TFbUDdWAfX8hZAi`CibEjcGjeIj\
+  gKkhMkjOllQlmSloUmqWmrYmp_jo`gnbdmcakeZjfWihThiRfj\
+  OelLdmIcoFapC`r9_s6Zt4asAcsFfrKhrPjrUmqZoscquhtwmv\
+  xrxzwrzvmzvgzubzuXzuzztzztzztzzlzzezzYzzRzzJzzCzz4\
+  zz1zz2zz6zzAzzFzzJzzNzzKzzH_zEWzBSz9QzBPzCNzEMzFKz\
+  HJzIHzKGzLEzMDzOBzPAzR8zS }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,112 @@
+;     Date: Wed, 23 Jul 2008 22:36:28 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 24-07-08 (Ratcheting Onward [6])
+; 
+;       Id: <1.5.4.16.20080723223655.21571320@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 24, 2008 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have made a decision to stay more on topic.  Starting today I 
+; will no longer post a copy of the FOTD to the philofractal list. 
+; Except for the FOTD, the philofractal list has been dead for 
+; years.
+; 
+; The topic of the Fractint list is fractals, not my ideas about 
+; God, science, or the paranormal.  There are quite a few forums 
+; where these things are eagerly and properly discussed.  And I'm 
+; not too sure of the importance of the daily weather report from 
+; central Pennsylvania, which can always be found on the internet.  
+; If the goofy fractal cats do anything exceptionally goofy, I'll 
+; tell about it however.  (Yes, FL did have something to do with 
+; my decision to stick more to the topic.)
+; 
+; Today's image shows some of the unexpected stuff that goes on in 
+; the fractals created by the formula Z^(1.075)+C.  The most 
+; surprising thing about these almost-linear fractals is that they 
+; actually contain fiercely detailed Minibrots, which can be 
+; easily found with my 'secret' method of finding minibrots.
+; 
+; One of these unlikely minibrots lies at the center of today's 
+; image, at the very limit of resolution.  I have not gone deep 
+; enough to make the minibrot visible in today's image because at 
+; that depth, the surrounding pattern breaks down into near total 
+; chaos.
+; 
+; At the modest magnitude of today's image, the pattern is far 
+; more interesting, rather resembling a ratchet wheel surrounded 
+; by a lacy network of lightning.  I named the image "Ratcheting 
+; Onward" because of the ratchet pattern.  This heavily fractured, 
+; circular effect is typical of the minibrots in fractals of such 
+; a low order.
+; 
+; The rating of a 6 is what I think the image deserves.  The 
+; calculation time of 1-2/3 minutes is a real bargain.  An equal 
+; bargain may be found at the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished GIF image is posted.
+; 
+; Until next time, take care, and keep a stiff upper fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ratcheting_Onward  { ; time=0:01:41.60-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-14.94607802098338/-2.324758141946301/\
+  8252035/1/-162.5/0 params=1.075/0/18/1500 float=y
+  maxiter=1800 inside=0 logmap=131 periodicity=10
+  colors=0009G06H0AI6DJFHDKKKZOPdRVmUfuZitzksonrwnqz\
+  uphVsZ9uX8pV7lU7hS6dR6`P5XU5Tc6Nm6Zr6Zz6Zz6ZIlq3Wp\
+  BafIguPmuWruVzuUzuTluShuRhuQfuPduOcuPiuQnuRsuOmuMg\
+  uKUuLUuMUuNUuPUuQUuRUuSUuTUuVUuWUuXUuYUu_Uu`UuaUub\
+  ZucZueYufXugWuhVuiUukTulcUmcVncVpcWqcXrcXscYtcYvcZ\
+  wc_xc_yc`zc`ycaycaycbycbyccxccxccxcdxcdxcewcewcfwc\
+  fwcfwcgwcgvchvchvchvcivciucjucjuckuckuckucltIltImt\
+  ImtIntInsInsIosIosIpsIptHqsIpsIpsIprIprIprIorIoqJo\
+  qJoqJoqJopJnpJnpJnpKnoKnoKnoKmoKmnKmnKmnLmmLlmLlmL\
+  lmLllLllLllMklMkkMkkMkkMkkMkjMjjNjjNjjNjiNjiNiiNih\
+  NihOihOihOigOhgOhgOhgOhfPhfPhfPgfPgePgePgePgfIkePg\
+  eVcda_dgWcnSctOczKbZ8a60b70c80d91dA3eB5fB7fC9gDBhE\
+  DhFFiFHjGJjHLkINlJPlKRmKTnLVnMXoNZpO`pOamPbjQbhRbe\
+  SccSc`TcYUdWVdTWdRWeOXeMYeJZfG_fE_fB`g9ag6bg1bf3bg\
+  4bg6bg7bg8bgAbgBbgCbgEbgFbgHbgIbgJbhLbhMbhNbhPbhQb\
+  hRbhTbhUbhWbhXbhYbh_bh`bi }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

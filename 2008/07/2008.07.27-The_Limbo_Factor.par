@@ -1,0 +1,110 @@
+;     Date: Sat, 26 Jul 2008 19:19:26 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 27-07-08 (The Limbo Factor [6])
+; 
+;       Id: <1.5.4.16.20080726191956.2b574a7e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 27, 2008 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image I tried to go down to an exponential level only 
+; half as far from unity as yesterday's exponent of 1.0125.  But I 
+; could find nothing of interest in the fractals with an exponent 
+; of 1.00625, so I tried an exponent of 1.009375, which is 3/4 as 
+; far from unity as yesterday's 'forest floor' image.
+; 
+; The searching down there was difficult, minibrots were nowhere 
+; to be found, but I finally found an interesting patch of chaos 
+; in the Z^(1.009375)+C Mandeloid fractal right at ground level of 
+; the complex hyper-ladder.  Today's image shows a small sample of 
+; that interesting chaos.
+; 
+; To me, the most amazing thing with the image is that the graph 
+; of its generating expression is virtually a straight line.  But 
+; even such a tiny departure from straightness can do unexpectedly 
+; intricate things when iterated a sufficient number of times.
+; 
+; In today's image we have areas of near total chaos, areas that 
+; are totally featureless, as well as areas of fractal patterns 
+; that repeat at ever smaller scales.  There are also several dis-
+; tinct fractal themes in the image.  Despite the ridiculous expo-
+; nent, today's fractal image is as fractal as any fractal could 
+; be.
+; 
+; I named today's image "The Limbo Factor".  After all, the point 
+; of the Limbo is to go as low as possible.  Then I rated it at a 
+; 6.  My inability to find a minibrot in the parent fractal cost 
+; the image at least one whole rating point.
+; 
+; The calculation time of under 4 minutes on a computer running at 
+; 2000mhz is reasonably brief.  And the trip to the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; to view the finished image there can be equally brief, if not 
+; briefer.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and view the world through fractal-colored glasses.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Limbo_Factor   { ; time=0:04:54.34-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-10.29306825/+0.0410706/163.76/1/142.5/0
+  params=1.009375/0/0/3500 float=y maxiter=16000
+  inside=0 logmap=456 periodicity=10
+  colors=000KBULBUM9UN9UO8UP8UQ8TR6SS6TT4RU4RU4RU2PU\
+  2NU1NU1MU1MU0KU0IU0IU0HU0FU0FU0DU0BU0DU0DU0FU1FU4F\
+  U6HU9HUBIVDIVHIXIKXMKXNMYRMYSMYUN_XN_YP_aPabPafRbg\
+  RbiSblSdmSdpUdrUfuVfvVbvSdxUfxVgxXgyXiyYjy_jy_lzam\
+  zbozdozdpzfrzgrzgpslojomarmSulIxj8zg0zi0zj0zj2zl4z\
+  l8ymBxoFvoHupKspNrrRpsSosVmuYluajvbixfgxifyldymbzp\
+  azs_zvYzxXzzVzzUzzSzzRzzPzzNzzMzzKzzMzzNzzPzzRzzSz\
+  zUyzVxzXvzYuz_sz_rzapyboxdmvflugjsiirjgplfomdmmblo\
+  ajp_irYgsXfuVdvUbxSayR_zKVzNXzPYzS_zVYzU_zS_zRazPa\
+  zNazMbzKbzIbzHdzFdzDdzBfz9fx8fv6gs4gp2ip1ip0ip0jp0\
+  jp0jp0lp0lp0lp0mp0mp0mp0lr0lr0jr0js0is0is1gs4gu6fu\
+  8fuBdvDdvFbvHbvKaxMaxN_xR_ySYyUYyVXyYXz_VzaVzdUzbV\
+  zbVzbVxbVubVrbVpbVmaXjaXgaXdaXbaX_aXXaXU_YR_YP_YM_\
+  YI_YF_YBgV1bX6_Y9XYDU_HR_KNaNKaRHbUDbX9d_6db2ff0gg\
+  0fi0fi0fi1fj1fj1dj1dj2dl2dl0Kl0Km0Mo0Km0Kl0Il0Ij0I\
+  i0Hi1Hg1Ff2Ff2Fd4Dd4Db6Ba }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

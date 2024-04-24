@@ -1,0 +1,107 @@
+;     Date: Fri, 18 Jul 2008 22:31:57 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 19-07-08 (Green Dumplings [6?])
+; 
+;       Id: <1.5.4.16.20080718223221.2a3f3b08@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 19, 2008 (Rating 6?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image reminds me of green dumplings.  I can't 
+; help it.  That's what I see, so that's what I named it.  I could 
+; not decide on a rating, so I let the image go with a rating of a 
+; questionable 6.
+; 
+; The parent fractal was created when I calculated the formula 
+; Z^(1.875)+C just 3/4 of one level up the logarithmic ladder with 
+; no function applied.  This fractal resembles nothing that one is 
+; likely to see in what is commonly known as the real world.  In 
+; fact, it consists of several separate Mandeloids, with today's 
+; scene located in the East Valley area of a small Mandeloid lying 
+; to the west of the main Mandeloid.
+; 
+; The image is one of the most jagged I have yet found.  It almost 
+; looks a bit sinister.  A good part of it consists of inside 
+; stuff colored a deep blue.  A better coloring might have been 
+; possible if I had put a bit more effort into it.
+; 
+; The calculation time of the included parameter file is 3-1/2 
+; minutes, but the wait to see the image can be reduced 
+; substantially by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; The 91F 33C heat and high humidity here at Fractal Central on 
+; Friday was not broken by a shower in the evening, as it was on 
+; Thursday, thereby making the fractal cats irate.  And irate 
+; fractal cats are certainly no fun.
+; 
+; Except for the irate cats, my day was pleasant enough, and with 
+; a similar day expected tomorrow, FL and I might plan a little 
+; outdoor enjoyment.  If so, the FOTD for July 20, might be 15 
+; hours or so late.  Until next time, whenever that is, take care, 
+; and search for reality in the least likely place -- your mind.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Green_Dumplings    { ; time=0:03:31.98-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.820586956762904/+0.1116182311689719/\
+  7.098603e+007/1/92.5/0 params=1.875/0/0.75/0
+  float=y maxiter=3600 inside=255 periodicity=10
+  colors=000Q7KL5JG3HB1F60EA3OE6XI9eMBnYHgiN`uTVnVVg\
+  WV`XVUYVNZVG_VSYWbWXmUXlS_jRaiPcgOeKMe2LeaJeZIfYGa\
+  YFZXD`XCaWAbW9cU8aT7`S7`R6`V6aZ5bY5bX4cW4cR7cM9UHC\
+  PCEK7HA2J06L39N6CP8FQBJSEMUGPWJSXMWZOZ`RabUdcWeaSf\
+  _PfYLgXIgVEhTBhS8ro6ujBweGyaLxbMxcNxcOxdOwePweQwfR\
+  wfRvgSvhTvhUviUujVujWukXukXvd_wZbwSexMhxFky9ny3pBA\
+  iGAjKAkOAkTAlXAl`AmeAniAnmAorAovApzApyLnxVlwejvoiY\
+  IiWMfUPdSSbQV`OYZM`XLcVJfTHiRFlPDoNBrL9uJ8xHHvOQtU\
+  Zr`gpfpnmylsymtyntyotyotyptyqtyrtyrtystzzzwzzzztxr\
+  qxoowllwijvfhvceu`cuZatWZtTXsQUsNSrKQrHNqELqCJqFMq\
+  IOqLQqNSqQUqTWqVYqY_q`bqbdqefqhhqjjqmlqpnqrpppnonm\
+  nmlnkkmjjlhikfgkefjceibdh`ch_b_aZSbVJcRBdOEeRHfTJg\
+  WMhYPi_RjbUkdWlgZmiankconfpphqrkokmmdokYqiRsgKfQYh\
+  OajMdlKgnIkpGnrErtCuvBxvDuvErvGovHlvJivKgvMdvNavPZ\
+  vQWvRUiUNXXHK_A8b4Da5I`6N`6S_7XZ8`Z8eY9jXAoXAtWBxW\
+  BwZAv`Avc9ue9ug8tj8tl700P }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
