@@ -1,0 +1,110 @@
+;     Date: Tue, 10 Jun 2008 21:45:01 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 11-06-08 (According to Hoyle [in doubt])
+; 
+;       Id: <1.5.4.16.20080610214456.2a7f0306@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 11, 2008 (rating in doubt)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; When the parent fractal of today's image is rotated minus 90 
+; degrees, it resembles a Mister Potatohead toy, with a ridicu-
+; lously large period-2 bud stuck on its left shoulder, a period-3 
+; wart on its right shoulder, and a period-5 pimple on its butt. 
+; Today's scene lies in the western valley leading to the period-5 
+; pimple.  I have no idea what happened to a potential period-4 
+; pimple.
+; 
+; Anyway, today's image has little to recommend it.  Due to the 
+; threat of lightning, I kept the computers unplugged most of the 
+; afternoon, which left little time for a proper fractal search.
+; 
+; The only thing today's image has going for it is its striped 
+; appearance, which was created by rendering the scene with the 
+; outside set to 'tdis'.  But even the stripes are so finely 
+; divided that they lose most of their effect.  As a result, I 
+; gave the image no rating.
+; 
+; The name "According to Hoyle" simply came to mind as I studied 
+; the image.  (Perhaps a psych could do a fair analysis of me from 
+; the names I give the FOTD images.)
+; 
+; The final bad news is the calculation time, which is a dragging 
+; 25 minutes.  Run the parameter file if you wish, but I recommend 
+; visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image is or soon will be posted for instant access.
+; 
+; Tuesday here at Fractal Central started sunny and very warm.  
+; But a series of brisk thunder-showers moved in around 3pm and 
+; continued until dark.  The temperature reached a high of 93F 34C 
+; just after noon, but by 6pm was down to a very comfortable 75F 
+; 24C.  The fractal cats rejoiced.
+; 
+; And if the next FOTD, which will be posted in 24 hours, is 
+; better than today's, I will rejoice also.  Until the rejoicing 
+; starts, take care, and as the wise shepherd says, when you see a 
+; storm coming, get the flock out of there.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+According_to_Hoyle { ; time=0:25:16.83-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=+0.6839673892413574/+0.164658493324798/\
+  184137.8/1/-102.5/0 params=1.25/0/0.2/0 float=y
+  maxiter=32767 inside=0 outside=tdis periodicity=10
+  colors=000n4Pp2Nq1Mo3Ln5Lm7Ll9KkBKjDKiFKhHJgJJfLJe\
+  NJcOIbQIaSI`UIMMRHJOCGL7DI9DJBDJDDJEDJGDJIDKJDKLDK\
+  NDKP9HOBJODKNFMNGNMIPMKQLMSLNTLPVKRWKTYJUZJW`IYaI_\
+  cHWfI`dIdcJhaJm`KqZKuYKyXMuYNrYOoYPlYQiYSeYTbYU_YV\
+  XYWUYC8pXRYqiGpiFpiFpiEoiEoiEoiDniDniDniCniCmiCmiB\
+  miBliBliAliAkiAki9ki9ki9ihEggIfgMdfQbfUaeZ_ebYdfXd\
+  jVcnRfvUcrX`oZYlaWhcTefQbiNZkLWnITpFPsCMw9KuAJtBJs\
+  CJrDJqEJpFJnGJmHJlIJkIIjJIiKIgLIfMIeNIdOIcPIbQIaQI\
+  _VIYZIXbIW`KW_MWYOVXPVWRVUTUTUURWUQYTPZTN`TMbUNcTM\
+  cTLcTKcSJcSJcSIcSHcRGcRFcRFcREcQDcQCcQCcQBcPAcP9cP\
+  8cP8cO7cO6cO5cO5cQ4cR4c_5hg6mo6rn9qnBpnDonFnmHmmKm\
+  mMlmOklQjlSilUhlXhkZgk`fkbekddpmekfdf_daTcYNcTGbO9\
+  bK3bL4`M4_N4ZN5XO5WP5VQ5UQ6SR6RS6QT6PT7NU7MV7LW7KW\
+  8IX8HY8GN2HT5GY8FbBEhEDmHCrKByF3wMBvSIuYPtcXsicroj\
+  quqnlXpd4kcDgbLcaTZ`aV_iP`sRZqTXoUVmWTkXRjZPh_NfaL\
+  dbJbdIaeG_gEYhCWjAUk8Tm6R }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

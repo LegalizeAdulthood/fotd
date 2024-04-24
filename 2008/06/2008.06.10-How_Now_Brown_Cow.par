@@ -1,0 +1,100 @@
+;     Date: Mon, 09 Jun 2008 21:25:00 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 10-06-08 (How Now Brown Cow [4])
+; 
+;       Id: <1.5.4.16.20080609212454.2a770112@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 10, 2008 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the debris along the southern shore line 
+; of the main bay of yesterday's fractal image, which is then the 
+; parent fractal of today's image.  This fractal, when its inside 
+; is not decorated, resembles nothing as much as a quail brooding 
+; a clutch of eggs.
+; 
+; But such things are for the birds.  I named today's image "How 
+; Now Brown Cow", which I admit makes no sense at all.  Of course 
+; this is no surprise.  As FL often tells me, if I had any sense, 
+; I would devote far less time and energy to the useless FOTD.  
+; But then I tell FL that some people just cannot see the worth in 
+; these fascinating images.
+; 
+; I rated today's image at a 4, which might be a gift.  I found it 
+; in less than 5 minutes, and gave it far too little coloring 
+; effort.  Hot weather makes me lazy.
+; 
+; The calculation time of a mere 1-1/4 minutes can be improved 
+; upon only by viewing the already-calculated image, which is or 
+; soon will be posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Continued heat and blazing sun made Monday a very lazy day here 
+; at Fractal Central.  The high temperature of 97F 31C made swim-
+; ming and boating the activities of choice.  The fractal cats' 
+; activity of choice was sleeping, and my activity was clearing 
+; away the work.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and if life serves up a lemon, make a lemon 
+; fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+How_Now_Brown_Cow  { ; time=0:01:13.35-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=+0.1973598/-0.7442536/622.1558/1/22.5/0
+  params=1.237/0/14/0 float=y maxiter=1500 inside=0
+  logmap=92 periodicity=10
+  colors=000_QSYRSVTSTUSRVRPWRMXRKYQIZQG_QE`QC_OB_MA\
+  _K9`I8`G7aE6cC5cA4a83`62_41Z50YA4WF8TKCQPGOUKMZOKc\
+  SIhWMg_SecXcgbakg_omYsrWqsYps_os`nsbmsdlseksgjshht\
+  jgtlftmetodtqctrbttatuljkwaatZZqXWnVTlSQiQNfOKdLHa\
+  JEZHBXF9UGCSGFQGIOGLMGOKGRIGTFHWDHZBHa9Hd7Hg5Hj3Hl\
+  8NhCSeGXbKa_OfWSkTWpQ_uNczKbxLbvLbuLasMarMapMaoM`m\
+  N`lN`jN_iO_gO_fO_dOZcPZaPZ`PYZQYYQYWQYVQXOXXHcXAjX\
+  3pZ5o_7n`8naAmbBmcDleFlfGkgIkhJjiLjjMilOimQhnRhoTg\
+  pUgqWfrXfnWdkWchWaeW`bV__VYXVXUVWQUUNUTKURHUQETPBT\
+  N8TM5TL7UK8VK9VJAWJCWIDXIEXHFYHHYGIZGJZFK_FM`EN`EO\
+  aDPaDRbCSbCTcBUcBWdAXdAYe9Ze9lOIz6QnAUcDYSGaHJe6Mi\
+  8IdAE`CAXAVW8oWMRk_3z`5y`6y`7x`8x`Ax`Bw`Cw`DwaFvaG\
+  vaHuaIuaKuaLtaMtaNtdJkgFbjCUm8Lo5C`CQNJb9PoASmBVlC\
+  XkD_jEbiEdhIfkMhmPjpTlrWnu_pwbryr8ppAnoClnDjmFilHg\
+  kIejKciLbhN`gPZfQXeSWdUUcVSbXQaYPZXRXXSVXUSXVQWXOW\
+  YLW_JW`HVbEVcCVeAVf9Xg9Zi }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

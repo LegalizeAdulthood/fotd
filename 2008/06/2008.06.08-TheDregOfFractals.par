@@ -1,0 +1,90 @@
+;     Date: Sat, 07 Jun 2008 23:14:32 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 08-06-08 (The Dreg of Fractals [1])
+; 
+;       Id: <1.5.4.16.20080607231424.2a0f35ba@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 08, 2008 (Rating 1)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I found today's image in 3 minutes, which I think is a new 
+; short-time record.  It calculates in 1-1/3 minutes, which is 
+; quite fast though not a record.  The formula behind the image 
+; subtracts 1/2 part of Z^(-1.1) from 1/2 part of Z^2 and adds C. 
+; Today's scene lies very near the tip of a filament.
+; 
+; The magnitude of 1*10^13 is actually a bit beyond the point of 
+; breakdown, but the slight bit of jaggedness is hardly notice-
+; able.  The magnitude does make the mathtolerance entry necessary 
+; however.  The rating of a 1 shows what I think of the image.  
+; The name "The Dreg of Fractals" echoes the opinion.
+; 
+; Even with its calculation time of 78 seconds, the image is most 
+; conveniently viewed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a high temperature of 97F 36C, the weather was far too hot 
+; for comfort here at Fractal Central on Saturday.  It was so hot 
+; that FL and I decided to take a day off in the surrounding wood-
+; lands.  The day in the woods was cool and enjoyable, but left no 
+; time for fractals.  While we were out, the fractal cats spent 
+; the day stretched in the coolest spot they could find.  The next 
+; FOTD is due in 24 hours, and as far as I know, it will appear on 
+; schedule.  Until then, take care, and keep your cool.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheDregOfFractals  { ; time=0:01:18.71-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.1848571131062667/+1.389112151819734/\
+  1.00707e+013/1/5/0 params=0.5/2/-0.5/-1.1/0/0/0/0
+  float=y maxiter=1500 inside=0 outside=tdis
+  periodicity=10 mathtolerance=0.05/1
+  colors=000qFhjFidFiYFjRGkLGkEGl7Gm1Gm2Jj3Lh4Ne5Qc6\
+  S`7UZ8XW9ZU9`SEcRJeQNhPSjOXmN`oMerLitLdpN`lPXiRTeS\
+  PaULZWHVYDSZDUVDVRDWNDYJDZFD_BD`8Gb9Jd9Mf9Ph9Rj9Of\
+  AMbBKZCIVDFREDNFBJG9FH7CHBFLFHOJJRNLUQNXUP`YRcaTfe\
+  VihXlfZke_jdajccibdh`fg_gfZieYjdWlcVmbUoaTp`Sr_QsZ\
+  PuYOvXNxWMyWVxZcx`lwcuweod`tvdtudtudttdssdsscsrcsq\
+  csqcrpcrocrobrnbrmbqmbqlbqkbqkaqjapiapiaphapgapg`o\
+  f`oe`oe`od`EUrGVqIVpJWoLWoMXnOXmQYlRYlTZkUZjW_iX_i\
+  Z_h``ga`fcafdaefbdhbcicckcbldand`1DmCJjMPgWUee_bjC\
+  5kE7kF8kG9kHBlJCD_mCdkBiiBnhDhjEckFZlHUmIOoJJpLEqM\
+  9rN4sO9oPDlPHiQMfQQcRU`RYY_f_go`owamc`kK_j0_h6WfBS\
+  dHPbML`SHZXEXbAVg6Tl3Wj6Yh8`fAbdDecFgaHj_KlYMoWOqV\
+  QoUTnUVlTXkTZiTahScfSeeSgcRibRl`Rn_QpYQrXQtWRrWSpV\
+  SnVTmVUkUUiUVgUVfTWhTWiSWjSWkRXlRXmQXnQXoQYpPYqPYr\
+  OYsOZtNZuNZvNZwO`uPatQbrRcqSdpTenUfmVhlWijXjiYkhZl\
+  f_me`ndQUmG9vKBpOCjxEhxEg }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,111 @@
+;     Date: Wed, 11 Jun 2008 22:59:34 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 12-06-08 (Forever Down South [8])
+; 
+;       Id: <1.5.4.16.20080611225928.2a5f68fe@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 12, 2008 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows one of the most impressive minibrots that I 
+; have ever found in the exponent range between 1 and 2.
+; 
+; The parent fractal was created by the formula Z^(1.5)+C as it 
+; appears 11 levels up the complex log ladder when the 'recip' 
+; function is applied.  This parent resembles a fairly normal 
+; looking mandeloid with an unusually long zigzagging filament 
+; extending south from the main bud and curving east.  A large 
+; minibrot lies on this filament, and today's scene is located in 
+; the East Valley area of this larger minibrot.
+; 
+; The image consists of unmistakable East Valley Julia set stuff.  
+; It seems to be a universal fact that minibrots of all orders, 
+; which are located in the East Valleys of larger minibrots, have 
+; the same underlying appearance.  The same is true, though 
+; perhaps to a lesser degree, of the minibrots in the Seahorse 
+; Valleys of larger minibrots.
+; 
+; I named today's image "Forever Down South".  I am not sure why I 
+; gave it this name, but the name is not totally inappropriate.  
+; After all, the scene does lie well south of the main part of its 
+; parent fractal.
+; 
+; The rating of an 8 is due in large part to the coloring, which 
+; largely makes the image.  The calculation time of 1-1/3 minutes 
+; is quite brief even in the eyes of the most impatient.
+; 
+; And as always, the pre-calculated image is available for instant 
+; viewing on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A perfect day here at Fractal Central on Wednesday was fully 
+; appreciated by the fractal cats as well as the fractal-sapiens.  
+; The sunny skies, low humidity and temperature of 81F 27C could 
+; hardly be improved upon.  With a repeat expected tomorrow, the 
+; satisfaction should only increase.  The next FOTD is due to 
+; appear almost by magic in 24 hours.  Despite the disagreement 
+; of skeptics, magic does happen, so expect the next FOTD image to 
+; appear on schedule.  Until next time, take care, and also walk 
+; with care.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Forever_Down_South { ; time=0:01:20.71-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=recip
+  center-mag=+0.4122069256216793/-2.500438043275711/\
+  2.156969e+010/1/90/0 params=1.5/0/11/525 float=y
+  maxiter=1500 inside=0 logmap=208 periodicity=10
+  colors=00000K00K00K00K00K00K00K01K23I65H86IB9IFCHI\
+  EGLGFNIGRLLWOPaRUfUXkX_oYbr_dx_gz_izblzcnzdpzeqziq\
+  zlpzoqzrtzvxzyzzzzzzzzzzzzzzzzzzzzzzzxrztkxobqkYkb\
+  VbVcVQmjNwzTwsKwkPqgJqaGhT8`I0060bzzF0L008000F9zzT\
+  zFztIzWDzVIzTNzTRnRVaQ__PdWPgVNkTLkRKlPKnNIqLGtKGx\
+  LPtNVqPalQgfRn_RzVQzWQzYQzYPz_Pz_PzaNzaNxbNtdLtdLo\
+  fLofKlgKkgKgiKfiLbfL_dLWbLVaNR_NQWNPVNLTPIRPIQPGNP\
+  FLQFKQFIQFGQGFTLKVQPYVR_YWbb_dfdggiikllnqnotkqoiql\
+  gqifrfdrbbrYatV_tRYtPWvLVxGTyDRz9Qz6Pz2Qz1Rv1To1Vk\
+  1Qg8NdFKbKGbQDaV9_a6Yg2Yl0Wr0Vx0Tz0Tz0Wz0Yz2_y8avB\
+  drGfoKgnPikTkgWndaoadqYirVltTglKdd9aY1YQ0VK0WP0YT0\
+  YY0_b0_g1al6bq9bvDdzGdzKbzIazI_zIczIpzIzzIzzIzzIzz\
+  IzzIzzIPzLPyPPrRPlVPfYP_aPTbPNfPGiP9lP2oP0rP0vP0xz\
+  zz0t02z9BzK4zP0zT0zY0za8zNVz8zz0zz0zz1zz4zzBzzGzzz\
+  zzNzzzzzzzzrzzdzzgzzazzWzz8zzFzzLzzzzzkzzFzz0zz8zz\
+  zzznzz0zz0zz4zzGzzdzz_zzF }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

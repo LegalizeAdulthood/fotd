@@ -1,0 +1,92 @@
+;     Date: Fri, 13 Jun 2008 21:29:53 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-06-08 (The Bug-Eyed Tree [6])
+;       Id: <1.5.4.16.20080613212950.2ac71228@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 14, 2008 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's strange image shows a kilroy-like alien head peering 
+; over the bottom of the frame.  The top part of the image shows 
+; fractal stuff on the way to becoming a fractal tree.  Combining 
+; both, I named the image "The Bug-Eyed Tree".
+; 
+; The image is actually a near-Julia set of the (-Z)^sqrt(2)+C 
+; Julibrot.  Actually, the slice is oriented 0.02 degree from the 
+; Julia direction toward the Oblate direction.  This tiny rotation 
+; is quite important.  To see how important, change the real (p1) 
+; parameter to 90 and do a thumbnail fractal.
+; 
+; I rated the image at a 6.  I have seen a few too many of this 
+; type of image to rate it any higher.
+; 
+; The calculation time of under 3-1/2 minutes is rational, for all 
+; this is worth.
+; 
+; The finished GIF image is available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heat, haze and humidity moved back into the Fractal Central area 
+; on Friday.  As the temperature reached 88F 31C, the fractal cats 
+; sought the cool air vent.
+; 
+; My day was acceptable; the fractal, a bit goofy.  The next 
+; fractal, goofy or not, will be posted in 24 hours.  Until then, 
+; take care, and why must all space aliens have bug-eyes?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Bug-Eyed_Tree { ; time=0:03:28.90-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot5 passes=t float=y
+  center-mag=0.190223/0/15.24794/0.8869/90/0
+  params=89.98/90/90/90/-1.124575/0/0/0/1.4142/0
+  maxiter=3600 inside=0 logmap=20 periodicity=10
+  colors=000KKVKKUKKTJKSIKRHKQGKPFKOEKNDKMCKLBKKAKI9\
+  KG8KE5KA2K73K93KB3KC3KE4KG4KH4KJ2KG4KK6KO7LS9LVBLZ\
+  CLbELfEHlFJjFLiFNhFPgFRfFTeFVcFVbFVaFT`FR_FQbFO`FM\
+  ZAKY6KW2IV4JT6KS8LRAMQCNPEOOGPNIQMKRLMSKOTGNSJNRMN\
+  QONPRNOTNNWNMYML`MKcMJeMIhMHjMGmGEkJFmMGoPHpSIrVJs\
+  SLqQMpNNnLOmIPkGQjERiBSg9Tf6Ud4Vc2Wb5Uc7ScARdCPdFN\
+  eHMeKKeMIfPHfRFgUDgWCgWBfWBfWBeWBeWBdWAdWAcWAcWAbW\
+  AbW9aW9aW9`W9`W9`NRbEgd6xfAq8Do9GmAJkBLjCOhDRfETeF\
+  WcGZaH``IcZJfXKhWLkUMnSNoLOpROpXOqaOqgOeOmtkMqlOol\
+  QmlSklUimWgmYem_bma`mcZneXngVniTnkPuvQqqRnlSjhSgcT\
+  c_UcVVcRVcMWcIXcDZc9`c6bb6dc6fd6gf6gg6gh6hj6hk6hl6\
+  in6io6ip6ns7io6di6`a5WU5PC1RI3SL5TP7VU8WYAXbCZhD_n\
+  F`uH_wWazKenPldUhcZdbc`ahcamf`ri_wlVzmXzn_znazoczp\
+  fzpizqkzrnzrpzuuzvwzzzztvzsszqovokrnhmmehmcdlbblb`\
+  kb_kaYjaWjaVj`Ti`Ri`Qh_Oh_MlYHjZJh_Lf`NdaPbbR`cSZd\
+  UXeWVfYTg_RhazYxgcmPhb3pR }
+
+frm:SliceJulibrot5   {; draws slices of (-Z)^n Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

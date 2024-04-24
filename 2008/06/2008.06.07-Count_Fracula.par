@@ -1,0 +1,105 @@
+;     Date: Fri, 06 Jun 2008 22:31:32 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 07-06-08 (Count Fracula [6])
+; 
+;       Id: <1.5.4.16.20080606223123.2a6728b2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 07, 2008 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A lot of flashy colors and a lot of filaments do not make a 
+; superior fractal.  This description fits today's image, which 
+; rates only a 6.  Today's fractal lies in the Z^(sqrt(2))+C 
+; Mandeloid as it appears 13 levels up the logarithmic ladder 
+; when no function is used.
+; 
+; The most notable feature of the parent fractal is its incredibly 
+; long main filament.  Today's scene is located deep in the East 
+; Valley area of the most prominent minibrot on this long 
+; zigzagging filament.
+; 
+; There is a minibrot at the center of the image, though it lies 
+; far beyond the range of resolution.  As it is, the magnitude of 
+; over 2*(10^12) is right at the limit, and requires the 
+; mathtolerance entry to assure that the parameter file calculates 
+; at the correct magnitude.
+; 
+; I named the image "Count Fracula", though I can see little in it 
+; to connect it with that infamous monster.
+; 
+; The calculation time of 5-1/2 minutes is about the fractal 
+; average.  But it is always a convenient choice to view the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A cloudy morning gave way to a sunny hot afternoon here at 
+; Fractal Central on Friday, with a temperature of 86F 30C.  The 
+; fractal cats, feeling the heat, remained in stretched-out mode.
+; 
+; My day was unexpectedly busy, which explains the hasty fractal.  
+; Tomorrow will be slower, hopefully resulting in a better FOTD 
+; image.  That image, however good, will be posted in 24 hours.  
+; Until then, take care, and wait for whatever is coming.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Count_Fracula      { ; time=0:05:34.44-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-2.587188090720521/-2.220584310407471/\
+  2.104486e+012/1 params=1.4142/0/13/0 float=y
+  maxiter=1500 inside=0 periodicity=10
+  mathtolerance=0.05/1
+  colors=000LESLERLFQLFPLFOKFNKFMKFLKFKKFJXaLhwM_0Z`\
+  5W`AU`ES`JP`ONaSLaXJaaGaeEajCanAbmEblHblKbkNbkQbjT\
+  biWciZchachdcggcfjcfmcepces`hpYjmVljSogPqdMsaKuZHp\
+  VFlRDgNBcJ9_GCaHFbHHcIKdIMeJPfJRgKUhKWiLZjL`kL_hKA\
+  3KG4KH5JI6JK7JM8JO9IQAISBIUCIWDHYEH_FHaGHcKGfNFjRE\
+  mUDqXCt`BxcAzf9zj8zm7zp7zsBzuEzvHzuKzsNzqQzoTzmWzj\
+  ZzgazddzagzZLzXNz_OzaQzcRzfSzhUzjVzlXvoYrqZms`iuaj\
+  wblxdmxfoxhpxjrxlsynuypvyrxytyyvWom3fe3dd3bd3`c3_c\
+  3Yb3Wb3Ua3Ta3R`3P`3N_3M_7SaAXcDbeGggJmiMrkPwlZZOgB\
+  0fA5eAAdAEcAJb9Nb9Sa9X`9`_8eZ8iY8nY8rX9nWAkWBhVCdV\
+  DaUEZUFWTGSTHPSIMSJJPNNNQQLUTIXWG`ZEcaBge9jh7nk4qn\
+  2uq0xt8xoFxkMyfTyb_yYfzUmzQnzOnzNnzLozKozIozHozGpz\
+  EpzDpzBzzAzz8qz7zv6pr8qm9khAmcBmZImUPmZWcdbUjiKpp9\
+  vwBrrCnmEjhFgcHcZI_UKWPLTKNPFOLAPI5IGDCEL6CT0B`c_b\
+  XPSQFHK56P97UC8ZF9cJAhMBlPBmOCnOCoNCpNCqMCrMDsLDtL\
+  DuKDvKDwKDtJGqJIoJLlINMET }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
