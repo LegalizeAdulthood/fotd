@@ -1,0 +1,109 @@
+;     Date: Sun, 06 Feb 2011 22:07:52 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-02-11 (In the Wilderness [No Rating])
+;       Id: <1.5.4.16.20110206220749.1467e7fe@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 07, 2011 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent of today's image is kind of a distorted Mandelbrot 
+; set rotated so that its west side faces south.  It came into 
+; existence when I calculated the formula Z^(1.81712)+C at level 
+; 10 of the hyperladder.  (1.81712 is the cube root of 6, though 
+; this has no significance in the appearance of the image.)
+; 
+; The parent fractal has a very large object just north of the 
+; main bay.  This cut-off object is too large to be called a 
+; minibrot, so I consider it a sub-parent.  Today's scene lies in 
+; a valley of this sub-parent, regardless of what one calls it.
+; 
+; I gave the image no rating, since I kind of ran out of fractal 
+; steam and drifted into philosophy-land before the image reached 
+; its full potential.  The name "In the Wilderness" describes my 
+; mental state while thinking of the name more than the image 
+; itself.
+; 
+; The calculation time of over 8 minutes may be reduced signifi-
+; cantly by resetting the passes to 'g', but doing so will cause 
+; much of the random decoration to be missed.
+; 
+; The calculation may be eliminated totally by viewing the 
+; finished image on the FOTD web site at:
+; 
+;  <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site may be accessed at:
+; 
+;      <http://www.Nahee.com/FOTD/>
+; 
+; We were caught nearly by surprise here at Fractal Central on 
+; Sunday, when the weather turned almost pleasant, with a 
+; temperature of 41F +5C and lots of sun. The sun enabled me to 
+; easily clear the remaining ice from the fractal driveway, and 
+; also gave the fractal cats a very enjoyable afternoon on their 
+; shelf in the window, from where they watched me at work.  FL 
+; added moral support and hot refreshment.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and we appear to live in a universe of three dimensions 
+; because this number of mental spatial dimensions is what the 
+; human consciousness creates for a field of 'outer' activity.  
+; Theoretical super-advanced aliens probably create a higher-
+; dimensional mental space for their 'outer' activities.  (In all 
+; cases the math is contrived to work with what is observed.)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+In_the_Wilderness { ; time=0:08:19.11-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=+0.01155565489096672/+1.143316385076897\
+  /8.32084e+008/1/155/0 params=1.81712/0/10/0 float=y
+  maxiter=10000 inside=0 logmap=850 periodicity=6
+  colors=000000SbrTerVgrXisYls_ns`psbsscusewsfyscup`\
+  qnZmlWijUehRafPYdMUaKQ_HMYFIWCEUAAS76Q52OL5MKALJEK\
+  JIJIMIIQHHUGHYGGaFFeEFiDEmCEqBDuADyAHmGLaLPQQSFVXJ\
+  _`NddRihVnlZspbxp`xoYwnWwnUwmRvmPvlNvkKukIujGujEui\
+  IsWQjZDlUChPBdJA`E9X98T48PA9WF9bLAiQAoZSjfienzakwb\
+  itbfqbdncakc_hcXedVbdT_dRabPbaOc`Md_LeYJfXIgWGhVFi\
+  UETgDCtGEoIGkKIgNKcPLZRNVUPRWRNYSI`UEbWAdY6fZ2dX5c\
+  V8aTA`RDZPFYNIWLKVJNTHPSFSQDUPBXO9ZQBbSDfUEiWGmYIq\
+  _JtXPnUUiR_cOdZLjTIoOFtJGsLHrMIrOJqPKqQLpSMpTNwUOe\
+  WPnXQszRm_Sl`TlbUkcUkdKlhBmlAjh9hd8f`7cX7aU6_z5XV4\
+  VIKTEKRBKQAKP9KO9KN8KM8UL7UK6UJ6UI5UH5UG4UF3cE3cD2\
+  cD2cC3cC4mB5mB6mA6mA7m98r99v8Az8AzKBzKCzKDzKDzKCzK\
+  CzUCzUCzUCzUCzUCyUCxUCwUCvUCuUCtUCrUFqWIpYLo_OnaRl\
+  cTkeWjgZijahldfnfepidrlctobvraxtbzrczpczodzmdzlzzj\
+  zzizzgzzfzzdzzczzazz`zzDzzNzzXzzfzzpzzzzzizzUzzEzz\
+  FzzGzzHzzHzzIzzJzzJzzrzzr }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,110 @@
+;     Date: Mon, 07 Feb 2011 22:14:21 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-02-11 (The Missing Linque [8])
+;       Id: <1.5.4.16.20110207221422.10cfcdaa@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 08, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Blue-and-gold color schemes are some of my favorites.  These are 
+; my old school colors, so I rated today's almost totally blue and 
+; gold image at a lofty 8.
+; 
+; The name "The Missing Linque" has nothing to do with the study 
+; of language or the theory of evolution.  It is simply a refer-
+; ence to the arrangement of radiating arms around the central 
+; minibrot, some of which are doubled, while others are totally 
+; missing.  The spelling simply makes the name appear trendy, kind 
+; of like the junque (junk) FL and I come upon on our antiquing 
+; trips.
+; 
+; The image lies in what I assume is the Seahorse Valley of the 
+; parent fractal that results when the formula Z^(1.913)+C is 
+; iterated at level +7 of the complex logarithmic hyperladder and 
+; no function is applied.  1.913 just happens to be very close to 
+; the cube root of seven, but this is of no importance in the 
+; final appearance of the image.
+; 
+; The calculation time of 1-1/2 minutes is brief enough to make 
+; the calculation a pleasure.  Even greater pleasure may be found 
+; at the currently active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; where the finished image is posted.
+; 
+; The original FOTD web site may be accessed at:
+; 
+;      <http://www.Nahee.com/FOTD/>
+; 
+; At lunch time on Monday, FL expressed her disappointment with 
+; the lack of forceful action by SuperPresident B.O. to aid the 
+; oppressed struggling people of Egypt.  To avoid another futile 
+; discussion, I left the room.  But to me the real puzzle is how 
+; so many otherwise intelligent people could have been gullible 
+; and naive enough to actually believe some kind of near-magical 
+; change was coming when B.O. was elected.  (Believe me, it's not 
+; easy learning to be as cynical as I have become over the years, 
+; but the cynical view usually turns out to be right!)
+; 
+; A mix of clouds and sun, with an unexpected temperature of 43F 
+; +6C, kept both the fractal people and the fractal cats happy 
+; here at Fractal Central on Monday.  The next FOTD will be posted 
+; in 24 hours.  Until then, take care, and fill in the blanks of 
+; life with wisdom, or your life will be a blank.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Missing_Linque { ; time=0:01:30.13-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.4313243146925733/+0.1339394994731501\
+  /3.085371e+011/1/-52.5/0 params=1.913/0/7/0 float=y
+  maxiter=1500 inside=0 logmap=133 periodicity=6
+  colors=00058f69g7Ah8Bi8Cj9DkAElAGmBIoCKqCMsBOqBQoB\
+  SmBRkBQiBPgBOeBOdBNbBM`BLZBKXBJVBITwwczzPzwMzsKzpH\
+  zmEyjCwhBvfAud9tb8r`7qZ6pX5oV4mT3lR2kP1jO0iP3iQ5iR\
+  8hSAhTDhUFhUIgVKgWNgXPfYSfZUf_Xf_ZfXXfUWfRUfPTfMRf\
+  JQfGOfDNfBMgGNgLOhQRhUUiZZiccjhhjlmgrrdxvazz_zzXzz\
+  UzzRzzPvzMrzJszGtzEtzVbljMdz5Yw6Wt6Uq7To7Rl8Pi8Og9\
+  Md9LaAJ_AHXBGUBESCCPCBMD9KD8JJAJOBITCIYDHbEHgFHlGG\
+  nGGoGGpGGrGFsGFtGFvGFwGFxGItHKqIMmJOjJQfKTcLV_MXXM\
+  ZTN`QOcMPeJPgFQiCRk8Sm5SuK4pJ6kJ7fJ9aJAXJCSJDNJFIJ\
+  GDJI8JJ3JK5IM6IO8IQ9HS47L88NB9OEAQHARKBTNCURDVUDXX\
+  EY_F_bG`eGacKcbNd`Re_UgYYhX`iVdjUglSkmRnnQqoTnkVkg\
+  Yhd_e`bbXd_UfXQiUMkRJnOFpLBrJ8oIAmICkIEiIFgHHeHJcH\
+  KaHM_HOYGQWGRUGTSGVQGWeFbuEirLbpSXnZRkeLilFgs9ez3a\
+  zA_zBYzCXzDVzDTzESzFQzGPzGNzHzzIzzJzzJzzKzzLzzMzzM\
+  zzpzzqzzrzzrzzszztzztzzuzzuzzvzzwzzwzzxzzyzzyzzzzz\
+  zzzozzezzVzzLzzJzzHzzFzzD }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

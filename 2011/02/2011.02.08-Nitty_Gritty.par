@@ -1,0 +1,105 @@
+;     Date: Tue, 08 Feb 2011 19:27:03 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-02-11 (Nitty Gritty [6.5])
+;       Id: <1.5.4.16.20110208192705.12dfef4a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 09, 2011 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we get down to the nitty-gritty, which is what 
+; I named it.  This is a picture of a miniature Mandeloid caught 
+; in the process of trying to morph itself into a well-defined 
+; baby Mandelbrot set.  But with an exponent of `Z' of only 1.913, 
+; the little fellow lacks the material he needs to pull himself 
+; into perfect shape.  The intent and effort are there; only the 
+; material is lacking.
+; 
+; I gave the minibrot a somber gray background to show that regard-
+; less of how hard he tries, he will never reach full mandelhood.  
+; But look at the richness he has created in his surroundings in 
+; his futile struggles to achieve perfection.  His efforts alone 
+; certainly rate the 6-1/2.
+; 
+; In addition to the lack of a solid `2' for an exponent, the mini-
+; brot at the center of today's image also suffers from a lack of 
+; a sufficient maxiter.  The rather anemic maxiter of 1750 should 
+; be at least doubled if we want to see all the central minibrot 
+; has to offer.
+; 
+; The calculation time of a little over 2 minutes will pass in 
+; less than half a flash.  Only then will it be known whether the 
+; result was worth the effort.  To keep risk of disappointment at 
+; a minimum, I recommend viewing the finished image on the active 
+; FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original classic web site may be accessed at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; Tuesday brought lots of sun to Fractal Central, but it also 
+; brought biting winds and a temperature of 25F -4C.  The fractal 
+; cats concerned themselves only with the sun, which despite the 
+; outside chill, was strong enough to keep them on their shelf in 
+; the window most of the afternoon.  My day was busy and thankful-
+; ly free of politics.  The next FOTD is due in 24 hours, though I 
+; hear we have a problem back at Old Fractal Central, and I may 
+; need to go there on Wednesday to check things out.  Until when-
+; ever, take care, and be satisfied with what you've got.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Nitty_Gritty { ; time=0:02:10.12-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.7007740040949522/+0.8641796338870031\
+  /70786.44/1/-90/0 params=1.913/0/-5/0 float=y
+  maxiter=1750 inside=0 logmap=129 periodicity=6
+  colors=000VTVVTVVTVVTVVTVVTVUSUUSUUSUUSUUSUTRTSQSR\
+  PRQOQPNPOMONLNMKMLJLKIKJHJIGIHFHGEGFDFECEDBDCACB9B\
+  A8A999`N2VJ2OF1IB1C70630aXuXSmSOfNK_JGTECL98E447zt\
+  ymhl`Y`PMOCBCybau_ZqYXnWVjTTfRQcPO_MMWKKTIHPGFLDDI\
+  BBE98H667AVc2Q6tz3Szzzz4mS3`L2PE1C7gv7Xg5MT3BE1pGr\
+  nFolEmjEkhDifDgdCebBc`BaZA_XAYV9WT8UR8SP7QN7OL6MJ5\
+  KH5IF4GD4EB3C92A7285163141025b84_74Y74W63U63S53Q52\
+  O42M42J32H31F21D21B1091070050sZ4lV3fR3JLgKKiLJkMIm\
+  NInPHlQHjRGiSGgTFfUFdVFc`CZeAUj7Qo5Lt2Gy0Cu7GqDJnJ\
+  MjPPgVScaV_gYXm`TscQyfLwhGviBtk6sl1rm8nlEkkKhjRdiX\
+  ahbZghWgkbYnhOqnEtt4pu8muCjuGgvKdvO`vSYwWVw_SwcPwg\
+  MshKphHmhFihCfhAchBcjBglBknBpoBoqBosBnuBnvDluGkuJg\
+  uMetPbtSatV`sY`s`_scVreTrgSriTmkOimNdpN`sMXvLSxLOz\
+  LJzLFzLBzNEzPGzQIySKxTMwVOwWQwYSxZUx`WyaYyc_ydazac\
+  z_ezYgzWizTkzRmzPozNqzKszIuzGwzExzByz9zz7zz5zz8zzA\
+  zzDzzFzzIzzKzzNzzPzzSzz2z }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

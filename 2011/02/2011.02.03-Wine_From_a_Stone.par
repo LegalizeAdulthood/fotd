@@ -1,0 +1,101 @@
+;     Date: Thu, 03 Feb 2011 20:12:35 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-02-11 (Wine From a Stone [8])
+;       Id: <1.5.4.16.20110203201241.12f7da50@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 04, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Once again up and half about, I find it's time for the next FOTD.
+; 
+; Today's image lies in the fantastically complex fractal that 
+; results when the formula Z^1.25+C is iterated 2.62 turns up the 
+; complex logarithmic hyperspiral.
+; 
+; The name "Wine From a Stone" shows my surprise when I found such 
+; an attractive scene in such an unlikely parent fractal.
+; 
+; The rating of an 8 might be a bit overblown, but after 2 fractal-
+; less days, I was extra well pleased to find such an image so 
+; quickly.
+; 
+; The calculation time of under 2 minutes is well within reason.  
+; An alternative way to view the image is to go to the currently 
+; active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; where the finished image is posted.
+; 
+; and always remember the original FOTD web site:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; The 'storm of the century' dropped 3 inches (15cm) of snow, 2 
+; inches (10cm) of sleet, and left trees coated with 1/2cm of ice 
+; as it passed just north of Fractal Central on Wednesday.  The 
+; fractal cats displayed a notable lack of interest.  Thursday 
+; brought brilliant cloudless skies but also a cold temperature 
+; around 23F -5C.  My day Thursday was spent trying to get caught 
+; up in the work.  I also noticed that the fractal driveway has 
+; frozen into 3 inches of solid ice.  I spread salt on it and 
+; hoped for the best.
+; 
+; The next FOTD is due in 24 hours.  Until then, take care, and 
+; see you soon.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Wine_From_a_Stone { ; time=0:01:51.22-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.7245512449658761/+0.2062643712917921/\
+  1618732/1/-57.5/0 params=1.25/0/2.62/0 float=y
+  maxiter=7500 inside=0 outside=tdis periodicity=6
+  colors=000sJkyHknNmcSoTYqJbsEUhALY6CN23D9AIFHMLNQP\
+  ULS`HWgCZn8au4`uC`uJ_uR_uYZueZulPgcGVV7IMBDUE9`I4h\
+  L0oN5fPAZQFRSKJUPBVU3TYAR`HQcOOgUNj`LmgKpmOngRmaVl\
+  XYkRajMdiGghBecDdZEbUGaPH`LIaOOaRTaUYaXba_gabladqX\
+  ZnSUlNPjIKgDFe8Ac45aEEbOMbYVcgbcqjcwtwviuvZsvOqvDo\
+  v3nnFpgRq`bsUntNzuMwvMuwMrxLpxLmyLkzLizIjqGkiDlaBl\
+  T8mL6nD4n5EeEOYNYPVgHcq9kjDjcHjXLiQPiJSiPUeUWb_YZd\
+  _WjaTocPueMzgJlgaia_gWZeQYbLX`FWZ9VX4UaF`eQgi`nmkt\
+  8NeISVSXKPYGNYDLZAIZ6G_3E_07YA0XJAaNJeQSjU`nXis`rw\
+  clr`gmYbhVYcSTZPOVMXaFdh9ln3jdEiWPgSSfOUdKWcHYaD_`\
+  9aZ5cY2eV9cSGbPNaMU`J`_GgZDnYAtXImVPfUX_ScTRKMPKGO\
+  KJQKMRKPSKSTKVUIPO2RP3PS3NV4JQ4FN5BJ57I63H60G95HC9\
+  HFFIIHJIJLILMINNTZ7O_8KW8GS8CO98K94H96I87I79J7AJ6C\
+  J5DK5FK4GM4IQ6KY8McAOiCQpESuGUzIQvGMpFImDEiCBfBJ_H\
+  RUMZOSfIXPVuMXpJYlGZgD_cA`Z7aV4bQ2cMAXRIQVQK_YDcd7\
+  g`RlXipLvTMrRUVk_SkfPklMk }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

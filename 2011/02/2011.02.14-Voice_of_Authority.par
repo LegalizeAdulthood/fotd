@@ -1,0 +1,123 @@
+;     Date: Mon, 14 Feb 2011 16:59:54 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-02-11 (Voice of Authority [6])
+;       Id: <1.5.4.16.20110214165954.105f33be@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 15, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With today's image we bid farewell to the parent fractal of the 
+; past four days and turn to the fractal that results when the 
+; formula Z^(1.88)+C is iterated 12 levels up the complex logarith-
+; mic hyper-ladder.  This parent fractal is a multi-part one, a 
+; single large Mandeloid surrounded by smaller Mandeloids, with 
+; today's image located in a curling filament extending from one of 
+; these smaller Mandeloids.
+; 
+; After due consideration, I rated today's image at a 6, which 
+; lately has pretty much been the average.  The name "Voice of 
+; Authority" sounds like it means something important.  Actually, 
+; like a piece of modern art, it means nothing at all.  The image 
+; itself is a typical fractured thing that results when fractional 
+; powers of Z are iterated.  I put a little extra effort into the 
+; coloring to bring out the reds and oranges as well as the smooth 
+; beige interior, though I'm not sure what good it did.
+; 
+; The calculation time of 6-1/3 minutes is too slow to be a 
+; bargain.  I recommend viewing the finished image on the current 
+; FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site may be accessed at:
+; 
+;      <http://www.Nahee.com/FOTD/>
+; 
+; The current issue of a leading 'news' magazine has a cover story 
+; about a so-called 'singularity' due to arrive in 2045, when the 
+; machines man has created will become more intelligent than their 
+; creators.  According to the technologists, we will then have the 
+; ability to transfer our unique stream of awareness into machine 
+; bodies, becoming immortal androids.  Of course, those unfortu-
+; nate people who don't live that long or who lack the money to 
+; pay for the process will be left behind in the dust bin of 
+; history.
+; 
+; It's a nice fantasy, but for some reason it strikes me as wish-
+; ful thinking.  Maybe I'm missing something, but as far as I 
+; know, not a single one of these future predictions has yet come 
+; true as predicted.   As for the current prediction, no one has 
+; determined exactly what is the 'stream of awareness' that makes 
+; each of us our individual unchanging selves.  What is it that we 
+; would transfer into the machine bodies?  What stays the same 
+; while the material of the body and the patterns in the brain 
+; constantly change?  Oh well, all I can say is, 'have a happy 
+; dream'.
+; 
+; Monday dawned clear and mild here at Fractal Central, and by 
+; midday the temperature had risen to 54F 12C.  But shortly after 
+; noon heavy clouds moved in and by sunset the temperature was 
+; again down near freezing.  The fractal cats made the most of 
+; the off-and-on sunshine.
+; 
+; The rest of the day was uneventful.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and if your full 
+; faith lies with science and technology, make the down payment 
+; today on your new android body.  (Do people actually believe 
+; this stuff?)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Voice_of_Authority { ; time=0:06:19.92-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.7291715568543372/+0.2177151126790068\
+  /9.079293e+008/1/-135/0 params=1.88/0/12/0 float=y
+  maxiter=12000 inside=0 logmap=414 periodicity=6
+  colors=000KALKAJKAIKAGKAFKADKAEKAHKAEKAHKAJKALKAMK\
+  ANKAOKAPKAQKARKASKATKAUKATKASKARKAQKAQKAQKAQIAQJAQ\
+  KAQKAOLAMMALMAJNAHNAFMADMABL99L8CK8EM8HN8JP7LQ7OS7\
+  QT7SU6VU6XV6_V6aW5cW5fX5hX5jUAicAGXAHcAIUAJcAKRALc\
+  ALOAMUANLAOUFPJKPUPRRUSVZTZdUbgVfiWjlXnnYooYqpZno`\
+  lnbjmdhlefkgdjibij`ilYhnWgoUfzSezQdzOczMbzKczNczPc\
+  zRczTczWczYcz_cza`qbavc`qc_lcZhcYccY_cXVdWRdVMdVId\
+  UDdT9dS4dS0bR4aQ8`PCZOGYOKXNOVMSULWTK_SKcUJKUIKVIK\
+  VHKWHKWGKYGKZFK`FKaEI`EFfDDmDBzE9zW8sC7`A7O87C77FA\
+  9ICALEBNHCQJDTLEWOFYQG`SHcVIfXJkZKoaLtcMweNzgOzgPz\
+  hQzfRxfSveTteUseVrdWqdXpdYocZnc_mc`kbaibbhbchadgae\
+  gaef`fe`ge_hd_ic_jcZkbZlaZmaYn`Yo_Yp_XqZXrYXsYWtXW\
+  uWWvWWwVXxVYxWZwX_wY`wZaw_bw_cw`dxaeybfzcgzdhzeizf\
+  jzgkzhlzimzjnzkozlpzmqznrzoszptzquzrvzswztxzuyzvzz\
+  wzzxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

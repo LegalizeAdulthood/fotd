@@ -1,0 +1,96 @@
+;     Date: Sat, 26 Feb 2011 01:41:24 -0500
+;     From: "Hal Lane" <hallane@earthlink.net>
+;  Subject: [Fractint] FOTD 21-02-11 (The Bottomless Pit [5])
+;       Id: <MDBBJLBFBICIIEIHFBMEEEEDEFAA.hallane@earthlink.net>
+; ---------
+; 
+; FOTD -- February 21, 2011 (The_Bottomless_Pit -- Rating 5)
+; 
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have been having some trouble lately getting Xmission to 
+; accept the FOTD's I send to the Fractint mailing list through 
+; Earthlink.  Apparently, Xmission has put Earthlink on some kind 
+; of blacklist because of excess spam.  We'll see how it goes.  I 
+; have also created a new e-mail address, which I might or might 
+; not switch to, to cut down the amount of spam I receive.
+; 
+; Today's image is a very quick one, showing a minibrot in the 
+; parent fractal that results when the formula Z^(1.1)+C is 
+; iterated 11 levels up the complex logarithmic hyperladder with 
+; no function applied.
+; 
+; I can find little in the image to recommend, which leaves me 
+; with no choice but to rate it at an average 5.  The calculation 
+; time is a very reasonable 43 seconds however.
+; 
+; The minor task of setting up and running the parameter file may 
+; be avoided by going to the active FOTD web site at:
+; 
+; http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html
+; 
+; and viewing the finished image there, for all if anything it is 
+; worth.
+; 
+; The classic FOTD web site may be found at:
+; 
+; http://www.Nahee.com/FOTD/
+; 
+; Lots of sun with a temperature of 36F +2C made Sunday feel quite 
+; seasonable here at Fractal Central.  But the forecast calls for 
+; snow late tonight.  The fractal cats enjoyed the sun while it 
+; was shining.  My day was quite busy getting some chores caught 
+; up.  The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and where is the big breakthrough?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Bottomless_Pit { ; time=0:00:43.11-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident inside=0
+  center-mag=-2.44794736/+2.79046077/1095/1/-90/0
+  params=1.1/0/11/525 float=y maxiter=1500
+  outside=imag periodicity=6
+  colors=000ZOZ`RYbUXdXXf_WhbVjeVlhUnkTomTZgUIaU2WU_\
+  tIWpKTmMQjOMfQJcSG`UDYVMVXUSZaP`iMbqJdyHfwIguJgtKh\
+  rLhqMioNimOjlPjjQkiRkgSlfSleRieRgeReeRceRadRZdRXdR\
+  VdRTdRRcROcRMcRKcRIcRG_UJWXLSZNsjoeVfTGYG1QL3SQ5UV\
+  7V_9XdBZiD_nFarGblDcfBda9eW6fR4gL2hG0iV8phFvgIpgKj\
+  gMdgP_gRUgTOgVJnJfmLbmN_mPXmRTmTQmVNlXJlZGl`Dlb9ld\
+  6lf3lg0cY4VP7MGAE7DI7FM7HQ7JT7LX7N`7Pc7RaBP_EOYHNW\
+  KMUOLSRKRUIPXHN`GLcFJfEHiDGlCKaQORcSHpLTiEdc7oYApW\
+  DqVGrTIrSLsQOtPQtNTuMWvKZwJ`wHcxGfyEhyDgxHgwLgvPgu\
+  SftWfs_frcfrfdmdcicbeb```_X_ZTZXOXWKWVGVUJWUMXUOYT\
+  RZTU_TW`TZaSabSccSfdRieRkfRngRphPqiNqjLrkJrlHrlFsm\
+  DsnBto9to7tp5uq3ur2ur8sqDrqIqpNopSnoXmoVllUljTlhSl\
+  fRlcQlaPl_OlYMkVLkTKkRJkPIkMHkKGkIFkGQfQ`bZkZhvVqs\
+  UqqTqoTqmSqkRqiRqfQqdQqbPq`OqZOqXNqVNq_QqcTqgWqcZp\
+  _apWdpSfpSgpShpRjqRkqRlqRmqRnqRoqRqrRrrRsrRtrRurRv\
+  rQsoPqmOnjNlhMjeLgcVI_XLZ }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

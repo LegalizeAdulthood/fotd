@@ -1,0 +1,95 @@
+;     Date: Sat, 12 Feb 2011 22:06:32 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-02-11 (Halfway to Infinity [6])
+;       Id: <1.5.4.16.20110212220629.139f334c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 13, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies "Halfway to Infinity" in the same parent 
+; fractal that held the images of the past two days.  I'm not sure 
+; where halfway to infinity might be located, since infinity has 
+; no limit and half of infinity must therefore have no limit also.
+; 
+; The image lies on the brink of evaporation.  A tiny increase in 
+; the imag(p3) parameter, which sets the bailout radius, will send 
+; the image over the brink, totally changing its character.  A 
+; huge increase to one-googol or so will result in a totally evap-
+; orated image, which must be made visible by setting the inside 
+; to an active fill such as 'bof61'.
+; 
+; The rating of a 6 is fair enough.  I might have raised it to a 7 
+; or so if I had not been overtaken by an attack of laziness, and 
+; had done more work on the color palette.
+; 
+; The calculation time of 1-1/2 minutes is very near FOTD average. 
+; This brief wait may be avoided by viewing the finished image on 
+; the active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; the original FOTD web site, not up to date, may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Morning clouds were followed by afternoon sun here at Fractal 
+; Central on Saturday.  The temperature reached a high of 37F +3C, 
+; but a stiff wind from the northwest kept things feeling quite 
+; winter-like.  The fractal cats spent most of their time in the 
+; sun.
+; 
+; My day was about average.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and when technological immortal-
+; ity arrives in a half century or so, will it be for everyone or 
+; only for those who can afford to pay the sure-to-be-outrageous 
+; price?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Halfway_ToInfinity { ; time=0:01:31.06-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+2.767698435760548/+0.04501133247478548\
+  /9.565617e+008/1/-110/0 params=-1.1/-11/-11/-1.1/0\
+  /6454426000.0/0/0 float=y maxiter=1500 inside=0
+  colors=000hDgdFZ_HRWJIRLANN2KJ1HG1ED1BA0870540210D\
+  B0NL0YV0gd0qn0lk8hhGdeO`bWX_cTXkPUrOWlOYgN_aNaXMcR\
+  MeMTBDQFHOILMLPJOTHRXFU_oUMZXIIZE1`AEkKRvURsTRqTRo\
+  SRmSRkRRiRRgQReQPaSOZTNWULTWKQXJNYQPTXROaQRbRPbROc\
+  SMcSLcTKdTIdUH4uq2zuAxnHwgPu`WtV`rSdqQhoNlnLplItkG\
+  xjEpeLiaRbYXWUcPQiIMoBIuNToZbijlcdh__dWV`SQYOKUKFQ\
+  GAMC5J8FM7OP6YS5fV4pY3z_3vb6td8rfBzhDnjGllIndNoYRp\
+  QVqJZrN`sRbtVdtZfubhvfjvjllgpcesUcwLazKdtJfoIijIke\
+  Hn`GpWGrRLmTPiUUdWY`XaXYfS_jO`nKaznAT`xKdlCg`4jQK3\
+  WF`PKAZPSOOCR_INLJCEseQ5Zt4AM8Jm7IBGMfAQbZU_DYWFaP\
+  HhTGeM5NZE`L9JeDWK7MkCRO5SmRTM8NnhQL5MnYTL6UnNWS4X\
+  qSfoKanDYktllgglVbzIYs5Zv6Ug6Qh6MW7HH7DI14K79LDDMq\
+  HOPLmzPSYUzzbPbSczzWRFmzJPaMMfQJkTqchdhcSl_8w_GpWN\
+  iSVbPaWLd27fEDhPIj`Ov2frIanXXnnXkkThiQfgNceK`bHZ`E\
+  WZBaqCX3kVISST3TV6UX8VYAW_DXaFzzCYfFYbHYYKXUMXPPXL\
+  RWEUXHTXJSYLRHa4UKVWMSmBo }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

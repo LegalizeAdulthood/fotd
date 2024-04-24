@@ -1,0 +1,108 @@
+;     Date: Sat, 19 Feb 2011 20:42:43 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-02-11 (Out of Order [5])
+;       Id: <1.5.4.16.20110219204240.10871998@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 20, 2011 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; An antiquing expedition did happen on Saturday, and it left very 
+; little time for a proper fractal search.  However, I did manage 
+; to find an acceptable image, (rated a 5), in the parent fractal 
+; that results when the formula Z^(1.99)+C is iterated just one 
+; level up the complex logarithmic hyper-spiral and no function is 
+; applied.
+; 
+; On its surface, this parent appears to be a normal everyday 
+; Mandelbrot set that has been rotated so that its main spike 
+; faces northeast instead of west.  But problems arise on the 
+; negative X-axis, which in today's parent cuts through what is 
+; normally the southeast shore line of the main bay.  Today's 
+; image lies in the mess of discontinuities in this small area.  
+; As would be expected, the image consists mostly of discontinui-
+; ties.
+; 
+; The name "Out of Order" refers to the fact that it is not normal 
+; for the negative X-axis to cut through the southeast shore line 
+; of the main bay of the M-set.
+; 
+; The calculation time of 3-1/2 minutes may be cut to 2-1/2 
+; minutes by resetting the passes to 'g', but doing so will cause 
+; some of the finer detail to be missed.
+; 
+; Both speed and accuracy may be achieved by viewing the finished 
+; image on the current FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site with all the past FOTD images may be 
+; accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Lots of clouds, a strong northwest wind and a steadily falling 
+; temperature made Saturday anything but enjoyable here at Fractal 
+; Central.  When the temperature dropped below freezing late in 
+; the afternoon, the fractal cats took to their shelf over the 
+; heat, where they enjoyed a comfortable evening.
+; 
+; FL and I spent most of the day on an antiquing expedition.  With 
+; the work just about caught up, the rest of the day was unevent-
+; ful.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and be satisfied with less than everything.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Out_of_Order { ; time=0:03:33.75-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.58310178265/+0.00224032835/223521/1\
+  /-105/0 float=y params=1.99/0/1/0
+  logmap=107 maxiter=1750 inside=0
+  colors=000EJK9DD466I6mF5fD4`B3V93P62I41C206oUYiQUc\
+  NQYKMSGINDFHABB67533VTuSQpQOlNMgLKcJHZGFVEDQBBM98H\
+  76D4482243tP2lL2eI1ZF1SC1L90E6073NfhIY_DPR9HI489z3\
+  ku2gq2dm2ai2Ze2W`1SX1PT1MP1JL1GG0CC09806403uvdqram\
+  nZjjXfgUbcS__PWXNTTKPPHLMFIICEEAAB7775332`7nB3lLpl\
+  JlhIheGebFaZEZWCVTBSQ9OM8LJ7HG5ED4A9276133FDnA8Y54\
+  H`P3YN2WL2TK2RI2OG2MF1JD1HB1EA1C81960750430210x8Ts\
+  7Qn6Oi6Me5K`4HW4FS3DN3BI28E1691440264X53U43R42O32L\
+  32I21F21C1191060038vk6lc5bW4TO2JGdAN`BJYBFRAMLATEA\
+  _8AeNPlacrorxjntfkpbhlYehUbdQ_aItsKmnLfiM_eOT`PMWQ\
+  FS865D7EirpU_ZFIHry9nt8jp7gl7ch6_d6X`5TX4PS4MO3IK3\
+  EG2BC1781340guSZiMQYGHNB8B55ld4g`4cY3_U3WR2SN2OK2K\
+  H1GD1CA086043kVD_N9OF6C73gsoXebMZQBcDdhXZmSTrNNvIH\
+  zEBz95z4SzdQzaOzZMzWKzUIzRGzOzzLzzJzzGzzDzzAzz8zz5\
+  zz2zzzzzzzzQzzzzzTzzzzz0zzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

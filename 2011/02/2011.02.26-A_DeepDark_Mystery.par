@@ -1,0 +1,103 @@
+;     Date: Sat, 26 Feb 2011 13:46:37 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-02-11 (A Deep Dark Mystery [7.5])
+;       Id: <1.5.4.16.20110226134633.153f453e@mindspring.com>
+; ---------
+; 
+; FOTD -- February 26, 2011 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; This FOTD will be coming through an indirect route.  But I think 
+; the problem with the blocked e-mail direct to the Fractint list 
+; has been solved.  Earthlink says it will take several days for 
+; me to regain access to xmission however, so I am still not 
+; claiming that the problem has ended.
+; 
+; Today's rather striking image lies in the parent fractal that 
+; results when the simple formula Z^(1.5)+C is iterated 3 levels 
+; up the logarithmic ladder and no function is applied.  This 
+; parent consists of a reasonably recognizable main bay with a 
+; disconnected fragment of a filament lying some distance to the 
+; southwest.  Today's scene lies near a larger minibrot on this 
+; fragment.
+; 
+; Most of the 'striking' effect is due to my coloring, which 
+; explains the extra half point I awarded to myself.  The rather 
+; suggestive name 'A Deep Dark Mystery' refers to the location of 
+; the scene in its parent fractal.
+; 
+; The calculation time of 2-1/2 minutes is almost blazingly fast, 
+; especially considering that the image is not a type=mandel, 
+; which I think uses machine language.
+; 
+; Those who would rather not calculate may view the finished image 
+; on the FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Morning rain and afternoon wind marked Friday here at Fractal 
+; Central.  The fractal cats didn't mind the rain, but they got a 
+; bit skittish when trash cans started blowing around in the after-
+; noon.  The temperature of 37F +3C was near normal for the day; 
+; the wind made it feel much colder however.  The next FOTD is 
+; schedule to be posted in 24 hours.  Until then, take care, and 
+; beware of fraudulent fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_DeepDark_Mystery { ; time=0:02:30.10-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.9990997088247993/-0.8321559193735784\
+  /5.35472e+009 params=1.5/0/3/0 float=y maxiter=4500
+  inside=0 logmap=322 periodicity=6
+  colors=0008A89B9ACABDBCECDFDEGEFHFGIFHJGIKHJLIKMJL\
+  NKMOLNPLOQMPRNQSORTPSUQTVRSWSSXSRYTQZUP_VO`WNaXMbY\
+  McYLdZLe_Ke`Kf`JgaJgbIhbIicHidHjdGkeGkfFlfFmgEmhEo\
+  hDqiDskCumCvoFwqKxsPyuUzwZzxczyhzzmzzrzzzzzzzzcAmu\
+  iGfYCTN8EB49IL4UADg9YTKPLFUEAc75oFSdBFT8BJ57923NYV\
+  BHFqT4_J2I91YH`H8I8b29s9lEXW9MG4BHVWCNz8FG478ANj6F\
+  V37FFCLB9F76AW35pcjjVcVPRFCDANb9Ns52L21A9ZB6N73B3s\
+  `ieRYSINE9BL5RaJFJ97_dU`NyOFdC7KesaVeSLSJAE98ev6Vg\
+  4LT2AEIJS99EnufPTLeSjVLZLENA7BLssASSmBMGhDAU85F4J4\
+  G9280H3081yqvd_bKIJszugkhHJHr6Sz4LR3ED171zo0VQ02F0\
+  17HnhpKPQAC7Tk5L_3EO17CA7a53JL2`F1RA1I509mFmXAXG5G\
+  ri__UOIFCkPM_IGOCBC65P8pE_u9Oa4CJVoxFQUwZqUHRUlETZ\
+  OLQIEHC786lBW_8OO5GC28hyHUdBFK52Do18Y04HXK8MD5B62q\
+  yW`AVO6KC3AxcucQaKDJ1JFFXug2zX1jM1VB0FIZoDQb9HQ48D\
+  0_n0Ra0IP09CZb9HJ4VRiNKYPvLRtLTqLVoLYlL_jLagLceLfc\
+  Lh`LjZLlWLoULqRLsPLuNLqRJ }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
