@@ -1,0 +1,108 @@
+;     Date: Fri, 26 Sep 2014 09:45:09 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-09-14 (Intricate Web [A-8,M-8])
+;       Id: <1.5.4.16.20140926094736.3e6fc1f8@earthlink.net>
+; ---------
+; 
+; FOTD -- September 25, 2014 (Rating A-8,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; While playing with old discarded formulas, I recently stumbled 
+; upon today's image, which must be seen to be believed.  The 
+; image is a slice through a 'dividebrot' Julibrot at an angle 
+; only 0.02,0.02 degrees from the Julia orientation.  The name 
+; "Intricate Web" comes close to describing the scene, but the 
+; word 'web' does not do full justice to it.  The more delicate 
+; parts resemble a spider's web closely enough, while the more 
+; solid parts look more like floating blocks of concrete.
+; 
+; To find the best proportions I did stretch the image somewhat in 
+; the horizontal direction, though not enough to distort the image 
+; or change the overall effect.
+; 
+; The coloring is mostly accidental.  Only a small part of it is 
+; my own creation.
+; 
+; The calculation time of 3-1/4 minutes will pass faster than 
+; expected once the details become apparent.  Of course, the web 
+; sites are always available for even faster satisfaction.
+; 
+; Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today began with cloudy skies and light sprinkles here at 
+; Fractal Central.  But by afternoon the rain ended and the sun 
+; appeared, making the fractal cats and humans quite happy.  The 
+; temperature of 70F 21C could not have been better.
+; 
+; The next FOTD will be posted in time.  Until the time arrives, 
+; take care, and the U.S. president, Mr. Obama, recently stated in 
+; an address to the United Nations that the cause of empire leads 
+; to the graveyard.  Since, his country, the United States, has 
+; over 500 military bases scattered around the world, I wonder 
+; which nation he was talking about.  And I'm a little on the 
+; conservative side.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Intricate_Web { ; time=0:03:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideJulibrot passes=1
+  center-mag=5.51/0/34.5/1.4601/-90/0 params=89.98/0\
+  /89.98/0/-0.77/0/0/0/1.05/1.5 float=y maxiter=600
+  inside=0 logmap=198 periodicity=6 sound=off
+  colors=00033844B66E88HAAKDDNGGQJJSMMUPPWTTYXX_``bg\
+  ghmmmmmpmozorzrzzzzzmmmmmmcccUUUPRoMDUBIBJHARH9ZG8\
+  c32eA5fG7hNAmR0kS6iTCkQ9mNCmQFmTImWLmZOmaRrdUre_rg\
+  bqddpb`q`YrYUtWQwUNzRLzOJzLHzIFzFDzDBzHPzLazOnzHZz\
+  AKzF5zF8zKAzQDzWFzaHzgKzmMzmOzmZzmZzmdzmazmZzmXzhL\
+  zcKzZKzeKzbJz`IzZHzaOzcVze`zhgzjnzltzfqzanzWkzRhzL\
+  ezGbzB`zNkzYvzWizVYzMOzDFvPIr_KmVRZQYcLdZOgUQjPSlK\
+  UoMWlNRfON`PIVQEQK9UO5YS1bb0fl0zeDz_PzT`zNlzrzzjwz\
+  eszUqzPmzQkzN`zKRzHGuF6pJ9kNCkQEpUHuXJz2oz9izFczFp\
+  zFjzFdzFZzFTzFOzJSzMVzPYzT`zWczZfzWezUdzSczQbzObzL\
+  dzJez5szBlzHfzN_zTUzZNzcHz`JzYLzVNzSPzhazaYzWVzQRz\
+  JOzDKz1Bz7HzDMzJRzPWzVaz`fzfkzf8zkpzgozcnz_mzWlzSk\
+  zOjzHlzKjzMhzPfzRdzTbzW`zYZzScz_XzXazVezTjzRnzOMzO\
+  PzORzOUzJ1zLCzMMzOWzPezKyzNtzQozTkzWfzZbzaYzYYz`Wz\
+  bVzdUztRzoSzjTzfTzaUzXVzTVzOWz70zCBzGMzKWzOfzsBzUv\
+  zSpzQjzhqzWhzPdzIazBZz0_z }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d), aa=-(real(p5)-2),
+  bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
