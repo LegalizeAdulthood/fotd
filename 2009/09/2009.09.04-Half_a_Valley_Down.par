@@ -1,0 +1,96 @@
+;     Date: Fri, 04 Sep 2009 18:23:20 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-09-09 (Half a Valley Down [6])
+;       Id: <1.5.4.16.20090904182547.2bbfe9e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 05, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The philofractal version of this FOTD is much longer.
+; 
+; Today's image shows a minibrot of order 1.5.  It lies rather 
+; deep in the Seahorse Valley of the Z^(1.5)+C Mandeloid as it 
+; appears 55 levels up the logarithmic ladder when no function is 
+; applied.  I named the image "Half a Valley Down", a name that 
+; has at least a bit of something to do with its location in its 
+; parent.
+; 
+; The minibrot impresses me as being just a little better than the 
+; average minibrot of order 1.5.  All things considered, I rated 
+; the image at a 6.  At first glance, there appears to be some-
+; thing important just beyond the right edge of the frame.  When I 
+; checked there however I found nothing but an area of bottomless 
+; pits with no minibrots at their centers.
+; 
+; The calculation time of 6-1/3 minutes is rather slow for an 
+; image that rates a mere 6.  I recommend going to the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the completed image there.  Doing this will 
+; eliminate the hassle of running the parameter file.
+; 
+; Friday was totally perfect here at Fractal Central, with blue 
+; skies, light winds, and a temperature of 81F 27C.  The fractal 
+; cats took advantage of the sun, which is now coming in their 
+; window at a more favorable angle.  My day was near average.  
+; With a 3-day holiday week-end coming up, I can't guarantee a 
+; FOTD on every day, but we'll see how it goes.  The next FOTD is 
+; scheduled in 24 hours.  Until then, or whenever, take care, and 
+; believe in reality.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Half_a_Valley_Down { ; time=0:06:20.82-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.02344014694273223/+0.742969732713732\
+  10/361282.8/1/-20/0 params=1.5/0/55/0 float=y
+  maxiter=12000 inside=0 periodicity=10
+  colors=000pSJpSIpTGpTFiULcURYUXSUbLUhFUn9Ut3Uy6Tu9\
+  TrCSnFSkIRgLRdOQ`RQYUPUXPRZPOeS`lVlrYxn_wjavgbvcdu\
+  _ftXgtTisPkrMlrLdpKXoJPnIHlH9kG1jHeqHhjHkdHnYHqSHt\
+  MFsOErPDrQBqS9aU9aU7`W6`X5_Y3Z_2Za1Zb0Zd3_d6`d9aeC\
+  bfFdgHehKfiNgjQikTjlWkmYln_njapgcrdesagsYitVkuSmvP\
+  nvMltPjrRhpUfnWdlZbj``hcZfedcdiadnZdsXdmSahNZcJWZE\
+  TU9QP5NW6Ua7`Z6XW6UT6QQ6NN6JK6GH6CF69G8CGAFGCHGDKG\
+  FMGHPGIRHGSHFSIESIDTICTJATJ9TJ8UK7UK6UK5UKAOKFIKKC\
+  KP6KU1RW6XYAc_FgaJkdRogZsjevmhzkkzhmzclzZlzUlzPlzK\
+  lzHlzFlvClrAlm7lh5lc7kZ9kUBjPDjKFiGGiHJ_ILQJOGJQ6K\
+  VBL_FMdJNiOOnSPsWQx_OnZMdYKVYILXHCXKBTNBQQBNTAJWAG\
+  ZADa99d96g93iKBjVIleQmpXjlWhiWffWdbWa_W_XWYUWWQWUN\
+  WRKWPGWNDWLAWJ7WL9VNBUODTQFSSHRTJQVLQXNPYPO_RNaTMb\
+  VLdXKeZKc_Nb`PaaR`bU_cWZdYYe`XfbWgdVhgUiiTikPchMZf\
+  JUcGOaDJZAEX79VUFaPL_LQZHWYD`W9fV5kU1pT3mR5jP7gN8d\
+  LAaJCZHDXFFUDHRBJO9KL7pRL }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

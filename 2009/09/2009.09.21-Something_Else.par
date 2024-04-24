@@ -1,0 +1,93 @@
+;     Date: Mon, 21 Sep 2009 23:52:02 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-09-09 (Something Else [8])
+;       Id: <1.5.4.16.20090921235444.3807633c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 22, 2009 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to a lack of time, today's discussion will once again be 
+; short.  The parent fractal is the same as yesterday's but the 
+; scene has shifted to a blunt valley of a large hole just to the 
+; northeast of its main bay.
+; 
+; I named the image "Something Else" because it's something else 
+; in the same fractal.  The rating of an 8 might stretch the worth 
+; a bit, (Is the image really better than yesterday's?).  The 
+; minibrot at the center does strike me as above average for the 
+; Z^1.9 range however.
+; 
+; The calculation time of 1-1/4 minutes will pass in a flash.  The 
+; trip to view the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; will pass in a flash also.
+; 
+; The clouds moved in fast here at Fractal Central on Monday, 
+; though the rain held off until well after dark and the 
+; temperature reached a pleasant 75F 24C despite the lack of sun.  
+; The fractal cats ignored the weather, enjoying instead the fresh 
+; catnip rats we picked up on Sunday.  Cassie got a bit tipsy.
+; 
+; My day was uneventful; even the work was humdrum.  If nothing 
+; unexpected comes up first, the next FOTD will be posted in 24 
+; hours.  Until then, take care, and after listening to the 
+; 'music' blaring from a passing car this afternoon, I am left to 
+; wonder why the young people of today seem to enjoy being kept 
+; angry.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Something_Else { ; time=0:01:14.53-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.71021616856/-0.05517047022/443232.9/\
+  1/60/0 params=1.9/0/1/0 float=y maxiter=3200
+  inside=0 periodicity=10
+  colors=000bpGasEZoDWlCTiBRfAOc9L_8IX7GU6DR5AO48L4C\
+  K7FKAIKCMJFPJHSJKWIMZIPaIRbLPbOOcQMcTLcVJdYId`GebF\
+  eeDegCfjAfm9go7gr6gt5bmAYgFT`KOVPJPUEIZ9Cc46h85gB5\
+  fF4eI4dM4cP3bT3aW3aZ2`b2_e1Zi1Yl1Xp0Ws0Vv0Vr5To9Rl\
+  EPhIOeNMbRKZWJW_HTdFPhEMmCJqAGu9CnI8gQ4`Y7_V9ZTBYR\
+  DXPFWNGWTHWZHWcKVdMVdOVeQVeSVfUVfXVfZVg`VgbVhdVhfV\
+  hbYgZ`gVbgRegOhfKjfGmfCpf9rfAngAjgBfgBbgCZgCVgDRgD\
+  NgEJgEFgFBgF7gL9jRBlXDobEqhGsnIvtKxyLzwKwvJttIrsIo\
+  rHlpGjoFgmFdlEbkD_iCXhCVfBSeAPdANcDQcGScIVbLXbN_bQ\
+  aaTdaVfaYi`_k`bn`dpZfkXhgVjcTl_RnWPpRNrNLtJJvFHxBF\
+  z7RhKbRWgAggJ_`STU`LNszOuzPhPQgURlzSozTfiUeoSexWiy\
+  UdxScxQbwOawMavK`vI_uGZuEZuFXsGVqHToHRmIPkJNiJLgKJ\
+  eLHcMFaMD_NBYO9WO8UN7NN7HN7BMDELIGKOJJTLIYOHcQGhTF\
+  mVJiSNeQRaOUYMYUJaQHeMFhIDlEApA8t66w24s36o48k49g5B\
+  c6C_6EW7GS8HO8JK9KGAMCAO8BP4CR1CS5HV8LYBP`EUbHYeKa\
+  hNejMdgMceMbcMa`M`ZL_XLZU }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

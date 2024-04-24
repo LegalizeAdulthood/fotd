@@ -1,0 +1,99 @@
+;     Date: Wed, 23 Sep 2009 17:49:58 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-09-09 (Bubbles in the Blue [9])
+;       Id: <1.5.4.16.20090923175242.22e7cfd4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 24, 2009 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A FOTD fractal with a rating of a 9 is a rare beast, but today 
+; we have one, a welcome relief from the string of 6 and 7 rated 
+; images.
+; 
+; The parent fractal came about when I subtracted 0.2 part of 
+; Z^(-7) from 0.2 part of Z^3 and added (1/C).  This parent 
+; resembles nothing as much as a network looking like an overdone 
+; pancake with various shaped holes scattered about.  The largest 
+; hole is a twisted Mandelbrot set with a wedge pointed at its 
+; East Valley.  Today's scene is located on the shoreline of this 
+; wedge.
+; 
+; The unusual effect was achieved by rendering the scene with both 
+; the outside and inside set to 'fmod' with a proximity of 1.  The 
+; image is divided about 50-50 between inside and outside parts.
+; 
+; One glance at the image will show why I rated it at a 9.  A 
+; second glance will explain the name "Bubbles in the Blue".
+; 
+; The calculation time of just over 1 minute will make taking the 
+; glances a very brief task.  But there are always those overquali-
+; fied computers that will not run DOS fractint.  Those with such 
+; units may view the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; My Wednesday ponderings were on the four-dimensional phenomenon 
+; known as double rotation, where an object such as a hypersphere 
+; may be subject to two totally independent and distinct rotations 
+; at the same time.  Of all the unvisualizable things possible in 
+; 4-D space, this is perhaps the most intriguing, for unlike most 
+; other 4-D stuff, it has no analog in 3-D space.
+; 
+; Morning sun gave way to afternoon clouds here at Fractal Central 
+; on Wednesday, while the temperature reached a summer-like 82F 
+; 28C.  The fractal cats are still more concerned with their power-
+; ful new catnip rats than the weather.
+; 
+; My day was about average.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and what we need is a fractal tea 
+; party.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Bubbles_in_theBlue { ; time=0:01:07.12-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.110714075944/+0.083632827962/4955856\
+  /1/87.5/0 params=-0.2/-7/0.2/3/0/0/0/0 float=y
+  maxiter=500 inside=fmod proximity=1 outside=fmod
+  logmap=yes periodicity=10
+  colors=000zzzvyvrxrmwmhvmcumZtmUsmPrmKqmFpmAom6nm6\
+  mm6mm6mm6lm6lm6km6km6jm6jm6im6im6hm6hm6gm6gm6gm6fm\
+  6fm6fm6fm6em6em6em6em6dm6dm6dm6dm6cm6cm6cm6cm5bm5b\
+  m5bm5bm5am5am5am5`m5`m5`m5`m5_m5_m5_m5_m5Zm5Zm5Zm5\
+  Zl5Yk5Yj5Yi5Yh5Xh5Xh5Xh5Wh5Wh5Wg5Wf5Ve5Vd5Vc5Vb5Ua\
+  5U`5U_5UZ4TZ4TZ4TZ4TZ4SZ4SZ4SZ4SZ4RZ4RZ4RZ4QZ4QZ4Q\
+  Z4QZ4PZ4PZ4PZ4PZ4OZ4OY4OY4OY4NY4NY4NY4NY4MY4MW4MW4\
+  LW4LV4LU4LU4KT4KT4KS4KR3JR3JR3JP3JO3IN3IM3IL3IK3HI\
+  3HG3HE3HC3GB3GA3GA3FA3FA3FA3FA3EA3EA4EA6EA8DBADCCD\
+  DEDEGEFIEFKEFMEFOFFQFFSFFUFFWFFYFF_FP`FPaFPbFPcFPd\
+  FPeFPfFPgFPhFPiFPjFPkFPlFPmFPmCQnEPnFPnGPnHPoJOoKO\
+  oLOoMOpNOpPNpQNpRNqSNqUMqVMqWMrXMrYMr_Lr`LsaLsbLsd\
+  KseKtfKtgKthKtjJukJulJumJupIvsIvvIzzmzzzzzmvvItrIs\
+  oIrmIpkIoiImgIlfIkdIibIh`IgZIeXIdVIbTIaRI`QIZOIYMI\
+  WKIVIIUGISEIRCIQBISCHTDGUDGWEFXFFYFE_GE`HDaHCcICdJ\
+  BpKMnKNmJOlJPjIQiIRgHSfHT }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

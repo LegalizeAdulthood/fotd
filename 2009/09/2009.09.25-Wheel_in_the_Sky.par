@@ -1,0 +1,83 @@
+;     Date: Fri, 25 Sep 2009 23:36:24 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-09-09 (Wheel in the Sky [8])
+;       Id: <1.5.4.16.20090925233908.2b9fddc6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 26, 2009 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's hasty image combines various unlikely negative portions 
+; of Z^(-1.05) and Z^(-5.5).  When (1/C) is added, the resulting 
+; parent fractal is a grossly oversized thing consisting of a 
+; nearly circular main bay with a kind of dimple on its eastern 
+; edge.  Today's image is located in a bit of fractured chaos in 
+; the vicinity of this dimple.
+; 
+; The extreme magnitude of the image makes the mathtolerance entry 
+; necessary.  The name "Wheel in the Sky" was the first phrase 
+; that came into my head when the time came to name the image.  
+; It might also be the name of an old song.  The rating of an 8 
+; indicates that I think the image is pretty good.
+; 
+; The calculation time of 8 minutes is slightly dragging, but the 
+; trip to the FOTD web site, where the finished image is posted, 
+; is much faster.  The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A sunny day with a temperature of 70F 21C was just what the 
+; fractal cats ordered here at Fractal Central on Friday.  They 
+; were totally satisfied with the afternoon sun.  My day was 
+; rather busy but otherwise acceptable.  The next FOTD will 
+; probably be posted in 24 hours.  Until next time, take care, 
+; and it's double or nothing.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Wheel_in_the_Sky { ; time=0:08:04.83-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-3.216611489264435/+0.5748460602506144/\
+  2.053771e+012/1/51.5/0 params=-2.475/-1.05/-0.275/\
+  -5.5/0/0/0/0 float=y maxiter=12000 inside=0
+  periodicity=10 mathtolerance=0.05/1
+  colors=000hfcfdbecadb`ba_a`Z`_YZZXYXWXWVVVUUUTTTSS\
+  SRQRQPQPOOOMNNLMMKLLIKKHJJGIIFHHHJJJLKLMMMONOPOQRQ\
+  RSRTUSVWUWXVYZW__YaaZbb_ddaffbggciielkgnniqpltsnww\
+  wxxxyyyzzzyyysssrrrmmmmmmamlemljmlnhlrhlmhlihmfhmc\
+  hm`imYimVinSjnPjnLjnIknFkoCkp9lq6lr3ms0nt2nu4nv6ow\
+  8oxAoyCnzElzFjzHiyJgwLfuNdsPcqRcoSbmUamWamY`m__ma_\
+  mcZmdZmbYlaXk`Wj_WiZVhYUgXUfVTeUSdTScSObRQaQM`PF_N\
+  LZMAYLJXKAWJHTIAUHARGASDA9FACHFFKGKMHPRIUUKZYLc_Lh\
+  cMmfMrhNvjNzmOzpOzsOzvOzuOzlHtgGobFiYEdTDZOBUKAOG9\
+  JC8D87846355555655855955A55C55D54F54G54H54J54K54M5\
+  4N54OA8PFCQKGRPKRUOSZSTcWUgZUfYTfYTb_W_`YWa_TcbPdd\
+  MefBSIBTJBUJAUKAVKAWLAXLAXLBWMCVNCUNDTODSPERPEQQFM\
+  RGIR0ES0AT00T00P00A00Y00A00c00ALEmMDZMCmLDYKUzJDYJ\
+  EmIEYHUzGFXGFmFFXEUzDGXDGmDESDDmDCmDBmDAmD96D82F76\
+  H79J6CL6FN5IP5LR4OT4RV3UX3XZ2_`2bb1ec1hb3ga5f`7e_8\
+  d_AcZCbYEaXFaeRSfVVgZYhb` }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

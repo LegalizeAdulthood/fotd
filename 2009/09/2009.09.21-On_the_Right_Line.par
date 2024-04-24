@@ -1,0 +1,94 @@
+;     Date: Mon, 21 Sep 2009 16:36:35 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-09-09 (On the Right Line [7])
+;       Id: <1.5.4.16.20090921163916.2c27c8ee@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 21, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; This FOTD is late because FL and I took an antiquing expedition 
+; to Lewisberry on Sunday.  It's not an excuse; it's just an expla-
+; nation of the lateness.
+; 
+; Today's better-than-average image lies on a filament extending 
+; from the large period-2 bud of the largest minibrot on the main 
+; stem of the parent Mandeloid, which not surprisingly is shaped 
+; like the minibrot at the center of the frame.  This parent was 
+; created when I calculated the formula Z^(1.9)+C at one level up 
+; the logarithmic ladder when no function is applied.
+; 
+; Since time is at a premium, I'll let the image do most of the 
+; speaking for itself.  (I think it's one that can speak for 
+; itself.)  The rating of a 7 indicates that I consider the image 
+; to be worth the 1 minute, 33 seconds needed to run the included 
+; parameter file.
+; 
+; The finished image may also be viewed already calculated on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; which is the simplest way to see the image, but I'm not sure you 
+; will hear it speaking for itself if you view it this way.
+; 
+; Lots of sun and a temperature of 73F 23C here at Fractal Central 
+; on Sunday gave the fractal cats lots of time to stretch out and 
+; relax while we were away.  The rest of the day was uneventful.  
+; The next FOTD will be posted as soon as I finish it.  Until 
+; then, take care, and where does an event go after it happens?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+On_the_Right_Line { ; time=0:01:33.16-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-1.102794620148859/+1.459219711739321/\
+  6.156207e+010/1/30/0 params=1.9/0/1/0 float=y
+  maxiter=2500 inside=0 logmap=126 symmetry=none
+  periodicity=10 mathtolerance=0.05/1
+  colors=000_F_ZFZYFYXFXWFWVFVTFURFTOFRLFPIFNFFLCFJo\
+  _7aT8OM8C79BC8FTEGQDSOCaMBcKApI9azKXoISeGOZEJTCEMA\
+  zzKmjHWaELQBnp3UY6xY4gS6RM779q9DVnC8zP8mE8XE8RF8LF\
+  8FG8SIkOHcKHWHGODGG8Nn9JTpNWVJKnNc`KTNIIC5moLlzHjx\
+  OewV`vaXthSsoNrvJmtMhsPcrSZqVUpYPo`LncUjYafTibNqZI\
+  yWDrSGkOIdKKYGMRCPK8RD4T71VFA`MJfURl`_rggwaemWccRb\
+  VNwiMrgLnfLjeKfdJbcJZbBI8GSSDMI9V7AT8AR8AP8AN8AL8A\
+  J8AH88jc9_TAQIRlVMcPIWJEODLHNIGKGGHEGECGB`axVXmQTb\
+  KOTFKIyOulMh_KXNIKem4`h5Wc6SZ6NU7JP7EK8bscXkcRccLW\
+  cFOcJZcHWcGUcFUcEUcDUcCUcBUcGUcEUcDUcBUcgUcbVcZVcV\
+  VcRWcMWcIXcEXcSYcPYcMYcKZcHZcFZcCZcocaQcfKcVFcJ`ca\
+  VcWQcQKcKFcEUcYRcUOcQLcMIcJFcFCcBzr4zl5zf6za6zz7zz\
+  7zz8zzGzzDzzAzzVGrzFszEtzDuzCvzBwz0xz3yz5zz8zz8zz9\
+  zzxzz8zz8zz8zzzzEzzGzzGzzGzzGzzGzzGzzGzzGzzGzzFzzD\
+  zzCzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,98 @@
+;     Date: Wed, 09 Sep 2009 22:23:50 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-09-09 (Bubbles in the Void [7])
+;       Id: <1.5.4.16.20090909222622.2a8f2922@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 10, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A very busy day on Wednesday means a brief discussion.  The 
+; fractal image lies in the parent fractal that is created when 
+; negative Z^(1.5) is mixed with negative Z^(-5.5) and straight C 
+; is added.
+; 
+; This parent fractal is a somewhat distorted Mandelbrot set 
+; rotated 180 degrees, with a disk surrounded by area of interest 
+; off to its west.  Today's image lies in one of these interesting 
+; areas. 
+; 
+; Most of the worth in today's image was achieved by rendering it 
+; with the outside set to 'tdis'.  But even then, I could rate it 
+; no higher than a 7.  The name "Bubbles in the Void" refers to 
+; the appearance of the image.
+; 
+; The calculation time of a superluminal 23 seconds means that the 
+; image will finish before it is started.  This will give the 
+; fractalist an early view of what will appear on the screen and 
+; give him a chance to decide not to do the calculation.
+; 
+; Hmmm....something seems wrong here, but regardless, another 
+; simple way to view the image is to view it in finished form on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; I had intended to write some political philosophy here, but 
+; luckily I counted to 10 and decided to remain quiet.  But I just 
+; couldn't resist putting a brief comment at the end.
+; 
+; Heavy clouds but no rain kept Wednesday boringly dreary here at 
+; Fractal Central.  The temperature of 75F 24C was the only thing 
+; not boring.  The fractal cats had quite a bit of excitement 
+; however when two beat-up tomcats met and got into a shouting 
+; fight in the yard next door.  When the loser slinked away in 
+; defeat, the victor sprayed the area generously.  I hope the rain 
+; comes soon.  (Don't ask why.)
+; 
+; But even if it doesn't rain the next FOTD will be posted in 24 
+; hours.  Until then, take care, and anything that seems too good 
+; to be true probably is -- including presidents.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Bubbles_in_theVoid { ; time=0:00:23.94-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=+1.095446005963/+0.763733641913/8393119\
+  /1/-2.5/0 params=-1/1.5/-1/-5.5/0/0/0/0 float=y
+  maxiter=1800 inside=0 outside=tdis periodicity=10
+  colors=000J`QKdPgiT`bUVWUOPVIIVBBW54W96ZC8`GAcJCeN\
+  EhQGjVHf_IbcIZRYfFlnPhsOggOgWNgKNg9Lh7Ki5Jj3Ik2Th9\
+  ffFqcLzaRwWViRYfMaWHdFChCEkAG`C8QEAFGCKIGOKLTMPXOR\
+  aLSeJTiLUhNUhPUhQUhSWhUYhW`h_chfhhmmmrrrvvvzzzOoqN\
+  koMhmLekKbiJZgIWeHTcGQbSUWcYPn`JodHpgFqjDrmCpkAoj8\
+  ni6lg4kf2je1nlBrsLuzVjiK_TAPD0LJ5HOAETFAYK6bP3gTCa\
+  QKXNSSK`NHhIEpDBx88nDEdHJVMPLQUCUZAX_8Z_6a_5c_9ZRC\
+  VJGQBJM3QRDXVNcZWjceqgoxkxpUugRiZOZQMOHJD8H2UbCnxL\
+  osIonGojDoeBoa8oX6oT4cdUSpsXiq`coeYniSlnMkrGivAhp9\
+  aj8Wd7P_7JbPRefZgwe_UmT0ttJuoIqjHnfGkaGgYFdTEaPEZ_\
+  9Wi5UpHRwTPmMZcFgU8pK1yOBoRLfUUYYcO`mFcv6bpAakEafI\
+  ``L`WP_RTqJdlKahL_dLY_MWWMUSNSX3gSDZONQGP4HR8ITBJV\
+  EKXHLZK9NFESIIWLM_NQcQVhTZlVbpYft_VjOGOpP_4M`8JaCH\
+  bGEcKCdO9eS7fVSTnUQlVOjWMhXKfYIdZGb_E`SAV`CZiDbvBQ\
+  tCWsD`qEfpFknGqyIQsHfmGvjKogNhdRaaUVZXOW`HTcAbbnXd\
+  RRf3OaAMYGKTNHKUIPTITSJXR }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

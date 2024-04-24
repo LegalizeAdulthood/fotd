@@ -1,0 +1,86 @@
+;     Date: Sun, 06 Sep 2009 23:18:01 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-09-09 (Cause and Effect [4])
+;       Id: <1.5.4.16.20090906232030.2bcffc96@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 07, 2009 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal lies in the parent fractal that comes about when 
+; various portions of Z^(-1.414) and Z^(-4.414) are mixed together 
+; and (1/C) is added.
+; 
+; I rated it at a lowly 4 because even after all the work involved 
+; in finding it, I ended up disappointed.  The name "Cause and 
+; Effect" implies that I was pondering some abstruse philosophical 
+; conundrum while the fractal cooked.
+; 
+; Worst of all, the calculation time of 18 minutes is about 1100 
+; times as long as yesterday's, yet the resulting image is only 
+; 1/10 as good.
+; 
+; Luckily, all the frustration may be avoided by visiting the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the completed image there.
+; 
+; Lots of sun and a temperature of 81F 27C made Sunday a day to be 
+; enjoyed here at Fractal Central.  The fractal cats tried lying 
+; on their window shelf, but it was still too warm to enjoy the 
+; increasing sun there.
+; 
+; My day was average, which means boring, but is the way I like 
+; it.  The next FOTD will be posted in 24 hours.  Take care, and 
+; religion tells us the universe began when God said 'let there be 
+; light'.  Science tell us there was a big bang.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cause_and_Effect { ; time=0:18:11.31-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=recip inside=0
+  center-mag=-0.19386319223/-1.76480211712/230000/1/\
+  120/0 params=-4.4/-1.414/-1.4/-4.414/0/0/0/0
+  float=y maxiter=14500 logmap=-1600 periodicity=10
+  colors=000AWIFZOLaUQd_Wge`jkelpamjZneVo_SpVOqPLrKI\
+  rFLpGNoHPmIRlJTkKViKXhLZgM`eNbdOdbOfaPh`QjZRlYSnXS\
+  oWUpVWqVYrU_sUatTbuTdvSfwShxRjyRktQfpQblQZhQVdPR`P\
+  NXPJTPFWOEYOD_ODaOCcOBeOBgOAjO9lO9nO8pO7rO7tO6vO5x\
+  O5vS9uVCtZGsaJreMqhQplTooXns_mvblqdkmejifiehhaihYj\
+  j_ck`YlaSnbMocGpdAsdNvd_ydlxeixffwgcwhawiZvjWvkUvl\
+  RumOunLuoJtpGtqDtqBupEuoGunIvmKvlMvkPvjRwiTwhVwgXw\
+  f_xeaxdcxcexbgvaduaasaZr`Xp`Uo`Rm`Ol_Mj_Ji_Gg_DfZB\
+  dZ8cZ5bZ3`Y5ZX7YX9WWBVVDTVERUGQTIOTKNSMLROKRPMLJOF\
+  EQ99NFBLKDJPFHVGF_ICdKAjL8oN6tP4yQ7wR9vRBuREsRGrRI\
+  qRLoRNnRPmSSkSUjSWiSZgS`fS`k_`k_XjYUhXQgVMfTIeREcP\
+  AbN6aL3`K6ZN9XQBVTETWGSZJQaLOdOMgQLjTJmVHpYFs_EuYJ\
+  qXNmVSiUWeT_aOdVJhPElI9pC4t67aNAJc9Ie9Ig9Ih9Ij9Ik9\
+  Im9In9Ip9Ir9Is9Iu9Iv9Ix9Iy8Ti8bV8lF8v07q36l66h95cC\
+  5_F4VI3QL3MO2HR2DT7GSCJSGMSLPSPSRUVRYYRb`RfcQkfQoi\
+  QtlQxnQthPpbO4YC4WC4UC4TC }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

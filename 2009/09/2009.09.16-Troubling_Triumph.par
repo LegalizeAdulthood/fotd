@@ -1,0 +1,99 @@
+;     Date: Wed, 16 Sep 2009 18:01:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-09-09 (Troubling Triumph [7])
+;       Id: <1.5.4.16.20090916180417.2b7fe66a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 17, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The name "Troubling Triumph" refers to my success in finding 
+; today's scene, which is interesting enough but has its problems. 
+; To start, it's a rather pleasant though slightly gloomy scene in 
+; the parent fractal that arises when Z^4 is mixed with twice as 
+; much Z^3.  But look closely.  The central quadratic minibrot 
+; lacks the usual 2,4,8... symmetry.  In fact, the outer symmetry 
+; seems to be 6,12,... while within this range there is little 
+; symmetry at all.  The whole affair is indeed a bit troubling, 
+; thus the name.
+; 
+; The rating of a 7 continues the unbroken string of similar 
+; ratings.
+; 
+; The little mathematical problem does not detract from the image, 
+; and with its blazingly fast calculation time of 23 seconds there 
+; is no reason to miss its curiosities.
+; 
+; Those with not quite enough curiosity to set up and run the 
+; included parameter file may still see the image by going to the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing it there.
+; 
+; I was undecided whether to tackle science, religion, politics or 
+; the paranormal in my philosophical outburst today.  On all these 
+; topics I have strong views, most of which are not very popular.  
+; So I waited for FL to say something that would get me started on 
+; one of them.  When the day passed without a comment, I decided 
+; to write nothing.
+; 
+; The clouds slowly thickened here at Fractal Central on Wednes-
+; day, but the temperature reached 72F 22C and there was just 
+; enough sun at the right time of day to satisfy the fractal cats, 
+; who took turns on the shelf in the sunny southwest window.  My 
+; day was appropriately busy.
+; 
+; The next FOTD will be posted in 24 hours, with or without the 
+; accumulated wisdom of the better part of a lifetime.  Until 
+; then, take care, and I wonder why different people accumulate 
+; such contradictory wisdom during their lives.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Troubling_Triumph { ; time=0:00:23.16-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-0.35203885984/-0.00077531473/322693.7/\
+  1/-75/0 params=1/4/2/3/0/0/0/0 float=y maxiter=1500
+  inside=255 logmap=45 periodicity=10
+  colors=000d0Lc0Ma0N_0OY0PW0QU0SR1UO2WL3YI4_F5aA6c4\
+  7e88cB7ZE5QI4LL2GO1BR06YUJdwWWkPgjbO_JGOC8C656E45C\
+  34A338237125113001emaZdVSXPLPJEKC7G6mzzZkgQ_XHOM8C\
+  BrqQhhL__HRRDII8994m`rfWk`RdVNYPIRIDKC9D646dtfZl`U\
+  eWPZQKSLFLGAEA575BzL9oH7eE5VA3L71A3szJkqGchDW_AOR8\
+  GI5892RMyNJqKGiGDaDBVA8N65F327FI2CF1AC1791560230AM\
+  08J07G06D05B0380250120JzkEj_9VO4FCrigjb`bWVVQPNJIF\
+  DC7669LF7HC6EA4A7375132NoZIdSDVL9KE4A7ejmX`cPSUGIK\
+  89AtLCjHAaE8SA6J74932SEDLA9E76733qCfjA`c9WX7QR6LK4\
+  GD3A615JfeEWV9LL4AA4Vf3Q_2MU2HO1DI18C046TV0OQ0KM0G\
+  H0CD0880440rc1RK0GCmDAdA8X86P54G228`ZAVU8QP7LK5FF4\
+  AA2551cHpUCbK8QA4Dm2zP1V62Z51T41N31H20B105AHS7CL58\
+  E247QhmK_cFRUAIK59AvPfbGSJ8EpbHxGsU8S5OnUDgOAZI7QC\
+  5H628mSyNEJF9C746h`X`URUOMMIGFCB765Gp5AZ35H1TWNOQJ\
+  JLFEGB9A7453xUvkOj_IZOCNC6BwmAof8h`7`V6UP5MI3FC2Pu\
+  WBtICnJDhJEbJFXJGRJHLJzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
