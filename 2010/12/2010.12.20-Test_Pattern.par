@@ -1,0 +1,105 @@
+;     Date: Mon, 20 Dec 2010 22:12:37 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-12-10 (Test Pattern [6])
+;       Id: <1.5.4.16.20101220221241.10bf4ccc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 21, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a minibrot of order 1.1.  For some reason I 
+; continue to search for interesting minibrots down in this range, 
+; even though I rarely find anything worthwhile.  (Today's image 
+; shows a rare exception.)
+; 
+; The parent fractal of today's image came about when I calculated 
+; the formula Z^(1.1)+C at a level 11 turns up the logarithmic 
+; hyper-spiral with no function applied.  This parent is shaped 
+; like a cut-off parabola with a few areas of chaos along its 
+; edges.  Not surprisingly, today's image is found in one of these 
+; chaotic areas.
+; 
+; I named the image "Test Pattern" because of the flat, highly 
+; colored, sharp-edged shapes filling it, which might be only a 
+; test of what might lie deeper in the parent.  The rating of a 
+; humble 6 indicates that I do not consider it one of the better 
+; FOTD images.
+; 
+; With a calculation time of a mere one-minute however, the image 
+; is worth the effort despite its modest achievements.
+; 
+; Calculation may be totally avoided by viewing the finished image 
+; on the currently active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; might not be up to date, but it is worth a quick check.
+; 
+; A mix of sun and clouds, with a high temperature of 34F +2C, 
+; made Monday pretty close to normal here at Fractal Central.  The 
+; fractal cats spent their time alternating between the shelf over 
+; the heat and the shelf by the window, which is also pretty close 
+; to normal.  The rest of the activity at FC was totally routine.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and maybe we're all serfs, laboring on the lands of our 
+; overlords, the big corporations.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Test_Pattern { ; time=0:01:04.05-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-2.447903993/+2.790388926/4195/1/75/0
+  params=1.1/0/11/0 float=y maxiter=10000 inside=0
+  logmap=87 periodicity=6
+  colors=000C4FB4E93C83A628527415213101_OEOKCBHA9D86\
+  A6464232zuTmpQclOUhMKzzAln9Xc8TU6OK5KA4G83C6284142\
+  HZ`FVXDSUCPQzz09JK0m06CD49A366133zcyG_zaWlCSfAO`9K\
+  V7GO5CI38C146q5gm4ci4`e3Ya3VY3SU2PR2MN2IJ1FF1CB197\
+  06303wA5r94m84i73d63_63W52R42N31I31D219104001UZ0PT\
+  0KN0FH0AB055pHfjFadDXZBST9NN7JUGQUIPVKOVMMVOLWQKWS\
+  JWUIVVLVVOVVRUWTUWWUWZUW`TXcTXfTXiSYkSYnSYqSYsVVgX\
+  TW_RKaP8jGNr8`z0zu4zq7zmBziEzdHz`LzXOzTSzOczKczGcz\
+  Ccz8czAczCczEczFczHczJczKczMczOczPczQczQmzQmzQmzRm\
+  zRmzRmzRmzRmzOmz6mzMmzJmzHmzEmzCmz9mz7mz4mz2mzFmzA\
+  mz5mzWmzGmzkmzemz`mzWmzQmzLmzGmzAmz5zzzzzuzzqzzmzz\
+  izzezz`zzXzzTzzPzzLzzGzzCzz8zz4zzIzzDzz9zz4zz8zz6z\
+  z4zz3zz1zzrzz_zzIzz1zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zzqzzRzzWzzOzzGzz8zz\
+  MzzIzzEzzBzz7zz3zzTzzPzzMzzJzzGzzCzz9zz6zz3zzJzzCz\
+  z6zzMzzKzzJzzHzzGzzFzzDzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

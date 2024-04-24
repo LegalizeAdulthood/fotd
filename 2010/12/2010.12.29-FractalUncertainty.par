@@ -1,0 +1,97 @@
+;     Date: Wed, 29 Dec 2010 22:21:11 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-12-10 (Fractal Uncertainty [?])
+;       Id: <1.5.4.16.20101229222119.10ef8c0a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 30, 2010 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has a strange look about it.  In fact, the strange 
+; look is all the image has going for it.  The grainy effect is 
+; due to the magnitude of the image being beyond the limit of math-
+; ematical precision.  The name "Fractal Uncertainty" expresses 
+; this imprecision.
+; 
+; The parent fractal was created when I calculated the formula 
+; Z^(1.75)+C eleven turns up the complex logarithmic hyperspiral 
+; with no function applied.  The image could be a troublesome one, 
+; since there is no guarantee that the accuracy will fail in 
+; exactly the same way on all machines.
+; 
+; Since I'm not sure what will result when the parameter file is 
+; run on different machines, I could give the image only a rating 
+; of a question mark.  To be sure of seeing the correct image, I 
+; suggest viewing it on the currently active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The traditional FOTD web site may still be accessed at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; but it is not yet up to date.
+; 
+; The temperature reached 40F 4.5C here at Fractal Central on 
+; Wednesday, which was the warmest in almost a month.  The fractal 
+; cats leaped to their window shelf as soon as the sun reached it, 
+; and stayed until the sun moved on several hours later.
+; 
+; The humans' day was about average -- dull but peaceful.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and maybe we're all merely Boltzmann brains.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FractalUncertainty { ; time=0:05:24.72-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.7800606505427/-0.1605412639414543/\
+  1.082816e+013/1/-17.4/0 params=1.75/0/11/0 float=y
+  maxiter=1500 inside=0 mathtolerance=0.05/1
+  colors=000OESKBNG9JC7E84942zfUbLFJ2_j1Ub1OV1IN0CF0\
+  67ELVAFN7AF3570IK0EG0AC078034zQz9cXU005DU00I000qtD\
+  zz6kZqaSfSLWJEL97ASl8IW59G2Ei1Cc0AY08S07N05H03B015\
+  0OUMzKE8A7c`nQOYHGREFVCE_9Dc6Ch4Bl8JjBQiFXhIcgJ271\
+  jV9lPGnKNoFVqAas5ht0jm6lfCn`IoUNqNTsHZuAdv4ikNWadI\
+  Sv5KJ9JMFJOKIRQITVHW`HYeH_jIbcJeXJhRKkKKnELq7Ls1Ef\
+  J7V_0JpFErT9sf4ut0v10g93fG6fN9eVCeaFdhIdoKdqFjsAou\
+  5tv0yw4ox8fyCXzFO3A7qCKhAH_8DR6AI46923MbuBJTrsljke\
+  bcZVWSNOLFGE787uRZfKQTDHz68lbNzQFzD7zE6zC58z4z835z\
+  2z41120cG1K80vMUjHOZDIz8Cz46frTYgNPXHHMB8B5LzxFByB\
+  8i75V32FVntPejKYaFPSAHJ5z9qfHhZE_SBRL8IE5972rJdR9K\
+  BHQ9EL7BH58D3581243vY2lS2bM1TH1Jz095TarEJRW`3RV2MQ\
+  2IL1DF19Az450ezkLVOTv5Nj4HZ3BN25B17w7zc42K2zDHmAD`\
+  7AP56z23zQQ0HH088Cp`FZ5BQ37H2381TOtPLlLIeIFZzCSA9L\
+  76Ez375CD4AB399378266144133011rUnOpPIbICQC6D6m1TWO\
+  fRK_MHUIDODAI96C436WJaSGX }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

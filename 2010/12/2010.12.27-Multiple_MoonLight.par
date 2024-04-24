@@ -1,0 +1,100 @@
+;     Date: Mon, 27 Dec 2010 22:09:27 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-12-10 (Multiple-Moon Light [8])
+;       Id: <1.5.4.16.20101227220932.12ef96d2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 28, 2010 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "Multiple-Moon Light", implying light from 
+; multiple moons.  The rating of an 8 might be a little liberal, 
+; but what the heck, it's a rather pleasing and peaceful image to 
+; meditate upon, so why not give it a rating of 8?
+; 
+; The formula behind the peacefulness combines 8 negative parts of 
+; Z^(-1.5) with one negative part of Z^(-5.5), then adds (1/C).  
+; The resulting parent fractal is a north-south string of large 
+; irregular bays, with a cut-off ring just south of the main mass 
+; of bays.  Today's scene is located in the interior of this cut-
+; off ring.
+; 
+; Actually, the image is 'evaporated'.  The escape radius of one-
+; googol makes sure that all outside parts have evaporated.  The 
+; scene consists entirely of 'bof61' inside fill.
+; 
+; The calculation time of 33 seconds will pass in a flash for 
+; those who run this letter as a parameter file.  Others will need 
+; to surf electronically down to the currently active FOTD web 
+; site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; where the finished image will soon be posted.
+; 
+; The original web site at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; is presently inactive, but will be brought up to date when Paul 
+; gets back on his feet.
+; 
+; The generous sunshine here at Fractal Central on Monday was 
+; nullified by a temperature of 25F +1C and a strong blustery wind 
+; from the north.  The Sunday evening snow amounted to a whopping 
+; trace.  The fractal cats, who are indoor cats and never concern 
+; themselves with outside conditions, were quite happy all after-
+; noon on their sunny shelf in the window.
+; 
+; The humans' day featured getting back into the everyday routine, 
+; which took very little effort.  The next FOTD will be posted in 
+; 24 hours.  Until then, take care, and activate your chi energy.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Multiple-MoonLight { ; time=0:00:33.34-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=+0.0784946918398598/-2.088888523004933\
+  /5.5e+009/1/-7.5/0 params=-1/-5.5/-8/-1.5/0/1e+100\
+  /0/0 maxiter=1500 inside=bof61 sound=off
+  colors=000boIaoJaoJ`oK`oK_pLZpLZpM000YpNXpNXpOWpOW\
+  pPVpPUpQUpQTpRTpRSpSSpSRpT000SlSShRSeQSaPSYOSVNTRN\
+  TOMTKLTGKTDJT9IV5JT6IR7IP8IN9ILAIKBHEHQGDHEGQC9HBF\
+  QACJAGKAELKJc9MOQUc9OQ9QR9RS8SU8UV8VW8WX8XY7Z_7_`7\
+  `a7bb6cd6de6ef6gg6hh5ij5kkQkl5mm_on6qodroiwpktprwn\
+  rtmrqlmnjmkimhhmefmbeC_dCYcDZdEZeEZeFZfGZgGZgH_hH_\
+  iI_iJ_jJ_kK_kL`lL`mM`mM`nN`oO`oOapPaqQaqQarRasRasS\
+  _tSYtTWuTUuTSvUQvUPwVNwVLxVJxWHyWFyVCzWEyWFyWHxWIx\
+  WKwWLwWNwWOvWQvWRuXTuXUtXWtXXtXZsX_sXarXbrXdqXeqXf\
+  q_dmbcidbfgab`duYawWZyXYvXXtXWrYVpYUnYTlZTjZShZRf_\
+  Qd_Pa_O_`NY`NW`MUaLSaKQaJObIMbHKaJGbHIcGKdFMeDNfCP\
+  gBRh9Si8Uj7Wm4Zk6Xj7Wi8Vh9UgASfCReDQdEPcFNbGMaHL`J\
+  K_KIZLHYMGXNFWOEVQGVSIUTKUVMTWOT0QS0SS0UR0WR0YQ0_Q\
+  0aP0cP0eO0gO0iN0kN0lM0hM0dM0`M0XM0TL0PL0LL0HL0DL09\
+  O03L05J06H07E08C09A0A70B50C30D60H80KA0NC0QE0TG0WI0\
+  Zf0Ef0Fe0Fe0Gd0Gc0Hc0Hb0I }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,107 @@
+;     Date: Fri, 31 Dec 2010 19:34:57 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-01-11 (Etched in Numbers [7])
+;       Id: <1.5.4.16.20101231193456.12b79a06@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 01, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To kick off a new year of FOTD images, we return to the parent 
+; fractal of the fuzzy image of two days ago, which was created by 
+; the expression Z^(1.75)+C.  This parent has a disconnected mini-
+; brot lying some distance southwest of the main body.  The image 
+; of two days ago is located near this minibrot.  The parent also 
+; has a smaller minibrot located much closer to the northeast side 
+; of its main body.  Today's image is located in a kind of valley 
+; in this smaller, closer minibrot.  The name "Etched in Numbers" 
+; is true of all fractals, and has no particular significance to 
+; today's fractal.
+; 
+; I have been searching the Mandeloids with exponents between 1 
+; and 2 for quite a few years, in the hope that some unexpected 
+; treasure might lie hidden in one of them.  So far the treasure 
+; has eluded me, but I continue searching.  Who knows, one day I 
+; might find it.
+; 
+; Today's image is hardly a treasure, but it's worth a rating of a 
+; 7, which makes the calculation time of 3 minutes almost worth 
+; the effort.  The calculation may be totally done away with 
+; however by viewing the finished image on the currently active 
+; FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And don't forget to keep checking the original FOTD web site at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; Friday brought thick clouds but warmer temperatures to Fractal 
+; Central.  The temperature of 46F +8C was not quite warm enough 
+; for the fractal cats however, and they spent half the afternoon 
+; on the shelf over the heat.  My day was pretty settled, as was 
+; FL's day also.
+; 
+; In the afternoon I spent an hour or so on the internet, checking 
+; 'Boltzmann brains', which is just about the most ridiculous idea 
+; our over-educated scientists have come up with -- so far, that 
+; is.  I'll have much to say about these hypothetical creatures 
+; lurking in outer space in future FOTD discussions.  The next 
+; FOTD will be posted in 24 hours.  Until then, take care, and is 
+; that a disembodied brain coming up behind you?  (We cannot prove 
+; that they are not there.)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Etched_in_Numbers { ; time=0:02:59.98-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.6043991509829967/+0.5801826859547423\
+  /1.876538e+007/1/-17.5/0 params=1.75/0/11/0 float=y
+  maxiter=1800 inside=0 logmap=247
+  colors=000ACIADIAELAGNAIPAKRAMTAOVAQXAS_AUaAWcASeA\
+  ZgAYiAM_AUfASbAQZAOUAKQAHMADHAADA69A35B69C9CCCGDEJ\
+  DHMEKQENTFPXFS_GVbGYfH_iHbmIepIgsJitKjtLktMmtNntOo\
+  tUqtcrumsvttwzuxzvyzwzzxzzyzzzzVJqUHqUGqTErTDrSBrS\
+  AsR8sR7sS9qTApUCoVDmWElXGkYHiZIh_Kg`LeaNdbOccPadR`\
+  eS_eTZbUX_UVYUUVVSTVQQVPeNGdMJcLNaKQ`JU_HXYG`XFcWE\
+  gVDjRCgOBeLAbH9`E9YB8W77T46R66PI7SL8UP8WT9Y_A_hAaq\
+  BcpBejAbdA_YAYS9VR9SQ9QO9NN8KL8IL8FJ8CI7AH77G74G72\
+  IB7LEBNHGQKKTNPVQTXTYYWa_YZa_XbaVdbSfdQgfOihMkiJlk\
+  HnmFonDlkFihHfeIccKa`LZYNWWOTTQQQSONTLLVIIWFFYDDZG\
+  MUJVQMbMOcNQdNReNTfNUgOWhOXiOZiO`jPakPclPdmzznQgoz\
+  zpQjpzznPilzzjNiizmgMieLidKibKh`JhcIhYHhcHhVGhcFhR\
+  EhcEgNDfKDeHCdECcBBc8BzS9zQAzcAzcAzcBzcBzhBzKDzmEz\
+  SFzWGzZHzbJzfKzjLznMzqNzpOzoPzzPzzQzzQzzmzzmzzmzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

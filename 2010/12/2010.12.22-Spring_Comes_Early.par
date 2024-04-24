@@ -1,0 +1,93 @@
+;     Date: Wed, 22 Dec 2010 20:09:48 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-12-10 (Spring Comes Early [7])
+;       Id: <1.5.4.16.20101222200943.141777a6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 23, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today (Dec 22) is the first full day of winter in this part of 
+; the northern hemisphere, so what could be more appropriate than 
+; a screen filled with pink apple blossoms, bringing a hint of 
+; the warmth that is yet three months away.
+; 
+; I named the preview image "Spring Comes Early".  It was created 
+; with the iterated expression Z^(-11)+11(1/Z)+C.  The parent 
+; fractal created by this expression must be seen to be believed.
+; 
+; In my opinion, the image is worth an above-average 7, a rating 
+; made all the more worthwhile by the fireball calculation time of 
+; 27 seconds.
+; 
+; Those who run parameter files with difficulty can soon find the 
+; finished image on the new FOTD web site maintained by Hal Lane 
+; at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; maintained by Paul Lee is still there, but Paul has not been 
+; able to update it for a while.
+; 
+; Sun, clouds and a temperature of 34F +1C made Wednesday a rather 
+; pleasant day here at Fractal Central.  The fractal cats soaked 
+; up the sun when it was shining on their window shelf and kept 
+; warm on their shelf over the heat when it was not.  My day was 
+; typically busy for a day three days before Christmas.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and if spring and summer are coming soon up here, autumn 
+; and winter are coming soon down there.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spring_Comes_Early { ; time=0:00:27.57-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-1.5378244047/+1.1918257186/199729/1/15\
+  /0 params=1/-11/11/-1/0/0/0/0 float=y maxiter=767
+  inside=fmod proximity=0.95 outside=real
+  colors=000zcslapfbj_ceUc_NdUHePAfJ4fEMeHceKteMZONE\
+  6OF6MG6LM6JU6Ic8GmDUPNzzX_zzSzmZWcdfJjpGooKinOcmSZ\
+  lVTkZPfZUaYZYXcUWg`OkgAlm3ldDhWMdNV`EcX5lUAgQFbNKZ\
+  JPUGTQDQQKOQRMQXKQcIQjGQpEXeCcVAjL8qA6x07v77tE7sL7\
+  qR7oY7nd7lk7kqN7_KBaHEcFIdCLf9Ph7Si6Oh5Kg4Hg3Df29e\
+  16e8AfFEfMIgTMg_QhfUhmYitaiuTlvKowBrw2toDlhNe`YYUg\
+  RNqKKpMIoOGnPDmRBlS9kU7jVDkUIlUOmTTnTZoScpShqSjiYl\
+  abmUgoMmqErr6wn_lhWecS_YOUTKNNGHICBD95MpbbhlDQMDPL\
+  COKCNICMHCLGBKFBJEBIDBHC`Ku_KsZKrZKqYKpXKoXKnWKmWK\
+  lVKkUKjUKhTKfTKeSKdRKdRKbQKbQKaPK`OK_OKZNKYNKWMKWL\
+  KULKUKKSKKRJKQIKPIKOHKNHKLGKKFKJFKIEKHEKGDJFCIECHD\
+  BGC6FB7EA7D97C87B77A679578477376275174073082081080\
+  280480680880A80C80E80F80F80F90F90F90E90E90E90E90E9\
+  0E9KE9JE9JD9JDAJDAJDAJDAJDAIDAIDAIDAICAICAICAICAHC\
+  BHCBHCBHCBHCBHBBHBBGBBGBBGBBGBBFBBEBADAACAABAAAAA9\
+  AA8AA7AA6AA5AA4AA3AA2AA1A }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

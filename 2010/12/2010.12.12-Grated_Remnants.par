@@ -1,0 +1,112 @@
+;     Date: Sun, 12 Dec 2010 10:23:27 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-12-10 (Grated Remnants [7])
+;       Id: <1.5.4.16.20101212102330.12dfec5e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 12, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As expected, an unplanned shopping trip arose by surprise on 
+; Saturday, which kept FL, (and myself also to some degree), 
+; occupied most of the day, exploring the Susquehanna Mall, a 
+; place that I always avoid assiduously.  But thanks to provi-
+; dence, (whatever that is), the task was eventually completed, 
+; and we found ourselves back at FC before daylight failed.  This 
+; left enough time to find a respectable but not quite outstanding 
+; fractal, but not enough time to finish the discussion.
+; 
+; The generating formula is total whimsy.  I took eleven negative 
+; parts of Z^(-1.1) and combined them with 1.1 negative parts of 
+; Z^(-11) before adding straight C.  The parent fractal is a most 
+; unpromising thing -- an oversized open oval with a small blob 
+; and a small wedge floating in its center.  But the wedge is full 
+; of detail, and a quick search led me to today's scene, which 
+; lies in a more chaotic area of the wedge.
+; 
+; I named the image "Grated Remnants".  The texture of the eight 
+; obvious features surrounding the central minibrot reminds me of 
+; a kitchen grater.
+; 
+; I rated the image at a 7, which is kind of a FOTD standard.
+; 
+; The calculation time of 8-1/3 minutes could cause a bit of 
+; fidgeting among those with too many other things to get done.
+; 
+; To prevent fidgeting, the finished image will soon be available 
+; at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; (But the last I heard, the site at:
+; <http://www.fractal-animation.net/fotd2.zip>
+; was no longer being kept up to date.)
+; 
+; I do not know what the situation is at the original FOTD web 
+; site at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; I have not heard from Paul in several weeks, though I continue 
+; to send the finished images to him.
+; 
+; A mix of clouds and sun and a not-too-chilly temperature of 39F 
+; +4C made Saturday a near-average mid-December day here at 
+; Fractal Central.  The fractal cats must have agreed, for when we 
+; returned from the shopping, we found them waiting in the window. 
+; After surviving the shopping, I had a day that was acceptably 
+; uneventful.
+; 
+; The next FOTD will be posted in 13 hours or so, but with no 
+; promises made as to the quality of the fractal.  Until then, 
+; take care, and if seven is lucky and thirteen is unlucky, what 
+; happens if you combine them and come up with twenty?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Grated_Remnants { ; time=0:08:22.68-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.16182984183858/+0.29257778317738/\
+  4.2912e+009/1/165/0 params=-11/-1.1/-1.1/-11/0/525\
+  /0/0 float=y maxiter=3600 inside=0 logmap=522
+  colors=000B0SC1TD6UE3VF9WG7XHCYIBZIF_JG`KI`KKaLKbM\
+  KcMKdNKdOKeOKfPKgQKhQKhPKeOKdOK_NK`MKVMKYLKPKKMKLJ\
+  JJHIHEIFBHD8HB6GD9GFCGHFGJIGKKGMNGOQGQTGRVCKa9Dh66\
+  o30v57r7Dn9JjBQfDWbFaZHhVJnRLtNNzKUyRizYfxctwjsvqy\
+  vwvtrvuorqirrfmn`kmWikRgjNdhIbgE`e9Zd5X`7VY8TV9RRA\
+  POBNLCLHDJEEHBFF8GDBECEDAHC9JB7MA6P94S83U79SVFQrIP\
+  sMPsPPsVPsSOtUOtVOtaOtcNu_NuaNuZNu_Nu_OrVPoLQlGRjB\
+  Sg6Td1Ub5XX9ZRDaLHcFKeAJg9Ih9Hi9Gk8Fl8Em8Do8Dp7Cq7\
+  Bs7At79u68w67x67y6EjRLXkJSmHNoFIqDDsC8uKvXBwf3xo6v\
+  h9ubBtXEsQHrKJqEQbDXOCc9CU9IK9NA9S09X2DX4HX5LX7PX8\
+  TXAXXB`Xkd6dY4ZR3TIENAPI2ZRKYZ`XfqW7glceeccZmaSm`L\
+  zZEzc7zm0zcUzXwmUdmRNcP5HJFLEPO9YLD`JGbGJdEMfBQi9T\
+  k6Wm4ZoCihKsaJlVIeOHZHGSAGL4MMYRMzSKySIxSGxTEwTCvT\
+  AvQEvOIvMLvKPvISvGWvEZvIVmLReOmYRmPUmHXm9WmGWmNWmT\
+  cmdjmpEwFFwDGwCHwBKzDNzFPzHSzJUzKXzLzzMzzMzzNzzNzz\
+  Ozzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

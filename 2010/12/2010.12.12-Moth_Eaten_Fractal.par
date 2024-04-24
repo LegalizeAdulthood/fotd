@@ -1,0 +1,100 @@
+;     Date: Sun, 12 Dec 2010 22:10:53 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-12-10 (Moth-Eaten Fractal [7])
+;       Id: <1.5.4.16.20101212221055.13078066@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 13, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that results when 
+; 1.6 negative parts of Z^3 are combined with 2.4 negative parts 
+; of Z^2 and C is added on each iteration.  The resulting parent 
+; fractal is a Mandelbrot set with some extra stuff added mostly 
+; along the X-axis.  Today's scene lies in some of this extra 
+; stuff that is just starting to sprout along the positive X-axis.
+; 
+; The rating of a 7 might be a bit liberal.  The image really is a 
+; bit too chaotic and the colors too disorganized for maximum 
+; effect.  But I kind of like it anyway, with its preponderance of 
+; grays, so the rating of 7 will remain.
+; 
+; The name "Moth-Eaten Fractal" came about when I realized that 
+; the thing was full of holes, like an old woolen sweater than has 
+; hung in the closet too many months with no moth repellant.
+; 
+; The calculation time of over 22 minutes is admittedly slow, but 
+; may be cut to 14 minutes by rendering the image with the passes 
+; set to 'g'.  Doing so however will cause some loss of accuracy.
+; 
+; To avoid all calculation, check the web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; where the finished image should soon be posted.
+; 
+; The original web site, complete with almost 14 years of FOTD's 
+; is still located at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; but the last time I checked, it was not up to date.
+; 
+; The temperature reached a mild enough 50F 10C here at Fractal 
+; Central on Sunday, but a steady rain fell all day, spoiling the 
+; brief respite from the chill.  The fractal cats seemed uncon-
+; cerned.  We are installing a shelf over the large radiator in 
+; the hallway, where they can leap any time they wish and be as 
+; warm as a cat by an open fire.  If all goes as planned, the next 
+; FOTD will be posted in 24 hours.  Until then, take care, and be 
+; lively.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Moth-Eaten_Fractal { ; time=0:22:37.71-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.69362781933042/+0.01361539169399/3.0\
+  909e+010/1/147.5/0 params=-1.6/3/-2.4/2/0/-97.5/0/0
+  float=y maxiter=8000 inside=0
+  outside=imag logmap=1235
+  colors=000UUUGa08J0zsBz_8m06NM4BB2sXtgQhXJYMDMB6BA\
+  cp8We6OV4GL28Al6Cc5AW48O36z24812jwrNUR5VLcaVWUOOMI\
+  GFC876PY5KS4mM3CH28B1450GnyzaizPVzCFzc5z74zz3z326z\
+  1zHzzz9zG4zzizVYzzNzABzz2zK1zzSzlNzzIzTEzz9z94zztz\
+  YjzzazKSzzJzz9zvnzzYzJHzzTzWNzzHzGBzz5zAnzzcz6UzzK\
+  z2AzzdzzZCBT99N76H44B225_ZCRQ9IH6983PjwLdoIZhFT`CN\
+  U9HM6BF357_OkOGWC8GJnPCYG6H8zR1mL0`G0PA0C50`qBWj9R\
+  c8NX6IR5DK49D246115e03S01EjCmN6PkkXaaQSSJJJD9964Uu\
+  3Mf2FT17ELHKA8A6Bt48e35S12EnSpYIZH9HlDm_9`O6PC3CTp\
+  uNeiHVYBLN5AB8i86a65U54N42F21712Uu1Oi1IY0CN06BjzEH\
+  ttDhhAYY6MM3BBgQ8ZK6QF4HA3851GDO86Cccc5J8PGnC8Pgma\
+  afXX`SRVNMPJGIEBC9564vuSgfLTTEEE76zX4mQ3`JzK01C6Ad\
+  BuiFTN7CxhWZyOQiGHV88FRDSNBOJ9KF7GB5C738314sq_zczz\
+  RzzDzzLzzFzzAzz5zzgzz`zzVzzPzzczzVzzczzMzzczzGzzcz\
+  zWzzZzz`zzbzzdzzWzzNzzFzzFzzczzczzczzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzcz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

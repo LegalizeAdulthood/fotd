@@ -1,0 +1,98 @@
+;     Date: Fri, 10 Dec 2010 22:37:36 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-12-10 (The Midas Untouch [7])
+;       Id: <1.5.4.16.20101210223736.10ffe42a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 11, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us back to the MandAutoCritInZ formula, 
+; still the most productive formula in my oversized and underused 
+; collection.  I named the scene "The Midas Untouch" because 
+; sometimes every fractal I find seems to turn to lead.
+; 
+; Most of the effect of today's image is due to its coloring.  The 
+; sinuous bands that hold the golden colors were created by 
+; rendering the scene with the outside set to 'tdis'.
+; 
+; The rather unlikely generating formula combines 8.4 parts of 
+; Z^(-2.2) with 17.5 parts of Z^(-5.2) then adds (1/C).  The par-
+; ent fractal is a shapeless thing with a large but disconnected 
+; minibrot just southwest of the main body of the fractal, which 
+; is one of the most twisted minibrots I have yet come upon.  
+; Today's scene lies in the East Valley area of this minibrot.
+; 
+; The rating of a 7 makes the 47-second calculation time a 
+; bargain.  Other bargains may be found at the following web sites:
+; 
+; <http://www.fractal-animation.net/fotd2.zip>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; where the finished image soon will be posted.
+; 
+; Clouds moved in just after sunrise and hung tough here at 
+; Fractal Central the rest of the day on Friday, tough enough for 
+; about 1/2 inch, 1cm of snow to fall in the afternoon.  The 
+; temperature rose from 16F -9C at sunrise to 30F -1C in the 
+; afternoon, assuring that the small snowfall made things 
+; slippery.  The fractal cats grew bored watching snowflakes 
+; after a half hour, and spent the rest of the afternoon in a 
+; warmer location.
+; 
+; My day was quite busy trying to clear away a lot of little 
+; nuisance jobs.  The next FOTD is due in 24 hours, but with the 
+; holiday rush near its peak I will give no guarantee that it will 
+; be ready on time.  Until whenever, take care, and . . . .
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Midas_Untouch { ; time=0:00:47.90-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=-0.704523766169/-0.703511014168/6e+007/\
+  1/100/0 params=8.4/-2.2/17.5/-5.2/0/0/0/0 float=y
+  maxiter=2700 inside=0 outside=tdis periodicity=6
+  colors=00000N00H55BAACFFCKKCPPCUUCZZCccChhCmmCrrCv\
+  vCzzCGiCIlCJoCFgOC`Z8Tj5Mu1Is0Fr0Cp09o06m03l00k0Gh\
+  0We0kb0lZ1lW9mSHmPPnLWnIToLQoNOoPLoRJoTGoVEoXBzZ8p\
+  a6pc3pe1pg0piVpkppm0po0mp0kp0ip0gp0ep0cp0ap0_p0Yp0\
+  Wp3bhFi`QpULiZGcbBYg6Sk1Mp0Gt0Ax0Du0Fs0Ip0Kn0Mk0Pi\
+  0Rf0Ud0Wa0Y_0`X0bV0dT0eOAfKRfGPcENaDL_CJXBIVAGT9EQ\
+  7CO6BM59J47H35F24D13F62HA1JE0LJ0NN0PR0RW0T_0Vc0Xh0\
+  Zl0`p0at0bl0ce0dZ0eS0eQ0eO0eM0eL0eJ0eH0eG1bJ4_M6XO\
+  9URCSUEPWHMZmU`MHcPEfRBhU8kW6m6Ro0jq0lp0mp0np0po0q\
+  o0ro0tn0unmvn0tk0sh0qfmpc0n`1mZ5kW9jTDhRHgOLeLPdJT\
+  bGXaEWeNViWVldUpmUsuVmnVhhVbbWYWWSQWNKXHDXC7X71VA3\
+  TD5RG7PJ9NMBMODKRFIUHGXJE_LDaM4WJ0QH0LF0YK0jP3wU2w\
+  T2wT1wT1wT0wT0wT0wT0wT0wS0wS0wS0wS0wS0wS0wS0wSBl30\
+  TN0UR0UU0VX0V`0Vc0Wf0Wj0Xm0XpGEK3Uo6Rk8OhBLdDIaFFY\
+  HCUI9RK6NK3KJ5LH7LH9MHBMHDNHFNHGOHHOHIMGILGHLGGKGF\
+  JGEGGDFGCDGACG9A61d41Z21T }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
