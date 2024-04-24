@@ -1,0 +1,107 @@
+;     Date: Sun, 08 Apr 2007 10:56:35 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  08-04-07  (FOTD for April 08, 2007 [No Rating])
+; 
+;       Id: <1.5.4.16.20070408110023.2a37fa6e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 08, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; My apologies for a late Easter Sunday FOTD.  In fact, today's 
+; FOTD is both brief and late.  But Easter will soon pass, the 
+; heavy graphic work is already finished, and with any luck at 
+; all, things will be back in their accustomed routine by Tuesday.
+; 
+; The fractal for today takes us to the Z^(1.25) Mandeloid as it 
+; appears 121 levels up the logarithmic spiral.  At this lofty 
+; level, the fractal resembles little more than a shapeless blob 
+; with a few hints of equally-shapeless buds.  The active little 
+; midget, which appears to be exploding near the center of today's 
+; image, is located just inland of the ragged bud on the northeast 
+; shoreline of the main bay of its shapeless parent fractal.
+; 
+; With almost no time to devote to fine-tuning today's image, I 
+; could not give it a name or rating.  But luckily the image is a 
+; fast one, rendering in only 2-1/3 minutes on my worn-out 10-year-
+; old computer, which is well past the point of no return.  So if 
+; the image disappoints, little time and effort will have been 
+; wasted.
+; 
+; It is never a wasted effort however to visit the FOTD web page 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the finished FOTD images there.
+; 
+; Saturday brought cold temperatures, some sunshine, heavy clouds 
+; and snow squalls to Fractal Central.  The fractal cats interrup-
+; ted their usual activities long enough to watch the snow fall, 
+; then, satisfied that all was well, they returned to their fun 
+; and games.
+; 
+; My day was not too busy with serious work, but it was far from 
+; slow.  Against my advice, fractal lady invited some friends to 
+; Easter dinner on Sunday, and I was selected to purchase the 
+; supplies.  Oh well, unlike the FOTD, Easter comes only once a 
+; year.  BTW, the next FOTD will appear in 24 hours.  Until then, 
+; take care, and search for the meaning of fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Apr_08_07 { ; time=0:02:21.66--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+0.7104895602\
+  1611750/+0.34294555698040560/333.8528/1/5/2.061385\
+  78429104768e-012 params=1.25/0/121/0 float=y
+  maxiter=1200 inside=0 outside=tdis periodicity=10
+  colors=000X`CXbFWeIWgLWiOVlRVnUUqXUs_UuaVr`Vp`Wm`W\
+  k`Xh`Xf_Yc_Ya_YZ_ZX_ZUZ_SZ_PZ`NZ`KZ`IZZNWYSUXXSWaP\
+  UfNTkLSpIRuGQzEPuDPpDPlDOgCObCOZCNUBNPBNLBMGAMBAM7\
+  ANHDOQGPZJQgMQpPUnWXlaYf_Z`Y_VW_PUaQWcQXeQYgQZiQ_f\
+  Q`cRa`RbYRc_RdaRebRfaSbaT_`UX`VU`VRI5qFDoCKn9Sm6Zl\
+  3fk0mj7gfDacKX_QRXXMTbGQhBNN0yV5jaAXhFJoK5E9jH9nK9\
+  qN9tQ9wF5l52a97WDCQGGKKLENP9LO6lx3gr4cm4_g4Vb4RX4N\
+  S4KAEJBDJCDJCCJDCJEBJEBJFAJFAJG9JH9JH8JI8JJ7JJ7JK6\
+  JK6JL5JM5JM4JN4sG42XK3WJ4WI5VH6VH6UG7UF8TE9TE9SDAS\
+  CBSCCRBDRADQ9EQ9FP8GP7GO6HO6IN5JN40gI2eH3dG4cF5bE6\
+  aE7`D8ZC9YBAXBBWACV9DU8ES7FR7GQ6HP5IO4M4FL7DLABKDA\
+  KF8sIoqKmpMknOilQgjSehUcgVbeX`cZZa`X_bVZdTXfRVhPTj\
+  NSkMTdOTYQTRSTLUSMSRMQQMPQNNPNLONKNOINOGMOFLPDLPBK\
+  PAJQ8IQ6IQ5HR3GR1GR0NZKTfbSe`SdZRcYRbWQaVQ`TP_SP_Q\
+  PZPOYNLM6OXMNWKNVJMUHMTGMTELSDLRBKQAKP8JO7JN5wzZrv\
+  VnrSjnPfjMbfJZT6ZT3YW6YY9 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

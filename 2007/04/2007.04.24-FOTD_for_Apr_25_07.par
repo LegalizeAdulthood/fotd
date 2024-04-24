@@ -1,0 +1,85 @@
+;     Date: Tue, 24 Apr 2007 21:49:14 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-04-07 (FOTD for April 25, 2007 [Not Rated])
+;       Id: <1.5.4.16.20070424215317.2d4ffb96@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 25, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's FOTD I combined 6 negative parts of Z^(-1.2) with 
+; 0.6 negative part of Z^(-6.6) and added (1/C).  This gave me a 
+; fractal with a prominent 'fan' and several large bays with 
+; filaments extending from them.  The filaments terminate in 
+; fractal rings.  Today's image is located in a spiral where a 
+; prominent filament intersects a circle.
+; 
+; Since I put very little effort into the image, and I recall 
+; several quite similar FOTD's, I could neither name nor rate it.  
+; And the calculation time is a bit longer than ideal, but it's 
+; still a pleasant fractal to stand in awe of, or sit in awe of 
+; in this case.  (All fractals are awesome.)
+; 
+; The pure gray background is a kind of test.  I'm not sure 
+; whether I like or dislike it.  I was tempted to change it to a 
+; more brilliant hue, but in the end I decided to let the back-
+; ground remain gray.  To see the image as it is, either run the 
+; included parameter file and wait a few minutes, or visit the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the image posted there.
+; 
+; Great weather prevailed again on Tuesday here at Fractal Central 
+; -- lots of sun and a temperature of 73F 23C.  The fractal cats 
+; checked the outside conditions from their window shelf, then 
+; decided it would be more fun to chase each other up and down the 
+; hallway.  My day turned a little busy when an unexpected job 
+; came in, but the work is now behind me and tomorrow promises to 
+; be a quieter day.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and see the fractal wonders around you.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Apr-25_07 { ; time=0:09:30.34--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=-2.61119533371666400/-3.479673158648305\
+  00/2.36905e+010/1/32.468695766896694/0.05936186487\
+  65445803 params=-6/-1.2/-0.6/-6.6/0/0/0/0 float=y 
+  maxiter=2000 inside=0 logmap=307 periodicity=10
+  colors=000ttwttwuuxssvssvqqtoormmpkkniilggjeehccfa\
+  ad__bYY`WWZUUXSSVQQTOQTRTQVXOX_M_cJcfHehFhlCloAmr8\
+  qv5tz3vz1rv3or3lo5hl5eh5ae6Za6VZ6RV8OR8KO8HKADHAAD\
+  C6AC36C03D00D00D00F00F00F00K00Q50TC0ZJ0cQ0fX0lc0qj\
+  0tq0zx0zr0xo0tj0of0la1fZ6cTCZQFVKKQHOMDKJAJF8FC5D8\
+  3C50810600300100000000000000000000000000101505A06D\
+  0AJ0CM0DQ0HV0JZ0Mc0Of0Qj0To0Vr0Zx0_z0az0ez0fz0hz0j\
+  z0jz0jz0lz0lt0lq0lm0mh0me0m_0oX0oR0oO0oK0lM0jM0hM3\
+  fO6eOAaOD_QHZQKXQOVQQRRTQRXOR_MTcKTfHTjFVmDVqCVtAV\
+  vCTtCTrCTqDTqDToDTmFTmFTlFTjFThHThHTfHReHQeFOaDMZC\
+  KVCJTAHQ8FMAFMCHMDJMFKOFOTHQXJRaKVcKXeKXhKXjKZmKZo\
+  KZqJ_tJ_vJ_xJ_zJazJazJazJczJczJczJczvR0zH0z86z0Fz6\
+  DzDDzJCzQCzVAzaAxfAvm8tt8rz6qz6oz5mz5lz5zzAzzFzzJz\
+  zMxzOrzRmzTjzXez__zaXzeRzfMzjJzmDzo8zr5zt0zx0zz1zc\
+  5zJAz0Dz08z05z01zA0zK0zV0ze0zo0zz0zz0zz0zz0zz0zx0z\
+  v0zr3zo6zmqzztzzxzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

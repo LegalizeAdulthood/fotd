@@ -1,0 +1,104 @@
+;     Date: Mon, 09 Apr 2007 23:59:06 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  10-04-07  (Galactic Circles [5])
+; 
+;       Id: <1.5.4.16.20070410000254.2b1fdaf6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 10, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us into the parent fractal that results when 
+; the formula Z^(1.25)+C is iterated 220 levels up the logarithmic 
+; ladder.  This parent fractal is a near shapeless thing with one 
+; large main bay and only hints of higher-period buds.  It is so 
+; shapeless that it must be studied carefully before its Mandeloid 
+; characteristics become evident.  Today's image is located in the 
+; circle-filled debris piled along the western shore of the main 
+; bay of its parent.
+; 
+; I named the image "Galactic Circles" because it is filled with 
+; tight little spiral circles that almost resemble tiny satellite 
+; galaxies.  But it takes more than a horde of circles to make a 
+; fractal worth a high rating, and I could find nothing extra in 
+; today's image -- thus the rating of 5.
+; 
+; The render time of 4-3/4 minutes is relatively fast as fractals 
+; go.  And even better, the finished image is posted for viewing 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; It has been asked how I fing good parameters to enter into the 
+; MandelbrotMix4 formula.  In tomorrow's FOTD, we'll start discus-
+; sing this question.
+; 
+; Monday was another raw chilly day here at Fractal Central.  The 
+; sky was cloudy, and the temperature, which should have been 
+; near 59F 15C, never made it above 43F 6C.  The only thing mis-
+; sing was the snow flurries.  The fractal cats didn't mind the 
+; conditions one bit.  They stayed cozy warm by the heat.
+; 
+; My day was actually close to normal for a change.  And with any 
+; luck at all, things will stay this way.  The next FOTD will 
+; appear in 24 hours.  Until then, take care, and where there's 
+; fractals there's hope.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Galactic_Circles   { ; time=0:04:41.66--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.49534375705044250/-0.526598078447610\
+  50/5502.968/1/142.5/-1.55795903955535664e-010
+  params=1.25/0/220/0 float=y maxiter=3600
+  inside=0 outside=tdis periodicity=10
+  colors=000OjJOkLPlMQmNQnPRoQSpRSqSYhWc`ZiSbnKelJdj\
+  IdhIcfHcdHbbGbaGb_FaYFaWE`UE`SD_RD_PC_NCZLBZJBYHAY\
+  GAYOGbVLgaQkhVpo_ttPcsQarR`qRZpSYoSWnTVmTUlUSkURjV\
+  PiVOhWNgXLfXKeYIdYHcZFbZEa_D`_B_`AZ`8Ya7Ya6Z_8ZY9Z\
+  WA_UB_SC_QD`OF`MG`LHaJIaHJaFKbDMbBNb9Oc7Pc5Qc4RZFV\
+  UQZP`aKkeGvhFrjFokElmEinDfpDcqC`sCYtBVvBSwEVtHXrJZ\
+  oM`mPcjRehUgfXicZlaanZdkXflVgmXgmZgk`gibggdgefhchh\
+  ajh_lhYnhWphUrhStgUmfVgeXadYWc_Qb`KabE`c8_d248C4AD\
+  4BE4CF4EGWHHaMIbRKcWLe`MhcNkfOngQqhRtiSvkTwlUxmWyn\
+  XzpYzqZzr_zsYzuWzvUzwUzxUzyUzzZzzczzfzzizzlzzozzrz\
+  zuzzzxzztzzpzyksxgowcju_esV`qRWoNRmIMpEHrACu67wC7s\
+  I7oN7lT7mZ7mc7mi7mo7mt7m9WrBTwCRwEPwFMwHKwIIrKFoLD\
+  lNBiO9fPBcPDcQFZQGURIPRKKRMJSNLSPNTRPTTRTUSUVRUVRV\
+  WQVWQVWPWXPWXOWXOXYNXYNYZMYZMYZLZ_LZ_KZ_K_`J_`J_`J\
+  b_OdZSgYWzjzzjzzjzzjzzjzzjzzjzzjzzjzzjzzjzzjzzjzzj\
+  zzjzzjzzjzzjzzjzzjzzjzzjz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

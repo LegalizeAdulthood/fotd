@@ -1,0 +1,96 @@
+;     Date: Thu, 19 Apr 2007 22:44:00 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 20-04-07 (Four-Leaf Shamrock [8])
+; 
+;       Id: <1.5.4.16.20070419224759.225f0c36@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 20, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Add 1/2 part of Z^(-6.6) to 5 negative parts of Z^(-1.1), 
+; combine with (1/C) and what do you get?  You get the parent 
+; fractal of today's image -- a huge fractal shaped roughly like a 
+; letter X.  Then raise the escape radius to 8.33e+017 and what 
+; happens?  The fractal starts to evaporate.  Today's scene is 
+; located right at the edge of the evaporating outside stuff.
+; 
+; Today's image would normally be a very fast one, rendering in 
+; about 2 minutes.  But for some reason, the 'zmag' inside fill, 
+; which makes the picture, slows the calculation to 23 minutes, 
+; with the passes=t option.  The passes=g option is not quite as 
+; slow, but it misses too much of the finer detail.
+; 
+; I named the image "Four-Leaf Shamrock".  Well, that's what it 
+; reminds me of.  Then I rated it at a lofty 8.  In my opinion, 
+; it's one of the more unusual FOTD images, well worth its rating.
+; 
+; The slow calculation time may be avoided by viewing the finished 
+; image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy skies and a warmer temperature of 57F 14C made 
+; things far more pleasant here at Fractal Central on Thursday.  
+; The fractal cats, who appear to be totally unaware of their 
+; 'fractal' nature, spent several hours on their shelf in the 
+; sunniest window.  I spent even more hours at the computer, 
+; trying to bring things back under control.  By the end of the 
+; day, I had success in sight.  The next in the series of FOTD's 
+; will appear in 24 hours.  Until then, take care, and make a 
+; quantum leap to somewhere spectacular.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Four-Leaf_Shamrock { ; time=0:23:03.47--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=t
+  center-mag=-25.29974773215104000/+0.42617313408043\
+  040/1310/1/-22.5/-2.85858038628905575e-009
+  params=-5/-1.1/0.5/-6.6/0/8.33e+017/0/0 float=y
+  maxiter=1000 inside=zmag periodicity=10
+  colors=000uzIptJopKnlLmhLldMk`NjXNiTOhPPhLPZGWQCbG\
+  7i73oE9mKFkQLiWRgaXegbcmhasn`olbkkdhjedigahiYgjVfl\
+  RenOdowg6vd7vb8v`8vY9vWAuTBuRBuPCuMDtKEtIEtFFtDGtB\
+  GnDFiFFcGFZIFTKFOLFINFDPF8QFANECKDDHDFECGCCFBBFBBF\
+  BBFABEABEABE9BE9AE9AD8AD8AD8AD8AC7AC7AC79C69C69B09\
+  B59B59B59B59E68H78K87N97QA6TB6WC5ZD5aE4dF4gG3iG3gI\
+  7fKAdMDcOGaQK`SNZUQYWTWYXV__TabSceQeiPglNioMkrLmuN\
+  lsPkqQjoSimUhkVhiXggYff_edadbbc`dcZfbXgaVZqR_mS_iU\
+  _eV`aWzcKaTZaP_aL`zHabDcc9dc5ec1fd5he8ieBjfElfHmgL\
+  nhOphRqiUriXtz`0kzvkfxliyllzifwfaucXr`Rp000VHkTCi_\
+  TceiZkyUI6RG9QECPDFOBIN9LM8OLBMJELIHJHJIGMGFPFERDD\
+  UCCXBAZ99a88d67f56i35l24n13o2Ip3Xp4jl9khDkdIk`MkXQ\
+  kUVlQZlMblIglEklBolMchWTdeI`o7Xp9VpAUqBSqCRqDQrEOr\
+  FNsGLsHKsIJtJHtKGtLFuMDuNCvOAvP9vQ8wR6wS5wT4rQDnOL\
+  jMUeKaaIjYGrYHrXJsXKsWMtWNtVPuVQuUSvUTvTVwTWwSYxSZ\
+  xZbpdehkh`qkUqnRqpPqsMqvK }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

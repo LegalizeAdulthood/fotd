@@ -1,0 +1,94 @@
+;     Date: Sat, 21 Apr 2007 23:07:35 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  22-04-07  (Iteration Chain [8])
+; 
+;       Id: <1.5.4.16.20070421231136.2b97c362@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 22, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to another big rush, today's discussion is short.  But do 
+; not be deceived by the brevity; the actual image is well above 
+; FOTD average.
+; 
+; Today's image came about when I subtracted 5 parts of (1/Z) from 
+; Z^(-4), added (1/C) and iterated with the escape radius set to 
+; an impressive 3600.  I will not begin to describe the immense 
+; spidery parent fractal, which is unlike anything that has gone 
+; before.
+; 
+; Being pleased with the smoothness of the image's colors, I rated 
+; it at an 8.  I named it "Iteration Chain", a name that could be 
+; applied to all fractals.  The calculation time of 9-1/2 minutes 
+; is marginally within reason.  Even more reasonable is the mere 
+; minute or so expended by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the completed GIF image there.
+; 
+; It was another perfect day here at Fractal Central on Saturday 
+; -- a virtual repeat of Friday.  And once again the fractal sabre-
+; tooth cats ignored the weather.  They were after big prey -- a 
+; catnip mouse.
+; 
+; My day was very busy, but the work is nearly accomplished, and 
+; by Sunday it will be finished.  The next FOTD will appear around 
+; that time.  Until then, take care and keep your fractal spirits 
+; high.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Iteration_Chain    { ; time=0:09:26.67--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.713802219497/-1.425678410608/\
+  3.91862e+007/1/-110/4.2853591961e-005 params=1/-4/\
+  5/-1/2.5/3500/0/0 float=y maxiter=256 inside=fmod
+  proximity=0.5 outside=fmod logmap=yes periodicity=10
+  colors=000zzzwwzttzqqznnzmmzlnzkozjpziqzhrzgrzfrzg\
+  sziszjszlszntzotzqtzstyrtxrrxrpwrnwrkvrivrgureurbt\
+  r`trZsrXsrUrrSrrQqrOqrLprJprHorFovAqrDonGnjJlfMkcP\
+  j_ShWVgSYeP`dLccHfaDi`Al_8eY6_W4TU2NS0IS1HR1HR1GR1\
+  GR1GR1FR1FR2FQ2EQ2EQ2EQ2DQ2DQ2DQ3CP3CP3BP3BP3BP3AP\
+  3AP4AO49O49O49O48O48O48O5AP5BQ6CR6DS7ES7FT8GU8HV9I\
+  W9JWAKXALYBMZBNZCP_CQ`DRaDSbETbEUcFVdFWeGXfGYfHZgH\
+  _hI`iIaiJcjJdkKelKfmLgmLhnMioMjpNkqNlqOmrOnsPotPpt\
+  OosOnsOmrOlrOkrOjqOiqOhqOgpOfpOepNdoNcoNboNanN`nN_\
+  nNZmNYmNXmNWlNVlNUlMTkMSkMRkMQjMPjMOjMNiMMiMLiMKhM\
+  JhMIhLHgLGgLFgLEfLDfLCfKBeJAeI9eH8dG7dF6dE5cD4cC3b\
+  B2bA1a90a80`70`60_50_40Z30Z20Y10Y00X00X00W00W00V00\
+  V00U00U00T00T00S00S00R00R00Q00Q00P00P00O00O00N00N0\
+  0M00M00L00L00K00K00J00J00I00I00H00H00G00G00F00F00E\
+  00E00D00D00C00C00B00B00A00A00900800700600500400300\
+  2001000000000000000000000 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

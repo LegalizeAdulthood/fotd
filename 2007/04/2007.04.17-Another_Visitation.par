@@ -1,0 +1,114 @@
+;     Date: Mon, 16 Apr 2007 22:44:43 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  17-04-07  (Another Visitation [8])
+; 
+;       Id: <1.5.4.16.20070416224839.2b47b900@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 17, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the same stubby Seahorse Valley of the 
+; same parent fractal that produced yesterday's image.  But it 
+; lies far enough away from the scene of yesterday's action to 
+; appear quite different.
+; 
+; About 1/10th of the image consists of 'inside' stuff made 
+; visible by the 'zmag' inside fill.  The rest of the image is 
+; made of good old equal-iteration bands.
+; 
+; I named today's image "Another Visitation" because it is the 
+; second visit in as many days to the same scene.  I rated it an 
+; 8 because I think it makes quite an interesting screen full.
+; 
+; The render time of 12 minutes can be avoided by visiting the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the image there.
+; 
+; I am involved in writing a discussion of how I find good 
+; parameters to enter into the MandAutoCritInZ formula.  To my 
+; surprise, I find that I am not sure how I find some of the good 
+; parameters.  But I almost always start by setting one of the 
+; exponents to an absolute value between 1 and 2.  How I find the 
+; alternate critical point to enter as the (p4) parameter is 
+; another story, which I will explain in detail in the discussion.
+; 
+; Finding good parameters for the MandelbrotBC2 formula, which I 
+; used in today's FOTD, is a far simpler task.  Either I choose an 
+; exponent between +1 and +2, or an exponent very close to a 
+; positive integer, such as today's 1.99.  A value of 2.01 would 
+; have created an equally interesting parent fractal, though the 
+; fractal would have rotated in the opposite direction as the 
+; logarithmic ladder was ascended.
+; 
+; A chilly temperature of 43F 6C, heavy clouds, strong winds and 
+; occasional showers of mixed rain and snow made conditions less 
+; than ideal for those whose business took them outdoors here in 
+; Fractal Central country on Monday.  A tuna treat that was late 
+; made the day less than ideal for the fractal cats also.
+; 
+; With the work getting lighter and the fractals getting better, 
+; my day was pretty good however.  And the best part is that 
+; tomorrow looks to be a repeat.  Until then, take care, and 
+; beware of scam fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Another_Visitation { ; time=0:12:12.59--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=t
+  center-mag=-0.75491096038879870/-0.055120426362415\
+  04/1.768255e+010/1/30/-0.009 params=1.99/0/10/0
+  float=y maxiter=2500 inside=zmag periodicity=10
+  colors=000PYpP`wM_yL_zJYzIYzHXzFXzEXzCVzBVz8Tz6Tz5\
+  Sz3Sz2Sz0Rz0Rz0Pz0Pz0Pz5XzFcpPjd_pTiwIsz6zz0zX8z0J\
+  z0Lz0My0Ou0Pp0Rl0Sg0Tc0Vd0Xf0Xg0Xi0Xj2Yj3Yl5Ym6Yn8\
+  _p9_pB_qC_sE_uF`vH`wI`wJ`xLazMazOazPazPaqYYffTVmPJ\
+  vL8zH0zE0zH0zJ0zL0zO0wR0uS0qV0nY0l_0ia0gd0df0ai0_l\
+  0Xm0Tp0Rs0Ou0Lw0Iz0Hz0Cz09y06w03v20u30s60q80p90nB0\
+  n90j90g90d90a82_85X88T8BR6EO6HL6JI6MF6PC5S95V65Y35\
+  `03c03f03i03l03n05j06g06c08`08X09T2BP5BM8CIBCFBEBC\
+  F8BF3AH0AH0ACHF8`6EcBIeEOjISmLXpPasSfvXjz_nzcszfwz\
+  izzlzznzzqzzuzzvzzszzpyzmvzjsygpvdmsaip__mXPjTHjR6\
+  mO0000pz0gv0`s0Sp0Lm0Ci05f00cXzpSpmOglJYiFPgBHf66c\
+  20a00d00c00a00`2w30m80dC0XH0OL0FP06T00Y`X0VR0RL0MF\
+  6IBCC5J80P30V90P50T20Yvzm0Y`PIE0zn0SgIIzECzB8w83q5\
+  0l20f_SmSJjLCgE3d60aszzipz`cwRRqIEl80fzO20zg0fd0Fa\
+  d0i_0gT0fP0dJ0dE0c90a30`0BH00R05y00q00l00fz09u0El0\
+  Hc0LV82TC9TFHSJOSMVRRaRTi }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

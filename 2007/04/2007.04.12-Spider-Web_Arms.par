@@ -1,0 +1,117 @@
+;     Date: Thu, 12 Apr 2007 00:04:56 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  12-04-07  (Spider-Web Arms [8])
+; 
+;       Id: <1.5.4.16.20070412000848.2a7711b2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 12, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we introduce a new formula, which will replace the old 
+; MandelbrotMix4 formula.  The new formula is named 
+; MandAutoCritInZ.  This is short for "Mandelbrot -- Automatic 
+; Critical value of Initial Z".  And this is exactly what the old 
+; M-Mix4 formula did.  The new formula adds an additional variable 
+; parameter to the old formula, which allows an extra adjustment 
+; to initial Z.  This is necessary because some functions of the 
+; type handled by the new formula have two critical points, and 
+; the formula calculates only one of them.
+; 
+; A drawback of the new formula is that it can not initialize Z 
+; to the second critical point automatically.  To do this, both 
+; critical points must be manually calculated and the difference 
+; entered as the adjustment to Z.  This may be done graphically or 
+; mathematically.  The graphic method is far more fun.
+; 
+; Sometimes both critical points produce identical fractals; 
+; sometimes the identical fractals are mirror images of each 
+; other; sometimes the two critical points produce totally 
+; different fractals.  Finding out is much of the fun of the new 
+; formula.
+; 
+; Today's image was created by subtracting Z^(2.6) from Z^(2.4) 
+; and adding C.  I named it "Spider Web Arms" because the pattern 
+; in the four angular arms around the central midget reminds me of 
+; spider webs.  The spider-webs are actually open-inside areas 
+; decorated by the 'fmod' inside fill.  I rather like the image, 
+; so I rated it at an 8.
+; 
+; Today's image is a slow one, with a calculation time of over 43 
+; minutes.  But the wait may be avoided by visiting the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the completely rendered image is or soon will be posted 
+; for instant viewing.
+; 
+; In tomorrow's FOTD I'll discuss all the MandelbrotMix formulas 
+; and what they are supposed to do.
+; 
+; A sunny mild morning turned into a cloudy mild afternoon here at 
+; Fractal Central on Wednesday.  The temperature reached 52F 11C, 
+; which is still well below normal.  Rain moved in at nightfall, 
+; but by then the fractal cats had finished their evening treats 
+; and were more concerned with washing each other's faces and 
+; chasing each other up and down the hallway.
+; 
+; My day was actually not too unpleasant.  And the above-average 
+; fractal for today shows it.  The next fractal, hopefully also 
+; above average, will appear here in 24 hours.  Until then, take 
+; care, and don't get lost in an ocean of iterations.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spider-Web_Arms    { ; time=0:43:47.58--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=t
+  center-mag=-2.14487395538943600/+0.299702679142293\
+  80/4.74766e+008/1/25/9.6356e-006 float=y logmap=228
+  params=1/2.4/-1/2.6/0/0/0/0 maxiter=5000
+  inside=fmod proximity=0.05 periodicity=10
+  colors=0000009L0BO0CR0DU0EY0G`0Hc0If0Jh0Pj0VkA_nKe\
+  pUksfpxmuzszzztwzotjjqiemh`hgWcfRZeMUdHPcCKbAOd8Te\
+  7Yf5bg4gh2li1qj2lh3gf3bd4Yb4Ua5P_5KY6FW6BV9GSCLPEP\
+  MHUJKZGMbEQ`JTZOWYTZWYbUbeTghRlkPqnOvIJPJKNJKMJKLJ\
+  LKJLJJLHJMGJMFJMEJMDNUMR`VK4IKAMKIQKMSKPXKS_KVcKYg\
+  K`gKchKehKhiKkjKnjKqkKskSeCUbBV`BWZBYXBZVB_SBaQBbO\
+  BcMBeKBfHBgFBiDBjBBk9Bl7BkAEkDHjFJjIMiKPiNRhPUhSXg\
+  VZgXaf_dfafediefkY_wXYoWXhVWaUUUTTNSSGQSJPSLOSNNSP\
+  LSSKSUJSWISYGS`FSbESdDSfImYHnVHoTHpRHpPGqNGrLGsIGs\
+  GFtEFuCFvAFv8ZuCNcFQmIUkMYhP`eSdbVh`ZkYaoVdrTgqVfw\
+  XfcZfp`foafocfzzfngfnhfmdgm`hmXilTjlPklLllHmhJkeLj\
+  bMi_OhXQgURfRTeOVdLWcIYbFZaLV`RR_WNZaJYfFXaD_XBaSA\
+  dO8fJ7iE5kA4mFK`K_OOnBJhCEbD9YEATNBOWARTATRAWPAYMA\
+  `KAbI9eF9gD9jB9l89o69q49s28r28q28q28p28o28o28n28m2\
+  8m2Dn6HnALnE`s9ox4nhHnUUmFfm0sl4pl7nkAkkDijGgjKdiN\
+  biQ_hTYhWWg_TgbRfeOfhM8Vb }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

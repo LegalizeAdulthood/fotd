@@ -1,0 +1,109 @@
+;     Date: Mon, 23 Apr 2007 19:07:53 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  24-04-07  (Valley Scenery [6])
+; 
+;       Id: <1.5.4.16.20070423191156.2a670bca@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 24, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image was created when the formula Z^(1.3)+C was 
+; iterated 13 levels up the logarithmic ladder, with the escape 
+; radius set to 625.  The parent fractal is a Mandeloid with 
+; several bays and an extremely long main filament.  A prominent 
+; midget lies about midway out this filament.  This midget is 
+; shaped much like the entire parent fractal, with several bays.  
+; Today's scene lies rather deep in one of the valleys that 
+; separate the bays.
+; 
+; I named the image "Valley Scenery", since it is little more than 
+; a snapshot of what exists deep in a valley of a midget in a 
+; Mandeloid of order 1.3.  The tiny midget at the center of the 
+; image is almost an accidental intruder.  It has little to do 
+; with the main part of the image, which is little more than a 
+; collection of mostly random bits and pieces.
+; 
+; One tiny bit of interest exists near the edges of some of the 
+; larger pieces of fractal stuff in the foreground, where comb-
+; like features appear to be sprouting.  There could be a bit of 
+; excitement in one of these combs, but the entire area is too 
+; slow for convenient exploration.
+; 
+; The rating of a 6 might be a bit overdone.  One thing definitely 
+; overdone however is the calculation time of over 1-1/2 hours.  
+; But the wait may be avoided by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; I sent the image on ahead to Paul at the FOTD web site about an 
+; hour ago, so it should be posted for viewing very soon.
+; 
+; Friday was the fourth near-perfect day in a row here at Fractal 
+; Central, with lots of sun, gentle winds, and a high temperature 
+; of 84F 29C.  The big excitement for the fractal cats came in the 
+; morning, when a lovesick tomcat wandered by, calling out for any 
+; lady cat within hearing.  The local fractal lady cat, Cassie, 
+; seemed unimpressed by the scraggly intruder.  My day was about 
+; average, though an extra long lunch did put the real work a bit 
+; behind.  The next FOTD will appear in 24 hours.  Until then, 
+; take care, and be fractally oriented.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Valley_Scenery     { ; time=1:38:39.11--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-1.49558348566892000/-5.297525258181361\
+  00/1.145386e+007/1/112.5/2.16309381435852988e-006
+  params=1.3/0/13/525 float=y maxiter=25000 inside=0
+  logmap=1300 periodicity=10
+  colors=000602704806908A0AB0CC0ED0GE0IF0KG0LH0MI0NJ\
+  0OK0PM0QP0SR0UU0WW0YZ0__0ac0dd0ff0hh0hh0hi0hi0hk0h\
+  k1hm2hm5ho7hoAfpCfpDfrGfrIftKfvNfvOfwSfwTfyVfyYdz_\
+  dzadzcdzedzgdzidzkdzmezoezqfzsgyujxwlwxovyquzttzvz\
+  flzdmzcmzcmzamz_kyYkyXkwXkwVjvTjvSjtShrQhrOhpNhpLf\
+  oLfoKfmIdmGdkGdkFdiDciCchCchAaf8af7ad5ac5_c4_a2_a1\
+  Y_1Y_0YZ0YZ0XX0XX0XW0VW0VU0VU0VS0TS0TR0TS0VR0TR0TP\
+  0TP0TO0TO0SM0SM0SK0SK0SJ1SJ1QH2QH4QG5QG7QG8QEAOECO\
+  DDODFOCGOCIOAINA0N98N9GN8ON8QN6SL6Tv6LL5Zd55L4_L4_\
+  K2aK2cK1dK1fK0hK0jI0kI0mI0ZI0zI0nn0jarzn0nI0nK1mK1\
+  mK2kK4kL5kL6jLczm8hN9hNAfNCfODdOEdOznOGcQHcQJaQKaQ\
+  M_SM_SOYSPYSRYTznnSXTUVVWVVXTVZTV_SX_SXaSXcQXdQYfO\
+  YhOYhN_iN_kL_mL_oLapKapKarIatIcvGcwGczFazGcwGcrGdo\
+  KdiPffUfcZfZchWhhRmjOrjJvkGzkDzk9zm6zm2zn0zn0zn5zn\
+  AznFznKzjPzcUzXZzQczKhzDmz7rz1vz0zz0zz0zz0zz0zz0zz\
+  0zz0zz0zz0zzDzzDzzCzzCzzC }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,114 @@
+;     Date: Tue, 10 Apr 2007 22:15:02 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  11-04-07  (Odd Fractal Out [6])
+; 
+;       Id: <1.5.4.16.20070410221852.2ac7ca80@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 11, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'll soon be posting a discussion about how I choose good 
+; parameters for the MandelbrotMix4 formula.  I had hoped to have 
+; it ready today, but the truth is I am not sure exactly how I 
+; find my parameters.  I would have assumed that the exponents in 
+; today's formula are too close together to do much of interest, 
+; but I entered them in the M-Mix4 formula anyway.
+; 
+; Today's parameters define a formula that combines Z^(1.95) with 
+; Z^(2.05) and adds straight C.  I chose the exponents because the 
+; average of 1.95 and 2.05 is 2, and since Z^2+C is the classic 
+; Mandelbrot formula, I wondered if a formula where the average of 
+; the exponents is 2 would have anything special to offer.  As it 
+; turned out nothing unusual appeared.  The parent fractal 
+; resembles one of the perturbed Mandelbrot sets, with a very non-
+; critical look about it that makes the search for interior 
+; midgets almost useless.  But even though there are no midgets in 
+; the parent fractal, there are many interesting nooks and 
+; crannies, with much to explore.
+; 
+; Today's image is located very near the negative X-axis of the 
+; parent fractal, in a blunt valley centered on the axis and 
+; pointing east.  I named it "Odd Fractal Out", since it has no 
+; midgets hidden within it and I could think of nothing better.  
+; The rating of a 6 might be a bit liberal, but the image really 
+; is rather striking, and the calculation time of 9-1/2 minutes is 
+; marginally within reason.  Those do not calculate Fractint 
+; parameter files may view the image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it is posted for sheer enjoyment.
+; 
+; I have updated the MandelbrotMix4 formula, and starting tomorrow 
+; I'll retire the old workhorse and switch to the new version for 
+; most of my fractals.  The newer version will be able to draw the 
+; fractals that result when Z is initialized to a second critical 
+; point of the formula.
+; 
+; Heavy clouds and continued chilly temperatures in the 40's F 
+; (around 8C) made Tuesday far less than ideal here at Fractal 
+; Central.  The fractal cats must have agreed, for they were 
+; unusually sulky most of the day.  It took extra tuna to raise 
+; their spirits.
+; 
+; My day was actually quite pleasant, at least compared to the way 
+; things have been for the past couple months.  And tomorrow looks 
+; to be a repeat.  I already have tomorrow's FOTD fractal, and 
+; it's a pretty good one, so check back here in 24 hours for a 
+; fractal surprise.  Until then, take care, and search for those 
+; patterns in the void.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Odd_Fractal_Out    { ; time=0:09:25.19--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-0.68373061187701090/-0.000464846373378\
+  43/3556049 params=1/1.95/1/2.05/0/0 float=y
+  maxiter=1500 inside=0 periodicity=10
+  colors=000WaSVaTTaURaVQ`WO`XN`YL`ZJ`_I``G`aXL_OTaF\
+  `b3fa5gb7gc9hdBheDifFifHigIjhKjiMkjOkkQkkSllUlmVmn\
+  XmoZnp`npbnqdorfosgptipukpumqvoqwqrxsrytryrqwqpvop\
+  unotlnsknrimqhlpflnekmcjlbjk`ij_hiYhhXggVffUfdSecR\
+  dbPdaOc`Mb_LbZJaYJc_IaXH`VG_TFYREXPDWMCVKBTIASG9RE\
+  8QB7O96N75M52K14L35L56L77L88MA9MCAMEBMFCMHDNJENLFN\
+  MGNOHOQIOSJOTKOVLOXMPZNP_OPaPPcQQeRQfSQhTQjUQlVRmW\
+  RoXRqYRsbSw`RuZRtYRsWQrVQqTQpSQoQPnOPmNPlLOkKOjIOi\
+  HOhQQkYRnfSpnTswVvvUuuTuuTttStsSssRsrRrrQrqPqpPqpO\
+  poOpnNonNomMnmLnlLmkKmkKljJllKmjJliJkhIjgIifIheHgd\
+  HfcHebGdaGc`Gb_FaZF`YF_XEZWEYVDXUDWTDVSCURCTQCSPBR\
+  OBQNBPMAOLANKAMJ9LI9KH9KJBLLCMNENPFORHPSIQUJRWLSYM\
+  T_OUaPVbQWdSXfTYhVZjW_jUZkX`l_bmbdndfoghpjjqmlrons\
+  rpturuxtvzvtstrmsqgqoapmWnlQmjKkiEjlGenI`qJXsLSuMO\
+  vLMwKJxJHRV`OS_LPZKO_IMYHLWGJUFISEHQDFOCEM2AIBDLKF\
+  NhbJfbKebLcbMbaN`aOZaPYaQ }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
