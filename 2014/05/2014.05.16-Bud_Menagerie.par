@@ -1,0 +1,98 @@
+;     Date: Fri, 16 May 2014 20:40:40 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-05-14 (Bud Menagerie [A-4,M-8])
+;       Id: <1.5.4.16.20140516204049.2b1f2732@earthlink.net>
+; ---------
+; 
+; FOTD -- May 16, 2014 (Rating A-4,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With its rating of a 4, the art aspect of today's image makes 
+; little impact, but its math rating of an 8 gives near full 
+; compensation.
+; 
+; The image shows perhaps the most convoluted bud I have yet come 
+; upon.  This bud appears to have cubic tendencies in much of its 
+; nooks and crannies, while other areas appear almost quadratic.  
+; The name "Bud Menagerie" refers to this zigzagging bud.
+; 
+; The parent fractal is a classic Mandelbrot set caught morphing 
+; into a cubic Mandeloid.  The most obvious feature is Seahorse 
+; Valley, which has joined its two branches into a kind of narrow 
+; bridge with a large diamond shaped area of chaos at the center.  
+; Today's image lies within this diamond.
+; 
+; In addition, the main stem of the parent has spread out into a 
+; broad area of intricate detail, with several large minibrots 
+; centered along the ill-defined negative X-axis.  I may check 
+; these minibrots in a future FOTD.
+; 
+; The image calculates in a measly 1-1/2 minutes, so seeing its 
+; glories will demand little sacrifice.  Checking the image on the 
+; web sites will remove any remaining sacrifice.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Heavy overnight rain ended by late morning here at Fractal 
+; Central today, followed by a cloudy afternoon with a temperature 
+; of 64F 18C.  The fractal cats approved of the temperature but 
+; were disappointed by the lack of sun.  The fractal humans simply 
+; made it through the day without a notable event happening.  The 
+; next FOTD will be posted in two days on May 18.  Until then, 
+; take care, and the only sure way to end racism is to stop giving 
+; it so much attention in the media.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Bud_Menagerie { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip passes=t
+  center-mag=-0.24168893/+0.00468962/1052/1/92.5/0
+  params=3/3/0/0 float=y maxiter=3600
+  inside=0 logmap=14 periodicity=6
+  colors=000`00Y00V00S00P00N00K02H02F02C049047074272\
+  770B97GX9KXBOXBOXDIrDKrGMrGOrGGzIIzIKzIMzKRzKTzMVz\
+  MXzMZzOazOczOezIxz4zzBzzIzzOtzVkzaezgZznRztKzzDzz4\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz7zzDzzKzzOzvVztazp\
+  gzkkzgrzcxzZzzVzzRzzMzzIzzBzzGzzIzzMzzOzzTzzVzzZzz\
+  azzezzgzzkxznvzrrztpzxkzzjzzezzgzzczzazzXzzVzvRxtO\
+  trMrrInrGkrBgr9er4ar2Zr0Vr0Tr0Or0Mr0Ir0Gr0Kr0Or0Tr\
+  0Xr0ar0et0jz0kz0pz0tz0xz0zz0zz0zz0zz0zz0zz0zzBzzMz\
+  zVzzczxeznrzerzVrxKrpBrg0rZ0rR0rK0rI0rG0rD0rD0rB4r\
+  99r7Dr7Ir4Mr2Tr0Xr0ar0er0jr0nr0tr0xr0zr0zr0zr0zr0z\
+  t0zv0zx0zz0zz0zzBzzjzzezzazzXzzTzzOzzKzzGzzBzz7zz2\
+  zz0zz0zz7zzGzzOzzZzzgzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

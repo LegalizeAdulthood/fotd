@@ -1,0 +1,97 @@
+;     Date: Sun, 04 May 2014 20:15:26 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-05-14 (Sandy Spectacle [A-7,M-6])
+;       Id: <1.5.4.16.20140504201526.2b7712b0@earthlink.net>
+; ---------
+; 
+; FOTD -- May 04, 2014 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's quick-to-finish image is a scene in one of the parent 
+; fractals that results when the expression Z^(1.5)+C is iterated 
+; a whopping 439.5 levels down the hyperladder.  For some reason 
+; unknown even to myself, I used the older MandelbrotBC2 formula 
+; to find the image.
+; 
+; This parent consists of a large irregular bay vaguely resembling 
+; a strange automobile with two large front wheels and no rear 
+; wheels.  The heads of two people can also be seen in the image, 
+; formed by the two large buds.  Today's scene is located in the 
+; debris on the northern shore line of the large bay.
+; 
+; In my opinion, the art aspect of the image is worth a 7, while 
+; the math aspect earns no more than a 6.  The name "Sandy 
+; Spectacle" points to the large areas of sandy chaos that fill 
+; the scene.  The calculation time of one brief minute should do 
+; away with fractal boredom, while the web sites can do away with 
+; the calculation chore entirely.
+; 
+; Check the finished image online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Some sun but lots of clouds, a few showers of rain, a chilly 
+; wind and a temperature that never got above 57F 14C left today 
+; with much to be desired here at Fractal Central.  With ample 
+; food in their dishes, the fractal cats wanted little more 
+; however.  The fractal humans had a rather slow day.  Until next 
+; time, take care, and at what point does mass-media news become 
+; propaganda only roughly based on fact?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sandy_Spectacle { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 float=y
+  center-mag=+0.3115167767523484/+1.075817196286113\
+  /1.433343e+009/1/-110/0 params=1.5/0/-439.5/0
+  maxiter=2750 inside=0 logmap=114 periodicity=6
+  colors=000EYcCfaBzzAwYWoifbu_ZlKHd40U9FgEbxD6yGNgJ\
+  cQLt9IPDHND9F6HMDOTKVZRbeYikdprzwxztrzrlzmfzm`umWv\
+  hQwcKxZEhU8cP3cK6yK8xKAwKDvmYXjVVgRTdNRaKPZGNWCLT9\
+  KS8JU8Jc8JhKJmUJmcJhUJcKJU6UL6UK5UJ5UI5IH4IH4IG4IF\
+  3cE3cD3cD3cC2cB2cA2c91c91c81c70c60c50c50c72c84cA6c\
+  B7cD9cEBcGCcHEcJGcKHckTXjTWhSVfRTeRScQQaPP`POZOMXN\
+  LWNJUMITMHUNJVOKWPLWQMXRNYSOZTPZUQ_VR`WS`XTaYUbZVc\
+  _Wc`XdaYebZfc_fd`geahfbfgggfehfchfbie`ie_jeYjdXkdV\
+  kdUlcSlcRmcPndNmcOlcOlbOkbPjaPjaPiaPh`Qh`Qg_Qf_Qf_\
+  ReZRdZRdYRcYSbYSbXSaXS`WT`WT_WTZVTZVUQhVQiWQjWQkWQ\
+  lWQmWQnWQoWQpWQqWQrWPpVOnUNlUNkTMiSzgSzfRzdQzcQzcP\
+  zcPzcOzcNzcNzcMzcLzcLzcKzcJzcJzcIzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzfzRgzRizSjzSlzTnzUozU\
+  qzVrzVtzWuzWwzXxzXvzWuzVtzUzzTzzSzzRzzQzzPzzOzzNzz\
+  NzzMzzLzzKzzJzzIzzHzzGzzF }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

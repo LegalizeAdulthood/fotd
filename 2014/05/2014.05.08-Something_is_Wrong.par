@@ -1,0 +1,107 @@
+;     Date: Thu, 08 May 2014 16:02:55 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-05-14 (Something is Wrong [A-6,M-9])
+;       Id: <1.5.4.16.20140508160258.38af9fd0@earthlink.net>
+; ---------
+; 
+; FOTD -- May 08, 2014 (Rating A-6,M-9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Something is indeed wrong with today's scene.  This is why I 
+; have given the math a rating of 9, while the art rates only a 7 
+; despite my extra work.  The math is interesting because the 
+; minibrot at the center is clearly quadratic, while the elements 
+; in the surrounding pattern are of order-6.  As an example of the 
+; strangeness, notice the 6 small spirals near the frame edges and 
+; the 36 tiny spirals at the next level inward.
+; 
+; I have seen this phenomenon several times before, and it appears 
+; no more logical today than it did when I stumbled upon it about 
+; 12 years ago.  But such counter-intuitive things in fractal math 
+; are what makes fractals so much fun and has kept me fascinated 
+; for over 25 years.  By comparison, those who approach fractals 
+; with a 'look ma I'm an artist' attitude all too often quickly 
+; lose interest.
+; 
+; The parent fractal came about when I subtracted 0.35 part of 
+; Z^(4) from Z^(3) and added straight C on each iteration.  This 
+; parent resembles a Mandelbrot set rotated 180 degrees, with 
+; large open bays at the end of every filament.  The largest bay 
+; of all lies at the eastern tip of the main spike.  This bay has 
+; a large but unstable valley intruding into it, which is very 
+; sensitive to changes in the real(p2) parameter.  Today's scene 
+; lies in this valley, very close to the X-axis.
+; 
+; The calculation time of 3 minutes is well within reason, but the 
+; viewing can be made even easier by checking the finished image 
+; on the web sites.
+; 
+; Enjoy life to the fullest.  Avoid the calculation hassle by 
+; viewing the finished image on the FOTD web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The weather was rather pleasant here at Fractal Central today, 
+; with partly cloudy skies, gentle winds and a temperature of 75F 
+; 24C.  The fractal cats passed the time watching the birds in the 
+; yard, while the humans took care of the business department.
+; 
+; The next FOTD fractal, for better or worse, will be posted in 
+; the near future.  Until then, take care, and some of yesterday's 
+; supernatural nonsense has become today's scientific wonders.  I 
+; wonder how much of today's supernatural nonsense will become 
+; tomorrow's scientific wonders.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Something_is_Wrong { ; time=0:03:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.4473682468658692/-0.0008456880636021\
+  /2e+007/1/-22/0 params=1/3/-0.35/4/0/0/0/0 float=y
+  maxiter=2600 inside=0 logmap=160 periodicity=6
+  colors=000DqjDqiDqhGqgJqfMqePpdRpcUpaXo__oYanWejVh\
+  gUkcTn`SmZQlXOkWNkULjSJiRIhPGhOFgMDfKBeJAeH8dF6cE5\
+  bH3bK2ZO1WS1TW1PZ1Ma1Jc0Ge0Cg09i06k03m0Ao4Gq7MsASu\
+  D`wHgxKkyNmzQnvVosZppbpmfqljslnulnznnxmmvllukksjkq\
+  ijpiinhhlghkfgiefhefebdb`b_Z`WW_SUYOPVKMSGJPDGMBEJ\
+  9CG7BD6AC79C78D87C86B85A94A93AA2AA1AA0AB69B58B57E7\
+  6H85K95SL3ZW1YW6YWBXWGXWKWWPWWUVWYVWbUWgUWkTUhTTfT\
+  SdSQaSP_SOYSNWRLTRKRRJPQHMQGKQFIQEGTGLWIQYKV`M_bOc\
+  eQhgSmjUrlVvmXtmZsm`rmbqmdpmfomhnnimnklnmknojnqins\
+  hnugnvfiq_dmU_hOVdIQ_CLW6HS0MR7QQDVQJZPPcPWgOalOgp\
+  NmtNsuPquRpvTnvVmwXkwZjx`hxbgxcfr`dlYcfWb`TaVX`PO_\
+  OMVOLRNJNNBIMGEMFAOJCPNER7GSUITXJV`LWdNYgPZkR_nSi`\
+  erOspXqndombpm`qm_qmYrmWrmVsmTsmStmTtmUumVumWvmXvm\
+  YumZum_pmakmcmreowgqziszkuzmwzozzqzzszzuzzwzzxzzyz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, esc=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

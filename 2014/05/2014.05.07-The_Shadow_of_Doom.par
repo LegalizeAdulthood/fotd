@@ -1,0 +1,102 @@
+;     Date: Wed, 07 May 2014 23:10:28 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 07-05-14 (The Shadow of Doom [A-6,M-8])
+;       Id: <1.5.4.16.20140507231031.2b7f9ec0@earthlink.net>
+; ---------
+; 
+; FOTD -- May 07, 2014 (Rating A-6,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a minibrot being devoured by a dark shadow 
+; encroaching from the right.  Shocked by this scene, I named the 
+; image "The Shadow of Doom".  Actually, the shadow is the 
+; advancing edge of a kind of cutoff point set by the ridiculously 
+; large value of the imag(p3) parameter, which determines the 
+; escape radius.
+; 
+; The parent fractal combines 10 negative parts of Z^(-1.1) with 
+; one part of Z^(-11) before adding (1/C) on each iteration.  This 
+; combination produces a very common type of parent fractal, 
+; consisting of a north-south string of large bays with a 
+; prominent 'fan' extending east from the origin.  Today's scene 
+; lies well east of this fan, in an area that has been opened up 
+; by the immense escape radius.
+; 
+; The art rating of a 6 implies that the image is less than 
+; totally awesome.  The math rating of an 8 shows that encroaching 
+; escape radii are rather unusual.
+; 
+; The calculation time of 2-1/3 minutes will pass, take my word 
+; for it.  It will pass even faster when the finished image is 
+; viewed on the web sites.
+; 
+; The pre-calculated image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Clouds moved in during the morning and thickened during the 
+; afternoon here at Fractal Central today.  The rain arrived in 
+; the evening, adding to the fractal cats' annoyance with the 
+; temperature of 64F 18C.  The fractal humans found their 
+; annoyance in the work that refused to co-operate.
+; 
+; The next FOTD will be posted in the near future.  Until 
+; whenever, most likely 24 hours, take care, and some scientists 
+; laugh at the supernatural beliefs of their more religious 
+; comrades, while speaking things that appear far more 
+; supernatural than any religious doctrine.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Shadow_of_Doom { ; time=0:02:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+6.150456348458247/+0.00268274080360025\
+  /9.387e+010/1/172/0 params=-10/-1.1/-1/-11/0/2.26\
+  9668213942e+017/0/0 float=y maxiter=1000 inside=0
+  logmap=140 periodicity=6 mathtolerance=0.05/1
+  colors=000Ns`AzaAqbChcAzd5neAze3mb3m`4mZ4mX5lV5lT5\
+  lQ6lO6kM7kK7kIAkG6fC5b94Z54V23X63Y93ZD3_G2`K2aN2bR\
+  2cUopsljqjeog_meVkcPi`KgYEeW9cU4bS5_R5YQ6VO6TN6QM7\
+  OL7LJ7JI8GH8EG8CH6MI4VJ2dK0mL5iM9eMDaNHYOMUOQQPUMQ\
+  YIpbERfASjzSn2mj4Xg6_c7a`9dXAfUCiQEkNFnJHpGIsCKu9L\
+  iKKZUKOdKDnKCkMCiNCfOCdPBaRB_SBXTBVUASWAQXANYALZ9I\
+  `9Ga9Db9BcBJeDQfFYgHdiJljKskLreLq_MpUMpPNoJNnDOm7O\
+  m2LnAIoHFpPCpW9qc6rj3rq5np6ko8ho9enAbnC_mDXlFUlGRk\
+  HOkJLjKIiMFiNChO9hNAgNAfNAfNAeNAeMAdMAdMAcMAbMAbLA\
+  aLAaLA`LA`LA_LA_OBXQCVSDSVEQXEOZFL`GJcHHeIEgICjJAl\
+  K7nL5pL3jKMdJc`FfYCiU9lR6oO3rO9mOEiOKeOP`OVXO_TOdP\
+  PeOPeNPfNPfMQfMQgLQgLQgKQhJRhJRhIRiIRiHRiHPfLOcON`\
+  SLYWKWZJTbHQfGNjFKmDHqCEuBCx9Tg7iS6cC7c8Uc4Uc0UUFU\
+  UKUUPUUTUUYUUaZUk_Ud`UYaURbUKcUMcUOcUQcUScUUcUWZcY\
+  acZec`hcbkcdnmfqmhtmjwmlzmmvzlmzfpzjmziizhhzggzffz\
+  fdzeczzazc_zbXzaVz`Tz_zz_ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, esc=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

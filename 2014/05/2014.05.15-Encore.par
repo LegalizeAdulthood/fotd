@@ -1,0 +1,106 @@
+;     Date: Thu, 15 May 2014 18:22:47 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-05-14 (Encore [A-8,M-7])
+;       Id: <1.5.4.16.20140515182256.2b2762f0@earthlink.net>
+; ---------
+; 
+; FOTD -- May 15, 2014 (Rating A-8,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a near repeat of an earlier FOTD image, which 
+; is why I named it "Encore".
+; 
+; The rather unusual parent fractal resembles a Mandelbrot set 
+; being squashed inside a shrinking ring.  Today's scene lies in 
+; the spurious detail that fills East Valley of this M-set.
+; 
+; The effect of a minibrot illuminating its surroundings was 
+; achieved by coloring the 'inside' brilliant white and rendering 
+; the scene with the 'outside' set to 'fmod'.
+; 
+; The calculation time of 50 seconds is quite fast, leaving little 
+; time to ponder the fractal mysteries.  Checking the web sites 
+; will be equally fast, leaving the mysteries unsolved.
+; 
+; So check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and the glorious variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; and forget the mysteries.
+; 
+; Heavy clouds prevailed here at Fractal Central today, but it 
+; remained dry, while a few breaks of sun kept the fractal cats 
+; from feeling too glum.  The temperature of 79F 26C brought few 
+; complaints from either the cats or humans.
+; 
+; The next FOTD will be posted in the near future.  Until then, 
+; take care, and if we really wanted to fight climate change, we 
+; would stop pushing meaningless politically-driven steps that 
+; could do nothing more than make us feel better while the planet 
+; continues to grow hotter.
+; 
+; If we were really serious, which we apparently are not, we would 
+; abandon the use of motor vehicles and airplanes powered by 
+; energy derived from fossil fuels, and drastically curb the use 
+; of electricity to power our homes and factories until the time 
+; comes (if ever) when we can generate reliable power from nuclear 
+; fusion.  If we cry that these steps would be too harsh and would 
+; wreck the economy, as they probably would, then let's suck it 
+; up, pack away our protest signs, admit defeat and prepare for 
+; the immense problems soon to come.  Wind and solar energy will 
+; never come close to replacing coal, oil and natural gas.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Encore { ; time=0:00:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip float=y
+  center-mag=+0.2774982732/0/554762 params=-100/-100\
+  /-14.75/0 maxiter=3600 inside=255 proximity=0.08
+  outside=fmod symmetry=xaxis periodicity=6
+  colors=000HOPHOPHPPHPOHQOHROHROHSNHSNHTNMLSMLSLMRL\
+  MRLMRKMQKNQKNQKNPJNPJOOJOOJOOIONIONIPNIPMHPMHPLHPL\
+  zzzzzzzzzzzzzzzyzzwzzuzzszvrzrqzmpzhozcmyZkxViwRgv\
+  RfvReuSduSctSbtTasT`sT_rUZrUYqUXqVWpVVpVUoVUoWUnWU\
+  mWUmXUlXUlXUkYVkYVjYVjZViZViZVhZVh_Vg_Wg_Wf`Wf`We`\
+  WeaWdaWcaWcbXbbXbbXabXacX`cX`cX_cX_cYZcYZcYYcYYcYX\
+  cYXcYXcYWcYXcXXbXX_WXZWXYVXXVWWUWVUWUTWTTWSSWRSWQR\
+  VPRVOQVNQVMQVLRVKSUKTUKUUKUUKUUKUUKUUKVUKVUKUUKUUK\
+  UUKUUKUUKTUKTULTUMTVNTVOSWPSWPSXQSYRSYSRZTRZUR_VR_\
+  VR`WQ`XQaYQbZQb_Qc`PcaPdaPdbPecPedOfeOgfOggOhgOhhN\
+  iiNijNjkNjlNkmMlnLjmKglJdkIbjH_iGXgFVfESeCPdBMcAKb\
+  9H`8E_7DZ6CY5BX3AW59V58U57U66T66S06R06Q06O06N06M06\
+  L06K06J06I06H06G05F04E03D02C01B00A0090080070060050\
+  04003002001000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  0000000000000000000000rzz }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

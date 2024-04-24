@@ -1,0 +1,104 @@
+;     Date: Mon, 05 May 2014 16:43:37 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-05-14 (Rectangle Homicide [A-7,M-7])
+;       Id: <1.5.4.16.20140505164337.2abf130e@earthlink.net>
+; ---------
+; 
+; FOTD -- May 05, 2014 (Rating A-7,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The S-shaped thing at the center of today's image is the curious 
+; rectangle just east of the large minibrot on the fractalized 
+; main spike of the Z^(2.003) Mandeloid.  It looks nothing like a 
+; rectangle because the scene is sliced in the Oblate orientation, 
+; which is defined by the imag(C) and real(Z) axes of the Julibrot.
+; 
+; I named the image "Rectangle Homicide" because of the violence I 
+; wreaked on the rectangle, though I realize that it's rather hard 
+; to be found guilty of murdering a rectangle.  
+; 
+; As I see it, the art and math aspects both rate a 7.  The art 
+; is, well, all right, while the four-dimensional math trick has 
+; worn pretty thin by this time.
+; 
+; The calculation time of 4-3/4 minutes could lead to impatience, 
+; so I recommend saving time by checking the web sites.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of sun and clouds prevailed here at Fractal Central today, 
+; with a temperature of 66F 19C, which was still a little below 
+; normal but due to the light winds, quite pleasant.  The fractal 
+; cats, never satisfied, complained about the on-and-off sunshine.
+; 
+; The fractal humans had an average day.  Hey, I know it's not 
+; very exciting but this is the FOTD, not a sappy romance novel.  
+; The next FOTD will be posted when I get a round tuit.  Tuits are 
+; everywhere however, so most likely the next FOTD is only 24 
+; hours away.  Until then, take care, and always remember that the 
+; news outlets let us know just what they want us to know.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rectangle_Homicide { ; time=0:04:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 periodicity=6
+  center-mag=-0.00000292103854801/+0.000050825559078\
+  12/2180/0.02172/90.5720777131635515/87.94541111137\
+  70125 params=0/90/0/90/-1.7435/0/0.00019/0.07682/\
+  2.003/0 float=y maxiter=32767 inside=0 logmap=-62
+  colors=000YaiWagV`eTZbRW_QSWOOUMLPLJJJHIJGHGFGFEFF\
+  CDFGBFODKUHKaIK`UKecOlmUsucuzmwzcxzUwzYwzgmmpccoUU\
+  nKKnJAmIAmHAoGAqFAsEAuDAwCAzBAzAAz9Az8Az7Az7AzAEzC\
+  HzFKzHNzKQzMTzPWzRZzUazWdzZgz`jzcmzepzgsz`hzUZzNOx\
+  GEz94zIEzQOzYYzegzmqzUzzkqzUizUazUUzUMzULzUKzUJzcI\
+  zcHzcGzcFzcEzcDzcCzcBzmAzm9zm8zmDzmIzmNzmSzmXzmazm\
+  fzmkzmpzmuzmzzmwzmtzmqzmozmlzzizzgzzdzzazz_zzRzzJz\
+  zBzzDzzEzzFzzHzzIzzJzzLzzMzzNzzPzzQzzRzzSmzQmzPmzO\
+  mzNczLczKczJczIPzKPzLOzNOzONzQNzRMzTMzULzWLzXKzZKz\
+  _JzaJzbPzaVz`_z`ez_kzZpzZmzWjzUgzSdzPazNZzLWzITzGQ\
+  zENzBKz9Hz7Kz9NzBQzCTzEWzFYzH`zJczKfzMizNlzPnzQlzP\
+  jzOhzNfzNdzMbzL`zLZzKXzJVzJTzIRzHPzHRzHSzHUzHVzHRz\
+  INzIKzIIzFHzDFzBEz98zV2zp4zo5zo6zo7zo8zo9zoAzoBzoI\
+  znOznUzn_znezmkzmqzmwzmpzfiz`bzVhzamzgrznwztwzhwzX\
+  wzMqzHkzCez7_z2Vz7QzBMzGHzKCzP8zTFzYMzbTzg_zlfzqmz\
+  vtzzuztvzowzjxzdyz_zzVzzZ }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

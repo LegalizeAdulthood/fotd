@@ -1,0 +1,110 @@
+;     Date: Tue, 13 May 2014 16:43:53 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-05-14 (Maximum Festivity [A-7,M-7])
+;       Id: <1.5.4.16.20140513164400.2ae715fa@earthlink.net>
+; ---------
+; 
+; FOTD -- May 13, 2014 (Rating A-7,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I combined negative (1/Z) with 
+; negative (Z) and added (1/C) on each iteration.  This expression 
+; has two critical values, +2 and zero.  Both critical values 
+; produce similar fractals, which are oriented 180 degrees apart.
+; 
+; Both parent fractals resemble the east parts of Mandelbrot sets 
+; with the main bud and spike cut off by flat disks.  Today's 
+; scene lies in the chaos along the northern edge of the parent 
+; that results when Z is initialized to the critical value of zero 
+; by setting real(p4) to -2.
+; 
+; I named the image "Maximum Festivity" because of the riot of 
+; overly brilliant colors, which were mostly produced by rendering 
+; the image with the 'outside' set to 'tdis'.  In fact, these 
+; garish colors hold down the art rating to an unexceptional 7.  
+; The math rates a 7 also, mostly because of the non-zero setting 
+; of the real(p4) parameter.
+; 
+; The image takes a solid 2-1/2 minutes to finish, not so bad as 
+; fractals go, but even more time can be saved by checking the web 
+; sites.
+; 
+; The finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today brought a mix of clouds and sun, and a temperature of 90F 
+; 32C, to Fractal Central.  The fractal cats thought it was a 
+; little too warm for comfort, while the fractal humans thought it 
+; was just right.  The next FOTD will be posted in a day or two, 
+; or possibly three.
+; 
+; Until the next FOTD appears, take care, and don't be misled by 
+; conservative deniers of climate change, (aka global warming).  
+; The world-wide weather records show that it is a fact.  And at 
+; the same time don't get caught up in the progressive frenzy to 
+; pass new legislation in the name of fighting climate change.
+; 
+; Since the climate doesn't obey man-made laws, passing new laws 
+; would amount to nothing more than feeling good while satisfying 
+; various political and economic agendas.  With our current lack 
+; of technology, hedonistic life style, and so many nations 
+; developing, there is nothing we would be willing or able to do 
+; that would stop or even slow the warm-up.  It would be far 
+; better not to economically cripple ourselves and to use our 
+; resources to prepare for the challenges of the warmer planet to 
+; come.
+; 
+; 
+; Jim (Captain Negative) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Maximum_Festivity { ; time=0:02:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.3041584081700229/+0.1763178398559197\
+  /142961/1/-65/0 params=-1/-1/-1/1/0/0/-2/0 float=y
+  maxiter=3600 inside=0 outside=tdis periodicity=6
+  colors=000UzzH0zM4zS9z_CzeHzjMzrSzxYzzbzzgzzmzzrzz\
+  xzzzzzuzzprzjjxebp_UgUM_PHPK9HE1990040000000000000\
+  0000000000000100400600900C00C00E00H00K00M00P00S11U\
+  44Y64_96bC6bE9eHCgKCjMEmPHpSHrUKuYMxYMz_PzbPzeSzgU\
+  zjUzmYzp_zr_zubzxezzezzgzzjzzgzzgzzezzezzbzzbzz_zx\
+  _zu_zuYzrYzpUzpUxmSujSrjSpgPjePgeMebMb_K__KYYHUUHS\
+  UHMSEKPEHPCEMCCK99K96H00640C94HH6MMCSUHY_KbgUgmamu\
+  frzmxzszzzzzuzzpzzgzmYu_UpKKj6Ab00Y00S00M00P00P00S\
+  00S00S00U00U00U00Y00Y00Y00_00_00_00b00b00b00e00e00\
+  e00g00g00g00j00j00j00m00m00m00p00p00p00r00r00u00u0\
+  0u00x00x00x00z00z00z00z00z00z00z00z00z00z01z01z04z\
+  04z04z06z06z06z09z09z09z0Cz0Cz0Cz0Kz0Sz1_z9gzHpzKz\
+  zMzzPxzPxzSuzSrzUrzUpzYmz_mz_jzbgzbgzeezebzgbzj_zj\
+  _xmYxmUxpUxpSxrPxrPuuMuxKuxKuzHuzEuzYrzmrzqrzzzzfr\
+  zUpz4pc1pz0KzQ0zmpzmmz0mz0mz0mz0mz0mz0jz0j00z00z00\
+  z00z00z00z00z00z00z40z90z }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, esc=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

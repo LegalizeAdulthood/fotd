@@ -1,0 +1,117 @@
+;     Date: Fri, 02 May 2014 16:55:43 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 02-05-14 (How Low Are We? [A-7,M-8])
+;       Id: <1.5.4.16.20140502165540.2aaf28fa@earthlink.net>
+; ---------
+; 
+; FOTD -- May 02, 2014 (Rating A-7,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The name of today's image asks a question -- "How Low Are We?"  
+; The real(p1) parameter answers that question.  The exponent of Z 
+; in today's image lies at the lowly level of 1.067, a level where 
+; fractals would normally be assumed to be virtually impossible, 
+; much less filled with minibrots.  But thanks to the overworked 
+; MandelbrotBC3, which calculates the multiple values of the 
+; complex-log function, we have not only a fractal, but a rather 
+; exciting minibrot.
+; 
+; The parent fractal resembles an orca swimming freely through its 
+; natural habitat, the ocean.  The fractal orca is surrounded by a 
+; cloud of sandy debris that could be bubbles.  Today's scene is 
+; located in this bubble debris, to the lower left of the orca.
+; 
+; The minibrot in today's image is shaped like a plunging rocket 
+; ship, not at all like the orca shape of its parent.  Almost all 
+; minibrots in this ultra-low range of exponents of Z are shaped 
+; like rockets or torpedoes, but this does not mean the scenes are 
+; worthless.  The features surrounding the minibrots can sometimes 
+; be surprising.
+; 
+; The art worth of today's image rates a 7.  In my opinion, the 
+; art aspect is notably above average, held up by its brilliant 
+; coloring.  The math rating of an 8 points to the surprise of 
+; finding a minibrot in a fractal with an exponent of Z as low as 
+; 1.067.  And this is not the lowest possible exponent that would 
+; produce a fractal with minibrots.  Like all things fractal, 
+; there is no well-defined cut-off point below which fractals with 
+; minibrots are impossible.  Finding them simply becomes ever more 
+; difficult until the fractalist simply stops his search.
+; 
+; The maxiter of today's image is 420,000, which results in a 
+; calculation time of 7-1/2 minutes.  This is a good example of 
+; the increasing difficulty as the exponent approaches unity.  And 
+; even with this extreme value, the minibrot is far from fully 
+; resolved.  Luckily, the web sites are there to bring relief.
+; 
+; So escape fractal drudgery.  Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today brought a mix of clouds and sun, brisk winds and a 
+; temperature of 61F 16C to Fractal Central.  The fractal cats, 
+; now quite difficult to tell apart from a distance, had a playful 
+; day.  The humans had a work day.  The next FOTD will be delayed 
+; until May 4, two days from now.  Until then, take care, and I 
+; just found a mind hiding under the stairs.  Did anyone lose 
+; theirs?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+How_Low_Are_We? { ; time=0:07:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=t
+  center-mag=-7.525986636549002/-3.471416076886733/\
+  3.47627e+010/1/110/0 params=1.067/0/0/1500 float=y
+  maxiter=420000 inside=0 logmap=395
+  colors=000d00b00`00_00Y00U02R0GT1JU5LW7MYCO_ER`JTb\
+  MUdRWdUY_TWUTWPTWLTWGTWCTW7TW4TW7URCUMGWJLWEOWCTY7\
+  YY5b_1f_0l_0q`0w`0z`0sb0nd0gd2`f7WgDRgHLiHGlHClH6n\
+  H2oH0oHAnHOlHbiHsiHq`HqTHqMEqEDo76o20o00o00zRDzziq\
+  zY_zOJzD5z50y00w00s00o00l00g20d60`A0YD0UH0RM0OP0PM\
+  1RJ5TGAUEGWCLY9R_6W`5giMusfln_dgTYbMRYGLTALMDLHEGD\
+  GA9H55J01L50MA0OF0LK0HP2EV5C`79bA6fD4iH2nP0qY0sd0w\
+  d0zo0zuczyzzzz2PH5PH7PH9PHCPHDPHGPHHPHLPHOcYPcYTcY\
+  UcYYcY_cYbcYdcYbcobcobco`co`co`co_co_co_ozYozYozYo\
+  zWozWozWozGtz4tz0tzctzctzctzctzctzctzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
