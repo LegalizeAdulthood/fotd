@@ -1,0 +1,100 @@
+;     Date: Tue, 06 Mar 2012 18:22:04 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-03-12 (A Thorny issue [8])
+;       Id: <1.5.4.16.20120306182411.2a771728@earthlink.net>
+; ---------
+; 
+; FOTD -- March 06, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image resembles a crown of thorns, which, because of 
+; the season, was the first name that came to mind.  Not wanting 
+; to risk offending the devoted, I thought another few minutes and 
+; named the image "A Thorny Issue."  The name refers to both the 
+; appearance of the fractal and my indecision in choosing a name.
+; 
+; The formula that created the image subtracts 2 parts of Z^(-1.8) 
+; from 2 parts of Z^(+0.75) then adds (1/C) on each iteration.  
+; This rather strange combination draws a parent fractal that 
+; resembles nothing as much as a rubber duck blowing bubbles.  
+; Today's scene lies deep in one of the bubbles.  This rubber-duck 
+; parent fractal is unusual enough to hold further interesting 
+; images in its depths.  I might again venture into it in the days 
+; to come.
+; 
+; I rated the image at an 8, which seems a bit more liberal than 
+; it deserves.  The calculation time of a fireball 45 seconds 
+; makes up for the minor lack of artistic value however.
+; 
+; Check the finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high definition version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past FOTD images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today brought a mix of sun and clouds to Fractal Central, while 
+; the temperature rose from a chilly morning low of 19F -7C to an 
+; afternoon high of 43F +6C.  The fractal cats decided there was 
+; too little sun on their shelf in the southwest window, and spent 
+; the afternoon curled on the couch.
+; 
+; The humans spent the day just being human, which is sometimes 
+; easier said than done.  The next FOTD will be posted in 24 
+; hours.  The odds are in favor of it appearing on time.  Until 
+; then, take care, and skeptics are skeptical of non-sensical 
+; things they do not wish to be true, while believers believe in 
+; things they wish to be true.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Thorny_Issue { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=-0.150195366063183/+0.1918500355272384/\
+  9e+11/1/55/0 params=2/0.75/-2/-1.8/0/0/0/0 inside=0
+  maxiter=1000 outside=imag logmap=54 periodicity=6
+  colors=000000G7FRCEaHElMDvRDuHBuWAzm9u`8uc7dP6vZQw\
+  Y0xDKyMHwlEwaBwc8weBwgEwiGwkJwmMwoOwqRwsTwuRwwQwyO\
+  wzNzhMznZztkzzxblwNZv7MvVHWrD5iLD`TLS`TJh`BogBmgAl\
+  gAjgAifAhfAffAefAdeAbeAae9_e9Zd9Yd9Wd9Vd9Uc9Sc9Rc9\
+  Qb8Ob8Nb8Lb8Ka8Ja8Ha8Ga8F`8D`7C`7A`79_78_76_75_74Z\
+  72Z71Z7BI7AJ7AK79K79L78M78M78N77O77O76P76P76Q75R75\
+  RS6WX5Ra4Mf3INEO3OTpnmthfwc_zZUqUQhPN_KKRGHPHFOIDM\
+  IBLJAKK8IK6HL4GL3EP5CS7AW89ZA7bC5eD3iF2lG7jHChIHfJ\
+  MdKRcKIsDDo98k54g27bBAZJDVRGQ_JMgMIoPEwQNnQVfRcZRk\
+  ROdXLYaIRgFKlCDr97wBBpCFiDIcFMXGPRHTKIWELQLOKRRFYU\
+  9cW4iU3iT3hS3hR3gQ3gP2fO2fN2eM2eL2dK2dI1cH1cG1bFmb\
+  EmaDmaCm`Bm`Am_9m_8mZNmsLmpJmmHmkFzhDzeBzc9z`zzgxz\
+  fwzfuzftzfrzeqzeozenzemzdkzdjzdhzdgzdezcdzcczcazc`\
+  zbZzbmzbmzbmzamzamzamzamzamz`wz`wz`wz`wz_wz_wz_wz_\
+  wzZwzZwzZwzZwzZwzZwzZwzZwzZzzZzzZzzZzz2zz3zz4zz5zz\
+  6zz6zz7zz8zz9zz9zzAzzKzzI }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

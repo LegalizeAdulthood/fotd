@@ -1,0 +1,108 @@
+;     Date: Sun, 11 Mar 2012 14:56:19 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-03-12 (What Animal is It? [8.5])
+;       Id: <1.5.4.16.20120311135830.0da747d0@earthlink.net>
+; ---------
+; 
+; FOTD -- March 10, 2012 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a freaky cubic minibrot that I turned up 
+; yesterday.  It lies just beyond the large quadratic minibrot on 
+; the east branch of the filament extending from the large 
+; northern bud of its oversized-Mandelbrot-set parent.
+; 
+; I named the image "What Animal is It?" because I have never 
+; before seen a cubic minibrot just like the one in the image, and 
+; also because there is still some quadratic energy mixed in with 
+; the preponderance of cubic energy.
+; 
+; The rating of an 8-1/2 is based more on the mathematical 
+; interest than the artistic value, which is closer to a 7.  The 
+; coloring did add a half-point however.
+; 
+; The calculation time of 2 minutes might cause some fractalists 
+; to grow impatient.  This is where the FOTD web sites charge to 
+; the rescue.
+; 
+; So be happy!  View the finished image on the official FOTD web 
+; site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; without the hassle of running the parameter file.
+; 
+; The image is posetd in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original, now classic, FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of sun prevailed here at Fractal Central today, but the 
+; weather was cold.  The high temperature of 36F +2C and brisk 
+; winds made it feel like midwinter and made the fractal cats seek 
+; the artificial heat.  To cheer the duo we assured them that 
+; tomorrow would be much warmer.  The hopeful words seemed to 
+; raise their spirits a little.  The next FOTD will be posted in 
+; 24 hours.  Until then, take care, and maybe the universe is a 
+; fractal running on the universal computer.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+What_Animal_is_It? { ; time=0:02:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti function=recip passes=1
+  center-mag=-0.8725112652295395/+29.7358140753207/\
+  1.847812e+011/1/-52/0 params=3/30/0/0/0/0/0/0/0/0
+  float=y maxiter=1600 inside=0 logmap=210
+  periodicity=6 mathtolerance=0.05/1
+  colors=000OhFMhFLhFKiFIiEHiEGiEEiEDjDCjDAjD9jD8jD9\
+  kCAlCBmCCmCDnCEoCEoCFpCGqCHqBIrBJsBJsBKtBLuBMuBNvB\
+  OwBOwBPvDPvEPuFPuHPuIPtJPtKPsMPsNPsOPrQPrRPrSPqTPq\
+  VPpWPpXPpZQo_Ro`SoaTnbUnbVmbWmbXlaYl`Zk__kZ`jYajXb\
+  iWciUdiSehQfhOggMhgKigIjhGkiEljCmkAnlAomApnAqoArp9\
+  sqFtrKusPvtUwuZxvcxwhxxmxymxzmnpcnc`oWgmRikKliFngA\
+  qe6sW9pMBcC7K300000`2VZ4UY5TW7TV8STASSBRQCROFWMI_L\
+  LdJPhHTmGWqFVrEVrDWsCUsBStAQt9Ot8Mu7Ku6Iv5Gv4Ew3Cw\
+  3Aw48t57r67o78m8Aj9BhADeBEcCG`DHZEJWFKUGMRHNPIPMIQ\
+  KIRNIRQIRTIRVLSYOT`RUcUUeWVhZWkaWmdXpgYsiYucUsZRrT\
+  OqOLpIIoDFnICkMAiQ8gU6ePEaKMZFTWA`S5hP0oM9kQIgURcY\
+  _``hXdqThyQkuObrNUoMLlLCjKBhJAfJAdI9cI9aH8_H8YG7XG\
+  7VF6TF6RE5QE5MF8JGBGHEDIG9JJ6KMULPULRULSULTcLTcLUc\
+  LUcLVmLVmLWmLXmLXmUYmUYmUZmUZzUXzTWz_VzXUzcTzcRzcQ\
+  zcPzcOzcNzcMzcOzcQzcRzcTzcUzcWzcXzcZzc_zcazcYzcZzc\
+  _zc`zcazcVzcPzcIzcCzcBzcA }
+
+frm:JulibrotMulti  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), aa=-(real(p1)-2),
+  bb=imag(p1)-0.0000000000000000001,
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=z*z*fn1(z^(aa)+bb)+c
+  |z|< 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

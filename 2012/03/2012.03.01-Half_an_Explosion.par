@@ -1,0 +1,111 @@
+;     Date: Thu, 01 Mar 2012 19:33:13 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-03-12 (Half an Explosion [8])
+;       Id: <1.5.4.16.20120301193516.2a6f7298@earthlink.net>
+; ---------
+; 
+; FOTD -- March 01, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Half an Explosion".  I gave it this name 
+; for two reasons: first, because the explosion is divided into 
+; two distinct halves; second, because it is a tweaking of an 
+; image that appeared several years ago, and is therefore only 
+; half new.
+; 
+; The parent fractal is an oversized thing consisting of two large 
+; bays with a large ring off to the northeast.  This ring is 
+; surrounded by smaller rings, with today's scene located in one 
+; of these smaller rings.
+; 
+; The half-and-half effect was created by carefully tweaking the 
+; escape radius, set by imag(p3), until the cutoff point slices 
+; through the center of the minibrot.  The effect in the left half 
+; of the image was created by rendering the scene with the inside 
+; set to 'atan'; the right half consists of normal equal-iteration 
+; outside stuff.
+; 
+; I rated the image at an 8 even though it is kind of a repeat.  
+; In my opinion, its half-and-half effect justifies such a rating. 
+; (I sometimes return to past images to see what I can find new in 
+; them.)
+; 
+; The calculation time of 55 seconds is blazingly fast.  And even 
+; the slight annoyance of setting up and running the parameter 
+; file may be avoided by viewing the finished image on the FOTD 
+; web sites.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The entire library of past images is available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The first day of March here at Fractal Central began with fog 
+; and heavy clouds.  The fog thinned and the sky brightened as the 
+; day progressed, but the clouds hung on and the conditions never 
+; reached what could be called pleasant, despite the temperature 
+; of 48F +9C, which was mild for the season.  Early in the day the 
+; fractal cats gave up waiting for the sun, and spent the rest of 
+; the time snuggled in the warmest places they could find.
+; 
+; The humans had a normal dull day, (which does not mean boring).  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and how can we consider the visible material universe to 
+; be any kind of ultimate reality when all we know of it is 
+; inferred from images created in our minds -- images that we now 
+; know reflect only about five percent of all that exists.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Half_an_Explosion { ; time=0:00:55.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+9.910072784924/+5.580966722132/1249903\
+  /1/-20/0 params=-4/-1.6/-0.8/-7.7/0/1.166686e+016
+  float=y maxiter=1000 inside=atan periodicity=10
+  colors=000btTgvOmxJrzEpwQnt`lqkjovklrlinmgjndfobcn\
+  camd_keZjfXigVhhTfiSejQdkOclNeiWggcidljbth_rfYqdWo\
+  bTn`RmYPkXNjUKhUIgPGdQEdJBZM9a000J5_C8VSAaSDa`FbcH\
+  ciKczPdrOezmzzczzNfzcazhYzUUiTPdTLZTHUSCOQ8JS4EU0e\
+  vPzzzpoUpeZpWbqMgqClq2pDdGCgLCiQBkVBm_BpdAriAtnAvr\
+  8tm6rh4pd2n_0mW6pYBrZGt`LvaRuSXtJbsAhr1cc5ZP9VBCbT\
+  BijBldDn_EqVFsQHvLIxGJzBKtDcoFvtGqxHltMopQqlUshYuv\
+  hFsmPpqYmufjyoglZd_JaO3cRBeUIfXQh_XjbdkdkjYejS_iMU\
+  iGOiAIxWoecnOkn6sn6jm6al6Tk6Kj6CjKRdXeZitTgoWLl8Ls\
+  ALzCQyHVyMZyRTpQNhQH`QBTP5LP0DP9GNIJMRML_PJhSIqVHz\
+  XGw_EubDrdBpgAmi8kl7in6iPjgLeeI`cFXaCS_9OZ8PY7QX6R\
+  W5SV4TU4TZ5Vc5Xh6Zl6_jBahHbfMddRenQowQxnYVee1h_1jV\
+  1lQ1nL1pG1rB1qAEpARo9co9pjCofEnaGmYJmTLlPNkLPkMTdN\
+  WZO_SObMPfFQi9Ql3ZpDftNnwXko`hgde_hbSl_KpXDtbKmgQf\
+  mW_raTfh_WofLvmOjnQZoSNpUBqW0r`sRakWbc_cXccPhdIleA\
+  pe3tVIsKXsAjsGlmMnhRpcXrZ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,106 @@
+;     Date: Thu, 22 Mar 2012 17:47:17 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-03-12 (Unlucky Thirteen [7+])
+;       Id: <1.5.4.16.20120322164937.2bd741cc@earthlink.net>
+; ---------
+; 
+; FOTD -- March 22, 2012 (Rating 7+)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the East Valley of a minibrot far out on 
+; the negative spike of a Mandelbrot set with Z^13 corruption in 
+; its depths.  The bailout radius has been intentionally set close 
+; to the point where the entire image will be totally cut off.  
+; This adds more detail to the scene.  The image magnitude of 
+; almost 10^13 is perilously close to the point of resolution 
+; breakdown, though this has little effect on the scene.
+; 
+; (Fractint bug alert: if the value of the imag(p1) parameter is 
+; entered in the parameter file as 1000000000000000 , the program 
+; reads the value as -1530494976  Changing the parameter file 
+; entry to 1000000000000000.0 [adding a decimal point and a zero] 
+; cures the problem.  Something else is being picked up, but I 
+; cannot see what.)
+; 
+; The name "Unlucky Thirteen" refers to the Z^13 corruption of the 
+; parent fractal.  Actually thirteen is considered unlucky because 
+; it was on a Friday the thirteenth that the order went out to 
+; destroy the Templars.
+; 
+; The rating of a 7+ indicates my uncertainty as to the true worth 
+; of the image.
+; 
+; With its calculation time of only 20 seconds, the image is 
+; another fireball.  But setting up and running a parameter file 
+; is still a minor chore.  This nuisance may be eliminated by 
+; viewing the image on the web sites.
+; 
+; The FOTD fractals are posted on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High definition versions of the images are posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past FOTD images and discussions are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Morning clouds broke by mid-afternoon here at Fractal Central, 
+; letting through just enough sun to raise the temperature to a 
+; balmy 72F 22C.  The fractal cats would have preferred more sun.
+; 
+; The humans spent the day keeping busy, which took little effort. 
+; A minor political difference at lunch time was settled before it 
+; grew.  The next FOTD will be posted in 24 hours.  At least, it's 
+; supposed to be posted then.  Until whenever, take care, and 
+; always remember that every argument has two sides.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Unlucky_Thirteen { ; time=0:00:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip
+  center-mag=-1.999079391269402/+0.0000036636302721/\
+  8.191939e+012 params=13/1000000000000000.0/\
+  -12.003665/0 float=y maxiter=300 inside=0 logmap=39
+  periodicity=6 mathtolerance=0.05/1
+  colors=00000A10B20C30D40E51F62G93HC4IG8JMBKSFJ_IId\
+  MAiP2lT5nW7p_9sbBzeEziGzlIzoKCSREVUGYXI`_KcbMfeE6d\
+  LDbA0KzzzYg`zA9oFDdJGUNJ6RvARlDRc6PD6J2CGMIEeRHZ_K\
+  ShNLqPEkLFfHGaEGQTSEfb3tmKWj_7hWUJRHX_SGZRFZREYRCX\
+  RBWRAWQ9VQAUQATQATQAURAVSUVSUWTUWUUXUUXVUYVUYWUZXc\
+  ZXc_Yc_Yc`Zc`_ca_ca`cb`mbamcbmcbmdcmddmedmeemfezff\
+  zggzggzhhzhhziizijzjjzjkzkkzklzlmzlmzmnzmoznoznpzo\
+  pzoqzprzprzqszqszrtzruzsuzsvztvztwzuxzuxzvysxztvys\
+  txsrxspwsowrmvrkvriurhuqftqdtqbsq`rq_rpYqpWqpUppTp\
+  oRooPoohizijzjkzkkzllzmmznmzonzpnzoozopzopznqznqzn\
+  rznrzmszmszmtzltzluzluzlvzkvzkwzkwzjzqjzsjzukzwjzv\
+  jzvjzvjzuizuizuiztizthzthzshzshzshzrgzrgzrgzqgzqfz\
+  qfzpfzpfzpezoezoezoeznezndzndzmdzmdzmczlczlczlczkb\
+  zkbzkbzkbzjbzjazjaziaziazi`zh`zh`zh`zg_zg_zg_zf_zf\
+  _zfZzeZzeZzeZzdYzdYzdYzcYzcXzcXzbXzbXzbXzaWzaWzaWz\
+  `Wz`Vz`Vz_Vz_Vz_WzZVz_Vz_ }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

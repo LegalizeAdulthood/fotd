@@ -1,0 +1,114 @@
+;     Date: Fri, 16 Mar 2012 22:16:49 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-03-12 (Julia Flavored Thing [7])
+;       Id: <1.5.4.16.20120316211905.2b6737a6@earthlink.net>
+; ---------
+; 
+; FOTD -- March 16, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a Julia set of the western Seahorse Valley area 
+; of the cubic Mandelbrot minibrot that appeared in the FOTD of 
+; March 13.  As can be seen in the image, the Julia aspect is not 
+; quite up to the quality of the earlier image, though it exceeds 
+; the image showing the Oblate aspect of the same scene, which 
+; appeared as the FOTD of March 14.
+; 
+; I chose a Julia set of Seahorse Valley because the Julia set of 
+; the center of the earlier minibrot is nothing more than an open 
+; circle.  I also have the Rectangular aspect of the same scene 
+; already finished.  The image is so distorted however that I have 
+; not yet decided whether to post it or scrap it.
+; 
+; The rating of an average 7 is a sign that this scene is starting 
+; to wear thin.  The name "Julia Flavored Thing" is whimsical.  We 
+; all know that fractals do not have taste.  (At least, we have 
+; not yet discovered such an aspect.)  The calculation time of 
+; 1-3/4 minutes is fast enough to hold impatience and boredom at 
+; bay.
+; 
+; Ease the minor stress of setting up and running the attached 
+; parameter file by viewing the already-calculated image on the 
+; official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; View it calculated in the glories of high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And check the entire FOTD history at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today's weather was a minor come-down here at Fractal Central.  
+; The day began with light rain and clouds.  The rain ended and 
+; the clouds thinned by noon, but it never totally cleared out, 
+; and the temperature reached only a mild 64F 18C, which is still 
+; well above normal, but well below the 75F 24C of yesterday.
+; 
+; The dedicated fractal cats would have preferred more sun; the 
+; dedicated humans, with other things to do, took the day as it 
+; came.  The next FOTD is likely to come in 24 hours.  Until then, 
+; take care, and no one should deny minorities the right to vote, 
+; but we should make sure that everyone with an actual right to 
+; vote has a valid photographic identification so that they can 
+; exercise their right.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+JuliaFlavoredThing { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti function=recip passes=1
+  center-mag=+0.00000048841008661/-0.000006757619985\
+  14/1205/1/2.5/0 params=3/30/90/0/90/0/-0.872494963\
+  4777424/29.73584375063138/0/0 float=y maxiter=1750
+  inside=255 logmap=77 periodicity=6
+  colors=00000_00Z00Y00X00W00V00U00T00S00R00Q00Q10P2\
+  0O30N40M50L60K70J80J90GA0DB0BC08D16E23F31H43J44L45\
+  N56P57R58T690Kz0Fz0Az00y00x00w00v00u00t00s00r00q00\
+  p00o00n00m00l00k00j00i00h00g00f00e00d00c00b00a00`0\
+  0_00Z00Y00X00W00V00U00T00S10R20Q30P40O50N60M70L80K\
+  90LA0MB0NC0OD1PE2QF3RG4SH5TI6UJ7VK8WL9XMAYNC_OE`PF\
+  aQHbRJcSLeTMfUOgVQhWSiWTjUYWSbHRf2Tg7UhCViHWiMXjRZ\
+  kW_l``leamjbnocnslTSt70s83s85r87r89r8Bq8Dq8Fp8Ip8K\
+  p8Mo8Oo8Qn8Sn8Un8WrOPvcJyrDslHnfKi`NdVR_QUVKXQE`L8\
+  cG3fL4cQ5aU6_Z7Yb7Wg8Tl9RpAPuBTyBXxA`wAdv9hvAmuKrt\
+  PwsUxsXyr6Cq6Bp5Ap59o48n47m36m36o2Ap49p69p89qA8rC8\
+  sE8tG7uI7vK7wM6xP6yS6zV6zY8za9zeAziCzmDzrEwvFrzKoy\
+  MlqOipQfmSchUlZWjXYfU_gPacUccZeccgchiWimYko_gq`fsY\
+  cuVdwR`yQ`zOYzMWzKXzIXzK_zOczRezUgzYoz`wzcyzgzzjzz\
+  mzzrzzttzuvzvwzwzzxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:JulibrotMulti  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), aa=-(real(p1)-2),
+  bb=imag(p1)-0.0000000000000000001,
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=z*z*fn1(z^(aa)+bb)+c
+  |z|< 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

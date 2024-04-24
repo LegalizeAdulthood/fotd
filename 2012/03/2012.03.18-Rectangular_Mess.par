@@ -1,0 +1,118 @@
+;     Date: Sun, 18 Mar 2012 16:35:57 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-03-12 (Rectangular Mess [4])
+;       Id: <1.5.4.16.20120318153814.2f7747e8@earthlink.net>
+; ---------
+; 
+; FOTD -- March 17, 2012 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Since FL and I were away today, which is now yesterday, the FOTD 
+; is understandably late.  But here it is in all its un-glory.
+; 
+; Today we take one final look at the cubic minibrot of March 13, 
+; this time in the Rectangular orientation, which is determined 
+; by the imag(c) and imag(z) axes of the Julibrot.  And what a 
+; change we see.  The minibrot is a total wreck, well worth being 
+; rated a lowly 4.  All resemblance to any kind of minibrot is 
+; gone.  Instead, we have a narrow slit with its surroundings 
+; stretched into an S-shape.  The whole thing makes a rectangular 
+; mess, which justifies the name "Rectangular Mess" and also the 
+; abysmal rating.
+; 
+; The image is more an exercise in stretching and skewing than a 
+; piece of fractal art.  The skewing is greater than 89.999, while 
+; the Y axis is stretched over 400,000 times its normal length.  
+; When the narrow slit at the center is un-stretched, it actually 
+; turns out to be a reasonable fractal, but I'll drop this feature 
+; where it stands and get on with a more artistic image for 
+; tomorrow, which is now actually today.
+; 
+; The calculation time of 1-1/4 minutes is more than the image is 
+; worth.  I strongly recommend visiting one of the FOTD web sites 
+; and saving this time.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A more spectacular high-definition version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the images since April 1997 are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; More unseasonably warm late winter weather prevailed here at 
+; Fractal Central today.  The proponents of global warming put on 
+; their short-shorts and cried "I told you so" as the temperature 
+; reached 75F 24C under cloudless late-winter skies and a warm sun.
+; 
+; While the humans were away, the fractal cats, needing neither 
+; heat nor a cool place, spent the afternoon curled on the couch.  
+; The next FOTD will be posted before too much time has passed.  
+; Until this intentionally vague moment arrives, take care, and 
+; the present unusually warm conditions in eastern North America 
+; indicate nothing about the existence of global warming.  Despite 
+; my conservative tendencies however, I am convinced it actually 
+; does exist.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rectangular_Mess { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti function=recip
+  center-mag=-0.00000000005146396/-0.000052031580625\
+  10/1.686185e+008/4.6e-005/-89.9996703841590033/89.\
+  9997085166255886 params=3/30/90/0/0/90/-0.87249496\
+  34777424/29.73584375063138/0/0 float=y maxiter=1750
+  inside=0 logmap=77 periodicity=6
+  colors=00000_00Z00Y00X00W00V00U00T00S00R00Q00Q10P2\
+  0O30N40M50L60K70J80J90GA0DB0BC08D16E23F31H43J44L45\
+  N56P57R58T690Kz0Fz0Az00y00x00w00v00u00t00s00r00q00\
+  p00o00n00m00l00k00j00i00h00g00f00e00d00c00b00a00`0\
+  0_00Z00Y00X00W00V00U00T00S10R20Q30P40O50N60M70L80K\
+  90LA0MB0NC0OD1PE2QF3RG4SH5TI6UJ7VK8WL9XMAYNC_OE`PF\
+  aQHbRJcSLeTMfUOgVQhWSiWTjUYWSbHRf2Tg7UhCViHWiMXjRZ\
+  kW_l``leamjbnocnslTSt70s83s85r87r89r8Bq8Dq8Fp8Ip8K\
+  p8Mo8Oo8Qn8Sn8Un8WrOPvcJyrDslHnfKi`NdVR_QUVKXQE`L8\
+  cG3fL4cQ5aU6_Z7Yb7Wg8Tl9RpAPuBTyBXxA`wAdv9hvAmuKrt\
+  PwsUxsXyr6Cq6Bp5Ap59o48n47m36m36o2Ap49p69p89qA8rC8\
+  sE8tG7uI7vK7wM6xP6yS6zV6zY8za9zeAziCzmDzrEwvFrzKoy\
+  MlwOiuQfsScrUcqWcpYco_cnaclcckecjgckiWgmYjo_hq`hsb\
+  fuchwaey_ezYczWbzUazSazKgzOhzRizUjzYxz`yzczzgzzjzz\
+  mzzrzzttzuvzvwzwzzxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:JulibrotMulti  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), aa=-(real(p1)-2),
+  bb=imag(p1)-0.0000000000000000001,
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=z*z*fn1(z^(aa)+bb)+c
+  |z|< 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

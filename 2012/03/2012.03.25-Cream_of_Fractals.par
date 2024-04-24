@@ -1,0 +1,111 @@
+;     Date: Sun, 25 Mar 2012 18:39:59 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-03-12 (Cream of Fractals [7])
+;       Id: <1.5.4.16.20120325174223.2b977c02@earthlink.net>
+; ---------
+; 
+; FOTD -- March 24, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is late; accept my apologies.  An antiquing trip 
+; to Annville erupted around noon, and we did not arrive back at 
+; FC until after 7pm.
+; 
+; The name of today's image, "Cream of Fractals", came to me as I 
+; cooked a pot of a well-known breakfast cereal, when the bubbles 
+; in the cooking cereal reminded me of the details in the green 
+; area of the image.
+; 
+; The simple iterated expression subtracts 0.01 part of Z^(-9) 
+; from 0.4 part of Z^2 and adds straight C on each iteration.  The 
+; resulting parent fractal resembles a distorted Mandelbrot set 
+; with its bays partly filled with cell-like features.  Today's 
+; image lies near a rather large minibrot in the area of Scepter 
+; Valley.
+; 
+; The rating of a 7 indicates average satisfaction on my part.  I 
+; might have raised the rating another point if I had put more 
+; effort into the coloring, rather than letting the image go with 
+; one of Fractint's random color palettes.
+; 
+; The calculation time of 1-1/2 minutes is a pretty good deal, 
+; though even this little effort may be saved by viewing the image 
+; on one of the web sites.
+; 
+; The official FOTD web site is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high definition version of the image is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original, now classic, FOTD site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The spring-like weather that has been gracing Fractal Central 
+; for over a week came to a sudden end today as heavy clouds moved 
+; in and periods of rain wet the blossoming plants.  The fractal 
+; cats registered strong complaints about the lack of sun, the 
+; lack of humans, and the temperature of only 59F 15C.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and once upon a time there was a certain school with 400 
+; students who said a prayer every day at the start of classes.  
+; Everyone was happy, but then an Atheist boy enrolled and 
+; complained to his parents that he had been forced to hear the 
+; other students pray to a god he did not believe in.  When his 
+; family took legal action, the school was ordered to stop the 
+; prayers.  Instead of one offended student, there now were 400 
+; offended students, but everyone said they felt good because the 
+; problem had been solved and justice for all had been done.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cream_of_Fractals { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-3.644626800694294/-0.2717701549892642\
+  /1.9e+012/1/-107.5/0 params=0.4/2/-0.01/-9/0/0/0/0
+  float=y maxiter=1000 inside=0 logmap=123
+  periodicity=6 mathtolerance=0.05/1
+  colors=0003DK3CJ2AH29G27E26C15B1391281060040030016\
+  90680670750730710700600LYiHSaEMUAHN7BF357GpDFmCEiB\
+  DfACb9BZ8AW89S78Q67M56I45F44B3362221110S2DP1BN1AL1\
+  9I18G17E16B05904703402201g9Sb8OY7LT6IO5FJ4CE399264\
+  13tOUqMSoLRlKQjJOgINeHMbGK`FJYEIWDGTCFRBEOADM9BJ8A\
+  H79E67C56945733422211gH5cF4`D4YC4VA3S83Q83N73L62J6\
+  2H52F41D41A31821620410200A30K60P90U70P60K50F30A205\
+  10hBsdAoa9kZ8gW7cS7_P6WM5SJ4OG3KC3G92C618304nOiiLd\
+  dJ``HXWFTRDPNAKI8GD6C98C4AC4FC3KD3PE3UFRUULUzGUUAU\
+  E5U7cXYZTUVPQQMMMIIHEFDBB877433`dIX`GUYFRUDORCLNAI\
+  K9FH7CD69A46633312rb1n_1jX1gV1cS1_Q1Xz1TzAhzAkz9nz\
+  9qzGmzMizSfzRgzRgzQgzQgzQgzPgzPhzO_zOazOczNezNgzMi\
+  zMkzMmzLozLqzLrzMszKtzJuzHv7Gw6cx6cy5cz5cz4cz3cz3c\
+  z2mz2mz1mz1mz1mz0mzCmzAmz9mz8zzmzzmzzmzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

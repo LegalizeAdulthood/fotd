@@ -1,0 +1,113 @@
+;     Date: Mon, 19 Mar 2012 00:17:36 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-03-12 (The Purple Pancake [7])
+;       Id: <1.5.4.16.20120318231954.2b3f2ec8@earthlink.net>
+; ---------
+; 
+; FOTD -- March 18, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Romance fans enjoy the adventures of the Scarlet Pimpernel; 
+; cartoon fans laugh at Sylvester the cat playing the Scarlet 
+; Pumpernickel; but how many have heard of the Purple Pancake?
+; 
+; None?
+; 
+; This is because I just invented him (or it).  He is not a 
+; swashbuckling hero, he is a fractal -- the fractal that appears 
+; as today's FOTD.
+; 
+; The scene lies deep in a larger pancake on a filament extending 
+; northwest from the large period-2 bud of its parent Mandelbrot 
+; set, which is infected in its depths with order-6 germs.
+; 
+; The image rates a 7.  It has too many small imperfections to 
+; rate higher.  But even a 7 is three points above the abysmal 
+; rating of yesterday's miserable FOTD.
+; 
+; The calculation time of 2-1/4 minutes is reasonably fast, but 
+; faster viewing can be found on one of the FOTD web sites.
+; 
+; The official FOTD web site may me accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; An impressive high-definition version of the image is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original classic web site mat be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day began gloomy here at Fractal Central, with heavy clouds 
+; hanging low.  But just after noon, the sun burst through in its 
+; full glory, bringing a near-perfect afternoon with full sunshine 
+; and a temperature of 68F 20C.
+; 
+; The fractal cats thought the conditions were perfect, and spent 
+; the time watching the world go by.  Meanwhile, the humans spent 
+; the day recovering from yesterday.  The next FOTD will be posted 
+; in 24 hours.  Until then, take care, and I just found a Higgs 
+; particle on the basement stairs.  I caught it and dropped it in 
+; an empty jar.  It is threatening to decay or tunnel out, so 
+; where do I take the particle to win the Nobel prize and get rich 
+; before it disappears?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Purple_Pancake { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip
+  center-mag=-1.256470121037991/+0.3793502089871847/\
+  2.45e+010/1/142.5/0 params=6/20000000/0/0/0/0/0/0/\
+  0/0 float=y maxiter=3600 inside=0 logmap=230
+  periodicity=6 sound=off mathtolerance=0.05/1
+  colors=000UXUUWUTVUSUURTUQSUPRUOQUNPUMOULNUJMUILTH\
+  KSGJREIQDHPCGPBEO9CN8AN78M66L55L74J83IA2HA1FA0EA0D\
+  A0BA0AA09A07A06A05A03A02A01ASclemwzzusltnlsklrglp`\
+  loXlnUlmQllMljJliFlhClg8lf5leBjeGheMfeRdeWcdaadf_d\
+  lYdqWdvVfpThkRieQk`OmVMnQLnPLmPKmPKlOJkOJkOIjNIjNH\
+  iNGhMGhMFgMFgLEfLEeLDeKDdKCdKCcJBbJBbJAaI9aI9`I8_H\
+  8_H7ZH7ZG6YG6XG5XF5WF4WF4XG5XG5XG6XG6XH6XH7XH7XH7X\
+  I8XI8XI8YI9YJ9YJAYJAYJAYKBYKBYKBYKCYLCYLCZLDZLDZME\
+  ZMEZMEZMFZNFZNFZNGZNGZOG_OH_OH_OI_PI_PI_PJ_PJ_QJ_Q\
+  K_QK_QKZPMZPNZOOZOPZNRZNSZMTZMUZMWZLXQOmSKmUGmWCcY\
+  8UZ5KX4PV3UT3ZR2cU1Yc1TX0OS0JU4IZ7HcBGhEFmIEqLDzPC\
+  zSCvTBrUBnVAlVAjW9hX9fY8dY8bZ7`_7Z_7W`DT`IQ`ON`TL`\
+  ZI`cF`iC`n9`t7`yCemHiaMnQRrEQpDcoDcnDcmDclDcjDciDc\
+  hCcgCmfCmdCmcCmbCmaCm`CmdFmgHzkJznLzqNzqNzrMzrMzsL\
+  zsLzsLzuIzvGzwJzxLzyNzzPzzSzzUzzWzzYzz`zzbzzdzzfzz\
+  izzkzzmzzozzkzzrzzszzszzt }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

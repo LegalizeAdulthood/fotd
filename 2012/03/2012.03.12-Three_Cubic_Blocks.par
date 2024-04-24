@@ -1,0 +1,109 @@
+;     Date: Mon, 12 Mar 2012 18:37:09 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 12-03-12 (Three Cubuc Blocks [7])
+;       Id: <1.5.4.16.20120312173921.389701f0@earthlink.net>
+; ---------
+; 
+; FOTD -- March 12, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to prior commitments, today's discussion will be brief.
+; 
+; The image shows a tiny cubic minibrot in the Seahorse Valley 
+; area of yesterday's half-and-half minibrot.  At this depth the 
+; math energies behind the minibrots are almost entirely cubical, 
+; yet quite different from the energies behind the minibrots in 
+; the Z^3+C Mandeloid.
+; 
+; The name "Three Cubic Blocks" refers to the three squared-off 
+; sections of the pattern around the minibrot.
+; 
+; The rating of a 7 indicates that I consider the image an 
+; improvement over yesterday's, but with plenty room remaining for 
+; further improvement.
+; 
+; The calculation time of 2-1/2 minutes will seem to fly by if you 
+; distract yourself with other things while the image is running.  
+; Checking the FOTD web sites is a great distraction.
+; 
+; View the finished image on-site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; View the hi-def version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; view all the past images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A sunny morning was followed by afternoon clouds here at Fractal 
+; Central today, while the temperature reached a spring-like 66F 
+; 19C.  The fractal cats enjoyed the mild weather from inside, 
+; complaining that the sun was obscured just as it was about to 
+; reach their window shelf.
+; 
+; FL reported for jury duty this morning but was not selected.  
+; The rest of the day among the humans of FC passed uneventfully.  
+; The next FOTD, an outrageously colorful one, will be posted in 
+; 24 hours.  Until then, take care, and don't be led astray by 
+; random comments at the close of the FOTD discussions, only some 
+; of which are meant to be taken seriously.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Three_Cubic_Blocks { ; time=0:02:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti function=recip passes=1
+  center-mag=-0.8725091180368829/+29.73602675574733/\
+  2.1e+009/1/180 params=3/30/0/0/0/0/0/0/0/0 float=y
+  maxiter=1600 inside=0 logmap=268 periodicity=6
+  colors=00057M58M69M9AMBBLDDLFELIFLJHKMKLPNNTPOWRO`\
+  UPcYQhbPlhQqnRurSrvVosWloWhlXehXbcY_`ZYYYVVVSSSPPO\
+  LLJIIDFF8DD8BB8BA8A97HFAQMAZTAj`BxhEuiDshDqhEniFli\
+  GjhHgjJfjLejObjQblTblV`lXan_`naYnbXncWoeUofSoiRqlP\
+  qnOqqGsqHusHvtIxuIzwHrvIkxIezI_zIVzIQzINzIKzHJvHJu\
+  GKqGLoGLlFLjEMfENeEOcDO`DQZDRWDRVCSSDVRDWQDYPFYSEZ\
+  PCZLA`H9`E9bD9bA9c99c9AeA9c9AeAAfAAhABjFFlKJnPNoUT\
+  qZYscbuhivmnxrtzvyzzzzzzzzvvztuvpqsnomklhijcefZccU\
+  `bPZZKWYGVVESTBQQ8OO6MM5KK4II4FF3MB5EE3BM5CO5CP6DQ\
+  6DS6ET7HV9JWB8YC8ZE8`G9bH9cGAbFD`EGZEFWFETFCQFBOGA\
+  MH8KI8IK8GL7EO7EP7CS7BT7AW8AY8AV8ASABQABOCCMCCKEDI\
+  EEFEEEFFFIFEKGCMHCOIAQJASK8VM8WN7ZO8`P8cR9eSAhVAlT\
+  BoTCzVDzYDzXEzWEzVEqRCjOBcK9cI9bH9bG9bF9bE9`D8`C8`\
+  B8`A8Z98Z98Z88Z88`88b9Ac9Bc9DeAFfAIfALhAPjBSjBVlB_\
+  nBbnBgoCkqCoqDssDvvEzwEzxEzzIzzQzz_zzWzzTzzRzzNzzP\
+  zzRzzTzzWzzYzz`zzczzfzziz }
+
+frm:JulibrotMulti  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), aa=-(real(p1)-2),
+  bb=imag(p1)-0.0000000000000000001,
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=z*z*fn1(z^(aa)+bb)+c
+  |z|< 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

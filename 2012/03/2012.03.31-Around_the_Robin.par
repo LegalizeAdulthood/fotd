@@ -1,0 +1,105 @@
+;     Date: Sat, 31 Mar 2012 18:45:11 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-03-12 (Around the Robin [7.5])
+;       Id: <1.5.4.16.20120331174740.2b77947a@earthlink.net>
+; ---------
+; 
+; FOTD -- March 31, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; There was no FOTD for March 30, but . . .
+; 
+; Today's image shows what happens when 0.15 part of (1/Z) is 
+; subtracted from Z^2 and straight C is added on each iteration.  
+; The parent fractal appears as the outline of a Mandelbrot set, 
+; with minibrots where the bays would normally be expected.  
+; Today's scene lies far out on the row of debris pieces that 
+; marks where the main spike once existed.
+; 
+; I named the image "Around the Robin" for some reason that I 
+; forgot before I finished typing it.
+; 
+; The rating of a 7-1/2 seems about right.  I did put a bit of 
+; extra effort into the coloring.
+; 
+; The calculation time of 30 seconds is an estimated average time 
+; on many different machines.  On my machine, parameter files 
+; never run twice in the exact same time.
+; 
+; To escape the chore of running the parameter file, check one of 
+; the web sites.
+; 
+; Find the finished image on the official web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Find the image in high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Find all the past images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; After a crackling thunder-storm last evening that sent the cats 
+; scurrying for cover, today dawned cloudy and drizzly.  The rain 
+; ended by noon, but the clouds remained for the rest of the day, 
+; with a temperature of a chilly 48F +9C, which kept the fractal 
+; cats curled up tightly.
+; 
+; The humans took a short afternoon trip to a nearby antique 
+; emporium, then did nothing, (which is always a pleasure), for 
+; the rest of the day.  The next FOTD will probably be posted in 
+; 24 hours.  Until then, take care, and a local store has just 
+; removed a sign from its door that read 'no hoodies'.  I wonder 
+; what brought on the the manager's sudden disregard for his 
+; store's security.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Around_the_Robin { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-2.638247280367536/+0.00026747118258587\
+  /6.1e+012/1/37.6/0 params=1/2/0.15/-1/0/0/0/0
+  float=y maxiter=1500 inside=0 logmap=81
+  periodicity=6 mathtolerance=0.05/1
+  colors=000A3BF6CK9DPCEUFFZIGcLHhOImRJrUKe3CS28E14K\
+  H5A82fGdL8KpV8ZK5HA2XJKMCDB66FmzAXe5GLzzzjjjWWWKKK\
+  CE7A9I76D549224KGLgjwfmweqxdtxmW_kaTjgNhlHgrBfw5rx\
+  _qp_qh_q`_qT_qL_qD_q6_o4Jm32n4An4Hn4On4Vo4ao4ho4oo\
+  4vZIfIVRPZTWbVaeXhiZom`upavl_viYwfWwcVw`TxYRxVPxSO\
+  tNSpJVlEYhAad5d`1gZ3fX5eV7dU9cSBbQDaOF`NH`KOVIUQF_\
+  LDeGAkB8q6DoYInxLntNnpPnlRnhTndVnaRicNddK_fGWgDRi9\
+  Mj6Ik7S`7`Q8iF8r59sC9tJAuQAvXBwcBxjCyqCyx7N2GKDOIN\
+  XGXdEf`HhYJjVLlSNnOQpLSrIUtFWutPlkQocRqWSsOTuSQoVN\
+  iZLdaIZdGUhEXkC_nAbq9dp7`o6Yo4Un3Rm1Nm0Kp7HsEEuLBx\
+  S8zZ5cJEH4MlXNkUKiRIhOFgLCeIAdF7cC5bIBbNHbSNbXSbaY\
+  bfcbkhbpnbutbzydwueuqfrmgpihmeikajiYkfUldQmaMn_IoY\
+  FnZInZLn_On_Qm`Tm`WmaZma`lbclbflcilckkdnkdqketkevi\
+  YlgRbfKTdDJc6Af3Qi1eY0VN0LB0AjnwEWC7G6Kz1yQytDA`oA\
+  KnRAPDH5aB3P51CszzejjSVVEFFWumOf`GTP8ECXA4G52qu5cf\
+  3RT2DE1CnF8YA4H5puuQTTK4g }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

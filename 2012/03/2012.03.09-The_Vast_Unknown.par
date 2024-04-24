@@ -1,0 +1,111 @@
+;     Date: Fri, 09 Mar 2012 16:43:30 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 09-03-12 (The Vast Unknown [7])
+;       Id: <1.5.4.16.20120309164539.2b478e5c@earthlink.net>
+; ---------
+; 
+; FOTD -- March 09, 2012  (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The math energies behind today's image mix 11.25 parts of 
+; Z^(-0.5) with 0.1125 part of Z^(-25) on each iteration before 
+; adding reciprocal C.  This weird combination creates a parent 
+; fractal consisting of a circular sea of radius 0.4 centered a 
+; little below the negative X-axis, with something resembling a 
+; blob-tree sprouting from the eastern shore into the empty 
+; interior.  Today's image lies in the detail of a tiny bud-
+; radical at the tip of this fractal tree.
+; 
+; I named the image "The Vast Unknown", which refers more to the 
+; scientifically unexplored inner space of consciousness than to 
+; the outer space of the cosmos or the infinite virtual space of 
+; fractals.
+; 
+; A good part of the image consists of inside stuff.  More work on 
+; the coloring, especially trying other inside coloring options, 
+; might have raised the rating.  However, using laziness as an 
+; excuse, I declined to exert the effort.
+; 
+; The image earns a rating of a 7, another average rating, which 
+; makes the calculation time of 3-1/2 minutes a rather poor 
+; bargain.  The FOTD web sites are a better deal than running the 
+; included parameter file.
+; 
+; Relief from calculation boredom may be found at the official 
+; FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High-definition relief is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The entire FOTD history may be found at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Fractal Central experienced a brief return to winter today, with 
+; heavy scudding clouds, occasional flurries of half-melted snow 
+; and a temperature of 41F +5C, which caused the house heat to 
+; come on.  The local fractal cats abandoned hope of sun well 
+; before noon, and spent the afternoon enjoying the warmth of 
+; their shelf by the hallway radiator-convector.  The humans had 
+; an above average day, especially FL, who received well-deserved 
+; kudos for a recent design job.
+; 
+; The next FOTD is scheduled to be posted in 24 hours, give or 
+; take a few, but tomorrow is Saturday, the day we humans reserve 
+; for fun stuff, so there is no guarantee that it will appear as 
+; scheduled.  Until whenever, take care, and believe it or not, 
+; some hard-core skeptics actually claim that there is no such 
+; thing as human consciousness, because it cannot be put on a 
+; table, dissected and studied scientifically.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Vast_Unknown { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.32662688881943/+0.00896919862832411/\
+  1.932931e+012/1/97.5/0 params=11.25/-0.5/0.1125/\
+  -25/0/0/0/0 float=y maxiter=420 inside=0 logmap=164
+  periodicity=6 mathtolerance=0.05/1
+  colors=000n6aj5Y`4Qc4UX3MW3MR2JQ7VI1BKAcF0AJBoPiwG\
+  DrAgtAPt4bx3Xt3Yp3Vl3Th2Qd2Oa2LY2JU1HQ1EM1CJ19F07B\
+  047023DFYBDT9BP89L67H45C338114mzzZqzUORozzgkzcch2e\
+  a1UJVmzSmuQmpNmkLmfJUaGUXEUTBUO9UJ7UE4U92U48Ud7U`c\
+  cYccUccRccNccKccHccDccAcc6cc3ccCcc8cc6cc4cc3cc1mmD\
+  mmBmmAmm8mm7mm5mm4mm2mm1mmZmmTmmNmmHmmBmm5mmuwzowz\
+  jwzewz_wzVwzQwzLwzFwzAwz5wz_wzXwzUwzRwzOwzLGzIDzFA\
+  zC8z95z62z3UzlQzeMz_IzUFzOBzI7zC3z6ozufzkYzaQzTHzJ\
+  8z9KzNYzRVzPTzNRzLOzJMzIKzGIzEFzCDzABz99z76z54z32z\
+  1rzwkzodzhYz`RzUKzMDzF6z7SzGLzCEz87z4xz9qz8jz7cz6X\
+  z5Rz4Kz3Dz26z1zz7jz5Vz3Fz1izuezpbzl_zhWmdTm`QmXNmT\
+  JmO_mMbmNemPhzRkzSmzVnzYoz`pzcqzfrziszltznmzifzd_z\
+  _TzVMzQFzL8zG2zB1zA1z91z21z81z71z61z50z50z40z30z20\
+  z10z0`z3Tz2Mz1Ez17z0qzJkzGezE_zCUzAOz8Iz6Cz46z2izP\
+  ezNbzL_zKXzIUzGRzFOzDLzBIzAFz8Cz69z56z33z1MzSKzPIz\
+  MGzKEzHCzFAzCzzz6z7wzc2z2 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

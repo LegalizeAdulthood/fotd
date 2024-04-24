@@ -1,0 +1,117 @@
+;     Date: Wed, 28 Mar 2012 16:28:21 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 28-03-12 (Shifting Gears [7.5])
+;       Id: <1.5.4.16.20120328153047.2bc783c8@earthlink.net>
+; ---------
+; 
+; FOTD -- March 28, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's FOTD we get a glimpse into the world of high-order 
+; fractal images, which can be nowhere near as boring as first 
+; appears, when they are done right.
+; 
+; As a demonstration, in today's FOTD we check the East Valley 
+; area of the half-morphed large minibrot on the main spike of the 
+; parent fractal, which is a Mandelbrot set with Z^31 tendencies 
+; rather close to the surface.
+; 
+; This location abounds with areas of erosion that are full of 
+; Z^31 minibrots arranged in the patterns that would normally be 
+; expected in this part of the Mandelbrot set.  I went quite deep 
+; into the parent before I found today's scene, which lies in a 
+; much larger but similar scene.
+; 
+; I named the image "Shifting Gears" when the scattered order-31 
+; minibrots reminded me of a fantastic nest of crushed cogwheels.
+; 
+; The rating of 7-1/2 reflects my opinion of the true worth of the 
+; image, which is held down somewhat by the similarity of many 
+; recent FOTD images.
+; 
+; The calculation time of a mere 30 seconds makes running the 
+; included parameter file at least a breeze if not a hurricane.
+; 
+; And this minor inconvenience of calculation may be avoided by 
+; viewing the completed image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past FOTD images and discussions may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day began cloudy here at Fractal Central.  A brief light 
+; thunder-shower passed over at 11am, followed by a sunny 
+; afternoon with a temperature of 68F 20C.  The fractal cats were 
+; pleased by the warmth, but would have preferred to have more 
+; of the sun coming straight in the windows.
+; 
+; The humans, who have heard more than enough over-hyped media 
+; talk about racial hatred recently, were left wondering what the 
+; real problem is.  The next FOTD, with no fractalish hatred 
+; involved, will be posted in 24 hours.  Until then, take care, 
+; and no problem will ever be solved until people are willing to 
+; see the true nature of the problem.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Shifting_Gears { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip
+  center-mag=-1.747579800976048/+0.0016262212467862/\
+  3.1326e+012/1/50/0 params=31/1e+040/0/0/0/0/0/0/0/0
+  float=y maxiter=1500 inside=0 outside=tdis
+  periodicity=6 mathtolerance=0.05/1
+  colors=000W4ES3AP36TCHWLSZUbabmNMxLQuJUrIXoG`lEdiD\
+  gfBkcKna9hZAfW6XT5RQ4LN3GL7JQBIUFPZISbMVgQYkU`pXbt\
+  nqzsnzsrzsrzkmzZSfMJgAAhFGjKLkORlTWmY`oaUpfUqUUrlU\
+  dUURlUPUdNj_LUUJUOHgJGjPMUVRU`WUUaUUfUUkUUpcUrUUtf\
+  FufNwaKcQIzbCJaAI`HH_Ab`4FYAMZ3S_3Y`2dX2jT2pV5iX7b\
+  ZAW`CQbFJdHCeJ6WHJNGVEFg5EsAGmEIhJKcNMZSOUWQP_RKYO\
+  PWMUUKZTHbRFgPDlOBpQDmRFjTGhUIeVKbXL`YNYZOWb_Iej4b\
+  b5`V5YN5WF5U85RVQOpjLnkJlkGklEilBgm9fm6dn4cn8ahC`b\
+  FZXJYRNWLQVFUT9XS3`ZUdesddmdchdbcdbZdaUd`Pd_Kd_FaU\
+  L_PRYJWWEaU8gS3lR7eRA_RDTQGNQJGQMARTKS_UTfcb`alV_u\
+  PZdaSOmL8yFV7lU9mUAmTCmTDmTEmSGmSHmSImIEOMFQPFRTFS\
+  WFT_GVbGWfGXiGYiLXjQXjVXkTUkSSlRQlPOlOMmNJmLHnKFnJ\
+  DnHBoG8oF6pD4pC2pB0fH1XM1NS2DX2EW6FW9GVDHVGIVJJUNK\
+  UQLTUMTXNT_OScPSfQSiTVjWXkZZka`ldblgemjgmminpknsmo\
+  voounnunnunnunnumnumnumnumnolljkkeji`jhWigRheMgdHg\
+  cGfdFeeEdfDcgCbgBahA`i_5J }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,109 @@
+;     Date: Wed, 14 Mar 2012 15:31:06 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-03-12 (Trouble in 4-D [6])
+;       Id: <1.5.4.16.20120314143319.38f7cefa@earthlink.net>
+; ---------
+; 
+; FOTD -- March 14, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Mandelbrot images and Julia images are slices cut at two 
+; different orientations through the 4-dimensional hyperthings 
+; known as Julibrots.  But there are also four other perpendicular 
+; orientations in Julibrots, which I unofficially call Oblate, 
+; Rectangular, Parabolic and Elliptic.  Today's image shows the 
+; Oblate view of yesterday's cubic minibrot, which is determined 
+; by the imag(c) and real(z) axes of the Julibrot.
+; 
+; The coloring is almost the same, but the shapes have undergone a 
+; terrible transformation.  Instead of the attractive symmetrical 
+; patterns surrounding the minibrot in yesterday's image, we have 
+; the stretched, tortured patterns surrounding it today.
+; 
+; Despite the identical colors, the disfigurement cuts the rating 
+; from a 9 to a 6.  The name "Trouble in 4-D" refers to this 
+; drastic deterioration of the rating.
+; 
+; The calculation time of 1-1/3 minutes is a fair price for the 
+; image.  The bargains may be found on the FOTD web sites.
+; 
+; Find the first bargain at the official FOTD web site, maintained 
+; by FL and myself at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Find a high-definition bargain at Hal's web site at:>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And check all the past images at>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Total sun and a temperature of 68F 20C made today a day to be 
+; enjoyed here at Fractal Central.  The fractal cats found total 
+; enjoyment when they curled up on their sunny shelf in the south-
+; west window.  The humans found their enjoyment when the day 
+; passed uneventfully.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and global warming is a fact, so let's 
+; stop burning fossil fuels.  (It's a great solution, but what 
+; will we replace them with?)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Trouble_in_4-D { ; time=0:01:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti function=recip float=y
+  center-mag=-0.00000000000253310/-0.000000000099959\
+  01/1.822797e+009/1.9508/-75.0923187513121064/50.92\
+  04078507495339 params=3/30/0/0/90/0/-0.87249496347\
+  77424/29.73584375063138/-0.8724949634777424/29.735\
+  84375063138 maxiter=2200 logmap=215 periodicity=6
+  colors=00000_00Z00Y00X00W00V00U00T00S00R00Q00Q10P2\
+  0O30N40M50L60K70J80J90GA0DB0BC08D16E23F31H43J44L45\
+  N56P57R58T69V6AX6BZ7C`7Db7Ed8Ff8Gg8HeBGdEFcHEbKDaN\
+  C_QCZTBYWAXZ9Wa8Vd8WeDWfHWgLWhPXhUXiYXjaXkeYkjYlnY\
+  mrYnv00K00K00K00K00K00K00K10K20K30K40K50K60K70K80K\
+  90LA0MB0NC0OD1PE2QF3RG4SH5TI6UJ7VK8WL9XMAYNC_OE`PF\
+  aQHbRJcSLeTMfUOgVQhWSiWTjUYWSbHRf2Tg7UhCViHWiMXjRZ\
+  kW_l``leamjbnocnslTSt70s83s85r87r89r8Bq8Dq8Fp8Ip8K\
+  p8Mo8Oo8Qn8Sn8Un8WrOPvcJyrDslHnfKi`NdVR_QUVKXQE`L8\
+  cG3fL4cQ5aU6_Z7Yb7Wg8Tl9RpAPuBTyBXxA`wAdv9hvAmuKrt\
+  PwsUxsXyr6Cq6Bp5Ap59o48n47m36m36o2Ap49p69p89qA8rC8\
+  sE8tG7uI7vK7wM6xP6yS6zV6zY8za9zeAziCzmDzrEwvFrzKoy\
+  MlwOiuQfsScrUcqWcpYco_cnaclcckecjgckiWhmYko_jq`jsb\
+  iuckwahy_izYhzWhzUhzShzKmzOmzRmzUmzYzz`zzczzgzzjzz\
+  mzzrzzttzuvzvwzwzzxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:JulibrotMulti  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), aa=-(real(p1)-2),
+  bb=imag(p1)-0.0000000000000000001,
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=z*z*fn1(z^(aa)+bb)+c
+  |z|< 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

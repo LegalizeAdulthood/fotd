@@ -1,0 +1,116 @@
+;     Date: Mon, 12 Mar 2012 08:21:54 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 11-03-12 (No Discontinuities [5])
+;       Id: <1.5.4.16.20120312072406.2b4770b6@earthlink.net>
+; ---------
+; 
+; FOTD -- March 11, 2012 (5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is an outzoom of yesterday's image, which lies 
+; in the fractal debris on the northeast side of today's minibrot.
+; 
+; Today's FOTD is a close-up of a minibrot halfway through the 
+; process of morphing from quadratic to cubic, and doing so 
+; without discontinuities.  The iterated expression is not the 
+; expected Z^(2.5)+C, it is sqr(Z)*(recip(Z^(3)+30))+C.  And since 
+; no fractional exponents are involved, no discontinuities will 
+; appear in the fractals it creates.
+; 
+; I have never understood exactly how the JulibrotMulti or similar 
+; formulas work, but today's image shows a perfect minibrot of 
+; order 2.5 without the frustrating broken-up bits and pieces that 
+; spoil so many otherwise good fractals.
+; 
+; The name "No Discontinuities" simply describes the minibrot.
+; 
+; I could give the image a rating no higher than a 5, which 
+; indicates its mathematical worth.  I put almost no effort into 
+; the coloring, so the artistic worth is near zero.
+; 
+; The calculation time of 45 seconds is blessedly brief, but 
+; viewing the finished image on one of the FOTD web sites is more 
+; convenient.
+; 
+; The finished image, already calculated for maximum convenience, 
+; is posted on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of sunshine and much warmer temperatures arrived at Fractal 
+; Central today.  The fractal cats heartily approved of the high 
+; temperature of 57F 14C and showed their approval by sharing the 
+; sunny shelf without quarreling.  The humans, FL and I, had an 
+; everyday day, whatever that might be.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and when someone survives a tornado that destroys his town 
+; and kills his friends, why does he claim to have been blessed?  
+; If that person were realistic, he would think rationally.  
+; Before he assumed his survival was a blessing, he would wonder 
+; whether he would welcome a similar blessing next year.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+No_Discontinuities { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti function=recip
+  center-mag=-0.872575097/+29.735974572/5146/1/100/0
+  params=3/30/0/0/0/0/0/0/0/0 float=y
+  maxiter=1500 inside=0 periodicity=6
+  colors=000UZYWaXZcX`fXchWejWhmWjoWmqVotVrvVtxVruXp\
+  sYnqZlo_jm`hjafhbdfccddabe_`fYYgWWhUUiSSjQQkIJsPOl\
+  VTeaYZgbSngLvkCtlEslGrlIpmKomMnmNlnPknRjnThnVgoXfo\
+  Ydo_cpabpc`pe_pgZqhXqjWqlVrnTrpSrrKArKBsKCtKDtKEuK\
+  FuKGvKHwKIwKJxKKzKLxKMwKNuKOtKQrKRqLSoLTnLVlLWkLXj\
+  LYhL_gM`eMadMbbMdaMe_MfZOfaMgYKgVIhRGhOEiLCiHAjE8j\
+  A6k70j05k59lADmFHnKLoPPpUTqZXrc`shdtmhurlvvmwzmxzm\
+  yzmwzmuvmtrmrmpqhnocmnaklZjjXhiUggSefPddNbcLaaI__G\
+  ZZDXXBWW8UU6ZN1TT4OZ6Id9y4ADiBJaEPVHiBEUOJF`O0mT5l\
+  R9kQDjPHiOLhNPgMOeONcPMaRM_SLZUKXVKVXJTYIR_HQ`HObG\
+  McFKeFJfHKdILbKMaLN_NNZOOXQPWRQUTRTURRWSQXTOZUN_UL\
+  aVKbWIdXHeYFgYEhZCj_Bk`9mb7l`8l_8lZ8kY8kX8kW9kV9jU\
+  9jT9jS9jR9iQAiPAiOAiNAhMAhLAhKBhJBgIBgHBgGBgFBhEEi\
+  DHjDJjCMkBOlBRlATm9Wn9Yn8`o8bp7ep6gq6jr5lr4os4qt3t\
+  t3vrCjpK_nSOm_DlXDkVEkTEFPFFRIETLDVNDXQCZTC`WBbZBd\
+  aAfcCJZFLZHOZKQZMSYPVYRXY }
+
+frm:JulibrotMulti  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), aa=-(real(p1)-2),
+  bb=imag(p1)-0.0000000000000000001,
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=z*z*fn1(z^(aa)+bb)+c
+  |z|< 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
