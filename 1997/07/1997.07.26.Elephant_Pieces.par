@@ -46,15 +46,17 @@ Elephant_Pieces    { ; time=0:01:15.41-SF5 on P4-2000
   ehVehVehVehVehVehVehVehVehVegWdgXdgYcfZcf_cf`cf`be\
   abebbecbedaeeadfadg`dh`di`cj`cj_ck_cl_bm_bnZboZRZl\
   FJzMHrTFjZEceCWlAOlDQlFTlIVmKYmN_mQamSdmVfmYhn_knb\
-  mndpngrnitmhslgsU0ukfrkeq }
+  mndpngrnitmhslgsU0ukfrkeq
+}
 
 frm:XY-XWrotation {; Jim Muth, thanks to Benno Schmid
-; p1 = rotation angle in degrees, p2 = parallel planes
-; p3 = point of rotation and parallel planes
-z=sin(p1*.01745329251994)*flip(imag(pixel))+p2,
-c=cos(p1*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
-z=sqr(z)+c
-|z| <= 16 }
+  ; p1 = rotation angle in degrees, p2 = parallel planes
+  ; p3 = point of rotation and parallel planes
+  z=sin(p1*.01745329251994)*flip(imag(pixel))+p2,
+  c=cos(p1*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+  z=sqr(z)+c
+  |z| <= 16
+}
 
 ; END 19.6 FILE===============================================
 ;

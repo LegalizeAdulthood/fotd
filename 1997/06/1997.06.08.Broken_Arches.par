@@ -57,17 +57,19 @@ Broken_Arches      { ; time=0:00:11.21-SF5 on P4-2000
   zvzzvzzvzzvzzuzzuzzuzzuzzuzzuzzuzzuzzuzztzztzztzzt\
   zztzztzztzztzzszzszzszzszzszzszwszwszwszwrzwrzwrzw\
   rzwrzwrzwrzwrzwqzwqzwqzwqzwqzwqzwqzvqzvqzvpzvpzvpz\
-  vpzvpzvpzvpzvpzv00Zmz6lz7 }
+  vpzvpzvpzvpzvpzv00Zmz6lz7
+}
 
 frm:Man-YZ-XZ {; Jim Muth (thanks to Benno)
-; p2 = 0 = Julibrot YZ plane
-; p2 = 1 = Julibrot XZ plane
-; p2 = >0 <1 = Oblique planes
-z=real(pixel)+flip(real(p1)),
-c=imag(pixel)+flip(imag(p1)),
-a=p2, b=flip(cos(asin(p2))):
-z=sqr(z)+((a+b)*c),
-|z| <= 25 }
+  ; p2 = 0 = Julibrot YZ plane
+  ; p2 = 1 = Julibrot XZ plane
+  ; p2 = >0 <1 = Oblique planes
+  z=real(pixel)+flip(real(p1)),
+  c=imag(pixel)+flip(imag(p1)),
+  a=p2, b=flip(cos(asin(p2))):
+  z=sqr(z)+((a+b)*c),
+  |z| <= 25
+}
 
 ; END COMBINED FILE FOR 19.6=========================================
 ;

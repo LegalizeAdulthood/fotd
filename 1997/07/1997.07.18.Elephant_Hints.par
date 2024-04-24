@@ -72,17 +72,19 @@ Elephant_Hints     { ; time=0:00:13.35-SF5 on P4-2000
   HPCQLJYWUqTToQSlNRjKQg8dCAbHB_MDYREVWGS`KkA`1KY5NV\
   8QSCUPGXMJ_JNblq6yMLsNOlNRfOU_PXUP_NQbui7ofCicHc`M\
   YYRSVWMS`Ed7FaDF_JGXPGVVHS`llJlkElk9lj4h0YcEcZThUf\
-  nPtsMigK_WIQKPQIXPHcPF`NL }
+  nPtsMigK_WIQKPQIXPHcPF`NL
+}
 
 frm:SkewPlanes {; Jim Muth
-;p1=(0,0)=YW, (0,1)=XW, (1,0)=XZ, (1,1)=YZ
-;p2=parallel planes, p3=proportional extra term
- a=real(p1), b=flip(cos(asin(real(p1)))), d=a+b,
- f=imag(p1), g=flip(cos(asin(imag(p1)))), h=f+g,
- z=real(pixel)+flip(real(p2)),
- c=flip(imag(pixel))+imag(p2):
+  ;p1=(0,0)=YW, (0,1)=XW, (1,0)=XZ, (1,1)=YZ
+  ;p2=parallel planes, p3=proportional extra term
+  a=real(p1), b=flip(cos(asin(real(p1)))), d=a+b,
+  f=imag(p1), g=flip(cos(asin(imag(p1)))), h=f+g,
+  z=real(pixel)+flip(real(p2)),
+  c=flip(imag(pixel))+imag(p2):
   z=(d*(sqr(z)))+(real(p3))*(z^(imag(p3)))+(h*c),
-   |z| <= 36 }
+  |z| <= 36
+}
 
 ; END 19.6 FILE===============================================
 ;

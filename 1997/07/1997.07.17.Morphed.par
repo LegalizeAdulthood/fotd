@@ -73,17 +73,19 @@ Morphed            { ; time=0:00:11.97-SF5 on P4-2000
   2EQ2GS3IT4KU5LV5NW6PX7RZ8S_8U`9QbPMcdJdsDkwM__K`cI\
   `fGajEanCbqAbuA`rA_o9Yl9Wi9Vf9Tc8R`8QY8OVHR`RUe_Wk\
   hZpj_pmapobpqcpnbmkaki`hf`ec_c`Z`ZYYWXVTWTQWQOVNLU\
-  LITIWKShAbv1lt7krCjpIinNh }
+  LITIWKShAbv1lt7krCjpIinNh
+}
 
 frm:SkewPlanes {; Jim Muth
-;p1=(0,0)=YW, (0,1)=XW, (1,0)=XZ, (1,1)=YZ
-;p2=parallel planes, p3=optional extra term
-a=real(p1), b=flip(cos(asin(real(p1)))), d=a+b,
-f=imag(p1), g=flip(cos(asin(imag(p1)))), h=f+g,
-z=real(pixel)+flip(real(p2)),
-c=flip(imag(pixel))+imag(p2):
-z=(d*(sqr(z)))+(real(p3))*(z^(imag(p3)))+(h*c),
-|z| <= 36 }
+  ;p1=(0,0)=YW, (0,1)=XW, (1,0)=XZ, (1,1)=YZ
+  ;p2=parallel planes, p3=optional extra term
+  a=real(p1), b=flip(cos(asin(real(p1)))), d=a+b,
+  f=imag(p1), g=flip(cos(asin(imag(p1)))), h=f+g,
+  z=real(pixel)+flip(real(p2)),
+  c=flip(imag(pixel))+imag(p2):
+  z=(d*(sqr(z)))+(real(p3))*(z^(imag(p3)))+(h*c),
+  |z| <= 36
+}
 
 ; END 19.6 FILE===============================================
 ;

@@ -42,14 +42,6 @@
 ;
 ; START PARAMETER FILE FOR 19.6===================================
 
-frm:Mystic2 {; Jim Muth
-a=real(p1), b=imag(p1), c=real(p2),
-d=imag(p2), k=real(p3), f=imag(p3),
-g=pixel, z=(pixel)^a+(b*(pixel))^c:
-z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
-g=sqr(g),
-LastSqr <= 100 }
-
 Angry_Fish         { ; time=0:00:22.13-SF5 on P4-2000
   reset=1960 type=formula formulafile=basicer.frm
   formulaname=Mystic2 function=cosxx passes=2
@@ -71,15 +63,17 @@ Angry_Fish         { ; time=0:00:22.13-SF5 on P4-2000
   mmmljnmfnncoo`opYpqUqrRqsOrsLrtHsuEtvBtw8ux4uy1vz4\
   uv8trBsnFrjIqeLpaPoYSnUPqTLtRIwQFyPEuRErTEoVEkXDhZ\
   De`DbbDZcDWeDTgCQiCMkCJmCGoMIiVKddMZmfdn`gpUkqOnrL\
-  isIduF_vCUw9Px6KoBMeFNXKP }
+  isIduF_vCUw9Px6KoBMeFNXKP
+}
 
 frm:Mystic2 {; Jim Muth
-a=real(p1), b=imag(p1), c=real(p2),
-d=imag(p2), k=real(p3), f=imag(p3),
-g=pixel, z=(pixel)^a+(b*(pixel))^c:
-z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
-g=sqr(g),
-LastSqr <= 100 }
+  a=real(p1), b=imag(p1), c=real(p2),
+  d=imag(p2), k=real(p3), f=imag(p3),
+  g=pixel, z=(pixel)^a+(b*(pixel))^c:
+  z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+  g=sqr(g),
+  LastSqr <= 100
+}
 
 ; END PARAMETER FILE FOR 19.6=====================================
 ;

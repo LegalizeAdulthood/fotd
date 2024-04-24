@@ -57,14 +57,15 @@ Corrosion          { ; time=0:00:10.49-SF5 on P4-2000
   0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
   z0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
   zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz\
-  0zz0zz0zz0zz0zz0zz0zz0zzz }
+  0zz0zz0zz0zz0zz0zz0zz0zzz
+}
 
 frm:ManN-2-pro-YW { ; Jim Muth
-z=real(p1)+flip(real(pixel)),
-g=imag(p1)+flip(imag(pixel)),
-a=real(p2), b=imag(p2), c=real(p3), d=imag(p3):
-z=(a*(z^b))+(c*(z^d))+g,
-|z| <= 16
+  z=real(p1)+flip(real(pixel)),
+  g=imag(p1)+flip(imag(pixel)),
+  a=real(p2), b=imag(p2), c=real(p3), d=imag(p3):
+  z=(a*(z^b))+(c*(z^d))+g,
+  |z| <= 16
 }
 
 ; END COMBINED FILE FOR 19.6=================================

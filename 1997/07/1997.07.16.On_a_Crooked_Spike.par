@@ -65,19 +65,21 @@ On_a_Crooked_Spike { ; time=0:00:26.47-SF5 on P4-2000
   LXUKYTJYSIZRH_QG_PF`OE`NDaMCaLBbKAbJ8cI7cH6dG5dF4e\
   E3eD2fC1fB0eD1dE2dF2cG3bH3aJ4aK5`L5_M6ZN6ZO7YP8XQ8\
   WR9WS9VUAUVBUWBTXCSYCRZDR_EQ`EPaFObFOdGNeHMfHLgILh\
-  IKiJRNeRQdQTdQXcP_bPbbOea }
+  IKiJRNeRQdQTdQXcP_bPbbOea
+}
 
 frm:XY-YZ-test03 {; Jim Muth
-; real(p1)=rotation angle in degrees,
-; imag(p1)=exponent of z
-; p2=parallel planes, real(p3)=axis of
-; rotation and parallel planes
-; imag(p3) = escape radius
-z=sin(real(p1)*.01745329251994)*real(pixel)+p2,
-c=cos(real(p1)*.01745329251994)*real(pixel)+flip\
-(imag(pixel))+real(p3):
-z=z^imag(p1)+c,
-|z| <= imag(p3) }
+  ; real(p1)=rotation angle in degrees,
+  ; imag(p1)=exponent of z
+  ; p2=parallel planes, real(p3)=axis of
+  ; rotation and parallel planes
+  ; imag(p3) = escape radius
+  z=sin(real(p1)*.01745329251994)*real(pixel)+p2,
+  c=cos(real(p1)*.01745329251994)*real(pixel)+flip\
+  (imag(pixel))+real(p3):
+  z=z^imag(p1)+c,
+  |z| <= imag(p3)
+}
 
 ; END 19.6 FILE===============================================
 ;

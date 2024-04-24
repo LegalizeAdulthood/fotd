@@ -51,14 +51,16 @@ Number_Seive       { ; time=0:00:13.02-SF5 on P4-2000
   iOEjQDkRDkTClUCmWBnXBoZAp_Aqa9rb9sd8tdBqdDmdGjdJge\
   LceO`eRYeTUeWReYOgcUiiZkndltinynoxkowhpvfqucqt`rtY\
   ssVsrStqQupNuoKvnHvnFuoXupnqijnbgjWcfQ_bJW_CTW5PUC\
-  QSJRQQSNXTLcUJjVzazMoTP0K }
+  QSJRQQSNXTLcUJjVzazMoTP0K
+}
 
 frm:IfElse01 {; adapted from R. Barnett's formula
-z=y=c=pixel, w=0:
-if(w), z=fn1(real(y))+flip(imag(y)), w=0
-else, z=(y*p1), w=w+1, endif
-z=z^p2+(p3*c), y=z,
-|z| <= 100 }
+  z=y=c=pixel, w=0:
+  if(w), z=fn1(real(y))+flip(imag(y)), w=0
+  else, z=(y*p1), w=w+1, endif
+  z=z^p2+(p3*c), y=z,
+  |z| <= 100
+}
 
 ; END PARAMETER-FORMULA FILE FOR 19.6========================
 ;

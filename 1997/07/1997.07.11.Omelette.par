@@ -44,17 +44,19 @@ Omelette           { ; time=0:00:46.08-SF5 on P4-2000
   C6MG7LK7KO7JS8JX8I`8Hd8Gh9Fl9EpLJbXNPhSBfREdPHbOJ`\
   NMZLPXKSVJVTHXRG_PEbNDeLCgJAjH9mRKf`W_ifTsqMqlKnfI\
   laGjWEhRDeMBcG9aB7Z55X03Z55_B7aG9bLBdREeWGg`IhfKzz\
-  z7ca8a_9`XAZVBXTCVRDUOESM }
+  z7ca8a_9`XAZVBXTCVRDUOESM
+}
 
 frm:ManN-YZ-XZ {; Jim Muth, Thanks to Benno
-; p3 = 0 = Julibrot YZ plane
-; p3 = 1 = Julibrot XZ plane
-; p3 = >0 <1 = Oblique planes
- z=real(pixel)+flip(real(p1)),
- c=imag(pixel)+flip(imag(p1)),
- a=p3, b=flip(cos(asin(p3))):
+  ; p3 = 0 = Julibrot YZ plane
+  ; p3 = 1 = Julibrot XZ plane
+  ; p3 = >0 <1 = Oblique planes
+  z=real(pixel)+flip(real(p1)),
+  c=imag(pixel)+flip(imag(p1)),
+  a=p3, b=flip(cos(asin(p3))):
   z=z^p2+((a+b)*c),
-   |z| <= 25 }
+  |z| <= 25
+}
 
 ; END 19.6 FILE===============================================
 ;

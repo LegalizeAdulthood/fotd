@@ -47,17 +47,19 @@ Spider_Basins      { ; time=0:01:35.52-SF5 on P4-2000
   HlKJlLLlNNlOPlPRlRTlSVlTXlUZlW`lXblYdlZfl`hlajlbll\
   cnleplfrmhtmgtmetmctmatm_tmYtmXtmVtmTtmRtmPtmNtmLt\
   mJtmHtmFtmDtmCtmAtm8tm6tm4tm2tl0ul0ul0ul1tl1tl2sl2\
-  sl2sm3rm3rm3rm4qm4qm5pm5p }
+  sl2sm3rm3rm3rm4qm4qm5pm5p
+}
 
 frm:Man-YZ-XZ {; Jim Muth
-; p2 = 0 = Julibrot YZ plane
-; p2 = 1 = Julibrot XZ plane
-; p2 = >0 <1 = Oblique planes
-z=real(pixel)+flip(real(p1)),
-c=imag(pixel)+flip(imag(p1)),
-a=p2, b=flip(cos(asin(p2))):
-z=sqr(z)+((a+b)*c),
-|z| <= 25 }
+  ; p2 = 0 = Julibrot YZ plane
+  ; p2 = 1 = Julibrot XZ plane
+  ; p2 = >0 <1 = Oblique planes
+  z=real(pixel)+flip(real(p1)),
+  c=imag(pixel)+flip(imag(p1)),
+  a=p2, b=flip(cos(asin(p2))):
+  z=sqr(z)+((a+b)*c),
+  |z| <= 25
+}
 
 ; END COMBINED FILE FOR 19.6=================================
 ;

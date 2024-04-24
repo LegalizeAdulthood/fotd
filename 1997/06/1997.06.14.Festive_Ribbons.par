@@ -42,17 +42,19 @@ Festive_Ribbons    { ; time=0:00:58.55-SF5 on P4-2000
   0ze0zd0zc0zc0zb0za0z`0z`0z_0zZ0zY0zY0zX0zW0zV0zV0z\
   U0zT0zS0zS0zR0zQ0zP0zP0zO0zN0zM0zM0zL0zK0zJ0zJ0zI0\
   zH0zG0zG0zF0zE0zD0zD0zC0zB0zA0zA0z90z80z70z70z60z5\
-  0z40z40z30z20z10z10z00K0r  }
+  0z40z40z30z20z10z10z00K0r
+}
 
 frm:ManN-XW-YW {; Jim Muth, Thanks to Benno
-; p3 = 0 = Julibrot XW plane
-; p3 = 1 = Julibrot YW plane
-; p3 = >0 <1 = Oblique planes
-z=flip(real(pixel))+real(p1),
-c=flip(imag(pixel))+imag(p1),
-a=p3, b=flip(cos(asin(p3))):
-z=z^p2+((a+b)*c),
-|z| <= 25 }
+  ; p3 = 0 = Julibrot XW plane
+  ; p3 = 1 = Julibrot YW plane
+  ; p3 = >0 <1 = Oblique planes
+  z=flip(real(pixel))+real(p1),
+  c=flip(imag(pixel))+imag(p1),
+  a=p3, b=flip(cos(asin(p3))):
+  z=z^p2+((a+b)*c),
+  |z| <= 25
+}
 
 ; END COMBINED FILE FOR 19.6=========================================
 ;
