@@ -1,0 +1,83 @@
+;     Date: Wed, 10 May 2006 23:49:32 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-05-06 (FOTD for 11-05-06 [No Rating])
+;       Id: <1.5.4.16.20060510235319.29b7e7bc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 11, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; How could one rate a regular pentagon?  They could not.  A penta-
+; gon is unratable.  All regular pentagons are similar.  They're 
+; all the same.  Therefore I gave today's image, which features a 
+; blatantly obvious pentagon, no rating.  True, the pentagon is 
+; decorated by flowery petals, but it is still a pentagon.
+; 
+; The parent fractal was created by combining small portions of 
+; Z^(-0.5) and Z^(-1.5) then adding (1/C).  It consists of several 
+; oversized arcs floating in empty space.  Today's scene is 
+; located in the smaller arc, which has by far the most detail.
+; 
+; When I examined this smaller arc, I found no signs of Mandelbrot 
+; midgets, but hey, there's nothing wrong with the pentagons that 
+; I did find, a great example of which appears in today's picture.
+; 
+; The passes=b option works exceptionally well with today's image, 
+; and it is quite amusing when the outline of the perfect pentagon 
+; is suddenly traced out.
+; 
+; The render time of just under 3 minutes is fair enough, but to 
+; speed things up even more, the finished picture of the pentagon 
+; has been posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was perfect here at Old Fractal Central on Wednes-
+; day; the fractal cats were perfect also.  My day was appropri-
+; ately busy.  The next FOTD is scheduled to appear in 24 hours.  
+; It actually might do so.  Until then, take care, and if you 
+; actually did find the theory of everything, it would still be 
+; nothing but a theory.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_11-05-06 { ; time=0:02:53.89--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=b
+  center-mag=-4.18371/-13.9732/62.87884/1/-3.1/8.018\
+  4e-013 params=0.12/-0.5/0.03996/-1.5/0/0 float=y
+  maxiter=1200 inside=255 outside=real periodicity=10
+  colors=000t9Is5Hr1Gq4Hp7HoAInDIlGIiJJfMJdPKaSK_VKX\
+  YLU`LScHPdIOeJOdKOcLObMOaNO`OO_POZPOYOOXNOWMOVLOVK\
+  OXJTZNX`S`cWdf`ijdmmhqpmurqvtstqqomnjikdeh_adVYaPU\
+  ZJQWEMTCIQBEN9JL8OI6TG5YD3bB2g81l62fB2`G3WL3QQ3KV4\
+  F_49d44h85eB6cF7`I8ZL9XPAUSBSVCQZDNaELdFJhGGkHEnHC\
+  hPLbXUXdbRlkLttOuoRujUufXva_vYbvTevPcsRbqT`oV_mWYj\
+  YXh_WfaUdbTadR_fQYhPWiSZfV`cYc``eYcgV`hXZhZXh_ViaS\
+  ibQidOjeMjgJjiHkjFklDkmAlo8lp6lr4ls8ktCktFktJjtMju\
+  QjuTiuXiu_iuL3ZO3ZR3ZU3ZX3Z_3Zc3Yf3Yi3Yl3Yo3Yr3Yu3\
+  Yt4Xt5Xs6Ws7Ws8Wr9VrAVrBVqCUqDUpETpFTpGToHSoISoISb\
+  M_QQgDUo1Yv2Zt3Zr4Zp5_n6_l7_j8`h9`fA`dBabCa`DaZEaX\
+  EcVEeUEgSEhREjPElOEnMEoLImKLkKPiJSgJVeJZcIaaId_IhY\
+  HkWHnUHkVIiVIgVIeVIcVIaVIZWJXWJVWJTWJRWJPWJWdcbmxZ\
+  jwWgvSdvPauMZtIWtFTsCQsIOqNNpSLnXKmaJlfHjkGipEguDf\
+  zCeyGdyKcyObyRayV`yZ_xaZxeYxiXxlWxpVxtUxwTN7mAOMDM\
+  LFLLHKKJIKLHJNGJPEIRDI000 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
