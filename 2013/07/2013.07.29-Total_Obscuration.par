@@ -1,0 +1,103 @@
+;     Date: Mon, 29 Jul 2013 13:45:08 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 27-07-13 (Total Obscuration [A-5,M-6])
+;       Id: <1.5.4.16.20130729134544.2b974b3c@earthlink.net>
+; ---------
+; 
+; FOTD -- July 27, 2013 (Rating A-5,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The name of today's image, "Total Obscuration", refers to the 
+; parent fractal, not the image itself, which is anything but 
+; totally obscured.  This parent consists of a group of blobs 
+; roughly resembling the shape of the Mandelbrot set that it 
+; largely but not quite totally obscures.  Today's scene lies at 
+; the eastern edge of the largest remaining open area, just north 
+; of the X-axis.
+; 
+; Perhaps the most incredible thing about the parent fractal is 
+; that the infinitesimal 0.000000000000001 part of Z^(-100), when 
+; added to 0.5 part of Z^2, could make such a difference.
+; 
+; The art rating of 5 and math rating of 6 indicate that very 
+; little inspiration or effort were involved in the creation of 
+; the image.  (I realize that an artist should never belittle his 
+; work, but I have never been very big on hubris.)
+; 
+; The image will take about 5 minutes to calculate on the average 
+; machine.  Take it and run the parameter file, or leave it and 
+; check one of the web sites.
+; 
+; Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Older back images may be seen at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A partly cloudy, rather warm and muggy day with a temperature of 
+; 84F 29C was interrupted in the afternoon by a heavy thunder 
+; shower that dropped 1-1/4 inches, or 3.2cm of rain in 15 
+; minutes.  The fractal cat watched the rain with interest, then 
+; took a nap with even more interest.  The fractal humans got into 
+; a discussion about conspiracy theories, some of which just might 
+; be true despite making no sense at all.
+; 
+; The next FOTD will be posted when I get a round tuit.  Until I 
+; find the tuit, take care, and if aliens are flitting around in 
+; our skies at will, breaking all kinds of physical laws, why does 
+; it seem so irrational to believe in them?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Total_Obscuration { ; time=0:05:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-1.022651114713766/+0.04055793961440786\
+  /2.253e+011/1/90/0 params=1e-015/-100/0.5/2/0/0/0/0
+  float=y maxiter=1800 inside=0 logmap=136
+  periodicity=6 mathtolerance=0.05/1
+  colors=000GgjIefJdbKc_LbWMaSN`POZLPYHQXERWASV6TU3W\
+  T8YSD_RIaQMdPRfOWhN`jMdmLioKnqJssJwrOxrTxrXyrayqfy\
+  qjzqozqszjptdnnYkiSicMgYFdT9bN3`I7YOAVUES_HPeLMkOJ\
+  pRLmTNkWPhYRf`TdbVaeX_gZYi`VlbTndQqfOshMvjJxlHzmFj\
+  XOWHXH1eG6dFAdFEcEIcDNbDRbCVaCZaGXaKVaNTaRRaUPaYOa\
+  aMadKahIakGaoEarDaiGa`IaZKcYLdXMeWNfVOgUPhTQiRSkQT\
+  lPUmOVjNWgMUdPSaRQZUOWZMTcKQaINWGPRE_LAjG7tJBrMFqP\
+  JoRMnUQlXUk_Yja`hddgghejldloceVQZADXGEWLENGeNGfNHg\
+  NHhNIjNIkNJlNJmNKnNKoNLpNLrNMsNMtNNuNNvNOwLQzNOxON\
+  vPMtQLsRKqTJoUInVHlWGjXFiZEg_De`CcaBbbA`d9Ze8Yf7Wg\
+  6Uf4Wh5Ti5Rj5Pk6Nl6Lm6Jn6Ho7Fp7Dq7Br79q99qA9qB9qD9\
+  qE9pF9pH9pI9pJ9pL9oM9oN9oP9oQ9oR9nT9nU9nV9nX9nY9mZ\
+  9m_9ma9mb9mc9le9lf9lg9li9lj9kk9km9kn9ko9kq9jr9js9j\
+  u9jv9jw9kz7jz9izBhzDgzFfzHezIdzKdzMczObzQazS`zT_zV\
+  ZzXYzZYz`XzbWzcVzeUzgTziSzkRzmSzoRznRznRznRznRznRz\
+  nRznRznRznRznRznRznRznRzn }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

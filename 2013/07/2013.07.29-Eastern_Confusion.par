@@ -1,0 +1,110 @@
+;     Date: Mon, 29 Jul 2013 20:54:01 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 29-07-13 (Eastern Confusion [A-7,M-8])
+;       Id: <1.5.4.16.20130729205437.2ba73164@earthlink.net>
+; ---------
+; 
+; FOTD -- July 29, 2013 (Rating A-7,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The iterated expression behind today's image is one of the most 
+; unusual of all time.  To create the parent fractal I added an 
+; infinitesimal 0.0000000000000001 part of Z^(-2) to a whopping 
+; 100 parts of Z^2.  This unlikely combination produces a parent 
+; Mandelbrot set so tiny that it appears as little more than a dot 
+; at the center of the screen.
+; 
+; The magnitude of today's image is over 10^14, and still has a 
+; little way to go before breakdown appears.  This does not mean I 
+; have found a way to increase the limit of definition.  What has 
+; happened is that the 100 parts of Z^2 have shifted the decimal 
+; point two places to the left, and we are simply getting greater 
+; magnification of a smaller parent fractal.
+; 
+; The tiny parent M-set appears pretty much normal until we 
+; venture into its more extreme depths, where strange things, 
+; including anti-bifurcation begin to appear.  Today's image lies 
+; in the East Valley area of the parent, though only a few signs 
+; of East Valley elements are in the scene.
+; 
+; The name "Eastern Confusion" refers to the unexpected details in 
+; the image.  The art rating of 7 indicates that the image is 
+; worth a look.  The math rating of an 8 indicates that in this 
+; image we might be on the verge of something quite new.  Only 
+; time and investigation will tell.
+; 
+; The calculation time of 1-3/4 minutes will pass in a flash.  The 
+; flash may be avoided by viewing the image on one of the web 
+; sites.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A hi-def version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; 16 years of back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; And in the next FOTD, a new FOTD web site may be added.
+; 
+; The weather was near perfect here at Fractal Central today, with 
+; photoshop blue skies, puffy cottonball clouds, low humidity and 
+; a temperature of 79F 26C.  Both the fractal cat and humans had a 
+; good day, though FL was a bit cranky around the edges at times.
+; 
+; The next FOTD will be posted in the proper time.  Until whenever 
+; that might be, take care, and may the aliens from outer space 
+; show themselves.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Eastern_Confusion { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.01739734355439775/+0.000000024567652\
+  58/1.103568e+014/1/-172.5/0 params=100/2/1e-016/-2\
+  /0/0/0/0 float=y maxiter=1500 inside=0 logmap=138
+  periodicity=6 mathtolerance=0.05/1
+  colors=00068P79Q8AR9BSACTBDUCEWDGYEI_GKaIMdKOgMQjO\
+  SlQTnSPsKOpAKg0GSAPJHTAPY1UeAZkIcqVhuemzqmzfhrTckS\
+  UaMIQLGLKLPF_PAfU6mXJqaQzmXzqczsjzzqzzxzzpzzhvwaov\
+  RiuHcu7X63P64H65A6697E87M77U68`58h48p38wTvRPuOLtMH\
+  sKDrH9qF6qDAmJEiOHeULbZPZdSViWRoZOtTUsN_sHdsBjr5pr\
+  0ur7soEqmLokRniXlhajhfhgkfgpdfubfgagUahG`i3`i3Ro3H\
+  uAIsGIqMJo`yhclPe_6ZdDTiJNnQHsWBwaAonAgzGauMWpSQkY\
+  KfcEai8Xn3SiCQdLP_UOVbNQkMMsLHe_DSmIWiN_fSbcXf_ajX\
+  fmUenQenMenJenFenBen8doEdpKdqQcrWcsactg`mdYgaVaZSV\
+  WPPTMJQKDNIFLHHKGJIFLHMPJTTL_XNf`PlcRjgTikUgnVfrXd\
+  vYcyZdyOeyDfy3gq8hjDibIjWMhZOf`PdcRbeS`hTZjVXmWVmX\
+  RmVNmTFm6ImELmMNmTQm`SmgOmfKmfGmfzmezmezmezmezmhzm\
+  kzmnzmqzmuzmhzmWzmVzmUzmTzmSzmRzmQzmPzmOzmQzmSzmTz\
+  mVzmWztYzyZzw`zvbzuczzezzfzzhzzizzlzzozzrzzuzzxzzo\
+  zzgzz_zzTzzMzzLzzLzzLzzLzzTzz`zzhzzozzczzSzzGzzKzz\
+  OzzSzzWzz_zzczzfzzYzzQzzH }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
