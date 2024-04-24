@@ -1,0 +1,107 @@
+;     Date: Tue, 06 Jan 2015 08:51:06 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-01-15 (Brush Strokess [A-8,M-8])
+;       Id: <1.5.4.16.20150106085350.2a87ca96@earthlink.net>
+; ---------
+; 
+; FOTD -- January 05, 2015 (Rating A-8,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image nearly duplicates an image I posted several days 
+; ago, but this in no way detracts from its worth.  In fact, the 
+; scene rates a double 8.  The art earns its rating because of the 
+; extra work I put into the coloring, the math because such an 
+; unexpected effect exists in such a familiar fractal object.
+; 
+; The image is sliced in an orientation halfway between the 
+; Elliptic and Parabolic directions.  The location is off to the 
+; side of the East Valley area of the large minibrot on the main 
+; spike of the Mandelbrot set.
+; 
+; The image was rendered with the outside set to 'tdis' though 
+; this is not responsible for the effect of brush strokes, which 
+; is a natural part of the scene.  The name "Brush Strokes" calls 
+; attention to this unusual effect.
+; 
+; The calculation time of 10-3/4 minutes is slow by any standards, 
+; but the image is worth the wait.  And the online web sites can 
+; eliminate the wait completely.
+; 
+; For instant relief from waiting, check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Though it turned out rather chilly here at Fractal Central 
+; today, conditions were actually quite acceptable.  With a 
+; temperature of 28F -2C and a good dose of sunshine between the 
+; clouds, the fractal cats had enough time on their shelf to 
+; satisfy themselves.  The humans, who are never completely 
+; satisfied, made it through the first full working day of the 
+; year without incident.
+; 
+; The next FOTD will be posted soon.  Until then, take care, and 
+; if a thermos bottle can hold one liter of water, how much would 
+; a Klein bottle of the same size hold?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Brush_Strokes { ; time=0:10:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrotSqr passes=1
+  center-mag=-1.749999870958464/+0.1116445258229022/\
+  2.347932e+008/0.6175/-61.5/52.31619 params=45/90/0\
+  /0/0/0/0/0/0/0 float=y maxiter=32000 inside=0
+  outside=tdis periodicity=6
+  colors=000UUUUOaTSdSWgR`iQdlPinOmqLrtNqsOqrQprRpqi\
+  pqUtpVoosxoYnnZnz`nmamlomldmkewkgljhlijeikkhoZkldh\
+  icefbbcW_aUX`hYhbZZf_Za`YV`XVaX_bWMcVNdfOdUOzTbfSY\
+  gSQgWTd_WabZZfaWidTmgQqhMpiNpiNpiOpaOpiPpiPplQofQo\
+  fRooRooRoqSorSosnnqZnocnohnlmnkrnivnizokznevmgrlem\
+  lihkccjaZieUicShXRg`QfVQfTPeSPdXOdONcNNbLMaKLaIL`H\
+  K_FKZEJZCIYBIX9H_5GX8HUBHRDIOGILIIJLJGNJDQJARK7VK5\
+  VK4WM4SN4UP4TQ4SS4NT4PV4PW4KY4LZ0Pb4I_7LXBKUEIYHDP\
+  LFWOEUSCQVBDS7ZU0LV07X0EV04V04U04T05S05R05Q05P06O0\
+  6N06M07L07J27I3AH48G38F28E19D09C09B09B0AA0A90A80B7\
+  0A709A09B3B95DD7EH9GK5HHDJEGLCIM9KO7MP4OR2QS4RT5SU\
+  7SV8TWATXBUYDUZEVZGV_HW`IWaKXbLXcNYdOYdQZeRZfT_gU_\
+  hV`iX`jYaj_ak`blbbmccnecofdpkfogdpcbp_`qWZqTXqPVrL\
+  TrHRsDPs9MrAOsAPsBQsBRsBSsCTsCUsDVsDWsDXsEZsE_sF`s\
+  FasFbsGctGdtHetHftHgtIitIjtJktJltJmtKntKotLptLqtIu\
+  vLrtNorPlqRioUgmWdlWFXVJ_ }
+
+frm:SliceJulibrotSqr   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z*z+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

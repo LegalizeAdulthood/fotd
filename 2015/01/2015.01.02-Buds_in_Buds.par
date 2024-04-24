@@ -1,0 +1,99 @@
+;     Date: Fri, 02 Jan 2015 18:41:06 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 02-01-15 (Buds in Buds [A-5,M-8])
+;       Id: <1.5.4.16.20150102184346.2c4fe250@earthlink.net>
+; ---------
+; 
+; FOTD -- January 02, 2015 (Rating A-5,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a simple blow-up of a small part of yesterday's 
+; Seahorse Valley image.  I named it "Buds in Buds" because it 
+; holds two different types of buds.  The first type, filled with 
+; the stripes, is obvious.  The other type is the stripes 
+; themselves, which are actually Mandelbrot buds seen from the 
+; side and stretched about 50 times in the horizontal direction.
+; 
+; The art, which most people consider the most important aspect of 
+; fractals, rates a humdrum 5.  The math aspect, which I sometimes 
+; consider more important, rates a quite respectable 8.
+; 
+; The calculation time of 5-1/2 minutes will seem fast at first, 
+; but will slow significantly as the rendering continues.  Of 
+; course, the web sites can make the viewing far more pleasant.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of sun and clouds with a temperature of 37F +3C made today 
+; right on the mark for the second day of the year.  The fractal 
+; cats soaked up the sunlight when it was falling on their shelf 
+; and waited hopefully when clouds blocked the sun.  The humans 
+; settled down to prepare for another year of surprises.  When the 
+; next FOTD is posted in a day or two, little will have yet 
+; changed.  Until then, take care, and if fractals hold as much 
+; hidden meaning as is often claimed, what then of the human 
+; beings who worked out the math?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Buds_in_Buds { ; time=0:05:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrotSqr passes=t
+  center-mag=0.369319/-0.531478/14.674/1/135/0
+  params=88/88/88/90/-0.75/0/0/0/0/0 float=y
+  maxiter=42000 inside=0 logmap=5 periodicity=6
+  colors=00054L65K76K87K98K99MAAOABQ9CS9EU9GW9IY8K_8\
+  La8Mc8NeAPcBQaDS`ETZGVYHWWIYVKZTL`SNaQOcPQdNRfMSgK\
+  UiJVjHXlGYmE_oD`pBaqA`oC`nD_mE_lFZkGZjIYiJYhKXgLXf\
+  MXeNWcPWbQVaRV`SU_TUZVTYWTXXSWYSVZSVZSV_SV_KWVCZQ4\
+  `L6aO7aQ9bTAbVBcXDc_EdaGddHefIehKfkMfmOfnQfnSfoU_o\
+  UZoVYoVXoWWpWVmXUjXTgYSdYQaZOZZPW_MT_JR`GQ`DM_BJYA\
+  F_6AY6BX6CW6CV7DT7ES8ER9FQAGPBGNBHMCILDIKEJJFKHFKG\
+  GLFHMEIMDJNBJOAKO9LP8MQ3PR5NQ7MQ9LQBJQDIQFHQGGQIEQ\
+  KDQMCQOAQQ9QS8QT7QU9PVAPWBPXCPYDPZFP_GP`HPaIPbJPcL\
+  PdMPeNPfOPgPPfSJgRMhQPiPSjOVkNYlM`mMcnLfoKipJlqIor\
+  HrsGusGwrIurJsrLqrMprOnrPlrQkrSiqTgqVeqWdqXbqZ`q__\
+  qaYqbWpdUpeTpfRphPpiOpkMplKpmJolInkHmjGmjGliFkhEjh\
+  EjgDifChfCgeBgdAfdAdc9ba8a_8_Y7YW6ZV3ZV5ZV6_W8_Y9`\
+  _B`aC`cE_eF_gHZhIZiKYjLYjMYjMWkLWkKWkKVkJVlJUlIUlI\
+  UlHUmHUmGUmGVmFWmEYnE_oDapDdrCgsCitBkuBmvAowAqx8ty\
+  7wz6zz5zz3zz2zz1zz0zzTzzU }
+
+frm:SliceJulibrotSqr   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z*z+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

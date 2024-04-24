@@ -1,0 +1,110 @@
+;     Date: Mon, 26 Jan 2015 20:39:15 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 26-01-15 (In a Grey Fog [A-6,M-5])
+;       Id: <1.5.4.16.20150126204217.2bc7ec74@earthlink.net>
+; ---------
+; 
+; FOTD -- January 26, 2015 (Rating A-6,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Let the banners wave and the trumpets blare!  I'm back!  At 
+; least for a day, that is.
+; 
+; These past few weeks I have been practicing drawing fractals and 
+; combining them with more traditional scenes.  Perhaps the most 
+; curious thing about drawing fractals is that I was doing it 
+; forty years ago and never realized it.  In the not too distant 
+; future I might post a few of my blundering mixed-media efforts 
+; to the official FOTD web site, but for now the images will stay 
+; securely hidden away.
+; 
+; Today's scene lies off to the side of East Valley of a tiny 
+; minibrot on the main spike of the Mandelbrot set.  It looks like 
+; a Julia set, but actually it is an 'Oblate' set.
+; 
+; The name "In a Grey Fog" refers to the colors of the image, not 
+; to my mood.  The art rating of 6 leaves room for improvement, 
+; while the math rating of 5 shows that we have been here often 
+; before.
+; 
+; The calculation time of 2-1/4 minutes is well within reason.  
+; And as always, total reason prevails at the FOTD web sites.
+; 
+; Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Snow and more snow prevailed here at Fractal Central today, with 
+; light snow still falling and 11 inches, 28cm, already on the 
+; ground.  But it looks like the over-hyped monster storm will 
+; bypass this area to the east.  Along with the snow and ice, the 
+; temperature of 25F -4C kept the feeling of midwinter on 
+; everyone's mind.  Meanwhile, the fractal cats were more excited 
+; about footprints left by a prowling tomcat than the snow itself. 
+; The humans passed the day watching the snow pile up and 
+; pondering the job of removing it.  The next FOTD will be posted 
+; who knows when.  Until whenever, take care, and be on the right 
+; side or be left out.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+In_a_Grey_Fog { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrotSqr passes=1
+  center-mag=-0.026704572415932/+0.000032869356282\
+  /1481028/0.1489/1.6/59.549 params=0/0/90/0/\
+  -1.41665/0/0/0/0/0 float=y maxiter=12000 inside=255
+  logmap=-88 periodicity=6
+  colors=00042F42F42E41D41C41B41A20841A62B83CA5EB7FD\
+  9GFBIHDJIFKKHMMJNOLOQNQRORTPSVQUXRUYSX_T_bUacUccVe\
+  dWgcXicYkcZmcZocZqcZocZmcZlcZmcZocZpcZrcZscZucZvcZ\
+  xaZz_YyZXyYWxXVxWUxVUwUUwTTwTSuTRsTQqTQoTPmTOkTNiS\
+  MgRLeQKcOJaMI_KHYIGWGFUEERCDOACLABIAAFAAEAADAADAAD\
+  AADAAEAAFAAGCAHEAIGAJIAKJAKJAKJAKJAKJAKJAKJAKJCMKE\
+  OLGQMISNKUOMWPOYQQ_RSaSUcTVdTWdTXcTXcTYcTZbN_bT_bU\
+  `aVaaWb`Wb`Xc_Yd_YdZZeZ_fY_fY`gXahXahWbiWcjVcjVdkU\
+  elUelTfmTgnSgnShoRipRipQjqQkrPkrPlsOmtOmtNnuNovMov\
+  MpwLqxLqxKsyKuzJszJwxIwwIwvIwuIwtIwsHwrHwqHwpHwoHw\
+  nGwmGwlGwkGwjGwiFwhFwgFwfFweFwdEwcEwbEwaEw`Ew_DwZD\
+  wYDwXDwWDwZMw`Vwccuelsbkq_koYkmVjmTjmQjmLnmOjmQfmS\
+  bmU_mWWmZSm`OmbLmdHmfDnhAmiBmiCmiDmiEmiFmiGmiHmiIm\
+  iJmiKmiLmiMmiNmiOmiPmiQmiRmiSmiTmiUmiVmiWmiXmiYmiZ\
+  mi_wi`wiawibwicwidwidwjawk_zkYzlWzlUzmSznQznOzoMzz\
+  KzzMzzLzzLzzKzzJzzIzzHzzG }
+
+frm:SliceJulibrotSqr   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z*z+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

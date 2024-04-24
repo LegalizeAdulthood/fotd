@@ -1,0 +1,102 @@
+;     Date: Fri, 02 Jan 2015 18:41:05 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-01-15 (New View 01 [A-7,M-8])
+;       Id: <1.5.4.16.20150102184345.2e0f4c42@earthlink.net>
+; ---------
+; 
+; FOTD -- January 01, 2015 (Rating A-7,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It's a new day, a new month, a new year and a new view of an old 
+; friend, Seahorse valley of the Mandelbrot set.  The outer border 
+; of the fractal is the familiar Julia set of the valley, while 
+; the brilliantly colored inner features are the Mandelbrot valley 
+; itself, twisted and stretched by the strange angle of the slice.
+; 
+; I named the image "New View 01" because I will be posting many 
+; more new views of old friends in the upcoming month.
+; 
+; The art rates a 7 because I was lucky with the coloring.  The 
+; Fractint program did most of the work.  The math rates an 8 
+; because it is the start of a venture into new aspects of 
+; familiar 'objects.
+; 
+; The calculation time of 3 minutes makes life easy.  Checking the 
+; online web sites makes life even easier.
+; 
+; The finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Total sun and a high temperature of 39F +4C here at Fractal 
+; Central today brought a cheery start to the new year.  The 
+; fractal cats soaked up as much sun as possible, though the 
+; window shelf is too small to accomodate three cats at the same 
+; time.  A new larger shelf might be needed.  The fractal humans, 
+; having survived the holidays, settled down to looking ahead at 
+; what might be accomplished in the 364 days remaining in the year.
+; 
+; The next FOTD will be posted in a reasonable time.  Until reason 
+; prevails, take care, and see you soon.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+New_View_01 { ; time=0:03:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrotSqr passes=1
+  center-mag=0/0/0.8820956 params=88/88/88/90/\
+  -0.75/0/0/0/0/0 float=y maxiter=15000 inside=0
+  logmap=yes periodicity=6
+  colors=00054L65K76K87K98K99MAAOABQ9CS9EU9GW9IY8K_8\
+  La8Mc8NeAPcBQaDS`ETZGVYHWWIYVKZTL`SNaQOcPQdNRfMSgK\
+  UiJVjHXlGYmE_oD`pBaqA`oC`nD_mE_lFZkGZjIYiJYhKXgLXf\
+  MXeNWcPWbQVaRV`SU_TUZVTYWTXXSWYSVZhOi_RdSU_KWVCZQ4\
+  `L6aO7aQ9bTAbVBcXDc_EdaGddHefIehKfkLfm7vnFnoMfoU_o\
+  `SohLooDoy0pv6msCjpIgnJdlKajLZhMWfNTdNRbMQ`IM_DJY9\
+  F_3AY4BX5CW6CV7DT7ES8ER9FQAGPBGNBHMCILDIKEJJFKHFKG\
+  GLFHMEIMDJNBJOAKO9LP8MQ3PR5NQ7MQ9LQBJQDIQFHQGGQIEQ\
+  KDQMCQOAQQ9QS8QT7QU9PVAPWBPXCPYDPZFP_GP`HPaIPbJPcL\
+  PdMPeNPfOPgPPfSJgRMhQPiPSjOVkNYlM`mMcnLfoKipJlqIor\
+  HrsGusGwrIurJsrLqrMprOnrPlrQkrSiqTgqVeqWdqXbqZ`q__\
+  qaYqbWpdUpeTpfRphPpiOpkMplKpmJolInkHmjGmjGliFkhEjh\
+  EjgDifChfCgeBgdAfdAdc9ba8a_8_Y7YW6ZV3ZV5ZV6_W8_Y9`\
+  _B`aC`cE_eF_gHZhIZiKYjLYjMYjMWkLWkKWkKVkJVlJUlIUlI\
+  UlHUmHUmGUmGVmFWmEYnE_oDapDdrCgsCitBkuBmvAowAqx8ty\
+  7wz6zz5zz3zz2zz1zz0zzTzzU }
+
+frm:SliceJulibrotSqr   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z*z+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
