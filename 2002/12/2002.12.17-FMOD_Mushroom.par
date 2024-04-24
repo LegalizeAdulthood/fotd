@@ -1,0 +1,92 @@
+;     Date: Tue, 17 Dec 2002 10:42:59 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-12-02 (FMOD Mushroom [4])
+;       Id: <1.5.4.16.20021217104522.0d87bd1c@pop.mindspring.com>
+; ---------
+; FOTD -- December 17, 2002 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another venture into the strange fmod world of 
+; yesterday's image.  True, the parameters have changed a little, 
+; but the effect is the same.  The fmod fill normally draws bubble-
+; like shapes.  It has no right to draw things like the nest of 
+; Sierpinski triangles that appears in today's image.
+; 
+; But the image does not lie -- the shapes are there.  Maybe the 
+; unusually high proximity setting of 8.5 is responsible for the 
+; madness.  I don't know the answer, but after the holidays I will 
+; certainly do more investigation into this phenomenon.
+; 
+; I must also work out a method of coloring these images.  The 
+; all-or-nothing palette I used in today's image is the best I 
+; could find so far, but there are many things I have not yet 
+; tried.
+; 
+; The many artistic shortcomings of today's image drag its rating 
+; down to a 4.  This less-than-average artistic rating is somewhat 
+; offset by the mathematical potential that lies in the image.
+; 
+; I have named the picture "FMOD Mushroom".  A quick glance will 
+; show why I chose this name.  The render time of 11 minutes can 
+; be avoided by downloading the completely-rendered GIF file from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Monday was sunny, and the temperature reached an unexpected high 
+; of 46F 8C, but the winds were far too high for outdoor comfort.  
+; After a brief time sitting on the porch, the dynamic duo decided 
+; to pass the afternoon indoors next to their favorite radiators.
+; 
+; And I'm going to pass this day working and preparing for the 
+; holiday season and all the marginally necessary activities that 
+; accompany it.  Until next time, take care, and prepare.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+FMOD_Mushroom { ; time=0:11:13.00--SF5 on a P200
+  reset=2002 type=formula formulafile=jim.frm
+  formulaname=Mystic2 function=cosxx passes=1
+  center-mag=-0.49007885823554040/+0.154505053817459\
+  60/6915.129/1/-115/-1.28745000771424145e-011
+  params=-1.53003/-0.78746/0.08577/1.30135/1.44567/2\
+  .45799 float=y maxiter=250 inside=fmod 
+  proximity=8.5 logmap=yes periodicity=0
+  colors=0000z00z00z00z00z00z00z00z00z00z00z00z00z00\
+  z0z00z00z00z00z00z00z00z00z00z00z00z000z00z00z00z0\
+  0z00z00z00z00z00z00z00z00z00z00z00z00z00z00z00z0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz00z00z00z00z0z00z\
+  00z00z00z00z00z00z00z00z000z000z00z00z00z00z00z00z\
+  00z00z00z00z00z00zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0z0000000000000000000000000000000000\
+  0000000000000000000000000z00z00z00z00z00z00z00z00z\
+  00z00z00z00z00z00z00z00z00z00z00000000000000000000\
+  0z00z00z00z00zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz0zz0zz\
+  0zz0z00z00z00z00z00z00z00z0000z00z00z00z00z00z00z0\
+  zz0zz0zz0zz0zz0zz0zz0zz0z00z00z00z00z00z00z00z0000\
+  00000000000000000000000000000000000000000000z00z00\
+  z00z00z00z00z00z00z000000000000000000000000z00z00z\
+  00z00z00z00z00z00z00z00z0 }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100 }
+
+; END PARAMETER FILE==================================
+; 
+; 

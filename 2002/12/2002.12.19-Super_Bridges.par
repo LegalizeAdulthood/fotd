@@ -1,0 +1,109 @@
+;     Date: Thu, 19 Dec 2002 09:45:11 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-12-02 (Corrected Super-Bridges [5])
+;       Id: <1.5.4.16.20021219094736.0d97113e@pop.mindspring.com>
+; ---------
+; FOTD -- December 19, 2002 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; This is a corrected version of the already-posted FOTD.  I 
+; inadvertently left the semicolon out of the comment line of 
+; the formula in the first version.
+; 
+; A few days ago, Tim posted a question about three-part numbers, 
+; or triternions.  Shortly thereafter, Morgan posted a basic 
+; formula that draws the triternion Mandelbrot set, which, as 
+; drawn by the formula, consists of a skewed M-set with its 
+; northern part chopped off.  When I ran the formula, I was 
+; expecting a somewhat different figure, but I'll take whatever 
+; the numbers give.  (Maybe several varieties of three-part 
+; numbers are possible, and one of the other varieties would draw 
+; a different M-set.)
+; 
+; Adding a few simple variable parameters to the formula, and 
+; giving it a new name, I did a little experimenting, and found 
+; that the triternion M-set behaves much like the hypercomplex 
+; set.  It seems to consist of overlapping M-sets with straight 
+; 'bridges' added.  Unlike the bridges in the odd planes of the 
+; Z^2+C Julibrot, which consist of stretched elements and can be 
+; unstretched into recognizable figures, the bridges in the 
+; triternion set consist of truly one-dimensional elements, which 
+; no amount of stretching will make into recognizable figures.
+; 
+; In the triternion set, as in the hypercomplex set, different 
+; elements often overlap, and when this happens, the element with 
+; the lowest iteration count will prevail.  Today's image shows 
+; triternion bridges overlapping conventional M-set elements, 
+; with a Minibrot on the left and a spiral on the right.  The 
+; resulting interplay produces some interesting 3-D effects, 
+; especially around the spiral.
+; 
+; I named the image "Super-Bridges" on a whim.  Not knowing quite 
+; what to make of the image, I rated it at an average 5.
+; 
+; Regardless of the rating, the image is a fast one, requiring 
+; only 2 minutes to render from the attached parameter file
+; 
+; The image can also be seen by downloading it from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Partly cloudy skies on Wednesday could not make up for a raw 
+; east wind and a temperature that barely rose above freezing.  
+; The fractal cat Tippy expressed his displeasure by sulking.  
+; Thomas was too busy sleeping by the heat.
+; 
+; And if I don't soon get busy, a few customers will be sulking.  
+; So until next time, which will arrive on schedule in 24 hours, 
+; take care, and keep careful watch for the spirit of the season.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Super-Bridges { ; time=0:02:16.99--SF5 on a P200
+  reset=2002 type=formula formulafile=test.frm
+  formulaname=triternion passes=1 center-mag=-0.8647\
+  1861343083230/-0.33029117615557820/1220.083/1.6718\
+  /-135.15/1.65891648238705725 params=0/-0.07/0/-0.2\
+  3/0/0.14 float=y maxiter=475 inside=255 logmap=39
+  colors=0A0EADEADD9CC9BC8BB8AA79A79C6BB6DK6FN6HP6JR\
+  6LT6NV6PW5QX5SY5UZ5W_5Y`5_a5ab5bc5cb7b`8`ZAZXBXVCV\
+  SETQFROGPMINKJLHLJFMHDNFBOD9PB8QB7RA6QA6PA5OA5NA4M\
+  A4LA3KA3JA5MC6OD7RF8TG9WIAYJB`LDbMEeOFgPGjRHlSIoUJ\
+  qVHmTFiREfPCbNB_L9WJ8TH6PF5MD3IB1D72F93GA4IC5JD6LE\
+  6MG7OH8PI9RKASLAUNBVOCXPDYRE_SG`TE`TDN8CMDBLIAKN9J\
+  S8IX7Ha6Gf5Fk4Ep3Du2Dy5Bv79tA8rC6pF4nH3lLCjPKiTShW\
+  _g_gfcoemzbfwd_tfTqhMnjFkl8hn2fo2fo2fo4gm6gl8gkAgj\
+  CghEggGgfIgeKgcMgbOgaQg`Sg_UgYWgXYgW_cVagTcgSegRgg\
+  QhgPgeRgcTgcVfbXfaYf__eZaeYceXeeWfdUgdTgcShcRhbQhb\
+  PiaOiaNi`Mj`Lj`Kj_Jk_IkZHkZGlYFlYElXDmXCmXBmWAnW9n\
+  V8nV7oU6oU5oT4pT3pU0oT2pT3pT5pS6pS8qS9qRAqRCqRDrRF\
+  rQGrQHrQJsPKsPMsPNsOOtOQtORtOTtNUuNVuNXuMYuM_vM`vL\
+  avLcvLdwLfwKgwKhwKjxJkxJmxJnxJoxabatQFsRGsRGrSGrSH\
+  rSHqTHqTIqUIpUIpUIoVJoVJoWJnWKnWKnXKmXKmYLlYLlYLlZ\
+  MkZMk_Mk_Mj_Nj`NkaFlbFzzz }
+
+frm:triternion { ; adapted from Morgan Owens' formula
+c1=real(pixel)+(p1),
+c2=imag(pixel)+(p2),
+c3=(p3),z1=z2=z3=0:
+nz1=z1*z1+z2*z3+z3*z2+c1
+nz2=z1*z2+z2*z1+z3*z3+c2
+nz3=z1*z3+z2*z2+z3*z1+c3
+z1=nz1,z2=nz2,z3=nz3
+z=nz1+flip(nz2)
+|z-pixel|<100 }
+
+; END PARAMETER FILE==================================
+; 
+; 

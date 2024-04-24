@@ -1,0 +1,95 @@
+;     Date: Mon, 16 Dec 2002 10:51:25 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-12-02 (The FMOD Fill Wins [5])
+;       Id: <1.5.4.16.20021216105346.2abfe0fa@pop.mindspring.com>
+; ---------
+; FOTD -- December 16, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have long suspected that the < fmod > fill has more potential 
+; than a hasty trial would indicate.  Yesterday, I found that this 
+; is indeed true.  I named today's image "The FMOD Fill Wins", 
+; because I feel that it reveals the full potential of the 
+; < fmod > inside fill, which I expect to be using more of in the 
+; future.
+; 
+; With no inside fill, the parent fractal of today's image would 
+; be a circle with a totally blank and empty interior, and today's 
+; image itself, which consists entirely of trapped inside points, 
+; would show nothing more than a flat black screen.
+; 
+; Another big contributor to the unusual effects seen in today's 
+; image is the < cosxx > function, which is actually an old 
+; mistake retained for compatibility.  The final contributor is my 
+; Mystic2 formula.  I wrote this formula a number of years ago for 
+; some reason which I have long ago forgotten.  It draws nothing 
+; but empty circles unless a non-flat inside fill is applied.
+; 
+; Because it is different, I have rated today's image at a 7.  If 
+; I had found more time to color it, I might have found a palette 
+; that raised the image to an 8.  The 11-minute render time is a 
+; bit slow, but a download of the completed image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; can shorten the wait.
+; 
+; Sunday turned out to be the warmest day of the month, with a 
+; temperature of 50F 10C.  This was just what the dynamic fractal 
+; duo needed to give them the pleasant day outdoors that restored 
+; their kittenish good humors.
+; 
+; But today is much colder, so I wonder how long those good humors 
+; will last.  My humor is not too bad, but will improve still more 
+; when the work is finished.  Until next FOTD, take care, and be 
+; mod.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_FMOD_Fill_Wins { ; time=0:11:16:35--SF5 on a p200
+  reset=2002 type=formula formulafile=jim.frm
+  formulaname=Mystic2 function=cosxx passes=1
+  center-mag=-0.03699035065064810/+0.431508222672209\
+  70/92.81819/1/17.5/-2.15889806032265597e-013
+  params=-1.728/-0.856/0.119/1.278/1.489/2.481
+  float=y maxiter=250 inside=fmod proximity=8.5
+  logmap=yes symmetry=xaxis periodicity=0
+  colors=000SmgTlfUkfVjfWieWheXhdYgdZfd_ec`dc`ccabbb\
+  abcaad`ae_afZ`fY`gX_hW_iV_jVZkUZkTZlSYmRYnQXoPXpOX\
+  qOWqNWrMVsLVtKVuJUvIUvIUuHVuHWuGWuGXuGYuFYuFZtE_tE\
+  _tE`tDatDatCbtCbsCcsBdsBdsBesAfsAfs9gr9hr9hr8ir8ir\
+  7jr7kr7kq6lq6mq5mq5nq5oq4oq4pq4pp6mp8jpAgpCdhDaoFZ\
+  oHWoJTrLQnMNnOKnQHnSEqVBoUCnTClTDkSDjSDhREgQEfQEdP\
+  FcPFaOF`OG_NGYMGXMHWLHULHTKISKIQJIPIJNIJMHJLHKJGKI\
+  FKHFLFELEELCDMBDMACM8BN7BN6AN4AO39O29O3AP3BP4CP4DP\
+  4DQ5EQ5FQ6GQ6HR6HR7IR7JR8KS8KS8LS9MS9NTAOTAOTAPTBQ\
+  UBRUBRUCSUCTVDUVDVVDVVEWWEXWFYWFYWFZXG_XG`XHaXHaYH\
+  bYIcYIdYJeZJeZJfZKgZKh_ph__4_Lj_Mk`Ml`Ml`Nm`NnaOoa\
+  OoaOpaPqbPrbQsbQsbQtcU4WRvcRvcTw`zwYWwVXwSZwQ_wNaw\
+  KbwHfwFewFdwFcwFbwFbvFauF`tF_sFZrFZqFYpFXoFWnFVmFV\
+  mFUlFTkFSjFRiFRhFQgFPfFOeFNdFNcFMbFLaFK`FJ_FJ_FIZF\
+  HYFGXFZsLZtL_vHZuJZtLZsNZrPYqRYpTYoVYnXXmZXl`XkbXj\
+  dWifWhhWgjbXzZbsWglQohRng }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100 }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,108 @@
+;     Date: Mon, 09 Dec 2002 09:19:17 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-12-02 (The Nest [6])
+;       Id: <1.5.4.16.20021209092132.2a07c0fc@pop.mindspring.com>
+; ---------
+; FOTD -- December 09, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Well, fractal persistence paid off, and I finally found an image 
+; worthy of an above-average rating.  True, it's only a slightly-
+; above-average rating of 6, but it's still an above-average 
+; rating, and that's all that matters.
+; 
+; I might have rated the image higher if it had been something I 
+; found rather than created with the < epsiloncross > inside fill 
+; feature of Fractint.  But let's not quibble -- an above-average 
+; image is an above-average image, and I needed an above-average 
+; image.  (Having repeated the phrase 'above average' a sufficient 
+; number of times, I shall mention it no more.)
+; 
+; The expression (-Z)^(1.5)+C was iterated to draw the fractal.  
+; Iterating -Z instead of Z merely reveals a different part of the 
+; infinite complex logarithmic spiral.  The 'SliceJB-new-min' 
+; formula is a slight reworking of a formula that was posted to 
+; the list several years ago by John Goering.
+; 
+; Today's image is an oblique slice of the -Z^1.5+C Julibrot.  
+; The slice is oriented rather close to the Julia direction, which 
+; is revealed when (p1) and (p2) are set to 0.5,0.5.  I named the 
+; image "The Nest" when it reminded me of some crazy bird's nest.  
+; With its effect of being illuminated from behind, the image 
+; could just as easily been named something inspirational such as 
+; "Crown of Thorns".
+; 
+; The 'SliceJB-new-min' formula draws more rotations than any 
+; other formula in my vast and partly forgotten collection, but it 
+; does not draw every possible rotation in four dimensions.  
+; Finding a formula that does this is still one of my quests.
+; 
+; The render time of 18 seconds is blazingly fast, but the down-
+; load of the completed image is still available at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Sunday was pleasant enough, with hazy sun, 
+; gentle breezes, and a temperature of 48F 9C.  The problem was 
+; that the snow turned wet and slushy -- far too unpleasant for 
+; the cats' tender paws.  They once again passed the day keeping 
+; warm and wishing they could get outside to play.
+; 
+; This morning the snow has re-frozen and is dry, but the tempera-
+; ture is well below freezing -- far too chilly for the intrepid 
+; ones.  Having a pile of work to think about, I shall give the 
+; cold little notice -- that is unless some reason arises that I 
+; must wander outdoors.  Until the next FOTD appears in 24 hours, 
+; keep warm or cool, whatever the case may be, and keep your 
+; fractals dry.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_Nest { ; time=0:00:18.46--SF5 on a P200
+  reset=2002 type=formula formulafile=julibrot.frm
+  formulaname=SliceJB-new-min center-mag=0/0.0688935\
+  /0.6666667 params=0.49/0.56/0.4/0.39/1.5/0/-0.0\
+  416275/0.7559499/0/0 float=y maxiter=1200 passes=1
+  inside=epsiloncross proximity=0.05 periodicity=10
+  colors=0007I00008GO7LQ6NT5QW4TZ4Wa5Zd6`g6ak7bo8cs8\
+  ew9hx9kyAnzBqzBtzCwzDzzDzzEzzEzzJzzOajSYiXUiaQheMh\
+  000000mRj000nQk000nNm000mKnmIolGplFplDqkCrkAsk9sjE\
+  kiIchMXhQPgUIfYAfa3d_7bZB`XFZWIXUMVTQTRTRQXPO`NNdL\
+  LgJKkHIoFHrMLpSOnYSlcVjiZhoagm_dkYbjW`hUZfSWeRUcPS\
+  aNQ`LNZJLXHJWGHYIHZLK_NM`PO`RQaTSbVUcXWc_Zda`ecbfe\
+  dfgfgihhkjhmlT_aUXcVVeVTfWQhWOiXMkYJmYHnZFpZDqiu_j\
+  t`kt`lsamsamrbnrborcpqcqqdqpdrpesoetoftofniihdlb_o\
+  XVrRQuLLxONuROrUQoXRlZTiaUfdWcgX`iZYl_VoaSrbPtcMr`\
+  NqZOpXPoVQnSRmQSlOTkMUjJViHWhFXgDYfAZe8_d6`c4aTiUV\
+  jTXkTYkT_lT`lTbmTcmSenSfnShoSioSkpSlpSmlPmhMmdJzmH\
+  mYEnUBnR9nN6nJ3nG1hQLc_cZivHD3EQ9BaF9mLAlOAlRAlTAk\
+  WAkYBk`BkbBjeBjgBjjBjlAei9ag8Yd7Ub7Q_6MY5IV4ET3AQ3\
+  6OK8T_9YoAbhFebKgXPjRUlLZoFbqOZiXWbeTWbUV`UVYVUWVU\
+  UVTRWTPWSMXSKXRIXRKYPMYNNZMPZKQ_JS_HT`GV`EWaDYaBZa\
+  A`YFbVJcSNeOSgLWhI_WI`JIa }
+
+frm:SliceJB-new-min {; thanx to J.R.H. Goering, July 1999
+  pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+  b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+  cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+  sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+  s=v*sin(a), c=p+flip(q)+(p4), z=r+flip(s)+(p5):
+  z=(-z)^(p3)+c
+  |z|<=100 }
+
+
+; END PARAMETER FILE==================================
+; 
+; 
