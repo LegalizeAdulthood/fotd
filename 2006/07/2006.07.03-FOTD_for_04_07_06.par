@@ -1,0 +1,97 @@
+;     Date: Mon, 03 Jul 2006 23:26:43 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-07-06 (FOTD for 04-07-06 -- Rating [4])
+;       Id: <1.5.4.16.20060703233117.0d9f4b2c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 04, 2006 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With today's image I have resumed rating the FOTD images.  The 
+; rating of a 4 is not a very impressive start, but it is better 
+; than no rating at all.  In a few days, if all goes well, I will 
+; resume naming the images.
+; 
+; I actually seem to have gotten a bit rusty during the several 
+; months we were occupied with moving Fractal Central.  The images 
+; seem to be fighting me.  No longer do they come almost automati-
+; cally.  But I am sure it will be only a short time before I am 
+; back in top fractal-finding form and writing philofractal discus-
+; sions worthy of an avatar.
+; 
+; Today is not that day however.  The notably unimpressive image 
+; pictures a midget in the Z^(sqrt(2))+C Mandeloid as it appears 
+; 16 levels up the unending logarithmic ladder.  If I had named 
+; the image, I would likely have named it "Splat".  The overall 
+; impression is one of a paint-ball splatter.
+; 
+; I used only the most basic rendering method.  Any fancy stuff 
+; would have been wasted on an image with this degree of chaos.  
+; The 7-minute render time might seem slow to those whose time is 
+; important.  If so, save time by downloading the finished GIF 
+; image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Typical summer weather prevailed again here at New Fractal Cen-
+; tral on Monday, with partly cloudy, hazy skies, opressive 
+; humidity, and a temperature of 88F 31C.  The new fractal cats 
+; were unconcerned with weather however, since they do not yet 
+; go out.  They were more concerned with the occasional fire-
+; cracker that went off in the neighborhood.  When the going got 
+; too loud, Cassie ducked under the bed; Nico ran to the window 
+; to see what all the noise was about.
+; 
+; The next FOTD fractal will appear right here in 24 hours.  We 
+; will try to produce one that rates at least a 5.  Until then, 
+; take care, and the best way I know to find enlightenment is to 
+; start a low-calorie diet.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_04-07-06 { ; time=0:06:54.41--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=-0.56705025697611/+0.08051017688019/7.9\
+  29609e+008/1/-162.5/-5.889938137216e-008 logmap=168
+  params=1.4142/0/16/0 float=y maxiter=5000 inside=0
+  colors=000JU_sANhEPYHRNPT_V4OTIdTfVsGQjKLbOGVS6niK\
+  1DH9JEGPpLrWMffgJZaMRXPJSSkvzUdjzC8mFEUIKWBcO5ZWSO\
+  mzDanI`cNZWSYRWQMYJKZUB6rmUkdK_ZOOTSqa8XUKkwx_jnOZ\
+  dLdYIZXFTWzfMZUR98cBGZGxnErgDfkkBAbEGUHLLKQf0YRCWz\
+  U0VE8PHGIKOEPIy3l`DcUF3PHALJHGLOzWemTb`R_OPX7U29SA\
+  AQHzZzdXRdobXg`Q`ZJUX8lQ9eSA_TBTU5RW8_nATduCyILuGM\
+  lENcDWHssbfm9R_KV9y2gT7XUrftc_kQTbQjwMdoJZhFTawezk\
+  `z_WjORbrk6uaVZUV3oE6gJ8`NAURReJN`MJWzFRS6yz8lzA_z\
+  3_z6Wz8TzAQzOLzdBzXEzQHzJKzg6zSFzzeziZzTTaMwVHdVZK\
+  7TLDNMJHNPWD_RGzMIzHLzM1zJ7zHCzEIzYazNUIqELrJQs_ct\
+  W`uZZvcXwgUxh8ymKzq4ztDzwMzz2zzOzzRzzTzzazzzzzjzzB\
+  zzGzzLzzQzzIzzNzzRzzozzdzzwzztzzgzzkzzbzzqzzKzzOzz\
+  Szz2zzCzzMzz7zzozzhzzazzVzzVzzdzzazz_zzXzzrzzlzzfz\
+  z`zzLzzPzzSzz6zzJzzTzzUzzUzzVzzuzznzzgzz`zzrzzlzzf\
+  zz`zzWzzVzzHzzOzz9zzKzz5zzCzzIzzPzz7zzJzzGzzKzzOzz\
+  SzzbzzHzzLzzOzzSzzozzizzd }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

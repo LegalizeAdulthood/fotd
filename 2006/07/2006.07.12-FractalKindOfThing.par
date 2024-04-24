@@ -1,0 +1,89 @@
+;     Date: Thu, 13 Jul 2006 00:41:06 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-07-06 (Fractal Kind of Thing [NO RATING])
+;       Id: <1.5.4.16.20060713004544.2aef6ee0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 13, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to a minor valley of the Z^(1.5)+C 
+; Mandeloid as it appears 1.5 levels down the complex log ladder. 
+; I named it "Fractal Kind of Thing" for the reason that that's 
+; what it is.  Unable to decide on a rating, I let the image go 
+; un-rated.
+; 
+; The image is a departure from my usual style of fractal.  
+; Instead of a midget and its hectic surrounding pattern, we have 
+; a serene infinite blue background with a fractal something 
+; floating by in the foreground.
+; 
+; The effect of infinitely deep space was achieved by rendering 
+; the image with the outside set to 'fmod'.  Those who find the 
+; 5-minute render time too slow may download the finished image 
+; almost instantly from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A warm muggy Wednesday here at New Fractal Central was spoiled 
+; at 7pm by a lively thunder-shower.  The fractal cats were 
+; startled by some of the louder thunder claps, but did not go 
+; into hiding.  Though my day was busier than average, the work 
+; was finished promptly.
+; 
+; The next FOTD will appear in 24 hours.  It is looking more 
+; likely that after tomorrow there will be a week or so hiatus 
+; in the FOTD while fractal lady and I refresh ourselves at some 
+; out-of-the-way place yet to be determined.  It will be a time 
+; to actually do nothing.  Such vacations are not only the most 
+; relaxing, they are the least expensive.  Until tomorrow, take 
+; more care than seems humanly possible.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FractalKindOfThing { ; time=0:04:58.30--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=-0.6\
+  5371716909482990/+0.45824484611091370/16437.02
+  params=1.5/0/-1.5/0 float=y maxiter=1000 inside=255
+  outside=fmod periodicity=10
+  colors=000hQTeKRcFO`9MZ4KY5MX6NX6PW7QW7RV8TV8UU9WU\
+  9XTAYTA_SB`SBbRCcODaRCdTBfVBiXAk_9ma9pc8rh6se8tcAt\
+  `BuZDuWEvUGvRIvPJwMLwKMxHOxCOzFPxIPvLPuNQsQQqTQpWQ\
+  nYRl`RkcRieRh__iVhjRqmQpkQpiQogPoePocPnaPn_OnYOmWO\
+  mUOmSPiQQfORbMS_LTWJTTHUQFVMEWJCXFAYC8Y97`88c79e6A\
+  h5Ak4Bm3Cp2Dr1Dde3``6XW8USAQNCNJEJEGGAIC5K91MA2OB3\
+  QC4SD5UE6WF7YE6`F8_GA_HC_IE_JGZJIZKKZLMZMOYNQYOSYL\
+  WXOUYQSYTRZVPZXN__M_aK`eLXcJ`rM`bIcNFf8CiHElPGnYIq\
+  eKsnMvvOxrQrnRmjThfUcbWYZXTVZOS_JUXMWVPXTSZRU`PXaN\
+  _cLaeIdfGghEjjClkAom8rn6tj8pg9ldAhaBdZC`WDXTETQGPN\
+  HLKIHHJDEK9BL58M1IWISeZcjsanocwp_rlWniTifPebL`_IXX\
+  ESUIKeLJbOH_RGXUEUXDRZBNaAKd8Hg7Ej5Bm48o35n48n5Bn5\
+  Dn6Gm7Jm7Lm8Om8Ql9TlAWlAYlB`mC`lBblBdlBflBhlBilAkl\
+  AmlAolAqo9wlAriAmgBhdBcaBZ_CVXCQUCLSDGPDBND7RHBULE\
+  XPH_TKbXNe_QhcTkgWnkZqoatsdwvgtpdrkboe_m`YjVWVN_TM\
+  `SMaQMaFLcFLcFLcFLcFLcFLc }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,90 @@
+;     Date: Thu, 13 Jul 2006 22:43:18 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-07-06 (FOTD for 14-07-06 [NO RATING])
+;       Id: <1.5.4.16.20060713224757.36bf0e04@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 14, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I recently wrote that all midgets in the Z^1.5+C Mandeloid look 
+; the same.  After finding today's image, I am no longer certain 
+; that this is true.  The pattern around the midget is fractured, 
+; as would be expected, but the theme of converging spiral arms 
+; clearly shows through the breaks and almost totally onliterates 
+; the radiating discontinuities.
+; 
+; I gave the image no name or rating.  Names and ratings add 
+; little to the impact of a fractal image.  If the image doesn't 
+; have impact, a lot of fancy words and bloated ratings are not 
+; going to create it.
+; 
+; The render time of over 19 minutes is true on my antique but 
+; still working fractal-dedicated P200 machine.  All the more 
+; modern units, if they run Fractint at all, will calculate 
+; today's image in far less time.
+; 
+; The parameter file has been posted, along with the completed 
+; image, to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Near perfect weather here at New Fractal Central on Thursday 
+; went unappreciated by the fractal cats, who spent the day 
+; alternating between sleeping and getting into trouble.  Nico 
+; somehow managed to knock an entire row of books from the shelf, 
+; while Cassie watched with amusement.  My day was spent preparing 
+; to do as little as possible for the next week or so.  (The best 
+; way I know to spoil a vacation is to plan to have a lot of fun.) 
+; The next FOTD will appear in about one week.  The exact date is 
+; uncertain, but one thing is certain -- I shall return.  Until I 
+; do, take care, and don't work too hard trying to relax.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_14-07-06 { ; time=0:19:20.80--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=+0.7\
+  7076375739672540/+0.17285705091042080/1.781267e+008
+  params=1.5/0/-1.5/0 float=y maxiter=10000
+  inside=0 logmap=562 periodicity=10
+  colors=000qGUqJXpL_pNbpPeoRhoTkoVmkWlgXldYl`ZlY_lU\
+  `lRalNblKclGdlDel9fl6gl9ZeCQZEISH9LJ1FK3GL4HL5IM6I\
+  N7JN9KOALPBLPCMQDNRFORGOSHPTIQTJQRLRQNROPRNRRLTRKV\
+  RJXRLTSNQSPNSRKSSHTUETWBTY8TZ5TY5WX5ZX5`W5cV5fV5hU\
+  5kT5nT5pS5sS5uR7tQ9sPArPCqODpNFoMHnMImLKlKLkJNjJOj\
+  ONdSN_XNU`NPVVUPbYJjbDqfGjhJcjMXkPQmSJnVCpY6q`AlbE\
+  gdIbfMYhQTjTPcSTYSWSSZMRaGRdARg4Rj9VfDZbIaZMeVRhSV\
+  lO_pKcsGhwClz9mxBnvDotFprHppJqnLrlNsjPthRtfTpdUmbV\
+  i`WfZXbXY_VZWU_TS`PQaMObIMcFKdCJdLSgU_iahkjpmrxoqs\
+  npnnojnnenmammXmlSmkOmjJliFlhAlh9leAkbBk`CjYDjVEiT\
+  FiQGhNHhLIgIJgGKgILdJMbLN_MOYNPWPQTQRRSSOTTMUUKWVH\
+  XWFZXC__A`b8YeCWhFUkISnMQqPOtSLwWJzZHzaFzeDzhBzkSz\
+  Ohz1bz5Yz9SzCNzGHzJCzN7zQCzOGzNLzMPzLTzJYzIazHezGd\
+  zKdzNdzQczUczXcz_bzcbzfbzibzlfzgjzbnzYrzTvzOyzKtzN\
+  pzPkzRgzTczWZzYVz_QzaMzdIzfDzh9zj5zl8zjAziCzgEzfGz\
+  eJzcLzbNzaPz_RzZTzYYzXbzW }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

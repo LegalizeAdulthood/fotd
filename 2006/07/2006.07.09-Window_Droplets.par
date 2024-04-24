@@ -1,0 +1,98 @@
+;     Date: Mon, 10 Jul 2006 00:51:40 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-07-06 (Window Droplets [6])
+;       Id: <1.5.4.16.20060710005618.391f7f5c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 10, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The Z^1.5+C Mandeloid always has been one of my favorites.  (The 
+; Mandelbrot set holds top spot.)  The Z^1.5+C is the most change-
+; able of the Mandeloids with an exponent of Z between 1 and 2.  
+; Today we examine this fractal as it appears at ground level of 
+; the complex-logarithmic ladder.
+; 
+; In my opinion, at this level the Z^1.5+C Mandeloid resembles a 
+; midget racing car.  At other levels it appears totally differ-
+; ent.  Today's scene is located in the driver's shoulder, on the 
+; northeast side of the fractal.
+; 
+; When rendered in the normal manner, with the inside set to 0 and 
+; the outside set to 'iter', today's image is rather lifeless.  To 
+; add a bit of excitement, I rendered it with the outside set to 
+; 'fmod', which produces the star-like effect.
+; 
+; The curves and cusps that fill the image remind me of the pat-
+; tern that is seen around street lights when one looks through a 
+; rain droplet on a window at night.  This pattern inspired the 
+; name "Window Droplet".  The rating of a 6 seems appropriate for 
+; today's image.  Far better images will be needed before we can 
+; reach the ratings of 8 or 9.
+; 
+; With a render time of just under 16 minutes, today's image is a 
+; bit slow.  But relief for impatience is available on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The near perfect weather went unappreciated here at New Fractal 
+; Central on Sunday.  The new fractal cats were more concerned 
+; with chasing each other up and down the long hallway and explor-
+; ing the nooks and crannies of the basement.  From what I hear 
+; from Old Fractal Central, the ex-fractal cats are spending their 
+; days sleeping, hanging out in the holly patch, and receiving 
+; treats of tuna as they always did when their home was known as 
+; Fractal Central.  My day was slightly busy -- just the way I 
+; like it.  The next FOTD will appear in 24 hours.  Until then, 
+; take care, and watch for the strange and unexplained events.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Window_Droplets { ; time=0:15:52.47--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.66433854815324980/+0.662251585236201\
+  20/178817.2/1/12.5/-1.06402237715075287e-009
+  params=1.5/0/0/0 float=y maxiter=16000 inside=0
+  outside=fmod periodicity=10
+  colors=000797989B7BD6DF5FI4HL9FPEDUIBZNAaR8dW6g`5j\
+  d3mi1om0glA`lKTlTMlbIriFlkCgl9an6Xo3Rq0Kr1Mr1Or2Qr\
+  2Rr2Tr3Vr3Wr4Yr4_r4`r5br5dr6fr6gr6ir7kr7lr8nr8pr9s\
+  s8qr8oq8mq8kp8ip8go8eo8cn8an8_m7Ym7Wl7Ul7Sk7Qk7Oj7\
+  Mj7Ki7Ii7Gh7EhADgCDgEDfGDfJDfLDeNDePDeSCdUCdWCdYCc\
+  `CcbCcdCbfCbiAchCbgEbfGaeIadKacM`bO`aQ`aS_`U__W_ZY\
+  ZY_ZXaZWcYVeYVgYP`TNaSMaSKaSJaSIaRGaRFaREbRCbRBbQA\
+  bQ8bQ7bQ5aP6bQ6cQ6dQ6eQ6eQ6fR6gR6hR6hR6iR6jS6kS6kS\
+  6lS6mS6nT6nT6oT6pT6qT6qT9oSCnRFmQIlPLjOOiNQhMTgLWe\
+  KZdJacIdbHo`8faGZaORbWJbcBck0et3cs5bs7`r9_rBZqDXqF\
+  WpHVpJTpLSoNQoPPnROnTMmVLmWHoXKmYMlZOk_Rj`ThaVgbYf\
+  c_ecadddbefafh`gk_hmYioXjrWktVmxTkvUjuVitWgsXfqYep\
+  Zdo_bn`ala`kbZjcYidXgeWffUegTdhSbkQajP`kO_lNZlMXmM\
+  WhMVeLUaKT_JSXIRVHQSGOQFNNEMLDLICKGCJDCIBCH8DH5CG6\
+  CG6CF6CF7CE7BE7BD8BD8BC8BC9BB9AB9AA9AAAA9AA9AA8B98\
+  B97B97C96C96C96C2D14B35A5 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
