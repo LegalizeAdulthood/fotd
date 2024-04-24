@@ -1,0 +1,97 @@
+;     Date: Thu, 18 Dec 2003 10:26:20 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-12-03 (The Phantom Wave [5])
+;       Id: <1.5.4.16.20031218102808.298f3f0e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 18, 2003 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has been named "The Phantom Wave".  Don't ask me 
+; why I gave it such a name -- I have no idea.  The name might 
+; refer to a wave of bubbles or a wave of midgets, or even a wave 
+; of FOTD images calculated by the MandelbrotMix4 formula.  More 
+; likely, it's a wave in my imagination.  But whatever the reason, 
+; there must be some kind of wave connected with the image, which 
+; lies in the parent fractal created by subtracting 0.9 parts of 
+; Z^(1.2) from 2 parts of Z^(-1.2) and adding (1/C).
+; 
+; The bubbly effect in the image was achieved by rendering the 
+; scene with the outside=fmod and the proximity=3.  At the moment 
+; I am not sure how the 'fmod' option works and how the proximity 
+; affects it, but the information is somewhere in the monumental 
+; stack of help included with the Fractint program.
+; 
+; I could rate the image no higher than a 5, a rating that is 
+; ho-hum average.  No, I do not expect a rush to see the image 
+; when I admit in the discussion that it is un-exceptional, but 
+; the fun lies in finding the FOTD images and writing about them.  
+; Profit is obviously no motive in the creation of the FOTD.
+; 
+; The render time on my worn-out P200 machine, which just barely 
+; keeps slogging along, is almost exactly 6 minutes.  On the state-
+; of-the-art units out there the image will render notably faster. 
+; The fastest way of all to see the phantom wave is to download it 
+; from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;        <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; and examine the image very carefully for any signs of a wave.
+; 
+; The Wednesday rain here at Fractal Central changed to snow at 
+; 2pm, but ended within an hour before accumulating on the ground. 
+; The cats, who spent the entire day indoors, were not concerned 
+; with the change-over.  They needed only a small treat of tuna in 
+; the evening to maintain their good spirits.
+; 
+; Today is starting partly cloudy, breezy, and cold -- the kind of 
+; day that keeps fractal cats indoors and the fractal human busy 
+; working on the next FOTD, which will appear in 24 hours.  Until 
+; then, take care, and be at peace.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_Phantom_Wave { ; time=0:06:00.08--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.38515755772367030/+0.157082089485032\
+  80/89131.38/1/-30/2.018383862823e-010 params=2/-1.\
+  2/-0.9/1.2/0/0 float=y maxiter=1200 inside=0
+  proximity=3 outside=fmod logmap=yes periodicity=10
+  colors=000pgopgmoglngknfkmfjlfilehkehjegjdfidfhdeg\
+  cdgccfccebbebadb`ca`ca_baZa`Za`Y``X__WZ_WZ_VYZUXZT\
+  XZTWZSVYRVYRUYQTXPTXOSXORWNQWMQWLPVLOVKOVJNUJMUIMU\
+  HLTGKTGKTFJSEISDHSDHRCGRBFRBFQAEQ9DQ8DP8CP7BP67O09\
+  O3BN6DN9FMCGLEIKHKKKMKNOKQOKRP9SP9SQ9SQ9TRATRATRAU\
+  SAUSAUTBVTBVUBVUBWUBWVCWVCXWCXWCXXDYXDYXDYYDZYDZZE\
+  ZZE__E__E__E_`F``F`aF`aFabGabGabGbcGbcGbdHcdHceHce\
+  HdeHdfIdfIegIegIehJfhJfhJfiJgiJgjKgjKhkKhkKhlJjkKh\
+  jKgiKehLdhLbgLafM`eMZdMYdMWcNVbNUaNS`OR`OP_OOZOMYP\
+  LXPKXPIWQHVQFUQEVRBUQCUQDTPETPFSPFSOGROHRNIRNJQNJQ\
+  MKPMLPMMOLNOLNNKONKPNKQMJRMJRLISLITKIUKHVJHVJHWJGX\
+  IGYIFZHFZHF_GE`GEaFCcGDbGDaGEaGE`GF`GF_GG_GGZGGZGH\
+  YHHYHIXHIXHJWHJWHJVHKUHKUHLTHLTHMSIMSINRINRINQIOQI\
+  OPIPPIPOIQOIQNGRPIQNJPMLPKMOJNNHPNGQMESLDTLBUKAWJ8\
+  XJ7ZI5_H4_I2`H3`H3`H3`H3`G3TnHUmJWmLXlNYlP_kR`kTbj\
+  VcjXeiZfi`ghbihdjgflghmfj }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

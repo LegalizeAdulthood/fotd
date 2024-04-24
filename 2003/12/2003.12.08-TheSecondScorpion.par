@@ -1,0 +1,93 @@
+;     Date: Mon, 08 Dec 2003 11:26:47 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-12-03 (The Second Scorpion [5])
+;       Id: <1.5.4.16.20031208112830.0d772d6e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 08, 2003 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It's a busy Monday here at Fractal Central, so the discussion 
+; will be correspondingly short.  In yesterday's discussion, I 
+; mentioned an element in the image that reminds me of a scorpion 
+; and inspired the name.  Today's image is a close-up of that 
+; scorpion, which fills the center of the screen and faces the 
+; upper-right corner of the frame.  (Perhaps I should have called 
+; it a lobster.)
+; 
+; The curled-up tail of the scorpion is clearly visible, though a 
+; bit of imagination is needed to see the claws.  The background 
+; has a theme of square rather than smoothly curving spirals, one 
+; of the more unusual types of spiral.
+; 
+; Since I spent almost no time finding the image, and only a few 
+; minutes writing this discussion, I can rate the image no higher 
+; than an average 5.
+; 
+; The 11-minute render time can be cut significantly by download-
+; ing the completed GIF file from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; A cold, windy Sunday here at Fractal Central produced moody 
+; cats who sulked around the house most of the afternoon.  Two 
+; treats of tuna were needed to restore their spirits.  I'm 
+; beginning to wonder how much tuna is too much.  If we need to 
+; continue giving them so many tuna treats, the duo might grow 
+; bored with tuna and demand something like lobster.
+; 
+; Well, I've got that work to finish, so I'd best start moving.  
+; Until next FOTD, take care, and keep those iterations coming.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+TheSecondScorpion { ; time=0:10:58.28--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.38011718899537150/-2.001815087683078\
+  00/1599.36/1/-52.5000000000051159/8.14260464609972\
+  701e-012 params=1.096/0/96/1000 float=y
+  maxiter=10000 inside=255 logmap=176 periodicity=10
+  colors=000dKUeKUfKUgKUhKUhKUhKUhKUhKUhKUhKUhKUhKUh\
+  KUhKUhKUhLUhMUhNVhOWhPXhQYhRZhS_hT`hUaiVbjWckXdlYe\
+  mZfoYfoWfoUfoTfoRfoPeoOeoMeoKeoJdoHdoFdoEdoCcoAco9\
+  co7co6cn7bn7am7am7`m7`l7_l7Zl7Zk7Yk7Yj7Xj7Wj7Wi7Vi\
+  7Vi8Uh8Uh8Tg8Sg8Sg8Rf8Rf8Qf8Pe8Pe8Oe8Od8Nd8Mc8Mc9L\
+  c9Lb9Kb9Kb9Ja9Ia9I`9H`9H`9G_9F_9F_9EZ9EZ9DaA8_9BZ9\
+  DX8FW8HV8JT7MS7OR7QP6SO6UN6WL5ZK5aI4cH4fG4hE3zD3zC\
+  3zA2z92z71z82z93zA4zB5zC6zD7zE8zF9zG9zHAzIBzJCzKDz\
+  LEzMFzNGzOHzPHzQIzRJzSKzSLzTMzUNzVOzWPzXPzYQzZRz_S\
+  z`TzaUzbVzcWzdXzeXzfYzgZzh_zi`zjazkbzlczrezodzlczj\
+  czgbzdazbaz_`zX_zVazSczQezNgzKizIkzFmzCozAqz7sz3uz\
+  5wz6zz7zz8zzAzzBzzCzzDzzFzzGzzHzzIzzJzzLzzMzzNzzOz\
+  zQzzRzzSzzTzzVzzWzzXzzYzz`zz_zzZzzYzzXzzWzzVzzVzzU\
+  zzTzzSzzRzzQzzPzzPzzOzzNzzMzzLyzKyzKyzIxzGxzExzCxz\
+  Awz8wz6wz4xz5wz6wz7wz8wz9wzAwzBwzCwzDvzEvzFvzGvzHv\
+  zIvzJvzKvzLuzMuzNuzNuzOuz }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

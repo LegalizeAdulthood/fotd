@@ -1,0 +1,95 @@
+;     Date: Sat, 06 Dec 2003 11:00:55 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-12-03 (Fractal farworks [5])
+;       Id: <1.5.4.16.20031206110235.0d5f4190@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 06, 2003 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a kind of freak.  To begin, it is an 
+; 'evaporated' scene in a fractal created by a formula that I 
+; invented at random, using nothing but alternating 1's and 4's.  
+; In addition, the 'all-inside' picture has been rendered with the 
+; inside=fmod option, with the proximity set to 0.24177, a setting 
+; that is rather critical.
+; 
+; The resulting image consists of dark zig-zagging arms 
+; highlighted by points of fiery brilliance.  But strangely, the 
+; brilliant points exist only in the upper two-thirds of the 
+; image.  The lower third is a dull black and blue.
+; 
+; Near the center lies the ubiquitous midget, appearing much like 
+; an exploding skyrocket.  This fireworks effect inspired the name 
+; "Fractal Farworks".  The mis-spelling is intentional, 
+; representing both the infinitude of the universe of fractals and 
+; the way the word is pronounced here in the local area.
+; 
+; After meditating on the image for several minutes, I could find 
+; no reason for rating it higher than the 5 which I assigned it.  
+; The render time of the parameter file is a moderate 6 minutes, 
+; which can be cut significantly by downloading the completed 
+; image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; With snow and sleet falling all day Friday and the temperature 
+; hovering around freezing, the fractal cats had as pleasant a day 
+; as possible, sitting on their shelves by the windows, watching 
+; the birds outside scrounging for food.  Their day ended with a 
+; treat of tuna.  Snow is still falling this morning, with around 
+; 1 foot 30cm on the ground.  I guess the cats will have a repeat 
+; day.
+; 
+; As for me, I'm simply going to relax and watch the snow.  In 
+; between snowflakes I might find a fractal.  And if I do, which 
+; is a near certainty, the fractal will appear as tomorrow's FOTD. 
+; Until then, take care, and then take more care.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractal_Farworks { ; time=0:06:10:15--SF5 0n a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=mandelbrotmix4 function=recip passes=1
+  center-mag=+2.03354144153070000/-0.028206890074231\
+  47/30377.39/1/-89/1.78200502964909191e-010
+  params=14/-1.414/1/-14.14/-1.4/1e+100 float=y
+  maxiter=1800 bailout=9 inside=fmod
+  proximity=0.24177 logmap=yes periodicity=10
+  colors=0000UzzS`zMgzFoz9vzGozMizSbzYXzcQziKzjLzjMz\
+  kNzkOzlPzlPzmQzmRzmSznTznTzoUzoVzpWzpXzpXznWzmVzlU\
+  zkTzjSziRzgQzfPzeOzdNzcMzbLzaLzcNzdOzeQzfRzhSziUzj\
+  VzkXzmYznZzo`zpazqbzr_zrYzrWzsTzsRzsPztMztKztIzuFz\
+  uDzuBzu9zvZzvwzwrzwnzxizxezyazyXzzTzzOzzKzzGzzJzzM\
+  zzPzzSzzVzzYzz`zzczzfzzizzlzzozzrzznzzkzzhzzezzbzz\
+  _zzWzzTzzQzzNzzKzzHzzHzzHzzHzzHzz`zzbzzczzezzgzzhz\
+  zizzjzzkzzlzzmzznzzozzozzpzzqzzrzzszztzzuzzuzznzzh\
+  zzazzWzzSzzPzzMzzJzzFzzCzz9zz6zz3zz2zz2zz2zz1zz1zz\
+  1zz1zz2zz3zz4zz4zz5zz6zz7zz7zz8zz9zzAzwAyrFxnKwjPu\
+  fUsaZqYcoUhmQmkMriOpgPneQlcRkaSi_TgYUeWVdUWbPX`KYZ\
+  GZYE_WC`UBaTCU`DMgDFnBEj00K9Cc8B_7AX69T58Q89PB9OD9\
+  NGAMJALLAKOAJRBITBHWBGZCF`CEcCDeCCdGDcKEcOFbSGaVHa\
+  ZI`bJ_fK_iLaeJcbHe_FgXEiUCkQAmN8oK7qH5sE3tB2uEAuHI\
+  vKQvNXwQdwTlwWstVqqUonUmkTkhSieSgbRe`Rd_Qf_PgZOiZN\
+  jYMlYLmXKnXJpWIqWHsVGtaZT }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

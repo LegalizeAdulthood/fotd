@@ -1,0 +1,95 @@
+;     Date: Mon, 15 Dec 2003 10:55:03 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-12-03 (Splotchy the Midget [4])
+;       Id: <1.5.4.16.20031215105649.2a878512@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 15, 2003 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's mediocre image consists entirely of 'bof61' inside fill. 
+; But it is not a scene in an 'evaporated' fractal; it is a 
+; glimpse of something that might have existed, but never did.  It 
+; is a scene in the blank screen that results when 1.1 parts of 
+; 1/Z are subtracted from 1.1 parts of Z^(0.8) and C is added.
+; 
+; When one is exploring the world of fractals, blank screens 
+; usually mean a dead end, but like so many other things in life, 
+; there are exceptions.  Today's image is one of these.  The image 
+; consists of a string of splotches, vaguely defining a midget at 
+; the center.  This midget is not a real midget.  It is a virtual 
+; midget that almost but not quite exists, and needs just a little 
+; extra energy in the form of the 'bof61' inside fill to make it 
+; fully manifest.
+; 
+; The result is not all that might be desired, rating only a 4.  
+; The render time of 10 minutes has been made a bit more interest-
+; ing by using the 'inside=b' option, which is quite a bit of fun 
+; to see in action.  As always, those who feel more serious about 
+; their fractals can escape the fun by downloading the completed 
+; image from Paul's FOTD web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; That long-promised philosophy appears in the version of today's 
+; FOTD that has been posted on the philofractal list.
+; 
+; Snow and cold rain on Sunday kept the fractal cats indoors.  The 
+; conditions were so unpleasant however that they were happy to 
+; sleep by their radiators for most of the day.  In the evening I 
+; gave them their small treat of tuna, and they ended the day 
+; peacefully.
+; 
+; Today is starting cloudy and breezy, with some slushy snow on 
+; the ground.  But it is not too cold.  It remains to be seen how 
+; the duo will take such conditions.  I usually take conditions as 
+; they come.  The work is moderate, the weather is moderate, the 
+; next FOTD will appear in 24 hours.  Until then, take care, and 
+; don't despair.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Splotchy_theMidget { ; time=0:10:35.92--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=b
+  center-mag=+0.58105390826287010/-0.018056876277498\
+  32/9829.255/1/-10/-2.82683806918093694e-011
+  params=1.1/0.8/-1.1/-1/0/0 float=y maxiter=1200
+  inside=bof61 logmap=yes periodicity=10
+  colors=000JKBtqjtqltqntqptqrtqttqvuquvjtvbtMqKOqIP\
+  qGQqFSqDTqBUqAWq8Xq6Yq5`q4co4em4hk3jj3mh3of2rd2tc2\
+  qd5oe8lfBjgzhhHeiKcjN`kQZlTXmWUnZSoaQpdOqcNqcLqcKq\
+  cIqbHqbFqbEqbDq`CoZClXBiVBfTAcSA`Q9YO9VM8SK8QJUqlV\
+  qkVqkWqkWnkXkjXhjYfjYcjZ`jZYi_Vi_Si`Pi`NibOddP`ePX\
+  gQTiRPjRKlSGnTCoT8qU4rU0sT5sSAsREsQJtPNtPStOXtN`uM\
+  euLiuKnuKrtPqsUpsZzrcsrgo`XZJNI1D24B969F87MA5SC4YF\
+  7YI9YKCYNEYPHYSJYVMYXOY_RYaTYdWYgYYi`YlbYndYhc`bcb\
+  XcdScgMciGckBcmLboUaqc`sl_uuZvUkoTkpRlqPlqOlrMmsKm\
+  tJmtHnuFnvEnvFltFkrFjpFioIPBFhmFgkFfjFehFdfFceFbcF\
+  aaF``F_ZGZXGYWGXUGWSGVRURPUTNGSMGRKGQIGPHGOFGNDFPA\
+  GOBGOBGOBGOBGOBGOBGOBGNBGNBGNBGNBGNCGNCGNCGNCGMChK\
+  ChMXhMChMChcChMCtc0s71r81q82sU2oA3mA3lB4kB4jC5iD5v\
+  D6gE6fE6eF7dG7cG8cH8cI9cI9cJAcJAcKBcLBcLCcMCc50b61\
+  a71`72_82_82Z93Y93XA4XA4WB4VC5UC5TD6TD6SE6RE7QF7QF\
+  7PG8OG8NH9MI9MI9LJAKJAJKB }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

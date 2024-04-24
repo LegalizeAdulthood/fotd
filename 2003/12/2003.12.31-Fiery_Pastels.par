@@ -1,0 +1,86 @@
+;     Date: Wed, 31 Dec 2003 10:49:35 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-12-03 (Fiery Pastels [9])
+;       Id: <1.5.4.16.20031231105135.2b4fab00@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 31, 2003 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's discussion will once again be short, as there is still 
+; some work I must finish before the end of the day.
+; 
+; I actually found today's image several weeks ago, but I have 
+; been saving it since then, to present it as a quality end to the 
+; FOTD year.  It is perhaps the best image of the month, maybe 
+; even of the year, at least in my opinion.  But I could still 
+; rate it no higher than an 9, which is excellent enough.
+; 
+; The image shows a very well defined midget lying in the fractal 
+; that results when portions of Z^(-1.4) and Z^(-4.1) are combined 
+; and (1/C) is added.  The parent appears as a bloated and 
+; indescribable Mandeloid with a smaller, far more conventional 
+; Mandelbrot set in its northern suburbs.  Today's scene is 
+; located in a cut-off filament in the East Valley area of the 
+; smaller M-set.  The cut-off nature of the filament is reflected 
+; in the eight cut-off 'elephants' surrounding the midget.
+; 
+; I named the image "Fiery Pastels" because of the fiery red 
+; background and the pastel effect of the entire scene.  The 
+; wait of 7 minutes while the image renders can be avoided by 
+; downloading the finished GIF image from Paul's web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The 52F 11C temperature on Tuesday here at Fractal Central was 
+; pleasant enough, but the wind was far too high for cat comfort.  
+; The duo spent less than one hour in the outdoors, and the rest 
+; of the day wishing the wind would die down.  They were not all 
+; that unhappy when evening came, but I gave them a treat of tuna 
+; just to be sure.
+; 
+; Today promises to be another repeat.  Now if I can only find a 
+; fractal repeat . . .
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fiery_Pastels { ; time=0:07:20.22--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=-0.43142567276170910/+3.130775435388886\
+  00/3.507041e+009/1/20/5.71769986824899323e-006
+  params=0.41/-1.4/0.14/-4.1/0/-50/0/0 float=y
+  maxiter=900 inside=0 logmap=141 periodicity=10
+  colors=000U3AX2AZ1A`0Ae0Af0Ak0Ak0An2Ao5Aq9AsDAuHAv\
+  KBvNDxSFyWIz_KzdNzhQzmTzpVxnWqnXknZenZakZZjZWhZSgZ\
+  OeZMdZNbZQbZTaZWbZZaZabZdaZgbZjaambdpagsbjuamvcpxa\
+  sybxzczzczzezzazzazy_xxXsvWpsVkpSgmQbjOZhNVdQQ_TMX\
+  WJTXIQ_HObFMdFKgEMjDMkBOnAOq9Ns9QpDSnHTmJVjNWhQXgV\
+  ZdX_baaadaVnaOxaJzdMzeQzhpzjpzkmzjkzhhzghzegzdezbd\
+  yabv_asZapXanWamVakTahSagQaeJadOadNabMaaznjzmhykhv\
+  kgsjgpjemhejhdggddedaebZdbWdaTbaQb_Na_0ID0JF0KH0MI\
+  0NJ0OK1QM3SN5TQ8VS9WTBXVEZWH_XJaZ2z83yA4xB5vD7uE7s\
+  F8qH9pIAnJBmKBmNDkOEjQFhSHgTHeVIdWJbXKaZ1703924B45\
+  E77H99IDAKFBNIDQKFSOHVSIXVJ_XT3SS7TQ9VQDVOFWOIWNMX\
+  NOXMSZMWZKZ_8zFAyIBvKDqNEnQHkTIgWJdZbz7zzTzzVzzVyz\
+  VxzVuzWsyWpxWnvWkuXjsXgqXepXbpXasZZvZXyZVzZTz_Qz_O\
+  z_Mz_bzOWzTQzXAz9BzABzBDzDDzEDzFEzHEzIFzJFzKFzMHzN\
+  HzOIzQIzSIzTJzVJzWKzXKzZpz0_zHBzdDzbDzbEzbEzbFzbFz\
+  aHzaHzaIzaIzaJz_JzSMzNQzJ }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

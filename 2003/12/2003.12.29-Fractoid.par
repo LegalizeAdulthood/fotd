@@ -1,0 +1,89 @@
+;     Date: Mon, 29 Dec 2003 10:19:40 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-12-03 (Fractoid [7])
+;       Id: <1.5.4.16.20031229102137.2b4f66b4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 29, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Greetings once again from Fractal Central, the half-fantasy, 
+; half-real home of the world's most over-and-under rated 
+; fractals, and the totally-real home of the world's laziest, 
+; craziest cats.
+; 
+; Today's fractal offering rates a very good 7, a rating that 
+; seems honest, at least at the moment.  In a day or two it may 
+; seem far too high or low, but I will not know until the time 
+; comes and the rating has been fixed in stone.
+; 
+; The name fractoid is a combination of the words fractal and 
+; android, though I can see nothing human-like in the image with 
+; its lilac swirls and beige background.
+; 
+; The stripes in the background were created by rendering the 
+; scene with the outside set to 'tdis', an option that colors the 
+; points according to the distance they peregrinate (I like the 
+; word) before passing beyond the escape radius.
+; 
+; The parent fractal is a distorted version of the Mandelbrot set, 
+; with the buds of the main bay rotated far around the shoreline 
+; in a CCW direction.  Today's scene is located in a spiralling 
+; elephant trunk on the south shore of East Valley.
+; 
+; The image takes 17 minutes to render from the included parameter 
+; file.  That time can be cut drastically by downloading the 
+; completed image from Paul's FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The past several days were acceptable here at F.C., with no 
+; extremes of weather, no extremes of cat behavior and no further 
+; word from Ken.  Today is starting as though it will turn into 
+; yet another perfect day.  But such perfection cannot last long 
+; before something goes wrong, so until next time, take care, and 
+; don't bet your bippy.  You might lose it, and bippies are hard 
+; to replace.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractoid { ; time=0:17:26.93--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.54306023277118430/+1.408216019104502\
+  00/3.663052e+007/1/-94.9999918776349119/-3.9243277\
+  7156226376e-007 params=1/1.1/-1/-1.3/0/0 float=y
+  maxiter=3000 inside=0 outside=tdis periodicity=10
+  colors=000SZc`UWiOQrJJzEDyHGwJIuMLrONpQP3ep0hq0js0\
+  nu0pv0qs4rr8spCuoGumJvkOwiSxhVxfZyeazcezahz`izcjzg\
+  jyjefezLzWxzzzzrzrzjWhopfjkcfgkcc_ZZXVVVQQTMMQIHOD\
+  CM87J43PCDVIM`OUfUak_iqeqzozxjzvgzscyq`xpZvoWvmTuk\
+  QujOsiMshJrgHrfErgHmgJhgMchN_hPVhSQiTMiVHiXCiZ7mVE\
+  pSMsOTvL_yHfzDmzAszHpyMnwQjuVhr`epecni_knXisUgxSez\
+  OczMezvczuazs`zs_zrZzq3Gp7IpAJpDMpHOpLPpNSpQUoUVoX\
+  Xo__oc`ofcohcoffjehgcicck_`nW_oSZqOXrLXpMXoMXnMXkN\
+  XjNXiNXgOXfOXeOXcOWeSVfUUgXTg_ShcQiePigOjjNkmMmpLm\
+  rJnvIoxIozHhrHakGVeGOXEHQE9JE3CACH7JM3SQ0ZU8U`HPfP\
+  LkXGqeCwgHriLokOkmShoVeqZasaZueVwhSykOzoLuaPoPToVS\
+  oaQphOpnNquLqzJqzIszNvzQxzUzzZzzazzezzhzzkzxnxupvq\
+  rrnupjwngykcziazgcyeevcgq`hn_jiXkfVnaToZQqUPrQNoVL\
+  m_IicGghEcmCaq9Zv7Wz5Uz8TzATyDTwETsHTqJToLTmNSiPSg\
+  SSeTSaVS_XSXZSV`TXaT_cTacTceTffThhTiiTkjTnkTpmTrnT\
+  uoTvgWu`ZsU`rMcqEfp7hoIch }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

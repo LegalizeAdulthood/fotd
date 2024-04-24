@@ -1,0 +1,93 @@
+;     Date: Tue, 23 Dec 2003 10:48:38 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-12-03 (Concentric Circles [6])
+;       Id: <1.5.4.16.20031223105030.0d7756e4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 23, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; This will be the last FOTD until December 29, but have no fear, 
+; it is just the seasonal rush that is putting the damper on the 
+; fractals, and there is still today's image to discuss.
+; 
+; The image is a scene in the fractal created by combining 8.6 
+; negative parts of Z^(-6.6) with 9.6 negative parts of Z^(-1.1) 
+; and adding (1/C).  It was calculated by the MandelbrotMix2 
+; formula, which works the same as the MandelbrotMix4 formula, 
+; with the added option of manually adjusting initial Z.
+; 
+; The parent fractal of today's image is an oversized thing 
+; consisting of a central Mandeloid with a large arm extending 
+; north and terminating in a large ring.  Today's scene is located 
+; on a filament inside this ring.  The location is reflected in 
+; the concentric rings surrounding the midget.  It is these rings 
+; that inspired the name "Concentric Rings".
+; 
+; When I found the scene, I rendered it first with the standard 
+; equal-iteration-band method.  When this method produced a 
+; thoroughly ho-hum image, I tried the other outside options.  I 
+; also tried evaporating the image and rendering it with the 
+; various inside fills.  The best option I could find was to 
+; render the scene un-evaporated, with the outside=tdis, which is 
+; the 6-rated version that appears as today's FOTD.
+; 
+; The render time of 9 minutes can be cut to a minute or two by 
+; downloading the finished image from Paul's web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A milder temperature of 54F 12C and as much sun as could be 
+; mustered on the shortest day of the year gave the fractal cats a 
+; good afternoon in the yard.  Their greatest excitement came when 
+; a starling lighted on a nearby twig, causing Tippy to chatter in 
+; anticipation and Thomas to twitch his tail furiously.  Luckily 
+; for the bird, the cats' bird catching days are pretty much 
+; behind them.  Today looks to be a repeat.
+; 
+; For me, it's work before fun, and the time to start working is 
+; now.  Until next FOTD, which will be posted on December 29th, 
+; Take care, and see you in 6 days.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Concentric_Circles { ; time=0:09:34.85--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=-1.65813346453185800/+30.92368628273601\
+  000/1.849903e+009/1/-5/0.0091790130718738816
+  params=-8.6/-6.6/-9.6/-1.1/0/0/0/0 float=y
+  maxiter=1400 inside=0 outside=tdis periodicity=10
+  colors=000jszgiRfiSeiSeiTdiTdiUciUbiVbiVaiWaiW`iW_\
+  iX_iXZiYYiYYiZXiZXi_Wi_Vi`Vi`Ui`UiaTiaSibSibRicRic\
+  QidPidPieOieNjfOiePiePhdQhdRgdRgcSfcTfbTebUebUdaVd\
+  aWd`Wc`Xc`Yb_Yb_ZaZ_aZ_`Z``Y`_Ya_XbZXbZXcZWdYWdYVe\
+  XVfXVfWUgWUgVThVTiUTiUSjTSkTRkTRlSRmSQmRQnRPnQPoQP\
+  pPOpPOqONrONrNNsNMtNMtMLuMLuLLvLKuKKsKJrJJqJJrIItI\
+  IuIItHHsGHrFGrEGqDFoCFnBElAEjADh9Dg8Ce7Cc6Bb5B`4AZ\
+  3AX19Y3AZ5AZ6A_8A`9A`BAaDAbEAbGAcHAdJAdLAeMAfOAfPA\
+  gRAhTBhUBiWBjXBjZBk`BlaBlcBmdBnfBnhBoiBpkBplBqnBrp\
+  CqoBpnBomBnmBnlBmkBlkBkjBjiBjiBihBhgAggAffAfeAeeAd\
+  dAccAbcAbbAaaA`aA_`AZ_9Z_9YZ9XY9WY9VX9VW9UV9TV9SU9\
+  RT9RT9QS8PR8OR8NQ8NP8MP8LO8KN8JN8JM8IL8HL8GK7FJ7FJ\
+  7EI7DH7CH7BG7BF7AF79E78D78D77E87E97EA7EB7EC7ED7EE7\
+  EF7EF7EG7EH7EI7EJ7EK7EL7EM7EM7EN7EO6FP6FQ6FR6FS6FT\
+  6FT6FU6FV6FW6FX6FY6FZ6F_6F`6F`6Fa6Fb6Fc6Fd5Ge5Gf5G\
+  g5Gg5Gh5Gi5Gj5Gk5Gl5Gm5Gn }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
