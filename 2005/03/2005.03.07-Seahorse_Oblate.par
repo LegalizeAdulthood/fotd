@@ -1,0 +1,98 @@
+;     Date: Mon, 07 Mar 2005 11:52:52 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-03-05 (Seahorse Oblate [6])
+;       Id: <1.5.4.16.20050307115328.29e76798@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 07, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is the last in the current series of seven Oblate 
+; pictures.  (Well, all right, yesterday's image had more of a 
+; Rectangular orientation.)  Today's image shows an Oblate view of 
+; a mini-Mandelbrot set lying in Seahorse Valley.  The Mandelbrot 
+; version of the picture may be seen by changing the (p1) 
+; parameter from 0,90 to 45,45 and resetting the x-magnification 
+; factor to 1.  When this is done, a perfectly-formed, though 
+; somewhat under-iterated, Mandelbrot midget typical of those in 
+; Seahorse Valley will appear.
+; 
+; The pattern surrounding the Oblate midget closely resembles that 
+; of both the Mandelbrot and Julia versions of the scene.  The 
+; main difference is that the pattern is distorted into a 
+; triangular shape.  This triangular distortion is typical of most 
+; midgets in the Oblate orientation.  The mathematical reason for 
+; this is probably known, though I have no idea of what that 
+; reason might be.
+; 
+; The name "Seahorse Oblate" is a description, and hardly more 
+; than a catalog number.  The rating of a 6 reflects the small 
+; amount of extra effort I put into the coloring.  The render time 
+; of 3 minutes is about the same as the time required to go to the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and download the finished image from there.
+; 
+; Starting with tomorrow's image, we will spend 7 days investiga-
+; ting what I call the Parabolic, real(c)real(z), orientation of 
+; the Julibrot.
+; 
+; A sunny mild day on Sunday, with a temperature of 54F 12C, kept 
+; the fractal duo quite happy in the yard most of the afternoon.  
+; When evening came, they were so exhausted that they almost 
+; forgot their tuna.  Today promises to be even warmer.  This is 
+; good news for the dynamic cats.  For me, there is a modicum of 
+; work to finish before I get to the fractals, the next of which 
+; will appear in 24 hours.  Until then, take care, and sometimes 
+; I wonder whether there are an infinity of fractals or only one 
+; fractal with infinite aspects.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Oblate { ; time=0:03:06.09--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  passes=1 center-mag=-0.00000000000200438/+0.000000\
+  00000203913/1.205523e+010/0.3459/32.5/3.8857805861\
+  8804789e-016 params=0/90/2/0/-0.7291299973892553/\
+  0.2357647081925723/-0.7291299973892533/0.235764708\
+  1925723 float=y maxiter=1800 inside=0
+  logmap=320 periodicity=10
+  colors=000jNvjNujNtiNsiNrhNqhNpgNogNnfNmfNleNkeOid\
+  PgdQecPcbOaaM_`LY_KWZJVZIT_KU`MUaOUbQWcSXcUZdW`eYb\
+  f_cgaehcfiehigijijkkllmmlnnmppnrqotspvtrxutzwvzxwz\
+  yzzzzzzzzzzzzPkWUkcYlaSm_NnYHoWCpU6qS1rQ8ZYEGeDFdC\
+  FcCEcBEbBDbADa9C`9C`8B_8B_7AZ7AZ6B`5Bb5Bd4Ce4Cg3Ci\
+  3Dj2Dl2Dn1Eo1Eq0Es0Et4Gs8IsBKsFLsINsMPsQQsTSsXUs_V\
+  sfbklicsqWyxOxuNxrNxoNwlMwjMwgMvdLvaLv_LuXKuUKuRPu\
+  OUzLZzNczRhzUlwYktalqdlnhlmlllolkjZjeMi`9dXE`UJXRO\
+  TNTOKYKHbGDgCAl87q9CrAGrBKrCPsDTsEXsF`sGetHitImtJq\
+  tKmpKjmKgjLdfLacLY`MVXMSUMPRMMOR`TWoY_zb`z``wZ`tYa\
+  qWanUakTahRbePbbOb_MbYLeWIhVGkUEmTCpSAsR8uQ6qO9nNB\
+  kLDhKFeJHbHJ_GLWFNTDPQCRNBTK9VH8XE7ZI6`L6aO6bS5cV5\
+  dY5f`5gd4hg4ij4jm4lq3mt3nw3oz3pr9rkEsdJtXPuQUvJZwK\
+  _rL`nMajNbfOcbPdZPdVSdUVdTYdT_bSa`ScZSdXSfVS8Hz8Jz\
+  9Lz9Nz9PzARzATzAVzOXz6Zz7`z7bz7cz8dz8ez8fz9fz9fz9f\
+  zAfzAfzAfzCfzEfzFfzHfzIfz }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

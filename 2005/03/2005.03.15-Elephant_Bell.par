@@ -1,0 +1,99 @@
+;     Date: Tue, 15 Mar 2005 08:58:21 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-03-05 (Elephant Bell [5])
+;       Id: <1.5.4.16.20050315085901.38c70e5e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 15, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today is the ides of March.
+; 
+; With today's image, we move on to the Rectangular orientation 
+; of the Z^2+C Julibrot.  The Oblate and Parabolic slices require 
+; that the 3-D Julibrot section be oriented in our space with the 
+; real(z) axis perpendicular to the Mandelbrot set on the screen.  
+; The Rectangular and Elliptic orientations require the imag(z) 
+; axis of the Julibrot to be perpendicular to the screen.  The 
+; Rectangular slices are then the view from left or right; the 
+; Elliptic slices are the view from above or below.
+; 
+; Today's image is a scene with Rectangular orientation, located 
+; in Elephant Valley, which is the prominent valley on the east 
+; side of the Mandelbrot set.  Elephants are everywhere in this 
+; area, and they can be found in nearly every orientation through 
+; the Julibrot.  By contrast, the Mandelbrot features such as buds 
+; and midgets can be found in only a few of the Mandelbrot-orien-
+; ted slices.  (This is not strictly true, but we'll ignore the 
+; exception for now.) 
+; 
+; Instead of all facing in the same direction, the elephants in 
+; today's image are facing each other, trunk to trunk, and appear 
+; to be stomping on a bell.  At least, this is what I saw when I 
+; was searching for a name for the image.  The name "Elephant 
+; Bell" reflects what I imagined in the scene.
+; 
+; Elephants might be large, but they are not all that unusual in 
+; the world of fractals.  As a result, I could rate today's image 
+; no higher than a perfectly average 5.  At nearly 8-1/2 minutes, 
+; the render time of the parameter file is within reason, but the 
+; download from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is far more convenient.
+; 
+; Monday was sunny but chilly here at Fractal Central.  The 
+; fractal duo managed nearly a half-hour in the holly thicket, 
+; but repeated chilly gusts of wind soon drove them indoors, 
+; where they satisfied themselves with an extra treat of tuna.  
+; Today is starting the same.  I expect pretty much the same 
+; reaction from the duo.  For me it's more of the usual.  The 
+; next FOTD will appear in 24 or so hours.  Until then, take 
+; care, and where is Alice's looking glass?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Elephant_Bell { ; time=0:08:23.017-SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=flip/ident
+  passes=t center-mag=-0.10158781095461710/-0.001681\
+  38469062141/2246.428/0.001052 params=0/90/2/0/0/0/\
+  0.26/0 float=y maxiter=35000 inside=0
+  logmap=31 symmetry=none periodicity=10
+  colors=0000cS0eR0fQ0gP0hO0iN0jM1kL3lK4mJ5nI6oH7pG8\
+  qF9rEAsDBtCCsCDrBEqBFpBFoBGnBHmBHlBIkBJjAKiAKhALgA\
+  MfAMeANdAOcAObAJa9F`8B_77Z63Y55XA6WF8VJ9UOBTTCSXDR\
+  VEQTEPSFQQFSPGUNGVMHXKIZII`HJaFJcEKeCKfBSYIZQPeHWl\
+  9bs1hrD`qPUp_NokGov9krFhoKelPbiU_f_XcdU`iRYnQVkPSi\
+  PQgONeNKbNI`MFZLCXLAVMDWMGXMIXMLYMOYMQZMTZNW_NY_N`\
+  `Nc`NeaNhaNkbNmbBZa0La4O_7RZAUYEXWH_VKbUNeTRhRUkQX\
+  nP_pOboLfoJioHdT``7ca8ca8ca8ca8ca8ca8ca8ca8ca8ca8c\
+  a9ca9ca9caAcaBcbDccEcdFceGcfHcgIchJciKcjLclManO_pQ\
+  YrSWtUUuVSvUQwSOwQMvOKuLIsJGrGEpECnCAl98j78h48g28f\
+  08c4B`7EYAHVDKSHNPKQMNTJQWGUZDXaA_d8bg7ci7dj7ek6fl\
+  6gm6hn6io5jp5kq5mr4os4qt4su4uv3ww3zx3zy3zzPzkizXjz\
+  _kzakzclzelzgmzitzomzkfzg_zdUz`NzYGzUAzRFzSEzTDzVC\
+  zWCzXBzZAz_9z`8zb7zc7zdDzgJziPzlVznTzoSzpRzpQzqPzq\
+  NzrMzrLzsKzsJztIztHzrHzqGzoGznGzlFzkFzjEzhEzgEzeDz\
+  dDzbDzaCz`CzZAzMAzNAzOAzP }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

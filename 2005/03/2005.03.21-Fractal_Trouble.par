@@ -1,0 +1,96 @@
+;     Date: Mon, 21 Mar 2005 10:07:08 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-03-05 (Fractal Trouble [5])
+;       Id: <1.5.4.16.20050321100752.2a7f4572@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 21, 2006 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is the last in the current series of adventures in 
+; the Rectangular sets of the Z^2+C Julibrot.  It is a scene in 
+; the vicinity of a midget rather deep on the north shoreline of 
+; East Valley, and as such, it displays all the characteristics of 
+; the area, including elements that are nearly cut-off and bits 
+; and pieces of elephants with curled trunks.
+; 
+; An unusual amount of stretching and skewing were needed to bring 
+; the scene to a recognizable form.  When I was doing the 
+; stretching, I had a momentary thought that the scene might be in 
+; trouble, which inspired the name "Fractal Trouble", and to some 
+; degree, proved to be true.
+; 
+; Unfortunately, after all the stretching and skewing, I was left 
+; with an image that I could rate no higher than a 5.  But a 
+; rating of 5 is an average fractal, and there is nothing normal 
+; about an average fractal.
+; 
+; The midget itself does appear in the image, though it has been 
+; stretched into a narrow slit and is a bit hard to pick out 
+; without toggling in and out of color mode.
+; 
+; The render time of 5 minutes may be reduced to one minute or so 
+; by downloading the finished GIF image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; On-and-off rain fell all day Sunday here at Fractal Central.  
+; Late in the afternoon one explosive clap of thunder ended the 
+; day with a bang, and sent the duo scurrying for cover. When they 
+; reappeared about 1/2 hour later, I offered them their daily 
+; treat of tuna, which gave them enough consolation to end the day 
+; on a peaceful note.  Today is starting with sun.  It looks like 
+; a better day on the way.
+; 
+; For me it looks like an uneventful day, unless something 
+; unexpected turns up in the world of fractals, that is.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and keep 
+; searching.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Trouble { ; time=0:05:04.94--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=flip/ident
+  passes=1 center-mag=+0.00000796644326786/-0.000000\
+  01175049742/8.952438e+007/0.0002847/0.086835163495\
+  9469293/89.9720082145064737 params=0/90/2/0/0.2533\
+  9158986615/0.00033540298237/0.25339158986615/0.000\
+  33540298237 float=y maxiter=8000
+  inside=0 periodicity=10
+  colors=000pSih_iaghUohMwgFzgKudPmbTd_YXYaOVfGTj8Rk\
+  CTlGVmKXnOZoS`pWbq_crcesggtkiuokvsmwwoxzpyvryrsymu\
+  zivzewz`yzXzzSzzOzzKzvLyrLunMqjMmeNiaNeYOaUOYPPULP\
+  QHQMDQIFRMHRPJRSKSVMSYOSaPTdRTgTTjUTmTRjRQhONcLKZI\
+  HUFFPCCK99F66AdCBM88KLMIJKHIJGHIFGHEFGDEFCDEBBCAAB\
+  99A8897786E75J6fRAcW9aa9Zf9Xj8Ug8Sb8PZ7NV7LR7IN6GJ\
+  6DG6BD58A5675lBGhAFeAEb9D_9CW8CT8BQ7AN79K68G68D57A\
+  56745jHy_DjPAXE7JLOZCXSRXePUbNS_LQXJOUILRGJOEHMCFJ\
+  BIG9LD7OA5T7VYUZdXRjQJpJBvC7zV6uS6oP6iN5cK5YI5SF4O\
+  C4LA4I7zZqsVklSffO`_LWUHQNELHAFA7ADfSAXM8NG6DAACp8\
+  Ad78T56H48K47I47H46F46E46D45B45A459447446WFnSDhPCc\
+  MBZJAUL8PP7KT6FW5A_EBcBPh9Pm6PpESoHYlFXfEV_CRUAMN9\
+  IH7DA596YE5SC5MA4G84A6Mczdzo_siVlcRdYMYSHQMDJG8BAY\
+  ByWAuUAqS9mQ9iO8fM8bK7ZI7VGJREMPCPZASh8VrTYzY_z`bz\
+  ebzbaw_ZrXWmUThRQcONZLKWIHVEDSBAP77M45PGAPD8PA7LEE\
+  DOO5YY5gg5qmfpgblY_gTXcOU }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

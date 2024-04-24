@@ -1,0 +1,100 @@
+;     Date: Fri, 04 Mar 2005 11:55:43 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-03-05 (Point of Contact [4])
+;       Id: <1.5.4.16.20050304115615.0d6f32a8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 04, 2005 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is something entirely different.  It is a slice, 
+; cut in a different direction, of the same abstract four-
+; dimensional figure that gives us the well-known Mandelbrot set 
+; and the infinite variety of Julia sets.  But it resembles 
+; neither the Mandelbrot set nor a Julia set.
+; 
+; The orientation of the slice is very near but not exactly the 
+; Oblate direction.  It has in fact been rotated 0.008 degree of 
+; arc toward the Julia direction.  When one is exploring the 
+; Julibrot, a tiny rotation can sometimes make a big difference.  
+; If the 0.008 value of real(p1) is changed as much as one degree, 
+; the entire image will collapse into a mere horizontal line.
+; 
+; The location of the center of the slice is near the tip of the 
+; negative stem of the M-set, but removed 1.3 units from the tip, 
+; along the real(z) axis.
+; 
+; The image, which has been stretched horizontally by a factor of 
+; almost 1300, features both a hyperbola and a point of contact.  
+; Since I have many hyperbolae in my fractal collection, I named 
+; the image "Point of Contact".
+; 
+; For some reason, the idea of today's image seems to exceed the 
+; quality of the image itself, and I could give it a rating of 
+; only a 4.  But there can be no disappointment, for the render 
+; time is so fast that the image will be finished before 
+; disappointment can set in.  
+; 
+; Rendering may be dispensed with entirely by downloading the 
+; already-rendered image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a temperature that never rose above freezing and brisk 
+; winds from the north, Thursday was an indoor day for the fractal 
+; cats, who took their pleasure watching birds from the comfort of 
+; their window shelf.  The usual treat of tuna kept them happy.  
+; Today is starting sunny and quite cold, but the wind has died 
+; and it is due to turn warmer this afternoon.  The fractal cats 
+; should be more tolerant of these conditions.
+; 
+; It looks like an average day coming up for me, which means do 
+; what needs to be done, then move on to fractal land.  The next 
+; glorious fractal will appear in 24 hours.  Until then, take 
+; care, and don't get scammed.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Point_of_Contact { ; time=0:00:20.76--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  center-mag=-1.29966327214381100/+0.000037418181458\
+  39/11605/1281.9 params=0.008/90/2/0/0/0/-2/0
+  passes=1 float=y maxiter=95 inside=0 outside=tdis
+  logmap=28 periodicity=10
+  colors=000D00E00F00G00H00I00J00K00L00M00N00O00P00Q\
+  40R20S10T4FU6FV8HWAIXCJYEKZGK_IK`LIaNHcPGdRKfTPfWU\
+  hZZhccghhfmmerrdwwczzhzzmzzmzzrzwwzrzzmzzhzzczzczz\
+  czzczzczzczzczzczzczzczzczzczzczzczzc000000000000J\
+  aXLcVNdTPeQRfOThMViJXjHZkFXlHVmITnJRoKPoLNpMMqOKrP\
+  IrQGsREtSCuTBuUFnZIgbM`gPUkTNpWGtVJrUMqTOpTRoSTnRW\
+  mQZlQ`kPcjOeiNhhNkgMmfLpeLrdKtjKvoJxtJyyLzuNzrOzoQ\
+  zkSzhTzeVzbXzZYzW_zTazQbzMdzJfzGgzD2Bj5Ei7Gh9IgCLg\
+  ENfGPeJSeLUdNWcQZcS`bUbaWda__YbVUeRQhMNkIJnDFq9Cp8\
+  Bp8Ao89o78o77n76n75n64m63m62m62aGgeKiiNjlQkpTmtWnw\
+  Zou_ns_nr`np`nn`nmankanjanhbnfbnecnccnacn`dnZdnYdn\
+  Zcm_bl`ak`aja`ib_hcZgcZfdYeeXdeXcbYa`Z_YZZW_XT_WR`\
+  UOaSMaRJbPHbOOWMUPK`JJfCHl6Gl9IlCKlFMlIOlLPlORlRTl\
+  UVlXXlZYfaQacJWeCRg5QcMQ_aQWqPVmOViNUeMUaLTYKTTJSP\
+  ISLHRHGRDFQ9EQ5DQ1FR3N9UN8XO7`O7cO6gO5jO5mP7lQ8lRA\
+  kSBkTDjUEjUGjVHiWJiXKhYMh }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

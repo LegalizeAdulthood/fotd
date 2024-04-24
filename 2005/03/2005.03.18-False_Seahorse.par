@@ -1,0 +1,99 @@
+;     Date: Fri, 18 Mar 2005 11:52:41 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-03-05 (False Seahorse [5])
+;       Id: <1.5.4.16.20050318115324.38cf9aa4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 18, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image looks like just another trip to one of the Julia 
+; sets associated with Seahorse Valley.  But look again!  It is 
+; not even a Julia set.  Real Julia sets are never filled with 
+; horizontal stripes such as those that fill the interior of the 
+; object in today's scene.  Today's image shows a Rectangular set 
+; located off to the side of the Seahorse Valley of a tiny midget 
+; which is located on the negative stem of the M-set, near the 
+; point where the stem joins the main body of the Set.
+; 
+; I named the image "False Seahorse".  I gave it this name because 
+; at first glance it appears to be a Julia set, but closer examina-
+; tion will reveal that it contains features that never appear in 
+; true Julia sets.
+; 
+; I am not all that pleased with the coloring, which for some 
+; reason never came alive as I had hoped.  Something more is 
+; needed to contrast with the hazy blue color of the interior of 
+; the Rectangular set.  The rating of an average 5 reflects my 
+; lack of satisfaction.
+; 
+; The rendering of today's image starts off fast enough, reaching 
+; 90-percent completion in the first couple minutes, but it slows 
+; to a near halt when it reaches the open stripe around the 
+; X-axis, and takes over 1/2 hour to finish.  The frustration may 
+; be avoided by downloading the finished GIF image from the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Well, today's effort might have fallen a bit short, but I have 
+; three more chances to produce a really outstanding Rectangular 
+; image before we move on to the Elliptic orientation.
+; 
+; The clouds broke in mid-afternoon here at Fractal Central on 
+; Thursday, in just enough time for the cats to enjoy an hour in 
+; the sun on the porch.  The hour must have been enough, for when 
+; the sun sank behind the trees, they came inside satisfied and 
+; ready for tuna.  Today is starting sunny and it will likely be 
+; warmer.  The duo should be happy.
+; 
+; I have a little more than the usual amount of work stuff to put 
+; behind me before I will be happy, but the work will be finished 
+; and the next FOTD will appear on schedule in 24 hours.  Until 
+; then, take care, and be yourself.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+False_Seahorse { ; time=0:33:24.06--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=flip/ident
+  passes=1 center-mag=-0.00518053262314617/0/161638.\
+  3/0.05557 params=0/90/2/0/0/0/-1.401913873518217/0
+  float=y maxiter=150000 inside=0 logmap=-230
+  symmetry=xaxis periodicity=10
+  colors=000R23S43T63V86WA9XCCZEF`GIbJLcLNgSQiYTmdWn\
+  jZrqastcpr`mqYjoVgnSelPbkM_iKXgHUeEScAPaKM_UJYcHWm\
+  TVmdLmcNmbPobRqaTtaUw`Xz`Yz_`z_azZczZezYfzYgz_fzae\
+  zcdzdczfbzhazi`zgZzfYzeXzcWzbVzaTz_SzZRzYQzXPzZOz_\
+  Oz`OzbOzcNzdNzeMzgMzhLziLzkKzlKzmKznKzcKzTKzJKzKKz\
+  LKzMKzJKzHKzFKzDKzBKz9Kz7KzBKzEKzIKzLKzPKzSKzWKzZK\
+  zbKzeKziKzlKzoKzqLzsMzSNzQOzPPzNQzMRzKSzJTzRUzYUzd\
+  UzdUzdUzdUzdUzdUzdUzdUzdUzdUzdUzPUzAUz9Uz8Uz8Uz7Uz\
+  6Uz6Uz5Uz4Uz4Uz3Uz2Uz2Uz5Uz8UzBUzEUzHUzKUzNUzQUzTU\
+  zWVzZWzaXzdYzcZzc_zb`zbazabzaczadz`ez`fz_gz_hz_izX\
+  jzVkzTlzQmzOnzMozKpzHqzFrzDszBtz8uz6vz4wz2xzAyzHzz\
+  OzzVzzazzhzzozzmzzkzzizzgzzezzczzazz_zzYzzWzzUzzSz\
+  zPzzNzzLzzJzzHzzFzzDzzBzzEzzHzzKzzNzzPzzSzzVzzYzz`\
+  zzbzzezzhzzkzzmzzizzkzzmzzozzpzzqzzrzzszztzzuzzvzz\
+  wzzxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
