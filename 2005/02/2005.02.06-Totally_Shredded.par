@@ -1,0 +1,106 @@
+;     Date: Sun, 06 Feb 2005 09:38:27 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-02-05 (Totally Shredded [2])
+;       Id: <1.5.4.16.20050206094055.0d6716c2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 06, 2005 (Rating 2)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is far from great.  In fact, with its low-as-
+; they-go rating of 2, it is far from being even average.  Maybe 
+; I'm getting too interested in philosophy.  Maybe I have put so 
+; much energy into fractals that I'm beginning to burn out.  Why 
+; else would I search where I have searched hundreds of times and 
+; rarely found anything of even average interest?
+; 
+; I don't know why I keep looking along the filaments of very low 
+; order Mandeloid fractals for interesting midgets.  The midgets 
+; are there, but they are so broken by the unavoidable discontinui-
+; ties that they look like they have just gone through a paper 
+; shredder.  Today's image shows a totally shredded midget that 
+; fully deserves its abysmal rating of 2 as well as its name -- 
+; "Totally Shredded".
+; 
+; The parent fractal is the default Z^1.26+C Mandeloid.  I hoped 
+; that the cube root of 3 would do something unusual when used as 
+; the exponent of Z, but as far as I could tell, nothing out of 
+; the ordinary happened.  Maybe if I had checked other levels of 
+; the logarithmic hyper-spiral, I would have found something more 
+; interesting, but somehow I doubt it.
+; 
+; I could also have done better with the coloring, but today's 
+; earthy palette seems to perfectly capture the futility I felt 
+; when working with the image.  The parameter file included at the 
+; end of this message runs in 7 minutes on my 10-year-old machine 
+; with the exhaust fan that needs to be started by hand.  But much 
+; of that render time may be saved by downloading the fully pre-
+; rendered GIF image from the FOTD web site maintained by Paul at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The sun was warm, the wind was light, and the temperature 
+; reached 54F 12C.  It was absolutely perfect here at Fractal 
+; Central on Saturday, and the cats made the most of the perfect 
+; conditions.  They went into the yard before 11am and did not 
+; return inside until after 4pm.  For some reason they wanted 
+; extra tuna for supper, which I gave them.  Then they ended the 
+; day with one of their rare spells of playfully chasing each 
+; other up and down the stairs.  Today is starting much the same.  
+; Hopefully, the aging duo is not all played out.
+; 
+; I have little to do today but watch the big game.  If the game 
+; is dull, I'll enjoy the over-priced ads.  The next fractal will 
+; appear in 24 hours, the next philosophy, most likely in 48.  
+; Until tomorrow, when the fractal of the day is guaranteed to be 
+; an improvement over today's, take care, and there will never be 
+; another 2-rated fractal until spammers learn to spell correctly.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Totally_Shredded { ; time=0:07:04.25--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.87536385207072350/+0.898575036268718\
+  70/3507503 params=1.26/0/0/0 float=y
+  maxiter=10000 inside=0 periodicity=10
+  colors=000htNepLblK_hJXeHUaGRYFOUBPVDPVEQVGQVHRVJR\
+  VKSVLSVNTVOTVQUVRNYYRWVUVSXTQ_SNcQLfPIiNGlMDuO5rM8\
+  oLBlKDiIGfHJdGLaEOZDRWCTTAWQ9Zer9K3_O8`SD`WIa_MacR\
+  agWbk`bv`drbcndbjfadlbfgagb`hY_iTZjOYyGckJYYLTKNN6\
+  PI8NLAMNCLQEKSGJUIHXKGZMFaOEcMGpOEjPDeRC`SAVU9QV8L\
+  U5HW7GX8GYAF_BF`DEaEEcGDdHDeJCgKChMBiNBkPAlQAmS9nT\
+  9mWClYFl`HkbKkeMjgPjjRilUinWjlYkjZli_mganebndcobdp\
+  `fq_grYhtVkrXiqYgpZfo_dn`cmaakb_jcZidXheWgfUVPpfgT\
+  heVicXjbZk``l_bnYdoXfpVhqUjrSltRnuPpvOrwMtxLurOlmQ\
+  chTVcVMZYDU_5WY6YW6_U7`S7bQ8dO8eM9gK9iIAg2DiABjHAl\
+  P9mW8oc6pj5rr4sy3rx3qw3pw3ov3nu3mu3lt3ks3js3ir3hq3\
+  gq3fp3eo3do3ep9fpFgpLgpRhpWipaipgjpmkpsquznrykpxhn\
+  xekwbiw_gvXevUbuR`uOZtMXtpt`hn_ah_Vb_OXZHRZ7ef9WbA\
+  MZBCVA1TC3SD5RF7QG9PIBOJCNLEMMGLOIKPKJRMIRMJSNISOI\
+  SPHSQHSRHSSGTTGTUFTVFTWFTXETYETZEWgCDJfGLcIN`LPYNR\
+  VQTSSVQVXNXZK_`HabEddBsw8 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

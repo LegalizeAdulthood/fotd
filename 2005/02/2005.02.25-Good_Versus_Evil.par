@@ -1,0 +1,99 @@
+;     Date: Fri, 25 Feb 2005 09:42:59 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-02-05 (Good Versus Evil [7])
+;       Id: <1.5.4.16.20050225094325.0d976b3e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 25, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal was created with the MandelbrotMix3a formula, 
+; which combines 4 different powers of Z but requires that the 
+; critical points be calculated manually.  In today's image, 
+; various portions of Z^(-5.5), Z^(1.5), Z^(2.5) and (1/Z) were 
+; combined, and a critical point was entered as (p5) to produce a 
+; parent fractal that consists of little more than a scattering of 
+; disconnected fractal strings.  But some of the strings hold 
+; curious little Mandelbrot atoms, one of which is the star of 
+; today's sizzling fast image.
+; 
+; When rendered in the traditional manner, with the outside set to 
+; 'iter', today's image is rather dull.  The 'tdis' outside option 
+; brings the scene to life however, and earns the rating of a 7.  
+; I chose the name "Good Versus Evil" when I noticed the contrast 
+; between the strong celestial blue in the center of the image and 
+; the lurid red around the edges, which hints at devilishness.  Of 
+; course, in a theoretical battle of good against evil, the result 
+; must always be a stalemate.  Both sides are equally powerful.
+; 
+; I rendered today's image with the 'passes=b' option, which is 
+; the fastest with this particular image.  It is also the most fun 
+; to watch.  The drawback is that it often completely misses some 
+; features of the images on which it is used.
+; 
+; Though today's parameter file renders fast as lightning, the 
+; FOTD web site, where the completed GIF image has been posted, is 
+; still fun to visit.  The site is located at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Snow fell all day Thursday here at Fractal Central, keeping the 
+; fractal cats confined all afternoon to their shelf by the 
+; window, where they watched the birds scrounging for food.  The 
+; duo must have been reasonably contented with their situation, 
+; for they were satisfied with the normal serving of tuna.  This 
+; morning is starting with some sun, but it is still cold and we 
+; are deep in snow.  I have no idea how the duo will manage the 
+; challenging conditions.
+; 
+; For me it's another average day with the average amount of work 
+; to clear away before tackling the fractal world.  The 6 inches 
+; 15cm of snow that fell yesterday is not enough to stop normal 
+; activity of a rather large city, so I have no excuse to put 
+; things off.  The next FOTD will appear in 24 hours.  The wrap-up 
+; of the philosophy will appear a few days later.  Until next 
+; time, take care, and where is Yukon King?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Good_Versus_Evil { ; time=0:00:56.74--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix3a function=ident passes=b
+  center-mag=+1.295364358/+0.033121647/21027.75/1/16\
+  5/7.70038116604254697e-010 params=0.5/-5.5/2/1.5/\
+  -0.3/2.5/-4/-1/0.8541307166/0 float=y maxiter=256
+  inside=255 outside=tdis periodicity=10
+  colors=000YtBXtCWtEVtFUsGTsISsJRsLQsMPsNQoQRkSSgUT\
+  cWU_YVW_WSaXOcUMgRKkPInMGrJEvHDyLIuPMrTQnXUk`Ygcad\
+  gfakjYonVsrR0005HDsHJlHIfHH_HGUHENHDHHCAHB4HA6IE7J\
+  I9JMAKPBLXDLdEMkNPmKSoPVqUYsZ`ultzUghL0`CGS42K9ETE\
+  PaJ_iE`dAa_5bV1bQ9e_HhhPkqMojKrczzXzzRzzSQzSVhT_cT\
+  dZUiTUnOVsJVfHiVFw_MmdSciZVndLsjColIknNgoSdqX`saXt\
+  fTvkQwpyPrx`qwlpvwoc3ieFYgRNibBjn0k`BlNLmAVaMXQYZE\
+  i`2tb8rcDqdJpeOnfUmgZlhQ_lHOo8Cr5AU3859DHEITKNcPSo\
+  UXzLi9QeBVaD_YFZULYQQXMVWI`VEeUAjU7oR9jPBeMD`KFWHH\
+  RFJMCLHANDlLFc_CVmAQoGLpMHqRCsX7tb3ugNV_f4TYCWQJZI\
+  QaAXdCTTDPHHNLKLONJRRHVUFYXD`_Cc_B``BY`AVa9Sa8Pb7M\
+  b6Jc5Gc5Db7Fa9H`BJ_CLZENZGPYIRXJSWLUVNWVPYUQ_TSaSU\
+  cRWeRXfUZeW`dZbcmu0lt2ks4kr6jq8ipAioChoEhnGgmIflKf\
+  kLejNdiPdiRchTcgVbfXaeZad``cb97vB9tDBsEDrGFqHHpUN`\
+  NGPG9ELKFQUGVcHZmHUlKQkNLjQHjTCiW8hZ4haDafLWjTQn`J\
+  rhDvp7zm3Vj00g64eB8bGC000 }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

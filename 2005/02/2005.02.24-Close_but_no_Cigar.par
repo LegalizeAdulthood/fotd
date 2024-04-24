@@ -1,0 +1,111 @@
+;     Date: Thu, 24 Feb 2005 12:00:41 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-02-05 (Close but no Cigar [8])
+;       Id: <1.5.4.16.20050224120106.2b375016@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 24, 2005 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To start, I must admit that today's Julia-like image is 
+; abysmally slow.  And that is not all.  It is merely close to 
+; being a Julia set.  In fact, it is within 1/2 degree of arc of 
+; actually being a Julia set.  But it is not a Julia set; it is 
+; "Close but no Cigar".  If the image were a Julia set, it would 
+; consist of nothing but the spider-like arms in the foreground.  
+; The brilliant, straight-edged, horizontal bar in the background, 
+; partially showing through the spider arms, is actually a grossly 
+; enlarged and infinitely stretched view of the area of the Mandel-
+; brot set associated with this particular Julia set.
+; 
+; The pure Julia version may be seen by changing the imag(p1) 
+; parameter from 90.5 to 90.  One benefit of this change is that 
+; the Julia set renders in 1/10 the time of the 'almost' Julia 
+; set.  The spidery arms in the pure Julia set are thicker and not 
+; nearly as intricate as those of the 'almost' set, especially in 
+; the lower part of the image.  And unless I am mistaken, there 
+; are fewer arms in the pure Julia set.  Of course, in the Julia 
+; set the straight-edged feature in the background, which adds 
+; most of the interest, is totally missing.
+; 
+; The very slow render time of today's image is a bit misleading.  
+; When I first rendered the image, I used the old version of the 
+; multXYZWcompjb-min formula.  Since then, I have moved the term 
+; (c^(p3-1)) to the initialization part of the formula, which lets 
+; it be calculated only once for each point rather than recalcula-
+; ted at every iteration.  This cuts the render time almost in 
+; half.  All previous versions of the multXYZWcompjb-min formula 
+; should be replaced with the version that is included in today's 
+; parameter file.  The 'frm:' that precedes the formula name must 
+; be removed before the formula can be included in a formula file.
+; 
+; I have rated the image at an 8.  This might be a bit overblown, 
+; but I rather like the image, and feel that it is worth the 8.  
+; But even with the new version of the formula, the image is a 
+; slow one that is much more convenient to download.  I have sent 
+; the image on ahead to Paul, so it should be posted to the FOTD 
+; web site, ready for download, shortly after you read this.  The 
+; web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Wednesday turned out not too bad here at Fractal Central.  The 
+; sun was visible about half the time and the temperature reached 
+; 43F 6C, which is about where it should be at this time of year.  
+; The cats spent about an hour in the yard, which is a little 
+; below their normal time outdoors.  Their evening tuna was near 
+; average.  But this morning I see light snow falling, with heavy 
+; snow forecast for later today.  The duo might not have a good 
+; day.
+; 
+; I expect an average day, but then, even an average day is filled 
+; with things of interest.  The next FOTD will appear in 24 hours. 
+; Until then, take care, and look beneath the surface of the 
+; everyday things of life.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Close_but_no_Cigar { ; time=2:26:36.40--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multXYZWcompjb-min function=ident/flip
+  passes=1 center-mag=-0.419308/3.33067e-016/1.62121\
+  2/1/90/3.88578058618804789e-016 params=90/90.5/1.2\
+  /0/1.1/0/0/0/-0.818/0 float=y maxiter=100000
+  inside=0 logmap=15 periodicity=10
+  colors=000PIVPIWOIXOJYNJZNK_MK`MKaLLbLLcKMdKMeJMfJ\
+  NgINhINiHOjHOkGPlGPmFPnFQoEQpEQqDQrDQsCQtCQuCQvDQw\
+  DQwDQwEPwEPwEOwENwFNwFMwFMwFLwGLwGKwGJwGJwHIwHIwHH\
+  wHHwIGwIFwIFwJEwJEwJDwJCwKCwKBwKBwKAwLAwL9wL8wL8wM\
+  7wM7wM6wM6wL8wL9wKAwKAwKAwJAwJAwIAwIAwIAwHAwHAwGAw\
+  GAwGAwFAwFAwEAwEAwEAwDAwDAwCAwCAwBAwCAwDAwEAwFAwGA\
+  wHAwIAwJAwKAwLAuMAsMAqNAoOAmPAkQAiRAgSAeTCcUEaVG_W\
+  IYXKWXMUYOSZQQ_QO`QMaQKbQIcQGdQEeQCfQAfQ8fQ6gP5gP5\
+  hO5hO5hO5iN5iN5iN5jN5jO5kP5kQ5kR5lS5lT5kU4lV5lW6lX\
+  6lY8mZAm_Cm`EmaGnbIncKndMneOofQogSohUoiWpjYpk_plap\
+  mcpneqogqpipqkormnsomtqluskvujwwixyjwzjwzjwzkwzkwz\
+  kvzkvzlvzlvzlvzluzmuzmuzmuzmuzntzntzntzntzotzoszos\
+  zoszpszpszprzprzqrzqrzqrzqqzrqzrqzsrztszutzvuzwvzx\
+  wzyxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:multXYZWcompjb-min {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p4,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p5,
+q=(c^(p3-1)):
+z=(-z)^(p2)*(q)+c,
+|z| < 400 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,107 @@
+;     Date: Tue, 01 Feb 2005 12:21:04 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-02-05 (The True Beast [6])
+;       Id: <1.5.4.16.20050201122328.2aa7d0dc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 01, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image bears the name "The True Beast".  I gave it this 
+; name because it brings out the full beastly nature that was 
+; partly hidden in yesterday's image.  Today's image shows the 
+; same midget that appeared yesterday, but the midget has been 
+; sliced in a different direction, one that is totally oblique to 
+; all six perpendicular planes of the four-dimensional Julibrot.
+; 
+; In yesterday's image the spiral arms could be seen and followed 
+; as they multiplied and converged onto the midget.  In today's 
+; image the arms are still there, but they are of a different 
+; number, and they no longer converge on the midget.  Some arms 
+; have vanished entirely, leaving only traces where they almost 
+; appear.  Others have morphed into horseshoe-like shapes, while 
+; still others have become concentric closed rings.
+; 
+; I have kept the color palette and logmap from yesterday's image 
+; so that the corresponding parts can be more readily identified, 
+; but considerable stretching and skewing was necessary to restore 
+; the image to the same proportions.  To see the area when it is 
+; unstretched, go the the 'z' screen, then the 'f6' screen and 
+; reset the 'x' mag factor to 1.  Due to the skewing, the midget 
+; is some distance off the screen to the right, but it can easily 
+; be seen why stretching was necessary.
+; 
+; The rating of a 6 might be a bit overdone, but today's image is 
+; still curious, amd well worth a look.  The image may be viewed 
+; by running the attached parameter file or by downloading it, 
+; already rendered, from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The philosophy, entertaining if not enlightening, is included in 
+; the philofractal version of today's FOTD.
+; 
+; With warm sun and a temperature of 39F 3C, Monday was marred 
+; only by the soggy melting snow still covering the yard.  The 
+; cats managed over an hour on the porch and even enjoyed a short 
+; trek to the holly thicket.  When the day ended, they were happy 
+; enough so that no special treat was needed.  This morning is 
+; starting the same as Monday.  I assume the duo will have a 
+; similar day.
+; 
+; For me the work is about average, which means that the next 
+; FOTD will appear in 24 hours as scheduled.  Until then, take 
+; care, and be open minded but not too credulous.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_True_Beast { ; time=0:02:44.06--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=Slicejulibrot2 center-mag=+0.000005602\
+  47472017/+0.00000088644054031/846681.8/0.02445/\
+  171.009021891882384/-58.4065041085181846
+  params=195/2.76/81.96/-30.91/0.288136932805/0.4826\
+  45405409/0.288136932805/0.482645405409 float=y
+  maxiter=5000 inside=0 logmap=288 periodicity=10
+  colors=000SYsSXrSWqSVpSUoSTnSSmSQlTOkUMjVKiWIhXGgY\
+  Ef_CeaAdcAceAbgAaiA`kC_mEZoGYqIXrKWsMTrOSqQRpSQpUP\
+  oWOnXNnYMmZLl_KlaJkcIjeHjgHkhGkgFlfEldDmbCm`BnZAnX\
+  9kV8hT8eR8bP7_N7XL7UJ6RH6OF6LD5IB5FC5CC49D46D43D45\
+  E57F59G6AH6CI6EJ7FK7HL8JM8KN8MO9OP9QQARRATSAVTBWUB\
+  YVC_WC`XCaYEbZGbZHc_Jd`Kd`MeaNebPfbQgcSgdThdVheWif\
+  YjgZjh`kiakjclkdmlfmlgmmimminmjomjpmjqnjrojtpjuqjv\
+  rjwsjxtlxujwtivshurgtqftpdsocrmbqlapk`oj_oiYnhXmgW\
+  lfVkdUjcTjbRiaQh`Pg_OfZNfYMgXKgVJgUHhTGhREhQDiPBiN\
+  AiM8jK7jJ5jI4kG2kF1kE0gH1dJ1aM2ZO2WR3TT3QY4Na4Kf5U\
+  o5cs2mz5mz8mzBhtEcrHZqKUoNPnQLmTMkWNjZOiaPidQhgRhj\
+  SgmTgpShsTgrTfrTfqTeqUepUbpU_pUZoUUoVTnVTnVSnVSmVR\
+  mWRnWQoWQpWPqWPsXOuXOwXNxXNzXMzYMzYLzYLzYKzYKzVOzS\
+  SzQWzN_zLczPgzUkzZozcszhvzmuzmwzmvzmvzmuzmuzmtzmtz\
+  mszmszmrzmrzmrzmqzmqzmpzmpzmozmozmnzmnzmmzmmzmmzml\
+  zmlzmkzmkzmjzmjzmizmizmiz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

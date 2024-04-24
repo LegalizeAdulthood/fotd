@@ -1,0 +1,98 @@
+;     Date: Tue, 22 Feb 2005 11:52:11 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-02-05 (The Hidden Squid [7])
+;       Id: <1.5.4.16.20050222115235.2277aaa8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 22, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With a minor rush lying on the shelf beside me, and a customer 
+; coming to pick it up this afternoon, I will have to be terse in 
+; today's FOTD discussion.
+; 
+; When I saw today's image I was reminded of squid tentacles, yet 
+; at the same time, no squid body was visible, leading me to name 
+; the image "The Hidden Squid".
+; 
+; The image is part of the Julia set that corresponds to the 
+; western shoreline of the Mandelbrot fractal created by the 
+; formula (-Z)^1.5*(C^0.1)+C.
+; 
+; The rating of the image is 7, and most of this rating depends on 
+; the striking definition of the tentacles.  Almost all the effect 
+; of squid tentacles was achieved by arranging the color palette 
+; to emphasize the tentacle-like shapes.  In themselves, the 
+; underlying fractal shapes are hardly worth a rating of 5.
+; 
+; To speed up today's formula, I have made a small change in it.  
+; The change is minor, and does not affect the running of any 
+; parameter files that were created with the earlier version.
+; 
+; The render time of 12 minutes is true on my worn-out fractal 
+; machine.  On my newest unit it renders in just under 2 minutes.  
+; But regardless of the speed of the computer, a download of the 
+; image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; will likely be faster.
+; 
+; A bit of hazy sun in the afternoon and a temperature of 50F 10C 
+; gave the two fractal cats one acceptable hour in the thicket at 
+; the bottom of the yard here at Fractal Central on Monday.  When 
+; they came inside, they chased each other up and down the stairs 
+; like kittens a few times before asking for their tuna.  Today is 
+; starting cloudy, chilly and damp.  Most likely the cats will be 
+; once again mildly satisfied.
+; 
+; My day is starting in an average manner, and will most likely 
+; end in an average manner, with the next fractal appearing almost 
+; by magic in 24 hours.  Until then, take care, and how did I ever 
+; manage to keep this FOTD going for almost 8 years?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Hidden_Squid { ; time=0:12:20.72--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multXYZWcompjb-min function=ident/flip
+  passes=1 center-mag=0.332068/8.60423e-016/15.62891\
+  /1/90/3.88578058618804789e-016 params=90/90/1.5/0/\
+  1.1/0/0/0/-0.7762321652/0 float=y maxiter=6000
+  inside=255 logmap=51 periodicity=10
+  colors=000fAaiAVlBPoCItA6rBArCBpEFpGGpHKoKLoLPoNQn\
+  PUnQVlSYlU_lVbjXdjZgj_iialicnjcridoidlgdigdffdbfd_\
+  ddWddVbdSbdPadLadI_dFZcB_b7`a6a_AbYDcWFdUIeSLfPNgL\
+  QiHSgGVfEYdC_bBbaAf_AiYAlWAoVArUAuSAyQAzPAzNAzLAzP\
+  CzQGzUKzWNz_QzbUzdXzgazjdzngzpkztnzuqzytzzxzzzzzzz\
+  zzzzzzzzztzzlzrdzjWzaPzUGzLAzD7zD6zD6zD4zD4zD2zD2z\
+  D1zD1xD0tD0qD0nD0kD0gD0dA0eD0eF4gI7gKDgNGiPKiSPiUS\
+  kWWkY_kablbglfjngonjrnlupozppzptzquzqyzqzzsyzsyzty\
+  ztyzvyzvyzxwzxwzxwzywzywzzwzzuzzuzzuzzuzzuzzuwzwtz\
+  wpzynzyjzygyzdyzaxzYxzVxzSvzPvzLtzItzFtzBsz7sz4qz1\
+  qz0qz0pz0pz0sz0pz0lz0kz0gz0ey0cw0at1Zp2Xo4Ul6SiAPg\
+  BNdDKaFH_GEWICULASNAPPALQAKSAGNA7QABUAFWAIYALaAPdA\
+  SfAViAYlAanAbpAftAiuAlyAozArzAuzAyzZxzcwzhwzmwzmwz\
+  mwzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwymwymwymwymw\
+  ymwymwzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwzm\
+  wzmwzmwzmwzmwzmwzmwzmwzmw }
+
+frm:multXYZWcompjb-min {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p4,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p5, q=(p3-1):
+z=(-z)^(p2)*(c^(q))+c,
+|z| < 400 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

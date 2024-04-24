@@ -1,0 +1,89 @@
+;     Date: Tue, 15 Feb 2005 10:24:58 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-02-05 (Iterative Amusement [9])
+;       Id: <1.5.4.16.20050215102518.0d5f69a0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 15, 2005 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To add a bit of variety to today's adventure, I changed the 
+; portions of Z in the parent fractal that I have been exploring 
+; for a week.  Instead of positive portions, we now have negative 
+; portions.  This change creates an even more interesting fractal.
+; 
+; Yesterday's image turned out so well that I tried the same 
+; partial-evaporation trick again today.  I rendered the scene 
+; with the inside set to 'bof61' and the outside set to 'tdis'.  
+; The resulting image rates another 9.
+; 
+; I found today's scene in a part of the parent fractal shaped 
+; like a fan.  There are many more unusual features in this new 
+; parent fractal, which I will be exploring for a few more days 
+; before moving on to something entirely new.
+; 
+; Much of the purpose of fractals is simply amusement.  This is 
+; the reason I named today's image "Iterative Amusement".  The 
+; relatively fast render time of 3-1/2 minutes makes the image 
+; that much more amusing.  The image may be seen in even less 
+; time by downloading it from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; It rained all day Monday here at Fractal Central, keeping the 
+; fractal cats safely confined to their indoor shelf by the win-
+; dow.  They had one thrilling moment when a squirrel carelessly 
+; climbed onto the ledge outside the glass, and they both sprang 
+; to the attack.  When the squirrel saw two cats eyeing him, he 
+; took off like a bat out of you-know-where.  Today is starting 
+; cloudy, but it is milder, and promises to be far more pleasant, 
+; both for the squirrel and the dynamic duo.
+; 
+; For me, it will be a satisfactory day if I end it with no work 
+; piled up.  The philosophy is still a couple days off, but the 
+; next FOTD will appear in 24 hours.  Until then, take care, and 
+; think kindly of your amusing fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+IterativeAmusement { ; time=0:03:25.05--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.00805949912494/+1.2384635446208/1621\
+  5.65/1/165/2.53985141251966695e-009 maxiter=1000
+  float=y params=-5/-1.26/-0.5/-12.6/0/1000000000
+  inside=bof61 outside=tdis periodicity=10
+  colors=000t4gr5fp5dn6cl7aj8`i8Zg9XeAWcBUaBT_CRYDQW\
+  EOVENTKXRQeQVnPUkPTiOTfOSdORbNR_NQYNPWMPTMORMOPLMN\
+  KKLJIJIHIHFGGDEGCDFABE89D78C56B34B23C54D74E94GC4GE\
+  4IG4KI4NL4PN4RP4TR4WU4YW4_Y4`_4bb4cd4df4dh42Gx3Iv4\
+  Jt5Ks6Lq6Mp7Nn8Ol9Pk9QiARhBSfCUdDVcDWaEX`FYZGZXG_W\
+  H`UIaTJbRJcQNaUQ`YT_aXZe_XhbWlfVpiUtlTwkUxjVxiWxhX\
+  xgYxfYxeZxd_xc`xbaxabx`bx_cxZdxYexXfxWgxVgxUhxTixS\
+  jxRkxQlxQlxThwWdwZ`waYwdUwfQviMvlJvoFvrBvt8vsBtrEs\
+  qHrpKqpNpoQonTnmWmlZll`kkcjjfiiihhlghofgrefudexcez\
+  bcxaawa`uaZtaYr`Wq`Vo`Tn`Rl_Qk_Oi_Nh_LfZKeZIcZHbZI\
+  aYJaXKaWLaVMaUN`TO`SP`RQ`QR`PS`OT_NU_MV_LW_KX_JYZI\
+  ZZH_ZG`ZFaZEbZE__HY`KWaNTbQRcTPkzNlwKlyImzGmzEnxBn\
+  w9nv7mu5lt8krAjqDioFhnHglKfkMeiPdhRcfTbeWacY`b__a`\
+  ZZ`YX`YV`_T``Q`bO`cM`eK`gH`hF`jD`kB`m8`n6`p4`q2dp5\
+  go8joBnnDqnGtmJwmLukMtjMsiMrhMpgMofNneNmdNkcNjbNi`\
+  Oh_OfZOeYOdXOr2hu2jx2kv3i }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
