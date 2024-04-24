@@ -1,0 +1,100 @@
+;     Date: Fri, 17 Sep 2010 23:11:05 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-09-10 (Caught in Flight [6])
+;       Id: <1.5.4.16.20100917231112.10afa698@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 18, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in virtually the same parent fractal that 
+; held the image of September 16.  I say virtually the same 
+; fractal because I have refined the real(p2) parameter so that 
+; the parent fractal now has perfect X-axis symmetry rather than 
+; almost perfect symmetry.  The refinement makes no difference in 
+; the surface appearance of the parent, but it gives a more satis-
+; factory base to today's image, (whatever that means).  The scene 
+; of today's fractal lies in a spurious valley of the large mini-
+; brot on the northern of the two main spikes of the parent.
+; 
+; The image rates only a 6.  The colors lack a certain harmony 
+; that could raise it to a rating of 7 or 8.  And the sharply 
+; angular shapes themselves have a vaguely threatening appearance.
+; 
+; The name "Caught in Flight" was the first thing that came to 
+; mind when I stopped trying to think of a name.  It has no 
+; rational connection to the image.
+; 
+; The calculation time of 10-3/4 minutes is a bit long for today's 
+; image.  I suggest a trip to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; to view the finished image.
+; 
+; The rain ended Thursday night, but dark lumpy clouds hung on all 
+; day Friday here at Fractal Central.  The temperature of 64F 18C 
+; felt a bit chilly, though it was not all that unpleasant.  The 
+; fractal cats spent the day checking for unwanted stray cats in 
+; the vicinity.
+; 
+; My day was appropriately busy for a Friday.  With the garden 
+; well watered, FL took it easy.  Unless an unexpected antiquing 
+; trip comes up on Saturday, the next FOTD will be posted in 24 
+; hours.  Until whenever, take care, and take it easy.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Caught_in_Flight { ; time=0:10:45.37-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident inside=0
+  center-mag=-1.751081846385343/+0.0208545867075613/\
+  2.07e+011/1/70/0 params=2.003/0/-0.00941066196782/0
+  float=y maxiter=12500 logmap=1111 mathtolerance=0/1
+  colors=000KZmKZmKZlKZkK_jK`iKahKbgKcfKdeLedMfcNgbO\
+  haPi`PhYOgVOgTOfQNeNNdKNdHMcEMbBMb9NcANdBOdCOeDPfE\
+  PfFQgGQgHRhIRiJSiKSjLTkMTkNUlOUlPTfTS`WSVZRPaQJdQD\
+  gOHdNKaLOZKRWIUTHYQF`NEcKCgHBjE9mB8q86t55w3WqHvlUu\
+  kSujQtiOtiMshKsgIrgGrfEqeCqeBnbCk`ChZCfXCcVC`TCZRC\
+  WPCTNCRLCOJCLHCJFCQJIWNOaQUgU_mXes`kycqnaid`bV_WKZ\
+  PAYI0XB1VA1U92S82R83P73O64M64L54J45F45A365260970G7\
+  0J72N65Q56W45`44f9EfEMfJWhOdjTll_rpgtzjzzeuzapzZkv\
+  ZbrZZmZVhZRcZNZZJUZFPZBKZ8FWFATM9QTAN_BKfCHmDEsDFq\
+  CGoCHnCIlCuwhcrcUUUMfCNdBOcBPaBQ`BRZBSYBTWBTVBANZD\
+  dbGgfJjjLnnOqrRtvTwzVLvXtsYso_rlaqhbpezz0fmZglWikS\
+  kjPliMmgLneKocJoaIp_HqYGqXGrVFsTEtRDuPCvNBwMAxOAyQ\
+  9zS9zU9zW9zY9z_9za9zc9zc9zc9zc9zc9ze9zgCziFzkIzmLz\
+  mOzmRzoTzqWztZzwazzdzzgzzjzzlzzmzzmzzmzzmzzmzzmzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

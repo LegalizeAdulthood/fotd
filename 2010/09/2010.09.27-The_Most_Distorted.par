@@ -1,0 +1,99 @@
+;     Date: Mon, 27 Sep 2010 22:27:54 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-09-10 (The Most Distorted [?])
+;       Id: <1.5.4.16.20100927222750.155f4988@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 28, 2010 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It's rare that a parent fractal earns FOTD status, but today's 
+; parent is just curious enough to do it.  Several pseudo-mini-
+; brots have been posted on the list recently.  Most of these 
+; were simply minibrots that were calculated with a non-critical 
+; initial value.  Today's Mandebrot fractal is fully critical 
+; however, but its Mandelbrot-set status is questionable.
+; 
+; There comes a point where a distorted Mandelbrot set reaches a 
+; degree of distortion where it can no longer honestly be called a 
+; Mandelbrot set, and I think today's Mandelbrot set has gone 
+; beyond that point, and morphed into some other kind of fractal.
+; 
+; East Valley is the only instantly recognizable feature.  Believe 
+; it or not, Seahorse Valley is at the southern edge of the main 
+; bay, while the northern period-20 bud is as large as the main 
+; period-2 bud, which is cut from the main bay by Seahorse Valley.
+; 
+; There is little more to be said about the image, except that, 
+; since it is a parent fractal, it obviously holds countless 
+; smaller scenes.  One of these will be posted as tomorrow's FOTD.
+; 
+; Unable to decide on a rating for a parent fractal, I let the 
+; image go with a puzzling rating of a question mark.
+; 
+; The name "The Most Distorted" is a bit of an exaggeration, since 
+; the distortion of today's image may be increased beyond limit by 
+; incrementally reducing the imag(p1) parameter.
+; 
+; The calculation time of 10-3/4 seconds is no mistake.  The image 
+; really is that fast.  The image may also be seen by viewing it 
+; already calculated on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and frequent showers characterized Monday here at 
+; Fractal Central.  The temperature of 73F 23C was mild enough 
+; however to keep things quite comfortable.
+; 
+; The fractal cats passed the day alternating between sleeping and 
+; watching for unwanted cats.  My day was uneventful.  The next 
+; FOTD will be posted in 24 hours.  Until then, take care, and 
+; will the end of the world make history?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Most_Distorted { ; time=0:00:10.46-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=-0.15/1.866/0.71/1/8/0 params=1/1.05/-1\
+  /-1.03/0/0/0/0 maxiter=1500 inside=0 logmap=yes
+  colors=000XN`XN`WO_VO_VOZUOZUOZTOYSPYSPXRPXRPXQPWQ\
+  PXQQWPRVORVNRUNRUMRTMRTLRTKRSKRSJRRJRRIRRHSQHSQGTP\
+  GTPFTPFTOETODTNDTNCTNCTMBTMBTMCULDULEVLFVLFWLGWLHX\
+  KIXKJYKJYKKYKLZKMZJM_JN_JO`JP`JQaJQaIRaISbITbIUcIU\
+  cIVdHWdHXeHXeHYeHZfH_fH`gG`gGahGbhGciGhiGmiFrjFvjF\
+  zkFzlGzmIzmKzmMzmOzmQzmSzmUzmWzmYzm_zmazmczmdmmzmm\
+  zmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmizmizm\
+  jzmjzmjzmjzmjzmkzmkzmkzmkzmkzmlzmlzmlzmlzWmzXmzXmz\
+  YmzZmzZnz_nz_nz`nzanzaozbozcozcozdozepzezQfzQgzPgz\
+  OhzOizNizMjzLkzLkzKlzJmzJmzInzHozHozGzzFzzFzzGzzGz\
+  zGzzGzzGzzGzzHzzHzzHzzHzzHzzHzzIzzIzzIzzIzzIzzIzzJ\
+  zzJzzJzzJzzJzzJzzIzzJzzKzzLzzMzzNQzOQzPRzQRzRRzSRz\
+  TSzUSzVSzWSzWTzXTzYTzZTz_Uz`UzaUzbUzcVzdVzeVzfVzgW\
+  zhWzhWziWzjXzkXzlXzmXznYzoYzpYzqYzrZzsZztZzuZzuZzt\
+  ZztZztZztZzsZzsZzsZzsZzrZzrZzrZzrZzqZzqZzqZzqZzpZz\
+  pZzpZzpZzoZzoZzoZzoZznZzn }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

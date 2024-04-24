@@ -1,0 +1,96 @@
+;     Date: Thu, 16 Sep 2010 09:30:13 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-09-10 (Land of Strangeness [6])
+;       Id: <1.5.4.16.20100916093015.11170b0c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 16, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates only a 6, which is un-exceptional, but it's 
+; still a rather interesting one, filled with various unexpected 
+; features and assorted other minor delights.
+; 
+; The parent fractal is a Mandelbrot set with two parallel main 
+; spikes.  Today's scene lies in the chaos between the spikes just 
+; east of the two large minibrots.
+; 
+; The curious value of the real(p2) parameter is critical.  The 
+; parent fractal has perfect X-axis symmetry only at this strange 
+; value, which is the reason I named the image "Land of 
+; Strangeness".
+; 
+; The calculation time of 12-1/4 minutes is slower than I would 
+; like.  Rendering the image with passes=g cuts the calculation time 
+; significantly, but it also misses much of the finer detail.
+; 
+; The way to both save time and see all the detail is to view the 
+; finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Wednesday was totally perfect here at Fractal Central, with 
+; Kodachrome blue skies, gentle breezes and a temperature of 73F 
+; 23C.  The fractal cats spent the morning watching for intruding 
+; cats, and the afternoon, sleeping.  My day was comfortably busy. 
+; FL spent most of the day with her flowers.  The next FOTD will 
+; be posted in 24 hours.  Until then, take care, and now that the 
+; old Kodachrome film is gone, the skies will never again appear 
+; so blue.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Land_of_Strangenss { ; time=0:12:16.77-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.751081879132979/+0.02085462071170922\
+  /7.33933e+010/1/35/0 params=2.003/0/-0.00941067/0
+  float=y maxiter=8000 inside=0 logmap=1050
+  mathtolerance=0.05/1
+  colors=000KKKIjcRc_ZWWgPSoHOwAKs9Jp8Im8Hj7Gf7Fc6E`\
+  6DY5CU4BR4AO39L38H27E26B15815A17B19D1BE1DG1FH1HJ1J\
+  K1LM1NN1PP1RQ1TR1VR9SRGQRONRVLUUOWUQYTS_TVaTXdSZfS\
+  ahRcjRelRgeVZZYQT`HUYKUVMVTPVQRWOUWLWXJYXG`YDbYBeZ\
+  8gZ6j_3l_1n`2o`2oa2pa2pb2qb2qb2qc2rc2rd2sd2sd2sa5n\
+  Z8jWAfTDbQFZNIUKKQHNMEPIBSE8UA9TB9SCARCAQDBPDBOECN\
+  ECMFCMFAMM8MT6M_5Me7LY8KPAJHCI8LVrJRdHORFLD_p0Wj0S\
+  d0OZ0KT0GN0RMKKKAPGRLHIHI9XpjUkcRfXOaQLXKISDFN6tqH\
+  lkEeeBZ_8RU5KO21Nq3Mh5L_7KR9JIBI9qKUhJO`JItmcrjcnf\
+  `hdWVbUMO8BWbCUYCSTCQOCPJDNEDL9zz4zzMzzIzxEzqBnj7U\
+  c3OCbIFJzOCsNAmM9gL7aL6VK4PJ3JI1W1wS4mP7cMAUJDKGGA\
+  mP6mO5cI4YM3SL2NK1IJ0sYUYQFvVHpTEjRCdQA_O8UM6OL4IJ\
+  2NM3LL2KL2JK1IK1GJ1FJ0EI0olxhfmbacWXUQSKJNACQWUUUF\
+  cSaVVTzKLzAkzIUz9rznlzffz_`zzzzLzzEzz7zz`zzOzzCzzS\
+  zzLzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

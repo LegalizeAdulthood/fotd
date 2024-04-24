@@ -1,0 +1,98 @@
+;     Date: Tue, 07 Sep 2010 22:30:12 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-09-10 (No Warpage Here [8])
+;       Id: <1.5.4.16.20100907223015.108fabf6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 08, 2010 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the Seahorse Valley area of the 
+; HyperMandelbrot set.  The Hypermandelbrot set consists of two 
+; overlapping classic M-sets, which coincide perfectly as long as 
+; all parameters are set to zero.  When the parameters are changed 
+; however, the sets become offset and begin covering each other.  
+; When different parts of the two sets occupy the same coordi-
+; nates, the part with the lesser iteration count always prevails. 
+; This gives some interesting effects, as today's image shows.
+; 
+; With the imag(p4) parameter in the formula set to 0.00000001, 
+; the two sets are offset to only a slight degree, but the image 
+; magnitude of over 10,000,000 is so great that the slight offset 
+; has a large effect.  The two overlapping minibrots, which are 
+; actually the same minibrot appearing twice, have obscured large 
+; parts of themselves.  The surrounding patterns also suffer with 
+; this identity mix-up, but everywhere, the parts with the least 
+; iteration count always prevail.
+; 
+; I named the image "No Warpage Here".  When I first saw the 
+; image, it appeared skewed, but when I checked, I found it to be 
+; perfectly straight.  The name reflects the discovery.
+; 
+; The rating of an 8 is well above the average 5 or 6.
+; 
+; The calculation time of 6-1/2 minutes is a bit on the dragging 
+; side.  For relief I suggest viewing the finished image on the 
+; FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Warm weather staged a comeback here at Fractal Central on Tues-
+; day, as the temperature reached a high of 90F 32C.  When it got 
+; a little too warm for the fractal cats' comfort, they staged a 
+; return to the cool tile of the kitchen floor.  My day was as 
+; close to normal as is possible, but FL is starting to worry 
+; about the effect the lack of rain is having on her gardens.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and as one zombie said to the other, "look alive!"
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+No_Warpage_Here { ; time=0:06:28.69-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=HyperMandelbrot2 passes=1 float=y
+  center-mag=-0.7426122288127712/+0.163791441788755/\
+  1.184834e+007/1/-80/0 params=0/0/0/0/0/0/0/1e-008
+  maxiter=6400 inside=0 logmap=-1090 periodicity=0
+  colors=0000000zw0yw0xw0wy0vx0uw0tv0su0rt0qs0pr0oq0\
+  np0mo0ln0km0jl0ik0hj0gi0fh1eg2df3ce4bd4ac4`a4_`4ZZ\
+  5YY5WW5TV5RT5PS6NQ6KP6IN6HM6FL9GNCHOEJQHKRJMSMPUOT\
+  VRWXTZYW`ZYc``eacgcfhdiielgcofare`wdZzcXzbWzaUw`Sw\
+  _RvZPuYOtWPsUPrSPqQPpOPoMPnKPmIPhGPcEPcCPcAQcAQgCQ\
+  hEQiGQjIQkKRlMRlORmQRnSRnURmWVlYYlZ`m_dm_gm`im`kma\
+  nlapkbrjbtjcwicyhdzhdzbhzXkzRnzLqzFtzMkzSczYVHcNMi\
+  FQhHVgJZfMceOhdRlcTqbVucWscWrcXqcXpcYncYmcZlcZkd_i\
+  d_hd`gd`fdaddacdbbdbaec_edYfeUgeSgfQhfOhgMigKihIjh\
+  GjiERCoN3rO9pOFnPLlPRjPWhQafQgdRmbRs`vQKRxZWoT`gNe\
+  _IjSCoK6tC1qD4nD7kDAhDCeDFbDI_DLiWdcRdZMdTHdODdUUX\
+  _jPdzIeyGexEfxDfwBgvAgv8hu7ht5it4is2is1jp4jn6kk8ki\
+  AlfCldElaHm_JmXLnVNnSPnQRgXY`ccUiiXfg_debhcemahr_k\
+  vYnzWqzUtzSwzRezVOzZNz`NzbMzdMzfLzhLzjLzlPzkUzkZzj\
+  czjhzjmzfrzbvzZzzVzzRzzNzzJzzFzzBzz7zz4zz7zzCzzDzz\
+  DzzDzzDzzDzzDzzEzzEzzEzzE }
+
+frm:HyperMandelbrot2 {; periodicity must be turned off
+a=(p1),b=(p2):
+q=sqr(a)-sqr(b)+pixel,
+b=(p3+2)*a*b+p4,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

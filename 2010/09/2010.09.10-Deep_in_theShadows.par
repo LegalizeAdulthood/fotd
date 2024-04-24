@@ -1,0 +1,87 @@
+;     Date: Fri, 10 Sep 2010 22:43:35 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-09-10 (Deep in the Shadows [6])
+;       Id: <1.5.4.16.20100910224333.116f012a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 11, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's unusually somber FOTD lies in a valley of the shapeless 
+; parent fractal that results when the expression Z^(1.8)+C is 
+; iterated 21 steps up the complex logarithmic hyperladder.
+; 
+; The banded effect was achieved by rendering the scene with the 
+; outside set to 'tdis'.  The name "Deep in the Shadows" refers to 
+; the shadowy effect of the entire image.
+; 
+; The calculation time of 4-1/4 minutes is a bit slow, so I 
+; suggest visiting the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and viewing the finished image there.
+; 
+; Clouds and a pleasantly cool temperature of 70F 21C prevailed 
+; here at Fractal Central on Friday.  The fractal cats slept 
+; through most of it.
+; 
+; My day was uneventful; FL was a bit agitated about current 
+; events, but I did not get involved.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and keep up with the 
+; foolishness.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Deep_in_theShadows { ; time=0:04:15.07-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.1472820697533/+0.181840866071/5.5050\
+  14e+008/1/-75/0 params=1.8/0/21/0 float=y logmap=45
+  maxiter=3200 inside=255 outside=tdis periodicity=6
+  colors=00090FA1KB3OC5TD7YE9`FBcGDfIFiKGlMHoSInYGnc\
+  EnhCnWAzs8zdBziEzD5ID6JE6JE6KE6KE7KF7LF7LF7MF8MF8M\
+  G8NG8NG9OG9OH9OH9PHAPHAQHAQIAQIARIBRIBSJBSJBSJCTJC\
+  TKCUKCUKDUKDVKDVLDWLEWLEWLEXMEXMFYMFYMFYMFZNGZNG_N\
+  G_NG_OH`OH`OHaOHaNG`OHaPHaPHaQHaQHaRHaSHaSHaTHaTHb\
+  UHbUHbVHbWHbWHbXHbXIbYIbYIcZIc_Ic_Ic`Ic`IcaIcbIcbI\
+  ccIdcIddIddIdeIdfJdfJdgJdgJdhJehJeiJejJejJekJekJel\
+  JemJemJfnJfnJfoKfoKfpKfqKfqKfrKfrKgsKgsKgtKguKguKg\
+  vKgvKgwKgwKgvLfvLevLduLcuLbuLatL`tL_tLZsLYsLXsLXsL\
+  WrLVrLUrLTqLSqLRqLQpLPpLOpLNoLMoLMoLLoLKnLJnLInLHm\
+  LGmLFmLElLDlLClLBlLBmMCmMDmNDmNEmNFnOFnOGnOGnPHnPI\
+  nPIoQJoQJoRKoRLoRLpSMpSMpSNpTOpTOpTPqUPqUQqVRqVRqV\
+  SrWSrWTrWUrXUrXVrXVpWXnWZlW`jWbhVdfVfdVhbVjaVkbUjb\
+  UjbUjcUjcUicTidTidTidTheTheSheShfSgfSgfSggSggRfgRf\
+  hRfhRfhRfiQeiQeiQejQejQdjPdkPdkPdkPckPclPclOclObmO\
+  bmObmObnNanNanNaoNaoNamsz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

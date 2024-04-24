@@ -1,0 +1,97 @@
+;     Date: Wed, 29 Sep 2010 23:31:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-09-10 (Something to Watch [9])
+;       Id: <1.5.4.16.20100929233146.116f8b1a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 30, 2010 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I found today's image on the first dive into the parent fractal, 
+; which was unusually good fractal luck.  Much to my surprise, the 
+; image I turned up rates a lofty 9.
+; 
+; The generating expression subtracts a tiny part of Z^100 from 
+; just over 1 part of Z^2 then adds (1/C) to create a parent 
+; fractal that is impossible to describe in words, but consists 
+; mainly of a wild mixture of holes and outside stuff.
+; 
+; In today's image the holes, which were brought to life with the 
+; 'bof60' inside fill, are reddish, while the outside stuff is 
+; bluish.  The inside of the minibrot is the dead black color in 
+; register 077, with assorted other brilliant inside and outside 
+; stuff surrounding it.
+; 
+; The name "Something to Watch" would have been more appropriate 
+; if the FOTD had been a changing animation.  As it is, the viewer 
+; will have to watch a stationary scene.
+; 
+; The rating of a 9 seems appropriate.  The image actually is 
+; quite good.
+; 
+; The calculation time of 1-3/4 minutes is very reasonable consid-
+; ering that an image with a rating of a 9 will be calculated in 
+; that interval.
+; 
+; And as always, the finished image is posted for instant pleasure 
+; on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Wednesday here at Fractal Central featured thickening clouds, 
+; with a forecast of torrential rain on Thursday.  The temperature 
+; of 70F 21C was quite pleasant.  The fractal cats spent the day 
+; watching for stray cats in the area.  I spent the day wondering 
+; how much water might get into the fractal basement if the fore-
+; cast 6-in 15-cm of rain actually falls.  The next FOTD is due to 
+; be posted in 24 hours.  If nothing goes wrong, it might actually 
+; appear.  Until next time, take care, and be prepared.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Something_to_Watch { ; time=0:01:45.56-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  float=y center-mag=-16.31605237523/-0.00276335686/\
+  1.5e+008/1/-33/0 params=1.02/2/-0.000102/100/0/0/\
+  0/0 maxiter=1500 inside=bof60 periodicity=6
+  colors=000q9Lr4Nr0S`70RE1XL2aR2fX2lc2qi2vo2sm3qk4o\
+  j5mh5kg6ie7fc8db8b`9`_AZYBXXBUTGSPLPMPNIULFYNKWOOV\
+  PTTQXSSaRTePUjOVnNTrTSvZRycTxeVwgWwiYvkZvm`uobtqct\
+  sesufswhryirzcpyYoySnxNmxHlwBkw6jwBhrFfmJdiNbdR`_V\
+  ZWZYRbWNfUIjSDnQ9rO4vN0uR2uV4tZ6tb8oIHpDJ000JRsIRw\
+  OMmTHdZCWc7Nh3EgGSfTeeesh_kjUdlOXoIQqCIs6Bu14r5Bo9\
+  HlDOjHUiISiJQiJPiKNhLLhLKhMIhMHePNcSSaVXZYaX`fVbko\
+  PjpMfqJcrG`sMZsRYtWXt`WPFBVCE_AGd7Ji5Ln3NoAPpGRpNT\
+  qTUrZWreYsk_sq`roZrmXqkVqjUphSpfQpePgWQZMRQCSI2TG9\
+  XFG_ENcDUfC`jBgmAnpFkpJip0Ea0E`0E_0EZ0EY0CV0AR08N0\
+  6J04F00B007003000000NbdN__NYUOVOOSJOPDON8LPDIQHGSL\
+  DTQBVU8WY6Xa7WY7WU8WR8WN9WJ9WGAWCAW9H_CNbETeHZhJdk\
+  MjnOpqRvtTleQcRNZOKULIPIFKFDFCA008HI9MQ9SY9Xe9bm9z\
+  z9ao8Xk8Rf8Mb8HZ8BU86Q81M85DF94LQJHeXEbUJ`SOZQSWOX\
+  UMaSKeTHaUFYVDUWBQX8MY6IZ4EZ2BXGKWUTVf`gQUtAOrHLpO\
+  IoUFm`Clf96jM4wAFfRPQfNRk }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

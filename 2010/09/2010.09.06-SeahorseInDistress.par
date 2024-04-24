@@ -1,0 +1,111 @@
+;     Date: Mon, 06 Sep 2010 22:30:36 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-09-10 (Seahorse in Distress [7])
+;       Id: <1.5.4.16.20100906223037.12d76e74@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 07, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's diversion takes us to a very familiar place -- Seahorse 
+; Valley of the Mandelbrot set.  But today we see it in a new 
+; light.  The view is oriented halfway between the Oblate and 
+; Rectangular directions, and also rotated one degree from the 
+; normal.
+; 
+; At this strange angle only part of the M-set can be seen, 
+; stretched over 50 times in the horizontal direction.  In today's 
+; image I unstretched the Mandelbrot part far enough to leave it 
+; only about 16 times its natural width.
+; 
+; The remnants of the Mandelbrot aspect of Seahorse Valley are 
+; found near the center of the frame, colored baby pink, much as a 
+; newly-born seahorse might be.  The rest of the pink stuff is the 
+; distorted M-set, with the western part of the main bay on the 
+; right and the eastern part of the large period-2 bud on the 
+; left.  The foreground stuff is lesser-iteration stuff, which I 
+; inaccurately call Julia stuff, since it is found in all planes, 
+; including the Mandelbrot.
+; 
+; The rating of a 7 seems about right.  I put some extra effort 
+; into the coloring, though not as much as the image could use.
+; 
+; The name "Seahorse in Distress" refers to the pink Mandelbrot 
+; part of the image, which, even after some unsquashing, still 
+; looks quite flattened.
+; 
+; The calculation time of 1-3/4 minutes is fast by any standards.  
+; The finished image is posted on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; I was a bit relieved when FL arrived back from Havre de Grace 
+; safe and unharmed just before noon on Monday, though I had to 
+; listen to a half-hour of tales of the big 2-day wedding festival.
+; 
+; The Monday weather conditions here at FC were near perfect, with 
+; lots of sun, a temperature of 81F 27C and low humidity.  The 
+; fractal cats must have been worried about FL's absence.  When 
+; they heard her car pull into the driveway, they leaped up and 
+; ran to the door to meet her.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and listen to the music of the spheres.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SeahorseInDistress { ; time=0:01:42.16-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 float=y
+  center-mag=0/0.002/2.9/0.3805/90/0 params=22/89/0/\
+  89/-0.75/0/0/0/2/0 maxiter=5000 inside=0 logmap=yes
+  symmetry=none periodicity=6
+  colors=000AVfAUeAQdAQcAQbAQaBP`CO_DNZEMYGLXIKWKJUM\
+  ISOGQQGMSEIXCDZA9a75c41e52f62g73h83i93k94lA4mB4nC5\
+  oD5qD6rE6sF6tG7uH7vH7wK8wN8wQ8wT8wW8xZ8xa8xd8xg8xj\
+  8wiCviFuiJthMshQrhTqgXqg_pgboffnfimfmlepketjewjezk\
+  fwkgukgrkhpkhmkikkjhkjfkkckkalh_mfYodWqaUr_TtXRvTP\
+  wUPwVPxWPwXQvYSuZUsZWpZYmZ_jZagZce_ec`gaai__kcZzcb\
+  mcXzc`mcVzcZmcUzcZmcUzcZmcUzcZmcUzcZmcUzcZmcUzeZmg\
+  UziZmkUzmZmmUzmZmmUzmZmmUzmZmmUzmZmmUzmZmmUzmZmmUz\
+  mZmmUzmZmmUzmZmmUzmZmmUzmZmmUzmZmmUzmZmrKzqUmrKzrU\
+  mrKzrZmuKzuZmuKzuZmwKzwZmwKzwUmzPzzUmzPzzcmzPzzcmz\
+  PzzcmzPzzcmzPzzcmzPzzcmzPzzcmzPzzcmzZmzcmzZmzcmzZm\
+  zcmzZmzcmzZmzcmzZmzcmzZmzcmz_nzenzezzezzezzezzezze\
+  zzezzezzezzezzezzezzezzezzezzezzhzzhzzhzzhzzhzzhzz\
+  hzzhzzhzzhzzhzzhzzhzzhzzhzzhzzmzzmzzmzzmzzmzzmzzmz\
+  zmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzzmzzmz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

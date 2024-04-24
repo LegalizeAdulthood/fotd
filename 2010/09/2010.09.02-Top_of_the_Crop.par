@@ -1,0 +1,93 @@
+;     Date: Thu, 02 Sep 2010 23:38:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-09-10 (Top of the Crop [6])
+;       Id: <1.5.4.16.20100902233822.10d742c4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 03, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to a lack of time, today's image shows a lack of attention, 
+; which holds it to a rating of an unimpressive 6.  To create the 
+; image I combined 1/2 negative part of Z^(-4.5) with 1-1/2 
+; negative parts of Z^(-1.5) and added (1/C).
+; 
+; The terraced effect was achieved by rendering the image with the 
+; inside set to 'tdis'.  The name "Top of the Crop" is a bit mis-
+; leading.  Actually, the image is the top of nothing.
+; 
+; The calculation time of 2-5/6 minutes is reasonable, but even 
+; this brief wait may be avoided by viewing the already-calculated 
+; image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; As for that photograph of the tattooed woman on the web site, I 
+; don't think the photo is faked.  The foreshortening where the 
+; fractal wraps around the woman's sides would be difficult to 
+; pull off this convincingly.  Most likely the fractal is some 
+; kind of dye transfer, and the woman and photographer planned 
+; the picture together.  The effect would have been more convin-
+; cing if they had eliminated the iteration bands.
+; 
+; Far too much heat filled the air here at Fractal Central on 
+; Thursday.  The temperature of 97F 36C was made bearable only by 
+; the relatively low humidity.  The fractal cats must have agreed, 
+; for they clung to the cool kitchen floor like flies to flypaper.
+; 
+; My day was busier than expected, but things should slow to a 
+; more reasonable pace on Friday.  The next FOTD will be posted in 
+; 24 hours.  Until then, take care, and to be a reasonable person, 
+; one must have faith that the things observed by the five senses 
+; are the ultimate reality.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Top_of_the_Crop { ; time=0:02:50.05-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.9696532311581735/+2.282990570495556/\
+  7.206449e+011/1/151/0 params=-0.5/-4.5/-1.5/-1.5/0\
+  /0/0/0 float=y maxiter=1600 inside=0 outside=tdis
+  periodicity=0 mathtolerance=0.05/1
+  colors=000JBWJBYJB_EBZJBYJBYJBXJBXJBWJBVJAUJ9SJ8RI\
+  7PH6LG5JD4EB5BD6CD7EE8HG9JI9MKBOMDPOFQPIQQLRRORSQS\
+  TRUSSXSTYSUZSV_SW`SWaSXbSXcTXdSWeSWfSVgKK`A0LzZ6zP\
+  8vK9rHAqFBqACr5Ew0Fw0Gw0Hw0Iw0Kw0Lm0Mc0NY0OW0QU0RS\
+  0SQ0TP0UzzRzjzzzczjzzjzzzczjzzzGzjzzzcz`Gz`Gv`HvjF\
+  u`FujFt`FtjFt`FsRFsQFrPIrOIqNIqMJpLJpKJoJJoIJoHJpG\
+  MpGOpFRqFTqEWqEYrD`rDbrCesCgsBjsBltAotAqtAssClrEeq\
+  FZpHSoJLoKElJHjJJhJLfJNdIPbIR`ITZIVWHYUH_SHaQHcOGe\
+  MGgKGiIGkGGmJFhMEcOEZRDVTDQWCLZBH`BCcA7eA3_E7UHBOK\
+  EINIDQLEUIEYFE`DEdAEh8Ek5Eo3Es0Ev0Gt0Is0Jq1Lp2Mo3O\
+  m3Pl4Rk5Si6Uh7Vg7Xe8Zd9_bAaaBb`CdZCeYDgXEhVFjUGkTG\
+  mWHnYHp_IqaIscJteJvgKwiKykLzmLzoMzqMzsMzpNymOvjPtg\
+  QqdRoaSlZTjWUgTUeQVbNW`KXYHYWEZTB_R8`O5aM3aP4bS5cV\
+  6dX7eYGdYOdYWdYcd_dd`edaedbfdcgddgdehdfidgidhjdjkd\
+  kkdlldmmdnmdondpodqodrpdsqdtqdshZr_UrSOqJJpADp28q6\
+  Br9DrDFsGIsKKtNMjBZjBakBc }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

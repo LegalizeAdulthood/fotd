@@ -1,0 +1,115 @@
+;     Date: Thu, 30 Sep 2010 23:30:25 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-10-10 (The Lost Elephants [No Rating])
+;       Id: <1.5.4.16.20100930233029.14af6b30@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 01, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; While reading Mike's description of his Elephant Valley 3-D 
+; animation, I noticed that he saw no elephants in the area.  In 
+; today's image the lost elephants have been found.
+; 
+; The image is a blow-up of a small section of the FOTD image for 
+; Sep 27.  And it is filled with elephants.  True, the elephants 
+; appear quite different from the standard ones in East Valley of 
+; the M-set, but they are definitely there.
+; 
+; The most recognizable elephants lie around the upper arch of the 
+; large open area.  They appear to be arising as hollow outlines 
+; from the depths on the left, arching over the open area, giving 
+; a mighty trumpet, and then diving back into the depths on the 
+; right.
+; 
+; But turn the image upside down.  There are more elephants hiding 
+; in the 'outside' stuff below the open area.  They are rather 
+; distorted, but unlike the upper elephants, they are filled with 
+; much detail.
+; 
+; Since the image is a near repeat of a recent image, and I reused 
+; the same color palette, I could give today's image no rating.
+; 
+; I raised the maxiter to 32767 to better define the narrow high-
+; iteration stripe across the center of the scene.
+; 
+; The name "The Lost Elephants" is a bit misleading.  Actually, 
+; the elephants have been found.
+; 
+; The calculation time of 3-1/4 minutes may be more than cut in 
+; half by rendering the scene with passes=g, but some smaller 
+; detail will be lost.  Rendering with passes=1 gives the best 
+; result, but doubles the calculation time.  The calculation task 
+; may be totally avoided by viewing the finished image on the FOTD 
+; web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Torrential rain came in squally bursts here at Fractal Central 
+; on Thursday, accompanied by gusty south winds and a surprisingly 
+; warm temperature of 77F 25C.  The wind caused an hour-long power 
+; outage in the late afternoon, but the work was already finished 
+; and little inconvenience was felt.  The fractal cats never 
+; noticed that the power went out.  The fractal basement took on 
+; surprisingly little water considering the approximately 4-in 
+; 10-cm of rain that fell up to 7pm.  My day was spent waiting to 
+; bail out the basement, but no bailing was needed.  The next FOTD 
+; will be posted in 24 hours.  Until then, take care, and think 
+; positively negative.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Lost_Elephants { ; time=0:03:14.93-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t maxiter=32767
+  center-mag=-0.011413986/+0.163729391/273/0.1226/\
+  -90/60.1 params=90/0/0/90/0.28/0/0.5/0/2/0 float=y
+  inside=0 logmap=10 periodicity=6
+  colors=000kpThpVeoWcmYak__iaYgeWeiUdiRchSbhQakObnM\
+  cqKctIcwHczDdzAfz6jz3kz2mz2mz2mz2nz2nz1oz1qz1sz1qz\
+  1oz2nz2mz2lz2kz3jz3iS3hU3gW4fY4e_4da4cc5be5ag5`i5_\
+  k1Xm5_l9alDdkHfkLijPkjTniVoiWpiOkUGfEHeDIeDJdDKdDL\
+  dDMcDNcDNcDObDPbDQbDRaDSaDT`DT`DU`DV_DW_DX_DYZDZZD\
+  zuDzuGzuIzuLzuNzuQzmSzmVzmXzm_zmazmdTMzTLzSKzSJzRI\
+  zRHzRGzTHzzI0zJ0zK0zL0zM0zN0zN0zO0zP0dQzfRzgSzhTzi\
+  QziTzcWzYYzS`zMczGezAhz8iz5jz9izCizFizIizLizPizSiz\
+  VizYiz`izehzcizbjzakz`lzZmzYnzXozWpzVqzTrzSszRtzQu\
+  zPvzNwzMxzLyzKzzJzzLzzMzzNzzPzrQzzRzzQzzSzzTzzUzzV\
+  zzWzzXzzZzz_zz`zzazzbzzczzdzzatzZozWizTdzQZzNUzKOz\
+  IJzJLzKMzLOzMPzNRzOSzPUzPVzQWzRYzSZzT`zUazVczWdzWe\
+  zXgzYhzZjz_kz`mzanzZtzaozcjzfezh`zkWzmRzoNzqTzsYzu\
+  czvhzslzppzmtzjxzgzzdzzczzbzzawz`tz_qzZnzYkzXhzWez\
+  VbzU_zTXzSUzRRzQOzPLzPGzOIzOKzOMzOOzOPzORzOTzNVzNX\
+  zNYzN_zNazNczKazNdzPgzSjz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

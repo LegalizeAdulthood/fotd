@@ -1,0 +1,108 @@
+;     Date: Mon, 13 Sep 2010 22:22:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-09-10 (Carlson Minibrot [No Rating])
+;       Id: <1.5.4.16.20100913222235.10ff7052@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 13, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Being far behind in nearly everything, I cheated a little today 
+; and found a quickie fractal in the Mandelbrot image that was 
+; posted to the list on Sep 11 by Roger Alexander, using a formula 
+; that was created by Paul Carlson in 1998.
+; 
+; Since the Sep 11 image is basically a tricked-out Mandelbrot 
+; set, I found today's scene by checking Seahorse Valley of the 
+; classic M-set for a minibrot and transferring the coordinates to 
+; the Sep 11 image.  Some parameter tweaking was necessary, but in 
+; the end I turned up a fractal (if that's what it is) that I felt 
+; worthy of granting FOTD status to.
+; 
+; Since the image is not of my own origin, (I used the Sep 11 
+; color palette as well), I could not rate it.  The name "Carlson 
+; Minibrot" gives recognition to the writer of the formula.
+; 
+; The calculation time of just under 3 minutes is brief enough to 
+; make calculation almost a joy.  The image may also be viewed in 
+; finished form on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Ample sun and a temperature of 81F 27C made for an acceptable 
+; mid-September day here at Fractal Central on Monday.  (I'm still 
+; a day behind on the FOTD's, so the weather is for the day of the 
+; FOTD.)  The fractal cats must have been totally satisfied.  They 
+; gave no comment, verbal or otherwise, about the weather.
+; 
+; My day was busy; FL's was even busier.  The next FOTD will be 
+; posted in 24 hours, maybe sooner if I find a chance to start 
+; getting caught up.  Until next time, take care, and take comfort 
+; in the illusory reality of the real world.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Carlson_Minibrot { ; time=0:02:58.43-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=mandel_rings center-mag=-1.76859049464\
+  5/+0.001606111983/8e+007/1/180 params=0.18/0/4/64
+  float=y maxiter=3200 inside=0 outside=summ
+  colors=zz0000zbezbeyadyady`cy`bx_bxZaxZaxY`wY_wX_w\
+  XZwWZvWYvVXvUXvUWuTWuTVuSUuSUtRTtRTtQStPRsPRsOQsOQ\
+  sNPrNOrMOrMNrLNqKMqKLqJLqJKpIKpIJpHIpHIoGHoFHoFGoE\
+  FnEFnDEnDEnCDmCCmBCmABmABl9Al99l89l88k78k77k66k56j\
+  55j45i33j33i33i22i22i11h00h00g00g00f00e00e00d00c00\
+  c00b00b00a00`00`00_00Z00Z00Y00X00X00W00W00V00U00U0\
+  0T00S00S00R00Q00Q00P00P00O00N00N00M00L00L00K00J00J\
+  00I00I00H00G00G00F00E00E00D00C00C00B00A00A00mmzllz\
+  kkyjjyiixhhxggxffweeweevddvccvbbuaau``t__tZZtYYsYY\
+  sXXrWWrVVqUUqTTqSSpRRpQQoPPoPPoOOnNNnMMmLLmKKmJJlI\
+  IlHHkHHkGGjFFjEEjDDiCCiBBhAAh99h99g88g77f66e55d44c\
+  33b22a11a00`00_00Z00Y00X00W00U00S00R00`00_00_00Z00\
+  Z00Z00Y00Y00X00X00W00W00W00V00V00U00U00U00T00T00S0\
+  0S00R00R00R00Q00Q00P00P00O00O00O00N00N00M00M00L00L\
+  00L00K00K00J00J00J00I00I00H00H00G00G00G00F00F00E00\
+  E00D00D00D00C00C00B00B00A }
+
+frm:Mandel_Rings {; Copyright (c) Paul W. Carlson, 1998
+  z = w = k = iter = range_num = bailout = 0
+  c = pixel
+  ring_width = real(p1)
+  num_ranges = real(p2)
+  colors_in_range = imag(p2)
+  index_factor = (colors_in_range - 1) / ring_width
+  :
+  w = w * w + c
+    ;
+  dist = abs(|w|-.25)
+  IF (dist < ring_width && iter > 0)
+    bailout = 1
+    z = index_factor * dist + range_num * colors_in_range + 1
+  ENDIF
+  range_num = range_num + 1
+  IF (range_num == num_ranges)
+    range_num = 0
+  ENDIF
+  iter = iter + 1
+  z = z - iter
+  bailout == 0 && |w| < 1.0e20
+  ;SOURCE: carlson2.frm
+}
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
