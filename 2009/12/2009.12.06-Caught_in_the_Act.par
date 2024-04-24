@@ -1,0 +1,94 @@
+;     Date: Sun, 06 Dec 2009 19:29:45 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-12-09 (Caught in the Act [5])
+;       Id: <1.5.4.16.20091206192948.2a0f4600@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 07, 2009 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent of today's image arose when I calculated the formula 
+; Z^(1.8)+C at a level of 27.5 turns up the logarithmic hyper-
+; spiral.  This parent is shaped somewhat like an ant taking a bow 
+; toward the southwest.  The ant has a drop of . . . let's call it 
+; honeydew . . . clinging to its tail end.  Today's scene is 
+; located in a valley in this drop of honeydew, which of course is 
+; actually a rather large minibrot.
+; 
+; I named the image "Caught in the Act", leaving it to the viewer 
+; to decide the exact nature of 'the act'.  And then I rated the 
+; whole thing at a rating of a perfectly average 5.  There have 
+; simply been too many similar images in the past to rate today's 
+; any higher.
+; 
+; The calculation time of under 5 minutes could bring stress to 
+; fractalists with restless legs, so to avoid 'R.L.S.' I suggest 
+; surfing out to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and enjoying the effortless fractal pleasures there.
+; 
+; The sunny weather here at Fractal Central on Sunday was spoiled 
+; by brisk winds and a temperature that never rose above 34F 1C.  
+; The fractal cats ignored the outside conditions and concentrated 
+; instead on finding good sleeping places.
+; 
+; My day was average.  The next FOTD, hopefully well above the 
+; average, will be posted in 24 hours.  Until then, take care, and 
+; if one continues devouring the mass media, they might eventually 
+; learn something.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Caught_in_the_Act { ; time=0:04:51.07-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.9556232624804515/+0.5917338580384347\
+  /9.539061e+009/1/-30/0 params=1.8/0/27.5/0 float=y
+  maxiter=8000 inside=0 logmap=408 periodicity=10
+  colors=000VpZToYSnWQmUPlTNkRMjQKiOJhMHgLGfJEeHDdGB\
+  cEAcD9cG8dI7fK6gM5hO4iR3jT2kV1mX0oZ0p`6lYBhWGdUL`R\
+  QXPVUN_QKdMIiIGnEDsABx79uAGsCNqFUnH`lKgjMnhOueRrbT\
+  o_VlYYjV_gSadQdbNf_KhXIjVOdWU_W_UXePXdMYcJZbH_bE`a\
+  Ba`9b_6c_4ccDfgLikTlo`oshqqfnpdlocjnahm`flZdkYbjW`\
+  hUYgTWfRUeQSdOQcNObLMaKKdNMgQOiUQlXSn_UqbWseYvg_uh\
+  aufZsdXqbUo`SmZQkXNiVLgTJeRGcPEaNC_L9YJ7WH5UF8TDAS\
+  BCR9DQ9EO9GN8HM8IL8JK7KI7MH7KG6KF6KE6K75K000000000\
+  fU5kU6pU8uU96UuQUeiURdU`xU9uURrUhpUzSUZ3U7QUKkUW_U\
+  VOUVCUV04VF7XUAZhCnmDysEzzFz20K5KX8biBUu9Uk8Ub7UUa\
+  EPiNLzWIzcF4U9xVRqOLzHFkB996NU9EK7IAUNFUbBU_7UX3UU\
+  8UU6UT4US2BR6JV3BThUaUbYFLUCUJxHzUUmfZmBcm8hm5mm2r\
+  z9v04zzlz0XzzMzmBzzpzcZzzHzVGzzzzezz`zzWzzRzzRzzSz\
+  zRzzRzzzzzzzzzzzzzzzzzzzzzzzzrzz_zzIzzKzzhzzXzzMzz\
+  BzzpzzbzzQzRDzRkzZWzWGzTPzLGzN8zP_zVOzTCzSRzDKzHDz\
+  K6zORzFKzIDzL6zOszWYzbWz` }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

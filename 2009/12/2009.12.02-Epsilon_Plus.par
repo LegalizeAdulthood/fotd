@@ -1,0 +1,92 @@
+;     Date: Wed, 02 Dec 2009 23:06:44 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-12-09 (Epsilon Plus [6])
+;       Id: <1.5.4.16.20091202230642.38d726d4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 03, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image continues our fascination with the 'Zexpe' 
+; family of fractals, but today we examine the fractal that lies 
+; 'Epsilon' levels up the logarithmic ladder.
+; 
+; This fractal is a twisted thing with 2 main buds and a very 
+; large minibrot near the shoreline of the main bay.  Today's 
+; image lies in a kind of East Valley in this large minibrot.
+; 
+; I rated the image at a 6.  After all, it is pretty much a 
+; repeat.  But the short calculation time of 1-1/3 minutes will 
+; bring happiness to all but the most melancholy fractalists.
+; 
+; The name "Epsilon Plus" implies more than is actually in the 
+; image.  Do not be deceived!
+; 
+; The fractal blues may be sent scurrying off by viewing the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Morning clouds deteriorated to afternoon and evening rain here 
+; at Fractal Central on Wednesday, while the temperature of 41F 5C 
+; kept heavy coats in fashion.  The fractal cats spent the day 
+; wishing summer would come.
+; 
+; My day was uneventful.  Hopefully, tomorrow will be the same.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and why is there something instead of nothing?  (Perhaps 
+; 'something' is the state of absolute maximum entropy.)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Epsilon-Plus { ; time=0:01:21.67-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident float=y
+  center-mag=+0.73546185828/-0.64880364106/768516/1/\
+  160/0 params=2.71828182845905/0/2.71828182845905/0
+  maxiter=12000 inside=0 logmap=116 periodicity=10
+  colors=000YYhZ_i_aj`ckaelbgmdinejoflpgnqhorijqifqi\
+  aqiYqiTqiQqiMqiJqeLoaNmYOlUPjQQiMRgISeETdAUb6Va2W_\
+  0WZ0XX0XV0YU0YS1ZQ1ZP2_N2_MSDLTDNUEOVFQWFSXGTXHVYH\
+  XZIY_J_`JazzzzzmzzPyyPxvFwr3un7skBqhEoeImbLl_PkXSl\
+  UWlRZiObXJUNFPDDK7AC9BAABBBCDDCEEDGFDHHEIIEKJFLLFN\
+  MGONGPPGRQHSRHUTIVUIXVJYXJZYK`ZKa`LcaLdcCTbDVbEWbF\
+  XbFYbGZbH_bI`bIabJbbKcbLdmZ6lY8kXAkWCjWEjVGizIhzKh\
+  wMgtOgqPfnRfjTefVdaXdVZcN`cMbbLdhASfDVeFYdH`cJcrdN\
+  qcOpbPpaQo`Rn_Rn_SmZTmzamzcEkdmzfBzgAzh8zjAzkFzmKw\
+  nPtoUpnZmmcnlhlkhikhfjhcwhcwhcwhcwhcwuEeuHeuKduNcu\
+  QcuTbuWauVeuZaubcufhujmunrurvuwzuzzuzzuzzuzzuzzuzz\
+  uzzuzzuzzuzzuzzuzzuzzuzzuzzuzzuzzmzzkzzizzfzzdzzfz\
+  zbzzZzzWzuSzuPzuAzu0zu4zuBzuIzuQzuXzuczuYzuTzuOzuJ\
+  zuLzuMzuOzuPzuRzuSzuUzuVzuXzuYzu_zu`zubzuczudzuezu\
+  ezufzufzugzugzuhzuhzuizuizujzumzujzuhzufzudzubzu`z\
+  uZzuXzuVzuRzuTzuUzuVzuWzu }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

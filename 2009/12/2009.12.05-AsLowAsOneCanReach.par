@@ -1,0 +1,106 @@
+;     Date: Sat, 05 Dec 2009 23:49:01 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-12-09 (As Low As One Can Reach [5])
+;       Id: <1.5.4.16.20091205234903.2a073782@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 06, 2009 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's hasty image is an example of what happens when the 
+; bottom falls out of the exponent of Z.  Today's exponent is 
+; 1.075, which is pretty close to being linear.  But as the image 
+; shows, when the iterations pile up, close to linear is quite far 
+; from being totally linear.
+; 
+; The parent fractal of today's image was created by the formula 
+; Z^(1.075)+C as it appears 18 levels up the logarithmic ladder 
+; when no function is applied.  This fractal is little more than 
+; an oversized parabolic shaped hole with areas of chaos at its 
+; southwestern extremity.  Today's image is located at the edge of 
+; this chaos.
+; 
+; As for the image itself, there is little that can be said about 
+; it and the rings of debris that surround the tiny minibrot at 
+; the center.  Due to its lack of a defined theme, it rates only a 
+; 5.  The name "As Low As One Can Reach" refers to the unusually 
+; low exponent of Z.
+; 
+; The calculation time of just over 3 minutes is a bit more than 
+; the image is worth, though it still might be worth a try just to 
+; see what a minibrot of such a low order might look like.
+; 
+; A better way to see the scene is to visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the finished image there without the chore of calcula-
+; ting the parameter file.
+; 
+; Snow fell all day here at Fractal Central on Saturday, which 
+; gave the fractal cats a chill, but the falling flakes held just 
+; enough interest to keep them in the window that serves as their 
+; TV.  The freezing temperature kept the humans on the street well 
+; wrapped however.  By day's end about 2-inches, 5cm of snow had 
+; piled up.
+; 
+; My day was troublesome.  FL was moody because the weather was 
+; too bad for us to go on the antiquing trip she had planned.  I 
+; was moody because the furnace cut out a couple times, and it 
+; looks like a service call might be needed.  But whatever might 
+; happen, the next FOTD will be posted in 24 hours.  Until then, 
+; take care, and search for the cosmic hypersphere.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AsLowAsOneCanReach { ; time=0:03:04.42-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-14.9460780195969/-2.324758143896453/\
+  2e+010/1/-162.5/0 params=1.075/0/18/1500 float=y
+  maxiter=3600 inside=0 logmap=253 periodicity=10
+  colors=000hVuiUukTulcUmcVmaTmZRmWOmTMmRKmOHmLFlICd\
+  EDXAFO5HS6JX8LaANfCPkERpGTuIVzKXuJYoH_iF`cDbZCcTAe\
+  N8fH6htf9ncDh_HaXLWTQPQUJMYCIbIIdOHgUGj`FmfFplEsrD\
+  vyCylKuZSqM_m8ghEgeKfaReZXdVbcRibOoaKv`GteGqkFopFl\
+  vEPjN1ZW2VW3RW4NV5JV6FU4_h1uwGsiVpWjmHjnJjoLjpNjrQ\
+  jsSjtUjuWiwZip_ii`iaahVchOdhGeh9fg1hc7i_DjWJkSQmOW\
+  nKaoGgpCnrx8lt7fo6`j5Ve4P`2JaLNccScaQbZNJmBNnIRoPW\
+  pV_qacrhgrnaipW`qQTsKKtECuj8LiAOiCQhEShGUgIWgKYgM_\
+  fOafQceSeeUgdWidYkd_ma_iZ_eW_aU_YR_UO_RL_NJ_JG_FD_\
+  BB_8HYCMXFRVIWUM`SPeRSjQVkPTlORmNPnMNoQLpUJqXHr_Gs\
+  aEtcCufAvh8wm6xr4yv3EzWGzXHzYJzZKz_zzzNzzzzzQzzRzz\
+  zzzUzzzzzXzzZzzzzz`zzzzz6zzAzzzzzzzzzzzzzzzzzzzuzz\
+  tzzsozrwzqzzphzsZzuXzpVzlUzhSzdRz`PzXUzTczNmzZrzZz\
+  zZzzZIzq3zpBzfIzuPzuWzuVzuUzuTzuSzuRzuQzuPzuOzuPzu\
+  QzuRzuOzuMzuKzuLzuMzuNzuPzuQzuRzuSzuTzuVzuWzuXzuYz\
+  u_zu`zuazubzuczuezufzugzu }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

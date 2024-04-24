@@ -1,0 +1,97 @@
+;     Date: Wed, 23 Dec 2009 18:59:16 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-12-09 (Pits and Bieces [6])
+;       Id: <1.5.4.16.20091223185933.2aafc1c8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 24, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image turned out quite well considering the whopping 3 
+; minutes or so it took me to find it.  It turned out well enough, 
+; in fact, that I decided to give it a rating of a 6.
+; 
+; The exponent of Z in today's image is 1.77828, which just 
+; happens to be the 4th root of 10, not that this makes much 
+; difference in the appearance of the image.  The fact that the 
+; parent fractal was calculated 14 levels up the complex 
+; logarithmic hyperspiral with no function applied is far more 
+; significant.
+; 
+; Most of the effect is created by the color palette, which was 
+; actually created by the Fractint program with a single strike of 
+; the <enter> key.
+; 
+; The name "Pits_and_Bieces" is a slight variation of "Bits and 
+; Pieces", which needs no explanation.
+; 
+; The only thing left to mention is the very fast 65-second 
+; running time of the included parameter file.
+; 
+; The finished image is posted as always on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Full sunshine but a brisk temperature of 25F -4C here at Fractal 
+; Central on Wednesday kept the fractal cats toggling between 
+; their window shelf and the heat source.  With me, things contin-
+; ued hectic.
+; 
+; The next FOTD is due in 24 hours, but with so much to be done on 
+; the day before Christmas, there is a good chance I might not 
+; have time to do an FOTD.  Until whenever, take care, and be 
+; patient.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pits_and_Bieces { ; time=0:01:05.14-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.7549969820674577/-0.0553349364154242\
+  /7.227405e+008 params=1.77828/0/14/0 float=y
+  maxiter=1500 inside=255 logmap=112 periodicity=6
+  colors=000000000000000000SgIN_FITCEM99E6473flASW6E\
+  G37CB5A94873652431212Pc1KX1GQ1CK08D0464cx3Zp3Uh2Pa\
+  2KU1FM1AF057MqnIheE_YBRP7IH398zVkrRejN_bJUVFONBIF7\
+  C7360PGb22W11Q11J11D006009KL7HI6EF5BC389256123a7GV\
+  5DP4AJ38C25612uumTTPFXVtLYa8GJ48duYKTHV_XFIGOAoC5Q\
+  jTibOaVJUNENF9F747iRaYKSNDJB69aTzJEVg5Z_4TT3NM2HE1\
+  B705AjT8bO6VJ5NE3F9174fTELE7zBie7UL3FdHTUCLK8EA47p\
+  DRZ8IH49RoAMf8IY6DQ59H3481VDxOAkI7_C5O62C7dx5Ym4Rc\
+  3KU2DK16Aq`DhUA_O8RI6IC4962e18_06U05O04I03C02601qT\
+  eiO_aKUUGONCIF8C746UmaPdVKXPFPJ4y`AmUFaOKQHPFBRMDT\
+  SEVYF_TDcOChJAlF9jGBhHDfIFdIHTOSIUb7Zl9ahBceDeaEhZ\
+  GjVIlSJnP6czFczBcz7cz3cz3cz2cz2cz1hz1hz1mz0mz0mzZm\
+  zHmzKmzGmzDmzAmz6mz3mzPmzKmzFmzAmz5mz0mzdmzzmzzmzz\
+  mzzmzzmzXmzQmzKmzDmz6mzumzimzYmzNmzBmzpmznmzPmzzmz\
+  emzLzzozzgzz`zzTzzMzzEzz7zzQzzJzzDzz6zzZzzQzzHzz8z\
+  ztzzazzJzzxzzUzzQzzMzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
