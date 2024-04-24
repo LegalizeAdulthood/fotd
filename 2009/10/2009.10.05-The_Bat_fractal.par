@@ -1,0 +1,92 @@
+;     Date: Mon, 05 Oct 2009 19:31:54 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-10-09 (The Bat-fractal [5])
+;       Id: <1.5.4.16.20091005193447.2a6fde68@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 06, 2009 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Things were quite busy here at F.C. on Monday, so to save time I 
+; returned to the same parent fractal that gave us yesterday's 
+; FOTD image and checked an area that appeared to have East Valley 
+; characteristics.
+; 
+; After a hurried search of the area, I found today's scene 
+; lurking not very deep.  The outside=fmod option showed the way 
+; to the minibrot.  This option surrounds minibrots with circular 
+; bull's eyes.
+; 
+; I named the image "The Bat-fractal", perhaps thinking of a 
+; certain comic hero.  Then I rated it at a measly average 5.  
+; It's really not worth anything more.
+; 
+; The one redeeming feature is the calculation time, which at a 
+; mere 55 seconds, will cause no one to grow impatient.
+; 
+; All possibility of impatience may be eliminated by viewing the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A mixture of sun and clouds let just enough sun through to keep 
+; the fractal cats happy here at Fractal Central on Monday.  The 
+; temperature of 66F 19C kept the people happy.  My day was more 
+; than busy enough to keep me happy.
+; 
+; The next ground-breaking, (I hope), FOTD will be posted in 24 
+; hours.  Until then, take care, and wait for something really new.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Bat-fractal { ; time=0:00:55.60-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.461660097395/-0.098463200739/2906449\
+  /1/-50/0 params=1.5/0/-16/0 float=y maxiter=1600
+  inside=0 logmap=68 periodicity=10
+  colors=000`ADcABfAJiARlAUoAYrAXuBOxCGrDFmDFhDEbEEY\
+  EDTEDOEDDZX3uz7tzAszErzHqtLpzOozSnzzmzqlzkkzijzViz\
+  UhzTVaSVYRVTQVOPVKOVFNVANV6LV8KV9zmcmmCGWDFWFEmGDW\
+  HCXJAXK9WL8WN7WO6WPATSERUIOXLMZPJ`THcWEe_Czc9zf7zj\
+  4zn2zz0zr8zsFzzMztTzqSzzRzzQziQzgPzdOzbNz_NzXMzVLa\
+  SKeQKhNJkLInIHqGHtEFvDDxFEuGErIEoJElLEiMEfKEcPE`QE\
+  YSEVYJETESUEPWEMXEJZEG_ED2zh5ve7sc9paClZEiXGfVJcTL\
+  _QNXOQUMSRKUNHXKFZHDC`eEZbGX`HWZJUXLTVMRTOQRQOPRNN\
+  TLLVKJWIHYHF_FDomYkdSgWMcNGpU0oT1nS2mR2lQzkPzjOziN\
+  zhMzgLzfKzeJzdIzcHzbGzaFz`Ez0ez3cz5az7`z9ZzBXzEWzG\
+  UzISzKRzMPzONzRMzTKzVIzXHzZFzemzdkzdzzdzzdzzczzczz\
+  czzczzbzzbzzbzzbzzazzazzazzazz`zzzzEzzCzzIzzHzzHzz\
+  GzzGzzFzzFzzEzzEgzEfzDezDdzCczCbzBazB0z25z39z4Dz5H\
+  z6Lz7Pz8Tz9zzAzzCzzBzzBzzBzzBIzBMzBPzBSzBVzBYzBszi\
+  rzgqzepzcozanz_mzYlzXkzVjzTizRhzPgzNfzMezKdzIczGbz\
+  EazCOzdSzXVzQFzNGzKHzIIzF }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

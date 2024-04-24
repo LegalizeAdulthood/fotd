@@ -1,0 +1,91 @@
+;     Date: Sat, 24 Oct 2009 18:42:34 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-10-09 (Fractal Dissolution [9])
+;       Id: <1.5.4.16.20091024184544.2a873638@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 25, 2009 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is unusual enough to earn a rating of a lofty 9.  
+; It is a scene in the parent fractal that results when various 
+; negative parts of Z^(-1.4) and Z^(-4.4) are combined and (1/C) 
+; is added.  One full point of the rating is due to the extra 
+; effort I put into the coloring and the bit of luck I had with 
+; bringing up random color palettes.
+; 
+; The parent fractal is a typical double-negative thing, with a 
+; prominent 'fan' extending east from the origin and filaments 
+; that terminate in rings.  Today's image is located toward the 
+; eastern edge of the 'fan'.
+; 
+; The name "Fractal Dissolution" refers to the appearance of the 
+; image, which gives the impression of being caught in the act of 
+; evaporating.  BTW, the image is not 'evaporated'.  The evapora-
+; ted version is too chaotic. 
+; 
+; The calculation time of 2-3/4 minutes is thankfully brief, and 
+; will make the image available to everyone who wishes to 
+; calculate it.  Those who do not consider calculation their cup 
+; of tea may find their tea on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is posted.
+; 
+; The weather on Saturday left much to be desired here at Fractal 
+; Central.  The temperature of 68F 20C was mild enough, but the 
+; day was spoiled by heavy clouds and torrential rain during the 
+; late morning.  The fractal cats spent the day distracting 
+; themselves with various diversions, while my day was average.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and miracles do indeed happen.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FractalDissolution { ; time=0:02:44.30-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.874477823124435/-0.03584207960073543\
+  /1.2e+009/1/-127/0 params=-4/-1.4/-0.4/-4.4/0/0/0/0
+  float=y maxiter=1400 inside=0
+  logmap=192 periodicity=10
+  colors=000ABKA1PK1PA1PA1KA1PK1PA1PA1KA1PK1PA1PA1KA\
+  1PK1P61Q73K84S96QA7OA9NBALCCJEDIHFHJGHMIGPJFSLDUMC\
+  UNFUNIUNLTOOTORSOUSPXRP_RPbQQeQQhPQkPRnORqORsLUoJX\
+  lPZnVcp`hrfmtlrvrvxzzzzzrpnjmmbilVekNbkFIT`MRbPPdS\
+  OfVMgYKi`JkdHlgGnjEpmCqpBss9uv8vsDsqIpoNnlSkjXihaf\
+  efcckaapZ_tXUoROjLIfGCaA7Y57Uz7U07Uz7U77Uz7U77Uz3U\
+  3RUrDURmUikZhjcghhfgleemdcncbnb`oa_p`Yq_XqZTlcQhhN\
+  cmK_rHWvIYqJ_lK`gKbbLcYMeTMgONhJOjEOkAPhDPfGPdJQaM\
+  Q_PQYRRVURTXRR_SObSMdSKgTHjTFmTDpTBrw0zr4tn8njBhfF\
+  bbIXZMRVQLRTFNX9J_3DPL7Ea14r3Dj4Mc5VW7cP8lH9uAErJJ\
+  oRNm_SjgXgp`exbdtcdqddmfdjgdfhdcjc_kcXlcTncQocMpcJ\
+  fRKXFKVGNUHPTHRSIURJWQJYPK`OKbNLdMMgLMiKNkJOnIOpHP\
+  rGPtEUdCZPBbAF`9JZ9NY9RW9UV9YT8aR8eQ8iO8lN8`WLPcYS\
+  gWVkUYoS_sRbvPexNgzMjzKmzIpzGrzFuzDxzBzzAqzKhzT_za\
+  RzjIzsJzrJzqJzqKzpKzoKzoLznLznLzmMzlMzlMzkMzkOzcPz\
+  WQzOSzGTz8Uz1Tz5Sz9RzCQzG }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

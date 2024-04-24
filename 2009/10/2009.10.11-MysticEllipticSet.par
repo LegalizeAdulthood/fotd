@@ -1,0 +1,92 @@
+;     Date: Sun, 11 Oct 2009 17:12:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-10-09 (Mystic Elliptic Set [7])
+;       Id: <1.5.4.16.20091011171541.2a5f1624@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 12, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene lies in the upper right quadrant of yesterday's 
+; image, and uses much of the same color palette.  It is actually 
+; an Elliptic set (It is not a Julia set!) lying close to one of 
+; the apparitions of the large minibrot on the main stem of the 
+; larger minibrot on the main stem of the parent Mandelbrot set, 
+; which is nowhere to be recognized in this Elliptic orientation 
+; of the Julibrot.
+; 
+; Because of the effect of a near-blinding aura of light that 
+; might surround something as mystical as the Holy Grail, I named 
+; the image "Mystic Elliptic Set".  But there is nothing sacred 
+; about the image.  It is all done with mere numbers.  (Then 
+; again, perhaps numbers are not so simple.  Maybe God creates His 
+; works with numbers.)
+; 
+; The rating of a 7 is my fair estimate of the value of the image. 
+; The calculation time of 4-3/4 minutes makes running the included 
+; parameter file almost a breeze.  The full breeze may be enjoyed 
+; by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image in breezy comfort there.
+; 
+; A mix of clouds and sun let through just enough sun to keep the 
+; fractal cats happy here at Fractal Central on Sunday.  The 
+; temperature of 59F 15C was on the chilly side, but the sun was 
+; shining warm on the shelf in the window, so the cats were toasty 
+; warm.  My day was peaceful while FL visited a nearby friend.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and how does one know what's right if he doesn't recognize 
+; what's wrong?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+MysticEllipticSet { ; time=0:04:45.20-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  passes=1 center-mag=-1.785734063956232/-0.22039446\
+  49006539/1.395829e+008/0.1291/54.82991160555688/-7\
+  1.010913634439 params=90/0/2/0/0/0/0/0.0001 float=y
+  maxiter=10000 inside=255 logmap=35 periodicity=10
+  colors=000u4TrCUoKUmSUjZUhfUenUcuUdl_ddddWidOndGsZ\
+  NtUUuP`vKfwFmxAty5zz5zz5zz8zzAzzCzzFzzHzzJzzMzzOzz\
+  QzzTzzVzzXzzYzzZzz_zz`zzazzazzbzzczzdzzezzfzzqzzkz\
+  zdzzZzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzSzzN\
+  Le0Me0Ne0Oe3Pe5Qe8RfASfCTfEUfGUfIVfLWfNXfPYgRYgTZg\
+  V_gY`m_bradvcgzejzgmzjozloznpzpqzrrztszvtzwuzxvzyw\
+  zzxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzyzzyzzxzzxzzwzzwzzvzzvzzuzzuzztzztzzszzszzrzz\
+  rzzqzzqzzpzzozznzzmzzlzzkzzjzzizzhzzgzzfzzezzevyer\
+  xemwehvedvectfcsgcrgcqhcoicnicmjclkcjkcilchmcgncen\
+  cdoccpbbpbaqb_rbZrbYsbXtbVubUubTvbSwbQwbPxbOybNybM\
+  wcNvdOtdPseQrfRpfSogTngUlhVkiWjiXhjYgjZfk_dl`clabm\
+  b`mc_ndZoeXofWpgVphWqeWqbXr`XrYXsWYsTYtRYtOZuLZuJ_\
+  vG_vE_wB`w9`x6`x4ay5by5cy6hy6my7ry7vy8wy8zy8zy9zzL\
+  zzJzzHzzFzzDzzBzzAzz9zz8zz8zzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

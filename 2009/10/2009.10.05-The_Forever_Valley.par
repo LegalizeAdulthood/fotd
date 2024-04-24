@@ -1,0 +1,99 @@
+;     Date: Mon, 05 Oct 2009 19:31:52 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-10-09 (The Forever Valley [No rating])
+;       Id: <1.5.4.16.20091005193445.2a6fb21c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 05, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yes, I know that today's FOTD is late, but I have an alibi.  On 
+; Sunday FL was bitten by the antiquing bug, which sent us on a 
+; trip to an antique emporium in Bellefonte, which is 2 miles 
+; northeast of the geographic center of the state of Pennsylvania. 
+; Actually I'm glad we went.  I found a 35-year-old 35mm SLR film 
+; camera in perfect working condition, offered for sale at $15.  
+; Film cameras are pretty much a thing of the past, but how could 
+; I resist such a bargain. The camera cost $250.00 new in 1974.
+; 
+; Today's image lies in the fractal that results when the formula 
+; Z^1.5+C is calculated 16 levels down the logarithmic hyperladder 
+; and no function is applied.
+; 
+; The parent fractal is shaped much like the minibrot at the 
+; center of today's image.  The scene is located rather deep in a 
+; valley leading to a bud on the shore line of the main period-2 
+; bud of the parent.
+; 
+; Having put so little effort into the image, I was unable to give 
+; it a real rating, but considering the muddiness, a rating of a 5 
+; would be about right.
+; 
+; The name "The Forever Valley" is a poetic phrase.  It has little 
+; connection with the actual appearance of the image.  The calcula-
+; tion time of 6-1/3 minutes is brief enough to keep doubts of the 
+; worth of the calculation at bay.  And those who do not consider 
+; fractal calculation to be their cup of tea, may view the image 
+; effortlessly on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather here at Fractal Central on Sunday was a bit too 
+; cloudy for absolute perfection, but there were enough periods of 
+; strong sun to keep the fractal cats satisfied.  My day was 
+; unexpectedly pleasing.  The next FOTD is due to be posted in 8 
+; hours.  It might make it; it might not.  Check then to find out.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Forever_Valley { ; time=0:06:20.58-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.762519089/+1.109746278/5982/1/45/0
+  params=1.5/0/-16/0 float=y maxiter=16000 inside=0
+  logmap=-312 periodicity=10
+  colors=000P6DS9ITCNUFSVIWVHUXGSVFRTEPRDOOCMMBLKBJI\
+  AIG9GD8FB7D96C75A559HBESHIcMMzKQzYUzcVzmVzhWzcWzUX\
+  pUXnTYmTYkSZjSZgR_eR_bQ`_Q`UMaTJbSGcRDdQ9eQ6fP3gN0\
+  hK3UK6GKBNKFTKJZSNeKRzDVzCQzBMzAHz9Dz88S74N76O78P7\
+  AQ7CR7DS7FT7HU7JV7KW7MX7OY7QZ7R_6QX6PU5OS5NP5MN4MK\
+  4LI4KF3JD3IA3I8BNEJRKRWQZ_Wfc`eeYegVdiSdkzcmzcoKbq\
+  HbsEbuC`zD_nzzzzzgzzzzV`zTYzSVzRREPOEOKENHELEEKAEJ\
+  7EI4ECQN6kW8lYAlZCl_El`GlaIlbKlcMldOleQlfSlgUlhWli\
+  Ylj_lk`llckmejngjojipliqnhrqhssgtugtoioijkclgYmbTo\
+  ZNpVHrQBsM5uI0vE2pF3jF4dG5ZG6TH7NH8HH7b`6xtCrnHmiN\
+  hdSbZYYUbTP__QXfRUmSStTUqSVnRWkRXhQYfQZcP_`P`YOaWO\
+  ZYQXZSU`USaWPcYNdZLf`IgbGidDjfBlh9mi9nh9oh9og9pg9q\
+  g9qf9rf9sf9se9te9ue9ud9vd9zd8z`7zz7zz6zz6zz5zz5zzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

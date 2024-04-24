@@ -1,0 +1,96 @@
+;     Date: Wed, 07 Oct 2009 13:23:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-10-09 (Seventy Times Seven [No rating])
+;       Id: <1.5.4.16.20091007132612.29c7c21c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 07, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA ALERT!
+; 
+; Today's formula is a new one.  I named it "AllNewDivideBrot".  
+; It is a modification of the NewDivideBrot formula, which at a 
+; cost of a slight increase in calculation time, eliminates the 
+; tendency of the resulting fractals to grow in size beyond all 
+; bounds as the second parameter is increased.  Before you copy it 
+; into a formula file, remove the 'frm:' before the name.  The 
+; formula still has some problems to be worked out, so there might 
+; be an updated version in a few days.
+; 
+; The parent fractal is a normal sized Mandelbrot set pictured 
+; about 2/3 of the way through the process of morphing into an 
+; order-7 Mandeloid.  Today's image lies in a backward valley very 
+; near the negarive X-axis.
+; 
+; The image shows an order-7 minibrot in unusually rich surround-
+; ings.  In fact, the surroundings are so grossly overdone that I 
+; could not give the image a rating.
+; 
+; I think the name "Seventy Times Seven" is a phrase from the 
+; Bible, indicating how many times we are to forgive our enemies.  
+; Why the phrase came to mind is a mystery, since I am no saint.  
+; My patience would run out at about the second offense.
+; 
+; The calcuation time of a little under 8 minutes is slower than I 
+; would prefer, but relief may be found on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the completed image is posted.
+; 
+; Morning sun, afternoon clouds and a temperature of 66F 19C made 
+; Tuesday a typical early Autumn day here at Fractal Central.  The 
+; fractal cats enjoyed what little sun they found, and spent the 
+; rest of the time finding various other trouble to get into.
+; 
+; My day was once again quite busy.  Most likely tomorrow will be 
+; the same.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and the last fractal will never be found.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SeventyTimes_Seven { ; time=0:07:51.87-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=AllNewDivideBrot function=recip float=y
+  center-mag=-1.515507963309433/-0.00007503378442631\
+  /1.372161e+010/1/45/0 params=7/7 passes=1
+  maxiter=7500 inside=0 logmap=410 periodicity=10
+  colors=000q_PrZPrXPsWPsVPtUPtSPuRPuQPvOPvNPwMPwLPv\
+  NQuPRtQRsSSrTSqVTpXUpYUo_Vn`VmbWldXkeXjgYjhYliUniQ\
+  piNrjJtjGvjCxj9sbEoWImYKlZMk_Ni`PhaRgbSecUddWceXaf\
+  Z`g`_haYicXjeWkfUlhTmjSnkQomPpoOqpMloLgnJbnIYmGTmF\
+  OlEJlILiMNfPPcTQ`WSY_UVcWSfXPjZMm`JqbGtcDjbIabNTaS\
+  KaXJ`VI_UHZTGYSGYRHZPI_OJ`NJaMKbLLbKMcJOdIQeHSfGUg\
+  FWgEYhC_iBajAck9el8gl7im6kn5mo4op3qq2sr1us4wu6xw8z\
+  zAZfCZdEZbG_`I_ZK_WN`UP`SR`QT`OVaMXaKZaI`aGbeFciEd\
+  mDeqCfuBgyAgvBftBerBdpBcnBblBajB`hB_fBZdBYaBXZBWVB\
+  VQBULBPIBKGBFABAABAABAABAABAABAABAAEA6HA6KA6NA7QA7\
+  TA6WC5ZE5aE4dD3gC2jK2lK5kz8jFAiGDhIGgJIfLLeMNdOQcP\
+  TbRVaSY`U__VbZXeYYgX_jW`lVboUcrTetSfwRhyRizQjzPjzO\
+  jzOjzNjzMjzLjzLjzKjzJjzJjzIjzHjzcjzcjzcjzcjzcjzcjz\
+  cjzcjzcjzcfzcczc`zcXzcUzcRzcNzzKzzHzzDzzAzz7zz6zz5\
+  zz4zzBzzHzzOzzUzzTzzszzrzzqzzpzzozznzzmzzlzzkzzjzz\
+  izzhzzgzzfzzPzzPzzPzzPzzP }
+
+frm:AllNewDivideBrot   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+b=imag(p1)+0.00000000000000000001:
+z=b*(z^2*fn1(z^(a)+b))+c
+|z| < 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

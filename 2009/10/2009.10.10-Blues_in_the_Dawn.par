@@ -1,0 +1,87 @@
+;     Date: Sat, 10 Oct 2009 11:52:43 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-10-09 (Blues in the Dawn [6])
+;       Id: <1.5.4.16.20091010115540.2a1f1544@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 10, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, with its royal blues and oranges, lies in the 
+; parent fractal that results when Z^(1.1) is subtracted from 
+; Z^(-1.1).  This parent fractal is a grossly oversized thing 
+; consisting of two Mandeloids, one of them a peanut-shaped thing, 
+; the other a partially cut-off Mandelbrot set.  These two large 
+; Mandeloids are connected by a stream of debris, with today's 
+; image located near the midpoint of this debris.
+; 
+; Royal blue and orange are my old school colors, so I gave the 
+; image an extra point in the ratings.  If I had gone to another 
+; school, the image, with the blues that just don't look right, 
+; would rate only an average 5.
+; 
+; The name "Blues in the Dawn" is appropriate for one who is going 
+; home after a rough, disappointing night out.  The brief calcula-
+; tion time of 1-1/2 minutes kind of makes up for that bad night.
+; 
+; But all these problems may be eliminated by viewing the image in 
+; finished form on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Too many clouds prevailed here at Fractal Central on Friday, and 
+; the temperature of 63F 17C was too chilly for total comfort.  As 
+; a result, the fractal cats were dis-satisfied and needed an 
+; extra treat of tuna to keep them quiet.  My day was busy, which 
+; explains the late FOTD.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and be right up there with the big-time thinkers.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Blues_in_the_Dawn { ; time=0:01:33.30-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-1.728552855008/-1.64484287301/1239049\
+  /1/152.5/0 params=1/-1.1/-1/1.1/0/0/0/0 float=y
+  maxiter=1800 inside=0 outside=tdis periodicity=10
+  colors=000IBbJBcLBcNAcPAcQ9cS9cU9czzzzzzZ7c`7ca7dc\
+  6de6df5dh5dj5dl4dzzzzzzq3dr3dp4eo4en4el5ek5ej5ei6e\
+  zzzf6fe7fd7fb7fa7f`8fZ8fY8fX9gW9gU9gTAgSAgRAgQRmPQ\
+  lOPlNOlMNkLMkWijVhjUfjSeiRdiQchPbhN`hM_gLZgJYfIWfH\
+  VfFUeETeDSdBQdAPd9Oc7Nc6Mb5Kb3Jb2Ia1Ha0Ga2Fb4Fb6EY\
+  7EY9DYBDYDDYECYGCYKPmKOlKOlKNlKNlKNlKMlKMlKLlKLlKL\
+  lKKlKKlKJlKJlKJlLIlMIlNHlOHlPHlQGlRGlSGlTFkUFkUEkU\
+  EkUEkUDkUDkUDkUCkUCkUCjUBjUBjUBjSAjQAjOAjM9jK9jI9j\
+  B1OD3NF5MH7LJ9KLBJMDJOFIQHHSJGULFVNFXPEZRD`TCbVBcX\
+  BeZAg`9ib8kd7zpFzjBze7zb8z_8zX8zU8zR9zO9zL9zI9zFAz\
+  CAz9Az6Az17z28z09z3Az0Bz5Cz0Dz0Ez0FzUGzUHzUHzUIzUJ\
+  zUKzULzUMkUNlUOlUPmUQsURpUQmUQjUPgLPdOOaRO_TOXWNUZ\
+  NRzMOzMLzLIzLGzLHzKHzJHzJIzIIzIzzHzzHzzGzzGzzFzzFz\
+  zEzzEzzDLLDLJCMHCMGBMEBNCANAAz89R38z79JBAzFB5C4zIB\
+  GNHzSNQXTza__fezkkipqzuw4zJzyI7yHzyHAyGzxGDxFzxFGx\
+  EzwEJwDzwCMwCzvBXiWWkVUlT }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
