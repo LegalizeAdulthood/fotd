@@ -1,0 +1,95 @@
+;     Date: Thu, 23 Jul 2009 18:48:16 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-07-09 (Star Nursery [8])
+;       Id: <1.5.4.16.20090723185012.2bc7de90@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 24, 2009 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Something in today's image reminds me of a cosmic dust cloud, 
+; which is also a star nursery.  And that's what I named it.  The 
+; parent fractal is nothing -- the blank screen that results when 
+; the (1/Z)+C fractal starts to morph into the Z^2+C fractal.  But 
+; the blankness turned interesting when I tried the 'bof60' inside 
+; fill on it.
+; 
+; It turned interesting enough, in fact, that the resulting image 
+; earns an 8.  If I had more time to work on the colors, I might 
+; have brought the image up to a rating of 9.
+; 
+; The result of calculating the included parameter file is worth 
+; the 8 minutes or so it takes to do the calculation.  And if 8 
+; minutes is too long to wait, the finished image is available for 
+; immediate viewing on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy clouds, high humidity and showers of rain kept Thursday 
+; from being acceptable to the fractal cats of Fractal Central.  
+; The temperature of 82F 28C was fair enough, but the cats demand 
+; sun.  My day was unusually busy.  When I fell behind however, FL 
+; stepped in to bail me out.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and don't ask 'what'.  These questions are too easy.  Ask 
+; 'why'.  These questions are far more difficult but far more 
+; satisfying.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Star_Nursery { ; time=0:08:09.33-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideJulibrot passes=1
+  center-mag=1.6021/13.942/5.9192/1.1171/-17.1932875\
+  494030064/-6.00330107850168204 params=86/0/86/0/\
+  -0.77/0/0/0/-1/1 float=y maxiter=1500 inside=bof60
+  logmap=yes periodicity=10
+  colors=000zzzmszcfzUXmKShKNcK5AK0AK0AK4AP7JUCGYGDa\
+  KBcNJePPgQSiRVkRYmR`mRdmRemRemRfmRfmRgmQgmPfmNdmKb\
+  kJ`iIYgHVfGTeFSfDSh1Tj6WlBYnG`pIbrLetOgvRjxUlyXnvZ\
+  _sQLpI6mHCkGHhFMfERdDWaC`_BeYAjaDddG_gJVjMQmOLpRGs\
+  UBvX6yZ1tV3oR4kO6fK7aG8YDAT9BO5CK2EF0FB0GJ5`REuPCt\
+  NAtL8tJ6tH4tG3tccih_ZmWOrTEgYEYbENgEDkEHjIKiLNhORg\
+  SUfVXeY_d`ccdfbgiajl`mp_qsZtvYwyYztXypXxlXwhXvcXu_\
+  XtWWsSWrNWqJWpFWoBWn7WnAVlDUkFUjITiKThNSfPSeSRdVQc\
+  XQb_P`aP_dOZfOYiNXkNW`FUQ8SF0Q40P90NE1MI5LN9JRDIWG\
+  H_KGdOEhSDmWCqZBr_Fr_Is_Ls_Pt_St_Vt_Yu`TvaPvbLwbHx\
+  cCxd8ye4ye0nZ7dSDVLKLEQB8WDAVFBVGCVIDUJEULFUMGTOIT\
+  PJTRKSSLSUMSVNRXORYPR`MTcJVeHWhEYkB_m9`p6br4co5`l6\
+  Yi7Vg8Sd9Pa9MZAJXBGUCDRDAOE7ME5LE9KEDJEHIELHEPGETF\
+  EXEE`DEdCEhJMkPUnWaqaisaUkaFda0Y_1ZZ2_Y3_X4`W5aV5a\
+  U6bT7bS8cR9dQ9dPAeOBfNCfMDgLDgJCgICgHBgFBgEAgCAgB9\
+  gA9g88g78g57g47g13j37g5Ad }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

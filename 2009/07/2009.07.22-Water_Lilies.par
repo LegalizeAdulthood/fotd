@@ -1,0 +1,101 @@
+;     Date: Wed, 22 Jul 2009 22:41:29 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-07-09 (Water Lilies [6])
+;       Id: <1.5.4.16.20090722224324.38df47ec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 23, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another venture into the multi-dimensional 
+; world created by the DivideJulibrot formula.  Apparently I have 
+; already posted two previous versions of this formula, which are 
+; all slightly different, but hopefully will produce the same 
+; images from the same parameters.  Even now however, I see a way 
+; to make the formula a bit faster, so I cannot guarantee that the 
+; version included in today's parameter file will be the final 
+; version.
+; 
+; I named the image "Water Lilies" when it reminded me of water 
+; lily leaves floating on a quiet tropical pond.  Actually, the 
+; image is very closely related to the fractal trees I occasion-
+; ally post.
+; 
+; The rating of a 6 indicates that I am not totally satisfied with 
+; the colors, but find them good enough to meet FOTD minimum 
+; standards.  One thing that cannot be questioned however is the 
+; calculation time of 31 seconds.  Such lightning speed can hardly 
+; be exceeded.
+; 
+; Web surfers may view the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Wednesday's weather proved to be routine here at Fractal 
+; Central.  The hazy sun, temperature of 81F 27C and moderate 
+; humidity was neither good nor bad.  The fractal cat Nicholas was 
+; bad however.  Leaping onto the kitchen counter without looking, 
+; he spilled a carton of half-and-half.  To atone for his misdeed 
+; he began lapping up the spilled cream, while Cassie cleaned the 
+; cream that dripped onto the floor.
+; 
+; The day was otherwise uneventful.  The next FOTD will be posted 
+; in 24 hours.  Until then, take care, and where are all these 
+; indispensable wireless electronic devices coming from?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Water_Lilies { ; time=0:00:31.86-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideJulibrot passes=1
+  center-mag=-1.72942/0/12.8 params=90/0/84/0/-0.893\
+  279/0/0/0/1.5/1.5 float=y maxiter=1500 inside=0
+  logmap=50 symmetry=xaxis periodicity=10
+  colors=000kU9iS6gP7cM7_I8WA8S59O19N8INFQMLZMSfMYnW\
+  d`ekNor9jq8eq8`q7zv7zp7vp6ro6mo5ho5eo5bm7_k8Xi9SgA\
+  NeBKcCNaDP`ESZGVXH_VIcTJeRKhPLjNMlMNmLNnLNnLNoLNpL\
+  NpLNpLNpLNoLNnLNnLNoLNnNImPEmRAlPBkNCjLDjJEiIFhGGh\
+  EzgCzfAzf9zgBMhCPiDRjEUkFWlGzmHzmFznCzmDzpGzmJz9Mz\
+  ANzCPzEQzGSzITzKVzMWzOYzQZzS`zUazWczYdz_fzahz`UzZU\
+  zYUzWUzUUzTUzRUzQUzOUzMUzLUzJUzHUzHUzGUzGUzFUzEUzE\
+  UzDUzCUzCUzBUzAUzAUz9Uz8UvPOreDmv2ir7fnCcjH_fMXbRU\
+  ZUQVUNRUKNUGJUDFU9JUgKUgMUhOXiPRjRLkTFlRFSPG6RH8TJ\
+  BVLEXNHZOK`QNbSPdUSfVVhXYdTX_OWVJVQEUL9SM9UN9WP9YQ\
+  8_S8aT8cV7ebFgjOjrXmK3JP3QV3X`3de3kk3rq4zp4zn5zm5y\
+  k6yj7xh7xg8we9wd9wbAvaAv_BuZCuXCtWDtUEsSIoQMkNQfLV\
+  bJZYGbUEfPCkL9oG7sC4x7BrDIlKPfQW`XbVciPipJpwCwuCws\
+  CwpDwnDvkEviEvfEudFuaFu_GuXGtVHtTHtQHsOIsLIsJJsGJr\
+  EJrBKr9Kq6Lq4Lq1Mp4Mp8LpCKqGJqKJrOIrSHsVGsZFsbFtfE\
+  tjDunCurBvrCsrDprEmrGjjXC }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

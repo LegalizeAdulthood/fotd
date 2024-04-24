@@ -1,0 +1,94 @@
+;     Date: Mon, 27 Jul 2009 10:38:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-07-09 (Time for Thinking [7])
+;       Id: <1.5.4.16.20090727104021.2a1706cc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 27, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that results when equal 
+; parts of Z^4 and Z^6 are mixed and C is added.  This parent 
+; fractal looks somewhat like a butterfly with a head on the 
+; negative X-axis shaped like a Mandelbrot bud.
+; 
+; With thick arms converging on its mouth, this bud appears to be 
+; non-critical, but curious double-bays along the edges of these 
+; arms are filled with spider-like minibrots.  Today's image shows 
+; one of these minibrots made all the better by rendering it with 
+; the inside set to 'bof61'.
+; 
+; After all the work, I rated the image at an average 7.  It's 
+; kind of fun to look at, with a bit of an art-deco feeling.  I 
+; named it "Time for Thinking" for some reason that I have forgot-
+; ten.  The words probably just popped into my head.  (An armchair 
+; psychologist could probably work up a complete psychoanalysis 
+; based on the names I give the FOTD's that just pop into my head.)
+; 
+; Luckily for those with time issues, today's image calculates in 
+; only 1-1/6 minutes, about the time it takes to make a New-York 
+; style egg cream.  (An egg cream consists of chocolate syrup, 
+; milk and seltzer water mixed in just the right amounts.  The 
+; amounts are critical.  It's kind of a chocolate ice-cream soda 
+; without the ice cream.)
+; 
+; Those who prefer to avoid calculation may view the finished 
+; image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Lots of clouds and humidity with some sun and a temperature of 
+; 84F 29C made Sunday a perfect day for warm weather activity here 
+; at Fractal Central.  The fractal cats believe in warm weather 
+; inactivity however, so they did little but eat and sleep.  My 
+; day was correspondingly inactive.  If I get the ambition, the 
+; next FOTD will be posted in around 12 hours.  Until then, take 
+; care, and then do it again.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Time_for_Thinking { ; time=0:01:10.02-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.73229701362/+0.00870137264/385017.8/\
+  1/82.5/0 params=1/4/1/6/0/0/0/0 float=y maxiter=950
+  inside=bof61 periodicity=10
+  colors=000XTBVVCSWDPYEN_FK`GHbHFdICeJ9gK7hL9dOAaRB\
+  YTCVWERZFO`GKcHHfJDhKAkL6nM3pN5nO7lP9kQBiRDgSFfTHd\
+  UJbVLaWN_XOZTNXQNWNMUKMTGLRDLQAKO7KN4KM7JKAJJDJIGI\
+  HJIGMIEPHDSHCVHBYHAZGDZFFZFHZEJZEKZDKZDKZCKZBKZBKZ\
+  AKZAKZ9IZ9GY8ET8CO7AI7AG6AI6AK6AM5AO5AQ5AS4AU4AW4A\
+  Y3A_3Aa3Ac8AeCAgGAiKAjOAlSKnWKp_PrcKsgUriUtkcvlcwn\
+  mvpmzqszqwTP8TQ6RU9Q_CPeFOjINmLMqOKrNIsMGtLEsKCvJA\
+  vI8tH6rG4rF2rE5rU8rmAuzCuwDutEunFujHugIudJuaKuZLuW\
+  KrUKoTJmRJjQIgPIeNHbMH`KGYJGVIFTGFQFFOEINFLMGNMGQL\
+  HSLHVKIXKI_JJaJJcLKdMKfOLgPLiRLjSMlUMmVNoXNpYNr_Os\
+  `OtaOqfRokUmoWktZix`ksblodmkfnghobipZkrVmsRotMpuIr\
+  vEtwAvx6wsBsnGojKlePh`UdXYaZ`c`bebdgdfieijgklimnko\
+  plrqntspvurxwszxtrntketcXuXNuPEuI5sJ8qKApLCnMElNGk\
+  OIiPKgQMfQOdNMbKKaHI_EGYCEX9CV6AT38S16R28R39Q4AQ5B\
+  Q6CP7DP7EP8GO9HOAIOBJNCKNDLNDMcHaWLfOPkGTp8Xu0_z4`\
+  x8`vBatFarIapMbnQblTcjXch }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

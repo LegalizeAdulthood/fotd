@@ -1,0 +1,97 @@
+;     Date: Sat, 18 Jul 2009 22:14:58 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-07-09 (Clandestine Action [No Rating])
+;       Id: <1.5.4.16.20090718221650.2bcfb1aa@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 19, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I might have expected FL to be bitten by the antiquing bug on 
+; Saturday, and so she was.  We spent the entire afternoon at an 
+; antique emporium an hour away.  Luckily, we got back to FC in 
+; time for me to find a barely adequate fractal.
+; 
+; Today's image lies in the East Valley of a larger minibrot in 
+; the Z^(1.5)+C Mandeloid as it appears 100 levels up the logarith-
+; mic ladder when no function is applied.  The typical East Valley 
+; elements are there -- at least bits of them are there.
+; 
+; Do not try to investigate the minibrot at the center.  With the 
+; magnitude of the entire image already at a galactic 2*(10^12), 
+; the tiny dot at the center is well beyond resolution.
+; 
+; The name I gave the image, "Clandestine Action", must have some 
+; connection to the image, though at the moment the connection 
+; eludes me.
+; 
+; Rather than embarrass myself by rating the image at a lowly 4, I 
+; gave it no rating at all.  The calculation time of just over 4 
+; minutes is within reason, but an even more convenient way to see 
+; the image is to view it on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A near perfect day prevailed here in the Fractal Central area on 
+; Saturday, with enough sun and a temperature of a un-summerlike 
+; 73F 23C.  Only a few too many clouds prevented the day from 
+; being absolutely perfect.  The fractal cats were cranky after 
+; being left alone for the entire afternoon, but cheered up when 
+; their treat was served.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and think positive in a negative 
+; manner.  Or is it the other way around?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Clandestine_Action { ; time=0:04:03.31-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.05486496989607698/-1.832864340918919\
+  /2.453859e+012/1/-30/0 params=1.5/0/100/0 float=y
+  maxiter=2400 inside=0 logmap=366 periodicity=10
+  mathtolerance=0.05/1
+  colors=000JGZKHYKIYLJXMKXMLWNMWONVOOVPPZQQcQRhRSmS\
+  TrSUvcWzoZzmhzzz00EI4FH7GGAHFDIEGJEJKDMKCPLBSMBVNA\
+  YO9`P8cP8bM9aKAaIA`GB_EC_CCZADY8EY6EXAFWDGVGGUJHTM\
+  ISPIRSJRVJQZKPaLOdLNgMMjNLmNKpOKsORmWYgbdbikXpqSwX\
+  hwCmwJjsPdoW_kaUgUQdKMQKHCEIGJJJOKMULPZMScNVfMShMP\
+  jLMlLJnLGpKDrKAtK7sN9rPBqRDpTFoVHoXInZKm`MlcOkeQkg\
+  RjiTikVhmXgoZgq_OpO5pC8lGBiJDfMGcPJ_SLXVOUYRR`TOcU\
+  NeVMfWLgXKhYJiZIj_Hk`Gl`FmeNfjV`naUsiOwjInaJeNJgMN\
+  iLRkKVmJYoIapIerHitGlvFpxEtyEwwDvuCutCurBtqBtoAsnA\
+  skCpiDngFleGibIg`JeZKcXM`VNZSPXQQUOSSMTQKUOIVRGWTE\
+  XVCYXAYZ8Za6_c4`e2ap1az9WzHQzTWzd`Izz3zz7zmAzmDrhG\
+  miJhiMcjQZkTUkWPlZKmaFmdBjeIizOczVdzabig`jnZktXlzY\
+  gzYbrYYnZTmZPlZKj_Fi_Ah_6f`8daAcbCacE`dGZdHYeJWfLU\
+  gNThPRhQQiSOjUNkWLlYKmZMn`NobOpcRqeUrfXshZtjculcvn\
+  cwpmxrmytmzvmzxmzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

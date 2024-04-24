@@ -1,0 +1,107 @@
+;     Date: Tue, 07 Jul 2009 22:07:59 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-07-09 (Parabolic Elephants [7])
+;       Id: <1.5.4.16.20090707220943.2bd7ce5c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 08, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is sliced in the direction I have named Parabolic. 
+; With the real(Z) axis perpendicular to the screen in our 
+; 3-space, and the Mandelbrot aspect on the screen, we are looking 
+; down from above.  And what do we see? . . . more fractal 
+; elephants!
+; 
+; The elephants are everywhere when the period-30 East Valley 
+; elephant complex is viewed in this direction, but they are well 
+; hidden.  I had to do quite a bit of stretching and skewing to 
+; make them recognizable.
+; 
+; The baby elephant in the upper left corner is almost, should I 
+; say . . . cute.  It actually appears to be leaping into the air, 
+; something I doubt an everyday elephant could do.
+; 
+; And what about those elephants at the right edge of the frame?  
+; They seem to be falling into an abyss.  They really are fractal 
+; elephants, but since when do elephants behave like this?
+; 
+; Also, where are the double-spiral things that look like big eyes 
+; with a big bulbous nose between?  They are everywhere in every 
+; East Valley.  Actually, they are closely related to the fractal 
+; elephants, though the connection will have to wait until another 
+; day.
+; 
+; Tomorrow's FOTD will show some Elliptic elephants.  They are 
+; there in the Elliptic planes also.
+; 
+; The rating of a 7 that I gave today's image might be a bit 
+; liberal.  And the calculation time of under 6 minutes may be 
+; eliminated entirely by viewing the finished image on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Typical early July weather prevailed here at Fractal Central on 
+; Tuesday.  The temperature of 84F 29C and partly cloudy skies 
+; were right on the normal mark.  The fractal cats slept through 
+; most of it.  My day was rather busy but still under control.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and fly like an elephant.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+ParabolicElephants { ; time=0:05:50.97-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 passes=t maxiter=27500
+  center-mag=-0.00059573625921465/-0.446555463085238\
+  70/1341.626/0.2304/90/-86.8491299926404423
+  params=0/90/0/0/0.26090366/-0.00195958/0/0/2/0
+  float=y inside=0 logmap=29 periodicity=10
+  colors=000wzMxzLwzKuzKszJqzIozHlzHizGfzGczG`zFYzHW\
+  zKUzNSyQRxTQxWPxZPyaPycPyePxgPxjPxmPwpPwsPwvPwwPvw\
+  PvvPvsPuqPuoPumPtkPtiPtgPtePscPscPsaPr`Pr`Pr`Pq_Pq\
+  _Pq_Pq_Pp_PpZPpZPoZPoZPoYPnYPnYPnYPnYPnYPnYPnYPnYP\
+  lVPiSPfQPcNP`KPYHPVFPSCPP9PM7UM8ZK8cJ9hH9mGAmEAmDB\
+  rBBv89zABzBCzCDvDErFFmGGhHHcIIaKJ_LKYMLWNMUPNSQOQR\
+  POSQMURKVSIWUGXVEZWC_XA`YAaZAc_9d`9ea9fb9hc9id8je8\
+  kf8mg8nh8oi8pj9oi9niAmiAliAkiBjiBiiBhiCgiCfjCekDdl\
+  DcmDbnEaoE`pE_qFZrFYsFXtGXuGXvHXwHXxH`yIYzI_zIazJg\
+  zJazJ`zKVzKUzKOzLNzLHzLGzMFzMEzMDzNCzNBuK5pM8pNApP\
+  CpNApOCuPDuQEuRFzRGzSHzTIzUJzULzVMzWNzXOzYPzYQzZRz\
+  _Sz`Uz`VzaWzbXzcYzdZzd_ze`zfbzgczgdzhezifzjgzkhzki\
+  zlkzmlznmznnzoozppzqqzrszquzqwzqwzpwzpwzpwzowzowzo\
+  wznwznwznwzmwzmwzmwzlwzlwzlwzkwzkwzkwzjwzjwzjwziwz\
+  iwziwzhwzhwzhwzgwzgwzgwzfwzfwzfwzewzewzewzdwzdwzdw\
+  zcwzcwzcwzbwzbwzbwzawzawz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,106 @@
+;     Date: Thu, 09 Jul 2009 21:30:27 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-07-09 (Elephant Transition [No Rating])
+;       Id: <1.5.4.16.20090709213212.2af797d6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 10, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Elephants, elephants, elephants!  We certainly have seen enough 
+; elephants so far this month.  But today's image will be the last 
+; one to feature these over-familiar fractal elephants.
+; 
+; The image shows a normal elephant morphing into a pair of alien 
+; pop-eyes.  The normal elephant is at the lower left corner of 
+; the frame.  Extending upward and to the right from the normal 
+; elephant lies a series of steps between a normal elephant and 
+; the tiny set of 'Greetings Earthlings' alien pop-eyes at the 
+; upper right edge.  It can be seen that the spiral elephant trunk 
+; becomes one eye, while the deep basin on the elephant's rump 
+; becomes the other eye.  The very minor mystery has been solved 
+; and we can move onward to more artistic things in the days to 
+; come.
+; 
+; The name "Elephant Transition" refers to the transition from 
+; elephant to alien eyes.  Of course, I could give no rating to an 
+; image that I find pretty boring myself.  But all is not lost, 
+; for the parameter file runs in a blazing 50 seconds.
+; 
+; Those who do not like blazes may access the finished image on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; An absolutely perfect day passed unappreciated by the fractal 
+; cats here at Fractal Central on Thursday.  The kodachrome 
+; (digitally intensified) blue skies and temperature of 81F 27C 
+; kept the humans happy, but the cats were more concerned with an 
+; unwanted stray tomcat that spent half the afternoon yelling 
+; somewhere nearby.  When the stray wandered on, he left his 
+; aromatic calling card, and this further disturbed the fractal 
+; duo.
+; 
+; My day was perfectly average, which means perfectly boring, and 
+; what's wrong with that.  The work was finished on time and FL 
+; offered no (accidental?) philosophical bait to get me pondering. 
+; The next FOTD, from an East Valley but with a guarantee of no 
+; elephants, will be posted in 24 hours, or maybe not for 36 hours 
+; if a certain rush job comes in.  Until whenever, take care, and 
+; they say we live on the surface of a multidimensional ocean.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+ElephantTransition { ; time=0:00:50.51-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4
+  center-mag=-0.127123/-0.601833/9.67109/1/99.4/0
+  params=89.9/0/89.9/90/0.252/0/0/0/2/0 float=y
+  maxiter=4200 inside=0 logmap=54 periodicity=10
+  colors=000ZczZdzZex_fw`gvahubitcjsdkrelqfmrgoqgpqf\
+  orforeoremrdlrdkrcjrchsbhsbhsahsags`gs`gs`gsS_fKSV\
+  CKI4C66B97BC9AFAAIB9JD9LE8NG8PH7RI7TK6WL6ZN5aO5dP4\
+  fR4iS3lU2oV2rW2tU4rS5pR6nP7lN9kMAiKBgICeHEdFFbDG`C\
+  HZAJY8KX7LW5MV4NV5PY5RZ5T_5V`6Xa6Zb6`c6bd7de7ff7hg\
+  7jh8li8nj8pk8rl8tmArkCpjEnhFlgHjeJidLgbMeaOc_QaZS_\
+  XTZWS_VS`UR`URaTRbSQbSQcRPdQPdQPePOfOOfOOgNNhMNhMM\
+  iLMjKQjKUkJZlIclIhiQmcXrZdvVkzQszMzzSnzaUze8zi9zmA\
+  zqBzlFzhJzdMz`QvXTrSXnO`jKcjGgjCjgEcdGYaIR_KL`NIaQ\
+  GaTEbWCbZAca8cc6ab9`bBZaDYaFWaHV`JT`Lc`Nc_Pc_RcZTc\
+  ZVcZYcYbcYhccmdcrhcvmczmczmczmczmczmczmczmczmYzmYz\
+  mZzh_zh_wh`uh`sh`rg`pf`oeamdalcajHahHagHbeHbdHbbHb\
+  aHb_HcYHcXYZ`TaYOdVJgTMeSOcRQbQS`PU_OWYNYXM_VLaTKc\
+  SJeQIgPHiNGkMFmKEoIDqHCsFBuEAwC9yB9wDAvEAuGBtHBsJC\
+  qKCpMDoNDnOEmQElRFjTFiUGhWGgXHfYHe_Ic`IbbJacJ`eK_f\
+  KZgKYdQYbWX_aXYgWVmWTszzz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

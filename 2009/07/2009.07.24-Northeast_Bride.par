@@ -1,0 +1,115 @@
+;     Date: Fri, 24 Jul 2009 18:48:51 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-07-09 (Northeast Bride [No Rating])
+;       Id: <1.5.4.16.20090724185048.29efe4c6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 25, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Friday turned unexpectedly busy here at Fractal Central, leaving 
+; almost no time for a proper fractal, much less a new type of 
+; fractal.  What we have is an almost-Julia set with a bridge 
+; across its center.  This bridge is a side view of the north 
+; branch of the valley leading to the period-4 bud on the north-
+; east shore line of the main bay of the Mandelbrot set.
+; 
+; The wedge-shaped valley has become a stripe with parallel sides 
+; because, regardless of where the Z-points are initialized in the 
+; Mandelbrot set, they eventually settle into the same orbits.  I 
+; have no time for the technical details so just take my word for 
+; it.
+; 
+; The image is a harmless one -- a Julia outline with a blue 
+; stripe running diagonally across the center.  The area north and 
+; east of the stripe has many spirals, all spiralling clockwise, 
+; while the area south and west has only vague hints of spirals, 
+; and these are spiralling counter-clockwise.
+; 
+; Checking the orbits will show that the northeast half of the 
+; area inside the Julia outline lies inside the period-4 bud; the 
+; southwest half lies on the outside.  Some of the orbits are 
+; quite interesting.  I leave it to the individual fractalist to 
+; find these orbits.
+; 
+; I named the image "Northeast Bride".  I had intended to type 
+; the word 'bridge' but typed 'bride' instead.  I kind of liked 
+; the error, so I decided to let it remain.  As for a rating, 
+; forget it.  How many who have remained with the list all these 
+; years are really thrilled by seeing such trite images?
+; 
+; At least the calculation time is reasonable.  Who can complain 
+; about a calculation time of under 2-1/2 minutes?  And if there 
+; are any who do complain, relief may be found on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is or soon will be posted.
+; 
+; Hazy sun but otherwise pleasant weather prevailed here at 
+; Fractal Central on Friday.  An afternoon threat of rain proved 
+; to be a false alarm.  The fractal cats approved of the dryness 
+; and temperature of 82F 28C.
+; 
+; My day was very busy, even with FL helping.  There is a 50-
+; percent chance that the next FOTD will be posted in 24 hours.  
+; The other 50 percent is that we decide to take the day off.  
+; Until whenever, take care, and something very important is 
+; happening unseen just beneath the surface.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Northeast_Bride { ; time=0:02:26.10-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 passes=t
+  center-mag=-0.00921296/0.0053159/1.11/1/-105/0
+  params=90/90/92/89/0.241/0.512/0/0 float=y
+  maxiter=25000 inside=0 logmap=-3 periodicity=10
+  colors=000UV9UVCUWEUWGVWIWWLWWNXXPYXRYXUZXW_XY_X_`\
+  VY`UXaSWaRVaPUbOTbMScLRcJQcIPdGOdFNdHMgIJiKHkMFmOD\
+  pQBrS9bazbazbazbazbbzbbzbbzbczbczbczbdzbdzbdzbdzbe\
+  zbezbezafzafzafzagzagzagzahzahzahzahzaizaizaizajza\
+  jzajzakzakzakzakzalzalzalzamzamzamzanzanzanzaozaoz\
+  aozaoz`pz`pz`pz`qz`qz`qz`rz`rz`rz`rz`sz`sz`sz`tz`t\
+  z`tz`uz`uz`uz`vz`vz`vz`vz`wz`wz`wz`xz`xz`xz`yzayzb\
+  yzczzdzzezzfzzgzzhzzizzjzzkzzlzzmzzmzzmzzmzzmzzmzz\
+  mzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzznzzozzpzzqz\
+  zrzzszztzzuzzvzzwzzxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

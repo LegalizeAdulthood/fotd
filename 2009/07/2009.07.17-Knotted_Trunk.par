@@ -1,0 +1,113 @@
+;     Date: Fri, 17 Jul 2009 23:18:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-07-09 (Knotted Trunk [5])
+;       Id: <1.5.4.16.20090717232024.2abfc9fe@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 18, 2009 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image returns us to the elephant menagerie.  While 
+; wandering aimlessly through the zoo, I stumbled upon the strange 
+; elephant in todays image, which is one in a series of similar 
+; elephants lined up along the shore line of East Valley of a 
+; minibrot on the main filament of the fractal that results when 
+; the formula Z^(1.1892)+C is calculated 4 levels up the logarith-
+; mic ladder.  BTW, 1.1892 is the 4th root of 2.
+; 
+; The elephant in the image, as well as the unseen ones on either 
+; side of it, has its trunk apparently tied in a knot, or at least 
+; a spiral.  Actually, it takes quite a bit of imagination to see 
+; an elephant in the image at all.  The most striking feature is 
+; the sawtooth pattern that pervades the scene, and the almost too 
+; intense colors.
+; 
+; The name "Knotted Trunk" refers to the trunk of the unfortunate 
+; elephant in today's image.  The rating of a very mediocre 5 
+; indicates that I don't give a croak about the trunk.
+; 
+; But the calculation time of 30 minutes is indeed a problem.  The 
+; image is hardly worth the wait, so I recommend viewing the 
+; already finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; While stuck in a traffic backup today, FL found herself next to 
+; a car playing a Hip Hop 'song' at ear-splitting volume.  A white 
+; woman was driving the car and FL was shocked at the violence and 
+; anger expressed in the shouted words.
+; 
+; When FL returned to FC, she asked me how such unpleasant 'music' 
+; could be so popular.  How, she asked, can people stay so angry 
+; that they enjoy listening to such stuff all day.  Not wanting to 
+; get into a philosophical discussion, I went to the book shelf in 
+; my workroom, picked up the book "Patterns in the Void" by Sten 
+; Odenwald, and told FL to read the epilogue, which describes the 
+; rational but hopeless view of the world that I feel is largely 
+; responsible for the festering anger and depression that makes 
+; such violent music not only acceptable but actually fulfilling. 
+; But the last time I noticed, she had not opened the book.
+; 
+; Clouds and light rain spoiled the day on Friday here at Fractal 
+; Central.  The fractal cats enjoyed the much cooler temperature 
+; of 72F 22C.  My day was average.  The next FOTD will be posted 
+; in 24 hours.  Until then, take care, and I hear that the aliens 
+; are softening us up so we'll be unable to resist when they 
+; arrive in force to carry us off as slaves.  But then, why would 
+; an alien race so technologically advanced as to be able to 
+; navigate interstellar space need something as primitive as slave 
+; labor to do their menial tasks?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Knotted_Trunk { ; time=0:30:06.87-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 function=floor passes=t
+  center-mag=-6.050216876515906/+7.990641684923723/\
+  2289070/1/-140/0 params=1.1892/0/4/500 float=y
+  maxiter=15000 inside=255 logmap=457 periodicity=10
+  colors=000Acw7cw4cw2cw5ev7fv9huBiuEjuGltImtKosNpsP\
+  qsRsrTtrVur`omejiYmkQomJqoOmZTiIYe1Xc3Xb5W`6W_8VYA\
+  VXBUVDUUEUTGTRITQJSOLSNNRLORKQRJRQKPQLOQLMPMLPMKPN\
+  IPNHOOGOOEOPDOPC_VBj_BudBvbCvaDw`Ew_FwZFxYGxXHyWIy\
+  VJyUJtb9ok0E`yD_vDZtDYqDYoCXmCWjCVhCVfBUcBTaBSZBSX\
+  ARVAQSAPQAPOEQQHQSLQUORWSRYVR_YR`aSbdSdhSfkThoTjrT\
+  luTmrUjpVgnWdlWajXZhYWfYTdZQa_N__KY`HWaEUaBSb8Qc5O\
+  c3Vf6`i9flCmoFsrIytKvqLtnMrkMohNmeNkbOh`OfYPdVPaSQ\
+  _PQYMRWKRXPVXUZYZbYbfZgjZlnZpr_nq`mp`loakoajnbirbk\
+  vcnzchzdesddqeciebic`ja_k_ZlYYlkcpxitwgrvepvcnuamu\
+  _ktYitWgsVfsTdrRbrP`qN_qLYpJWpHUoGToERnCPnANm8Mm6K\
+  l4Il3Hk5Gk6Gj7Gj8Gj9GiAFiBFdPFiCFhDFhEFhFFgGEgHEfI\
+  EfJEfKEeLDeMDeNDdODdPDWvEXtDXsDYqDYpDYnDZmDZkD_jD_\
+  iD_gD`fD`dDacDaaDa`Db_DbYDcXDcVDcUDdSDdRDtaAu`Bw_B\
+  w_CxZEyZGzYIzYKzXMzXOzWQzWRzVSzWTzYUz_VzaWzcXzdYze\
+  Zzf_zgazhczihzjmzkrzlzKFK }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,101 @@
+;     Date: Mon, 06 Jul 2009 18:32:39 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-07-09 (Elephantettes [7])
+;       Id: <1.5.4.16.20090706183422.2ab78b74@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 07, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we shift the direction of our gaze to the 
+; Rectangular orientation and see what goes on at the period-30 
+; elephant complex when seen from this angle.  Some fairly normal 
+; elephants are still there, such as those scrunched at the right 
+; edge of the image, but what caught my attention are the bits and 
+; pieces of elephants at the center.
+; 
+; I named the image "Elephantettes", an oxymoron if ever there was 
+; one.  But the front halves of elephants, their trunks curling 
+; out left and right, actually do appear a bit delicate.
+; 
+; The double-half-elephant effect is due to the angle of the slice 
+; and the curved shape of the things being sliced.  Elephants are 
+; actually four-dimensional shapes that curve and twist through 
+; four-dimensional space.  It would take a five-dimensional viewer 
+; to actually see the entire 4-D elephant shapes, though a 4-D 
+; viewer could intuit the entire shapes.
+; 
+; The improved color palette makes the image worthy of a rating, 
+; and the rating I chose is a 7.  The calculation time of five 
+; minutes is bearable for all but the most impatient.  The most 
+; impatient may avoid calculation altogether by enjoying the fin-
+; ished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A perfectly average early July day prevailed here at Fractal 
+; Central on Monday.  The mostly sunny skies and temperature of 
+; 82F 28C were just what the fractal cats ordered.  Their only 
+; complaint was that they never get to go outside like the old 
+; fractal cats used to do back at old fractal central.  (Actually, 
+; the old and the new fractal cats never met.)
+; 
+; My day was comfortably busy.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and I believe only what I see, 
+; and I'm not sure I believe most of that.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Elephantettes { ; time=0:05:18.62-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 passes=t periodicity=10
+  center-mag=-0.0019407218694615/-0.4731591677497216\
+  /2371/0.001754/90/0 params=90/90/0/90/0.260821781/\
+  0/0/0/2/0 float=y maxiter=27500 inside=0 logmap=25
+  colors=000wzMxzLwzKuzKszJqzIozHlzHizGfzGczG`zFYzHW\
+  zKUzNSyQRxTQxWPxZPyaPycPyePxgPxjPxmPwpPwsPwvPwwPvw\
+  PvvPvsPuqPuoPumPtkPtiPtgPtePscPscPsaPr`Pr`Pr`Pq_Pq\
+  _Pq_Pq_Pp_PpZPpZPoZPoZPoYPnYPnYPnYPnYPnYPnYPnYPnYP\
+  lVPiSPfQPcNP`KPYHPVFPSCPP9PM7NM8MK8LJ9KH9IGAHEAGDB\
+  FBBF89EABEBCECDEDEEFFDGGDHHDIIDKJDLKCMLCNMCPNCQOCR\
+  PBSQBURBVSBWUBXVAZWA_XA`YAaZAc_9d`9ea9fb9hc9id8je8\
+  kf8mg8nh8oi8pj9oi9niAmiAliAkiBjiBiiBhiCgiCfjCekDdl\
+  DcmDbnEaoE`pE_qFZrFYsFXtGXuGXvHXwHXxH`yIYzI_zIazJg\
+  zJazJ`zKVzKUzKOzLNzLHzLGzMFzMEzMDzNCzNBuK5pM8pNApP\
+  CpNApOCuPDuQEuRFzRGzSHzTIzUJzULzVMzWNzXOzYPzYQzZRz\
+  _Sz`Uz`VzaWzbXzcYzdZzd_ze`zfbzgczgdzhezifzjgzkhzki\
+  zlkzmlznmznnzoozppzqqzrszquzqwzqwzpwzpwzpwzowzowzo\
+  wznwznwznwzmwzmwzmwzlwzlwzlwzkwzkwzkwzjwzjwzjwziwz\
+  iwziwzhwzhwzhwzgwzgwzgwzfwzfwzfwzewzewzewzdwzdwzdw\
+  zcwzcwzcwzbwzbwzbwzawzawz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

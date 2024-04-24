@@ -1,0 +1,97 @@
+;     Date: Thu, 16 Jul 2009 21:09:41 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-07-09 (Just Getting Started [7])
+;       Id: <1.5.4.16.20090716211132.2b17c580@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 17, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene doesn't make it as a work of fractal art, (Since 
+; when have the FOTD images ever been art?), nor does it bring an 
+; insight into some obscure mathematical conundrum.  It simply 
+; shows some elephants pieces gathering into finished elephants.
+; 
+; Now don't expect full-blown elephants to appear when you run the 
+; parameter file.  The elephants in today's image are little more 
+; than their disembodied trunks.  But the rest of the ponderous 
+; beasts are there, at least in spirit, faithfully mounting guard 
+; over their shrunken Z^(1.5)+C buds.
+; 
+; The parent fractal is the Z^(1.5)+C Mandeloid as it appears 24 
+; levels up the complex logarithmic hyper-spiral.  Today's scene 
+; is located in a rudimentary East Valley that lies on the X-axis.
+; 
+; I rated the image, for those who care, at a 7, which is FOTD 
+; average.  The name "Just Getting Started" refers to the 
+; elephants, which are just now getting their act together.
+; 
+; The calculation time of 1-1/6 minutes will pass in a jiffy.  The 
+; time might seem a bit longer for those desperately impatient to 
+; see the image.  These desperate few may view the image already 
+; calculated on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Summer finally arrived here at Fractal Central on Thursday as 
+; the temperature rose to 91F 33C and the sun sizzled down.  The 
+; fractal cats paid no heed to the hot weather, spending the day 
+; in front of the living room fan.  My day was as quiet as might 
+; be hoped but busy enough to keep financial worries at bay.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and why are there trillions of trillions of stars in the 
+; universe yet only one of each one of us?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+JustGettingStarted { ; time=0:01:10.14-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 function=floor
+  center-mag=+0.165500928/-0.005217105/1112.595/1/\
+  28.8/0 params=1.5/0/24/0 float=y
+  maxiter=4500 inside=0 logmap=34 periodicity=10
+  colors=000CCCAFE8HH6JK4LN2NP6PQARQDTRHWRLZSO`SScTV\
+  eTZhUbjUelVimVlnVjoWhpWfqXdqXbqY`pYZoZXnZVm_Tl_Rk`\
+  Pj`Oi`QhbSgcTfeVefXdhYci_bk`ala`jb_hcagccededegbfi\
+  afk_gmYhoXiqVipUjoSkoRlnPjlOghMcdKZ_IVVHRRFMMDIJCD\
+  HA9F85D7CBEJDLQHRWMYbRdiVjp_qvcwwazw_zwYzxWzxUzxSz\
+  xQzyOzyMzyKzzIzzGvzErzDmxGhwJcvMZtPUsSVrUWlYVg`Ubc\
+  TYgTTjSOmRJpRKmTLjVLgXMdZMa`NZaNWcOTeOQgPNiPLjPMgP\
+  MdPMaPM_PNXPNUPNSPNPPOMPOKPOHPOEPOCRMDTLDVJEXIEYGF\
+  _FFaDGcCGdAHf9Hh7Ij6Ik5IQWR5uZ7rX8oV9lTAiRBgPCdNDa\
+  MEZKFXIGUGHREIOCJMBGLHEKMCKRAJW8I`6Ie4Hj2Ho7NmBSkF\
+  XiKagOfeSkcWpbWpbXpbXpaYoaYoaZoaZo`_o``n``n_an_an_\
+  bm_bmZcmZcmZdmYijVelYelYflYflXglXgkXhkWhkWikW7iz8j\
+  z9jzAjzBjzCjzDjzEjzFjzGjzHjzIjzJjzKjzKjzLjzMjzNjzO\
+  jzPjzQjzUjzZkzckzhkzmkzrkzvkzzkzzkzzkzzkzzkzzkzzkz\
+  zkzzkzzkzzkzzkzzkzzkzzfzzgzzgzzgzzgzzgzzhzzhzzhzzh\
+  zzhzzhzzizzizzizzizz_zzYz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

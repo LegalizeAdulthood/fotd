@@ -1,0 +1,102 @@
+;     Date: Thu, 02 Jul 2009 10:41:38 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-07-09 (One Skinny Trunk [No Rating])
+;       Id: <1.5.4.16.20090702104317.2b5781d2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 02, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows the grossly enlarged Mandelbrot aspect of a 
+; scene very deep in East Valley, framed by the Julia set of East 
+; Valley.  The angle of the slice is one-millionth of one degree 
+; from the true Julia direction.  This is the angle of one centi-
+; meter as seen from a distance of over 570 kilometers.  But as 
+; tomorrow's image will show, all the Mandelbrot features are 
+; still there, and undistorted as well.
+; 
+; I named the image "One Skinny Trunk", even though the skinny 
+; thing running diagonally from lower left to upper right is not 
+; an elephant trunk, but the entire width of East Valley at the C 
+; point of 25.00001.  Since the image trick is a virtual repeat of 
+; one I did with Seahorse Valley, I could give the image no rating.
+; 
+; If you think the calculation time of 24 minutes is slow, wait 
+; until you see the calculation time of tomorrow's image.  But 
+; don't fret.  Both images will be available on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Fairly warm but otherwise pleasant weather prevailed here at 
+; Fractal Central on Wednesday, with partly cloudy skies and a 
+; temperature of 84F 29C.  A light thunder-shower moved in well 
+; after dark, which passed pretty much un-noticed by the fractal 
+; cats, who spent the day watching for stray cats.
+; 
+; During a hurried lunch I asked FL why she spends so much time 
+; watching those silly latin TV novellas.  She commented that 
+; people with common sense ignore the silly questions I sometimes 
+; ask.  Then I told her that this shows the stupidity of people 
+; with common sense.  When she asked if I think she has common 
+; sense, I took a long sip of coffee.
+; 
+; The day was so busy that I was forced to post the FOTD 12 hours 
+; late.  This means the next FOTD is due in 12 hours.  It's a very 
+; slow one, so be prepared.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+One_Skinny_Trunk { ; time=0:24:23.10-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 passes=t periodicity=0
+  center-mag=0/0/1.147423/1/90/0 params=89.999999/0/\
+  89.999999/60/0.2500001/0/0/0/2/0 float=y
+  maxiter=60000 inside=0 logmap=-3 symmetry=xaxis
+  colors=000UDcXFe_KgbPieUkmcmmmmEmmDmmCmmCmmBmmBmmA\
+  mm9mm9lW8nW8pWBnYEm_HlaKkbNidPhfSggVfiYdk`clbbneap\
+  h_qkZsnYupXvmWskVpiUnfTkdShbRf`QcYPaWOZUNWRMUPLRNK\
+  OLJMIIJ8C7GHHEGEBFB9E97D6QqwOnsNlpMimLgiJdfIbcH__G\
+  YXEVUDTRCQNBOK9LH8JD7GA6E7zgnudjqbgm`ciY`eWYaUUYSR\
+  TPOPNKLLHHIEDGA9E7At`9pY9mV8iT8fQ8bO7_L7WJ6TG6PE6M\
+  B5I95F6ym0yh5xcAxZFwXKwVPvTUvRZuPcuNctLctKcFGCBF98\
+  D6GMRFLPEKNDJLCIJBIIAHGAGE9FC8FB7E96D75C5UurRplPkg\
+  MgbKbYHZTFUOCPJALE7G9v27s36p46m46j56g56d66a65Z75W7\
+  5T85Q95N95KA4HA4EB4BB48C4zXnnSdbOWSKMGGDRVXOTUMRRK\
+  POINLGLIDJFBHC9F97D6oFplEliEifEfcEc`E`YDYVDVSDSPDP\
+  MDMJCJGCGDCDACA7C7E5xC7lA8a8AQ6BF5Q25O35M35K35I45G\
+  45E4vV0dO2NI3lEviDsgDpeDncDkaDh_DfYDcWDaUDZSDWPCUN\
+  CRLCOJCMHCJFCHDCEBCB9C97C6iCyfCtcCp`ClYChVCdSC`PCX\
+  MCSJCOGCKDCGACC7C8eQhaOcYN_ULWRKSNJOJHKGGGCEC8D8`6\
+  0Z71Y71W71V81T81S82Q82P92 }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
