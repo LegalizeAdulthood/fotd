@@ -1,0 +1,82 @@
+;     Date: Wed, 25 Oct 2006 08:12:48 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-10-06 (FOTD-ette Number-3 [No Rating])
+;       Id: <1.5.4.16.20061025081418.0d1ff070@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 25, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Well, here it is.  One of my fractal goals over the past several 
+; months has been to find a midget in a Mandeloid of an order less 
+; than 1.1.  On Tuesday I finally found one -- for all it is 
+; worth.  It popped up by accident, almost without a search.  My 
+; great? discovery appears as the FOTD image for today.
+; 
+; I found the midget 800 levels up the logarithmic ladder of the 
+; Z^(1.09)+C Mandeloid.  Not surprisingly, the midget is shaped 
+; pretty much the same as its parent.  I named the image 
+; "FOTD-ette Number-3" but gave it no rating.  How could I rate 
+; something as insignificant as an oval-shaped midget surrounded 
+; by a cloud of meaningless chaos?
+; 
+; The image calculates in 4-1/2 minutes on my 10-year-old machine. 
+; It also may be viewed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The cloudy chilly and windy weather with a temperature of 43F 6C 
+; here at New Fractal Central on Tuesday did not worry the fractal 
+; cats, who do not worry about the outside weather.  They passed 
+; the day in a frisky mood, chasing each other up and down the 
+; hallway.  With me, the work continues quite heavy and the time 
+; for fractals continues quite light.  The next fractal will 
+; appear in 24 or so hours.  Until then, take care, and see the 
+; fractal light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD-ette_Number-3 { ; time=0:04:37.32--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+1.1984147098\
+  8871700/+0.57729940263917580/233.807/1/142.52/8.27\
+  331259056762747e-013 params=1.09/0/144/800 float=y
+  maxiter=50000 inside=0 logmap=78 periodicity=10
+  colors=000KbFK`HJZJJYKIWMIVNHTPHRRGQSGOUFMWFLXEJZE\
+  I_FKaFMbGOcGQdHSeHUfIWgIYhJ_iJajKckKelLgmLhnQijVjg\
+  _kddl`imYnnVvrUroSolQliOifMfcLb`J_YHXWFUTDRQCNNAKK\
+  8HH6EE4BC3EE5GG7II8KKAMMCOODQQFSSHUUIWWKYYM__NaaPc\
+  bQd`TeZVfXXgWZhU`hSciQejPgkNilLklJrlKmlLilMelNalNY\
+  lOUlPQlQMlRIpVDlREiOFfLGcIH_FIXCJU9KT0MR6KQCJPIINO\
+  GMUFL_EJeCIkBHqAVhQg_euQvtRttSrtTqsUosVnsWlsXkrXir\
+  Yhr0fr0eq0cq0bq0`qb_mcYidXedVaeUYfSVfRRgPNhOJhMFiL\
+  9hJCiKFjLHkMKlMNmNPnOSoOVpPXqQ_rRbsRdtSguTkyQivThs\
+  VfpXemZcj`cnhbhbbcYcZShr9mUNrWOvYPz_QzaRzcSzeTzgUz\
+  iVzkWzmXzoYzqZzs_zu`zwazxazsczndziezdfz_gzVhzQizLj\
+  zGozHkzHgzIczI`zJXzJTzKQzKMzLIzLFzMBzM7zM4zQ8zUCzX\
+  Fz`JzcMzgQzkUznXzr`zucztazs`ztZzuYzwWzxVzyTzzSzzQz\
+  zPzz8zzNzzCzzBzzBzzAzzAzz9zz9zz8zz8zz7zz7zz6zz1zz6\
+  zzUzzWzzXzzZzz_zzUzz`zzbzzfzzjzznzzrzzuzzpzzkzzfzz\
+  azzYzzTzzOzzJzzEzzAzzCzzE }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

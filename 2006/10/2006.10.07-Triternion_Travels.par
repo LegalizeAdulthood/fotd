@@ -1,0 +1,109 @@
+;     Date: Sat, 07 Oct 2006 07:53:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-10-06 (Triternion Travels [No Rating])
+;       Id: <1.5.4.16.20061007075441.29bf6c50@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 07, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The earlier version of today's FOTD will not run because I 
+; left out the 'frm:' brfore the formula name.  This version 
+; works all right.
+; 
+; Today's image makes use of a formula revised by Gilles Nadeau 
+; and posted to the Fractint list on Friday.  (I have changed the 
+; space between Neo and T-set in the formula name to an under-
+; score.  A space band in a formula name is not permitted.)  The 
+; formula is designed to draw the three-dimensional triternion 
+; Mandelbrot set.  It does this very well.  But I notice that the 
+; images it draws are the same as those drawn by the type=quat 
+; formula in Fractint, which claims to draw slices of a four-
+; dimensional quaternion M-set, but which I have always suspected 
+; actually draws slices of a circular three-dimensional object.
+; 
+; It is apparent that the three-dimensional object being sliced by 
+; both formulas is the figure that is traced out when the M-set is 
+; rotated around its X-axis.  The value I gave (p1) in today's 
+; image is +0.64952, which is the Y-value of the prominent valley 
+; of the large north bud of the M-set.  And not surprisingly, the 
+; valley appears in distorted form in today's image.  The large 
+; open areas at the top and bottom of the frame are oblique slices 
+; of the northern bud itself, or rather of the donut-shaped ring 
+; this bud traces out as it rotates around the X-axis.  The chaos 
+; across the middle of the frame is the fringe of the detail on 
+; the main-bay side of the valley, grossly stretched as would be 
+; expected when slicing through the edge of a donut.
+; 
+; What I would like to see is a way of rotating the slice 90 
+; degrees, so that the circles of revolution are drawn, and also 
+; the fascinating ovals that must lie in between.  I have no idea 
+; of how to do this however.
+; 
+; The image is titled "Triternion Travels", which is a fair enough 
+; opinion of the scene.  Since the image has mathematical value 
+; but little artistic worth, I gave it no rating.  The render time 
+; of 7-1/2 minutes on my 10-year-old machine may be avoided by 
+; visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the image as it is posted there.
+; 
+; A cloudy cool day here at Fractal Central on Friday went un-
+; noticed by the dynamic duo of fractal cats, who still were more 
+; interested in playing with each other and waiting for another 
+; mouse to come out.  They exhausted themselves playing, and 
+; showed little disappointment when no mouse appeared.  The usual 
+; evening treat was fully enjoyed.
+; 
+; My day was totally average.  Tomorrow will probably be the same. 
+; Until then, when the next FOTD will shine forth, take care, and 
+; would the true number of dimensions that make up sub-atomic 
+; reality please stand up.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Triternion_Travels { ; time=0:07:26.44--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=Neo_T-set
+  center-mag=-0.124889193/0/42.27946/3.2951
+  params=0.64952/0 float=y maxiter=5000 inside=0
+  logmap=186 symmetry=xaxis periodicity=10
+  colors=000kdff_g`ViWQjTJmSKlRLkRMkQNjQNjPOiOPhOQhN\
+  RgNRgMSfLTeLUeKVdBjCGbRKVdJKuMMsONrQOqSPpUQoXRnZSm\
+  `TlbVjdWigXhiYgkZfm_eo`dtddqaco_cmYckWciUcgSceQccO\
+  caMc_KcYIcWGcUEcSCcN5fQAcSFaVK_XPYZTWaYUcbSfgQhlOj\
+  pMhqPfrSdrVbsX`s_ZtbXueWugUvjSvmQwpOxrMxuKyxJyzHwy\
+  FuxDsxBqwAow8mv6kv4iu3hu7isBjrFkpJloNmmRnlVokZpibq\
+  hfrfjsentcrubvx`uuatsasqasoarmaqkapiaqfbpgapgaph`p\
+  h`pi_oi_ojZojZokYokYnlXnlXnmWnmWnnVqoUnnVknVhnWenW\
+  cnW`nXYnXVnXSnYQnYNnYKnZHnZ4bsCsWFnZIj`LfbOaeRYgUU\
+  iXPl_LnbHpeCsh8uk4wn0yh9lcI_ZRNRX4TY8UZBVZEW_IY`LZ\
+  `O_aS`aVbbYccadcdedghghfdjdbkc_laYm_WnZToXRqWOrUMs\
+  SKtRHuPFvODwUEjZFZcGNMAELEGKHIKKJJNLJQMITOHWPHZRGa\
+  SGdUFgVEjXEmYDp_AxfCucDs`EqZGnWHlUIjRJhPPeUVcZ_abe\
+  _gkYlpWprVsAao8Wg7Q`6KU5EN7LK9RIBYGDcEFjCGpAAsU5ul\
+  `FLRMJHTI8ZHQaVgdhyfuvXotOirFcp6YmHWkRVh`TfjSdtR`m\
+  SXfST_TPTTLMUIFUFP`CZfAgm }
+
+  frm:Neo_T-set { 
+  X=real(pixel), Y=imag(pixel), V=real(p1) 
+  x1 = y1 = v1 = 0: 
+  x2 = x1^2-y1^2-v1^2 + X 
+  y2 = 2*x1*y1 + Y 
+  v2 = 2*x1*v1 + V 
+  x1=x2, y1=y2, v1=v2 
+  z = x1^2+y1^2+v1^2 
+  z < 8 } 
+
+; END PARAMETER FILE=========================================
+; 
+; 

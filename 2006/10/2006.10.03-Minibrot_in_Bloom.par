@@ -1,0 +1,97 @@
+;     Date: Tue, 03 Oct 2006 07:58:51 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-10-06 (Minibrot in Bloom [5])
+;       Id: <1.5.4.16.20061003080006.0d970ff0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 03, 2006 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yes, I know that today's FOTD is late.  As often happens in my 
+; convenience-type business, an unexpected job came in on Monday 
+; morning, which the customer needed the same evening.  The job 
+; was small, and was indeed finished by evening, but this left 
+; little time for fractals.
+; 
+; Despite the rush I did find one fractal with a bit of interest.  
+; It appears as today's FOTD.  The image is a scene with a mini-
+; brot, in the parent fractal that results when negative portions 
+; of Z^(-1.6) and Z^(-4.7) are combined and (1/C) is added.  I 
+; often use reciprocal C with fractals that contain negative 
+; exponents of Z.  Such negative fractals are often inside-out.  
+; Reciprocal C turns these fractals inside-out again, which makes 
+; them rightside-out and easier to examine.
+; 
+; I enhanced today's image by calculating it with the 'outside' 
+; set to 'tdis', but it is impossible to make much of little, so 
+; with little to start with, I could rate the result no greater 
+; than an average 5.
+; 
+; I named the image "Minibrot in Bloom" for no particular reason.  
+; It is only fair that a merely average image be a fast one, and 
+; with its render time of only 3 minutes, today's image is fast 
+; enough.
+; 
+; The only faster way of viewing the less-than-glorious scene is 
+; to take a virtual trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and to download the completed image from there.
+; 
+; A morning with drifting patches of fog gave way to a sunny warm 
+; afternoon with a temperature of 70F 21C here at New Fractal 
+; Central on Monday.  The fractal cats glanced out the window a 
+; few times, but spent most of the day waiting by the hole for the 
+; mouse to come out and play.  They must play too rough, for the 
+; mouse never appeared.  Their disappointment was eased in the 
+; evening by a generous treat of tuna and cheese.
+; 
+; My day was unusually busy, but it looks like things will now be 
+; normal for a week or two.  Unless I am wrong, which I sometimes 
+; am, the next FOTD will appear in around 15 hours.  Until then, 
+; take care, and walk in this world with puzzlement and enjoyment.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Minibrot_in_Bloom { ; time=0:03:05.92--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=-0.84928080821253190/-1.706583784520602\
+  00/1.211013e+008/1/122.5/-5.73023364377339695e-005
+  params=-1/-1.6/-0.5/-4.7/0/0 float=y maxiter=1000
+  inside=0 outside=tdis periodicity=10
+  colors=000oVCoTBoQAoO9oM8oK7oI7jNCeRH`WMW_R7A8TkXN\
+  kWKiZIhaGgcDffBeh9ck6bn4ap2`s0_u2Zt4Zs6Zr7Zq9ZpBZo\
+  CZnEZmGZlIZkJZjLZiNZhOZhPajQclRenSgoTiqUksVmtWovXq\
+  xXsyYnwYjvYftYbsYZrYUpYQoYMnYIlYEkYAjXCkWDlVFmUGnT\
+  HnSJoRKpQMqPNqOOrNQsMRtMStKRrJRqIQoHQnGQmFPkEPjDPi\
+  COgBOfAOe9Nc8Nb7Na6J`6F_6BZ67Y63X60X72V84U86T98RAA\
+  QACPBEOCGMCILDKKEMJEOHFQGGSFGTEISDKRCMRBNQAPQ9RP8S\
+  P7VS8XV8ZY9``9cbAeeAghBikBkmBijAgg9fd9da8cZ8aW7_T6\
+  ZQ6XN5WK5UH4TF4ONBKVIFbPBiWBgYBfZBe`BcaBbbBadB_eBZ\
+  fBYhBWiBVkBUlBSmBRoBQpBPqMOnWNkfMhpMeqNcrNasN_sNYt\
+  NXuNVuNTvNRwNPxNOxNMyNKzNIzNHuQGqSKuUOhWEcYD__CVaC\
+  RcBMeAIgADi99k85m89kEDiJHgOLeTPcYTacX_h`YmdWrhUwX`\
+  qLgkAnfGrbAd9EcDIbGLaJP`MT`QW_T_ZWcYZfXajXenWhqVku\
+  UnxUqrRhlO`fMS`JKVGBQE3SF5UG7VG8XHAZIB_IDaJEcKGdKI\
+  fLJhMLiMMkNOlNPlLQlJRlHSlFSlETlCUlAUl8Vl6Wl5WPQQ1i\
+  KmjJngIneHncGnaFnZEnXDzWS }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,93 @@
+;     Date: Wed, 18 Oct 2006 06:45:46 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-10-06 (Double Trouble [6])
+;       Id: <1.5.4.16.20061018064712.0dcf4172@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 18, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is kind of a mystery.  I'm not sure if it is a 
+; real fractal or an artifact.  The formula is simply a variation 
+; of the hypercomplex formula in fractint.frm, with a few more 
+; variable parameters added.  The strangeness lies in the imag(p3) 
+; parameter, which is 10^(-012).  It seems unlikely that such a 
+; small value could make such a big difference in the appearance 
+; of the parent fractal.  I suspect that we may be dealing with 
+; some kind of mathematical imprecision here, but if so, I have no 
+; idea what it might be.
+; 
+; Regardless, the fractals the formula creates appear as real as 
+; any other fractals.  They may be zoomed into up to the limit of 
+; double-precision math, though the fact that the periodicity must 
+; be set to zero hints that the fractal-reality of this fractal 
+; might be questionable.
+; 
+; It's a rather somber image, with a pronounced 3-D effect, which 
+; looks its best when the screen brightness is turned well down.  
+; 
+; I named the image "Double Trouble".  It comes in two halves and 
+; there is always that troubling doubt about its validity.  The 
+; rating of a 6 seems appropriate.
+; 
+; The render time of just under one hour is necessary due to the 
+; large maxiter of 15000 and the necessity to turn off periodicity 
+; checking.  But this time will be cut to 10 minutes or so on the 
+; fastest machines.  If even this is too slow however, it would be 
+; best to wait until Paul posts the finished GIF image to the FOTD 
+; web site sometime later today.  The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A steady chilly rain fell all day here at New Fractal Central on 
+; Tuesday.  The fractal cats spent a good part of the day watching 
+; the cars splashing by.  In my department, the big rush job that 
+; is supposed to be soon coming in has so far failed to appear.  
+; It is still promised this weekend however, so we'll have to see 
+; how it goes.  The next fractal will go as scheduled in 24 hours, 
+; I presume.  Until then, take care, and the crazy schedule will 
+; soon be over.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Double_Trouble { ; time=0:59:28.63--SF5 on a P200
+  reset=2004 type=formula formulafile=jim.frm
+  formulaname=HyperSquare passes=1
+  center-mag=-0.17649147506615800/0/2086.338/1/90/\
+  -1.23373533611470521e-014 params=0/0.5/10/0/0/\
+  1e-012 float=y maxiter=15000 inside=0
+  logmap=443 periodicity=0
+  colors=000UFKUDJUBIUBIUAHUAHU9HU9HU8GU8GU8GU7GU7GU\
+  6FU6FU5FU5FU5FU4EU4EU3EU3EU1FU2EU3EU4EU5EV6EV7EV8D\
+  V9DVADWBDWCDWDDWEDWFCXGCXHCXICXJCXKCXKBYKBYKBYKBYK\
+  BYKBYKBYKAYKAYKAYKAYKAYKAYL9YM9YM9YN9YO9YP9YQ7YR8`\
+  R8`S9`R9`RA_QA_QB_PB_PC_PCZPDZPDZPDZPEZPEYPFYPFYPG\
+  YPGYPHXPHXPIXPIXPJXPJWPJWPKWPKWPLWPLVPMVPMVPNVPNVP\
+  OUPOUPOUPPUPPUPQTPQTPRTPRTPSTPSSPTSPTSPUSPUSPURPVR\
+  PVRPWRPWRPWQPVQPVQPVQPVQPVSQVRPVQPVPOVPOVOTUNSTNSS\
+  MRQLRPKRNKQMJQKIQJIPIHPGGOFFODFOCENADN9CO7DN8EN8FN\
+  8FN9GN9HM9HMAIMAJMAJMBKLBLLBLLCMLCNLCOKCOKDPKDQKDQ\
+  KERJESJESJFTJFUJFUIGVIGWIGWIHXIHYHHZHHZHI_HI`HI`GJ\
+  aGJbGJbGKcGKdFKdFLeFLfFLfFMgEMhEMiEMiENjENkDNkDOlD\
+  OmDOmDPnCPoCPoCQpCQqCRqCSpDTpDUpEVpEWpEXpFYpFZpG_p\
+  G`pGapHbpHcpIdpIepIfpJgpJhpKipKjpKkpLlpLmpMnpMopMp\
+  oNqoNroNsoOtoOuoPvoPwoPxoQyoQzoRzoRzoRzoSzoSzoTzoT\
+  zoTzoUzoUzoVzoVzoVzoWzoWz }
+
+frm:HyperSquare {; Jim Muth
+a=(p1),b=(0,0):
+q=sqr(a)-sqr(b)+pixel
+b=p2*a*b+p3
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

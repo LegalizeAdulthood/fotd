@@ -1,0 +1,88 @@
+;     Date: Tue, 31 Oct 2006 22:05:54 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-11-06 (All the Same [No Rating])
+;       Id: <1.5.4.16.20061031220727.2a8768a0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 01, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a midget in the Z^(10.01)+C Mandeloid as it 
+; appears 100 levels up the logarithmic ladder.  It shows why 
+; fractals in this range are virtually ignored.  Basically, they 
+; all look the same, and the universal sameness is not particular-
+; ly interesting.
+; 
+; I did my best with the thing, but with so little to work with, 
+; there was not much I could do.  I gave the image no rating and 
+; named it "All the Same".
+; 
+; The render time of 2 minutes is surprisingly brief.  And even 
+; this short time may be avoided by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; A beautiful sunny and warm fall day, with a temperature of 70F 
+; 21C here at New Fractal central on Monday went un-noticed by the 
+; fractal cats, who slept away most of the day.  I passed most of 
+; the day in my easy chair or hopping around on my walker, waiting 
+; for the recovery of my sprained ankle to reach the point where I 
+; can kick the walker good-bye.  On some days I get concerned and 
+; depressed at the slowness, and I lack the energy to write the 
+; FOTD, which explains why there was no FOTD for October 31.  But 
+; badly sprained ankles don't heal overnight.
+; 
+; Luckily, the regular graphic work is quite slow, and unless I 
+; fall into another bout of depression, the next FOTD will appear 
+; in 24 hours.  Until then, take care, and look for the golden 
+; lining.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+All_the_Same { ; time=0:02:07.64--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.97597907569757680/+0.003611381692242\
+  21/3.838319e+011 params=10.01/0/100/0 float=y
+  maxiter=1250 inside=0 logmap=41
+  periodicity=10 mathtolerance=0.05/1
+  colors=000cN5bM5bM5aL4aK4`J4`J4_I3_H3ZG3ZG3`J6bL9d\
+  OCeQFgTIiVKkYNl_QnbTpdWqfYodZmbZl`_jZ_hX`gV`eT`cRa\
+  bPa`NbZLbYJb_MaaO`cR`eT_gW_iYZk`ZmbYoeYqgXsiXrfYrc\
+  Yr`ZrYZrV_rS_rP`rM`jOccQfXSiPUlIWoBYr4Zu8XpBWlEVhH\
+  UdKT`NSXRRTUQPXPL_OHbNDeM9hL5eM9cND`NHZOLWOPUPTSQX\
+  PQ`NRdKRhISlGSoEQjDOeBM`AKW8IR7GM5EH4CCD9EM6GV3Ic1\
+  KbGXaUh`gtXeqTcnQbkTZjWWjZTiaPidMifJhiGhlCho9gr6gt\
+  3gTHf2Ue6Rf9UgCZhFciJhiMmjPrkSvlVzmZzmazndzogzpjzp\
+  lzmmzjozgpzdqzaszZtzWuzTwzQxzNyzLvzKszJpzJmzIjzIgz\
+  HdzHazG_zGYzLWzQUzVSzZQzcOzhMzlKzqIzvHzzLzsOzlSzeV\
+  zZZzSazLezEhz7kz1iz5hz8gzBfzEdzIczLbzOazR_zVZzYYz`\
+  XzcYzbZza_z`_z_`zZazYbzXbzWczVdzUezTezTfzRfzQjzWnz\
+  arzgvzmzzsvzrszqozplzohzneznbzmZzlWzkSzjPziMziHzYC\
+  zN7zC2z1AzBIzLQzUYzcezmmzvkzwizwgzwfzwdzwbzw`zw_zw\
+  YzwWzwUzwTzwSzuSzsSzqSzoSzmSzkSziSzgSzeSzcSzaSz_Tz\
+  `UzaVzbWzcXzdYzeZzedz6cz5 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

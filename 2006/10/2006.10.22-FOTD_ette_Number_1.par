@@ -1,0 +1,72 @@
+;     Date: Sun, 22 Oct 2006 22:40:00 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-10-06 (FOTD-ette Number-1 [No Rating])
+;       Id: <1.5.4.16.20061022224129.1a3f405e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 23, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With a few minutes to spare on a Sunday evening, I have found a 
+; fractal.  In my opinion, it is not a great fractal, but since 
+; greatness is in the mind of the beholder, it might be great in 
+; some alien mind.
+; 
+; The image is a scene in the fractal that results when Z^(-0.5) 
+; is mixed with Z^(-5.5) and (1/C) is added.  I named it 
+; "FOTD-ette Number-1", and gave it no rating.  The 18 minutes 
+; spent calculating the image may be avoided by viewing the image 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather has been kind of cloudy and chilly here at New 
+; Fractal Central for the past few days.  The fractal cats have 
+; been themselves.  The next FOTD will appear whenever I get the 
+; opportunity, probably within a day or two.  Until then, take 
+; care, and if we were automatons with no self-awareness, would 
+; we believe that unconscious matter could create consciousness?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD-ette_Number-1 { ; time=0:18:13.02--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=+3.57092434964353400/+0.006606919547551\
+  14/5.890099e+007/1/-25/-4.8024984247926894e-005
+  params=3/-0.5/0.8/-5.5/-0.8/0 float=y maxiter=4500
+  inside=0 periodicity=10
+  colors=000NScMUaMW_LYYK`WKbUJdSJfQIhOHjMHlKGnIGpGI\
+  rEKtCMvAOx8Qz6Sz7Uz7Wz7Yz8_z8bz8ez9hz9kz9nzAqzAtzA\
+  wzBzzBzzBzzCvzCrzCmvDhrDcmDbhEacE`ZE_UFZPFYKFXFFWA\
+  IUCLSBFQAAOAALAAJAAHAAFAADAAAAA8AA6AA4AA2AA5AA7AA9\
+  AABAAD5AF02F23F44F55F76F87FA8FB9FDAFEBFGCFHDFJEFKF\
+  FMGFNHFPIFQJFSKFTLFVMFWNGUPHTQISSJRTKQUKPWLOXMNYNM\
+  _OL`PKaPJcQIdRHeSGgTFhUEiUDkVClWBmXAoY9pZ8qZ7s_6t`\
+  5ua4wb3xb2y_3sX3nU3iR3dP3_M4VJ4QG4LD4GB4BKDASMA_VA\
+  hcAplAxuAwsCvqDuoFtnGslIrjJqiKpgMoeNncPmbQl`RkZTjY\
+  UiWWhUXgTYfR_eP`dNbcMcbKdaIf`Hg_FiZDjKrzKBlKrzKBlK\
+  rzKBlKrzKBmKrzKBmKrzKBnKrzKBnKrzKAnKrzKAoKrzKAoKrz\
+  NApOrzPApKrzRApKrzTBmKrzVBiKrzXCdZCbaC`cCZeCXgDUiD\
+  SkDQnDOpDMrEJtEHvEFxEDzEBtEAnE9hE8bE8XE7RE6LE5GE5I\
+  F7JG8KH9LIAMJBNKCPLDQMERNFSOGTPHUQIWRJXSKYTLZUM_VN\
+  `WOaXPcYQdZRe_Sf`TgaUhbVjcWkdXleYmfZng_og`pgangbmf\
+  blebkdcjbciach`cf_dOOgNQe }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

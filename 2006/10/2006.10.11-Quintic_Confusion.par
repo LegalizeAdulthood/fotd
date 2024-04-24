@@ -1,0 +1,91 @@
+;     Date: Wed, 11 Oct 2006 23:48:57 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-10-06 (Quintic Confusion [7])
+;       Id: <1.5.4.16.20061011235018.29dfbf5a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 12, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to the vicinity of the negative X-axis of 
+; the Z^(5.003)+C Mandeloid, where we examine a quintic midget at 
+; the limit of resolution.  I named the image "Quintic Confusion" 
+; because of its extremely busy appearance.  I was ready to rate 
+; the image at an 8, but I could not bring myself to honestly give 
+; such a high rating.  The fractal picture is simply too disorgan-
+; ized and muddy.  I finally decided on a rating of 7.  The math-
+; tolerance entry in the parameter file is necessary to insure 
+; that the image is calculated at the correct magnitude.
+; 
+; To create the image, I used the MandelbrotN formula, which I 
+; wrote a number of years ago to generate images of Mandeloids of 
+; any power.  With this formula, the image renders in 14-1/2 min-
+; utes.  Curiously, when I checked the time the manzpower formula 
+; would take to calculate the image, I found it would take almost 
+; 19 minutes.
+; 
+; The cobweb-like appearance apparently holds true of all Mandel-
+; oids of the order n.003, where n is an odd positive integer.  
+; When n is even, the railyard effect appears.  In the next FOTD, 
+; I'll see how large I can raise the value of n and still find an 
+; acceptable image.
+; 
+; Today's image may be calculated from the included parameter 
+; file, or it may be viewed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The fractal cats were annoyed not at all by the cloudy and 
+; cooler weather here at Fractal Central on Wednesday, with a 
+; temperature of 66F 19C and a few drops of rain.  They were too 
+; busy checking and exploring the basement, which they got into 
+; for the first time.  After deciding that all was well down 
+; there, the duo settled for a relaxing evening.
+; 
+; My day was slow, but not as slow as the past several days have 
+; been.  I expect tomorrow to be another slow day, which should 
+; mean another interesting fractal.  That fractal will appear in 
+; 24 hours.  Until then, take care, and be ready for the great 
+; revelation.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Quintic_Confusion { ; time=0:14:38.04--SF5 on a P200
+  reset=2004 type=formula formulafile=slices.frm
+  formulaname=MandelbrotN passes=b
+  center-mag=-0.53558959324674450/-0.001231684234550\
+  91/5.008814e+012/1/25/0 params=5.003/0/0/0/0/0
+  float=y maxiter=4500 inside=255
+  periodicity=10 mathtolerance=0.05/1
+  colors=0000006Gz0Dz0Az06z0Gz1Pz8XyIeuQoqZyoJsB5m0E\
+  P1P4QSEJWQEXbAXbAXbAXc8Xe8Zi6Zk6Zm6Zm5Zm5Zm4Zm4Zk4\
+  Zi2GX2Mc2Xm4Xp4Xm4Xi5Xc5XZ6XW64ggPPsk8zeWz`uzWzzMz\
+  uEmX6XB1J0BS2L`BWiMesXqzgszzuzWvzzyzLzzzzzAzz5zz1v\
+  z4ov6gkAb`BWQEPGII6LD0M80Q50U10X00Z00b00e00i00k00q\
+  10uA0yI0zS1zb2zk4zWbyIzio2zc4zU4zL4zB4z24z04v04s04\
+  o0Dg0M`0XU0eM0qG0zA1z4AzEIoPQcZZUkgJvqBz6kM4qL1vL0\
+  zL0zL0zL0zL0vP5cSDMWJ8XXQShcgzzhzcW6MPL5IJDIIJIIQI\
+  GXIEcIEkILiJSgLXeMccPkbQq`SyZUzZUuZSmZScZSXZSQZSIZ\
+  SBZS5ZSGWUSUWbSXoQZzP`zM`20Q80XD8bIMgDWkAbo5is2sv0\
+  zz0zz0zzzMzzsgzvXvyPmzEez6Xz0Qz0Jz0`z8sqZquWoySmzP\
+  kzLizIgzEezDkzJozPssWvk`zcgzXmzQuzJzzDzz6zz5zz5zz5\
+  zz5uA40DU0KP00K0BE0X2WQ2UL2UE1UK1UP1UP1UP4UP5UP8UP\
+  AUPDUPEUPIUPJUPMKQPANS0SU0VX0XZ0Zb0Zc0`Z0bW0cQ2eMA\
+  gJIgESiB`k8im4uo1zo0zi0ze0y`0qX0iU0bP0WL0PI0ID0BA0\
+  5600B24GB6LMAPXDWQuMMv000 }
+
+frm:MandelbrotN {; Jim Muth
+b=p1, z=p2, c=p3+pixel:
+z=z^(b)+c,
+|z| <= 16 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

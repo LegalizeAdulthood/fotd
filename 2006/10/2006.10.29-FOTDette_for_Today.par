@@ -1,0 +1,77 @@
+;     Date: Sun, 29 Oct 2006 22:23:13 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-10-06 (FOTDette for Today [No Rating])
+;       Id: <1.5.4.16.20061029222446.0d5ff864@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 30, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to the fractal that results when 
+; Z^(-6.67) is subtracted from Z^(-1.667) and (1/C) is added.  To 
+; add to the interest I reduced the escape radius to 44, which 
+; makes the outside parts solid, and rendered the scene with the 
+; outside set to 'tdis'.
+; 
+; The resulting image falls short of FOTD standards, so I gave it 
+; no rating.  The name "FOTDette for Today" needs no explanation.  
+; The 5-minute render time will try the patience of very few.  The 
+; completed image is posted for easy viewing on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The cloudy, blustery and chilly weather continued here at 
+; Fractal Central on Sunday, with a high temperature of only 46F 
+; 8C.  The fractal cats spent the day surprisingly peacefully.  
+; Maybe they feel guilt about my bum ankle.  With me, it's still 
+; the bunny-hop, with the addition of a few upper-body sore 
+; muscles due to the unusual exertion of supporting my weight with 
+; my arms and hands, on the walker.  If all goes well, and why 
+; should it not, the next FOTD will appear in 24 hours.  Until 
+; then, take care, and watch for cats who don't put away their 
+; toys.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTDette_for_Today { ; time=0:05:14.67--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.99968161435129880/+0.786477887450229\
+  40/21486.63/1/177.5/-2.37472548569872544e-010
+  params=1/-1.667/-1/-6.67/0/-56 float=y maxiter=900
+  inside=0 outside=tdis periodicity=10
+  colors=000kaslbtmcundvodwncunctnbsmbqmapmaol`ml`ll\
+  _kk_ikZhkZgjYejYdjXciXaiW`iW_e_VacRYgMUjIQnDMr9Iv4\
+  Fy0Fw6FuCFsHFqNFoTFnYDi_Be`9aa7Xb5Tc3Pd1Le2Nc3Ob4P\
+  a4Q_5RZ6SY6TW7UV8WU9XT9YRAZQB_PB`NCaMDbLDcKFeKHgKI\
+  iKKjKMlKNnKPoKQqKSsKUtKVvKXxKcyKduJeqJfnIgiIhcHi_H\
+  jWGkSGlOFmFFUBF6JP9QYDYfGdoJkxJguJdsJ`pJYnJUlJRiJN\
+  gJKeJGbJD`JAZLCYMDYNFYPGYQHYRJYSKYULXVNXWOXYPXZRX_\
+  SX`TXcSZeS`gSbiSdkSfmShoRjqRlsRnuRpwRryRtsSqnTohUl\
+  cVjYVhTWeNXcIY`CZZ7ZXAaZCc`FebHgdJifMkhOmjRolTqnVs\
+  pYur_wtayuZwtXvtVusTssRrrPqrNpqLnqJmpGlpEjoCioAhn8\
+  gn6em4dm2cl0blEe`RhPckDpm2nj3mh4lf4kd5jb5i`6gZ7fX7\
+  eV8dT8cR9bP9fLDjIGnEKrBNv8QuARtCStESsGTsHTrJUrLUqN\
+  VpPWpQWoSXoUXnWYnXYkY_iYafZbdZda_e__gX`hV`jSakQamO\
+  anPbmPblPblQbkQbjQbjRbiRbhRchRcgScfScfSceTcdTcdTcc\
+  TccSdbRebPfaOg`Nh`Mi_KjZJkZIlYKxbHlYF`TCQOAEJ83FB4\
+  EE5DG5CJ6BL7AO79Q88T97W96 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

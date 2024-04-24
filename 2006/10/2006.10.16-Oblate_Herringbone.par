@@ -1,0 +1,95 @@
+;     Date: Tue, 17 Oct 2006 00:59:40 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-10-06 (Oblate Herringbone [7])
+;       Id: <1.5.4.16.20061017010105.29af9cce@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 17, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Do the herringbone patterns so prominent in recent FOTD fractals 
+; exist in the odd planes of the Z^(2.0000001)+C Julibrot?  As 
+; today's image shows, they most certainly do.
+; 
+; Today's image skices the Julibrot in the Oblate direction, which 
+; is determined by the imag(c) and real(z) axes.  In this direc-
+; tion, the scene remains pretty much intact.  The herringbones 
+; remain where they should be, while the tiny hole still lies near 
+; the center.  The slices in other odd orientations are far less 
+; kind to the scene however, and distort things almost beyond 
+; recognition.  I will show some of these other slices in upcoming 
+; images.
+; 
+; I named today's image "Oblate Herringbone".  The name is little 
+; more than a description of the scene.  Considering the image a 
+; bit below the two previous herringbone images, I rated it at a 7.
+; 
+; The render time of just under 11 minuted may be avoided by 
+; viewing the finished image from on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Increasing clouds and warmer temperatures here at New Fractal 
+; Central on Monday went un-noticed by the fractal cats, who still 
+; can not figure out why the carpets in the hallway no longer slip 
+; so easily.  The big excitement of the day came when Nicholas 
+; tried to dislodge Cassie from her favorite warm radiator cover.  
+; He was rewarded for his effort by a swift hit on the top of the 
+; head.  Luckily, all had been settled by the time evening snack 
+; time arrived.
+; 
+; My day remained slow.  The big job that was originally due in 
+; this morning has been delayed until Wednesday at the earliest.  
+; Undoubtedly, it will still be needed on the original date.  The 
+; next FOTD will shine forth in glory 24 hours from now.  The 
+; glory will be in the eye of the beholder.  Until then, take 
+; care, and where are all the scientific breakthroughs that were 
+; supposed to be brought about by the space shuttle program?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Oblate_Herringbone { ; time=0:10:51.53--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  passes=b center-mag=+0.00000000035115616/+0.000000\
+  00000068196/2.490884e+010/0.004515/-0.111270026331\
+  318467/-89.827 params=0/90/2.0000001/0/-1.74994915\
+  4546508/4.809332442e-007/-1.749949154546508/4.8093\
+  32442e-007 float=y maxiter=2000 inside=255
+  logmap=750 periodicity=10 mathtolerance=0.05/1
+  colors=000mXbkZfi`jgbmedqdftbcqa`n_YkZVhXSeWPbUM`T\
+  JYRGVQDSOCPMAMK8JI6GG4DE2AC07A04800F0zFczPczZczYcz\
+  YJcXOWXTSXYOWbKWgGVlCVq8Vv5Uu6Tu7Su8Ru9QtAPtBOtCNt\
+  DMsELsFKsGJsHIrIHrJGrKFrLEkTDd_DZfCSmCMtFPuIRuLTuN\
+  VuQXuTZuV`uYbu`dubfuTcaJ`JAZ0NWG_TWlQkyOzvPysQypRx\
+  mSxjTxgUwdVwaVwZWvWXvTYuQZuN_uK`tHatFatoffjjXemOfl\
+  SgkWhk_n5Lo4Gp4Cq48o5Bm6Dl7Fj7Hh8Jg9LeANdAPaHTZNXW\
+  T`6Hl3HC7FBBEAED9IC8MB7PA6T95X84_74nF5lE7kE8jD9iCA\
+  gBCfADeAEd9Fb8Ha7I`6J_6KYATWEaVIjQEeLBaG8XB5TD9SEC\
+  SFFSHISILRJORLSRMVRNYQP`QQcQRfQSfPTePUeOVdOWdNXcMY\
+  cMZbL_bLcWOgQRkKToDWs7Zw1```tZZuXYuWWuUVvTTvRSvPQw\
+  _XnYZoWWnUUmSRlQPkONjPNge5XiN`oUYzcVzzSzzPzzMzzczz\
+  tzzszzrzzqzzqzzpqpopcopZnp`mobmoelngknikmkjmmimmiz\
+  zhhhheegcbg`ZfZWfXTfUQeSNePJdNGdKDcIAcG7cF9aEA_DCY\
+  CDXBEVAGT9HS8IQ7KO6LN5NL4OJ3PI2RG1SE1TD5WH8YKB_NPQ\
+  JbGFo7BsFGvMLtPPrRTpTWnV_ }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
