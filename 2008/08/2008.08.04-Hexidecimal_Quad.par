@@ -1,0 +1,110 @@
+;     Date: Sun, 03 Aug 2008 17:52:15 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 04-08-08 (Hexidecimal Quad [9.5])
+; 
+;       Id: <1.5.4.16.20080803175251.2aaf7512@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 04, 2008 (Rating 9.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'm starting to discover the potential of the DivideJulibrot 
+; formula.  Today's image is a Julia-set of East Valley of the 
+; large minibrot on the main stem of its parent fractal.  This 
+; parent fractal came about when I divided Z^2 by (Z^(16)+10).  On 
+; the surface it resembles an oversized Mandelbrot set, while deep 
+; inside it takes on Z^16 characteristics.
+; 
+; The image is a splendid blending of quadratic East Valley 
+; elements with the more circular Z^16 elements.  It rates a full 
+; 9.5, 1/2 point of which is due to my marginally expert coloring 
+; efforts.
+; 
+; I named the image "Hexidecimal Quad" in recognition of the 
+; mixture of elements of two different orders.  The calculation 
+; time of a superluminal, (which is possible in the world of 
+; fractals), 23 seconds, will make running the included parameter 
+; file a pleasure.
+; 
+; An equal pleasure may be experienced by visiting the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the already-calculated image is posted for instant 
+; ecstasy.
+; 
+; The Sunday weather here at Fractal Central was so good that the 
+; digital thermometer read 'comfort' from sunrise to sunset.  Lots 
+; of sun, low humidity and a temperature of 82F 28C in the middle 
+; of the dog days must be considered near perfection.  The fractal 
+; cats were more interested in a squirrel that was in the yard all 
+; morning, gathering nesting material.
+; 
+; I did little but take it easy most of the day, though far busier 
+; days are in sight.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and forget philosophy for a day -- a lack 
+; of philosophical pondering leads to less wisdom but more peace 
+; of mind.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Hexidecimal_Quad   { ; time=0:00:23.00-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot center-mag=0/0/0.891266\
+  /1/-90/0 params=90/90/90/90/-17.4231/0/0/0/16/10
+  float=y maxiter=1600 logmap=11 periodicity=10
+  colors=000FA2HA0LA0OA5S8CXAJaCQfEXkGcpIjuKqiJnYJkN\
+  JhKYLHk0Fd0DZ0BT09N08H0zh4zc8zECmCJcBOUAQK9QJAPKAK\
+  LBKMBKNCMOCSMKULRZKYaJeaIldHthKvmMurPxzRzzTzzXlz_`\
+  zdZqO_UNYTMWSLURKSQJQPJOOMZJWbFcfBci8mn4mu1zzCVXNb\
+  NYjDhlCbnBYoASq9Ns8Ht7CrAGpDKnFOmISkLWiN_gQcfSggcd\
+  hnaiyZhydgyjXqbMiWBaO0VH8TEFRCNQ9UO7`M4hL2oJ0vI0uJ\
+  6uKFtLOtMWnbfhrqikojemjZkkTjlMhlGfm9dm3ch9YcESZKMV\
+  PGFcnJXnNRnRLnVFnZ9nY7cX5TW3JV18V00Y70`E1bK2TGHKDV\
+  BAhUsnNq`GoO9mA3l0LZ9bMLs9WtGRuMMuSHvYCvc7liMbo`Ut\
+  o_X4cR7gLAkFDoAGrMKuXNxhRzsUzzMzzEzz6zz0zz0cm1ar2`\
+  v3_z4WwCTtJQqRNnYKke4SV3PS2MP1KN4GV7Db8Ea8Ea9F`9F`\
+  AF_AG_BGZBGZ65h8Be9GbAL_BQYCWVD`SEePFjNPeLY`KgWJpS\
+  IeYEWbALg6Bl3FkAJjGNiMRhSVgYZfcbeifeo`hpWjqRlrLosG\
+  qtBsu8cf5OT29F3MI4ZK4kMDkRLkVUkZakbjkfrkjricrgXreQ\
+  rdKrbDr`6r_0jS4cL8XECQ7GJ0KNBGQMCUW9Xf5_p2XmCVjLSg\
+  UQdbObkTfiXihalgeofFZ6GR4 }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=real(p5)-2, bb=imag(p5)+0.00000000000000000001,
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(-aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

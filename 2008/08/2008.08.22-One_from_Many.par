@@ -1,0 +1,94 @@
+;     Date: Thu, 21 Aug 2008 21:51:20 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 22-08-08 (One From Many [6])
+; 
+;       Id: <1.5.4.16.20080821215211.2abfe5f6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 22, 2008 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A big rush left little time for fractals on Wednesday, but I 
+; did manage to find one in a hurry.  The little order-6 minibrot 
+; in today's image mixes both quadratic and order-6 elements.  It 
+; is located on the northeast shore line of the main bud of its 
+; parent fractal, which exactly resembles an oversized Mandelbrot 
+; set.
+; 
+; Since I found the scene almost automatically, I could rate it no 
+; higher than a 6.  The name "One From Many" had some relevance 
+; when I thought of it, but now I can see little meaning in it.
+; 
+; The calculation time of 2-1/4 minutes is speedy enough for such 
+; a routine fractal.  And the already-calculated image has been or 
+; soon will be posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another perfect day went un-noticed by the fractal cats on 
+; Thursday, while I noticed the perfection but had no time to 
+; enjoy it.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and wait with anticipation.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+One_from_Many      { ; time=0:02:15.66-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1 float=y
+  center-mag=-23.3599216711707/+3.587124300227662/\
+  5.186719e+009/1/-158.75/0 params=0/0/0/0/0/0/0/0/6\
+  /30 maxiter=2200 inside=0 logmap=239 periodicity=10
+  colors=000h5Ag5Ae5Ac5A`5AY8AVBASEAPHAKKAGNABQ87S6C\
+  T9GUCKVEOWHTXKXYM`YPdZRi_Um`XqaZubaybctaao`_j_YfZW\
+  aZVXYTTXROWPJVNFVMIXLLZLN`LQbLSdLVfLXhL_jLakLgmQln\
+  Vro_wpdunfsmgqkiojjmhlkgmifngdpecqcasa`t`_u_aq_cnZ\
+  djZfgZgcYi`YkXXlUXnQXoNWqJWsGVtCVv9Vw6Tl8Rb9PTBNJC\
+  L9DSIBYRAc_9ih8oq7uy6ozEizLczSYzZTzeUqgViiWakWUmhb\
+  iukfVTNSWMPZLN`KKcJIeIFhHDjGAmF8oFDiKIdOM_TRVXVQa_\
+  LecGiWJbOMXHPRGSPGUOFXNFZMFaLEcKEfJEhHDkGDmFDpECrD\
+  CuCCwBFtCHqCJnDLlDNiEPfERdFTaFWZFYXG_UGaRHcPHeMIgJ\
+  IiHIkJHlKHmLHnNGrOGvPGzNJzLLtJNnIPiGReEUdDWbBY`9__\
+  8aaFbcLbeRbgXbibbkhbmnbotbpzbmrajjagbadV`aN`_G`_G_\
+  _F__F__F__F__FZ_EZ_EZ_EZZEYZEYZEYZDYZDXZDXZDXZDXr5\
+  _x4Xs9YoDYkHZgLZcPZ_T_WX_S``Od`Kh`Xjdilhumkpngkocf\
+  p_aqWXrSSsONtKIuGDvC8w84x46y87zB8zFAzIBzMCzPDzTFzW\
+  Gz_HzbIzeHzfHzfHzfHzfHzfHzfGzgGzgGzgGzgGzgGzgJzdMz\
+  bPz`RzZUzXXzV_zTazRdzPhzd }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

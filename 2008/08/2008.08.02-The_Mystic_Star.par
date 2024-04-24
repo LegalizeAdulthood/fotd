@@ -1,0 +1,126 @@
+;     Date: Fri, 01 Aug 2008 21:30:54 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 02-08-08 (The Mystic Star [?])
+; 
+;       Id: <1.5.4.16.20080801213129.2b3f6cde@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 02, 2008 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA ALERT!
+; 
+; Discard the formula that came with yesterday's FOTD, and 
+; substitute today's formula.  Yesterday's formula has a small 
+; error, which I found soon after posting the FOTD.
+; 
+; While working with yesterday's formula, I noticed that I was 
+; constantly getting two extra lobes on the elements.  This is 
+; because I had forgotten to subtract 2 from the number entered as 
+; real(p5).  This oversight explains why the elements in yester-
+; day's image had 7 lobes instead of 5.  But today's formula, 
+; which I am pretty sure is the final version, sets everything 
+; right.
+; 
+; As an example, the value of real(p5) in today's formula is 5, 
+; and the image is filled with five-sided elements, indicating 
+; that all is once again well in fractal land.
+; 
+; Today's image is a Julia set of a small valley at the outer edge 
+; of the third bud out the negative X-axis of its parent fractal, 
+; which resembles a moth-eaten Mandelbrot set.  I did not rate it 
+; because I'm still not familiar with the potential of this latest 
+; formula.
+; 
+; I named the image "The Mystic Star".  Fractals are at least as 
+; mysterious as anything traditional mystics have been telling us.
+; 
+; I wonder what a tiny rotation away from the Julia orientation 
+; would do to today's image.  Perhaps we'll find out in tomorrow's 
+; FOTD.
+; 
+; The calculation time of 1-1/2 minutes may make the trip to the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; un-necessary.  But the trip is lots of fun, so if running para-
+; meter files is not your glass of orange juice, don't hesitate to 
+; dash out to the web site, where the finished image is posted for 
+; instant viewing pleasure.
+; 
+; We certainly did not deserve the perfect weather that prevailed 
+; here at Fractal Central on Friday.  After all, it's supposed to 
+; be midsummer, when we go around wiping away the perspiration or 
+; hiding within our air-cooled cocoons.  Today's blue skies, puffy 
+; cumulus clouds, low humidity, and temperature of 86F 30C were 
+; unexpected but fully welcomed by human and cats alike.  With not 
+; much work to do, this human worked on a fractal formula, while 
+; the fractal cats worked on trying to get an extra treat.
+; 
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and if the mysteries of mysticism are not mysterious enough, 
+; look to modern science for some real mysteries.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Mystic_Star    { ; time=0:01:28.15-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1
+  center-mag=0/0/3.963356/1/-90/0 params=90/90/90/90\
+  /-5.4262/0/0/0/5/4 float=y maxiter=1600 inside=0
+  logmap=11 symmetry=none periodicity=10
+  colors=000UGXUIXUKXUMXUOWUQWUSWUUWUWVUYVU`VUbVUdUU\
+  fUUhUUjUUlTUnTUpTUrTVxRUtTUqVUmXUjZUf`UcbU`dSaeRbe\
+  PceOdeMdeLeeJfeIgeHgeFhfEifCjfBkf9kf8lf6mf5nf4nf6k\
+  d8icAgbBe`Db_F`ZGZXHXWJUVKSTLQSMOROMPPJOQHNRFLTDKV\
+  AJW8HY6GZ4FZ2E_5G_8I_AKaDLbGNdIPeLRfOShQUiTWkWYmYZ\
+  m``ncbsdenecjebfeabe`Zf_VfZQfXMfWIgVEgUAgT4eQ6gS8h\
+  UAjWBkXDmZFn`GpaIqcKseLtfNvhPwjQxkRvjSuiSthTsgTrfU\
+  qeUpdVodVmcWlbWkaXj`Yi_YhZZgYZfY_dX_cW`bV`aUa`Ta_S\
+  bZRbYRYrjakfeeciZ_mTXqMTuGQxANdRVeTWfUWfVWgWWgXWhY\
+  Wh_Wi`WiaWjbXkcXkdXlfXlgXmhXmiXnjXzxhnkXc_MTOBxuOv\
+  tNusMsrMrrLpqLopKmpKloJjnJrnIzmHzlHzkGzkGzjFziFziE\
+  zhEzgDmiCcgDUfETeFSdzoczQaHP`IO_JNZKMYLLXLKVMJUNIT\
+  OHSPGRQFPQEORDNSCMTBLUCJTBKUBLVBMWAMXANXAOYAPZ9P_9\
+  Q`9R`9Sa8Sb8Tc8Uc8Vd7Ve7Wf7Xg7Yg6Yh6Zi6_j6_jB`hGaf\
+  LbeQccVdaZd`V`bRYdOUfKRgHNiDKk77tAHlCQeEZZJdnGgST`\
+  OdUKoNGpNHRorSelTWgUMbUDY }
+
+frm:DivideJulibrot   {; draws slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=real(p5)-2, bb=imag(p5)+0.00000000000000000001,
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(-aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

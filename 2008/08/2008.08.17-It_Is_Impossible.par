@@ -1,0 +1,121 @@
+;     Date: Sat, 16 Aug 2008 22:26:32 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 17-08-08 (It Is Impossible [6.5])
+; 
+;       Id: <1.5.4.16.20080816222720.2abfcc2e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 17, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As the title of today's image implies, the image is impossible.  
+; With the value of real(p5) set to -2, the minibrots deep in the 
+; parent fractal must be of the order -2.  Minibrots of a negative 
+; order are by definition impossible however.  If they did exist, 
+; they would have a number of lobes 1 less that their order, but 
+; how can a minibrot have minus-3 lobes?
+; 
+; This is what I decided to find out in the search for today's 
+; fractal, when I set the value of real(p5) at minus-2.  The first 
+; problem was that, with such a large escape radius and a negative 
+; exponent of Z, the image turned out to be all blank inside stuff 
+; -- an evaporated image.  This problem was quickly solved by re-
+; rendering the blank screen with an active inside fill.  In this 
+; case I first tried the 'bof61' fill.
+; 
+; When I did this, a ghostly arrowhead-shaped thing appeared, only 
+; vaguely resembling a Mandelbrot shape with a rudimentary East 
+; Valley.  A closer search of this proto-East Valley revealed the 
+; symmetries that indicate minibrots are at the center.  Zooming 
+; in on a prominent symmetry, I found today's scene, with its 
+; pseudo-minibrot at the center.  The 'bof61' inside fill revealed 
+; the scene, but I found that the 'fmod' fill actually works best 
+; with this image.
+; 
+; And what does a minibrot with minus-3 lobes look like?  That 
+; question can be answered by checking today's image.  I'm not 
+; sure that the thing at the center is a minibrot at all, but with 
+; its symmetrical surroundings, it sure does seem to be trying to 
+; be one.
+; 
+; After all this mathematical excitement, I could rate the image 
+; no higher than a 6.5, 1/2 point of which is due to my coloring.
+; 
+; The calculation time of a fireball 45 seconds will burn no one.  
+; And as always, the finished image is or soon will be available 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A perfect day here at Fractal Central on Saturday pleased humans 
+; and cats alike.  The warm sun, blue sky and temperature of 77F 
+; 25C were perfect for everything but skiing.  I doubt that anyone 
+; in the area had planned on skiing however.
+; 
+; The day's FOTD might be a bit hasty, but the next FOTD is due in 
+; 24 hours.  I suspect it will actually be ready on time, and it 
+; might even be a pretty good one.  Until then, take care and make 
+; the impossible possible.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+It_Is_Impossible   { ; time=0:00:45.13-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1 periodicity=10
+  center-mag=+0.21857780829516740/+0.051382415163788\
+  77/284576.4/1/-87.5/0 params=0/0/0/0/0/0/0/0/-2/0.5
+  float=y maxiter=1000 inside=fmod proximity=0.051
+  colors=000gaEhcEjeElgDniDokDjdLfZSaTZYMeTGlPAsrmmX\
+  Cn`DldDihEglFepFbtG`xHZzHXzKVyNUwPSccctVPsXOq_MpaL\
+  qbNrbPsbRtbTubVvcWwcYxc_UUPzcczddzdfzdhzdjzdlzdmze\
+  kzfjxfiughsggqhfoielicjjbhjafk`cl_alZ_mYYmX`kWciVf\
+  gUuuMppPlkRhfTdbV`YXXT_TPaPKcLFeF9eHBgIDhJFjKHkLJl\
+  MLnNNoOPpPRrQTsLXvOWuRVtUUtXTs_SsbRreQqhPqkOpnNpqM\
+  oPTGdPYsLooMlkMjgMgcNe_NcXN`TNZPOXLOUHOSBMOEOQHPSK\
+  QUNRWQSYTT_WU`ZVbaWddXfgYhjZjm_lvQHsWYnfvp`mqWerRY\
+  sMQtHImRHf`G_jFUsFVpIVnLVlNVjQVhSWfVWdXWb_W`aWZdMe\
+  NWXfOHBXL`iNzdOz_OyWOyRPxNPwIPwEQv9Qu5QuFRnPSgYTag\
+  UVcBgogHp`LpUPqOTqHXrA`r4ds6as7_s9YsAWtCTtDRtEPtGN\
+  tHLuJIuKGuMEuNC8zihVckTbmSaoR`rP_tOZvNYzN_xMYuLXrL\
+  VoKUlKSiJRfJPcIO`INDSkLWeT_``cWhgQpkLxoGzrBboUAmkE\
+  gWIbGKcHMcIOcJPcJRcKTcLUcLWcMYcN_cO`cObcPdcQecQWRQ\
+  MEQC2QD3PE4OF5OG6NH7NI8MJ8MK9LLALMBKNCKOEJOGJQIISK\
+  IUMHVOHXQHZSG`UGcWGcXFcXF }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

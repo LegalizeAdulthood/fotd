@@ -1,0 +1,119 @@
+;     Date: Thu, 28 Aug 2008 23:00:51 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 29-08-08 (The Underdog Wins [4])
+; 
+;       Id: <1.5.4.16.20080828230147.2abf15e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 29, 2008 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Everyone is for the underdog, even though the underdog rarely 
+; wins.  In today's image however, the underdog actually wins.  It 
+; wins by default more or less.  Due to an unexpected rush job, I 
+; had no time to explore for a new fractal, so I grabbed an old 
+; image that has been lying in the 'maybe' file for months.
+; 
+; It is obvious why this image never made it beyond the 'possible 
+; FOTD' stage.  It has little to show.  This is the kind of scene 
+; I usually immediately pass over on the way to the final FOTD, 
+; but with today's lack of time, it is where I stopped.
+; 
+; I'm not going to deceive myself into thinking the image is worth 
+; more than a 4.  In fact, even the rating of a 4 might be a bit 
+; generous.  The only thing of note in the image is a minibrot in 
+; the upper left corner shaped rather like a peanut.  The rest of 
+; the scene is a mish-mash of broken-up fractal stuff, some of it 
+; arranged into curious patterns, but ultimately dis-satisfying.
+; 
+; The parent fractal looks much like the minibrot in today's 
+; image; the scene is found in the east branch of a valley leading 
+; to the northern period-2 bud.
+; 
+; I named the image "The Underdog Wins".  In a way, due to the 
+; rush, this underdog image actually did win its way into FOTD 
+; immortality.
+; 
+; The calculation time of 5 minutes is longer than I would have 
+; preferred for an image such as today's, but relief is at hand on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the already-calculated image is posted for immediate 
+; satisfaction.
+; 
+; The weather was far from perfect here at Fractal Central on 
+; Thursday, as the remains of the dissipated tropical storm Fay 
+; arrived.  Heavy clouds prevailed all day but only a few light 
+; sprinkles fell from them, while the temperature hovered around 
+; 70C 21C.  The fractal cats spent a good part of the day watching 
+; for the manx tomcat who is trying to establish his territory in 
+; the small field beyond the back yard.  The intruder cat never 
+; appeared and the fractal duo eventually grew bored watching the 
+; rain.
+; 
+; My day was unexpectedly busy, which explains the 'filler' 
+; fractal.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and don't mix the concrete with the abstract.  It can 
+; lead only to confusion.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Underdog_Wins  { ; time=0:05:06.93-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.598635449/+0.490200106/2010
+  params=1.7/0/66/0 float=y maxiter=50000 inside=0
+  logmap=75 periodicity=10
+  colors=000cZAbXBbVCaSD`QE_OFZMGYKHXIIWGJWEKXFMYFNZ\
+  FP_FQ`FRaFTaFUbFVcFXdFYeFZfF`gFagFbeJddNfbQhaUj_Xl\
+  Z`nX0hW0cV0ZK0NO1OPHKRJFTLAVOFYSK_XPabUdgZflchqhjv\
+  mjuljuljukjukjujjtjjtijtijthjthjsikrjlqklplmomnomo\
+  nnomoplpqkqqjrrjrsisthttguUW1UX2UY3VZ4V`5Wb6Wd7Xe8\
+  Xg8Xi9YkAYlBZnCZpD_qD_qE_rF`rG`rHaqIaqIaqJbqKbpLcp\
+  McpMdpNdoOdoPeoQeoRfnRfnSWPfMHnC9uDAvEAvFAgGChGCiH\
+  DjIDkJElJEmKFnLFoMGpNHqNHrOIsPItQJuQJvRKvSKvTLvTLv\
+  UMvVMvWNvXOvXOvYPvZPv_Qv_Qw`RwaRwbSwvewbSwcTwdUweU\
+  wfVwfVwgWwhWwiXwiXwjYwkYwlZwlZwm_wn`wo`wpawpawqbwr\
+  bwscwscwtdwudwvewAZzF_zJ`zO`zSazXbz`bzeczidzndzrez\
+  `WzbXzdYzfZzh_zj`zk`zmazobzqczsdzueztRzuSzuTzuUzuV\
+  zHbzFazC`zA_z8ZzAfzCnzDuzHqzKmzNizQezTazWYzZUzaQzd\
+  MzfPzgRziTzjWzlYzm_zobzpdzrfzsizukzvmzxpzyrzztzvsz\
+  srzprzmqzjqzkozknzllzlkzmizmhznfznezndzmezlfzkgzkh\
+  zjizijzikzhhzgfzfdzebzd`z }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

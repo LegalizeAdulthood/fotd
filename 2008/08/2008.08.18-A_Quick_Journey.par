@@ -1,0 +1,98 @@
+;     Date: Sun, 17 Aug 2008 18:48:45 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 18-08-08 (A Quick Journey [5])
+; 
+;       Id: <1.5.4.16.20080817184933.2befc1f4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 18, 2008 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a minor thing worth a rating of a measly 5 
+; points.  But its calculation time of an equally measly 17 
+; seconds means that almost no time will be wasted calculating it.
+; 
+; The parent fractal combines just the tiniest bit of Z^(-63) with 
+; Z^2 before adding C.  This parent resembles a classic Mandelbrot 
+; set obscures by scalloped disks.  Today's scene is located near 
+; the X-axis in an interesting area between the two largest disks.
+; 
+; I added a modicum of interest to the not-so-impressive scene by 
+; rendering it with the outside set to 'tdis'.
+; 
+; Then I named the image "A Quick Journey" because I found it in 
+; less than 5 minutes.  And I rated it a 5 because I found it in 
+; less than 5 minutes.
+; 
+; The final result may be seen by running the included parameter 
+; file or by viewing the completed image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The sky was blue enough, but a few too many puffy white clouds 
+; kept Sunday from being absolutely perfect here at Fractal 
+; Central.  The temperature of 84F 29C and low humidity were all 
+; that could be asked for, but those puffy clouds got in the way 
+; of the sun a bit too often.  The fractal cats, unconcerned with 
+; minor cloud details, had a near perfect day anyway.
+; 
+; My day was very good, which I would enjoy being able to say more 
+; often.  The day's fractal was not quite so good, but no one ever 
+; claimed that this fractal world is perfect.  The next FOTD, hope-
+; fully a bit closer to perfection even if not quite there, will 
+; be posted in 24 hours.  Until then, take care, and embrace your 
+; reality before it gets away.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Quick_Journey    { ; time=0:00:17.04-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-0.840428912973/+0.001176307923/9345305\
+  /1/-115/0 params=1/2/1e-018/-63/0/0/0/0 float=y
+  maxiter=1000 inside=0 outside=tdis periodicity=10
+  colors=000P8W5BS`ibYg_WeXUcURaRP_ONYLLWIKXTKYcJZnJ\
+  ZxGYtEYpCXlAXh8Wd6W`4VX2VT9HIG48MBERIKWPQ`WWebajig\
+  oolmijkchiYggSefMdRBjNHkJNlGTmCZn8do5jp`GUbGVdGWfG\
+  XhGYjGZlG_mG`gI_bK_YLZTNZOOYJQYERYKTXPVWUWWZYVcZVa\
+  QM`HE_86i`xhapgbifcbedVdeOcfHcgAZjEVlIRnMNpPbzjYri\
+  TjhObhKVgFNgAFf68fDGbJN_QUXW`UcUXkN_sHbrJZrLVrNRrP\
+  NrRJrTFrVBrX7mRDhMIcGOZBTU5ZP0cUHVZXMclE`mHZnKXoNU\
+  pQSqTQqVLhOH`HCTA8L3GQ7OUAK_EHeHEkLBpOAnT9mX9l`8kd\
+  7ii7hm6gq6fu8isAlrCnpEqoGtmIvlMwcQwVUwNQoPMhRIaTEU\
+  UANW6GY39Z7F`AKbDQdGVfK`hNejQklTpmZf_cXMX_OQbQJdSC\
+  gU6iVAiSEiPIiMRaLZULfMLTdBFv2Dw5Cw7AwA9wC7wF6wH4wK\
+  3wMPBkKLgFVdBda6nZ2xWPUdVTc`TcfTclTcrTcwTcsUaoU_kU\
+  YhUWcPUZLTVHRQCQL8OH4NVK_gZktmwgicVeLZhNajOelPhoRl\
+  qSosTruUsqTtnSukRvgRwdQxaPxZPraXldcfgk`jrVly_hoddf\
+  i`XnXOsTEwQ5pV4iZ4bb3Wf3Pj3In2Br24v2Bt1Ir1Pp1Wn0bl\
+  0ij0pi0gd7_`ESXLKTSCPYi5_ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,106 @@
+;     Date: Sun, 24 Aug 2008 17:25:02 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 24-08-08 (Seven from Eight [6.5])
+; 
+;       Id: <1.5.4.16.20080824172555.2bf7d1f6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 24, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is very late because on Saturday I somehow got 
+; involved in another of FL's antiquing expeditions.  But all was 
+; not lost.  We found an oriental-style lamp for $15, which FL 
+; claims is worth over $250.  To me it looks like an old lamp, but 
+; who knows . . .
+; 
+; Today's image came about when I divided Z^2 by (Z^(6)+3).  The 
+; parent fractal resembles a Mandelbrot set starting to morph into 
+; the Z^8 Mandeloid.  Today's scene is located in some island 
+; debris that has appeared in the northwest interior of the large 
+; period-2 bud.
+; 
+; The image is extremely fast, taking only 24 seconds to run on 
+; the fast machine. The name "Seven from Eight" refers to the fact 
+; that, though the central minibrot has only 7 lobes, the surround-
+; ing pattern is a series of powers of 8.  The rating of a 6.5 
+; could be a little liberal for such a hasty image, but the image 
+; is still better than average for one of order-8.
+; 
+; The finished image will be available on the FOTD web site as 
+; soon as Paul can calculate and post it.  The FOTD web site may 
+; be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was near perfect here at Fractal Central on Friday.  
+; Need anything more be said.  The fractal cats enjoyed the great 
+; conditions to the best of their ability.  My day was busier than 
+; expected, yet still within reason.  Expect the next FOTD in 
+; about 6 hours.  But do not be too disappointed if it does not 
+; make it.  Until next time, take care, and look for those extra 
+; iterations.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seven_from_Eight   { ; time=0:00:24.58-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot
+  center-mag=-3.653068462538817/+0.2509654289884953/\
+  1.06659e+010/1/-85/0 params=0/0/0/0/0/0/0/0/8/3
+  float=y maxiter=750 inside=0 logmap=47
+  periodicity=10 mathtolerance=0.05/1
+  colors=000GACKAFOAISALWAN_AVcAbgAjkArnGygWo`ccWmUh\
+  xKztAqp8mjBhfDcbGZ_IUYKPVLKRMGOMKHNOBOS6OXjZayiWjn\
+  QXsRTpRPnRLlRHiRDgR9eR5cX9XbDQhHJnLCsO5nS5jW5fZ5bb\
+  5Ze5aZGdSRgMajFlm9vbFZTLBPLQLLdOOgRQiTSlWUnZXq`Zsc\
+  `vebxCAyIFtNJpTNkYRgbVcnXEj_LgaRdcXaebZghWinaglgej\
+  mcisagy_frahlbifck`elVfnPgoOirOluNmxNozMpmLp`KpOJZ\
+  YIIgI1pM9iPHbTPWWXQ_dJblCes6dtBcuFbvJawO`xS_zWZzUY\
+  zSXzQWzOVzMUzKTzITzGTzSTzcTzoMzmGzlAzj4ziHzZTzOezD\
+  qz2NzKmzV7zZ9zSAzLBzEszXdzOQzGSzPMzJHzDSzzMzzHzzkz\
+  zUzzFzzczzXzzQzzJzzmzz`zzOzzYzzSzzNzzHzz9zzAzzBzz2\
+  zz7zzQzzUzzazzizzgzzezzdzz`zz`zz`zz`zz`zzgzzlzzqzz\
+  vzz0zz4zz8zzCzzGzzQzzZzzhzzqzzbzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

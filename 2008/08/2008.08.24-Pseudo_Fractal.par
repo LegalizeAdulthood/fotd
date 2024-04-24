@@ -1,0 +1,107 @@
+;     Date: Sun, 24 Aug 2008 22:58:16 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-08-08 (Pseudo-Fractal [6.5])
+;       Id: <1.5.4.16.20080824225909.2a0fe0a4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 25, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image divides Z^2 by Z^(-97)+100.  
+; Unfortunately, this parent fractal does not exist.  It has been 
+; totally evaporated by the extreme escape radius built into the 
+; formula.  With the 'inside' set to the standard numb, the parent 
+; fractal is nothing more than a blank black screen.
+; 
+; But salvation is at hand, for the active inside fills can often 
+; return life to dead images such as the parent of today's scene.  
+; In today's case, the 'bof60' fill works quite well.
+; 
+; I'm not sure that what results from all this trickery is really 
+; a fractal, though it most certainly is a picture.  And the 
+; picture is more interesting than might be expected from a bland 
+; all-inside image.
+; 
+; There is a main bay at the bottom, with an imaginary shore line 
+; strung with buds.  Scattered fields of debris fill the imaginary 
+; 'outside' areas, while a most interesting object lies on the 
+; left side of the frame.  This 'object' is better seen than des-
+; cribed.  In fact, it is nearly impossible to describe it.
+; 
+; I named the image "Pseudo-Fractal" since I'm not sure that it is 
+; really a true fractal.  I rated it at a 6.5 to reward myself 1/2 
+; point for my semi-skilled coloring.
+; 
+; The calculation time of 3-1/3 minutes is not as short as I would 
+; have preferred, but I think the image is worth it.  At any rate, 
+; the finished image is posted for instant viewing on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A pleasantly warm day prevailed here at Fractal Central on 
+; Sunday.  The warm sun and temperature of 88F 31C were ideal for 
+; outdoor activities of all kinds.  The fractal cats limited them-
+; selves to indoor activities however.
+; 
+; My day was pleasant also, and F.L.'s new oriental lamp actually 
+; looks kind of comforting glowing a soft amber on the living room 
+; table.  The next FOTD will appear in 24 hours.  Until then, take 
+; care, and if a thing isn't real, what is it?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pseudo-Fractal { ; time=0:03:20.18-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1
+  center-mag=+1.032172008373736/+0.0316130942554965/\
+  2352.071/1/95/0 params=0/0/0/0/0/0/0/0/-99/100
+  float=y maxiter=750 inside=bof60 periodicity=10
+  colors=000zzUuxUowUkuUesUcpUamU_jUYhUWfUUdUSbUQ`WO\
+  ZYMX_NUaOScQQfROhSMjTKlUInVGp_HndHmhHkmHjqHhvHgzHf\
+  vGdrGcnFbkFagF`cE__EZXDXTDWPDVLCUICTEBSABR7BQ7ET7G\
+  W7IY7K`7Mc7Pe7Rh7Tk7Vn7Xq7ZtJgwpzzhwzZtzRowQltPirO\
+  fpOdnNbnM_lLXiLUfKSdJPbJMaIJ_HEZHCXNBU000_gcagabg_\
+  dgZegXggWhgUigTheSgdSgcSfbSeaSe_SdZScYRcXRbWRaURaT\
+  R`SR_RR_QRZTPYWNYYLX`JWbHWeFVgEVjCUlATo8Tq6St4Sv3T\
+  s6Uq8VoAWlDWjFXhHYeKZcMZaORXZZJOe6Di7Hl8Kp9OsARwBV\
+  zCYxAav8dt6hr4kp2oo0rg9i_I`SQSKZJCfAAbB9_B7XB6UB5R\
+  BXSUxSksQjoPjkOjgNjcMjAnP8tM7yK8uN9rQAoTBlWCiZDfaE\
+  cdF`gE_PD_7NTHXMQfG_p9hz3qq8shCt`Gug2Nf7MfBLeFKeKJ\
+  dOIdSHdWGWRPNMYYUVhaSshQE6PK9NPBMUDKZFJcHHhJGmLFgH\
+  KbDPY9UT5ZO2bK7YHBTDFOAKJ6OE3S90W5P`YRYaTVeVTiXQmY\
+  OqPPeGQU8RJ9NI9JH9GH9CG98F95FGFCMOASY8Yf6co4dj5ee5\
+  f`5gW5hR5iM5jH5kD5UHIDLUBF_AAe95kFBbKGUQLMVQD_V5`U\
+  E`UM`UV`Ub`UjWYcS`YOcSKfM }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,107 @@
+;     Date: Fri, 15 Aug 2008 21:22:37 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 16-08-08 (Few Discontinuities [7])
+; 
+;       Id: <1.5.4.16.20080815212323.2b9fc1d2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 16, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It is an inescapable mathematical fact that fractals with frac-
+; tional powers of Z must have discontinuities.  These discontinui-
+; ties sometimes make interesting patterns in themselves, but just 
+; as often they spoil the perfection of the fractal in which they 
+; are found.  The discontinuities cannot be avoided, but as the 
+; FOTD image for today unexpectedly shows, they can be minimized.
+; 
+; The formula for today's image contains Z^(3.5), which demands 
+; that the image have discontinuities.  The breaks are there 
+; indeed, but they are so few and so unobtrusive that they could 
+; easily be missed when the image is glanced at casually.
+; 
+; With its one minor break on the left side, today's image is a 
+; scene in the East Valley area of its parent fractal, which is an 
+; oversized Mandelbrot set.  I named it "Few Discontinuities" and 
+; rated it at a 7.
+; 
+; The calculation time of just under 5 minutes is fast enough to 
+; hold boredom at bay, yet slow enough to allow ample time for 
+; anticipation.  The image is also available on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Pleasant temperatures and plenty sun made Friday an acceptable 
+; day here at Fractal Central.  A sudden thunder-shower at 5pm 
+; was too brief to spoil things.  The fractal cats agreed as they 
+; stretched in the returning sun.
+; 
+; For me the day was acceptable.  I could think of a few things 
+; that might have gone better, but why quibble with minutiae.  The 
+; next in the apparently endless series of FOTD's will be posted 
+; in 24 hours.  Until then, take care, and if life is all a dream, 
+; where will we be when we wake up?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FewDiscontinuities { ; time=0:04:53.03-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot
+  center-mag=+3.798906332849346/-0.0029529560051977/\
+  5.019158e+007/1/20/0 params=0/0/0/0/0/0/0/0/3.5/15
+  float=y maxiter=15000 inside=0 periodicity=10
+  colors=000jbjgciddhaegZefWfeTgdQhcNibKjaHk`Fk`Lh_Q\
+  fZVdY_bXd`WiZVnXUsVTxTTsWRnZQj`OecNafLXhKTkIOnHKpF\
+  FsEBuDApFAlHAhIAdKA`M9XN9TP9PR9LS9HU9DVBFXCGZEH_FJ\
+  aHKbILdJMeLOgMPiOQjPSlRTmSUoTVpUWoVXnWXnXYmYZlZZl_\
+  _k`_ja`jbaicahdbhebgfcfgdfhdeiediedhbeh_ehYfhVfhTg\
+  hQghOhhLhgIhgGigDigBjg8jg6kg3kg1ke2ic3ib4i`5hZ6hY7\
+  gW8gU9fTAfRBePCeODeMEeKFeJGeHHeFIeEJeBGi8Dl5Ao28r5\
+  Ar7CsADtCFuFGvHIwKJxMLyPMzROxTQvWRtYTr`UpbWpeXogZo\
+  j_olaonbom_nlYmlWmkTljRkjPkiNjhKihIigGhfEgfBge9fd7\
+  eb3gd5ee6cf8ag9`hBZiCXjEWkFUlHSmIRnKPoLNpNLqOKrQIs\
+  RGtTFuUDvVBvW1xZAwbJtfRrj_mmhlolknngmkdke`h`YfVUcQ\
+  Q`KNYFJV9HR3GT4FV5EX6EZ7D`8Cb9BdABfBAhC9jD8lE2Nn8m\
+  EAe9CY5AN0DQ1GS2JU3MW4PY5R_6Ua7Xc7_f8bh9djAglBjnCm\
+  pDprEtuFrtEptEotEmsDlsDjsDisDgrCerCdrCbqBaqB_qB`s9\
+  ZqBXpCVnDUmESkFQjGPhINgJLeKKdLIcMGaNE`ODZQBYR9WS8V\
+  T6TU4SV1PV3RW5TW7VW8WWmak }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

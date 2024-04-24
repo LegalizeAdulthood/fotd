@@ -1,0 +1,104 @@
+;     Date: Mon, 04 Aug 2008 18:56:27 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 05-08-08 (A Strange Seahorse [7.5])
+; 
+;       Id: <1.5.4.16.20080804185703.388fa6e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 05, 2008 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday's image showed a very unusual East-Valley type Julia 
+; set.  Today's shows an interesting Seahorse-Valley type Julia 
+; set.  The parent fractal came about when I divided Z^2 by 
+; (Z^(10)+2.5) before adding C.  This parent fractal only vaguely 
+; resembles the familiar Mandelbrot set.  It has a Seahorse Valley 
+; that is almost impossible to find, but I must have come pretty 
+; close, because today's image certainly has Seahorse-Valley Julia 
+; characteristics.
+; 
+; It also has lots of Z^12 characteristics, which are visible all 
+; through the image as a series of circular features with 12 
+; sections each.  Unfortunately, with its rating of 7.5, today's 
+; image falls short of yesterday's.  But it is still worth a look, 
+; especially with a calculation time of only 29 seconds.
+; 
+; The name "A Strange Seahorse" pretty well describes the image.
+; 
+; As always, the already-calculated GIF image is or soon will be 
+; posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; for instant, fully hedonistic ecstasy.
+; 
+; The weather continued absolutely perfect here at Fractal Central 
+; on Monday.  With the work light, FL and I took a couple hours 
+; off in the afternoon for a 3-mile walk along a nearby hillside 
+; trail.  The temperature of 82F 28C made walking as enjoyable as 
+; it gets.  When we returned, the fractal cats scolded us for the 
+; unaccustomed absence.  The next FOTD will be posted in 24 hours. 
+; Until then, take care, and change the change that never changes.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Strange_Seahorse { ; time=0:00:29.25-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot
+  center-mag=0/0/0.4014516/1/-30/0 periodicity=10
+  params=90/90/90/90/-1.98955/0.67403096/0/0/12/2.5
+  float=y maxiter=600 inside=0 logmap=3
+  colors=000ZZccchhhmmmrrrwvvzxyzwwzwtvwqrwomwnhwmfw\
+  mdwlbwk`wjZwjYrfVmbSi_QdWN`SKWPISLFNIDJEAEA7A75532\
+  100LtheM3hL4kL4mK5pK5sJ6uJ6xI7zI7xNCwSHvWMt`RseWri\
+  `icb`ZddWagU_kSYnPWrNUuLSxJQvIWtIasIggFeXCdM9cOBXQ\
+  DQSFJTGDVIBWK9XM8YN6ZP4_R3`T1aU0`wGPqQEl_3giA_aHSV\
+  OLOVDH`6AWB8SG7OL6KP5GU4CZ38b26_94XG2VN6ZL9aJCeIFh\
+  GIkFMiYQrzSkmSdcS_WSTSSNBSJ6SF2JO8BXD6XqB`rFcsKftO\
+  juTmvXpvXouWntWmsVlrUkqUjpTioThnSgmRflRekQdjQdiPch\
+  ObgOaf101N`eN_cMZbLYaLX`KW_KVZJUYITXISWHRVHRUGQTGP\
+  SFORGF_HGZHIYIKXIMWJOVJQUKSTKTTMYUObVPfWRkXSoYTkVT\
+  hTUeRUbPV_NVXLWUJWRHWNFXKDXHBYE9YB7Z85Z53Z21T42O53\
+  I63D74884AC7CF9EJCFMEJNIMNLPNPSNSVNVYNZ`NacNefNhiN\
+  klNooNrrNunTpjZlfdgcjchWhmHmz2r`ClLMfmWKDeJbk1W_Dg\
+  KPr5`s4Xt4Tu3Pv3Lw2Hx2Dy19y15M0YO4_P7aQAbSEdTHeUKg\
+  VNhXRjYUkZXm__nacpbfqcisdltaiqZgnWelTciRagO_dLYbIW\
+  _FUXDSVAQS7OQ4MN2KLBQRJVW }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=real(p5)-2, bb=imag(p5)+0.00000000000000000001,
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(-aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

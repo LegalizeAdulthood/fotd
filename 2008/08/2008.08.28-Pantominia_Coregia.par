@@ -1,0 +1,108 @@
+;     Date: Wed, 27 Aug 2008 19:43:13 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 28-08-08 (Pantominia Coregia [5])
+; 
+;       Id: <1.5.4.16.20080827194409.2a6ff2c6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 28, 2008 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is a quick one, and it shows.  The rating of a 5 
+; shows that the image leaves much to be desired.  The name 
+; "Pantominia Coregia" means nothing at all.  I dreamed it up 
+; because it sounds kind of like something scientific.  The chief 
+; advantage of the image is its fireball calculation time of under 
+; 15 seconds.  It doesn't get much shorter than that.
+; 
+; The formula divides Z^2 by (Z^(3)+6) and produces a near-
+; Mandelbrot set, with today's scene located in the northeastern 
+; suburbs of the large minibrot on the main spike.
+; 
+; When this is done, we see a quintic minibrot surrounded by 
+; smaller similar minibrots.  There is nothing artistically 
+; notable about the image, it is merely interesting to observe.
+; 
+; And observe the image is what you'll do if you run the included 
+; parameter file or zip over to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and peruse the image already calculated and posted there.
+; 
+; Despite a thin layer of cirrus clouds that hung over Fractal 
+; Central all day Wednesday, the day, with its temperature of 81F 
+; 27C, was near perfect.  At least the fractal cats must have 
+; thought so, for they spent half the afternoon on their shelf by 
+; the window, wishing they could go outside, where that tough manx 
+; tomcat is lurking and ready for a fight.  Needless to say, the 
+; duo had no chance to go out and engage the usurper.
+; 
+; My day was too busy to be called perfect.  Maybe tomorrow will 
+; be better.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and keep searching for a photon at rest.  If 
+; you find one, you'll rewrite the physics books.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pantominia_Coregia { ; time=0:00:14.72-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot
+  center-mag=-10.48325696865905/+0.09877741090398924\
+  /3.971914e+010/1/-50/0 params=0/0/0/0/0/0/0/0/5/6
+  float=y maxiter=316 inside=0 logmap=59
+  periodicity=10 mathtolerance=0.05/1
+  colors=000A7LA6MA5OA4PA3R52SADZFNeKXlPfszzzkjBkjBk\
+  jBeiCZeCQaDIYDATE3PEEWOPbY_igipqUfpFXo0Oo4Ve7aXBhO\
+  EnFzmKzmzzmzzlZKlcLlhPefTZeXSd`MbdFah8`l2_a3hR4qG5\
+  yH6qI6iI6bcXmxvxkrv_nt`go`ajaWeaQ`aKXdQRgVMj`HmeBp\
+  k6sp1ll6ehA_dET`IMXMGUQK_LNeHQkDTq9Wv5RoFMhOIaYzVf\
+  zOozSgzW_z_SzcLzgFzjAzm5zp0zo7zoEznLznSzmZzmeXzl6z\
+  0Uz2pz3hzFazRVzaTzZzzXzzUzzSzzPzzNzzMzzLzzKEzJBzI9\
+  zH6zG4zG5zL5zP5zT5zX5z`LzT_zLSzMLzNDzO6zODzMKzKRzI\
+  YzHMzLKz1Jz9JzGJzOIzVIzbIziIzpGzjEzdCzZDz`DzbDzdIz\
+  bMzaRz_VzZ_zYczWhzVlzUZzdWzfUzhRzjPzkMzmKzoIzpMziP\
+  zbSzWWzPZzIazBdz5SzXFzxTzwezwrzwSzh1zVCz_NzdYzihzn\
+  rzsgzVmzWrzXwzXwz_wzawzdwzfwziwzkwzmgzlTzkNzcHzWBz\
+  O5zGCzEIzDOzCUzB_zARzIIzPNzRRzTVzVZzXczZgz`kzbozcn\
+  zhnzlnzpnztnzxSzV5z1AzCFzNKzYPzgOzdNzbMz`LzZKzWJzU\
+  IzSIzQez`ezVezQezKezEez8ez3gz2iz2jz2lz2nz2oz2qz2rz\
+  2_z4Hz6Fz4Ez3Dz2mzGgzIazJ }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

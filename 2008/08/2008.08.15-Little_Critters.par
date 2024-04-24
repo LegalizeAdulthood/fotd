@@ -1,0 +1,106 @@
+;     Date: Thu, 14 Aug 2008 22:05:08 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 15-08-08 (Little Critters [8])
+; 
+;       Id: <1.5.4.16.20080814220553.2ad7c3b4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 15, 2008 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's fractal I divided Z^2 by (Z^(0.000001)+5), or some-
+; thing like that, and then added C.  At least, that's what I 
+; think happened when I entered the parameters.  But regardless of 
+; what actually happened, the resulting parent fractal resembles 
+; an oversized Mandelbrot set, though deep inside it is different.
+; 
+; I found today's scene on the edge of the infinitely divided main 
+; spike, in the area just east of the large minibrot.  This is 
+; quite a rich area, filled with surprises, an area which until 
+; now I have largely ignored.
+; 
+; I named the image "Little Critters" when I noticed the dark 
+; insect-like things sitting on the webs surrounding the central 
+; minibrot.  Then I rated the image at an 8, which includes a 
+; small reward for my coloring.
+; 
+; The brief calculation time of 1-1/3 minutes will make everyone 
+; but the most impatient fractalist happy.  And even those 
+; impatient few will be only slightly discombobulated.  To avoid 
+; all possibility of discombobulation however, the finished image 
+; may be accessed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Too many clouds and a threat of rain kept Thursday from being 
+; perfect here at Fractal Central.  But the temperature of 82F 28C 
+; was quite pleasant and the rain held off until nightfall, so the 
+; fractal cats had nothing to complain about.
+; 
+; I had nothing to complain about either.  So I'm not complaining. 
+; The next Fractal of the Day will be posted in 24 hours.  Until 
+; then, take care, float like a duck and sting like a flea.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Little_Critters    { ; time=0:01:20.40-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot center-mag=-10.49111003\
+  76656/+0.00000459624450347/5.459246e+011/1/177.5/0
+  params=0/0/0/0/0/0/0/0/2.000001/5 float=y inside=0
+  maxiter=1800 logmap=200 periodicity=10
+  mathtolerance=0.05/1
+  colors=000K8_K9bK9dKAgKAiKEkKHmKKoKNqKQsKUsKXvJ`vG\
+  cxDfvAjw7nxAqyKuzUvuZwqcwlhuhmscrq_voVzmRzkUziXzfZ\
+  zbazZczXfzVhFSdEP`CNXBKTAHP8FL7CH69D479345222`_IZZ\
+  HYXGXWGWVFVUFTTESSERQDQPCPOCNNBMMBLLAKJ9JI9HH8GG8F\
+  F7EE7DC6BB5AA5994884773552442331221110AM38H26D1481\
+  240oYOjULeRJ`OHXLFSIDNFAIC8E969644324Yz3Xz3Wz3Vz3V\
+  z3Uz3Tz3Tz3Sz3Rz3Rz3Qv3Ps2Po2Ok2Ng2Nd2Mc2Lb2L`2K_2\
+  JZ2JY2IW2HV2HU1GT1FS1EQ1EP1DO1CN1CL1BK1AJ1AI19H18F\
+  08E07D06C06A059048047036024023012001W0NU0LS0KR0Jq4\
+  5n45k45h45e35b35_35X35U35R25O25L25I25F25J79MCCQGFT\
+  LIWPL_UObYRfbUifXlk_pobstevxhuwitvisuirtiqsipriori\
+  nqimpiloiknijmiilihligjfgicfh`fgYffVedSecPdbMd`JdZ\
+  G_ULVSPRRUMQYHPbDQfEReESeETeEUeFUeFWeFYdF_dKadPcdU\
+  edZgdbidfkajm_noYqqWusUuuSuwQvzOwzMxzKyzIzzGzzFzzE\
+  zzDzzCzzBzzAzz9zz8zz7zz6zz54z49z7Ez9JzCOzETzHYzJbz\
+  MgzOlzRqzTuzVezRQzNlzVkzY }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

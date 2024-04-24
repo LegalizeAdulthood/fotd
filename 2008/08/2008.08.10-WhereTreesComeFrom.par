@@ -1,0 +1,101 @@
+;     Date: Sun, 10 Aug 2008 16:57:29 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 10-08-08 (Where Trees Come From [No Rating])
+; 
+;       Id: <1.5.4.16.20080810165810.2a6f95a6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 10, 2008 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is one I found automatically.  I named it "Where 
+; Trees Come From" because with only a slight change of 
+; parameters, I could turn the Julia image into one of those 
+; fractal trees.
+; 
+; But today we have no trees.  We have a surreal something, 
+; vaguely resembling a slavic helmet, better seen than described. 
+; There is no way I could honestly rate such a quickie image, so 
+; I let it go unrated.
+; 
+; The calculation time of just under 9 minutes is longer than I 
+; would have preferred.  But give Paul a chance to calculate and 
+; post the image, then rush to the FOTD web site to enjoy it.  The 
+; web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With full sun and a temperature of 79F 26C, Saturday was the 
+; picture of perfection here in the Fractal Central area.  The 
+; fractal cats must have agreed, for in the late evening when we 
+; returned from the day out, we found three waste baskets over-
+; turned and the contents scattered -- a sure sign of bored and 
+; discontented cats.
+; 
+; With little harm done, I managed a FOTD, though a bit too late 
+; to post on time.  However, the next FOTD will be posted on time 
+; in 6 hours or so.  Until then, take care, and fractals are the 
+; spirits of numbers, or are numbers the spirits of fractals?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+WhereTreesComeFrom { ; time=0:08:53.54-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=dividejulibrot passes=1
+  center-mag=45.1158/0/0.1140451/1/90/0
+  params=90/0/90/0/-105.58135/0/0/0/1.5/100
+  float=y maxiter=3000 inside=bof61 periodicity=10
+  colors=000JYCIVCHTBGQAGO9FL9EI8DG7CD6B74CB6DF8EJAE\
+  MCFQEGUFHYHH`JIdLJhNJkOKmQKnSLpULqXMsZMt`NvbNwdMtg\
+  LqjKnlJloIirHftGcwGayFbwFbvEcuEcsDdrDdqDdoCenCemBf\
+  kBfjAgiAggAgf9he9hc8ib8ia8i`PU_eF_u0_t2`s4ar6bq7cq\
+  9dpBeoCfnEgnGhmHilJjkLkkMklQmlUnlYolapmermismmtmpu\
+  korjnphmmglkfkhdjfcicbha`ib_icZidYjeXjeVjfUkgTkhSk\
+  hRkiQljOlkNlkMmlLmmKmnJmnIkkIjiHigHheHgbGf`GeZGdXF\
+  cUFbS8nsAmtBmtCmtDltEltGltHktIktJktKktMjtNjtOjtPit\
+  QitSitThtUhtVhtWht_arbWqeQjgLdjGYlASo5Lq0Fp2Hp4Io6\
+  Jo8KnALnCMmEOmGPmIQlKRlMSkOTkQUjSWjUXiWYiYZi__ha`h\
+  cagecggdfiefkfemgeohftjeqidnhckgcigbfface``e`Zd_Wc\
+  ZTcYQbYOaXLaWI`VF_VD_UAZT7YT5YU6XV6XV6XW6XW6XX6XY6\
+  XY6WZ6WZ6W_6W`7W`7Wa7Wa7Vb7Vc7Vc7Vd7Vd7Ve7Ve7VWmXV\
+  kYUiZUhZTf_Se_Sc`Rb`Q`aQ_aPYbOWcOXcNTdMSdMQeLUeKNf\
+  JVzKMfLZdLSbMzzMY_NdjNcWzzzPiSPoRQoPzzNRuLSvLRwKfz\
+  JPrIOoIOmHNsGMgFLeFKbEK`D }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=real(p5)-2, bb=imag(p5)+0.00000000000000000001,
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(-aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

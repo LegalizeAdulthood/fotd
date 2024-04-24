@@ -1,0 +1,115 @@
+;     Date: Mon, 11 Aug 2008 21:22:17 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 12-08-08 (No More Perfection [No Rating])
+; 
+;       Id: <1.5.4.16.20080811212300.2bf7ce94@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 12, 2008 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA ALERT!  The DivideJulibrot formula included in 
+; today's parameter file is a new version that has been slightly 
+; changed from the earlier version.  The earlier version will 
+; still work, but the version in today's parameter file is some-
+; what faster.
+; 
+; As for today's image, take it or leave it.  For some reason I 
+; dislike perfection, probably because it leaves no room for 
+; improvement.  And this afternoon when I took another look at 
+; yesterday's image, it struck me as being just a bit too perfect. 
+; A tiny rotation took care of the perfection however.
+; 
+; A rotation of a mere 0.0005 degree from the Julia orientation 
+; wreaked total havoc on yesterday's image.  (A slightly larger 
+; rotation makes the rectangle go away completely.)  But the 
+; wreckage struck me as being good enough to serve as FOTD for 
+; August 11, especially since I had little time for a further 
+; fractal search.
+; 
+; The color palette is the same as yesterday's, with only a slight 
+; change.  Since yesterday's image was the real thing, I gave no 
+; rating to today's image, which is a parody of yesterday's.  The 
+; name "No More Perfection" explains itself.  The parameter file 
+; runs in 1-1/4 minutes, about the same time it takes to view the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Monday here at Fractal Central was actually a bit too chilly for 
+; perfection, and the heavy thunder-shower in mid-afternoon made 
+; it even cooler.  An afternoon temperature of 63F 17C is hardly 
+; ideal for mid-August in the northern hemisphere, but the day 
+; was salvaged in the evening by a lovely double rainbow spanning 
+; the eastern sky.
+; 
+; The fractal cats enjoyed the few intervals with brilliant sun, 
+; and endured the periods of rain.
+; 
+; My day was rather busy, yet pleasant enough.  I expect a repeat 
+; tomorrow.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and the farmers must be praying for rain.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+No_More_Perfection { ; time=0:01:14.44-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1
+  center-mag=-0.0000104151/+0.002511651686/798281.4
+  params=89.9995/0/89.9999/0/-1.7435/0/0.00019/0.073\
+  88/2.003/0.0003385 float=y maxiter=3500 inside=255
+  logmap=136 periodicity=10
+  colors=000EJMILNNNOSQQXTUaWYmdftiongjj`cdUW_NOUHGE\
+  2DJ7BOBATG9hF6mK9mPBmUDmZFmcHmkImhJmfKmdLmbMmcNmhO\
+  mcPcVQcTRcRScPTcNUcLVcJWcIacHXcHScHOmHJgHEsG5mHAgI\
+  FaJKWKPQLUONTKMYHMbEMgBMl6Ds7Ir8Mq9Qp9UoAZnBbmCflC\
+  jlzauzcpzelzghziczk_zmWzoUzqSzsRzuPzwOzxNzyLzzKzzI\
+  zzHzzGzzLzzPzzUzzYzzbzzfzzkzzozznzznzzmzzmzzlzzlzz\
+  kzzkzzjzzjzzizzizzhzzhzzgzzgzzfzzfzzYzzezzezzdzzdz\
+  zczzczzbzzbzzazzazz`zz`zz_zz_zzZzzZzzYzzYdzXezX9zz\
+  BzzCzzDzzEzzFzzGzzHzzIzzJzzKzzLzzMzzNzzOzNPzNQzORz\
+  PSzPTzQUzQVzRWzSXzSYzTZzT_zU`zVazVbzWzzWzzzzzFzzzz\
+  zGzzzzzHzzzzzHzzzzzIzzzzzIzzzzzJzzzzzJzzzzzKzzzzzL\
+  zzzzzLzzzzzMzzzzzMzzzzzNzzzzzNzzzgzOgzzfzPfzzfzPfz\
+  zfzQfzzfzQfzzfzRfzzfzRfzzfzSfzzzzTzzzzzTzzzzzUzzzz\
+  zUzzzzzVzzzzzVzzzzzWzzzzzXzzzezXTzzUzXUzzUzXUzzVzX\
+  VzzVzXVzzWzXWzzWzXWzzWzXXzzXzXXzzXzXYzzYzXYzzYzXYz\
+  zZzXZzzZzXZzz_zX_zz_zX_zz }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=imag(p5+0.00000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

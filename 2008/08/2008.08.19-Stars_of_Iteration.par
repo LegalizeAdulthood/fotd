@@ -1,0 +1,98 @@
+;     Date: Mon, 18 Aug 2008 16:21:11 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 19-08-08 (Stars of Iteration [8])
+; 
+;       Id: <1.5.4.16.20080818162200.2b4fd5ca@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 19, 2008 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The formula for today's image adds a very small bit of Z^(-20) 
+; to Z^2 to produce a Mandelbrot set with disks of Z^(-20) stuff 
+; at the centers of all the bays and buds.  The image is located 
+; on the X-axis, in the detail at the east edge of a disk almost 
+; filling the large period-2 bud of the M-set.  More than anything 
+; else it resembles a surrealist's spider-web.
+; 
+; I named the image "Stars of Iteration", which sounds a little 
+; poetic and in a way describes not only today's fractal, but all 
+; fractals.  And then I rated it at an 8.  I considered adding a 
+; half point for my coloring, but decided that I did not do quite 
+; enough color tweaking to merit the extra half-point.
+; 
+; The calculation time of only 42 seconds is fast enough to cause 
+; no impatience.
+; 
+; The finished image, which is posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is convenient enough to totally take the work out of fractals.
+; 
+; With a temperature of 88F 31C here at Fractal Central on Monday, 
+; it was just a bit too warm to be perfect, but all else was the 
+; picture of perfection.  The dynamic fractal cats, who never stop 
+; reiterating, agreed.  Just after lunch they spotted an unfamil-
+; iar manx cat in the yard next door, and with a volley of hisses 
+; and growls, sent it on its way.  I did not tell them that the 
+; cat was ready to move on anyway, and their empty threats had 
+; nothing to do with its departure.
+; 
+; Otherwise the day was uneventful.  The next FOTD will be posted 
+; in 24 hours.  Until then, take care, and to become famous, solve 
+; the measurement problem.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Stars_of_Iteration { ; time=0:00:42.84-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.9160783767764306/0/8.62e+008
+  params=1/2/1e-018/-20/0/0/0/0 float=y maxiter=1450
+  inside=0 logmap=153 symmetry=xaxis periodicity=10
+  colors=0000EC0FF0GI0HL0IO0JQ0LT0NW0PZ0Ra0Td0Vg1XiD\
+  _aPbV`cOldHwdAwgBwjCwmDwpEwsFwvGwyGvvFutFuqFtoFslF\
+  sjFrhFqeFqcFp`FoZFoWFnUFnSFoTEpTDqTCrTBsTAtT9uT8vT\
+  7wT6xT5yT4yT4pO9hJEsFTSAcJ5cB1cC2cC2ZD2UC2PB2KA2FA\
+  2AA3AA3AA3AA3AA3AC3AF3AI3AN5AS7FW9L`BReCWiEanGgsPz\
+  wUzvUzuUzuUztUztPysKwrHurHsqHsqHsmJmjLhgNcdPZaRUYT\
+  OVVJSXEPZ9M_4K`5Ja6Ha6Gb7Fb8Dc8Cc9Ad99dA8eB6eB5fC4\
+  fCm6Am9DmCGmFJmIMmKOmNRmQUcTXUW_OYaSdSWkJ_zAbzKYzU\
+  TzcOzmJztFzzGzzHzzHzzIzzIzzJzzKzzKkVLlYLm`MncMnfOl\
+  dQjcShbUg`We_YcZZbY``WbZVdXUfWShURjSQkRPceQXsQUrQQ\
+  qRNpRzoSznSzmTzlTzkTziQHhNLgLPfITeFXdD`cAdb7ha5cX5\
+  _T5VP5RL5PPAOSENWIMZMLbQKeVJiZIlbHpzGszIzzFrzCjz9c\
+  z6Wv4Pr3Mm3Kh2Ic2GZ1E_1Ce0Ak08q06v6CoCIhIOaOUVU_U_\
+  eZdkcamh_omYqrVsvzuzzwzzxzzyzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzezzNzz4zz6zz7zz8zz9zzAzzCzzDzzEzzFzzGzzIz\
+  zJzzezzfzzgzzhzzhzzezzbzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

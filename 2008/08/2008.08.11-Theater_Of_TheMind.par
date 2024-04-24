@@ -1,0 +1,107 @@
+;     Date: Sun, 10 Aug 2008 22:19:41 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 11-08-08 (Theater of the Mind [7.5])
+; 
+;       Id: <1.5.4.16.20080810222023.2b47a8fe@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 11, 2008 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As I studied today's image, I fancied myself sitting in the 
+; balcony of a celestial movie theater, viewing the fractal show 
+; being projected on the screen.  I named the image "Theater of 
+; the Mind" because that's exactly what it is.  The rating of a 
+; 7.5 might have been a point higher if I had not used variations 
+; of this same rectangle so often in previous FOTD's.
+; 
+; The brilliant rectangle in the center is nothing other than a 
+; variation of our old friend the rectangle that lies in a Julia 
+; set of the East Valley area of the large fractured minibrot on 
+; the infinitely divided mail spike of the Z^(2.003)+C Mandeloid.  
+; In today's variation the minute value entered into the imag(p5) 
+; parameter has shrunk the rectangle almost to the point of invisi-
+; bility.  The slightest increase in this parameter will make the 
+; rectangle go away totally.
+; 
+; The calculation time of 1-1/3 minutes should cause the average 
+; fractalist little if any inconvenience.  The exceptional 
+; fractalist may wish to take the trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; to view the finished image there.
+; 
+; With lots of sun and a temperature of 81F 27C, Sunday was 
+; pleasant enough here at Fractal Central -- until 6pm that is, 
+; when the clouds started gathering.  No rain ever fell, but 
+; thunder rumbled ominously in the north for an hour.  The fractal 
+; cats ignored the weather and concentrated instead on a fly in 
+; the kitchen window.  The fly eventually disappeared.  My day was 
+; uneventful, which is acceptable.  The next FOTD will be posted 
+; in 24 hours.  Until then, take care, and unlike everything else, 
+; fractals are forever.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Theater_Of_TheMind { ; time=0:01:21.79-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1
+  center-mag=-0.00001033139728697/+0.002511651686093\
+  /860217 params=90/0/90/0/-1.7435/0/0.00019/0.073\
+  88/2.003/0.0003385 float=y maxiter=3500 inside=255
+  logmap=136 periodicity=10
+  colors=000EJMILNNNOSQQXTUaWYmdftiongjj`cdUW_NOUHGE\
+  2DJ7BOBATG9hF6mK9mPBmUDmZFmcHmkImhJmfKmdLmbMmcNmhO\
+  mcPcVQcTRcRScPTcNUcLVcJWcIacHXcHScHOmHJgHEsG5mHAgI\
+  FaJKWKPQLUONTKMYHMbEMgBMl6Ds7Ir8Mq9Qp9UoAZnBbmCflC\
+  jlmOufSp`WlU_hOccHg_BkW2mU5nS7oR9pPBqODrNFsLHtKJuI\
+  LvHNvGLrLJnPIkUGgYEcbD`fBXkAUoBVnCVnDVmEVmEVlFVlGV\
+  kHWkIWjJWjJWiKWiLWhMXhNXgOXgOXfPXfe`YQXeRYezmdzmdz\
+  mczmczmbzmbzmazmazm`zm`zm_zm_zmZzmZzmYzmYdzXezX9zz\
+  BzzCzzDzzEzzFzzGzzHzzIzzJzzKzzLzzMzzNzzOzNPzNQzORz\
+  PSzPTzQUzQVzRWzSXzSYzTZzT_zU`zVazVbzWzzWzzzzzFzzzz\
+  zGzzzzzHzzzzzHzzzzzIzzzzzIzzzzzJzzzzzJzzzzzKzzzzzL\
+  zzzzzLzzzzzMzzzzzMzzzzzNzzzzzNzzzgzOgzzfzPfzzfzPfz\
+  zfzQfzzfzQfzzfzRfzzfzRfzzfzSfzzzzTzzzzzTzzzzzUzzzz\
+  zUzzzzzVzzzzzVzzzzzWzzzzzXzzzezXTzzUzXUzzUzXUzzVzX\
+  VzzVzXVzzWzXWzzWzXWzzWzXXzzXzXXzzXzXYzzYzXYzzYzXYz\
+  zZzXZzzZzXZzz_zX_zz_zX_zz }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=real(p5)-2, bb=imag(p5)+0.00000000000000000001,
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(-aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

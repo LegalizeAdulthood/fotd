@@ -1,0 +1,101 @@
+;     Date: Sat, 30 Aug 2008 17:37:47 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 31-08-08 (Orderly Disorder [6.5])
+; 
+;       Id: <1.5.4.16.20080830173845.2ab78332@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 31, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image comes from the same general area of the same 
+; parent fractal as yesterday's image.  It's actually a very rich 
+; area, especially since the minibrots that fill the area are 
+; almost all cubic ones surrounded by unusually extensive patterns 
+; with both cubic and quadratic characteristics.
+; 
+; I named the image "Orderly Disorder".  That's what fractals are. 
+; Then I rated it at a 6.5, which includes a questionable 1/2 
+; point for my coloring efforts.
+; 
+; The included parameter file calculates in just under 1 minute, 
+; that is after the file is set up to run.  This is about the 
+; same time required to hop over to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and enjoy the completed image there.
+; 
+; The clouds hung around on Saturday here at Fractal Central, but 
+; it stayed dry, and the temperature of 75F 24C was not at all 
+; bad.  The fractal cats were much more relaxed, which means that 
+; the intruder cat was not in the area.
+; 
+; My day was peaceful enough, and if all goes well, tomorrow will 
+; be the same.  I'll be taking a brief trip back to Old Fractal 
+; Central tomorrow, so the next FOTD fractal image might be late.  
+; But the image is assured.  I already have it in cold storage, 
+; ready to go.  Until then, take care, and be with fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Orderly_Disorder   { ; time=0:00:58.35-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1 float=y
+  center-mag=-3.944756829565295/+0.000377496511276/\
+  1.105404e+007/1/-115/0 params=0/0/0/0/0/0/0/0/3/3
+  maxiter=750 inside=0 logmap=91 periodicity=10
+  colors=000TcnRcoSeoTfoUgoVioWjoXkoYmoZno_oo`qoarob\
+  socuodvoewofxohwpjwqlvrnvspvsruttuuvtvxtwztwvorskm\
+  pfimbdjZ`gUWdQSaMNZHJWDET9APG8LM6HT5DZ39e16k0Bl4Fl\
+  8JmBNmFRnIWnM_oQcoTgpXkp_ngToZNoRHoIBqA5nE4lI4jM4j\
+  Q4kT4iX4g`4dd4bh4`k4Zo4Xs4Vw4Tz4Wx6Yw7_v9btAdsCfrD\
+  ipFpoGrnIuqJwpLyoMziNuaMtULsMKrEJq6Jo8HnAGlCFkEEiG\
+  DhICfKBeMAdO9XNNQM_JLlCKyBJvBIsBHpAHmAGjAFg9Fd9Ea9\
+  DZ9DWDGXGJYJMYNPZQSZTV_WY`_``bcaefahibllcoocrrdutd\
+  opbjlaei__eZVbXQZWKWUFSTAPSCQRESRGUQHVQJXPLYPN_OPa\
+  ORbNTdNUeNHkf4qzCmxKjwSgv_ctg`soYrlWnjVkhUhfTddSaa\
+  QZ_PWYOSWNPUMMSLJTMKTMKTMKUMKUMKUNKVNKVNKVNKVPKXQJ\
+  ZTI`WHbZGd`GfcFhfEjiDlkDilGgmJenMcoOapR_qUYrWWsZUt\
+  aSudQvfOwiMxlKynPzkTzhXze`z`dzWhzRkzNgzMdzLazLZzKW\
+  zKTzJUzIZzIczHhzHmzGrzGvzKzzOzzSzzWzz_zzczzgzzazzX\
+  zzRzzMzzGzzBzzDzzEzzFzzGzzHzzIzzJzzLzzMzzNzzOzzPzz\
+  QzzRzzTzzUzzWzzXzzZzzkzzm }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

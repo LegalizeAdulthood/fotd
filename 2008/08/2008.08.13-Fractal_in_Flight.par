@@ -1,0 +1,104 @@
+;     Date: Tue, 12 Aug 2008 21:28:09 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 13-08-08 (Fractal in Flight [7.5])
+; 
+;       Id: <1.5.4.16.20080812212853.2abfadce@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 13, 2008 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal takes us into fractional powers of Z.  In the 
+; image for today the exponent is 2.5.  The value of 100 that I 
+; gave to imag(p5) assures that the parent fractal will be huge, 
+; and on the surface will resemble the Mandelbrot set.  But deep 
+; inside the 2.5 characteristics will appear.
+; 
+; Today's image is located on the edge of the infinitely divided 
+; main spike of the monumental parent fractal, in the area just 
+; east of the large minibrot.  I named it "Fractal in Flight".  I 
+; must have had a reason for choosing such a name, but the reason 
+; now totally eludes me.
+; 
+; The rating of a 9 includes a full point for my coloring efforts. 
+; The unusual colors are the main feature of the image.
+; 
+; There is no risk of impatience appearing when the included para-
+; meter file is run.  The calculation time of one brief minute can 
+; hardly be bettered.  The image may also be seen on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A very pleasant summer day prevailed here at Fractal Central on 
+; Tuesday, with blue skies decorated with puffy clouds, and a 
+; temperature of 81F 27C.  The cats, being fractal by nature, took 
+; the conditions in fragmentary bits and pieces.
+; 
+; I took the day as it came, finishing the work on schedule with 
+; time for a pretty good fractal.  The next fractal, a cosmic one, 
+; (not a comic one), will be posted in 24 hours.  Until then, take 
+; care, and when you find your reality, cling to it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_in_Flight  { ; time=0:01:03.45-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1 logmap=92
+  center-mag=-170.9755598748956/+0.1185530913812762/\
+  1.643467e+009/1/172.5/0 params=0/0/0/0/0/0/0/0/2.5\
+  /100 float=y maxiter=1725 inside=0 periodicity=10
+  colors=000A6IA7KA8MA9OAAQABSACUADWAFYAH_HKaPMcROeW\
+  MhVKcUIYTGTSEORCIPADN98L9BN9EPAHREPTITWMXYQ_gS`pZa\
+  zaczfez`XvSPrIGm78c00W23V45U67T79S9BRBDQCFPEIOGKNI\
+  MMEKLFKKFKJFKMFKOFKQHKTHMVMKXLJ_LHaLFcKDfKBhJAjJ8m\
+  J6oI4qI2sI1wklsjjojhljfhiddibai`YiZUhXRhVNhTJhRGgP\
+  CgNhgLhgJhhKhhLhhchhchhchhchhchhchhcThQVhRXhSZhSLP\
+  a85kBBjDGiFLhHQgJVgM_fOdeQidSncUscSreQrgOqhMqjKqlI\
+  pzGpzEpzCozAoz8oz6nz4nz2nz6ozApzEqqIrnMskQthTtfXuc\
+  `v`dwYhxVlySpzPszNotQlnTihWfbZbYa_SdXMgUGjRBlUFkXI\
+  kZLkaOkcRkbPgaNcaL_`JW`HS_FOZDKZBGY9CY79aX4zv0zw1z\
+  w2zw2zw3zw4zw4zw5zw5zw6zw7zw7zw8zw9zw9zxAzyAzzIzzQ\
+  zzYzzezzmzztzzdzzQzzBzzHzzMzzRzzWXzaYzfZzk_zp`zubz\
+  tdzsfzshzrjzrkzqmzpozpqzoszouznvznpzdjzVdzMZzCUz3S\
+  z6Rz8zzAzzDzzFzzHzzJzzMzzOzzQFzSEzVzzXzzZzz`zzTzzL\
+  zzDzzCfzBdzAaz9Zz8Xz7Uz6Sz6Qz7Oz8Nz9LzAKzBIzCHzDFz\
+  EEzEQz``zvZzsYzpXzmVzjUzg }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=imag(p5+0.00000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

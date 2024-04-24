@@ -1,0 +1,104 @@
+;     Date: Tue, 26 Aug 2008 21:29:48 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 27-08-08 (Something from Nothing [6.5])
+; 
+;       Id: <1.5.4.16.20080826213044.2b97ce0e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 27, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's 6.5 rated image truly gets "Something from Nothing", 
+; which is what I named it.  To begin, it consists totally of 
+; 'inside' stuff, but due to some quirk in the 'fmod' routine, the 
+; inside stuff inside the minibrot is more 'inside' than the 
+; inside stuff outside the minibrot.  Yes, I know it makes no 
+; sense, but that's the way it is.  (Changing the 'logmap' to 1 
+; eliminates this quirk.)
+; 
+; The generating formula divides Z^2 by (Z^(-2.1)+4).  The 
+; immediate result of this operation is a blank screen, which can 
+; be resurrected from the dead by the 'fmod' feature.
+; 
+; I really cannot say much more about the image, for I really have 
+; no idea what's going on with it.  But with its smooth coloring, 
+; it's an interesting fractal to study.  The calculation time of 
+; 1-1/3 minutes should cause no one any grief.  The pre-calculated 
+; image is or soon will be posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; An absolutely perfect day prevailed here at Fractal Central on 
+; Tuesday.  Perfection is defined by crystal blue skies, a few 
+; puffy clouds for decoration, low humidity, gentle winds, and a 
+; temperature of 79F 26C.  The fractal cats must have agreed, for 
+; they spent much of the day in the window, watching for Max the 
+; Manx cat, who is prowling the area, establishing his dominance.
+; 
+; My day was busy, which is about all that can be said.  The next 
+; FOTD, one with more substance, will be posted in 24 hours.  
+; Until then, take care, and what does a massless photon become 
+; when it sits at rest?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SomethinFromNothin { ; time=0:01:21.46-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot center-mag=+0.2602484/\
+  +1.367610189/9214.697/1/92.5/0 params=0/0/0/0/0/0/\
+  0/0/-0.1/4 float=y maxiter=1500 inside=fmod
+  proximity=0.25 periodicity=10
+  colors=000fXYeWXeWXdVWhVYgUYfTYeSXdRXcQWbPWaOV`NV_\
+  MUZLUYKTXJTWJSVJSUJRTJRSJQRJQQJPPJPOJONJOMJNLJNKJM\
+  JIMIIMHILGILFIJEHKDHKCHJBHIAGJ9GI8GI7GI6GH5GH4GH3F\
+  G2GG1FG0GF0FF1FE2FE3EE4ED5ED6ED7EC8EC7DC6DB6DB5CB5\
+  CA4CA1972A83B94B94CA5CA6DB6DC7EC8ED9FD9FEAGFBGFBHG\
+  CHGDIHEIHEJIFJJGKJGKKHLKILLIMMJMMKNNLNNLOOMOONPPNP\
+  QOQQPQRQRRQRSRSTSSTSTUTTUUUVUUVVVWWWXXWXXXYYXYZYZZ\
+  Y__Z_`Z`a_`a_ab`bc`bcacdacebdfbdfcegcfhdfhdgiegjeh\
+  jfikfilgjmgjmhknhkoiloimpjmqjnrknrkoslptmptoqupqvr\
+  rvsrurqtqqtppsopsnormormnqmnqmmpmmpmmomlollnlknlkm\
+  ljlljllikliklijlhjlhilgilghkfhkfgkegkefkdfkdekdekc\
+  dkcckbckbbkabjaaj`aj``j``j__j__jZZjZZjYYjYYjXXjXXj\
+  XWiWViWViVUiVUiUTiUTiTSiTSiSRiSRiSQiRQhRPhQPhQOhPN\
+  hPNhOMhOMhOLhNLhNKhMKhMJgLJgLIgKJgKKgJLgJMgJNgIOgI\
+  PgHQgHRgGSfGTfFUfFVfFWfEXfEYfDZfD_fC`fCafBbfBcf6df\
+  8ef9ffAgfBheCieDjeEkeFleG }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

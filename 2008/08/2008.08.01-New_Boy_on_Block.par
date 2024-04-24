@@ -1,0 +1,131 @@
+;     Date: Thu, 31 Jul 2008 21:54:03 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 01-08-08 (New Boy on the Block [?])
+; 
+;       Id: <1.5.4.16.20080731215436.2a976860@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 01, 2008 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA ALERT!
+; 
+; Today's FOTD uses a new formula, which I wrote today.  The 
+; formula combines the DivideBrot routine with the Julibrot 
+; routine to draw different slices of the curious DivideBrot 
+; Mandeloids.
+; 
+; The new formula is number 6 of the SliceJulibrot series.  I 
+; wrote the formula to make it easier to work with both the Julia 
+; and Mandelbrot aspects.  I have not yet investigated the odd 
+; slices, though they probably hold some interesting scenes.
+; 
+; Today's image has no parent fractal.  It is the parent fractal.  
+; The image is a Julia set of what remains of the Seahorse Valley 
+; of the ruined large minibrot on the main stem of the correspond-
+; ing Mandelbrot set.  To see the ruined minibrot in the Mandel-
+; brot aspect, simply change both the p1 and p2 parameters from 
+; 90,90 to 0,0.
+; 
+; At first glance, the image appears to have X-axis symmetry, but 
+; a closer examination will reveal that it has no symmetry at all.
+; 
+; The imag(p3) parameter is extremely critical, with the slightest 
+; change totally altering the image.  I have not yet tried 
+; different values of the remaining parameters, but I see much 
+; potential for excitement.
+; 
+; The formula combines Z^2 and Z^5.  From the way the image is 
+; filled with 7-sided elements however, one would never guess it.  
+; The calculation time of a very brief 25 seconds will cause no 
+; one any pain.
+; 
+; Since I have no idea of the potential of the new formula, I 
+; could give today's image no rating.  The name "New Boy on the 
+; Block" refers not only to the new formula, but also to the new 
+; tomcat that lurked around FC for acouple minutes this afternoon.
+; 
+; The most convenient way to see the image is to visit the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; but before you will be able to work with the image, you will 
+; need the new formula entered into one of your Fractint formula 
+; files.
+; 
+; Thursday proved to be a thoroughly delightful day here at 
+; Fractal Central, with blue skies, puffy cumulus clouds, lower 
+; humidity, and a temperature of 86F 30C.  The fractal cats 
+; enjoyed the conditions, but became alarmed when they spotted an 
+; unwelcome beat-up tomcat prowling in the yard next door.  Just 
+; as Nicholas reached full bristle however, the intruder moved on, 
+; returning peace to the cat community.
+; 
+; My day was about average.  The next FOTD will be posted in 24 
+; hours, plus or minus a few.  Until then, take care, and fractals 
+; are not only good for the soul, they might be what the soul is 
+; made of.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+New_Boy_on_Block   { ; time=0:00:25.12-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot6 center-mag=0.0187793/\
+  4.44089e-016/0.9861933 params=90/90/90/90/-14.1496\
+  5667/0.0052/0/0/5/8 float=y maxiter=1200 inside=255
+  logmap=3 symmetry=none periodicity=10
+  colors=000_MjeSekXajZcj_eiagibiicjfagd_ebYc`WaZU_X\
+  TYVRWTPTRNRPLPNKNKILIGJ133GEHECECACA9A878656434212\
+  gi7_a5TU4MN3EF2771UGzSFwREtPDqOCnMCkLBhKAeI9bH9_F8\
+  XE7UC6RB6OA5L84I73FQnlUhmXbn`XocRogLpjFqmAqlErkIrk\
+  LsjPsjStiWthZuhbugevgivflwepwesxdwxdzxbvtarq`nnZjk\
+  YfhXceYdgZdh_dj_dk`dmadnbdpbdqcdsddtqdvhbwbbzc`zb_\
+  tbZsaYs`Wr_Vq_TpZSoYRoXPnXOmWMlVLkVKkXNiZPg_ReaTcb\
+  VadX_eZZgaXicVjeTlgRmiPokNpmMmlLjlKglJdlJalIZkHWkG\
+  TkGQkFNkEKkEX0AV4CT7DRAEPDFNGGLKIJNJIQKGTLEWMC_OAb\
+  P8eQ6hR5kSInUUqVesWfoUflSfiQfeOfbMg_KgWIgTGgQEgNCd\
+  MHaMLZLPWLTTKXQK`OKdCAKTuUOkP5_j7Vi8QhALgBGgEJeGLd\
+  INcKPbMR`OT_RVZTXYVZWX`VZbU`dTbaRdZQfXOhUNjRLkPKp`\
+  JtkIrjKpiLniNlhOjgQigRgfTefUceWadX`dZZc_XbaVbbTadS\
+  aed_ZpYSnXQmWOlVMlTMlSMlRMlQMlPMlOMlNMlMMlLMlKMlJM\
+  lIMlHMlGMlFMkHOjJQjLRiMTiOUhQWhRXgTZfV`fXaeYce_dda\
+  fdbgaYiZTkWPmTKoQFqNBsUHn }
+
+frm:SliceJulibrot6   {; draws slices of DivideBrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=real(p5), bb=imag(p5)+0.00000000000000000001,
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(-aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

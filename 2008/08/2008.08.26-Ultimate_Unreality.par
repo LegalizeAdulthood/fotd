@@ -1,0 +1,107 @@
+;     Date: Mon, 25 Aug 2008 18:04:58 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 26-08-08 (Ultimate Unreality [6.5])
+; 
+;       Id: <1.5.4.16.20080825180553.2a4fe8d8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 26, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another ultimately unreal one, which is why I 
+; named it "Ultimate Unreality".  The generating formula contains 
+; an unlikely Z^(-0.5), which, when combined with Z^2, produces a 
+; blank screen.
+; 
+; But there is action within the blankness.  Just as empty space 
+; is filled with virtual particles, the blank screen is filled 
+; with a virtual fractal, and the energy supplied by the 'fmod' 
+; inside fill brings the virtual fractal to fractal reality.  In 
+; this case, the 'fmod' inside fill is the only one that works.  
+; (Since virtual particles also need energy to make them real, I 
+; suppose they are also ultimately made of numbers.)
+; 
+; Anyway, today's image, composed totally, as it is, of inside 
+; stuff, rates a 6.5, 1/2 point of which is a reward for the 20 
+; minutes or so I spent tweaking the colors.  The calculation time 
+; of 3-1/3 minutes is fast enough to avoid impatience and slow 
+; enough to give time for anticipation.
+; 
+; Perhaps the easiest way to view the image is to forget parameter 
+; files and visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image is or soon will be posted in finished form.
+; 
+; The near-perfect weather here at Fractal Central on Monday was 
+; fully enjoyed by the fractal cats, who slept through most of it. 
+; I also noticed the blue skies and temperature of 82F 28C, but I 
+; was a bit too busy to enjoy it.  The next FOTD, hopefully one 
+; with more reality, will be posted in 24 hours.  Until then, take 
+; care, and never forget that fractals are as real as electrons.  
+; (But exactly what is the difference between an abstract electron 
+; and a concrete electron?)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ultimate_Unreality { ; time=0:03:22.33-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1 float=y
+  center-mag=+0.4129219397998285/+2.004990460705446/\
+  2140000/1/165/0 params=0/0/0/0/0/0/0/0/-0.5/5
+  maxiter=1500 inside=fmod logmap=yes periodicity=10
+  colors=000fwAgwAhwAiwAjvAkvAlzAzyzwymtwhrvcquZrtUs\
+  sPtrKuqFuqAupAupAuoAuoAunAunAumAumAulAulAukAukAujA\
+  tjAtiAtiAshAshAsgAsgAsfAsfAseAreArdArdAqcApcApbApa\
+  Ap`Ao`Ao_Ao_AoZAmZAmYAmYAmXAlXAlWAlWAlVAkVAkUAkUAj\
+  UAjTAjTAjTAjSAiSAhSAhRAhRAgRAgQAgQAgQAfPAfPAfPAfOA\
+  eOAeOAeNAeNAdNAdMAdMAdMAcLAcLAcLAcKAbKAbKAbKAbKAaK\
+  AaKAaKAaJA`JA`JA`JA`JA_IA_IA_IA_IAZIAZIAZHAZHAYHAY\
+  HAYHAYGAXGAXGAXGAXGAY82XB5XE8XGAXJDXLFXOIWRKWTNWWP\
+  WYSW`UWbXVeZVhaVjcVmfVohVrkVtmUqjTnhTkeShcReaRbZQ_\
+  XQYVPVSOSQOPNNMLMJJMGGLDELBCMCDMDEMDFMEBMECNFDNFDN\
+  GENFFNGGOGHOGIOGIOGJOGKOGKPGKPGKPHLPIMPINQJOQJPQKQ\
+  QKRQLSQLTRMUSMVTNWUOXVOYXPZWPYWQWVQUUPUTOUTXhTYiTY\
+  jTZkTZkU_lU_mU`nU`oUapRavSatTarUapVanWalXajYaiZag_\
+  ae_ac`aaaa_baYcaXdaVeaTfaRgaPgaNhaLiaKjaIkaGlaEmaC\
+  naAoa8pb6oa7oa7oa7oa8oa8na8na9na9na9naAmaAmaAmaAm`\
+  Bm`Bl`Bl`Cl`Cl`Cl`Dk`DbwI }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
