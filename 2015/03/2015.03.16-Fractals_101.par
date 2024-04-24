@@ -1,0 +1,113 @@
+;     Date: Mon, 16 Mar 2015 18:23:29 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-03-15 (Fractals-101 [A-6,M-6])
+;       Id: <1.5.4.16.20150316172715.2a772730@earthlink.net>
+; ---------
+; 
+; FOTD -- March 16, 2015 (Rating A-6,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have been pretty silent lately but I am certainly still here.  
+; Though today's image is nothing new, it shows that between my 
+; more artistic efforts I still find time to check into the world 
+; of fractals.  And don't give up hope.  Some of my latest efforts 
+; should soon be worth posting on the web sites.
+; 
+; If the Mandelbrot set is the mother of all Z^2+C fractals, then 
+; the Julibrot is the grandmother, for it is the four-dimensional 
+; superfractal that contains the Mandelbrot set as a single 
+; two-dimensional slice.
+; 
+; Today's image shows an undistorted view of a different slice of 
+; this Julibrot, sliced in a totally new orientation, with the 
+; vertical direction the imaginary C axis and the horizontal 
+; direction the real Z axis.  I call this orientation the Oblate 
+; direction, though this is totally unofficial.  The image slices 
+; through the M-set at the point -0.8 on the real C axis, just 
+; beyond Seahorse Valley.
+; 
+; I have named the image "Fractals-101" because the 4-D aspect is 
+; basic to so many fractals.  I could rate it no higher than a 
+; double 6 however because we have been here so often before.  The 
+; calculation time is almost instant however, and this is the 
+; image's best point.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The temperature of 54F 12C made up for the limited sun here at 
+; Fractal Central today.  Now that the winter to be remembered is 
+; winding down, and the snow and ice is quickly disappearing, the 
+; three fractal cats are giving more attention to the activity in 
+; the outside cat world.  Lida has her eye on a big tough-looking 
+; orange tomcat that frequents the area, while Jasmine prefers a 
+; tuxedo colored tomcat.  Nicholas simply watches the ladies silly 
+; behavior with aloof detachment, while the fractal people watch 
+; all three with puzzlement.
+; 
+; The next FOTD will be posted, that much is certain, but only the 
+; invisible shadow knows when, and he's not talking.  So until 
+; whenever, take care, and everyone should have at least one crazy 
+; conspiracy theory he can believe in without feeling silly.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractals-101 { ; time=very brief SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrotSqr center-mag=0/0/0.86
+  params=0/0/90/0/-0.8/0/0/0/0/0 float=y passes=1
+  maxiter=750 inside=0 symmetry=xyaxis periodicity=6
+  colors=0004Ct5Et6Gt7It8Kr9MrAOrBQqCSqGUpIWpLXoNYnR\
+  ZmT_kX`i_`ga`e`adZbdXacQacKabEab8cb7dg6hk5jo4ksDic\
+  MgOVe8ZcBaaEe_HhYJkWMoUPrSSuQUwOUwMUwLUwJUwHUwGUwK\
+  TwNSwQSwURwXQw_Qw`PwaPwbPwbPwYNwULwPKjOqjOqkPqkPql\
+  QqmQqmQqnRqnRqoSqoSqpSqpTqqTqrUqrUqsVqsVqtVqtWquWq\
+  vXqvXqwXqwYqxYqxZqyZqz_ryZqyZqyYqyYqyYqyXqyXqyXqyW\
+  qxWqxWqxVpxVpxVpxUpxUpxUpxTpwTpwSpwSpwSpwRowRowRow\
+  QowQovQovPovPovPovOovOovOovNnvNnuMnuMnuMnuLnuLnuLn\
+  uKnuKnuKntJmtJmtJmtImtImtImtHmtHmtHmsGmsGmsFlsFlsF\
+  lsElsElsElsDlrDlrDlrClrClrClrBkrBkrBkrAkqAkq9kq9kq\
+  9kq8kq8kq8kq7jq7jp7jp6jp6jp6jp5jp5jp5jp4jp4jo0lp4j\
+  q7iqAhrEfrHesKdsOctRatU`uY_v`YvcXwgWwjVxmTxqSytRzx\
+  PywQxvQxvRwuRvtSvtSusSurTtrTsqUszUrzUqzVqzVpzWpzWo\
+  zWnzXnzXmzYmzYlzZkzZkzZjz_iz_iz`hz`hz`gzafzafzbezb\
+  ezbdzcczcczdbzdazeaze`ze`zf_zfZzgZzgYzgYzhXzhWziWz\
+  iVziUzjUzjTzkTzkSzlRzlRzl }
+
+frm:SliceJulibrotSqr   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z*z+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
