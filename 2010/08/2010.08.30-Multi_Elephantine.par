@@ -1,0 +1,109 @@
+;     Date: Mon, 30 Aug 2010 22:11:48 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-08-10 (Multi-Elephantine [7])
+;       Id: <1.5.4.16.20100830221150.169715ec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 31, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us on another trip into the abstract fourth 
+; dimension.  It is a near-Julia set of the East Valley area of a 
+; minibrot located on the main spike of the Mandelbrot set, rather 
+; close to the set's main body.
+; 
+; The image is not a Julia set, nor is it a Mandelbrot set.  It is 
+; a hybrid, with both Mandelbrot and Julia characteristics.  The 
+; outer shape is obviously a Julia set of an East Valley.  The 
+; brilliant innermost parts however are a very oblique slice of 
+; the Mandelbrot aspect of the area.  The buds in this brilliant 
+; area are purely Mandelbrot buds, though at this extreme angle 
+; they are partially obscured.
+; 
+; I named the image "Multi-Elephantine" because of an abundance of 
+; the beasts hiding throughout the scene, which is chock full of 
+; both elephants and bits and pieces of elephants.  In today's 
+; image however, the ponderous pachyderms are less apparent than 
+; they usually appear.
+; 
+; The rating of a 7 is far enough above average to make the 
+; 6-1/3 minute calculation time worth the wait.
+; 
+; The calculation wait may be totally eliminated however by 
+; viewing the already-calculated image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Near perfect late summer weather prevailed here at Fractal 
+; Central on Monday.  The day began with fog, but by 9am the sun 
+; broke through, and for the rest of the day not a single cloud 
+; was seen.  The high temperature of 90F 32C was a bit too warm 
+; for total comfort in the sun.  The dry air made it quite 
+; pleasant in the shade however.
+; 
+; It's too bad we could not spend the day outside in this perfec-
+; tion.  The fractal cats enjoyed their perfection however.  They 
+; found perfection on the kitchen floor and on their shelf in the 
+; sunny window -- while the sun was not there, of course.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and why philosophize about the meaning of existence, when 
+; we don't even know the meaning of fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Multi-Elephantine { ; time=0:06:22.13-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 maxiter=32767
+  center-mag=0/0/38/1/90/0 params=89.96/0/89.96/0/\
+  -1.416653/3.1e-005/0/0/2/0 float=y
+  inside=0 logmap=28 periodicity=7
+  colors=000AFUAGWAHYAI_AJaAKcALeBMgCNiDOkEPmGQoIRqK\
+  SsMTsOUpQVkSWfUXaYYX_ZRa_Mc`HeaCgb7ic2kd7meBofFmgK\
+  lhOkiSijXhk`gkdddYbZR_TLYMEVG7TA1WB7ZCDaCIdDOgDTjE\
+  ZmFdpFisGouGtqFpmEmjDjfCfcBc_A`X9XT9UP8RM7NI6KF5HB\
+  4D83A427124HVPXwhYteYqcYnaZk_ZhYZeW_bU_`U_YU_VU_SU\
+  _TUZUUZVUZWUZXUZYUZZUZZUZZVZZWZZXZZYZZZZZ_ZX`ZZ_ZZ\
+  ZZZYZZXZZWZZWZZXZZYZZZZZ_ZZ`YZaXZbWZcVZcU_cQ_cN`cQ\
+  acSacU`cWZcYXc_VbaT`dQYfOVgMShKQiINjGKkEIlGIlIIlKI\
+  nLIoNIpPIrRIsSIsUItWItYItZIu`IubIucIqaJn`KkZLgYMdX\
+  NaVOZUPVTQSRRPQSLPTINUFMVCLVNTOX_HffBgdGgcLgaPg`Uh\
+  _ZhYbhXghWkfZieagdcecfdchbck`cm_clackbcjcciechfcgg\
+  cficejcdkcdlcckcbkcakc`jc_jcZjcYicXicWjcVkcVlcWmcX\
+  ncYocZpc_qc`rcascbtccuccvccwccxccycczcczcczcczcczc\
+  czcczcczcdzcezcfzcgzchzcizcjzckzclzcmzcnzcozcpzcqz\
+  crzbszatz`uzZvzXwzVxzTyzRzzQzzOzzMzzKzzIzzGzzFzzDz\
+  zBzz9zz7zz5zz0zz1zz1zz1zz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

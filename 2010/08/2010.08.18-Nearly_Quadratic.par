@@ -1,0 +1,103 @@
+;     Date: Wed, 18 Aug 2010 23:39:14 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-08-10 (Nearly Quadratic [6])
+;       Id: <1.5.4.16.20100818233907.129f64ce@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 19, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Almost Quadratic".  The reason is that 
+; the exponent of Z is 2.01, which is almost quadratic.  The 
+; parent fractal is a Mandelbrot set, no surprise there, but this 
+; set is rotated 180 degrees, so that East Valley is on the west 
+; side of the main bay and the main spike points east.
+; 
+; Both East Valley and the main spike have split into fractalized 
+; pieces, with the greatest distortion on the southern branch of 
+; Seahorse Valley and the southern shore of the large period-2 
+; bud.  But the Seahorse Valley distortion is an FOTD for another 
+; day.  Today we are concerned with the things happening to East 
+; Valley, which has broadened into a wedge.  Today's image lies in 
+; a curious patch of debris near the northern edge of this wedge.
+; 
+; All this strangeness might appear good in writing, but on the 
+; screen, even when helped by the 'tdis' outside option, it makes 
+; an image that I can rate no higher than a 6.
+; 
+; The calculation time is a borderline slow 5-1/2 minutes.  The 
+; best way to avoid the wait is to rush carefully to the FOTD web 
+; site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and view the finished image there.
+; 
+; Lots of clouds, a little sun and a temperature of 82F 28C made 
+; Wednesday a rather pleasant but uneventful day here at Fractal 
+; Central.  The fractal cats were not concerned with the outside 
+; weather however.  Nicholas somehow worked open one of the high 
+; unused cabinets in the kitchen and disappeared inside for a 
+; couple hours during the afternoon.  Cassie checked the space but 
+; decided not to go in.
+; 
+; In my department, things were about average.  The next FOTD will 
+; be posted in 24 hours, and that certainly is average.  Until 
+; then, take care, and if all electrons are exactly the same, how 
+; can we distinguish one from another?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Nearly_Quadratic { ; time=0:05:23.51-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.258603580125043/-0.00230274752051391\
+  /2.985925e+008/1/166/0 params=2.01/0/1.5/0 float=y
+  maxiter=4200 inside=0 outside=tdis periodicity=6
+  colors=000RbBUb3ZZ6bW9fSCjPEcYNYfWRodLxmOqnQjnTdnV\
+  YnXSnUWoRZpPbqMerKhrLkdMnRMpDOoJPnPQmVRl`SkfTjlUir\
+  ViwjSmzAcsDbmFagIa`K`VN_PP_MRXF3PD5MFQPDDMBBJ99HD4\
+  GHDFK2EG8LCDR8IXGPYNVYUaY`gYgmYifUj_RlTOmMKoFHp8Eq\
+  1cT8zpjzo9zkZzgUzd8z`8zX7zU7`Q7_N7ZR9VVARZCOacKeEG\
+  iGDmH9pI6qP7qV8ra8rg9rm9nnEjnJfnNbnSZoXVo`RoeNoiLq\
+  eKraIsZHtVGuREvODwKCxH6tJ1pK5qH9rFDsDHsBIlGIeKIZOI\
+  SSILWIE_I7cI0gN8hRFiVMi_Tjc_jgfkkmkjniiohipghqegrd\
+  gscilbjebkZbg`ZcbW_dTWeQSgNOiKKkHHlEPnHWoKcqMjrPqs\
+  RvL7nK9gKA`JBUJCMIDFIE8HF1HG7myPdefXNwP4oV4g`4_e4W\
+  b8S_BOXELUHHRKDONALQ9KV9K_8Jd8Ji7In7Is7IwaG9YLBVQD\
+  SVEPZGMcHJhJGlK9kK2kK5mP8nUBpZEqbHrgKtlNuqQvucx_py\
+  Er6df5WaE`YNdTWhPclWcOYVK_MHaDEc5B`L83YvG`mTcddeWf\
+  aZhY`jVclRemOgVbZCqQEpSGoUInWJmYLl_NkaOkcTldXle`le\
+  dlfhlgllgplhtlhsjarhVrgOqeHpcApb3jZBeVI`SQWOXQKcLH\
+  kGDrBAygOSl`_qmgkgeKeTNcJ }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

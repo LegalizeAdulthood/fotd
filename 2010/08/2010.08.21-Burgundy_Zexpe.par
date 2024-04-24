@@ -1,0 +1,94 @@
+;     Date: Sat, 21 Aug 2010 22:10:58 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-08-10 (Burgundy Zexpe [7])
+;       Id: <1.5.4.16.20100821221059.14cfa612@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 22, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates a 7 -- nothing wrong with that!  It's a 
+; scene in the Zexpe fractal calculated PI levels up the log 
+; ladder.  This parent fractal has two main buds, one on the 
+; southeast shore of the main bay, the other on the northeast 
+; shore.  The northeast bud is more of a cove than a closed-off 
+; bud.  Today's image lies rather deep in a valley on the north 
+; side of this northeast cove.
+; 
+; I named the image "Burgundy Zexpe".  The deep red colors of the 
+; six radiating arms remind me of the color of that wine made in 
+; France.  The rating of a 7 is just far enough above average to 
+; be interesting.  The calculation time of 1-1/4 minutes will pass 
+; in a flash.  The flash may be avoided by flashing out to view 
+; the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Saturday was a day of nothings here at Fractal Central.  It was 
+; not sunny; it was not cloudy; it was not hot; it was not cold; 
+; it was not wet, nor was it dry.  The sky was a hazy white color, 
+; with a blurred sun filtering through.  Exactly three drops of 
+; rain fell, while the temperature was a perfectly average 84F 
+; 29C.  The fractal cats had an average day, which means checking 
+; for intruding cats every so often, eating, playing, and sleeping.
+; 
+; My day was average also, as was FL's.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and search for the 
+; secret key.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Burgundy_Zexpe { ; time=0:01:14.54-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.9202794160124455/+0.3485306379947302\
+  /1.979387e+012/1 params=2.71828182845905/0/3.14159\
+  265358979/0 float=y maxiter=2400 inside=0
+  logmap=165 periodicity=6
+  colors=00065d77e89f9BgADhBFiCHjDJkELlFPmESlEWjD_hC\
+  bfCfdBjbBmaDi_FeZGbXIZWKWULSTNPSPLQQHPSENUAMV7KX3J\
+  Y0IV1HT2HR3GP4GN5FL6FJ7EH8EF7DD6DB5DB0HF0KI0NMCRQD\
+  UTDXXD_`DccDfgEikEmnEprEsuEvnLqhSlbZgXebRlYLsUOrUQ\
+  rUSrUUqUWqUYqZ`pcbphdpmforhozjozhhzgazfVzdOzcHzbBj\
+  cFfcIcdL`dPXeSUeVReYOfaKfdHggEgkAhn7hq4ht1gp3fm5ej\
+  7dg9ccBb`DaYF`VH_SJZOLYLNXIPWFRVCTUMSTVRScQRlPQuOU\
+  vSXvW_vZbwbewehwikxmnxpqxttxwksqcnkWieNd_F_U7VOIQM\
+  TMKcHInDGx9Eo6Gg3I_0J_4L_8M_CN_GO_KP_OQ_RR_VT_ZU_b\
+  V_fW_jX_nY_qZXgjUYtVZuV_uV`uWavWbvWcvWdvVgdRgPViOY\
+  jN`kMclLfmKinJloJefFdR7hR5iWBi`HieNdhL_kJVnIQqGLtF\
+  GwDCyCz`UmCjmBbmAWm9Pm8Hm7Am73mIBzTJzbRzmZzwfWx`Rz\
+  VzzQGzKBzFzzLIzQMzWzz`MzaJzazzbzzbzzbzzczzc1zczza6\
+  z_zzYBzWzzU5zqzzYhzbzzgizlzzpzzfzzdzzbzzazz_zzYzzX\
+  zzQzzUzzXzz`zzczzfzzjzzmzzhzzlzzpzzczzzzzszzlzzezz\
+  fzzfzzgzzgzzhzznzzhzzbzzX }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

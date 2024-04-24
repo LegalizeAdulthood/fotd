@@ -1,0 +1,106 @@
+;     Date: Thu, 19 Aug 2010 20:19:37 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-08-10 (From Epsilon to PI [7])
+;       Id: <1.5.4.16.20100819201933.11774ed2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 20, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; On Thursday I was occupied with the 'Zexpe' series of formulas 
+; (formulae is the plural word for the over-educated) and tried 
+; one of my own.  Using the MandelbrotBC3 formula, I checked to 
+; see what the Zexpe fractal looks like at a level of PI steps up 
+; the complex logarithmic hyperladder.
+; 
+; The parent fractal that I found there looks pretty much like the 
+; minibrot at the center of today's image, though it is rotated 
+; 180 degrees, and as today's image shows, it is quite interesting 
+; in its depths.
+; 
+; Today's scene lies in a valley of its parent that corresponds to 
+; the small valley near the center of the eastern shore line of 
+; the main bay of the minibrot at the center of the image.
+; 
+; The rating of a 7 means I consider today's image to be a bit 
+; better than yesterday's, yet nothing to get over-excited about.
+; 
+; The name "From Epsilon to PI" fairly describes the math behind 
+; the image.
+; 
+; The calculation time of 1-1/2 minutes is fast by any standards.  
+; But viewing the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; is less work and more fun.
+; 
+; Perfect weather prevailed here at Fractal Central on Thursday -- 
+; sunny skies, low humidity and a temperature of 84F 29C.  The 
+; fractal cats had a thrill when a very loud fight broke out 
+; between two cats in the yard next door, but they seemed a bit 
+; disappointed when one cat, presumably the loser, made a cautious 
+; retreat before the dispute could escalate to physical violence.  
+; My day was slow, which gave more time to waste before searching 
+; for fractals.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and I found a mind lying on the basement stairs.  Did 
+; anyone lose theirs?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+From_Epsilon_to_PI { ; time=0:01:28.70-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.1738289076076641/+0.3463464790189864\
+  /9.098551e+008/1/152.5/0 params=2.71828182845905/0\
+  /3.14159265358979/0 float=y maxiter=3600 inside=0
+  logmap=129 periodicity=6
+  colors=000E28F3BG4EH5HI6KJ7NK8QL9TMAWNBZOCaPDcQEcR\
+  FcSGcTGcUGcRGcOIcKJcIJdGJeEJfCKgAKh8Kk6Kn7Lq8Nt9Qw\
+  HTzRVzZ_ybcxgfxlgzoiqshkvddwVZmNScHLU6F4sbBpVHmONj\
+  HTgAZd3`jBcoJmuRzzY4EA5FG5GM6HS6HY7Ic7Ji8Ko8KuAYoC\
+  kiEydKs`QmYWgVcaRjWOrRLkPHdOEYNAQM7JL4EI3AG2JFBSEK\
+  aDTjDagHZeKXcNUaQSZUQXXNV_LTbJQdLOeNMgPKhRIiTGkVEl\
+  XCmZAo`8pb6qd4sf2th0uj3rk5pk8nkAlkCjkFhkHfkJdkMalO\
+  _lRYlTWlVUlYSl_QlaOlcPjdQieRggSfhTeiUcjVblV`mW_nXZ\
+  oYXqZWr_Us`Tt`StZPtXNtVLtTJtRHtPEtNCtLAtJ8tH6jE7aB\
+  7T87J57A271070039yy8tt7pp7kk6gg5bb5ZZ4VV3QQ3MM2HH1\
+  DD188044PYuNVpLTlJQhHOdGL`EJXCHTAEO8CK79G57C348124\
+  3oS2bL1QE0D7upgpkckg_fbXaZTXUPTQMOMIJHEEDB987443w1\
+  mw0hw0cx0Zx0Ux0Px0Ky0Fy0Ay05yI5zC3z6zzEszCzzBhzAzz\
+  8Zz7zz6Pz0zzE9zDzzDAzDzzDCzCzzCEzUzzCFzUzzKCzUzzR9\
+  zUzzY7zUzzk9zUzzbIzUzzTRzUzzNSzMzzLMzKzzIHzHzzGBzF\
+  zzJGzNzzMTzLzzLdzKzzJpzJz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

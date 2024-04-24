@@ -1,0 +1,99 @@
+;     Date: Sun, 29 Aug 2010 23:20:38 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-08-10 (Total Abstraction [6])
+;       Id: <1.5.4.16.20100829232040.13d715e0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 30, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the Rectangular (imag(c),imag(z)), 
+; orientation of the Z^2+C Julibrot.  The scene is located near 
+; the -1.416 point of the main spike of the Mandelbrot set.
+; 
+; The rating of a 6 is a come-down from the lofty ratings of the 
+; past several days, but the image is still worth a look, and the 
+; calculation time of just over 2-1/4 minutes will cause little 
+; inconvenience.
+; 
+; The name "Total Abstraction" refers to the nature of the four-
+; dimensional Julibrot figure, as well as all other 4-D things.  
+; The curious thing about this is that when one or two dimensions 
+; of the total abstraction are discarded by taking slices, the 
+; slices prove to be very real.
+; 
+; This abstract stuff becomes quite clear when the image is seen.  
+; It may be seen on the FOTD web site in finished form at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The sky was once again cloudless here at Fractal Central on 
+; Sunday, but the temperature of 90F 32C was a bit too warm for 
+; human or cat comfort.  The fractal cats took up residence on the 
+; cool kitchen floor, while the humans took it easy on the porch.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and as I see it, the concept of meaning is an invention of 
+; intelligent minds.  Since the universe apparently has no mind, 
+; how then can it have a meaning apart from what we give it?  But 
+; at the same time, what is the evolutionary advantage of this 
+; human tendency to waste mental energy searching for meaning and 
+; even to invent meaning where none exists?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Total_Abstraction { ; time=0:02:15.37-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=0/-0.028319668443599/3349.992/4.7924/180
+  params=90/0/0/90/-1.41665335/0/0/0/2/0 float=y
+  maxiter=5000 inside=0 periodicity=6
+  colors=000UQwUQwUQwUPwTPwTPxTOxSOxSOxSNxSNyRNyRMyR\
+  MyRMyQLwPKuOKtOJrNJpMIoMHmLHkKGjJGhJFgIFeHEcHDbGD`\
+  FCZECYEBWDBVCAT000C9RB9QA8O98M97L86J76H75G65E54D44\
+  B439328226214113001JMxILvIKtHKsHJqGJpGInFImFHkEHjE\
+  GhDFgDFeBDbBD`BC`BCZACYACW9BW9BU9AS89R89P78O79M6AL\
+  6BJ5CI5EG4HF4KD3PC3UA2Z92c71h61m40r30v1Az6Kx5Pv4Ut\
+  3Zr2cp1hn8ml7rj7vh7zf6vd6rc6ma6h_5cY5ZW5UU4ST4QR4O\
+  P4MN3KL3IK3GI2EG2CE2AC28A1691471250130010L1xK0wK0v\
+  K0uK0uJ0tJ0sJ0sJ0rI0qI0pI0pI0oH0nH0nH0mH0lG0lG0kG0\
+  jG0iF0iF0hF0gF0gE0fE0eE0eE0dE0cD0bD0bD0aD0`C0`C0_C\
+  0ZC0ZB0YB0XB0WB0WA0VA0UA0UA0T90S90S90R90Q80P80P80O\
+  80N70N70M70L70L70KA5JFAIKFJPKKUPPZUUcZZhccmhhrmmvr\
+  rzvvuzzszzqzzozzmzzkzzizzgzzezzcyzbxzawz`vz_uzZtzY\
+  szXrzWqzVpyVoxUnwUnvTmuTluTltSksSjrRiqRipQhpQgoQgn\
+  PfmPelOdkOdkOcjNbiNbhMagM`fL_fL_eLZdKYcKYbJXaJWaIV\
+  `IV_IUZHTYHTXGSXGRWGRVFQU }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

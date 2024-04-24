@@ -1,0 +1,99 @@
+;     Date: Wed, 11 Aug 2010 22:42:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-08-10 (A Higher Reality [6])
+;       Id: <1.5.4.16.20100811224222.144f7722@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 12, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an almost-Julia set of a tiny bud on the west 
+; shore line of the north branch of Seahorse Valley of the 
+; Mandelbrot set.  The scene doesn't have very much to offer, but 
+; I added some life to it by rendering it with the outside set to 
+; 'real'.
+; 
+; The name "A Higher Reality" came to mind when I briefly opened a 
+; book about the search for a theory of (almost) everything.  I 
+; lost count of the number of required dimensions around 26, 
+; though I think the number has been condensed down to 10 or 11.  
+; The fewer the number of dimensions in such a theory, the better. 
+; After all, any person with the faculty or reason can see that 
+; reality consists of 1 temporal and 3 spatial dimensions.  
+; Apparently, we still have a lot of dimensions to get rid of.
+; 
+; The rating of a 6 indicates that I am less than enthusiastic 
+; about the image, especially with its calculation time of 5-3/4 
+; minutes.  Luckily, calculation may be avoided by viewing the 
+; finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Wednesday turned much too hot for the fractal cats here at 
+; Fractal Central.  When the temperature reached 95F 35C, they 
+; took up residence on the kitchen floor for the rest of the day.  
+; My day was appropriately busy, leaving no time to be worried by 
+; the heat.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and the ultimate reality is what we see with our eyes, 
+; hear with our ears, and touch with our hands. . . . or is it?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Higher_Reality { ; time=0:05:47.73-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.00004828/\
+  +0.00105737/181.8182/1/42.5/0 params=89.999651500\
+  03/0/89.99965150003/0/-1.768530150422537/0.0002036\
+  0636743215/0/0/2/0 float=y maxiter=150000 inside=0
+  outside=real periodicity=0
+  colors=000h_qgZogYlgXjgWhfVffUcfTafT_eSYeRWeQTdPRd\
+  OPdNNdMKcLIcKGcJEcJCeKFgLIiMLjNOlORnPUoQXqR_sSbtTd\
+  sUerUeqVepVfoWfnWfmXflXgkYgjXgjWgiWhhVhgUhfSieUidV\
+  icXibYja_j``k`amaboacqbesbguciwckxdmzKFGVGHYLHYOI_\
+  RIcTJgWJkZKoaKrdLuhLwnMyrMzzMpwLotLnqLmnLlkLlhKkeK\
+  jdKicKhbKhaKg`Kf_KeZLdYMdXNcWObVPaUQ`UR`US_UT_UUZU\
+  VZUWZUXYUYYUZXU_XU`XUaWVbWWcWWdVYeV_gUaiUbkUdmTemT\
+  gmThmUfmVemWdmWbIX_GYWEYTCZQA_N8_K7aK6bJ6d5Kb6O`6R\
+  Z7VX8ZV9aTAeRBhPClOCoPBnQBmRBlSBlTAkUAjVAjWAiX9hY9\
+  hZ9g_9f`9fa8eb8dc8cd8ce7bf7ag7ah7`i6_j6_k6Zl6Ym6Yn\
+  5Xo5Wp5Vq5Vr4Us4Tt4Tu4Sv3Rw3Rx3Qy3Py3Px4Ox4Ox5Ox5O\
+  x6Ow6Ow6Ow7Ow7Ow8Nv8Nv8Nv9Nv9NvANuANuANuBNuBMuCMuC\
+  MtCMtDMtDMtEMtEMsEMsFLsFLsGLsGLrGLrHLrHLrILrILrILe\
+  frferfergdtfereeqdfpcfnbfmbglagk`gichhchgchecidcic\
+  cibcj`cj_cjZckXckWckVclUclSmmRmmQmmPmnNmnMmnLmoJmo\
+  ImoHmpGmpEmpDmqCmqAmq9mr8 }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

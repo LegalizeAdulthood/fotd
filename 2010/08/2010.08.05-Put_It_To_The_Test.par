@@ -1,0 +1,96 @@
+;     Date: Thu, 05 Aug 2010 22:30:01 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-08-10 (Put It To The Test [6])
+;       Id: <1.5.4.16.20100805223000.144f60f4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 06, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image is perhaps more interesting 
+; than the image itself.  It was created when I subtracted one 
+; part of Z^(-4.99) from 5 parts of Z^(-1.99) and added (1/C) on 
+; each iteration.  When rotated 180 degrees, it appears as a 
+; Mandelbrot set gone wild.
+; 
+; Instead of a main bay, we have a circular area of chaos with a 
+; cloverleaf pattern almost completely filling it.  And the large 
+; bud on the X-axis has spread out into a secondary bay.  Beyond 
+; this the main stem is well decorated with various kinds of 
+; stuff, none of which I have yet checked, though I might do so 
+; before the next FOTD.  Today's image is located in a moth-eaten 
+; radical on the northern extremity of the western shore line of 
+; the spread-out large bud.
+; 
+; To add a modicum of interest, I rendered today's image with the 
+; 'outside' set to 'tdis', which, as in today's image, usually 
+; creates a kind of terraced effect.  In today's image, the 
+; improvement was not all that impressive however.
+; 
+; As for the image itself -- it rates a humble 6 -- nothing to get 
+; excited about.  The name "Put It To The Test" means whatever the 
+; viewer wishes.  The calculation time of 5 minutes is a bit slow 
+; for an image that rates only a 6, but the wait may be avoided by 
+; viewing the image in finished form on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; If Thursday had been a little cooler, and we had had more rain 
+; on Wednesday, Thursday would have been a near ideal day here at 
+; Fractal Central.  As it was, the high temperature of 90F 32C 
+; kept the fractal cats close to the cool spots, while the soil in 
+; FL's garden remains quite dry and dusty.
+; 
+; My day was average.  The next FOTD, for better or worse, will be 
+; posted in 24 hours.  Until then, take care, and when one has 
+; nothing to day, he should say nothing.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Put_It_To_The_Test { ; time=0:05:05.00-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.566250012964/-0.536299639162/5e+007\
+  /1/117.5/0 params=5/-1.99/-1/-4.99/0/0/0/0 float=y
+  maxiter=10000 inside=0 outside=tdis periodicity=6
+  colors=000zzzfkPejPdiOchObgNafN`eM_cLZbLYaKX`KW_JU\
+  ZJTYISXIRWHQVHPTGOSFNRFMQELPEKODJADIACHACGABEA8FEB\
+  FIDGHFGHHHGJHFLIFNIEPJDSJCUKCWKBYKA_LAaL9cM8eM7hN7\
+  jN6lO5nO5pP4rP3tQ2uP3uO4sN5qM5nM6lL7iK7gJ8dJ9bIA_H\
+  AYGBVGCTFCQEDODELDEJEDIEDIEDIFCIFCIFCIFBIGBIGBIGAI\
+  GAIHAIH9IH9IH9II8IJ8II8IB3CI8IODOUIU_N_eSekXkqaqvf\
+  ywewwdvwcuwbtwbswaqw`pw_ow_nwZmwYlwXjwXirWhmVghUfc\
+  UeZQ_URVWSPXTKYUEZV9_WG`XNaYUbZ`c_gd`meakfbjgcihdg\
+  iefjfekgdlhbmianj`okZplYqmXrmWsmUtmTumSvmRwmPxmOzm\
+  NzmLzoKzpJzrIzsGzuFzvEzxAzwDywFxwHwwJvwLuvNtvPsvRq\
+  vTovVmvXjuZgu`dubeudfufguhgsigqigojgmjglkgjkghlgfl\
+  gdlgcmgamg_ngYngXogVogTogRpgPpgOqgMqgKrgIrgHsgFsgD\
+  sgBtg9tg8ug6ug4vg2vg1vh3uh5uh7uh9thBthCthEshGsiIsi\
+  KriLriNriPqiRqiTqiUqhVpgVpfVofVoeVndVndVmcWmbWlaWl\
+  aWk`Wk_Wj_WjZXiYXiXXhXXhWXgVXgTVfVXgXZhZ_i`ajabkcd\
+  lefmerPfqQhqRjpSkpSinRhmQ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
