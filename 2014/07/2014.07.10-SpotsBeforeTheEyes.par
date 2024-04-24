@@ -1,0 +1,111 @@
+;     Date: Thu, 10 Jul 2014 16:52:00 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-07-14 (Spots Before the Eyes [A-7,M-6])
+;       Id: <1.5.4.16.20140710165325.2aefa032@earthlink.net>
+; ---------
+; 
+; FOTD -- July 10, 2014 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's polka-dotted image lies in the parent fractal that 
+; results when three negative parts of Z^(-2.3) are combined with 
+; one negative part of Z^(-7.7) and (1/C) is added on each 
+; iteration.  The resulting fractal is a sprawling thing with a 
+; main bay that resembles Mickey Mouse lying on his right side.  
+; Today's scene is located in a filament extending from a lump on 
+; Mickey's right ear.
+; 
+; The art rates a 7; the math rates a 6.  There have been far 
+; better images in FOTD history, and we have been to this part of 
+; the world of fractal math many times before.
+; 
+; The name "Spots Before the Eyes" simply describes the overall 
+; impression of the image.  Calculating the scene with the logmap 
+; reset to zero and the outside set to 'tdis' eliminates some of 
+; the spottiness, but brings little improvement to the overall 
+; appearance of the image.
+; 
+; Perhaps the best feature of today's FOTD is its unusually brief 
+; calculation time of 30 seconds, which is quite surprising 
+; especially considering the image's magnitude of over 10^12.  The 
+; web sites are always there to eliminate any residual impatience.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Near perfect weather prevailed here at Fractal Central today.  
+; Near perfection is defined as partly cloudy skies, lower 
+; humidity and a temperature of 82F 28C.  The two fractal cats 
+; enjoyed the conditions to the most of their cat ability, while 
+; the fractal humans, with other things to do, paid little 
+; attention to the outside conditions.
+; 
+; The next FOTD will be posted in a day or so.  A FOTD posting 
+; every other day seems to be becoming the new FOTD normal, but 
+; this is not a permanent change in the schedule.  Until whenever, 
+; take care, and there were several tornadoes in the local area 
+; two days ago.  Believe it or not, the number of resulting power 
+; outages made bigger news than the damage and deaths caused by 
+; the storm.  Even today the outages are still the top local 
+; story.  When a few days without electricity and the resulting 
+; unendurable disconnection from the rest of the world is seen as 
+; a greater disaster than the deaths of five people, I begin to 
+; suspect we have become a bunch of underactive overweight tech-
+; addicts who are much too fascinated with and dependent on the 
+; latest hi-tech gadgets.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SpotsBeforeTheEyes { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+0.8469945718775622/-1.054897773204772/\
+  1.6466e+012/1/70.5/0 params=-3/-2.3/-1/-7.7/0/0/0/0
+  float=y maxiter=1500 inside=0 logmap=52
+  periodicity=6 mathtolerance=0.05/1
+  colors=000000600CF60I9HNCAYF_dIPkLzsO_c`xKlkAy6IU0\
+  AAA4WHL`eezdkzdazdUzaKzZ9mZ0zW1cY2UY4K`4AyI_zU0zjY\
+  zzzlwzhswdqq`nkWkeSh`OeVKcPO_`RVjURuWMz_Kzzzzzzzzz\
+  zjzzczzWzyPzxIzwCsn7ce2MY04PCIdKKeRLgYLhcMjjOkqOlx\
+  PnzPnx_`shMor7hz0az0dz0er2hh9j_HlPOnFUq4`r0en1hj7j\
+  gFlcLn_SqWYrSduPjwgYuxMuzAuzCxuEykFzcHzUIzKKz9Lz0L\
+  z0ao6PSEC26AK09Y09k0Hg0Mc0S`0_W0dU0jP0oMq42hE1`M1S\
+  V1La1PgRSlnPjnMgnKdnHanE`nOWoWUqdPrnMswIuzFwzCxzIq\
+  zOjxUcr_WndPhjIdnAVu6Lz2Az01z0Cz1Mn7VaCdRIlEMw0Sz0\
+  Wu0`l0cd0eV1jM4lE7o4ArW6Pu10o94kHEeOMaVVaSUaPSaMRa\
+  KPaHO_6U`4P`2L`1H`0ECyd9zj6zo2zs1zy0zz0zz0zzucYlcV\
+  dcSWcPOcMFjK6sH0zE0cC0cA1cLEcVOccLz`KzYIzVHzUFzRFz\
+  OFzLFzIFzFFzCLzCPzCUzCYzCazCezCazA_z9Wz7Sz6Pz4Mz2K\
+  z1SzA`zKhzSqz`yzhzzqzzxgzRAz0Fz0Kz0Oz0Rz2Vz6_z9azC\
+  ezEhzFkzHnzMqzSszYwzcyzhzznzzrrzwezzUzzRzyOzuLzqIz\
+  kFzgCzc9z_KzgUzoazxkzzszz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, esc=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

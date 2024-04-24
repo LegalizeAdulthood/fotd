@@ -1,0 +1,113 @@
+;     Date: Sun, 06 Jul 2014 14:48:35 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-07-14 (Donut World [A-8,M-7])
+;       Id: <1.5.4.16.20140706144958.2ba76ede@earthlink.net>
+; ---------
+; 
+; FOTD -- July 06, 2014 (Rating A-8,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD image lies in the parent fractal that results when 
+; the expression Z^(1.9)+C is iterated 19 levels up the complex 
+; logarithmic hyperspiral with no function applied.  (I chose the 
+; value of 19 whimsically.)  This parent resembles a distorted 
+; Mandelbrot set rotated so that its main spike points to the 
+; southeast and its East Valley lies on the northwest side of the 
+; main bay.  Today's scene lies in one of the curious square 
+; shaped areas of chaos on the southwest side of the valley.
+; 
+; The unusual donut-ring effect was created by rendering the image 
+; with the outside set to 'fmod' which draws the overlapping 
+; circles.  The name "Donut World" refers to these rings of 
+; fractal stuff.
+; 
+; The art rates an 8, which might be a bit exaggerated, since I 
+; doubt that the hasty color work is the best I could do, but the 
+; math rating of a 7 seems about right.
+; 
+; The calculation time of 2-1/4 minutes is near FOTD average.  The 
+; average amount of time may be saved by checking the finished 
+; image on one of the web sites.
+; 
+; The web sites may be accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; For all who have an interest in such things, the weather here at 
+; Fractal Central was totally perfect today, with photoshop blue 
+; skies, brilliant sunshine, low humidity and a temperature of 84F 
+; 29C.  The fractal cats, living the indoor life, took the outdoor 
+; conditions in stride; the fractal humans passed the day spending 
+; more time outside than usual.
+; 
+; The next FOTD will be posted in either one, two or three days.  
+; Until whenever, take care, and let's combine all the world's 
+; religions, average out all the beliefs, and see what we come up 
+; with.  The way it is now, there are so many different and con-
+; flicting religious beliefs that any thinking person, especially 
+; in our materialistic science-based culture, must wonder if there 
+; is any real truth at all behind the world's different religious 
+; teachings.  Such doubt could easily be the reason so many lash 
+; out in anger when their religious beliefs are questioned or 
+; denied.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Donut_World { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.249919982284546/+0.07730680874550416\
+  /3.250118e+009/1/122.5/0 params=1.9/0/19/0 float=y
+  maxiter=2400 inside=0 proximity=0.068
+  outside=fmod periodicity=6
+  colors=000jZfk`fkbgkdhlfjlimllpmosmrwmuzmxzlvzltzk\
+  szkqzkpzjnvjmsjkoijlihliglhelhclgblg`lg_lfYlfXlfVl\
+  eUldSlaSlZRlWRlURlUSoURlUQjUPgUOeUNbUM`ULYZMYXKWWJ\
+  VVIUUHTTGRSFQQDPPCOOBMNALM9KL8JK7IL6KM6LM6NN6OO6QO\
+  6RP5TQ5UQ5WR5XS5ZS5_T4aU4bU4dV4eW4gY2pX3lW4hV5eU6a\
+  T7YS8VR9RQANPBKOCGNDCI70LA5ND9PGDRIHTLLVOPXQTZTY`W\
+  abZed`ifcmhfqjhuPNmRPkSQjTSiUThVUgWWfXXeYZcZ_b_`aa\
+  b`bc_cdZdfYegWfiVgjUhkTimSjnRrpRnoQkoQhoQdoPaoPZoP\
+  VnOSnOPnOLnNInNFnN7pHCnNGlSKjXOhaSffWdk_bpcbwc`ucZ\
+  scYrcWpcVncTmcSkcQicPhcNfcMdcKccJacH_cGZcEXcDVcBUc\
+  ASc8Qc7Pb9QbBQbDQbFQbHRbJRbLRbNRWXOZUP`RQbORdLSfIT\
+  hFUjCVl9Wn6Xs4Xp3Ym3Zj3_h3`e3ab3a`3bY3cV2dT2eQ2eN2\
+  fL2gI2hF2iC0kD2iE3hE4fF5eG7cG8bH9`HA_ICYJDXJEVKFUL\
+  HSLIRMJPMKONMMONLOOJPPIQRGQSFRTDRW6RUCSSHTQNUPSTNY\
+  SLbRLpQKkPKgOJcNJ_MIWLISKINJHJIHKHGLGGMFGNEGODGPCI\
+  QBKRAMS9PT8RU7TV6UW5VX4WY }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

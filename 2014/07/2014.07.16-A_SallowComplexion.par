@@ -1,0 +1,106 @@
+;     Date: Wed, 16 Jul 2014 23:11:21 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-07-14 (A Sallow Complexion [A-4,M-6])
+;       Id: <1.5.4.16.20140716231252.2ba7e2ce@earthlink.net>
+; ---------
+; 
+; FOTD -- July 15, 2014 (Rating A-4,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is . . . how can I phrase it . . . interesting, 
+; which is a word commonly used when one does not like something 
+; but does not want to state his disapproval outright.  Let's face 
+; it, the color cast of the image is sickly.  If more time had 
+; been available, I might have found a color palette worth several 
+; rating points higher, but as it is, I could rate the art no more 
+; than a lowly 4.
+; 
+; The image lies in the parent fractal that results when the 
+; expression Z^(1.618...)+C is iterated 12 levels up the 
+; hyperladder with no function applied.  The main bay of this 
+; parent resembles a crescent moon, with a large minibrot on a 
+; zig-zagging filament extending northeast from the main bay.  
+; Today's scene lies in deep in a blunt valley on the southwest 
+; shore line of this minibrot.
+; 
+; The prominent object almost filling the scene is not the pattern 
+; around a single minibrot, though the object is filled with 
+; smaller minibrots, many of which are well within reach.  This 
+; pseudo-minibrot effect raises the math rating to a humdrum 6.
+; 
+; The calculation time of a zippy 1-1/4 minutes will bring little 
+; impatience.  The web sites will bring none at all.
+; 
+; View the finished image at leisure on the FOTD web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; High humidity, lots of clouds and occasional periods of light 
+; rain made today far from perfect here at Fractal Central.  The 
+; temperature reached 84F 29C but the humidity kept things quite 
+; oppressive.  The fractal cats passed the day lounging around the 
+; living room, while the humans were too busy to do much lounging.
+; 
+; The next FOTD will be posted in a day or two.  Until that moment 
+; arrives, take care, and what rational fractal artist would 
+; disparage his own work?
+; 
+; 
+; Jim (irrational) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_SallowComplexion { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+1.318515193661967/+1.207989754697286/\
+  6751055/1/85/0 params=1.618034/0/12/0 float=y
+  maxiter=1500 inside=0 logmap=119 periodicity=6
+  colors=00054K65K76K87K98KA9KBAKCCKDEKEGKFIKGKKHMKI\
+  OKJQKJSKIUKHWKHYKG_KGaJJcIMeIPgIRiIUkIXmIZoIaqIdsI\
+  guIivIlvIovIqvLtvPwvUzwXzw_zwbzwezwhzwkzwnzwqzwtzw\
+  wzwzzwzzwzzwzzwzzwzzwzzwzzvzzuzzszzrzzpzzozwmztlzq\
+  jvoirmgmkfhidchcZcbU_`PY_KXYFVXBTVASU9QT8OR7NQ6KQC\
+  KQCKQ8A85GCOMGf437UgLP`HKTEFMAAE7573Z2DT1AN18H16B0\
+  4502HP7lD8_96O64C32p60iWHWG8qqKjk3_b3UW2OQ2IJ1CD16\
+  60eSL_OIUKFOGCIC9C86643rLdjIZbFTVCNN9HF6B735D3O82G\
+  418DzXAmQ7`J5PD2C6kkgdd`YYVRRPKKIDDC6663Vg1FMW2LP1\
+  GJ1CC086045fcCSGTdIOZFKTCGNACH78B5452Ph7SrfI_S9IEQ\
+  tfJeWDSL6EAcO6YK5SH4MD3HA2B61530vhlnbegX__SUTMOMGI\
+  EBC756oGy2z51j31V20F1X3JS2GO2EK1BG19C17804402FIIAC\
+  C5663Yk2MW1BGhY1XP0MH0B80KJOA9CTpQEQDAoz5QVyXEiOAV\
+  G7F83NL3IG2DC1981440Z8bT6WN5QH4JB2D516G2LD1HA1E81A\
+  507203Dd`BZW9UR8PN6KI4FD3A9154zL6qI5hF4_C3R92I6193\
+  0Emv9Xb4GJPExIAhC7U63FQXy }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

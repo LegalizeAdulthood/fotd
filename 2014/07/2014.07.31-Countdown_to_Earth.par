@@ -1,0 +1,100 @@
+;     Date: Thu, 31 Jul 2014 17:22:37 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 30-07-14 (Countdown to Earth [A-6,M-6])
+;       Id: <1.5.4.16.20140731172420.2b47d964@earthlink.net>
+; ---------
+; 
+; FOTD -- July 30, 2014 (Rating A-6,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractional-value minibrot scene lies in the parent 
+; fractal that results when the expression Z^(1.75)+C is iterated 
+; 7 levels up the complex logarithmic hyperspiral.  This parent 
+; resembles nothing more than a squashed bug with its head facing 
+; southwest, but not wanting to turn off potential viewers, I 
+; named today's FOTD "Countdown to Earth", which has little if 
+; anything to do with the appearance of the image.
+; 
+; The scene is located in a valley leading to a small bud on the 
+; southwest side of the bug's head.
+; 
+; The math and art aspects both rate a 6.  I could find nothing 
+; really new in the image.
+; 
+; The calculation time of 3-1/4 minutes is rather slow.  The web 
+; sites can speed up the viewing pleasure however.
+; 
+; Check the finished image at the web sites without the 
+; inconvenience of calculating it.  The web sites may be accessed 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A pleasant mix of sun amd clouds with an equally pleasant 
+; temperature of 77F 25C made today here at Fractal Central fit 
+; for a king.  With no king in the vicinity, the day was enjoyed 
+; by the fractal cats and humans (cats always coming first, of 
+; course).
+; 
+; The next FOTD will be posted in the appropriate time.  Until 
+; then, take care, and live with honor but don't get preachy.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Countdown_to_Earth { ; time=0:12:03.87 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.952052728739694/-0.7263908032093859/\
+  1319932/1/65/0 params=1.75/0/7/0 float=y
+  maxiter=3600 inside=0 logmap=279 periodicity=6
+  colors=000C8ZD9ZEAZFBZGCZHDZIEZJFYKGYMIYOKYQMYSOYU\
+  QYWSYYUZ_W_aY`c_adabeccfegggmhirjkvlmznozpqzrszwuz\
+  wwzwtzwzzwzzzzzzzzzzzzzzzzzzzzzzzzzzVRYTQXROWQNVOM\
+  UMKTKJSJISKLVKNXKPZKRaKTcKVeKXgLWfMWeNWdOVdPVcQVbR\
+  UaSUaTU`UT_UT_VTZWSYXSXYSXZRW_RV`RUaQUbQTcQScQSdNT\
+  dLTeJUeHUfFUfCVgAVg8Wh6Wh4We5Ub5T_6RY6QV7OS7NP7LN6\
+  KK5IH5HE4FC4E93C63B33914838B4BD6EF7IH9LJAOLBRNDUPE\
+  WRGYTH_VIbXKeZLh`NkbOndPqfRthSwjUzlVznWzpSvhPraLmV\
+  IhOEhIBiDAkCAmCAoC9qC9sB9uB8wB8yB8zBBwAEtAHr9Jo9Ml\
+  8Pj8Rg7Ue7Xb7Z_6ac6dh5fm5im4lm4nm4om4om4pm4qm5rm5s\
+  m6tm6zm7wb7ZX8S_8Jb9Fe9Ah9CfBFeCHdDKcENaFP`GS_HUZI\
+  XXJ_WKaVLdUMgSNiROlQPnPQiNPeLP`KPXIPTGPOFPKDPGCPHE\
+  OHGOHHNHJNIKNIMMINMIPMJRLJSLJUKJVKKXKKYJK_JK`J78HA\
+  IMCRRE_WGh`IqeKzjNzhPzfRzdUzcWzaYz_`zZbzXdzVfzUbzU\
+  ZzUWzUSzUPzUxznszlozkkzjgzhczg_zfWzdSzcOzbKz`_zoaz\
+  oczneznfzmhzmjzllzlnzkpzk }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

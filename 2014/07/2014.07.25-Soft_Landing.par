@@ -1,0 +1,92 @@
+;     Date: Fri, 25 Jul 2014 13:11:47 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-07-14 (Soft Landing [A-7,M-6])
+;       Id: <1.5.4.16.20140725131324.2b0fdf38@earthlink.net>
+; ---------
+; 
+; FOTD -- July 24, 2014 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; After studying today's image for a few seconds, I decided that 
+; it appears to be filled with pillows.  Maybe it is, maybe not, 
+; but whatever, I named it "Soft Landing".
+; 
+; The generating expression mixes 0.125 part of Z^(-2.5) with Z^2 
+; before adding (1/C) on each iteration.  This combination 
+; produces an oversized Mandeloid that resembles nothing as much 
+; as a kidney bean or a peanut, with the East Valley on the west 
+; side and the small, almost invisible main spike pointing east.  
+; Today's scene lies on the north shore line of the 'east' valley.
+; 
+; The art rates a 7.  After all, I did put some extra effort into 
+; the coloring.  The math rates only a 6.  Today's math trick is 
+; over 10 years old.
+; 
+; The calculation time of 4-3/4 minutes borders on slowness.  To 
+; save time and effort, check the finished image on the FOTD web 
+; sites.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Near perfect conditions prevailed here at Fractal Central today, 
+; with photoshop (aka kodachrome) blue skies, cotton-candy white 
+; clouds and a temperature of 77F 25C.  Both the fractal cats and 
+; humans enjoyed the conditions as much as possible.  The next 
+; FOTD will be posted soon.  Until 'soon' arrives, take care, and 
+; be wise.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Soft_Landing { ; time=0:04:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-17.80110543551/+0.0751068472079/789855\
+  /1/25/0 params=1/2/0.125/-2.5/0/0/0/0 float=y
+  maxiter=2250 inside=0 logmap=250 periodicity=6
+  colors=000ljAniDphGqgJsfMufPxeSzdVzcYzc_yfVtiRolMj\
+  oIgoEdmFajFZgFWcFU`GRXGOUGLQGJNHGJHDGHACH89HGCKNFN\
+  UIQ`LTgOWnRZuTasX`r`_pdZohYnlXlpWktVjxV_q`QkeThcke\
+  ECYnDapEerEhtFlvGpxGsyJtxLtxOtxQtxStwVtwXtwZtwatwc\
+  tvetvhtvjsvjqvgoudltahrYdmV`hRXcNTZKKU0AP0AK0AF65A\
+  5055005005005A04EA4EK4FU4Gc4Gc3Jb3Lb3Nb2Pb2Rb2Tb1W\
+  b1Yb1_bBpuFqoIrjMrePs`StWWtRZuMauHenJhgKkaLnVMzwNz\
+  wPzwRzrTzoVzmXziZue`saarXVqSOpLIoEBo85FcDWBKXCKZDJ\
+  _FJaGIbHIdIHeJHgLGhMGjNFkOFmPEqP8nQEkQJhQPeQUbQ__Q\
+  dXQjUQoRQtTOoVNjXMeZLa`KXbISdHNfGJhFEjE9mC3kD5jD6i\
+  D7hD8gD9fEBeECdEDcEEbEFaFHzFI_FJZFKYFLaQVe`djmsijn\
+  hgihdega`fZWfWSeTNdQIdOEeSIeVMfYQfaTgdXgg`flagjchi\
+  ehgfifhjdijckkaml`nlZpmYqnWszXwnVtbUqRUnFUk4Ui6Ug8\
+  UeAUdCWbEYaG__IaYKcXMeVOgUQiSSkQUmPWoNYqI_sM`uPawS\
+  bxVczZdzaezdfzggzjhzlizmkznlzzmzznzzozzqzzszzuzzwz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, esc=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

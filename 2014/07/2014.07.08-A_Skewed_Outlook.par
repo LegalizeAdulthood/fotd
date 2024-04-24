@@ -1,0 +1,104 @@
+;     Date: Wed, 09 Jul 2014 00:50:54 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-07-14 (A Skewed Outlook [A-7,M-8])
+;       Id: <1.5.4.16.20140709005219.0d8f257e@earthlink.net>
+; ---------
+; 
+; FOTD -- July 08, 2014 (Rating A-7,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the parent fractal that results when 
+; the expression Z^(1.7)+C is iterated 28 levels up the complex 
+; logarithmic hyperspiral.  This parent consists of a large 
+; twisted fractal with a large s-shaped bay, the whole thing 
+; surrounded by disconnected minibrot-like smaller fractals.  
+; Today's scene lies in a blunt valley in one of these small 
+; fractals well southeast of the main body of the fractal complex.
+; 
+; I named the image "A Skewed Outlook" when I noticed the totally 
+; different appearance of the left and right halves of the scene.  
+; This unexpected difference earns the math part of the image a 
+; rating of an 8.  The art part rates a 7, which is above average 
+; but nothing to brag about.
+; 
+; The calculation time of 5-3/4 minutes might start to drag for 
+; those fractalists with other tasks to attend to.  Here is where 
+; the web sites dash to the rescue.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A typically warm and muggy hazy summer day passed uneventfully 
+; here at Fractal Central today.  The temperature of 91F 33C kept 
+; things on the lazy side, especially among the fractal cats, who 
+; spent most of the afternoon stretched out in the living room.  
+; The humans, unable to take it as easy, spent the day doing the 
+; necessary things as slowly as possible.  The day ended with a 
+; heavy thunder-storm that dropped the temperature to 70F 21C.
+; 
+; The next FOTD will be posted in a day or two.  Until then, take 
+; care, and the more 'news' I see on the mass media outlets, the 
+; more I wonder how much of that 'news' has been carefully chosen 
+; and spun to create a particular political impression.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Skewed_Outlook { ; time=0:05:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+1.348076433286836/-0.5324527881075607/\
+  3.35741e+012/1/87.5/0 params=1.7/0/28/0 float=y
+  maxiter=3600 inside=0 logmap=862
+  periodicity=6 mathtolerance=0.05/1
+  colors=000ELgDKfBIfAHe9Fd7Dd6Cc5Ac38b27b15a04a15_1\
+  5Z15Y26X26W26V37U37T37S47R48P48O58N59M59L69K69J6AI\
+  7AH7AG79E88D97CA6BA5AA49A38A27A16A05A04A03A02A01A0\
+  0000j8Ii9KhALhAMeBQbBU_BYXBaUBeRBiOBlVdUa_YgV`ZVLR\
+  V6SU8TT9USAUSBVRCWQDWQEXPFYOGYOH_JMaFRbAWd6`e2dZ9f\
+  SGgMNiFUj9`kFZgLXdRWaXUZbSWgRTh_OhgJioEiw900000003\
+  00600800A0090090A90E90H95K8AN8FQ8KT8PW8UZ7Za7XdAZg\
+  C_jE`mGbpIcsKdiPi`TmSYrJavAezCbzE_zGXzHUzJRzLOzMLz\
+  OIzQFzRCzT9zV6zW3zY4wZ5u`5sa6pb6nd7le8ig8gh9ei9bkA\
+  `lBZnBWoCUpCSlFTiITfKUbNU_PUXSVTVVQXWN_WJaWGdXDgX9\
+  iY6lY3nYJqJZt5Tk4Oc4JW4EN39F3473FH4Qa5`d6ko7uz8uxB\
+  uwDuvGuuIutLusNurQuqSupVuoXunZqi`mebiadfXfbThZPjAA\
+  lSGnOCpK8rH4sJ6oK7kL9gNAdOC`PDXQEUSGQTHMUJIWKFXMBY\
+  N7ZO4aP6dQ8fRAiSClTDnUFqVHtWJvXKXZF7`BKTFXMJiFNv8R\
+  xQJygBzx4wv5uu5st5qs5nr5lq5jp5ho5fn5cm5al5_k5Yj5Wi\
+  5Xh6Xh7Yh8Yg9ZgAZgB_gC_wB }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

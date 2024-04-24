@@ -1,0 +1,99 @@
+;     Date: Thu, 31 Jul 2014 17:22:39 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-07-14 (On the Other Side [A-7,M-5])
+;       Id: <1.5.4.16.20140731172421.2b47eeda@earthlink.net>
+; ---------
+; 
+; FOTD -- July 31, 2014 (Rating A-7,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the same squashed-bug parent as 
+; yesterday's, but instead of being located in the bug's head, 
+; today's image lies in a valley of a large disconnected minibrot 
+; just northeast of the main body of the parent.
+; 
+; This valley has two totally dis-similar sides, a peculiarity 
+; that is reflected in today's image with its large sinuous areas 
+; and contrasting smaller areas of angular chaos.
+; 
+; The name "On the Other Side" refers to the location of the scene 
+; in the parent fractal.  The art rating of a 7 shows that I 
+; consider today's image to be somewhat of an improvement over 
+; yesterday's, while the math rating of a 5 shows that the math 
+; trick is old hat.
+; 
+; The calculation time of a dragging 4 minutes may be eliminated by 
+; checking the web sites.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of clouds and sun with a temperature of 81F 27C made today 
+; another rather pleasant one here at Fractal Central.  The 
+; fractal cats and humans had an uneventful afternoon, which was 
+; pleasant to experience but makes boring reading.
+; 
+; The next FOTD will be posted sometime next month, maybe as soon 
+; as tomorrow.  Until whenever, take care, and sometimes the 
+; losers of battles turn out to be winners.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+On_The_Other_Side { ; time=0:04:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+1.130133599894878/+0.5911035952324553/\
+  9.316793e+008 params=1.75/0/7/0 float=y maxiter=1750
+  inside=0 logmap=-473 periodicity=6
+  colors=000A0WA1UA2SA3RA4PA5NA6M97K88I8AH9BMADQBFVC\
+  HZDIcEKgFMlGOpHQuIRyLVrOZkRbdUfYXjR_nKbrDev6hz0rzT\
+  nzVjmWfmXbmY_mZWc_Sc`OcaLcbVcTdcKmcBgcDbcFXcHScJMc\
+  LHSNBUP6WR8ZV9`YBcaCedDggFjkGlnIorJquKsxvI`zE_xDXw\
+  DVuDTtDRrDPqCMoCKnCIlCGkCEiBBhB9fB7eB5cB3bB1TG0KL0\
+  K14R5DX8McCViFbAKVBKWBKXBUYBUZBU_Cc`CcaCcbCccCrdDr\
+  eDrfDrgDrhDriT6IX78SFFOMLJTRF`XAgb6nh2un3mo4ep5Yp5\
+  Rq6Jq7Br74r97oBAlDDiFGfGNjGTmH_qHetHkwJ`iKQWLFIM55\
+  I67F68C7A97B68D38E08FAFGJLHTRHaXIjbIiaMh`Pg`Tf_WeZ\
+  ZdZbcYecYhhUflQdqMbmfhogmqhqsivtjzsevr`rqWnpRkoMgn\
+  HcnD`mD_lDZkCZjCY`fTahRbjPclNdnLepJfqHftELX9UA4KA7\
+  UBAKKDUBGKBJUCMcCPcCScCVcCYcD`cDccDfcDicDkcCpcEmcG\
+  jcIgcKdmMamOZmQWmSTmUQmVOmWNmWMzWLzXKzXKzXJzYIzYHz\
+  YGzZGzZFzZEz_Dz_Cz_Cz`HzaMzbQzcVzd_zeczCXzCXzCWzCV\
+  zBVzBUzBTzBTzBSzARzARzAQz`FzgCzoAzv8zkBzaDzRGzHIzK\
+  KzNMzQOzSQzVSzYUz`WzbXzdV }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
