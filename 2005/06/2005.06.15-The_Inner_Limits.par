@@ -1,0 +1,103 @@
+;     Date: Wed, 15 Jun 2005 12:09:15 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-06-05 (The Inner Limits [8])
+;       Id: <1.5.4.16.20050615121058.2b3f5e5a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 15, 2005 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's fractal we take the Z^2.0001+C near-M-set and view 
+; it 1000 levels up the hyperspiral, at a point where the large 
+; filament extending southwest from the bud centered at -1.31 
+; intersects the negative X-axis.  We then zoom into a very tiny 
+; midget on the filament, very near the point where it crosses 
+; the X-axis.
+; 
+; The most obvious thing about the image is that its extreme 
+; magnitude is causing it to break down.  But in this case, the 
+; lack of mathematical precision actually makes the image.  It 
+; does so by introducing a unique texture such as certain fine 
+; artists might strive for.
+; 
+; Since we are beyond the limit of the depth it is possible to 
+; achieve with this particular fractal, I named the image "The 
+; Inner Limits".  And yes, I *was* thinking of an old TV show, 
+; one of the interesting kind that is no longer produced.
+; 
+; Curiously, if it were not for the breakdown, the image would 
+; have rated only a 7.  As it is, the unique texture raises the 
+; rating to an impressive 8.  The render time of 7 minutes is 
+; within reason, and may be eliminated entirely by downloading the 
+; completed gif image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; I think I'll declare next week a week where I name the FOTD 
+; fractals after some of the spam subject lines I receive that 
+; week.  This morning I deleted about 25 of them.  Most are pure 
+; gibberish, but some, such as 'why didn't you tell me', are truly 
+; creative, causing one to ponder 'who didn't I tell something 
+; to'.  But if I do this, I'll pick only the most creative subject 
+; lines.
+; 
+; Another hot muggy day Tuesday kept the fractal cats asleep most 
+; of the time.  The high temperature of 93F 34C was simply too 
+; warm for normal holly-thicket activity.  Luckily, the duo 
+; realized this, and were not troubled.  Today is starting much 
+; the same.  More of the same is likely from the cats.
+; 
+; For me the work is still slow, but the fractals are as hot as 
+; ever.  Until the next one appears 24 hours from now, take care, 
+; and the strange thing about fractals is that they can be both 
+; hot and cool at the same time.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Inner_Limits { ; time=0:07:07.70--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 mathtolerance=0.05/1
+  center-mag=-1.41545766839771800/+0.000001306788129\
+  35/3.214947e+012/1/72.4887718120855027/0.011650530\
+  4108602131 params=2.0001/0/1000/0 float=y passes=1
+  maxiter=1500 inside=0 outside=tdis periodicity=10
+  colors=000H9uGBqGCnFEjFFgEHcEI_DKXDLTCNQCKMBKIBKFA\
+  KBAK8CKBDKEEKHGKKHZNIZQJZSL_VM_YN_`P_cQ_dR_eS_eWXb\
+  _U_bUXdUSeRNeNIgJDjG9iHCiHFiHIiHLhHOhHRjHUlHXmI_oI\
+  bqIeqIhpIkpInpIqpIshXd`kqUzzRqqPiKN`PLTTJKYHCaFKXE\
+  RTDZOCeKBcJBbJB`IB_IBYHBXHBVGBUGATGARFAQFAOEANEALD\
+  AKDAJDFKCJKCOLCSLCXLB`MBeMBiMBeKAbIA_GAXFATDAQBANA\
+  AK8AG6AD5AA3A71A40A86KBCUFIcIOmLTv`nCZmEXmFVlGTlHS\
+  kIQkJOjLMjMLiNJiOHhPFhQEhREfSEeTEdTEcUEbUEaVE`VE_W\
+  EZWB`Z8ba5dd2ef7baB_YFXTKUPORKSPGRXERdDQlCQtBTo9Wj\
+  8Ze7a`6cW5fR4iM3lH2oC1q80pI7oRDn`KmiQlrWhnUejTbfRZ\
+  bQWZOTVNRTLPSJNRHMPGKOEINCGMAFK9DJ7BI5AH49SJ8aY8kl\
+  9hm9emAbnA`nBYoBVoBTpCQpCNqDKqDIrEFrECsEAsDBpCBmCB\
+  kBChBCfACcADa9DZ9DX8EU8ES7EP7EN8GO9IPAKQBMQCORDQSE\
+  STFUTGWUHYVI_WIaWJ_VJZVKXVKWVKVULTULSULRUMPUMOTMNT\
+  NLTNKTNJTPSOR`JTiEVr9`oLjtYotXsuWwuVrlcmcliVtQwKPt\
+  KPqKPnKPkKPiKPfKHItICwI7y }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

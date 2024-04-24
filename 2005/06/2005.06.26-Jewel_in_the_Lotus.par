@@ -1,0 +1,97 @@
+;     Date: Sun, 26 Jun 2005 10:15:13 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-06-05 (Jewel in the Lotus [9])
+;       Id: <1.5.4.16.20050626101703.0d5fb674@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 26, 2005 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I think enough of today's near-integer Mandeloid image to rate 
+; it at a 9.  The rating comes mostly from the coloring, which 
+; happened by accident, with little talent involved on my part.  
+; (And it's a good thing it was an accident.  I put little effort 
+; into coloring the image.)
+; 
+; The parent fractal is the Z^3.0001+C Mandeloid, which is being 
+; viewed fully 31415 levels up the complex logarithmic hyper-
+; spiral, at a level where it has rotated 90 degrees and the 
+; valley that normally lies at the bottom center of the south bud 
+; now lies on the negative X-axis.  Today's scene is located in a 
+; tiny bit of cut-off debris sitting unobtrusively in the middle 
+; of the broadened valley.
+; 
+; Once again, violently cut-up features fill the scene, creating a 
+; new pattern by their very numbers.  The resulting image reminds 
+; me of nothing I am familiar with in the everyday world.  I 
+; therefore named it "Jewel in the Lotus", a phrase which is (or 
+; was) popular among those who do a lot of meditating.  I am not 
+; sure what the lotus jewel is supposed to be.  Most likely it is 
+; something mystical, far beyond human comprehension, as also are 
+; fractals, so the name seems perfectly appropriate.
+; 
+; The render time of only 6-1/2 minutes is surprisingly fast for 
+; such a spectacular image.  And even that short wait may be 
+; eliminated by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and downloading the completed GIF image from there.
+; 
+; A hot temperature of 91F 33C here at Fractal Central on Saturday 
+; did not deter the fractal cats from their habitual afternoon in 
+; the holly patch.  When the day ended they returned inside with 
+; no complaint to enjoy their treat of tuna.  Today is starting 
+; the same.  For me, it looks like a lazy day coming up.  Maybe 
+; I'll find excitement in Fractal Land.  The next FOTD will appear 
+; in 24 hours.  Until then, take care, and see the light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Jewel_in_the_Lotus { ; time=0:06:24.53--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-1.08925890693203400/-0.000124691641026\
+  76/2.565123e+007/1/32.5/-4.7039283794514386e-008
+  params=3.0001/0/31415/0 float=y maxiter=2500
+  inside=0 outside=tdis periodicity=10
+  colors=000KaeJegRi`ZmVfqOmuIeqJZmKRjLKfMDcMOUVZKci\
+  Alt0un7liEcdLV_SMVZDQe4TaAVZGXVMZSS`PYbLcdIifFoUFf\
+  IFYNL`SRbXXdabffhiknkptmtzonIdfLcZOcRQcJTbBWb3Ybp0\
+  Cb3SQ6gb7mn8rgCk`GeUK_NNTGRN9VH2YBBI9J38FC6CK59T36\
+  `23h1uMVvLQwKLxKGyJByJ7uMjqJnnGrjDvgBzjFqmJhoN`rRS\
+  tVKldUencZxlbqmfknienm_opUogTh_TbSTXKTRCTLLFUQNaUV\
+  hYaoc`nzdmzcmzqlztlwsfts`qsVnrPkrJhrEiR0nS6sSBwSGh\
+  IIU8JXEI_JIaOHdTHgZGicGlhFnmFmkIliLlgOkeQkcTjaWj_Y\
+  XJNJ3CL5GN7JP9MRBPTDSUFVO_HJt3Tq5bn7lk9uiAt_LsQVrG\
+  dr7nXmmYjhYgdZd_ZbW__R_XN_VJcYKg`LjcLneMqhMukNxmNh\
+  h`UcmXah_`db__eZWhYRkXNi`Uhd`ghgfknTkqFks2ku4hp6el\
+  8bh9`dBY_DVWFSSGQOBM`6Im1FzPWmkk`jhbifchddgbef`feZ\
+  gdXhdViVPbMKWDFP4AIUQpQTgNW_KZSHaKEcCMY9UT6`O4ZSCY\
+  VKWYRVaZTdeSgmRjtYcmdYgkSaiUbhWbfYb4UhcRcOKcVKc`Kc\
+  fKckPcpYzpStePiOIX8FJCJOFMTJQYMTbPWhT_nWbtZbzXXqVO\
+  hTEZS5QQASPFUOJXNOZMT`LXc }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

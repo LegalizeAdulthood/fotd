@@ -1,0 +1,87 @@
+;     Date: Mon, 06 Jun 2005 11:58:10 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-06-05 (Simply Simple [4])
+;       Id: <1.5.4.16.20050606115948.3777a110@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 06, 2005 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is not the ultimate goal of Sunday's fractal 
+; adventure, but it is an interesting scene that appeared on the 
+; way.  The ultimate goal will appear as the FOTD for June 07.  
+; Since I have not yet reached that goal, I have little idea of 
+; what I will find there.  I know only that it should be 
+; interesting.
+; 
+; The formula is a new one that calculates Mandelbrot fractals 
+; with both variable escape radii and powers of Z.  I might make a 
+; few speed-up changes in it before making it permanent, but it 
+; works well enough as it is for today's image.
+; 
+; The name "Simply Simple" means nothing other than what it 
+; implies.  Of course, there is nothing simple about fractals, 
+; which are some of the most complex things found in nature, if 
+; indeed nature is where fractals exist.  (They might exist only 
+; in the mind.)
+; 
+; The rating of a 4 is below average.  Since the image is only a 
+; way-station, I could rate it no higher.  The below-average 
+; rating is made up for however by the render time, which is a 
+; sizzling 35 seconds.
+; 
+; For the convenience of those with handicapped (challenged in PC 
+; language) computers, the completed image is available on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; 88-degree (31C) heat and high humidity kept the fractal cats 
+; confined to the shade of the holly thicket on Sunday.  But at 
+; least they were outside, which is all that cats of the fractal 
+; variety need to keep them happy.  Today is starting even warmer 
+; and more humid.  I expect more of the same.  The next FOTD will 
+; be ready in 24 hours.  Until then, take care, and don't sweat it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Simply_Simple { ; time=0:00:35.26--SF5 on a P200
+  reset=2004 type=formula formulafile=slices.frm
+  formulaname=MandelbrotVE-VP
+  center-mag=-1.99998588087103100/+0.000000000314646\
+  81/1.730527e+010/1/-145/0.00152484032409423709
+  params=2.0000000001/0/0/0/0/0/2/0 float=y
+  maxiter=600 inside=0 outside=summ periodicity=10
+  colors=000GoSCqO8rK4tG0uC8oGGjJOdNV_QbUUjPXrJ`yEcw\
+  B`u9Zt7Xr5Vp3To1RG14M6CRBKVGHYLFaQDdUBhZ8kc6oh4rl2\
+  ki7dfBZdFSaJLZOFXS8UW2S_JLTZFMn9FjBEgDDcFCXHBUAAPA\
+  9AA8`TJjYUtbctx0mv4ft8`sBUqFNoJHnMJjKKfJMbHNZGOVFL\
+  VIIVLGVODVRAVU8VX5V_3VbAYeH`hObkVenahqgjtaduWZvQUw\
+  KOxEIy9DzW_fruNVjU8_`PPbdEcaCa_A_Y8ZW7XU5VS3UQ1SO0\
+  RK1VH2YE3`A4c75f46i8R1CgBGxLMpRRiWXbaaWfgPllIqqBvk\
+  GqeKm_OiUSdOW`I_XCcTGfVKiWOlYSnZWq`_tacvbdrZenWfjT\
+  gfQhbMiZJjVGkSDjXDjaDifDikDhpDhtDZdOPPYG9gG8fF7fE6\
+  fD5fD4eC3eB2eB1eC2cC2bC3aC3`C4_C4YC5XC5WC5VDDAC6UC\
+  6SC7RC7QD8PD8OD9ND9LD9KDAJDAIDBHDBFDCEDCDDDCDDBM3r\
+  L4oL4mK5kK5iJ6gJ6eJ7cI7`I8ZH8XH9VG9TGARGAPFBMFBKEC\
+  IECGDDEDDCjQjiPihPhhPhgPgfOffOfeOeeOddNdcNccNbbNbb\
+  MaaM``M``M__MZ_LZZLYYLXYLXXKWXKVWKVVKUVJTUJTUJSTJR\
+  SJRSIQRIPQIPQIOPHNPHNOHMNHLNGLMGKMGJLGJKGIKFHJFHJF\
+  GIFFHEFHEEGEDGEDFDCEDBLmX }
+
+frm:MandelbrotVE-VP {; variable escape and power
+a=p1, z=p2, c=pixel+p3,
+b=sqr(real(p4)):
+z=z^(a)+c,
+|z| < b }
+
+; END PARAMETER FILE=========================================
+; 
+; 

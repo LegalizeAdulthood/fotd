@@ -1,0 +1,86 @@
+;     Date: Fri, 24 Jun 2005 09:56:28 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-06-05 (Fractal Nets [6])
+;       Id: <1.5.4.16.20050624095815.2b37b256@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 24, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; After yesterday's round of OT political blather, it's time for a 
+; terse and to-the-point fractal discussion.
+; 
+; In today's fractal I took the Z^2.00005 Mandeloid and examined 
+; it 62830 levels up the logarithmic hyperspiral, at a level where 
+; it has rotated almost exactly 180 degrees.  I once again chose 
+; East Valley (in this case a west valley) of the largest midget.
+; 
+; At first I saw spider webs in the image, but we had already seen 
+; too many spider webs.  Changing my mind set, I then saw fishing 
+; nets, and gave the picture the simple descriptive name "Fractal 
+; Nets".  The image rates a 6.  It's a good enough fractal, but 
+; the entire 'network' theme is being overdone, creating nascent 
+; boredom and holding down the rating.
+; 
+; The render time is 1/2 second short of 10 minutes.  This time is 
+; appropriate for such a moderate quality image, and those without 
+; the 10 minutes to spare may still enjoy the image by downloading 
+; it from Paul's FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The Thursday weather here at Fractal Central was perfect, making 
+; the cats perfectly happy, as happy as only cats can be.  Today 
+; is starting a bit warmer, but the duo should not mind.  For me, 
+; the work is moderate and the fractals keep coming.  The next one 
+; will arrive in 24 hours.  Until then, take care, and it's some-
+; times hard to let go.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Nets { ; time=0:09:59.50--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+1.74949246694105800/-0.000598456658569\
+  62/1.167956e+010 params=2.00005/0/62830/0 float=y
+  maxiter=6000 inside=0 periodicity=10
+  colors=000NOzQNvSMrVLoXLk_KhaJdcJabMcbOdaQfaSg`Ui`\
+  Wj_Yl__m_bnZdpZfqYhsYjtXlvXnwXpxWktWgpWbmWZiWVeWQb\
+  WMZWIWYLTZNQ_QN`SKaVHbXEc_Bda8ec5Zb8TbBMbEGbHAbKDc\
+  MFdOIdQKeSNfUPfWSgYUg_XhaZicaiecjgehigfghcei`cjYak\
+  V_lRYmOWnLUoISpFQlGPhHOeHNaIMZILVJKSKJOKJLLIHLHEMG\
+  ANF7NE3OD0OD1MB2LA2K83J74I54H4BIAIJFPKKWLPbMUhNZdR\
+  X`UVXXTT_SQbQMeOIhNEkLAnJ7qIAZGDGFFHIHIKIJMKKOMLQN\
+  MTPNVROXSPZUQ`VRbYDR`0Fa8FbFFbNFcUFcaFdhFdoFemGekG\
+  eiGfgHfeHfcHgaIg_IgYIgWIiUIjRIlPImNITwaSx_RyYRyWSu\
+  _TrbUoeVkhVhkWenXaqYZtYWw_YsaZob_kd`gfacgc_idWkeSl\
+  fOngKohGlcGi_GfWGcSGaOGSeCJw8NAzV9xb9wj8vr8uy8tmCl\
+  aGeQKZENSFPRGQRGRRHTQHUQIVQIXPJYPJZPI`RHaSHbUGcVGe\
+  XFfYFg_Eh`DibDkcCleCmfBnhBoiDkgFheHecJbaLZ_NWYPTWR\
+  QUTNSVJQXGOZDM`AKb7IeDMgIPiOSlTVnZYpc`mdekdihenfer\
+  devbhqakl`mg_pbYsYXuTWxOVzKTuLRqLQmMOiMNdML`NKXNIT\
+  NGPOFKODGOCCPA8P94PNSwNQy }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

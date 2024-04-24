@@ -1,0 +1,99 @@
+;     Date: Mon, 27 Jun 2005 11:48:39 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-06-05 (Ground-Level Zexpe [7])
+;       Id: <1.5.4.16.20050627115029.2c0f2d9a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 27, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the Zexpe fractal, which is a simple 
+; Mandeloid, named by Lee Skinner, with epsilon acting as the 
+; exponent of Z.  To add a bit of interest I chose the fractal as 
+; it exists at ground level of the hyperspiral, and zoomed in on a 
+; valley.
+; 
+; In these irregular fractals, it is hard to tell at first glance 
+; whether a valley is of an 'East' variety, a 'Seahorse' variety, 
+; or some other variety.  The only way is to actually examine the 
+; inner details of the valley.
+; 
+; The valley I chose in today's parent fractal proved to be of the 
+; 'East' variety, with abandoned bits and pieces of elephants 
+; strewn about.  I chose today's particular midget because of its 
+; unusual 2-4-2-4 symmetry.
+; 
+; The name "Ground-Level Zexpe" refers to the location of the 
+; parent fractal on the hyperspiral.  The rating of a 7 reflects 
+; the surprise I felt on seeing such a symmetrical midget in a 
+; fractal so far removed from integer value.  The render time of 5 
+; minutes is within reason, but reason varies, and for the 
+; convenience of those who find a 5-minute wait unreasonable, the 
+; image has been or soon will be posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; from where it may be conveniently downloaded.
+; 
+; Now I must investigate the new triternion formula.
+; 
+; The high temperature of 88F 31C was barely acceptable to the 
+; fractal cats here at Fractal Central on Sunday.  They spent the 
+; full afternoon in the holly thicket, but demanded extra tuna 
+; when they came inside for the night.  Today is starting a bit 
+; cooler and with much more clouds, but it is dry.  If it stays 
+; dry, the duo should have a good day.  My day will turn good when 
+; the work is behind me and the fractal for tomorrow is in the 
+; bag.  Until the next FOTD appears in 24 hours, take care, and 
+; great things lie just beneath the surface, but where is the 
+; surface?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ground-Level_Zexpe { ; time=0:05:17.42--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.20582645949934450/+0.327273605449370\
+  60/2.043985e+007/1/80/-2.42403299516302795e-008
+  params=2.71828182845905/0/0/0 float=y maxiter=1500
+  inside=0 logmap=99 periodicity=10
+  colors=000mQDjRJhSPeTVcU`aVeZWaWXZUYVRZUO_TM_SQ_TT\
+  _UWZYZZZaYcdYhgYkiZjk_fl`cna_obXqbTrbQtbMu`JtZIrWH\
+  pRGnNGkIFhDEe8Db5D`9G_DIZGKYKNXNPWPRVSUUUWTXYS_`Rb\
+  bQedPhgOkiNmkTlgYkdbkaNgY8dV5WO3NISGZoAnh9cb9UW9KQ\
+  9AK90JH1JO1JV2Ia2Ih3Io3Iv3Jr6Jo9JlBJiEKeGKbJK_LKXO\
+  KUQMWTNYWOZZQ`aRacScfUdiVflWgnYiqZjt_lw`myajraglae\
+  fab`b`VbYPbWJbTDbR7G_aEZ_CZYAZW8ZU7ZTGdYPjbXpgXohX\
+  oiXnjXnkXmlXmmYllYkkYkjYjiZjhZigZifZheZgd_gc_fb_fa\
+  _e`_e`_e`jlDiiCigCheChcCh`CgZCgXCfVCfSCfQCeOCeMCeK\
+  CgIFhGIiEKjCNlAQm8Sn6Vo4Yp2_o7YnCWmGUmLSlQQkUOjZMj\
+  cKigIhlGhpFioIjnKkmMklPlkRmjTmiWnhYog_ofbpedqdfqci\
+  rbksamsaopbknbhkcdicafdYddVbdS_eOYeLVfHTfERfBVUYYI\
+  saFldCeg9Zj7Tk9RkAPkBOkCMlDKlEJlFHlGGZRVLai7kwIrWT\
+  y4rv3nv4kv4hv4dv4av5Zv5Vv5Sv5Pv6Lw6Ix6Fy6Cz6EzCGzI\
+  HzOJzULzZMzdOzjQzpRzuPzpOzkNzgLzbKzZJzUHzPGzLFzGEz\
+  CTzNfzXtzf2zY2zW2zV2zU2zT }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

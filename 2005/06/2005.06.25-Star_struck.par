@@ -1,0 +1,80 @@
+;     Date: Sat, 25 Jun 2005 09:11:35 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-06-05 (Star-struck [6])
+;       Id: <1.5.4.16.20050625091323.0dafa678@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 25, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's disk-filled image is a scene in one of those bloated, 
+; shapeless parent fractals that results when a fractal with 
+; negative exponents of Z is near the point of turning inside-out.
+; 
+; To create today's parent fractal I took Z^(-1.5) and combined it 
+; with 0.1 part of Z^(-15) before adding (1/C).  The name 
+; "Star-struck" has little to do with the appearance of the image.
+; 
+; The rating of a 6 might be a bit liberal, but the colored disks 
+; in the image, even though they are very common in such fractals, 
+; are among the more spectacular I have come upon.
+; 
+; The render time of 2-3/4 minutes makes calculating the image a 
+; minor task.  And the image is also available on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a high temperature of 88F 31C, Friday was rather hot here 
+; at Fractal Central, but the dynamic duo did not seem to be 
+; bothered by the heat as they slept under the holly trees most of 
+; the afternoon.  Only a minor treat of tuna was needed to end 
+; their day satisfactorily.  Today is starting even warmer, with 
+; higher humidity added.  The cats will endure the conditions 
+; somehow.  For me, it looks like a rather slow day on the way.  
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and ponder the great mystery.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Star-struck { ; time=0:02:42.69--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.43845969486441970/-1.109134687337877\
+  00/1.567753e+009/1/-51/-0.000280759513837061658
+  params=1/-1.5/0.1/-15/0/0 float=y maxiter=550
+  inside=0 logmap=48 periodicity=10
+  colors=000KK_7KiBPpCKdEgzVYUiPuyHrU9ndyzMnr4fX0_X0\
+  TX1OM7KCCH2KP6TX7adBgkCprGyzHzzKzzMzzGzuBzk6zb1zV0\
+  zK0zC0z400pC2w77z4Cz1Tm1iR1z61z01z00z10z90uH0pP0n6\
+  Bn0_mJJmm2dfCY_MPTXJMfCGp49z02z00z1Kz9fzHzuCys9ur6\
+  rr1np0kn0in0wu4zzn2TmKCmb0ms0KJ000B0R90PE0PJ2PO7OT\
+  COYGOb0r_0zX0Ts70z40z22z1Gr0Rk9yz6nz2fz1Yw0Or0Gk07\
+  d00_06f0Bm0Gs0My0Rz0Xz0az0Xz0Rn7M_GHMPGG_EBgC4rC0z\
+  B0z90z90z60z2Cz1Pz0dz0sz0zz6szHfzVTzfGzf_ziazmazpa\
+  zsazwazzazzazzazzgzGkzXdzkYzfazbbz_dzVfzRgzOizTazX\
+  Tz_KzbCzf4zi0znBzsMzy_zzkzrazfRzgaziizkszlzzmzznzy\
+  ozxpzwqzvrzuszztzzunwvXpwEix0by0az0az4azHazV_zg_zu\
+  _zz_zzazybzbdzJfz0fz0fz0fz0fz2gz0gz0gz0gz0iz0iz0iz\
+  0iz0_z7PzYGzyMzgRzRXzBdzGkzKszPzzVzz_rzTbzMOzGBz9J\
+  zBPzBXzBbzBizCpzCwzCzzCzzKyzRuzYszfpzmnzsmzzdzMXz0\
+  Rz0Oz0Kz0Gz1Cz49z76zBJz9Xz7iz6wz4rz7mzBgzEbzHYzKTz\
+  OPzRKzPGzO1zK1zM1zO1zP4zX }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
