@@ -1,0 +1,114 @@
+;     Date: Mon, 04 Jun 2007 21:49:25 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  05-06-07  (Is This Success [7])
+; 
+;       Id: <1.5.4.16.20070604215408.0d1f11fc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 05, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I did it!  And it wasn't that hard.  I found what I consider a 
+; worthwhile midget of order 1.5.  I found it in the Mandeloid 
+; that results when the formula Z^(1.5)+C is iterated 115 levels 
+; up the complex logarithmic ladder to infinity.
+; 
+; This parent fractal consists of a large bay with two large and 
+; nearly equal buds.  Today's scene is located in the outer chaos 
+; around one of these buds.
+; 
+; When compared to some of the quadratic midgets I have come upon 
+; over the years, today's little fellow is not all that great, but 
+; I like its symmetry and the way it hides its necessary disconti-
+; nuities.
+; 
+; I named the image "Is This Success?", and I rated it at a 7.  
+; The calculation time of a measly 3-1/4 minutes on the P2000 is 
+; well within reason.  And the fully rendered image is or soon 
+; will be posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it may effortlessly be viewed and hopefully enjoyed.
+; 
+; Morning clouds and drizzle gave way to afternoon sunshine and a 
+; temperature of 79F 26C here at Fractal Central on Monday.  The 
+; day ended with a cooling thunder-shower.  The fractal cats spent 
+; most of the day curled comfortably on their scratching posts, 
+; paying no attention at all to the weather.
+; 
+; My day was rather busy but not excessively so.  And I actually 
+; felt a bit happy when I found the 7-rated midget in a Z^(1.5)+C 
+; Mandeloid.  With this goal accomplished, it's time to move on.
+; 
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and if we exist in an infinity of alternate worlds, are the 
+; other versions of ourselves conscious?  If they are conscious, 
+; then they are not really us, they are someone else who looks 
+; like us, because we can be in only one place at a time.  And if 
+; they are not conscious, then they are not actual people at all.  
+; And if some animated human bodies in alternate worlds are not 
+; actually conscious people, how many animated bodies in this 
+; alternate world may not be conscious people?  We really must 
+; solve the riddle of what makes us our unique selves, though I 
+; doubt that our present method of science can find the answer or 
+; that an effort will even be made to find it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Is_This_Success    { ; time=0:03:14.11-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.58023340112269160/-0.346967414576066\
+  70/6.652242e+010/1/77.4984899716347542/0.001675277\
+  38189383185 params=1.5/0/115/0 float=y maxiter=2500
+  inside=0 logmap=431 periodicity=10
+  colors=000A0KzzmwtcvpUvkSvgQvdOv`LvYJuUHuRFuNCuKAu\
+  G8uD6uA4rF7oJAmNCjSFgWHe_KbdM_hPYlRAH1KF2UD2ZC5cB7\
+  hB9mABpADsGGvMIxQKzWMzaOzgRwmTmpVctXU4ZK5_A5`35a45\
+  b45c55d65e76e86f86g96hA6iB6jC6kC6kB9jBCjAFiAIi9Lh9\
+  Nh8Qg8Tg8Wg7Zf7`f6ce6fe5id5ldznd4oczoc4pc4pczpc4qb\
+  4qb4qb4rb4rb4sa4sa4sa4ta4ta4tazqYznUzkRzlQzmPznOzo\
+  NzpMzqLzqLznJAkIEhGHfFLcEO`CSYBVWAeQKoKT`NbMPl8Rv3\
+  MX_FsZGmZHgZIaYJWYKQYLK`RHcWFfaCifAveXkaVaZURVSHSR\
+  7PQ6RO6SN6UM6VK6XJ5YI5_H5`F5bE5cD4eC4fA4h94i84j7Bl\
+  LImYPokVpxSqsPqoNrkUrgcscms_ztWztSzuOzuKzuGznKwhNz\
+  bQzXTCRWELZKPcUSgcVkmYpw`tzcxwYtwSpmMmcQhUTcKWZE_U\
+  FbPGeKGzFHzDHzBHz9KiKNiVPidSizUizWfzXczY`zZYzzVozT\
+  nzQlzSjeUhfWfgYdh`cja_laXnaUpaRo_UnaZnccmehlgmlirk\
+  kvjmzjoziqzhszhuzevzcwz`xzZyzXzzUzzSzzPzzNzzLzzKzz\
+  PzzUzzZzzczzhzzmzzrzzvzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

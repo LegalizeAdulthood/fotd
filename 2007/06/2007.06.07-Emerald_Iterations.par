@@ -1,0 +1,102 @@
+;     Date: Wed, 06 Jun 2007 23:52:40 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  07-06-07  (Emerald Iterations [9])
+; 
+;       Id: <1.5.4.16.20070606235725.30cfdc3e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 07, 2007 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image really turned out well, so well in fact that I 
+; rated it at a lofty 9.  The parent fractal, which was created by 
+; combining 2 negative parts of Z^(1.5) with 2 positive parts of 
+; Z^(2.5) and adding straight C, is a distortion of the Mandelbrot 
+; set, with many extra bays and other goodies to explore.  Today's 
+; image is located in one of these extra goodies -- a tiny, almost 
+; invisible valley that sprouts from nowhere and goes nowhere.
+; 
+; This tiny valley is located just outside of the much larger 
+; seahorse-type valley that sets off the period-2 bud on the north-
+; west shoreline of the main bay.  (There is a second period-2 bud 
+; and a second tiny valley on the symmetrical southwest shoreline.)
+; 
+; The image is made by its coloring, which is a refreshing change 
+; from the usual and often too-intense colors of most FOTD images. 
+; I named the image "Emerald Iterations".  The green is not quite 
+; pure, but it is green enough to justify its name.
+; 
+; The calculation time of 3-1/2 minutes on the P2000 machine would 
+; be extended to around 15 minutes on the P200 machine.  It will 
+; be cut to seconds however by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the completed image there.
+; 
+; The weather here at Fractal Central on Wednesday was absolutely 
+; perfect.  The deep blue sky, puffy white clouds, low humidity, 
+; light winds and high temperature of 70F 21C could hardly be 
+; improved upon.  The cats made no effort to improve upon the 
+; weather.  They were too busy watching a pair of doves.
+; 
+; With a 9-rated FOTD to boast about, and the commercial work well 
+; under control, my day was well above average.  Now if only 
+; tomorrow could be a repeat . . .  Regardless, the next FOTD will 
+; appear in 24 hours.  Until then, take care, and grasp at the 
+; great mysteries.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Emerald_Iterations { ; time=0:03:42.21-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=+0.29719583945369130/+0.215567134695368\
+  40/6.652338e+009/1/55/-0.000245700507399387869
+  params=-2/1.5/2/2.5/0/0/0/0 float=y maxiter=4000
+  inside=0 logmap=432 periodicity=10
+  colors=000oxwmxvjxugxrdwoavlZujWtgUtdStaQtZOsWNsTM\
+  sQLsNBfcFiYJlSNoMOQSPYPPdMQkJpw_guTZsNbtiYs_UrQ`E0\
+  Ce`JlRpQLCvUGuQJtNNsKD9gIPZMcQl3X`TP3fiBj_JnQXtRSf\
+  fCK6mORacMGlk61CAF8ES4Id1_uISqGLmFUcEaUDjLDrBCz2Ca\
+  8XDEp3b4BX7ISAQNDXIGdDJk8MdFBYL1aQ7dUCgYIjaNneSqiY\
+  RlBTlBVkBWjAYiA_hA`hAVe9Qc9La8G_8BY76W79UACTCESEHR\
+  GJQIMPKOOMRNOTMQWLSYKU`JWbIYcM_dPaeTcfWeg_ghbiiekk\
+  bhl`emYcoW`pUZqRWsPUtMRuKPwIMuFKsHHoKFkNEgQDeTCcWB\
+  aYA__9Y`8Wa7Ub6Sc5Qd4Oc3Ma2K_1IY0GW0CT06Q00N00K00H\
+  00E00B0080550A20F8AKEFPFKUHPZIWcKXgLXjNXlOXnQXpRXj\
+  W`d_d_cgUhkPlnJprEtu8pn2mgGdWUWLmmmzzzmmmSB_RFbRId\
+  RMfQPhQTjQWlP_nPbpPfrPitRfqScnU`lVYiXVgYSd_Pa`M_bJ\
+  XcHVfMWhRXjWYl`Zne_pi`RseUtfWtfZtg`ugcuheuhhvijvim\
+  vjovjdwWUwHWwHXwHYwH_wH`wHawHcwHdwHhwHmwHrwHvwHzwH\
+  zwHwwKzwUzwczwSzw8zwBzwEzwUzw`zwRzwgzw_zwVzwQzwLzw\
+  uzwgzwUzwnzwYzwtzwjzw`zwR }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

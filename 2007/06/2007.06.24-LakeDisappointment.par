@@ -1,0 +1,86 @@
+;     Date: Sun, 24 Jun 2007 23:10:49 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-06-07 (Lake Disappointment [6.5])
+;       Id: <1.5.4.16.20070624231551.2b47239c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 25, 2007 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I subtracted 0.4 part of Z^(2.25) 
+; from 0.8 part of Z^(-1.25) and added C to create a parent 
+; fractal that consists of two main Mandeloids, the southern one 
+; far out of proportion, the northern one looking like a moth-
+; eaten sweater.  Avoiding these obvious features, today's scene 
+; is located in a trail of debris that stretches between the 
+; Mandeloids.
+; 
+; I was undecided whether to rate today's image at a 6 or a 7, so 
+; I split the difference and rated it a 6-1/2.  The name "Lake 
+; Disappointment" came about when I failed to reveal all the 
+; potential I thought the fractal had in it.  I think there are 
+; actually several lakes of this name around the world, though at 
+; the moment, I cannot say where they are located.
+; 
+; The calculation time of 1-1/2 minutes on the P2000 would stretch 
+; to 8 minutes on the old worn-out P200.  But the fastest and most 
+; convenient way of viewing the scene in this technologically 
+; advanced electronic age is to go on-line to the FOTD web page at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and sit in awe of the image as it fills your screen.
+; 
+; Another superb day graced Fractal Central on Sunday.  Full sun, 
+; light winds and a temperature of 82F 28C can hardly be bettered 
+; for outdoor summer activities.  I had my weekend's share of 
+; activity on Saturday however, so I took it easy all day Sunday, 
+; while the cats kept a sharp eye on us to be sure we would not 
+; leave them alone again all day.  If things continue as planned, 
+; the next FOTD will appear in 24 hours.  Until then, take care, 
+; and where does the light that illuminates the objects in our 
+; dreams come from?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+LakeDisappointment { ; time=0:01:30.30-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.45779742812842340/-0.861568641122261\
+  90/6.926184e+010/1/122.5/0 params=0.8/-1.25/-0.4/\
+  2.25/0/0/0/0 float=y maxiter=1450
+  inside=0 logmap=165 periodicity=10
+  colors=000B8QGAUMCYREaXGeaIifJmgMnhOniRojTokVolYpm\
+  _pnbqodqpfqqkrnorrrswwwzzzzzzuuummmcccWWWWWWWWWWWW\
+  WWaTT_RRYSUUSXRS_NSbKXfHaiDfkAkw7svCpvHnkMkjQdgSYd\
+  UXaWV_YUY_SWaQUcPSzNQzMOzOczPhzQmzRrzSFSTDPUBLV9IW\
+  8FRGEMOEHVDCbD7iDEaLKUSQM_WFfXJdYMbZQa_T_`XZ`_XabV\
+  bfUciSdmRepPesO_ncUisWhiXg_YgQZfG_f6adBbbGd`Ke_PfY\
+  UhWYiUbjTfkRhlPimNjnLlnJmoHnpGoqEqrCrrAss8utcvucwu\
+  cxtctscprclqcipceomanmYmmVlmUlwTkwTkwSjwRjiRheUgaW\
+  fZYeV_dRbcOdaKf`Gh_DkZ9mY5oX2qQGmKTjDef7rc8ob8la9i\
+  `9f_AdZAaYBZYBWXCUWCRVDOUDLTDJTSCaf6ju0rv2sv3sv4tv\
+  5tv6tv7uv8uv9uwBvwCvwDwwEwwFwwGxwHxwIx3yYAvWGtUMqS\
+  SoRYmPcjNihLofKmaPkYTjUXhQagMeeIicEnbFr`Kv_PzYUxXZ\
+  wWcvUhuTmtSrsRvrPzpOzoNznMzmKzlJzkIzjHzi8zgIzhSzia\
+  zjkzjXzUIzEBzQEzZHzgJzpGzdDzUAzJIzOPzTWzYbzaKzV1zP\
+  LzMczKvzIWzM6zPIzXUzcnzgezjvzhtzkrznJzMczrjzqJz8Vz\
+  OfzbKz_`zhEzPSzZdzh6zK5zL }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

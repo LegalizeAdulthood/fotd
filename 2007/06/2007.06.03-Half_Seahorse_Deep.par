@@ -1,0 +1,92 @@
+;     Date: Sat, 02 Jun 2007 22:52:57 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  03-06-07  (Half Seahorse Deep [5])
+; 
+;       Id: <1.5.4.16.20070602225738.2bbfcad6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 03, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Half Seahorse Deep".  I gave it this 
+; name because the parent fractal was created by the formula 
+; Z^(1.5)+C iterated 5 levels down the logarithmic ladder, and the 
+; image is located deep in the rather fully formed Seahorse Valley 
+; of this parent.
+; 
+; I rated the image at a 5, a rating that says 'average'.  The 
+; image is somewhat better than yesterday's production, but falls 
+; far short of past FOTD high points.
+; 
+; The render time of 11 minutes on the P2000 would stretch to near 
+; an hour on the old P200 machine.  My suggestion is to take the 
+; simplest route to fractal satisfaction by viewing the completed 
+; image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Very warm and humid weather here at Fractal Central on Saturday 
+; was slightly relieved by a heavy shower at 6pm.  The fractal 
+; cats watched from a window and wondered where all the water was 
+; coming from.  I was kept rather busy by commercial work, though 
+; I did find enough spare time for a brief trip to fractal land.
+; 
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and I hear there's a new world coming.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Half_Seahorse_Deep { ; time=0:11:02.57-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+0.7403602118\
+  8/-0.037639107902/5272512 params=1.5/0/-5/0 float=y
+  maxiter=20000 inside=0 logmap=643 periodicity=10
+  colors=000c`Gc`Ec`CcaGfbKicOkeSnfXqh`tidwkhyllxjjx\
+  hhxgfxeexccwbaw`_wZZwYXwWVwUTvTSvRQvQOvOMvMLuLJuJH\
+  uHFuGEuECuCAtB8t97t75t63t41t30s42s53s55r66r68r79q7\
+  Bq8Cq8Eq9FpAGpAIpBJoBLoCMoCOoDPnDRnESnEUmFVmGWmGYm\
+  HZlH`lIalIckJdkJfkKgjLjkKhlJfmIenHcoGboF`pE_qDYrDX\
+  sCVtBUtASu9Rv8Pw7Ox6Mx6Lv7Mu8Ns9NrAOpBOoCPnDPlEQkF\
+  QiGRhHRgISeJSdKTbLTaMU_NUZOVYPVWQWVRWTSXSTXRUYPVYO\
+  WZMXZLY_LY_KW_KT_JQ_JNVIKPHHJHEEIBFI8GJ5HJ6IK6JK6K\
+  L7LL7ML7NM8OM8PN8QN9RO9SO9TOAUPAVPAWQBXQBYRBZRC_RC\
+  `SCaSDbTDcTDdUEeUEfTDhUEgUEfUFeVFdVFcVGbWGbWGaWH`X\
+  H_XIZXIYYIXYJXYJWZJVZKUZKTZLS_LR_LR_MQ`MP`MO`NNaNM\
+  aOLaOLbOKbPJbPIcPHcQGcQFeOEdPFdQFcQFcRFcSGbSGbTGaT\
+  GaUGaVH`VH`WH_XH_XI_YIZYIZZIY_IY_JY`JXaJXaJWbKWbKW\
+  cKWdKYdK_eLafLcfLegLggMihMkiMmiMmjMmkNmkNmlNmlNmmO\
+  mnOmnOmpOmqNorOqsOstOuuOwvOzwOzxOzyOzzOzzOzzOzzOzz\
+  GzzGzzGzzGzzGzzGzzGzzGzzG }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

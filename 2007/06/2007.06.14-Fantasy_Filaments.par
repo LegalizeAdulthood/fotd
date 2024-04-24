@@ -1,0 +1,89 @@
+;     Date: Thu, 14 Jun 2007 22:09:37 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-06-07 (Fantasy Filaments [4])
+;       Id: <1.5.4.16.20070614221430.2a0734ee@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 15, 2007 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we calculate the Z^(1.5)+C Mandeloid 95 levels down the 
+; logarithmic ladder and check the resulting fractal in the area 
+; of one of the minor buds on the northeast shoreline of what 
+; passes for a main bay.
+; 
+; We soon find a midget lurking in the vicinity.  The midget has 
+; little to recommend it, being little more than an irregular hole 
+; surrounded by zig-zagging bits and pieces of filaments.  But we 
+; need a fractal in a hurry, so we volunteer the midget to step 
+; forward and accept the honor of being declared FOTD for June 15. 
+; The midget grudgingly accepts.
+; 
+; Since the filaments are the most striking features of the image, 
+; I named it "Fantasy Filaments" and decided on a rating of a 4.  
+; A fractal that is found almost automatically can hardly be 
+; considered above average.
+; 
+; Perhaps the best feature of the image is its speed.  It 
+; calculates in just one minute on the P2000 machine.  It would 
+; take around 6 minutes on the P200.
+; 
+; The pre-calculated GIF image is available on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A cloudy morning here at Fractal Central on Thursday was 
+; followed by a partly sunny afternoon with a high temperature of 
+; 68F 20C.  For me a rushed morning was followed by an afternoon 
+; only slightly less rushed.  The fractal cats managed to stay 
+; inconspicuous during most of the day.  The next FOTD will 
+; hopefully appear in 24 hours.  Until then, take care, and 
+; remember that the best is always yet to come.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fantasy_Filaments { ; time=0:01:09.05-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=+0.21651796350606610/+0.249124595095299\
+  90/5200.166/1/-57.5/-7.452637118543e-011 logmap=113
+  params=1.5/0/-95/0 float=y maxiter=7500 inside=0
+  colors=000LJJLIKKHKKHLJGMJFNKEOJFNJFNJFNJFNJFNJFNJ\
+  GNJGNJGNJGNJGMJGMJGMJHMJHMJHMJHMJHMJHMKFKJHMJJNJLP\
+  JNQJPSJRTJTUJVWJXXJZZJ__JaaJcbJecJgeJifJkhJmiJokJq\
+  lJrmIslHslHskGskFskFtjEtjDtiDtiCtiBuhBuhAug9vg8vg9\
+  ugAseAqcBoaCm_CkYDiWDgUEeSFcQFaOG_MGYKHWIIUGISEJQC\
+  JOAKM8LK6LI4MG2MD0LC1KA2KA3JB4IB5IC6HD6HE7GE8FF9FG\
+  AEHBEHBDICCJDCKEBLFALGAMH9NH9OI8OJ7PK7QL6RM6RM8QO9\
+  PQAOSCNUDMWELYFK_HJaIJcJIeLHgMGiNFkOEmQDoRCqSBsTBu\
+  VAuXAtY9t_9ta9tc8td8tf7th7sj7sk6sm6so5sq5sr5so6tm6\
+  tk6th6tf7ud7ua7u_7uY7ucAtiCtoEthHrbKpWPnQUlJZjDch7\
+  hgCmbGrZLwUPzQTzMSwNSsORpPRlQQiRQdSPcTPcUScTUcSWcR\
+  YcQ`cPbcOdcNfcNicMkcLmcKocJrcItcHvcGxcGvcHtcHueHvg\
+  IwiIxkIymJzoJzqJzsKzuKzwKzxLzyLzzLzzMzzMzzMzzMzzLz\
+  zLzzLzzLzzKzzKzzKzzKzzJzzJzzJvzJrzKmzLhzMczNZzOUzP\
+  UzQUzRUzSUzTUzMUzTUzZUzdUzcUzbUzaUzaUz`Uz_UzZUzZUz\
+  YUzXUzXUzWUzVUzUUzGUzHUzI }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

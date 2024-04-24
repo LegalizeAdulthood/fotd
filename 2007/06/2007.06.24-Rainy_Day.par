@@ -1,0 +1,94 @@
+;     Date: Sun, 24 Jun 2007 14:00:53 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-06-07 (Rainy Day [Not Rated])
+;       Id: <1.5.4.16.20070624140555.2baf1d8a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 24, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is shamefully late.  But I have an excuse.  On 
+; Saturday morning the weather was so good that Fractal Lady got 
+; an uncontrollable urge to visit her old alma mater in State 
+; College, which is about 85 miles from Fractal Central.  Our day 
+; was very pleasant though a bit too sentimental for my taste.  
+; When we got back to F.C. well after dark, we were exhausted.
+; 
+; With no chance to create a new fractal last evening, I dredged 
+; an old one from the fractal bone yard this morning, and declared 
+; it FOTD for June 24.  The image is a scene along the negative 
+; X-axis of the parent fractal that results when the formula 
+; Z^(2.003)+C is iterated 10 levels up the log ladder.
+; 
+; I could hardly give rating to a fractal that has been lying in 
+; the virtual dust for a year or two.  But I did give it a name.  
+; I named it "Rainy Day" because I have been saving it for just 
+; such a day as yesterday.
+; 
+; The included parameter file ran in 8-1/2 minutes on the old P200 
+; machine.  I estimate it would take around 1-1/2 minutes on the 
+; P2000.
+; 
+; Those who do not consider calculating fractals from parameter 
+; files to be their cup of tea may view the image on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; but because of the FOTD's lateness, Paul might not have a chance 
+; to post it for a few hours yet.
+; 
+; Absolutely perfect weather prevailed throughout Central Pennsyl-
+; vania on Saturday, making it a great day for nostalgia. The 
+; fractal cats greeted us eagerly when we returned, then promptly 
+; rushed to their food dishes.  The FOTD for June 25 will appear 
+; on schedule in about 9 hours.  Until then, take care, and keep 
+; the iterative faith.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rainy_Day { ; time=0:01:30.00-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-1.33533148191821700/+0.001624130111275\
+  15/604124/1/95/-3.61649927851925845e-008
+  params=2.003/0/10/0 float=y maxiter=1750 inside=0
+  logmap=149 periodicity=10
+  colors=000CZeB_dA_d9`c8Rm7Um6Wm5Ym4`m3bm2fn1io0npE\
+  sqRxrQupQrnPolPmjOjhOggOdeNbcN_aMX_zcKvZKrUKmPKhKK\
+  cHKZEKUBKP9KK6II3GI1FJ2HK2IL2JL2KM2LN2MO3OO3PP3QQ3\
+  RR3SR3TS3UT4WT4XU4YV4ZW4_W4`X5bY5cZ5dZ5e_5f`5g`5hZ\
+  7gY9fXBeWDdVFdUHcTIbSKaRMaQO`PQ_OSZOQcNThNVmNXrNZv\
+  N`zNbzNdzNfzNizNkzNmzNozNqzNszNuzNwzNyzMxzMwzmvSmu\
+  RmtQmsPmrOmqNmpMmpLmoKmnJmmImlHmkGmjFmiEmhDmiCmhDm\
+  hDmhDmhDmhDmhDmhDmhDmhDmhDmhDmhDmhDmhDmhDahDwhDvzD\
+  fhDghDihDjhDlhDml7mhDeeIYaON`QRZTUYVXXX_VZbU`eTbhR\
+  dkQfnPhmOilOikOikNijNiiNjiMjhMjgMjgMjlWepe`toWxyRv\
+  zTtzUrzVpzWnzXmzYkzZiz_gyaexbdwcbvd`ueZsfXqgWohWmg\
+  WjfWgeWedWccWabW_aWY`WW_WUZWUZWUYWUXWVWWWVWXUWYTWZ\
+  SW_RW`QWaQWbPWcOWeNWgMWiLWkKWmJXrI_rHbuFevHhwJkxLn\
+  yNqzPtzQwzSzzUzzWzzYzz_zz`zzbzzdzzfzzhzzizzjzzkzzl\
+  zzlzzmzznzznzzozzpzzpzznzzlzzjzzhzzfzzdzzczzazz_zz\
+  YzzWzzUzzizzhzzgzzgzzfzzf }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,86 @@
+;     Date: Tue, 05 Jun 2007 22:01:41 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-06-07 (Hope Springs Eternal [6])
+;       Id: <1.5.4.16.20070605220626.2bffbb7a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 06, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's nervous-looking image came to life when I combined 5 
+; negative parts of Z^(-1.5) with 1 negative part of Z^(-7.7) and 
+; added (1/C) to generate a parent fractal that resembles a mis-
+; shapen rabbit-snowman with two undersized ears, staring at a 
+; fairly normal Mandelbrot set some distance to the east.  Today's 
+; image is located in the center of the most prominent valley, 
+; which separates the rabbit-snowman's thorax from his abdomen.
+; 
+; I named the image "Hope Springs Eternal", though I have no idea 
+; what I might have been hoping for when I thought of the name.  I 
+; rated the image at a slightly-above-average 6.  It took little 
+; effort to convince myself that it actually was at least a little 
+; above the FOTD average.
+; 
+; The calculation time of 1 minute is on the fast P2000 unit.  On 
+; the workhorse P200 machine it would take between 4 and 5 minutes 
+; to finish.  Of course, the calculation time is of no consequence 
+; if the fully-calculated image is viewed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where many more FOTD images and discussions are posted for near 
+; instant enjoyment.
+; 
+; A near perfect day graced Fractal Central on Tuesday, with lots 
+; of sun and a temperature of 75F 24C.  The fractal cats enjoyed 
+; the weather by spending as much time as possible in the sunniest 
+; windows.
+; 
+; My day was moderately busy, as most days are.  And tomorrow will 
+; probably be the same.  The next FOTD, a better one I hope, will 
+; appear at this same internet spot in 24 hours.  Until then, take 
+; care, and be faithful to your fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+HopeSpringsEternal { ; time=0:01:08.81-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+0.49695135167365110/+0.011152854814175\
+  17/2.193735e+009/1/-96/-0.00020346097735753077
+  params=-5/-1.5/-1/-7.7/0/0/0/0 float=y maxiter=1500
+  inside=0 logmap=124 periodicity=10
+  colors=000RMdZ8PPKbTEVQHYNK`KNcOL`RKYVJVYIS`HPdGMg\
+  FJjEGnDDqCAtB8tDDtEHtF`tHPtITtJctLXtMetNitOWqPfnQ_\
+  lRTiSMgTFdU8bU1_R3XO4UM5RJ7OH8LE9ICBF9CD7DCBGCEIBI\
+  K000BPOASQ000KZUUaWceYmh_rlawoczsezvgzyiwvgmtecqdU\
+  obKl`Kj_NgYPeWRbVT`TVYRXWQZZO_aNadLbhJdkHenFgqDhtC\
+  fuFeuHcvKbvM`wP_wRYxUXxWVyZUy`SzcRzeSseTleTeeUZeUS\
+  eVLeVFeXAbY5`Z0ZP0jF0vgvubepZPlV8hRDeNIcJNaGR_CWY8\
+  `W5dU8fSBgREhQHiOKjNNkMQmKTnJWoIZpGaqFdrEgsDbtGYuJ\
+  TuMOvPJwREwU9xX4y_0yaGYcV7eW8gX8iY9kZ9l_An`ApaBrbB\
+  scCudCwdCxaGsZKoWOjTSfQWbN_YKcUHgQEkLBoH9rD8nE8kF8\
+  hG7eG7bH7ZI6WJ6TJ6QK5NL5JM5GM4DN4AO47O8rhEjlJcpMao\
+  O`nR_nTZmVYmYWl_VkbUkdTjfSjeQhePfeQdeRbhS`mT_rUYvV\
+  WzWUzXSzYQzZPz_UzaYzdbzgfzjkzmozrjzvezz`zz_zz_zz_z\
+  z_zz_zz_zzZzzZzzZzzZzzZzzZzzZzz_zz_zz_zz_zz_zz_zz_\
+  zz`zz`zz`zz`zz`zz`zz`zz`zz8zzIzzRzz_zzhzzizzjzzkzz\
+  3zz6zz9zzCzzFzzIzzKzzIzzG }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

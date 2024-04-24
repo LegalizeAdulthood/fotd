@@ -1,0 +1,87 @@
+;     Date: Sat, 16 Jun 2007 23:20:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-06-07 (Pressing Minibrot [6])
+;       Id: <1.5.4.16.20070616232537.2a5712a8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 17, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I subtracted 5 parts of Z^2 from 
+; 3.35 parts of Z^3 and added (1/C).  Curiously, the 1/C did not 
+; turn the fractal inside out, but it did create a somewhat 
+; distorted Mandelbrot set rotated 180 degrees, with an extra stem 
+; fragment lying some distance beyond the main stem.
+; 
+; Ignoring this extra fragment, I checked instead a spot off to 
+; the north side of the actual main stem.  Not very deep inside 
+; this spot I found today's scene, which I have named "Pressing 
+; Minibrot".  I gave it this name because the whole image looks as 
+; though it has been pressed against a pane of glass.
+; 
+; The rating of a 6 might be seen as a bit liberal by some, but I 
+; did put a bit of extra effort into the image, which helps 
+; justify the rating.  One good point that cannot be denied is the 
+; calculation speed of the image, which is 9 seconds on the P2000 
+; and only 44 seconds on the P200.
+; 
+; This is a bit faster than it would take to go to the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the finished image there.  But viewing the image on the 
+; web site does away with the hassle of calculating parameter 
+; files.
+; 
+; Partly cloudy skies and a high temperature of 81F 27C made con-
+; ditions pretty much ideal here at Fractal central on Saturday.  
+; At least the fractal cats must have thought so, for they spent 
+; several hours looking out the window.  My day was not too busy, 
+; but I suffered an attack of severe laziness.  The next FOTD will 
+; appear in 24 hours.  Until then, take care, and get in there 
+; with the big-time thinkers, whoever they are.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pressing_Minibrot { ; time=0:00:09.66-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+0.46563561954888720/+0.015792627220296\
+  66/226192.6/1/63.75/7.78858089134359943e-011
+  params=-5/2/3.35/3/0/0/0/0 float=y maxiter=255
+  inside=0 outside=tdis periodicity=10
+  colors=0003MsARkHVcOZWVbPafHhj9on2NaThkAahHVeO68G9\
+  DJCILEMNHRPJVRM_TCKIFPMIUPLZSQcBPcLmnmfkh`hcUeZzgX\
+  meW`dVQHHPLKPPMPTOOXRO`TCAmGKfKU`2KN7OPBSRGWSK_UfD\
+  CcHFaKHZOKXRMVUOSYRQ`TnEAeNHXWONJeONcOQaOU_OXYO`W1\
+  oq9kiHgaajAZhFWgJTeNQdRSnYQxyXp8VmDTjIRhMPeRsKGlOJ\
+  fSM_WPU_Su9SnGTgMU`SUUYVd_Ya`X_`XYaWWaWUbWSbVQcVzp\
+  JsmLmkNfiP`gRUeTbu__qZXmYUjXRfWdkr`imYghUfcRdZbn7_\
+  lBYjFVhJTfNQdRy43sA7nFBhKFcPJYUNTZRNEuOKoOPjOUdOZ_\
+  LO2MR7MTBNVFNYJO_NOaRTdpQVzP_jTe6SdBRdGQcLPcQLroMo\
+  kMmhNjdNhaOeYG8aID`JI_KMZLRYMVXN_W5a6CbFIcNM6QNISO\
+  TUw57kHF_TNTEORLQQRSPYUzK24qs8nnBljEjfIgbLeZslDhiJ\
+  YfPGleJiaMfYdtZaqY_oXXlXVjWSgWQeVZWlbO9`QCZSFXUIVW\
+  KTYNR_QPaTuKlnOhgSd`WaU_YXlrUijRfbylqqjlihgbfcVdZh\
+  09c8E_GIWONSWRAzHEtLHnOLhSQPzPStPUoPXjOZdOa_DRoGVi\
+  JYdM`_GFuIKoKPjLUdNZ_`POnBAiGEeLH`QLXVOS_SA6gDDdGK\
+  aJR_MYXF22HA8JIELPKNXQySE }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

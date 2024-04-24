@@ -1,0 +1,96 @@
+;     Date: Wed, 20 Jun 2007 23:23:41 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-06-07 (The Inside Supreme [7])
+;       Id: <1.5.4.16.20070620232840.385f4344@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 21, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It's either the longest day of the year, the shortest day of the 
+; year, or just another day exactly 12 hours long, depending on 
+; where on earth one lives.  Here at Fractal Central, it's the 
+; longest day.  The sun rises at 5:36am and sets at 8:42pm EDT, 
+; though the twilight begins shortly after 4am and lingers until 
+; 10pm.
+; 
+; On the longest day of the year, it's only proper that the FOTD 
+; should be above average.  And I think I have posted an above-
+; average one.  It's an evaporated scene in the parent fractal 
+; that results when 5.5 negative parts of Z^(-1.5) are combined 
+; with 0.5 negative part of Z^(-5.5) and (1/C) is added.  An 
+; evaporated fractal is one in which all the exponents of Z are 
+; negative and which has such a large bailout radius that all the 
+; points are trapped.  These fractals must be calculated with an 
+; active inside fill such as 'bof61' to avoid a totally flat blank 
+; screen.
+; 
+; The drawback to evaporated fractals is their slowness.  They are 
+; slow because they consist totally of 'inside' stuff.  In today's 
+; case, the parameter file takes 24 minutes to calculate on the 
+; fast 2000 mhz machine.  On the old 200 mhz work horse, it would 
+; take 2-1/2 hours or more.  But I have sent the calculated image 
+; on ahead to Paul at the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it will soon be posted for instant enjoyment.
+; 
+; I named today's image "The Inside Supreme" because it's all 
+; inside.  I rated it at a 7 because that's what I think it's 
+; worth.  If I had put more effort into the colors, I might have 
+; been able to rate it at an 8.
+; 
+; Wednesday was absolutely perfect here at Fractal Central.  Every 
+; aspect of the weather was in the middle of the comfort range.  
+; The fractal cats celebrated the perfection by finding a strong 
+; shaft of sunlight and resting in it until it moved out of reach.
+; 
+; In my department, the commercial work was about average, but I 
+; had an exceptionally efficient day, and finished in notably less 
+; time than usual.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and don't be haunted by fractal entities.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Inside_Supreme { ; time=0:24:28.59-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+0.42867296563386100/-1.702442513543234\
+  00/3.132496e+008/1/-143.5/-0.000168553882913445585
+  params=-5.5/-1.5/-0.5/-5.5/0/1e+100/0/0 float=y
+  maxiter=5500 inside=bof61 periodicity=10
+  colors=000qcppamo_jnYhnWemUblS`kQYjOViMThKQhINgGLf\
+  EIeCFdADc8Ac78d97dA7dC7eD6eF6eG6eI6fJ5fL5fM5gO4gP4\
+  gR4gS4hU3hV3hX3iY2i_2i`2ia2gg9flGerNdwTdlMdaGdRAdG\
+  4dF4eF4eE4fD4fD4gC4gB4hB4hA4i94i94jA6jA7jA9kAAkABk\
+  ADkAElAGlBHlBImBKmBLmBNmBOnBPnBRnCSoCUoCVoCWoCYpCZ\
+  pC`pCapCbkB_gBXcAU_ARW9OS9LN8IJ8FF7CB797663644DA4K\
+  F5RK5XQ6cV6j_6pdBpUGpJKp8On9SlAVjAZiBbgBeeCicCmbDp\
+  `DtZEwYEvXGvWHvWIvVKvULvUMvTNvSPvSQvRRvRSuQUuPVuPW\
+  uOYuNZuN_uM`uLbuLcuKduKesJfqJfpJgnJgmIhkIhjIhhIifI\
+  ieHjcHjbHj`Hk_GkYGlXGlVGlTGmSFmQFnPFnNFnMEoKEoIEpH\
+  EpFEpEDqCDqBDr9Dr8DrAFsBHsCJsDLtENtFOtGQtHSuIUuJWu\
+  KXuM_sOaqQcoSemUgkWiiYkhZlfZleZldZlcZlbZlaZl`Zl_Zm\
+  ZZmYZmXZmWZmVZmUZmTZmSZnRZnQZnPZnOZnNZnMZnLZnKIrd2\
+  uy4sv6qs8oqAnnCllEjiGhfIgdKeaMc_OaXP`VRZSTXPVVNXUK\
+  ZSI`QFbOCdNAfL7hJ5jH2kG0ZL7MPDATJ5QJ1OJ7LOCISHFWNC\
+  _S9cX6ga4kNM`8bRtixsgurer }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

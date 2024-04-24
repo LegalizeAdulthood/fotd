@@ -1,0 +1,98 @@
+;     Date: Sun, 10 Jun 2007 01:07:57 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  10-06-07  (Where are the Elephants? [3])
+; 
+;       Id: <1.5.4.16.20070610011246.0db74934@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 10, 2007 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image was found almost without effort, and therefore 
+; rates a lowly 3.  It shows a scene in Elephant Valley, but 
+; there are no elephants to be seen anywhere in the image.  The 
+; elephants are present sure enough, but they lie at a different 
+; orientation, and are totally unrecognizable.
+; 
+; The slice of the valley shown in the image is oriented in the 
+; Oblate direction of the Julibrot, the orientation defined by the 
+; real(Z) and imag(C) axes.  It has been stretched around 25 times 
+; in the vertical direction to counteract the natural horizontal 
+; stretching in this part of the Julibrot.
+; 
+; I named the image "Where are the Elephants?".  The calculation 
+; time on the P2000 is almost 3 minutes.  On the P200 it would be 
+; around 14 minutes.  On the FOTD web site the image may be viewed 
+; almost instantly however.  The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Near perfect weather, with sunny skies and a temperature of 79F 
+; 26C, made everyone happy on Saturday.  It made me so happy that 
+; I decided to take the day totally off, and go out and have fun, 
+; which explains the late FOTD.  The next FOTD might be ready in 
+; 24 hours, or if I decide to have another fun day, it might not.  
+; So until next time, take care, and keep enough chaos in your 
+; life to make it interesting.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+WhereAreElephants  { ; time=0:02:52.35-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 passes=1
+  center-mag=0/+0.477351227473598/83.88363/0.04158
+  params=0/0/90/0/0.277/0/0/0 float=y maxiter=18000
+  inside=0 logmap=6 symmetry=yaxis periodicity=10
+  colors=000KHUKIUKJULKTMKTNKSOKSPKRQKRRKRTKQUKQWKPY\
+  KP_KPaKOcKOeKNgKNiKNkKMmKMoKLpJLpILpHKoIKoJJoKJoLJ\
+  nMLmNMkONjOPhPQgQReRTdRUbSVaSW`TYZTZYU_WVaVVbTWcSW\
+  dQXfPYgNYhMZjLZkJ_lI_mG`oFapDaqCbsAbt9cu7bw8cv8cu9\
+  ct9dsAdsAdrBdqBepCepCeoDenDfmEfmEflFfkFgjGgiGgiHhh\
+  HhgIhfIhfJieJidKicKicLjbLjaMj`NgdMj`LmYKoVJrSItPHw\
+  MGyJFwIFvIFuIFtIFrIFqIFpIFoIFmIFlIFkIFjIFiIFgIFfIF\
+  eIFdIFbIFaIF`IF_IFZIFXIFWIFVIFUIFSIFRIFQIFPIDNJFOI\
+  HPIJQILQHMRHOSHQTGSTGUUGVVFXWFZWF`XEbYEcZEeZDg_Di`\
+  Dj`Dh_Ff_Hd_Jb_K`_MZ_OX_QV_RT_TR_VQ_WO_YM__K_aI_bG\
+  _dE_fC_hA_i8_k6_m5_n7Zm8Zm9ZmAYmBYlCYlEXlFXlGXkHWk\
+  IWkJWkLVkMVjNVjOUjPUjQUiSTiTTiUTiVSiWShXShZRh_Rh`R\
+  gaQgbQgcQgfSfdQgbPg`Nh_MhYLiWJiUIjTHjRFkPEkNClMBlK\
+  AmI8mG7nF6nD4oB3oA2oB6kBAhCEeCIbDM_DQXEUUEXRFYSFZS\
+  F_SF`TFaTGbTGcTGdUGeUGfUNGlNGmOGnOGoOGoVMj`SfgYamc\
+  YvlSshUpeWnbXk_ZiW_fTadQb }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
