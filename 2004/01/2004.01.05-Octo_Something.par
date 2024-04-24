@@ -1,0 +1,102 @@
+;     Date: Mon, 05 Jan 2004 10:17:13 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-01-04 (Octo-Something [4])
+;       Id: <1.5.4.16.20040105101916.29bfa724@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 05, 2003 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With today's image I make one of my rare departures from fractal 
+; purity.  Instead of showing an interesting scene rendered in the 
+; normal manner, the image shows a rather ordinary scene rendered 
+; in an unusual manner.  Instead of consisting of equal iteration 
+; bands, the image was created by rendering it with the outside 
+; set to 'atan'.
+; 
+; Instead of spending my fractal time searching for a scene, I 
+; spent it in fine tuning the color palette for the smoothest 
+; possible effect.  The net result rates a 4, which is somewhat 
+; below average, and shows that, at least to me, an undistorted 
+; presentation of a fractal discovery is more important than 
+; pseudo-artistic fractal 'creativity'.
+; 
+; I named the image "Octo-Something".  An early version of the 
+; image had eight 'somethings' lying somewhere in it.  But 
+; whatever it was that inspired the name has long since been lost.
+; 
+; In the image, the perennial midget is offset to the right, and 
+; has little of the usual symmetry surrounding it.  The lack of 
+; symmetry is partly due to the nature of the area and partly due 
+; to the unusually low magnitude.  This low magnitude has one 
+; great benefit however -- it makes the image a very fast one.  
+; The 45-second render time is a welcome relief from the 1-1/2 
+; hour wait that was necessary to see yesterday's image.
+; 
+; The parent fractal, which was created by combining negative 
+; portions of Z^(-1.9) and Z^(-9.1) and adding (1/C), is a 
+; shapeless thing with three large bays and many smaller coves.  
+; Today's image is located in an unlikely area that I happened to 
+; zoom into by chance.
+; 
+; It will probably take longer to download the image than to 
+; render it from the included parameter file, but those who 
+; choose to download will not be disappointed.  The completed 
+; image is available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Though Sunday promised to be pleasant here at Fractal Central, 
+; the promise was not fulfilled.  Instead of the forecasted sun 
+; and temperature close to 70F 21C, we had heavy clouds and a 
+; temperature of 46F 8C.  The cats tried the yard only a few 
+; minutes before deciding that a day indoors would be more com-
+; fortable.  The traditional tuna treat restored their spirits.
+; 
+; Today is starting even worse -- it is raining.  Check back in 24 
+; hours to see how the cats adapt, and when you do, you might even 
+; enjoy a better fractal.  Until then, take care, and keep discour-
+; agement at bay.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Octo-Something { ; time=0:00:45.53--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.99960116589275130/-0.228694138466237\
+  50/117.874/1/50/-6.99683366800485373e-012
+  params=-1.9/-9.1/-9.1/-1.9/0/0 float=y
+  maxiter=1800 inside=0 outside=atan periodicity=10
+  colors=000Ae`9gY9iW9kU9mR9oP9qN9rL8tI8vG8xEAzBhz9m\
+  z7hz5cz6Cz6Ex6Gv7It7Kr7Mo7Om8Pk8Ri8Tg9Ve9Xb9Z`9`ZA\
+  bXAcVAeTBgQBiOBkMBmKCoICqGCrFFrEClDAfC8`C6VB4PA2JA\
+  0OB5TC9XCEaDIfENjERoFWsF_rGZrGZrGZqGZqGZqGZpGYpGYp\
+  GYoGYoHYoHYnHXnHXnHXmHXmHXmHXlHWlHWlIWkIWkIWkIWjIV\
+  jIVjIViIViIViIViGWiIVhKVhMVgNVfPVeRVdTVdUVcWUbYUa_\
+  Ua`U`bU_dUZfUYiTZgU_fV`eVadWbcWbbXcaXd`Ye_ZfZZfY_g\
+  X_hW`iV`jUajTbkSblRcmQcnOdoMdpNeqOfrPgsQitRkrSmpTo\
+  nUqlVojWmhXkfYidZgb_e``cZaaXb_VcYTcWRbUPaSN`QL_PJY\
+  OHXNFWLDVKBUJASI8RG7QF5PE3NC4OD5PD5QD6RD7SE7TF8UG9\
+  VH9WIAXJBYKBZLC_MD`NDaOEbPFcQGdRHeSIfUJgXKhZKhaNfV\
+  PdURbTU`SWZRYXQ`VPbTOdQNfOMeOLdPKcQJbRKaSLaTM`UO_V\
+  PZWQYXRYYTXZUW_VV`XUaYUbZTc_SdaRebQfcQgePhfOigNjhM\
+  kjMlkLmlKnnJooIppMquIpqEpmAoi6oe2ob8mZElWKkTPjQVhN\
+  `gKffHkeElfGlfImfJmfLmfMnfOnfPnfRofSofUofVpfXpfYpf\
+  _qf`qfbujbqfcmccj`cfXccUd }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

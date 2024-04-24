@@ -1,0 +1,88 @@
+;     Date: Sat, 03 Jan 2004 09:43:46 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-01-04 (Iterative Wreaths [7])
+;       Id: <1.5.4.16.20040103094548.2b0fdb46@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 03, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal continues the theme of the past 3 fractals.  We 
+; combine portions of Z^(-1.7) and Z^(-1.7), and add (1/C) to get 
+; a many-bayed parent Mandeloid with a separate ring of chaos 
+; lying some distance to the north.  Today's scene lies in this 
+; outlying ring of chaos rather than in the main body of the 
+; fractal itself.
+; 
+; But today's image is an 'evaporated' one, in which all 'outside' 
+; parts have shrunk until they vanished, so speaking of bays and 
+; outlying areas of chaos makes little sense.  The escape radius 
+; has been raised so high that the parent fractal has been reduced 
+; to a sea of trapped points.  Luckily, these points do interes-
+; ting things in their confinement, which can be revealed by 
+; rendering the scene with the inside set to 'bof61'.
+; 
+; The trapped points that make up today's image remind me of a 
+; seasonal wreath.  I named the image "Iterative Wreaths", needing 
+; no reason at all for using the plural.  The rating of 7 is high 
+; enough to justify the brief 2 minutes required to render the 
+; image from the included parameter file.  The image may also be 
+; seen by downloading it from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Friday was another routine day here at Fractal Central, both 
+; with the weather and the activity of the fractal cats.  The 
+; pleasant winter sun and temperature of 54F 12C was just enough 
+; to give the cats a couple hours in the yard.  When evening came 
+; the duo was ready to settle for the night.  Today is starting 
+; foggy.  We'll see what develops.
+; 
+; It's now time to wrap up the little work yet to be done and 
+; enjoy a day with not much else to do but relax.  Between bouts 
+; of relaxation, I'll find the fractal that will appear as 
+; tomorrow's FOTD.  Until next time, take care, and take time out 
+; to ponder a fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Iterative_Wreaths { ; time=0:02:05.34--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-1.12781826180191500/+3.156480392217424\
+  00/288207.2/1/152.5/-1.82667648160328433e-008
+  params=1.7/-7.1/7.1/-1.7/0/1e+100 float=y
+  maxiter=1200 inside=bof61 outside=tdis periodicity=10
+  colors=000ARHDUIFWIIYJK`JMbKPdKRgLUiLWkMZnM`pNbrN`\
+  bHZOCX97WFDWKIWQOWVTW_ZVecVjiVpnVuwhzz00ASP9RU9PX9\
+  Oc9Ng91KG4TF7`hAiDCqDFzEIkELhENeFQbFT_FVXGYUG`RGbO\
+  HeLHhIHjFImCIp9Ir7Ir8Ks9MtAOuBQvCSvDUwEWxFYyG_zHaz\
+  HbYJM6L55K25J07M39P5AS72Hp2Hqdqhfrfgsdhtciuaju`lvZ\
+  mwXnxWoyUpyTmvRjsPgpNdnMakK_hIXfGUcFR`DOZBMW9JT8GR\
+  6DO4AL28J17M47O66R96TB6WE5YG5`J5bL4eN4gQ3jS3lV3oX2\
+  q_2ta2vc7uaCt`Gs_LrYPqXUpWZoUbnTgmSklQpkPtkOsjQrjR\
+  rjSqjTpjUpjVojWnjYnjZmj_lj`ljakjbkjchhaff_cdYacX_a\
+  VX_TVYSTXQpGXlFZiDafCcbBf_9hX8kT6mQ5pN4rPCYSGUUKRW\
+  NOYRL_UIbYEdaBfd8hh5jk2dj9ZiFTiLNhRHhXVkehmnYfhN`b\
+  CVX1PR6VSB_TFdTKjUPoVTtVVrTWqSXpQYoPZnO_mM`lLbjKci\
+  IdhHegGffEgeDhdCecGcbK`aNZ`RW_UUZYSYaPXdNWhKVkIUoG\
+  UrIVnKVjMVgOVcQV`SVXUVUWVQXVNUTOSSOPRPNQPKOQINQFMR\
+  DLRAJS8IS5HT3GT1FT6cCCaII_OOYTUWZZVcdTijRnpPtuOyrR\
+  upTrmVnQliKeaFZVASN5MG8PH }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

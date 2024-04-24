@@ -1,0 +1,103 @@
+;     Date: Sun, 11 Jan 2004 12:32:08 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-01-04 (Half an Elephant [6])
+;       Id: <1.5.4.16.20040111123415.0d673de8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 11, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In the East Valley area of the Mandelbrot set there lives a herd 
+; of elephants.  Each elephant stands astride its personal bud, 
+; guarding that bud from anything that might threaten it.  In the 
+; cubic M-set two elephants guard each double bud.  In the quartic 
+; set, there are three elephants per triple bud.  And so it contin-
+; ues into infinity, the elephants eventually merging into a haze 
+; of undifferentiated elephant stuff.
+; 
+; But what of the Z^(1.5)+C Mandeloid?
+; 
+; In this set, the same trend continues.  Half an elephant stands 
+; guarding each half-bud.  I have no idea what happens to the ele-
+; phants' rear ends, but the front parts are there, complete with 
+; curled trunks.
+; 
+; It took the MandelbrotBC1 formula to show a level of the parent 
+; fractal where these half-elephants are not broken beyond recogni-
+; tion.  Luckily, that level was found only 1.5 turns up the log-
+; arithmic hyper-spiral.
+; 
+; I named the image "Half an Elephant", most likely because half 
+; an elephant is better than none.  Of course, a half-elephant is 
+; not as good as a whole elephant, but that's another story.
+; 
+; When the time to do the rating arrived, I pondered the image and 
+; decided on a rating of 6, which combined with the render time of 
+; 10.67 minutes gives an overall value of 56.
+; 
+; The GIF image is available for near-instant download on Paul's 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather Saturday here at Fractal Central was very cold.  All 
+; day, my digital thermometer hung around 10F -12C, which kept the 
+; cat duo confined very securely to the sources of heat.  They 
+; needed only one minute on the porch to convince them that the 
+; outdoors was uninhabitable.  In the evening, I presented them 
+; with a treat of tuna, which lifted their sullen spirits.
+; 
+; Today, the regular work is pretty much caught up, but the 
+; fractal lady is thinking of a trip to look at 'antiques', (IMO, 
+; discarded junk), so I guess I'll tag along.  But I'll be back in 
+; plenty time to find the next FOTD fractal.  Until that next 
+; fractal appears, take care, and look for the other half.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Half_an_Elephant { ; time=0:10:40.43--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor
+  center-mag=+0.15911535849239720/-0.002404932214412\
+  98/1541.738/1/22.5/4.45664338766249557e-013
+  params=1.5/0/1.5/0 float=y maxiter=15000
+  inside=255 logmap=39 periodicity=10
+  colors=000R9YS9YS9ZT9ZU9_V9_V9`W9`X9aY9aY9bZ9b_9c`\
+  9c`9da9db9ec9ec9fd9fe9gf9gg7gg8gf9geAgdBgcBgcCgbDg\
+  aEg`Ff_Ff_GfZHfYIfXJfWJfVKfVLfUMeTNeSNeROeRPeQQePR\
+  eOReNSeMTdMUdLVdKVdJWdIXdIYdHZdGZdF_cE`cDacDbcCbcB\
+  ccAdc9ec9ecAdbAcbAcaAbaAa`Aa`A`_B`_B_ZBZZBZYBYYBYX\
+  BXXBWWCWWCVVCVVCUUCTUCTTCSTCSTDRSDQSDQRDPRDOQDOQDN\
+  PENPEMOELOELNEKNEKMEJMEILFILFHKFHKFGJFFJFFIFEIFEIF\
+  EIFEImSNoQPqNRpOQoPPnQPmROlSOkSNjTNiUMhVLgWLfWKeXK\
+  dYJcZJb_Ib_Ia`H`aG_bGZcFYdFXdEWeEVfDUgCThCShBRiBQj\
+  APkAOl9Mk7Nl8Ol9Ol9PlAQmBQmBRmCSmDSmDTnETnFUnFVnGV\
+  oHWoHXoIXoJYoJYpKZpL_pL_pM`pMaqNaqObqOcqPcrQdrQdrR\
+  erSfrSfsTgsUhsUhsVitWitWjtXktYktYluZmu_mu_nu`ovZpu\
+  `qtbrtcssetsfurhvriwpfxocymazlZzkWziUzhRzgOzeMzgJz\
+  iIzkHzmHzoGzqGzsGzuFzwFzxFzyEzzEzzDzzDzzDzzCzzCzzC\
+  zzBzzBzzAzzLzzMzzNzzOzzOzzPzzQzzQzzRzzSzzTzzTzzUzz\
+  VzzUzzVzzVzzWzzWzzXzzXPPm }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

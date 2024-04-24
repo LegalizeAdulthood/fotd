@@ -1,0 +1,102 @@
+;     Date: Tue, 20 Jan 2004 10:32:07 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-01-04 (The Cubic Trinity [8])
+;       Id: <1.5.4.16.20040120103423.29b7dbcc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 20, 2004 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is the second consecutive one to rate an 8, though 
+; its slower render time cuts its overall value to 59.  I did need 
+; to take a slightly liberal view of the image to reach that 
+; rating however, but it is still an unusually interesting sample 
+; of a midget in an almost-cubic fractal.
+; 
+; The name I chose for the image, "The Cubic Trinity", has nothing 
+; to do with religious belief.  It merely reflects the fact that, 
+; in the image, everything comes in powers of 3.
+; 
+; While yesterday's FOTD image examines the negative real axis of 
+; the Z^(2.003)+C Mandeloid as it appears 1040 levels up the 
+; spiral, today's image looks at the negative real axis of the 
+; Z^(3.003)+C figure at the same level.
+; 
+; Not unexpectedly, much of the same type of detail appears.  We 
+; have the same features resembling skeletal hands, and the same 
+; barely noticeable lack of symmetry.  The breaks that do appear 
+; are arranged symmetrically around the midget so that they become 
+; a regular part of the pattern.  Indeed, it takes a bit of 
+; searching to find the places where the symmetry breaks, but a 
+; careful search will reveal that all corners of the midget's 
+; basin are not quite identical.
+; 
+; The render time of 13 minutes is slow for an image that might be 
+; a bit exaggerated.  That wait may be eliminated by downloading 
+; the finished GIF file from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With the temperature hovering around 25F -4C all afternoon, the 
+; day was far too cold for the delicate whiskers and paws of the 
+; fractal cats.  They tested the outdoors only a few minutes 
+; before deciding that warmth was better than adventure.  A bit of 
+; tuna kept them happy.  Today is starting sunny and just as cold. 
+; The cats will likely have a similar day.
+; 
+; I have a bit of work to finish before starting the search for 
+; the next fractal, but I can finish that work with the speed of a 
+; photon.  I also have an urge to treat myself to some junk food 
+; at the golden arches 1/2 mile down the road.  If I survive, I'll 
+; return in 24 hours with the next FOTD image.  Could we possibly 
+; have three consecutive images that rate an 8?  Check back here 
+; in 24 hours to find out.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_Cubic_Trinity { ; time=0:13:28.73--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=mandelbrotbc1 function=floor passes=1
+  center-mag=-1.08945153107755200/-0.010540023154615\
+  56/4.734514e+012/0.9997/-170.7/0.200745373042978764
+  params=3.003/0/1040/0 float=y maxiter=2100
+  inside=0 logmap=355 periodicity=10
+  colors=000EEKCDJGHMJLPNPRQTUUXWX`Z`d`chchmfmskryou\
+  uuwwwXuTSmONhIHcCCZ67U1UY6p`AmYFjVJgTNdQRaOVZL_WIc\
+  TGgQDkNBoQEpTHpWKpYMp`PpcSpeUpdTmdTkdTicTfcTdcSbbS\
+  `bSYbSWaSUaRSaRP`RN`RL`RJaPKbOLcMMcLNdKOeIPeHQfFRg\
+  ESgDThBUiAVi9WiCUkETmGSoIRqKPsMOuPNwRMwUKwWJwZIw`H\
+  wcFweEwhDwjCweLw_UzQbtHZnGWiFScDPZCMTBIOAFI8CD7876\
+  585287688A8AD8BH8DL8EO8GS8HW8JZ8Kb8Mf8NiELeKKbQIZW\
+  HWaGT_EUZDVYBVWAWV9WU7XT6XR5YQ3YP2ZO1ZP6WQAURERSIP\
+  TMMUQKVUHWYFXaCYeAZi7Zm5X3lV4hU4eT5bS5_Q5XP6UO6RN6\
+  OL7LK7IJ8FI8CG89F96E93D90GA2IA4KA5NA7PA9RAAUBCWBEY\
+  BF`BHbBJdBK`EIYHGUJERMDOOBKR9HT7EW6AY4lr2fj13Z33W5\
+  3T72Q92NB2KC2HE1EG1BI18K15L27M39M4AM5CM6EM7FM8HN9I\
+  NAKNBMNCNNDPNDQNGRPJSRMTTPUVSVXVWZYW``XbcYdfZfi_hl\
+  `jo`libecd_YfUThONjIHlCCm6Dn9DnCDnFDnHEoKEoNEoPEoS\
+  FqVFsXFu_FwbFxdJz`MzXQzTTzPXzL_zHczDfz9azNYz`Uznbz\
+  `kzOszBczJQzQNzPLzNJzMGzL }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,90 @@
+;     Date: Wed, 14 Jan 2004 10:21:24 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-01-04 (The Unseen Squid [5])
+;       Id: <1.5.4.16.20040114102336.0d7743d8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 14, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; When I stepped back to view today's image from a distance, I was 
+; immediately reminded of an undersea scene, where a squid or 
+; octopus has been threatened and has released a cloud of black 
+; ink to conceal its escape.  Since I saw no actual squid in the 
+; image, I named it "The Unseen Squid".  (I doubt that a Mandel-
+; brot 'molecule' could pass for a squid.)
+; 
+; All in all, it's a very traditional fractal, created with the 
+; MandelbrotMix2 formula and rendered with the outside set to 
+; 'iter' and the inside set to zero.  The image has the appearance 
+; of being very close to the escape radius, but this appearance is 
+; the actual nature of the fractal at this particular point.  
+; Increasing the bailout by entering a large number as the 
+; imag(p3) parameter has very little effect on the image.  A large 
+; bailout radius will not evaporate the image because its formula 
+; contains a positive power of Z.
+; 
+; When rating the image, I studied it for several minutes, trying 
+; to find a reason to rate it at a 6.  I found nothing in it worth 
+; more than a rating of a very-average 5.  Combined with a render 
+; time of 11-1/2 minutes, this gives an overall value of 43.
+; 
+; This value can be raised considerably by letting Paul render the 
+; image and downloading the finished product from his web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The temperature reached 48F 9C here at Fractal Central Tuesday 
+; afternoon, though the clouds, which came and went, kept 
+; conditions from being ideal.  The fractal cats had as good a day 
+; as possible in the yard, considering the less-than-ideal 
+; weather.  This morning is much colder, and a snowfall is moving 
+; in.  The cats' moods will suffer, I fear.
+; 
+; My day will be adequate once I finish the waiting work.  And an 
+; adequate day is about the most one can ask for.  Tomorrow, I 
+; will return with another fractal of a quality yet to be deter-
+; mined.  Until then, take care, and have faith in fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_Unseen_Squid { ; time=0:11:34.70--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=+1.68407403939392000/+12.56396673625027\
+  000/48065.35/1/49.9999999999923546/-6.064168889263\
+  75464e-010 params=-0.3/-1.5/1/1.5/0/0/0/0 float=y
+  maxiter=1500 inside=0 logmap=181 periodicity=10
+  colors=000HZ_F_ZE`YCaXBaWGbXKcXOdXTdXXeY`fYegYigYm\
+  hZriZvjZzjZngVcdRTaNIZJ7WFAXECXDEYDGYCIYCKZBMZAO_A\
+  Q_9S_9OXELVIITMFRRCPV9NZqxunurksoiqlfnjdlgajd_hbbe\
+  debeh_fjXgmUhpRirOjrTiqXiWimUfjScgR`ePYbNV_LSYKPVI\
+  MSGJQEGNDDKBAI97F74C61A55D49G4CI4HN4LR4PW4T_4Xd4`h\
+  4dm4hq4lv4pz7Xo9DdLANX86Z88_8A`8Ba8Dc8Ed8Ge8Hf8Jh8\
+  Ki8Mj8Nk8Pl8QmARmCSnDSnFToHUoIUpKVpMWpNWmMTkLQiKNf\
+  JKdIIbHF_GCYF9WE6UD4TF7TGATHCTIFSKISLKSMNSNPRPSRQV\
+  RRXRS_QUbQVdQWgQXiTZkV_lXamZbn`cobepdfqfgriiskjtml\
+  uomvqnwspxuqywrznpyeoxYnwPlvGku8jtAisBisCisDisEisF\
+  isGirHirIirJirKirLirMirNdpO`oPWmPSlQOkRJiRFhSAfT6e\
+  T2dNNjIfpDzuCvrCrpCnnCjlBfjBbhBZfBVdARbAN`AJZAFXAB\
+  VNLWZVXjdYvnYtm`rlcpkenjhlijjhmhgoffreftggshhriirk\
+  iqljqmkpnkpploqmnrnntnmuomvplwplpkejgZdcTZ_MTWGVXH\
+  XYHYZH__Ia`IcaJebJfcJhdKjeKlfLngLybbwc_vdXteVseSqf\
+  QpgNTUhRVgPVeOWdMXcKYbJZa }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

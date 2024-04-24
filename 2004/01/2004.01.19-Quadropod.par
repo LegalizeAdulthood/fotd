@@ -1,0 +1,105 @@
+;     Date: Mon, 19 Jan 2004 10:19:52 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-01-04 (Quadropod [8])
+;       Id: <1.5.4.16.20040119102206.2a77d9b6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 19, 2004 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is the second one I have found with the newly 
+; released Fractint version 20.3.  Other than a few minor 
+; glitches in the evolver and view-window, which have been 
+; corrected, I have noticed no difference in the program 
+; performance.  Of course, some of the changes involve features 
+; I rarely use.
+; 
+; In yesterday's FOTD we examined stem area of the Z^(2.003)+C 
+; Mandeloid as it appears 1040 levels up the logarithmic hyper-
+; spiral.  Today we turn our attention to the west, and examine 
+; the 'East Valley' area of the Mandeloid.  Unlike the main stem, 
+; which simply breaks into infinite bits and pieces, the East 
+; Valley area smears out into a broad flat wedge with jagged 
+; edges.  Today's image is located in a narrow band of chaos on 
+; the southern edge of the wedge.
+; 
+; I named the image "Quadropod".  It reminds me of some fantastic 
+; animal with four translucent arms.  Perhaps I should have named 
+; it 'Study', since I spent so much time studying the background 
+; colors and trying to create a smoothly blended gradient with no 
+; visible bands, a challenging task in GIF format with its meager 
+; 256 colors.
+; 
+; Though the result is not perfect, I feel I came close enough to 
+; the goal of perfect smoothness to rate the image at an honest 8, 
+; which, combined with the render time of just under 11 minutes, 
+; gives an overall value of 73.  (To find the overall value, the 
+; image rating is multiplied by 100 and the result divided by the 
+; render time in minutes, making the render time like the money 
+; one must pay to buy an item.  The shorter the render time, the 
+; more value for the money spent.)
+; 
+; As always, the render time may be eliminated entirely by down-
+; loading the finished image from Paul's web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The cold rain continued most all day Sunday here at Fractal 
+; Central, changing to a few snowflakes just before ending around 
+; sunset.  The high temperature never made it above 36F 2C, which 
+; is far too chilly for the cats' fractal ears.  The duo spent the 
+; day sleeping by the heat.  Today is starting sunny, but it is 
+; very cold again.  We'll see how the cats make out.
+; 
+; My day looks as though it will be notably average.  Hopefully, 
+; the fractal I find this evening will be notably above average.  
+; Until the next FOTD appears, take care and be forever fractalish.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Quadropod { ; time=0:10:57.62--SF5 on a p200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.25242073906725380/-0.005654551455851\
+  47/2.66834e+010/1/145/-0.00262791307117529738
+  params=2.003/0/1040/0 float=y maxiter=2700
+  inside=0 logmap=309 periodicity=10
+  colors=000vwmuwmtwmswnrwnqwnpwnowonwomwolwpkwpjwpi\
+  wphwqgwqfwqewqdwrcwrbwr`ws_wrZwsYwsXwtWwtVwtUwtVws\
+  VwsWwrWwrXwqXwqYwqYwpZwpZwp_wp_wp`wp`wpbwpcwpdwpew\
+  pgwphwpiwpjwplwpmwonwnowmpwllhQiePfbPc_OaWOZTNWQNT\
+  NLSKLRGKQDKPAJO7IN4HM7IL9JKBKMELOGMQIMSLNUNOUPPUSQ\
+  UURWWRZXSaYTe_UhaVkcWmeWlgXlhYlgYlgZlgZlf_lf_le`le\
+  `lealdaldckcdkcfkcgkbikbjkalkamkaok`pk`rk_qk_qk_pj\
+  `mj`lj`kj`jjaijahjagjafjbejbdjbcjbbjcajc`jc_jcZjdY\
+  jdXjdWjdVjeUjeTjeSjeQjeOlcMmbKm`ImZGmYEmOKhPTcQVZR\
+  XUSVPTUKUUKUUPUTTVTXZTaaSeeSiiSnlRrpRvtRzwRxuQvtPt\
+  rOrqNpoNonMmmLkkKijKghJfgIdfHbdG`cGZaFX`EW_DUYDSXC\
+  QVBOUANTAPSCRSESSGUSIVSKXSLYRN_RP`RRbRTcRVeRWgQYhQ\
+  _jQakQcmQenQfpShqUjsWltYnv_pwaqrcomemigkdii`kgWmeS\
+  ocNqaJs_EuYAwW9xV9yV9zV9zU9zU9zU9zU8zT8zT8zT8zT8zS\
+  8zS8zS8zSAzRCzPEzNGzLIzNUzPezRdzTdzVdzXdzZdz`dzbcz\
+  dczfczhczjczlcznczpczpczp }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

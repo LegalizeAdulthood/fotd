@@ -1,0 +1,111 @@
+;     Date: Mon, 26 Jan 2004 10:56:47 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-01-04 (Spiral Mesa [8])
+;       Id: <1.5.4.16.20040126105907.38ffad8c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 26, 2004 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In the discussion of the "Whirling Devilish" fractal of two days 
+; ago I remarked about the straight edge cutting through the upper 
+; right portion of the image.  I commented that some very unusual 
+; chaos lies in this area but that the exploration there is too 
+; slow to be practical.  Well, for today's image I have turned 
+; impractical and wandered into the chaos along the straight-edge. 
+; Today's FOTD is what I found there.
+; 
+; I have rarely seen an image with such contrasting parts, the 
+; dull reddish rocky lower part contrasting as starkly as it does 
+; with the ethereal blue celestial spiral filling the upper part.  
+; The lower part of the picture reminds me of one of those mesas 
+; found in the southwest desert area of the U.S.  The upper part 
+; reminds me of nothing other than a fractal spiral.  Combining 
+; the two impressions, I named the image "Spiral Mesa".  I feel 
+; that the rating of an 8 is justified, though the extreme slow-
+; ness holds the overall value to a lowly 4.
+; 
+; Perhaps the most incredible thing about the image is that it is 
+; produced by Z^1.003.  The graph of this expression is basically 
+; a straight line, and linear expressions do not make fractals.  
+; It is only at very large values of Z that the slight curve in 
+; the graph becomes noticeable, which is why a maxiter of 20000 is 
+; necessary to reveal the chaos.
+; 
+; An unfortunate effect of the high maxiter is the 3-hour render 
+; time.  The wait can be eliminated however by downloading the 
+; completed GIF image from Paul's web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; I sent the image file to Paul several hours ago, so the image 
+; should be posted shortly after he receives this discussion.  As 
+; a matter of interest, I made a 0.65-degree change in the 
+; rotation of the image since I sent it.  This was done so that 
+; the border between sky and mesa would be level.  To see a 
+; perfectly straight horizon, run the parameter file; to see the 
+; image without a wait of several hours, download it.  The only 
+; difference is in the orientation, which is barely noticeable.
+; 
+; Thickening clouds and cold temperatures prevailed all day here 
+; at Fractal Central on Sunday.  The high temperature of 18F -8C 
+; and lack of sun kept all thoughts of outdoors from the minds of 
+; the fractal cats.  They were quite content to lie by the heat 
+; source and occasionally ask for food.  This morning we have 6in 
+; 15cm of fresh snow on the ground and a temperature of 17F -8C, 
+; which makes the outdoor conditions worse.  The forecast is for 
+; freezing rain, sleet and more snow.  I feel sorry for the duo.
+; 
+; There is no reason to feel sorry for myself however.  The work 
+; is caught up, leaving me little to do but sweep the powdery snow 
+; and explore the world of fractals.  Until next time, take care, 
+; and don't forget to remember.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Spiral_Mesa { ; time=3:08:09.19--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.84105158773950410/-0.082216007167982\
+  33/10307.65/1/-176.85/6.14521628028441569e-012
+  params=1.003/0/1040/1500 float=y maxiter=20000
+  inside=255 logmap=4824 periodicity=10
+  colors=000_00ODNQCMPBLT9JU8IV7HX5GY4FX2FZ3EZ4D_4D_\
+  5C`6BW6BY7AZ8A_89a98bA8dA7eB7bC6hC5eD5kE4hF3lE4gR5\
+  lE6gT7kE8aD9kDAfDBkDCjQDjDEeOFjCG_CHiCIiRJiCKdULhU\
+  McBNhBOcBPhBQbCPgDPgPPgPOgQOgUObUOgUNbUNgUNgYNgUMg\
+  NMgNMYOMgPLgQLgRLYSLgTKgTKgUKgVKgWJhXJiYJg0EkYJa1N\
+  qYSdJWvY`wUexYddIcxdbyAayk`yo_yrZrnUkkQdhMYeIRbEK_\
+  ALZCMYEMYFNXHNWIOWKOVLPVNPUPQTQQTSRSTRSVSRWTQYTQ_U\
+  P`UPbVOcVNeWNfWMhXMjXLkYKmYKnZJpZJq`KpaLpbMpdNoeOo\
+  fPohQoiRnjRnlSnmTmnUmpVmqWmrXltYluZlvZltYmrYmqXmoX\
+  mmXmlWmjWmhWmgVmeVmdUmbUm`Um_TmYTmWTnVSnTSnRSnQRnO\
+  RnNQnLQnJQnIPnGPnEPnDOnBOnAOnEQpIRqJQtLSuMTvNVwOWx\
+  PXyRZzS_zTazUbzVczXezYgzZiz_kz`mzbozcpzdqzerzfszht\
+  ziuzjvzkwzlwzkwzjvziuzhtzgszfrzeqzdpzcozbnzamz`lz`\
+  kz_jzZizYgzXezWczVazU_zTYzSWzRUzQUzPUzQUzRUzSUzTUz\
+  UUzVUzWUzTUzQUzNVzLWzI_zFdzDhzAlz7pz5tzCuzIvzOwzVw\
+  z`xzfyznzzlyzjxzhwzfvzemz }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

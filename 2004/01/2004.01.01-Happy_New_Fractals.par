@@ -1,0 +1,87 @@
+;     Date: Thu, 01 Jan 2004 16:56:31 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-01-04 (Happy New Fractalss [9])
+;       Id: <1.5.4.16.20040101165831.39276dd6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 01, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to an unplanned busy night, today's discussion is not only 
+; late, it is very short and to the point.
+; 
+; I named the fractal "Happy New Fractals" because it is the first 
+; in a year-long series of hopefully superior images.  The 
+; generating formula combines portions of Z^(-5.1) and Z^(-1.5), 
+; and adds (1/C).  The resulting fractal consists of the usual 
+; indescribable Mandeloid, with a separate area of chaos lying 
+; just southwest of the main fractal unit.  Today's scene lies in 
+; this separate area of chaos.
+; 
+; Most of the effect was achieved by rendering the image with the 
+; outside set to 'tdis' and the inside set to 'fmod'.  The rating 
+; of an above-average 7 makes the 3-minute render time worth the 
+; effort.
+; 
+; The image can also be seen by downloading it from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The last day of the year passed uneventfully here at Fractal 
+; Central.  With lots of sun and a temperature of 54F 12C, the day 
+; was pleasant enough for the cats to enjoy almost two hours in 
+; the wild outdoors of the yard.  When midnight came and people 
+; began setting off fireworks, they cats took shelter in their 
+; closet in the spare room, where they were still sleeping when 
+; the night ended.  Today is the first day of another year, and it 
+; is starting the same as yesterday.  I expect the cats will be 
+; acceptably happy.
+; 
+; I will be unable to comment on my happiness until 8784 hours 
+; have passed.  So check back then to see how the year goes.  
+; Luckily, the next FOTD will appear far before then.  It will 
+; appear in 18 hours in fact.  Until then, take care and happy 
+; recovery.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Happy_New_Fractals { ; time=0:03:25.14--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=-2.466097773964582/-1.765694766786944/4\
+  37507.9/1/22.5/-4.23133679e-007 float=y params=1.5\
+  /-5.1/5.1/-1.5/0/0/0/0 maxiter=1000 inside=fmod
+  proximity=0.7 outside=tdis periodicity=10
+  colors=000U73V84W94XA5ZC5_D6`E6aF7cH7dI8eJ8fK9gLAi\
+  NAjOBkPBlQCnSCoTDpUDqVErWEi`KadQUiWLmaDrg5vm7sm8qm\
+  9omBlmCjmDhmFemGcmHamJ_mKXmLVmNTmOQmPOmRMmSKmTHmVF\
+  mWDmXAmZ8m_6m`4ma6ka7ia9gaAebBcbDabE_bFYbHWcIUcKSc\
+  LQcMOcOMdPKdQIdSGdTEdVCeWAeX8eZ6e_4e`3eWEeSOeNZeJh\
+  fLggMfgNehOeiPdiQcjRcjTbkUalV`lW`mX_nYZi00o`YoaXpb\
+  WqcWqdVreUT00V88XFEZ17`26a26b36c35d35e45f44g44h54i\
+  54i53l63m63n62o72p72q71r81s81t81uB3uD4uF5uI7uK8uM9\
+  uPBuRCuTDuVEuYGu_HuaIudKufLuhMujNumPuoQuqRutTuvUux\
+  VuzWgyVVyVIxV5xV6tV6pV7lV7hV7dV8aV8YV8UV9QV9MV9JVC\
+  IUEITGISIISNTNSbIXlDav8`qD`mI`iN`eS`aW`Y``Ue`Qj`Mn\
+  XDwTKoQRhNY`KdUHkMEqFMjLTdR_ZXfTbmNg_`mMms9zy8vt7s\
+  p6pl5lh4id3f`2dY8c_EbaKacP`eV_h`ZjfYlkXnhXofXogWlh\
+  VjiUgjTekSbkR`lNXmKUmHRnDNnAKo7Ho4En9ImEMlIQlNTkRX\
+  jW`j_c4ci3RV1DFfjufiufhuePXe68c5Ab5Ca5E`5G_5IZ5KY5\
+  MX5O`GYdRfhao0bl7_mEYmLVm }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

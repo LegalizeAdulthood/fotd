@@ -1,0 +1,103 @@
+;     Date: Tue, 13 Jan 2004 12:11:25 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-01-04 (Hope Springs Eternal [4])
+;       Id: <1.5.4.16.20040113121336.0d971178@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 13, 2004 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As they say, hope springs eternal.  And that is what happened 
+; to me yesterday as I was deciding which part of Fractal Land 
+; to explore.  Moved by eternal hope, I finally decided on a 
+; different part of the same fractal that held the 'half-
+; elephant' image which appeared on January 11.
+; 
+; I constantly hope to find a truly outstanding midget in the 
+; Mandeloids with exponents between 1 and 2; I never have found 
+; one.  But hope springs eternal, and I keep trying, apparently 
+; unable to learn from the years of coming up short.
+; 
+; Today's image shows a very typical midget in the Z^(1.5)+C 
+; Mandeloid.  As is true with almost all other midgets in this 
+; range, the area is far too broken and chaotic to make an 
+; impressive image.  Maybe the truly great scenes are there, 
+; hiding somewhere in some remote corner of the parent fractal, 
+; but somehow I doubt it.
+; 
+; But, being a hopeful fellow, I will continue searching for 
+; something that I know might not exist.  Any unusual scenes I 
+; come upon in my search will appear as a FOTD.  Most scenes will 
+; vanish into the limbo reserved for deleted fractal images.
+; 
+; In all honesty, I could rate today's image no higher than a 4, 
+; which, combined with the render time of just under 12 minutes, 
+; gives an overall value of 33.  There are two ways to see the 
+; image: first, by running the included parameter file; second, by 
+; downloading the completed GIF image from Paul's FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The dynamic duo of fractal cats had one of their best days in 
+; quite a while here at Fractal Central on Monday.  When the 
+; temperature reached 46F 8C shortly after noon, they paraded to 
+; the door and asked in unison to go out.  They looked almost like 
+; kittens as they romped in the dead grass and played hide-and-go-
+; seek in the holly thicket.  When evening came they were ready to 
+; come indoors to eat and sleep.  Today looks like a repeat, but 
+; another cold wave is on the way, and due to arrive toward eve-
+; ning.  Hopefully, the duo will finish romping before the cold 
+; air arrives.
+; 
+; And also hopefully, my work will be finished before the duo ends 
+; their romp.  Until next time, take care, and when, if ever, will 
+; the new anti-spam law start working?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+HopeSpringsEternal { ; time=0:11:57.49--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.81193569327624530/+0.514042346538518\
+  10/4.870091e+007/1/25/1.19288052269350686e-007 
+  params=1.5/0/1.5/0 float=y maxiter=1800
+  inside=0 logmap=326 periodicity=10
+  colors=000g70m60a70e90`90ZA0fC1fC3dD4cD6aF7`G9_GAX\
+  ICVJDTJFSLFQLGPMIMOJLOLJPMIQOGQPFSQCSS9TT4VV0VX0XY\
+  0XY0VX0TV0TT0SS0SQ0QP0QO1PM3PL4OJ6OI7MG7MG9LFAJDCJ\
+  CDIAFI9GG7IG6JF4LF3MD1OD0PC0PC0SA6VADYAL`AQcAYf9di\
+  9ll9ro9yr9zu9zsDzsGzrJzrMzpPzpTzpXzo_zoazmdzmizllz\
+  lozlrzjuzjyzizzizzgzzgzzgzzczz`zzYzzTzvQzrOzmLziGy\
+  dDx`AvX7sS3rO0pJ0oF0mC0oD0oD0oD0oD0oD0oD0oD1oD1oD3\
+  pD3pD4pD4pD6pD6pD7pD7pD9pD9pDArDArDCrDCrDDrDDrDFrD\
+  FrDGrDGrDIoFImFJlFJjGLiGLgGMfIMdIOcIOaIO_JPYJPXJQV\
+  LQTLSSLSQMTPMTOMTMMYDX`4fc0pa1ma7j`Dg`Jd_Pa_V_Y_XY\
+  dTXjQXpOVvLVzITzFTzC`zAgzAmz9uz9zz9yzAyzAyzAyxCyvC\
+  ysCyrCyoDymDyjDyiFyfFydFyaFy`GyYGyXGyTGySIyPIyOIyL\
+  JyJJyGJyFJyCLyALy7Ly6Lv7Ms7Op9Om9PjAQiAQfCScCT`DTY\
+  DVVFXTFXQGYOG_LI_II`FJaDJagScz`dzafzafzagzagzaizci\
+  zdjzfjzglzilzjmzlmzmozoozppzrpzsryuryvsxxsxyuvzuvz\
+  vuzvuzxszxszyrzyrzzpzzpzz }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

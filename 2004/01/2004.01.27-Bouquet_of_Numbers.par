@@ -1,0 +1,89 @@
+;     Date: Tue, 27 Jan 2004 10:33:24 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-01-04 (Bouquet of Numbers [8])
+;       Id: <1.5.4.16.20040127103545.2b1f0152@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 27, 2004 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; After yesterday's exciting adventure in the world of Z^1.003, I 
+; decided to subtract Z^(1.003) from Z^(-1.003) and explore the 
+; fractal world created by this combination.  Before starting, I 
+; had to decide on the escape radius, which has a significant 
+; effect on fractals in this range.  I chose the escape radius of 
+; 250 entirely at random.  Apparently, I chose well.  The image I 
+; found rates an 8 and has an overall value of 43.
+; 
+; The resulting parent fractal is an almost-symmetrical Mandeloid 
+; rotated 90 degrees.  Perhaps I should describe the parent as 
+; part of a Mandeloid, for the northern area of the Mandeloid is 
+; obliterated by the blue disk that usually appears at the origin 
+; of fractals with negative exponents of Z, and is likely an 
+; artifact.  It's no problem however, because today's scene is 
+; located in the East Valley area, which lies on the south side of 
+; the Mandeloid.
+; 
+; Much of the flowery effect resulted from rendering the scene 
+; with the outside set to 'summ' rather than the usual 'iter'.  
+; The name "Bouquet of Numbers" came to me as I sat in wonder that 
+; all this came from such a simple beginning.  The render time of 
+; 18 minutes is bearable, but a far better way of viewing the 
+; image is to download it from Paul's FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With the yard buried 20cm deep in snow and ice, and the tempera-
+; ture lurking around 19F -7C, the fractal cats passed an unevent-
+; ful day Monday curled by the nearest source of heat.  Today is 
+; starting with freezing drizzle, so I predict another uneventful 
+; day for the cats.
+; 
+; For me, the work is pretty much caught up.  Combined with the 
+; abysmal outside conditions, this should give me plenty time to 
+; ensconce myself indoors and find another good fractal.  If I do, 
+; the fractal will appear as tomorrow's FOTD.  Until then, take 
+; care, and beware of extrasensory fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Bouquet_of_Numbers { ; time=0:18:46.52--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=+0.00045100966909858/-0.356152672378903\
+  30/6.50686e+009/1/90/3.88578058618804789e-016
+  params=-1/1.003/1/-1.003/0/150/0/0 float=y
+  maxiter=3000 inside=0 outside=summ periodicity=10
+  colors=000fbZfb_fc_fc`fd`fe`feaffaffbfgbfgcfhcficf\
+  idfjdfjefkefkedhfcffbdgabg`_h_YhZWhYUiXRiWPjVNjULj\
+  TIkSGkRElQClR8kPAlOBlNDmMEmLFnJHnIIoHJoGLpFMpDNpCP\
+  qBQqARr9Tr7Us6Vs5Xt4Yt0_z2Zw3Zt4Zq5Zn6Zk8Zh9ZeAZbB\
+  Y`UYYUYVXZSX_P_`M`aJcbGccEhbGh`Ic_KcZMZYNZXPXVRXVT\
+  UTVUUFUUOUSWSIdQBo39l48i47f55c64`52Y63Z74_85`96`A7\
+  aA8bB9bCAcDAdEBdECeFDfGEfHFgIGhIHiJIiKIjLJkMKlMLnN\
+  MpONqPOsQPuSQxRPvQPtPPsOOqNOpMOnMNlLNlKNkJMkIMjHMj\
+  HLiGLhFLhEKgDKgCKfDHdCKfBNgAQh9Ti9Wk8Zl7am6dn3gq6f\
+  o8fnBemDelGekIdiLdhNdgQcfSceUcdXbbZbaaa`ca_faZh`Xk\
+  `Wm`Vp_Ur_Tt_SvaRxbRzfR000000000000HDHHJEHSBH_8Hf5\
+  Hn2Ld6PZ9TWDXWG`TKdQNhORlLUpIYsG`tIatKatLatNbtObtQ\
+  btRctTctUctWduXduZdu_euaeubeudfuefugfuhgujgukgvhev\
+  fdvdcwbbw_awY_xWZxUYxRXyPWyNUyLTzISzGRzEQzCPyERyGS\
+  yHTxJUxLWxMXxOYwQZwR`wTawUbvWcvYdvZfu`gubhuciuektg\
+  luinukovmqtmqsmqrnrqnrmhe }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

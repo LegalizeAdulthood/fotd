@@ -1,0 +1,90 @@
+;     Date: Wed, 21 Jan 2004 12:17:28 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-01-04 (What the . . . [5])
+;       Id: <1.5.4.16.20040121121944.0d6f6682@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 21, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's FOTD I tried the trick of the past two days on 
+; the quartic Mandeloid.  This trick worked quite well on the 
+; quadratic and cubic Mandeloids, leading to some very inter-
+; esting images, but it produced only near-total chaos when I 
+; applied it to the quartic Mandeloid.
+; 
+; A quick glance at today's image shows a scene that has no 
+; business being in a fractal with a formula of Z^(4.003)+C.  The 
+; image is totally disorganized.  Where is the 4,16,64... symmetry 
+; that should be there?  What are all the discontinuities doing in 
+; the picture?  Forget about unimportant things like the meaning 
+; of existence; these fractal mysteries are the questions that 
+; need to be answered.
+; 
+; When I saw the image, I thought, "What the...", and the name 
+; stuck.  Unfortunately, we will have no third consecutive 8-rated 
+; FOTD.  Today's image rates only a 5, which gives an overall 
+; value of 53 when combined with the render time of 9-1/2 minutes.
+; 
+; The value may be increased by downloading the finished GIF image 
+; from Paul's web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another very cold day Tuesday here at Fractal Central kept the 
+; cats safely ensconced indoors.  The high temperature reached 
+; only 28F -2C, which was far too cold for their sensitive ears.  
+; But they had a pleasant day anyway, resting by the heat.  Today 
+; is another repeat.  Somehow the cats will survive.
+; 
+; The work for me is rather heavy today, so I had best get back 
+; on it.  Until next time and next FOTD, take care, and don't get 
+; spammed -- it's no treet. 
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+What_the---- { ; time=0:09:30.07--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.47577616215156650/-0.003703526351880\
+  48/2.714026e+007 params=4.003/0/1040/0 float=y
+  maxiter=1800 inside=0 logmap=163 periodicity=10
+  colors=222Q22T22V22X24Y26_27a29c2Bf2Bd2Dg2Ef2Gh2Ih\
+  2Je2Lh2Nh2Pk2Pl2Po2Pq2Ps2Pu2Pv2Px7PxEPxLPxVLxaGxhB\
+  xo6xx2xx2xx2xx2xx2xx2xx2xx2xx2xu2xs2xo2xn2xj2xh2xd\
+  2xc2xa4xY7xX9xTDxQExNIxLJxINxGPxEQxN_xXhxdoxnxxxxx\
+  sxxoxxlxxhxxdxxaxxYxxVxxQxxNxxJxxGuxDux9sx6sx2rx2r\
+  x4sx9urExlJxfPxaVwX_wQcwLfwGfwBcw7Xw7PwBGwG9wJ2wP2\
+  wT2wY2wa2w_2w_2w_2w_2w_2wY4wY9wYEwYJwYNwcJwfGwjDwn\
+  9wr7wu4wx2wx2wx2wx2wx2wx2wx2wx2wx2wx9wxIwrQwj_wdhw\
+  _jwXlwTjwPhwLdwJcwG_wDYw9Vw6Tw4Pw2Lx2Jx2Gx2Ex2Bx29\
+  x26x24x22x22x22x24x26w27w29w2Bw2Dw2Gw2Iw2Jw2Lw6Nw9\
+  PwBQwEVwGXwJYwL_wPawQcwVdwXfwQfwVfwXfwYfw_fwafwcfw\
+  dfwffwhfwjfvlfunftofsrfrsfqufpxfoxfoxfrxfuxfxxfxxf\
+  xxfxxfxxfxxfxxfxxfxxfxxfxxfxxfxxgxxgxxhxxhxxixxixx\
+  jxxjxxkxxkxxlxxlxxmxxmxxmxxmxxmxxmxxmxxmxxmxxmxxmx\
+  xmxxmxxmxxmxxmxxmxxmxxmxxmxxmxxmxxmxxmxxmxxmxxmxxm\
+  xxmxxmxxmxxmxxmxxmxxmxxmx }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,87 @@
+;     Date: Thu, 08 Jan 2004 10:08:30 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-01-04 (A Little Bit More [4])
+;       Id: <1.5.4.16.20040108101037.29bf946a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 08, 2004 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today, I promised a better fractal from the same formula 
+; that created yesterday's image.  Well, a fractal that rates a 4 
+; is better than one that rates a 2, but I had hoped for something 
+; a little more better.  Maybe the parent fractal really is nearly 
+; worthless, or maybe I simply failed to search far enough.
+; 
+; For today's rendering, the outside has been set to 'fmod', with 
+; a proximity value of 2.  This is somewhat of a program feature, 
+; rather than a pure illustration of what exists in the formula 
+; graph at that location.  The fact that I needed to resort to it 
+; is a sign that the basic fractal is not all that impressive.
+; 
+; I named today's image "A Little Bit More" because it is a little 
+; bit better than yesterday's.  Another good feature is the render 
+; time, which is only 5 minutes -- marginally worth the effort.
+; 
+; Hopefully, tomorrow will bring a better image.  I should hope 
+; for an image that rates at least a 6, my run-of-the-mill rating.
+; 
+; The completed GIF image of today's fractal may be downloaded 
+; from Paul's web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The cold kept the cats indoors here at Fractal Central on 
+; Wednesday.  Not appreciating the outdoor temperature in the mid 
+; 20'sF, (around -4C), the cats barely thought of going out.  They 
+; passed the day instead by catching up on their sleep.  Today is 
+; starting about the same.  I expect the duo will have a similar 
+; day.
+; 
+; My day includes work, which I had best get started on.  Until 
+; next FOTD, take care, and have you tried the fractal weight-loss 
+; program?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Little_Bit_More { ; time=0:05:23.84--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=+0.38849806591214900/+3.327863228966088\
+  00/3866.667/1/-122.5/-5.61300450563351205e-011
+  params=1.2/-2.1/-2.1/-1.2/0/50/0/0 float=y
+  maxiter=1200 inside=0 proximity=2
+  outside=fmod logmap=yes periodicity=10
+  colors=000wTjuRgsPeqNcmM`iMYfMVbMSZLPWKMSJJOIGLMEO\
+  QDQUCSXCV`BXdBZgAak9co9er8hv8jz7lz7pz8sz9vzAyzBzzC\
+  zzDzzHuwLpsPkoTflXah`XddS`hNXlJUpZSenRWzQMzTNxWOuZ\
+  PraQodRlgSeiWcfY`c_Z`aWYcTVeRSgOPiMMkONZQOMPPNPPNP\
+  QOPQOORPORPOSQOSQZXQh`QsdQzhQziPzjOxjNwkMukLtlKrlJ\
+  qmIonHnnGloFkoEipDhpCioDjnEkmFllFmkGnjHoiIpiIqhJrg\
+  KsfLteLudMvcNvcNudOuePufQugRtgRthStiTtjUtkVskVslWs\
+  mXsnYsnYtjZtfZtbZtZZuV_uR_uN_uJ_wLaxMbzNczOezPfzQg\
+  qMeeJdUFcICbMD`PD_SEYWEXZFWaFUeGThGRkHQoHPrINuIMyJ\
+  KzJJzJIpTPbbWOlbAuiVobniWzdQz`TtXWmTZfPa_LdTHfYGdb\
+  GcgGalG`qF_vFYzFXzFWzHVyIVvJUtKUqLTnMTkNSiOSfPRcQR\
+  `RQZSQYURXVSXWTWXUVYVVZWU_XT`YTaZSb_Rc`RdaQebPfcPg\
+  dUzGWzIXzKYzMZzN`zPaxRbwScuUdsWfrYgpZho`imbjlckndk\
+  odlpelqelrfmsfmugnvgnwhnxhoyioziozisxhvugzrfzoezle\
+  xhbpd_haX`YUUVRaTGhR6th7zy8xs7pm7hg7`a6TW6LR6RSCXT\
+  IaUOgVUmW_rXexYkzZqzXnyVl }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

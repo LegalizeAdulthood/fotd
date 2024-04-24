@@ -1,0 +1,104 @@
+;     Date: Sat, 24 Jan 2004 09:27:58 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-01-04 (Whirling Devilish [6])
+;       Id: <1.5.4.16.20040124093016.38ff4cd8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 24, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In the most recent FOTD, the Z^1.003+C fractal that appeared two 
+; days ago, I mentioned that the large Mandeloid filling the frame 
+; has a tiny area of chaos on its northeast shore, but that the 
+; iteration count in this chaotic area is too high for exploring 
+; to be practical.  For today's FOTD, I accomplished the impracti-
+; cal.  The image I found takes over 4 hours to render.
+; 
+; Today's image is a scene in this narrow area of chaos, which 
+; appears to consist entirely of discontinuities.  The unbroken 
+; features themselves, if such things exist, consist only of 
+; equal-iteration bands with smoothly curving boundaries.  It 
+; is the way these boundaries are broken up that makes the image.
+; 
+; The image shows a series of incomplete spirals with exaggerated 
+; colors -- the kind of thing that might be expected.  But behind 
+; the spirals lies an 'inside' area with a perfectly straight 
+; edge, and this edge cuts uninterrupted across all the disconti-
+; nuities that would normally be expected to disrupt it.  A few 
+; thumbnail excursions into the detail along this straight edge 
+; have shown that the chaos there is totally unorganized, with 
+; areas having totally differing characteristics lying side-by-
+; side.  (I might explore this area in the near future.) 
+; 
+; I named the today's image "Whirling Devilish", a play on words 
+; that takes note of its prominent spirals.  The over-exaggerated 
+; color palette permits a rating of no higher than a 6, which, 
+; combined with the 244-minute render time, gives an overall value 
+; of a pathetic 2.4.  Wise fractalists will find a far better 
+; value by downloading the finished image from Paul's web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; I e-mailed the image to Paul several hours ago, so there should 
+; be no unusual wait for it to be rendered and posted.
+; 
+; Friday was far too cold here at Fractal Central for dignified 
+; cats to be outdoors.  The temperature never rose beyond 19F -7C, 
+; and the wind blew at a brisk pace all afternoon.  The dynamic 
+; duo satisfied themselves curled by the radiator, catching up on 
+; sleep.  This morning the ground is covered with about 3cm of 
+; powdery snow, and it is as cold as yesterday.  It's no mystery 
+; how the cats will pass the day.
+; 
+; I hope to pass the day uneventfully.  I'll start by sweeping the 
+; sidewalk, and then . . . .  Until next time, take care, and who 
+; knows what fractals lurk in the world of numbers?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Whirling_Devilish { ; time=4:04:39.54--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.84148491609888050/-0.080629287046106\
+  61/527.1442/1/117.5/-5.21221954485895367e-013
+  params=1.003/0/1040/1500 float=y maxiter=60000
+  inside=0 logmap=-4386 periodicity=10
+  colors=000L0HL0IM0IM0JN0JN0KO0KO0LP0LP0MQ0MQ0NR0NR\
+  0OS0OS0PT0PT0QU0QU0RV1RV2SW3SW4TW5TW6UW7UW6UV6SU6R\
+  T6PR6OQ6MP6LO6JM6HL6GK6EJ6DH6BG6AF68A48E67I87M97QB\
+  7UD6YE6cG6iI6mJ6qJ5nJ5kJ4iJ4gJ3dJ3aJ2ZJ2WJ1VJ1XO3Z\
+  S4`W5c_6ec7hg8jk9moAqtAosBmsCkrDirDgqEeqFcpFapG_pH\
+  YqIWqIUrJSrKPtLRtKSuKTvKUuKWtJXsJYrJZqJ_pJaoIbnIcm\
+  IdmIfmHgmHhmHimHjmHlmGmmGnmGomGqmFrmFsmFtmFumFvnHw\
+  oJxpLyqMzrOzsQztSzuTzvVzwXzxZzy_zzczzgzzlzzkzzjzzi\
+  zzhzzgzzfzzezzdzzczzbzzazz`zz_zzZzzYzzZzzXzzWzzVzz\
+  TzzSzzRzzPzzOzzNzzMzzKzzJzzIzzGzzFzzEzzDzzBzzAzz9z\
+  z7zz6zz5zz5zz4zz4zz4zz3zz3zz3zz3zz2zz2zz2zz2zz1zz1\
+  zz1zz1zz0zz0zz0zz0zz3zz6zz8zzBzzDzzGzzIzzLzzOzzQzz\
+  TzzVzzYzz_zzbzzezzgzzjzzlzzozzqzztzzwzzvzzuzzuzztz\
+  zszzszzrzzqzzqzzpzzozzozznzzmzzmzzlzzkzzkzzjzzizzi\
+  zzgzzezzdzzbzz`zz_zz`zzazzbzzbzzczzdzzdzzezzfzzfzz\
+  gzzhzznzzmzzlzzjzzizzgzzf }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
