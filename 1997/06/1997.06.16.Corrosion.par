@@ -1,0 +1,71 @@
+; June 16, 1997: Corrosion 
+;
+; corrosion
+;
+; Fractal visionaries:
+; Today's fractal is one of those that I just couldn't find a name for.
+; It looks like nothing I've seen on this world.  It vaguely resembles a
+; neural network, so at first I was going to name it "neural".  Then I
+; imagined a scene on an alien planet and decided to call the fractal
+; "alien".  In the end I decided to name it "Vicious" because it has a
+; certain nastiness about it.
+; The fractal itself combines several tricks.  First, it is drawn in the
+; YW plane, which gives parts of it a tortured, stretched-out appearance.
+; Second, it is a combination of the Z^2 and Z^-2 mandeloids, which
+; creates the many floating blobs and twisted filaments.  Third, I've
+; colored it so that it appears to be illuminated from behind by a lurid
+; light.
+; Combining positive and negative powers of Z in the same formula is one
+; of my favorite tricks.  Today's formula, for example, combines Z^2 and
+; Z^-2, which fills the Mandelbrot lake with interesting details.  But the
+; positive and negative terms cannot simply be added together as
+; (Z^2)+(Z^-2).  If they are, the terms tend to cancel out, and nothing
+; more than a few bands appear.
+; To solve this problem and keep the formula under control, I combine
+; different portions of the positive and negative terms.  In today's
+; fractal, for example, I use the formula, (0.75*(Z^2))+(0.03*(Z^-2)).
+; Iterating only 0.75 of Z^2 makes the figure somewhat larger to give more
+; inside room, while the 0.03 portion of Z^-2 is just enough to add inside
+; detail without clogging the interior.  Tomorrow, I'll post one of the
+; many striking straight Mandelbrot images I've found with this method.
+; For those who prefer their images pre-drawn, today's finished image is
+; posted to a.b.p.f. and a.f.p.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START COMBINED FILE FOR 19.6===============================
+
+Corrosion          { ; time=0:00:10.49-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=ManN-2-pro-YW passes=1 periodicity=10
+  center-mag=0.819581/0.0188454/1.328656/1/90/0
+  params=-0.5/0.5/0.75/2/0.03/-2 float=y
+  maxiter=3600 bailout=100 inside=255 logmap=3
+  colors=000D00100F00H00J00I00J00L00O00Q00T00Y00b00j\
+  F0oJ0qM0sP0vP0vP0yP0yQ0zQ0zR0zR0zR0zQ0zR0zS0zT0zU0\
+  zV0zW0zX0zY0zZ0z`0za0zb0zc0zd0ze0zf0zg0zh0zi0zj0zk\
+  0zk0zk0zl0zl0zm0zm0zn0zn0zo0zo0zp0zp0zq0zq0zr0zr0z\
+  s0zs0zs0zt0zt0zu0zu0zv0zv0zw0zw0zx0zx0zy0zy0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zzz }
+
+frm:ManN-2-pro-YW { ; Jim Muth
+z=real(p1)+flip(real(pixel)),
+g=imag(p1)+flip(imag(pixel)),
+a=real(p2), b=imag(p2), c=real(p3), d=imag(p3):
+z=(a*(z^b))+(c*(z^d))+g,
+|z| <= 16
+}
+
+; END COMBINED FILE FOR 19.6=================================
+;

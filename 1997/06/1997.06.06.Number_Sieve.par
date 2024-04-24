@@ -1,0 +1,64 @@
+; June 6, 1997: Number Sieve 
+;
+; sieve
+;
+; Fractal visionaries:
+; Last evening, I promised an IF-ELSE fractal for today, and I've found
+; one worth sharing.  My own first efforts at IF-ELSE formula writing have
+; failed to find anything of interest, so I took a formula posted a few
+; days ago by Ron Barnett, added a few variable parameters to it, and set
+; it loose.
+; It didn't let me down.  This formula has no end of great fractals in
+; it.  Today's picture is just one of a dozen or so equally striking ones
+; this formula has produced.  The coloring is in my preferred style of
+; looking toward the source of light.  I hope you enjoy it.
+; In a month or so, I'll start shopping for a new computer to replace my
+; poor old overworked 486.  Before I buy, I plan on doing a speed test, by
+; running the same test fractal on different machines.
+; I also hear various rumors I'd like to check.  I've heard it claimed
+; that the MMX technology sacrifices accuracy for speed, and that its
+; fractal performance is therefore compromised.  I've also heard that the
+; Pentium Pro, (40686), is optimized for 32-bit apps.  I'm curious to see
+; if this affects its fractal performance.  The new Pentium II processors
+; appear interesting.  I'm curious to see how they compare with the
+; Pentium Pro.
+; Well, while I'm dreaming of my new computer, I'd better send this off
+; before my mail server goes down again.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PARAMETER-FORMULA FILE FOR 19.6======================
+
+Number_Seive       { ; time=0:00:13.02-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=IfElse01 function=cotan passes=1
+  center-mag=0/0/0.1054215/1/45/0 symmetry=origin
+  params=0.7/0/1/0/0.26/0.26 float=y maxiter=724
+  inside=253 logmap=yes periodicity=10
+  colors=000F0B600JELLFJOIUOHNRKWRISTMYTKVWN_WM_ZPaZ\
+  Pa`RcaSdcTedTfeUggVhhWjiWkkXllYmmZnoZop_pl_pg_pc_o\
+  Z_oV_oQ_oM_nH_nGZoFXpDWqCVrBTsASu9Qv8Pw6Ox5My4Lz5L\
+  z5Ky6Ky7Kx8Kx8Jw9KwAIwBKvBIvCKuDHuEGtEGtFGsGFsHFsH\
+  FrIErJEqKEqKDpLDpKFpJHqIJqHLqGNqFPrERrDTrBUrAWs9Ys\
+  8_s7as6ct5et4gt9fpEflIehNddSc`XcYabUfaQj`Mo`It_EsZ\
+  JrYNpXSoWXnV`mUekTjjSniRshQwfRudStbTraTq_UpYVoWWmU\
+  WlTXkRYiPZhNZgL_eK`dIacGabEb`Cc_BdZ9dX7eWBeZFe`Jdc\
+  NdeRdhWdj_dmcdogcrkctocwlcuibrfbpbam_akX`h`VIaRGbN\
+  DcIBdE8eA6fC8fFAgHCgJEhLGiOIiQKjSMjUOkXRlZTl`VmbXm\
+  eZng`oibokdpnfpphqrjoqglqdjpahpZeoWcoU`nRZnOXmLUmI\
+  SlFQhIOdLL`OJYRHUTFQWCMZAIaCIbDHcFHdGGeIGfJFgLFhME\
+  iOEjQDkRDkTClUCmWBnXBoZAp_Aqa9rb9sd8tdBqdDmdGjdJge\
+  LceO`eRYeTUeWReYOgcUiiZkndltinynoxkowhpvfqucqt`rtY\
+  ssVsrStqQupNuoKvnHvnFuoXupnqijnbgjWcfQ_bJW_CTW5PUC\
+  QSJRQQSNXTLcUJjVzazMoTP0K }
+
+frm:IfElse01 {; adapted from R. Barnett's formula
+z=y=c=pixel, w=0:
+if(w), z=fn1(real(y))+flip(imag(y)), w=0
+else, z=(y*p1), w=w+1, endif
+z=z^p2+(p3*c), y=z,
+|z| <= 100 }
+
+; END PARAMETER-FORMULA FILE FOR 19.6========================
+;

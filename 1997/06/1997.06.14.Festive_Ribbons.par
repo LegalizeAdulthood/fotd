@@ -1,0 +1,58 @@
+; June 14, 1997: Festive Ribbons 
+;
+; ribbons
+;
+; Fractal visionaries:
+; Today's fractal is again a scene in the Z^-2 julibrot, this time part of
+; the YW slice.  It reminds me of bouquets of bows made from the ribbons
+; that wrap gifts, so I named it ribbons.
+; I can see that I've got much exploring to do in the odd slices of the
+; negative mandeloids.  There seems to be some really interesting stuff in
+; there.
+; Before I go, I must add my few words of praise to Alice Kelley for her
+; Alice in Fractaland web page.  That seashell fractal is one of the best
+; I've ever seen.  Curiously enough, a few months ago I wrote a test
+; formula virtually identical to the one that drew the seashell picture.
+; When I discarded it without giving it a fair tryout, I made a big
+; mistake.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START COMBINED FILE FOR 19.6===============================
+
+Festive_Ribbons    { ; time=0:00:58.55-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=ManN-XW-YW passes=t center-mag=-2.7813\
+  36924045611/+0.7398353640882788/7569.178/0.005067
+  params=0/0/-2/0/1/0 float=y maxiter=1000 inside=255
+  logmap=yes periodicity=10 sound=off
+  colors=000y01x02x02w03v04u05u05t06s07r08r08q09p0Ao\
+  0Bo0Bn0Cm0Dl0El0Ek0Fj0Gi0Hi0Hh0Ig0Jf0Kf0Ke0Ld0Mc0N\
+  c0Nb0Oa0P`0Q`0Q_0RZ0SY0TY0TX0UW0VW0VV0WU0XT0YT0YS0\
+  ZR0_Q0`Q0`P0aO0bN0cN0cM0dL0eK0fK0fJ0gI0hH0iH0iG0jF\
+  0kE0lE0lD0mC0nB0oB0oA0p90q80r80r70s60t50u50u40v30m\
+  20u20s10v00w00u11u22p22u33r44v59u55t66r79r88r88r99\
+  qBEpBBoBBoCFnDDmEElEElHIkGGjHHiHJiIIhJJgKKfMLfLLeM\
+  MdNOcNNcOObPPaRQ`QQ`RR_STZTTYTTYUUXWWWWWVWWVXYUYYT\
+  ZZSZZS``R``QaaPabPbbOccNddMeeMeeLffKghJggJhhIiiHkk\
+  GjjGkkFlmEmmDmnDnnCppBppAppAqr9rr8ss7ss7tt6uu5vt4v\
+  t4ww3xw2yy1zw1zz0zx0zv0zx0zt0zw0zt0zu0zr0zr0zs0zr0\
+  zr0zq0zp0zo0zo0zn0zm0zl0zl0zk0zj0zk0zi0zh0zg0zh0zg\
+  0ze0zd0zc0zc0zb0za0z`0z`0z_0zZ0zY0zY0zX0zW0zV0zV0z\
+  U0zT0zS0zS0zR0zQ0zP0zP0zO0zN0zM0zM0zL0zK0zJ0zJ0zI0\
+  zH0zG0zG0zF0zE0zD0zD0zC0zB0zA0zA0z90z80z70z70z60z5\
+  0z40z40z30z20z10z10z00K0r  }
+
+frm:ManN-XW-YW {; Jim Muth, Thanks to Benno
+; p3 = 0 = Julibrot XW plane
+; p3 = 1 = Julibrot YW plane
+; p3 = >0 <1 = Oblique planes
+z=flip(real(pixel))+real(p1),
+c=flip(imag(pixel))+imag(p1),
+a=p3, b=flip(cos(asin(p3))):
+z=z^p2+((a+b)*c),
+|z| <= 25 }
+
+; END COMBINED FILE FOR 19.6=========================================
+;

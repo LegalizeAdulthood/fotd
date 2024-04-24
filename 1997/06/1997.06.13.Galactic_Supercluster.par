@@ -1,0 +1,74 @@
+; June 13, 1997: Galactic Supercluster
+;
+; supercluster
+;
+; Fractal visionaries:
+; Every once in a while when I am exploring in the world of fractals, I
+; make a major discovery that opens a whole new world of adventure.
+; Today, while casually noodling around at lunchtime, I made one of those
+; discoveries.
+; Before putting my oblique plane formulas under wraps, I wanted to try a
+; few things with them.  The first thing I did was to add a third variable
+; to my Man-YZ-XZ formula, so that I could try different exponents of Z.
+; The higher order mandeloids were uninteresting in the odd planes --
+; squares instead of circles, but still uninteresting.  Then I tried
+; Z^-2.  The results knocked my socks off.
+; I discovered that the fractals drawn by the negative powers of Z, which
+; are of limited interest in the Mandelbrot and Julia planes, are hiding
+; their goodies in the other planes.  Here are all the spirals and whorls
+; and seahorse tails that one would expect in a Mandelbrot fractal.  I've
+; not yet found a midget, but I'm not sure if I'd recognize one even if I
+; did find it.
+; While the positive exponent Mandeloids become less interesting in the
+; odd planes, the negative exponent mandeloids become more interesting.
+; Now I've got another whole new world to explore.
+; This is what keeps me going in the world of fractals -- even after eight
+; years.  A serendipitous new approach, and the fractals I had virtually
+; given up on have opened up and revealed . . . I don't know what.  But
+; I'll be posting some Z^-2 images in the days to come.
+; Today's fractal, Galactic Supercluster, is the first of the new -2
+; world.  I've stretched it out in the vertical dimension to counter the
+; tendency of the YZ plane to smear everything out horizontally.  The
+; image has been posted to a.b.p.f. and a.f.p. for convenience.  And now
+; I've got to get back to that -2 Mandeloid . . .
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START COMBINED FILE FOR 19.6===============================
+
+Galactic_Superclus { ; time=0:00:16.80-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=ManN-YZ-XZ passes=1 center-mag=-2.8895\
+  1188/+0.73347537/433.6914/0.04891/-0.283/-20.784
+  params=0/0/-2/0/0/0 float=y maxiter=750 inside=253
+  logmap=yes periodicity=10
+  colors=0000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  000000A24F6BD24E99E88E77000G57G87K48I98J99K99600M8\
+  AN9AO9BPABQACRACRACSBDTBDUBEVBEWCEXCFYCFZCG_DG_DG`\
+  DHaDHbDIcEIdEIeEJfEJgFKhFKhFKiFLjGLkGMlGMlGMmHLmHL\
+  mILmILmJKmJKmKKmKKmLKmLKmMKnMJnNJnNJnOJnOJnPJnPJnQ\
+  InQInRInRInSInSInTInTInUHnUHnVHnVHnWHnWHnXHoXGoYGo\
+  YGoZGoZGo_Go_Go`Fo`FoaFoaFoaFnaFmaFmaFlaFlaEk`Ek`E\
+  j`Ej`Ei`Ei`Dh`Dh`Dg`Dg_Df_Df_Ce_Ce_Cd_Cd_Cc_Cb_CbZ\
+  BaZBaZB`ZB`ZB_ZB_ZAZZAZZAYYAYYAXYAXY9WY9WY9VY9VY9U\
+  Y9UX8TX8SX8SX8RX8RX8QX8QX7PX7PW7OW7OW7NW7NW6MW6MW6\
+  LW6LW6KV6KV5JV5JV5KV5PUEUTNZUdVVkCYzCXyCWxBVvBUuBS\
+  tBRsAQqAPpAOoANn9Ml9Lk9Jj9Ii8Hg8GfAHeDIdFJdHKcKLbM\
+  MaONaRO`TP_VQZYQZ_RYaSXdTWfUWhVVkWUmXToYTrZSt_RtaX\
+  tdbtfhthnshnshnrgmqgmpgmpgmogmngmmflmfllflkflkflje\
+  kiekhekhekgekfekedjedjddj }
+
+frm:ManN-YZ-XZ {; Jim Muth, Thanks to Benno
+; p3 = 0 = Julibrot YZ plane
+; p3 = 1 = Julibrot XZ plane
+; p3 = >0 <1 = Oblique planes
+z=real(pixel)+flip(real(p1)),
+c=imag(pixel)+flip(imag(p1)),
+a=p3, b=flip(cos(asin(p3))):
+z=z^p2+((a+b)*c),
+|z| <= 25 }
+
+; END COMBINED FILE FOR 19.6=================================
+;

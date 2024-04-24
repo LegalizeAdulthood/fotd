@@ -1,0 +1,69 @@
+; June 17, 1997: Into the Eye 
+;
+; eye
+;
+; Fractal visionaries:
+; When I saw the first fractals that contained complex or imaginary
+; exponents of Z in their formula, I was disappointed.  The pictures on my
+; screen were split along the negative X-axis.  They looked like part of
+; the fractal was missing.  I soon found out that this was indeed the
+; case.  Due to the multi-valued nature of the complex log functions, such
+; fractals are infinite, and cannot be displayed in their entirety.  But
+; enough can be displayed to reveal that they spiral endlessly around the
+; origin in a screw motion.
+; This inability to display the entire fractal was a situation that needed
+; to be corrected, so I started experimenting.  I soon noticed that
+; changing the sign of the exponent causes a fractal to change the
+; direction of its spiral.  What would happen, I wondered, if a formula
+; something like (z^x)+(z^(-x)) or (z^x)^(-x) were iterated with x being
+; complex or imaginary.  Would the opposite spirals cancel out, leaving a
+; fractal with complex or imaginary features, but without the annoying
+; X-axis discontinuity?  I wrote a few test formulas, and the answer was
+; yes, in some cases the opposite spirals did cancel out, leaving some
+; very interesting one-piece complex and imaginary fractals.
+; Today's fractal, Cyclone, is drawn from one of those test formulas.
+; I've added a few frills to the formula to make it more interesting, but
+; it's still basically the same idea.  Instead of spiraling off the screen
+; into imaginary planes, the fractal spirals endlessly into the origin.  I
+; haven't followed the spiral very deep, but it appears to show
+; ever-changing features as one goes deeper.
+; The picture itself is immediately striking -- the way I like a fractal
+; to be -- with a brilliant red background blazing through mysterious
+; foreground shapes.  The finished image has been posted, of course, to
+; a.b.p.f. and a.f.p.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START COMBINED FILE FOR 19.6===============================
+
+Into_the_Eye       { ; time=0:00:04.99-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=Mytest07 passes=1 center-mag=0/0/0.001\
+  636546 params=0/-2/1/0.01/0/2 float=y maxiter=3000
+  inside=bof60 logmap=yes symmetry=none periodicity=9
+  colors=00000000ICKPEIRGJWILUKMaMMhOMkQNnTNpVOsXOvZ\
+  Ox_Ry_Ty_Vy_Xy`_nWmbZmSXmGZmGUmHOmHJmIDmIDmIDmIDmI\
+  DmJDmJDmJDmJDmJDmJDmKDmKDmKDmKDmKDmKDmLDmLDmLDmLDm\
+  LDmLDmMDmMDmMDmMErNErNErOFrOFrOGrPGrPGrPGrQHvQHvRH\
+  zRHzRIzSIzS6zN6zO7wQ8wS9rUArWBmYCm_DcaEUcFKeGGgHDi\
+  IAkJ6mK3oK0qJ1pJ2pJ2oI3oI4oI5nI5nH6nH7mH7mH8mG9lG9\
+  lGAlGBkFCkFCkFDjFEjEEjEFiEGiEGiDHhDIhDJhDJgCKgCLgC\
+  LfCMfBNfBNeBOeBPeAQdAQdARdASc9Sc9Tc9Ub9Ub8Vb8Wa8Xa\
+  8Xa7Y`7Z`7Z`7__6`_6`_6aZ6bZ5cZ5cY5dY5eY4eX4fX6fW9f\
+  VBgTDgSFgRIgQKhOMhNOhMRhLThKViIXiH_iGaiFciEejChjBj\
+  jAlj9nk7qk6sk5uk4vi5vg5vf6vd6vc6wa7w`7wZ7wY7wW8wU8\
+  wT8wR9wQ9wO9xNAxLAxKAxIBxHBxFBxDCxCCxACx9Cy7Dy6Dy4\
+  Dy3Ey1Ey0Ew2Gu4Is5Kq7Mo8OmAQkCSiDUgFWfHYdI_bKa`LcZ\
+  NeXPgVQiTSkRTmPVoPWmOXlOYjNZiN_gM`fMadLbbLcaKd_KeZ\
+  JfXJgWIhUIiSHjRHkPGlOGmMFnKFoJEpHEqGDrEDsDCtBCuADt\
+  BDtBDsBDsCDrCDrC9dR9ZR9US }
+
+frm:Mytest07  {; Jim Muth
+z=pixel, a=real(p2), b=imag(p2), c=b*(pixel):
+z=(((z^p1)*(z+a))^p3)^(-p3)+c,
+|z|<=100
+}
+
+; END COMBINED FILE==========================================
+;

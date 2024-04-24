@@ -1,0 +1,59 @@
+; June 3, 1997: Stained Glass Window 
+;
+; stainedglass
+;
+; Fractal visionaries:
+; Here's another fractal from one of my Mytest formulas.  I'm getting hung
+; up on this series of formulas, which I wrote a while back and then
+; forgot.  But there's no cause to worry, the formulas make good fractals.
+; Today's fractal is another quickie.  When I first saw it, I thought of a
+; transparent stained glass window illuminated from behind by the last
+; rays of the setting sun.
+; The appearance of depth and illumination from within is something I
+; always strive for in my pictures.   Unfortunately, the effect is quite
+; difficult to reproduce on a CMYK color printer.  The RGB of the screen
+; just doesn't translate very well to CMYK.  The new 6-color and 7-color
+; printers do somewhat better, but there's just no way that reflected
+; light viewing will ever equal direct RGB viewing.  The cones of the eye
+; are sensitive to red, green and blue, and you can't fight nature.  This
+; is why fractals displayed as huge expensive transparencies look so
+; impressive.
+; For tomorrow's fractal I haven't the slightest idea.  I'll just have to
+; wait and see what's on the screen when the time comes.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PARAMETER-FORMULA FILE FOR 19.6==============================
+
+StainedGlassWindow { ; time=0:00:05.00-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=mytest08 function=cotan passes=1
+  center-mag=0/0/0.8021348 params=2/0/0/1/0/2
+  float=y maxiter=500 inside=bof60 logmap=yes
+  symmetry=xyaxis periodicity=10
+  colors=000F30D30N30K30Q30O30R30R30S30S30T30T30U30U\
+  30V30V30W30W30X30X30Y30Y30Z30Z30_30_30`30`30a30a30\
+  b30b30c30c30d30d30e30e30f30f30f80g80gD0hD0hD0iD0iD\
+  0jO0kR0kU0lW0lZ0m`0oc0qf0tf0ve0wd0uc0t`0s_0sY0rX0r\
+  S0sS0sS0tS0tS0tN0uN0uN0vN0vN0wN0wL0xL0xK0yI0yI0zD0\
+  zD0zI0zD0zI0zI0zI0zI0zN0zS0zS0zS0yS0yS0xT0xU0wS0wS\
+  0vS0uS0uQ0uR0tQ0tO0sP0sP0rQ0rP0qP0qO0pN0pM0oL0oK0n\
+  J0nI0mH0mG0lF0lE0kD0kC0jB0jA0i90i80h70h60g50g40f30\
+  f30e30e30d30d30c30c30b30b30a30a30`30`30_30_30Z30Z3\
+  0Y30Y30X30X30W30W30V30V30U30U30T30T30S30S30R30R30Q\
+  30Q30P30P30O30O30N30N30M30M30L30L30K30K30J30J30I30\
+  I30H30H30G30G30F30F30E30E30D30D30C30C30B30B30A30A3\
+  0930930830830730730630630530530K30L30L30M30M30N30N\
+  30N30N30N30N30N30N30N30N30N30N30N30N30N30N30N30N30\
+  N30N30N30N30N30N30N30N30N30N30N30N30N30N30N30N30N3\
+  0N30N30N30N30N30N30N30N30 }
+
+frm:Mytest08  {; Jim Muth
+z=fn1(pixel), a=real(p3),
+b=imag(p3), c=a+(b*pixel):
+z=(((z^p1)*z)^p2)^(-p2)+c,
+|z|<=100 }
+
+; END PARAMETER-FORMULA FILE FOR 19.6================================
+;

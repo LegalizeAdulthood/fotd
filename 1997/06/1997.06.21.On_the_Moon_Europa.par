@@ -1,0 +1,70 @@
+; June 21, 1997: On the Moon Europa 
+;
+; europa
+;
+; Fractal visionaries:
+; It is sometimes said that fractals are a window to the infinite.  This
+; much is undebatable.  But fractals are also a window to other worlds.
+; Today's fractal is named "Europa" because it depicts a scene of total
+; desolation on that ice-covered moon of Jupiter.  Do not despair when the
+; parameter file appears to be drawing a blank black image.  Look close,
+; dim the lights, tiny stars are there. What you are seeing is the black,
+; star-infested sky of that bleak, airless satellite.
+; The real picture begins about 2/3 of the way down the screen, where the
+; icy surface, blue and cold, comes into view.  The distant sun, a blazing
+; point at this great distance, lies just above and to the right of the
+; scene, its dazzling reflection glinting from every ice crystal in turn
+; as the satellite slowly rotates.
+; Actually the scene is a picture of the Mandelbrot negative X-axis sliced
+; in the XZ direction.  The line of symmetry lies about 1 inch from the
+; bottom of the screen, (assuming a 15-inch monitor).  The picture is also
+; a good demonstration of the human element in creating fractal art.  When
+; I first saw the characteristics of this area, I knew that it would make
+; a good Europa-like scene, and intentionally colored it to bring out its
+; potential.  Such an effect would be near impossible to achieve by random
+; color flowing.
+; For tomorrow's fractal, I think I'll see what I can do with everyone's
+; favorite midget -- the one on the negative X-axis at -1.76.  Today's
+; picture has been posted in finished form to a.b.p.f. and a.f.p.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START COMBINED FILE FOR 19.6===============================
+
+On_the_Moon_Europa { ; time=0:01:36.78-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=man-yz-xz passes=1 center-mag=-0.00000\
+  686598512544/-1.845082873438826/8.246947e+010/\
+  -5.121e-005/359.999056918636597/-89.9990597420641762
+  params=0/0/1/0 float=y maxiter=5000 inside=255
+  logmap=yes periodicity=10
+  colors=0007Ry7Rx8Qw8Qv9Qt9PsAPrAPqBOpBOoCNnCNmDNkD\
+  MjDMiEMhELgFLfFLeGKcGKbHKaHJ`IJ_IJZIIYJIWJIVKHUKHT\
+  LGSLGRMGQMFPNFNNFMOELOEKOEJNEJNEJMEJMEJLDJLDJLDJKD\
+  JKDJKDJJDJJCJICJICJICJHCKHCKGCKGBKGBKFBKFBKFBKEBKE\
+  BKDAKDAKDAKCAKCAKBAKBAKBAKA9KA9K99K99K99K89K89K88K\
+  78K78K68L68L68L58L57L47L47L47L37L37L37L26L26L16L16\
+  L16L27M27N38N38O49O49P4AQ5AQ5AR6BR6BS6CS7CT7CU8DU8\
+  DV8EV90W90XA0XA1YA2YB3ZB4ZC5_C6`C7`D8aD9aDAbEBcECc\
+  FDdFEdFFeGGeGHfHIgHJgHKhILhIIiJNjJOjJPkKKkKQlLRlLR\
+  mLRnMRoNKpNSpNTqNVzJazJezKhzUhzOfzGdzGbzK`zMZzSPvS\
+  SwTYxTYyTYyTZzU_z0czV`zV`zV`zWazWazWazXbzXbzYczYcz\
+  YczZdzZdz_ez_ez_ezZdzZdzZdzYdzYdzYczYcztzzvzzxzzzz\
+  zzzzzzzWbzWbzVbzVbzVazVazUazUazUazUazTazT`zT`zT`zS\
+  `zS`zS`zS`zR_zR_zR_zR_zQ_zQ_zQ_zQZzPZzPZzPZzPZzOZz\
+  OYzOYzOYzNYzNYzNYzNYzMXzMXzMXzMXzLXzLXzLXzLWzKWzKW\
+  zKWzKWzJWzJWzJVzJ`zJazJaz }
+
+frm:Man-YZ-XZ {; Jim Muth, Thanks to Benno
+; p2 = 0 = Julibrot YZ plane
+; p2 = 1 = Julibrot XZ plane
+; p2 = >0 <1 = Oblique planes
+z=real(pixel)+flip(real(p1)),
+c=imag(pixel)+flip(imag(p1)),
+a=p2, b=flip(cos(asin(p2))):
+z=sqr(z)+((a+b)*c),
+|z| <= 25 }
+
+; END COMBINED FILE==========================================
+;

@@ -1,0 +1,59 @@
+; June 24, 1997: Psychedelic Hambone 
+;
+; hambone
+;
+; Fractal visionaries:
+; Today's fractal continues the exploration of the Mandelbrot YZ
+; direction.  But for the rest of this week, I'm going to emphasize the
+; artistic aspect in the pictures rather than the mathematical.
+; I named the fractal "Bridge" because of the bridge that cuts across the
+; center, neatly slicing the image, which has origin symmetry, in half.
+; That bridge is actually the familiar East (or Elephant) Valley of the
+; Mandelbrot set, seen from an angle that cannot even be imagined.
+; I just as easily might have named the picture "Zebra".  The stripes
+; arose pretty much on their own.  I had a perfectly smooth palette worked
+; out except for one final band, which I cycled around the image one step
+; at a time just for amusement.  The effect was interesting enough so that
+; I added a few more strategically located stripes.  The result -- today's
+; fractal.
+; Tomorrow, I'll present an entirely new angle on an otherwise dull and
+; boring part of the Mandelbrot set.  Today's completed image has been
+; posted to a.b.p.f. and a.f.p., where it waits for those who can't
+; reconstruct it from the parameter file.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FILE FOR 19.6========================================
+
+PsychedelicHambone { ; time=0:00:20.16-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=Man2-YZ passes=1 center-mag=0/0/5.5954\
+  63/0.2882 params=0.25/0.28 float=y maxiter=1200
+  bailout=100 inside=bof60 logmap=yes
+  symmetry=origin periodicity=10
+  colors=000WIIWHHXUFYEEYaDZBB_AA_z9`97a66a55cu7d88e\
+  9AgAB00CiuE0EFdFGmzIiHJkIKlKMrzNtMOuNQvORwzSkQVkQV\
+  PGND9k2Re3Sf3Sf4Tg5Ug5Uh6Vi6Wi7Wj8Xj8Yk9ZlAZlA_mB`\
+  mC`nCanDboDbpEcpFdqFdqGerEklCrgAxa7ei5Np6Ko7Hm8El9\
+  AkA7jB4hC1gC3gD4gD6gE7gE9gFAfFCfFDfGFfGGfHIfHJfILf\
+  IMfIOfJPeJReKSeKUeLVeLXeLYeNTfPPgRLgTHhVChX8iZ4iX6\
+  iW8hUAhSBhRDgPFgNHgLJfKLfINfGOeFQeDSdBUdAWd8Yc6Zc4\
+  `c3bb1db1hY1kT2oO2rJ2vE2y98qBDjEJbGPVJUNL_GNd8Qj0S\
+  hCQeOOcZM`jKlVQmQQnLQnFRoARp5Rp6Op7Mp8JpAHpBEpCBpD\
+  9pE6RI41M36M4AN5FN6JN7OO8SOAXPB`PCePDiQEnQFoQElSGi\
+  VJeXLbZN_`PXcSUeUQgWNjZKl`HnbDpdAsg7uiAtfCsdFraHq_\
+  KpXMnUPmSRlPUkNWjKWhKWgKWeKWdKWbKVaJV_JVZJVXJVWJVU\
+  JVSJVRJVPJVOJVMJULIUJIUIIUGIUFIUDIUCISEJQGJOHJMJJL\
+  LKJNKHOKFQKDSKBUK9VK7XK6ZL4`L2aL0cL0dM1eO1fP2gR2iS\
+  2jT3kV3lW4mY4nZ5mX6lW7kU8kT9jRAiQBhOCgNCfLDeJEdIFd\
+  GGcFHbDIaCJ`ATNNUMMUKKVJJ }
+
+frm:Man2-YZ {
+z=real(pixel)+flip(real(p1)),
+c=flip(imag(pixel))+imag(p1):
+z=sqr(z)+c,
+|z| <= 36 }
+
+; END FILE FOR 19.6==========================================
+;

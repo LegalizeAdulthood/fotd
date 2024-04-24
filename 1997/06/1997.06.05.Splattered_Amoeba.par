@@ -1,0 +1,64 @@
+; June 5, 1997: Splattered Amoeba 
+;
+; amoeba
+;
+; Fractal visionaries:
+; Today's fractal is one of my TowerExp series, based on the formula
+; Z^(-Z+n).  Though the Z^Z formulas usually are filled with
+; discontinuities and disconnected fragments, this fractal has very little
+; chaos.  It appears as round tubes dividing ever finer as they near the
+; limit.  Like so many of my pictures, it appears to be illuminated from
+; within by a pale peach-colored light.  This gives it somewhat of a
+; three-dimensional effect.
+; Much is being said nowadays about three-dimensional fractals, with
+; high-tech methods such as ray tracing and PHC being discussed as though
+; everyone can actually understand the discussion.  To me, these methods
+; are interesting, but I still prefer to achieve my three-dimensional
+; effects by carefully chosen coloring.
+; My method of coloring is quite simple.  I try various combinations of
+; colors, then set the fractal program to slowly flow the colors and sit
+; back to watch.  Sometimes it takes longer to find the proper color
+; palette than it did to draw the image; at other times I find the right
+; colors almost at once.
+; Today's picture is a good example.  It took 50 seconds to draw and 13
+; minutes for me to find the colors.  Even now, I feel that the colors are
+; not the best possible -- but then, colors never are.
+; For tomorrow's fractal I hope to have found something worthwhile with a
+; formula I just wrote, which uses the new if-else commands in Fractint
+; version 19.6.  But that's not a promise, because I've found nothing yet
+; worth showing.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PARAMETER-FORMULA FILE FOR 19.6======================
+
+Splatted_Amoeba    { ; time=0:00:08.40-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=TowerMinExp01 passes=1 symmetry=xaxis
+  center-mag=0.0110378/0/1.141865 params=7/0/0.25/0\
+  /0.02/0 float=y maxiter=512 inside=bof61 logmap=yes
+  colors=000000007KFJRJUYRVdUWzrzvjpsbjjWjeUpaEvcJqd\
+  OkfTfgZ`icWjhQlmLejRZgXTdbMahFZn8WtCYpF_mJbiMdeQfb\
+  ThZThZV_VUhZUhZUgZUgYUgYUgYUfYUfYVfXVeXVeXVeXVeXVd\
+  WVdWVdWVcWVcWVcWVbVVbVVbVVbVVaVWaUWaUW`UW`UW`UW`TW\
+  _TW_TFAdFBdGBcGCcHCcHDcHEbIEbIFbIFbJGaJHaKHaKI`KI`\
+  LJ`LJ`MK_ML_ML_NM_NMZONZOOZOOYPPYPPYPQYQRXQRXRSXRS\
+  XRTWSUWSUWTVVTVVTWVUWVUXUUYUVYUVZUWZTW_TPz2Pz3Pz3P\
+  z4Qz4Qz5Qz5Qz6Qz6Qz7Qz7Qz8Ry8Ry9Rx9RwARwARvBRuBSuC\
+  StCSsDSsDSrESqESqFTpGToGToHTnHTmITmITlJTkJUkKUjKUi\
+  LUiLUhMUhMUgNVfNVfOVeOVdPVdPVcQVbQVbRWaRW`SW`SW_T3\
+  Vz3Vz4Vy4Vy4Vy4Vx5Vx5Vx5Vw5Ww6Ww6Wv6Wv7Wv7Wu7Wu7Wu\
+  8Wu8Wt8Wt9Wt9Ws9Ws9WsAWrAWrAWrAXqBXqBXqBXpCXpCXpCX\
+  oCXoDXoDXnDXnDXnEXmEXmEXmFXlFXlFYlFYlGYkGYkGYkHYjH\
+  YjHYjHYiIYiIYiIYhIYhJYhJYgJYgKYgKZfKZfKZfLZeLZeLZe\
+  LZdMZdMZdMZcNZcNZcNZcNZbOZbOZbOZaPZaP_aP_`P_`Q_`Q_\
+  _Q__Q__R_ZR_ZFRbDP_AOW8MT }
+
+frm:TowerMinExp01 {; Jim Muth
+z=pixel, c=p2+(p3*pixel):
+z=z^(-z+p1)+c,
+|z| <= 100 }
+
+; END PARAMETER-FORMULA FILE FOR 19.6========================
+;
