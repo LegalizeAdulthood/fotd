@@ -1,0 +1,108 @@
+;     Date: Tue, 23 Oct 2007 22:05:24 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 24-10-07 (Nevermore Land [5.5])
+; 
+;       Id: <1.5.4.16.20071023220636.2b9f1542@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 24, 2007 (Rating 5.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image, which was created by 
+; combining Z with Z^(-0.5) and adding C, resembles a fractal 
+; bullet.  Today's scene is located on the north shore of the 
+; bullet, where some very tiny mandel-buds are located.
+; 
+; I named the image "Nevermore Land" because after finding what 
+; lies there, it is unlikely that I'll ever go there again.  I 
+; could rate the image itself at only a 5.  My semi-expert color-
+; ing efforts added the extra half-point.
+; 
+; Today's fractal image shows an abstract land of fractals -- a 
+; land created by numbers and populated by the horde of similar 
+; figures that fill the frame.  Not surprisingly, as we dive 
+; deeper into the image, these figures are repeated at ever 
+; smaller sizes without end, all the way to infinitesimal infin-
+; ity.  That's the way fractals are.
+; 
+; An overwhelmingly prominent, blazing white minibrot sits at the 
+; center of today's scene, looking strangely out of place, almost 
+; as though it were dropped there by some higher power.  It has 
+; little symmetry to betray its existence, and almost no basin of 
+; attraction around it.  Other smaller minibrots are scattered 
+; throughout the scene, all of them similar to the one in today's 
+; image.
+; 
+; The parameter file at the end of this discussion takes just over 
+; 5 minutes to complete on the fireball P4-2000mhz machine.  On 
+; the droopy old P-200mhz snowball unit it takes about 1/2 hour.  
+; On the FOTD web site the image has already been calculated and 
+; posted for maximum enjoyment.  The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy clouds and occasional rain spoiled the day Tuesday here at 
+; Fractal Central.  The temperature of 72F 22C, however, was quite 
+; pleasant.  The fractal cats, who dislike rain, spent the day 
+; watching the humans do their work.
+; 
+; My work was finished earlier than expected, which gave me a 
+; chance to find today's parent fractal.  The next fractal will be 
+; posted in 24 hours.  Until then, take care, and numbers describe 
+; the universe so well because we created them intentionally to do 
+; just that.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Nevermore_Land     { ; time=0:05:11.42-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-1.0890400699647/+0.07599607053382/\
+  7288.355/1/-35/1.85112133954667968e-011
+  params=1/1/1/-0.05/0/0/0/0 float=y maxiter=6000
+  inside=255 logmap=128 periodicity=10
+  colors=000aAp_8nY8nW8lU7lS7jQ5jO5hM5hK3fI3fG1dE1dC\
+  0bA0b80_70_50Y30Y10W00X10X10X10V30V30U30U30T50T50T\
+  50U70T70U70T70TC0QG3OK7OOAMTEMXIK_MKdQIiXIn_GrdGvg\
+  EzlEzpCztCzxAzz8zzMzzXzzezzpzzzvzzrzzmzpmzemzXmzMm\
+  zCmzAmzAizAezCazCYzCUzCQzCMzCIzCEzCAzC6zC3zC0zC0zC\
+  0zC0zA0zC0vC0rC0nE0iI0eM0aQ0YV1VX5Q_8MbCIeGEiIAlK7\
+  nM3pO0nO0lM0jK0iI0jG0kE0lE0mE0nE0mE0lE0kE0kE0kE0kG\
+  0kG0kG0kG0kG0kG0kG0kG0kG0kG0kG0kG0kG0kG0kI0lI0mK0n\
+  K0oM0pM0pO0pO0pQ0pQ0pQ0pT0pT0pT0pV0pV0pV0pV0pV0pV0\
+  pV0qV0rV0sV0tX0uX5vYAwYFxZKy_Kz`LzaNzdKzdMzaMzaNza\
+  KzaJzaIzaJz_Iz_Jz_Jz_Lz_Lz_NzYNzYPzYPzYRzYRzYQzXSz\
+  XRzXRzXSzXSzXRzVUzVTzVTzVVzVVzVVzTXzTXzTXzTYzTYzTY\
+  zQ_zQ_zO_zMazKazIazGdzEdzCdzAez8ez7ez5ez3ez1ez0ez0\
+  ez0ez0ez0ez0ez0ez0ez0ez0ez0ez0ez0ez0ez0ez0ez0gz0iz\
+  0lz0nz0pz0rz0tz0vz0xz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

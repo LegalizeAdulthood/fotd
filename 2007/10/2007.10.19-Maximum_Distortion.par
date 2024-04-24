@@ -1,0 +1,93 @@
+;     Date: Fri, 19 Oct 2007 21:36:19 EDT
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 20-10-07 (Maximum Distortion [7.5])
+;       Id: <bf1.1d870559.344ab593@aol.com>
+; ---------
+; FOTD -- October 20, 2007 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is another rather slow one.  It lies deep 
+; in the East Valley of the parent fractal that results when 
+; Z^(-1.01) is subtracted from Z^(1.01) and (1/C) is added.
+; 
+; Without a doubt, this parent fractal is the most distorted 
+; Mandeloid I have yet come upon.  At first glance, it doesn't 
+; even look like a Mandeloid.  It looks more like an oversized 
+; squashed and folded circle with rough edges.  But a second look 
+; reveals that those rough edges are actually bud radicals, and 
+; the fold is the barely recognizable East Valley.
+; 
+; Despite its appearance, today's image was rendered in the fully 
+; traditional manner, with the inside a solid black and the 
+; outside colored according to the iteration count.  The sinuous 
+; iteration bands are in the fractal, though I did emphasize them 
+; a bit with the coloring.
+; 
+; To reward myself for the coloring, I rated the image a 7-1/2.  
+; The name "Maximum Distortion" refers to the parent fractal.  The 
+; maxiter of 750,000 is larger than it need be, but with the 
+; logmap feature turned off, it makes little difference.
+; 
+; The calculation time of 16-3/4 minutes is admittedly slow.  To 
+; avoid delay, I suggest going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; With a temperature of 75F 24C, it remained unusually warm here 
+; at Fractal Central on Friday, though an all-day string of sudden 
+; showers kept the day from being too pleasant.  The fractal cats 
+; showed their displeasure by viciously attacking their scratching 
+; posts.
+; 
+; My day was average, which means nothing happened worth telling 
+; about.  The next FOTD is due in 24 hours.  Check then for near 
+; total fractal satisfaction.  Until next time, take care, and 
+; after thousands of years, one would expect people to realize 
+; that ghosts are all in the mind.  But then again, neuro-biolo-
+; gists claim the mind is all in the brain, while at the same time 
+; philosophers claim that all we can know about the brain comes 
+; from images in the mind.  Do I see circular reasoning at work?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Maximum_Distortion { ; time=0:16:43.82-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+1.159214347642294/+3.358879727718408/\
+  2.97941e+009/1/-177.5/-0.00115705984022239361
+  params=1/1.01/-1/-1.01/0/0/0/0 float=y inside=0
+  maxiter=750000 periodicity=10
+  colors=000S5AW6GZ6Mb6Se7Yi7cl7iw0ro7ohEm`Lk7PdUSim\
+  XwpVmrTctRUvPKxNBvQFtTIsVLqYOp`RnbUleYkh`ijchmffpi\
+  erllrvhoselpbjmZgjWdgTbdP_aMXZJVWFSTCPQ9NODLUHJ_KI\
+  hOGnRFsTDwVCzVAwT9uQAsOFtMKuJPwHSzFPwCKrAAm80hUHco\
+  XYmYZlZ_j__i_`h``faaebadbbbcbadc`dcZcdXbeVafT`gR_h\
+  PXeOUbMS_LPXJMUIKRGHOFELDCIC9FA6C94AC6DF8FI9ILBKOC\
+  MREPUFRXHU_IWbKYeL`hNbpOetQguPltRnqSglTeiTcfT_eRYe\
+  OWeLUfKSgJQh3Oe4Mc4Ka5J_5MY6PV6ST7VR7YP8`N8cK3jL8e\
+  MDaNHYOLXOPXPTXPXXP`XQcXQgXQkXRoXRsXPz`RvXSsTUoQVl\
+  MWiJVjIVkIVlHVmHUmGUnGUoFUpFzzhzyczxczwczvczucztcz\
+  sczrczqczpczoczncymUxcKvXIvTJvWKvZLuaLq`NnZOkZPgYQ\
+  dXRaWTYWUVWVSWWOWXLVZIV_EV`BVa3Ud8VbDWcHXcMYcRYcVZ\
+  c__cd`ch`ce_cb_c_acXccVacS_cPYcMWcPUcYQcYQcYQcYRaY\
+  R_YSYYSWYTUYTVYUWYUX_UXaUWcUVeUVgUUiUUkRTmSUoTZqUc\
+  tVhxWmzXhvZcrcZmhUkmRir_gv9ezBczCZzEUzGPzIKzJImDJc\
+  DKUCLKCMICNGBOEBPBBQ9AR7A }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================

@@ -1,0 +1,93 @@
+;     Date: Tue, 30 Oct 2007 08:45:54 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-10-07 (Square-Root Picnic [No Rating])
+;       Id: <1.5.4.16.20071030074710.2bdf8fb8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 30, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us once again to one of the infinity of 
+; fractals created by the formula Z^sqrt(2)+C, this time to the 
+; fractal that appears 1.4142 levels up the logarithmic ladder, a 
+; fractal that resembles a limbless torso with a head attached 
+; -- a perfect parent fractal for the day before Halloween.  The 
+; scene is located in the chaos on the eastern side of the head.
+; 
+; The image shows a small minibrot and its surrounding pattern.  
+; As must always be the case in fractals where the power of Z is 
+; fractional, the features in the image are broken and scrambled.  
+; But the broken features make a rough kind of symmetrical pattern 
+; around the midget, which is barely striking enough to raise the 
+; image to FOTD status.  I can give no logical reason for the name 
+; "Square-Root Picnic".
+; 
+; Since I have done so many of these scrambled fractals with 
+; exponents of Z between 1 and 2, and achieved only a modicum of 
+; success, I could not give the image an honest rating, but it is 
+; still worth a look.  The calculation time of 7 minutes is 
+; slightly slow for such a less-than-splendid image.  To save time 
+; and frustration, I recommend going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; After a foggy and frosty start, Monday turned quite pleasant 
+; here at Fractal Central, with sunny skies, light winds, and a 
+; high temperature of 55F 18C.  The fractal cats were more con-
+; cerned with something in the hallway than with the weather.  
+; They must still remember the mouse that popped out of the hole 
+; in the floor by the radiator last year around this time.  When 
+; no mouse appeared on Monday, I comforted the disappointed duo 
+; with a treat of tuna and cheddar cheese.
+; 
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and don't get caught up in a non-local fractal field pattern.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Square-Root_Picnic { ; time=0:07:06.50-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=-0.1110651380\
+  7892870/+1.444879230159444/5.566726e+010/1/-52.5/\
+  0.0361740551652163 params=1.4142/0/1.4142/0 float=y
+  maxiter=3000 inside=0 logmap=848 periodicity=10
+  colors=000cAqcApcApcAncAmcAkcFkhKjmPhrUgvZgzcfzhdz\
+  mgzrdztczvaxt`vqZtpYsnXpkVnjTkgSjfRhdPfaOd`MaYL`XJ\
+  ZVIXSHVRFSOERMCOJBMI9LH8IE6HC5E93C82B6183062030020\
+  0100200300500600800900B00C00E00F00H00I00J00L10M10O\
+  10P10R11S11T11V21X21Y22Z22`22a22c33e33g33i33k33m35\
+  o35q55s55t56u56v56w56x28y36z56z65z85z95zB3zC3zE3zF\
+  2zH2zH2zI1zJ1zL1zM0zO0zP0zR0yS0xT0wT0vV0uX0tY0tZ0t\
+  `0ta0tc0td0tf0xd0tf0pg0mg0hh0fh1aj3Yj5Vk8Rm9OpCJqE\
+  FtHCvI8xL3xO5zM6zM8zM9xMBwMCvMEtMFsMHqMIsMJvMJxMLz\
+  MMzMOzMPzMRzMSzMTzMVyMXxMYwMZvRYuOYqMYmJYkIYiHYgEY\
+  eCYc9Ya8Y_6YY3YW2YU0YS0XQ0YO0YM0ZK0ZgzZqz`zz`zz`zz\
+  awzamzaczca0ca0c`0d`0d`0dZ0fZ0fY0zY0zg0zn0zn0zg0zV\
+  0zT0zT0zS0vS0nR0gR0`R0TP0FPgFOgFOgFMgFMgFMgFLgc9zc\
+  AzcEzcIzcMzcQzcUzcYzcazcezcizzmzzozzqzzszzuzzwzzyz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzwzzxzzzzzzzzzzzzzzz\
+  zzzzzzxzzwzzwzzvzztzztzzs }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

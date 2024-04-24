@@ -1,0 +1,98 @@
+;     Date: Mon, 15 Oct 2007 21:28:30 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-10-07 (Hyper-Dry Valley [6])
+;       Id: <1.5.4.16.20071015212934.2a5718d0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 16, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's curious image is another venture into the fractal that 
+; results when 0.2 parts of Z^3 are subtracted from Z^2 before C 
+; is added.  This fractal appears as a Mandelbrot set rotated 180 
+; degrees, with an extra spike extending from its East Valley, 
+; which of course is on its west side.
+; 
+; But today we ignore this extra spike and check the more conven-
+; tional spike extending eastward from the Mandeloid's nose.  
+; There is a very prominent minibrot on this spike, which appears 
+; to be two partially merged minibrots.  Today's image is located 
+; rather deep in the northern branch of what at first appears to 
+; be a Seahorse-type valley, but actually is an entirely new type 
+; of valley.
+; 
+; I named the image "Hyper-Dry Valley" because despite the promis-
+; ing appearance of the chaotic yet symmetrical 'object', I could 
+; find no minibrot at the center.  The minibrot might be there, 
+; but the resolution failed before I reached it.
+; 
+; Despite the disappointment, I rated the image at a 6.  The 
+; fractal object, if indeed it *is* an object, has such a real 
+; appearance that I could do no less.  I'll leave it to the philo-
+; sophers to argue the actual reality of fractal objects such as 
+; the Mandelbrot set.
+; 
+; But one thing that cannot to be argued is the calculation time 
+; of the image, which is a rather slow 10-3/4 minutes on the 
+; fractal fireball, and just over one hour on the fractal snowball.
+; 
+; The finished image has been sent ahead to Paul at the FOTD web 
+; site, and by the time you read this, it should be already posted 
+; and ready for instant viewing.
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Very fine weather prevailed here at Fractal Central on Monday, 
+; with sunny skies and a temperature of 68F 20C.  The fractal cats 
+; enjoyed the sun from their shelf in the window.  My day was as 
+; average as the fractal.  I expect another average day tomorrow, 
+; but hopefully the fractal will be better.  The next FOTD will 
+; appear in 24 hours.  Until then, take care, and everyone has 
+; some degree of faith in something.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Hyper-Dry_Valley { ; time=0:10:44.72-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=+1.589436551517345/+0.0185571325367402/\
+  7.396629e+011 params=1/2/-0.2/3/0/0/0/0 float=y 
+  maxiter=10000 inside=255 periodicity=10
+  colors=000nVbmUflUikTlDVOB_O9dO7iN6gb5er3cz3cz3cq4\
+  dh9ZgFTfLNeRHdXBbbHahN_oUYePSWKMLEGLHHLKILNJLQKLTL\
+  LXNNYPPZRR_TUaWWbYYc_`ebaf_bgXchUdjRekOflLgnIjaOmO\
+  UqA`hGW_MRRSMIZHOcLUhQ_mVer_kwdrzilyhftg`pfVkdPgcJ\
+  bbDZa6U_B_eGekLlrIjmEggBda7bX4_R0XL9TNJOPTJSaEUk9W\
+  u4Zp6Wk9SeCP`FLWIIQLEOW_LgunJElNGjRIgVKe_NccP`gRZk\
+  TWpWZ`YaL`cJYfHViFSlDPoBMr9Ju7Gx4DxJNxYXxlfxzqrznk\
+  zkdzhZzdSzaLzZEzVKx`RugYsmdptknzrkzjguabhTYWQSeNLo\
+  KFyH8zGEzFKyEQtCWnBaiAgc8mYAgcCaiEahHagJ`fM`eP_dR_\
+  cUZbXZ`ZZ_aYZcYYfXXiXWkWVnWUqVSqVSpWSpWToXToXUnYUm\
+  YUmZVlZVl_Wk_Wj`XhZWeXVcVU`STZQRWOQULPRJOPHNMELNEQ\
+  ODSPDUQCURCUSBUTAUUAUV9RX8DTIJOSOJaTEkY9ucCqeGmgJi\
+  iNdkQ`mUXnXSo`OpcKqgFtdFqaFnYFkVFhSFeOFbLFdHFaEFZB\
+  FW7FT4FQ0GNBKLNOJYSHiWFu`Du`Gt_JsZNrYQqYTpXXoW_H00\
+  K00N00Q00T00W00Z00a50eA0iF0mK0qP0tU0wZ0yc0vh0sm0oh\
+  0lc0hZ0eU0bW0`X0YY0WZ0T_0 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
