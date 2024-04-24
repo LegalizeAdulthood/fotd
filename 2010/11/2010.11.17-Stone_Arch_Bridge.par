@@ -1,0 +1,103 @@
+;     Date: Wed, 17 Nov 2010 19:15:44 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-11-10 (Stone Arch Bridge [6])
+;       Id: <1.5.4.16.20101117191544.13cf33c0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 18, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an unfamiliar slice of the Julibrot, which I 
+; have named "Stone Arch Bridge".  While searching for a name, I 
+; noticed the row of arches across the bottom of the image, and 
+; was reminded of the railroad bridge across the Susquehanna River 
+; at Marysville, which is just north of Harrisburg.
+; 
+; The slice is centered at the western limit of the ever-smaller 
+; string of buds lined up out the negative X-axis of the Mandel-
+; brot set.  The orientation is at an angle rotated 31 degrees 
+; from the Parabolic toward the Oblate, though mostly Parabolic 
+; elements predominate.
+; 
+; The rating of a 6 means I am only mildly impressed by the image, 
+; though, because of the spectacular coloring, I do consider it 
+; worth nominal FOTD status.
+; 
+; The very brief calculation time of 8 seconds assures that very 
+; little effort will have been wasted if the resulting image lays 
+; an egg.
+; 
+; To avoid the possibility of ending up with an omelet, I suggest 
+; checking to see if the image is posted on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; After a heavy overnight thunder-storm, Wednesday dawned cloudy 
+; and blustery here at Fractal Central.  The conditions continued 
+; most all day, with the clouds breaking only long enough to give 
+; a glimpse of the setting sun.  The winds made the temperature of 
+; 52F 11C seem surprisingly chilly.  The fractal cats made the 
+; most of things, checking every so often to be sure no unwanted 
+; cats were prowling nearby.
+; 
+; My day was slow enough to enjoy, but not so slow as to cause 
+; concern.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and be ever so cautious when the aliens from Sirius C 
+; are snooping about.  They're as sneaky as a cat.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Stone-Arch_Bridge { ; time=0:00:08.27-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 center-mag=0.572006/\
+  -0.350829/0.7022955/1/121/0 params=0/90/31/31/\
+  -1.40115519/0/0/0 float=y maxiter=950 inside=255
+  logmap=yes symmetry=none periodicity=6 passes=1
+  colors=00000A00C01E02G03I34K55M76O87RC8UF9WHAWIBYJ\
+  C`KDbKFeLGhNHjOImQJpSKtTLwVMyWNzVPxVRvUStUUpTVnTXk\
+  SZhS_zRazRbzQdzQfzPgzPizPjzOkzOlzOmzOmzOmzOmzNmzNm\
+  zNmzNmzNmzNmzNmzPmzRmzTmzUmzWmzYmzZmz`mzbmzdmzemzg\
+  mzimzjmzlmznmzomzgmz_mzTmzLpzEtzHszJrzMqzOqzRpzToz\
+  WozYnz`mzbmzemzgmzjmzlmzomzqmzpmzpmzpmzpmzpmzpmzpm\
+  zpmzpmzpmzpmzpmzpmzpmzpmzqmzqmzqmzqmzqmzqmzqmzqmzo\
+  mzmmzkmzimzgmzemzcmzamz_mzYmzWmzUmzSmzUmzVmzXmzYmz\
+  _mz`mzbmzcmzemzfmzhmzimzjmzlmzmmzomzpmzrmzsmzumzvm\
+  zxmzymzzmzxmzvmzumzsmzrmzpmznmzmmzkmzjmzhmzfmzemzc\
+  mzbmz`mz_mz`mz`mz`lz`kyajxaiwahvaguafubfubfvbfvbfv\
+  bfwcfwcfwcewcexcexdexdeydeydeydeyfmxgmwimvjmulmtmm\
+  tjmjgmaemTbmK`mB`mN`mY`mhamkammbgoblqakp`jo`in_in_\
+  hmZglYglYfkXejXejWdiWchVchUbgUmfTmfTmeSmdSmdPmeNme\
+  LmfImfGmfEmgCmg9mg7mh5mh3mh3mh3mi3mj3mk3mk3ml3mm3m\
+  n3mn6ml9mjCmhFmfImdLmbszz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

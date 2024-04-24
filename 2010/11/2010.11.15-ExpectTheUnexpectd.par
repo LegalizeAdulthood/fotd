@@ -1,0 +1,116 @@
+;     Date: Mon, 15 Nov 2010 20:59:56 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-11-10 (Expect the Unexpected [6!])
+;       Id: <1.5.4.16.20101115205952.10df21f6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 16, 2010 (Rating 6!)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; One should always be prepared for the unexpected, even when it 
+; seems impossible.  Today's slice through the Julibrot is a good 
+; example.
+; 
+; The slice is centered on East Valley of the Mandelbrot set, and 
+; oriented 0.1 degree from the Oblate direction, which means the 
+; Mandelbrot stuff is stretched about 573 times its normal extent 
+; in one direction.
+; 
+; In the image that I found before today's, I unstretched the 
+; Mandelbrot parts, but in so doing, I stretched the Julia parts 
+; about 573 times.  The grossly stretched Julia stuff is visible 
+; near two corners of today's image.  When I did this stretching, 
+; I had almost no hopes of finding any of the Mandelbrot stuff 
+; that I had presumedly returned to its normal proportions, but 
+; much to my surprise, I found one tiny open spot lurking in the 
+; upper left corner.
+; 
+; When I closed in on the tiny spot, I found the better part of 
+; one of the twisted minibrots that fill East valley.  At first I 
+; could not believe that any Mandelbrot features at all could 
+; remain when the Julibrot is sliced 89.9 degrees from the Mandel-
+; brot orientation.  But pictures do not lie, (unless they have 
+; been manipulated on a computer), and the twisted object at the 
+; center of today's image is most certainly the remains of an East 
+; Valley minibrot.
+; 
+; The rating of a 6! means that almost all the interest lies in 
+; the mathematical aspect of the image.  The artistic worth is 
+; minimal, though not entirely absent, and the features surround-
+; ing the chopped-off minibrot certainly are curious.
+; 
+; The name "Expect the Unexpected" relates my adventures on the 
+; way to finding today's image.
+; 
+; The calculation time of 21 seconds takes almost all the work out 
+; of running the included parameter file.  The calculation work 
+; can be eliminated entirely by viewing the finished image on the 
+; FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The sun departed and the clouds moved in here at Fractal Central 
+; on Monday, while the temperature hovered around a mild 55F 13C.  
+; The fractal cats took it all in stride, concerned only about 
+; their next food treat.  My day was uneventful.  Until next time, 
+; take care, and beware of global warming -- it's got me worried.  
+; How long will it be before we wake up one morning up to our 
+; knees in the rising seas, and find polar bears extinct?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+ExpectTheUnexpectd { ; time=0:00:21.31-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 center-mag=-0.023260073\
+  46855092/-0.00735188243689156/2294.688/0.002601/\
+  -179.929980454595068/89.7871683432740895
+  params=0/0/89.9/0/0.277/0/0/0 float=y maxiter=2400
+  inside=0 logmap=22 periodicity=6
+  colors=000A0OA0PA0QA0RA0SA2TA4UA6WA8YAA_ACaAEcAGeA\
+  IgAKiAMkAOmAQoASqAUsAWuAYwA_xAayAczAdvAcrAZm9Uh8Pc\
+  6KjNFiRFPYCK`CFcAAe85d70a90Y90R60L40720xy1tu0pq0lm\
+  0hi0de0aa0YY0UV0QR0MN0JJ0FF0BB0770330KmNHeJEZGBSD8\
+  L95E6273USSPOOLKKHGGCCC888444PUvGKb8AJyfVnZPdSKVLF\
+  KEAA752Tg1JT09E8yM7rJ6kH5dE4YC3R92K71D4062jcxdZq_V\
+  jVQcQMXKHRFDKA8D546amLYhJVdHS`FPXEMTC_oGbeIeXJhOLj\
+  FMeFOaFPYFQUFSQFTLFUHFVDFX9FY5FZ1F_4M`6Sa9ZbBdcEkd\
+  GqdEpfDogCniAmj9ll8km7kn9loAlpBlpDmqEmqFmrHmsInsJn\
+  tLntMnuNovPovQowRowUkuXgsZcqa`odXmfTkiPilMgnIeqEct\
+  Aav7`uAYuCVtETtGQtJNsLLsNIsPGiRD`TBSU9NV8IW7EW79X6\
+  4Y50Y56bABgEGkILpMQtQQuSQvUQwWQxYQy_cz`czbczdczfcz\
+  hcziczgczemzcmzamz_mzYmzWmzUmzSmzzmzzmzzmzzmzzrzzv\
+  zzzzzzzzzzzzzmzzmzzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzznzzkzzgzzczz_zzXzzTzzPzz\
+  MzzLzzKzzJzzIzzHzzHzzFzzE }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

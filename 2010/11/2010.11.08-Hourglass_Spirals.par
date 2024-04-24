@@ -1,0 +1,113 @@
+;     Date: Mon, 08 Nov 2010 20:17:45 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-11-10 (Hourglass Spirals [7])
+;       Id: <1.5.4.16.20101108201742.136fd23a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 09, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is (no guarantee) the last of the series of near-
+; Julia Mandelbrot valley images.  This one shows the valley of 
+; the north bud of the large minibrot on the west branch of the 
+; filament that extends from the north bud of the Mandelbrot set.
+; 
+; The effect is much the same as the previous images, though there 
+; is more decoration around the almost-Julia set.  The name "Hour-
+; glass Spirals" refers to the hourglass-like shape of the two 
+; spirals on either side of the center.
+; 
+; It is tempting to think of these fractal spirals as 3-D things 
+; such as short curved lengths of string.  But they are actually 
+; 2-D slices of 3-D spaces that curve and twist in 4-D space.  As 
+; with all 4-D stuff, the entirety of the spirals is impossible to 
+; visualize.  As mere humans, our consciousness is limited to the 
+; 3-D experience.
+; 
+; I decided to give today's image, which is likely the last of the 
+; series, a rating of a 7.  We have been mired in this series 
+; longer than I had intended, and there are many unusual slices of 
+; the Julibrot that we have not yet checked.  Tomorrow's image 
+; will begin the exploration of these.
+; 
+; Today's image calculates in under 7 minutes, not fireball fast, 
+; but certainly faster than some FOTD's, which have taken days to 
+; complete.
+; 
+; The last I heard, Paul was still in the hospital, recovering 
+; from an infection.  He has enough access to the FOTD web site to 
+; post the FOTD discussions.  But since he is using a new-fangled 
+; laptop machine running Vista, which panics as the sight of the 
+; Fractint program, he cannot run the parameter files.  I am send-
+; ing the finished GIF images to him while he is in the hospital, 
+; from where he can post them to the FOTD web site.  Hopefully, 
+; the web site will be up to date shortly.  As always, the site 
+; may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A few too many clouds and a bit too little sunshine here at 
+; Fractal central on Monday kept the fractal cats from reaching 
+; maximum contentment.  The temperature of 54F 12C was just about 
+; normal.  My day was normal also.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and I hear that within 25 years everyone will have their 
+; own private autogyro for their daily commute.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Hourglass_Spirals { ; time=0:06:51.18-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 passes=1 center-mag=0/0\
+  /11.7/1/87/0 params=89.9/0/89.9/52.5/-0.15436/\
+  1.0371225/0/0 float=y maxiter=40000 inside=0
+  logmap=8 periodicity=6
+  colors=000CKVDLUEMSFNWGOTHPRIQOJRMJSJKTIMUJNVIOWIQ\
+  XHTYGVZGY`F_aFabEdcDfeDifCkgCnhBpjAskAul9wm9zlCzlE\
+  zlHzlJxlMvlOtlRtlTslWslYsl`rlbrlerlgqljqllqlnokmnj\
+  lmikkijjhiifhgdhfegedfcbecadcaccaccabcbacc`cc_ccZc\
+  cZccYccXccWccVccUcbUcaYc`acZecXicWmcVqcUpcUpcUpdUp\
+  dUpdUpeUpeUoeUofUofUofUogUogUogUnhUnhUnhUniUniUnjU\
+  nkUmlUlmUkmUjmUimUhmUhmUgmUfmUemUfmUgmUhmUhmUimUjm\
+  UjmUkmUlmUlmUmmUnmUnmUomUpmUpmUpmUqmUrmUsmUtmUumUv\
+  mUwmUxmUymUxmUxmUxmTxmSxmRwmQwmPwmOwmNwmMwmLvmKvmJ\
+  vmIvmHvmGumFumEumDumCumBuiEteHtaKsYNsUQrSRrQSrOTsM\
+  UsKUsIVsGVsEWtCWtAXt8Xt6Yt4Zu2_u0`u0bz0dz0ez0ez0fz\
+  0fz0gz0hz0hz0hz0iz1jz3jz4kz5kz7kz8qzArzBrzCszEszFs\
+  zHuzIuzKuzLuzMuzOuzPuzRuzSuzSuzUzzVzzWzzXzzYzzZzz`\
+  zzazzbzzczzdzzezzgzzhzzizzizzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

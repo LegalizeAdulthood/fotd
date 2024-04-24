@@ -1,0 +1,106 @@
+;     Date: Thu, 11 Nov 2010 17:20:13 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-11-10 (Deep-Blue Computer [!])
+;       Id: <1.5.4.16.20101111172015.13df15c0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 12, 2010 (Rating !)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a slice through the Julibrot oriented halfway 
+; between the Mandelbrot and Julia directions.  It is not the one-
+; and-only halfway slice.  There is no single slice.  The Julibrot 
+; is four-dimensional, and today's slice is but one of an infinity 
+; of slices oriented halfway between the M and J directions.
+; 
+; Today's image is actually the entire parent fractal of the past 
+; two days' FOTD's.  With minor tweaking, I have used basically 
+; the same colors on all three images.
+; 
+; I named the image "Deep-Blue Computer".  I think this is the 
+; name of the computer than beat a grand master at chess a number 
+; of years ago.  I rated the image with an exclamation mark.  
+; (Called a 'bang' in the printing trade.)  I surprised myself 
+; when I tried the 'real' option on the 'outside' parts.
+; 
+; The calculation time of 5 seconds makes whatever comes up worth 
+; the effort.
+; 
+; But all effort may be eliminated by checking the finished image 
+; on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; I usually avoid discussing politics, but today I must make an 
+; exception.  While FL and I were taking a break watching the news 
+; at lunch time on Thursday, they showed a 10-second clip of a 
+; certain un-named congressman declaring that something must be 
+; done about the country's out-of-control financial deficit.  A 
+; few minutes later, when some effective but painful actions were 
+; suggested, the same congressman declared that the suggestions 
+; were unacceptable, unworkable and totally out of the question.  
+; The resulting laugh from FL made my day.
+; 
+; The Thursday weather here at Fractal Central was a repeat of 
+; Wednesday's, with a slight drop in temperature to 57F 14C.  The 
+; fractal cats spent the afternoon basking in the sun on their 
+; window shelf.  My day was quite busy but still acceptable.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and does anyone know how to reduce the deficit without raising 
+; taxes or cutting benefits?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Deep-Blue_Computer { ; time=0:00:05.05-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 center-mag=-0.000556425\
+  /0/0.6726457 params=45/0/-45/0/-0.75/0/0/0 float=y
+  maxiter=1000 inside=0 outside=real symmetry=xaxis
+  colors=00075H76I77K78M79P7AR7BT7CW7DY7E_7Fb7Gd7Hf6\
+  Ii6Jk6Jm6Jp6Kr6Kt6Lw6Ly6Lz6Oz6Qz6Sz8Uz9VzAUzBSzCQz\
+  DRzERzGSzHTyITxJUxKVwLVvMWuOXtPXsQYrRZqSZpT_oU`nV`\
+  nSZoQ_pO`pMaqJbrHcrFcsDctBct8cu6cv4cv2cw0cw2cx3cy4\
+  cz5cz6cz7cz8cz9czAczBczCczbcz_czYczWczUczSczQczOcz\
+  MczKczJczHizGszLozQlzTczVczXczZcz`czbczfcziczmczpc\
+  ztczwczzcz0cz1cz1cz1cz1kzAizJhzRgzTjzUlzWnzXpzYrzT\
+  ozPlzKizGfzBcz7`z3YzIazXdzjgzjfzjfzjezjezjdzjdzjcz\
+  jczcYzXSzQMzJGzDBzOIzYOzhUzr_zfYzVWzJUz8Tz9Pz9Lz9H\
+  zADzA9zA5zA2zH9zOFzULz`SzgYzmczkfziizhlzfnzeqzctzb\
+  vzLWz36zELzOZzYlzgzzavzWrzQozKkzEhz8dz2az7XzBTzFPz\
+  JKzNGzRCzV8zRKzNWzJgzJfzIezIdzIczIbzIbzIbzIbzIbzIb\
+  zIbzIbzIbzIbzKazLazNazOazQazSazTazVczXezYgz_iz`kzd\
+  mzhozmqzrszvszzzzzzzzzzzzzzzzvuzrwzmyzhzzZozUezPVz\
+  KLzGAzCAzB8zB6zB4zB3zB3zA4zA4zA5zA6zA6zA7z97z98z98\
+  z99z9Az9Az8Bz8Bz8Cz8Cz8Dz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,108 @@
+;     Date: Sun, 07 Nov 2010 19:29:37 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-11-10 (Be Forever Fractal [No Rating])
+;       Id: <1.5.4.16.20101107192944.149f3d32@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 08, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is what happened when I tried the almost-Julia-
+; valley trick on the valley leading to the large sub-bud on the 
+; northwest shore line of the large period-2 bud of the Mandelbrot 
+; set.
+; 
+; Like the recent images, there are some similarities and some 
+; differences.  The greatest difference in today's image is the 
+; fact that it is only the central part of the entire parent 
+; almost-Julia set.  I have cropped off a good part of the out-
+; lying areas, but the part that remains is interesting enough.
+; 
+; We have the same spirals and the same grossly enlarged view of 
+; the Mandelbrot aspect of the valley.  Once again I used mostly 
+; the same color palette, though in today's image I cut the values 
+; and intensity of the stronger hues.
+; 
+; I could hardly give just another valley scene a proper rating, 
+; though I did name it "Be Forever Fractal", a name that sounds a 
+; bit more meaningful than it actually is.
+; 
+; The calculation time of only 3 minutes is blessedly brief.  (I 
+; gave it the blessing myself.)  I haven't heard how Paul at the 
+; FOTD web site is coming, but the last I heard he was recovering, 
+; so it might be worth a look to see if the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; is up to date yet.
+; 
+; FL and I managed the shift from daylight time to standard in 
+; fine shape here at Fractal central on Sunday.  We simply arose 
+; an hour earlier.  The cats never noticed the change, except in 
+; the evening, when they had to wait an hour longer for their 
+; treats.
+; 
+; A mixture of sun and clouds hung above Fractal Central all day.  
+; The fractal cats enjoyed the sun while it was out and the house 
+; heat when the sun failed them.  The temperature of 45F +7C was 
+; chilly for both man and cat.
+; 
+; The next FOTD will be posted in 24 hours.  There is no escaping 
+; the delay.  Until then, take care, and resistance is futile.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Be_Forever_Fractal { ; time=0:03:07.19-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 passes=1 periodicity=6
+  center-mag=0/0/2.16/1/47.5/0 float=y maxiter=42000
+  params=88.7/0/88.7/77.5/-1.12542/0.21722/0/0
+  inside=0 logmap=yes
+  colors=00086a97bA8cB9dCAeDBfECgFDhGEiHFjIGkJHlKImL\
+  JnMKoNMnOOmPQlQSkRUjSVgTWdUXaSY_QZXOZUMYSKXQIWOGVN\
+  EULCTJASH8RE6QB4P95OA5NA5MA5LA5KB5KB5KB5KB6KC6KC6K\
+  C6KC6KD6KD6KD6KD8KC9KBALBBNADQ9ES9FU8GW8IZ7J`6Kb6L\
+  d5Mf5Qb9T_DUXHUULUQOUNSUKWUH_UEbUFaUF`UF_UG_UGZUGY\
+  UGXUHXUHWUHVUHVULWUOWURWUVXUYXU`XUaTUaPSbMQbIOcFQc\
+  BSd8Ud4Wd0YdA_dKaeUceZceccfccf_ceZcdYccX`cWZcVWcUT\
+  cTQcRNcQLcPIcOFcNCcM9cL7cKEcJLcJScIZcIccMMc7Oc8Mc7\
+  Lc7Mc7Nc7O`7PY6QV6SU6UU6WU6YU6_U5aU5cU5cU5cU5cU5cU\
+  7cU8cU9cUAcUCcUDZUEUUFPUHKUIFUJAUK5UM3UN3UO3UP3UR3\
+  US4VT4WW4YZ4Zc4`h4am4cq4ev4fw5ix5jy5lz5nz5oz5oz5pz\
+  5pz5qz3rz5rz6rz8sz9tzBtzCuzDuzFuzGvzIwzJwzKxzMxzNx\
+  zPzzQzzSzzTzzUzzWzzXzzZzz_zz_zzazzbzzczzdzzezzfzzh\
+  zzizzjzzkzzlzzmzzozzpzzqzzqzzqzzqzzqzzrzzrzzrzzrzz\
+  rzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrz\
+  zrzzrzzrzzrzzrzzrzzrzzrzz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

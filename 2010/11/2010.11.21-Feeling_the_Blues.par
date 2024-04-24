@@ -1,0 +1,96 @@
+;     Date: Sun, 21 Nov 2010 22:29:19 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-11-10 (Feeling the Blues [7])
+;       Id: <1.5.4.16.20101121222925.11a74be6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 22, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a curious minibrot, (if this is the proper 
+; name for such creatures), that lies on what remains of the main 
+; stem of the Mandelbrot set when the Julibrot is sliced at an 
+; angle oriented 20 degrees from the Oblate toward the Elliptic 
+; direction.
+; 
+; To bring the image to reasonable proportions, I stretched it 
+; about 4 times in the horizontal direction, which is a little 
+; excessive, but makes the best effect.
+; 
+; In my opinion the image is worth a rating of a 7, not the least 
+; of it due to the coloring, which brings blue to a new extreme.  
+; The name "Feeling the Blues" describes the mood of the scene.
+; 
+; The calculation time of 23 seconds will pass in half a flash, as 
+; also will the trip to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; to see the pre-calculated finished image.
+; 
+; A mixture of sun and clouds and a temperature of 50F 10C kept 
+; everyone happy here at Fractal Central on Sunday.  In the 
+; evening, Cassie, the smaller fractal cat, started growling at 
+; something in the yard, but we could see nothing.  Nicholas, the 
+; large cat, assured her that all was well, and after a few 
+; minutes, whatever had her concerned moved on.  Meanwhile, my day 
+; was average.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and sometimes a person needs light to see the light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Feeling_the_Blues { ; time=0:00:23.29-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 center-mag=-1.575725778\
+  /0/75.37224/3.9228 params=70/0/20/0/0/0/0/0 float=y
+  maxiter=3200 inside=0 logmap=29 periodicity=6
+  colors=00000600800A00D00F00I00K00N00Q00R00S01T02U0\
+  3V04W05X06Y07Z08_09`0Aa0Bb0Cc0Dd0Ee0Ff0Fg0Fh0Fi0Fj\
+  0Fk0Fl0Fm0Fn0Fo1Fp2Fq3Fr4Fs6Ft7Fu8Fv9FwAFxBFyCFzDF\
+  zAGz8HzAIzCJzEKzGKzIKzKKzMLzOMzQOzSQzUSzWUzYWz_Yza\
+  ZzcZzeZzg_zh`ziazjbzkczldzmeymfxmhwmivmjumktmlsmms\
+  mmsnmsomspmsqmsrmssmssmstmstmsumsumsvmsvmswmswmswm\
+  swmswmsvmsumstmssmsqmsqmsqmsqmsqmtsmtumuwmusmvsmws\
+  mxrmyrmzrmzrmzqmzqmzqmzqmzpmzpmzpmzpmzpmzomynmxmmw\
+  lmvkmujmtimshmrgnqfooeondomcplbpkapj`picpzcpzcpzcp\
+  zcpzcpzcqzcqzcqzcqzcqzcqzcqzcqzcqzcqzmrcmrcmrcmrcm\
+  rcmrcmrcmrcmrcmrcmscmscmscmscmscmscwscwscwscwscwtc\
+  wtcwtcwtcwtdwtewtfwtgwthwtiwujwtkwtlwtmwsnwsowspwr\
+  qwrrwrswqtwquwqvwpwwpxwpywozwozzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

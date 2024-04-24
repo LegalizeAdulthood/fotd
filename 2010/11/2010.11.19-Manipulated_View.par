@@ -1,0 +1,117 @@
+;     Date: Fri, 19 Nov 2010 18:19:46 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-11-10 (Manipulated View [No Rating])
+;       Id: <1.5.4.16.20101119181939.150f31fa@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 20, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's image a segment of the classic Mandelbrot shape 
+; appears in the background as the brilliant blue stuff.  But the 
+; shape is so distorted that it is almost impossible to recognize 
+; the part of the M-set shape that is showing.  In today's image 
+; we have taken yesterday's scene, rotated, twisted, and skewed it 
+; until we have restored the Mandelbrot shape to recognizable 
+; familiarity.
+; 
+; Much to our surprise, we find we have cut a slice through the 
+; M-set shape that covers the main period-2 bud, the northwest 
+; part of the Main Bay and the northern period-3 bud.  To find the 
+; slice, I totally winged it by eye.  It might be possible by 
+; complicated trigonometry to determine the correct anti-distor-
+; tion mathematically.  It works quite well with simple single 
+; rotations, where all that is required is to enter the cosine or 
+; the reciprocal of the cosine of the angle as the X-magnification 
+; factor.  But in yesterday's image, where four angles are 
+; involved, the mathematical method is too complex, at least for 
+; my Arithmetic-101 level of knowledge.
+; 
+; At this point, I am left wondering which version of the same 
+; slice is more correct, yesterday's or today's.  The actual 
+; Mandelbrot part of the Julibrot is a 4-D thing, kind of a nest 
+; of hypercylinders shaped like the M-set in the C-plane, but 
+; extended to infinity in the Z-plane.  (Don't try to visualize 
+; the entire shape, it's impossible.)  This Mandelbrot hyper-
+; cylinder nest becomes distorted when it is sliced at an angle, 
+; as we did in yesterday's image.
+; 
+; Today's image, which corrects this natural distortion, is 
+; actually the more distorted, and therefore the least correct 
+; image.  But at the same time, it is almost impossible to tell 
+; our position when viewing yesterday's image, so I suppose this 
+; makes today's image the more correct one.
+; 
+; All math and almost no artistic value equals no rating.  The 
+; name "Manipulated View" tells it like it is.  The calculation 
+; time of under 2 seconds is incredibly brief, and should be not 
+; be a factor.  The finished image may also be seen on the FOTD 
+; web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Conditions here at Fractal Central on Friday were acceptable, 
+; with partly cloudy skies, a temperature of 48F +9C and cats that 
+; were fairly contented.  The commercial work was about average, 
+; while the FOTD, is more a curiosity than a work of art.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and try to uncover the alien plot before we end up on a slave 
+; ship to Arcturus.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Manipulated_View { ; time=0:00:01.88-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 center-mag=0.177576/\
+  -0.440939/0.5850274/0.3595/142.341509490465285/\
+  -74.8871977088931544 params=152/105/-64/49/-1/0/\
+  1.118/0 float=y maxiter=1800 inside=0 logmap=yes
+  symmetry=none periodicity=6
+  colors=000C36D47E58F69G7AH8BI9CKADMCEOEFQGGTIHWKIZ\
+  NJbQKfWKi`KleKngKljKjjKhfKgcKe`Kc_KbZKcYKdXKeXKfXK\
+  gZKg`KkaKnaKqbKnbKlcKjcKhdKfdPdeUbaZ_gcYkhVpmTtrQy\
+  vOzzMzzJzzHzzFzzDzzAyz8xz6vz4uz4zzJzzXzz8zzWzzrrzb\
+  rzOrzLrzJrzHrzFrzDrzBrzCrzCrzCrzDrzDrzDrzErzErzErz\
+  MrzErzFrzFrzFrzGrzGrzGrzHrzHrzHrzHrzIrzIrzIrzJrzJr\
+  zJrzKrzKrzKrzXzzWzzWzzVzzVzzUzzUzzTzzTzzSzzSzzRzzR\
+  zzQzzQxzPwzPuzOszOrzNpzNnzMmzMkzLizLhzKfzKdzTdzScz\
+  RczQczQczPczOczNczNczMczLczKczeVzdWzcWzbXzaXz`Xz_Y\
+  z_YzZYzYZzXZzWZzV_zV_zU_zT`zS`zR`zQazPazPazObzNbzM\
+  bzLczKcz_zzXzzUwzSrzPmzMhz`zz_zzZzzZzzYzzYzzXzzXzz\
+  WzzVzzVzzUyzUxzTwzTvzSuzRszRrzQqzQzzPzzPzzOzzNzzNz\
+  zMzzMzzLzzLzzKzzGzzHzzHzzIzzIzzJzzJzzKzzKzzSzzPzzM\
+  zzNzzMzzLzzKzz6zz7zz8zz8zz9zz9zzAzzAzzBzzBzzCzzCzz\
+  DzzDzzEzzFzzFzzGzzGzzHzzHzzIzzIzzJzzJzzKzz4zz5zz6z\
+  z7zz8zz9zzAzzBzzPzzOzzNzz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

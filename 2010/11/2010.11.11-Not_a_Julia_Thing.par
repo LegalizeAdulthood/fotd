@@ -1,0 +1,107 @@
+;     Date: Thu, 11 Nov 2010 12:36:18 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-11-10 (Not a Julia Thing [8])
+;       Id: <1.5.4.16.20101111123619.11e7e99e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 11, 2010 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A busy day means a late FOTD.  Wednesday was unusually busy here 
+; at Fractal central, so the FOTD is late.
+; 
+; Today's image lies in the parent fractal of yesterday's image.  
+; It is located in the Seahorse Valley of a distorted minibrot on 
+; the main stem of the parent, very near the point where the stem 
+; joins the main body of the Julibrot fractal.
+; 
+; I named the image "Not a Julia Thing".  On the surface it 
+; resembles an everyday Julia set, but it actually lies in an 
+; orientation rotated halfway toward the Mandelbrot direction, 
+; making it something for sure, but not a pure Julia set.
+; 
+; The rating of an 8 includes a full point for the extra effort I 
+; put into coloring the image.  The coloring creates the better 
+; part of the overall effect.
+; 
+; The calculation time of over 1-1/2 hours that is listed in the 
+; parameter file is some kind of timing bug that sometimes appears 
+; in the fractal computer after I run the ancient 'WordPerfect 5.1 
+; for DOS' program, which I still use after all these years.  The 
+; actual calculation time is around 2-1/2 minutes.  It's too bad 
+; the bug doesn't make the fractals calculate as fast as it makes 
+; the clock run.  (While the bug was in effect, the calculation 
+; time for an hour-long fractal was listed as 'a very long time'!)
+; 
+; The finished image may be seen by running the included *2-1/2* 
+; minute parameter file or by viewing it on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Total sun and an unexpectedly warm temperature of 61F 16C kept 
+; nearly everyone happy here at Fractal Central on Wednesday.  The 
+; fractal cats actually had a bit too much sun in the afternoon, 
+; and retired to the bookshelves in the hallway.
+; 
+; My day was quite busy, yet satisfactory, which is all I could 
+; hope for.  The next FOTD will probably be posted in 12 hours.  
+; Until then, take care, and when all those predicted technolog-
+; ical wonders finally arrive, will they be for everyone, or only 
+; for the wealthy?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Not_a_Julia_Thing { ; time=1:31:02.06-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 center-mag=-0.944342858\
+  62/+0.000172719906/4812174/1/-40/0 params=45/0/-45\
+  /0/-0.75/0/0/0 float=y maxiter=5000
+  inside=0 logmap=614 periodicity=6
+  colors=00000B00D00F00I00K00N00P00S00V00Y00_01b02d0\
+  3f04h05j06l07n08o09p0Aq0Br0Cs0Ds0Es0Fs0Gs0Hs0Is0Js\
+  0Ks0Js0Ks0Ls0Ls1Ms2Ns3Ns4Os6Pr7Pq8Qp9RoARnBSmCTlDT\
+  lASm8TnAUnCVoEWpGXpIXqKXrMXrOYsQYsSYsUYsWZsYZs_Zsa\
+  _sc_se_sg_sh_si_sj_sk_sl_sm`sm`sm`sm`sm`sm`sm`smas\
+  masnasobspfsqfsrgssgssestfstgsuhsujsvksvlswmswnswo\
+  swpswqsvrsurstrssrsqrsqrsqssqtsqutsvtuwuwxusxvszws\
+  zxrzyrzzrzzrzzqzzqzzqzzqzzpzzpzzpzzpzzpzzpzzpzzpzz\
+  pzzmzzozznzzmzzmzzmzzmxznxzmxzlxzkxzkxzkxzkxzkxzkx\
+  zkxzkxzjxzjxzjvzivzhuzgvzftzetzdrzcqzarz_qzYpzWqzU\
+  qzQpzMpzIpzGqzGrzGsyFtxEvw8uv2su0rt0ms0is0es0as0Zn\
+  0Wi0Td0Q_0NV0KQ0HL1EI1CI0AI08L09P0CT0EX0I_0Lc0Og0R\
+  m0To0Vq0Xs0Ys2Ys3Zs5Zs6Zs8ZsAZsBZsD`sFbsGdsIfsJhsN\
+  jsRlsWns`psdpshwshwshwshwshwsdrs`tsWvsRwsHlsCbs7Ss\
+  2Is0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0B\
+  s0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

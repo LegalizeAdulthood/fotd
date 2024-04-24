@@ -1,0 +1,112 @@
+;     Date: Fri, 05 Nov 2010 19:35:35 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-11-10 (Almighty Spiral [6])
+;       Id: <1.5.4.16.20101105183538.1087b826@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 06, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Usually, I put little effort into fractal spirals.  They're very 
+; easy to find and nearly everyone does them.  But the spiral in 
+; today's image is so unusual that I had to make it a Fractal of 
+; the Day.
+; 
+; I found the spiral when I tried to extend the trick of the two 
+; most recent FOTD's to the valley of the period-10 bud on the 
+; northeast shore line of the Mandelbrot set.  The trick worked as 
+; I thought, producing the anticipated image, but I never expected 
+; the image to be filled with such hairline-thin spirals.
+; 
+; Today's scene is a blow-up of a small part of the full image, 
+; which in itself is quite interesting.  (The full image will be 
+; the FOTD for tomorrow, November 07.)
+; 
+; Actually, images with very fine details such as today's and 
+; tomorrow's are improved by anti-aliasing, which helps eliminate 
+; the awkward breaks in the finer parts.  Because of the fine 
+; detail in today's image, I recommend calculating it at the 
+; highest resolution available.
+; 
+; The name "Almighty Spiral" is overblown.  The spiral is not all 
+; that great when compared to some that have been found by others, 
+; though it is probably the best I have found.
+; 
+; If spirals were not so commonplace, I might have rated the image 
+; higher.  As it is, a rating of a humdrum 6 will have to do.
+; 
+; The calculation time of 11 minutes is for a resolution of 
+; 640x480.  It will be far longer if the image is rendered at a 
+; higher resolution than this.  But for the true fractal-spiral 
+; fan, the result will be worth the wait.
+; 
+; The finished image is posted on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Sprinkles of rain fell during the morning Friday here at Fractal 
+; Central.  A few breaks of sun appeared during the afternoon, but 
+; not enough to lure the fractal cats to their shelf by the south-
+; west window.  The temperature of 52F 11C was about normal for 
+; early November.
+; 
+; The next FOTD will be posted in 24 hours.  Only a surprise 
+; antiquing trip could delay it.  Until next time, take care, and 
+; expect the unexpected.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Almighty_Spiral { ; time=0:11:12.40-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 passes=t periodicity=6
+  center-mag=-0.448511/-0.894674/9.159484/1/114/0
+  params=89.96/0/89.96/0/0.3272613/0.0561252/0/0
+  float=y maxiter=15000 inside=0 logmap=-3
+  colors=000REQSESUEUWEXYFZ_G`aHbcIeeJigKmiLqkMtmNwk\
+  OziPygQxeRwcSvaTu_UtYVqWWnUXkSYiQZfOZcMYaKXZIWWGVU\
+  EURCTOASM8RJ6QG4PE5OF5NF5MF5LF5KG5KG5KG5KG6KH6KH6K\
+  H6KH6KI6KI6KI6KI8KH9KGALGBNFDQEESEFUDGWDIZCJ`BKbBL\
+  dAMfAQbET_IWXMZUQbQTeNXhK`kHdnEgoFfoFepFdpGdqGcqGb\
+  rGarHasH`sH_sH_uL`vO`wR`xVayYaz`asaYlaUebRZbNScKLc\
+  GEdD7d91d5AdFFdPKeZUeccehmfhlfdiecfdbcca`b`Za_W`ZT\
+  _YQZWNYVLXUIWTFVSCUR9TQ7TPEXOL`OSdNZgNcdRMlCOpDMlC\
+  LiCMfCNcCO`CPYBQVBSSBUPBWMBYJB_GAaDAcAAc7Ac4Ac1Ac3\
+  Cc5Dc6Ec8Fc9HcBIZCJUEKPFMKHNFIOAKP5MR3NS3PT3QU3SW3\
+  TX4VY4W`4Yc4Zh4`m4ar4cv4ez4fz5iz5jz5lz5nz5oz5oz5pz\
+  5pz5pz3qz5qz6qz8rz9rzBrzCszDszFszGtzItzJtzKuzMuzNu\
+  zPvzQvzSvzTwzUwzWwzXwzZwz_wz_wzawzbwzcwzdwzewzfwzh\
+  wziwzjwzkwzlwzmwzowzpwzqwzqwzqwzqwzqwzrwzrwzrwzrwz\
+  rwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrw\
+  zrwzrwzrwzrwzrwzrwzrwzrwz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

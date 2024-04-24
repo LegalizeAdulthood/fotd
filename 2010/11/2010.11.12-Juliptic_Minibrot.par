@@ -1,0 +1,104 @@
+;     Date: Fri, 12 Nov 2010 19:05:42 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-11-10 (Juliptic Minibrot [6])
+;       Id: <1.5.4.16.20101112190539.134f15e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 13, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As the name of today's image -- "Juliptic Minibrot" -- implies, 
+; today's image lies in an orientation half way between the 
+; Elliptic and Julia directions.  The center of the slice is the 
+; origin of the Julibrot.
+; 
+; The image lies just east of a larger minibrot on a kind of main 
+; spike of the parent fractal, which is shaped the same as the 
+; minibrot in today's image.
+; 
+; Quite a bit of trickery was necessary to bring today's image to 
+; a reasonable proportion.  It was necessary to expand the X-axis 
+; direction to nearly ten-thousand times its normal size.  The 
+; unexpanded view of the same area is only a series of vertical 
+; stripes.
+; 
+; A minor coloring trick -- rendering the scene with the outside 
+; set to 'tdis' -- brought just enough extra oomph to the image to 
+; qualify it as FOTD for the day.
+; 
+; The rating of a 6 is based more on mathematical curiosity than 
+; artistic value.
+; 
+; The calculation time of 5-1/2 minutes is slow for an image that 
+; rates only a 6.  I recommend viewing the image in finished form 
+; on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Hopefully Paul is well enough to bring the site is up to date.  
+; The last time I checked, the last posted FOTD was November 2.
+; 
+; Thursday began with fog here at Fractal Central, but by 9am the 
+; sun broke through, and for the rest of the day total sun 
+; prevailed, with a temperature of 57F 14C.  The fractal cats made 
+; the most of the sun, which at its low angle, comes in their 
+; window quite strongly.  My day was occupied with wrapping up the 
+; week's work.  The next FOTD is due in 24 hours, but if it is 
+; late, an antiquing trip most likely arose on Saturday.  Until 
+; whenever, take care, and be ready to sacrifice.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Juliptic_Minibrot { ; time=0:05:31.15-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 center-mag=-2.474863995\
+  1095/0/915153/9451 params=90/0/45/0/0/0/0/0 float=y
+  symmetry=xaxis maxiter=15000 inside=0 outside=tdis
+  colors=000zm0KgGIkIHnKCjU7fc3cl9`hEZeJWaOUZURVZPSc\
+  MOhKLlGWpCet8ow4yU6STAVSEXRH_RLaQPdPSfOWiOZk97_ois\
+  llbjoMhr6bhFY_OTRXOIeJ9mavGUDGVHEWLCXPAYT9ZX7_`5`d\
+  3`g2RbIHZX7IY6DZ6DUAAUA7UA5UA6UA6UA6NACVAIbFNjKTrH\
+  YzKUtNQnQNiTJcWFYZCTa8Nd5IeKTzYcelnzzyzrqzzinbapWU\
+  sOMvGEx97r8Cm7Gh6Lc6PZ5UU4YP4aM6KJ8`G9KDB`ADK8E`9G\
+  K9HcAJKAKfBLKBNiCOjCPkFUgHYdKa`MeYOiURmRTqNVuKXzQz\
+  rWZza`pgazmznsazpaln`zk`ji_zfzhdZgazg_YfXYeVXdSXcQ\
+  WbNWaLWaJx`VyYVx_Qx`MxbIwcEweAwf6wg2ue5tc7sa9q`CpZ\
+  EoXGmVJlULkSNiQQhOSgNU_TWTYXMcZEh_7na0sbLpaemazkav\
+  icsgepffldhicifakb`l_ZnXYoa_nf`mkalpbkucjl`ccZYWWR\
+  NULERE6P88OD9NHBNMCMQDLUFLZGKbHKfwmNsnPpoRmpSjqUgr\
+  WcrX`sZYt_VuaSvcOvdLwfIxhFyiCzk9zlBvjDshEofGldIhbJ\
+  e`HbZF`YEYXCWWBTV9RU7PS6MR4KQ3HP1FO0DN2GQ4IT6LW8NZ\
+  APaCSdEUfGXiIZlK`oMcrOeuPgwQfuResSdrTcpUbnVamW`kX`\
+  jQZlKXnDVp7Tr1Rt7SsQYAO`C }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

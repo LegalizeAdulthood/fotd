@@ -1,0 +1,101 @@
+;     Date: Tue, 09 Nov 2010 20:45:01 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-11-10 (The Mystical Donut [7])
+;       Id: <1.5.4.16.20101109204500.145fdb50@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 10, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Like all images in the month of November, today's image lies in 
+; an unfamiliar slice of the Z^2+C Julibrot.  I'll not try to 
+; describe the location or orientation of the parent-fractal 
+; slice, other than reporting that it is centered on Seahorse 
+; Valley and is double-rotated halfway between the Mandelbrot and 
+; Julia orientations.  This is little help, since in the 4-D 
+; Julibrot there are countless orientations halfway between the M 
+; and J directions.  Today's scene is located on the rudimentary 
+; main stem of the parent slice.
+; 
+; I named the image "The Mystical Donut".  I know it's a rather 
+; silly name.  There is little of a mystical nature in a donut.  
+; But I can't help it if I saw a donut in the image.
+; 
+; Most of the image's detail was created by rendering it with the 
+; outside set to 'real'.  The 'imag' and 'summ' options work 
+; almost as well.
+; 
+; The rating of a 7 makes the image worth the minute required to 
+; run the parameter file.
+; 
+; Those with over-qualified machines can hopefully find the eye-
+; ball-ready image posted to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mixture of sun and clouds prevailed here at Fractal Central on 
+; Tuesday, with the clouds predominating.  The temperature of 55F 
+; 13C was just a bit too chilly for maximum comfort, though it was 
+; about normal for early November.  The fractal cats enjoyed the 
+; sun when it appeared and sought comfort by the heat when it went 
+; behind the clouds.
+; 
+; My day was average.  Isn't that boring?  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and do we exist even 
+; when we are unconscious?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Mystical_Donut { ; time=0:01:03.50-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 center-mag=-1.41420407/\
+  0/724383.1/1.5564/-90/0 params=45/0/-45/0/-0.75/0\
+  /0/0 float=y maxiter=1400 inside=0 outside=real
+  colors=000JffIeeIddIccIbbIbaIb`Ib_IbZIbYIbXIbWIbVI\
+  bUKaTLaSNaROaQQaPSaOTaNVcMXeLYgK_iK`kKdmKhoKmqKrsK\
+  vs2zz2zzzzzzzzzzzzvuzrw2my2hz2ZoCUeMPVWKLfGApCAzB8\
+  vB6tB4rB3oB3mA4kA4iA5gA6eA6dA7c97b98a98`99_9AZ9AY8\
+  BX8BW8CV8CU8DT8DS7ER7EQ7FP7FO7FN7GM7GL7GN7HP7HS7IU\
+  7IW6IZ6J`6Jb6Je6Kg6Ki6Ll6Ln6Lp6Ms6Mu6Mw8Nv9OuAPtBP\
+  sCQrDRqERpGSoHTnITmJUmKVlLVkMWjOXiPXhQYgRZfSZeT_dU\
+  `cV`cSZdQYeOXeMWfJVgHUgFThDRiBQi8Pj6Ok4Nk2Ml0Ll2Nh\
+  3Od4Pa5QY6RU7SR8TN9UJAVGBWCCX8DY5BaDAeL9iT8l`AmaBm\
+  bDmcEmdGmeHnfJngKnhMniNnjOnkQolRomTonUooWopXpqZpr_\
+  psaptbpucpuensflrgkqhipigojfnldlmcknajo_ipZhqXgrWf\
+  n_djbcffabi`Zm_VpYRtXOwWNtVMqVLoVKlVJjUIgUHeUGbUF_\
+  UEYTDVTCTTBQTAOTCPUDQUERUFSUGTUHUVIVVJWVKXVLYVNZWO\
+  _WP`WQaWRbWScXTdXUeXVfXWgXVeUVcSVbQV`OV_MVYKUXIUVG\
+  UUEUSCURAUP8UO6SSDQWKP_QNcXMgbKkiJnoKnpKnpKnpKnpKn\
+  oKnnKmmKllKkkKjjKiiJhhJgg }
+
+frm:SliceJulibrot2   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

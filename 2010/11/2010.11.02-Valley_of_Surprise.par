@@ -1,0 +1,102 @@
+;     Date: Tue, 02 Nov 2010 18:55:35 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-11-10 (Valley of Surprise [5])
+;       Id: <1.5.4.16.20101102175530.10d72246@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 03, 2010 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we enjoy another image from the Z^2+C Julibrot.  The image 
+; would normally have been discarded as soon as it appeared, but 
+; November is the month of salvation for questionable images from 
+; the Julibrot, so I decided to give today's image a chance to 
+; show its stuff, or its lack of stuff.
+; 
+; The rating of a 5 is right in the middle of the rating scale, 
+; which ranges from zero to ten.  This leaves it to the individual 
+; fractal fan to decide whether the 2-1/3 minute calculation time 
+; would be worth the effort.
+; 
+; The scene lies in the Seahorse Valley complex of the Julibrot.  
+; I have totally lost track of the location and orientation, and 
+; of the amount of stretching and skewing I did on the scene, but 
+; in the end, I was left with an image of a debris-filled hole 
+; with a brilliant white stripe in the background, which on the 
+; surface has no resemblance at all to anything normally connected 
+; to Seahorse Valley.
+; 
+; The name "Valley of Surprise" has something to do with the 
+; first impression of the image.  If one looks closely enough, 
+; however, they will see tiny hints of seahorse activity every-
+; where.
+; 
+; Finally, the 2-1/3 minute wait for the image to calculate may be 
+; avoided by viewing the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The total sun here at Fractal Central on Tuesday was spoiled by 
+; a morning temperature of only 23F -5C and an afternoon high of 
+; 48F +9C.  The fractal cats, who spent the day in the indoor 
+; temperature of 68F 20C fully enjoyed the sun however.  My day 
+; was average.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, stay alert, and prepare for a bombshell.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Valley_of_Surprise { ; time=0:02:19.88-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 passes=1
+  center-mag=-0.512268272656399/+0.0732312476231547/\
+  164.2885/5.3623/13.0817225561897121/65.54874842\
+  92186195 params=0/0/90/0/-0.76/0/0/0 float=y
+  maxiter=15000 inside=255 logmap=142 periodicity=6
+  colors=000dWteXsfXqgYohZmi_kj`ikaglbfmbencdodcpebq\
+  farg`sg`sf_sfZsfZsfYsfXrfXqfWpfWocXn`YmZZlX_kW`jUa\
+  iSbhScgQdfPeeNfcLgaJh_GiYEjWBkV7nU9lTBjSChREfQFdPG\
+  bOH`NIXMIXLJVKKTJLRIMPHNNHPLIRJJSHKTFKUDKVBKW9KX7M\
+  X5OX2QX4SX5UW7SW8QWAOWBMXDKXEIWGGVHEUIDTKCSLCSNCRO\
+  AQQ9PR7PT6PU2SU5RV8RVBQWEPWHNXKMXNLYQKYTIZWHZZH_ZI\
+  _ZJ_ZKQZLH_MJ`NKaOLcPMdQNeROfSPhTQiURjVSlWTmUUnUVo\
+  UWpUXpUYoUZmUYkUXiUWgUVeUUcUTaUS_URYUQWVPVVOUVNTUM\
+  STLRTKQTJPTIOUHNUGMUFLVEKVDJVCKXBKYAKZ9KZ8KZ7KY6KX\
+  7KW7LX8LX8LX9LX9LYALYALYALZBL`BMaCMbCMcDMdDMdEMdEM\
+  dFMeFMeGNeGNeGNfHNfHNfINfINgJNgJNgKOgKOhLOhLOhMOhM\
+  OiMOiNOiNOiOPjOPjPPjPPjQPkQPkRPkRjzzczzczzczzczzcz\
+  zczzczzezzdzzdzzczzczzbzzbzzazzazz`zz_zz_zzZzzZzzY\
+  zzYzzXzzXzzWzzWzzVzzVzzUzzUzzTzzTzzSzzRzzRzzQzzQzz\
+  PzzPzzOzzOzzNzzNzzMzzMzzLzzLzzKzzJzzJzzIzzIzzHzzHz\
+  zGzzGzzFzzFzzEzzEzzDzzuzz }
+
+frm:SliceJulibrot2   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

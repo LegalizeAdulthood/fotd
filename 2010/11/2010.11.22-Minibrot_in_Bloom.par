@@ -1,0 +1,94 @@
+;     Date: Mon, 22 Nov 2010 22:39:33 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-11-10 (Minibrot in Bloom [8])
+;       Id: <1.5.4.16.20101122223940.10bfbfba@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 23, 2010 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I had intended November to be exclusively a month of odd slices 
+; of the Z^2+C Julibrot, and here we are 3/4 of the way through 
+; the month, with quite a few interesting odd-slice scenes to show 
+; for the effort.  While searching for an odd Julibrot slice today 
+; however, I came up blank, but the workhorse MandAutoCritInZ 
+; formula rescued me in the nick of time.
+; 
+; The image shows a minibrot in a valley at the southern edge of 
+; the superb fan of the parent fractal, which was created when I 
+; combined 11 negative parts of Z^(-1.1) with one negative part of 
+; Z^(-11), and added (1/C).
+; 
+; I rated the image at an 8, including a full point for the extra 
+; coloring effort.  I named the image "Minibrot in Bloom" when I 
+; noticed FL raking leaves out in the back-yard garden.
+; 
+; The calculation time of 3-1/4 minutes is well within reason for 
+; an image that rates an 8.  Viewing the image already calculated 
+; on the FOTD web site is even more reasonable.  The web site may 
+; be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Morning clouds gave way to afternoon sun here at Fractal 
+; Central on Monday, while the temperature reached a pleasant 57F 
+; 14C.  The fractal cats occupied themselves for an hour or so 
+; chasing the laser beam up and down the hallway.  After the work-
+; out they were too exhausted to do much but sleep and ask for 
+; food.
+; 
+; My day was rather slow.  In the afternoon I spotted FL raking 
+; leaves in the garden, but she finished before I could go out and 
+; help.  The next FOTD will be ready in 24 hours.  Watch for it 
+; then in this same spot. Until next time, take care, and I'll 
+; tell you how if you tell me why.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Minibrot_in_Bloom { ; time=0:03:14.93-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.302856921705854/-2.971635012449411/\
+  3.859e+009/1/150/0 params=-11/-1.1/-1/-11/0/100/0/0
+  float=y maxiter=2400 inside=0
+  logmap=290 periodicity=6
+  colors=000H0OD0L90J50G10D00A00800C00F31H62J83L64HC\
+  3PA3MH2VF1PA1TG0UF0fE1gb2lh3onDgrW`ufRypmzzzzwzysm\
+  xpcwlCvkCtjDrgEpfFneFncGnaHn`InZInXJnWKnULnTLjRNgQ\
+  PcNR`MTXKUUJWQHYNG_JE`GDbCBd9Af69g7Hi8Ol9WnAbqAisK\
+  XhTLZb8Pk0FhAKeNOb`T_mX_i__eb_ad_Zg_Vi_Rl_Nn_Kq_Gs\
+  _Cv_9x`BuaCssPqbFnrglcHjmLUbPbbTZbXVb`RizzbhJrTz03\
+  20760BA0EE0II0LL1PP1ST2WX3_`3bc4fg4ik5mo5pr7mp9jnB\
+  glCdjEahGZgIWeJTcLQaNN_OKZLPXJTVHXTF`RDdPBhNEeRGbU\
+  I_YKX`MVdOSgQPkSMnUKqQHkNFfKDaHBXE9SA7N75I43D11800\
+  30GJ0WZ0km7eoE`qLWrTRt_MvfHwdQpcYjaed`mZai`bfbcbcq\
+  lzeWgfTheVieWidYjdZju`kcakYbdTcYOdRIcLDcE8c73b14b4\
+  4b74bA4bD4bG4bJ4bM5bP5cS5dV5eY5f`5gc5gf5gh4hi4ii4i\
+  j3jj3jj3kk2kk2ll2ll1ml1mm1nm0nn0on0on7qoEtpLwqSzrZ\
+  zsWztTzuQzvSzwTzxUzyVzzWzzWzzmzzmzzmzzmzzmzzmzzmzz\
+  mzzmzzmzzmzzmzzmzzmzzmzzmzzzz5zz7zz9zzBzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, esc=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

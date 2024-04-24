@@ -1,0 +1,97 @@
+;     Date: Thu, 25 Nov 2010 09:01:25 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-11-10 (Mount Mountain [7])
+;       Id: <1.5.4.16.20101125090119.145f3298@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 25, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The FOTD is late.  The reason -- I was too busy with other 
+; things on Wednesday Nov. 24 to do a proper search for the image 
+; for Nov. 25.
+; 
+; Today's image is named "Mount Mountain", a fine name for a 
+; fractal mountain if ever there was one.  The mountain exists 
+; mostly in the human mind, though partly in the parent fractal 
+; that is created when the formula Z^(1.1)+C is iterated 11 levels 
+; up the multi-dimensional complex logarithmic hyperladder with no 
+; function applied to the works.
+; 
+; I rated the image at a 7, which is not too bad for a fractal 
+; mountain with a touch of snow on its peak.
+; 
+; The calculation time of 12-3/4 minutes is admittedly slow, but 
+; then good things are worth waiting for, and the calculation can 
+; always be bypassed by going direct to the finished image on the 
+; FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Sun in the morning gave way to clouds in the afternoon here at 
+; Fractal Central on Wednesday, while the temperature reached no 
+; higher than a chilly 45F +7C.  The fractal cats spent most of 
+; the day watching their television, which is what they see on the 
+; other side of the window when they sit on their shelf.
+; 
+; My day was occupied getting the work caught up before the big 
+; holiday.  FL busied herself picking up the goodies for the 
+; Thanksgiving feast.  If we're lucky, only two guests will show 
+; up; if we're not, it could be six.  The next FOTD will be posted 
+; in 24 hours, possibly as little as 14 hours.  Until whenever, 
+; take care, and what will be the next big breakthrough?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Mount_Mountain { ; time=0:12:49.73-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=t
+  center-mag=-0.0853596/0.776714/7.814454/1/-142.5/0
+  params=1.1/0/11/525 float=y maxiter=32767
+  inside=253 logmap=63 periodicity=6
+  colors=000QGaQH`QH_PIYPJXOKWOLVOMTNNSKORHOQHPOHQNG\
+  RMGSLGYJFUIFVHFVGGWHGRIHRIHRJIRKIRKJWLJWLJWMKWNKWN\
+  LWOLRPMRPMRQNRQNRRNRSORSORTPRTPRUQRVQRVRRWRRXRRXSR\
+  YNRYORZOR_PR_PR`OT_PS`PR`QQaQQaQPbRObRNcRNcSMdSLdN\
+  _eOZeOYfOXfPXgPWgPVgQUhQUhQTiRSiRSjRRjSQkSPkSPlbOl\
+  bNmbNmcMncLncKndKodJodIpeHpeHqeGqfFrfFrfEsgDsgCrgC\
+  mhBhhAccFZZKUUPTPUKKZFFcEAcE5cE3bE3aE4`E4`E4dE4cD4\
+  bD4bD5aD5`D5`D5_D5ZD5YD5YC6XC6WC6VC6VC6UC6TC7SC7SC\
+  7RB7QB7QB7PB7OB8NB8NB8MB8LB8KA8KA9KA9KAUcAUKAmKAUc\
+  AmKAUK9Uc9mK9UK8UK8mK8Uc8UK7mK7UK7Uc6zE6cD6zD6cD5c\
+  D5zD5cD5cD4zD4cD4cD3zD3cD3cC3zC2cC2cC2cC1cC1cC1cC1\
+  cC0cC0cC0cC0cJ4cP7IWBMaEPhIQgHRgHSfHSfHTeGUeGVdGVd\
+  GWdGXcFYcFYbFZbF_aE_aE``Ea`Eb`Em_Dm_DmZDmZDmYCmYCm\
+  YCmXCmXCmWBmWBmVBmVBmUAmUAmUAmmAmmAmm9mm9mmzmmzmmz\
+  mmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmm\
+  zmmzmmzmmzmmzmmz00ammzmmz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

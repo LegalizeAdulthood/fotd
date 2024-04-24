@@ -1,0 +1,105 @@
+;     Date: Tue, 23 Nov 2010 19:40:32 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-11-10 (Busy-body Blueness [5])
+;       Id: <1.5.4.16.20101123194029.10e75bae@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 24, 2010 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As I said in yesterday's FOTD, I have grown bored with the odd 
+; slices of the Julibrot, and have decided to return to the old 
+; familiar routine images a week early.
+; 
+; Today's image lies in a remote valley of the strange parent 
+; fractal that results when the formula Z^sqrt(2)+C is iterated 
+; 41.3 levels up the complex logarithmic ladded with no function 
+; applied.
+; 
+; The minibrot at the center is a square-root-of-2 thing.  With 
+; exponents of Z in this range, parent fractals and their mini-
+; brots can take any shape whatever, which is not surprising, 
+; since the complex logarithm is multi-valued.
+; 
+; The name "Busy-body Blueness" is one of the most unjustified I 
+; can remember.  Very few blue tints are in the image, which is 
+; more of a sickly olive-green and orange than anything else.  I 
+; have no idea what the 'busybody' is supposed to refer to.  
+; 
+; The rating of a 5 might have been higher if I had put a bit more 
+; effort into the coloring.
+; 
+; The calculation time of 5-1/4 minutes is asking a bit much from 
+; the casual viewer to see a 5-rated image, but those who decline 
+; to view it will never know what they have missed.
+; 
+; Running the included parameter file may not be necessary.  The 
+; finished image is likely posted on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Clouds prevailed all day Tuesday here at Fractal Central, but 
+; they broke in the west just before sunset, leading to a spectac-
+; ular light show.  The temperature reached a pleasant 57F 14C.  
+; The fractal cats took things easy until late afternoon, when 
+; they began agitating for food.
+; 
+; My day was a very boring average, but then who needs excitement 
+; all the time.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and the fractals will keep coming until the 
+; supply is exhausted.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Busy-body_Blueness { ; time=0:05:14.45-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.09186130753/+1.498879230002/2387775/\
+  1/110/0 params=1.4142/0/41.3/0 float=y maxiter=8400
+  inside=0 logmap=362 periodicity=6
+  colors=000qPLqPLqPMqPNqPOqPPqPPpPQpPRpPSpPSpPTpPUp\
+  PVpPVoQWoRXoSYoTYoUZoV_oW`oXboY`mZ_k_Yh`XfaWdbUacT\
+  _dRYeQVfPTfNReMOdKMcJJdJKcILcHLbGMbFMaFN`ENZDOYCOX\
+  CPdBPcAQa9Q`9RZ8RY7vW6vV6vU5vS4vR3vP3vO2sM1pL0mK0j\
+  M2gN4dO6aP8ZQAXRCYSEYTGYUHYVJYWLYYNYZPZ_RZ`TZaVZbW\
+  ZcYZd__ea_fc_ge_ig_ji_kj_ll`mn`np`or`pt`qv`rx`sy_q\
+  wZpvZouYnsYmrXlqXkoWinVhmVgkUfjUeiTdgTcfSaeR`dR_bQ\
+  ZaQY`PXZPWYOUXNTVNSUMRTMQRLPQLOPKMOJKMJILIGKIEIHCH\
+  HBGG9EF8DF7CE6AE59D48D37E58F78FA9GC9HE9HHAIIAIJAJL\
+  BKMBKNBLPCLQCMRCNTDNUDOVDOXEPYEQZEQ`FRaFRbFQ`KQ_UP\
+  ZcPXjOWcOVUNUKNSCMRCMQCLOCLLBKJBKHBJFBJDAICAIBAIBA\
+  HD9GF8GI8FK7FL6EO6EQ5DS4CV4CW3BY2Be2Af1Ag1lh2li3lj\
+  4lk5ll6lm7ln8lo9qpAqqBqrCqsDqtEquFqvGqwHqxIqyJqzKq\
+  zLqzMvzNvzOvzPvzQvzRvzSvzTvzUzzVzzWzzXzzYzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

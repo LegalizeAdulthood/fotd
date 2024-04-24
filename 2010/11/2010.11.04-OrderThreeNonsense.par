@@ -1,0 +1,113 @@
+;     Date: Thu, 04 Nov 2010 22:06:55 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-11-10 (Order-Three Nonsense [No Rating])
+;       Id: <1.5.4.16.20101104210657.12c7053a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 05, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I rather enjoyed the half-and-half view of Seahorse Valley that 
+; I posted as the FOTD for yesterday.  Today I decided to take it 
+; one step further and see what would happen if I calculated the 
+; same type of view of North Valley.  The result is today's image.
+; 
+; The image closely resembles yesterday's, with the outer shape 
+; being the familiar Julia set of the area, with the bloated 
+; Mandelbrot-valley aspect filling the inside.
+; 
+; At first glance, today's image appears to have origin symmetry.  
+; A second glance however reveals that it has no symmetry.
+; 
+; An even greater change is in the periodicity.  In yesterday's 
+; image the blunt spirals had two arms; in today's image there 
+; are three arms in each spiral.
+; 
+; I re-used the same color palette to bring out the similarities 
+; in the images.  But this makes today's image too much of a 
+; repeat for an honest rating.  I let it go with no rating.
+; 
+; The name "Order-Three Nonsense" refers to the periodicity of the 
+; area of the Julibrot pictured in the image.
+; 
+; The calculation time of 46 seconds is just about what the image 
+; is worth.
+; 
+; The most convenient way to view the Julia-Mandelbrot nonsense is 
+; to view the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds, steady rain, and a temperature of 46F +8C spoiled 
+; outdoor plans here at Fractal Central on Thursday.  Luckily, 
+; with no outdoor plans, the fractal cats were satisfied indoors, 
+; lying by the heat.
+; 
+; My day was tranquil enough, which means enough work to keep my 
+; thoughts reasonably free of politics, philosophy and personal 
+; opinions in general.
+; 
+; Now that gardening season has ended, FL found herself with more 
+; spare time than she knew what to do with, but a latin soap-opera 
+; soon filled the empty time.  (I wish I understood Spanish.)
+; 
+; The next FOTD, even higher-order nonsense, will be posted in 24 
+; hours.  Until then, take care, and will there ever come a day 
+; when someone discovers the last fractal?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+OrderThreeNonsense { ; time=0:00:46.52-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 passes=1 symmetry=none
+  center-mag=-0.0201592/-0.0270368/0.9861933/1/58.5/0
+  params=87/0/87/58.7/-0.125/0.66/0/0 float=y
+  maxiter=2700 inside=0 logmap=yes periodicity=6
+  colors=000REQSESUEUWEXYFZ_G`aHbcIeeJigKmiLqkMtmNwk\
+  OziPygQxeRwcSvaTu_UtYVqWWnUXkSYiQZfOZcMYaKXZIWWGVU\
+  EURCTOASM8RJ6QG4PE5OF5NF5MF5LF5KG5KG5KG5KG6KH6KH6K\
+  H6KH6KI6KI6KI6KI8KH9KGALGBNFDQEESEFUDGWDIZCJ`BKbBL\
+  dAMfAQbET_IWXMZUQbQTeNXhK`kHdnEgoFfoFepFdpGdqGcqGb\
+  rGarHasH`sH_sH_uL`vO`wR`xVayYaz`asaYlaUebRZbNScKLc\
+  GEdD7d91d5AdFFdPKeZUeccehmfhlfdiecfdbcca`b`Za_W`ZT\
+  _YQZWNYVLXUIWTFVSCUR9TQ7TPEXOL`OSdNZgNcdRMlCOpDMlC\
+  LiCMfCNcCO`CPYBQVBSSBUPBWMBYJB_GAaDAcAAc7Ac4Ac1Ac3\
+  Cc5Dc6Ec8Fc9HcBIZCJUEKPFMKHNFIOAKP5MR3NS3PT3QU3SW3\
+  TX4VY4W`4Yc4Zh4`m4ar4cv4ez4fz5iz5jz5lz5nz5oz5oz5pz\
+  5pz5pz3qz5qz6qz8rz9rzBrzCszDszFszGtzItzJtzKuzMuzNu\
+  zPvzQvzSvzTwzUwzWwzXwzZwz_wz_wzawzbwzcwzdwzewzfwzh\
+  wziwzjwzkwzlwzmwzowzpwzqwzqwzqwzqwzqwzrwzrwzrwzrwz\
+  rwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrwzrw\
+  zrwzrwzrwzrwzrwzrwzrwzrwz }
+
+frm:SliceJulibrot2   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

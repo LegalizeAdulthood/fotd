@@ -1,0 +1,112 @@
+;     Date: Thu, 18 Nov 2010 22:12:03 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-11-10 (UnManipulated View [No Rating])
+;       Id: <1.5.4.16.20101118221204.12473406@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 19, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is presented exactly as it came off the press, 
+; with no manipulation such as rotating, stretching or skewing 
+; applied.  What appears on the screen is all there is of the 
+; fractal.  Nothing has been cropped.  Such chaos is typical of 
+; Julibrot slices at such weird 4-D angles.
+; 
+; The foreground features, which are colored dirty brown, are low 
+; iteration stuff that can go in any direction at all.  The 
+; brilliant blue stuff in the background is high iteration stuff 
+; that defines the Mandelbrot set.  This blue stuff is actually a 
+; very familiar segment of the Mandelbrot-set shape, though at the 
+; weird angle at which it is being viewed, it is unrecognizable.
+; 
+; In tomorrow's FOTD however, I will post another version of 
+; today's scene, in which I have done all the manipulation needed 
+; to return the Mandelbrot part to its normal state.  This will 
+; include substantial stretching and skewing, as well as a 
+; generous rotation.
+; 
+; Since today's image is all math with almost no artistic intent, 
+; I could not give it a rating.  The name "UnManipulated View" 
+; describes the image.
+; 
+; Since the image is of such a low magnitude and maxiter, it 
+; calculates in a fireball 6 seconds.  The image should also be 
+; available on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and blustery conditions continued here at Fractal 
+; Central on Thursday, with a temperature of 50F 10C.  The fractal 
+; cats kept happy chasing the point of light from a toy laser 
+; around the living room until they both began panting, and we 
+; decided they had had enough exertion for one day.
+; 
+; As far as the graphic design work went, my day was slow.  As for 
+; politics, in the morning paper I saw a column by a liberal woman 
+; columnist about how our schools are failing the young men, while 
+; the young women are excelling.  I thought it was the women who 
+; are supposed to be suppressed beneath a glass ceiling by our 
+; patriarchal, male-dominated society.
+; 
+; Regardless of who is suppressing who, the fractals are certainly 
+; not being suppressed.  In fact, the next one will be posted in 
+; 24 hours.  Until then, take care, and you can't have it both 
+; ways!
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+UnManipulated_View { ; time=0:00:06.04-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 center-mag=0.967912/\
+  -0.1798/0.7473842 params=152/105/-64/49/-1/0/\
+  1.118/0 float=y maxiter=1800 inside=0 logmap=yes
+  symmetry=none periodicity=6
+  colors=000C36D47E58F69G7AH8BI9CKADMCEOEFQGGTIHWKIZ\
+  NJbQKfWKi`KleKngKljKjjKhfKgcKe`Kc_KbZKcYKdXKeXKfXK\
+  gZKg`KkaKnaKqbKnbKlcKjcKhdKfdPdeUbaZ_gcYkhVpmTtrQy\
+  vOzzMzzJzzHzzFzzDzzAyz8xz6vz4uz4zzJzzXzz8zzWzzrrzb\
+  rzOrzLrzJrzHrzFrzDrzBrzCrzCrzCrzDrzDrzDrzErzErzErz\
+  MrzErzFrzFrzFrzGrzGrzGrzHrzHrzHrzHrzIrzIrzIrzJrzJr\
+  zJrzKrzKrzKrzXzzWzzWzzVzzVzzUzzUzzTzzTzzSzzSzzRzzR\
+  zzQzzQxzPwzPuzOszOrzNpzNnzMmzMkzLizLhzKfzKdzTdzScz\
+  RczQczQczPczOczNczNczMczLczKczeVzdWzcWzbXzaXz`Xz_Y\
+  z_YzZYzYZzXZzWZzV_zV_zU_zT`zS`zR`zQazPazPazObzNbzM\
+  bzLczKcz_zzXzzUwzSrzPmzMhz`zz_zzZzzZzzYzzYzzXzzXzz\
+  WzzVzzVzzUyzUxzTwzTvzSuzRszRrzQqzQzzPzzPzzOzzNzzNz\
+  zMzzMzzLzzLzzKzzGzzHzzHzzIzzIzzJzzJzzKzzKzzSzzPzzM\
+  zzNzzMzzLzzKzz6zz7zz8zz8zz9zz9zzAzzAzzBzzBzzCzzCzz\
+  DzzDzzEzzFzzFzzGzzGzzHzzHzzIzzIzzJzzJzzKzz4zz5zz6z\
+  z7zz8zz9zzAzzBzzPzzOzzNzz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
