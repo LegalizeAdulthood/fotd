@@ -1,0 +1,92 @@
+;     Date: Fri, 04 Apr 2008 21:55:39 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 05-04-08 (Angelic Snowman [7])
+; 
+;       Id: <1.5.4.16.20080404205803.2adf27f0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 05, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's semi-glorious image lies in the parent fractal that 
+; results when 3 negative parts of Z^(-1.3) are combined with one 
+; negative part of Z^(-3.3) and (1/C) is added.  To make things 
+; more interesting the bailout radius was increased to 780,100, 
+; which partially evaporated the scene, and the image was rendered 
+; with the inside set to 'fmod', which created the excessive sharp 
+; angular detail.  Both values are critical to the effect.
+; 
+; The above-mentioned parent fractal reminds me of an angelic 
+; snowman with a halo around his head, which is what I named the 
+; image.  But do not expect to see a snowman in the image.  The 
+; oversized parent fractal is the snowman.  Today's scene is 
+; located on top of the snowman's head.
+; 
+; The rating of a 7 might be a bit excessive.  The image is too 
+; hectic for my taste, but it's still worth a look.  That look may 
+; be had by running the included parameter file and waiting 1-2/3 
+; minutes, or by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Steady rain and a temperature of 43F 6C here at Fractal Central 
+; on Friday made it a day that rated a pathetic 2.  The fractal 
+; cats gave it a 1.  The other aspects of Friday were notably 
+; average.  The next FOTD will appear in 24 hours.  Until then, 
+; take care, and don't ask questions that demand too much thought. 
+; You might be told to sit down and shut up.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Angelic_Snowman    { ; time=0:01:41.67-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+5.84307665577121/+5.123185232569579/\
+  3964884/1/165/0 params=-3/-1.3/-1/-3.3/0/780000.0/\
+  0/0 float=y maxiter=750 inside=fmod
+  proximity=0.016581 periodicity=10
+  colors=000pkmpanpSopIpjHmdGj_GgUFePFbJE_EEYBCO9AE7\
+  959G4AM4CS4DZ4Fd4Gj4Hp4Lr3Os3Su2Vv2RqUOmuMjsKhqIfo\
+  HdnFalD_jBYhAWgB_kCcoDgrIZpNRoSJmXBla3kd4dg4Yj5Rl5\
+  KeFL_PLTZMNhMHrMPnGXjBdf6lb1ic6gdAeeFcfJagN_hSYiWW\
+  i_RjaMkcIleDmg9ni4ok0olX0Sd9QlIOtRMeP`ROnPOkNOhLOe\
+  JObHO_FOXDOUBOS_3M`7SaBXbFacJfdNkeRpfVunozgozapzVn\
+  zPmzIjzCqz9hy7jz5Us3cz1QiFTbTYYebTzhagmiwwqbqovpQS\
+  olMnjGmhBmgT`miOsdWq_coWknRslNzkJsfGlbDeYA_UJYTRWS\
+  ZUSfSRnQRgSP`UNUWLNYJGZIMWNSURYSWcP_iNdoLhr7St6Sv4\
+  Tw3Tr6Qm8OhBLcDJZFHXEVVDhUCuLKnxTgyKYyBOqFNjINcLNX\
+  ONPSNIVNBYN4`NBSWIKdOCl_agoHAeL5XO1qzqtldw_SyNGySJ\
+  yXMy`PyeSyiVynYyr_phYh_W_QUSHTldNnYLoSJpLHrFFs8Dt2\
+  BrJDp_FooHfrGZtFRvEOoFLhGIaHFWICPJ9IK6CKFLHOTEW`CQ\
+  bIKdNEfT8gYvScsP_qMWnJTlHPiEMgBIe9FI2iQ5bX8XdBRkEL\
+  sHFzJ9qNGhRM_VSRZZIbdAejLhaVkTenKoqByt3xuBwuJvuRvu\
+  YuuetumtutmvdgwQawBesAhcA }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

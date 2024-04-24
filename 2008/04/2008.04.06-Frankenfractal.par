@@ -1,0 +1,89 @@
+;     Date: Sat, 05 Apr 2008 23:16:09 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 06-04-08 (Frankenfractal [7.5])
+; 
+;       Id: <1.5.4.16.20080405221835.2adf468a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 06, 2008 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's evaporated quickie surprised me when it turned out to 
+; rate a 7-1/2 on the Jamth scale of fractal worth.  I don't have 
+; much to say about it except that it is spectacularly colorful, 
+; mostly due to the program, but partly to my efforts.
+; 
+; The parent fractal is the same one that gave us yesterday's 
+; image, though instead of being located in the snowman's head, 
+; today's image is located in a spiral lying beyond his left foot.
+; 
+; The name Frankenfractal is a bit of an exaggeration.  The 
+; fractal is nowhere near as impressive as its namesake monster.
+; 
+; With a calculation time of under 2 minutes, today's parameter 
+; file should be no problem to run.  But in case the unexpected 
+; happens, the completed image may be seen on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Variable clouds and a temperature of 52F 11C made Saturday 
+; fairly harmless here at Fractal Central.  The cats, being of a 
+; fractal nature, ignored the outside conditions to find their 
+; action inside.
+; 
+; My day was fairly lazy.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and keep watching that paradigm.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Frankenfractal     { ; time=0:01:55.66-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-23.11035411865113/-22.10717055110748/\
+  135535/1/156/0 params=-3/-1.3/-1/-3.3/0/1e+050/0/0
+  float=y maxiter=950 inside=bof61 periodicity=10
+  colors=000_H0WE0VA0S71P31L01I01H018000000000000015\
+  0G30I30K30L10N13P16Q0AS0DT0HV0KW0PY0S_0_Q0eI0lA0s3\
+  0q60q80qC0qE0oH0oK0oN0oP0mS0mV0mY0m`0ld0lg0lj0ll0W\
+  b0IV05N00G00C007103300500600700700C00G00K00P03S07W\
+  0C`1Ge5Lj7QmAVsD_xGdzIhzLmzNsz0zt0zo5zhAzdGzYLzTSx\
+  NYtIdsDjo8qmCjhDeeE_`GVYIQVKKQLGNNCKHHLDLN8QN5VP0_\
+  Q0dQ0hS0mS0lP5jLDlILmGKoHIqIIsIHtKHvKGxLGzNNzNVzPb\
+  zPjzQszSzzSzzTzzTzzWzzYzz`zzbzzezzgzzjzzlzzgzzbzz_\
+  zzVzzSzzNzzKzzGzzDzz8Kz60q10t00q00m00j00g00d00`00Y\
+  00T00Q00N00K00H00E00C00800H00Q01_05g0Yz3Vz3Sz1Px1N\
+  z1czcczczX0zO0z00q00h00`00T00L00I80GI7DVIAdW7qj6wz\
+  7wz7wz7wz7wz7mz7mz7bj7_h7Wg7Te7Sd7Pb7L`7K_CIVEHSIG\
+  PLELQEHTDEWCC`A8d86h81l70q60t50x50tA0sE0oK0mP0lV0h\
+  _0ge0ej0_e0V`0QY0KT0GQ0CL07I01E00C0070050EL0sd0zv0\
+  zx0zz0zz0zz0zz0sz0jz0Yz0Tz0Qz0Lz0Iz0Ez1Cz1Gz0Iz0Nt\
+  0Qo0Vj0Ye0b`0eW0hT0eP0bL0 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

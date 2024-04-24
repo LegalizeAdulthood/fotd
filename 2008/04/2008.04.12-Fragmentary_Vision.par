@@ -1,0 +1,95 @@
+;     Date: Fri, 11 Apr 2008 21:24:49 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 12-04-08 (Fragmentary Vision [6.5])
+; 
+;       Id: <1.5.4.16.20080411212718.2bc76b70@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 12, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the Z^(sqrt(2))+C Mandeloid as it appears 
+; 1/2 level up the logarithmic ladder when calculated by the 
+; MandelbrotBC2 formula.  I took a step backward when choosing 
+; this formula.  The scene is located in a valley on the east side 
+; of the main bay, which might or might not be an East-type valley.
+; 
+; Whatever the nature of the parent valley, there are no elephants 
+; or even pieces of elephants in the image.  What we do have is a 
+; moderately attractive but well broken-up scene with a near-shape-
+; less minibrot at the center.  This minibrot might become better 
+; defined if calculated at a larger maxiter, but I feel that the 
+; current maxiter of 12500 is plenty large enough.
+; 
+; The name "Fragmentary Vision" describes the image.  The rating 
+; of a 6.5 includes an extra half-point for the bit of extra 
+; effort I put into the coloring.  The calculation time of 10-1/4 
+; minutes is slow, but the time can be speeded up by viewing the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Mild but overcast weather prevailed here at Fractal Central on 
+; Friday, with the temperature around 66F 19C.  The cats slept 
+; through most of it.  My day was moderately busy.  Hopefully, 
+; tomorrow will be slower.  The next FOTD, whatever it may be, 
+; will be posted in 24 hours.  Until then, take care, and be calm 
+; in a fractal crisis.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fragmentary_Vision { ; time=0:10:14.12-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=+0.15332371912302240/-0.010277132064488\
+  32/5.053782e+009/1/-167.5/0 params=1.41421/0/0.5/0 
+  float=y maxiter=12500 inside=0 logmap=1050
+  colors=000MC4NC1PE2PE2QF2QG2RH3RH3SJ3SJ3TK3UL4UL4U\
+  L4UM4UM4UM5UN5UN5UN5VO6VO6VO6VP6VP6VP7VP7VQ7VQ7VQ7\
+  WR8WR8WR8WS8WS9WS9WT9WT9WT9XUAXUAXUAXVAXVAXVBXWBXW\
+  BXWBYX9XWBXVCWUDWTEVSFVRGUQHUPITOJTNKSMLSLMRKNRJOQ\
+  IPQHQPGRPFSOETODUNCVNBWMAXM9YL8ZL7_K6`K5aJ4bG0bJAc\
+  LFdNKdPPeRUfUZhWcjYhk_mmdnpamn_jlYgjVdhTafRZdPWbMT\
+  `KQ_INZFKYDHXBEW8AW9AVABVACUBCUCDUCETDETDFTEGSFGSF\
+  HRGIRHIRHJQIKQIKQJLPKMPKNOLNOMOOMPNNPNNKNOOMPPMPNL\
+  QTLRNLRUKSVKLZLSVKZRKdNKkJJrFJyAKzBJzRJyDIwEIvEHuF\
+  HsGGrHGpIFoIFmJEbKEeLDeMDkMDmMCzUBwN9qP9pRAoUBmWCk\
+  VDiZEfcFdcGTUH`ZIYZJWZKUZLRdMVcKUcKThKVhJXhJZaJ_hI\
+  `hIahIbqHcqHdlHeqGfqGgrGhrFjsFltFpuEtuHxuLzuPzuSzu\
+  Wzu_zubzufzujzunzuizuhzufzuezuczubzv`zw_zxmzymzzmz\
+  zmzzmzzmzzmzzmzzmzzmzzmzzmzzmzznzznzzozzpzzpzzqzzr\
+  zzrzzszzszztzzuzzuzzvzzwzzwzzxzzyzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

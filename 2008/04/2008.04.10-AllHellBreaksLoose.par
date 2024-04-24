@@ -1,0 +1,110 @@
+;     Date: Wed, 09 Apr 2008 23:03:13 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 10-04-08 (All Hell Breaks Loose [!!])
+; 
+;       Id: <1.5.4.16.20080409230541.2b1f6500@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 10, 2008 (Rating !!)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Look at what has happened to the perfect minibrot of yesterday's 
+; image.  Not only has it stretched beyond recognition, it has 
+; come apart.  But this is what happens in the four-dimensional 
+; Julibrot when the Mandelbrot scene is double-rotated and sliced 
+; at a critical angle.  In this case, the angle defined by the 
+; real(p1) parameter is the critical one.  A change as little as 
+; 0.1 degree makes a world of difference.
+; 
+; I was so surprised at the result that I rated the image at a !!  
+; This is a most unusual rating indeed.  And I must apologize for 
+; the name "All Hell Breaks Loose".  The image is not really that 
+; violent, and I doubt that any fractalists believe in the literal 
+; existence of that legendary hot place down below.
+; 
+; As for a description of the motion known as double rotation, I 
+; am working on it, but at the same time I am finding it extremely 
+; difficult to put into words.
+; 
+; Those in a hurry will find the calculation time of 34 seconds 
+; quite reasonable.  Those even more hurried may view the finished 
+; image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a temperature of 63F 17C, Wednesday was mild enough here at 
+; Fractal Central in central Pennsylvania, but the clouds kept it 
+; from being ideal.  The fractal cats live in an ideal world, so 
+; they were not disturbed by the grayness.
+; 
+; My day was moderately busy, but we were irritated by an irate 
+; customer who claims he didn't get what he wanted and refuses to 
+; pay his bill.  Thankfully, fractals do not incur bills, and even 
+; if they did, they would never refuse to pay.  The next FOTD will 
+; be posted in 24 hours.  Until then, take care, and keep going in 
+; hypercircles, whatever they are.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AllHellBreaksLoose { ; time=0:00:34.64-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 center-mag=+0.000000006\
+  15716237/+0.00000013555853479/1.861013e+008/0.0130\
+  8/92.6807800722809247/-33.0516955361447415
+  params=-92.5/162/147/-42/-1.749446905449293/6.8348\
+  87985e-007/-1.749446905449293/6.834887985e-007/\
+  2.0000001/0 float=y maxiter=1800 inside=0
+  logmap=181 periodicity=10
+  colors=0003966A79B8BC9ED9HEAKFBOFBRGCWHD`IDdNEkTFl\
+  aOikYftVmzSrzQvzNzzK_PHNYnLYjIYeGZaEZXBZT9_O6_K4_F\
+  2_B7XCCVDHTDMQEOXCROEWMFewcdoZcgUb_PaSKfEsdGjcHbbI\
+  VaJNI`RKZQLYPNXOOWNPUMRTLSSLTRKVQJWOIXNHzzztwsornk\
+  ieg`XcSOzXLvVLqSHjOFeMF_ic``V`SNo_9lXAjUBgSCePDbME\
+  LhzNevOcrPanR_jSYfTWbVUZWSVXQRZON_MJiF0hG2gG3fH4fH\
+  5eH6dI7dI9cJAbJBbJCaKD`KEL5kTDVxy9vvAtsArpBqmBojCm\
+  gCldCjaDhZDfWEeTEcQFaNF`7l`9h`Ad`C``DX`FU`GQ`IM`JI\
+  sSNoQLkOJgNIcLGjzJgoIedHbUGYtjZqgZoeZlcZjaZg__eY_b\
+  W_`T_YR_WP`TN`RL`OJ`MHLk9MiANgAOeBPdBQbBR`CSZCTYCU\
+  WDVUDWSEXREYPEZNF_LFkmzjjuigqhdlgbhf_deX_dUWcSSbPN\
+  aMJlVFjTFhRFfQFeOFcNFaLF0OR4NP7NOBMNEMMHMLLLKOLJRL\
+  IVKHYKGxQ0vP1uP2sO3rO4pP5oQ6mS7lU8jW9iYAg_BfaCdcDc\
+  eEagFiicgk_fmWeoTcqPbsMauIUwIWxHXyHYzGZzG_zFQzfUzX\
+  YzORzuSzqTzmUzjVzfWzcWz_XzWYzTZzP_zM`zICzzPzbtzroz\
+  hjzZezPDzrHzkLzdPzZTzSXzL }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

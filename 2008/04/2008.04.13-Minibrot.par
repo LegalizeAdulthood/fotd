@@ -1,0 +1,100 @@
+;     Date: Sat, 12 Apr 2008 20:25:37 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 13-04-08 (Minibrot [No Rating])
+; 
+;       Id: <1.5.4.16.20080412202808.2b5f1d70@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 13, 2008 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Minibrot", and that's all it is.  After 
+; spending the entire afternoon clearing the winter debris from 
+; the yard, I had almost no time for a proper fractal search.  So 
+; I took the first minibrot I could find in the Z^(1.75)+C 
+; Mandeloid as it appears 6 levels up the logarithmic ladder when 
+; the cosine function is applied, and declared it Fractal of the 
+; Day for April 13.
+; 
+; The parent fractal is a distortion of the classic Mandelbrot 
+; set, with today's scene located in its Seahorse Valley area.  
+; With no effort involved in its creation, the image could not be 
+; given a rating.
+; 
+; The calculation time of 4-3/4 minutes is within reason.  But it 
+; is equally reasonable to completely avoid the effort of calcula-
+; tion and view the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Saturday was the best day so far this spring here at Fractal 
+; Central.  A heavy thunder-shower around 5am cleared out the 
+; murk, and by 9am the day was sunny with a temperature of 68F 
+; 20C.  Things got even better in the afternoon when it reached 
+; 73F 23F.  The fractal cats watched from the back window with 
+; amusement as I started work in the yard.  The next FOTD is due 
+; and will likely appear in 24 hours.  Until then, take care, and 
+; don't waste energy on a heroic but futile effort to create true 
+; meaning in a meaningless universe.  This is what born-again 
+; skeptics and Atheists do, and I have never yet seen one succeed. 
+; But above all else, think positive.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Minibrot           { ; time=0:04:43.24-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=cos passes=1
+  center-mag=-0.643729366910521/+0.3961159852470334/\
+  95347.75/1/97.5/0 params=1.75/0/6/0 float=y
+  maxiter=7500 inside=0 logmap=212 periodicity=10
+  colors=0002G83G94GA6GB7GC8FDAFEBFFCFGDFGKJKRMOYPSd\
+  TWkW_rZbo`alaajbagc`ed`be`_f`Yg_Vh_Ti_Qj_NkZLlZImZ\
+  GnZEfdDZiCSnBKsADxGLwMTvS`uYhtcpt`nsYlsVksTisQhsNf\
+  sLesKctJatI_tIYtHXtGVtFTtFRuEPuDOuCMuCKuBIuAGuAFu9\
+  Gr9Ho9Im9Jj9Kh9Le9Mb8M`8NY8OW8PT8QQ8RO8SL8SJ9RK9RL\
+  9RL9RM9QN9QN9QO9QP9QPUZKnfGmdImcKlbLlaNk`Pk_QjYSjX\
+  TiWViVXhUYhT_hS`fXad`acdbahb_mcZqcXudWydTzeRzePzeN\
+  zeLzeJzeHzeFzeDzeBzeEvcGrbIoaLk`Nh_PdZRaYUYWWUVYRU\
+  `NTbKSdGRfDQcPR``RZkR_jT_jU`jW`iX`iZai_ahabhbbhdbh\
+  e`ggZfhXeiWdjUckSclRbmPanN`oM_pK_qIZrHYsFXtDWuCWvD\
+  UvDSvDRvDPvDOvDMvEKvEJvEHvEGvEEvEDvIKoMRiPYcTdYXkS\
+  _rM`pOanPblQcjRdhSefTfdUgbVh`XiZYjXZkV_lT`mRanPboO\
+  c_WVKbM5iE5jG4kI4lK4mM4nO3oQ3pS3qU3rW2sY2t_2ua2vb3\
+  wa4xa5ya5za6z`7z`8z`8z`9z`Az_Bz_Bz_Cz_Dz_EzZEzZFzZ\
+  GzZGzZKz`NzaQzbTzcWzdZzeazfezghzhkzinzjqzktzlwzmtz\
+  oqzpozqlzrizsgzt2z81z70z7 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,105 @@
+;     Date: Mon, 07 Apr 2008 18:58:02 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 08-04-08 (Fierce Fiery Scene [7])
+; 
+;       Id: <1.5.4.16.20080407190027.2ac71624@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 08, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal came about purely by accident as I was using the 
+; 'fmod' outside option to search for a minibrot in the 
+; Z^(sqrt(2))+C fractal as it appears 4 levels up the logarithmic 
+; ladder when no function is applied.
+; 
+; I never found a minibrot, though many are certainly nearby, but 
+; I did find a strikingly colored scene that consists entirely of 
+; 'outside' stuff rendered, of course, with the 'fmod' option.
+; 
+; The image uses only a small part of the 256 available colors.  
+; In this case however, the lack of the full color palette is 
+; hardly noticeable.
+; 
+; After a brief moment of indecision, I rated the image at a 7.  
+; The name "Fierce Fiery Scene" kind of describes the image, 
+; though I could find no signs of flames in the picture.
+; 
+; The calculation time of 7-1/2 minutes is a bit slower than I 
+; would have preferred, but the image is different enough to be 
+; worth the effort.  And as always, the finished image is posted 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was dry all day Monday here at Fractal Central, but 
+; the heavy clouds and temperature of 48F 9C hardly felt spring-
+; like.  The fractal cats spent the day keeping warm by the 
+; warmest radiator.
+; 
+; I spent the day being busy with work and reading about a certain 
+; cat in a quantum box.  The fiery fractal ended the day with a 
+; moment's satisfaction.  The next FOTD, not so fiery, will appear 
+; in 24 hours.  Until then, take care, and is Schrodinger's cat 
+; dead, alive, sick, or none of the above?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fierce_Fiery_Scene { ; time=0:07:37.14-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.6634403428163981/-1.406626216391897/\
+  1.641796e+009/1/100/0 params=1.41421/0/4/0 float=y
+  maxiter=1500 inside=0 proximity=0.002
+  outside=fmod periodicity=10
+  colors=0003B`3B`3Ba3Ba4Ba4Ba4Bb4Bb4Bb4Bb4Ac4Ac4Ac5\
+  Ac5Ad5Ad5Ad5Ad5Ae5Ae5Ae5Ae36h48f5Ae5Bd6Dc6Eb7Ga7H`\
+  8JZ9LY9MXAOWAPVBRUBSTCURDWQDXPEZOE_NFaMFbLGdJHfIHg\
+  HIiGIjFJlEIoCJnDJmDJmDKlDKlDKkDLkDLjDLjDMiDMiDMhEN\
+  hENgENgEOfEOfEOeEPeEPdEPdEQcEQcFQbFRbFRaFRaFS`FS`F\
+  S_FT_FTZFTZFTZFU`GVaHWbHXcIYeJZfJ_gK`hKaiLbkMclMdm\
+  NenNfpOgqPhrPisQjtQkvRlwSmxSnyTmzUnzTnySnxSnwRnvQn\
+  uQntPnsOnrOnqNnpMnoMnnLnmKnlKnkJnjIniInhHngGnfGneF\
+  ndEncEnbDt_6r`9paBnaDlbGkcIicKgdNedPdeRbfU`fWZgY_j\
+  Z_l`Yg_WbYUYXSTVQOUOJSLFQMERMERMESNESNESNDTNDTODUO\
+  DUODUODVPCVPCWPCWPCWQCXQCXQBYQBYRBYRBZRBZRBZRA_RA_\
+  RBZSCYTDXVDWWEVXFUYFT_GS`HRaHQbIPdJOeJNfKMhLLiMKjM\
+  JkNImOHnPGpQFrREtSDvTCxUBzUBzUAxTAvSAtRAsQAqQApPAo\
+  OAnOAmNAkMAjMAiLAhKAgKAeJ9dI9cI9bH9aG9`G9ZF9XE9VE9\
+  TD9RC9PC9NB9LAAJ9BIACHADGAEIAFKAGMAHNAIOAJPBKQBLRB\
+  MSBNTBOUBPVBQWBRWCSXCTXCU }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

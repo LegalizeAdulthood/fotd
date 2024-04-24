@@ -1,0 +1,104 @@
+;     Date: Thu, 24 Apr 2008 21:24:48 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 25-04-08 (Total Confusion [No Rating])
+; 
+;       Id: <1.5.4.16.20080424212730.2b8731ee@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 25, 2008 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to the fractal that is created when the 
+; formula Z^sqrt(3)+C is calculated 2 levels up the logarithmic 
+; hyper-something when no function is applied.
+; 
+; The parent fractal resembles a half-deflated beach ball draped 
+; over the edge of a cliff.  The not-too-attractive and under-
+; iterated minibrot in today's scene resembles its parent beach 
+; ball rather well.
+; 
+; The scene is located a short distance to the west of the main 
+; bay of the parent fractal, where a zigzag filament is being 
+; squeezed between two heavy discontinuities.
+; 
+; I named the image "Total Confusion" after a quick glance showed 
+; very little orderliness in it.  Then I let it go without a 
+; rating.  I didn't like the image enough to rate it.
+; 
+; The calculation time of 2-2/3 minutes will try the patience of 
+; not even the most impatient fractalist.
+; 
+; And last but not least, the finished image is posted for instant 
+; viewing on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Absolutely perfect weather prevailed Thursday here at Fractal 
+; Central.  The sunny skies and temperature of 75F 24C made time 
+; spent outdoors a pleasure.  The fractal cats, who never get 
+; outside to enjoy the weather, were unimpressed.
+; 
+; My day was slow -- once I got the G.D. (graphic design) work 
+; out of the way that is.  And better yet, tomorrow is due to be 
+; the same.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and what color is the number 8?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Total_Confusion    { ; time=0:02:40.92-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.679007675579299/+0.0786582104032291/\
+  1.345969e+008/1/-145/0 params=1.732/0/2/0 float=y
+  maxiter=5000 inside=0 logmap=155 periodicity=10
+  colors=0001AM19N18O17P17Q16R15S14T14U35V55V75W95WB\
+  5XD5XF6XH6YJ6YL6ZN6ZO6ZN7XM8VM9TLARLBPKCNJDLJEJIFH\
+  IGFJHHJIJKJKKKMLLNLMPMNRMNSNOUNPVOQXORZPS_PTaMPaPT\
+  bSXbV`bXdb_hbblbdpbbnc`ldZkeXifVhgTfhRdiPcjNakL`lJ\
+  ZmHYmjyMfsKbmJZhHVbGRXFNSDJMCG99FHBEOCDVDCaEBhFAoG\
+  9vHDsGGpFKnENkDRhCUfBXcA``9cZ8gW7jT6mR6hQ7dP7`O7WN\
+  7SM7OL7JK7FJ7BI77I7CL7HN7MP7RR7WT7`W7eY7j_7oa7tc7Y\
+  bZBbzFazJazNazR`zV`zZ`zb_zf_zj_znZzrZzvZzqWvmTsiQp\
+  dNm`KjXIgTFdOCaK9ZG6WD1RC4TB6UA9V9BW8EX8GY7I_6L`5N\
+  a4Qb3Sc1Ml3Ud5`X7gP9nHAuAAqBAnCAjCAgDAcEA`EAXFAUGA\
+  QGANH8GGAKHCNIEQJGTKIXKK_LLbMNeNPiNRlOToPVrQWuQZqN\
+  anKdkIggFjdClaAgcFceK_gPViURkYNmbIogEql9rtAspAslBs\
+  hEosBsd5xO8wRAvTCuVEtXGsZIr`KqbMpdOogQniSmkUlmWkoY\
+  jq_is`kvahuaeuaguaiubkubmuboubqubsucuucwucwucwufzt\
+  czu`zuZwuWwuUwuRuuPsuMquKouHouFquHsrIupJvmKwkMxhNy\
+  fOzcPzaTzbQz_1z61z81zA1zC }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
