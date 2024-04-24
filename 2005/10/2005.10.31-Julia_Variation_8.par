@@ -1,0 +1,91 @@
+;     Date: Mon, 31 Oct 2005 08:23:15 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-10-05 (Julia Variation-8 [5)
+;       Id: <1.5.4.16.20051031082446.0d772c52@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 31, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It's Halloween here at Fractal Central, the day when ghosts come 
+; alive.  Of course ghosts can not come alive.  They are firmly 
+; dead.  Skeptics who have never seen a ghost do not believe in 
+; them.  They know that ghosts are entertaining figments of the 
+; imagination.  Those who have seen a ghost do not need to 
+; believe.  They know that ghosts do exist.  Those who watch all 
+; the TV reality shows about hauntings don't know what to believe. 
+; My own opinion is that where there is such a widespread belief 
+; in ghosts, there must be something other than the currently 
+; understood and accepted psychological phenomena involved.  This 
+; might or might not be actual disembodied spirits.
+; 
+; And after today's image we might have a few more believers, for 
+; a kind of toy vampire-like ghost lies spreading its cape near 
+; the center of the scene.  It is the blackest part of the 
+; fractal, and decorated by a pair of greenish, demon-like eyes.
+; 
+; The image shows a Julia set of the Z^(1.618)+C Mandeloid as it 
+; appears 16 levels down the hyperspiral.  The image consists 
+; partly of normal outside stuff and partly of inside stuff made 
+; more interesting by the 'bof61' inside fill.
+; 
+; Unable to decide whether I like the image, I have rated it at a 
+; 5.  The render time of 1-3/4 minutes is fast enough for all but 
+; the most impatient.  The impatient can find relief for their 
+; impatience on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Warm sun, gentle breezes and a temperature of 66F 19C made the 
+; cats' day quite enjoyable here at Fractal Central on Sunday.  
+; They spent the entire afternoon lurking in the holly bushes, 
+; watching for something that never came.  My day was reasonably 
+; good.  Today is starting sunny and chilly, but another quick 
+; warm-up is expected.  Until the next FOTD appears in 24 hours, 
+; take care, and fractals are good for the spirit.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Julia_Variation-8 { ; time=0:01:43.88--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=0.0839311/0.0751566\
+  /0.9861933 params=1.618034/0/-16/0/0.0151917/-0.17\
+  77604/0/0 float=y maxiter=255
+  inside=bof61 periodicity=10
+  colors=000KDg000QDITDHWHGZLFaOEdSDhWCiZCkXFiVIhTLg\
+  SOfQReOUdNXcL_aJb`He_GhZEkYCnXBqW9tV7wU6yS5xR5wP4v\
+  O4uM4tL3sJ3rI2qG2pF2oD1nC1mA0l90k80jMDi_Qimain`jn_\
+  kn_loZmoZnoYopXppXppWqqWrqVsqUtrUurTvrTvqSwpSwpRwo\
+  RxnRxnQxmQymPylPykPzkOzjOzjOzgPyePxcQxaQw_RvYRvWRu\
+  UStSStQTsOTsMTrKUqIUqGVpEVoCVoAWn8Wm6Xm4Xl2XlLURNW\
+  SOXTQZUR_VS`WVZXXYXZXY`WYcUYeTZgSZiR_lP_nO_pN`rM`t\
+  L`pOZlQXhSVdVU`XSXZQT`PUYQUWRVUSVRSWPTWNUXKUXIVYGW\
+  YEXZBXZ9Y_7Z_4Z`2_`0``0`i8iqHroKmmNilPejS`iUXgXTfZ\
+  PgWQhUQiSQjQQkNRlLRmJRnHRoFRe_HXs8VpETnJRlOPiUNgZL\
+  ecJchH`nFZsDXxBVzDXzEYyGZxH_vJauKbsMcrNdpPfoQgmShl\
+  TijUjiVigVifVhdWhcWgaWg`WgZXfYXfWXeVYeTYdSYdQYdPQl\
+  bJspMrmPqkSphUpfXoc_naanZdmXglUilShkUhkVhjWhjYgjZg\
+  i_giagibfhcfhefhffggfgiefjefkefmeendeodeqddrddsddt\
+  YjvRoxLtyMquNnrOknOhkPehQbdQ_aRXYSUVSRSTOOULLUJISG\
+  JREJPCJOAJN7K2Cg0Dj0Dm0Dp }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

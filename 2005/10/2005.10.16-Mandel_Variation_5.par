@@ -1,0 +1,101 @@
+;     Date: Sun, 16 Oct 2005 10:12:40 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-10-05 (Mandel Variation-5 [4])
+;       Id: <1.5.4.16.20051016101402.23578500@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 16, 2005 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Can a fractal be used as a wallpaper design?  Today's image 
+; shows that the answer is yes.  The old formula I resurrected for 
+; today is named "Wallpaper", and the only thing it aparently does 
+; is create a wallpaper-like pattern.  Since the formula is based 
+; on the Mandelbrot set, I named the image "Mandel Variation-5".  
+; 
+; Like is true of so many of these old forgotten formulas, I have 
+; no idea where it came from or what it was originally supposed to 
+; do, though with the way the functions are piled on in the 
+; iteration part, I doubt that I wrote it.
+; 
+; The (p1) parameter is set to a point some distance north of 
+; Seahorse Valley.  Bits and pieces of this valley form the 
+; smaller, more intricate parts of today's wallpaper sample.  The 
+; larger flat diamond shapes are simply parts of the iteration 
+; bands in the area.
+; 
+; Is there a market for wallpaper with a fractal design?  Who 
+; knows.  Maybe it has already been tried.  I myself prefer the 
+; peaceful feeling a smoothly painted wall induces, expecially 
+; when the color is a pastel tint of blue.  But some people enjoy 
+; the liveliness that a busy wallpaper pattern can create.  There 
+; might be a place for fractals on the walls of our homes, but 
+; surprisingly enough, not here at Fractal Central.
+; 
+; After giving today's image careful consideration, I rated it a 
+; below-average 4.  This is no reflection on the worth of the 
+; formula.  The formula might have far better images in it, but 
+; wallpaper is just not my thing, so I will not work with the 
+; formula long enough to find out.
+; 
+; One very good point however is the speed of the image, which 
+; with its XY-axis symmetry, renders in an incredible 3 seconds.  
+; It will take several times as long to stop by the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and download the completed image from there.
+; 
+; Lots of sun and a high temperature of 75F 24C here at Fractal 
+; Central on Saturday was just what the cats have been waiting 
+; for.  Only a rather brisk wind kept the day from being 
+; absolutely perfect.  Today is starting sunny but not quite as 
+; warm.  The day will probably be good enough for the duo.  For me 
+; things look peaceful.  Hopefully they will stay that way until 
+; the next FOTD appears in 24 hours.  Until then, take care, and 
+; spare no fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Mandel_Variation-5 { ; time=0:00:03.18--SF5 on a P200
+  reset=2004 type=formula formulafile=jim.frm
+  formulaname=Wallpaper center-mag=0/0/0.04266667
+  params=-0.75/0.49/16/0 maxiter=95 inside=255
+  float=y logmap=yes symmetry=xyaxis periodicity=0
+  colors=000qmmnibkdSSEKYMJcUIQXR1NTNUNrp3ol7mhAjdEb\
+  KIXr8_mBbiDedFjAciOSmrWjiONGXYRPim4hi8hfBhcEiqWhkR\
+  heM6vlQkXgmWhiSjbelikecXZZIWi9Tt0MPgnN6ZYPJggKx_TX\
+  k`5w`Wq`ukwzokyp`xqPwrEvrAnZ7gGF_KMTNTMQ_FTaKNbPId\
+  UCeZ7rwllmcgcWaUNXKFPLKHMP9MUDQLGUCJY3RX5ZX7fW9nWA\
+  xCvZpTViaRbiNWrJPzLcqNqhGbg9Pg2Bgt3Ih8MhIKhSITRzZH\
+  oj23iKA40EIDFWPGt0jnJWoZVl_Qj`LJpaSjV`eOasEdlFffGt\
+  zUpqPlhL1KBGQDVWF0OqFTdUXTZBMlAhJSfQV_WXUbZNAV7PkP\
+  WgMbcJkXIiZHuMypRjlWWvSSrVPoXMkZJcGmeNbgUSsh8pfBmd\
+  DjbF7UCAMMJQKSUJ`YIjTViWQhZLpO9lVD4_NLTsTWf`ZU2htD\
+  fjOd`ZbRqY8f7OgFMgMKhUIReIWcH_bHdaHVEbaQS`xbdlSVgr\
+  ih6heAhbEhXThYQhZNh_KyYlp_XZM0cU9nholecjbSemF8eELy\
+  TXlNGUxQXi_ZVhEehMXhUPCczLbnTac``SWhEkpkOSFVVGaYHE\
+  xLPpJZhIvFWoQOj5DiGFhRGIr6Pm9WiCbdF6meJhXWdPRHa_RR\
+  RMo_UYy1usDgmPUJJJQOIWSIbXHjnligXbvXdpTekPgeLo2kkK\
+  Wv1YoJPNb6aeaccWebRgaMtry }
+
+frm:Wallpaper { ; 
+; use fp math, no periodicity, XY symmetry
+; p1=location in M-set
+; p2=magnitude
+z=c=p1+(1/p2)*(tan(cos(real(pixel)))\
++flip(tan(cos(imag(pixel))))):
+z=z*z+c,
+|z| <= 64 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

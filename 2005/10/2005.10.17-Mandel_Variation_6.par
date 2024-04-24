@@ -1,0 +1,89 @@
+;     Date: Mon, 17 Oct 2005 11:45:31 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-10-05 (Mandel Variation-6 [6])
+;       Id: <1.5.4.16.20051017114653.38ef79a2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 17, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's old forgotten formula is an early attempt to examine the 
+; odd planes of the Julibrot.  In a way it succeeds, but its extra 
+; baggage makes its use more difficult than need be.  For today's 
+; fractal, the formula has created a very unusual variation of the 
+; Julia set of East Valley of the Mandelbrot set.  The artistic 
+; worth of the image is un-notable, but the mathematical interest 
+; raises the total worth to a rating of 6.
+; 
+; The p1 parameter places the scene in East Valley of the Mandel-
+; brot set, while the p2 parameter slices the 4-D Julibrot in a 
+; direction very close to the Julia orientation.  The p3 parameter 
+; adds the extra decoration that makes the image mathematically 
+; notable.  The overall effect is one of an endless spiral, only 
+; one level of which appears on the screen.
+; 
+; I named the image "Mandel Variation-6".  A name like 'Julia 
+; Variation' might have been more appropriate, but names are 
+; names, and the name I have given the image will be its name 
+; for all eternity.
+; 
+; Except for those with internet-proficient-but-Fractint-chal-
+; lenged computers, rendering today's image will be no problem, 
+; for it finishes in only 26 seconds, and that is on my tired old 
+; P200 workhorse machine.  Those with amnesiac machines that have 
+; forgotten how to run DOS programs can see the image by down-
+; loading it from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Sunday turned out milder than expected here at Fractal Central, 
+; with a lot of sun, a fresh breeze, a few scudding clouds, and a 
+; high temperature of 66F 19C.  The cats were satisfied, though 
+; not overjoyed.  Today is starting sunny but chilly.  The cats 
+; are still sleeping and have yet to comment.  The next FOTD will 
+; appear in 24 hours.  Until then, take care, and see the new 
+; world revealed by fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Mandel_Variation-6 { ; time=0:00:26.26--SF5 on a P200
+  reset=2004 type=formula formulafile=jim.frm
+  formulaname=ManJul2CPwr inside=255
+  center-mag=-0.000916065/0.00366617/0.507824/1.0765
+  params=0.255/-0.0006/1e-010/0.001/-50/10 float=y
+  maxiter=10000 outside=real periodicity=10
+  colors=000SXkZYheZek_bcT`WMZOFYG8W82VB4UE5TH6SK7RM\
+  8RP7MS7HV6CY67`62b58c5De4If4Nh3Ti3Yk2bl2gg4ec6dZ8c\
+  VAaQC`ME_W8`d3a_RNVn9YiB`eDcaFfYHhUIjYKk`MldNmgPoj\
+  RpnSqqUrtVilWaeXUYYMRZEKZIbZMtZMuZNuYNuYNuYOvYOvYO\
+  vYOvYPuZPuZPtZPtZPsZQsZQrZQrZQqZQqZQqZRpZRpZYYZRoZ\
+  RoZRnZSnZSmZSmZSlZSlZSlZTkZTkZTjZTjZTiZUiZUhZUhZUg\
+  ZUgZUgZVfZVfZVeZVeZVdZWdZWcZWcZWbZWbZWbZXaZXaZX`ZX\
+  `ZX_ZY_ZYZZYZZYYZYYZIP1JQ2JQ3JQ3JQ4KQ4KQ5KQ5KR6LR6\
+  LR7LR7LR8MR8MR9MS9MSANSANSBNSBNSCOSCOSDOTDOTEOTEPT\
+  FPTFPTGPTGQUHQUHQUIQUIRUJRUJRUKRUKSVLSVLSVMSVMTVNT\
+  VNTVOTWOTWPUWPUWQUWQUWRVWRVWSVXSVXTWXTWXUWXUWXVXXV\
+  XYWXYWXYXYYXYYYYYYYYZlXgkYfkYfkYfkYfjYfjYfjYfjYejY\
+  eiYeiYeiYeiYehYehYehYdhYdhYdgYdgYdgYdgYdgYdfYcfYcf\
+  YcfYceYceYceYceYbeYbdYbdYbdYbdYbcYbcYbcYacYacYabYa\
+  bYabYabYabYaaY`aY`aY`aY``Y``Y``Y``Y_`Y__Y__Y__Y__Y\
+  _ZY_ZY_ZYZZYZZYZYYZYYZ000 }
+
+frm:ManJul2CPwr {; Jim Muth
+; Creates and rotates ^2 Hyperbrot Figure
+; P1 sets point of rotation, P2 sets angle of rotation
+; P3 sets power of C
+z=c=pixel:
+z=sqr(z)+p1+(p2*(c^p3)),
+|z| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

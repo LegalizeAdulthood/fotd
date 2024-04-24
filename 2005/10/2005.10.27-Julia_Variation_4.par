@@ -1,0 +1,86 @@
+;     Date: Thu, 27 Oct 2005 09:47:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-10-05 (Julia Variation-4 [5)
+;       Id: <1.5.4.16.20051027094852.2affc9f6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 27, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image looks somewhat like a nuclear explosion.  It is 
+; actually a picture of the Julia set of the Z^(1.25)+C Mandeloid 
+; as it exists only one level up the spiral.  Or perhaps I should 
+; say 2.14159... levels down the spiral.  The number PI works 
+; better as a ground level.
+; 
+; The interesting Julia sets that can be created with the JuliaBC 
+; formula are very easy to find and they are literally endless in 
+; number.  And, as today's 24-second render time shows, they are 
+; lightning fast.
+; 
+; I'll post a few more low-order Julia sets before returning to 
+; the hoard of old, forgotten, mostly useless formulas.  I want to 
+; check the Julia sets of a few of the square-root-of-two 
+; Mandeloids.
+; 
+; Since today's fractal basically found itself, I could rate it no 
+; higher than a 5.  The name merely indicates that it is the 
+; fourth in the series of similar images.  (The first in the 
+; series was not an FOTD.)  For the convenience of those with over-
+; qualified computers, the completed image is available on the 
+; FOTD web site, which may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A chilly blustery day Wednesday produced just enough sun to keep 
+; the cats in a neutral mood as they lurked in the yard.  With the 
+; work still caught up, my mood was good.  Today is starting sunny 
+; but chilly, leading me to expect another marginal day for the 
+; cats.  The next FOTD will appear in 24 hours.  Until then, take 
+; care, and be with it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Julia_Variation-4 { ; time=0:00:24.06--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=-0.0612658/0.043239\
+  /0.3908483/1/-90/3.88578058618804789e-016
+  params=1.25/0/1/0/0.09428/-0.0025/0/0 float=y
+  maxiter=1000 inside=0 outside=real periodicity=10
+  colors=000HL8FM8DN7BO79P67Q65R53S51T54U77V89WACXBF\
+  YCHZEKaFNcGPfIShJUjKWfNYcQ_`T`YWbUZdRahOcmLfrHivEl\
+  zBoz8rz5tz6qz7nz8kz9hzAevBbrC_mDYhEVcFSZGPUHMQIJOJ\
+  GMJEMNIMRMMVQMZUMbYMfaMjeMmhKjkJhmIfoHdzGbzFazEczG\
+  qzHwzJqzKmzLczNYzOYwPYrRYmSYiUYhVYgWYeYYdZYc_Yb`ad\
+  adfchidkkfongrphurbkoYamTSjOIhJ8fNAgQChTEiWGiZIjaK\
+  kdMlgOljQmmSnpUnlTkiThfSecSb_R_XRXUQURQROQOMPNKPNI\
+  PNHONFOMDOMCNMANM8NL7ML5ML3ML2ML4NO6NR8OUAOWCOZEPa\
+  GPdHPfGQbFQ_FRWERTERQDSMCSJCTFBTCBT9EU8GV8IW8LX8NY\
+  8PZ8SZ8U_8W`8Za8`b8bc8dc8eaAe_BeYDeWEfUGfSHfRJfPKg\
+  NMgLNgJPgHQhFShEThCVhAWi8Yi6Zi4`i3ak8YlDUnIQoNMpSI\
+  rXEsaAte6pf7mg8ig9fhAciA_iBXjCUkDQkDNlEKmFGmGDnGAo\
+  H6oI3pJ0pJ1lK1iL1fM1cN1`N1YO1VP1SQ1PR1MRGU`V`jhgtg\
+  drfbpf_neYldWjdThcRfcOdbMcaKaaH_`FY`CW_AUZ8SZ5QY3O\
+  Y1NW2RV2UU3YT3`S4dR4gQ5kP5nO6rN6uM6xP7tR7pT7mV7iX7\
+  fZ7b`7Zb7Wd7Sf7PhANiDLjGJ }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

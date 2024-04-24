@@ -1,0 +1,91 @@
+;     Date: Wed, 26 Oct 2005 11:57:03 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-10-05 (Julia Variation-3 [6)
+;       Id: <1.5.4.16.20051026115832.2aa7eefc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 26, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image pictures a Julia set of the Z^(1.15)+C Mandeloid 
+; as it appears 10 levels up the complex-log superspiral.  At this 
+; level the Mandeloid resembles a pin-headed punching bag surroun-
+; ded by acres of chaos.  I chose the Julia set of an inside point 
+; near the bud side of the most obvious valley.
+; 
+; Much of the image consists of an inside area brought to life by 
+; the 'bof61' inside fill.  I gave the entire scene a heavenly 
+; blue tint that in my opinion raises its rating from a 5 to a 6.  
+; Some areas of the image appear to hold some interesting scenes, 
+; but I have no time to check these at the present time.  There 
+; are far too many other fractals waiting.
+; 
+; The name "Julia Variation-3" indicates that today's image is the 
+; third in the series of JuliaBC images.  I am sure quite a few 
+; more are to come.  With a render time of just under 15 minutes, 
+; today's image borders on the slow side.  But the rendering may 
+; be avoided by downloading the finished image from the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; I am thinking of writing four more versions of the branch cut 
+; formula, one for each of the four remaining odd planes of the 
+; Julibrot.  Most likely I will find little there that is more 
+; impressive than the scenes in the Mandelbrot and Julia sets, but 
+; it will be interesting to see what I can find.
+; 
+; A steady cold rain fell all day Tuesday here at Fractal Central, 
+; with a raw wind and temperature of 43F 6C making things even 
+; worse.  The dynamic duo kept their dis-satisfaction no secret.  
+; Luckily, I had stocked up on chunk light tuna ahead of time, and 
+; was prepared for the sulkiness.  Today is starting breezy and 
+; chilly, but the clouds have cleared, promising a better day.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and be at peace with all that is.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Julia_Variation-3 { ; time=0:14:51.44--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=-0.295117/\
+  0.224777/0.634058/1/-42.5/-3.77822773067748585e-014
+  params=1.15/0/10/0/-0.61125/0.69209/0/0 float=y
+  maxiter=2600 inside=bof61 periodicity=10
+  colors=000D92D94D96D98D9AD9GD9ID9KD9MD9OD9QD9SD9UD\
+  9WD9YD9_DAaDBcDCeDDgDEiDFkDGlDHmDInDJoDKpDLqFMrHNs\
+  KOtKPuKQvKRwKSxNTyNUzNVzNWzNXzNYzNZzN_zN`zNazNbzNd\
+  zNfzNhzNjzNlzNnzNpzNrzNtzNvzNxzNzzNzzNzzNzzNzzNzzN\
+  zzNzzNzzNzzXzzZzz`zzbzzdzzfzzjzzmzznzzqzztzzwxzzuz\
+  wsztrzqqzopzlozinzfmzcmz`mzYmzVmzSmzPmzMmzKmzKmzKn\
+  zKozKpxKqvKrtKsqHtoDulDviDwgDxdDyaDz_DzXDzXDzqFzzS\
+  zzdzzizznzztzzyuzzpzzjzzezz`zzZzzWzzWzzWzzTzzTzzRz\
+  zTzzWzzZzzZzz`zzczzcxzevzhqzhozjlzmizmgzpazr_zrVzu\
+  QzxCzx0zz0zz0zzCzzQzzazzozzzzzzzxzzuzzuzzrzzrzzpzz\
+  mzzmzzjzyjzthznhziezdez_czV`zP`zKZzFZzDWzDWzDTzDOz\
+  DTzDZzDczDhzFmzKrzPxzVzz_zzdzzizxnzvtzqvzoyzoHzzDz\
+  zDzzDzzDzzDzzDzzHuzKrzNpzv9it9lq9lq9ln9ln9ll9ll9li\
+  9li9lg9og9od9od9ob9ob9o_9o_9oX9oX9oV9qV9qSBtSDtPJv\
+  POvPRxNWxN`zKczKhzHmzHpzHuzFzzFzzDzzDzzDzzDzzDzzDz\
+  zDzzDzzDzzDzzDeqD`lFZiHTd }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

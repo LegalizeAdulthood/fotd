@@ -1,0 +1,86 @@
+;     Date: Tue, 04 Oct 2005 10:17:26 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-10-05 (In a Spin [6])
+;       Id: <1.5.4.16.20051004101839.0d37233a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 04, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; When I brought up an old formula named 'Crazy Midgets', I 
+; thought it looked strangely familiar.  I was searching for a 
+; formula I have hidden somewhere that draws small Mandelbrot 
+; sets arranged in circles, but today's formula is not the one I 
+; was after.  The 'Crazy Midgets' formula is actually an early 
+; version of the MandelbrotMix4 workhorse formula, and today's 
+; image could just as easily have been created with that formula.
+; 
+; To produce the parent fractal, 0.2 part of Z^(3) was combined 
+; with Z^(-2) and C was added.  This parent consists of a somewhat 
+; distorted central Mandelbrot set surrounded by a scattering of 
+; debris.  Today's scene is located on the negative X-axis, in a 
+; small cut-off pile of debris.  Little more need be said about 
+; the image, which speaks for itself.  (It's a talking fractal!)
+; 
+; The name "In a Spin" has little relation to the image, which 
+; holds nothing in the shape of a spiral.  It is simply a phrase 
+; that came to mind as I was studying the fractal in search of a 
+; name.  The rating of a 6 is just enough above average to make 
+; the effort of running the very fast parameter file worthwhile.
+; 
+; The image is also available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it is posted in completed form.
+; 
+; Genuinely perfect weather prevailed all day Monday here at 
+; Fractal Central, which kept the cats on their best behavior.  
+; The cats are happy, but except for the grape growers, the local 
+; farmers are starting to complain about the dryness.  Today is 
+; opening with a low overcast and fog, but it is still dry.  We 
+; shall see how the day goes for the cats.  But regardless of how 
+; it goes for them, the next FOTD will appear in 24 hours.  Until 
+; then, take care, and search for the real thing.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+In_a_Spin { ; time=0:00:36.80--SF5 on a P200
+  reset=2004 type=formula formulafile=jim.frm
+  formulaname=CrazyMidgets logmap=34
+  center-mag=-1.685045559356637/0/1.140448e+008
+  params=1/-2/0.2/3 float=y maxiter=290
+  symmetry=xaxis periodicity=10 inside=0
+  colors=000G8GA5Q52_BETHQMNaFTm8my2Zn4Zd5ZV7PL8TBAZ\
+  1BX3EW5HV7KU9MTBPSDSREUXGYaHagJelKirMmwNplS_aWJR_3\
+  McXHfzRar_YjiTbrPWlUSgZObcKXgHSlDNq9Iu6Qt6Xt6dt6kt\
+  6st6zt6qmShflfdjdbhc`faZd`XbWZcS_cNadJbdEdeAee8ah7\
+  Zk6Wn4Tq3Qt2Nw1Ky9GxGCwO9vV5ua2tOKkBabLOQUBEaKGiSH\
+  p_IjXOdVUZS_TQdXMd`JddGdgDdk_inumcmgUmaKmWAmQCmVEm\
+  ZGmbImfKmjMmnOrrQwvSzkUz`WzQYzFZz4VzBSzIOzPLzVIzTG\
+  zSDzRBzQ8zP6zO4zN5zM6zL6zK7zJ7zJNzGTzLZzQdzUfzXhz_\
+  izbbzlfzgjzcnz_rzWoz_mzckzgizkgzodzgaz`ZzUWzNTzGQz\
+  9Oz2LzBJzJHzRFzZDzfKziQzlWzoazrgzumzxkzrizlgzfezac\
+  zWazQ`zLWzRRzWMz`HzeDzjFzfHzbJz_NzYQzXTzWWzVZzTazS\
+  dzRgzQdzSazUZzWXzYPzfHzn9zvEzcIzMMz4Tz6_z8fzAmzCsz\
+  EozIlzLhzOezRgzVhzZizbkzelzimzmnzplzokzojzoiznhzng\
+  znfznazgXzaTzWOzPJzJFzDRzHbzKnzNyzQkzTZzWMzZNzTNzO\
+  NzINzDJzHGzLDzPAzS9zO9zK8zG8zCAzICzODzTFzZHzdIziKz\
+  oLztIznFzhCzb9zX7zRCzNGzK }
+
+frm:CrazyMidgets   {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
