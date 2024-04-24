@@ -1,0 +1,88 @@
+;     Date: Mon, 12 Feb 2007 06:37:32 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-02-07 (Swiss Cheese Fractal [Rating 7)
+;       Id: <1.5.4.16.20070212063747.3627cd40@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 12, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image gives a sample of what goes on in the 
+; fractal that results when Z^(+0.95) is combined with Z^(-0.95) 
+; and straight C is added.  The first thing that happens is the 
+; evaporation of the parent fractal, and this is not due to an 
+; excessive bailout radius.  Today's parent fractal is so far gone 
+; in fact that it has degenerated into a smooth-edged circle, with 
+; only a bit of fractal action on its western extremity.  
+; 
+; Today's scene is located in what I assume to be the partially-
+; evaporated remnants of the bud side of the north branch of Sea-
+; horse Valley.
+; 
+; Most of the coloring effect was achieved by rendering the image 
+; with the outside set to 'imag'.
+; 
+; I named the image "Swiss Cheese Fractal" since to me at least, 
+; that's what it looks like.  And I rated it at a 7, since I 
+; consider it above the recent FOTD average.  The calculation time 
+; of 6-3/4 minutes is longer than yesterday's super-quick image, 
+; but still fast as fractal times go.
+; 
+; The fastest way of all to view the image however is to go to the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it is or soon will be posted for public viewing.
+; 
+; Light winds, ample sun and a temperature of 37F 3C here at 
+; Fractal Central on Sunday made conditions pretty average. The 
+; fractal cats complemented the weather by being on their average 
+; behavior.  In my world, things were still quite busy, and will 
+; stay that way for a week or two.  But regardless, the next FOTD 
+; will appear in 24 hours.  Until then, take care, and fractal 
+; luck be with you.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SwissCheeseFractal { ; time=0:06:43.47--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-1.44286471691316400/+0.032918163027620\
+  59/557090.1/1/-12.5/-1.65303069850353257e-007
+  params=1/0.95/1/-0.95/0/0 float=y maxiter=1500
+  inside=0 outside=imag periodicity=10
+  colors=000caWbbWbcWadWaeV`fV`gV_hV_iVZjVZkVYjWXiWX\
+  hXWgXWfXVeYVdYUcYUbZTaZT`ZS__SZ_RY_RX`QW`PVaPUaOTa\
+  OSbNRbNQbMPcMOcLNcLMdKLdKKdJJeJIeIHfHGfHFfGEgGDgFC\
+  gFBhEAhE9hD8iD7iC6iC5jB4jB4jA6iA8i9Ah9Ch9Dh8Fg8Hg7\
+  Jg7Lf7Mf6Of6Qe5Se5Ud5Vd4Xd4Zc3`c3bc3cb2eb2gb1ia1ka\
+  1la3kZ4kX6kV7kT9kRAkPBkNDkLEkJGkHHkFIkDHlEGlEFmFEm\
+  FEmFDnGCnGBoHAoHAoH9pI8pI7qJ6qJ6qJ5rK4rK3sL2sL2sL3\
+  rK3qK3pK4oK4nK4mJ5lJ5lJ5kJ5jJ6iJ6hI6gI7fI7fI7eI7dI\
+  8cH8bH8aH9`H9`H9_GAZGAYGAXGAWGBVGBUFBUFCTFCSFCRFCQ\
+  FDPEDOEDOEENEEMEELDFKDFJDFIDFIDGHDGGCGFCHECHDCHCCH\
+  CCw7ks8go8dk9ag9Yc9V_ASWAPSALOBIKBFTGvSFsRFqQFnQEl\
+  PEiOEgOEdNDbMD_MDYLDVKCTKCQJCOICLIBJHBGGBE`BN_BMZB\
+  MYBLYBLXBLWBKWBKVBKUBJUBJTBJSBISBIRBIQBHQBHPBGOBGO\
+  BGNBFMBFMBFLBEKBEKBEJBDIBDIBDHBCGBCkNUeLR`JOWHLQFI\
+  LDFy3Tx4Sw4Sv4Su4Rt4Rs4Rs5Qr5Qq5Qp5Po5Pn5Pm5Om6Ol6\
+  Ok6Nj6Ni6Nh6Ng6Mg7Mf7Me7L }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

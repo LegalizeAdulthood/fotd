@@ -1,0 +1,90 @@
+;     Date: Sat, 10 Feb 2007 20:22:22 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-02-07 (Fractal Splat [No Rating)
+;       Id: <1.5.4.16.20070210202233.3b1f0e26@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 11, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I gave today's image a name.  It looks so much like a burst 
+; paint ball that I named it "Fractal Splat".  I did not rate it 
+; however.  A quick look will show why I gave it no rating.  The 
+; image came about when I checked the Z^(1.23)+C Mandeloid 321 
+; levels up the logarithmic ladder.
+; 
+; At this level, the parent fractal resembles a Mandeloid with a 
+; long twisting filament stretching off to the southeast.  Bits of 
+; disconnected filament lie scattered well beyond the main 
+; filament.  Today's scene is located on a node of one of these 
+; disconnected bits of filament.
+; 
+; Today's image might not be the best of all time, but it 
+; certainly is one of the fastest.  It calculates in just over 1/2 
+; minute on my tired old machine.  On one of the newer units, it 
+; will be even faster.
+; 
+; But the fastest way of all to enjoy today's big fractal splat is 
+; to visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view it there.
+; 
+; The temperature made it up to 36F 2C today.  Though this was 
+; still below normal, the ample sunshine and lower wind made the 
+; day feel reasonably bearable.  At least the fractal cats agreed 
+; when I let their noses sniff the outside air.
+; 
+; The non-fractal work still is very heavy, as it will remain for 
+; at least a week or so.  Then I hope things will return closer to 
+; a state of normalcy.  The next FOTD will appear in 24 hours.  
+; Until then, take care, and see the pretty fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Splat { ; time=0:00:37.98--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+1.8555056755\
+  91762/-0.91202704583663640/1500.458 params=1.23/0/\
+  321/0 float=y maxiter=1500 inside=0 periodicity=10
+  colors=000clGejIggLidOkaRl_TjWSiTShQSgNSeKRdHRcERb\
+  BRKwyJqtJkoJejJ`eNYiQWmUTqXRu_PyYQvXRtVSrUTpTUn_Xk\
+  f_hmbfeW_YQURKOJEHB8Bj2tj0t_3bP6LF94iSaeOdaLgZHjVE\
+  mSApO7sL4uTEs_OqgYongmbelRdkGck6QNDMKJJIPGGWCDa9Bg\
+  69m37gB9bJAXRBSZCMfDHmE8OZ7TX6XV6aT5eR5jP4nN4rMApN\
+  GnOLlORjPXhQagQKZJ2QC4TG6VK8XOA_SCaWEc_GebHcWIaQJ_\
+  JKYDLW6MU0SP8YKGcFNiAVo5bt1ir8epEanKYlQUjWRbVXWVbP\
+  UhHUnATt3TyBOoIKePGWWCMb8CW9HPALIBQBCU4DY6Ia7Ne8Sh\
+  9XlA`omfemgdnhdnhcoicoicif_ccWYaTSZPMXMGUIBSFCTHDT\
+  IEUJFUKGVLGVMHWNIWOJXPKXQKYRLYSMZTNZUO_VO_WP_XQ`YR\
+  `ZSa_Ta`TbaUbbVccWcdXdeXdfYegZeh_fi`fj`fkZdiYcgXbe\
+  WadV`bUZ`TY_SXYRWWQVVOTTNSRMRPLQOKPMJNKIMJHLHGKFFJ\
+  EEHDDGCCFBBEAAD99C90008B87A77866755644543432321210\
+  10d6Hb5G`5F_5EY5EW4DV4CT4CR4BQ3AO3AM39L38J28I27G26\
+  E26D15B14914813602402301100IoXHmVGkUGiTFgSEfREdQDb\
+  PD`NCZMBYLBWKAUJYu7_rAaoD }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

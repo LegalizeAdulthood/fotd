@@ -1,0 +1,84 @@
+;     Date: Tue, 13 Feb 2007 13:03:28 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-02-07 (Fractal Racquets [Rating 7)
+;       Id: <1.5.4.16.20070213130343.3387c6ce@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 13, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is late.  In fact, with the current work load here 
+; at Fractal Central and even more work due in, it's lucky today's 
+; FOTD appeared at all.
+; 
+; But since the image did make it, I must give a bit of info about 
+; it.  The parent fractal is a grossly oversized thing -- a 
+; roughly circular line, with things that could best be described 
+; as tennis racquets attached to it.  These racquets were the 
+; inspiration for the name "Fractal Racquet.  The scene of today's 
+; image is on a filament near one of the smaller racquets.
+; 
+; The generating formula combines various portions of Z^(-1.18) 
+; and Z^(-11.8), then adds (1/C), creating a giant fractal with 
+; unusual potential.  After a thorough study of all the tiny 
+; racquets in the scene, I named the image "Fractal Racquets".  
+; 
+; The calculation time of 3-3/4 minutes is thankfully brief.  And 
+; as always, the already-calculated image is or soon will be 
+; posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; An unexpectedly mild day on Monday gave a brief break from the 
+; prolonged cold.  But snow and ice are forecast for tomorrow and 
+; Wednesday, so stay tuned.  The fractal cats were distracted all 
+; day, watching the ceiling.  They must think they hear mice in 
+; the woodwork.  But cats will be cats, and only they know what 
+; they were watching for.  In my department the work is nearing a 
+; peak.  If the next few FOTD's fail to appear, it will be a sign 
+; I have had no chance to do them.  So tune in in 24 hours to see 
+; what happens next.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Racquets { ; time=0:03:48.28--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+17.45787701233519000/+15.9569373194939\
+  0000/211810.2/1/-150/-3.9476924986389661e-006
+  params=4/-1.18/-1/-11.8/-1.55/0 float=y
+  maxiter=1400 inside=0 periodicity=10
+  colors=000YIGVKKSMOOOSLQWIS_EUcBWg8Yk9ZjA_jB`iCaiD\
+  bhDchEdgFegGfgHgfIhfIieJjeKkdLldMmcNncNocPp`RpYTqV\
+  VqTXqQZrN`rLbrIdsFfsChsAjt7lt4mt2jp4gl6dh8ad9Z`BWY\
+  DTUFQQGNMIKIKHEMFBN6bBBYGGTKLPOQKTQFXUB`SAaR9aP8bO\
+  8bN7cL6cP5dN5_M4`L4`J3aI2YH2YI4_J6`K8bLAbMBdNDeODh\
+  PHlQJiRKoSNlSOqTRpUSsVUsWVvXYwYZxZby_az`ezajzbgzbh\
+  zQVfEHQFGRFFRGESGDSHCTHBTIAUIAUJ9VJ8VK7WK6WL5XL4XL\
+  4X_UVnmKonKoiKodKoiKojKojKptKptKptKpuKpuKpucqudque\
+  qvfqvgqvmqvqqvurwxrwzrwzrwzrwzstzsrzspzsngtlftjdtg\
+  ctebuc`ua_u_YuYXvVWvTUvRTvPSwNQwLPwINwGMxELxCJxAIx\
+  8Hs7Ln7Oi7Se7V`7YW7aS7dN7hI7kE7nD7nC7oB7oA7o97oD9l\
+  HBiKDgOFdRGbVI_ZKYaMVeOThPQlROpTLsVJwXGzYEtOSoEej5\
+  smFYpPCoREnTGnUImWKlXMlZOk_QjaSjcUidWhfYhg_giagjcc\
+  ha`f_YdZVcXSaWO_ULZSIXRFVPCUODLGED9F52RBJbH_mMpnOo\
+  nQnnSnnUmnWlnYln_knajncjneinghnihf`g_TgSKfLCfE4fZ4\
+  dr4bp7_nAXlDUjFRhIOaHCaFC }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

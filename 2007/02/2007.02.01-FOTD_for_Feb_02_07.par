@@ -1,0 +1,81 @@
+;     Date: Thu, 01 Feb 2007 23:36:44 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-02-07 (FOTD for Feb 02, 2007 [No Rating)
+;       Id: <1.5.4.16.20070201233647.337f5c1c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 02, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a midget that exists in the Z^(1.2)+C Mandel-
+; oid as it appears 202 levels up the complex logarithmic ladder.  
+; The image comes on strong, but it's really only one more in an 
+; endless series of midgets that look like starbursts.
+; 
+; Because of its lack of originality, I gave the image neither a 
+; name nor a rating.  It's still worth a brief look however.  The 
+; render time of 2-3/4 minutes is true on an ancient P133 machine. 
+; It will finish in a minute or less on any SOTA computer worth 
+; its name.
+; 
+; Those with over-qualified units may view the image on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The sky was leaden grey, the temperature was a cold 25F -3C, and 
+; the forecast called for snow here at Fractal Central on Thurs-
+; day, but no snow fell.  The fractal cats, who have never been 
+; out in snow, do not know what they missed.  My day was frantic, 
+; which is the reason for the hasty FOTD.  The next FOTD is due to 
+; appear in 24 hours.  It actually might appear.  Until then, take 
+; care, and when the going gets tough, the tough turn to a fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Feb_02_07 { ; time=0:02:46.97--SF5 on a P133
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2
+  center-mag=-1.86847411642572900/-1.033879743947788\
+  00/2666.667 params=1.2/0/202/0 float=y maxiter=5000
+  inside=0 periodicity=10
+  colors=0003RKyYYnSSdMMVHHKBBA55rDGlBEgACa9BX79R68M\
+  56G34B23511FBJC9GA7D86A648435212ResOanMZiKVeIS`FOW\
+  DLSBHN9EI6AE479234EtrComBkiAfe9ba8ZX7UT6QP5LL4HG3D\
+  C2881440fb0c_0`Y0YV0WT0TQ0QO0OL0LJ0IH0GE0DC0A90870\
+  54022ovbbgTQTJDE9UMtPIkLFcHCWC9O86G4383mI2hG2cE2_D\
+  1VB1R91M81I60D4093041kQGgOEdMDaKCZJBWHASF9PD8MC7JA\
+  6G85ecdicendfrdgvdhsfepgbmi`kjYhlWemTcoQ`pOYrLWsJZ\
+  nN`jRbfVdbZfZbiVfkRjmNnoJrqFvYjDSYRMMdPReRVfTZgWch\
+  Ygi_kjbpkdtlfxmcvnauo_spYrqWqrUosSntQmuOkvMjwKixLf\
+  uMcsNaqNZnOWlPUjQRgQPeRMcSJ`THZTEXUBUV9SW6QW4OX7PY\
+  APZCP_FP`IPaKQbNQbPQcSQdVQeXRf_RgbRhdRigRiiRccNYYK\
+  SSG403NNDHHABB6553IFYGDVFCSDBPCAMA8J97H76E65B43832\
+  5112CAA655wK1rI0nH0jF0eE0aC0YB0UA0P80L70H50C408204\
+  10OWfKQZGLSCGL8AE457fwGbrE_mDXiCTdBQ_9NW8JR7GN6DI4\
+  9D3692341uvInoGhhEabCWWAPQ8JJ6CD4662Dmi6PNsj5cxdZq\
+  _VjVQcRMXMHRIDKD8D94646qc }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

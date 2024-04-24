@@ -1,0 +1,99 @@
+;     Date: Mon, 05 Feb 2007 20:49:32 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-02-07 (FOTD for Feb 06, 2007 [No Rating)
+;       Id: <1.5.4.16.20070205204939.38b79d12@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 06, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In the FOTD discussions, I keep talking about a mysterious 
+; 'parent fractal'.  The parent is really not so mysterious 
+; however.  It is simply the entire fractal created by the 
+; generating formula.
+; 
+; Today's image is such a parent fractal.  It resulted when I 
+; combined 0.65 part of Z^(-1.4142) with 0.65 part of Z^(1.4142) 
+; and added straight C.  Like so many fractals created by the 
+; M-Mix4 formula, it appears to be two fractals in one.
+; 
+; The main Mandeloid in the image is immediately obvious, but in 
+; the background lies part of a larger and unseen fractal.  This 
+; unseen fractal appears as the bright stuff in the parent 
+; fractal.  Its buds are apparent, but it is obviously a 'ghost' 
+; fractal.  I suspect that the generating formula has more than 
+; one critical point, and this unseen fractal is what would appear 
+; if Z were initialized to another critical point.
+; 
+; As it is, the image, with its deep blues and purples, is a 
+; rather somber one.  Since I didn't even try to explore deeper 
+; into the fractal, I could hardly give it a name or rating, but 
+; it's still a pleasant thing to see, and with a calculation time 
+; of under 3 minutes, little time will have been wasted if the 
+; result is disappointing.
+; 
+; The finished image will soon be posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it may easily be viewed.
+; 
+; Today was downright arctic here at Fractal Central.  Enough sun 
+; broke through the clouds to make the day bright, but the brisk 
+; wind and temperature around 12F -11C made it risky to stay ex-
+; posed for too long.  The fractal cats never expose themselves to 
+; the weather however.  They were quite satisfied to lie near the 
+; large radiator in the hallway, which was going full blast.
+; 
+; As today's super-quick fractal shows, my day was very busy.  And 
+; to make things worse, the heavy work will likely continue for 
+; another week at least.  So far I have been able to keep the FOTD 
+; going.  Hopefully, I'll be able to keep it going during the 
+; coming week.  The next in the long series of never-before-seen 
+; fractals will almost certainly appear on schedule in 24 hours.  
+; Of course, 'almost' is no 100-percent guarantee, so check back 
+; tomorrow at this same time. Until then, take care, and if time, 
+; like space, is quantized, how long is the present moment?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Feb_06_07 { ; time=0:02:57.02--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-0.3004690/0/1.344086/1/-90/3.88576e-016
+  params=0.65/-1.4142/0.65/1.4142/0/0 float=y
+  maxiter=1500 inside=0 logmap=yes periodicity=10
+  colors=0005R`5Q_5QZ5PY5PY4OX4OW4NV4MU4MT3LT3LS3KR3\
+  KQ3JP3JP4IQ5IQ6IR7IR7IR8IS9ISAISBITBITCITCITDIUEIU\
+  FIUcIVcIVcIVcIWcIWcIWcIXcIXcIXcHYcHYcHYcHZcHZcHZcH\
+  _SH_TH_TH`UH`VH`WHaXHaXHaYHbZHb_Hb`Hc`HcaHcbHdcHd_\
+  Yz`Xz`Xz`Xz`Xz`Wz`Wz`Wz`Wz`Vz`Vz`Vz`Vz`Uz`Uz`Uz`Uz\
+  `Uz`TzaTzaTzaTzaSzaSzaSzaSzaRzaRzaRzaRzaRzaQzaQzaQ\
+  zaQzaPzaPzbPzbPzbOzbOzbOzbOzbNzbNzbNzbNzbNzbMzbMzb\
+  MzbMzbLzbLzbLzcLzcKzcKzcKzcKzcKzcJzcJzcJzcJzcIzcIz\
+  cIzcIzcHzcHzcHzcHzUKzWKzXKzYKzZKv`KraPmbPhiUchZZhc\
+  UhhPhmKhrFhvAhz8gz9gzAgzBgzCgzDgzEgzEgzmfzmfzmfzmf\
+  zmfzmfzmfzmfzmezmezmezmezmezmezmezmdmmdmmdmmdmmdmm\
+  dmmdmmdmmcmmcmmcmmcmmcmmcmmcmmGmmHmzImzImzJmzJmzKm\
+  zKmzLmzLmzMmzMmzNmzOmzOmzPmzPmzQmzQmzRmzRmzSmzSmzT\
+  mzUmzUmzVmzVmzWmzWmzXmzXmzYmzYmzZmz_mz_mz`mz`mzamz\
+  amzbmzbmzcmzdmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcm\
+  zcmzcmzcmzcmzcmzcmzcmzcmz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

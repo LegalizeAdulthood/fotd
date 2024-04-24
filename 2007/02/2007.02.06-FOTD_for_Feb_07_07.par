@@ -1,0 +1,86 @@
+;     Date: Tue, 06 Feb 2007 20:51:07 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-02-07 (FOTD for Feb 07, 2007 [No Rating)
+;       Id: <1.5.4.16.20070206205116.49f72258@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 07, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a midget hiding in the parent fractal that 
+; results when the formula Z^(1.55)+C is iterated 55 levels up the 
+; logarithmic ladder.  Like almost all the midgets in this 
+; exponent range, the one in today's image resembles a starburst.
+; 
+; With little time to devote to fractaling, I put too little 
+; effort into today's image to give it a name or rating.  My own 
+; opinion is that the colors are a bit weak, but the ladies seem 
+; to like pastel shades, so I declined to increase the contrast.
+; 
+; The render time of 4-1/2 minutes should offend the patience of 
+; only the busiest fractalists.  And these hurried ones can still 
+; see the image by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing it there.
+; 
+; Lots of sun, less wind, and a temperature of 21F -6C made things 
+; a bit less uncomfortable here at Fractal Central on Tuesday.  
+; But for some reason the fractal cats were uneasy, and spent much 
+; of their day wandering about the house calling out for something 
+; only they knew about.
+; 
+; My day was very busy, as tomorrow will be also.  But those FOTD 
+; images just keep coming.  The next one is due in 24 hours.  If 
+; all goes well, it might actually appear.  Until then, take care, 
+; and if ghosts existed, I would say Fractal Central is haunted.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Feb_07_07 { ; time=0:04:33.64--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+7.97695322125945500/-0.802613566305494\
+  30/3767413 params=1.55/0.015/55/0 float=y
+  maxiter=3600 inside=0 logmap=105 periodicity=10
+  colors=000o_Hr_FiaEmYipcjsVkuMkxDlz4lhTgcPj_YlWUnS\
+  bpOjrMuwKrtJorIloHimFfjEchD`eCYcAV`9SZ8PW7MZ5Jc4Gh\
+  3Dm2Ar18v4Br6Dr8GrAImCLhENcHQ_JSaLUcNXfPZhRakUcmWf\
+  pYhr_kuamwcoydmxdlwejweivehuffufetfdtgbsgarg`rhZqh\
+  YqhXpiVoiUoiTnjRnjQmjPlkNlkMklKmkLkjLiiLghLegLcfLa\
+  eL_dMYcMWbMUaMS`MR_MPZMNYMLXNJWNHVNFUNDTNBSN9RN7RN\
+  6PO8OP9NQAMQCLRDKSEJTGITHHUIGVKFWLEWMDXNCYPBZQAZR9\
+  _T8`U7aV6aX5bY4cZ0eb3c_5bX8aUA`RD_OFZMHXJKWGMVDPUA\
+  RT7UO1TS5TV8TYBS`FScISfLRiPRlSRoVSnXTnYUnZVn_Wn`Xn\
+  aYncZnd_ne`nfangbnhasmbnicifddce_`eWYfRUgMRhHOiCLj\
+  7Hi8Ih9IgAJfBJeCKdDKcELbFLaGM`HM_IMZJNYKNXLOWMOVNP\
+  UOPTPQSQQPLSRQQTVOV_MXdKYhIXiHWjGVkFVlFUmETnDSoCSp\
+  CgRKv2Rr4Qo6Ql8PiAPeCPbEO_GOXINTKNQMNNOMKQMDUIHRMK\
+  OPOMTRJWUGZYEb`Bed6ic9hcBgbEfbGfaIeaLd`Nc`Pc_Sb_Ua\
+  ZW`ZZ`Y`_YbZXeYXgYWiXWlWVnVVpVUsUUuTUwTWsUYpV_mW`j\
+  XbgYddZea_gZ_iW`jTalQbnNc }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
