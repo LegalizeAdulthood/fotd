@@ -1,0 +1,128 @@
+;     Date: Tue, 05 Aug 2014 15:16:53 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-08-14 (Squarely Rooted [A-8,M-5])
+;       Id: <1.5.4.16.20140805151840.299712cc@earthlink.net>
+; ---------
+; 
+; FOTD -- August 04, 2014 (Rating A-8,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA ALERT!
+; 
+; -----------------------------------------------------
+; 
+; MandelbrotSqrt2BC   { ; by several Fractint users
+;   p=p1, q=2*PI*(p/(2*PI)),
+;   r=p1-q, Z=C=Pixel:
+;     Z=log(Z)
+;     IF(imag(Z)>r)
+;       Z=Z+flip(2*PI)
+;     ENDIF
+;     Z=exp(1.414213562373*(Z+flip(q)))+C
+;   |Z|<36 }
+; 
+; -----------------------------------------------------
+; 
+; Today's formula is a new one, an addition to the 'BC'or 
+; 'branch-cut' group of formulas, which are supposed to draw the 
+; other fractals resulting from the multi-valued nature of the 
+; complex logarithm.  Since Z^(sqrt(2)) is the exponent I use most 
+; frequently, I have simplified the formula, and in doing so, I 
+; have also speeded up the calculation a little.
+; 
+; But even from the beginning, the math of the 'BC' formulas has 
+; been questionable.  The formula for the complex logarithm as 
+; listed in the second edition of "Fractal Creations" is . . .
+; 
+;     (1/2)In(x^2+y^2)+i(arctan(y/x)+2kPI
+; 
+; where k can be any real positive or negative integer.
+; 
+; The value I have entered for 'k' in today's image, -9.42477, 
+; shows the math flaw, since it is not an integer, but despite the 
+; flawed math, this fractional value still creates a fractal.  
+; (I'll not even try to guess what errors might be created by the 
+; spurious trig functions that I sometimes use.)
+; 
+; The parent fractal of today's image is a chaotic indescribable 
+; thing with a long zig-zagging filament extending from its 
+; northeast side.  Today's scene lies in the 'East Valley' area of 
+; a tiny minibrot on this filament.
+; 
+; I named the image "Squarely Rooted" because the exponent of Z is 
+; the square root of 2.  The artistic aspect is a little better 
+; than most recent images and rates an honest 8.  Except for the 
+; new formula, I could find nothing new in the math, which rates a 
+; boringly average 5.  The calculation wait of 3-5/6 minutes may 
+; be avoided by checking the web sites.
+; 
+; Check the finished image on the FOTD web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today brought a mix of clouds and sun, and a temperature of 81F 
+; 27C to Fractal Central, the historic center of fractal activity. 
+; After a relaxing week-end, the fractal humans got back to work; 
+; after a relaxing week-end, the fractal cats continued relaxing.
+; 
+; The next FOTD will be posted in a day or two, or maybe three.  
+; Until whenever, take care, and when watching the media news, try 
+; to separate the propaganda from the facts.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Squarely_Rooted { ; time=0:03:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotSqrt2BC passes=1
+  center-mag=+1.381338385604301/+0.8059894596556334/\
+  6.963546e+011/1/-50/0 params=-9.42477/0 float=y
+  maxiter=1800 inside=0 logmap=441
+  periodicity=6 mathtolerance=0.05/1
+  colors=00000B01D02F03H04J05L06N17P28R39T4AV5AX6AZ7\
+  A`8Ab8Ad8Ae7Af7Ag7Ah7AiAAjCBkFDlHGmKInMKoOMpRPqTRr\
+  WTsYVs_Yrb_rdbrgerihrkkrnmvpozsqzutzwwzvzzuzztzztz\
+  zszzrzzrvvqsrppmpmhomcnlbnlamk_lkZljYkjXjiVjiUihTh\
+  hRhgQggPVkfYlg`mibnjakiahhaehabga_faYfaVeaSdaPdaMc\
+  aIbaFbYDWVBQRAKO4EK08H02GALFMcEXvUbuhguwluxmnymgwk\
+  euictharf_pdYocWmaUk_SjZQhXOfVMeUKcSIaQG`PEbODcNCd\
+  MBeLBfKAgK9hJ9iI8jH7kG7lG6mF5nE5oD4pC3qC3YU4eT3mS1\
+  tR0uK7uEEv8Lv2SlAVcHYVO`MVcDaf4hi6kb8nX9pRBsLDvFEx\
+  9CuJBsS9p`8niCheGbbKX_NRXRLUVFRZ9Oa4Li9AqE0sAGu7Wv\
+  4kuGktSksckrokqzkoxdmwZkuTitNhsHloFplEtiCxfBtdCqbD\
+  m`EjZEfUFcPG_KHXFH_AMaEQc7UJ8ZK8WF8JB86hbulUqpKltc\
+  hw2dmcKtKjsSmq`pphsoqvnyykuqizjgUcdnWboP`pIUqGNrFG\
+  sE9hD3uC9vHEwMKxRPyWUz_TzcTzfzzjzzmzzpzztzzwzzzzzr\
+  zzkzzczzXzzQzzIzzBzz4zz3zz2zz2zz1zz0zz0zzBzzHzzNzz\
+  TzzYzzczzizznzzjzzgzzdzza }
+
+frm:MandelbrotSqrt2BC   { ; by several Fractint users
+  p=p1, q=2*PI*(p/(2*PI)),
+  r=p1-q, Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(1.414213562373*(Z+flip(q)))+C
+  |Z|<36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

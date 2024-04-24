@@ -1,0 +1,95 @@
+;     Date: Sat, 02 Aug 2014 08:50:02 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-08-14 (An Ocean View [A-7,M-7])
+;       Id: <1.5.4.16.20140802085146.2f6f88a8@earthlink.net>
+; ---------
+; 
+; FOTD -- August 01, 2014 (Rating A-7,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene lies in the same parent fractal as the previous 
+; two FOTD images.  It is located in a fractured spiral on the 
+; main bay side of the northwest branch of the valley serving as 
+; the gateway to the squashed bug's head.  The view to the east 
+; from this point is water all the way to the horizon, which is 
+; why I named the image "An Ocean View".
+; 
+; The spiralling energies in the area are apparent, though with 
+; the fractional exponent of Z, which is 1.75, these arms are well 
+; broken up.
+; 
+; In my opinion, both the art and math aspects of the image rate a 
+; 7 -- good enough to earn FOTD status but not enough for the 
+; cigar.
+; 
+; The calculation time of 6 minutes definitely drags, but 
+; calculation may be avoided by checking the web sites.
+; 
+; For convenience, the image has been calculated and posted to:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of clouds and sun and a temperature of 84F 29C kept today 
+; on the pleasant side here at Fractal Central.  The next FOTD 
+; will be posted in about two days.  Until then, take care and 
+; beware.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+An_Ocean_View { ; time=0:06:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.7147163078573494/-0.2245693444358739\
+  /2.857437e+009/1/-67.5/0 params=1.75/0/7/0 float=y
+  maxiter=2700 inside=0 logmap=670 periodicity=6
+  colors=000mRYmTYmUZmVZmU_mT_mS`mR`mQ`mPamPamOamNbm\
+  MbmLcmKclJckJdjIdiHdhGehFegEffDfeDfdCgcBgbAga9h`8h\
+  `8h_AeZBbZC_YDXYFVXGSXHPWIMWKKVLHVMEUNBUO9TPATQBTQ\
+  CTRDTRDTSETTFSTGSUGSUHSVISVJSWKSXKSXLRYMRYNRZNR_OR\
+  _PR`QR`RRaRQaSQbTQcUQcUQdVQdWQeXQeXPcWObVNaVM_ULZU\
+  LYTKXTJVSIURHTRGSQGQQFPPEOPDNOCLNBKNBJMAHM9GL8FL7E\
+  K6CJ6BJ5AI49I37H26H15G14G35H46H57H68HB9HFAIKBKQAUY\
+  AcaAmcAucAqaAtZArXApUAnSBlPDjMFhKIfHKdFMbCO`9QZ7SX\
+  4UV2WT6aQ9gNDmKGsIIpKJnMLlOMjQNhSPfTQdVRaXT_ZUY`VW\
+  bXUcYSeZQg`OiaLkbJmdHneFpfDrhBti9vj7wlDrnJnpOjrUfs\
+  ZbudZwiVyoRztNwsUtscrsmoszmszjszlwzwDVuDTtDRrDPqCM\
+  oCKnCIlCGkCEiBBhB9fB7eB5cB3bB1cA0U70K14R5DX8McCViF\
+  bdow_gxV_yQSzzrKzrNznPvkRthTqgVqgXqd`qacqZfqWjqTmq\
+  QpqNs_XpJemM`lPXlRTkUOkXKjZGjkFFjBDi8Bh49g17d76cD6\
+  cI5cO5mT5mZ4md4mi3mo3mt3ms6mszmszmszmszzszzszzszzs\
+  zzszzszzszzszzszzszzszztz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
