@@ -1,0 +1,105 @@
+;     Date: Sun, 20 Jun 2010 18:12:57 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-06-10 (Great AntiMinibrot [10])
+;       Id: <1.5.4.16.20100620181258.11376b40@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 21, 2010 (Rating 10)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Minibrots in fractals are easy to find and very widely known, 
+; but much less known are antiminibrots, which are quite difficult 
+; to find.  Minibrots lie at the center of a basin where the 
+; iteration count increases as the center is neared, and reaches 
+; infinity at the edge of minibrot itself.  Antiminibrots are 
+; peaks with an area of lowest iteration count at the center.  In 
+; today's image the center is beyond resolution, so I cannot give 
+; the iteration count at the central peak.  But the count need not 
+; be as low as 1.
+; 
+; In a minibrot basin, the number of elements surrounding the 
+; central minibrot bifurcates in a 2,4,8,16... series as the 'brot 
+; is approached.  In an antiminibrot such as the one in today's 
+; image, the number antibifurcates in a 16,8,4,2 series.
+; 
+; In everyday minibrot images, the lowest iteration bands lie 
+; around the edges of the frame, and the automatic logmap feature 
+; (setting the logmap to 2) works very well, but in antiminibrot 
+; images such as today's, where the lowest count is at the center, 
+; the automatic logmap is useless.  Luckily, turning off the log-
+; map in today's image works just as well as the automatic feature.
+; 
+; Today's image rates an honest 10.  Its mathematical and coloring 
+; values are both well above average.  And its cauculation time of 
+; 59 seconds can hardly be beat.  BTW, 95-percent of the coloring 
+; was created by the Fractint program.  I tweaked only 10 or so 
+; color registers.
+; 
+; The name "Great AntiMinibrot" says it all.
+; 
+; The image cauculates in less than a minute, but it still takes 
+; some time to set up the parameter file.  To avoid this small 
+; hassle, the finished image may be seen already calculated on the 
+; FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Partly cloudy skies with slightly lower temperatures and notice-
+; ably lower humidity prevailed here at Fractal Central on Sunday. 
+; Nicholas, the fractal cat who dislikes heat, spent most of the 
+; day stretched on the cool tile floor.  Cassie, who likes it 
+; warmer, passed the day curled on the foot stool.  FL and I spent 
+; the day taking it easy.
+; 
+; The next FOTD, probably not as great as today but hopefully 
+; still quite good, will be posted in 24 hours.  Until then, take 
+; care, and get a new angle on things.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Great_AntiMinibrot { ; time=0:00:59.09-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip
+  center-mag=-0.2382764653067911/+0.6598651051332169\
+  /1.26548e+013/1/-15/0 params=6/1e+023/0/0 float=y
+  maxiter=2250 periodicity=6 mathtolerance=0.05/1
+  colors=000T_IXWMGELHFMIGMJGMKHMKHMLIMMINNJNNJNOKNP\
+  KNQLNRLNRMOSMOTNOUNOUOOVOOWPOXPPYQPYQPZRP_RP`SPF8_\
+  QIUT3gU5fU6eV7dV8cV9bWBaWC`XD_XEZXFYYHYYIXYJWZKVZL\
+  U_NT_OS_PR`QQ`RPmg4ke7jc9ibBg`Df_FeYHcWJbVLaTNvZkt\
+  YisYhrXgqXfpXdoWcmWblWakV`jVZiUYhUXfUWeTVdTTcTSbSR\
+  aSQAC_NVgOVfPVePVdQUbRUaSU`TU_TUZUTYVTXWTWXTVXTUYS\
+  T_SPZSS_SR`SQXubYsaYr`Yp`Yo_YnZZlZZkYZjXZhXZgWZfW_\
+  dV_cU_aU_`T__S`YS`XR0mz0kz0iz2gz4ez5cz6az7_z9YzAWz\
+  BUzCSzDQzFOvGMrHLmILhJMcLM_MNZNNYOOYOOXNPWNPVMQUMR\
+  TLRSLSRKTQKUPJXOI_MKbKMeIOhGQkETnCVqAXt8Zw6ay3ax3`\
+  u3_r4Zo4Yl5Xi5Wf6Vc6U`6TY7SV7RS8QP8PM9OJ9NGAMMGLTM\
+  K_Szczzazv_wtYtrWqpUnnSklPhjNehKbeH_cEXaCU_9RY6OV3\
+  KTAMRHOPORNVTKbWNaXQ_YUZZXX`_VacUbfSciQemPfpNgtLir\
+  MioNilOijPigQidRhVKVLCHB42B42B52B52B62B72B72B82B82\
+  B92BA2BA2BB2BC2FE8KHFPKMTNTYQ_bTfaTe_TcZTaXT_WTYUT\
+  WSTVRTT`SP`SPDp3Hk7LgBPcE }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

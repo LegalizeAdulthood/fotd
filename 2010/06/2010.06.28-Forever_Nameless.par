@@ -1,0 +1,93 @@
+;     Date: Mon, 28 Jun 2010 22:34:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-06-10 (Forever Nameless [6])
+;       Id: <1.5.4.16.20100628223424.13c7152a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 29, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates a 6.  So far, so good.  Its parent fractal 
+; is one of the largest I have ever found, needing the maximum 
+; possible outzoom before it fits onto the screen.  No problem 
+; here either.  I named the image "Forever Nameless", which is 
+; paradoxical because this is actually a name.  OK, but fractals 
+; are meant to be observed with the eyes, not to be given clever 
+; names.
+; 
+; Today's image is evaporated.  I raised the escape radius to one 
+; googol, which caused all the 'outside' parts to vanish, leaving 
+; an image consisting totally of 'inside' stuff.  This left-over 
+; inside stuff was then brought to life by the 'bof61' inside fill.
+; 
+; The generating expression combines various negative portions of 
+; Z^(-1.2) and Z^(-4.4) then adds (1/C).
+; 
+; The calculation time of 54 seconds is quite fast, I admit it.  
+; But the image can be seen instantly on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; assuming Paul has already posted it there, that is.
+; 
+; Heavy clouds, high humidity and sporadic rain showers spoiled 
+; Monday here at Fractal Central.  The temperature of 86F 30C felt 
+; very sultry -- like an afternoon on the banks of the Panama 
+; Canal rather than the Susquehanna River.  The fractal cats, who 
+; have never been to Panama, spent the day stretched on the cool 
+; tile floor.  My day was average.  FL, who was beginning to worry 
+; that it might never rain again, felt much relieved when the 
+; showers fell, even though the day's rain amounted to only 1cm.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and be on the alert for alien invaders from space.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Forever_Nameless { ; time=0:00:54.41-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=-6.396910880855549/+1.12547947073241/\
+  1.606963e+011/1/-17.5/0 params=-4/-1.2/-0.2/-4.4/0\
+  /1e+100/0/0 maxiter=1600 inside=bof61 periodicity=6
+  colors=000SFaVFZYFXaEUdERgEPjEMmEJpEHsEEwDBqLGkUMe\
+  bR_kXUtbZkYYl_Xl`VmbUncTneRofQphPpiOqkMrlLrnKsoItq\
+  KrmKqjJpgJodJnbIm_IlXHkUHjSHiPGhMGgJGfHFeEFdBEc8Jd\
+  CNdDSeEWeF_fGdfHhgIlgJqhKuhLziMzfOzcQy`SyXUxUWxRYw\
+  N_wKawHcvEevAgu7iu4kt0ms2mq4no7om9okBpiEqgGreIrcLs\
+  aNt_QuYOsTQqPSoKUmFWkFaYEgJDm4EcMEZPFUSFPVFKZGFaGA\
+  dG5gH0kN0`T0QZ0Fd03RPRDnnDlkEjhJd_OZRTTIZM8aIJeDVh\
+  8fl3rrQ`xmIkpHZsFod0atMeuUhv`lwhpxppqppjoqbnqWmqPl\
+  rHkrAjs2in2fi3cd3`_4YV4VQ5SL6PJGRBSQNIOSKLWNI`PFeS\
+  CdWBc`Abe8aj7`o6_t4Vp4Ql4Kh4Fd4A`44X38Z6C`9GbCLdFP\
+  fIThLYjPBkeAcd8Wb7O`5G_48Y20WGC_VPciagxnltlmpjnlho\
+  hfpddq`brX`sSYuXSraMogFlbOlcQieSffUbhW_iYXk_TeWQ_S\
+  NUNKOJHHEERHJUFLXCN_APb7Re5Ti2Wd8W_EXVKYPQZNRSLTKJ\
+  VCDca4ntCcdAdh8dl6ep7TY6HJ544GA9RGEbMJmSOyYTmSQmSS\
+  mSUlSXlSZlS`kTclRamP_nNXoLVpJTqGQpINnLJlNFjQBhT7fQ\
+  BaRAXRASS9l2Kd6HXADPE94Qn }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

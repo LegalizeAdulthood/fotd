@@ -1,0 +1,105 @@
+;     Date: Thu, 24 Jun 2010 23:10:20 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-06-10 (Cometary Residue [7])
+;       Id: <1.5.4.16.20100624231019.10bf5dba@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 25, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA ALERT!
+; 
+; Today's formula, FinDivBrot-2J, is a new one.  Actually it's 
+; simply a Julia version of the FinDivBrot-2 formula.  Today's 
+; image is the first one I found with the new formula, and it 
+; rates FOTD status.  I cannot recall this ever happening before.
+; 
+; The 'comet' with the long, long tail that streaks across the 
+; entire frame is actually a complete Julia set, one of the most 
+; unlikely Julia sets I have yet stumbled upon.  The corresponding 
+; Mandelbrot fractal is a Mandeloid with everything scrunched 
+; around toward the main stem, and the east side of the main bay 
+; cut off by a straight wall.  Today's image corresponds to the 
+; point where the curving north shore line meets the straight wall.
+; 
+; The image resembles a comet zooming across the sky.  (In fact, 
+; comets do not zoom across the sky except in the movies.)  I 
+; rated the image at a 7, which is above average.  The colors are 
+; quite smooth, and it has some math interest, all of which add to 
+; its worth.
+; 
+; The name "Cometary Residue" came about when I turned the image 
+; upside down.  It originally was rotated 180 degrees from its 
+; present orientation.
+; 
+; The coloring smoothness was achieved by rendering the image with 
+; the outside set to 'tdis', which colors the points according to 
+; how far they travel before escaping.
+; 
+; The calculation time of under 2 minutes is not too high a price 
+; for the result, but all calculation may be avoided by viewing 
+; the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Partly cloudy skies, a temperature of 88F 31C, lower humidity 
+; and a refreshing breeze made Thursday quite an acceptable day 
+; here at Fractal Central.  The fractal cats came out of hiding 
+; long enough to get into a squabble over who would spend the 
+; afternoon on the foot stool.
+; 
+; My day was satisfactory, as far as that goes.  And if all goes 
+; well, tomorrow will be a repeat.  With the drought growing worse 
+; here in Pennsylvania, FL is concerned with her garden, but so 
+; far, with generous watering, the plants appear to be holding up 
+; rather well.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and be satisfied.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cometary_Residue { ; time=0:01:50.09-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2J function=recip
+  center-mag=10.892/-14.7808/0.052083/1/90/0 float=y
+  params=1/1/10000/0/0.79606/0.19699 periodicity=0
+  maxiter=5000 inside=255 outside=tdis symmetry=none
+  colors=000zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzMzzNzzNzzOzzOzzPzzPzzQzzQzzRzzRzzSzzSzzTzzT\
+  zzUzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzbzzbzzczzczzdzzdzzezzezzfzzfzzgzzgzzhzzizzizzjz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzASsASsBSrBSrBSqCSqCSpCSpDSoDSoDSnDS\
+  nESmESmESlFSlFSkFSjGSjGSiGSiHShHShHSgHSgISfISfISeJ\
+  SeJSdJSdKScKScKSbLSaLSaLS`LS`MS_MS_MSZNSZNSYNSYOSX\
+  OSXOSWPSWPSVPSVPSUQSTQSTQSSRSSRSRRSRSSQSSQSSPTSPTS\
+  OTSOTSNUSNUSMUSMVSLVSKVSKWSJzzJzzIzzIzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz9zz8zz8zz7zz7\
+  zz6zz6zzzzzzzzzzzzzzzzzzzzzzzzzzzzz4zz4zz5zz5zz6zz\
+  6zz7zz7zz8zz8zz9zz9zzAzzBzzBzzCzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzGzzHzzHzzIzzJzzJzzKzzKzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzTzzUzzUzzVzzVzzWzzWzz\
+  XzzXzzXzzWzzVzzUzzTzzSzzz }
+
+frm:FinDivBrot-2J   { ; Jim Muth
+z=pixel, c=(p3), a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

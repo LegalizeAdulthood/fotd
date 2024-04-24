@@ -1,0 +1,106 @@
+;     Date: Thu, 03 Jun 2010 00:32:50 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-06-10 (Square-Root-of-Three Minibrot [8.5])
+;       Id: <1.5.4.16.20100603003405.2b57e1a8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 03, 2010 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image was created by iterating the 
+; expression Z^(sqrt(3))+C with the MandelbrotBC3 formula at a 
+; level of 12 turns up the complex logarithmic hyperspiral with 
+; the 'round' function applied.  This parent consists of a large 
+; circular main bay, with strangely enough, two large period-2 
+; buds, one on the northwest shore line, the other on the north-
+; east shore, with the whole thing resembling the head of Mickey 
+; Mouse.  Today's scene is located on the western edge of the 
+; northwest period-2 bud.
+; 
+; The MandelbrotBC3 formula takes advantage of the multi-valued 
+; nature of the complex logarithm.  Unlike the expression Z^2+C, 
+; which, regardless of the value given real(p2), always draws the 
+; Mandelbrot set, an expression such as Z^(sqrt(3))+C has no 
+; single fractal associated with it.  It has instead an infinity 
+; of different fractals, every one of which is the result of itera-
+; ting the expression Z^(sqrt(3))+C.  Asking which fractal is the 
+; correct one is meaningless.
+; 
+; Today's image is named "Square-Root-of-Three Minibrot".  The 
+; reason for the name is obvious.  The rating of an 8-1/2 might be 
+; a bit liberal, but I did do some extra work on the coloring, and 
+; I feel I deserve the reward.
+; 
+; The calculation time of 1-3/4 minutes is well within the comfort 
+; range for fractal generation.  The comfort may be increased yet 
+; further by surfing out to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and viewing the image there, already calculated.
+; 
+; Lots of sun and lower humidity made Wednesday a rather pleasant 
+; day here at Fractal Central.  The fractal cats were up and about 
+; most of the day, getting into various kinds of mischief -- a 
+; good sign that they approved of the drier conditions, if not the 
+; higher temperature of 88F 31C.
+; 
+; My day was acceptable, if not great.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and if you're a 
+; serf, be faithful to your lord and master.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SqrtThree_Minibrot { ; time=0:01:45.08-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=round passes=1
+  center-mag=-0.9914563737440867/+0.4862853210787398\
+  /1.758179e+011/1/-67.5/0 params=1.732051/0/12/0
+  float=y maxiter=3000 inside=0 logmap=162
+  periodicity=6 mathtolerance=0.05/1
+  colors=0004Kp5Kn6Kl6Kj7Kh8Kf8Kd9Jb9I`9HZ9GX9FV9ET9\
+  DRzzzzzzzzzzzzzzzzzzzzzzhzzUfzGpzwVzs_mpcDh_JaWPVS\
+  wUOtLLjCKb7KW2KOFJ000KKIPRHUYGYdG`lLkrOsuQzzS9cU7G\
+  R5MZ3K`2Jb8NeDQgJTjOWlT_oZbqcethhvagoWgiQfcKfYEeS8\
+  eM2eG6dRAc`EbkHbuQWqZPngIjrBgz5doBYeHRXMKNSDEX7GZz\
+  HmzImzMWZPQYSKXVEWY8V_EY`K`aPbiSdpVfwYhlVnbStTQyUS\
+  uUUqUVmVXiVYeV_aV`ZYXW`UTbQReNOgJMjGJlDHkBzzczzczz\
+  czzazzUzmUknqgkjjicmgXpeRrgWqh_qicqjgqllpmppntpoxp\
+  senwOmz6lqJehWZ_hSStLSpKSlJSiISeHSaGSZFSVESSESJRSA\
+  cS2oMVsNPqNKpNEoN9nI7iE5d94`52W11S72XC2aH2eN2jS2nX\
+  2sa2wb7zcBzdFzeJzgNziRukVmmZcrSUvLKzEBz77zC8zG9zLA\
+  zPAzTBzZCzcDzhDzmHzrLzvPzzTzzSzzRSzQQzPPzONzNLzMKz\
+  LIzKHzKKzJKzIzzIzzHzzGzzGzzFzzEzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzz8zd8ze8zf8zg9zh9zi9zj\
+  9zk9zlAzmAznAzoAzpAzqGzqLzqRzqWzqazqfzqkzqgzrdzr`z\
+  rYzsVzsRzsOzsLztHztazYjzi }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

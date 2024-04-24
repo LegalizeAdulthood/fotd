@@ -1,0 +1,99 @@
+;     Date: Mon, 14 Jun 2010 23:28:58 EDT
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 15-06-10 (Cranky Calculation [No Rating])
+;       Id: <49ef8.189b5d0b.39484d7a@aol.com>
+; ---------
+; 
+; 
+; 
+; FOTD -- June 15, 2010 (No Rating)
+;  
+; Fractal visionaries and enthusiasts:
+;  
+; Things were rather disorganized here at FC on Monday, as we 
+; shifted things to different machines.  For some reason, the new 
+; fractal machine will not connect to mindspring, which explains 
+; why I am sending this through my AOL address.  The problems are 
+; being solved one at a time however, and within a day or two, we 
+; should be up and running on the same old schedule.  But another 
+; big change is not far off.  I am putting the fractal dedicated 
+; unit on a DSL line, most likely with a new URL address.
+;  
+; As for today's fractal, I doubt that it's worth a rating.  The 
+; image is a simple minibrot in a valley of one of the Z^(1.7)+C 
+; parent fractals.  I named it "Crabby Calculation", which rather 
+; describes my mood after fighting with disobedient computers all 
+; day.  The image, for all its worth, fails to earn a rating, but 
+; with its calculation time of 2-1/2 minutes, not much will be 
+; lost if the image fails to satisfy.
+;  
+; Calculation may be avoided by viewing the finished image on the 
+; FOTD web site at:
+;  
+;        <_http://www.Nahee.com/FOTD/_ (http://www.Nahee.com/FOTD/) >
+;  
+; With a temperature of 84F 29C and reasonable humidity, Monday 
+; was fairly pleasant here at Fractal Central.  Too many clouds 
+; kept it from being an outstanding day however.  The next FOTD 
+; will be posted in 24 hours.  Hopefully, by then I'll be back in 
+; the familiar fractal routine.  But if no image appears, it will 
+; be a sign that we ran into more computer problems.
+;  
+; P.S. The fractal cats had a sulky day.  They didn't like all the 
+; disorganization.
+;  
+; 
+; Jim Muth
+; _jamth@mindspring.com_ (mailto:jamth@mindspring.com) 
+; _jimmuth@aol.com_ (mailto:jimmuth@aol.com) 
+;  
+; 
+; START PARAMETER FILE=======================================
+ 
+Crabby_Calculation { ; time=0:02:34.77-SF5 on P4-2000
+reset=2004 type=formula formulafile=basicer.frm
+formulaname=MandelbrotBC3 function=floor
+center-mag=-0.058531449501/+0.648142658462/2264403
+params=1.7/0/19/0 float=y maxiter=7500 inside=0
+logmap=206 periodicity=6
+colors=000yFYwJWvKVuKUtKSrKRqKQpKOoKNnKPmKSlKVkKYk\
+L`kNckPckRbkSakU_kWZkXYjXXjXVjWUjVTjUSjTQhSPfRSdQT\
+bPU`QVZRWXSXVUYTVZRW_PX`NYaLZbJ_cKaeKbfKcgKdhKeiKf\
+jKgkKhlKimJjlIjlHkkHkkGkjFljFliEliDmhDmhCmhBngBngA\
+oh9om9or8pv7pz7pv6qr5qm5qh6od7me8lf9jfAigBghCfhDdi\
+EcjFajG`jHZkIXlJWmKYnL_nMaoNcpOepNgqMirLjrKkm_jhXi\
+cUhZRgUOfPLeKQdFTgBXjC_lEcmF_mGWlYYmV_mTalRbkPdjNf\
+iLhhKigKjfKkeKldKmcOmbNlaMl`Nl_NkZMkYMkXMjYLjXKkWK\
+kVJlUIlTHmSOlRNlQMlTMkWLkZLkaKjeJjhJjkIinIhmKglKfk\
+KejKdiKchKcgKcfKceKccKZZKUUKPPKKLJ90EB3FD6FF9FHBFI\
+EFKHFMJFOMGPPGRSGTUGVXGW_GYaG_dHagHbjHdlHfoHhrHl7M\
+QHzTMtVQoXVjZZeac`cgWelRgpMJdyMnxOouPosQopSpnTpkUp\
+iWqfXqdYqb_r_`rYarVcsTdsQesOgtLhtJltZktYktXktWktVk\
+tVktUktTjtSjtRjtRjtQjtPjtOjtOjtNiuMivLiwKixKiyJizI\
+izH8z9AzACzADzAFzBGzBIzBKzCLzCNzCOzDQzDRzDTzEVzEWz\
+EYzFZzF`zFbzGczGezGfzHhzH }
+ 
+frm:MandelbrotBC3   { ; by several Fractint users
+e=p1, a=imag(p2)+100
+p=real(p2)+PI
+q=2*PI*fn1(p/(2*PI))
+r=real(p2)+PI-q
+Z=C=Pixel:
+Z=log(Z)
+IF(imag(Z)>r)
+Z=Z+flip(2*PI)
+ENDIF
+Z=exp(e*(Z+flip(q)))+C
+|Z|<a }
+ 
+; END PARAMETER FILE=========================================
+;  
+;  
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
+; 

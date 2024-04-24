@@ -1,0 +1,100 @@
+;     Date: Mon, 21 Jun 2010 22:45:04 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-06-10 (Negative Minibrot [7])
+;       Id: <1.5.4.16.20100621224507.131ffbd8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 22, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday's image was a true-to-life antiminibrot.  Today's 
+; image is a negative minibrot, which is not quite true to life, 
+; since the negative effect was totally created by the coloring.  
+; The minibrot itself is nothing more than an everyday run-of-the-
+; mill minibrot given interest by rendering the entire scene with 
+; the outside set to 'tdis'.
+; 
+; The negative effect gives a rather ominous feeling to the image. 
+; I have occasionally seen this effect used in Japanese 'anime' 
+; cartoons.  The name "Negative Minibrot" is self explanatory.  
+; The calculation time of 39 seconds is no error.  The parameter 
+; file really runs this fast.
+; 
+; But running parameter files involves a bit of hassle.  This 
+; small hassle may be avoided by checking the finished image on 
+; the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and forgetting about running the parameter file.
+; 
+; The parent fractal came about when I combined 0.1 part of Z^10 
+; with one part of Z^1.5 and added straight C.  This parent is a 
+; mis-shapen Mandelbrot set rotated about 180 degrees, with a 
+; large open area extending beyond its east (west) valley and a 
+; curled-up main stem.  Today's scene lies on a kind of figure-8 
+; shaped hole on this curled stem.
+; 
+; The weather here at Fractal Central on Monday was almost 
+; perfect.  Only a too-warm temperature of 88F 31C kept it from 
+; being totally perfect.  The fractal cats spent the day relaxing, 
+; though at one point Nicholas ducked briefly under the bed when 
+; he thought we were getting out the cat-carrying box to take him 
+; to the doctor again.
+; 
+; My day was about average; FL is concerned about the unusually 
+; dry weather we have had so far this year, and the effect it is 
+; having on her garden, (and the farmers' crops also).  The next 
+; FOTD will be posted in 24 hours.  Until next time, take care, 
+; and does anyone know how to get more water to fall from the sky?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Negative_Minibrot { ; time=0:00:39.66-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident inside=0
+  center-mag=+0.5547669664716627/-0.0077870219432185\
+  /1.259273e+011/1/-120/0 params=0.1/10/1/1.5/0/0/0/0
+  float=y maxiter=1500 outside=tdis 
+  periodicity=6 mathtolerance=0.05/1
+  colors=000XiXXiXXjXXjXXkXXkX_lWamVdnVfoUipTkqTloSm\
+  nRnmRolQpkPqjPriOrhNsgNtfMueLvdLwcKxbJxaJudOrfTpiY\
+  mkbjnghplesqbuv`wzbvvcvseuofulhuiitektblt_cpUWlONh\
+  IZyEGiDFeCEbCE_CDXCDTCCQCBNBBKBAGBADB00042797BFFIK\
+  IMMMMRQPVVT__Wcd_nplklkhijeehbbg__eYXeXVeVSfTQfROg\
+  PLgNJhMHhLPYKXNKcDJdHIeKIfNHgRHgUGhXFi_FjcEkfEkiDl\
+  lCmpCnsBovBoy_dkYaiW_gUXfSVdQSbOQaMN_KLYIIXGGVEDTc\
+  BSc8Qc6PcANcDMcGLmJKmMJmPImSGmVFmYEm`DecCzfBzS0z`5\
+  ziAz0yzSazrFzlDzfBz`9zP4zT6zW7zZ8zbAzeBzhCzkDzoFzr\
+  GzuHzxIzvKctMdsOfqPgpRhnTilVkkWliYmh_nzapzbqzdrzfs\
+  zgTzDWzGYzJ_zMazPdzRfzUhzXjz_ozamzalzakzaizahzagza\
+  fzadzaczabza`za_zaZzaYzaTzdPzfLziHzkEzoDzmCzlCzkBz\
+  iBzhAzgAze9zd9zc8za8z`7z_7zZCz_Hz`MzaJzvNzkQzaTzRX\
+  wDWzHWzLWzPWzSWzWWz_VzbVzfVzjVzmVzqVzuVzxYzw_zvazu\
+  cztezsgzsizrjzqkzpjznjzmizlizjhzihzhgzfgzefzdfzbez\
+  aez`dzZdzYczXAzxXzXXzXXzX }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

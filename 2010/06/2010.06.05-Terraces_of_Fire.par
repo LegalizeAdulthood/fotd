@@ -1,0 +1,93 @@
+;     Date: Sat, 05 Jun 2010 22:37:39 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-06-10 (Terraces of Fire [8])
+;       Id: <1.5.4.16.20100605223855.2a271624@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 06, 2010 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "Terraces of Fire".  One look at its fiery 
+; terraces will give the reason.  The parent fractal is hardly 
+; more than a rudimentary blob with a single sizeable bay and the 
+; remnants of an East Valley.  Slices of long-gone elephants 
+; abound in this valley, with today's scene located not too deep 
+; in one of the remaining left-over elephant-trunk spirals.
+; 
+; The terraced effect is a result of rendering the image with the 
+; outside set to 'tdis'.  Making terraces is one of the things 
+; this option does quite well.  The rating of an 8 is mostly due 
+; to this terraced effect, which is really all the image has going 
+; for it.
+; 
+; The calculation time of 13 minutes is admittedly slow, but it is 
+; not excessive when the resulting image rates an 8.  The thirteen 
+; minutes may be saved by surfing to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where the already-calculated image is posted for instant relief 
+; of impatience.
+; 
+; The warm and humid conditions continued here at Fractal Central 
+; on Saturday.  The temperature of 88F 31C was made worse by the 
+; air that was almost moist enough to swim in.  The fractal cats, 
+; who do not swim, kept cool on the kitchen floor.  In my depart-
+; ment, all was quiet.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and how many liters of water will a Klein 
+; bottle 30cm in diameter hold?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Terraces_of_Fire { ; time=0:12:53.59-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=round inside=0
+  center-mag=+0.15403642991044/-0.00092662965803/5.3\
+  e+10/1/-30/0 params=1.5/0/11/0 float=y maxiter=5000
+  outside=tdis periodicity=6 mathtolerance=0.05/1
+  colors=000nx8iwAdwBZvCUvEPuFKuGJtJIsLHsNGrPFqREqTE\
+  pWDpYCo_BnaAnc9me9mgBfaC_WDTQEMKFFEG89LIDPRHT`KXiO\
+  `rRYsQWtPTuORvOOwNMxMKyMQqIWiEaaAgU6mM3lN4kN5uN6sN\
+  7qN8oN9mNAkJ9iG9fD9cA8`78Y48V18S38P58M78J98FB8CD8A\
+  F88H86K85N85Q8ATBFVDKXFOYHR_KV_PZ`U``Zcacfahicmkdr\
+  ofvsgzwizzjzwkzulzsmzqnzoozmpzkqzirzgszetzcuzdrzeo\
+  zfmzgjzggzhezibzj`zjYOkVLlTJmQGmOElOFlOHkOJjOLjOMi\
+  OOiOQhOSgOTgOVNffKigHlhFoiHnjJnkKnlMnmNnnPmoQmpSmq\
+  UmrVmsXltYlu_lv`lwblxclyfmlim`blcXleQlgKliQjhVih`g\
+  hefhkdhpchmajk`ki_lfYndXobWp_UrYTsWStTQvRPwPOxNNyV\
+  SdbXKja0hMWg6zh9xhBwhEviGuiJtiLsiOrjQpjTojVnjYmk_l\
+  kbkkdjkfighgdje`kcYmaUn_RpYOrWKsUHuSDvQAxO7yMDuOJq\
+  POnQUjS_fTdcUeaTe_TfZTfXTgWTgUShTShRSiPSiOSjMRjLRk\
+  JRkIRlGRlFRYOKJXE4e8jDZeC`aBcXAfT9hP8kK7nG6pB5s74v\
+  34x68w8BwAEvDHvFKuHNuJQuMTqPVnSXkUZgXad_caaeYdgVgj\
+  SilOlnLopIqsEtuBww8yy5sx7 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,100 @@
+;     Date: Fri, 11 Jun 2010 22:13:02 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-06-10 (Pits and Bieces [7])
+;       Id: <1.5.4.16.20100611221424.2a67323e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 12, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Pits and Bieces", which is a play on 
+; the words 'bits and pieces'.  The reason for the name will be 
+; obvious as soon as the image is seen, and with a calculation 
+; time of 1-1/4 minutes, the wait will not be long.
+; 
+; The parent fractal is a degenerate Mandelbrot set.  Today's 
+; scene is located some distance east of the remains of the East 
+; Valley of the parent.  Little East Valley stuff remains in the 
+; image, though a few hints appear here and there.
+; 
+; Surprisingly, the image is extremely sensitive to changes in the 
+; escape radius, imag(p3), which in the image is the formula 
+; default of 100.  As the escape radius is increased or decreased, 
+; the image changes dramatically.  It evaporates and vanishes 
+; entirely when the value of imag(p3) is increased to about 8500.  
+; When imag(p3) is set to -13.92, the image takes the shape of a 
+; Maltese cross.  Any negative value greater than this gives a 
+; blank screen.
+; 
+; Before experimenting with the escape radius however, be warned 
+; that the calculation time increases dramatically as the ER is 
+; increased.  When imag(p3) is set to substantially greater 
+; values, the calculation time increases to more than 15 minutes.
+; 
+; At an escape radius of over 8500 or so, the result is a blank 
+; screen consisting totally of 'inside' stuff.  But even here all 
+; hope is not lost.  Using an active inside fill such as 'bof61' 
+; brings the blank screen to life.  But here again, the calcula-
+; tion time grows even longer.
+; 
+; The rating of a 7 seems about right.  Calculation may be avoided 
+; entirely by viewing the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Near perfect outside conditions kept the fractal cats happy here 
+; at Fractal Central on Friday, even though they are inside cats.  
+; Partly cloudy skies, low humidity and a temperature of 79F 26C 
+; are near perfect by any human's or any cat's standards.  In my 
+; area, the rush died out in the morning, followed by a slow 
+; afternoon.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and don't be caught with your fractals down.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pits_and_Bieces { ; time=0:01:15.73-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritMinZ function=recip
+  center-mag=+0.2794802820587657/+0.0280646118234618\
+  /6.298586e+008/1/180 params=1/1/3/-1/0/0/0/0
+  float=y maxiter=1500 inside=0 periodicity=6
+  colors=000mVHsPGxHCzCAz68z06``P0ze4zkGsoRks`dvkXzv\
+  PzzHzzAzzAvzAizAVzAHxA2vA0o00i00b00X000Eu0AmA6eP4Z\
+  HLeAbk2ss0zx0zzJzskzgzuZCXz6Xz2Xz0Xz0Xz0Xz0Xz0RzCN\
+  zPJzbGziPzqXzvdqzeezgVzgJzi8zi0zk0zk0zb0kT0VJ0EC0C\
+  C4ACNACe2Eg0Ei0Gk0Gm0Gm0Ag06d00`00V00R00N00T00Z00b\
+  42gA6mGAqLEvRGzzzvzsuqdugPuZ8uP0uG0uoLo0LV0RX4VXH`\
+  ZTdZegZsm`zq`zu`mxiJzq0zxkxqdovZezRXzLNzGGzdPzzZzz\
+  gzzixiiqPki6kb8bXAVRALNCEHE6CE08G02G00N0C000`0Ze0i\
+  k0ui0mg4ggXbebXedRdeLdgGXiERkEJiEEgE6eE0dETbC0bk0L\
+  T0C8026006004004000000400E00N00X00e00o0Tq0Tz00z0Tz\
+  PTz8TzUTvRTs`Tzd0zf0zh0zjCzpEzsExuEzz0izE`zTKuzLzz\
+  XuzezzouzxzzzzzzzzzzzzzzzzzzzzzzzgzzdzzNzz8mT0ZT0J\
+  TTPTzzzzkzxgzqeziizbmzv`ozP`zXdodebkgPszCzk0zm0zo0\
+  mk0Pg00d00b00gH0mb0sv0xz0zz0sz0iz0`z8RzGHzN8xV0v`0\
+  4z0Cz0JuARmJZeTeZbmRkuJuzEzqkZgz2izEkzPmzZoziqzusz\
+  zuzzZv4XsAVqGToLTmP`eLe`J }
+
+frm:MandAutoCritMinZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*((-z)^b))+(d*((-z)^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
