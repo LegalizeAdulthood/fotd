@@ -1,0 +1,117 @@
+;     Date: Mon, 08 Jun 2009 17:00:16 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-06-09 (Seahorse Valley-09 [6])
+;       Id: <1.5.4.16.20090608170136.2bbfef06@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 09, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; While viewing today's image, which is the last time we'll see 
+; this particular Seahorse Valley minibrot, I started wondering 
+; exactly what a minibrot is.  In the Mandelbrot set, minibrots 
+; appear as miniature Mandelbrot sets.  But at the same time mini-
+; brots extend beyond the Mandelbrot set in 2 perpendicular Julia 
+; directions, making it more appropriate when discussing minibrot 
+; rotation to consider minibrots as four-dimensional 'minibrot 
+; complexes'.
+; 
+; The elements in these complexes are very large in the Z-plane 
+; directions and small in the C-plane directions.  The complexes 
+; are open inside and extend throughout the Julibrot figure, 
+; appearing here and there until they are ultimately completely 
+; cut off by lower-iteration stuff.  The great difference in the 
+; C and Z dimensions of the minibrot complexes also explains the 
+; extreme stretching that so often appears in the odd-plane 
+; directions.
+; 
+; Today's image is another view of the past two days' minibrot 
+; complex, this time sliced in a direction rotated about halfway 
+; between the Oblate and Rectangular directions.  Conveniently, it 
+; has X-axis symmetry, which not only gives a more pleasing appear-
+; ance, but also cuts the calculation time in half.  I had to 
+; stretch the image quite a bit in the horizontal direction to 
+; make it clear.
+; 
+; Unfortunately, I could not rate the image at a 9, as Paul 
+; wondered, since this is the third consecutive trip to the same 
+; minibrot complex.  But the rating of a 6 is still a bit above 
+; average and makes the 5 minutes required to run the parameter 
+; file just barely worth the effort.
+; 
+; perhaps the best way to view the image is to surf out to the 
+; FOTD web site at
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; but try not to fall into the 4th dimension on the way.  If you 
+; got turned around there, you would come back as anti-matter and 
+; destroy half the continent when you self-annihilate.
+; 
+; The fractal cats enjoyed the typical early summer weather that 
+; prevailed here at Fractal Central on Monday.  The temperature 
+; of 86F 30C and the humidity did not bother them at all, but I 
+; decided it was time to get the energy-saving fan out of the 
+; closet and stir up a breeze or two.
+; 
+; The next FOTD will be posted in 24 hours.  It will not be just 
+; another view of the same minibrot.  Until then, take care, and 
+; would it be possible for a universe to exist with no conscious 
+; observers to observe it?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-09 { ; time=0:05:12.20-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 passes=t periodicity=10
+  center-mag=0/0/108000/50000000/0
+  params=42.6/90/0/90/-0.7499841692570846/0.01444653\
+  20644315/0/0/2/0 float=y maxiter=16000 inside=0
+  logmap=2000 symmetry=xaxis mathtolerance=0.05/1
+  colors=000zzzQYxTWwWUvZSuaQudOtgMsjKrmIqmGqkHmiHjg\
+  HgeIccI`cIYcJUcJRdJOeJLfLKgNJhPIiQHjSGkUFmVEnXDoZC\
+  p_BqaArc9sd9tc8ub7va6w`5x_4yZ3zY3vY8sYDoYIlYNhYSeY\
+  XaYaZYfVYkSYpOYuLYzOXxQXvSWuVWsXVrZVpaUocUmeUlT`bG\
+  gT4mJ8rLBvMEzNHzPKzQNvRQrTUmUXjV_iXbiYeiZhh`khanhb\
+  dg`VgZLgXBgVwpGumFsjEqhEoeDmbCk`CiYBgWBeTAcQ9aO9_L\
+  8ZJ8ZO7ZT7ZX7Za7Zf7Zj7YiCXhGWgLWfPVeUUdYUdaYbbaabe\
+  `ch_ceYZcWU`UQZTLWRGUPCRN7PM3CEM07d66aC6ZH6XN5US5R\
+  Y5Pb4Mh4Jm4Hi5Ee6Ba69Y76U83Q81P95OA9NBDMCHLDKKEOKF\
+  SJGWIH_HIbGJfFKjELnEMqGQmHUiIXfJ`bKdZLgWMkSNoOmr0P\
+  vzQyzRuzRrzRozRkzShzSeLSaMSZNTWOTSPTPQTMRTJSRHQPGP\
+  NFNLDMJCKHBJF9HD8GB7E96DDBCGFBKJANO9QS8UW7X`6`d5ch\
+  4fl3gg5hb6iY7jT8kP9lKAmFBnACo5Dz00z00z00z00z50zA0z\
+  F0zK0zP0zS0zV0zY0z`0zc0zf0zg0zi0zk0zm0zo0zq0zs0zu0\
+  zv0zw0zx0zy0zz0zz0zz0zz0zz0zzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

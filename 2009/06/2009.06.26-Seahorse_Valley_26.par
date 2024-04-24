@@ -1,0 +1,97 @@
+;     Date: Fri, 26 Jun 2009 17:42:46 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-06-09 (Seahorse Valley-26 [No Rating])
+;       Id: <1.5.4.16.20090626174421.2b675c1e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 26, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Things did not go according to plan at Old Fractal Central on 
+; Thursday, so I had to remain there overnight and finish the work 
+; Friday morning.  When I got back to New Fractal Central at 5pm 
+; Friday, it was too late for a proper fractal search.  I filled 
+; in the fractal blank with today's hasty but curious distortion 
+; of Seahorse Valley.
+; 
+; The picture itself is not much to look at, but it calculates in 
+; a mere 15 seconds, so little time will be wasted in running the 
+; included parameter file.  The question is: which part of the 
+; image is distorted -- the recognizable Seahorse Valley shape 
+; inside the narrow open slot, or the stretched-out stuff in the 
+; foreground which is covering parts of the valley?
+; 
+; Actually, it's the Seahorse Valley shape that has been distor-
+; ted.  To return the image to its undistorted appearance, reset 
+; the magnification to 0.75, the X-Magnification Factor to 1, the 
+; Rotation Angle to zero and the Skew Angle to zero.  Seahorse 
+; Valley is still in there, but it's a bit squeezed.
+; 
+; Due to the hurried nature of the image, I gave it no rating.  
+; The brief calculation time may be avoided by viewing the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Very warm but otherwise harmless weather prevailed at both Old 
+; Fractal Central and New Fractal Central on Thursday, with a 
+; temperature around 90F 32C at both places.  The fractal cats had 
+; little to say.  The next FOTD, the one for June 27, will be not 
+; be posted on schedule, but neither will it be as late as today's 
+; FOTD.  Until whenever, take care and be conservatively liberal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-26 { ; time=0:00:15.29-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 center-mag=0.00692656/\
+  -0.00129906/6.290885/0.05253/-7.5/-71.877681871366\
+  1783 params=-43/-93/-85/88/-0.75/0/0/0/2/0 float=y
+  maxiter=2500 inside=0 logmap=yes periodicity=10
+  colors=0007cvA`tCYsEWrHTpJQoLOnOLlQIkSGjVDhXAgZ8fa\
+  5dc2ce0bc2`b4Z`5X_7WZ8UXASWCRVDPTFNSGMRIKPKIOLGNNF\
+  LODKQBJSAHT8GV6FW5GV8GVBGUEGUHHTKHTNHSQHSSIRVIRYIQ\
+  `IQcJPfJPiJOlJOnMRkOThQWeSYbU__WbXYdU_gRaiOckLenIg\
+  pFirDjlIkfMl`RmVVnP_oJcpDhq7lr9jrBhrDfsFesHcsJatL`\
+  tNZtPXuRVuTUuVSvXQvZPv`NwbLwdKwfIxhGxjExlDynByp9yr\
+  8zt6zv4zx3v3ru4su5su5st6st6st7ss7ss8ss8sr9trAtrAtq\
+  BtqBtqCtpCtpDtpDtoEuoFuoFunGunGunHumHumIumIujIrgIp\
+  dInbIk_IiXIgVIdSIbPI`NIYKIWHIUFIRCIP9IN7ILBJNEKOHK\
+  PKLQOMRRMSUNTXOU_OVbMSeLQgKOjILlHJoGHqEEtDCvCAjDJZ\
+  DRND_BDg0DoACqKCrUCtcBumBwwBxvCvuCttCrtCpsCnrClrCj\
+  qChpCfoCdoCbnC`mCZmCXlCVkCTjCRjCPiCNhCLhCJgCHfCFfC\
+  DgEChGCiHCiJCjLCkMBkOBlQBmRBmTBnVBoWAoYApZAq`AqbAr\
+  c9se9sg9th9uj9ul9vm8wo8wq8xr8yt8yu8vsFsqMppTnmWljZ\
+  kg`idcgaef_hdXkbUmaRp_OrYLuXJwVQmTWdRaVPhMNnCMt3Ns\
+  4Or5Or6Pq7Pq8Qp9QpARoBRnC }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

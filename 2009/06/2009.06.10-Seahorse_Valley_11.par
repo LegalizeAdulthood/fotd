@@ -1,0 +1,103 @@
+;     Date: Wed, 10 Jun 2009 19:59:04 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-06-09 (Seahorse Valley-11 [8])
+;       Id: <1.5.4.16.20090610200026.2b4fe8be@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 11, 2009 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the Oblate aspect of Seahorse 
+; Valley.  The Oblate aspect is defined by the real(z) and imag(c) 
+; axes of the Julibrot.  To find the Oblate view, take the point 
+; at -0.75 on the negative X-axis of the Mandelbrot set and 
+; imagine the real(z) axis cutting perpendicularly through this 
+; point, extending in front of and behind the screen.  This line 
+; is actually the X-axis of the basic Julia set of Seahorse 
+; Valley, and when taken with the real and imaginary C axes 
+; defines a three-dimensional hyperslice of the four-dimensional 
+; Julibrot figure.  Now rotate the 2-D image on the screen 90 
+; degrees around the vertical axis, through this imaginary 3-D 
+; hyperslice until it sits in an upright position perpendicular to 
+; the screen, facing left and right.  This is the oblate aspect of 
+; Seahorse Valley.  It's easier to think about than describe in 
+; words.
+; 
+; Now that we have our bearings in Seahorse Valley, what we find 
+; in there is a whole slew of those things I call peanut holes.  
+; In today's image the holes are filled in because of the maxiter 
+; of one-million, but they may be seen in their full glory by 
+; lowering the maxiter to 7,500.  Curiously, these peanut holes 
+; appear in all aspects of Seahorse Valley, while the Mandeloid 
+; elements such as minibrots vanish soon after we leave the 
+; Mandelbrot orientation.
+; 
+; I added superfluous detail to the scene by rendering it with the 
+; outside set to 'summ', and then I colored it to resemble a scene 
+; on some surreal alien planet.  I rated it at an 8 because I kind 
+; of like scenes on alien planets.  The calculation time of under 
+; 10 minutes will probably be cut to less than half on a current 
+; S.O.T.A. (state-of-the-art) machine, once the machine is taught 
+; how handle the Fractint program.  Or perhaps it is best to 
+; forget teaching a new computer old tricks, and trek electronical-
+; ly out to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; to view the finished image in its full glory there.
+; 
+; Thickening clouds here at Fractal Central on Wednesday did not 
+; dim the spirits of the fractal cats, who spent a good part of 
+; the day chasing each other up and down the hallway.  The tempera-
+; ture of 84F 29C was just about normal for the end of spring.  My 
+; day was busy but under control.  The next FOTD will be posted in 
+; 24 hours.  Until then, take care, and does dark energy come from 
+; the world of fractals?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-11 { ; time=0:09:51.37-SF5 on P4-2000
+  reset=2004 type=formula formulafile=slices.frm
+  formulaname=Oblate passes=1 center-mag=-1.18496393\
+  032451400/+0.00512773353588221/33113.21/0.6062/\
+  -1.06803255737970959/-88.8155012674095872
+  params=0/0/-0.75/0 float=y maxiter=1000000 inside=0
+  outside=summ periodicity=10
+  colors=0001_z1Zz1Zz1Zz1Zz2Yz2Yz2Yz2Yz2Xz2Xz2Xz2Xa2\
+  W`2WZ2WY2WX3VW3VV3VT3VS3UR3TQ3SP3SO3RM3RL3QK3QJ4OI\
+  4OG4MF4ME4LD4KC4KA4J94I84H74H64G56H57H58I59J5AI5BJ\
+  5CG5DF5EE5GD5HC5IB5JA5KA5LA5NA5QC5TE5WG5YI5`M5cQ5c\
+  U5cW5cY5c_5cc5ca5c_5cY5cX5eX5gY5iY5kY5lY5kY5jZ5kZ5\
+  lZ5mZ5nZ5o_5p_5q_5r_5s_5rZ9rZDrZGrYKrYNrYRrYVrXYrX\
+  arXdrXhrWlrWorWsrWvqVuqVtpVtpVspVsoVroVroVqnVqnVpn\
+  VpmUomUnlUnlUmlUmkUlkUlkUkjUkjUjjUjiTiiThhThhTghTg\
+  gTfgTfgTefTezTdzTdzSczSbzSbzSazSazS`zS`mS_mS_mSZmS\
+  ZhTZgUZfVZcWZcXZcYZcZZc_Zc`ZcaZcbZccZcdZ`AtZCrYDpX\
+  FnVHlUJjTKiSMgQOePQcORaMT_LVYKXWJYVIUWHUXGVcGVcFVc\
+  EVcDWcDWcCWcBWcAWcAWc9Wc8Xb5Ya8ZbA_cC`dEadGbeJcfLd\
+  gNegPfhRgiThjWijYjk_klalmcmmennhoojpplqpnsqptrrurq\
+  spprnoqlopjnohmnflmdllbkk`jjZiiXihVhgTgfRfePfdNecL\
+  dbJ`hHdaHgVHjOHnHHqAHw2Et4Hq5Jo6Ml8Oi9QgATdCVbDY_E\
+  _XGaVHdSIfPKhNLkKMmIOpFPr }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,105 @@
+;     Date: Mon, 01 Jun 2009 19:23:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-06-09 (Seahorse Valley-02 [4])
+;       Id: <1.5.4.16.20090601192437.2ca77ff8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 02, 2009 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a quickie, fast and simple enough to get the 
+; FOTD back on its regular schedule.
+; 
+; The image is a view of Seahorse Valley (believe it or not) 
+; sliced in an orientation 15 degrees from the Oblate direction 
+; toward the Rectangular direction.
+; 
+; The narrow line across the center of the fractal is actually the 
+; space between the two branches of the valley as seen from the 
+; west side.  We are in the large period-2 bud, looking east 
+; toward the valley wall that separates us from the main bay of 
+; the Mandelbrot set, which from this angle lies a short distance 
+; behind the screen.
+; 
+; Bits and pieces of seahorse tails are scattered about the scene, 
+; though most of them must be stretched quite a bit before they 
+; become recognizable.  But search as we may, we would never find 
+; a Mandelbrot minibrot.  They do not exist at this angle.
+; 
+; The name of the image is only a catalog number.  The lowly 
+; rating of a 4 is all I could give an image that is basically a 
+; space filler.
+; 
+; After yesterday's marathon calculation time, today's 7-second 
+; time is a blessed relief.  And as always, the image is posted 
+; for instant satisfaction on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A mix of sun and clouds, and a slightly chilly temperature of 
+; 73F 23C made Monday acceptable for the fractal cats here at 
+; Fractal Central.  They had a bit of excitement when one of the 
+; local stray cats found and made short work of a baby robin that 
+; had just fallen out of its nest.  Luckily, FL missed the sad 
+; event.
+; 
+; The next view of Seahorse Valley will be posted in 24 hours.  
+; Until then, take care, and if I were the Big Guy up there, I 
+; would never have designed a world where living creatures need 
+; to kill and eat other living creatures, and then said to man, 
+; "thou shalt not kill."
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-02 { ; time=0:00:07.43-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 center-mag=-0.121105/0/\
+  1/1/90/0 params=15/90/0/90/-0.75/0/0/0/2/0 float=y
+  maxiter=15000 inside=0 logmap=yes periodicity=10
+  colors=000NEOLEQKERJDSIDTHDVHCWHDXHEYHFZFKYKOYPQYU\
+  TYZWYcYXh`XmcXreXvhXzjXufTmcPc_MUXIJTLMQPKVUIZZHbc\
+  FfhUimcmrmqvuuzxxzzzzwxzpuziqzcnvYkrUhmUehXcc_aZb_\
+  YeYXgXWVWkIVzHWvGWrFWnFWjEXfDXbDX_CXWBYSBYOAYK9YG9\
+  YD7a76e17d68dA9dEAcIBcMBcQCbVDbZEbbFafGajGanEcjDdg\
+  CedAfa9gZ8iW6jT5kQ4lN3mKQaOkRSiTVgUXfVZdWacYcaZe`_\
+  hZ`jYal3mn9nmEolJpkPqjUriZshctgiufnveswdxxdwiMwV4x\
+  S8xQBxOExMHxKLxIOyFRyDUyBYy9`y7cy5fLx7Rs9WnAaiBfdD\
+  l_EqWFG_jL`iPaiTbhYbhachedgjdgnefrffvffuc_t`TsZNrW\
+  GqT9qR3iMDaINUDXM9fE5oG9pHDqJHrKLrLOsNStOWtP_uRcvS\
+  fwTjwVnxWryXuyQcmJNbC6SDFYEOcFXiGeoGntKhiOcZScOWcD\
+  Zc3Wc6Tc8QcBNcDKcGIcIFcLCcN9cQ6cS4cU0z00y00y00y00y\
+  00y00x00x00x00x00x00w00w00w00w00zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

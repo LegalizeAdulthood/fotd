@@ -1,0 +1,110 @@
+;     Date: Sun, 28 Jun 2009 14:02:13 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-06-09 (Seahorse Valley-28 [7])
+;       Id: <1.5.4.16.20090628140349.2a9f5960@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 28, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's strange new view of Seahorse Valley shows the valley as 
+; it appears in perspective.  The center of the image is the point 
+; at (C=-0.76+0i),(Z=-0.5+0i), which is a point of convergence of 
+; many thick filaments.
+; 
+; I assume the large open area at the top of the frame, which has 
+; a periodicity of 2, is part of the large period-2 bud, while the 
+; open half-oval at right center is a period-17 bud on the north-
+; east shore line of the period-2 bud.  But whatever this oval 
+; area is, checking the orbits of the points in this image is very 
+; interesting, and not surprisingly, the orbits frequently take 
+; the shape of peanut holes.
+; 
+; The effect of looking down from a mountain top onto a blue sea-
+; shore with many long thin coves is rather striking.  I tried to 
+; intensify the effect with the coloring.  I also see the ghostly 
+; outlines of several volcanoes near the shore line of the large 
+; period-2 bud at the top.  But who knows what these things mean?
+; 
+; The rating of a 7 indicates that I kind of like the image.  The 
+; calculation time of only 3-1/2 minutes indicates that quick 
+; satisfaction will be found by running the included parameter 
+; file.  Those who desire instant satisfaction will find fulfill-
+; ment on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is posted, already calculated.
+; 
+; Now I must track down and eliminate whatever it is that keeps 
+; popping up on one of the computers, warning that a fatal trojan 
+; horse virus is about to destroy it.  (That is unless I buy a 
+; cure-all program at a certain web site.)
+; 
+; Near perfect summer conditions prevailed here at Fractal Central 
+; on Saturday, with partly sunny skies and a temperature of 82F 
+; 28C.  The fractal cats perked up when a passing tomcat left his 
+; scent mark somewhere in the area, but soon settled down to do 
+; what cats do best -- sleep.
+; 
+; My day was average: Sunday will likely be the same.  The next 
+; FOTD will hopefully be posted on time in 8 hours or so.  There 
+; are still two more trips to Seahorse Valley in the works.  Until 
+; then, take care, and circulate among the big-time thinkers.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-28 { ; time=0:03:31.54-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 passes=1 inside=0
+  center-mag=0.460478/0.175657/3.554948/0.2653/\
+  179.409174596140105/-9.88243261062668
+  params=2.8/-7.3/90.3/-4.4/-0.76/0/-0.5/0/2/0
+  float=y maxiter=5200 periodicity=10
+  colors=000UBFTCFSDEREDQFDPGCOHBNIBMJALK9KL6JM9INCH\
+  OFGPIGQLJROMSQPUSSWUVZWYaY`d_cgafjdijglkjolmrlpums\
+  wlwwmzsnzoovmprjpmgqhercbsZ_sUXtPUuKRvFPvAQs6Rq6Ro\
+  5Sm5Tk5Ti4Uf4Vd4Vb3W`3XZ3XX2YV2ZS2ZQ1_O1`M1`K0aI0a\
+  G0`I3_J5_K7ZLAYNCYOEXPHWQJWSLVTNUUQUVSTXUSYXSZZR_a\
+  QacQbePcgPdiTfkWgm_iobjqfksimumnwpoxmkykhzhdzfazd`\
+  zc`zb`za`z``z_`zZ`zY_zX_zW_zV_zT_zS_zR_zQZzPZzOZzN\
+  ZzMZzLZzKZzJZzI`zHazGbzFczFdzEezDgzChzCizBjzAkz9lz\
+  8oz9mzAlzBkzCizDhzEgzFezGdzHczIazJ`zK_zLYzMXzNWzOU\
+  zPTzQSzRQzSPzTOzSOzSOzSOzSOzSOzSOzSOzSOzSOzSOzMKzS\
+  OzYSzcWze_zhZzkYznXzpWzh`zaezUjzNozFtz8yz8yz7sz7mz\
+  6gz6bz7dz7ez7fz7gz8hz8iz8kz8lz9mz9nz9oz9pzCkzEgzGc\
+  zJZzLVzNRzPNzu5zi6zY7zN8zB9z0AzDOzQ`zbmznzzovzorzo\
+  nzojzpfzpbzpZzpWzl_zhczdfz`jzXnzTqzPuzMxzKwzJvzHvz\
+  GuzFuzDtzCtzAsz9sz8rz6rz5qz3qz2pz1pzJqz_qzpqzoqzoq\
+  zoqzoqzoqzRQzPOzcBz`BzYBz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

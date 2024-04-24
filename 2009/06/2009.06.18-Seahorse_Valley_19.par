@@ -1,0 +1,110 @@
+;     Date: Thu, 18 Jun 2009 18:09:50 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-06-09 (Seahorse Valley-19 [7])
+;       Id: <1.5.4.16.20090618181119.2b574a0a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 19, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we have a scene very near the Julia set of Seahorse Valley 
+; of the (-Z)^(2.5)+C Mandeloid.  Actually, the image has been 
+; rotated 6 degrees from the Julia orientation toward the Oblate 
+; orientation.
+; 
+; Instead of being at -0.75 on the X-axis, the seahorse singular-
+; ity in this Mandeloid lies near -0.760037363.  To see the pure 
+; Julia set, which is far less interesting, change real(p1) to 
+; zero and reduce the maxiter to 150 to save time.
+; 
+; The first thing I notice about the image is the open slit along 
+; the X-axis.  This is the area near the singularity between the 
+; north and south arms of the valley.
+; 
+; Next, I notice the many proto-peanut holes.  Most have only two 
+; lobes, but the two at the left end of the fractal appear to have 
+; developed four lobes, and the brilliant open area on the X-axis 
+; just left of center is certainly a peanut hole in the making.
+; 
+; Actually, I'm not sure that the image is mathematically correct. 
+; The X-axis symmetry might be an artifact of the math routine.  
+; To see the problem, set real(p1) to something like 0.0000000001. 
+; The image still has X-axis symmetry.  Then set real(p1) to zero, 
+; and the right half of the resulting fractal totally changes.  
+; Such a small parameter change cannot possibly make such a large 
+; change in the resulting image.  But real or an artifact, today's 
+; image rates a 7.
+; 
+; The calculation time of 2-1/2 minutes is quite reasonable even 
+; for the most fanatical rationalists.  And never forget that the 
+; finished image is available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Thursday started with rain here at Fractal Central, but just 
+; after noon the sky brightened and the rain ended.  One final 
+; sprinkle fell at 2pm, but after that the sun appeared and it was 
+; a fine day, with a temperature of 77F 25C.  After chasing away a 
+; couple unwanted stray cats with their fierce glares and mighty 
+; growls, the resident fractal cats spent the day sleeping and 
+; ignoring the weather.
+; 
+; My day was average.  It's not boring; it's peaceful.  The next 
+; FOTD will be posted in 24 hours.  Until then, take care, and be 
+; fractalish.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-19 { ; time=0:02:27.18-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrotMin4 center-mag=-0.056338\
+  /0/1.03 params=84/0/90/0/-0.760036373/0/0/0/2.5/0
+  float=y maxiter=50000 inside=0 logmap=yes
+  periodicity=10
+  colors=000hKdhLehMfhNghOihQjhRkhTmhVnhWphYqh_rh_th\
+  auhavhcwhcwhcwhdwhdwhewhewhfwhfwhfwhfwhfwT22V68X9D\
+  ZDI_GNaKScNXdQacP`bP_bO_aOZaOY`NY`NX_NWZMWZMVYMVYL\
+  UXLTXLTWKSWKRVJRUJQUJQTIPTIOSIOSHNRHMRHMQGLPGLPGKO\
+  FJOFJNEINEHMEHLDGLDGKDFKCEJCEJCDIBCIBCHBBGABGAAF99\
+  F99E98E87D87D86C76B75B74A64A63962952851640851951B6\
+  2C62E72F73H83I83K84L94N94OA5QA5RB5TB6UB6WC6XC7ZD7_\
+  E8aF8bG8dH9eI9gJ9hKAjLAkMAmNBnOBpQBqSCsUCt`CvcDwcD\
+  xhDqmCmmBmmBmmAmlAmk9mj1mi5mh9mgDmfGmeKmaOv_SwYRwW\
+  RwUQwSQzQPzPPzOPzOOzOOzPNzPNzPMzPMvQMwQLuQLsRKqRKo\
+  RKmSJkSJiSIhSIhTHgTHfTHfUGeUGeUFdVFcVFcVEbVEbWDaWD\
+  aWC`XC_XC_XBZYBZYAYYAYYAX_9W`9Va9Uc8Td8Se8Rf8Qh7Pi\
+  7Oj7Nk7Mm6Ln6Ko6Mp6Oq7Qr7Ss8Ut8Wu8Yv9_w9axAcyAezAg\
+  zBizBkzBmzCozCqzDszDuzDwzEyzEzzEzzFzzFzzGzzGzzHzzH\
+  zzLzzPzzUzzZzzczzhzzmzzrzzvzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrotMin4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

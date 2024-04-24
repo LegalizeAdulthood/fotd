@@ -1,0 +1,116 @@
+;     Date: Mon, 29 Jun 2009 17:51:18 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-06-09 (Seahorse Valley-30 [8])
+;       Id: <1.5.4.16.20090629175256.2b8f62d8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 30, 2009 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a puzzle.  Everyone knows that Mandelbrot-type 
+; minibrots are impossible in Julia sets, so how do we explain the 
+; obvious midget M-set in today's image, the parent of which is a 
+; Julia set.  To see this Julia set, reduce the magnitude to 0.5 
+; and recalculate the image.  The Seahorse-Valley Julia set that 
+; soon fills the screen is obvious.
+; 
+; Well, two things need to be explained.  To begin, the minibrot 
+; is somewhat warped.  Its two period-3 buds as well as its main 
+; stem are missing.  And in addition, the parent Julia set is not 
+; quite a Julia set.  It is double-rotated 1/1000 of one degree 
+; from the true Julia orientation.  This rotation is extremely 
+; small -- the width of one centimeter as seen from a distance of 
+; over 1/2 kilometer -- but it is enough to reveal the Mandelbrot 
+; shape of the minibrot.  To see the minibrot magically turn into 
+; the Julia set of the center of the main Mandelbrot bay, change 
+; real(p1) and real(p2) to 90.  Yes, 1/1000 of one degree can make 
+; this much of a difference.
+; 
+; Other things of interest are the four partially-filled peanut 
+; holes and the breakdown of the 2,4,8... series of elements 
+; surrounding the minibrot.  This breakdown is no surprise, since 
+; it often appears in warped minibrots such as the minibrot in 
+; today's image.  The unusual texture of the image was achieved by 
+; rendering it with the outside set to 'summ'.
+; 
+; I rated the image at an 8.  I think it has enough interest to 
+; earn such a rating.  The calculation time of just over 9 minutes 
+; is rather slow, but nothing to get excited about, especially 
+; since the image may be viewed on the FOTD web site without the 
+; need to calculate it.  The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Picture perfect weather prevailed here at Fractal Central on 
+; Monday -- at least the fractal cats thought so.  They thoroughly 
+; enjoyed the blue skies, puffy white clouds, low humidity and 
+; temperature of 84F 29C.
+; 
+; >From indoors I half enjoyed the outside conditions.  Meanwhile, 
+; FL, having asked a question on Sunday that I had no immediate 
+; answer for, enjoyed an afternoon in her garden, keeping a sharp 
+; lookout for japanese beetles in the roses.
+; 
+; The next FOTD, the first of a new month, will be posted in 24 
+; hours.  I wonder what the new theme, if any, will be.  Until 
+; then, take care, and the pleasantly cool summer we're having 
+; this year should quiet those greenie fanatics clamoring about 
+; the imaginary perils of equally imaginary man-made global 
+; warming . . . at least until it gets hot again.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-30 { ; time=0:09:05.19-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=-0.000394521/0.010564/31.23732/1/72.5/0
+  params=89.999/0/89.999/0/-0.7500830511589915/0.007\
+  7264749796986/0/0/2/0 float=y maxiter=15000
+  inside=0 outside=summ periodicity=10
+  colors=000mO2zP5mP6la8mPAzPCmPDzPEmOKaMNYLSVKWSJ`P\
+  IfMHkKGpJLlJQiJVgJZcJcaJh`KnXKsVKxTQwXUv`Zvbctfhsi\
+  lslprpsssxsutprqlonhmkfjhbgeZebXb_T`YQYUNWRKTOGRME\
+  QPHTTKWWMY_Q`bSbfVeiYhm`kqcntfpxiszkuznxzluvksrjqn\
+  hpigmgflbdiYbhVagYihbskdzlczhczebzbazZ`zW`zSZzP_zL\
+  YzIYzESs8Mk2Gc0JgBLkOMn`OzzPezPzzPezQezzzzQzzQezRe\
+  zzvzRezRtSSuzSezSezSezzzzTxJzyIzzHTzGTzESzDTzDRzCQ\
+  zCOzBOzBNzALz9Lz8Kz8Jz7Iz7Hy6Fy6Fy6It8KpAMkCOgFQbH\
+  SYJTVLWRNYNP_KRXMQWNQTPPSQPQROQSOOVNNWNLYMK_MIaLHb\
+  LEeJDfKEeLGeMHeNIcOJcPKcQLbRObTPbUQaVRaWSaXT`YU`ZW\
+  `_X_`Y`aZ`b`````_b`Yc`WfaTg`RcfS_kUWqVTvVStUSsUSrT\
+  SqTSpSSpSSnSSmSRlQRlQRkPRiPRhORgORfOQeMQcMQbLQbLQa\
+  KQ`KQ_KQYJQXIPWHQVHPTGPTGPSGPRFPQFPPEPOEPNCPMCPLCP\
+  KBPJBPIAPHAPG9PF9PE9PD8PC8PC7zC8PA5P85m97P64P54m65\
+  P33bHHzHHaGG`EEmGG_EE_DDmEEmDDmDDzzDmCCzCCzzCmBBzB\
+  BzzAmAAzAAm88zz1zY0zQ0zz1 }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,94 @@
+;     Date: Sat, 27 Jun 2009 16:58:06 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-06-09 (Seahorse Valley-27 [6])
+;       Id: <1.5.4.16.20090627165941.2aa75816@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 27, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows an unfamiliar aspect of Seahorse Valley.  In 
+; the image, the valley complex is viewed in a direction very 
+; close to the Oblate.  In fact, it is sliced in a direction 
+; rotated only 0.5 degree toward the Parabolic direction.
+; 
+; This slight rotation means that the lower half of the image 
+; skims the chaotic east (main bay) side of the valley, while the 
+; upper half shows the more organized detail on the west side.
+; 
+; As is the case all over the valley complex and in all orienta-
+; tions, those little peanut-hole things are everywhere, though 
+; with such a high maxiter they are filled in.  The curious loops 
+; turn into attractive spirals when viewed in the Julia direction.
+; 
+; The rating of a 6 seems about right for an image with more 
+; mathematical interest than artistic worth.
+; 
+; The calculation time of 12-1/2 minutes is slow, but the finished 
+; image may be seen on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heat, haze and humidity prevailed here at new Fractal Central on 
+; Friday, with a temperature of 88F 31C and a slight thunder-
+; shower late in the afternoon.  The fractal cats enjoyed things 
+; as much as they could.
+; 
+; The next FOTD will be posted within 24 hours.  Until whenever, 
+; take care, and get green for all it's worth.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-27 { ; time=0:12:32.24-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 passes=t
+  center-mag=-1.46642/0/20.08762/1.9132 params=0/0/\
+  90/0.5/-0.75/0/0/0/2/0 float=y maxiter=50000
+  inside=0 logmap=3 symmetry=none periodicity=10
+  colors=000bJAcJAdJAeJAfJAgJAhJAiKAjLAkMAlNBmOCnPDo\
+  QEpRFqSGqTIqUJpWKpYLp_NoaOocPoeQnfSnhTniUmkVmjWmiX\
+  mhYlgZkf_je`idahcbgbcfade`ed_fcZgbYhaXi`Wj_VkZUlYU\
+  mXUnWUoVUpUUqUUrUUsUUtSUuQUvLUwGUwBUw6Uv2Uu6Ut9UsC\
+  UrGUqJUpMUoPVnTWmWYlZ_kbajecihehkfgigfggeegddhcbhb\
+  `haZi`Yi_WiZUjYSjXRjWPjVNjUNjTMjSMjRMjQMhPMfOMdNMb\
+  MM`LMZKMXKMVKMTKMRKMPKMNLMLMMJNMHOMFQMDRMBSM8TM6UN\
+  4UM5UL5UK5UK5UJ5UI5UI5UH7UG9UFBUFCUEEUDGUDIUCKUBMU\
+  BOUAQU9SU9UUAWUFYUK_UPaUUcUZeVcgWhiXmkYrkXviXzgXve\
+  WrcWmaWh_WcYVZWVUUVPSVKQUJOULMUMLUNJTOITPGTRFTSEST\
+  CSUBST8TVASWBSXCSYDSZER_FR`HRaIRbJRcKQdLQeMQhOQmPP\
+  qQPtRPvRPuQQqPRmOSkNTiMVgLXeL_cKcaKf_JiYJkWInUHrSI\
+  sQItOIuMJvKJwIJxGJyEKzDKzDKzDKzFLzHMzJOzKQzMSzOUzP\
+  WzRYzT_zUazWczYczZcz`cvbcscctahr`mp_roYvmXzlWzjUzi\
+  Tzgczfmzftz`zzVzzOzzIzzDzzCzzczzhzzmzzrzzvzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

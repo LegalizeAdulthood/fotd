@@ -1,0 +1,102 @@
+;     Date: Wed, 17 Jun 2009 19:54:19 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-06-09 (Seahorse Valley-18 [6])
+;       Id: <1.5.4.16.20090617195547.2b5741d8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 18, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have been wondering lately why I consider fractal spirals to 
+; be boring merely because there are so many of them, while never 
+; becoming bored with the almost constant flow of minibrot scenes 
+; I post in the FOTD.  I guess beauty, as always, exists in the 
+; eye of the beholder.
+; 
+; Today's venture into Seahorse Valley takes us into the valley of 
+; an oversized Mandelbrot set that is quadratic on the surface but 
+; cubic in its depths.  The imaginary value of 0.0588... might not 
+; seem too deep, but the parent fractal is ten times the size of 
+; the classic Mandelbrot set, so the things we find here are more 
+; typical of the things at a depth of 0.00588... in the classic 
+; M-set.
+; 
+; The expected peanut holes are there, though they are shaped more 
+; like circular disks than peanuts, and have three lobes rather 
+; than four.  The minibrot at the center is pure cubic, but with a 
+; series of 2,6,18... elements surrounding it, rather than the 
+; expected 3,9,27...
+; 
+; The rating of a 6 is all I could do for the image, since I could 
+; find nothing really exceptional about it.  Also, the very slow 
+; calculation time of 1-1/3 hours, which is due to the overall 
+; unusually high iteration count, makes the calculation pretty 
+; much a computerized chore.  Luckily, relief for fractal distress 
+; may be found on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where I have sent the finished image on ahead so that it could 
+; be posted as quickly as possible for instant excitement and 
+; total satisfaction.
+; 
+; The clouds not only hung tough all day here at Fractal Central 
+; on Wednesday, but rain also fell all day, and the temperature 
+; never topped a very un-summery 61F 16C.  The fractal cats liked 
+; this not at all, and showed their displeasure by squatting down 
+; and sulking in the middle of the hallway, where they had to be 
+; stepped over and could not possibly be un-noticed.
+; 
+; Meanwhile, my day was fair enough.
+; 
+; The next FOTD of a Seahorse Valley will be posted in 24 hours.  
+; Until then, take care, and what a frustration it would be to 
+; spend one's whole life searching for the answer, only to find 
+; the question was wrong.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-18 { ; time=1:19:31.82-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=NewDivideBrot function=recip
+  center-mag=-7.450695707282017/+0.05885084210143485\
+  /1.29963e+011 params=3/10 float=y maxiter=100000
+  inside=0 periodicity=10 mathtolerance=0.05/1
+  colors=000C9VDBWEDWEFXFHXGJYKLZPNZUP_ZR_cT`hV`mXam\
+  Zbm`bmbcmdcmfdmhdmjemlfmofmqgmtgmxhmzjmwfmscmnZmjU\
+  mdQm_LmVGhQBcL6ZG1UG2UH3UJ3PK4KL5FN5AO65Q64R74S84U\
+  84V94X94YA5ZB5`B5aC5cC5dD5eE5gE6hF6jF6kG6lH6nH6oI4\
+  rG6pI8nJAmKCkLEjMGhNIgOKePMdQObRQ`SS_TUYUWXWYVX_UY\
+  aSZcR_eP`gNaiMbkKcmJdoHeqGfsEguDhtFgtGgsHgsIgsJgrK\
+  grLgrMgqNgqOgpPgpQgpRgoSgoTgoUfnVfnWfnXfmYfmZfl_fl\
+  `flafkbfkcfkdfjefjffjgfgedeccdedcfdbgeahe`if`jf_lf\
+  ZmgYngXohWphWqhXpiXoiXnjXmjXlkXkkXjkXilXhlXgmXfmXe\
+  nXdnXcoXbqXarX`tX_uXZwXYxXXyXWzXVzXUzXTzXSzXRzXRzY\
+  RwYRtYRqZRnZRkZRi_Rg_Re_Rc`Ra`R``RZaRXaRVaRTbRRbRQ\
+  bROcRMcRKcRIdRHdRFdRDeRBeR9gS7eR8dQ9bPAaPB_OBZNCXN\
+  DWMEULETLFSKGQJHPJINIIMHJKHKJGLHFLGFMEENDDO64ICDOI\
+  LTOTZUac_iigroeqncpmapl_okYojWnjUmiSmhQlgOlfNkfLje\
+  JjdHicFibDhaBga9g`7f_5fZ3eY0eZ2eY3eY4eY5eX7eX8eX9e\
+  XAeWCeWDeWEeVFeVHeVCCVB7U }
+
+frm:NewDivideBrot   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+b=imag(p1)+0.00000000000000000001:
+z=z^2*fn1(z^(a)+b)+c
+|z| < 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

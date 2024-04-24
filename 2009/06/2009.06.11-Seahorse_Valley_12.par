@@ -1,0 +1,103 @@
+;     Date: Thu, 11 Jun 2009 19:01:35 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-06-09 (Seahorse Valley-12 [No Rating])
+;       Id: <1.5.4.16.20090611190257.2bb721f6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 12, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It yesterday's image we set the real(z) axis perpendicular to 
+; the Mandelbrot plane at the -0.75 limit of Seahorse Valley.  In 
+; today's image we do the same with the imag(z) axis, which gives 
+; us the Rectangular aspect of the valley.  The question then 
+; immediately arises, which Z axis is actually perpendicular to 
+; the Mandelbrot plane.  The answer is that they both are.  And 
+; every other line in the Julia plane is perpendicular to the 
+; Mandelbrot plane as well.  The two planes are absolutely perpen-
+; dicular to each other, with every line in both planes perpendic-
+; ular to every line in the other.  Absolute perpendicularity is 
+; one of those strange unvisualizable things that cannot exist in 
+; spaces with dimensions less than 4.
+; 
+; Seahorse Valley is filled with holes that resemble crossed 
+; peanuts, which I call peanut holes.  Today's image shows one of 
+; these holes in its full glory, with many other holes scattered 
+; about.  These holes are not true areas of trapped points, but 
+; bottomless pits of ever increasing iteration count.  In today's 
+; image the maxiter is 110,000, but even this value leaves the 
+; peanut hole wide open.  A much greater maxiter of 1,000,000,000 
+; or so would totally close it however, greatly increasing the 
+; already very slow calculation time in the process.
+; 
+; The unlikely values in the parameter file show that the image 
+; has been greatly stretched and skewed to bring the large peanut 
+; hole to a reasonably undistorted state.  Such distortion that 
+; needs to be undone is very common in the Rectangular and other 
+; odd planes.
+; 
+; I gave today's image no rating.  After all, how could a mere 
+; peanut hole earn a rating?  In addition, the calculation time of 
+; 1-1/3 hours will try the patience of even the most patient 
+; fractalist.  I strongly recommend viewing the finished image on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy clouds blanketed the Fractal Central area on Thursday, but 
+; no rain fell during the daylight hours and the temperature 
+; hovered around a very comfortable 73F 23C.  The fractal cats had 
+; nothing to say about things.
+; 
+; My day was occupied with work.  But the efficiency eventually 
+; paid off and the work was finished by 4pm.  The next FOTD will 
+; be posted in 24 hours.  Until then, take care, and no comment at 
+; this time.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Valley-12 { ; time=1:22:37.96-SF5 on P4-2000
+  reset=2004 type=formula formulafile=slices.frm
+  formulaname=Rectangular center-mag=-0.790706186467\
+  98470/+0.00044125005017076/5.971931e+007/0.0001521\
+  /0.0745896617071803714/-89.9801123768401396
+  params=0/0/-0.75/0 float=y maxiter=110000
+  inside=0 periodicity=10
+  colors=000BJDBIEBHFBFGBEHBDIBCJBAKB9LB8MB7N84LB6ND\
+  7OF8PH9RJASLBTMCVNDWOEXRFZUH_XI`ZJb`KcbLddMffNghOh\
+  jPjlQkoQnnRlmRjlRhkRgjSeiSchSbgS`fTZeTXeTWdTUcUSbU\
+  RaUP`UN_VLZVKYVIXVGVSEXVFZXF`ZGa`GcbHedHgfIhhIjkIl\
+  mJnozoqKqszsuLuwzvyLtwzsvNqtzpsOnqzmpPlozjmRilzgjS\
+  fiSdgTcfUbeU`cV_bWY`WX_XKPiQUbWZXacRghLmmFxp4uqzsq\
+  zqqzoqzmqzkrHirJfrLdrNbrP`sSZsUXsWVsYSs_QtaOtcMteK\
+  tgItiEwrFunGtkGshHreHpbIo_InXJmUKkQKjNLiKLhHMfEMeB\
+  Nd8Mb2Nc5Od8OeBPeEPfHQgKRgNRhQSiSSjVTjYUk`UlcVlfVm\
+  iWnlifjbjlWnnPrpHzsIvqIsoJomJlkKijKehLbfLZdLWcMTaM\
+  P_NMYNIWOFVOCTP8RP5PQ1QP2OP3NP3MP4LP4KP5JP5IP6GP6F\
+  P7EP7DO8CO9BO9AOA8OA7OB6OB5OC4OC3OD2OD1QE4RF7SFATG\
+  CVHFWHIXILYJN_JQ`KTaLWbLYdM`eNcfNfgOhiPkjPnkQqlQrl\
+  QsiUmfXgc_a`bWYeQVhKOnDQlESkEUjEWhFXgFZfF`dFbcGdbG\
+  e`Gg_GiZHkXHkWIjWJjWIiVHiVGcVEYWDTWBNWAHWAFWBDWBCW\
+  ADUADSCDQFDPHDNJDLMEJOEIR }
+
+frm:Rectangular {; Jim Muth  imag(z),imag(c)
+z=flip(real(pixel))+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
