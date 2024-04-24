@@ -1,0 +1,107 @@
+;     Date: Tue, 07 Jun 2011 22:12:49 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-06-11 (The Inhuman Brain [7])
+;       Id: <1.5.4.16.20110607221255.117f1502@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- June 08, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, with its brain-like shape and complex networks, 
+; reminded me of a human brain.  But it is not made of meat, it is 
+; made of numbers, so I named it "The Inhuman Brain".
+; 
+; The image is part of a near-Julia view of the eastern extremity 
+; of the main bay of the (-Z)^(2.5)+C Mandeloid.  It is not a 
+; Julia set, since it is rotated 45 minutes of arc away from the 
+; Julia orientation toward the Oblate orientation.  Julia sets are 
+; 2-dimensional slices cut in a particular orientation through the 
+; 4-dimensional Julibrot figure.  Today's image just misses the 
+; proper Julia direction.
+; 
+; I rated the image at a 7, which is FOTD average.  We have seen 
+; similar images several times in the past, so I could rate it no 
+; higher.  The calculation time of 2-1/4 minutes is close to FOTD 
+; average also.
+; 
+; As always, the completely calculated image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; along with the day's philosophizing.
+; 
+; The hi-def version of the image is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Paul's FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Things were reasonably pleasant here at Fractal Central on 
+; Tuesday.  The hazy sky and temperature of 86F 30C made things 
+; seem quite summer-like.  But summer is expected to come in much 
+; stronger on Wednesday, so we'll see what happens then.  The 
+; fractal cats had no complaints about the weather, though they 
+; did appear annoyed with each other at times.  The humans had a 
+; typical day.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and watch out for that conscious universe.  It knows what 
+; you're doing even when you're asleep.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Inhuman_Brain { ; time=0:02:17.14-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1
+  center-mag=0.621705/0/8.385427/1/90/0
+  params=89.25/0/90/0/0.3831/0/0/0/2.5/0 float=y
+  maxiter=64000 inside=255 logmap=6 periodicity=6
+  colors=000cSobUmaWj_YgZ_dXaaWcZUeWTgTRiQQkNOkGPlKQ\
+  mNQnQRoTSpWSqWSpZYn_`k`chaffbidclceobgraiu`kw_luZi\
+  tXgrVdqSboP_nMYlKVkITiGQhEOfCLeAJf7Gd8Hb8Ia8J_8KZ8\
+  LX9MW9NU9OT9PR9QQAROASNATLAUL8Uzn6no2lk4kh6je8ibAh\
+  _CgXEfTFeQHdNJcKLbHNaEPcCR`BQZBPWAOUANR9MP9LM9LK8K\
+  H8JF7IC7HA6G76F25B46D56F66H76J86LA7MB7OC7QD7SE7VG8\
+  XH8_I8bJ8eK8gL8hL8hN9jOAlPAnQBpRCrSCsTDuUEwVEyWFzX\
+  GzYGzZHzZHwZHtZHpZIlZIhZIdZI`ZJYZJVZJSZJPZKzZKzZKz\
+  bLz`KzZKzXKzVKzUKzSKzQKzOKzNKzLKzJKzHKzAMzGKzMIzRH\
+  zXFzaEzgCzlBzr9zx5zw8zvBzuDztGzsJzwCzrLznUzjazfjza\
+  xzbuzbrzcpzcmzdjzdhzeezebzQmzYfze`zmUzpRztOzsPzrPz\
+  qPzpQzoQzoQzmRzlRzjRziRzgRzfRzdRzcRzaRz`RzZRzYRzVS\
+  zSTzPTzMUzKUzHVzEVzBWz9WzDXzGYzJYzNZzQZzT_zX`z_`zb\
+  azfazibzlczpczsdzvdzqezlfzggzbhz_lzZhzYezXbzW_zVXz\
+  UUzUQzTNzSKzRHzQEzPBzP8zRCzSFzUIzVMzXPzYSzfZzodzwj\
+  zmXzdKzW7zZDz`IzbNzgOzeQz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

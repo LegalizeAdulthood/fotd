@@ -1,0 +1,112 @@
+;     Date: Mon, 13 Jun 2011 22:09:26 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-06-11 (Tsunami-Plus [8])
+;       Id: <1.5.4.16.20110613220929.12bf198a@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- June 14, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us ever deeper into the world of near-
+; linearity.  The exponent of Z in today's image is 1.009.  Both 
+; common sense and instinct tell us that a fractal with an 
+; exponent so close to unity can only be a lopsided circle or a 
+; featureless ellipse at best.  But as is the case with so many 
+; things that are known to be true in the world of science, common 
+; sense and instinct are wrong.
+; 
+; The parent fractal of today's scene is an ellipse, that's for 
+; sure, but when calculated at the particular height of 4.45 
+; levels up the logarithmic ladder, the ellipse becomes irregular 
+; along its edges.  Today's image shows a close-up of some of this 
+; irregularity.
+; 
+; I named the image "Tsunami-Plus".  The reason for the 'tsunami' 
+; part of the name is obvious.  The 'plus' refers to the shaft of 
+; total chaos shooting down and disappearing behind the wave.
+; 
+; The rating of an 8 expresses my opinion of the mathematical 
+; worth of the image.  If I had put more effort into the coloring, 
+; I might have given the image more artistic value and worked the 
+; rating up to an 8-1/2.
+; 
+; The calculation time of 4-1/2 minutes will pass in a flash once 
+; the peak of the mighty wave appears, decorated almost like the 
+; wave in the famous Japanese drawing.
+; 
+; The image is posted, fully calculated, on the official FOTD web 
+; site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and in high definition with possible variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Sun, clouds and a temperature of 75F 24C made Monday a 
+; refreshingly pleasant day here at Fractal Central.  At least the 
+; fractal cats thought so.  They reverted to their winter curl-up 
+; modes.  The humans spent the day doing routine things such as 
+; gardening and serious work.  The next FOTD, likely another in 
+; the how-low-can-you-go series, will be posted in 24 hours.  
+; Until then, take care, and all good things must come to an end, 
+; but so must all bad things.  In fact, everything with a 
+; beginning in time must come to an end in time.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Tsunami-Plus { ; time=0:04:31.27-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=t
+  center-mag=0.787447/-1.99784/1.8675/1/-77.5/0
+  params=1.009/0/4.45/2400 float=y maxiter=5000
+  inside=255 logmap=205 periodicity=6
+  colors=000U7AV8BW9CW9DXAEXBFYCGZDHZEI_FJ_FK`GLaHMa\
+  INbJObKPcLQcLRdNQeOQfQPfRPgTOhUOhVNiXNjYMj_Mk`LlbL\
+  lcKmdKnfJngJoiIpjIslGpkInkKlkMjjOhjQfjSdjUaiW_iYYi\
+  _WiaUhcSheQhgOhiLgkJgmHgoFgqDfsBfu9fw7fxAcwDawFZwI\
+  XwKUwNSvPPvSNvUKvXIvXEzZGv_HsaIobJldLheMegNahOZjQV\
+  kRSmSOnTLpVHqWEsXAuZ4tY7tX9sWBsVDrUFrUHqTJqSMpROpQ\
+  QoQSoPUnOWnNYmM`mLblLdlKfkJhkIjjHlkEpjHnjJljLkjNii\
+  PgiRfiUdiWciYah__haZhcXhfWghUgjSglRgnPdvPgpOikNkfM\
+  maLpWKrRJtMIxGIvHHtHGrHGpHFnHFlHEjHEhHDfHDdHCbIC`I\
+  BZHBXGAWFAXE9OE9MDAMDDMCFMBJNFIPJHPNGQRGSVJUZLVbNX\
+  gPZjR`mUapWcsYev_fyagr_hkYhdWiZVjSTjLRkEPk8OgETdJY\
+  aPbZUgW_lTdqRkwQiuPhsOgqNfpMenLdlKcjJbiIagH`eH_dGZ\
+  bFY`EXZDWYCVWBUUATS9SR8RP7QNpgQ7PM6SL6VK6XK6_J6aI6\
+  dI6fH6iH6kG6nF6pF6sE6aG6uE8tD9sDAsCBrCCrBEqBFqAGpA\
+  Hp9Io9Cr4Jo9QlDWjIbgMheRobVu`ZucSufLuiEul7IjaJk_Jk\
+  YL_QNPJPDCR25S36T47T58F0F }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

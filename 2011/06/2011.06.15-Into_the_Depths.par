@@ -1,0 +1,108 @@
+;     Date: Wed, 15 Jun 2011 22:12:48 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-06-11 (Into the Depths [8])
+;       Id: <1.5.4.16.20110615221253.10a7715c@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- June 15, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD image is late, but it's still worth the effort of 
+; a trip to the FOTD web site.  In the image we venture ever 
+; closer to the point of total linearity.  In fact, since 
+; yesterday's image we have gone half-way to unity.
+; 
+; The value of the exponent in today's image is 1.0045, yet it 
+; still creates fractals with interesting detail.  There must be 
+; something special about the point 4.45 levels up the log ladder 
+; when the 'recip' function is applied.
+; 
+; Regardless of which mathematical quirk the image came from, it 
+; is worth a rating of an 8, much of it due to the mathematical 
+; factor.
+; 
+; If I had had more time to work on the coloring, I might have 
+; raised the image to a rating of an 8-1/2.  As it is, I devoted 
+; most of the color work to creating the 3-D effect in certain 
+; areas.
+; 
+; The name "Into the Depths" describes the fall toward unity.  
+; Though today's image is quite close to the limit, I would not be 
+; surprised if tomorrow's is even closer.  Check back to see.
+; 
+; The image may be seen without the nuisance of calculating it by 
+; checking the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The hi-def version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Tuesday was a bit chilly but otherwise very pleasant here at 
+; Fractal Central, and the clouds were spectacular.  The fractal 
+; cats thoroughly appreciated the temperature of 66F 19C, 
+; reverting to curl-up mode for their afternoon siestas.  The 
+; humans, who were out of town all afternoon, let them sleep 
+; undisturbed.  The next FOTD will be posted in just a few hours.  
+; Until then, take care, and what will those who base their world 
+; view on the reality of the material universe do, if it turns out 
+; that everything is an illusion?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Into_the_Depths { ; time=0:16:58.75-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-2.100288591283524/-1.442130840681714/\
+  528.8877/1/115/0 params=1.0045/0/4.45/3600 float=y
+  maxiter=5200 inside=255 logmap=966 periodicity=6
+  colors=000IpVKpTLpSMpRNnPPnNQnMSnLTnKUnJXnIYmGZmFa\
+  mEbmDcmCfmBgmAik9lk8nk7ok7rk6tk5zn4zm4uk4qj4lj4gh4\
+  cg5_g5Xe5Td5Qb5Nb5K`6H_6F_6DZ6BX69X6AT7BR8DNAELAGI\
+  CHGDJDELBGN9GP7JR5KT4MW2N_2NY2PX2QW1QU1RT1RR1SQ1TP\
+  1TN0VN0VM0WK0XJ0XI0ZH0ZH0_F0`E0`E0bD0bC0dB0dD0`E0Z\
+  F0XG0VH0TI0RJ0PL0NM0LN1KP1IQ1GS1FT1DU1CT2DS3ES4ER5\
+  FR6FQ7GQ9GPAGPCGNDINFINGJNJJMLKMMKLPLLRLKTMKWMJXNJ\
+  _NIbPIePHhQnZTWdRHjQ9sW9pS9nP9mM9kJ9jG9gE9eC9dA9b8\
+  9`69_49X39W29V19T09S09R0BQ0DQ1FQ2HQ3JQ5MQ7NQARQCUQ\
+  FQIGTMIXQI_TIcXIgbJlgJqkJupJzwKzuJzuJzuIyuIysGysGw\
+  sGwsGwrFurFurEurEtpDtpDupCvpCxuCzuBztBzsAzqAzpAznA\
+  wl9uk9sk8qk8oj7ni7mh7lh7kg7jd7ib7nZ7pW7gT7VQ7SN7PK\
+  7MA7BA3EA5GA7HU9KUKN_KPUKS_KUUKSKMRKMQKMPKMNKMMKNL\
+  KNKKNIKNHKNHKNGKPEKPEKPDKPCKKBKLBKKBKKCKICKIDKHDKH\
+  EKGEKGEKFEJFFKEFKEGLDGMDHMBHNGHPGHQGIQFIRFJSEJTEKT\
+  DKVDLUCFU3IU7LUCNMKMMKLMK }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,105 @@
+;     Date: Fri, 10 Jun 2011 22:38:32 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 11-06-11 (Way to the Unknown [No Rating])
+;       Id: <1.5.4.16.20110610223831.109f166a@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- June 11, 2011 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the Z^101+C Julibrot.  It is a 
+; simple diversion from the heavier things that the FOTD somteimes 
+; gets involved in.  It's the type of thing I might have done 10 
+; years ago, so I could give it no rating.  But it's still a very 
+; fast 44-second image, well worth a glance.
+; 
+; The image is not part of a Julia set, nor of a Mandelbrot set.  
+; It is sliced in a direction rotated 4-1/2 degrees from the Julia 
+; toward the Oblate orientation.  This makes the image almost a 
+; Julia set, though one would never guess it from the appearance 
+; alone.
+; 
+; The name "Way to the Unknown" sounds full of deep meaning.  
+; Actually, it has little if any connection to the image, and even 
+; less meaning.  The most obvious features in the image are the 3 
+; similar openings, though they failed to be mentioned in the name.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Check the high-definition version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And don't forget the original FOTD web site at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Friday brought a refreshing break to Fractal Central as a bit of 
+; cooler air slipped in from the north, dropping the temperature 
+; to 86F 30C and clearing away the haze and humidity.  The fractal 
+; cats must have missed the change.  They spent most of the day 
+; stretched in the coolest places they could find.
+; 
+; The humans had a rather dull day, which appears to be typical of 
+; how things go in the summer here at FC.  The next FOTD will see 
+; its moment of glory in 24 hours.  Until then, take care, and if 
+; the answer is not what you had hoped for and expected, believe 
+; it anyway.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Way_to_the_Unknown { ; time=0:00:44.21-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=-0.995001/0.963568/19.79345/0.7593/180
+  params=85.4/0/90/0/-0.9737/0/1.0066/0/101/0 float=y
+  maxiter=1500 inside=255 periodicity=0
+  colors=000D07D08E0AF0CFAIEFOIJVMNWRQRVT7ZW7cVzmUzz\
+  zzzzzMaZBej1iuOd_j`FgaJdbzacQZdUzzzTf`QgdNhgKikHjn\
+  EkrBlv8my5nz2oz4kz6gz8czA_yCWwESvGPtILsKHqMDoO9nQ5\
+  lS2kR3mQ3nP3oO3qN4rN4sM4uL4vK5wJ5yJ5zI5zH6zzzzF6zF\
+  6zEGwEPnDYeDfXDoOEjREeTE`VFWYFS_FNaGIdGDfG9hEFcCLZ\
+  ARU8XP6bK4hGKULZFPm0Tl1Wzzzj3`i4ch5eg6hf7je8me9ocC\
+  nbEmaGl`Ik_KjZMiYOhXQgWSfVUfSXcQ_aOa_MdYKgWIiUFlSD\
+  oQBqO9tM7wK5yI7uK8rLAnNBkODhPEdRGaSHZTFYVEYWCYYBYZ\
+  9Y`8Ya6Yc5Yd6Wb7V`8U_8SY9RWAQVAPTFGIBNRCMQDLODJMEI\
+  LFHJWzzUvxTrtRnpQjlOfhNbdMZ`KVXJRTHNPGJLBeQjsmgojd\
+  kgahdZdaW`ZTYWQUTNQQKNNHJK71r83o94l95iA6fB7cB8`CAZ\
+  CBWDCTEDQEENFFKAXrBVoBUlCTiCRfCQcDP`DNZEMWELTEJQFI\
+  NFHKAOzDKdaMQ`LP`LP`LP_LP_LP_LPZLPZLPZLPYLOYLOYLOY\
+  KOXKOXKOXKOWKOWKOWKOVKNVKNVKNVKNUKNUKNUJNTJNTJNTJM\
+  SJMSJMSJMSJMRJMRJMRJMQJMQJMQILPILPILPILOILOILOILOI\
+  LNILNIKNIKMIKMHK7Gm6EfUsz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
