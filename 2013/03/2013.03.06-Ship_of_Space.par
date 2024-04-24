@@ -1,0 +1,103 @@
+;     Date: Wed, 06 Mar 2013 18:11:23 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-03-13 (Ship of Space [8])
+;       Id: <1.5.4.16.20130306181018.2aef703e@earthlink.net>
+; ---------
+; 
+; FOTD -- March 06, 2013 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A ship that sails on the stellar winds of space -- how romantic. 
+; A fractal ship that sails abstract mathematical hyperspace on 
+; the winds of numbers -- well, maybe not quite as romantic, but a 
+; lot more real than space ships will ever be.
+; 
+; Today's image shows a fractal ship plowing through four-
+; dimensional space on its way to who knows where.  I named it 
+; "Ship of Space" when I luckily turned the original image, which 
+; looked nothing like a ship, upside down before discarding it.
+; 
+; The formula, MandelbrotBC2, is an early version of the 
+; MandelbrotBC3 formula.  I like to bring up the old formulas now 
+; and then to see what I can do with them.
+; 
+; The calculation time of 1-1/2 minutes is a fair price for the 
+; scene.  And luckily, the FOTD web site problem has been solved 
+; for good (I hope) and the image is posted there.
+; 
+; The finished images are once again being posted to the official 
+; FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High-definition variations are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of clouds darkened the skies here at Fractal Central today, 
+; while the temperature held around a quite reasonable 43F +6C.  
+; The fractal cat, now into the 'senior cat' group, spent the day 
+; sleeping on his high bookcase.  The humans passed the day doing 
+; lots of human and a few inhuman things.
+; 
+; The next FOTD will most likely be posted in 24 hours.  Until 
+; whenever, take care, and we will never get any significant part 
+; of our energy from things like solar panels and wind turbines 
+; for the same reason that we stopped using wind to propel our 
+; large sea-going ships.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ship_of_Space { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.6537202144440802/+0.4582235896757069\
+  /14661.82/1/-149.4/0 params=1.5/0/-1.5/0 float=y
+  maxiter=1000 inside=0 outside=fmod periodicity=6
+  colors=000OdDSfEXiG`lIdoKiqLmtNqwPvzRuwRstRqqSomSm\
+  jTkgTicTg`UeYUcVVaRV_OVYLWWHWUEXSBXQ7YQ7XQ7WP7UP7T\
+  P7SO7QO7PN7ON7MN7LM7KM7IM7HL7GL7EK7DK7CK7AJ79J78J7\
+  6I75I74H72Aw3X2yILlHNjGPhFRfEUdDWbCY`B_ZAbX9dV8fT7\
+  iQ7hQ7gP8fO8eO9dN9cM9bLAaLA`KB_JBZICYICXHCWGDVFDUF\
+  ETEESDFQCGQCIQDJQDLQEMQFOQFPQGRPHSPHUPIVPJXPJYPK_P\
+  L`PLbOMcONeONfOOhOPiOPkOQmNRmORlQRkSRkTRjVRiXSiZSh\
+  _SgaSgcSfeSefTdhTdjTclTbmTboTaqU`sU`tU_vUZxUYzVZxV\
+  `vUbtUcrTepSgnSilRjjQlhQnfPpdOpeMpgKpiIokGomEooCoq\
+  Ans8nu6nw4my2ku6ipAflEdgJacN_ZRXUWXUUXUSXVQXVOWWMW\
+  WKWXIWXGWYEVYCVZAVZ8V_6V_4U`2U`4U`6U_8V_AVZCVZEWYG\
+  WYIWYKXXMXXOXWQYWSYVUYVWZUYXSWVQUTNSRLQPJOMGMKEKIC\
+  IG9GE7EC5C92AU2Nn1_`y`hygqxzzwzwvzttzqrznpzkozhmwe\
+  kubis_grXfrUdqRbqO`pL_pIYoFWoCUn9UmEWhJ_cPdZUhUZlP\
+  dmK`nPWkUSgZNccJ`hEYmEVmDTmDRmCPmBNnBLnAJn9Hn9Fn8D\
+  o7Bo78o50K50K50K50K50K50K }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,95 @@
+;     Date: Mon, 18 Mar 2013 09:10:03 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-03-13 (Green for the Day [7.5])
+;       Id: <1.5.4.16.20130318081051.2b67648e@earthlink.net>
+; ---------
+; 
+; FOTD -- March 17, 2013 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today is Saint Patrick's Day here at Fractal Central, and over 
+; the rest of the world as well.  In honor of the occasion, I 
+; added a touch of green to today's image, which shows a partially 
+; eroded minibrot on the northwest shore line of the main bay of 
+; the HyperMandelbrot set, which lies in an 8-dimensional Julibrot 
+; that I have no intention of getting into.
+; 
+; Change the real(p3) or real(p4) (or both) parameters to zero and 
+; see the minibrot before it was eroded.  Surprisingly, the 
+; maxiter is now far too low to show the uneroded minibrot, which 
+; indicates that everything within the outer circle of the image 
+; is new stuff existing only in the higher-dimensional part of the 
+; Julibrot.
+; 
+; The rating of 7-1/2 includes a bonus for honoring the day.  The 
+; name "Green for the Day" acknowledges that it is a special day 
+; for the Irish.  The calculation time of 6-1/4 minutes is slow.  
+; Luckily, the web sites can relieve fractal slowness.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with hi-def versions at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Cloudy skies and a temperature of 39F +4C made the outdoors 
+; rather unpleasant here at Fractal Central today.  The fractal 
+; cat and fractal humans had a typical uneventful day indoors.
+; 
+; The next FOTD will be posted in the proper time frame.  Until 
+; whenever that is, take care, and be of sound mind and body, but 
+; don't let the mind and body get too noisy.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Green_for_the_Day { ; time=0:06:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=HyperMandelbrot2 center-mag=-0.7329867\
+  340546847/+0.2212534245722819/3.30344e+010/1/168.7\
+  /0 params=0/0/0/0/0.13/0/1e-070/0 float=y
+  maxiter=2450 inside=0 logmap=-1916 periodicity=0
+  colors=00005A05A05A05A05A05A25A35A55A65A85A95AB5AD\
+  5AE5AG5AH5AJ5AK5AJ5AI5AI5AH5AG5AG5AF5AE5AE5AE5AE5A\
+  F5BG6CH6DI7EK7FM7GN7HP7IR7JT7KV7LW8MW8NW9OV9PTAQSA\
+  RRASPATOAUNAVLAWKAXIAYIAZIA_HA`HAaHAbGAcGBdFCeFDfF\
+  EfDFgCGhBFh9Kc8P_7UW6YS5bO4gK1mH3kG5jG7iF9gFBfFDeE\
+  FdEHbDJaDL`DN_COYCQXBSWBUVBWTAYSA_R9aQ9cO9eN8gM8hL\
+  8uaft_etZesYesXerVerUerTeqSeqRdpPdpOdpNdoMdoLdnJdn\
+  IdmHcmGcmFclDclCckBckAcj7hk9clAZmCVmDQnFMoGHoHDpKE\
+  pMFpOFpQGqTGqVHqXIqZIr_Jr`JraKrbLscLseMsgMsiNtkOtm\
+  OtoPtpPsqQsrRrsSrtSquTqvUpwVpxVpycozmozrnzvnzzmzzm\
+  zzmzzjzzgzzdzzK3OI8KGDHEIDDNAHNBLOCPODSYEUgGVcHWhJ\
+  YmKZrM_vNazPxzpsnqnhqiardWr_PsVJszzsOzVzzaEzg9an4Y\
+  tJdmYkflr_zyUxpQwhNu_KtSHrJEqBBp38uK7y_7ZrbXj_VcXT\
+  WUSPRQHOOALN3ILAFKHDIOBHU9G`7Eg5Dn3Ct1Iq0No0Sl0k_G\
+  lRHlIIm9Jm1KoGUpVcrimsxvHmvccecpQcyAcc7coKccXcmizm\
+  uzztzzszzrzzrzzpzznzzlzzF }
+
+frm:HyperMandelbrot2 {; periodicity must be turned off
+a=(p1),b=(p2):
+q=sqr(a)-sqr(b)+pixel,
+b=(p3+2)*a*b+p4,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

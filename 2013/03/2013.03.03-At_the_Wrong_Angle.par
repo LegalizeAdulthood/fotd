@@ -1,0 +1,112 @@
+;     Date: Sun, 03 Mar 2013 18:03:34 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 03-03-13 (At the Wrong Angle [8])
+;       Id: <1.5.4.16.20130303180226.36cf42ba@earthlink.net>
+; ---------
+; 
+; FOTD -- March 03, 2013 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene shows a minibrot in an oversized parent Mandelbrot 
+; set that has been corrupted in its depths by Z^9 energies.  The 
+; location is in the center of the north branch of Seahorse Valley 
+; of the large minibrot on the main spike of the parent M-set.
+; 
+; But no minibrot lies at the center of the frame.  What we see 
+; there is a stretched-out slit with almost nothing of a Mandel-
+; brot or Julia nature about it.  The name of the image -- "At the 
+; Wrong Angle" -- explains the problem.  We are viewing the scene 
+; from the wrong angle.  We are viewing it from some monstrous 
+; unimaginable angle in the fourth dimension.
+; 
+; To bring the large-scale pattern to near perfection, the entire 
+; image has been stretched and skewed to the limit, yet except at 
+; the center, the stretching is hardly noticeable.
+; 
+; The image earns a rating of an 8 even though it did appear 
+; several years ago in a slightly modified form.
+; 
+; The parameter file runs in 4-1/3 minutes.  Hopefully, with such 
+; extreme stretching and skewing, it will run accurately on all 
+; machines.  (But it sometimes gives me trouble even on the 
+; machine that created it.)
+; 
+; Until the official FOTD web site is again up and running, I 
+; recommend viewing the finished image at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; and don't forget the back images posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The un-notable winter weather continued today here at Fractal 
+; Central, with cloudy skies, only a few breaks of sun, a few 
+; flurries of snow, a brisk north wind and a temperature of 36F 
+; +2C.  The mighty fractal cat, not quite as mighty as he once 
+; was, spent the day watching the world go by and plotting mis-
+; chief.  The humans simply made it through the day.
+; 
+; I will post the next FOTD when the time comes.  Until whenever 
+; that might be, take care, and what's that! . . . the world did 
+; not end . . . what a disappointment!
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+At_the_Wrong_Angle { ; time=0:04:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideJulibrot center-mag=-0.000000000\
+  00020463/+0.00000000023549410/4.597516e+009/0.0131\
+  /88.53859228715406/-89.1361541431747213
+  params=-92/189.6/-26.6/58/-442.1377733748792/0.169\
+  7133339657901/-442.1377733748792/0.169713333965790\
+  1/9/250 float=y maxiter=60000 inside=0
+  periodicity=10 sound=off mathtolerance=0.05/1
+  colors=000neSlbUk`WiZZgX`fVbdTddQkcRfcRbcRZcRVbSRb\
+  SNbSJbSF`OAbSBdVBfZBhaCjdClhCnkDpoDrrDsuDpsCnrClqC\
+  joBhnBfmBdkAbjA`iAZg9Xf9Ve9Xl0Vh5Td9S`DQXHOTLNPQLL\
+  UJHYIDaG9eF5iQNZYeP_dO`cNacMcbLdbLeaKgaJh`Ixb0i`IV\
+  ZZ8VzHYoP_dXaUdcJpb2nd5le8jfAhhDfiFdjIblK`mNZnPXpS\
+  VqUTrXTuZRsZPrZNpZLoZJmZCpcIlZOhVUeQ_aMeYHkVDqR8Lk\
+  uc_VvO4rP6oQ7lR8iSAfTBcUC_VEXWFUXGRYIOZJL_KWObh8ue\
+  CtcFs`IrZLrXOqURpSUoQXoN_nLbmIelGhlEkkBnj9qi7tiArl\
+  CqnEpqGosInvKmxSamZzbfzSmzIdzHWzGNzFzzEzzDzzBzzAzz\
+  5zqhzzMzwRzgKJzDBz6zQECoY9YM6zBMefzzSzzEzzBzz8zz5z\
+  z2ztENeAGS79z3RsK5rG4dC4z83z4GzV`C6zz3zzCzz9zz6zz3\
+  zz4zz3zz9zz1PFeO`CZSHhKLrBPz3TbcEWPdXL`WNWVPRURMUT\
+  IRahiShyUJWE9ORkHHWA8GWKNOEHa9BA05z3Re2KT0DG06U0dN\
+  0UG0K94Alnz`ajQPVECFMkECN7znHXKBm_YjYAhWFXUKYOPZPU\
+  _QZaSccVhfYmg`rhbviezjhzkkzlmzmoznnzoozqpzsqzurzws\
+  zxtzzuzzvzzwzzxzzyzzzzzzz }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d), aa=-(real(p5)-2),
+  bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
