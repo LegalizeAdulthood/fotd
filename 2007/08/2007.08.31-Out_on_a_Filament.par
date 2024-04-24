@@ -1,0 +1,112 @@
+;     Date: Thu, 30 Aug 2007 21:49:18 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 31-08-07 (Out on a Filament [6])
+; 
+;       Id: <1.5.4.16.20070830214546.0d87d694@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 31, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to the tip of the negative spike of the 
+; Mandelbrot set, where we examine a tiny minibrot.  In fact, it 
+; is the most remote minibrot on the spike reachable with conven-
+; tional math.  But where is the minibrot?
+; 
+; Actually, it is very close.  The problem is that we have 
+; perturbed the view, and therefore have just missed the minibrot. 
+; But we have come close enough to skim through the outer fringes 
+; of the pattern around it.  To see the actual unperturbed mini-
+; brot simply reset the real and imaginary p2 parameters to zero 
+; and shift the view a bit.
+; 
+; I have added to the interest by reducing the bailout radius, 
+; which is real(p4), to the point where the entire scene is on the 
+; verge of being swallowed up entirely.  I have added even more 
+; interest by rendering the image with the outside set to 'tdis'.
+; 
+; I named the image "Out on a Filament", since that is its 
+; location.  But the rating of a 6 was all I could do for an image 
+; that is basically just another trip to the over-viewed negative 
+; spike of the Mandelbrot set.
+; 
+; The calculation time of a sizzling 39 seconds will try the 
+; patience of no one.  And the task of calculating the scene may 
+; be done away with entirely by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; As I write this, I wonder what this Mandelbrot-set location 
+; would look like in some of the odd orientations through the 
+; Julibrot.  Well, there is one way to find out, and that is to go 
+; and look.  If I find anything of exceptional interest, it will 
+; appear as a future FOTD.
+; 
+; The weather was too warm for comfort here at Fractal Central on 
+; Thursday, with a high temperature of 90F 32C and quite sticky 
+; humidity.  In the evening however a light thunder-shower cooled 
+; things down a bit.  The fractal cats don't worry themselves with 
+; outside heat unless there are squirrels to go along with it.  If 
+; there are no squirrels, a chipmunk or two will do.
+; 
+; My day was appropriately busy and tomorrow promises to be the 
+; same.  The next FOTD is due in 24 hours.  Until then, take care, 
+; and give particular attention to the questions that appear to 
+; have no answers.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Out_on_a_Filament  { ; time=0:00:39.39-SF5 on P4-2000
+  reset=2004 type=formula formulafile=slices.frm
+  formulaname=MandelbrotVE-VP passes=1
+  center-mag=-1.99999977939708600/-0.000000000000023\
+  21/2.706509e+013/1/2.47067461084123785/0
+  params=2/0/1.3e-007/6e-008/0/0/1.9999997799/0
+  float=y maxiter=3000 inside=0 outside=tdis
+  symmetry=none periodicity=10 mathtolerance=0.05/1
+  colors=000wfapfZifW9x5PoH7phIlbTiYcbxcdmcebbJncVcQ\
+  kbViZ_gWVPFYVK``PVrUYnT`jTC4SKaXUdVeJ1dRBcZKQ5LXOP\
+  JJjU_bUSiXWdZ_`acXRPrmceGG2MR9S`GYaNO3LWNPzr2zhBzU\
+  KLEQQMRVTS__TNLRSRSWWS_aTcz7arFblMOK1SQ8WWF_aM_Uz`\
+  Yza`HbcNTeWWfVZfUafz_EzWcz_fzpGzkPzgYzSHzWQNUdzdSz\
+  oFzy3wwMlvdbuwToqXikzcfzeadgXziShgWdGprf_`dczb8zcH\
+  BcQHcZNH9wTQgoTzkYigb`eDxrHtnOmjUff`_W5cZI_aVzu2ho\
+  GbiUY3rGMlNLM`6`KoNziXKWk1Yi8_hFagMFRjSZzK1GRFLYTP\
+  1j8BiELhJVgOStVVpUYmU`iTHBHTRN9fvPfgQGHVPL_YPtQcVB\
+  HYML`XP86095pHFjPOdXYZOt19KuHY8TbJ_v`qndlk`ghXbBGc\
+  MLcXPsEuoMmkTfg__4McGT_S_WUmtYjj`haIRCQXIXaOWpfYmb\
+  _k_ahWwBNpMPiXR`6JaGMbPOcYRL9JSLNYWQhoSflTejTdhTHs\
+  HNoKTlNZiQVzZYsX`lVhGgeU_2ljFjdShZptolpiimcfiYR0FY\
+  MMwowplliibqpVllUgiTt3NoDPkNQgXSMUp5XuD4tMHjVUaCw1\
+  MqBVkKtlWkiUUxcXs`ZoYajVjmJgjNehQhHVeUU9j0Hi8PhFXg\
+  Mi2EWz7cGzd8ZcQWZNi`Ucb`Y }
+
+frm:MandelbrotVE-VP {; Jim Muth  real(c),imag(c)
+a=p1, z=p2, c=pixel+p3,
+b=sqr(real(p4)):
+z=z^(a)+c,
+|z| < b }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

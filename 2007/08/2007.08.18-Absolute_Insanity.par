@@ -1,0 +1,101 @@
+;     Date: Fri, 17 Aug 2007 21:37:19 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 18-08-07 (Absolute Insanity [No Rating])
+; 
+;       Id: <1.5.4.16.20070817214308.2b4f6522@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 18, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Now and then I like to pull out old forgotten formulas and see 
+; what they can do.  Today's formula is about 10 years old.  It is 
+; an early attempt to draw oblique slices through the Julibrot, 
+; while checking different powers of C.
+; 
+; It is only moderately successful at doing this, but it still can 
+; produce some interesting images.  Today's image is a scene in 
+; East Valley of the Mandeloid created by the formula Z^2+C^8.  
+; The slice is oriented very close to, but not exactly in, the 
+; Julia direction.
+; 
+; The resulting fractal has the outer shape of the East Valley 
+; Julia sets but with a very decorative 'star' in the center.  I 
+; named the image "Absolute Insanity" because it makes so little 
+; sense.
+; 
+; With no idea of what other images might lie in the formula, I 
+; could give today's image no rating, but it is still a rather 
+; interesting, if not the most attractive, image of all time.
+; 
+; The included parameter file calculates in 4-1/4 minutes on the 
+; fast machine.  It would take 23 minutes on the P200mhz.  To see 
+; the image without the need to calculate it, go to the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view it there.
+; 
+; Friday began muggy here at Fractal Central, but turned quite 
+; pleasant during the afternoon.  The cats gave up waiting for 
+; another bat to appear, and resumed their normal activity of 
+; making their own trouble.  My day was peaceful enough.
+; 
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and walk with spirit.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Absolute_Insanity  { ; time=0:04:16.72-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=ManJul2CPwr passes=t
+  center-mag=0/0/1.02/1/-90/3.88578058618804789e-016
+  params=0.2505/2.06e-005/0.015/0/8/0 float=y
+  maxiter=25000 inside=0 periodicity=10
+  colors=000XGIzKIAMfAMeAMcALbAKaAJ`AI_AHZAGYAFXAFW9\
+  EV8DU6CW6BZ6Aa68d63feRIfTJgUKhVLiWMjXNkZNl_Om`PnaQ\
+  obRocRpeSqfTrgUshVtiWukWvlXwmYxnZyo_zscyp_ymWyjSyg\
+  OydLyaHyZDyW9yT5zO0yQ2xR4wS5vT7uU8tWAsXBrYDqZFp_Go\
+  `InbJmcLldMkeOjfQigRhiTgjUfkWelXdmZdn_bo`ao`_oaZpa\
+  XpbWpbUqcTqcRqdQrdPreNreMsfKsfJsgHtgGthEthDuiBuiAu\
+  j9ujAthAsfArdArcAqaAp_ApYAoXBnVBmTBmRBlQBkOBkMBjKB\
+  iJChHChFCgDCfCCfACe8Cd6Cd5Bc6Bb6Ab6Aa79a79`78_88_8\
+  7Z87Z96Y96X95WA5VA4UA4TB3SB3RB2QC2PC1OC1NC4PB7RBAT\
+  BCVBFXAIZAL`ANbAQd9Te9Wg9Yh9`i8ck8fl8hm8il7ik7ik7j\
+  j6ji6ji6kh6kh5kg5lf5lf4le4md4md4mc3nc3nb3na2oa2o`2\
+  n_1o`2o`3oa3pa4pa4pb5qb6qb6qc7rc7rc8rd9sd9seAseAte\
+  BtfCtfCufDugDugExfFugErgEohEmhEjiEgiEejEbjE_kEYkEV\
+  lESlDQmDNmDKnDInDFoDCoDApD7pD4qDZP52qD5oF8nGBlIEkJ\
+  HiLKhMMfOPePScRVbSY`U`_VcYXeXYhV_kU`nSbqRctPevOfeE\
+  YP5QR6RS6RU7SV7SMsONwLOzJ }
+
+frm:ManJul2CPwr {; Jim Muth
+; Creates and rotates ^2 Hyperbrot Figure
+; P1 sets point of rotation, P2 sets angle of rotation
+; P3 sets power of C
+z=c=pixel:
+z=sqr(z)+p1+(p2*(c^p3)),
+|z| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
