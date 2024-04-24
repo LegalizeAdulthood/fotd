@@ -1,0 +1,97 @@
+;     Date: Sat, 17 Nov 2007 22:26:27 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-11-07 (Zexpi Minibrot [4])
+;       Id: <1.5.4.16.20071117222802.2f3757d4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 18, 2007 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I had one of those days Saturday where I just couldn't find a 
+; worthwhile fractal no matter how far I looked.  I finally 
+; settled for the image that appears as today's FOTD, but even 
+; though it appears as an FOTD, I could honestly rate it no better 
+; than a 4.
+; 
+; The image takes us on a trip to the Zexpi fractal, which is what 
+; I named the fractal with an exponent of Z equal to PI.  We check 
+; the fractal as it appears 4 levels up the logarithmic ladder, 
+; where it resembles a comical little clown with his head facing 
+; southwest. Today's scene is located on the sole of the clown's 
+; left foot.
+; 
+; The only thing not totally ordinary about the image is the fact 
+; that a good part of it consists of 'inside' stuff made visible 
+; by the 'fmod' inside fill.
+; 
+; I named the image "Zexpi Minibrot", which is simply its descrip-
+; tion.  The calculation time of just under 3 minutes stretches to 
+; around 14 minutes on the 200mhz machine -- hardly a bargain.  
+; But relief is waiting on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is posted for instant viewing.
+; 
+; A cold, cloudy day threateneing rain or snow made no one happy 
+; here at Fractal Central on Saturday.  The fractal cats spent the 
+; day on their shelf by the window, bravely enduring the unpleas-
+; ant conditions.
+; 
+; My day was average -- enough said.  The next FOTD will appear 
+; in 24 hours.  Until then, take care, and how many Mandelbrot 
+; sets exist at this moment?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Zexpi_Minibrot { ; time=0:02:40.43-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor
+  center-mag=+0.17206725258491350/+0.675860279367873\
+  30/33541.71/1/-57.5/-1.49841909713e-010 inside=fmod
+  params=3.14159265358979/0/4/0 float=y maxiter=1800
+  proximity=0.09 logmap=yes periodicity=10
+  colors=000000000000000000000000000000000000deYbhYa\
+  kY`mYg8Gj9DlABoB9qC7sD5rC7qC9pBAoBCnAEmAFl9Hl9Ik9K\
+  j8Mi8Nh7PC6Ff6Se6Ue6VM2WL3UK3SJ4QI4PH5NG5LF6KE6ID7\
+  GC7EB8DA8B9998987CI6FS6Ia5Lk5Ot7Rq8Ur9XsAlkBriCxgF\
+  rbHmYJhTLbONYJPTER_tTSDVSDA_tYSC_SCaSBA_tAbuAevefI\
+  enMeuPgrOioOklOmjOogOqdOrbOrYKrTGrPCrK8rF4rB0pD3oE\
+  5nG7mH9kJBjKDiMFhNIgPKeQMdSOcTQbVSaWU`TV_QV_OWZLXZ\
+  IXYFYYDYbIXgMWlRVqVVo`PmfKklFirAhx5fu7er8co9blA`iB\
+  _fDYcEX`FVYGUVHSSJRPKPMLDOFGMIJJLMHOPFQTDTWBWZ8Za6\
+  ad4dg2gj0ie4ha7hXAhTDgOGgKJgGMgILeJLcKKaLK`NJZOJXP\
+  IWQIUSHSTHRUGPVGNXFMYFKZEI_EHaIJcMKePLgTNiWOk_PmcR\
+  ofSqjTrmUpkRniPlgNkeLicJgaHe_EdYCbWA`U8ZS6YR4kKLyE\
+  `qzTmvUirVeoWakWZhXVdYRaYNYZKV_GR_CO`8Ka5Ha6F`7E`8\
+  D`9B`AA`B9`C7`D6`E5`F3`G2`H1`H0`K4aN7bQAbTDcWGdZJd\
+  aMedPecQgbRhaSiaTj`Uk_Vl_VmZWnYXoYYpXZqW_rW_sR`mNa\
+  hJbbFcYBdS7eNTOCgEMv4Wt7X }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

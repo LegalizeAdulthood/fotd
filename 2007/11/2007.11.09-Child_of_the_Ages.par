@@ -1,0 +1,100 @@
+;     Date: Thu, 08 Nov 2007 21:26:11 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 09-11-07 (Child of the Ages [8])
+; 
+;       Id: <1.5.4.16.20071108212737.2b7f141c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 09, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is from the same Z^(1.75)+C parent fractal as 
+; yesterday's.  But today, instead of checking the chaos up north, 
+; we check the inside shore of the north branch of the valley 
+; enclosing the large period-2 bud on the east side of the large 
+; main bay of the parent.
+; 
+; Once I reached the spot, it was not too difficult to find one of 
+; the minibrots that inhabit the area, and color it appropriately.  
+; The rating of an 8 shows that I am well satisfied with the final 
+; result.
+; 
+; The name "Child of the Ages" is simply a phrase that came to 
+; mind while I was checking to see whether the scene is located on 
+; the parent or child side of its valley.  It is on the child side.
+; 
+; The sight of the image is worth its calculation time of 6-3/4 
+; minutes.  But absolute worth is a subjective thing, so for more 
+; convenience, the finished image is posted for instant viewing on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Cloudy skies and a temperature of 39F 4C, along with flurries of 
+; leaves, made Thursday feel quite like autumn here at Fractal 
+; Central.  The fractal cats were more concerned with the pigeons 
+; than with the autumn leaves.
+; 
+; My day was busy but under control.  The next FOTD will appear in 
+; 24 hours.  Until then, take care, and are fractals good, evil, 
+; both, or neither?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Child_of_the_Ages  { ; time=0:06:47.33-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor
+  center-mag=+0.75351497361/+0.06981942344/108600.6/\
+  1/-42.5/-3.34186859e-010 params=1.75/0/11/0 float=y
+  maxiter=25000 inside=0 logmap=557 periodicity=10
+  colors=000__`MMaEMe7Mi1Mm0Mq0Os1Ok1Nc3MW3LO5KG7J77\
+  J08J08J0AJ0AJ0CL0EP0GS0IV0KY0K`0Mc1Of7PiASlGUnKUnO\
+  xqczxszquzkxzgxuazmWzgSz_MzSGzKCzC7z51z00z00z00z01\
+  z01x03u03s05o05m07k07i08k08m08m0Ao0Aq0AqGEW_IAsM0z\
+  P0za8zmkzxzzszzquuogquUmoGgk3cg0_c0MCG_0sUaImz0oz0\
+  oz0zz3qzAqzGqzMszUsz_szeszkqqkockmOkkAki0kg0ke0kS0\
+  cG0W50O00G00800C30GC0IM0MY0Pg0Sq0Wz0_z0au1ge1mS1qC\
+  1x01z01z01z00z00x00uz0qm0ma0dU3Z30S50a70Y80U0zi1zg\
+  1zg1he3zr3xc3sc3mc5ga5ca5Q_5Y_7U_7PY7MY8IY8EW8CW88\
+  UA5zA1wPWSKYPCUO5eK0gI0fE0xC0qA0cUEPmYCzo0zq5zqAzq\
+  GzsMxsSosYiseaumWuuOuzIuzCmzAgzAazAUzAOzAIzAAx85x8\
+  0x80s80s80s80mG0kM0gU0c_0_e3ca7ecCgeGkgMkiPokWsm_u\
+  oczqizsmzuszxxzzzzzzzzzzzzzzmzzazzezzizzmzzqzzuzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzz_zzWzzUzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzIzzCzz7zz7zz8zz8zz8zz8z\
+  z8zz8zz8zz8zz8zzezz_zzUzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

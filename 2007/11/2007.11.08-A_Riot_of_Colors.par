@@ -1,0 +1,115 @@
+;     Date: Thu, 08 Nov 2007 07:43:02 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 08-11-07 (A Riot of Colors [7.5])
+; 
+;       Id: <1.5.4.16.20071108074427.0cf76ad6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 08, 2007 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The name of today's image, "A Riot of Colors", says it all.  It 
+; is perhaps the most colorful FOTD image of all time, helped in 
+; no small degree by myself.  The parent fractal is the Z^(1.75)+C 
+; Mandeloid as it appears 11 levels up the complex logarithmic 
+; ladder, which could perhaps be more accurately described as a 
+; hyper-helix.  As a matter of interest, the formula for calculat-
+; ing the complex natural logarithm is:
+; 
+;             (1/2)ln(x^2+y^2)+i(atan(y/x)+2kPI)
+; 
+; The logarithmic ladder, or hyper-helix, exists because k can be 
+; given any value from minus to plus infinity.
+; 
+; Today we are at step +11 of the infinite ladder, where the 
+; parent appears as a single large oval bay with, strangely 
+; enough, two large period-2 buds, one on its east side, the other 
+; more irregular one on its northwest side.  A large area of chaos 
+; extends north from the irregular bud, and today's scene lies 
+; just east of a larger minibrot lying near the northern tip of 
+; this area of chaos.
+; 
+; The image is far too gaudy to earn a superior rating, but it is 
+; well worth a 7 plus the 1/2 point I gave myself for the little 
+; extra work I did on the color palette.
+; 
+; The calculation time of 3-1/4 minutes is perhaps a bit slow for 
+; the total image, but the colors alone will assure that those who 
+; take the time to run the included parameter file will not be 
+; totally disappointed.
+; 
+; Iteration frustration may also be avoided by visiting the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; Typical late autumn conditions prevailed here at Fractal Central 
+; on Wednesday.  Brisk northwest winds blew, the sunlight alterna-
+; ted with dark scudding clouds, and the temperature reached only 
+; 43F 6C.  Snug indoors, the fractal cats spent the day by the 
+; heat, warm as toast, while I kept warm fighting with a job that 
+; just would not do what the customer wanted.  The next FOTD will 
+; be posted in 24 hours give or take a few.  Until then, take much 
+; care, and be at ease with this mysterious world.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Riot_of_Colors   { ; time=0:03:18.17-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=-0.30648810766/+1.86666607889/6240791/\
+  1/77.5/-9.14082472e-009 params=1.75/0/11/0 float=y
+  maxiter=32000 inside=0 logmap=160 periodicity=10
+  colors=000zNQmON`QJNQIBSE0SD0U90U80L40E2680G20D009\
+  0080340420600900B00D30J90QG0WO4bWBibGnkNvrUzzZzvUz\
+  rQvnNnkJigGbdDX`9QX6LU3GQ09N04J00G00D00900600B00G0\
+  0L00Q00W00`00e00k00p00v00z00n2DbDOQNbEZn3kz0vzz0mz\
+  0gz2dz6`z9WzDSzIOzLJzOGzUDzX8zb4ze2zi0zn0zr0zv0vv0\
+  rv0nv0kv0gv0bv0Zv0Wv0Sv0Ov0Up0Xk0`g0db0zX0kU0nO0rJ\
+  0zG0tI0rJ0pJ0nL0zL0mN0kN0iO0gO0eQ0eQ0bO2`O4ZO8XNBW\
+  NEUNISLLQLOOLUNJXLJ`JzdIggGZkEZnDLfIBYN4ZN0QS0NY0P\
+  b0QzxNztJzpGzmDzi9zd6zZ3zU0tO0nL0iO0eS0`W3WZ6Sb9Nd\
+  DJdGGeIDeL9eN4gQ2gS0iW0iX0i`0kb0ke0mg0mk0mm0pg0rb0\
+  vX0xS0zN0zI0zD0z86z3Ez0Nz0Wz0dz0mz8vzGzzQzz`zzizzt\
+  zzzzzvzznzzgzz`zzUzzNzzOzzdzzvzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,92 @@
+;     Date: Thu, 29 Nov 2007 07:43:42 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 29-11-07 (Curly Evaporation [6])
+; 
+;       Id: <1.5.4.16.20071129074528.30779460@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 29, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that is generated when 
+; 4 negative parts of Z^(-1.2) are combined with 1 negative part 
+; of Z^(-4.8), and (1/C) is added.  This parent consists of the 
+; typical large round bays with filaments extending from the buds 
+; and terminating in rings.  Today's scene lies on one of these 
+; filaments near the point where it reaches a terminal ring.
+; 
+; The name "Curly Evaporation" indicates that the scene is an 
+; evaporated one with the resulting expanse of 'inside' stuff 
+; brought to life by the 'bof61' inside fill.  The colors are a 
+; bit too muddy to add to the rating, but the image is still worth 
+; a look.
+; 
+; The calculation time of 2-3/4 minutes means that it will not 
+; take too much effort to run the included parameter file, but if 
+; for some reason running parameter files is impractical, the 
+; completed image may be viewed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Bright sun and chilly temperatures around 39F +4C prevailed here 
+; at Fractal Central on Wednesday.  The fractal cats made the best 
+; of things by sleeping most of the day.
+; 
+; My department was busier than expected, but still under control. 
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and have reasonable faith in reason.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Curly_Evaporation  { ; time=0:02:44.72-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-4.535005682551917/-17.02949523595395/\
+  9.386122e+007/1/-127.5/0 params=-4/-1.2/-1/-4.8/0/\
+  1e+100/0/0 float=y maxiter=1800
+  inside=bof61 periodicity=10
+  colors=000th6pi8mjAikCflEbmG_oJWpLTqNPrPMsRItTFuVG\
+  rXHpZIm`JkbKhdLfeMdgNaiO_kPXmQVoRTpTVjVWdXXZZYT`ZN\
+  b_IaaGacE`eC`gB`i9_k7_m6Zo4Zq2Zr1Yl7YgDYaJYXOYRUXM\
+  _XGdXBjX5pX0uGPXJNULMSNKQPJNSHLUGJWFHYDE_CCbAAd97f\
+  75h63j51g62d63a63Z74W75U75R76O87L87I88G88QlVUe`XZe\
+  _TkbMpeGu`FsXErTDqPCoLBnHAmD9k98j57i16h37g58f79f9A\
+  eBBeCCdEDdGDcIEbKFbLGaNHaPI`RJ`TK_UK_VMXWNVXPTYQRZ\
+  SPZTN_VL`WJaYHbZFc`DcaBOv6Ms6Kp6Im6Gj6Eg6De6Bb69_6\
+  7X65U64S6GPDRMKaJQ_HNZGKYFHWDEVCBUB9XCAZCB`DBbDCdD\
+  CfEDhEDjEElFEnFFpFFoEGoEHnDHnDImCImCJlBJlBKkALkALj\
+  9Mj9Mi8Ni8N`tWJioNgoQdpTbpW_qZXrbVreSshPtkNtnKuqIu\
+  jJdcJOYJ7bK9fLBkMDoNFqRIrUKsXMt_OucQvfSwiUxpWztYzu\
+  ZzwZzvZysZwpZumZsjZqhZpgZogZkdVgXRcUO_KKWAHSADOAAK\
+  F6GK3FQ6FU9FYCFaFFeIFzLzzOzzzzzUzzzzzYIv_JraKmcLhd\
+  NccJZZFUUBPP7KKDLPJOUPRZVUcWXcX_cYbcZec_hcUk_OnXIz\
+  zKzzKzzKzzKzzKzzKmzKm8Km3 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

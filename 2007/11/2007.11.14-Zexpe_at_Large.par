@@ -1,0 +1,108 @@
+;     Date: Tue, 13 Nov 2007 21:58:28 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 14-11-07 (Zexpe at Large [7.5])
+; 
+;       Id: <1.5.4.16.20071113215958.2adf131a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 14, 2007 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the Z^(EPSILON)+C Mandeloid, sometimes 
+; known as the Zexpe fractal.  But today, instead of concentrating 
+; on the ground level, we examine the Zexpe at a height 4 levels 
+; up the logarithmic ladder, where it is shaped roughly like a 
+; Mandelbrot set rotated so that its west side is facing south-
+; east.  Today's scene is located in a tiny valley in a bud on the 
+; northeast shore of the main bay of this parent fractal.
+; 
+; Only my modesty prevents me from admitting that most of the 
+; effect of the image is due to my coloring efforts.  The extra 
+; half-point in the rating of 7-1/2 recognizes this effort.  The 
+; name "Zexpe at Large" can mean whatever the individual fractal 
+; viewer wants it to.  The magnitude of the image is 2*(10^13), 
+; large enough to make the mathtolerance entry necessary in the 
+; included parameter file.
+; 
+; The calculation time of under 2 minutes on the fast machine 
+; would stretch to about 7 minutes on the slow unit.  But even 
+; this small bit of time may be saved by visiting the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; Tuesday dawned rainy here at Fractal Central, but the rain ended 
+; by 8:00am, leaving behind heavy clouds and a light fog.  Then, 
+; just before noon, a breeze sprang up, clearing the clouds and 
+; fog almost by magic.  The afternoon was sunny and quite mild, 
+; with a high temperature of 61F 16C.  The fractal cats observed 
+; all this with passing interest.  The squirrels foraging in the 
+; back yard were far more interesting to the cats.
+; 
+; My day was fairly busy, though still well under control.  The 
+; next FOTD will appear in 24 hours, give or take a few.  Until 
+; then, take care of your fractals, for perhaps they are mere 
+; delusions that are common to many people.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Zexpe_at_Large     { ; time=0:01:54.52-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=+0.77754390860285990/+0.036243793086052\
+  48/2.00498e+013/1/-46.7/0 params=2.71828182845905/\
+  0/4/0 float=y maxiter=1700 inside=0 logmap=156
+  periodicity=10 sound=off mathtolerance=0.05/1
+  colors=000ND9Q89T49X6D`8Gc9JgBMkDPnESrGVuHYcf8Y`AS\
+  VCNPEHKFCEH68J13KWGDzS6kcBXnGJyLBcV4IcQMVkQNjVMjZM\
+  ibLigLhkKhoKhsKilLifMj_MjUNkOOkHOlBPzzzzzzzmzvhzrc\
+  zmZviUrbPmWKiPDeI6eDIeEKiFMmFNpFOrFPtFQvFSxDUzBQdA\
+  TX8WO7ZG5a84c0CX6KQCSJI_DNYCPXBQWBSVATU9VT9WYDWaGW\
+  fJWjNWoQWsTWrX`r`eqciqgnpkspnwfbqYRlPFfG4aHDYHMUGV\
+  RITPKRNLPLNOJQMHSKFVIDXHBYIEYIHYJJYJMYKPZKRaJWeJ_h\
+  JclJgoIksIovIsyIwsJtmKqhLnbMkXNhSOeMPbHQ_ONWUKT`HP\
+  fEMlCJjJQhPWfVadahbgn`mtSmhKmXPh`TddY`haWlfSpjOtcS\
+  nXWiQ_cJcZCgUMbSVYQdTOmONlLOmQWnUboZipbpqfwbhiPjWB\
+  kJMgTWdbeal_ZjUWhOUfIUdCUb7U`EUcLUeRUhYUjcUmjUopUq\
+  VUaAUMKUHTUDaU8jU4_V6QW8GXA6YBDZDJ_FQ`GWbIabKhcLnc\
+  NtcOscQscRscTscUpcQmcMjcJhcFecBbc8_c4Yc1`cBbeLdgUf\
+  ichklgmigoggqdgsbdu_`wXYyUUzRRzOOzLKzIHzFDzCAz96z6\
+  3z3wzjozdhzZ`zTczVfzXezXdzYdzYczYczZbzZbzZ`zTZzNYz\
+  HUzORzVNzaKz_9z9Cz9Gz9Jz9 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

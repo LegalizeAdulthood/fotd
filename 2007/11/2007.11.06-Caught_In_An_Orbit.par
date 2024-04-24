@@ -1,0 +1,116 @@
+;     Date: Mon, 05 Nov 2007 21:39:25 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 06-11-07 (Caught in an Orbit [7.5])
+; 
+;       Id: <1.5.4.16.20071105214049.2ad7f676@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 06, 2007 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; ALERT -- TODAY'S FORMULA IS A NEW ONE!  SAVE IT!
+; 
+; Monday evening I reached the point where I could no longer 
+; endure the flawed MandelbrotBC2 formula, with its ground level 
+; at +3.14159... so I added PI to the fifth line of the BC2 
+; formula and named the tweaked version MandelbrotBC3.  Today's 
+; image was created with the BC2 formula and converted to the BC3 
+; formula, which explains the odd value for real(p2).  (The value 
+; was 89 in the BC2 version; the value in the BC3 version is 89 
+; minus PI.)  In addition, I generalized the function.
+; 
+; Today's fractal was created by the expression Z^(1.09)+C, which 
+; is so close to being linear that one could hardly expect it to 
+; produce an interesting fractal.  But we are dealing here with 
+; fractals, and fractals, even those of such a low order, do not 
+; always behave in a predictable manner, especially when they are 
+; calculated 85.8584... levels up the logarithmic ladder.
+; 
+; At this height, the parent fractal of today's image resembles a 
+; torpedo.  Not surprisingly, the minibrot in today's image also 
+; resembles a torpedo, or perhaps a rocket ship that has landed on 
+; a lost planet circling the red-dwarf star Wolf-359.
+; 
+; I named today's image "Caught in an Orbit" for a reason I have 
+; long since forgotten.  The rating of a 7-1/2 includes the extra 
+; work I put into the coloring and also minor task of writing the 
+; new formula.
+; 
+; The calculation time of 2-1/2 minutes is slightly slow, but the 
+; image is worth it, and relief from iteration pains is available 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the pre-rendered image is posted for instant viewing.
+; 
+; Monday turned out better than expected here at Fractal Central.  
+; The skies were sunny, the wind was light, and the temperature 
+; reached 57F 14C.  The fractal cats checked the pigeon situation, 
+; then spent most of the afternoon on their shelf in the sun.  
+; Rain moved in after dark, but by then it had already been a fine 
+; day.
+; 
+; My day was close to average, the way every day should be.  The 
+; next FOTD will appear in 24 hours.  Until then, take care, and 
+; how many visionaries does it take to see an actual fractal?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Caught_In_An_Orbit { ; time=0:02:35.44-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 center-mag=-1.8897526870\
+  35/+16.753530446161/2324853/1/-170/0 params=1.09/0\
+  /85.858407346/3500 float=y function=floor
+  maxiter=36000 inside=255 logmap=135 periodicity=10
+  colors=000YSCVRAXR9WRAWRAVRBVQBVQBUPCUPCTODTNDTNDS\
+  MESNESNERNFRMFQLGQLGQKGPKHPJHPJHNIGLHFKGFIFEGDEFBD\
+  D9CB9CA8B87B66A5693591580683B96G99L9CO9FSAHSAK_ANb\
+  AQfBTjBWnBYqBhzCZnCZmCZlC_kC_jC_iC_hD_gD`fD`eD`dD`\
+  cDabDaaDa`Ea_EaZEbYEbXEbWEbVEbUE`TG_SHZRIYRJXQKVPL\
+  UOMTONSNORMPPLQOLRNKSMJTLIUJIVIHWHGXGFYFFZHH_IJ`JK\
+  aKMbLNcNPeOQgPSiQTkRVmTWoUYqVZsW`uXawZcx_dy`fzagzb\
+  izcjzahy`fxZdwYbtX`qVZnUXkTVhRTeQRbPP_NNXMLULJPJHK\
+  IFFHDBFB9E96D84H79L7DP7IT7MX7Q`6Ve6Zk6cq6gw6kt8jq9\
+  inBhlCglDfkFejGdiHdiJchKbgLafN`eO_eQZdRZcSYbUXbVWa\
+  WV`YU_ZT__TY`UXaUWbVVcVTdVSeWRfWQgWOgXNhXMiXLjYJkY\
+  IlYHmZGnZFnZHk`JiaLgbNecPbdR`eSZfUZgW_hY`i_ajabkcc\
+  lddmfenhfojgplhqnirojsmkpllnkmkzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzmmz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

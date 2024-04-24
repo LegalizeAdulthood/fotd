@@ -1,0 +1,98 @@
+;     Date: Mon, 19 Nov 2007 22:18:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-11-07 (Julia Broken Up [6])
+;       Id: <1.5.4.16.20071119221949.2b8732e0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 20, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Julia Broken Up" because it is the Julia 
+; set of the center of yesterday's 'All Broken Up' image.  As 
+; such, it shares many of the features of that image, as well as 
+; virtually the same color palette, but at the same time it brings 
+; enough new aspects to make it worth being chosen as the FOTD for 
+; November 20.
+; 
+; With nothing really totally new to offer, the image could hardly 
+; be rated much above a 6, and in fact, this is what I rated it.
+; 
+; Perhaps the most interesting thing about the image is yet to 
+; come.  I could have created the image more directly with the 
+; type=julzpower formula, but I used the SliceJulibrot4 formula 
+; instead.  I did this because I am curious as to the appearance 
+; of this area of the Z^(4.003)+C Julibrot when sliced in the four 
+; remaining mutually perpendicular planes of the four-dimensional 
+; space in which it lies.  I will check these other orientations 
+; sometime tomorrow, and if I find anything of unusual interest, I 
+; will include it as tomorrow's FOTD.
+; 
+; The calculation time of 4-1/2 minutes is thankfully brief.  Even 
+; briefer is a visit to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; to view the finished GIF image there.
+; 
+; Very unpleasant weather prevailed here at Fractal Central on 
+; Monday.  Not only was it cloudy and just above freezing all day, 
+; but the melting slush made walking a major effort.  The fractal 
+; cats passed the day keeping warm.  My day was just busy enough 
+; to keep my mind off the miserable conditions.  The next FOTD 
+; will appear in 24 hours.  Until then, take care, and search for 
+; the real reality.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Julia_Broken-Up { ; time=0:04:25.07-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/18.8653/\
+  1/22.5/0 params=90/90/90/90/-1.222743994189852/2.3\
+  43672119431135e-006/0/0/4.003/0 float=y
+  maxiter=2500 inside=bof60 periodicity=10
+  colors=000RuzThvQdrO_mMWhKTcIQZFOVDMRBKM9HI7EGDHDI\
+  KGNMKSPNXRRaUUfXYkZ`paducgqbhmbiiajeaka`lY`mU_nQ_n\
+  UVfYR_aNTeJMgKPiLSjMUlNXnOZoPaqQcsRftShqJbnBXl3Sk9\
+  PjENjKLiPIhVGh_EfXFeUGdSHcPHaNI`KJ_IJZFKYCLWAMV7MU\
+  5NT2OS0OQEVORaMchLpnd6mZ8fU9`dLUfIOgKIdOJkOKqSKpWL\
+  o`MpeMujNznNvjMtgMpdLo`LoYLnVKmRKlOJkLJkIJgJNcKR_K\
+  UWLYSL`PMdLMgHNkDNn9Or6OuzNrxQowTmvVktYis`grbepeco\
+  h`njZlmXkpVjrThuRgxPfzNhvPisQjpRkmTliUmfVncWo`YpYZ\
+  qU_rRasObtLcuIduGetEetCftAfs8gs6gs4ht0is2hr3hr4gq5\
+  gq6gp7fp8fo9fnBenCemDdmEdlFdlGckHciA_kIcmPgnXjpcnr\
+  krzswzruzqtwqrwpqvootonsnmrmkrmjrlhrkgrkerjdsidrjc\
+  rjcrkcqkcqkcqlcplcpmcpmcghxpmczrKyqJxqIwqHwpGvpFup\
+  EtpDtoCsoCroBrnAqn9pn8on7om6nm5mm4no1mm4lk6ki8jgAi\
+  eChcFgaHf_JeYLdWNcUPbSSaQU`OW_MYZK_YIaXGdWEfVChUAj\
+  T8lS6nTCkTIhTNeUTbUY_UcXViUVmRVmOVmLSmOQmROmUMmXKm\
+  _ImbGmeEmhHmgJmgLmfNlfPie }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

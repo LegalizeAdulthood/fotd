@@ -1,0 +1,118 @@
+;     Date: Sun, 25 Nov 2007 22:39:15 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 26-11-07 (Take it or Leave it [?])
+; 
+;       Id: <1.5.4.16.20071125224057.2b874ff4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 26, 2007 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image has texture, and lots of it.  In fact, it 
+; might set a new record for texture.  The scene of the action 
+; lies in the Z^(1.44225)+C Mandeloid as it appears a single turn 
+; up the logarithmic hyperspiral when the function is eliminated 
+; by setting it to 'ident'.
+; 
+; The value of the exponent--1.44225--happens to be the cube root 
+; of 3.  I chose it because I dislike absolutely random exponents. 
+; The parent fractal consists of a single large bay with an almost 
+; equally large triangular bud on its north side.  Today's scene 
+; with its jagged and poorly defined minibrot at the center is 
+; located near a larger minibrot that lies on a filament extending 
+; east from this triangular bud.
+; 
+; The near-ridiculous amount of texture was achieved by rendering 
+; the scene with the outside set to 'imag'.  A high-contrast color 
+; palette increased the effect.  I have no idea how to rate an 
+; image that I went out of my way to sabotage, so I let it go with 
+; a question mark for a rating.
+; 
+; The name "Take it or Leave it" implies that I do not expect 
+; everyone to approve of such a harsh image.  But the image is not 
+; a total loss.  A careful examination reveals a subtle pattern 
+; amid the chaos, which just might make a worthy, more convention-
+; al image if I were to emphasize it by more appropriate coloring.
+; 
+; The included parameter file takes 3-1/2 minutes to run on the 
+; fast machine and 12 minutes on the slow one, a reasonable time 
+; by any standards.  But if reason fails, do not panic.  Simply 
+; rush to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; If the image is not already posted there for instant viewing, it 
+; soon will be.
+; 
+; With 100-percent sunshine and light winds, the high temperature 
+; of 46F 8C here at Fractal Central on Sunday felt quite pleasant. 
+; The fractal cats agreed as they stretched on their shelf in the 
+; sunniest window.
+; 
+; Except for a customer who for some reason called about his job 
+; at 11am, my day was totally without incident, the weird fractal 
+; notwithstanding that is.  And speaking of fractals, the next one 
+; will appear in 24 hours.  Until then, take care, and the philos-
+; ophy of materialism is quite rational, and it makes good common 
+; sense, but what if the world does not obey the rules of reason 
+; and common sense?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Take_it_or_LeaveIt { ; time=0:03:36.83-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.46417761748/+1.46578697867/211500.7/\
+  1/65/0 params=1.44225/0/1/0 float=y maxiter=2500
+  inside=0 outside=imag logmap=202 periodicity=10
+  colors=000GS3DQ59N8BKBCIDEFGFDNAKLKQTGXUB_U5_U7ZU9\
+  ZUAZUCZUDZUFYUGYUIYUKYULYUNYUOYTQYQRYOTZLV_KUZJTYJ\
+  SYJRXIQXIPWIOWINVHMUHLTHKRGJQGIOGFOHINGLMFOMFRLEUK\
+  DXKD_JCbIBeIBhHAkG9nG9qF8tE7vE7uF8uF8tG8tG9tG9sH9s\
+  HAsHArIArIBqJBqJBqJCXKCQKCWKCoNDfPDmSDfUD`QEeOEdUE\
+  eZEgfFfhFekFdmFcoF`pKZpPWpUUpYZlXbhXfdXj`XnYXkWViV\
+  UgTTeSRcRQaPP_ONYNMWLLUKJSJIQHHOGFMEE852KDDICBGAAE\
+  99C87A66855043422211IhBGdAFa9DY8CV7BR69O58K56H45D3\
+  4A2261130cDD5CC5CC5BB5BB4AA4AA499499c8838c3c737736\
+  63662662K5255244144133133122122011011000000zvBzsA0\
+  zA0z90z90z8zh82e72a70Y62W62T51Q51O4FL4JI3MG3PD2PA2\
+  U8UZ51t0zzzzzuntpiojdie_c`V`XSb_VVSOTQMQOKNLILJGUG\
+  EFECcCAA98c76544c22ZjHcVBBF5cKIGGFcDCAA9c66333wdCU\
+  `AwX9UT8wQ7UM6cI5UE4cB3U72U31muUmvUmwUmxUmmUmmUmmU\
+  mmUzzUzzzzzzzzzzzzzzzzzzzzzzzUzzUzzUzzUzzUzzUzzUzz\
+  UzzUzzUzzUzzUzzUzzUzzUzzU }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

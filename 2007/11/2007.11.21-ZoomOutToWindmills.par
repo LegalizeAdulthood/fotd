@@ -1,0 +1,110 @@
+;     Date: Wed, 21 Nov 2007 08:11:38 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 21-11-07 (Zoom Out to Windmills [No Rating])
+; 
+;       Id: <1.5.4.16.20071121081315.2a3f51f0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 21, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is a simple outzoom from yesterday's image.  I had 
+; to post it because I think it is somewhat of an improvement over 
+; yesterday's version.  Of course, there is no way I could rate a 
+; near-repeat, so I let it go un-rated.
+; 
+; When I did the outzoom, the image reminded me of a whole wind-
+; mill farm, thus the rather cryptic name "Zoom Out to Windmills"
+; 
+; The calculation time of 1-1/2 minutes is quite fast considering 
+; the maxiter of the image and how much of it consists of 'inside' 
+; stuff.  Yes, a good part of today's image, as well as most of 
+; yesterday's, is made of 'bof60' inside fill.  To see just how 
+; much, change the inside option to 'numb'.
+; 
+; Now a word about the missing characters in some of my parameter 
+; files.  I think this happens when I cannot connect to Mindspring 
+; and must post the FOTD through AOL, which appears to send email 
+; in html format.  And there is a bigger problem.  The philofrac-
+; tal list rejects html format.  This explains the missing philo-
+; fractal postings.  Finally, if the finished image is unavailable 
+; on the FOTD web site, give Paul a chance to render and post the 
+; image, and try again later.
+; 
+; The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Continued dull, dreary, damp and chilly weather prevailed here 
+; at Fractal Central all day Tuesday.  The rain ended at daybreak, 
+; but then a fog set in, which covered the area for the rest of 
+; the day.  Due to the dampness, the near-normal temperature of 
+; 41F 5C seemed much colder.  The fractal cats must have agreed, 
+; for they hugged the radiators most of the day.
+; 
+; My day was average, with nothing of unusual importance to make 
+; it memorable.  The next in the unending line of FOTD images will 
+; be posted in 24 hours.  Until then, take care, and, (SQOTD), no 
+; one has ever seen an atom, so how do we know they exist?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+ZoomOutToWindmills { ; time=0:01:24.08-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/2.423648
+  params=90/90/90/90/-1.222743994189852/2.3436721194\
+  31135e-006/0/0/4.003/0 maxiter=2500 inside=bof60
+  float=y symmetry=origin periodicity=10 sound=off
+  colors=000W_aYY_VVXTTWRRUPPSNNQKLNIIKGFHECEA9AGAMK\
+  ATSOGXRJaTNfWQkZUp`Xuc`zecvddrdencfjcgfbhbbiZajVaj\
+  ZXbbTWfPPjLIlMLnNOoOQqPTsQVtRYvS_xTbyUdvLZsDTq5OpB\
+  LoGJoMHnREmXCmaAkZBjWCiUDhRDfPEeMFdKFcHGbEH`CI_9IZ\
+  7JY4KX2KVGRTTYRedQrji8icAbZBXiNQkKKlMEiQFpQGvUGuYH\
+  tbIugIzlJzpJzlIyiIufHtbHt_HsXGrTGqQFpNFpKFlLJhMNdM\
+  Q`NUXNXUO`QOcMPgIPjEQnBQqzPnzSkzVizXgy_exbcwdaug_t\
+  jXslVqoTprRotPmwNlzLkzJmxLnuMorNpoPqkQrhRseStbUu_V\
+  vWWwTYxQZyN_zK`zIayGayEbyCbxAcx8cx6dy2ex4dw5dw6cv7\
+  cv8cu9buAbtBbsDasEarF`rG`qH`qI_pJ_nCWpK_rRcsZfuejw\
+  mnzuswwwwwwzzzzzzzzzwwwwwwwsowofwndwmcwmawl`xk`wl_\
+  wl_wm_vm_vm_vn_un_uo_uo_ljtuo_ztGzsFzsEzsDzrCzrBzr\
+  Azr9zq8zq8zq7zp6zp5zp4zp3zo2zo1zo0zq0zo0zm2zk4zi6z\
+  g8zeBzcDzaFz_HzYJzWLzUOzSQzQSzOUwMWtKYqI`nGbkEdhCf\
+  eAhb8j_EgYKdYPaZVZZ_WZeT_kQ_oN_oK_oHXoKVoNToQRoTPo\
+  WNoZLoaJodMocOocQobSnbUka }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,104 @@
+;     Date: Thu, 15 Nov 2007 18:15:40 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 16-11-07 (A Seahorse Named Epsilon [6.5])
+; 
+;       Id: <1.5.4.16.20071115181713.2adf1c70@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 16, 2007 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It turns out we're still in the Zexpe fractal today, or at least 
+; one of the Zexpe fractals, since there are an infinity of them.  
+; And we're also still at the fourth level of the logarithmic 
+; ladder.
+; 
+; Today we check the main-bay side of the southwest branch of what 
+; corresponds to Seahorse Valley of the parent fractal, where we 
+; find today's strangely realistic scene.
+; 
+; I named the image "A Seahorse Named Epsilon" because it lies in 
+; a parent whose generating formula is Z^(e)+C.  A rated it at a 
+; modest 6-1/2, one-half point of which is due to my coloring.
+; 
+; The calculation time of 2-1/3 minutes is reasonable.  It is 
+; equally reasonable to view the image by visiting the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it has already been calculated and posted.
+; 
+; Heavy rain fell all night Wednesday here at Fractal Central.  By 
+; the time it ended at 11am Thursday, 3.6 inches or around 90mm of 
+; rain had fallen.  The rest of Thursday was cloudy and blustery, 
+; with a temperature of 45F 7C.  A few puddles appeared in the new 
+; fractal cellar during the downpour, but nothing like the several 
+; inches that used to flood into the old fractal basement during 
+; heavy rain.  The fractal cats slept through it all.
+; 
+; My day was adequate.  Hopefully, tomorrow will be the same.  The 
+; next FOTD will appear in 24 hours at this same internet spot.  
+; Until then, take care, and if I could, I would go back to the 
+; year 1900 and spread the news that fractals were coming.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Seahorse Named_E { ; time=0:02:20.66-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor
+  center-mag=+0.5129196182676702/-0.567400274301192/\
+  1.208445e+010/1/37.4997739850628022/0.000251376\
+  462945825108 params=2.71828182845905/0/4/0 float=y
+  maxiter=4800 inside=0 logmap=228 periodicity=10
+  colors=000cRm_PjWNjSMkKRdIT_LTVIOcGT6EP7bhoBYoCSTJ\
+  WUFRIISwy`X`TK5gV9XJGpQEeJDWDbQJWPGPODINA9uaAlUBcM\
+  CVEZOQRNJJMDl`9_W8OR7v7mfCZRHLsSudQdQOOI0vv_MZTEgb\
+  t_YgSUWKQJlPu_OdONOF58EA7DE7CI72jB7Y99hm6qR9aHgJPN\
+  OE2T4S3vTFwTQwU`xUkxZ`jz_XzRJuK5mFBgA0a50Y00T00P00\
+  5bx9UYaBGTFDKJAa0cV6VPBNIHFixoAJ0BK2BL4CM6A4IB9FBD\
+  CCI9d7_VCQLHG2bg7UP1UZ_BmuwqimeZdUNVIVOHxhW8baAUMh\
+  umYiZNYLAyPBeG671t8YhCRYFKNJDekrWbbMUNKXoGRTFpOEeI\
+  DWCaXIVUFPRCIO9SmbMcSHVHNq8Ha7gIsXKbMLNV1GmO`cNTVN\
+  MLMEbwXGaiEUQUeUUaUCWICRCFI4EJ5DK6CL7GEmFGbEISDKH1\
+  zpedP826A97BG7A05BB6E9nDGTwhsg`bSTNPIzIKzoozW`zEZz\
+  DSz9YzTEzOGzKIzGKzBozCezCWzGvzEizDKzH6zFAzEEzDIz6v\
+  zW9zMGzNZzKVzHSzEPz53z8AzAGzPjzLzZIzQFzGIzrLzvGzX1\
+  zbVzZOzPIzG6zs9zVQzH1zA7z8YzkzzlzzSzzHzzCzzizzizz7\
+  zz7zzSzzMzzHzzCzzAzz8zzYzzKzzvzzvzzXzzazztzzczzNzz\
+  VzzQzzLzzGzzBzzUzzIzzvzzX }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,97 @@
+;     Date: Sat, 10 Nov 2007 11:36:51 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 10-11-07 (Incomprehensible [No Rating])
+; 
+;       Id: <1.5.4.16.20071110113818.2b87e31e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 10, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is late because I had no chance to finish it on 
+; time.  But here it is in all its hasty glory -- a scene 
+; picturing a 'minibrot' in the 'East Valley' of the Z^(1.7)+C 
+; Mandeloid as it appears 44 levels up the logarithmic ladder.
+; 
+; Since it took me only 2 minutes to find the image, I could give 
+; it no rating.  The name "Incomprehensible" describes my 
+; impression of the world of fractals.
+; 
+; The calculation time of 1-1/3 minutes will cause no impatience. 
+; And as always, the finished image is available on the FOTD web 
+; site.  But due to the lateness of this posting, give Paul a 
+; chance to render and post the image before visiting the site, 
+; which may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy clouds, light rain and chilly temperatures made Friday one 
+; of the more unpleasant days here at Fractal Central.  The 
+; fractal cats were so put off by the conditions that they didn't 
+; even bother to look for the pigeons that sometimes peck for food 
+; on the sidewalk.  (BTW, what food do pigeons find on pavements 
+; that is nourishing enough to keep them so healthy?)
+; 
+; My day was unexpectedly busy, but tomorrow will be slower.  The 
+; next FOTD will appear in only 12 hours.  Until then, take care, 
+; and when time ends, will fractals still exist?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Incomprehensible   { ; time=0:01:21.47-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=floor
+  center-mag=+0.127824723136437/+0.1574929171029857/\
+  1.557655e+007/1/2.5/0 params=1.7/0/44/0 float=y
+  maxiter=2000 inside=0 logmap=152 periodicity=10
+  colors=000gKbhKfhKeiKdiKdjKcjKcjKbjKbjKakKakK`lH`l\
+  D_m9_lAajAbhBcgBdeCecCgaDh`DiZEjXEkWElVFjUFhUGfTGe\
+  TGcSHaRH_RIZQIXQIVPJTOJSOKQNKONKMMLLLLJLMHKMFKMEJN\
+  FIOGHPHGQIGQJFRKESLDTMDTNCUOBVPAWQAWR9XS8YT7YUAXVF\
+  WZKUbPTaUU`ZW_cYZh_YlaXmcWoeVqgUsjTulSwnRxpRvqTuqU\
+  sqVrqWqqXorYnrZlr_kr`jrahscgsdesedsfcsgath`uiZujYu\
+  kXulWsmVqnUpnTnoTloSkpRipQgqQfqVj0Zh5ag9dfDgeHkdLn\
+  cPqbTtaXs`Xr`Xr_Xq_Xp_XpZXoZXoYXnYXmYXmXXlXXlWXkWX\
+  jWXjVXiVXiUXhUXgUXgTXfTXfTXgSXhRXiQXkPWlOWmNWnMWoL\
+  WfMXZMXRMXJMXBMX3MX6NU9NSCNQFNOINLLNJONHROFUODXOA_\
+  O8bO6eO4gO2dNAaMHZLOWLVTKaQJhNIoKIvLJsMKpNLnOMkPNh\
+  QNfPOgPOgPPhPPhPQiPQiPRjPRjPSkPSkPSkSbfUlaWvXSpVPj\
+  TMdSJZQGTPDNNAHL7BK45I10H62IA4JF6KJ8LNAMSCNWEO_GPc\
+  IQgKRkFQoBQsFSuJTwNUxRWyUXzWYzYZz_XzaVzcUzeSzgQziP\
+  vkNrmLmoKhqIcsHZuKWwNUxQRyTOzWMzZJzaGzdEzgBzj8zm6z\
+  p3zs1zv6ztAzrFzpJznNzlPzg }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

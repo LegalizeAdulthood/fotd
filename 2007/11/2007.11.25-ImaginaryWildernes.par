@@ -1,0 +1,105 @@
+;     Date: Sat, 24 Nov 2007 23:20:03 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 25-11-07 (Imaginary Wilderness [5])
+; 
+;       Id: <1.5.4.16.20071124232144.2ac76a2c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 25, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's merely average fractal was found in the parent fractal 
+; that results when the formula Z^(2+0.01i)+C is iterated two 
+; levels up the logarithmic ladder.  This parent at first appears 
+; to be a normal Mandelbrot set rotated so that its main spike 
+; faces southeast.  But the surface appearance is deceiving.  
+; There is a split on the positive X-axis and the period-5 bud 
+; normally on the southwest shore of the main bay lies right on 
+; this split.
+; 
+; It should come as no surprise that the features in the vicinity 
+; of the split are distorted.  The minibrot in the center of 
+; today's image is a typical example.  It appears to have gotten 
+; its north and south halves out of phase, with the two branches 
+; of Seahorse Valley no longer lining up.
+; 
+; I named the image "Imaginary Wilderness" because fractals with 
+; complex and imaginary exponents are virtually unexplored -- at 
+; least by me.  The rating of a 5 seems fair for a fractal done in 
+; such haste.  The calculation time of just under 3 minutes may be 
+; avoided by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; The sun was bright here at Fractal central at sunrise on 
+; Saturday morning, but the temperature of 21F -6C promised a cold 
+; day.  The fractal cats slept until it warmed to above freezing.  
+; My day turned busier than expected when I let F.L. talk me into 
+; a trip to a local antique mall to see the stuff that someone 
+; else threw away.  (Actually, I kind of enjoyed it.)  When we 
+; returned around sunset however, the cats were sulky at having 
+; been left alone for most of the day.  The next FOTD will be 
+; posted in 24 hours, for all it is worth.  Until then, take care, 
+; and search for the secret.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+ImaginaryWildernes { ; time=0:02:54.25-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.8488258557/-0.0209973644/15601.18/\
+  1/82.5/-3.5510218377e-010 params=2/0.01/2/0 float=y
+  maxiter=5000 inside=0 logmap=203 periodicity=10
+  colors=0008FA9FCAGDAGEAHEAHFAIFBIGBJGBJHBKHBKICKJC\
+  LJCLKCMKCMLDNLDNMDOMDONDPNEPOEPPEQPEQQERQFRRFSRFSS\
+  FTSFTTFTTFTTLYWRbZYh`cmcirfowhlsgjpfhmefiddfcbcb``\
+  aZX`XU_VRZTOYRKXPHWNEVJATLBUNCVODWQEWRFXTGYVHZWIZY\
+  J_ZK``LaaMacNbeOcfPchQdiRekSflTfnUgpVhqWisXitYjvZk\
+  xYlwZkvZkuZktZjsZjsZjrZiqZipZioZhnZhnZhmZglZgk_gj_\
+  fj_fi_fh_eg_ef_ee_de_dd_dc_cb_ca_ca_ca_ca_ca_cb`ac\
+  a_dbYecWfdUgeSgfQggOfgMffKffIeeGedEddCdcAdc8cb6ca6\
+  ca6b`6b`5a_5a_5aZ5`Y4`Y4`X4_X3_W3ZV3ZV3ZU2YU2YT2_U\
+  0YT2XS4VS5UR7TR8RQAQQCPPDNPFMOGKOIJNJIMLGMNFLOELQC\
+  KRBKT9JV8JW7IY5IZ4H`0Gb3Ha5Ia7J`9J`CK_EL_GMZIMZLNY\
+  NOYPPYRPXUQXWRWYSW_SVbTVdUUfVUiUUhVWgVYfV_eVadVccW\
+  ebWgbWiaWk`Wm_XoZXqYXsXXuWXwVYyWXzXWzXVzYVzYUzZTzZ\
+  Sz_Sz`Rz`QzaPzaPzbOzbNzcMzcNzdOzePzeQzfRzfSzgTzgUz\
+  hUziUziUzjUzjUzkUzkUzlUzmUzlUzmUzmUzmUzmUzmUzmUzmU\
+  zmUzmUzmUzmUzmUzmUzmUzmUz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

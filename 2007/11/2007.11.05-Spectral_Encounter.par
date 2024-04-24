@@ -1,0 +1,110 @@
+;     Date: Sun, 04 Nov 2007 22:13:55 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 05-11-07 (Spectral Encounter [7])
+; 
+;       Id: <1.5.4.16.20071104221517.2b5f012e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 05, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Spectral Encounter".  I named it when I 
+; pondered the fact that the image is not really there.  It is an 
+; evaporated image, a ghost if you will, made manifest by the 
+; 'bof61' inside fill.
+; 
+; Since ghosts are not supposed to be real, I could give the image 
+; a rating no higher than a 7, but it's actually a rather pleasant 
+; diversion, whose only drawback is the slow calculation time of 
+; 15-1/2 minutes on my fast P4-2000 machine and almost 1-1/2 hours 
+; on the slow old P200.
+; 
+; The image itself is indescribable, vaguely resembling some 
+; exotic tropical jungle.  There is a midget at the center, but it 
+; lies far beyond the resolution limit.  In fact, the resolution 
+; is already starting to break down in the actual image.  The 
+; 'mathtolerance' entry is necessary to assure that the parameter 
+; file renders at the correct magnitude of 3.66*10^12.
+; 
+; The generating expression combines various negative portions of 
+; Z^(-1.1) and Z^(-11.1) then adds (1/C).  Before it is evaporated 
+; the resulting parent fractal is an immensely oversized thing 
+; consisting mostly of rings and requiring several outzooms to fit 
+; completely onto the screen.  Today's scene lies in the East 
+; Valley area of a large minibrot not too far southeast of the 
+; origin.
+; 
+; The frustrating wait for the parameter file to finish may be 
+; avoided by stopping by the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the already finished image there.
+; 
+; A few too many clouds and a temperature a few degrees too chilly 
+; made Sunday only an average day here at Fractal Central.  The 
+; fractal cats were not bothered by the temperature of 52F 11C, 
+; but those pesky pigeons pecking on the sidewalk annoyed them no 
+; end.  Finally however the pigeons flew away and the cats settled 
+; down for their afternoon naps.
+; 
+; My day was as good as could reasonably be expected.  The next 
+; FOTD image and discussion will be posted at this same internet 
+; spot in about 24 hours.  Until then, take care, and where will 
+; the universe be a google years from now?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spectral_Encounter { ; time=0:15:31.59-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+7.365065632339196/-7.058195106026997/\
+  3.660111e+012/1.0009/162.8253108182/0.065113202793
+  params=-5/-1.1/-11/-11.1/0/1e+100/0/0 float=y
+  maxiter=6000 inside=bof61 logmap=1274
+  periodicity=10 mathtolerance=0.05/1
+  colors=000aKWbOUZSRVWOR_LNcIJgGFeDBcA7`74_58X9BVDE\
+  TGHRVKPNNN`RKVUIYXGa_EdbCheAkcEmbHn`Ko_NpYQqXUsVXt\
+  U_uSbvRewA63D95GB6IE7KG8NJ9QLBSOCUQDXSE_VFaXHc_Ifa\
+  JidKkfLnhMogNpfOqfPpePoeQodRndRmcSmbTmbUmaUnaVn`Wm\
+  `WjZTgXRdVPaTPZRPWPPTNPQLPNJNKJLHIJFIKEIKCIKBIKAIK\
+  EJKHKKKKKNLKQLKTMKWMHZNEaNBdO8gO5_QKTSYMUkFWyJ`kMe\
+  ZPjMSo9Ss5XdT`RpbQodQofQogQniQnkQnmQmnPmpPmrPltPlu\
+  PlwPkyPkzPkyQhxQfwQdvQbuR_tRYsRWsRUrSRqSPpSNoSLnTI\
+  mTGlTElTCiUEgUGeUIcUK`ULZUNXUPVVRTVTQVUOVWMVYKV_IV\
+  `NTZSQXXNVaKTfIS`HRVGQPGPJFODEN7EM4aW2xe5ph8ijBblE\
+  WnJ`lOekTjiYnhdVJbTHjREjSCfSAbN8XJ6TF4JF2IF0IJ6INC\
+  JRIJVOJYUI`_IcdM``QZYUWUYURaRNePKiMKrPKzUPvGGnELhC\
+  QbAVX8_F9`H9aJAaLAbNBcPBcQCdSCeUDeWDfYEg_EgaFhbFhc\
+  FgcGedHcdIbeI`eJ_fKYfKXeK_MUQWUZeUgnUpiUkeUfaUaYUX\
+  UUTQUOMUJIUEEU9AZ5Dc5Fh5Im5mr5mv5mz5mz5mz5mz5mz5az\
+  5cz5fz5hz5kz5mz5iz7RzKQzM }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
