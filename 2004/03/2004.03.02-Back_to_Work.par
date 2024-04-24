@@ -1,0 +1,90 @@
+;     Date: Tue, 02 Mar 2004 12:17:59 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-03-04 (Back to Work [6])
+;       Id: <1.5.4.16.20040302122046.2997bcc0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 02, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The non-fractal work is unexpectedly heavy again here at F.C., 
+; so today's discussion will have to be short and to the point.
+; 
+; The point is that today's image is a scene in the fractal which 
+; results when 9.9 parts of Z^(-0.41) are subtracted from 0.9 
+; parts of Z^(1.4) and (1/C) is added.  This fractal resembles 
+; a distorted Mandelbrot set with East Valley on its southern 
+; side.  The scene of today's image is located in the interior of 
+; this valley.
+; 
+; The coloring is different from my usual rather somber palettes.  
+; Instead of dark blues and purples, I have colored it in bright 
+; oranges and tints of white, with a little green and black thrown 
+; in for emphasis.
+; 
+; The image was calculated using the outside=tdis option, which, 
+; in this image, gives more bands than the normal equal-iteration 
+; method, and therefore smoother colors.
+; 
+; I named the image "Back to Work" because that's what I have to 
+; do as soon as I post this letter.  The image has been rated at a 
+; 6.  The render time of 8 minutes gives an overall value of 68.
+; 
+; And the minor task of rendering the image from the included 
+; parameter file may be avoided by downloading the completed GIF 
+; image from Paul's FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another near perfect late winter day here at Fractal Central on 
+; Monday kept the two fractal cats happy.  The sun and temperature 
+; of 57F 14C were pleasant for people also.  Today is starting 
+; cloudy with light rain, but the rain is already moving out.  I 
+; expect better things to come by afternoon.
+; 
+; For me, the work is heavy today, but I always manage to find 
+; time enough for another fractal.  Until tomorrow, when that 
+; fractal will appear, take care, and have you tried the miracle 
+; fractal diet?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Back_to_Work { ; time=0:08:48.22--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.10212840421265620/+0.057868193267248\
+  99/3.902478e+008/1/180 params=0.9/1.4/-9.9/-0.41/0\
+  /525 float=y maxiter=1200 inside=0 outside=tdis
+  periodicity=10 colors=000QhVOiWNhVNgVNfUNeUNdTNcTN\
+  bTNbSNaSN`RN_RNZRNYQNXQNWPNWPNVONUONTONSNNRNNQMNPM\
+  NPMORLOSLOTKOUKOVJOWJOXJOYIOZIO_HPaHPbGPcGPdGPeFPf\
+  FPgEPhEPiDPjDPkDTjHXiL`hOdgSgfVkeZodbscewbizblyahy\
+  aeyabyaZy_WxYTxWQxXMxYJxZGw_Dw`9wa6wb3wc0vd3ve6vf9\
+  ugCuhFuiIujLukOulRumUunWuoZupauqdurgusjutmuupuvsuw\
+  vuxxuxuuwssvpqtnprkopinnfmldljakh_J31L52M72O93PB3Q\
+  D4SF4TH4VJ5WL5XN6ZP6_R7`T7bV7cX8eZ8f`9gb9idAjfAkhA\
+  ikBgnCfqDdsEbwFazGrzHzzIzzJzzKzzLWzKXwJYuJZsI_qH`o\
+  HanGclFdkFejEfiDggDhfCieBjdBacLTcVKbcBbm3bv5`t6Zs8\
+  Yq9WzBmzCTzESzFQjHOiINhKLfLKeNIcOHbQFaRD_TCZUAXW9W\
+  X7VZ6T_4S`3Ra5Ta6Ua7Vc8Wh9YmAZrB_wC`wDarEcmFdhGedH\
+  fdIgdJieKjeLkeMleNmdOncPnbQoaRp`Sp_TqZUrZUrVRnSPkP\
+  NhMKeJIbGG_DEXCHVBKUANTAQR9TQ8WP7ZN7aM6dL5gJ4jI4mH\
+  3pF2sE2vD4tF6sG8qI9pJBnKDmMFkNGjOIhQKgRLfSMeUNeVNd\
+  WOdYPdZPc_Qc`RbbRbcSbdTafTagUahV`iVdRSfT }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

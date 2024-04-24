@@ -1,0 +1,107 @@
+;     Date: Fri, 05 Mar 2004 12:33:48 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-03-04 (Cubic Mandelbrot [4])
+;       Id: <1.5.4.16.20040305123639.22a72b02@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 05, 2004 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today there is some good news and some bad news.  The good news 
+; is that I will take steps to assure the unbroken continuity of 
+; the daily FOTD's.  I will put several images and discussions 
+; into a spare directory and hold them for use on the days when I 
+; lack the time to find a new image and write a new discussion.  
+; The bad news is that it will take several days to create the 
+; backup supply of FOTD's.  As a result, today's FOTD will be the 
+; last until March 9th.
+; 
+; On the Fractint list, Tony Hanmer wrote:
+; 
+; >In a formula such as MandelbrotMix4, are there enough midgets 
+; >to make very tiny jumps from one to the next, such that each 
+; >midget stays the same size and orientation but only its surroun-
+; >ding detail changes slightly?  This would lead to animations 
+; >with a stable midget, which would be amazing to see.
+; 
+; The answer is yes.  The number of midgets that could be created 
+; with the MandelbtotMix4 formula is one of the higher infinities, 
+; and animations such as you describe would be fascinating to 
+; watch.  But making animations with the M-Mix4 formula raises 
+; problems.  When the parameters are changed, the detail around 
+; the midgets does indeed change.  And the size and orientation of 
+; the midgets remains nearly unchanged.  But the midgets jump 
+; around in a totally unpredictable manner, and are quickly lost 
+; beyond the edges of the screen.  As a result, it becomes neces-
+; sary to track the midgets down, and when they are finally found, 
+; sometimes with much difficulty, it is nearly impossible to posi-
+; tion them in exactly the same spot on the screen.  The resulting 
+; animations are jerky and very unpleasant to watch.
+; 
+; Not much need be said about today's image.  It is a scene in a 
+; remote valley in the northwest quadrant of the cubic Mandelbrot 
+; set.  The image has been running for the last hour while I have 
+; been busy at other tasks.  The rating of a 4 hardly makes the 
+; render time of over 1-1/4 hours worth the effort.  The overall 
+; value comes in at a nominal 5.
+; 
+; The image may be seen with much less effort by viewing it on 
+; Paul's FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; But before going there, give Paul a chance to render and post 
+; the image.
+; 
+; The light rain on Thursday morning ended before noon, leading to 
+; a cloudy and mild afternoon.  Before venturing outdoors, the 
+; dynamic duo checked the temperature and found it was 52F 11C.  
+; They decided this was acceptable, and spent several hours in the 
+; yard, nibbling the new grass.  This morning is starting with 
+; similar weather.  We shall see what the duo decides.
+; 
+; My decision is to attack the pile of work still before me, so 
+; until next time, which will not be until March 9th, take care, 
+; enjoy fractals while you have them, and be certain you will 
+; always have them.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Cubic_Mandelbrot { ; time=1:16:36.22--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotCube passes=1
+  center-mag=-0.25362329215568170/+1.276686610281370\
+  00/2.409843e+009/1/2.49999017136973389/7.615552049\
+  72785837e-006 params=0/0/0/0 float=y maxiter=75000
+  inside=0 logmap=-4088 periodicity=10
+  colors=000TKUSKVRKWQKXPKYOKZNK_MK`LKaKKcKKeKKgKKjK\
+  KmMKpOJpQIrWLtUOvWRxYUy_Xza_zcbzeezghzhkzgnzgqzcry\
+  _sxWtwSuwOvwKwwGxwXywOzwFzw6zu8zs9wqAuoCsmDqkEoiFm\
+  gFkeGicGgcHedHcfHaiI_kIYmJWoJWmJVkPWhTVcOU`MSZLPVK\
+  JAJMAIOBHRBGTBISCJSDKSEMRFNRGORHQQIRQJSQKTQL`VJh_I\
+  odHl_MiVRgRWcTU_VSYXQWZOX`MYbKZdI_fG`hEagIbfLceOdd\
+  RecVfbYga`h`ci_gjZjkYmlYpmXnmWlmVjmUhmTfmSdmRbmQ`m\
+  PZmOXmNVmMTmLRmKPmJNmIMmESmAXmDUmFRmHOmJLmLJmNGmPD\
+  mRAmT8mQ7mO7mM6mK9mICmGFmEImCLmAOmERmIUmMXmQ_mUbmY\
+  em`hmdkmhnmlqmptmtwmwzmvzmuzmtzmszmrzmqzmpzmozmnzm\
+  mzmlzmkzmjzmizmhzmhzm`zmUzmNzmGzm9zmBzmDzmFzmHzmJz\
+  mLzmNzmOzmRzmOzmMzmJzmHzmEzmCzmAzmCzmEzmGzmIzmKzmM\
+  zmOzmPzmRzmTzmVzmXzmZzm`zmazmZzmXzmVzmTzmUzmUzmUzm\
+  UzmUzmUzmUzmUzmUzmRzmNzmJzmEzmAzm6zm9zmCzmFzmIzmLz\
+  mNzmQzmTzmWzmZzmazmczmXzmQzmJzmCzm6zm8zm9zmAzmCzmD\
+  zmEzmGzmHzmIzmKzmLzmMzmMz }
+
+frm:MandelbrotCube {; Jim Muth  real(c),imag(c)
+z=p1, c=pixel+p2:
+z=z*(sqr(z))+c,
+|z| <= 16 }
+
+; END PARAMETER FILE==================================
+; 

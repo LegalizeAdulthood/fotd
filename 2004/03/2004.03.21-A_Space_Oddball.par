@@ -1,0 +1,107 @@
+;     Date: Sun, 21 Mar 2004 12:23:34 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-03-04 (Correct version -- A Space Oddball [5]
+; 	  )
+;       Id: <1.5.4.16.20040321122634.2a0ffc72@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 21, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's adventure in fractal land we return to that 
+; rectangle in the Julia set of the Z^(2.003) Julibrot.  But we do 
+; one thing very different.  Instead of viewing it in the Julia 
+; direction, we turn our viewpoint 90 degrees and view it in the 
+; Oblate direction, which is determined by the real(Z) and imag(C) 
+; axes.
+; 
+; Surprisingly, the rectangle is still a rectangle, though it is 
+; now quite squashed, and its top and bottom edges are no longer 
+; sharply defined, but have become fuzzy.
+; 
+; When viewed from this direction, the scene has origin symmetry, 
+; the lateral elements being transformed into graceful swirls.  
+; With few more good features to tell of, the image could be rated 
+; no higher than a 5, which, with a 21-minute render time, equals 
+; an overall value of 24.
+; 
+; Perhaps remembering that great film of 35 or so years ago, which 
+; was set in a future that is now 3 years in the past, I named the 
+; image "A Space Oddball".  And I wonder why none of the things 
+; foreseen in that film have come true.  I guess it's a plot of 
+; the evil space aliens to keep us helpless in preparation for the 
+; coming takeover and enslavememt.  :-)
+; 
+; The enlightened will avoid the aliens and save 20 minutes by 
+; downloading the finished image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Those who enjoy watching their fractals come to life will run 
+; the included parameter file.
+; 
+; The first day of spring turned out to be very pleasant here at 
+; Fractal Central on Saturday.  The fractal cats took full 
+; advantage of the sun and temperature of 59F 15C by spending most 
+; of the afternoon in the yard, checking the spring bulbs that are 
+; already showing.  At sunset, they came inside for their evening 
+; treat without urging.  Today is starting mostly sunny and mild, 
+; but it is quite windy, and the duo dislikes wind, which conceals 
+; the sound of danger.  It remains to be seen what kind of day 
+; they will have.
+; 
+; Regardless of the cats' day, my day will be pleasant, and the 
+; fractals will all be above average.  Until next time, take care, 
+; and hang on to your fractals.  Once you lose them, they are gone 
+; forever.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Space_Oddball { ; time=0:20:55.04--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=t
+  center-mag=0/0/3303.206/0.0232/0/-77.7313946499058\
+  517 params=0/0/90/0/-1.7435/0/0.00019/0.07388/\
+  2.003/0 float=y maxiter=60000 bailout=9 inside=0
+  logmap=66 periodicity=10
+  colors=0008355450532654765877999AAABBCCDEDEFEFHFHI\
+  GIKHJMGLNFMPENREPSDQUCRVBSXBUZAV_9Wa8Yc8Zd7_f6ag5b\
+  i5ck4el3fn2gp2iq1js0kt0ls3is6gr9drCbqF`qIYpLWpOToR\
+  RoTPnUOmVOlVOkWOjWOiXNhYNgYNfZNeZNd_Nc_Mb`MaaM`aM_\
+  bMZbLYcLXcLWdLVeLUgLTiKSkKRmKUoK_qKatJcuJexJhyJhzJ\
+  hzKhxJevKbsLZsLUoMPnMKkNFiOFgOEePEePDdQDcRCcRCbSBb\
+  SBaTB`UA`UA_V9_V9ZW8YX8YX7XY7XY6WZ6V_5V_5U`4U`4Ta4\
+  Ta5Wc5Ye6_f6bh7di7fk8il8kn9mo9pqArrAtt8wvAvuBvtCvs\
+  DvrEvqFvpGvoHvnIvnJvmKvlLvkMvjNviOvhPvgQwfRwfSwdTw\
+  bTwaUw_UwYVwXVwVWwTWwSXwQYwOYwNZwLZwJ_xI_xG`xE`xDa\
+  xBaxAbxBcxCdxDexEexEfxFgxGhxHixIixIjyJkyKlyLmyMnyN\
+  oyOpyPqyQryRsyStyTuyUvyVwyVxyWyyXzzXzzYzzYzzZzz_zz\
+  `zzazzbzzczzdzzdzzezzfzzgzzhzzizzjzzjzzkzzlzzmzznz\
+  zozzpzzpzznzzlzzkzzizzhzzfzzezzczzFzzEzzEzzDzzCzzC\
+  zzBzzBzzAzzAzz9zz8zz8zz7zz7zz6zz5zz5zz4zz4zz3zz2zz\
+  3zz3zz3zz3zz4zz4zz4zz4zz5 }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE==================================
+; 

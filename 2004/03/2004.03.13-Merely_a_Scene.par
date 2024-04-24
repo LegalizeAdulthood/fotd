@@ -1,0 +1,106 @@
+;     Date: Sat, 13 Mar 2004 08:50:24 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-03-04 (Merely a Scene [5])
+;       Id: <1.5.4.16.20040313085318.0d67a982@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 13, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an error.  When setting the parameters, I 
+; inadvertently forgot to reset the formula function to 'floor'.  
+; The results of the mistake were not all bad however.  Like the 
+; 'Tim's error' formula in Fractint, the mixed-up formula produced 
+; quite an interesting image.  So that this mix-up does not happen 
+; again, I will rewrite the MandelbrotBC1 formula, rename it 
+; MandelbrotBC2, and change the variable parameter to a fixed one. 
+; But the image that was produced in error will keep its honored 
+; position as FOTD for March 13.
+; 
+; The parent fractal consists of a large irregular bay with 
+; several tiny bays along its smooth eastern shore.  The western 
+; shore of the bay consists of what I call wetland -- a large area 
+; of near total chaos.  But as today's image, which is a scene in 
+; this wetland, shows, near total chaos does not equal uselessness.
+; 
+; I have given the image the simple name "Merely a Scene".  That's 
+; what it is.  There is no sign of my ever-present midgets, though 
+; some rudimentary ones do exist is other parts of the parent 
+; fractal.  The image consists of a single shaft jutting down from 
+; the top of the frame and meeting a fragment of a second shaft 
+; near the bottom of the frame.  The distant background is filled 
+; with similar shafts.  The main shaft has an unusually vivid 
+; three-dimensional appearance, an effect that is not always easy 
+; to achieve with colors alone.
+; 
+; I gave the image a rating of a 5.  The lack of a midget dropped 
+; the rating as much as two points.  Another bad feature is the 
+; slowness of the image, which takes over one hour to render on my 
+; machine.  When the rating and render time are combined, the over-
+; all value comes in at a lowly 7.2.
+; 
+; The hour wait for the image to render can be avoided by down-
+; loading the completed GIF file from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The image is slow, so before visiting the site, give Paul a 
+; chance to render and post it.
+; 
+; Too much wind and too low a temperature kept the fractal cats 
+; confined indoors on Friday, but today is starting with much less 
+; wind.  Hopefully, the temperature will rise to a level that is 
+; acceptable to the cat duo.  If not, it's back to the tuna.
+; 
+; As for me, I've got a bit of work to finish, and then it's all 
+; fun and games.  Until next time, take care, and if you don't 
+; take care, watch out.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Merely_a_Scene { ; time=1:09:15.00--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=recip passes=1
+  center-mag=+0.67813638334978250/+0.185081778774343\
+  90/1.597705e+007/1/-40/1.216475693094354e-008
+  params=1.2/0/0/0 float=y maxiter=10000
+  inside=255 logmap=874 periodicity=10
+  colors=000aUY_TWYSUVRSSQQPOONNMKLKHJIEIGCGE9FC6DAA\
+  494C97FB9HDBJEELGGNIIPJLRLNTMPVORXQUZRW`TYbV`dWbfY\
+  dhZfj`hlbjnclpenrgpthrvjtwkvxmwyoxzqyzszzuzzwzzyzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzfHFfIFeJGeKHdLHdMIcNJcOKbPKbQLaRM\
+  aSM`TN`UO`UOZVNYVNXWMVWMUXLTXLRXLQYKPYKNZJMZJLZJJ_\
+  II_IH`HF`HE`HDaGBaGAbF9bF6YJ7`H8bF9eDAgCBjACl8Fz9D\
+  n7Cc6CT2BT5AT89TA9TD8TG7TI7TL6TN5TQ5TT4TV3TY3T`2Tb\
+  1Te1Tg9WaGZX_VQYURWTSUTTSSUQRVOQWMPXKPYIOZGM_EK`CI\
+  aAHb8Fc6Dd4Be18g29e3Ac3Cb4E`4G_5IY6JX6LV7NU7QS8TR8\
+  WP9YOAUMA_LBdJBiIClGCnFIeHNXJSOLXFNY4Fa6Pe8Yj9eiAf\
+  hBghCggDhgEifFi`GheHjdIkdJlcKlcLmbMmbNnaOo`Po`Qp_R\
+  p_SqZTrZUrYVsSYuVXtYWs`VubUweTyhSzkRzmQzpPzsOzuNzv\
+  RzvUzvUzwUzwUzwUzwUzxUzxUzxUzyUzxUzwUzvUzuUzuUztUz\
+  sUzrUzrUzqUzpVzoTznQznNzmLzlIzkFzj9zkDzkHzlLzlOzlS\
+  zmWzm_zsfzpdzmbzjazh_zeZz }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

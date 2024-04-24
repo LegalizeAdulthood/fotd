@@ -1,0 +1,89 @@
+;     Date: Mon, 29 Mar 2004 09:38:42 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-03-04 (The Infinite Mosaic [7])
+;       Id: <1.5.4.16.20040329094150.0db7586e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 29, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To produce today's fractal, I mixed together portions of Z^4 and 
+; Z^5 before adding C, and cooked them slowly over a low flame.  
+; The resulting dish took almost 1-1/2 hours to finish, but it was 
+; worth the wait.
+; 
+; I named the finished product "The Infinite Mosaic".  With its 
+; unusually intense colors, the image does have a kind of mosaic 
+; feel about it.  And most fractals certainly are infinite.  So 
+; the name seems justified.
+; 
+; The render time is a puzzle.  It is hard to say why an image 
+; with such routine parameters should take so long to calculate.  
+; >From its appearance, I would expect it to finish in something 
+; like 10 minutes.  I can blame no one who decides to save an hour 
+; or so by downloading the completed image from Paul's FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; I sent the image file to Paul separately, so it should be posted 
+; by the time you read this letter.
+; 
+; The extraordinarily brilliant colors raise the rating from a 6 
+; to a 7.  But the unusually slow render time lowers the overall 
+; value to a humble 8.2.  It's still an interesting image however, 
+; with its tight mosaic-like spirals and tiny midget hiding almost 
+; invisibly at the center.
+; 
+; The clouds moved in on Sunday here at F.C., then they moved out, 
+; leaving warm sunshine and a temperature of 63F 17C, which was 
+; enough to keep the fractal cats happy.  The weather experts' 
+; forecast for today is again cloudy, but I see lots of sun and 
+; blue sky out there.  I expect the cats will find this acceptable.
+; 
+; For me, the work is in the modicum range, which I should finish 
+; in plenty time to find the next FOTD fractal.  Until tomorrow, 
+; take care, and become one with the fractal universe.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+TheInfinite_Mosaic { ; time=1:25:01.15--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+2.06994532777612900/+0.379001200947109\
+  80/2.290883e+011/1/85.0010974549234959/-0.00072585\
+  6327050203309 params=-0.15/4/0.045/5/0/0 float=y
+  maxiter=14400 inside=0 periodicity=10
+  colors=000zztzzzzzzzzzzzzzzzzzbt_Cr70tA0wA0zC0zC0z\
+  F0z20zF0zS0ze0zr0wz2mzCbzKSzVKzbNz_NzXzzXzzVNzSNzS\
+  NzQNzQNzNNzKNzKNzINzINzFNzCNzCNwANr7No7Nm4Ng4Ne2Nb\
+  0NX0NV0NS0KQ0KQ0KQ0IQ0IQ0IQ0FQ0FQ2FQ2CQ2CQ2CQ2AQ2A\
+  Q2AQ27Q47Q47Q44Q44Q44Q42Q42Q42Q70Q70Q70Q70Q70Q70Q7\
+  0A20Q7XeCzrFoj7_b0KX02Q00I00C00F00F00I00I00I00K00K\
+  40KA0NF0NK0NQ0QV2Q_4Qe7SjASoCStCVzFVzIVzKXzNXzQZzS\
+  _zV_zV_zQazNezKezIgzCgzAjt7jo4mg0m_0oS0oK0rC0t00r7\
+  0rF0qN0pV0ob0oj0or0mw0mz0mz0mz0jz0jz0jz0ez0Zx0Yl0W\
+  j0Tl0Qm0Hp0Op2Nv4Kw7Ix7FyAAzC7wF4tI2oK0mN0gQ0eS0_V\
+  0XZ0S`0Qb0Xe0bj0gm4mrArtFwzKzzQzzVzz_zzkzzozztzzwz\
+  zzzzzzzzzzuzzpzzizzbzzXzzSzwNztKzoFzjAzg4zb0zX0zV0\
+  zQ0zI0zN0zS0zV0w_2tb7ogFmjKgoSet__weXzmSzrQzzKzzJz\
+  zIzzKzwKztNzrNzoQzmQzjQzeSzbSz_VzXVzVVzSXzQXzK_zI_\
+  zF_zCbwAbw7ew4ew2ez0gz0gz0ez0bw0_t0Xo0Vj4Szo0zo0zr\
+  0zt4ztCXwIezNmzVrz_zzgzzm }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

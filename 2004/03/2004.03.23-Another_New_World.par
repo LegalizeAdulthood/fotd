@@ -1,0 +1,85 @@
+;     Date: Tue, 23 Mar 2004 10:58:58 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-03-04 (Another New World [7])
+;       Id: <1.5.4.16.20040323110200.2b472b22@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 23, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is the first glimpse into a new fractal world.  
+; This is why I named it "Another New World".  New fractal worlds 
+; are no big deal.  They can be created at will.  But the world 
+; introduced by today's image is rather unusual, as the next 
+; several FOTD's will illustrate.
+; 
+; On the surface, the image appears to be a routine quadratic 
+; midget in the fractal that is created when 0.355 parts of Z^4 
+; are added to Z^3 before C is added.  And this is indeed what it 
+; is.  But in its heart lies a deep secret, which I will reveal in 
+; stages over the days to come.
+; 
+; For now, enjoy today's image, which is already good enough to 
+; rate an above-average 7.  The overall value is brought down to 
+; 25.5 by the render time of 27 minutes, but this value can be 
+; increased by avoiding the rendering entirely, which can be done 
+; by downloading the finished image from Paul's web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a high temperature of 37F 3C and brisk winds, Monday was 
+; far too harsh for the delicate paws of the fractal cats.  They 
+; did manage an hour or so on the porch, but the clouds that kept 
+; obscuring the warm sun gave them no end of annoyance.  Luckily, 
+; cats have short memories, and by the time they had finished 
+; their evening tuna, they had nearly forgotten their bad day.  
+; Today is sunny and warmer, and the wind has died.  The duo is 
+; already thinking of going out.
+; 
+; And I'm thinking of finishing the work that must be done so I 
+; can get to the fractals that are fun but not absolutely 
+; necessary to survival.  Until the next wonderful image appears 
+; 24 hours from now, take care, and see you then.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Another_New_World { ; time=0:27:25.89--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.52321930545120110/-0.002589589762561\
+  87/2.048744e+010/1/-54.9998285074083242/4.87322811\
+  3853878e-005 params=1/3/0.355/4/0/0 float=y
+  maxiter=10000 inside=0 periodicity=10
+  colors=000z06u39m8EeDKYGPPLU9ozCozCozCozCozCozCozC\
+  ozEozEozEoxEouElrEipEgmHdjHagHZeHWbHT_HRY00z00z00x\
+  00p03j9Dbz0zj0z0J00L00L04L09O9EOMz0zz0xz0xz0uz0uz0\
+  uz0rz0rz0pz0pz0pz0mz3mz3jz5ju8jr8gpBgmBegDeeDebGb_\
+  GbYJ_SJ_PL_MLYKOY0oE0gK4aPCTU0iz0gu0dr0am0Zj0Xg4Tb\
+  CR_1Lz4Oz4Oz4Oz4Oz4Oz6Oz6Oz6Oz6Oz6Oz9Oz9Oz9Oz9Oz9O\
+  zCOzCOxCOuCOrPJrPGpPGjSGeSDbSDYSBUUBPzoMzoPxoUroYm\
+  g_gZbbTgYLjSDmP8pKJjERe9Z_4iU0oP0oK0oH0oK0oK0oK0oM\
+  0oM0oM0oM0oP0oP0oP0oS0oSPoEMo1CoE1oP0o_0dm0Rx0Dz00\
+  z03z03z03z05z05z05z08z08z08z0Bz0Bz0Bx0Du4LU0Du0Dr0\
+  Dr0Gp0Gm0Gm0Jj1Jg4Jg6Le9Le9LbCO_EO_HOYz00z00z00z00\
+  z00z00z00z00z00z00z00z00z00z00x30u50r51m84j86gB9eD\
+  CbDE_GHUGKSJMPLPMLSKOUzo0zo0zo0zo0xo0uo0uo0ro0po0m\
+  o0jo0go0gl0ei1bg4_g6Yd9UaCUZESXKPXMMTPKRSHOU0op0om\
+  0om0om0oj1oj1oj1og4og4og6oe6oe6oe9ob9sbCobCk_Cf_Ea\
+  _EXYHTYHRYz00zm0zg0zb0zX1 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,94 @@
+;     Date: Mon, 22 Mar 2004 09:20:18 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-03-04 (First Fractal Flight [8])
+;       Id: <1.5.4.16.20040322092319.2a97ab14@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 22, 2004 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is still another view of the Julia rectangle in 
+; the Z^2.003 Julibrot.  I should not call it a rectangle today 
+; however, for today's orientation has been rotated 0.63 degree, 
+; which is just far enough from the Julia direction that the 
+; rectangle has been stretched into a near perfect square.
+; 
+; But the square is only a small part of today's image, which 
+; resembles some fantastic bird in flight.  Having been shrunk to 
+; near insignificance, the square lies where the wings are 
+; attached to the body of the big bird.  This resemblance of the 
+; entire image to a bird in flight inspired the name "First 
+; Fractal Flight".
+; 
+; I rated the image, perhaps a bit over-enthusiastically, at an 
+; exceptional 8.  When the render time of 13 minutes is figured 
+; in, its overall value rates a 60.  This value may be increased 
+; by saving the time that would otherwise be spent rendering the 
+; image.  And this may be done by downloading the finished image 
+; from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Cold winds, only occasional sun, and a temperature of 41F 5C 
+; limited the cats' outdoor time to less than an hour on Sunday, 
+; but a generous treat of tuna in the evening kept their moods 
+; from becoming too sullen.  This morning it is still windy and 
+; the temperature is down to 28F -2C.  It looks like another less-
+; than-ideal day for the fractal duo.
+; 
+; I have near the normal amount of work to finish before retiring 
+; to fractal land.  Today, I will bid a temporary 'good-bye' to 
+; the rectangle, and set out for unexplored territory.  What I 
+; find there will appear as tomorrow's FOTD.  Until then, take 
+; care, and float like a fractal, whatever that means.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+FirstFractalFlight { ; time=0:13:21.14--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=-0.000138176/-0.00692793/21.92537/1/-40\
+  /-5.05012698326368081e-014 params=90/90/89.27/90/\
+  -1.7435/0/0.00019/0.07388/2.003/0 float=y
+  maxiter=60000 inside=0 logmap=29 periodicity=10
+  colors=000RASSATTAUUAVVAWWAXXAYYAZZA__A``AaaAbbAcc\
+  AddAeeAffAggAhhAiiAjjAkkAllAmmAnnAooAppAqqArrAssAt\
+  tAuv9vtCurEuqGtoJtnLslNskPriSrhUqfWqeZpc`pbbo`do_g\
+  nYinXkmVnmUplSrlPumRtlTskVrjWqjYpi_ohanhbmgdlfflfh\
+  keijdkidmhcogbpfbreatd`ud`sc_qc_oc_nc_lbZjbZibZgbZ\
+  ebZcaYbaY`aYZaYYaYW`XU`XS`XR`XP`XN_WM_WK_WI_WH_WIY\
+  UJXTKWSKVQLUPMTONSMNRLOQKPOIQNHQMGRLESKDTJCTIAUH9V\
+  G8TC8VF7XH7ZJ6_M6aO5cQ5dT4fV4hX3jZ3ka2mc2oe1ph1rj0\
+  tl0qn0kf7gZEiRLkJRmLSoNUqPVsRXuTYwVZyX`zZaz`czbdzd\
+  fzfgzhhzjjzlkznmzpnzrpztqzvrzrszoszlsziszeszbsz_sz\
+  XszUszUszUszUszUszUszUszUszUszUszUrzWqzYqz_pzapzco\
+  zeozgnzinzkmzmlzolzqkzskzujzwjzyizzizzhzzhzzhzzgzz\
+  gzzgzzfzzfzzfzzezzezzezzdzzdzzdzzczzczzczzazz`zz_z\
+  zZzzYzzXzzWzzVzzTzzSzzRzzQzzPzzOzzNzzMzzKzzJzzIzzH\
+  zzGzzFzzEzzDzzEzzEzzFzzFzzFzzGzzGzzHzzHzzHzzIzzIzz\
+  IzzJzzJzzKzzKzzKzzLzzLzzN }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE==================================
+; 

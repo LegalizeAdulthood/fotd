@@ -1,0 +1,105 @@
+;     Date: Fri, 19 Mar 2004 10:41:31 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-03-04 (Semaphore [6])
+;       Id: <1.5.4.16.20040319104430.2b376cea@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 19, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; There is a very unusual rectangle in the Z^(2.003)+C Julibrot.  
+; It is located in the Julia set with a C-value of -1.7435 at 
+; Z-coordinates of 0.00019,0.07388 and a magnitude of around 75.  
+; I have several times mentioned this nearly-perfect rectangle in 
+; my FOTD discussions, and since the two most recent FOTD's took 
+; me to the general area, I decided to take a peek at the rectan-
+; gle while I was there.
+; 
+; The rectangle is quite critical.  If imag(C) is changed even 
+; 0.0001 from zero, the near-perfection is lost.  In today's 
+; image, the value is changed only 0.00004 and already strange 
+; things are happening.  I aided the strange happenings by 
+; rotating the view less than one degree from the exact Julia 
+; orientation.
+; 
+; As a result of my tweaking, the once near-perfect rectangle has 
+; been changed into what can be best described as a semaphore 
+; flag.  (What ever happened to the days when they actually 
+; communicated with those things?)  The lower right half of the 
+; rectangle is filled with reddish high-iteration outside stuff, 
+; while the upper left half is composed of trapped inside points 
+; given life by the 'fmod' inside fill.  Several other inside 
+; fills would have worked nearly as well.
+; 
+; The "SliceJulibrot4" formula that generates today's image is a 
+; generalization of the "SliceJulibrot2" formula to any power of 
+; Z.  It is a new formula, which I have not previously posted.
+; 
+; I named the image "Semaphore" and rated it at a 6.  When the 
+; render time of 7 minutes is considered, the overall value equals 
+; an 82.  Rendering may be avoided entirely by downloading the 
+; finished GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Thursday was not too cold and not too cloudy.  It was also not 
+; windy, and as a result, the fractal cats had almost two hours of 
+; quality time in the yard.  When they came in, they settled down 
+; without demanding their usual treat of tuna.  Rain fell during 
+; the night, but it has already moved off.  If the clouds move 
+; out, the cats will have a fair chance at another good day.
+; 
+; The work that I must finish is about average.  It's 10:30am and 
+; time to get started, so until next FOTD, take care, and be 
+; lively.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Semaphore { ; time=0:07:16.94--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=0/0/77.51938 params=89.63/90.33/89.72/9\
+  0.32/-1.7435/4e-005/0.00019/0.07388/2.003/0 float=y
+  maxiter=6000 bailout=9 inside=fmod
+  proximity=0.02 logmap=50 periodicity=10
+  colors=000MKMNKLOKKPKJQKJRKMSKOTKRULTVMVWNYXN_YObZ\
+  Pd_Qf_Ri_Sk_SmWVoTYpQ`rNcsJfuGivDlxAnyDozFpzHqzKrz\
+  MrzOszQtzTuzVvzXvz_wzaxzcyzeyzgxyhwxiwxkvwlvwmuvnu\
+  vptuqturstssttkjuc`vWRwOHxG7oFEfFLYFSPFZGFdII_KczL\
+  PPWTJYRK`PLbNNdKOfIPhGRjESlCT5MO9OPDQPHRPLTPOUPSWP\
+  WYP_ZQc`QfaQjcQneQrfQvhQyiQvgOtfNrdLocKmaJk`HhZGfY\
+  EdWDbVCdTBfRBgPBiNBkLBlJBnIBoGBqEBsCBtABv8Bw7BoEHg\
+  KN_RSSXYKbbLd`Mf_NhYOjXOlWPnUQoTRqRRsQSuPTwNUyMUzL\
+  SwMRtMPqMOnMNkMLhMKeMIbMH_MGYMhrBdlE`gHmbKmXNmSQmN\
+  TmHWmCZm7am8bm9cmAdmBdmCemDfmEgmFgmGhmHimIjmJjmO`m\
+  SRmWImVMmUPmUTmTWnSZpSbqRerQhtQluPovPruLhtIZuFQvCG\
+  w97x8Cy8Hz7Lz7Qz6Vz6ZzDVzKRzPNzVJz`Gz`CzdjzZazTUzS\
+  YzS`zSczSfzSizTezUbzV_zVXzWUzXRzXNz`8zYKzZHzZEz_Bz\
+  `8zUFzWDzXBzZ9z_7zKYzLvzNqzOmzPizQezSazTYzUTzVPzXL\
+  zYHzZDz_9zCOzLHzTBzASzDPzFNzILzKJzNHzPFzSDzUBzX9zZ\
+  7zvnzrgzo`zlVziOzfIzcBzJj }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE==================================
+; 
