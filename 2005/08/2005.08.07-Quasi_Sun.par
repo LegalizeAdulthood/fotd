@@ -1,0 +1,101 @@
+;     Date: Sun, 07 Aug 2005 12:19:40 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-08-05 (Quasi-Sun [5])
+;       Id: <1.5.4.16.20050807122148.2ab7e67e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 07, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is totally out of control.  At first glance it 
+; appears to have l-r symmetry, but this is only an illusion.  It 
+; doesn't even have symmetry.  There is absolutely no single theme 
+; that characterizes the image other than total random chaos.
+; 
+; The formula behind the madness is named 'Mystic2'.  I wrote it a 
+; number of years ago then promptly forgot it because it draws 
+; nothing but empty circles of radius 1.  But one day I applied an 
+; active inside fill to one of the empty circles and discovered a 
+; whole new fractal world hidden in the emptiness.
+; 
+; Unfortunately, there appears to be no recognizable system behind 
+; the fractals the formula draws.  The outcome is always a sur-
+; prise.  This is good enough when one is seeking surprises, but 
+; it makes the orderly fractal searches, such as I enjoy, nearly 
+; impossible.  Considering all this, I could rate the image no 
+; higher than an average 5.
+; 
+; Today's image, which is all inside stuff, was rendered with the 
+; inside set to 'bof61'.  The 'zmag' option works almost as well.  
+; I have not tried the other options, but I suspect they will give 
+; similar results.
+; 
+; I named the image "Quasi-Sun".  The brilliant white ball at top 
+; center rather resembles a blazing sun, and a closer examination 
+; will reveal spots on the surface of the sun -- sunspots no 
+; doubt.  But it's only a fractal, and fractals do not support 
+; nuclear fusion, so it is only an imaginary sun.
+; 
+; The render time of 4-1/2 minutes is fast enough for most pur-
+; poses, whatever those purposes might be in addition to just 
+; plain enjoyment.  An even faster way of viewing the disorganized 
+; image is to download it from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; An acceptably mild and dry day on Saturday was just what the 
+; fractal cats needed to help them get over their recent bad 
+; moods.  With a high temperature of 86F 30C making the outdoors 
+; comfortable, the cats were able to spend over 6 hours lurking in 
+; the depths of the holly patch.  I have no idea why they must 
+; lurk.  They never pounce on prey.  This morning is starting 
+; cloudy and not too warm, but the humidity is higher and I hear 
+; distant thunder.  I suppose the cats will make the best of 
+; things.  For me the work is falling behind again, as it occasion-
+; ally does.  I'll try to have the next FOTD ready in 24 hours.  
+; If not, it will appear a day or so later.  Until next time, take 
+; care, and sometimes chaos is good for you.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Quasi_Sun { ; time=0:04:31.88--SF5 on a P200
+  reset=2004 type=formula formulafile=jim.frm
+  formulaname=Mystic2 function=exp float=y logmap=yes
+  center-mag=-0.00000823926389345/-0.999999811601756\
+  10/5661946 params=-3.97/-4.39/-1.62/1.54/3.11/-0.51
+  passes=1 maxiter=95 inside=bof61 periodicity=0
+  colors=000ZGUSMNLRHxjFpfEcbDRZCJ`cGYPX9UQHNKPHhiJT\
+  bFg8ZYERONJHMlFRUc8OVEJMNFiZaaYVzzzMWHSC7RM9M84KE6\
+  IK8GQAPd3Sg5Ni7Ib9DHZECTERNEUH98cCGPqQCgSBYTBOVBtW\
+  geWXSWMl`cRqfMiWMglHUqCHv78z7Y2x8ymJh`cSPxBMoJJfRG\
+  YZDQeBLWAGN9BD884HH3QS3Ya3USBRIIO8PL8WT8X_8Yf8Yb8R\
+  _ALXCF_FLaHQdKVfM_VFMK88TND`aHhoL98WSG`jYeMPNaXYUX\
+  QMWIx8VmFOWOHSbzLZ`fMcZPWSRPLUIC8PFjUEeNE`HFfxEckE\
+  `_EYNsrUhlPZfKO`Fwf0gb4TZ8pxnBAdCIVDPLxXSnWNbWJQWF\
+  mENdJKWNHNSEVaPP_KJYFKBjHMTFhqEaWhALTLGwLkgPZTTNB`\
+  bDYPx8FlCE`JDPQCH87NWMKWJIWGGWDxufDPoESaEUOx_gdYRk\
+  8y_AhPLSGDkFIaFNTESKxOoxM7aR9G88FJAstWlfpV`WcrwVjf\
+  MbRcUOXVKRVHKWElhi`cYP_MecHZaFS_ELYCjI_ZwkSmZLdNxW\
+  mxEciKUUQKWReNUQxM7aR9`CxUvxOmgJdRxUUdXZCZpDYbEXPq\
+  aDYZCN8HKAFIHEGPCH8fGDWFNL8BfAIWCPLxL_jPRUTJ_sdPgQ\
+  xF7kL9VRASHlOLbLPUHTKVKtPOdJSQPtwLkfHcRwumM`rJZcGX\
+  Prl1df5R`8xtbCMLDPIDRGEUD }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

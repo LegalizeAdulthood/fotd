@@ -1,0 +1,85 @@
+;     Date: Mon, 01 Aug 2005 11:43:20 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-08-05 (Pyroclastic Fractal [6])
+;       Id: <1.5.4.16.20050801114525.38a79c62@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 01, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's FOTD we bid a temporary farewell to the Mandelbrot 
+; set and return for a while to the MandelbrotMix4 formula for a 
+; view of the fractal that results when various portions of 
+; Z^(-1.5) and Z^(-6.5) are combined and (1/C) is added.  I will 
+; not try to give a detailed description of the indescribable 
+; parent fractal, which is actually several separate Mandeloids, 
+; one a sprawling, shapeless thing with numerous valleys and 
+; buds, the other a fairly routine M-set.
+; 
+; Today's scene is found in an inconspicuous location on the west 
+; edge of the shapeless thing.  It has been partially evaporated 
+; by a large escape radius, resulting in the sea-shell like 
+; effect.  The name "Pyroclastic Fractal" has no relation to the 
+; actual appearance of the image.  It is simply a phrase that 
+; came to mind while I was studying the image.
+; 
+; The coloring could stand some improvement, which is why I could 
+; rate the image no higher than a 6.  The render time of 4-1/2 
+; minutes is quite reasonable for such a complicated image.  And 
+; as always, the finished image is available on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A near perfect high temperature of 81F 27C kept the fractal cats 
+; quite happy here at Fractal Central on Sunday.  The 6 hours they 
+; spent in the yard seemed to pass in the twitch of a whisker.  
+; Very little tuna was needed to give them a near perfect ending 
+; to the day.  Today is starting much the same.
+; 
+; For me the work is waiting.  The next FOTD will appear in 24 
+; hours.  Until then, take care, and the answers will be shocking 
+; indeed.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+PyroclasticFractal { ; time=0:04:31.61--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-1.562997473196849/+0.74551682411940390\
+  /10292.68 params=1/-1.5/0.3/-6.5/0/200 maxiter=1400
+  inside=bof61 outside=tdis float=y periodicity=10
+  colors=000RUJSVLSWNTYPUZQU_SVaUVbVWcXXeZXf`YgaZicZ\
+  je_kg`mh`njaolapm`nk_liZjgYheXfdWdbVb`U`ZTZYSXWSVU\
+  RTSQRRPPPONNNLLKJKLHIHFGJDE78CJBDJDEMFFLHFPJGOMHSO\
+  ISQIVSJXUKYWL_ZL``MbbNcdOefOfhPhkQimRkoRlqSnsTouTm\
+  uSkuSiuSguSfuSguSguRguRguRguRguRhtRhrQgpPdnOblOaiN\
+  YgMWeLTcLRaKP_JPXIOVIOTHORGNOFNMFMKEMIDKFCMGDNHEOH\
+  FQIGRIHSJITJJVKKWKLXLMYLN_MN`MOaNPbNQdOReOSfPTgPUi\
+  QVjQWkRXlRXiPZgO`dMbbLd_JeYIgVHiTFkQElOCnLBpJArG8s\
+  E7uB5w94y51z73z85xA6uB8sDApEBnGDkHFiJGfKIdLKaNL_ON\
+  XQPVRQSTSQUUNWVLXXI`ZDYYGWXJUWMSVPPUSNTVLSYJR`GQcE\
+  PfCOi9OmANlBNkCNkDNjDMiEMiFMhGMhGLgHLfILfJLeJKdKKd\
+  LKcMKcMJbNJaOJaPJ`PJ`QK_QLZRMZRNYSOYSPXTQXTRWUSWUT\
+  VUUUVVUVWTWXTWYSXZSX_RY`RYaQYbQWaPV`PU_PTZORYOQXOP\
+  WNOWNNVNLUMKTMJSMIRMGQLFPLEPLDOKCNKAMK9LJ8KJ7JJ6JJ\
+  EFHLBGS7FZ4E`4Db4Dd4Cf4Ch4Bj4Bk4Bjgmghldhkahk_hjXi\
+  iUiiSihPihMjgKjfHjfQRGQSI }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,86 @@
+;     Date: Wed, 24 Aug 2005 11:40:53 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-08-05 (The Ringleader [5])
+;       Id: <1.5.4.16.20050824114309.29c7f7e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 24, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image combines various portions of Z^(1.3) and Z^(-1.3), 
+; then adds (1/C) to create a fractal much like those seen many 
+; times before in the FOTD's, but with subtle differences that 
+; make it one-of-a-kind.  I named it "The Ringleader" when I 
+; noticed the near perfect ring of rust-colored elements circling 
+; the midget at the center.
+; 
+; The parent fractal consists of a central ocean that resembles a 
+; warped figure 8, surrounded by a large area of chaos containing 
+; the usual infinity of midgets of all shapes and sizes.  Today's 
+; scene is located near one of the larger satellite midgets.  I 
+; entered the mathtolerance into the parameter file by hand to be 
+; sure the image renders at the correct magnitude.
+; 
+; The rating of a 5 shows that I consider the image to be only of 
+; average quality.  The render time of 47-1/2 minutes on my old 
+; machine shows that the best way to view the image is to download 
+; it from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Tuesday turned out quite pleasant here at Fractal Central.  
+; Under a partly cloudy sky, the temperature rose to 82F 28C.  And 
+; the humidity remained quite low all day, making it ideal for the 
+; aging cats of the fractal variety, who spent several hours 
+; lurking in the holly thicket, watching for intruders that never 
+; appeared.  Only a little tuna was needed in the evening to end 
+; their day on an upbeat note.
+; 
+; Today is starting sunny and continued ideal.  Things again look 
+; good for the duo.  For me, things look rather busy, but it is 
+; nothing that I cannot handle.  The next FOTD will appear in 24 
+; hours.  Until then, take care, and keep iterating those fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Ringleader { ; time=0:47:30.09--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.32843784367421990/+0.000050140129110\
+  26/1.652223e+012/1/35/-0.00128493235744315398
+  params=1/-1.3/-1/1.3/-0.23/0 float=y maxiter=5000
+  inside=0 periodicity=10 mathtolerance=/1
+  colors=000IfJHeJHeJHdIGcIGbHGaHF`HF_GF_GEZGEYFEXFD\
+  WEDVECUECUDCTDBSCBRCBQCAPBAOBAOA9NA9MA8L98K98J87I8\
+  7I87H76G76F76E65D65C55C54B54A43B45C37D39E4BF6DG8FH\
+  AHICJJELKGNKIPKKRKKTKKVKKXKKZKK`KKbJKbIJaHJaGI`FH`\
+  EH_DG_CFZBFZAEZE3ZC9ZAEe8Jl6Or5Tq6Sq7Sq8Sq8Sq9SqAS\
+  qBRqBRqCRqDRqERqERqFQqGQqGQqHQqIQpJQpJQpKPpLPpMPpM\
+  PpNPpOPpPOpPOpQOpROpROpSOpTOpUNpUNpVNoWNoXNoXNoYMo\
+  ZMo_Mo_Mo`MoaMoaMobLocLodLodLoeLofLogKogKnhKniKnjK\
+  njKnkKnlJnlJnmJnnJnoJnoJnpInqInrInrInsIntIouJntIms\
+  IlrIlqHkqHjpHjoHinGhnGhmGglGfkFejFejFdiFchEcgEbgEa\
+  fEaeD`dD_cD_cDZbCYaCX`CX`CW_BVZBVYBUYBTXATWASVARUA\
+  RU9QT9PS9OR9OR8NQ8MP8MO8LNAKNFKMKJLPIKPIKPHJPGIPFH\
+  P01PFHPEGQDFSDEUCDWBDYBC_ABa9Ac9Ah89k78n67k66j56h4\
+  5f44d33b23`22Z11X00VEBUDASCARC9PB9OA8NA8L97K87J86H\
+  76G75F65D54C54A439338326225114112001NrPMqOMpOLoNLn\
+  NLmNKlMKkMKkLJjLJiLJhKIgK }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

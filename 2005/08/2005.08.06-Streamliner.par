@@ -1,0 +1,80 @@
+;     Date: Sat, 06 Aug 2005 09:27:00 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-08-05 (Streamliner [6])
+;       Id: <1.5.4.16.20050806092907.38d7d21a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 06, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The brevity of today's discussion is a result of the 
+; continuing rush here at F.C.
+; 
+; Today's fractal subtracts Z^1.01 from Z^2.  The result shifts 
+; the Mandelbrot set to the east and splits the negative real 
+; axis.  Today's image is located in the East Valley area of the 
+; large midget on the negative axis.
+; 
+; I have named the image "Streamliner".  This type of image always 
+; reminds me of a railroad.  The glory days of the railroad are 
+; long past, but the word 'streamliner' still evokes feelings of 
+; the rails.
+; 
+; We have seen this type of image many times before, which limits 
+; the rating to a 6.  The render time of a little over 3 minutes 
+; is quite reasonable.  The completed GIF image is available on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The Friday high temperature of 95F 35C limited the cats' outdoor 
+; time to under one hour.  Around 7pm it began thundering, but no 
+; storm arrived and the cats ended their day peacefully.  Today is 
+; starting cloudy and a bit cooler.  If all else goes well, it 
+; will be a better day for the cats.  For me the work is moderate, 
+; threatening to get heavy.  We'll see how it goes.  The next FOTD 
+; will appear in 24 hours.  Until then, take care, and things are 
+; never so good that they cannot get better.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Streamliner { ; time=0:03:22.02--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.99882094606212310/+0.001072594239131\
+  53/892730.3 params=-1/1.01/1/2/0/0 float=y
+  maxiter=5000 inside=0 logmap=62 periodicity=10
+  colors=00006n9FsIOwJWwL`xGdyBhy6lz2oz1jr0dh0_`8WIF\
+  SMNOQUKU`GYhCao8ev5it9msCprFtqbwzjtqwqwopweozWouTn\
+  v4ns3fp3_n3Tk3Mi3FY6UM8hBAvEDuGGuJJuLMuOPuQRuWMkaI\
+  agDTm9Js49y00s6KmCchIwcSvZ`vUiuQruTqtVltYgs_bsaYrd\
+  TrfQqhNqbQrXSsSUsMWtGZuB`u5bv0dv1br2`n2_k4dk5hk6mk\
+  8qk9vkAzkGv`LrRRnHWk7SlLPlYLlkIlxLjxNixPgxSfxUdxWc\
+  xYbxVcjTdYReKPf7MeGKePIeXFeeDenBevVBeXEhYGj_Im`Lob\
+  NrcPt`TkZWbXZUVaLTdCWcAZb8aa6c`5adC`gIZjOYnVWq`Vtf\
+  Sq`QnWNlQLiLIfGGdADa5B_0GX8KVFOSNTQUXNa`LhdJoZQpUW\
+  pPapJhpEnp9tpHgaIi`Jj`Jk`Km`Ln`Lo`NpYOpWPqTQrRRsPT\
+  tMUuKVvHWwFXxDZyA_z8`z5az3bz1SzPHzkMzkQzkVzkZzkbzk\
+  gzkkzkozkWzhYzdZz`_zXazTbzQczMRzyJzxBzx4zxJznPzhUz\
+  cZzZczThzOmzJazLRzMFzN4zO9zPEzQJzROzRTzSYzTbzUgzUc\
+  zS`zRYzQVzOSzNPzMRzTSz_UzfVzmWztSzmOzfLz_HzTDzMAzG\
+  EzMHzSKzYNzcQziTznWzgZz`azU_zZZzbYzgXzkWzpVztZzqbz\
+  oezlizjmzgpzeZzcIza1z`0zg }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
