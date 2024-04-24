@@ -1,0 +1,102 @@
+;     Date: Tue, 22 Aug 2006 23:04:55 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-08-06 (Garden of Rings [6])
+;       Id: <1.5.4.16.20060822230542.2b3f7ff6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 23, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The big job went out on schedule this morning, and the customer 
+; is happy.  The most recent rush has ended and the FOTD has 
+; returned.  I would like to guarantee that this interruption will 
+; be the last in the FOTD series of images and discussions, but I 
+; have not yet learned to see the future.
+; 
+; To celebrate the re-appearance of the FOTD we have gone to the 
+; fractal that results when Z^(-1.5) is subtracted from Z^(1.5) 
+; before (1/C) is added.  This fractal is little more than a 
+; single small Mandeloid surrounded by scattered bits and pieces 
+; of fractal debris.  Today's image is located in a rudimentary 
+; valley of one of these tiny bits.
+; 
+; I rated the image at a 6, though I could easily have chosen a 
+; rating of 7.  I settled on the 6 because much of the image's 
+; effect was achieved by rendering the scene with the outside set 
+; to 'fmod'.  The basic scene is really quite bland.
+; 
+; I named the image "Garden of Rings".  The rings were created by 
+; the 'fmod' option, which draws a series of overlapping bands and 
+; rings, usually centered on points of interest.  This option is 
+; also the simplest way to find hidden midgets, especially in the 
+; Mandeloids with exponents of Z between 1 and 2.
+; 
+; IMO, the render time of 6-1/2 minutes is reasonable enough, but 
+; individual opinions of what is reasonable may vary, so in addi-
+; tion to rendering the image from the included parameter file, 
+; the image may be seen by downloading it from the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; My philosophical ideas are taking shape, but are not quite ready 
+; to be made public.  After all, radical ideas demand radical 
+; thought and preparation.
+; 
+; Very pleasant but very dry weather continued all day Tuesday 
+; here at New Fractal Central.  Conditions are approaching drought 
+; status, but the new fractal cats did not even notice.  They 
+; spent the day playing under an old afghan which I spread on the 
+; living room floor for them.
+; 
+; My day was pretty much occupied with cleaning up after the big 
+; rush of the past week or so.  Hopefully, such rush jobs will not 
+; arrive too often, though I certainly do not want them to totally 
+; vanish.  The next FOTD will arrive in 24 hours.  That is almost 
+; but not quite guaranteed.  Until then, take care, and how would 
+; it be possible to prove that the universe is not real?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Garden_of_Rings { ; time=0:06:27.12--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.18116619808723830/+0.390853245407780\
+  80/1.034841e+007/1/162.5/3.31205395526223967e-007
+  params=-1/-1.5/1/1.5/0/0 float=y maxiter=1200
+  inside=0 proximity=0.8 outside=fmod
+  logmap=yes periodicity=10
+  colors=000zzzwyvtvrqwmnvhkuhkshjqhjoijmjikjiikigli\
+  flhemhgmhhngjogkogmpfnqfpqfqressetsevtfwsgxshyrizq\
+  jzqkyvjwtivrhupgtnfsleqjdohcmfbkdajc`ha_g_ZeYYcWXa\
+  UW_SVYQUWOTUNSTLRSJPRHNQFLPDJOBHN9FM7FL3FK6GJ5HI6I\
+  H7JG7IF8GE8FD9EC9CBABAA99B88B87C76C75D64D63E72B61C\
+  62D64E66F88GAAHCCIEEIGGJIGKJHLLIMMJNNJOOKOPLPPLQPM\
+  RPNSPNTPOUOPUOQVOQWORXOSYOSZOT_OU_OU`OVaOWbNXcNXdN\
+  YeNZeNZfN_gN`hN`iNajNbkMcmNblNbkNbjNbiNbhNbgNbgNbf\
+  NbeObdObcObbObbObaOb`Ob_ObZObYObYPbXPbWPcVPcUPcTPc\
+  SPcSPcRPcQQcPQcOQcNQcNQcMQcLQcKQcJQcIQcIRcHRcGRcFR\
+  cERcDRcCRcCRcBRcASc9Sc8Sc7Tc7Tc6Uc5Uc4Vc3Vc2Xc1Wc2\
+  Xc3Xc3Xc4Xc5Xc5Xc6Xc6Wc7Wd8We8Wf9Wg9YhAZiBbjBhkCol\
+  DumDznEzoESRFSRGSRGSQHSQHSPISPJSOJSOKSNLSNLSMMSMMS\
+  LNSLOSKOSKPSJPSJQSIRSIRSHSSHTSGTSGUSFUSFVSEWSEWSDX\
+  c3l`5hZ7eX9bVB_SDXQFUOHRK9JLCLLEMLGNMIOMKPMNQMPRNR\
+  SNTTNVUNXVO_XOaYmGbmHcmJc }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

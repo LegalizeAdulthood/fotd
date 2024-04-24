@@ -1,0 +1,90 @@
+;     Date: Sun, 27 Aug 2006 00:10:04 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-08-06 (Imperfect Perfection [7])
+;       Id: <1.5.4.16.20060827001053.2fdff170@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 27, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD image takes us to the Z^1.95+C Mandeloid as it 
+; appears at ground level of the logarithmic ladder.  At this 
+; level the parent fractal resembles a chopped-up Mandelbrot set.  
+; Today's scene is located in the East Valley area of its parent.
+; 
+; It's an unusually attractive image for a fractal with an 
+; exponent of Z less than 2.  The 'passes=b' option works quite 
+; well with today's image, and it is by far the fastest.
+; 
+; I named the image "Imperfect Perfection" and rated it at a 7.  
+; The rating could have been a 7 or an 8.  Being in a conservative 
+; mood, I decided on the rating of 7.
+; 
+; The 6-1/2 minute render time may be avoided by downloading the 
+; completed GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy clouds and a temperature of 73F 23C kept the sun worship-
+; pers indoors here at New Fractal Central on Saturday.  It stayed 
+; dry however, making conditions perfect for checking one of the 
+; local antique emporiums, which, with a little coaxing from 
+; fractal lady, is what I spent the afternoon doing.  The fractal 
+; cats spent the day looking for trouble.  Nico worried himself 
+; silly trying to get into the basement, but the basement still 
+; needs to be cleaned before he will be permitted to explore it.
+; 
+; The work is still slow, which means there should be no trouble 
+; finding and preparing the next FOTD, due to appear in 24 hours.  
+; Until then, take care, look for the bright side and be enlight-
+; ened.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+ImperfectPerfecton { ; time=0:06:25.24--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=b
+  center-mag=+0.26576286572368590/+0.007295698873062\
+  91/5.409258e+009/1/-77.5/7.83611996738736716e-006
+  params=1.95/0/0/0 float=y maxiter=2000
+  inside=001 logmap=264 periodicity=10
+  colors=000000XRKQKKJEKGGKDHKAIK7JL9NMAQNCTODWQE_TG\
+  bVHeYIh_HcWG_TFVPERMDMJCIFBDCB99GGGLMMPTSUZYZddbkj\
+  gqpkwvgrqcmm`iiXdeT_`QWXMRTJNPKIQKERKARK6SK2SKJ7XF\
+  LiBYu8jsDlrHnpMpoQqiNadLN_J8HPmFNmDLmCJmAHm9FmBKkC\
+  OiDTgEXeFacGghcu_crZHlWGdTFXQERNEMKJLVNKdME_L9WL4S\
+  Q5NV6J_7Ed8Ah86kDBmKGoQKqWPsYVuZ_w`dxbiycnzcs`_YTZ\
+  WKXTCWQ4VOLYN``NRMLI8JDSN8jQ7gP6eP5cP4`O3ZO2XO1VOA\
+  QLJMISHF_DDh8Aq47y05u27q38m5Ai6Be8Da9EbECcJBdOAeT9\
+  fY7gb6hg5xk4w0AjBGZMLNXRBfWe2nd8gcE`bJUaPNaUHYXNU_\
+  TRbZNdcKgiGjoDltXPap1JY7HGDGmE59_kGZfNYaUXX`WTgVOn\
+  UJuTFnUJhUNaVRWVVQVZUXWYZUa`SebQidOmfMptKleKiUKfNK\
+  bFK_8KX1KT3NP5PM7RI8UFAWBCY8D_g2he7fcBdbFb`J`ZOZYS\
+  XWWVV_USdPPhKMmEJr9Gv4HnHHgTH`dHUpGZoFbnEfmDklCokB\
+  sjFknIhrLmuYmhimW1nX3qW4tV5wU6zT7zS8zR9zQAzQPzYcze\
+  rzmlzffz`mzVrzOvzIzzCzzDzzEzzFzzGzzHzzWzzizzwzzqzz\
+  lzzgzzbzzYzzTzzOzzJzzQzzf }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

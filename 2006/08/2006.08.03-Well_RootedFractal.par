@@ -1,0 +1,84 @@
+;     Date: Fri, 04 Aug 2006 00:29:15 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-08-06 (Well-Rooted Fractal [6])
+;       Id: <1.5.4.16.20060804002945.392f4318@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 04, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's 6-rated image is a scene in a remote valley of the 
+; Z^sqrt(2)+C as it appears 38 levels up the logarithmic ladder. 
+; I named the image "Well-Rooted Fractal" for no good reason.
+; 
+; The Z^sqrt(2) fractal is interesting because its midgets are 
+; unusually easy to find.  They first appear much like the midgets 
+; of the Mandelbrot set, hiding between two symmetrically placed 
+; elements.  Unfortunately, the patterns around the midgets in the 
+; square-root-of-two fractals have a tendency to all look the 
+; same.  The pattern around the barely-visible midget at the 
+; center of today's image lacks some of this 'sameness', but it is 
+; still similar to many other images.
+; 
+; The render time of 8 minutes is just the slightest bit on the 
+; slow side.  This slight bit of slowness may be avoided however 
+; by downloading the already-rendered image from the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another very hot day here at Fractal Central kept all thoughts 
+; of going outside from the heads of the fractal cats.  They spent 
+; the day watching birds and squirrels.  For me the day was about 
+; average.  If all remains average, the next FOTD will appear in 
+; 24 hours.  Until then, take care, and I hear that fractal soup 
+; is delicious.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Well-RootedFractal { ; time=0:08:00.55--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=-0.6174173528\
+  2187680/-0.20187002932680840/1.964483e+009/1/2.5/\
+  3.90137333446116674e-007 params=1.414213562373/0/\
+  38/0 float=y maxiter=5000 inside=0 periodicity=10
+  colors=000fZmyN9wU7u`5tf3rm1qs0kf4fU8aHCX4GV88UC1W\
+  M3YW4_e5`n6TaAMQEFDI81MIGJSVGaiDjwAlvGnuMpuSqtYstc\
+  usivsnrlonepjZpfSqcMqKbb0sP8tNFuLMvJUwH`xFgyEetMcp\
+  Ubka`gi_cq`gh`j``mS`pKZaVYNeX9o926FAAKHEQOIVVL_bPe\
+  iTjpXow_YtPHrF0p54j98dCCZGGTJKNNOHQSCTY9Ub7Vh4Wm2X\
+  r0Yq2ep4mp6uk6og6ib6cZ6YU6SQ6MM6HK9FJBDIECGGA0A00F\
+  0X6CRMELaUUdcafmiiumkzmnzmqzmszmuzmwzmzzmzzPHUPGUP\
+  GURIUTKUUMWUOTUQQUSNUUKXTI_THbTFeTEhTCkTBwT9zT8oax\
+  g`p`_hUZ`NYTGXL9WD2W65jwGZnROf`DZeV`jlahh_feZdbXc_\
+  WaWV_TTYQSXNRZRN`UJbXGd`Cmc8zf5taAmYFcUKUPPKLUDHYJ\
+  TdOckTnrYyxk_wxAvnCpdEkVGeLI`MKWNLRNMNONIOOEWRHcUK\
+  jXNiaOhfPhkQgpRfuSfzSgrUhkWicYjX_kPalIcgJ`cJYZKVVK\
+  TQLQMLNILLNNMRONVQNZRObTOfUPjVPhURgTSeSTdRUbQVaPW`\
+  OXwPbsRXpTRlVLiWFXURKSb8RnJ_aUgQdoEow2YyRHzoNxkTvg\
+  Ztcdr`jpXpnTulQvgNvcKw_HwVExRBxN8xJ5efraboYZmVWkRS\
+  iOPgRNhULhWJhZHhaFhZMWbTd }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

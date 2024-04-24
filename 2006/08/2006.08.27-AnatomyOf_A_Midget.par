@@ -1,0 +1,100 @@
+;     Date: Mon, 28 Aug 2006 00:57:28 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-08-06 (Anatomy of a Midget [8])
+;       Id: <1.5.4.16.20060828005817.30970dd6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 28, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have always wondered what a midget in the Z^sqrt(2)+C fractal 
+; looks like up close and personal.  Today I decided to find out.  
+; I calculated the Z^sqrt(2)+C Mandeloid as it appears 414 levels 
+; down the logarithmic ladder, and found the smallest midget I 
+; could that was within range of resolution.  I set the maxiter at 
+; a very high 50000 and let the image rip.  The unusually high 
+; maxiter is necessary to show all the detail in the more chaotic 
+; areas surrounding the main bay.
+; 
+; Surprisingly, or perhaps not so surprisingly, the midget mirrors 
+; the appearance of its parent fractal.  The sharp, jagged 
+; elements radiating from the midget have divided and sub-divided 
+; until they have lost definition.  I would like to more closely 
+; examine the chaotic areas of the image, but sadly, these lie 
+; beyond resolution.
+; 
+; I named the image "Anatomy of a Midget".  After all, the picture 
+; is basically a study of a midget.  I rated it at an 8, perhaps a 
+; bit high but not beyond reason.
+; 
+; The render time of 27-1/2 minutes is true when the parameter 
+; file is run on my fastest machine, a P4-2300, with the passes 
+; set to 1.  On my usual P200 unit, the image takes about 1/1-2 
+; hours, not nearly the 11-1/2 times as long as might be expected.
+; 
+; All this concern about render times may be avoided by download-
+; ing the finished image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy rain fell all day Sunday here at New Fractal Central on 
+; the banks of the Susquehanna River in Central Pennsylvania.  By 
+; the time the day ended, near 4 inches, that is 10cm, of rain had 
+; fallen, causing some flooding of small streams and streets.  The 
+; fractal cats stopped chasing each other long enough to glance 
+; out the window once or twice to watch the rain.  But they are 
+; not outside cats, and they don't worry about wet weather.
+; 
+; My day started slow and finished slow.  The next FOTD will 
+; appear in 24 hours.  Until then, take care, and what is more 
+; unreal, a dream or a fractal?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AnatomyOf_A_Midget { ; time=0:27:30.35-SF5 on P4-2300
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 inside=0
+  center-mag=-0.35216497790502230/+0.096774058667879\
+  18/2.68731e+011/1/117.5/-0.000214201607454139742
+  params=1.4142/0/-414/0 float=y maxiter=50000
+  logmap=650 periodicity=10 mathtolerance=0.05/1
+  colors=000kwUlvSmuQnsNorLpqJqoGrnEsmCokDljDhhDegDb\
+  eDZdDWbDSaDP_DMZDIXDFWDBUD8TD5SDFWGOZIYbLfeNohPmeN\
+  kcMiaKh_JfYIdWGbUFaSE_PCYNBWL9VJ8TH7RF5PD4OB3SDDVF\
+  NZGXaIfdJpZZeTmVSnXRnZRn_QoaPobPodOoeNpgNpiMpjLqlL\
+  qmKqoKqpOmlRiiUffXbb`__cWXfTTiPQlMNjLPiKRgJTfJVdIX\
+  cHZaG``GbZFdYEfWDhVDjTClSBnQApPArREoTHlULiWOfYScZV\
+  ``ZYbaVceSehPglMhoJjsGkvEnoOqhXtafwVozPxlYp_fiddbh\
+  cXlaRq`LuZFyY9`XBsbCpeDngEkjFhlGfnHclGakFksFYiEVhE\
+  TgDRTCPXCMXBKbBIaAG`AKbEOdHReKVgNZiQajUelXin_lobpq\
+  esrhpofnmdkjbih`ffZdcXaaV__TXXRVVPSSNQQLNOJLLHIJFG\
+  HEEPCCXABc99k78r6AnCCkHDhMFdRGaWIZ`JVeLSjMPoi0gfJi\
+  dakbtm`tYZtIYt3_kA`cHaWObOV_QSYRQWSOUTMSUJQVHOWFMX\
+  DKYBJXFJXIJWMIWPIVTIVWIU_HUbHTfHTiHSmGSpGRtGRwGRzG\
+  UyGWxGYxG_wGawGcvGewGgxGiyGkzGmzGozGqzGszPnzXizedz\
+  m_zuVzW0zX2zX4zX6zX8zYAzYCzYEzYGzYIz_LzaOzcQzdTzfV\
+  zhYzi_zkbzmezngzpjzrlzjyz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

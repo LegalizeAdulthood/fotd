@@ -1,0 +1,102 @@
+;     Date: Tue, 29 Aug 2006 22:59:55 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-08-06 (Off on a Tangent [5])
+;       Id: <1.5.4.16.20060829230044.0d7f95ba@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 30, 2006 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we check another midget of a very low order.  
+; The parent fractal is the Mandeloid that results when the 
+; expression Z^(1.1892)+C is calculated 49 turns down the 
+; logarithmic ladder.
+; 
+; The central midget might be the last one for quite some time.  
+; I have a theme planned for the September FOTD's and midgets are 
+; not included.
+; 
+; The rating of a 5 is all I could do for today's image, which 
+; mostly repeats things we have seen many times before.  But one 
+; thing that has not been seen so many times is the huge discon-
+; tinuity in the pattern surrounding the midget, one of the 
+; greatest I have yet seen.
+; 
+; I named the image "Off on a Tangent".  There is no logical 
+; reason for such a name.  I simply felt like giving the image 
+; that name.
+; 
+; The render time of 7 minutes is true on my 10-year-old fractal-
+; dedicated P200 unit.  On the current SOTA (State Of The Art) 
+; machines, the image will calculate in about 2 minutes.  But some 
+; SOTA machines are over-qualified to run Fractint, which is still 
+; the world's best fractal generator.  To avoid fractal frustra-
+; tion, the owners of these handicapped units will need to down-
+; load the finished GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A warm, muggy, lazy afternoon with a temperature of 86F 30C was 
+; interrupted by a heavy thunder-shower at 4pm.  The new fractal 
+; cats went to the window long enough to see what all the outside 
+; commotion was about.  Then they returned to their job of getting 
+; into trouble.  My sister called from Old Fractal Central this 
+; morning to let me know that the old fractal cats, Thomas and 
+; Tippy, are in good health, and are doing the same things they 
+; did when we were there
+; 
+; My day was slow, but in the evening we heard from a customer who 
+; informed us that he will send in a big job tomorrow morning.  
+; The rush might put tomorrow's FOTD in doubt, so be sure to check 
+; back here in 24 hours to see how it goes.  Until tomorrow, or 
+; maybe the next day, take care, and life is the world's greatest 
+; mystery.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Off_on_a_Tangent { ; time=0:07:05.95--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=-2.75444535467781000/-0.095428023111382\
+  43/3.412037e+009/1/-40/2.57163975737953465e-005
+  params=1.1892/0/-49/0 float=y maxiter=7500 inside=0
+  colors=000udJzdczfUvgKrm6qj8qhAqfCqdEqbFq`HqYJqWLq\
+  UNqSOqQQqOSqMUqJWqHXqFZqD`qBbq9dq7ep9goBhnDinEjmGk\
+  lImkKnkLojNpiPqyPuiQrURoDTpFRmHQjIPgKOdLMbNL_PKXQJ\
+  USIRTGPVFMWEJYDG_CD`ABb98c85e72f60h91iB1kD2lF2mH3o\
+  K3pM4qO4sQ5tS5uU6wX6xZ7z`7zb8zd8zg9zi9zkAzmAzoBzr6\
+  zq9zqBzqDzqGzqIzqKzqMzqPzqRyqTwqWvqYuq_sqarqdpqfoq\
+  hnqklqmkqopzymuujqqhmneijbef`acYY_WUXTQTQMPOIMLEIK\
+  9DJAFJBGJCHJDIJEJJFKJFLJGMJHNJIOIJPIKQILRILSIMTINU\
+  IOVIPWIQXJMNIOTIQYISbIUgIWlIYqG`yI_vKZtMZrNYpPYnRX\
+  lSXjUWhWVeXVcZUa`U_aTYcTWeSUfSShUZjWdkYjvfXzoHznJz\
+  mLzlNzkOykQwjSuiTthVrhXpgYof_meakdbiddhcffbgdaibak\
+  a`l__nYZpXZqWIpWHoVCnVHnUFmUPlTOlTMkSLjSJjRIiRGhTG\
+  lSFjRFhREgQEeQDcPDbPC`OC_NCYNBWMBVMATLARL9YK9XK9dJ\
+  D_JGgIJeIMkF_zIUzKRzMNwOMkRKhTJfVIdXHb_F_aEYcDWWCU\
+  hARj9Pl8Nn7Lq5Is4GuYEvZDw2Ct2Dj2Ee2Fn2HpKFoLEoLDnM\
+  CmMBlNAlN9nQBoTDqWErZGtaH }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

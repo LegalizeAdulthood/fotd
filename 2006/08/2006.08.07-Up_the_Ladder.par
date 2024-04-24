@@ -1,0 +1,94 @@
+;     Date: Mon, 7 Aug 2006 23:31:41 EDT
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 08-08-06 (Up the Ladder [8])
+;       Id: <bc3.27a23da.32095f9d@aol.com>
+; ---------
+; 
+; FOTD -- August 08, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's rather unusual image takes us 414 levels up the logarith-
+; mic ladder to see what the Z^sqrt(2)+C fractal looks like at 
+; that lofty height.  Actually the fractal doesn't look like much. 
+; It is little more than a cut-off blob.  But on the southwest 
+; edge of the blob, a distorted pseudo-Mandelbrot midget lies.  
+; Today's scene is located in what passes for the north branch of 
+; Seahorse Valley of this midget.
+; 
+; I named the image "Up the Ladder".  And why not?  We had to 
+; climb 414 levels to reach the parent fractal.
+; 
+; In my opinion, the image is unusual enough to be worth a rating 
+; of an 8.  Others may rate it differently.
+; 
+; Most of the coloring effect was achieved by rendering the image 
+; with the 'outside' set to 'atan'.  This option usually creates 
+; images with far too much chaos.  With today's image however, it 
+; works better than any other.
+; 
+; The render time of a little under 13 minutes is rather slow.  It 
+; will be more convenient to download the finished product from 
+; the FOTD web site, which may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a temperature of 88F 31C and high humidity, Monday turned 
+; out too sultry for human comfort, though the fractal cats, being 
+; inhuman, did not mind.  They spent the day chasing each other up 
+; and down the hall.  The hall is carpeted; the dining room is 
+; not.  Nicholas has not yet grasped that there is less traction 
+; on a polished floor than on a carpet, and after zooming down the 
+; hall, he slid several times head first into the wall at the back 
+; of the dining room.  His thick head suffered no damage.
+; 
+; The work is still under control, which means the next FOTD will 
+; likely appear on schedule in 24 hours.  Until then, take care, 
+; and walk with fractals in your eyes.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Up_the_Ladder { ; time=0:12:48.85--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=-0.3\
+  2349009137520020/-0.48489650785797940/284807.2/1/\
+  -20/-3.289834655e-010 params=1.4142/0/414/0 float=y
+  maxiter=12000 inside=0 outside=atan periodicity=10
+  colors=000TePScORbNQaMO_LMYJLWIJTGHQFFNDEKCCJAAH98\
+  F77D65B4383151PAoN9kM9hK9eJ9bH9_G9XE9UD9RB8OA8L88I\
+  78F58C489286183zf6vc5ra5n_4kY4gW4cU3`S3XQ3TO2PM2MK\
+  2IH0EE0BB07803501Ye0Wb0V`0UZ0SX0RV0QT0OR0NP0MN0LL0\
+  JI0IG0HE0FC0D90B6083060040pPzjNsdLlZJeTHZNFSHDLBBE\
+  597YFbSDWMCQHBJBAD5961kw0it0gr0fo0dm0ck0ah0_f0Zc0X\
+  a0W_0UX0SV0RS0PQ0OO0ML0KJ0IG0FE0DC0A9077054022rwAo\
+  uAlsAiqAfoAcmAakA_iAYgAWeAUcATaAS_ARYAQWAPUAOSANQ9\
+  MO9LM8KK7JI6IG6HD5GA4E83C638426214104De3Cc3Cb3Ca3C\
+  _3CZ3CY3BW3BV2BU2BS2BR2BQ2AO2AN2AM2AL1AJ1AI1AH19F1\
+  9E19D19B19A089067056045033022011zwtwsqronmkkhgiccf\
+  _acY_aVYZTWWQUTOSRLQOJOLHMJEKGCID9GA7E84C52A29Nw8M\
+  r7Ln7Ki6Je6Ia5HX5GU4FR3EN3DK2CG2AD18A166043eV0cU0a\
+  T0`S0ZR0YQ0WP0VP0TO0SN0QM0OL0NK0LJ0KJ0II0HH0FG0EF0\
+  CE0AD09D07C06B04A03901801DOHcDF_DEVDCRDBNDlzejychw\
+  bfu`es_cqYaoX_mVZkUXiSVgR }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 

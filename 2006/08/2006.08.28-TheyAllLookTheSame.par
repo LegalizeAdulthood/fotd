@@ -1,0 +1,111 @@
+;     Date: Tue, 29 Aug 2006 00:32:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-08-06 (They All Look the Same [NA])
+;       Id: <1.5.4.16.20060829003308.0d6718ae@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 29, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's harmless little scene appears in the Z^sqrt(sqrt(2))+C 
+; Mandeloid as it appears 59 levels up the complex logarithmic 
+; ladder.  (The logarithmic ladder is explained below.)  The scene 
+; is so harmless in fact that I did not bother giving it a rating. 
+; I did give it a name however.  After not too much thought, I 
+; named it "They All Look the Same", which sounds a bit biased, 
+; but really is not.
+; 
+; A quick glance at the image will reveal why I gave it that name. 
+; Indeed, all midgets in the Mandeloids with an exponent of Z 
+; between 1 and 2 do seem to look pretty much the same.  They all 
+; resemble splashes, or starbursts as they are sometimes called.  
+; I spend countless hours searching, hoping that I will find a 
+; midget in this range that is truly different.  So far I have had 
+; minimal success.
+; 
+; The calculation time of today's parameter file is under 19 
+; minutes on my machine.  This is a bit slow for an image of such 
+; questionable worth.  For relief, I recommend downloading the 
+; completed image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The 'complex logarithmic ladder' is a phrase I invented.  I 
+; sometimes refer to the same thing by the name 'logarithmic 
+; hyperspiral'.  Neither phrase will be found on the internet.  I 
+; invented the phrases because the complex logarithmic function is 
+; multi-valued, and can have an infinity of solutions.  Each 
+; solution gives a unique four-dimensional julibrot fractal, 
+; complete with both Mandelbrot and Julia slices.  In my mind, I 
+; simply stacked these four-dimensional fractals onto one another 
+; until they formed a single many-layered hyper-object of 5 or so 
+; dimensions.  It is the stack of all the julibrot fractals 
+; possible to create with a single exponent of Z that I call the 
+; logarithmic ladder.  Today's parent fractal for example exists 
+; on the 59th level of this ladder.  The ladder could perhaps be 
+; more conveniently thought of as the 59th floor of an infinitely 
+; tall skyscraper.
+; 
+; In the MandelbrotBC2 formula, the p1 parameter determines the 
+; exponent of Z, while the p2 parameter determines the level of 
+; the ladder we wish to explore.
+; 
+; Cloudy and muggy but dry weather prevailed here at New Fractal 
+; Central on Monday.  The fractal cats seemed not to notice.  They 
+; were too busy chasing each other up and down the hallway.  The 
+; big event of their day came when I opened a bottle of soda.  
+; When Nico heard the hiss of the escaping gas, he hissed back at 
+; it.  Cassie watched Nico make a fool of himself.
+; 
+; The next FOTD is due in 24 hours.  If all goes well, it will 
+; appear on schedule.  Until then, take care, and mysteries just 
+; happen.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheyAllLookTheSame { ; time=0:18:51.96--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.13962249185463330/-0.000766113336763\
+  77/5.149203e+007 params=1.1892/0/59/0 float=y
+  maxiter=25000 inside=0 outside=tdis periodicity=10
+  colors=0000Gz0Gz0Gz0Gz0Hz0Hz0Hz0Hz0Jz0Jz0Jz0Jz0Jz0\
+  Lz0Lz0Lz0Lz0Nz0Nz0Nz0Nz0Pz0Pz0Pz0Pz0Nz0Pz4RzARzETz\
+  JVzNVzTXzXXxbVxeVxkVxoTxuTxxTxzRxuRsmRmeRg`PbTNXLN\
+  TEJN8HH0HC0J60L00L00N00U00V00W00X00Y00Z02_06`08a0C\
+  b0Ec0Hd2Ji2Nm2Pq2Tu2Vv2JuAAqH0oN0bV0Td0R`0RZ0PX0PV\
+  0NR0NP0LN0LL0JH0JG0HE0HC0H80G60G40E20E00C02C04A04A\
+  0680880A608806A04C04C02E00G00G00H00J00J20L40N60N80\
+  PA0RE0zG0TH0VJ0XL0XN0ZP0`T0`V0bX0dZ0d`0eb0gd0ge8uJ\
+  ez0gz2iz6kxAmvEmuGosJqoNsmRskVuiXvg`xedxbgz`kzZmzX\
+  qzVuzTxzPzfNzzLzzkzzHzzGzzkzzgzzEzzEzzEzzEzzEzxEzv\
+  EzuCzqCzoCzkCxiCueCsdCq`CoZAmzAkTAgRAezAdLAbHA`GAZ\
+  EAXzC`LEbPGeRGgTEeTEdzEdTEbTEbTE`TE`TEZTEXTEXTEVTE\
+  VTETTETTERTEPTEPTENTENTELTELTEJL0LTEJVdC`gHdkNgoRm\
+  sXqvbuzexzkzzqzzuzzzzzzzzvzzqzzizxdzsXzoRziJzeEudX\
+  kbo``zR`zTbzTdzVezVezXzzXizXizZkzZmz`ox`ovbqubsqbs\
+  odumdziexgexe0Ez0Ez0Ez0Ez }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

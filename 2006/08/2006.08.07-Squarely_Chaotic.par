@@ -1,0 +1,94 @@
+;     Date: Mon, 7 Aug 2006 09:32:47 EDT
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 07-08-06 (Squarely Chaotic [6])
+;       Id: <4ff.4aa8716.32089aff@aol.com>
+; ---------
+; 
+; FOTD -- August 07, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the Z^sqrt(2)+C fractal as it 
+; appears 41 levels up the logarithmic ladder.  (The ladder is 
+; infinite.  Regardless of how far one climbs up or down it, they 
+; can come no closer to the top or bottom, for there is no top or 
+; bottom.)
+; 
+; I named the image "Squarely Chaotic" because the exponent of Z 
+; is the square root of 2.  I rated the image a 6 because I could 
+; find nothing in it that might earn a higher rating.
+; 
+; The parent fractal consists of a large double-lobed bay vaguely 
+; resembling a termite and surrounded by considerable chaos.  
+; Since termites are bad news if they get into the house, I left 
+; the word out of the name.  Today's scene is located at the 
+; inland edge of the chaos on the north-northeast shoreline of the 
+; bay.
+; 
+; The image is not the best of all time, but the brief render time 
+; of 1-1/2 minutes means that not much effort will have been 
+; wasted if the image fails to please its viewer.  And as always, 
+; the finished GIF image will soon be posted to the venerable FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another very pleasant day prevailed Sunday here at New Fractal 
+; Central on Sunday.  The all-new fractal cats made the most of 
+; things by watching birds and squirrels, and stretching in the 
+; sun that comes in the front window during the afternoon.  In 
+; the evening I gave them their treat of tuna, but Nicholas seems 
+; to prefer cheese (sharp cheddar only) to tuna.  Maybe he was a 
+; cow in a past life.  Cassie is satisfied with her tuna treat.
+; 
+; My day was peaceful enough, but Mindspring still does not have 
+; its dial-up access under control in this area.  I guess it's 
+; about time to think of a switch.  The next FOTD is due in 15 
+; hours.  Until then, take care, and walk on the enlightened side 
+; of the fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Squarely_Chaotic { ; time=0:01:26.12--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+0.2624741533\
+  9993670/+1.0374591869810080/159400.7 periodicity=10
+  params=1.4142/0/41/0 float=y maxiter=30000 inside=0
+  colors=000900F00L0898`E5VI4RM1MzR0oH0b891i`EMRC`Iz\
+  _YCl0HV5LFCy`5lO9`BEbz0Ys0V`5SICs00j05c09X0E_0YV0S\
+  S0MHziusbeRSl8ef5_`4TV1O0zF9VHp0vb0b005BXxr8uc4`e0\
+  m0f0s0Sm0Xg0`b0eX0gb9MgT1EEEEEMMEX4HO09UL2Qz0xv0ro\
+  0mg0ib0eCRP0p9HcoCXi8Rc4LY0FSFLPTPMgTJzYIf40bEClOR\
+  vYezfsLHOuVijL`_9RO8SrxXcTPz0Yp0Tg0PY0LyYmlMb`BSLJ\
+  BMCEO5Hx00l00`04rJ8c9E0SSPJsPEiP9`P4R0Bs9V0EM0IF0M\
+  69i9v_4bJS0ME6cue_f_XSTSEOzb0xS0lI2`8Buz4ii9_MEOvg\
+  Pf`PSVPEOg`0`O4VBB`zXVYPOvpPfgPS_PERzzv000060540C2\
+  0J19z40x20l10`09Xx0Tg0ST0RE9E1vJ0bl64zgjoS`bERbz2V\
+  XBbb0YS0VI0S880vPBSLz20x10l14`0BYrOO0I4R09J0FC0L58\
+  zz2Mz0Om0OX1PF98zjEpxJPb909zzrH0xL0bL`FMOHOBIT0858\
+  xeH0_B0T56v`BmREeIFX8H_zxXslT`bRISxzTolRfXOYFLe1``\
+  0VX0RS0M0`16R5CI9J8EzP6lCCRI0PC5P89P4EBz0Fo0IY0MH9\
+  Cy0Hc0LJ6`08zz0mX8zzMxrLl_J`HI0Y00P08H4H8BbX0YL0T9\
+  56lVC_RHOOLBL000200E08400 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
