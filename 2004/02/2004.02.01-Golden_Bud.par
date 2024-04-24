@@ -1,0 +1,105 @@
+;     Date: Sun, 01 Feb 2004 09:40:20 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-02-04 (Golden Bud [4])
+;       Id: <1.5.4.16.20040201094245.0d7f26d0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 01, 2004 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Golden Bud".  This does not imply that 
+; the bud is a golden color.  I gave it that name because the 
+; parent fractal was created by using the golden ratio, or 1.618, 
+; twice.  Actually, the bud, or the interior of the bud, is an 
+; electric blue color.
+; 
+; The generating formula of the image is Z^1.618+C.  This means 
+; that each bud in the resulting fractal will have 0.618 part of 
+; one lobe.  But unlike the buds of the whole Mandeloids, where 
+; all buds are of a similar shape, the buds of the fractional 
+; Mandeloids have no fixed shape.  The missing part of the next-
+; higher whole bud can take any shape whatever.
+; 
+; The next-higher whole bud in today's instance is the near-per-
+; fect circle of the buds of the classic Mandelbtot set.  The 
+; 0.382 part of a circle that is missing has been eroded rather 
+; equally from the entire perimeter, leaving a rather squat bud 
+; with assorted nooks and crannies.  Some of these crannies might 
+; hold some interesting scenes.  The drawback to the exploration 
+; is the extreme slowness of the area.
+; 
+; I wanted to give the image a rating higher than the 4, but in 
+; all honesty I could not.  I worked on it for my own amusement 
+; rather than to make as good a picture as possible.  Combined 
+; with the render time of 22 minutes, the image has an overall 
+; value of 18.
+; 
+; The completed GIF image is available on Paul's FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; It remained very cold all day Saturday here at Fractal Central, 
+; and as a result, the fractal cats remained very close to the 
+; heat.  At one point, Thomas did check the conditions on the 
+; porch, but the temperature of 19F -7C and lack of direct sun was 
+; far too chilly for his ears.  He turned around after only two 
+; minutes and came back inside to enjoy the heat.  This morning is 
+; starting about the same; I suppose the cats will have a repeat 
+; day.
+; 
+; So far, my day has been uneventful, but the fractal lady has 
+; that 'lets go shopping for antiques' look in her eye.  I fail 
+; to see what's so interesting about stuff that others no longer 
+; want, but who knows . . . on rare occasions something worthwhile 
+; does turn up.  One thing certain to turn up however is the next 
+; FOTD, which will appear tomorrow.  Until then, take care, and 
+; older is not always better.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Golden_Bud { ; time=0:22:18.97--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=mandelbrotbc1 function=floor
+  center-mag=+0.19019301420027440/-0.004400056781287\
+  68/31007.75/1/24.86/-1.94137206310784904e-011
+  params=1.618/0/1.618/0 float=y maxiter=15000
+  inside=255 logmap=187 periodicity=10
+  colors=000bXqbYocZnc`lcakdbiLQHOMHQHGRIHRIHRJHRJIR\
+  KIRKIRLJRLJRMJRMJRNKRNKROKROLRPLRPLRQMRQMRRMUFRSLO\
+  RRMPWJOaHNfFMeGMdHLcILcJKbKKaLJ`MJ`NI_OIZPHYQHYRGX\
+  TGXUFWWFWXEWZEV_DV`DVbCUcCUeBUfBThATi8RkATjBUiCViE\
+  WhFYgGZgI_fJ`eKaeMcdNdcOecPfbRhaSiaTj`Vk_Wl_XnZZoY\
+  _pY`qX`tVasWarXaqXbpYboZbnZcm_cl_ck`cjadiadhbdgcef\
+  ceededdecefbffaff`gg_hgZhgYikctghpgXiZJVP4IR5HS5HU\
+  6HV6GX6GY7G_7F`8Fb8Fc8FcCHcFJcILcLNcOPcRRcUTcXVc`X\
+  ccZcf`cibcldcofcrhcujdzfcxkcvpcttbrybpzcrzbnzajz`f\
+  z_bwZZsZVpYRlXNhWJeVFaWASVBWVCZUDaUDdUEgTFjTFmSGpS\
+  HsSHvRIyRJzQHzRJzSKzSLzTMzTNzUOzUPzVQzVRzWSzWTzXUz\
+  YVzYWzZXzZYz_Zz__z``z`azabzaczcczdczeczgczhcziczlb\
+  zkczjczjdzidzhdzhezgezgezffzefzefzdgzdgzcgzbhzbhza\
+  hzaiz`iz_iz_jzZjzZjzYjzXjzWjzVlzUlzTmzSmzRozQozPpz\
+  OpzNrzMrzLrzLrzNszOszQszRszStzUtzVtzXtzYuzYuzZuzZu\
+  z_vz_vz`vz`vz`vzavzavzmzz }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

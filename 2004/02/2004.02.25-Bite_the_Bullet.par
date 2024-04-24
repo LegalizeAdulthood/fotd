@@ -1,0 +1,102 @@
+;     Date: Wed, 25 Feb 2004 10:26:04 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-02-04 (Bite the Bullet [2])
+;       Id: <1.5.4.16.20040225102847.2b479138@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 25, 2004 (Rating 2)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I am brimming over with philosophy today, both scientific and 
+; political, but unfortunately, or perhaps fortunately, because of 
+; the general turmoil, I have no time to write it.  So instead of 
+; blathering, we will go directly to the abbreviated discussion 
+; of the image.
+; 
+; Today's image is a different view of the same scene that 
+; appeared in yesterday's image.  The magnitude and maxiter are 
+; the same, but, using a different formula, the render time has 
+; jumped from 9 minutes to 95 minutes.  This is a fine demonstra-
+; tion of the efficiency of the Fractint Mandel formula, which was 
+; used to calculate yesterday's image.
+; 
+; Yesterday's Mandelbrot image showed the real(c) and imag(c) axes 
+; of the scene.  Today's image shows the imag(c) and imag(z) axes. 
+; I call this orientation the 'Rectangular' because the slice 
+; through the origin of the Julibrot in this direction is shaped 
+; quite like a rectangle.
+; 
+; When seen from this particular direction, the hole that appeared 
+; as a midget in yesterday's image is shaped more like a bullet.  
+; In recognition of this fact, and considering the plight of the 
+; local school teachers, I have named the miserable picture "Bite 
+; the Bullet".
+; 
+; Since today's image is basically a repeat of yesterday's, 
+; complete with the same color palette, I could rate it no higher 
+; than a 2, which, combined with the render time of 95 minutes, 
+; gives an overall value of a pathetic 2, perhaps the all-time 
+; lowest value.
+; 
+; At times like this it is best to avoid needless frustration by 
+; giving Paul a chance to render and post the image, then download-
+; ing it from his FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was cold and rainy here at Fractal Central on 
+; Tuesday.  The temperature of 36F 2C, while not quite cold enough 
+; for snow, was certainly cold enough to chill the whiskers and 
+; ears of the cats, who passed the day sleeping by the heat and 
+; glancing at the birds flying past.  Today is starting sunny and 
+; cold, but promises to turn warmer.  The cats have yet to make 
+; their judgement on the weather.
+; 
+; For me, I've got quite a load of work to accomplish and the 
+; local agitation, (the fractal lady is involved in the school 
+; situation), is helping none at all.  I'll try to have a fractal 
+; ready by post time tomorrow, but there is no promise.  Until 
+; next time, take care.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Bite_the_Bullet { ; time=1:35:29.99--SF5 on a P200
+  reset=2003 type=formula formulafile=slices.frm
+  formulaname=Rectangular passes=1
+  center-mag=0/0/2.171274e+008/0.002123/-0.035408778\
+  9311406873/-89.8977468907879 params=-0.12942475461\
+  27244/0.6495253624666402/-0.1294247546127244/0.649\
+  5253624666402 float=y maxiter=100000 inside=0
+  logmap=5777 periodicity=10
+  colors=000NotLnuKmwJlxLkuMjsOipPhnRglSgiUfgVeeXdbY\
+  c`ZcZUcbPceKciGclEcbCcTBcJ9c98c0OcORcVTcaJcSFcWBc_\
+  8cc7he7eg7ch7`j6Zl6Wm6Uo6Rp5Pr5Mt5Ku5Hw5Fx8LlBQ`FM\
+  cIJeMGgPDiSAlW7nZ4pa1rd4of7liAikDfmFcpI`rLYuOVwRSy\
+  TQcSXIRcNSfRTiVUkZUncVqgWskXvoXxlWviVugUtdTrbSq_Rp\
+  YQnVPmTOlQNjOMiLLhJKfGJeEIdHObJTaLZ_OcZQiXSnWUsVZH\
+  K_ML`QMaUNbYNcaOdePeiQfmQgqRhuShySbrQYkOSdNNYLHRKC\
+  KI7EHKKDWQ9gW5s`1jV8bPEUJLMDRD7Y52cD6YKATREOZIJeME\
+  lP9mNBgMCcLDmJFnIGnHHnFJnEKoDLoBNoAOo9PeGOWNNNUNUZ\
+  H`bBgf5nj0og0pd0qa0rZ0sX0tU0tR0uO0vL0wJ0xG0yD0zA0z\
+  80rY1tI2qN2nS3lW3iZ6fX8dYAaYC_YEXZGUZIS_KP_MN_OPYM\
+  RWKTUIVTGXREYPC_NAaM8cK6eI4gG2hF1gF1gF1fG1fG1eH1eH\
+  1dI1JEQJFPKGOKHNLIMLJMMKLMLKNMJNOINQIOSHOUGPWFPYEP\
+  _DQaDQcDReCRgBSiASk9Tm9Tm8UmAUm6Vm5Vm5Wm4Wm3Xm2Xm1\
+  FlAGk9Hj9Hi9Ii8Ih8Jg8Jf8Kf7Le7Ld7Mc6Mc6Nb6Na6O`5O`\
+  5P_5QZ4QY4RY4RX4SW3PipOlr }
+
+frm:Rectangular {; Jim Muth  imag(z),imag(c)
+z=flip(real(pixel))+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16 }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,106 @@
+;     Date: Thu, 05 Feb 2004 12:14:24 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-02-04 (Crazy Man, Crazy [8])
+;       Id: <1.5.4.16.20040205121652.29bfe8ce@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 05, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We have a fractal for today -- an image with a rating of 7 that 
+; I found at the zero level of the Z^2.1+C Mandeloid.  I hesitate 
+; to call the zero level the ground level, since the 3.14159... or 
+; pi level is a more appropriate candidate for ground level of the 
+; MandelbrotBC1 formula, at least when the 'floor' function is 
+; used.
+; 
+; The parent fractal is a twisted version of the classic M-set, 
+; which closely resembles the midget at the center of today's 
+; image.  The largest bud of the parent is attached to the north-
+; west shore of its main bay, and is squashed on the right side.  
+; A tiny, almost invisible valley lies on this squashed shoreline. 
+; Today's scene is located rather deep in this valley.
+; 
+; Today's picture gives an unusually strong impression of being a 
+; photograph of an actual three-dimensional scene in some other 
+; reality.  How is this possible?  Nothing but numbers are 
+; involved in the creation of the image, and numbers are abstrac-
+; tions -- ideas that might have no existence other than in the 
+; mind of man.  It's "Crazy Man, Crazy", which is what I named the 
+; image.
+; 
+; And it could get even crazier.  Since I arranged the colors with 
+; the intent of creating the impression of an actual three-
+; dimensional object, perhaps I am the creator of a reality.  In 
+; fact, I could consider myself the creating god of as many 
+; infinite fractal universes as I care to create.  I might wonder 
+; if there are conscious beings in any of the universes I create.  
+; If there are, I wonder if they believe in me.
+; 
+; Returning to our present reality, today's image, with its render 
+; time of 28 minutes, has an overall value of 25.  That value may 
+; be increased significantly by downloading the completed GIF 
+; picture from Paul's FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Tuesday was wet here at F.C., and the cats were unhappy.  On 
+; Wednesday the sun appeared and the temperature reached 41F 5C.  
+; The cats were happier, but the sloppy snow in the yard made 
+; their paws too wet for comfort.  Today is starting colder and 
+; the sun is gone.  It remains to be seen how the duo will take 
+; these conditions.
+; 
+; With the work once again under control, my day promises to be 
+; busy but not overly rushed.  The fractal that I find will appear 
+; as tomorrow's FOTD.  Until then, take care, and never forget 
+; that any fractal, no matter how good, can always be made a 
+; little better.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Crazy_Man--Crazy { ; time=0:27:51.78--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor inside=0
+  center-mag=-0.54888974079389370/+0.824478167923077\
+  90/1.096037e+008/1/10/-3.4330458e-007 params=2.1/0\
+  /0/0 float=y maxiter=12000 inside=0 periodicity=10
+  colors=000z0dz0iz0nz0sz0az0Hz40z00z00z00xA0xL0vU0v\
+  a0ui0ur0sz0sz0mz0fz2az4Uz6Nz8Hz8Fz6Dz4Az28z26x04x0\
+  2v02v00u00s00s00r00p00p00n00n0DHLEIQFJTGKWHLZIMbJN\
+  fNJmQFsNQu0Sz0YzRcrShgUm_WraYuc_xeazgcziezkgzmizok\
+  zqmztmzwkzzizzgzzezzczzazz_zzYzzWxzUuzSszQvzOzzMzz\
+  KzzKzzKzzKzzKzzKzzKzzKzzKzzKzzLszmNzgLzbJzZHzUHuQF\
+  nLDiFAbAAW48Q06J04A04402800D20H60LA0PF0SJ0WN0ZQ0bU\
+  0fY0ia0md0pg0si0vbPLfNHgLDiJ8kJ4mP8nSApWFpZHrbLsgN\
+  ukQunSvrWxuYzzazzbzzfzzgzzkzzmzznzznzsnzmnzdnzYnzP\
+  pzHpz6pz0pz0pz0pz0rz0sz0uz6uzFvzLxzQxzWzzazxgzvmzs\
+  rzpvznzzpzzpxvrvrrvmrugssbsrYsrSupNunHunAmrNdsYWuf\
+  NvpDxx2zz0zzDxzSuzfszupzzmzzkzzizzgxzgszfnufipddid\
+  ZdbUZbPUaJPaDJZ6DZ2AgF8nQ6va4zk6zr6zxS4zD2z00p02b0\
+  8d0Cd0Hd6LdDPfJSfPWfS_fYcgbfggigmmgrpivtizwizyizwg\
+  xtfvpdsmbpkanhZkdYg`YfXWbVUZQSYNQUJPQFNPDNNzmNziNx\
+  gNudNpbNkZNgYz0Hz0Nz0Uz0Z }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

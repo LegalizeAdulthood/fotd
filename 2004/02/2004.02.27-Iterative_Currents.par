@@ -1,0 +1,111 @@
+;     Date: Fri, 27 Feb 2004 12:30:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-02-04 (Iterative Currents [6])
+;       Id: <1.5.4.16.20040227123257.2a7fbf62@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 27, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; While working with today's image, I discovered that there is a 
+; problem with the type=mandel formula in Fractint.  As a result, 
+; I needed to write a new version of the SliceJulibrot formula to 
+; calculate today's image, which is a different view of yester-
+; day's type=mandel image.  This new version, SliceJulibrot3, is 
+; included in the parameter section at the bottom of this letter.  
+; The new version calculates the square root of the number entered 
+; as (p4), or the starting point of Z.  I needed the new version 
+; because the high-speed type=mandel formula in Fractint calcu-
+; lates the square root of the complex number that is entered as 
+; the starting-point parameter rather than the entered number 
+; itself.  (Actually, I already knew this, but for some reason it 
+; did not come to mind.)
+; 
+; As mentioned above, today's image is a different view of the 
+; spectral bud that was illustrated in yesterday's FOTD.  But the 
+; angle of today's view is close to 90 degrees from that of yester-
+; day's view, and as a result, the spectral bud has been stretched 
+; to a few near-straight features in the background.  The fore-
+; ground spiral however has really come to life, and has changed 
+; into a sinuous series of curves, which no longer form a perfect 
+; spiral, but are rather pleasant to look at anyway.
+; 
+; These swirling features inspired the name "Iterative Currents".  
+; While studying the image, I got the distinct impression of 
+; convection currents swirling on the surface of a newly-poured 
+; cup of hot coffee.  My original impulse was to rate the image at 
+; a 7, but then I realized that some people do not drink coffee, 
+; and dropped the rating to a 6.  Combined with the render time of 
+; just under 16 minutes, this gives an overall value of 38.
+; 
+; With more work, the coloring could have been better, but I spent 
+; so much time trying to find why the first formula didn't work 
+; that I had too little time to devote to coloring the image.
+; 
+; The finished image is available on Paul's FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A lack of sun and a temperature of 41F 5C here at Fractal 
+; Central on Thursday kept the cats' outdoor time limited to less 
+; than one hour, but, perhaps due to their increasing age, this 
+; was all the duo needed to satisfy their ever-shrinking urge for 
+; adventure.  Today is starting sunny and milder.  This promises 
+; good things for the duo.
+; 
+; For me, the work is still heavy.  But it is not heavy enough to 
+; keep me from fractal land, and whatever I find there will become 
+; tomorrow's FOTD.  Until then, take care, and keep your fractals 
+; in alphabetical order.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Iterative_Currents { ; time=0:15:54.50--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot3 passes=1
+  center-mag=-0.00263587632006605/+0.004641457407512\
+  89/79.37667/23.269/0/-32.6192430711928907
+  params=82.7/-41.3/-91.4/74.8/-0.23020724/0.6448031\
+  5/0.3991/-0.6312 float=y maxiter=40000
+  inside=0 logmap=464 periodicity=10
+  colors=000pzMpyMpxNpxNpxOpxOpxOpxPpxPpxQpxQpxRpwRp\
+  wSpwSpwTpwTpwUpwUpwUpwUpwUpvUpvUpvUpvUpvUpvUpvUpvU\
+  pvUpvUpuUpuUpuUpuUpuUpuUpuUpuUpuUpuUptUptUptUptUpt\
+  UotUotUotUotUntUnsUnsUmsUmsUmsUlsUlsUlsUksUksUksUj\
+  sUjrUjrUirUirUirUhrUhrUhrUhrUgrUgrUgrUfqUfqUfqUeqU\
+  eqUeqUeqTdqTdqSdqSdqRdqRdpQdpQdpPdpPdpOdpOdpNcpNcp\
+  McpMcpLcpLcoKcoKcoKcnJcnJcnJcnJcmIcmIcmIcmIblHblHb\
+  lHblHakGakGakGakG`jF`jF`jF`jF_iE_iE_iE_iEZhDZhDZhD\
+  ZhDYgCYgCYgCYgCXfBXfBXfBXfBWeAWeAWeAWeAVc9Vb9Ua9U`\
+  9TZ8TZ8SZ8SZ8SZ7SZ7S_7T_7T_6U_6U`6Tb5Uc6Ud7Vd8Ve9V\
+  cAWbBWaCW_DXZEXYFYYHYYKYXNZXQZWTZWW_WZ_Va`Vd`Ug`Uj\
+  aUnaTqaTtbSwbSzcSzcRzcRzdRzdTzdVzeXzeZzf`zfbzfdzgf\
+  zghzgjzhkzhkzilzimzinzjozjpzjqzkrzkrzlrzlrzlrzmrzm\
+  rzmrznrznrzmrznrznrznrznrznrznrznrznrznrznrznrznrz\
+  nrznrzorzorzorzorzorzorzorzorzorzorzorzorzorzorzpr\
+  zprzprzprzprzprzprzprzprz }
+
+frm:SliceJulibrot3   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+sqrt(p4):
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE==================================
+; 

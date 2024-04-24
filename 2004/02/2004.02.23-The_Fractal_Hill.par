@@ -1,0 +1,108 @@
+;     Date: Mon, 23 Feb 2004 10:48:41 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-02-04 (The Fractal Hill [7])
+;       Id: <1.5.4.16.20040223105121.0d6f2f30@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 23, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Though today's image might not be the most beautiful scene ever 
+; discovered in the Z^2+C Julibrot, it must be one of the most 
+; unusual.  Viewing the image, we once again find ourselves in the 
+; East Valley area, but what has happened to the valley we know so 
+; well?  Where are the elephants?  In today's image there is not 
+; the slightest sign of the ponderous pachyderms that live in the 
+; vicinity.
+; 
+; Don't panic.  The elephants have not stampeded off.  They have 
+; simply been squashed beyond recognition, leaving us with some-
+; thing that resembles a surrealistic mathematical hill standing 
+; on an alien planet, under a very earthly blue sky, complete with 
+; a haze layer near the horizon.
+; 
+; Nothing beyond the basic equal-iteration bands has been used to 
+; render the scene.  The only extraordinary aspect of the image is 
+; the fact that it has been stretched in the vertical direction 
+; almost 100000 times.  Things become quite squashed as we near 
+; the tip of East Valley and view it from the unimaginable direc-
+; tion of today's image.  The stretching I did on the image was 
+; necessary so that it would consist of more than a straight, 
+; featureless razor-edge.
+; 
+; I named the image "The Fractal Hill".  It does rather resemble 
+; a hill, and it most certainly is a fractal.  I put some extra 
+; effort into coloring the scene, which raises its rating to a 7.  
+; When the render time of over 10 minutes is considered, the 
+; overall value comes in at a 67.
+; 
+; And when the pre-rendered image is downloaded from Paul's web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; the value increases several-fold.
+; 
+; With lots of sun and a temperature of 50F 10C, Sunday was fair 
+; enough here at Fractal Central.  The cats must have thought so 
+; also, because they spent over three hours lounging in the yard, 
+; and when they came in, only a small bit of tuna was needed to 
+; keep their moods up.  Today is starting sunny and pleasant once 
+; again.  We shall see how the cats' day goes.
+; 
+; For me, it will be another relatively uneventful day -- that is 
+; unless finding a great fractal can be considered a big event.  
+; Regardless of what happens, the next FOTD will appear in 24 
+; hours.  Until then, take care, and there's a hill beyond the 
+; hill beyond the hill . . .
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_Fractal_Hill { ; time=0:10:23.02--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 passes=1
+  center-mag=+0.25009805052166050/+0.519661012667224\
+  50/28984.82/9.451e-005/90/3.64113739159677152e-011
+  params=45/90/0/0/0/1e-006/0/0 float=y
+  maxiter=100000 inside=255 logmap=297 periodicity=10
+  colors=000PNzQOzRPzSQzTRzUSzVTzWUzXVzYWzZXz_Yz`Zza\
+  _zb`zcazdbzeczfdzgezhfzigzjhzkizljzmkzmlzmmzmmzmmz\
+  mmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmm\
+  zmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzm\
+  mzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmzmmz\
+  mmzmmzlmzlmzkmzkmzkmzjmzjmzimzimzimzhmzhmzhmzgmzgm\
+  zfmzfmzfmzemzUmLUmMUkLUjLUiLUgLUfLUeLUdLUbLYaLZ`M_\
+  ZOZYQYXSXWUWUWVTYUS_TQaSPcROhQNrPLkOKbNJZKHSKGSKFS\
+  KESKCSKBSKASK8SK7QK6OK5MK3KK2IK1IK0IKANKKSPUXUbaZa\
+  aiaacaaUaaUaaA`aB`aB`aC`aC`aDcaE_aE_aF_aF_aG_aHWaH\
+  ZaIZaIZaJZaJZaKYaLYaLYaMYaMYaNXaOXaOXaPXaPXaQXaRWa\
+  RWaSWaSWaTWaUVaUVaVVaVVaWVaWVaXWbXWbYWbYWbYWbZWbZW\
+  b_Wb_Wb_Xb`Xb`XbaXbaXbaXbbXbbXbcXbcYbcYbdYbdYbeYbe\
+  YbeYbfYbfYbgZbgZbgZbhZbhZbiZbiZbiZbjZbj_bk_bk_bk_b\
+  l_bl_bm_bm_bn`cm_bm_bm_bm`em`emaemaembembdmcdmcdmc\
+  dmccmccmccmccmcbmcbmcbmcb }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE==================================
+; 

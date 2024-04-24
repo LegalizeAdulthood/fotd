@@ -1,0 +1,106 @@
+;     Date: Mon, 16 Feb 2004 10:54:10 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-02-04 (Triple Point [7])
+;       Id: <1.5.4.16.20040216105646.299fc3d0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 16, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; This happens every time I start thinking about the fourth 
+; dimension.
+; 
+; Today's image starts what may prove to be a lengthy journey in 
+; the oblique slices of the four-dimensional Z^2+C Julibrot figure.
+; 
+; The formula I use for this exploration was developed about five 
+; years ago by John Goering and revised slightly by me.  I have 
+; not posted this particular version previously.  Since I will be 
+; using it often in the days to come, be sure to remove the frm: 
+; from its name and copy it into your formula file.
+; 
+; This formula does not draw every possible slice through the four-
+; dimensional figure, but it draws more slices than any other in 
+; my vast collection.  It can do a smooth rotation from the Julia 
+; to the Mandelbrot aspect.  And it reveals one of the least known 
+; oddities of the world of fractals -- that there are two slices 
+; through the Julibrot that produce a Mandelbrot set.  One of 
+; these slices is drawn when the (p1) and (p2) parameters of the 
+; formula are set to zero.  I leave it to the intrepid fractalists 
+; to find the parameters that reveal the second Mandelbrot set.  
+; One hint -- the (p1) and (p2) parameters need to be varied only 
+; somewhere between +1 and -1.
+; 
+; Today's image is another view of the orange midget of 
+; yesterday's image, using the same color palette.  I have named 
+; it "Triple Point".  There is not much to be said about it, 
+; except that it is a remote slice of the Julibrot, which appears 
+; as though it is being pulled in three directions.  The rating of 
+; 7 and render time of 7 minutes give an overall value of 84.
+; 
+; Starting with tomorrow's FOTD, I'll do some heavy-duty 
+; exploration of the fourth dimension.  But before that time 
+; arrives, save a few minutes by downloading the finished image 
+; from Paul's web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Sunday was sunny here at Fractal Central, but the temperature 
+; hovered around freezing all day.  This was too chilly for the 
+; fractal felines, who spent the day indoors, seeking the warmest 
+; spots they could find.  Thomas managed a few hits at his old 
+; playtoy before he settled for the day.  Tippy just settled.
+; 
+; Today is starting even colder, with a temperature of 14F -10C.  
+; The cats, who are growing slower every year, will likely have 
+; another inactive day.  As for me, when the work is finished, 
+; I'll have a fractal day.  Until next time, take care, and don't 
+; get dizzy trying to figure those Julibrot rotations.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Triple_Point { ; time=0:07:11.60--SF5 on a P200
+  reset=2003 type=formula formulafile=julibrot.frm
+  formulaname=SliceJulibrot passes=1
+  center-mag=+0.00000000000130513/+0.000000000008816\
+  47/2.524132e+011/0.03598/101.821445919962812/-76.3\
+  113167840462694 params=0.83333/0.5/0/0/0.351424051\
+  7840664/0.06386667204878391/0.3514240517840664/0.0\
+  6386667204878391 float=y maxiter=5000 inside=0
+  logmap=-820 periodicity=10
+  colors=00001P02P03P14Q25Q36Q47R58R69R7AQ8BQ9CPADPB\
+  EPCFPDGQEHRFIQGJRHKSILTJMUKNVLOWMPXNQYNRXOSXPTXQUX\
+  RVXSWXTYXT_X`bageenkjuonvhgwa`wWUxPNyIGyCAxFBxHCxK\
+  DxMDwPEwRFwTFwWGwYHv`IvbIveJvgKviKueJtbIs_IrXHqUHp\
+  QGoNGnKFmHFlEEkBEfDLbERZGXVHbQIeMKgILiEMgCOeBPd9Rc\
+  8SbAUcCVcEWcGYcIZcK_dMadObdQcdSfdUheWjeYme_oe`meXk\
+  iTilPgpLesHcwDZztiTqgVofXleYjd_hc`ebbcaca`eZ_gXZhU\
+  YjSXkQWmNVnLUpJTqLVmMWjNYgPZdQ``RaYTbVUdSVeOXgLYhI\
+  ZiFXjHWjIVjJUjKTjLSjMQkOPkPOkQNkRMkSLkTPgSTdRWcQ_c\
+  PbcOfcNicMmcLpcKtcJwcJscHocFkcEgcCdcA`c9Xc7Tc5Qc4O\
+  cBMcIKeOIgVGi`EkgCpmAtt9xzCvuEtpGrkIpgKobNqYPsTRuP\
+  TwKVxFXzBZzL`zVbzc`z_ZzWXzSVzPTzLRzHQzEQzIQzLPzPPz\
+  SPzWPzZPzbPzeRzcSzbUz`Vz_XzZYzX_zW`zVazTczSdzQfzPc\
+  zO`zVgzUdzYaz`ZzcXzeVzdTzcVzbYza_zaaz`cz_fzZhzYjzY\
+  lzXozWqzVszUuzUnzSgzQ`zOUzMOzLVzJ`zIgzHmzGtzFzzEwz\
+  LtzRrzXozblzhjznczVezThzR }
+
+frm:SliceJulibrot    {; draws most oblique slices
+  pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+  b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+  cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+  sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+  s=v*sin(a), c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,100 @@
+;     Date: Thu, 19 Feb 2004 12:14:48 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-02-04 (The Golden M [5])
+;       Id: <1.5.4.16.20040219121727.0d7732e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 19, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With an unexpected load of work to get out, I have time for only 
+; a short discussion of today's image.
+; 
+; The image is a scene in Seahorse Valley.  It looks nothing like 
+; the familiar valley because it is sliced through the Julibrot in 
+; a new direction.  To visualize the direction, imagine the 
+; Seahorse Valley area of the M-set extending as a 3-D figure in 
+; front of and behind the screen as it would when the real and 
+; imaginary parts of Z are perturbed equally.  Then imagine a 
+; horizontal slice through this 3-D figure cut 0.05 above the 
+; X-axis.  And then imagine yourself looking down on this slice 
+; from above.
+; 
+; Or better, forget the imagination.  From this angle, Seahorse 
+; Valley appears as a 'bridge' spanning the width of the Julibrot. 
+; The impossibly straight edges are typical of scenes in the odd 
+; planes.  There is an explanation for why this is so, but it will 
+; have to wait until I have more time to write it.  Until then, 
+; enjoy Seahorse Valley as you have never seen it before.
+; 
+; I named the image "The Golden M".  The reason for the name is 
+; obvious when the image is seen.  The rating of an average 5 
+; combines with the render time of 16 minutes to give an overall 
+; value of 31.  The value may be increased by downloading the 
+; finished GIF image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The sun shone and the temperature rose to 46F 8C on Wednesday 
+; here at Fractal Central.  The cats enjoyed the pleasant 
+; conditions to the best of their ability, and when the sun went 
+; down, came inside without complaint.  Only a small treat was 
+; needed to satisfy their meager desires.
+; 
+; Today is starting cloudy, but it is still mild.  It will be 
+; another good day for the cats.  For me, it remains to be seen 
+; how the trip into the fourth dimension will go.  But however it 
+; goes, whatever I find there will appear as the next FOTD.  Until 
+; then, take care, and keep your feet on the ground and your head 
+; in the clouds.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_Golden_M { ; time=0:16:10.54--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 passes=t logmap=yes
+  center-mag=-0.00128325508607199/-0.000000000000004\
+  55/159.0018/0.01505/90/-5.05012698326368081e-014
+  params=45/90/0/0/-0.75/0.05/0/0 float=y
+  maxiter=100000 inside=0 outside=summ periodicity=10
+  colors=000NuPNrQOpSOmTPkVPhWQfYQcZR``RZaSWcSUdTRfT\
+  PgUMiUKjWJiXIiZHh_GhaFgbEgcEgeDffCfhBeiAek9dl8dm8d\
+  bIaTRZJ`W9iTDeVHbWL_XPXYTUZXR_`OadLbhIclFdpCet9fw6\
+  gqHdlRbg`_hjYmqWmoTmmQmkNmiJmgFmeBmd8meAmfCriAml9m\
+  n7uq6xr5uo4sk4qh4qe4pc4oa4n_4mZ3mY3nX3oW3pV3qU3rZ3\
+  rV3rT7mRBhOFcMIZJMUHQPFUKFXEH`8Id7Kh6Mk5No4Ps3Rw3S\
+  z8XrD`kIddNhYSmRXqKauDfy6bu9_qCXmFTjIQfKYbNJ_QGWTD\
+  SV9PYaL`mHmcEeUHrcKmcMcmKccScEUcHXcJZcLacfdhQfmSim\
+  VlmXnmZqm`smZpmYmmWmmVmmTmmSmmQmmOmmNmmLcmacmZQmXO\
+  mUMmRKmPImMGoKEpGGqDHrAJr7Ks4Ls8NtCOtGPtKRtOStSTtW\
+  Vt_WtcXtgZtk_to`tsbtwctzdtxfqvgouhmsjmqkmplmnmmlon\
+  kpoiqphrqfqrepsdotcnubmvalw`kxblycmzdnzfozgpzhqzir\
+  zkszltzmuzovzpwzqxzryzpzzozzmzzlzzjzzizzhzzfzzezzc\
+  zzbzz`zz_zzZzzbzzezzhzzkzznzzozzpzzpzzqzzqzzrzzszz\
+  szztzztzzuzzvzzvzzwzzwzztzzrzzozzmzzjzzhzzfzzczzaz\
+  z_zzYzzWzzUzzSzzQzzOzzMzz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE==================================
+; 
