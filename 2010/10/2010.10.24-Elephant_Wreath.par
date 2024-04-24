@@ -1,0 +1,98 @@
+;     Date: Sun, 24 Oct 2010 10:47:41 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-10-10 (Elephant Wreath [5])
+;       Id: <1.5.4.16.20101024104748.11bf4666@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 24, 2010 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Elephants are everywhere in Seahorse Valley of the Mandelbrot 
+; set.  They come in all sizes, shapes and colors.  They also 
+; enjoy doing tricks.  The elephants in today's image have formed 
+; themselves into a wreath, a bit too early for the season to be 
+; sure, but decorative just the same.  The name "Elephant Wreath" 
+; describes the scene well enough.
+; 
+; The image is stretched more than 1000 times (1083 to be exact) 
+; in the horizontal direction.  Such stretching is necessary to 
+; correct the natural distortion of the scene, which lies in an 
+; orientation rotated 10 degrees from the Rectangular toward the 
+; Oblate.
+; 
+; The rating of a 5 might be a bit too conservative, but how much 
+; can a holiday wreath decorated with elephants be worth?
+; 
+; The calculation time of 11-1/2 seconds is fast by any standards. 
+; Viewing the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; is equally fast, and could be a lot more fun.
+; 
+; A frosty morning gave way to warm sunshine and an afternoon 
+; temperature of 64F 18C here at Fractal Central on Saturday.  (It 
+; reached 73F 23C at Old Fractal Central 150 miles 240km south of 
+; here.)  The fractal cats slept through most of it.  My day, 
+; which was occupied with a trip back to Old Fractal Central, was 
+; otherwise uneventful.  The next FOTD will likely be posted 
+; within 12 hours, which will bring the FOTD up to date if it 
+; happens.  Until next time, take care, and keep alert for that 
+; quantum stuff.  It's lurking everywhere.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Elephant_Wreath { ; time=0:00:11.52-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.003041525\
+  45290287/0/16.30635/1083 params=100/90/0/90/0.265/\
+  0/0/0/2/0 float=y maxiter=1500 inside=0 logmap=48
+  symmetry=xaxis periodicity=6 mathtolerance=0.05/1
+  colors=000BaMCbODcOEdQFeSGfUHgWIhYJiZKjYMkYOlXQmXS\
+  nWUoWZrVcuVhxUmzUruVvrVwnVzkWwhWmeWcbWUZXKWWJVVHTV\
+  EQUCNTAKS9IS8HS7GS6FR5DS4CQ3AO25M10K00K40K70KA0KD0\
+  KG4PK4UN4ZQ4cT4hW4lX6nY7oY8pZ9rZBs_Ct_Dv`Ew`FxaHub\
+  IrcKpcLmdNkeOheQffRcgT`gUZhWWiXUiZRj_PkaMkbKhaMe`O\
+  c_Q`_RYZTWYVTXXRXYOW_LVaJUcGUdDTfBSh8Rj6Rk8ShATfBU\
+  cDUaFV_GWXIXVKUULVUNWUOXUNYUNYUMYUMXVLXWLXXLWYKWZK\
+  W_JV`JVaJVbIScIQdHNeHLfGMgGNhGNiGOjGPkGPlV0PX1OY1N\
+  Z1M_1L`2La2Kb2Jc2Ie3Hf3Hg3Gh3Fi4Ej4Dk4Dl4Cn5Bo5Ap5\
+  9q59r68s67t66u66r9BoCGlFLiHQfKVcN_pIZaPcP_mOWhNTcN\
+  Q_MNVMJRLGMLDIKADK79M9ANBBODCPEDRGESIFTJGULGVNHXOI\
+  YQJZSK_ULaVMbXNcZNd_OeaPgcQhdRifSjhTjlVkiTkfSkdQka\
+  Pk_NlXMlUKlSJlPHlNGlKEmHDmFBmCAmA8m77m56l66k76k86j\
+  96jA6iB6iC6hD6hE6gF6gG6fG6eH6eI6dJ6dK6cL6cM6bN6bO6\
+  aP6aQ6`R6`R6_TD_UK_VQZWXZXcZYibVeeSaiPZlMVoJRsGOvD\
+  KyBHo9DqjdsleunfvT9vpghQY }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,99 @@
+;     Date: Tue, 05 Oct 2010 18:59:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-10-10 (Asteroid Impact [7])
+;       Id: <1.5.4.16.20101005185918.13f79cfc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 06, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For some reason, the TV channels these days are filled with 
+; programs about looming catastrophes and the end of civilization. 
+; So why not have one of the looming catastrophes appear in 
+; fractal form?  This is just what happened in today's FOTD, which 
+; captures the hypothetical asteroid-impact catastrophe at the 
+; moment of impact.
+; 
+; Actually, the scene shows an order 1.15 minibrot in the parent 
+; fractal that appears when the formula Z^(1.15)+C is iterated at 
+; the MandelbrotBC3 formula's ground level.  This parent is shaped 
+; much like the minibrot in today's image, and is decorated on its 
+; southwest side by a field of rather fantastic zigzagging fila-
+; ments.  Today's image lies about halfway out in this field.
+; 
+; The name "Asteroid Impact" says it all.
+; 
+; The rating of a 7 might be a little overdone.  The colors appear 
+; a bit too brilliant to me.
+; 
+; The calculation time of 1-3/4 minutes is a lot shorter than the 
+; time it took for the asteroid to reach the earth.  And even if 
+; the asteroid never arrives, the finished image is or soon will 
+; be available for instant viewing on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Chilly temperatures and occasional light rain kept activity 
+; suppressed here at Fractal Central on Tuesday.  The fractal cats 
+; leaped to their shelf for joy when the sun briefly appeared in 
+; the afternoon, taking the chill from the temperature of 54F 12C. 
+; Unfortunately, the sun went behind the clouds after bringing 
+; only 5 minutes warmth, and the cats were sorely disappointed.  
+; My day was slow and routine.  FL killed time watching those hot 
+; Latin soap operas.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and when will we capture a live bigfoot?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Asteroid_Impact { ; time=0:01:43.70-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-5.61156103006634/-3.172542628607448/\
+  247530.1/1/-171.1/0 params=1.15/0/0/525 float=y
+  maxiter=32767 inside=0 logmap=102 periodicity=6
+  colors=0002AI4BK6CM8DOAEQCFSEGUGHWIIYKJ_MKaOLcQMeS\
+  NgTOiUPjTQiSRiRSiQThPThOUhNVgMWgLXfKYfJYfIZeH_eG`e\
+  FadEbdDbdEceFdeGefHffIffJggKhgLihMihOjhQkiSliUliWm\
+  mYnr_ovaozcpzdqzerwfrwgqwhqwipwjpwkowlormnmnnmommq\
+  mcsmcujcwhUzeUzcUzaKzZKzXKzUFzSFzQFzNGzLGzIGzGGzEG\
+  zBGx9Gw6Gv4Gu2Gt3Hs4Hr4Iq5Ip6Jo6Jn7Jm8Kl8Kk9LjALiA\
+  LhBMgCMfCNeDNdEOcEObFOaGP`GP_HQZIQYIQXHSWHUVHUUGUT\
+  FUSEURDUQCTPBSOARNAQMAOLAMJAJIAIHAHGAGFAFcRccT`cWX\
+  cYUc_QcbNcdJcfGc_JcUMcOPcIScFRcBRc8Qc5Pc2zc4zc7zc9\
+  zAlsBwrBkrmjrmjrCwqmiqmiqDwqmhpmhpmhpmgpEwpmfoFwoF\
+  fomeoFwnmenGwnmdnGdnIwomboKwpLapm`pNmqOmqPmqQmrRmr\
+  SmrTmsUmsVmsWmtXmtYmtVmsSmsPmsNmsKmsHmsEmsCmsFmtIm\
+  tKmtNmuPmuSmuUmvXmvZmvamvdmwfmwimzkmznmzpmzsmzumzx\
+  mzzmzqmzmmzmmzmmzmmzmmzmmzmmzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

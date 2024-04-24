@@ -1,0 +1,115 @@
+;     Date: Mon, 25 Oct 2010 20:24:02 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-10-10 (Blazing Slices [5])
+;       Id: <1.5.4.16.20101025202356.12ef55ca@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 26, 2010 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a view of the western part of the Mandelbrot 
+; set rotated so that west is facing up.  It is sliced at an angle 
+; rotated 66 degrees toward the Oblate orientation.  The image is 
+; actually a scene in the four-dimensional Z^2+C complex known as 
+; the Julibrot, which holds all the perturbed Mandelbrot sets as 
+; well as all the Julia sets.
+; 
+; Over the years I have stumbled upon countless other Julibrot 
+; scenes sliced in odd directions, which look nothing at all like 
+; either Julia or Mandelbrot images.  Perhaps I'll use some of 
+; these odd images as FOTD's before too long.  They certainly are 
+; interesting enough even though they might not always excel in 
+; artistic worth.
+; 
+; The spurious buds in today's image are neither Julia nor 
+; Mandelbrot things.  They exist only at the orientation of 
+; today's image.  Changing the P1 or P2 parameters will show how 
+; critical the orientation is.
+; 
+; The name "Blazing Slices" has no connection to an old western 
+; comedy movie.  It refers to the fiery colors I intentionally 
+; gave the image.
+; 
+; The calculation time of 10 seconds makes even a 5-rated image 
+; such as today's a bargain.  The image may also be viewed, this 
+; time in finished form, on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; I made a big mistake Monday afternoon when I caught FL watching 
+; one of those mushy latin soap operas and asked her what the show 
+; was about.  When she described the plot, it went something like 
+; this: `that woman loves that man but he doesn't love her and the 
+; woman he does love doesn't know that he is her brother.  This 
+; other woman wants a divorce from her no-good husband, but he has 
+; just won a huge lottery and now she doesn't know what to do 
+; about the man she really loves.  This other man loves the first 
+; woman but he has a crippled wife who depends on him.'  On and on 
+; the convoluted plot description went until, after a few minutes 
+; of trying to fathom the intricacies, I dozed off.  When I jerked 
+; to my senses, I asked FL where does the action fit in.  The 
+; resulting laughter made my day.
+; 
+; A fairly pleasant day passed almost un-noticed here at Fractal 
+; Central on Monday.  The fractal cats did notice the intermittent 
+; periods of sun and the unseasonably warm temperature of 72F 22C, 
+; but the humans were involved in other things.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and the golden rule is supposed to work both ways.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Blazing_Slices { ; time=0:00:10.10-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/1.10231/\
+  1.5/2.0709 params=0/66/0/90/-0.75/0/0/0/2/0 float=y
+  maxiter=450 inside=0 logmap=yes passes=1
+  colors=00091ZB2_E3`H4aK5bM6cP7cS8cV9cYAc`BccC_fDWj\
+  ESmFOpFMqEKs9Iv2Jz0KzALzDMvGNsJOpMPpPQpSRpVSpYTp`S\
+  ocSofSoiRpiRpjQpkQqlQqlPqmPrnOroOroNspNsqNsrMtrMts\
+  LttLuuLuuKuvKvwJvxJwzKvxJvwJuvJutJtsJtrJspJsoJrnJr\
+  zJqzJqzJpzJpzJozJozJnzJnzJmzJmzJlzJlzJkzJkzJjzJpzK\
+  mzJjzJhzIzzzbzzzzzYzzWzzzzzQzzOzzzzzKzzJzzJzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

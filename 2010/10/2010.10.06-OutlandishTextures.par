@@ -1,0 +1,95 @@
+;     Date: Wed, 06 Oct 2010 22:15:26 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-10-10 (Outlandish Textures [6])
+;       Id: <1.5.4.16.20101006221529.115f1448@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 07, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a study of the textures in the area of chaos at 
+; the top of the asteroid minibrot in yesterday's FOTD image.  I 
+; named today's image "Outlandish Textures" because the fractured 
+; features filling it are some of the more incredible I have 
+; stumbled upon in my years of investigating the Mandeloids with 
+; exponents of Z between unity and 2.
+; 
+; The rating of a 6 seems about right.  A minibrot in the scene 
+; might have added a point or so to the rating.  Actually, there 
+; probably are minibrots lurking in the scene or at least nearby, 
+; though I'm not going to search at this time.
+; 
+; The calculation time of just under 5 minutes is somewhat slow.  
+; But time may be saved by viewing the finished image on the FOTD 
+; web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and occasional rain put a damper on activity here 
+; at Fractal Central on Wednesday.  The temperature of 59F 15C 
+; helped keep things suppressed.  The unpleasant weather outside 
+; didn't worry the fractal cats however.  They had a very active 
+; morning chasing each other all around FC.  When their fun was 
+; over, they spent the afternoon sleeping.
+; 
+; My day was average.  FL's day was the same.  The next FOTD will 
+; be posted in 24 hours.  Until then, take care, and I suppose a 
+; thing is real when I see it with my own eyes, that is unless it 
+; is something disapproved by the high priests of science, such as 
+; a ghost.  Then it's merely a hallucination, which, depending on 
+; how one sees it, may or may not be considered a real thing.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+OutlandishTextures { ; time=0:04:54.89-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-5.61156110752/-3.172542314606/7807759/\
+  1/-171.1/0 params=1.15/0/0/525 float=y maxiter=3000
+  inside=255 logmap=272 periodicity=6
+  colors=000zr0wa0vq0ua0ta0sp0r`0q`0po0o`0on0na0nm0m\
+  c0mm0ld0ll0kf0jm0ig0im0hi0hn0gj0gnAflAfoKemKeoKdoK\
+  dpKcnBbnAbmLamKamm`lT`lm_lT_kmZkTZjmYjTYjmXiTXimWi\
+  TWhmVhTVgmUgTUgmTfTSfmSfTRemReTQdmQdTPdmOcTOcTNcTN\
+  bTMbTMbTK_VIYXHVYFT_DRaCObAMd8Kf7Hg5Fi4Dj5Ci6Ch6Cg\
+  7Cf8Ce8Cd9Cd9CcACbBCaBC`CC_CC_DCZECYECXFCWGCVGCUHB\
+  UHBTIBSJBRJBQKBPKBPLBOMBNMBMNBLOBKOBJPBJPBIQBHRBGR\
+  BFSBESBEVDIYEL`FPgbVgcVgcVfcUfdUfdUedUeeTeeTdeTdfT\
+  dfScgScgSbgSbhRbhRahRaiRaiQ`iQ`jQ`jQ_kP_kP_kPZlPZl\
+  OZlOYmOYmOXqLYoNYmOZkPZiQ_gR_fS`dT`bUa`WaZXbYYbWZc\
+  U_cS`dQadPbeNceLefJffHggGhgEihCjhAki8li7mg6mf6md6m\
+  c6ma6m`6mZ6mY6mX6mV6mU6mS6mR6mP6mY6hW6hV6hU6hS6hR6\
+  hP6hO6hM6hL6hJ6hI6hH6hI7gI8gJ8g99g99gAAgAAgABfBBfB\
+  CfBCfCDfCDfCEfDEeDFeEFeEGeEGeFH`FHeFIeGIdGJdGJdHKd\
+  HKdHLdILdIMcJMcJNcJNcKOcKOcKPcLPbLQbLQbMRbMRbMSbNS\
+  bNTbOTaOUaOUaPVaPVaPWaQWa }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, esc=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,98 @@
+;     Date: Mon, 11 Oct 2010 20:22:04 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-10-10 (Z Squared Plus C [6])
+;       Id: <1.5.4.16.20101011202205.118fc06a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 12, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's tortured image is another aspect of the little Mandel-
+; brot minibrot that appeared two days ago as the FOTD of October 
+; 10.  That image was unmistakably a Mandelbrot-plane scene, but 
+; today's image is sliced in the Rectangular direction, which 
+; leaves little but the same colors to recognize.
+; 
+; I wanted to do something more with the original image.  My first 
+; impulse was to check the same scene in the Julia direction.  The 
+; resulting circular hole was not very interesting however.  So I 
+; tried the Rectangular direction, and look at what happened.
+; 
+; To begin, the calculation time increased nearly 100 times to 45 
+; minutes, which shows the efficiency of the type=mandel formula 
+; of Fractint.  The original 2-lobed basin has been twisted and 
+; stretched to a point where it is almost painful to look at.  The 
+; central minibrot is stretched into a slit so narrow that it has 
+; virtually vanished.
+; 
+; I did tweak the colors a bit, though not enough to give myself 
+; extra points.  The name "Z Squared Plus C" implies that the 
+; generating formula is the same; only the orientation has been 
+; changed.  The rating of a 6 seems about right.
+; 
+; The calculation time of 45 minutes will definitely not pass in a 
+; flash, which is why I recommend viewing the image already 
+; calculated on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Monday began well enough here at Fractal Central, with lots of 
+; sun and a temperature of 79F 26C, but at 4pm the sky clouded 
+; over and a minor thundershower moved in, dropping the tempera-
+; ture to 64F 18C.  The fractal cats took all this in stride, more 
+; concerned about food than the weather.
+; 
+; My day was about average.  Most likely tomorrow will be the 
+; same.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and where did we go wrong?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Z_Squared_Plus_C { ; time=0:45:08.14-SF5 on P4-2000
+  reset=2004 type=formula formulafile=slices.frm
+  formulaname=Rectangular center-mag=+0.000000000001\
+  01005/-0.00000000000148829/2.16213e+011/0.04251/\
+  -114.506625219024372/-84.326593494906632
+  params=-1.779820675627452/3.6884410169988e-011/-1.\
+  779820675627452/3.6884410169988e-011 float=y 
+  maxiter=40000 inside=255 logmap=-9114 periodicity=6
+  mathtolerance=0.05/1
+  colors=000QVtQUsPTsOSrORrNQqNPqMOpLMpLLoKKoJJoJInI\
+  GnIFmHEmGDlGClFAkE9kE8jD7jD6jC5hC5gB5eB5dB5cA4aA4`\
+  94Z94Y94X84V83U83T73R73Q63O63N62M52K52J42H42G41F31\
+  D20231C31B219218106105104002001000zzwyzwxwwutprqjo\
+  pgmodknbim`gl_ekZcjYaiX_hWYgVXeUWcUVbTUaST`RS_QRYP\
+  QWOPUNOSMNRLMQLLQLKQLJPLIPLHPLGPKENICKGAIE9GC8EA7D\
+  96B85A7496385274153042031020FUHESGDRFDQFCPECODBNDA\
+  LCAKB9JB9IA8H98G97F86D76C75B65A5495484363253242131\
+  121010KZBIWAHU9GS8FQ8DO7CL6BJ6AH58F47D46A358236224\
+  1120x9ut8rq8on7lk7ih6fe6cb5`_5YX4VU4TR4QO3NL3KI2HF\
+  2EC1B918605302z6ez5dz5cz5bz5bz5az5`z5`z5_z5Zz5Zz4Y\
+  z4Xz4Xz4WzUVzUVzUUzUTzUTzUSzURzURzUQzUPzUPzUOzUNzc\
+  NzcMzcLzcLzcKzcJzcIzcIzcHzcGzcGzcFzcEzcEzcDzcCzcCz\
+  cBzcAzcAzc9zc8zc8zm7zm6zm6zm5zm4zm4zm3zm2zm2zm1zm0\
+  zz8zz7zz7zz7zz7zz7zz7zz6zz6zm6zm6zm6zm6zm6zm5zm5zm\
+  5zm5zm5zm5zm4zm4zm4zm4zzz }
+
+frm:Rectangular {; Jim Muth  imag(z),imag(c)
+z=flip(real(pixel))+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,107 @@
+;     Date: Sun, 31 Oct 2010 22:14:21 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-11-10 (Maximum Credulity [No Rating])
+;       Id: <1.5.4.16.20101031211428.11771af8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 01, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image was created in the same manner as the image of 
+; three days ago -- the `Offside' image of October 29 -- though 
+; instead of going off from the center of the period-2 bud in the 
+; Rectangular direction, we go off in the other perpendicular 
+; direction, the Oblate, until we reach the edge of the Julibrot.
+; 
+; By some very curious coincidence, in this direction the Julibrot 
+; ends on the real(Z) axis at a distance of plus and minus 
+; 1.61803...., which strangely enough is the golden ratio.
+; 
+; Since today's image was created in the same manner as the 
+; earlier image and is a virtual repeat, I declined to give it a 
+; rating.  The name "Maximum Credulity" came to mind Sunday after-
+; noon while I was watching a skeptical show about the existence 
+; (read non-existence) of the supernatural.
+; 
+; Perhaps the best feature of today's image is its fireball-fast 
+; calculation time of 5-1/2 seconds, which guarantees that 
+; virtually no time will have been wasted if the image fails to 
+; inspire awe and wonder for natural numbers.
+; 
+; Viewing the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; will involve no wishful thinking, and will also guarantee that 
+; no time will be wasted if a let-down happens.
+; 
+; Blustery conditions, accompanied by dark wind-shredded clouds 
+; and a temperature of 54F 12C made Sunday a typical autumn day 
+; here at Fractal Central in central Pennsylvania.  The fractal 
+; cats had their thrill when a pigeon landed on the outside of 
+; their lookout window, only inches from Nicholas' hungry jaws.  
+; But as soon as Nicholas made his move, the pigeon flew away, 
+; leaving Cassie to wonder what all the tail thrashing was about.
+; 
+; My day was average, even though the FOTD turned out to be below 
+; average.  The next FOTD, an improved one to be sure, will be 
+; posted in 24 hours.  Until then, take care, and only the credu-
+; lous believe in ghosts.  Since I do believe in ghosts, I guess 
+; that makes me credulous as well as superstitious.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Maximum_Credulity { ; time=0:00:05.32-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=+0.000039265\
+  06831894/0/176501/0.0009777 params=0/0/-24.095/0/-\
+  1/0/1.61803/0/2/0 float=y maxiter=1500 inside=bof61
+  periodicity=6
+  colors=0004_q3Rc2IR19DCAv65TdBXR7MD3BJdO9KC00Z00W0\
+  0S01O02L03I04F059066084m61scXmL`zAI0CkBne5PL4CzyZf\
+  VHL6EC498244otQYaHHJ8RGBKC8D856428qmUjdKVRAFDs_IeR\
+  DSI9E94h_tUOaFCJG7sC5e83S41EES77E36Bj47V23Fw7Iw2RT\
+  xmLh`EUP7FCeakSPWECGZW`QORHGI889hZJCE08904407cZ5UQ\
+  3KH1A8LM9FG6AB4552s8b`5QI2DEq27R1HKaK_DDO86C4UDcM9\
+  UF6K73AyS34LR3FK2AD156_rlIRO2ab1ST1JJ099Q7tD3SQPXA\
+  3Y72P51H208_jivj5bV3JF16`94O62C3zPjjIZVCNF6BOEr8LZ\
+  enLLPAd33U22K11A00w2`h1RU1IF09pWbH1dLQOEHG788o4vY2\
+  bH1Jqlnc_aROPDCCZm4HP2hTqTKNLFHEAB755txleh_SUOEFCX\
+  XxGGUlCa_9SO6JC39AT`6JO39CTY8EH4TtrESRiwgs2Pf4NW3H\
+  L2BA15iGNYCHN8BB45smze`jSPVECF80fKkNJoTHsZGvdCic8X\
+  b4Ka18aG7XV6Si5Nx5IpMRia_bqgjeeqUcxIatOSpUIm_8fL1S\
+  D2E537yk4dW2KGAkv6Wb3GJBHy7Bd35K4tNRooDQQE9KTwXLhO\
+  EUG7F8uMbTBJAum5TPaDbJ6JLrdARKUwEKc9AK4v3xg2hT1UE0\
+  FZypNdZBKHx8XU4GLqfE_S7IE }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

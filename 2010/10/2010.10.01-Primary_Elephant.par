@@ -1,0 +1,115 @@
+;     Date: Fri, 01 Oct 2010 18:49:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-10-10 (Primary Elephant [7])
+;       Id: <1.5.4.16.20101001184925.103f394a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 02, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's FOTD, I commented that there were upside-down 
+; elephants in the detail under the arch of hollowed-out outline 
+; elephants.  In today's image I pick out and concentrate on the 
+; primary upside-down elephant.  The name "Primary Elephant" 
+; identifies the pachyderm that marches proudly before us in 
+; today's image, with its sub-elephants and their sub-sub-ele-
+; phants lined up in its back.  I have never before given as much 
+; prominence to a single so-obviously fractal elephant!
+; 
+; As all Mandelbrot enthusiasts know, each elephant in East Valley 
+; stands guard over its particular Mandelbrot bud.  So where is 
+; the bud that is being guarded by the elephant in today's image?
+; 
+; Notice the narrow brilliant horizontal band across the lower 
+; part of the image.  The broad dark horizontal area between this 
+; band and the brilliant white area behind the elephant's upper 
+; parts is actually the bud, or what is left of it.  The bud has 
+; been stretched to infinity by viewing it in the Rectangular 
+; direction.
+; 
+; Mandelbrot features are compact in the C planes, but extend to 
+; infinity in the Z planes.  The Rectangular plane consists of the 
+; compact imag(c) dimension plus the infinite imag(z) dimension, 
+; resulting in an open circular Mandelbrot bud stretched in one 
+; direction to infinity, which appears as an infinitely long black 
+; open stripe with parallel sides.
+; 
+; Although the image is the third visit to the same part of the 
+; East Valley complex, the central elephant is so well defined 
+; that I rated the image at a 7.
+; 
+; A slight drawback is the calculation time of almost 11 minutes, 
+; which is long enough to give impatience a chance to raise its 
+; fickle head.  But impatience may be kept at bay by viewing the 
+; finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The heavy rain moved out and the sunshine returned here at 
+; Fractal Central on Friday, while the temperature took a drop to 
+; 70F 26C.  The fractal cats spent their afternoon lounging in the 
+; sun on the kitchen floor.
+; 
+; My day was relatively slow.  A bit of water did seep into the 
+; fractal basement on Thursday night, but FL with her mop quickly 
+; took care of that.  The next FOTD will be posted in 24 hours 
+; unless an antiquing expedition develops on Saturday, when the 
+; FOTD might be delayed.  Until whenever, take care and befriend a 
+; lonely fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Primary_Elephant { ; time=0:10:55.81-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t
+  center-mag=-0.011023301/+0.168393972/2097/0.1113/\
+  90/69 params=90/0/0/90/0.28/0/0.5/0/2/0 float=y
+  maxiter=32767 inside=0 logmap=10 periodicity=6
+  colors=000kpThpVeoWcmYak__iaYgeWeiUdiRchSbhQakObnM\
+  cqKctIKwHLzDMzANz6Oz3Pz2Qz2Nk2Om2Po2Qq1Rl1Sm1Tn1Up\
+  1Vq2Ws2Xu2Yv2Zw3_x3`y3ax3bw4bw4bu4au4`v5_v5_t5_r5_\
+  p1_n5_m9alDdkHfkLijPkjTmiSojNoiKneJlbHjZIhUJfPKdKL\
+  dDMcDNcDNcDQbDUbDZbDcaDhdDmhDrmDvrDzvDzzDzyDzwDzwD\
+  zvDzuGzuIzuLzuNzuQzmSzmVzmXzm_zmazmdTMzTLzSKzSJzRI\
+  zRHzRGzTHzzI0zJ0zK0zL0zM0zN0zN0zO0zP0dQzfRzgSzhTzi\
+  QziTzcWzYYzS`zMczGezAhz8iz5jz9izCizFizIizLizPizSiz\
+  VizYiz`izehzcizbjzakz`lzZmzYnzXozWpzVqzTrzSszRtzQu\
+  zPvzmwzmxzmyzmzzmzzmzzmzzmzzmzrmzzmzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzKzzLzzMzzNzzOzzPzzPzzQzzRzzSZzT`zUazVczWdzWe\
+  zXgzYhzZjz_kz`mzanzZtzaozcjzfezh`zkWzmRzoNzqTzsYzu\
+  czvhzslzppzmtzjxzgzzdzzczzbzzawz`tz_qzZnzYkzXhzWez\
+  VbzU_zTXzSUzRRzQOzPLzPGzOIzOKzOMzOOzOPzORzOTzNVzNX\
+  zNYzN_zNazNczKazNdzPgzSjz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

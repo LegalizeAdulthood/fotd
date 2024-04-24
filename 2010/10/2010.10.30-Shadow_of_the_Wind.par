@@ -1,0 +1,86 @@
+;     Date: Sat, 30 Oct 2010 22:30:45 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-10-10 (Shadow of the Wind [6])
+;       Id: <1.5.4.16.20101030223047.143fdc54@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 31, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's rather harmless image lies in a valley of the fractal 
+; that results when various negative parts of Z^(-4.5) and Z(-1.7) 
+; are mixed together and (1/C) is added.  Like most fractals of 
+; this double-negative type, this parent fractal cannot be des-
+; cribed, though it may easily be seen by backing out of today's 
+; image.
+; 
+; I rated the image at a 6.  I searched for something to justify a 
+; higher rating, but nothing is there.
+; 
+; The name "Shadow of the Wind" has nothing to do with an old 
+; radio hero who could make himself invisible.  It's simply a 
+; phrase that came to mind from apparently nowhere.
+; 
+; The calculation time of 9 minutes means that the time required 
+; to run the parameter file is more than the resulting image is 
+; worth.  The problem may be eliminated by viewing the finished 
+; image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Too many clouds and a temperature of 54F 12C kept the fractal 
+; cats suppressed here at Fractal Central on Saturday.  My day was 
+; relaxing enough, though for some reason the Halloween trick-or-
+; treaters were out one evening early.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and if a spook 
+; spooks you, spook him back.  (They do exist, you know.  Whether 
+; they are real is another question.)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Shadow_of_the_Wind { ; time=0:09:02.88-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=+0.56620315067701/+0.03728036351951/\
+  8.3e+009/1/2.5/0 params=-0.6/-4.5/-3.6/-1.7/0/0/0/0
+  maxiter=10000 inside=0 logmap=1140 periodicity=6
+  colors=000HChCAkF7mE5oE3qD4oD5nC6mC7kB8jB9iAAgABf9\
+  Ce9Cd9Db8Ea8F`7GZ7GY6IX6JVCHU5LT5LSFHU8JVAIWHGYDGZ\
+  EF_JEaHDbJCcMBeLBfNAgP9iQ8jR7kS6mU5nW4oQ3kZ2r_1sN3\
+  iU2mO3gI3aC4V65P05JA7EJ8ASA5`B1bD2cF3dH4fJ5gL6hN7i\
+  P8kR9lTAmVBnXCpZDq`ErbFsdGufHvhIwjJxkKuiLrgMoeNlcO\
+  iaPf_QcYR`XRYVSVTTSRUPPVMNWJLXGJYDIYDIdDIkDIrAXm7k\
+  h4zdCqcJhcQ_bXRbcIaj9aq1ao3`n4_m5_k6Zj7Zi8Yh9XfAXe\
+  BWdCWcDVaEV`FU_GTZHTXISWJSVKRULRTMQTMQTNP1BF19G8CI\
+  EEKKGMQIOXKQbMShOUnQVlTWjVWhXWf_WdaWccWdeTefQfhNgi\
+  LhkIilFjnCkoAbf8VY6MQ4EH26905EA4JK4NU3Sc2Xm2`w4Xr6\
+  Un7Ri9OeBKaCHXEETFBPEJXDRcDYjLdXSkJEU8KTBPSEVRH_RK\
+  Vw8RvANvCJuDFuFBuG9qP8mY7if6eoRShkEacH_XKYQNWJQUCT\
+  S5WR6YX6Zb6_g6`m6arKVhXPZiIPvCGsSGqfGouGgqN`nUTk`M\
+  ggEdn7au5dm3fe1hY0jQEfTRcWd`ZqY`y8FtIMoRTfYZYddPki\
+  Gzo8ztAzmBzfCz_DzTEzMFzFBzQ8z_5zi2zsKzr`zrqzrmzliz\
+  ffz`bzVZzPWzK1zB1zC1zD1zE }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, esc=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

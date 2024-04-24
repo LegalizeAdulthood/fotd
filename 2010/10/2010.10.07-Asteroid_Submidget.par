@@ -1,0 +1,97 @@
+;     Date: Thu, 07 Oct 2010 19:24:54 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-10-10 (Asteroid Submidget [6])
+;       Id: <1.5.4.16.20101007192458.133f75de@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 08, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The asteroid impact FOTD image of October 6 went off with a 
+; bang, and yesterday's textured image raised more questions than 
+; it answered, so why not return to the scene for a third time 
+; today?
+; 
+; Today's image shows a curious little minibrot on the broken stem 
+; extending up and to the right from the minibrot in the Asteroid 
+; image of October 6.  Like most all minibrots of such low order, 
+; today's minibrot is far from symmetrical.  It has most of its 
+; interest on its right side, where a strange twisting and broken 
+; filament shoots out and ultimately terminates.
+; 
+; I named the image "Asteroid Submidget" because that's what it 
+; is.  I rated it at a 6 because I have seen far better.
+; 
+; The calculation time of just under 10 minutes is too slow for an 
+; image that rates a mere 6.  My advice is to save the time by 
+; viewing the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Much improved weather arrived at Fractal Central on Thursday.  
+; When the sun appeared by 9am, the fractal cats perked up.  When 
+; the temperature reached 70F 21C, they leaped to their window 
+; shelf and checked for unwanted cats, then began chasing each 
+; other up and down the hallway.  One of them overturned a lamp, 
+; but no one saw it happen and both appeared innocent, so the 
+; guilty cat will remain forever a mystery.
+; 
+; My day was slightly busy, while FL kept equally busy in her 
+; garden.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and is there a difference between being real and 
+; being really real?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Asteroid_Submidget { ; time=0:10:08.46-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-5.611562204517299/-3.172542123229572/\
+  8.609708e+009/1/98.9/0 params=1.15/0/0/525 float=y
+  maxiter=32767 inside=0 logmap=604 periodicity=6
+  colors=000qKanI`lGZjFXgDWeCUcAS`8RZ7PX5NV4MU8NTCOS\
+  FORJPQNPQQQPUROYRN`SMdSLhTLkTKhRKfPJdOJbMI`LIZJHXI\
+  HVGHTEGRDGPBFNAFL8EJ7EH5EF4QBMa7cm3uiGZfSCgVBhYBi_\
+  BcUBcdBcUAccAcUAccAcUAccAccIdPP_AW_0RY2UW3WU5ZS6`Q\
+  7cO9eNAgLBjJDlHEoFFqDHtBIvAJxCLsDNoEPkFRfGTbHUZIWU\
+  JYQK_MLaHMcDNd9SbCW`E__GcYIgWKkVMoTOsSQnROiQNdQM_P\
+  LWPKUOLTOLROMQOMOONNONLOOKOOJOPHOPGOQEOQDORBORAOS9\
+  OS8QU7RW7TY6U_6Va5Xc4Ye4_g3`i3ak2cm1do1fq0gs0hu1gp\
+  2fk3eg4db5cY6bU7aP8aLa5Qc6Pe6Og6Ni7Mk7Ll7Kn7Jp8Ir8\
+  Ht8Gu8FtCGsFHrJIrMJqQKpTLpWPo_UnbZmfcmiclmckpckshf\
+  emaSgKFKUHMzJOzKPzMRzNTzPUzRWzTYzUZqz`szbuzcwzexzf\
+  zzbzz_zzWzzTzzPzzMzzIzzFzzCzzLzzNcRQdOSeMUfKXgHZhF\
+  `jDckBel8gm6jn4ln2mn0mo2no3no5nozzozzozzozzozzozzo\
+  zzozzozzozzozzozzozzozzozzpzzpzzpzzpzzpzzpzzpzzpzz\
+  pzzpzzpzzpzzpzzpzzpzzpzzpzzrzzpzzozznzzmzzlzzkzzjz\
+  zizzhzzgzzfzzdzzczzbzzczz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, esc=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

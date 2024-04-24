@@ -1,0 +1,110 @@
+;     Date: Thu, 28 Oct 2010 22:30:28 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-10-10 (Offside [6])
+;       Id: <1.5.4.16.20101028223031.144f7076@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 29, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene lies off to the side of the large period-2 bud of 
+; the Mandelbrot set at an angle of 90 degrees.  But since there 
+; is a complete 360-degree circle of lines in the Julibrot perpen-
+; dicular to the M-set, we must be more specific.  Today's image 
+; lies in the direction of the imag(Z) axis, and is centered at 
+; the point 0.78615 on that axis.
+; 
+; The image is not a perturbed Mandelbrot set.  It is rotated at 
+; an angle of -19.37 degrees from the Mandelbrot orientation, the 
+; angle at which it is tangent to the edge of the Julibrot in the 
+; Elliptic orientation.  When rendered in the conventional manner, 
+; today's image is a rather boring fractal.  The Fractint program 
+; cures this monotony with its various inside and outside fills.  
+; I rendered today's image with the outside set to 'real' and the 
+; inside set to 'bof61'.
+; 
+; I could rate the image no higher than a 6.  It has too much 
+; program magic and not enough true fractal stuff for any higher 
+; rating.
+; 
+; I named the scene "Offside" because it lies off to the side of 
+; the large bud on the main stem of the M-set.
+; 
+; The calculation time of under 6 seconds is brief enough to hold 
+; disappointment at bay if the resulting image is seen as lacking.
+; 
+; The easiest way to view the image is to visit the FOTD web site 
+; at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where it is posted already calculated and ready to be 
+; appreciated at leisure.
+; 
+; With a temperature of 68F 20C and sunny skies, Thursday was 
+; pleasant enough here at New Fractal Central, though the wind was 
+; a bit too blustery for absolute comfort.  The fractal cats spent 
+; most of their time in the window, watching occasional flurries 
+; of leaves that fluttered past on the gusts.
+; 
+; My day was uneventful; FL's day was the same.  The next FOTD 
+; will be posted in 24 hours.  Until then, take care, and a month 
+; ago my broker told me I could make a pile in the guano market, 
+; but I must have done something wrong because I dropped a load.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Offside { ; time=0:00:05.59-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/-0.0000596\
+  847054883/272487.8/0.0009874/90/0 params=-19.37/0/\
+  0/90/-1/0/0/0.78615/2/0 symmetry=none inside=bof61
+  float=y outside=real maxiter=1500 periodicity=6
+  colors=000WuVTtYQt`NtcKsfHsiEskDGyCleAe_8ZU7SO5LIz\
+  uCzr6xoJrfFhYCXQ9QH6J83d38Y26R25K14D126mzNRzI`mDS`\
+  9IP49CTnyPwzLaiIVaEPVAJN7CF367eJdaidU_WMROFIG798Zt\
+  DNa8BJ4I1cF0YC0SA0M70H50B205AWz8Sr7Oj6Kb5GV3CN28F1\
+  47I1OueoaSYJEHhVxaQoWMfPHYJDQC8H648IP3EK2AF17A1350\
+  YO9MG6B834Xw2Mc1BKcUIGoqYFkYYxTTpPPhLLaHHUCCM88F44\
+  7iswWtbGSJeMyRkOLaJGSEAJ9594Lg4AM2bQcXMYRISMEMiTWi\
+  QXgS_`_m`Zn`Yo`Xn`Wm_VkYUiVRfTQbQO_cMWmPhzWHyVHzbI\
+  v`IrbImeJhhJcjJZlIUnHPpGRrFYtEcuEanL`hSZaZYWdRRYLN\
+  RFIK9EDHJHPOLXTPdYTlaX_bONcFAd69c58b47a42SF8SNDSVB\
+  OQ9KM7GH5CD388144CIR5_e4SX3LP2EG178XorShkObdKWYGQR\
+  CJK8DD466cdpUUbKKQAADJlUE_M9OF4C7PT8IL6CE46721Q30L\
+  20H20D1081040gF_ZCSQ9LH6E837ZZtQQeHHS88ETs9Oi7J`6E\
+  S49I3491sNGgICXD9M96B43nRdPDKMSLGLFBEA575B`zip3UZ2\
+  FH15OC3G8184hKHUDBF65cKveQrgWnhajbYeYVaSSYNPUHLQCI\
+  M6FI1CE9MHHVJOdLWmNbvPZuS }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

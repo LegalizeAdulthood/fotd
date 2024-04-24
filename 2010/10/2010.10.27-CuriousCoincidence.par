@@ -1,0 +1,110 @@
+;     Date: Wed, 27 Oct 2010 19:06:56 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-10-10 (Curious Coincidence [No Rating])
+;       Id: <1.5.4.16.20101027190656.12c7e5ba@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 28, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image gets no rating.  Why?  Because it's a virtual 
+; repeat of yesterday's image.  The difference is that, while 
+; yesterday's image was sliced in the Oblate direction, today's 
+; is sliced in the Rectangular direction, which consists of the 
+; imag(Z) and imag(C) axes of the Julibrot.
+; 
+; IMO, what made yesterday's scene so curious is the fact that the 
+; fractal terminates on the left and right at values of plus and 
+; minus 1.618...., (the golden ratio), while the large valleys 
+; meet at plus and minus 0.618...., the reciprocal of the golden 
+; ratio).
+; 
+; This is curious enough, but when I checked the horizontal 
+; terminal points of today's image, I found a value of plus and 
+; minus 0.78615....  What an incredible coincidence it is that 
+; this is the reciprocal of the square root of the golden ratio.  
+; (The two large valleys in today's image meet at plus and minus 
+; 0.521555...., though I have yet to find anything significant in 
+; this value.)
+; 
+; Mathematical interest aside, today's image is simply a variation 
+; on yesterday's image, with the same color palette.  Those who 
+; enjoyed yesterday's will enjoy today's almost as much.  Those 
+; who thought yesterday's image was boring will be no more 
+; impressed by today's.
+; 
+; The name "Curious Coincidence" refers to the mathematical aspect 
+; of the image.
+; 
+; The calculation time of only 3 seconds is mercifully brief.  The 
+; best way to view the image is to enjoy it already calculated on 
+; the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Wednesday began with clouds here at Fractal Central.  But the 
+; clouds broke up by midday, leading to a sunny afternoon with a 
+; temperature of 72F 22C.  These conditions were perfect for the 
+; fractal cats, who spent several hours in the sun that streamed 
+; in the southwest window.  My day was average; FL had a similar 
+; day.  The next FOTD will be posted in 24 hours, and is likely to 
+; be another mathematical curiositiy, though one with far more 
+; artistic impact.  Until then, take care, and why does the number 
+; epsilon equal minus one when it is raised to the power of 
+; imag(PI)?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+CuriousCoincidence { ; time=0:00:03.35-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/1.398/1/\
+  90/0 params=90/0/0/90/-1/0/0/0/2/0 float=y inside=0
+  maxiter=300 inside=0 outside=real periodicity=6
+  colors=000KZzJXwJVsJTpJRmJQjJPgJNeJMbJL`IKYHJVGISF\
+  HPEGMDFJCDFBBCA8A958GQKJYKMeKPmKUmKZmKcmKhmKmmIrmF\
+  vmCzjHzhNzeSzcXzbTzaPz`Lz_HzZDzZ9zSCzLFzEHz7Kz1Mz6\
+  OzAPzFRzJSzNTzSSzXSzaRzfRzhRzjRzlRzmRzoRzqRzrRzzOz\
+  zLzzIzzFzzKzzOzzTzzXzzVzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

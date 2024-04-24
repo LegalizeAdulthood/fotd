@@ -1,0 +1,117 @@
+;     Date: Tue, 26 Oct 2010 22:17:28 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-10-10 (A Golden Slice [5])
+;       Id: <1.5.4.16.20101026221723.1327ec74@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 27, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The formula behind today's image is Z^2+C, the same formula that 
+; creates the Mandelbrot set and all its associated Julia sets.  
+; But today's image is obviously not the M-set, nor is it any 
+; recognizable Julia set.  It is something I call an Oblate set, 
+; a hybrid set half-Mandelbrot and half-Julia.
+; 
+; The X-axis of the image is the real(Z) axis of the Julibrot, 
+; while the Y-axis is the imag(C) axis.  The image has a Mandel-
+; brot nature in its vertical direction and a Julia nature in its 
+; horizontal direction.  The center of the image is the center of 
+; the large period-2 bud of the M-set.  No shape manipulation such 
+; as stretching or skewing was done in the creation of the image, 
+; though I did add a bit of life by rendering it with the outside 
+; set to 'real'.
+; 
+; A most curious relation exists in the location of the elements 
+; along the X-axis of the image.  The fractal terminates on the 
+; left and right at the points plus and minus 1.61803398875.... 
+; which of course is the Golden Ratio, while the two major valleys 
+; closest to the center meet at plus and minus 0.61803398875.... 
+; which is the reciprocal of the Golden Ratio.  There must be a 
+; logical reason why this is so, though I have not been able to 
+; find it.
+; 
+; I rated the image at a 7, a good part of which is due to the 
+; mathematical interest.  Artistically, the image rates a 5 or 6.  
+; I named the image "A Golden Slice" because of the appearance of 
+; the Golden Ratio in it.
+; 
+; Despite all the golden glitter, the image is blazingly fast, 
+; finishing on my machine in under 3 seconds, almost as fast as 
+; the display can switch to super-VGA mode.  The trip to see the 
+; finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; may not be quite as fast, but it will involve much less set-up 
+; work.
+; 
+; Rain fell most all Monday night here at Fractal Central.  The 
+; remaining clouds blocked the sun on Tuesday, but the temperature 
+; of 70F 21C was mild enough that the lack of sun was never 
+; noticed.  The fractal cats spent an hour chasing a mechanical 
+; toy mouse we picked up Monday evening.  Nicholas finally killed 
+; it when its battery went flat.  The rest of the day was occupied 
+; with routine work.
+; 
+; Remembering yesterday, I dared not ask FL what was happening on 
+; the Spanish channel.  The next FOTD will be posted in 24 hours.  
+; It should be no surprise if another odd slice of the Z^2+C 
+; Julibrot shows up.  Until then, take care, and let your negative 
+; side shine through.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Golden_Slice { ; time=0:00:02.85-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/0.7544715
+  params=0/0/90/0/-1/0/0/0/2/0 float=y maxiter=300
+  inside=0 outside=real periodicity=6
+  colors=000KZzJXwJVsJTpJRmJQjJPgJNeJMbJL`IKYHJVGISF\
+  HPEGMDFJCDFBBCA8A958GQKJYKMeKPmKUmKZmKcmKhmKmmIrmF\
+  vmCzjHzhNzeSzcXzbTzaPz`Lz_HzZDzZ9zSCzLFzEHz7Kz1Mz6\
+  OzAPzFRzJSzNTzSSzXSzaRzfRzhRzjRzlRzmRzoRzqRzrRzzOz\
+  zLzzIzzFzzKzzOzzTzzXzzVzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
