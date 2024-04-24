@@ -1,0 +1,53 @@
+; May 24, 1997: Zodiac 
+;
+; zodiac
+;
+; Fractal visionaries:
+; Today's fractal is a delicate little one that takes only a few seconds
+; to draw.  It pictures 12 Mandelbrot midgets, all facing inward.  I was
+; going to name it Apostles, but I decided on Zodiac, because the midgets
+; are lined up in a circle.  I could have named it Months or Hours, but
+; those names just don't have enough class.
+; The delicate fractal arcs connecting the 12 midgets are filled with
+; smaller midgets of the most unusual kind.  I'm not going to post any of
+; these, but anyone who explores this image will not be disappointed.
+; As you may have noticed, I'm spending a lot of time with my Test15 and
+; Test16 formulas.  Sometimes this happens.  I get hung up on a particular
+; formula and just can't seem to let go of it.  But for the sake of
+; variety, I'll move on to a new formula for tomorrow's fractal.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PARAMETER FILE FOR 19.6===================================
+
+Zodiac             { ; time=0:00:02.81-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=Test16 center-mag=0/0/0.9363296
+  params=1/6.5/0.075/-5.5/2/1 float=y maxiter=500
+  inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000A0PA0PA0PHUrNirTxrTwrmvrmtrmsrzrrzqrzorz\
+  nrznjzncznWzmOzmzzmzzqzzqzzlzzkzzpzzkzzkzznzzvzztz\
+  zqzWou`vxvzWrzYoz_kzbgzddzf`zhYzaVzUSzN_zzgzzdzzbz\
+  z_zPXzUUzYSzbPzfMzkSznYzqbzthzwfzpdzjckdaiY_gSZeMZ\
+  hDZeLZeKZfKZfJZfIZfHZgHZgGZgFZgEZhEZhDOhrOhqOhpPho\
+  PhnPhmPhlQhkQhkQhjQhiRhhRhgRhfRheShdShcShbShaTh`Th\
+  _ThZThYUhYUhXUhWUhVVhUVhTVhSVhRWhQWhPWhOWhNXhMXhLX\
+  hKXhKYhJYhIYhHYhGZhFZhEZhDu40t50t61s71s81r92rA2qB2\
+  pC3pD3oE3oF4nG4mH4mI5lJ5lK5kL6kM6jO7iP7iQ7hR8hS8gT\
+  8gU9fV9eW9eXAdYAdZAc_Bb`BbaBabCacC`dC`eD_fDZgD_zp_\
+  yn_xl_xk_wi_vg_ue_td_sb_s`_rZ_qYZpWZoUZoSZnQZmPZlN\
+  ZkLZjJZjIZiGZhErp5qp5po6po6oo6nn7mn7ln7lm8km8jm8il\
+  9hl9hl9gl9fkAekAdkAdjBcjBbjBaiC`iC`iC_hDZhDOFUOGUP\
+  GTPHTPISPJSQJSQKRQLRQLQRMQRNQROPROPSPOSQOSQOSRNTSN\
+  TTMTTMUUMUVLUVLUWKVXKVYJVYJVZJW_IW_IW`HWaHXbHXbGXc\
+  GXdFYdFYeFYfEYgEZgDZhDb8n }
+
+frm:Test16 {; Jim Muth
+z=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3), g=f*(pixel):
+z=((a*(-z^b))+(c*(-z^d)))^k+g,
+|z| <= 100 }
+
+; END PARAMETER FILE FOR 19.6=====================================
+;

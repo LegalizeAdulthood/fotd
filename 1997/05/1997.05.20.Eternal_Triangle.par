@@ -1,0 +1,71 @@
+; May 20, 1997: Eternal Triangle 
+;
+; triangle
+;
+; Fractal visionaries:
+; A few days ago Ray Girvan posted a formula that drew distorted Newton's
+; images, only to be told that this approach had already been
+; investigated.  After trying trying the formula, I realized that the
+; images were strangely familiar.  I had seen similar images somewhere
+; before.  Examining my Newton's formula file, I discovered a formula that
+; contains within itself the ability to duplicate Ray's formula.  The
+; formula is attached to the end of this letter.  (Set real p1 to 1, imag
+; p1 to 3, real p2 to 3, imag p2 to 1, real p3 to 1, and imag p3 to 0.0001
+; and the formula draws the power 3 Newton's figure.)
+; The formula is still in the testing stage.  When I get it finalized,
+; I'll eliminate some of the variables to make it easier to control.  When
+; I work with this formula, I start with the above parameters, which draw
+; the power 3 figure, and change them one at a time.  Many settings give a
+; blank screen.  When this happens, I search out the exact setting where
+; the screen goes blank.  Something unusual is almost always found there.
+; When I get a blank screen that just won't do anything, I always try the
+; bof60 inside fill before giving up.
+; Today's fractal is all inside fill.  At first glance, it looks nothing
+; at all like a Newton's figure.  But it is.  Tomorrow, I'll post another
+; fractal made with this formula, which doesn't even look like a fractal.
+; Before I go, I'd like to pose a challenge.  A while back, I was
+; discussing fractals with a non-mathematical co-worker.  The conversation
+; drifted to four-dimensional fractals, and this person asked me to
+; explain in simple language the difference between quaternions and
+; hypercomplex numbers.  I couldn't.  Can anyone out there answer this
+; person's question in easy-to-understand layman's terms?
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PAR FILE FOR 19.6=========================================
+
+Eternal_Triangle   { ; time=0:00:36.30-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=NewtonTest26
+  center-mag=-0.118626/0.258174/0.5706667/1/-30/0
+  params=1/6/3/1/1/2.27e-032 float=y maxiter=90
+  bailout=100 inside=bof60 logmap=yes periodicity=0
+  colors=000IzAIv9It9Iq8Io8Il7Ik7KgALdDMbFN`IPZKQWNR\
+  UPSSSTQVUOXVM_WKaYIdZFf_Di`Bka9nc9oeApgAqiBskBtmBu\
+  oCvqCwsCxuDzwDzyEzzEzQNsLQwHSzzh9zfAydBybCx`ExZFxX\
+  GwVHwTIvRJvPKvNLuLNuJOtHPtFQpGSmGTiHVfHWbIYZJ_WJ`S\
+  KbOLdLKcHKaEJXAJUEMWIOYMV`Q`_UfZYkZ9GQ9GQ00A00A00A\
+  00A00A00A00A00A00A00A00A00A00A9GQsXSwOFwSGwVHvZIvb\
+  JveKviLulMupNwgQx_TzRWzIZnbibvseuqhsolrmoqkroiungu\
+  eltYqtPvqQumRtjSsfUrcVq_WpXXoTYnRVkPRiMOfKKdIHaSap\
+  `uzJozOlzTixYgwbdugaslZqqXptWivWbxVWzVPzUIzUBByybq\
+  qzijygevd`rbWn`QkYLgWGkVOnTVrSbuRjyPqzOyczqzVzkjZS\
+  y7ezrhylkvgnsaqoWtlQwiLzfFyiLykRxnXxqcwtiwvovyuvzz\
+  sRKwRSzSZzSfzYbzcZyiVwnQutMszIqzErzIrxLstPsoStkWtg\
+  Zodbk`gfYkaUoYRtTNxRSnQYeObWRcYTd`WebYge`hgbijejlW\
+  GQYOT_WWbc_dkbfsehzhmq`rgUwZNzPGzF9zH8zJ8zL7zN6zO6\
+  zRCzUIzWOyZTw`Zucdteip`blXXiTQeOKaKDaNFaRHaUJaXL`_\
+  N`cP`fR`iTInCInCImBImBIlA }
+
+frm:NewtonTest26 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=(pixel):
+zx=z^b-a
+zy=c*z*z
+z=z-(d*zx/zy)^k,
+|zx| >= f }
+
+; END PAR FILE FOR 19.6===========================================
+;

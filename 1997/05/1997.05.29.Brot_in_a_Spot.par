@@ -1,0 +1,59 @@
+; May 29, 1997: Brot in a Spot 
+;
+; spot
+;
+; Fractal visionaries:
+; Today's formula is a really strange one.  One minute it's drawing the
+; classic Mandelbrot set, the next minute it's drawing a screen full of
+; flying fragments.  I devised the formula in an effort to eliminate the
+; break along the negative x-axis that appears when complex or imaginary
+; powers are calculated.  I got a lot more than I bargained for.
+; I figured that since positive and negative imaginary powers draw
+; fractals that spiral around the origin in opposite directions, if an
+; expression something like (Z^2i)^(Z^(-2i)) were calculated, the opposite
+; signs would cancel the spiraling out, leaving a fractal with the
+; features of an imaginary exponent without the discontinuity along the
+; x-axis.
+; It worked beautifully.  Today's fractal, ringwrld, shows a somewhat
+; distorted but still recognizable Mandelbrot set surrounded by rings
+; introduced by the imag(1) assigned p3, which is calculated in the
+; formula as both positive and negative.
+; The formula is full of other surprises.  It's one of the most bizarre
+; and unpredictable formulas in my collection, but despite its
+; versatility, it still runs fast.  So don't hesitate to change the
+; parameters and see what surprises you can turn up.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PARAMETER-FORMULA FILE FOR 19.6==============================
+
+Brot_in_a_Spot     { ; time=0:00:04.94-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=Mytest06 center-mag=-0.729122/0/0.4411
+  params=1/0/0.5/0/0/1 float=y bailout=100 inside=253
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000OMJUOG_PDeRBkS8qU5wV2wY4w_6wb8xe9xhBxjDx\
+  mFugDraBoW9mR8jL6gF4d92a301`udQTbdgarudsngthjualwV\
+  oxOryIuzBqvFmqJimNdhS`dWX__TWcYdUbmKbhOccTcZXdUadP\
+  eSPWGON3OD3ND3MD3KC3JCbPePSOCU6KXOR`fZcx`iobofdtXf\
+  zO9BsECtKEuPFvUGw0s46s6Cr8HrANrDTqFZqHcpJipL_UTR8_\
+  ZIafSdmafukhdnPPq6UgAZYEbOHgELl4Pg7UcAZZDcVHhQKmMN\
+  rHQwLQoOQgSQ_WPR_PJbPBfP3aU6XY9SbCNfFIkHDoK8tN3xQF\
+  tSRqUbmWniYKHsr5wm6vh8vc9uZAuUBtPDtKEsanLZiPWeUT`Y\
+  RXbOSfLOkIJoI4SH7ZHAeGDlr68h8KZBWPDg1Ns5Ls9JsDHsEK\
+  BFIQGGdeVfbThZRjWPkSNmPLoWO6_L8dIAhEClBEgRBIdFKbIN\
+  aKP_NHKF95898A8CB8FD7IE7MG7PH6SJ6WK5ZM5aN4eP4hQ8gR\
+  CfRGfSKeTOdTScUWcV_bWcaWg`Xk`Yo_YsZZrZXp_Uo_Sm_Pl`\
+  Nj`Ki`IgaFfaDdaAcb8ab5`b3Za6Xa9V`CT`FR_IP_LN_OMZRK\
+  ZUIZXGY_EYbCXeAXhf9Wl9_jA_iB_iIVhPQhWKgbFN5xHAjCFX\
+  6KI0P4coIYkJSgKYjIclHbnKaoO`qR_rUZtXYu`XwcWxfZx`ax\
+  VdxPfwKiwElw8ow200LMWCOSF }
+
+frm:Mytest06  {; Jim Muth
+z=c=pixel:
+z=(((z^p1)*(z+p2))^p3)^(-p3)+c,
+|z|<100 }
+
+; END PARAMETER-FORMULA FILE FOR 19.6================================
+;

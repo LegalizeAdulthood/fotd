@@ -1,0 +1,63 @@
+; May 21, 1997: Alien Message 
+;
+; alien
+;
+; Fractal visionaries:
+; Today's fractal doesn't make much of a picture, but it's one of the
+; strangest I've ever uncovered.  It doesn't even look like a proper
+; fractal; it looks more like the greatly enlarged surface of a CD-ROM
+; disk.  Or it could be a mysterious encoded message picked up by my
+; computer and sent by a race of space aliens plotting to invade Earth.
+; Actually it's none of these.  It's just a Newton's fractal.  In Newton's
+; method fractals no two areas ever actually touch.  The areas are always
+; separated by an infinitely divided area of fractal chaos.  This fractal
+; area of chaos between different roots is immediately obvious, but it
+; also exists in the bays of points converging on the same root, where it
+; separates the iteration bands.
+; Normally this chaotic area is too small to find, but by making the
+; cutoff value sufficiently small the chaotic area can be made visible.
+; As one explores ever deeper into this chaotic area, one incredible
+; pattern after another emerges, as the edges in one pattern when
+; magnified break up into the next pattern.  And the patterns never stop.
+; But now, I must stop.  There's another alien message coming into my
+; computer.  ;-)
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PAR FILE FOR 19.6=========================================
+
+Alien_Message     { ; time=0:00:03.57-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=NewtonTest26 passes=t periodicity=10
+  center-mag=-1.08216744913928/+0.634312891440502/\
+  8.60215e+007 params=1/3/3/1/1/2.4e-032 float=y
+  maxiter=90 inside=0 logmap=yes
+  colors=00000e0e00eee00e0eeL0eeeLLLLLzLzLLzzzLLzLzz\
+  zLzzz000555888BBBEEEHHHKKKOOOSSSWWW___ccchhhmmmsss\
+  zzz00zG0zW0zj0zz0zz0jz0Wz0Gz00zG0zW0zj0zz0jz0Wz0Gz\
+  00z00zG0zW0zj0zz0jz0Wz0GzVVzbVzjVzrVzzVzzVrzVjzVbz\
+  VVzbVzjVzrVzzVrzVjzVbzVVzVVzbVzjVzrVzzVrzVjzVbzhhz\
+  mhzqhzvhzzhzzhvzhqzhmzhhzmhzqhzvhzzhvzhqzhmzhhzhhz\
+  mhzqhzvhzzhuzhqzhlz00S70SE0SL0SS0SS0LS0ES07S00S70S\
+  E0SL0SS0LS0ES07S00S00S70SE0SL0SS0LS0ES07SEESIESLES\
+  PESSESSEPSELSEISEESIESLESPESSEPSELSEISEESEESIESLES\
+  PESSEOSELSEHSKKSMKSOKSQKSSKSSKQSKOSKMSKKSMKSOKSQKS\
+  SKQSKOSKMSKKSKKSMKSOKSQKSSKQSKOSKMS00G40G80GC0GG0G\
+  G0CG08G04G00G40G80GC0GG0CG08G04G00G00G40G80GC0GG0C\
+  G08G04G88GA8GC8GE8GG8GG8EG8CG8AG88GA8GC8GE8GG8EG8C\
+  G8AG88G88GA8GC8GE8GG8EG8CG8AGBBGCBGEBGFBGGBGGBFGBD\
+  GBCGBBGCBGEBGFBGGBFGBDGBCGBBGBBGCBGEBGFBGGBFGBDGBC\
+  G000000000000000000000000 }
+
+frm:NewtonTest26 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=(pixel):
+zx=z^b-a
+zy=c*z*z
+z=z-(d*zx/zy)^k,
+|zx| >= f }
+
+; END PAR FILE FOR 19.6===========================================
+;

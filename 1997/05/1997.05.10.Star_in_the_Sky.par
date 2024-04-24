@@ -1,0 +1,58 @@
+; May 10, 1997: Star in the Sky 
+;
+; star
+;
+; Fractal visionaries:
+; I've got Fractint 19.6 up and running, and the good news is that it's a
+; little faster, (on my machine at least), than 19.5.  I'm glad to see
+; that the slow-down trend, which has been building since version 19.2,
+; has been reversed.  In addition to the usual formula and parameter
+; files, I've attached today's fractal as a parameter file with formula
+; included for those running version 19.6.  If I've done my part right,
+; simply snip it, save it as *.par, (* = any name you wish), and run it.
+; As for the picture itself, since yesterday's fractal had a demonic
+; appearance and took 2 hours to draw, I felt it only proper that today's,
+; which I have named "vision", should have a sacred appearance and draw in
+; less than a minute. Actually it draws in 20 seconds.
+; I'm showing no favoritism in my choice of symbols.  I used the six-sided
+; star because it gives such a symmetrical fractal.  Change p1 to 6, p3 to
+; -4 and the symmetry to xaxis, and you'll get a five-sided star.  But the
+; five-sided star is lopsided.
+; With this formula, p1 controls the number of lobes on the outer rim, p2,
+; which must be kept small, controls the size of the inside star, and p3
+; controls the number of lobes on the inside star.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA-PARAMETER FILE====================================
+
+Star_in_the_Sky    { ; time=0:00:03.68-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=MixMan2waypro passes=t logmap=yes
+  center-mag=0/0/0.835206 params=7/0/0.003/0/-5/0
+  float=y maxiter=10000 inside=253 symmetry=xyaxis
+  colors=000A49B5BD7DE9GICJKFMMJQMMUKPUHRUETcBVcBYcA\
+  _c9acCZmFWmITmLQmONmQJPTGTWDXZA_a7c`Ce_Gg_LhZPjYUl\
+  fUqpUuyUzwUwvVutVrsVpqWmpWknXhmXfkXcjYahYZgYXddaaj\
+  eZpi_mjakjbhkcfkeclfamgZmiXnjUnlSomPpnMppKqqHqrFrt\
+  CsuAsv7tx5ty2uqCliMd4DfDIcMNaVSZ81vOHirLcGQUHNYILa\
+  JIeKFiLDmMAqM8tOCuQFuSIuTLuVOuXRuYUuZWv_Yv`Zva`vbb\
+  vccwdewefwfhwgjwgkwhmwiowjpwkrwlsxmuxnwxoxxpzxmuuj\
+  orgjodela_iZVfWQcTK`QFYOAVNFTMJRLNPKSOJWMI_KIcJJbK\
+  KbLKbLLbMLbMMbNNbONbOObPPbQPbQQbRQbRRbSRbSUcQWdPYd\
+  N_eMaeLcfKegIggHihGkhEmiDGDCFECFFCEFCEGCDHCDICCICB\
+  JCBKCALCALC9MC9NC8OC7OC7PC6QC6RC5RC5SC4TC7UEAWGDXI\
+  GZKJ_MMaOPbQScSVeUXfX_hZbi`ejbhldkmfnohqpjtrlwsnsq\
+  oonoklpgjpcgq_erWcrS`sOZsKXtGUuCSu8Qv4Nv0Lw1Nu2Os2\
+  Qq3So4Un5Vl6Xj6Zh7_f8ad8bc7Yf7Uh7Qk7Mm7Ip7Er7Au76w\
+  8Cu8Hr9NpATmAYkBchBhfDihFjiHjjIklKkmMlnOloQmpRmrTn\
+  sVntQmuKkuFjv9hv4szOD9MC9 }
+
+frm:MixMan2waypro {; Jim Muth
+z=c=pixel:
+z=z^p1+(p2*z^p3)+c,
+|z| <= 100 }
+
+; END FORMULA-PARAMETER FILE======================================
+;

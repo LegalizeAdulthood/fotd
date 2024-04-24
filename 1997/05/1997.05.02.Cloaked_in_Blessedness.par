@@ -1,0 +1,60 @@
+; May 2, 1997: Cloaked in Blessedness 
+;
+; blessedness
+;
+; Fractal visionaries:
+; Today's fractal again takes advantage of the bof61 inside fill
+; feature of Fractint, which colors the points according to their
+; closest approach to the origin.  I named it "angel" because it
+; looks a little like an angel -- but not too much like one.
+; The image demonstrates that as the exponent of Z in a mandeloid
+; is made smaller, the action shifts from outside the fractal to
+; the inside, where it can be revealed by the fill options.
+; The negative Z in the formula rotates the odd order sets 90
+; degrees, while leaving the even order sets unchanged.  This
+; action completely changes the nature of the fractional order
+; sets, and reveals details in the sets of orders just a bit
+; greater than one, which are normally no more than tiny oblong
+; holes.
+; More on these low-order sets in the near future.  The finished
+; image is hopefully posted to ABPF.  I say hopefully because
+; yesterday's picture didn't make it, causing me to have to repost
+; it this afternoon.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA===================================================
+
+Cloaked_in_Blessed { ; time=0:00:25.81-SF5 on P4-2000
+  reset=1950 type=formula formulafile=basicer.frm
+  formulaname=JimsCompMand2 passes=t
+  center-mag=0.597564/0/0.5179649/1/-90/0
+  params=1.1/0/-0.025/0/0/0 float=y maxiter=128
+  inside=bof61 logmap=yes periodicity=0
+  colors=000JKPzzzMIPzzzPGQRFQSEQzzzVCRXBRYARzzzg8Rg\
+  7Rg6Sg5Sg4Sh3Sh4Qh5Ph5Oh6Mh6Lh7Ki8Ji8Ii9Gi9FiAEiAD\
+  iBCiCAiC9iD8iD7iE5jF4jF6jG9jGDjHGjHJjIMjIPiHMhHLhG\
+  JgGHfFFfFDeFBdE9cE7cD5bD3aD1aC0`C0_B0_B0ZA0YA0XA0X\
+  90W90V80V80U80T70T70S60R60R60Q50P50O40O40N40M30M30\
+  L20K20K20J10I10I00H00G00F00F00E00D00D00C00B00B00A0\
+  0900800800700600600500500600700700800800900A00A00B\
+  00B00C00D00D00E01E02F03F04G05G06G06G07G07G08H09H09\
+  H0AH0AH0BH0BH0CH0DH0DH0EH0EI0FI0GI0GI0HI0HI0II0JI0\
+  JI0KI0KI0LJ0MJ0MJ0NJ0NJ0OJ0OJ0PJ0QJ0QJ0RJ0RJ0SK0TK\
+  0TK0UK0UK0VK0WK0WK0XK1XK1YK1YL1ZL1_L1_L2`L2`L2aL2b\
+  L2bM3bN4bO4bP5bQ5bR6cS6cT7cU7cV8cW8cW9cX9cYAcZAc_B\
+  d`BdaCdbCdcDddDddDdeEdeEdfEdfEdgEdgFdhFdhFdiFdiGdj\
+  GdjGdjGdiFchEbgEagD`fD_eCZdCYdBXcAWbAVa9Ua9T`8S_8R\
+  Z7QZ6PY6OX5NW5MW4LV3KU3JT2IT2HS1GR1FQ0EQ0DP0CO0BN0\
+  AN09M08L07BPODOOENPGMPHLP
+}
+
+frm:JimsCompMand2 {; Jim Muth
+  z=c=pixel:
+  z=(-z)^p1*(c^p2)+c,
+  |z| <= p3+100
+}
+
+; END PARAMETER FILE==============================================
+;

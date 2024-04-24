@@ -1,0 +1,56 @@
+; May 23, 1997: The Nameless One 
+;
+; nameless
+;
+; Fractal visionaries:
+; Today's fractal is a blow-up of a midget on the tail of another midget,
+; which is one of eleven midgets in a circle around the origin.  To see
+; the circle of eleven midgets, do a few out-zooms.  To turn the midgets
+; so they face inward, change the sign of real(p2).
+; My Test15 formula is rapidly earning a place in my permanent formula
+; file.  It's one of the most versatile I've written, holding new
+; surprises with every parameter change.
+; Test15 uses one of my favorite techniques -- mixing various proportions
+; of different formulas, especially positive and negative mandeloids, a
+; trick which fills the interiors of the positive figures with detail of
+; the most unpredictable kind.  To see the true Julia set of the circle of
+; midgets, change imag(p3) to 0.
+; While all that is going on, I'm going off to check the new HP hexachrome
+; color printer.  It makes the output of a standard CMYK printer look like
+; mud.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PAR FILE FOR 19.6=========================================
+
+The_Nameless_One   { ; time=0:00:21.48-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=Test15 passes=1 center-mag=-0.91612191\
+  674121870/0/124030 params=1/6/0.058/-5/2/1 float=y
+  maxiter=1000 inside=0 logmap=22 periodicity=10
+  colors=0000070070070060050050140240330835B27E2AH7A\
+  LBAQFA_JKeNUkRcqVmwYuu_ztmtsaqrcgvdhreiqfkmhllimkj\
+  nikohmpgnqforepodomcokcohbofbodana`n_`nY_nV_nTZmRY\
+  mOYmMXmKXmJXkJXjIXiIXhIXgHXfHXeHXdGXcGXbFXaFX`FX_E\
+  XZEXYEXXqW2pT7pRBoPFoNKoLOnJSnGXmE`mCdmAil8ml6ql4u\
+  j6ti7tg8sf9sdBrcCraDq`EqZGpYHpWIoVJoTLnSMnQNmPOmRM\
+  mULmWJmYHl_FlaDlcClfBkiBkkAjnAjpAjqDdrF_sIUtKPtMKN\
+  F8`H4nI0jM1gP1cS1`V1XY2U`2Qc2Ng2Jj2Gm3Cp39s35v32y3\
+  9w2Fv1Lu0Rt0Xo1ak1fg2kb2pZ3uV3vO6wH9xBBkDIZFOMHUAJ\
+  _EKaHLcKLdNMfRNgUNiXOk_PlcPnfQoiRqlRrmUsmWsmYsm_tm\
+  btmdtmfumhumkummvmovmqvmtwmvwmxwmzwrdXvK6oIEhGLaES\
+  VCZOAeH8lA6s34z89tDEoIIjNNeRR`STZSVYSXWSYVT_TTaSTb\
+  RTdPTfOUhMUiLUkJUmIUnHHfI4ZIXJwZKt`LrbMpcNneOlgPjh\
+  PhjQflRdmSboT`qUZrUXqXUq_RqbPqeMqgKkePfdT`cYWbaR`f\
+  L_jGZoBYsCXsyfBzzzyaAy_9yX9zV8zS8zQ7zN7zL7vN7sP7pR\
+  7mT7jV7gX7dZ7``7Yb7Vd7Sf7 }
+
+frm:Test15 {; Jim Muth
+z=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3), g=f*(pixel):
+z=((a*(z^b))+(c*(z^d)))^k+g,
+|z| <= 100 }
+
+; END PAR FILE FOR 19.6===========================================
+;

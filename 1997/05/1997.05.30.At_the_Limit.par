@@ -1,0 +1,64 @@
+; May 30, 1997: At the Limit 
+;
+; limit
+;
+; Fractal visionaries:
+; Today's fractal has a squeezed, uneasy feeling about it.  It is not
+; beautiful.  It is a picture of a rather ordinary midget buried deep in
+; the northeast corner of the Mandelbrot set.  What makes this midget
+; unusual is that I caught it as it was being squeezed by an ever
+; decreasing bailout radius, and ready to be swallowed up.
+; When a midget is very close to the escape radius, (something that can
+; happen only when the escape radius is set to less than two), the
+; character of its surroundings totally changes.  Instead of lacy chaos,
+; such squeezed midgets are surrounded by blobs of color pushing in toward
+; them.  The iteration count of these blobs is not in order, but jumps
+; around in a random manner, which makes coloring these fractals
+; difficult.
+; This same effect is what makes the tiny midgets far out on the negative
+; x-axis so attractive when the bailout is set to 4 and they are therefore
+; near the escape radius, and so plain when the bailout is set to 100 or
+; so.
+; The exact bailout setting where a particular midget distorts like this
+; is rather critical.  It must be found by trial and error, bracketing and
+; closing in on the exact point where the screen goes blank.  It cannot be
+; done with the hard-coded Mandelbrot formula because Fractint permits
+; only integer values to be entered for the bailout.
+; The picture takes 25 minutes to draw on a 486-100mhz machine at 640x480
+; resolution, and is posted to a.b.p.f. and a.f.p.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PARAMETER-FORMULA FILE FOR 19.6==============================
+
+At_the_Limit       { ; time=0:02:29.45-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=Mandelbrot center-mag=+0.3511154645682\
+  388/+0.4139810894457739/1.624429e+010/1/-95/0
+  params=0/0/0.950077/0 float=y maxiter=14000
+  inside=0 logmap=1526 periodicity=10
+  colors=000KBZ`byKQjsCBMlUHcVCVW7MX9Fk7Ef5DaZyR0vi1\
+  je2_b3O_BqF9fK7XO5NTIdKEYOARR6KUN7EI9JDAO8CTduXMZX\
+  vAjhBfVCcHD_sWaPp2HbDAQNknCXaJIPQlDecB6LCKobYXY`4m\
+  b3V_vzRVaURyFLlKF`O9PTJOrCGv58zei5Bi_HWWNJTT6QPDJM\
+  JCTGJZEQQLJHSDZ3LNOJCgHFcRI``LYjOVsvSa1lmDqoOupZyq\
+  HXS042ed_WYZUaEMRYCKXWJcMH`CFZGBNBCR7DU3v2J4ctvEfj\
+  JU_OGOTp9wcApSBiFCbvvPV_ToC0ISGAKPUnJGWQ_AxJCjJINF\
+  GQBFS7EVhYdoeabY_RRZFKYQKhKIeEGb8E_isoOYeCGTt5KC4g\
+  s3fe6cT8aGBZTJgMHdGGa9EZ1h72`E2TK3LRvVsGqSBcU7QWwP\
+  ChMIVJNHGSYpjIXccLzLHkrb``UZKLY`h`KTZsitTThNXSCSUf\
+  D2TDDGDNI66E8DAAK6CRyRC0VG1PM2JSr3FT8OkQZ_MYPJYEGX\
+  3Ic3F_FMfBJb7G_utFbeLLRRuH3gGBUFIGEQj_NPOSvV1VMH`O\
+  GPKMEGSsmoa`hKPbfOHXLLNIPDFT0Xx2Nj_Pg8yR5`UonCbdIR\
+  WNFMSDgPzSTLYqz7bI9`zBZzFtzBPzzTzzxZzEzzzQzrIzkAzc\
+  zz0zzHzzuRzzzzrFzkzzcazgzzazzCzzJzzQzzFzzKzzOzzTzz\
+  ZzzYzzXzzmzzgzzazzezzbzz` }
+
+frm:Mandelbrot {; Jim Muth
+z=p1, c=pixel:
+z=sqr(z)+c,
+|z| <=p2 }
+
+; END PARAMETER-FORMULA FILE FOR 19.6================================
+;

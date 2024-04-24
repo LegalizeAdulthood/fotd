@@ -1,0 +1,53 @@
+; May 4, 1997: The Layered Look 
+;
+; layered
+;
+; Fractal visionaries:
+; Here's a shy little now-you-see-it-now-you-don't mandelbrot midget.  The
+; colors must be just right for it to be picked out behind all the
+; foreground clutter.  It is clearly visible in the attached picture, but
+; change the palette a bit and notice how easy it is to lose sight of this
+; elusive little fellow.  The fractal is an oblique slice of the figure
+; that results from mixing portions of the Z^2 and Z^-1 mandeloids.
+; The formula is one of my favorites.  Unlike the formula I posted
+; yesterday, which is still being developed, I have this one under enough
+; control so that I have a general idea of what it will do. Mixing various
+; portions of the classic Mandelbrot set with various portions of
+; mandeloids of other orders as it does, it holds no end of surprises.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA===================================================
+
+The_Layered_Look   { ; time=0:00:11.04-SF5 on P4-2000
+  reset=1950 type=formula formulafile=basicer.frm
+  formulaname=MixSqrProJulib passes=t
+  center-mag=-1.90264/0/0.2925241 params=0.2/-2.5/\
+  -1/0.13/-0.487442/0 float=y maxiter=750 inside=253
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000A6ZA6XA5UA5PA4KA4FA3AA3KA5KA6KA7KA8KA9KA\
+  AKABKLCdKDcJFbIGaHH`GI_FJYEKXDLWCMVBNUAOT9NS9NS9NR\
+  9NR9MR9MR9MQ9MQ9MQ9MQ9LP9LP9LP9LP9LO9LO9KO9KO9KN9K\
+  N9KN9KN9KM9JM9JM9JM9JL9JL9JL9IL9IK9IK9IK9IK9IJ9IJ9\
+  HJ9HJ9HI9HI9HI9HI9GH9GH9GH9GH9GG9GG9FG9FG9FF9FF9FF\
+  9FF9FE9EE9EE9EE9ED9ED9ED9DD9DC9DC9DC9DC9DB9DB9CB9C\
+  B9CA9CA9CA9CA9B99B99B99B99B89B89A89A89A79A79A7AB8A\
+  B8BB8BC8CC8CC8CC8DD8DD8DD8ED8ED8FE8FE8FE8GE8GF9GF9\
+  HF9HF9IF9IG9IG9JG9JG9KH9KH9KH9LH9LH9LI9MI9MI9NI9NJ\
+  9NJ9OJ9OJ9OJ9PK9PK9QK9QK9QL9RL9RL9SL9SL9SMATMATMAT\
+  MAUNAUNAVNAVNAVNAWOAWOAWOAXOAXPAYPAYPAYPAXQBXQBXRC\
+  XRCXSCXSDXTDXTDWTEWUEWUFWVFWVFWVGWWGWWGWXHWXHWYHWY\
+  IWYIWZIWZJV_JV_JV_KV`KV`KVaLVaLVbMVbMVbMVcNVcNVdNV\
+  dOVeOUeOUePUfPUfPUgQUgQUgQUhRUhRUiSUiSUjSUjTUjTTkT\
+  TkUTlUTlUTlVTmVTmVTnWTnWToWToXToXTpXTpYTqYSqZSqZSr\
+  ZSr_Ss_Ss_St`St`zzzSuaSva }
+
+frm:MixSqrProJulib {; Jim Muth
+z=pixel, a=real(p1), b=imag(p1),
+c=real(p2), d=imag(p2), e=(d*pixel):
+z=(a*sqr(z))+(b*z^c)+p3+e,
+|z| <= 100 }
+
+; END PARAMETER FILE==============================================
+;

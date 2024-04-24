@@ -1,0 +1,53 @@
+; May 1, 1997: Blues in the Dusk 
+;
+; blues
+;
+; Fractal visionaries:
+; I admit it, today's fractal formula is outrageous.  I wrote it about a
+; year ago on a day when I was feeling particularly reckless.  I expected
+; nothing more than a blank screen from it, but despite its ridiculous
+; appearance, it makes interesting pictures.  The parameter file for one
+; of them is attached below.  Tower" is the name I gave the picture when I
+; noticed the tower of exponents in the formula.
+; The picture still has the Fractint default magnitude.  I have yet to
+; zoom either in or out on it, so I have no idea what's deeper inside it.
+; The finished image has been posted to ABPF as always.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START PARAMETER FILE============================================
+
+Blues_in_the_Dusk  { ; time=0:00:40.42-SF5 on P4-2000
+  reset=1950 type=formula
+  formulafile=basicer.frm formulaname=TowerExp11
+  passes=1 center-mag=-0.876369/0/0.6666667
+  params=1/0/0/0/1/0 float=y maxiter=500
+  bailout=100 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=10 sound=off
+  colors=000M5NM5NM5NM5NM5NM5NN4NN4NN4NN4NN4NN4NO5OO\
+  6PP7QP8RQ9RQASRBTRCUSDVSEWTFXTGYUHZUIZVJ_VK`WLaWNb\
+  XOcXPdYQeYRfZSfZTg_Uh_Vi`Wj`XkaYlaZmb_nb`ncaocbpdc\
+  qddrelqdeqcZqbSqbLraEr`7r_0rc8sfFtjNumVuqbvtiwxqxw\
+  pxwowvnwvnwumwtlvtkvsjvsivrhuqguqgupfuoetodtnctnbt\
+  masl`sl`sk_skZrjYriXriWqhVqhVqgUqfTpfSpeRpeQpdPocO\
+  ocOobNoaMnaLn`Kn`Jn_ImZHmZHmYGmYFlXElXElWFmWFmVGmV\
+  GmVGmUGmUHnUHnTHnTInTInSInSInSJnRJnRJnRKnQKoQKoQKo\
+  PLoPLoPLoOMoOMoOMoNMoNNoNNpMNpMOpLOpLOpLOpKPpKPpKP\
+  pJQpJQpJQpIQqIRqIRqHRqHSqHSqGSqGSqGTqFTqFTqFUrEUrE\
+  UrEUrDVrDVrDVrEUoEUmEUmFTmFTmFTmFTmFSmGQmGOmGMmGKm\
+  GKmHKmHKmHKmHKmHKmIKmIKmIKmJKmJKmJKmKKmKKmKKmLKmLK\
+  mLKmMKmMKmMKmMKmNKmNKmNKmOKmOKmOKmPKmPKmPKmQKmQKmQ\
+  KmRZRRZRR_SS_TS_US`VS`WT`XTaYTaYUbZUb_Ub`VcaVcbVcc\
+  WdcWddWdeXefXegXfhYfiYfiYgjYgkZglZhmZhn_io_io_ip`j\
+  q`jrL5ML5ML5MM5NM5NM5NM5N
+}
+
+frm:TowerExp11 {; Jim Muth
+  z=pixel, c=p2+(p3*pixel):
+  z=z^(z^(z^(z^(z^(z^(z^(z^(z^(z^(z^(z+p1)))))))))))+c,
+  |z| <= 100
+}
+
+; END PARAMETER FILE==============================================
+;

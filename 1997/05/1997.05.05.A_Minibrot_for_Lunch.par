@@ -1,0 +1,62 @@
+; May 5, 1997: A Minibrot for Lunch 
+;
+; minibrot
+;
+; Fractal visionaries:
+; I built the orchid fractal this afternoon and tried my hand at
+; recoloring it.  I soon gave up.  Colored as it is, it's one of the most
+; exquisite fractals I've yet seen.  It's hard to top the present coloring
+; scheme, so my idea was to change only the background -- to a deep blue,
+; (R-00, G-00, B-20).  This gives me the impression that the orchid is
+; floating in infinite space.
+; Today's fractal is built from the same formula as yesterday's.  I've
+; included the formula again today because I've made a slight change in
+; it, which enables it to run slightly faster.
+; You'd think that the Mandelbrot midgets would be totally hackneyed by
+; this time, but here's one that's different.  It looks to me like a
+; skewered turkey, so I named it "skewered".  Believe it or not, the image
+; is a result of subtracting the Z^4 mandeloid from the Z^2.  As is the
+; case with nearly all my fractals, I've not yet explored any deeper than
+; the attached image, but I'll bet there's plenty of goodies hiding down
+; in there waiting to be discovered.
+; As for the request to send formula and parameter files as separate
+; attachments, I fail to see how that would simplify the process.  In my
+; case I'd need to make two separate postings for each fractal, because my
+; software permits only one attachment per E-mail letter.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA===================================================
+
+A_Minibrot_for_Lun { ; time=0:01:11.95-SF5 on P4-2000
+  reset=1950 type=formula formulafile=basicer.frm
+  formulaname=MixSqrProJulib passes=1
+  center-mag=-1.00004989087253/-0.000068071013947/\
+  3.412695e+008/1/67.5/0 params=1/-1/4/1/0/0 float=y
+  maxiter=1218 inside=0 logmap=yes periodicity=10
+  colors=000`Kq`Kq_Kp_Kp_JpZJpZJoZJoYJoYJoYInXInXInX\
+  ImWImWImWImWHlVHlVHlVHlUHkUHkUGkTGjTGjTGjSGjSGiSGi\
+  RFiRFiRFhQFhQFhQFhPFgPEgPEgOEfOEfOEfNEfNDeNDeNDeMD\
+  eMDdMDdLDdLCcLCcKCcKCcKCbJCbJBbJBbIBaIBaHA`IA`JA`K\
+  A`LAaMAaNAaOAaPAaQAbRAbSAbT9bU9bV9bW9cX9cY9cZ9c_9c\
+  `9da9dc9dd9de9df9eg9eh9ei9ej9ek9fl9fm9fn8fo8fp8fq8\
+  gr8gs8gt8gu8gv8hw8hx8hz7iz7iy8ix9ixAhwBhvBhuChtDht\
+  EhsFgrGgqHgpIgpJgoJfnKfmLflMflNfkOfjPeiQeiRehRegSe\
+  fTdeUdeVddWdcXdbYdaYcaZc`_c_`cZacYbbYcbXdbWebVebUf\
+  bUgaThaSiaRj`Rj`Rj`Rj`Rj`Rk`Rk`Sk`Sk`Sl_Sl_Sl_Sl_S\
+  m_Sm_Tm_Tm_Tn_Tn_Tn_Tn_To_To_UoZUoZUoZUpZUpZUpZUpZ\
+  UqZUqZVqZVqZZrZcrZhrYmrYrsYvsYzsUzsKztAztAztAztAzu\
+  AzuAzuAzuKzuKzvKzvKzvXzvXzwXzwXzwmzwmzxmzxmzxmzxmz\
+  ymzymzymzymzzmzzmzzmzzmzymzxmzxzzwzzwzzvzzvzzuzzuz\
+  ztzztzzszzszzrzzrzzqzzqzzpzzpzzozzozznzznzzmzzmzzl\
+  zzlzzkzzkzzjzzjzzizzizzhz }
+
+frm:MixSqrProJulib {; Jim Muth
+z=pixel, a=real(p1), b=imag(p1),
+c=real(p2), d=imag(p2), e=p3+(d*pixel):
+z=(a*sqr(z))+(b*z^c)+e,
+|z| <= 100 }
+
+; END PARAMETER FILE==============================================
+;

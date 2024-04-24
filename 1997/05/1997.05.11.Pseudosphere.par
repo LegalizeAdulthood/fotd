@@ -1,0 +1,52 @@
+; May 11, 1997: Pseudosphere 
+;
+; pseudosphere
+;
+; Fractal visionaries:
+; Today's fractal is another quickie.  It is something that appeared
+; unexpectedly in a new formula I've been playing around with.  It reminds
+; me of the golden shield of some long forgotten mythological hero.  I've
+; included separate parameter and formula files, as well as a combined
+; parameter file for those with version 19.6 of Fractint.  As always, the
+; finished image has been posted to ABPF.
+; I've also reproduced the image with the five mandelbrot midgets pointing
+; inward.  I suspect that it's an artifact caused by the multi-valued
+; nature of the complex log function, but what the heck, it's a pretty
+; good image.  Let's not worry about where it came from.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START VERSION 19.6 PARAMETER FILE===============================
+
+Pseudosphere       { ; time=0:00:06.32-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basicer.frm
+  formulaname=Test02 passes=1
+  center-mag=0/0/0.9861933/1/90/0
+  params=1e-009/0/-5/0/0.06/0 float=y maxiter=15000
+  inside=bof61 logmap=yes periodicity=10 sound=off
+  colors=000E02O23S84VD5ZJ6aP7fV8k`9ofAtqczzzxscvhJz\
+  cNpMRcLcUAUF0FlSbjVcgZdeaecdf`hgZkhXniUojRokOokMpl\
+  JpmGpmDpnBpn7gg3_a5Y_7WZ9UXASWCQUEOTGMRIJPKHOMFMND\
+  LPBJR9IT7GP7NM7UI6aF6hB6o86v65l54b43TA7822J119_OKQ\
+  OoDCQKlEHdCDX9AO76G4382MrwJjnGbfCVY9NQ6FH3781MG1JE\
+  1GB1D90970640327l96e85Z64S53L42E2171SqcgAL`8HT6EM5\
+  AE37713LwDInBFf9CY79P56H3381rhM_UEIF7BOS9LO8HK6EG4\
+  AC378134Ys7M`4BI2wT_nPVfLQYHLPCFH8A8454yn3of3dY2VQ\
+  1KH0A81Pp0GZ08Hic9aX7XMJYMJZMJ_MJ_NJ`NJaNJbNJcNJdN\
+  JeNJeOJfOJgOJhOJiOKjOKkOKlOKlPKmPKnPKoPKpPKqPKrPKr\
+  QKsQKtQKuQKuQKtRLtRLsSLsSLsTLrTMrUMrUMqUMqVMqVMpWM\
+  pWMpWNoXNoXNoYNnYNnZNnZNmZNm_Nm_Ol`Ol`OlaOkaOkaOkb\
+  OjbOjcPjcPicPidPidPhePhePhfPhfQgfQggQggQfhQfhQfiQe\
+  iQeiQejRdjRdkRdkRckRclRclRbmRbmSbnSanSanSaoS`oS`pS\
+  `pS_qS_qT_qTZrTZrTZsTYsTYsTYtTXtUXuUXuUWvUWvUTvXQu\
+  _OubLteIthJnaYQGQKBHF6991 }
+
+frm:Test02 {; Jim Muth
+z=pixel, d=real(p3),
+f=imag(p3), c=d*(pixel^f):
+z=sqr(z)+(p1*z^p2)+c,
+|z| <= 100 }
+
+; END VERSION 19.6 FORMULA-PARAMETER FILE=========================
+;

@@ -1,0 +1,53 @@
+; May 6, 1997: Life On Vega-5 
+;
+; vega
+;
+; Fractal visionaries:
+; Today's fractal is one of my favorites.  A study in emerald, it
+; resembles a cosmic mushroom cloud illuminated gently from behind by a
+; pearly grey-blue radiance.
+; The formula is pure serendipity.  To create it, I wrote expressions that
+; I thought would make sense, and lo and behold, they worked.  This
+; formula is part of a series of serendipitous formulas I call MandNewt,
+; because they combine features of Newton's fractals and mandeloid
+; fractals.  The six variable parameters add to the serendipity by causing
+; the resulting image to be nearly unpredictable.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA FILE==============================================
+
+Emerald            { ; time=0:00:59.65-SF5 on P4-2000
+  reset=1950 type=formula formulafile=basicer.frm
+  formulaname=MandNewt10 passes=1
+  center-mag=-0.106416/0/2.38/1/90/0 params=5/-1/1/\
+  0.5/1/5e-031 float=y maxiter=430 inside=255
+  logmap=yes periodicity=0 sound=off
+  colors=0008H78H78H78H78H77I67I67J67J6A66A86AA6AC6A\
+  E6AG6AI6AJ6AK5AL5AM5AN5AO5AP5AQ5AR59S58T57U56U56U5\
+  6U56U56U56U56U55U45U45U45U45U45U45U45U45U45U45U45U\
+  45U45V45W45X45Y45Z44_34_34`34`34a34a34a34b34b34c34\
+  c34c34d34d34d34e34e35f36f27f28g29g2Ag2Bh2Ch2Di2Ei2\
+  Gi2Ij3Kk3Mk3Ol4Qm4Sn4Un4Wo4Yp4_q5aq5cr5es5gs5it6ku\
+  6mv6ov6qw6tx6wy7zz7wz7tz7qy8oy8my8ly9ky9jy9ix9hx9g\
+  xAfxAexAdxAcxAbxBaxB`xB_wBZwCYwCXwCWwCVwCUwDUwDUwD\
+  UwDUvDUvEUvETvETvETvETvFTvFTvFTvFTvFSuGSuGSuGSuGSu\
+  GSuHSuHSuHRuHRuIRtIRtIRtIRtIRtJRtJQtJQtJQtJQtKQsKQ\
+  sKQsKQsKPsLPsLPsLPsLPsLPsMPsMPrMOrMOrMOrNOrNOrNOrN\
+  OrOOrONrONqONqONqPNqPNqPNqPNqPMqQMqQMqQMqQMpQMpRMp\
+  RMpRLpRLpRLpSLpSLpSLpSLoSLoTKoTKoTKoTKoUKoUKoUKoUK\
+  oUJnVJnVJnVJnVJnVJnWJnWJnWInWInWInXImXImXImXImXImY\
+  HmYHmYHmYHmYHmZHlZHlZHlZGl_Gl_Gl_Gl_Gl_Gl`GlbGleFl\
+  hFmkFmnFnqFntFowFozFpzFpz }
+
+frm:MandNewt10 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3):
+h=z^a+(g-b)*z-g
+j=c*z^d+g
+z=z-k*h/j,
+f <= |h| }
+
+; END PARAMETER FILE==============================================
+;

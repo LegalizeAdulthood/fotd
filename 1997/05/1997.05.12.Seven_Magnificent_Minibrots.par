@@ -1,0 +1,67 @@
+; May 12, 1997: Seven Magnificent Minibrots
+;
+; seven
+;
+; Fractal visionaries:
+; Over the past 7 years, I have probably written and deleted thousands of
+; formulas.  Most of these were discarded because they produced either a
+; blank screen or duplicated figures that were more easily drawn with
+; simpler formulas.  Only a few survived to find a permanent home in my
+; formula file.  Today's formula, Test15, is one of the survivors.  I've
+; yet to get around to naming it.
+; I thought of the formula today because I've been reading lately of
+; formulas that draw multiple midgets in a circle.  One thing today's
+; formula does, among many others, is to draw any number of midgets of any
+; order, facing either in or out, in a circle around the origin.  Today's
+; picture, seven_up, shows seven midgets of order two, arranged in a
+; circle facing outward.  To have them face inward, change the +0.35
+; assigned real p2 to -0.35.
+; I'll leave it to the intrepid fractal explorers to discover how to
+; change the number of midgets, or how to change their shape to midgets of
+; a different order.  I'll give only the caution that it's easy to get
+; hopelessly lost.  But even if you get lost, you'll see some strange
+; sights.
+; It's a tricky process involving several parameters that must be changed
+; and coordinated at the same time.  (OK, if anyone really wants to know,
+; I'll send the method along, but be warned that the description of the
+; method is mathematically convoluted and will make rather tedious
+; reading.)
+; To atone for today's fractal, which is much math and little art, I'll
+; post a great piece of fractal art tomorrow.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START COMBINED FILE FOR 19.6====================================
+
+Seven_Magnificent  { ; time=0:00:02.91-SF5 on P4-2000
+  reset=2004 type=formula formulafile=jim.frm
+  formulaname=Test15 center-mag=-0.00126273/0/0.51461
+  params=0.25/4/0.35/-3/2/1 float=y maxiter=90
+  inside=0 outside=tdis symmetry=xaxis periodicity=10
+  colors=000000eJ`_ESU9JO4AMIBLVCJgDItEzeLzURzzXzzSz\
+  zOzzsrTsQu8Qu8Qt8Qt9Qs9Qs9Qs9QrAQrAQqAQqAQqBQpBRpB\
+  RoBRoCRnCRnCRnCRmDRmDRlDRlDRlERkERkERjERjFRjFRiFRi\
+  FShGShGSgGSgGSgHSfHSfHSeHSeISeISdISdIScJScJScJSbJS\
+  bKSaKTaKT`KT`LT`LT_LT_LTZMTZMTZMTYMTYNTXNTXNTXNTWO\
+  TWOTVOTVOgJK_PMTVOL`QGdGFeKEeNEeRDeUCfYCf`BfcAfgAg\
+  j9gn8gq7hw8gt8gr9gp9gnAflAfjAfgBfeBecCeaCe_CeYDdVD\
+  dTEdREdPFcNFcLFcIGcGGbEHbCHbAFd5Gc7Hb8IaAJaBK`CL_E\
+  MZFNZHOYIPXJQWLRWMSVNSUPTTQUTSVSTWRUXQWYQXZPY_O_`O\
+  `aNbbMccLddLfdKgeJifIjgIkhHmiGnjFokFqlErmDtnCuoCvp\
+  BxqAyqAzoDwmFukHriJpgLmeNkcQhaSf_UcYWaWYZU_XSbUQdS\
+  OfPMhNKjKGmGHlHIlIJlIJkJKkKLkKMjLMjLNjMOjNPiNPiOQi\
+  PRhPShQShQThRUgSVgSVgTWfUXfUYfVXiWYhVYgVYfVZfUZeUZ\
+  dUZdU_cT_bT_aT_aT``S`_S`_S`ZRaYRaXRaXRaWQbVQbVQbUQ\
+  bTPcSPcSPcROcQOdQOdPOdONdNNeNNeMNeLMeLMfKMfJLfILfI\
+  LgHLgGKgGKgFKhEKhDJhDJhCJ }
+
+frm:Test15 {; Jim Muth
+z=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3), g=f*(pixel):
+z=((a*(z^b))+(c*(z^d)))^k+g,
+|z| <= 100 }
+
+; END COMBINED FILE FOR 19.6======================================
+; END VERSION 19.6 FORMULA-PARAMETER FILE=========================
+;
