@@ -1,0 +1,108 @@
+;     Date: Fri, 30 Jul 2010 22:08:12 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-07-10 (No Minibrot Here [7])
+;       Id: <1.5.4.16.20100730220812.14377aac@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 31, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows an anti-minibrot, or maybe a negative 
+; minibrot, depending on what one chooses to call fractal hills 
+; instead of basins.  Whatever the thing in today's image is 
+; called, it is the opposite of a minibrot.
+; 
+; The area with the lowest iteration count lies at the center 
+; rather than at the edges, and the number of elements is arranged 
+; in decreasing powers of two as the center is approached rather 
+; than in increasing powers of two.
+; 
+; This arrangement makes a mockery of Fractint's automatic logmap 
+; feature, which sets the logmap to the lowest iteration count it 
+; finds at the edges of the frame.  In today's image the lowest 
+; count is at the center, causing the automatic logmap feature to 
+; set the logmap to a number that is far too high.
+; 
+; The parent fractal is a normal Mandelbrot set -- normal on the 
+; surface, that is.  In its depths, where today's image lies, it 
+; is anything but normal.  The deeper one dives into the parent, 
+; the more things take on order-16 characteristics.
+; 
+; Today's scene is located in a bit of debris in the main bay of a 
+; half-morphed minibrot lying in the trunk of an elephant on the 
+; southeast shore line of the large minibrot on the west branch of 
+; the filament extending from the period-3 bud on the north shore 
+; line of the main bay of the parent Mandelbrot set.  (After 
+; reading this guide I doubt I'll ever find the location.)
+; 
+; I named the image "No Minibrot Here".  There certainly are 
+; minibrots in the arms, but they lie well beyond resolution.  The 
+; rating of a 7 shows that I rather like the image.  The calcula-
+; tion time of 2-1/3 minutes means the image is an efficient one.
+; 
+; Calculation may be totally avoided by viewing the finished image 
+; on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The weather was perfect here at Fractal Central on Friday, with 
+; a temperature of 82F 28C, low humidity and mostly sunny skies.  
+; The fractal cats made the most of things when they started 
+; chasing each other up and down the hallway, filling FC with the 
+; rumbling thunder of cat-paws.
+; 
+; My day was uneventful; FL's day was the same.  I hear rumors 
+; that an antiquing trip is planned for tomorrow, so if the next 
+; FOTD is late, you will know why.  Until whenever, take care, and 
+; with all the cameras in circulation, why has no one ever gotten 
+; a clear photo of a bigfoot?  Could it be that bigfoot is nothing 
+; more than another fantasy, believed by those who want to believe?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+No_Minibrot_Here { ; time=0:02:20.87-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip passes=1
+  center-mag=-0.1543020574040948/+1.030334624147516/\
+  4.524186e+009/1/50/0 params=16/1e+050/0/0 float=y
+  maxiter=1500 inside=0 logmap=162 periodicity=6
+  colors=000zczwczwczwcvwcrwcmwchuccscZqcUocPmcKmcGm\
+  cBmcAmcCmcEmcFmcHmcJmcKmcMmcOmcPmhRmmRchSccScZScUS\
+  cPSZKSZGSZDSZBSU8SU6SU1WU4SU7PU9MOCJOEGKHDGJABM7AO\
+  4_fS0rz0rz0rz0rz0rz0rz0rza43a55a67a79a8Ba9CaAEaBGa\
+  CIaDJaELaFNaGPaGQ`FU_EXZD`YCcXDgWEjVGnUIqSKvTOtUQs\
+  VSrWUqXWpXYoY_nZam_ch`ec`gZaiUckUhmUmoUrrUvqUxoUvn\
+  UrmUmlUhkScjQZiSUhQPhNKgLFfJAeG9dE7cB6b95b74_64X64\
+  U54R54O44L44I44F34C3492462442885CB7GEAKICOLFLfeMhc\
+  NiaOj_PhXUeU_bReYOkSLmMIpGFq3Cr79r86p93pA6nB8lCAjD\
+  ChDEfEGdFIcGJaHL_INYIPWJRUKTSLVQMXONZNN_PLaRKbTJdV\
+  IeWGgYFh_EiaDkbBldAnf9oh8pi6rk5sm4uo3vp2wrBzsJzpYz\
+  nlzlzzAAAAAAAA7CAAEACGBEH9GICHIFIIIIIKJINKIQKJSLJV\
+  MJYMJ_NJbNJeOKgPKjPKmQKoRKrRKuSKwSJtRIrRHpRHnRGlRF\
+  iREgREeRDcQCaQBZQBXQAVQ9TQ8RQ8PQ6VU5`Y4fa3le2qi1pj\
+  1oj1nj1nk1mk1lk1ll1kl0jl0jm0im0hm0hn0gn0fn0fn3em5e\
+  l8ekAejCejFeiHehKdgMdfOdf }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

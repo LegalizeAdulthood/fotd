@@ -1,0 +1,111 @@
+;     Date: Tue, 27 Jul 2010 22:39:11 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-07-10 (Persistence of Space [7])
+;       Id: <1.5.4.16.20100727223916.10ef2b1e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 28, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows the last midget out the main spike of the 
+; Mandelbrot set that is large enough to be resolved with 
+; conventional math.  The little fellow is centered around 
+; -1.999999117587324 on the X-axis.
+; 
+; But whatever you do, don't be expecting an everyday minibrot 
+; when you run today's parameter file.  Even I have no idea of how 
+; the scene is oriented.  We're in the fourth dimension here, and 
+; the angle of today's image was found at random by the evolver 
+; feature of Fractint.
+; 
+; To add to the confusion, the scene was rendered with the 
+; 'outside' set to 'fmod' with a proximity of 1.5, which changes 
+; the normally solid outside parts to a series of rubbery, melting 
+; loops.  And it goes without saying that I did ample stretching 
+; and skewing to create the image.
+; 
+; The melting loops in the image remind me of a famous but rather 
+; strange painting of melting watches draped over a dead tree 
+; limb in the middle of nowhere, so I named the image "Persistence 
+; of Space".  (Actually, the artist was more obsessed with 
+; crutches than watches.)
+; 
+; The rating of a 7 indicates that in my opinion the image is 
+; notably superior to yesterday's.  The calculation time is a very 
+; brief 20 seconds, and even this brief time may be saved by 
+; viewing the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and thereby avoiding the calculation.
+; 
+; Tuesday turned into a repeat of Monday here at Fractal Central.  
+; The temperature reached 86F 30C with low humidity, while the sky 
+; remained spotted with kodachrome clouds.  The fractal cats 
+; remained lazy.
+; 
+; My day was busy enough, and if all goes well, tomorrow will be a 
+; repeat.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and I guess we're alone.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+PersistenceOfSpace { ; time=0:00:20.16-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=-0.00000000000344397/+0.000000000002282\
+  92/3.695823e+011/0.1358/35.8120960583612629/-42.57\
+  16308875028773 params=-2.105319376201666/145.16220\
+  58778649/0/134.0351573229163/-1.999999117587324/0/\
+  -1.999999117587324/0/2/-5 float=y maxiter=2147
+  inside=0 proximity=1.5 outside=fmod symmetry=none
+  periodicity=0 mathtolerance=0.05/1
+  colors=000H5WF1XH4WI7VJAVKCULFTNITOLSPNRQQRRTQSVQU\
+  YPV`OWcOXeNYhM_kM`nLapKbsKcvJbyGdxJexLfwOgwQhwTivV\
+  jvYkv_luamudntfotiptkqsnrspruussrsrotpltoiumfuldvj\
+  aviZvgWwfTwdRxcOxaLy`IyZFzWCyYDxZEw_Fv`GuaHtbIsdJr\
+  eKrfKqgLphMoiNnkOmlPlmQknRkoRjpSirThsUgtVfuWevXdwY\
+  dxYZnWTdUNVTHLRBBP51O95PD9PHDPLHQOLQSPQWSR_WRb_Rfc\
+  SjgSnkSuoPqnSnmUjmWglYck_`kaXjcUjeRihNhjKhlGgnDfp9\
+  fr6et1fx3ev5eu7et9dsBdrDdpFcoHcnIcmKblMbjObiQahSag\
+  UafW`dX`cZ`b`_ab_`d_ZfZYhZXjZWkZVlWYmU_mSbnPdnNgoL\
+  ipMvoJkoHanFRnDHnB7jIAfPDfOFfOHfOJfOLfNMfNOfNQfNSf\
+  MTfMVfMXfMZfM`fLafLcfLefLgfKhfKjfKlfKnfKodJmbIl`Hk\
+  ZHjXGiVFhUFfSEeQDdODcMCbKBaVGLJB`43n76o99oBBoDEpFG\
+  pHJpJLpLOqNQqPTqRVqQWoQXnQYlQZkQ_iQ`hQagQbeQcdQdbQ\
+  eaQf_QgZQhYPiWPjVPkTPlSPmQPnPPoOPpMPqLPrJPsIPtGPuF\
+  PvEQuFRtFStFTsFUrFVrFWqGXpGYpGZoG_nG`nG`mHamHblHck\
+  HdkHejHfiIgiIhhIigIjgIkfI }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

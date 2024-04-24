@@ -1,0 +1,108 @@
+;     Date: Sun, 18 Jul 2010 22:24:29 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 19-07-10 (The Wrong Angle [6])
+; 
+;       Id: <1.5.4.16.20100718222424.138f7490@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 19, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a zoom into the bit of Seahorse Valley that was 
+; stretched across the center of yesterday's image.  It took quite 
+; of anti-distorting to undo the stretching distortion in yester-
+; day's image, but once this was done, the result was very near 
+; perfect.
+; 
+; The incredible thing with today's image is that it calculates in 
+; 13 minutes, but shows the spider-web, peanut-hole features that 
+; normally lie much deeper in Seahorse Valley and take hours to 
+; calculate.
+; 
+; The name "The Wrong Angle" refers to the fact that in the image, 
+; Seahorse Valley is viewed nearly edge-on, yet appears quite 
+; undistorted.  The rating of a 6 is mostly for mathematical 
+; interest.
+; 
+; The calculation time of 13-1/2 minutes is admittedly a drag, and 
+; I can give no guarantee that the result will offer full compensa-
+; tion.  My advice is to view the finished image on the FOTD web 
+; site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; BTW, I have simplified the new logo for the FOTD web page, which 
+; was getting over-worked and over-complicated.  It shows my 
+; favorite fractal and the six perpendicular slices of the 4-D 
+; Julibrot.  I'll send it to Paul on Monday.
+; 
+; Typical midsummer weather continued here at Fractal Central on 
+; Sunday, with lots of sun and a temperature of 93F 34C.  The 
+; fractal cats made the most of things by sleeping all day.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and if the world ends within 24 hours, there might be no more 
+; FOTD's.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Wrong_Angle { ;_time=0:13:36.14-SF5_on_P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.838351136\
+  47022960/+0.01718083180624014/204.918/427.74/90/\
+  0.0214321089199651232 params=-45/0/90.1/0/-0.7514/\
+  0/0/0/2/0 float=y maxiter=125000 inside=0
+  colors=000QJoRIpSHqTFrUErVBtUBsTArSBpRCoRDmRDlQDkP\
+  DjOEhODhNDgNEfMEdMDcMCcLDbLCbKCaJCZHCYHBVGAUFAUFAU\
+  E9UD9UD9UC9U94UB7UC9UDCUEEVFHWGJXHMYJO_KRaLTdMWfNY\
+  hO`kPbmKbxNcsQdoSekVfgXfc_g_ahWdiSgjOijKlkGnlCqm8s\
+  m4tk7tjAtiCuhFvgHwfKxeMydPzcRyeSxfSwgSvhTuiTskTrlT\
+  rmUrnUroUqqUqrVqsVquVqwVpwWowXnxYnyZmzZlz_kz`kyajx\
+  biwbhvchudgtefseerfeqgdphcoibnibmjalk`kl_jm`il`hk`\
+  gj`fj`eiaehaehadgadfadfacebddbccbccbbbbbabaac``c`_\
+  c`_c`Zc`YaaXb`Yc`Yc`Zd`Ze`_e`_f`_ge`ge`heaieaieajd\
+  bkdbkdclfcmgdmhdnjdojeqletlfwmfxogwofvnfumfslfnjem\
+  ielgekfejdeicdhadg`dfZdeYddXccWcbVcaUc`Tc_SbZRbYQb\
+  XPbVQeWPcWObXOaXN`XM_YMZYLYYLXZNZZO__Pa_Qb`Rd`Se`T\
+  faUhaWibXkbYlbZmc_oc`pdardbsedvdctdbtcbucaucaub`vb\
+  _va_vaZwaZw`Yw`Yx_Xy_Wz_WzZVzZVyZUyYTxYTxXSxXSwXRw\
+  WRwWQvVPvVPvVOuUOuUNuUNtTOtSOtSOsSOsSNsSNrRNrRNrRM\
+  qRMqQMqQMpQKpQKpQKoQKoQKo }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,107 @@
+;     Date: Fri, 23 Jul 2010 22:23:13 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 24-07-10 (Doomsday Scenario [7])
+; 
+;       Id: <1.5.4.16.20100723222308.102f3730@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 24, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene on the NNW shore line of the large main 
+; bay of the (-Z)^(1.19)+C Mandeloid.  I named it "Doomsday 
+; Scenario" when I had the impression of a comet tearing through 
+; the atmosphere, ready to strike the earth and send mankind the 
+; way of the dinosaurs.
+; 
+; Yes, I know there are more than enough doomsday shows on the TV 
+; channels nowadays, but I can see no harm in adding my own 
+; version of doom -- a fractal comet that ends the grand experi-
+; ment of quasi-intelligent life on planet earth.  Actually, I 
+; doubt we'll need a comet to bring about the end of the civilized 
+; world.  We appear to be on the verge of doing it ourselves, and 
+; only a fool would think some super-technology will be able to 
+; save us.
+; 
+; The good news is that when man is gone, fractals will remain, 
+; though I wonder if anyone else in the universe will know or care.
+; 
+; Today's image rates a 7.  It's reasonably unusual and certainly 
+; colorful enough.  The calculation time of just over 2 minutes is 
+; fast enough; viewing the finished image on the FOTD web site is 
+; even faster.  The web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heat and humidity returned in full force here at Fractal central 
+; on Friday, with a temperature of 95F 35C.  A storm threatened in 
+; the afternoon, but never developed.  The fractal cats passed the 
+; day on the cool floor, as would be expected.  My day was average 
+; and uneventful.  FL passed the day quietly also.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and let me know when we land a man or woman on Mars.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Doomsday_Scenario { ;_time=0:02:11.55-SF5_on_P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5
+  center-mag=-0.001859683/+1.0354605665/15937/1/-20/0
+  params=0/0/0/0/0/0/0/0/1.19/0 float=y maxiter=50000
+  inside=0 logmap=142 periodicity=10
+  colors=000KKKSMNbMO`MOSQPJIQBAQXGdqMrnNojNmgOjcOg`\
+  PeYPbUQ_RQXNRVKRSHSPESMBTK8TH4UF1UCgIZjJWlKToLPUMM\
+  UQJUNGUSJUYLUZOQbQIlTApV2nX6mWAcVDVUHLTLCSO3SN4VL5\
+  YK5`I6cG7fF7hH7fI7dK7bL7aN6_O6YQ6WR6US6SU6RV6PX6OY\
+  6MZ6KJMY3`k6Um9NpCGrF9tI2vH3qH3mH4hH4dH4_H5WH5RH5N\
+  H5IH5EH6AH65H61ID1IL1JS0JZ0KezKlvSpmZkzbolfdWjUQgU\
+  9dUAaTAZTAWTATSBQSBNSBKSBHSBIQAI9AJ99J78K97K76I65L\
+  95M74M54P76S97VB9XDA_FBbHCdJDbLDaNC_OCZQBXSBVUAUWA\
+  TYARZAQ`9Oa9RbCUbFXcJ_cMbdPedSheVkeYnf`qfctffcoSzz\
+  EmzzzzAmzzzz5mzzzz4mzzzz6mwzzu7mszzq9SoATmATmBTmCV\
+  mSTmTTmUTmVTmWUmXUmYUmZUm_Um`UmaUmbUmcUmdVmeXmfZmg\
+  _mhamicmjemkgmlimmkmnkmojmpkmqlmrmmsmmtmmummvmmwmm\
+  xmmymmzmmzmmzmmzmmzmmzmmzmmzmmzmrzmrzmrzmrzmrzmrzm\
+  rzmrzmrzmrzmrzmrzmrzmrzmrzmrzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

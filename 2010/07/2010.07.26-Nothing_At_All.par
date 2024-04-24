@@ -1,0 +1,104 @@
+;     Date: Sun, 25 Jul 2010 22:36:43 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 26-07-10 (Nothing At All [7])
+; 
+;       Id: <1.5.4.16.20100725223646.1317e10a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 26, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Someone once told me that there is nothing to be found in 
+; fractals with negative exponents of Z.  Well, today I checked 
+; the Z^(-2)+C fractal and found nothing.  Today's image shows the 
+; nothing that I found.  The name "Nothing At All" confirms the 
+; nothingness.
+; 
+; Actually, the image is not a Mandeloid.  It is rotated 30 
+; degrees toward the oblate direction, and has quite a bit of 
+; stretching and skewing included.  The 5-pointed, rounded star-
+; like elements are something entirely new in my experience.
+; 
+; It's hard to give a rating to nothing, but if something were 
+; there, it would have rated a 7.  Assuming something actually is 
+; there, I rated the image at a 7 despite its blatantly feminine 
+; pastel-pink appearance.
+; 
+; The calculation time of 1-2/3 minutes will pass in a flash.  The 
+; flash may be avoided by viewing the finished image on the FOTD 
+; web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A muggy cloudy morning was followed by heavy midday rain and a 
+; pleasant afternoon here at Fractal Central on Sunday, with lots 
+; of afternoon sun, lower humidity and a temperature of 81F 27C.  
+; The fractal cats slept through most of it.  My day was lazy.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and one can never be wrong if they know what is right.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Nothing_At_All { ;_time=0:01:40.02-SF5_on_P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=+2.892806630\
+  58179/-0.5181829559722656/1538.462/1.2095/99.12110\
+  220555914/-2.95959565993425278 params=0/0/30/0/\
+  -1.8758/0/0/0/-2/100 float=y maxiter=1500
+  inside=bof61 outside=tdis periodicity=0
+  colors=000PLPQLPQLPQLQQLQRLQRLQRLQRLQRJPRLQRNQRORR\
+  QRRSSRTSRVTUWTUYTZ_UZ`UcbVccVheWhgWmhWmjXrkXrmSvoK\
+  vpAzr0zs0zq0zp0vo0vm0rlArkKmiUmhWhgWheWcdVccVZaVZ`\
+  UU_UUYUPXTPWTKUTKTTGSSGQSFPSFOREMRELRDKQDIQCHQCGQB\
+  9PBDPACPAAO99O98O86N85N74N73N8AO85O96P97PA7QABQB9R\
+  BARCASCBSDDTDDTEEUEEUFDVFHVGFWGHWHIXHJXIKYILYJLZJM\
+  ZKN_KO_LO`LP`MQaMRaNSbNSbOTcOUcPVdPWdQWeQXeRYfRYfS\
+  YgTZgTZgUZgUZgVZhV_hW_hW_hX_hX_iY_iZ_iZ`i_`i_`j``j\
+  ``ja`jaajbakbakcakdakdakealeblfblfblgblgbmhbmhcmic\
+  mjcmjcnkcnkcnlcnldnmcomdoncondoodoobopbnpanpanp`nq\
+  _nqZnqYnqXnrWnrVnrUnrTnsTnsSnsRnsQntPntOntNntMnuLn\
+  uKnuJnuInvInvHnvGnvFnwEnwDnwCnwBnxAnx9nx8nx7ny8ox7\
+  nw7mv7lu7ku7jt6is6hr6gr6fq6ep6do5cn5bn5am5`l5_k4Zk\
+  4Yj4Xi4Wh4Vg4Ug3Uf3Te3Sd3Rd3Qc3Pb2Oa2N`2M`2L_2KZ1J\
+  Y1IY1HX1GW1FV1EU0DU0CT0BS0AR09R09Q2AQ3AMJNNKONKONK\
+  ONKOOKOOKOOKOOKPPKPPKPPLP }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

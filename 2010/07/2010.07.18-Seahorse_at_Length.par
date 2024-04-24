@@ -1,0 +1,112 @@
+;     Date: Sun, 18 Jul 2010 10:43:17 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 18-07-10 (Seahorse at Length [6])
+; 
+;       Id: <1.5.4.16.20100718104318.10bfbd2e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 18, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday's unusual scene in Seahorse Valley kept me thinking 
+; most of the day on Saturday.  In yesterday's image the Mandel-
+; brot aspect of the valley is totally invisible.  In today's 
+; image however it is visible in grossly stretched form as the 
+; open strip across the center of the frame.  If this open strip 
+; is stretched about 57 times in the vertical direction, the 
+; valley itself will become visible, cut off on the E-W sides but 
+; decorated with all kinds of new and unusual stuff.  This can be 
+; done in the Z-f6 screen by setting the X-magnification factor 
+; to 0.0175.
+; 
+; The orientation of the image is rotated one degree from the 
+; Oblate and then rotated 45 degrees toward the Julia.  All this 
+; rotation happens in the 4th dimension, so don't try to make 
+; sense of it.
+; 
+; The name "Seahorse at Length" refers to the piece of Seahorse 
+; Valley stretched across the center of the frame.  I rated the 
+; image at a 6 because I did too little work on the coloring.
+; 
+; The calculation time of 16 seconds is no mistake, so there will 
+; be no wasted time if the image proves disappointing.  The risk 
+; of disappointment may be totally eliminated however by viewing 
+; the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A rather hot day prevailed here at Fractal Central on Saturday.  
+; At least the fractal cats thought so.  They spent most of the 
+; day stretched on the cool tile floor.  I also thought it was 
+; hot, and spent the day within range of the cool air.  Everyone 
+; I mentioned it to also agreed that the high temperature of 93F 
+; 34C was indeed hot.
+; 
+; The day was busier than usual for both myself and FL as we 
+; wrapped up the leftovers from the big rush job of the past two 
+; days.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and stay decohered.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_at_Length { ;_time=0:00:16.26-SF5_on_P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0.0367694/0/\
+  0.8392416 params=-45/0/90.1/0/-0.7514/0/0/0/2/0
+  float=y maxiter=5400 inside=0 logmap=yes
+  passes=t symmetry=xaxis periodicity=6
+  colors=000VGkWGjXGhYGfZGdZGbZG`ZGWZGRYHOYGOZENZCKY\
+  AHW8DU5BR29P27N25N35N56N76N96NB7MD7MF7MH8MJ8MK8ML8\
+  MM9MN9MO9MP9MQAMRAMSAMTAMUBMWBMYBM_BMaCMcCNeCOgCPi\
+  DQkDRmDRoDSqFSsGSsHSrISqJSqKSpLSoMToNTnOTmPTmQTlRT\
+  kSTkTTjUTiVUiWUhXUgYUgZUf`UfaUebUdcVddVceVbfVbgVah\
+  V`iV`jV_kVZlWZmWYnWXoWXpWWqWVrWVsWUtWUuXVsXVrXVqXV\
+  pXVoYVnYWmYWlYWkYWjZWiZWhZWgZXfZXe_Xd_Xc_Xb_Xa_Y``\
+  Y_`YZ`YY`YW`YVaYUaZTaZSaZRaZQbZPbZOb_Nb_Mb_Lc_Kc_J\
+  c_Ic_Hc`Gd`Fd`Ed`Dd`Cd`Bd`Aea9ea9fb9fb9fc8gc8gd8gd\
+  8hd8he7ie7if7if7jg6jg6jg6kh6kh6li5li5lj5mj5mj5mk4n\
+  k4nl4nl4om3om3pn3pn3pn3qo2qo2qp2rp2rq1sq1sq1sr1tr1\
+  ts0ts0ut0ut0uu0tv1tw2tx3sy3sz4sz5zzEzzGzzIzzKzzMzz\
+  OzzQzzSzzUzzWzzZzzczzhzzmzzrzzvzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

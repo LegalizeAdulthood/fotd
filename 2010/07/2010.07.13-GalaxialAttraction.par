@@ -1,0 +1,110 @@
+;     Date: Mon, 12 Jul 2010 22:38:26 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 13-07-10 (Galaxial Attraction [6])
+; 
+;       Id: <1.5.4.16.20100712223828.11272de6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 13, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to the unusual colors of today's image, I wanted to rate it 
+; higher, but I just couldn't shake the feeling that I had seen 
+; something similar so many times before.  It takes more than just 
+; colors to make a great fractal image, so I finally settled for a 
+; rating of a 6, which is slightly above average.
+; 
+; The generating expression combines 1.5 negative portions of 
+; Z^(0.6) with 0.25 negative portion of Z^(6.4) and then adds 
+; (1/C).  The parent fractal is an area of scattered Mandelbrot 
+; sets with different degrees of distortion, all of them surroun-
+; ded by clouds of smaller satellite M-sets, all the way to 
+; infinity.  Today's scene lies in a satellite of a satellite very 
+; deep in what appears to be an East Valley of one of the largest 
+; M-sets.
+; 
+; The name "Galaxial Attraction" means next to nothing.  It's 
+; probably a carry-over from my wonder years, when I wanted to be 
+; an astronomer.
+; 
+; Due to the extreme magnitude of the image, the mathtolerance 
+; entry in the parameter file is absolutely necessary.  Without 
+; it, all kinds of weird things happen.  The image actually lies 
+; beyond the range of perfect resolution, but the resulting break-
+; down is hardly noticeable.
+; 
+; The calculation time of 1-1/2 minutes is a fair price to pay for 
+; today's image.  The real bargain price may be found on the FOTD 
+; web site, where the already-calculated image may be viewed 
+; instantly.  The web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The temperature rose to 88F 31C in the early afternoon on Monday 
+; here at Fractal Central.  At 4pm however a thunder-storm moved 
+; in with a gust of wind and a brief downpour of rain.  By 5pm the 
+; temperature was a comfortable 73F 23C.  The storm dropped 1.5cm 
+; or just under 1/2 inch of rain, much to FL's satisfaction, but 
+; the rain here is still about 25cm or 10 inches below normal for 
+; the year.  The fractal cats braved the storm without dashing for 
+; cover.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and every fractal should exceed the one before.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+GalaxialAttraction { ;_time=0:01:33.41-SF5_on_P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=+0.4069265102167707/+0.1836836593039934\
+  /2.5e+013/1/-55/0 params=-1.5/0.6/-0.25/6.4/0/0/0/0
+  maxiter=1800 inside=255 logmap=394
+  periodicity=6 mathtolerance=0.05/1
+  colors=00000500A00F00K00P00U00Z00c00h00m00r00w00zA\
+  JAFMAPPPSTSWWW_Z_bbbfefjhjmkmiijfhgbfd_eaXcZTbWQ`T\
+  N_RM`UMaWMbZMc`LdcLdeLehTchLfjKgmKhoKirVToSYqParMe\
+  shgnchpZhqUirPisej`Ca2EcDGeOHfZJhiO`nNborzzowzlvzi\
+  uzfszcqz`ozfnymmwrrrvvvzzzzzzhjrcjrZjsUisPityhxsiw\
+  niwiivdivZiuUiuPitVNRTQUSSXRU_QXbPZeO`hNckMenLgqai\
+  1YiDUiORiZNii2D54HB6KG8NLARQBUVDX`F`eHcjJfoIBUJFXJ\
+  I_JMbJPdJTgKWjK_lKboKfrN`1McKLfbLBEKEIKHMKKPKNTKQW\
+  KT_KWcKZfKajKdmKgqK3eJ6eJ9eJCjNFoNIrNLtMOtMQtMTtLW\
+  tLZtLatKdtKgtnzgkxhiwifvjdtkbsl_rmYpnVooTnpRlqOkrM\
+  jsAKuBMtCOtDQtDStEUtFWtFXtGZtH`tIbtIdtJftKhtSbUPeb\
+  MgkWKoVMpUOpTQqaSslUzQWrPYrO_sNasMcsLetKgt7HN9KQAM\
+  TBPWCRZDUaEWcFYfG`iHblIeoJgrPMJOOMOQPNSSNTUNVXMX_M\
+  YaM_dLagLcjLdlKfoKhrrmKomOlmRimzfmzcmz`mzYmzVmzSmz\
+  PmzMmzjmzamzTmzgmzdmzbmz_mzYzzWzzTzzRzzOzzMzzyzzuz\
+  zrzzozzlzzhzzezzbzz_zzzzZ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

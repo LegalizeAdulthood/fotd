@@ -1,0 +1,102 @@
+;     Date: Tue, 20 Jul 2010 22:16:33 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 21-07-10 (Boiling Magma [7])
+; 
+;       Id: <1.5.4.16.20100720221620.1407b03c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 21, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image reminds me of a reservoir of hot magma lurking 
+; just beneath the earth's crust, which is why I named it "Boiling 
+; Magma".  Actually, magma doesn't boil until it reaches the 
+; surface and becomes lava, but we'll ignore that small detail.
+; 
+; If the image seems a bit familiar, there's a good reason.  It's 
+; a blow-up of a section of yesterday's Seahorse Valley image, 
+; with only a bit of skewing and a small tweaking of a few color 
+; registers.
+; 
+; The rating of a 7 seems to be about what the image is worth.  
+; And the calculation time of 3-1/4 minutes is also a good value.
+; 
+; The best value is available on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where the finished image is posted in its full glory.
+; 
+; A mix of clouds and sun with a temperature of 86F 30C made Tues-
+; day a rather warm but pleasant day here at Fractal Central.  The 
+; fractal cats, who never get to go outside, had a brief thrill 
+; when a roaming tomcat passed through the yard, leaving his scent 
+; behind as a calling card.
+; 
+; My day was busier than average, but not excessively so.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and believe it only if it's true.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Boiling_Magma { ;_time=0:03:15.65-SF5_on_P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 maxiter=15000
+  center-mag=0.275349/0.555803/11.73091/1/44.2/\
+  -9.09027692082236349 params=75/90/60/90/-0.75/0/0/\
+  0/2/0 float=y inside=255 logmap=yes periodicity=0
+  colors=00020A30B40C51D62E73F85GA6HC7IE8JG9KIALKBNM\
+  CPODRQETSFVUGXWHZYI`_JbaKdcMfeOhgQhiSgkUgmWgoYgq_g\
+  sagtcftefugfuifvkfwmewoexpexqeyreysevrfsqfqpfnogln\
+  gimggkfdiecZdbYcaXb`Wa_V`ZU_YTZXSYWRXVQWUPVTOUSNTS\
+  MSSLRTKSTJTUITUIUVHVVHVWHWWIXXIXXJYXJYYJZYK_ZK_ZL`\
+  _La_Ma`Mb`NcaNcaOdbOebPebPfcQgcQgdRhdRieSieSjfSjfT\
+  kgTlgUlhUmhVnhVniWoiWpjXpjXqkYrkYrlYslYtlYtlYtlYtl\
+  YtlYtkYtkYtkYtjYtjXtjXtiXtiWtiWthWthVshVsgVsgVsgUs\
+  fUsfUsfTseTseTseSsdSrdSrdRscRtcRrbQtbQsbQraQraPraP\
+  r`Pr`Or`Or_Or_NtZNqZNqZMqYMqYMqYLqXLqXLqXLqWKqWKqW\
+  KqVJpVJpVJpUIpUIpUIpTHpTHpSHpSGpSGpRGpRGpRFoQFoQFo\
+  QEoPEoPEoPDoODoODoPCoUCoZCoc8rhComGmrKjvOhzSezWczZ\
+  `zbZzfWzjUznRzrPzvMzzJzyKzxLzwMzvNzuNztOzsPzsQzrRz\
+  qRzpSzoTznUzmVzmVzlWzkXzjYziZzhZzg_zf`zeazf`zeazea\
+  zdazdazcazcbzcbzbbzbbzabzaczacz`dz`ezafzbgzchzdize\
+  jzflzgnzhpzirzjtzkvzlvzmz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
