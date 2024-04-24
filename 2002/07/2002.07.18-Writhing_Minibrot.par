@@ -1,0 +1,93 @@
+;     Date: Thu, 18 Jul 2002 09:39:23 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-07-02 (Writhing Minibrot [6])
+;       Id: <1.5.4.16.20020718093955.0d9770a0@pop.mindspring.com>
+; ---------
+; FOTD -- July 18, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is part of a fractal that takes the parent fractal 
+; of the most recent FOTD, makes a small change in the portions of 
+; Z, and adds 1/C instead of C.  These changes create a grossly 
+; bloated fractal which has a totally new overall shape but 
+; retains the inner detail of the original.
+; 
+; The scene of today's image is in a totally cut-off feature near 
+; a cubic-shaped bud of the parent fractal.  I have no idea why a 
+; quadratic midget should be located near a cubic bud.
+; 
+; I named the image "Writhing Minibrot" because of eight the 
+; twisting arms.  An outzoom will reveal four arms which are even 
+; more twisted, but at this scale the central midget is invisible.
+; 
+; Considering the vivid coloring, the rating of 6 is perhaps a bit 
+; conservative.  But with its routine appearance, I really could 
+; not give the image a rating of 7.
+; 
+; The render time of the parameter file is under 6 minutes.  This 
+; is reasonably fast, but still slow enough to make a download of 
+; the completed GIF image file worth the slight effort.
+; 
+; The download can be found at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Wednesday was very hot, with a temperature 
+; of 98F 37C that kept the dynamic fractal cats indoors.  Today is 
+; just as hot, and also more humid.  The cats will likely spend 
+; another day indoors.
+; 
+; I'll spend most of the day indoors also, getting caught up in 
+; some unexpected work that came in.  Until next time, which will 
+; be on July 20, take care, and what is more real, a quark or a 
+; lark.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Writhing_Minibrot { ; time=0:05:48.06--SF5 on a P200
+                     ;  Version 2002 Patchlevel 4
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.41757997728383400/+0.186116858405553\
+  00/1.301984e+011/1/-87.5201974223679713/0.01523203\
+  09024481793 params=1/3/-0.3/5/-2.5/0 float=y
+  maxiter=1000 inside=0 logmap=100 periodicity=10
+  colors=0000Xm0`k2di8ggEigJmeRqdXubbvbgz`mzZszXxzXm\
+  xRdmLVdHLTCCH62820A00A00A00A00C00C00C00C00C00E00E0\
+  0E00E00G00G00G00G00G00J00L00N60PE0RN0TV0Vd0Xk0Zu0`\
+  z0bz4bz8bzCbzGdzJdzLdzPdzTdzXez`ezdezeeziezmgzqgzu\
+  gzxgzzgzzbzzXzzRxzNxzHvzCvz6uz0uz0sz0sz0oz0kz0gz0d\
+  z0`x0Xv0Ts2Po2Lk4Hg6Ed6A`86Z84LH88RC0`G0gJ0iG0kC4m\
+  8Co4Hq0Ps0Vu0bv0gv0im0id4kXCkNJkERm6Zm0em0mN0V00CE\
+  0JTARgPZvdezsmzuezu`vuVsuPmuJiuEeu8bu2Xu0Tu0Pu0Lu0\
+  Gq0Cm08k62gE0eN0bV0Zd0Xk0Tu0Rz0Nv0Ls0Jo0Hi0Ee0Cb0A\
+  X08T04P02J00G00C00808J0JV0Vd0eo0qx0zz0zz0zz0xz2sz4\
+  mz8gzCbzEXzHPzLJzPEzR8zV2zZ0z`0zZ0zZ0zZ0zX0zX2xX6u\
+  V8qVAmVCiTEeTHbTJZRLVRNRRPNRRLLPJHNJELJALJ6JJ2KJ0U\
+  J0cJ0mJ0wJ0zJ0zJ0zN0zP0zT0zV0zX0z`0zb0ze2zg6zi8zmA\
+  zoEzsGzuHzvLzsNzqRzoTzmXziZzg`zedzdez`izZkzXmzVmzX\
+  mzXmzXmzXmzZmzZmzZmzZmz`mz`mz`mz`kzgizogzvgzzezzdz\
+  zdzzLzz2zq8zkCzg0zz0zv0zo
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}
+
+; END PARAMETER FILE==================================
+; 
+; 

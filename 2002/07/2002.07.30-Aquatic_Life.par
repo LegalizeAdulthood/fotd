@@ -1,0 +1,105 @@
+;     Date: Tue, 30 Jul 2002 11:13:15 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-07-02 (Aquatic Life [8])
+;       Id: <1.5.4.16.20020730111354.2abfca32@pop.mindspring.com>
+; ---------
+; FOTD -- July 30, 2002 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal reminds me of another real-world object.  In 
+; this case, I see the graceful swaying of seaweed, a few meters 
+; under the surface near some tropical shore.  The scene is also 
+; filled with schools of small, colorful tropical fish, though 
+; these are more difficult to pick out.
+; 
+; With all this underwater activity in mind, I named the image 
+; "Aquatic Life".  Then I stepped back to evaluate the result.  
+; After much mental wrestling, I rated the image a much-above-
+; average 8.
+; 
+; The formula of the aquatic scene is Z^(-1.1)+Z^(-11)+(1/C), 
+; a simple expression that does more than it should.  But as I 
+; stated recently, it is not the formula that works the magic; it 
+; is the 280 iterations.
+; 
+; The parent fractal of today's scene appears as a large open bay 
+; with many buds and valleys around its perimeter.  Today's scene 
+; is located in the center of a blunt valley on the south shore of 
+; the main bay.  The aquatic effect was achieved by rendering the 
+; scene with the outside set to the <tdis> option, followed by 
+; careful coloring.
+; 
+; The render time of just over 1 minute makes running the attached 
+; parameter file the quickest way of seeing the seaweed.  But 
+; downloading the completed GIF image from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; might be a lot more fun.
+; 
+; The weather Monday here at the (IMO) center of the fractal world 
+; was hot, hot, hot.  A breeze and slightly lower humidity made it 
+; feel less oppressive than it otherwise might have been, but 100F 
+; 38C is still hot -- there's no escaping it.  The heat was so 
+; severe that it buckled the rails of a local rail line, causing 
+; a train to derail.
+; 
+; The dynamic fractal cats avoided the excessive heat by passing 
+; the day in the air-cooled indoors, though they did check several 
+; times just to be sure it really was that hot outside.
+; 
+; Today is Tuesday, and it's another scorcher -- a perfect excuse 
+; for me to stay indoors and get a little ahead on the upcoming 
+; convention program that needs to be finished within a week.  
+; Until next time, which will come in 3 days on August 2, take 
+; care, and why are tropical shores with all their humidity and 
+; heat considered paradise on earth?.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Aquatic_Life { ; time=0:01:27.77--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.856206964880088/-1.054799381804275/2\
+  124528/1/-160/-3.37734701108538538e-008
+  params=1/-1.1/1/-11/0/525 float=y maxiter=280
+  inside=0 outside=tdis periodicity=10
+  colors=000z01z03y04u04o06j06f07`07X09S09M0AI0AD0C7\
+  0C30D00D13I47M7CQAGTDLYGPaJTfLYiOamQfrTjvXoy_szaxz\
+  czzUzzKzz7zz6vz4lz3`z1Qv0Gs6FuCDvIDxOCyTAzYAz`CzcF\
+  zfGziIzlLzoMzrOzuQzxSzyTzxVzxXvxYrvYmv_iv`dv``uaXu\
+  cSudOsdJsfFsgAsg6mc9g`CcYFYVGTSJOOMJLPDIQ9FT3CX09Y\
+  6C_DD_LF_SG_TI_TPcPXgLaiGikCmaJqSPu0Mz6LuAJoGGjLFd\
+  QD_VAT`9Pd7Jj4Do37u13y00z00z00z10z60zC0xG0sM1oQ4iX\
+  7d`A_fDVjGQpJLuMGzPAzUUzc1zmYzuVzzSzzQzzOzyMzxJzvI\
+  zuFzsDzrAzp9zo6zm4yl1yj0xl3vl6vl9umCumFsmGroJroMpo\
+  PppSopVopXmrUlsUluUjuUjvUitUimUmcUqUPvCdz0sv4osCjo\
+  JflQaiYYddValQ_sMVzISzDPzATzMXsX`jfc`pgQzjIzgMzdPz\
+  cSx`Vs__oXajVdfSgaQjYYXcdIgl4lgAicGg_MfVSdQYaMc`Ii\
+  _DoY9uV4zT0zS0zQ0zV0z_0za0yf0vj0sm0pr0mv0jy0gz0dz0\
+  az0_z0Yz0Vz0Tz0Qz0Pz0Mz0Ly0JxIiTJfOJdILcDLa7M`1M_0\
+  OY0OX0ld3sXJzQYy6ls0yo0xl0xi0xf0va0v_3vX6uT9uPCuMF\
+  sJIsGLsCi09i07i0`_7zPTz9F
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}
+
+; END PARAMETER FILE==================================
+; 
+; 

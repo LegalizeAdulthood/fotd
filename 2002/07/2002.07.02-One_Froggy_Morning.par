@@ -1,0 +1,98 @@
+;     Date: Tue, 02 Jul 2002 11:20:25 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-07-02 (One Froggy Morning [7])
+;       Id: <1.5.4.16.20020702112048.29c79c9a@pop.mindspring.com>
+; ---------
+; FOTD -- July 02, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Fractals of the Mandel-Julia variety are filled with holes, 
+; especially when the iterated expression contains more than one 
+; power of Z.  These holes come in many varieties.  There are the 
+; obvious Mandelbrot midgets and Julia sets, and then there are 
+; the other types of holes that defy description.  Today's image 
+; features one of these 'other' holes.
+; 
+; The area in question was pointed out to me by Lee Skinner in an 
+; image he sent privately several days ago.  The orange-colored 
+; holes near the center are of a type I have seen in images 
+; created with the branch-cuts formula when the exponent of Z is 
+; in the area of 1.15, but in today's image, several things appear 
+; to be happening at the same time.  It almost appears that the 
+; two different powers of Z are doing things independently of each 
+; other.  A math expert might be able to tell what is going on in 
+; today's image, but not being a math expert, I have no idea.
+; 
+; While studying the image, I had the distinct impression of a 
+; frog staring back at me.  I promptly named the image, "One 
+; Froggy Morning".  The rating of 7 is justified because the image 
+; is a bit -- well -- cute.
+; 
+; The render time of over one hour on a P200 machine is not cute 
+; however.  I advise letting Paul and Scott do the heavy work and 
+; downloading the completed image from their one of the web sites. 
+; Paul's site is at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Scott's is at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Monday at Fractal Central was typical summer 
+; fare for these parts of the world -- HHH -- hazy, hot and humid. 
+; The temperature of 92F 33C, combined with the high humidity and 
+; foul air, made the outdoors unpleasant for most of the day.  The 
+; dynamic duo of cats must have agreed, for they stayed on the 
+; porch only a few minutes before coming in and asking for their 
+; tuna treat.
+; 
+; As for me, it's another Tuesday, even hotter than yesterday, and 
+; I've got a bit of work to finish before returning to the FOTD 
+; CD, which should be ready for distribution by the end of summer. 
+; But the end of summer is still over 2-1/2 months away, and 
+; before then we'll have many more fractals added to the ever-
+; growing list.  The next fractal will appear on July 4.  Until 
+; then, take care, and digress but don't egress.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+One_Froggy_Morning { ; time=1:09:42.15--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=6.57209/0.000937142/22.6787/1/-80/-1.23\
+  37353361147052e-014 params=-0.2/-1.25/-0.2/-0.8/0/0
+  float=y maxiter=160000 inside=0 logmap=19
+  periodicity=20 colors=000j85Q85h96g96fA6eA7eB7dB7c\
+  C8bC8aD8`D9_E9ZE9YEAXFAWFAVGBVGBUHBTHCSICRICQJDPJD\
+  OKDNKEMLELLEKMFKNFKNFLOFLOFLPFLPFMQFMQFMRFMRFMSFNS\
+  FNTFNTFNUFOUFOVFOVFOWFOWFPXFPXFPYFPYFQZFQZFQ_FR_FR\
+  `FR`FRaFRaGSaGSbHTbITbJUbJUbKVbLVcLWcMWcNXcNXcOYcP\
+  YdQZdQZdRZeS_eT_eU`eU`eV_eV_eX`fZ`f_`gaagcageahfah\
+  hbhjbilbimcjocjqckrcktdlvdlxemzgnzhozjpzlqzmrzoszp\
+  tzruztvzvwzwxzyyzxxywwxuwwtvvsuurutqtrosqnrpmrolqn\
+  jqmipkgojfniemhcluckfnmtakhchWahlZZZb`_eb`idamgcni\
+  goklpmpqpupotonrnlqmkoljnjhligkgfjfeiddhccgaaf``eZ\
+  _dYZcWXaWW_VUYUTWTRUSPSSOQRMOQLMPJKOIINGGLEEKCCLDC\
+  NEDOEDQFDRGESHEUHEVIFXJFYKG_KG`LGaMHcNHdNHfOIgPIiQ\
+  JjRJlSKnTLoULqVMsWNuXOwZPw`QwbRwdRxfSxhTxjUxlUxnVx\
+  pWyrXytYzvZzx_zz`zw_zuYzrXzoVzmUzjSzgRzePzbOz_MzYL\
+  zVJzSIzQGzNFzKDzHCzFAzC9yA7y75y54y32z00y00x11yA1zK\
+  1zN1zQ2zT2zU2zU3zU3zU3zU4zU4zU4zU4zU0zU0 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

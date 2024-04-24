@@ -1,0 +1,99 @@
+;     Date: Fri, 26 Jul 2002 10:09:19 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-07-02 (Quadrapod Minibrot [8])
+;       Id: <1.5.4.16.20020726100956.0d972c0a@pop.mindspring.com>
+; ---------
+; FOTD -- July 26, 2002 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; After a long fractal drought, we finally have a fractal that 
+; rates an 8, a rating that equals much above average on my 
+; conservative 0-to-10 scale of fractal worth.  Actually, the 
+; fractal itself is quite humdrum in the mathematical sense.  Most 
+; of the high rating is based on the coloring, which in a moment 
+; of excessive fractal zeal, I devoted an entire half-hour to.
+; 
+; The parent fractal of today's scene consists of a Mandelbrot 
+; figure with several large irregular open holes at the end of 
+; some of its filaments, and strings of smaller holes at the ends 
+; of others.  There is also a string of holes extending outward 
+; from the center of East Valley.  Today's image lies in an 
+; isolated, cut-off feature near this string of holes.
+; 
+; The string-of-holes nature of the area in which today's image 
+; lies is reflected in the four strings of holes radiating from 
+; the brilliant red flower around the central midget.  Since 
+; there are four of these 'arms', I named the image "Quadrapus 
+; Minibrot".  (I have no idea what a real 'quadrapus' might be, 
+; though the fractal cats might fit the description.)
+; 
+; The formula of the image uses the golden ratio, 1.618..., which 
+; often appears in the designs of nature.  The ratio also appears 
+; at places in the Julibrot, where least expected, but that's 
+; another story for another day.
+; 
+; The render time of 3 minutes from the parameter file is close to 
+; the time required to go online and download the completed GIF 
+; image from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Thursday here at Fractal Central featured a 
+; pleasant break from the oppressive heat and humidity that 
+; usually plagues this part of the world at this time of year.  
+; Lots of clouds and a cool breeze off the ocean held the 
+; temperature to 79F 26C.  The grass, still wet from an early 
+; morning shower, was a bit too uncomfortable for the dynamic 
+; duo, who prefer their paws dry, but they did spend a few 
+; relaxing hours on the dry porch, watching the local birds.
+; 
+; And I'm also going to relax -- but not until I finish the work 
+; that needs to be done.  Until next time, on Monday the 28th, 
+; take care, and keep the ratio golden.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Quadrapus_Minibrot { ; time=0:03:39.53--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-2.85097707624026200/-3.007861364773440\
+  00/5821280/1/-115/1.56494616987412627e-008
+  params=1.5/1.618/1.5/16.18/0/0 float=y maxiter=400
+  inside=0 logmap=71 periodicity=10
+  colors=00020K10K00K40MBAQI9WPMcXcadt_lzZtzXlzUdvRX\
+  qOPlLKgIPcFU_C_W9eR7lM4sI1yE0z90zd0zZ0yS0sB0nB2gC5\
+  cE7XF9TFCMHEIIHCKK8KL7PH5WCBTEHRFLOFRMHXLHaIIgHIlE\
+  KsCKyBLz8Lz7Mz5Mz8Pz9RzCTwEUtFWoIXlKZgMadOc_PdXTeT\
+  UgPXiLZjI_lIZlIWlBTg4Pc0PZ0PU0tU0PW0PW0PW0PWIIa09W\
+  0BW0BX0BX0CX0CX1EX1EZ1EZ1FZ2FZ2FZ2HZ2H_4I_4I_4I_5K\
+  _5Ka5La5La7La7Ma7Ma7Mc8Oc8Oc8Pc8Pc9Pd9Rd9Rd9RdBTdB\
+  TdBUeBUeCUeCWeCWeCWgEXgEXgEZgEZgFZgF_iF_iF_iHaiHai\
+  HdjHggIjdLnaOqZRtWUtTUtPUtITtBTt4Tt1Rt2Rt5Rt7Pt9Pt\
+  BPtEOtFOqIOnKMjMMgOMdRLaTLZWLWXKW_KXaK_dPacXcadd_l\
+  dZtdXzcWzcUycTwcTtcUscWqcWncXlcZicZgd_dd_cda_dcZdc\
+  XddUdeTdePddXaXdZPlWItTBwR4vT0vU0tW0tX0sZ0s_0qa0qc\
+  0od0ne0ng0li0lj1jl1jn2io4iq5gs7gt8et9dt9dtBctCctEa\
+  tFatH_tI_tKZtKXtLXtMWtOWtPUtRUtTTtTTtURtWRtXPt_Otc\
+  OteMtiMtlLtoLtsLtvKtyItzKtzItzItzItzItzItzItzItzIt\
+  zItzItzItzItzItzItz5tq4to }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 
