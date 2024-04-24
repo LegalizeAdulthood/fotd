@@ -1,0 +1,87 @@
+;     Date: Thu, 04 Feb 2010 09:02:26 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-02-10 (Bubbles in the Air [5])
+;       Id: <1.5.4.16.20100204090320.2a7f815e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 04, 2010 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA VERSION ALERT!
+; 
+; Today's formula is the final version of the DivideBrot series.  
+; The only change is that the variable escape radius now works.
+; 
+; I'm still feeling a bit down, but the fractals keep coming, even 
+; if they are not quite up to the FOTD standards.  When I heard on 
+; the news today that the plan to return men to the moon has been 
+; officially killed, it helped not at all.  Its death was a fore-
+; gone conclusion.
+; 
+; As for today's fractal, it's an average one that rates a 5.  I 
+; named it "Bubbles in the Air".  The name partly refers to the 
+; effect of green froth in the image and also to the death of the 
+; space program, which has vanished like a soap bubble.
+; 
+; I'm not sure the image is worth the 6-2/3 minutes it takes to 
+; calculate.  But that time may be cut drastically by viewing the 
+; pre-calculated image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; 2cm, 0.8 inch of snow fell Tuesday night here at Fractal Cen-
+; tral, but it vanished almost by magic when the sun appeared and 
+; the temperature reached 39F +4C Wednesday afternoon.  The 
+; fractal cats purred their approval.
+; 
+; For me and FL the day was average.  The next FOTD, hopefully 
+; well above average, will be posted in 12 hours or so.  Until 
+; then, take care, and what ever happened to the superconducting 
+; supercollider that would reveal the secrets of the universe?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Bubbles_in_the_Air { ; time=0:06:38.23-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinalDivideBrot function=recip float=y
+  center-mag=-1.919886956766113/0/1.43142e+008/1/90/0
+  params=3/2/0/0 maxiter=8000 inside=0 periodicity=6
+  colors=0007ia8eXAaSCXMDTHFPCHJ3GL7GMAGNDGOGFPJFQMF\
+  SPFTSEUVEVYEW`EXcEYfIVhMTjQQlUOn`5zXMoTbdQrVSpTUnS\
+  VlQXkPYiN_gM`fKbdJcbHeaGf_EhYDoUBiXCd_C_bCUeDPhDKk\
+  DFmDEhFEdGD_HDWJCRKCNL8HKCJMGKOKLQOMRSNTWOVZQWbRYf\
+  S_jT`nUbrVduWeiTdZRcOObDMa3Lc2K`2JZ2IX2HV2HT2GR2FP\
+  2EN2ELA9HH5DKBGNGJQLMTQPUYVUe_zvdwugqtjgsh`rfIqdHp\
+  cGoaFn_EmYDlXCkVBjTBiSCfRCdQCbPD_ODYODWNETMERLEPKE\
+  NKJbLOqLOmMOjMOgMOcNO`NOYNPXPPXRQWTQWVRWXRVZSV`SVb\
+  TUdTUfQVfTUhVTjXSlZRn`QpbPrdPteNsgMshKsiJsOUHWQUcM\
+  fYyBdcYUHRVITWIUXIVXIWYIYZIZZI__I``MacPchPhmUmrXrv\
+  _ryarxcrwdrvcrubrtaqs_prXoqUnpRmoOlnLkmIjkFkiClgCm\
+  hCnhCoiDpiDqjDrezDfuLgmSdm_el_fj_gi`hh`igajfaiibje\
+  akbakZalWamTamPanMaoJaoFapCap9anCclFdkHeiKfgNgfPhd\
+  SicUjaXk__lZamXdnVgoUipSlqRnrQksQhsPesPcsO`sOYsNVs\
+  NTsMQsMNsLKsLIsKFsKCsJ5tKAsKErKJqKNpKSoMUqKWoIYnG_\
+  mFalZzkUzjPziKzhFwzArl5mf }
+
+frm:FinalDivideBrot   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16),
+b=imag(p1)+0.00000000000000000001:
+z=(-b)*(z*z*fn1(z^(a)+b))-c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

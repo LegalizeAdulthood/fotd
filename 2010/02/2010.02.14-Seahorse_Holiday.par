@@ -1,0 +1,98 @@
+;     Date: Sun, 14 Feb 2010 22:08:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-02-10 (Seahorse Holiday [No Rating])
+;       Id: <1.5.4.16.20100214220915.2bb7373c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 15, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I spent the day Sunday enjoying how pleasant it is to actually 
+; spend a day doing nothing of importance.  Despite the attack of 
+; laziness, I did manage to find a fractal.
+; 
+; The fractal is simply another version of the effect I demonstra-
+; ted in yesterday's FOTD image, where the grossly bloated image 
+; of a tiny part of the Mandelbrot set is seen lying in its corres-
+; ponding Julia set.
+; 
+; This time I chose a scene in the southern branch of Seahorse 
+; Valley to enlarge and fit into its Julia set.  A careful tweak-
+; ing of parameters placed the enlarged valley straight through 
+; the center of its Julia set.
+; 
+; The name "Seahorse Holiday" has a kind of fun-fantasy ring to 
+; it.  The lack of a rating indicates that I took the lazy way out 
+; when finding the image.  The calculation time of under 3 minutes 
+; will make life easy for all but the most impatient fractalists.
+; 
+; These impatient few may find immediate viewing pleasure on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is or soon will be posted.
+; 
+; Peace prevailed here at Fractal Central on Sunday, both among 
+; cats and humans.  The weather was peaceful also, as the clouds 
+; failed to drop their snow and the temperature reached freezing.  
+; The next FOTD, very likely another venture into the abstract 
+; world of four dimensions, will be posted in 24 hours.  Until 
+; then, take care, and fight the latest epidemic -- the epidemic 
+; of fractal addiction.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Holiday { ; time=0:02:52.38-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t center-mag=0/0\
+  /0.8810318 params=89.9/0/89.9/89/-0.75007/-0.01/0/\
+  0/2/0 float=y maxiter=32767 inside=0
+  logmap=yes periodicity=9
+  colors=000PHZSGYVFXYDW`CVcBUf9Ui8Tl7So5Rr4Qu4Px4Pv\
+  AQuGRsMSrRSqVToZUnbUlgVkjWjkWljXmhXnfXocXp`XqYXrWX\
+  sTXtQXuNXvKXwHXxEXyCXpHOhLG_Q8SU0NPBIKLDFV8Bd9Ab9A\
+  `A9ZA9XB8VB8TC7RC7QD6OD6ME5KE5IF4GF4EF4DJAIMFNQKRT\
+  PWXU___dcdhfimjnqmsvpxzrruslqtglvahwWcxR_uTarVcpXd\
+  mZfj`hhaieckbem`gnYipWjqabgfVZkNQpFHu78rCFpGLmLRkP\
+  XhUbfYhcbnaft_jzZhrYfkXdcXbXW`QVZIUXBUV4VX5WY6XZ6Y\
+  `7Za8_b8_d9`e9afAbhBciBdjCdkCfjCgiChhCjgCkfCSiQShM\
+  ThIThLThPSfUReZQdcPchObmNarM`wL_wKZwJYwIXwHWwGWwFX\
+  wEYwDZwC_wB`wAaw9br3cm8dhCecGfZKgUPhPTiKXjF`kGUlIN\
+  mLCnOGoNJpNNqNQrNUsNXtN`uNcvNgwNjxNcxNcxNcxNcvMcuL\
+  ctKcsJcqIcpIcoHcnGQmzQmzRmzSmzSmzTmzUmzVmzVmzWmzXm\
+  zYmzYmzZmz_mzXmz_mzbmzemzgmzjmzmmzomzrmzumzxmzwmzw\
+  pzvwzvwzvwzuwzuwzuwztwztwztwzswzswzuwzswzrwzpwzowz\
+  mwzlwzjwziwzgwzfwzdwzcwzawz`zz_zzVzzQzzIzzLzzNzzPz\
+  zRzzTzzVzzXzzZzz`zzbzzdzz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,101 @@
+;     Date: Tue, 02 Feb 2010 00:19:46 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-02-10 (Real or Imaginary [5])
+;       Id: <1.5.4.16.20100202002039.2a6f7f26@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 02, 2010 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to a busy day and my continuing depressed spirits, today's 
+; discussion is brief.  The image is an almost-Julia set of the 
+; East Valley of the Z^3+C Mandeloid.  Actually, the scene is 
+; double-rotated a mere 0.00025 and 0.00025 degrees from the true 
+; Julia orientation.
+; 
+; Most of the action was achieved by rendering the image with the 
+; outside set to 'imag'.  This also explains the name "Real or 
+; Imaginary", which, if taken as a question, can be answered 
+; 'imaginary'.
+; 
+; The calculation time of 3 minutes is many times the incredibly 
+; brief time of yesterday's image, but still well within reason.  
+; An equally reasonably way to enjoy the image is to surf out to 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image and near instant enjoyment awaits.
+; 
+; I'm not sure why I've been so down the past few days.  It seems 
+; to be something about the world situation, and life in general, 
+; but I just can't put my finger on it.  FL says I'm too wrapped 
+; up in politics.  This may be so, but with things going as they 
+; are and doomsday shows filling the TV channels, I don't need 
+; politics to bring on the blues.
+; 
+; The partly cloudy skies and temperature of 34F +1C here at 
+; Fractal Central on Monday were a notable improvement over the 
+; weather of the day before.  The fractal cats appreciated the 
+; improvement but still preferred the heat.  My day was unexpec-
+; tedly busy, and my less-than-high spirits drained most of my 
+; enthusiasm for work as well as fractals.  But despite all, a 
+; fractal did appear, and the next FOTD will still be posted in 24 
+; hours.  Until then, take care, and be of stout temperament but 
+; lean heart.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Real_or_Imaginary { ; time=0:03:02.58-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0.00542724/\
+  0.0429859/0.68/1/45/0 params=89.99975/0/89.99975/\
+  45/0.385/0/0/0/3/0 float=y maxiter=32000 inside=0
+  outside=imag periodicity=9
+  colors=000Y1QY0VX0`T5`PGfLQlH`tDiy7nzDemDY_ERUHNLL\
+  KDPH3TE0VC0X70YA0Y90H71C6365613902C00E01E92DI3DS5C\
+  c6AKGILSOMdTPq`IteCxl5zr0zy0zzS2hS9fSHeQOcQXaQd`Pk\
+  YPtXOzTMlZKo`HqaEtcCud7xeHoaKjZOdXQZTVTQPTVOMXMGZL\
+  A`K3cI0dG0fH5YD6S99M5AH1DC3IM2QT0Z`0ff0on0xu0zz0tj\
+  0xd1zZ3zT6zOCxXKoZSfa`YehPhqHky9nz0ry2lo6eeA`XETc7\
+  XZ5QX2LS0HP0CL06H01L5EGDHCML6VO2cQ0lV0uY0za0kd0ak0\
+  Qk0Ek02jcHtZKtVMrQPqMSoIVoEYnA`l6ckAahE`eKZcOXZTVX\
+  YTTcSQfPMlOKqMH3tw7ruArrEqqHqnLolOnjQnhVleYldakadj\
+  `hjYkhXofTlaXhXZdQaaLdYGfTAjQ5lM0oI0rE0wG0wI0uK1tM\
+  6tOArQEqTKoVOoYSnZXlaalcekejjhohL`K0L00O00S00V00Z1\
+  0a20e30j50l60q70t90xA0zC0zG0zK0zP0zT0zZ1zc2zh3zl5z\
+  r005105205503623952A72DA1ED1HG0II0LL0MP0OS0QV0SY0V\
+  `0Xc0Ze0`h0ck0dn0fq0ht0kx0kx0kx0ky0ly1ly3lz6lz9nzD\
+  nyInuOnrTnnZnkdnfjndoo`wnXllSakOSjKHhG6dE7ZD9TCAOI\
+  9DPA2VC0aD`MAyK9`HEZCIZ6M }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

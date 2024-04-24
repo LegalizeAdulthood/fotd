@@ -1,0 +1,99 @@
+;     Date: Mon, 22 Feb 2010 19:06:15 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-02-10 (Dissolution [6])
+;       Id: <1.5.4.16.20100222190724.38e782e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 23, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With today's image we return to the MandAutoCritInZ formula, a 
+; formula that often but not always initializes 'Z' to a critical 
+; value, and is without doubt the most productive formula in FOTD 
+; history.
+; 
+; Today's iterated expression is (Z^2)+2(Z^0.9)+C, which produces 
+; a fractal that resembles nothing as much as a half-dissolved 
+; Mandelbrot set.  The name "Dissolution" refers back to this 
+; unseen parent fractal.
+; 
+; Today's scene is located on the shattered remnants of the once-
+; mighty negative stem, not too far east of the once-prominent 
+; large minibrot, but far enough that most of the typical East 
+; Valley stuff has disappeared.  The few remnants that do remain 
+; add a modicum of interest to the central minibrot.
+; 
+; The rating of a 6 is what I think the image is worth.  The 
+; rating is held down by the coloring, which could use a bit more 
+; work.  As it is, I had too little time to devote to bringing out 
+; the scene's full potential.
+; 
+; The calculation time of just under 3 minutes will pass in a slow 
+; flash for those running the included parameter file.  The trip 
+; to view the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; will pass in a fast flash.
+; 
+; Clouds moved in overnight Sunday here at Fractal Central, lead-
+; ing to a cloudy day Monday with a temperature of 41F +5C and a 
+; few spurts of tapioca snow (graupel).  The fractal cats took the 
+; whole thing in stride, dividing their time between the heat and 
+; their window shelf.  My day was boringly busy.
+; 
+; It was reported on the list that the FOTD images were quite suc-
+; cessful when I created them with the formulas hard coded in the 
+; Fractint program.  I'm not sure I totally agree, but who knows 
+; -- maybe I'll have another go at those surprisingly simple yet 
+; productive formulas.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and listen close to today's music if you 
+; want to know what's wrong with the world.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Dissolution { ; time=0:02:58.23-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-1.616933041801702/-0.2780341565794527/\
+  1.3e+010/1/22.5/0 params=1/2/2/0.9/0/0/0/0 float=y
+  maxiter=1500 inside=0 logmap=176 periodicity=6
+  colors=000KEKLFKMGKNHKOIKPJKQKKRLIXMGbNEhOBmP8rVKv\
+  _UzdczjmzorztvzzzkxzcwzWvzOuzHuzKswMqrPpmRnhUgcWaZ\
+  ZVU`P6XRKUTYRZjw0EqDJkSNebS`lWKsQ4zK8wRBtXFrbIohMm\
+  nPjtShzsFctFdtFeuFeuFfvFgvFgwIawLWwNQwQLwSFwV9wX4z\
+  mDzrMzmQzRUzKYlE`eJX_OTTSPNXLG`HAeD4i9Fe8Pb7__6iX5\
+  sU4fzQbsU_lYXeaUZeRThK`bChX5pS4qX4r`3rd3si2tm2tq6r\
+  p9ppCnpFlpIjoMhoPfoSeoVcnYana_ndYngWmjUmmSmpRmoSnn\
+  TonTpmUqmVrlVslWtkXujXvjYwiZxiZyh_zh_zjbrkdkmfcniX\
+  pkPqmImjKjgLfdMcaN_ZPXWQTURQRSMOUJLVFIWCFX9DYYUkvi\
+  yrgtnfojdkgcfcab_`YX_UUYWSWXQUYOT_MR`JPaHNbFMdDKeB\
+  If9HgCGhFGiHGjKGkMGlPGmSGnUFoXFpZFqaFrdFsfFtiFukFv\
+  OKVWPVbUVdXZfZbh`fjbildmnfqphuqjxpkwYVGXVMWVSWVYaW\
+  ZgX_mX_sY`xY`u`_scZpeZnhYljYYNIK02mb7kb6ib5gb4ee4c\
+  h3ak2_n1Yq1btCgwNlzXizYgzZdz_bz_czYczWczUczSczQfzR\
+  hzSjzSlzTnzTpzUrzUfzTVzdKzo9zzLzWWz2TzCQzMNzWLzdTz\
+  X`zQhzIpzBxz4jzJKz9JjBIzC }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

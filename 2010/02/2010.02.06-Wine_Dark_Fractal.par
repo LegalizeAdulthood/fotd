@@ -1,0 +1,99 @@
+;     Date: Sat, 06 Feb 2010 20:20:42 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-02-10 (Wine-Dark Fractal [6.5])
+;       Id: <1.5.4.16.20100206202138.2b0f028c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 07, 2010 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to my semi-expert coloring, today's image is rather pleasant 
+; to look at, rather like a glass of fine wine.  How could I not 
+; name it "Wine-Dark Fractal"?
+; 
+; The object at the center is a minibrot of order 10.5, which 
+; explains the peculiarities, such as splitting filaments and lack 
+; of any kind of symmetry.
+; 
+; The parent fractal is basically a Mandelbrot set with lots of 
+; added attractions scattered about.  The added attractions in 
+; today's parent M-set lie along the negative spike, which, when 
+; examined closely, is found to be infinitely divided.  Today's 
+; image is located near but not exactly on this shattered spike
+; 
+; The rating of 6.5 includes a 1/2-point bonus for my semi-expert 
+; colors.
+; 
+; The calculation time of 24 seconds will pass in a flash.  Those 
+; who dislike flashes may observe the finished image on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; About 10 inches, 25cm of snow piled up overnight Friday here at 
+; Fractal Central.  When the snow ended at 10am Saturday, the rest 
+; of the day was cloudy with a temperature of 28C -2C.  The snow 
+; here is rather notable, but nowhere near the 30 inches or 76cm 
+; my sister reports are on the ground back at Old Fractal Central, 
+; where Thomas, the last fractal cat of Old Fractal Central, sinks 
+; in up to his middle.  
+; 
+; The new fractal cats here at New Fractal Central ignored the 
+; snow.  Their biggest excitement came when a pack of starlings 
+; landed in the yard to pick up the bread crumbs FL put out.  As 
+; expected, my day was spent in sidewalk clearing and little else.
+; 
+; The next FOTD is not only due, but might actually be posted in 
+; 24 hours.  Until then, take care, and even if we do find the 
+; Higgs particle, what will be the benefit to the everyday man on 
+; the street?  Then again, maybe God is a particle.  Or did He 
+; merely create the particles?  And if He did, who or what the 
+; heck made Him?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Wine-Dark_Fractal { ; time=0:00:24.15-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinalDivideBrot function=recip
+  center-mag=-1.653872103168748/+0.000261245191652/\
+  3904061/1/-30/-0 params=10.5/1000000/0/0 float=y
+  maxiter=6400 inside=0 logmap=32 periodicity=6
+  colors=000COmBLkAIi9Fg9Ce89c76a63_60Z93RB5KD7DJ9EO\
+  AFUBFZCGdDHiEZkOclYfmgrnqxmzurzxuzzzzzSE2PI3MN4JR4\
+  GW5D_5eZIdYKdYLdXMdXNdWOdWPdVQdVRcVTcUUcUVcTWcTXcS\
+  YmSZmS_mU`mW`mY`m_`m``mbamdamfamhamiamf`md_mb_m`Zz\
+  ZZzXYzVYzTXzRXzPWzNWzUXz`XzgXznXzuXzrWzpWzmVzkVzhU\
+  zfUzcSz`RzYPzVOzSMzQLzNKzKIzHHzEFzBEz9DzJAzS7z`5zi\
+  2zr0zn3zj5zf8zbAzZCzVFzRHzNKzJMzFOzBRz7Tz4Vz4Uz4Tz\
+  4Tz4Sz4Sz4Rz4Rz4Qz4Qz4Pz4Pz4Oz4OzBNzIMzOLJzLEzKAzJ\
+  6zI2zI8zGEzEKzCPzBVz9`z7fz5kz4sz3zz2xz7vzCuzGozIjz\
+  JezL`zMVzOQzPLzRGzSDzVAzY7z`4zc3z_3zW3zS3zP3zL3zH3\
+  zD3zA6z99z9Cz9Fz8Iz8Kz8NzBQzETzHWzKZzNazQczTfzWizZ\
+  lzaozdrzgtzirzjpzjnzklzkjzlizlgzmezmcznazn_zoZzoYz\
+  oXzoWznWznVznUznUznTzmSzmRzmRzmQzmPzl0zePzlOzlNzlM\
+  zkMzkLzkKzkKzkJzjIzjHzjHzjGziFziFziEziDziCzhCzhBzh\
+  AzhAzh9zg8zg7zg7zg6zf5zf5zf4zf3zf2zeLzdJzbHz_FzYDz\
+  VBzT9zQ7zOAzRDzUBzM6zM1zM }
+
+frm:FinalDivideBrot   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16),
+b=imag(p1)+0.00000000000000000001:
+z=(-b)*(z*z*fn1(z^(a)+b))-c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

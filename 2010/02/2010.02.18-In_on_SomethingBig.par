@@ -1,0 +1,105 @@
+;     Date: Thu, 18 Feb 2010 15:54:31 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-02-10 (In on Something Big [No Rating])
+;       Id: <1.5.4.16.20100218155538.2b4f7b3a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 18, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As the FOTD nears its 13th anniversary, the fractals are showing 
+; no signs of running out.  Actually, when I posted the first FOTD 
+; image, I expected to continue posting fractals for a week or 
+; two.  I guess I under-estimated my interest in fractals.
+; 
+; Today's image shows a grossly bloated part of East Valley of the 
+; large minibrot on the main stem of the Z^2.000001+C Mandeloid.  
+; The valley has broadened into a wedge, the bloated edge of which 
+; is visible in the interior of the outer near-Julia set.
+; 
+; Some fractalists may wonder if I have discovered a way to get 
+; more magnification out of the standard math routine.  Don't get 
+; your hopes up.  These magnified images do little more than shift 
+; the decimal point and lose resolution at a much lesser magnitude.
+; 
+; There is little or no art in the image, so I gave it no rating.  
+; Actually, I am currently more interested in finding unusual math-
+; ematical fractal things than creating wannabe works of art and 
+; saying, 'Look Ma, I'm an artist'.
+; 
+; The name "In on Something Big" could refer to the greatly 
+; enlarged wedge, only a tiny part of which is visible inside the 
+; Julia shape.  The calculation time of 5-3/4 minutes is slow 
+; enough to make the trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; worth the effort.
+; 
+; Cloudy skies interspersed with snow flurries and a temperature 
+; of freezing made Wednesday less than ideal here at Fractal 
+; Central.  The fractal cats must not have liked it any more than 
+; the humans.  They were quite testy most all day.
+; 
+; My day was rather busy but still under control.  FL did get a 
+; bit annoyed at lunch when I told her I was not the slightest bit 
+; disappointed with Super-prez.  I expected him to do nothing and 
+; he has done nothing.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and if you expect nothing from your frac-
+; tals, you might actually get *something* and be surprised.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+In_on_SomethingBig { ; time=0:05:46.45-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t inside=0
+  center-mag=0/0/8.8/1/90/0 params=89.99996/0/\
+  89.99996/0/-1.74999826/4.55e-006/0/0/2.000001/0
+  float=y maxiter=4200 outside=tdis periodicity=0
+  colors=000PbnMbnIcnFdnBen8fn5fnBhmGjlLklQmkVnk_pjd\
+  riisinuhsvhtwdtwauwYuwVuwSvwOvwLwwHwwEwwBxvDxuExtG\
+  xsHysJyrKyqLypNyoOzoQznRzmTzlUzlVwiTufSsdRqaQo_PlX\
+  OjVNhSMfQLdNKeKLbLJ`LHZMGXMEVMCTNBRN9G83PN8Vb9XaCZ\
+  `E`_Gb_IcZLeYNgYPiXRjWUlWWnVYpU_qUas_etdhQXYuikrgh\
+  offlecjcagbZdaXb_U_ZSXYPVWNSVKPUINSFKRDHQAFP8HRCJT\
+  FLVINXLPZPQ`SSbVUdYWfaYhd_jg`ljdh`heSlaIpZ9m_Cj`Fg\
+  aIdbLacOZcRWdUTeXQf_NgbKjjLgeMd`NaWOZSPWNQTIQRENXI\
+  LbLJhOHnRMjSQfSUbTY_TaWUeSUiOVmLVqHWuDWz7VyAWxDWwF\
+  XwIXvLYuNYuQYtTZsVZrY_r`_qb`pe`leWpg`tiexkjxjixihx\
+  hgxgfxfexedxecxdbxcaxb`xa_x`ZzcWx`YvYZtV`rTapQcnNd\
+  lKfnKjjIggHedGbaE`ZDYjLZWCWrE`H4UI6TJ8TJATKCSKESLG\
+  SLIRMJRMLRNNQNPQORQOTPPVPQUMPWPPYSO_VOaYNc_NebMgeM\
+  ihMkjQehU_fYUd`PbZReXSgWUiUVkSWmRYoPZqO_sSTmWNgZHa\
+  bBWd4Pe5Re5Se5Te5Ve5We5Xf5Zf5_f5`f5bf5cf5df5edAabE\
+  Z`JWZNTYSQWWNU`KSdHQiEPmB }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

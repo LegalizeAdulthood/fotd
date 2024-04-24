@@ -1,0 +1,94 @@
+;     Date: Mon, 15 Feb 2010 23:06:40 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-02-10 (Ray of Futility [No Rating])
+;       Id: <1.5.4.16.20100215230744.2b576086@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 16, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image does the same thing with the northern Seahorse 
+; Valley of the Z^3+C Mandeloid as yesterday's image did with the 
+; single Seahorse Valley of the classic Mandelbrot set.  I named 
+; the result "Ray of Futility" for reasons known only to myself 
+; and already forgotten.
+; 
+; I could do this same thing with Mandeloids of every higher 
+; order, though the result would soon devolve into higher-order 
+; sameness.  I might try just one more however, perhaps of a 
+; fractional order like 2.5 or 1.5.
+; 
+; Sameness is boring, so I decided to give no rating to the image. 
+; The calculation time of 9 minutes is more than I think the image 
+; is worth, so to make life easier I recommend viewing the already 
+; finished product on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Monday, Presidents' day, here at Fractal Central began sunny, 
+; but the pleasant conditions didn't last long.  By midday threat-
+; ening clouds moved in and at 3pm snow arrived, while the tempera-
+; ture hovered within a degree or two of freezing.  Early in the 
+; afternoon the fractal cats gave up waiting for the sun, and 
+; spent the rest of the afternoon finding the coziest sleeping 
+; places in the house.  My day was about average, though far more 
+; active than the past two days, when I did nothing at all.  All 
+; who would like to see another glorious fractal will have their 
+; wishes fulfilled at this same place in 24 hours or so.  Until 
+; then, take care, and technology is the answer to all problems.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ray_of_Futility { ; time=0:09:02.37-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t
+  center-mag=0/0.175365/0.93633 params=89.98/0/89.98\
+  /90.5/0.005/0.7698185/0/0/3/0 float=y maxiter=15000
+  inside=0 outside=tdis periodicity=7
+  colors=0009BS9DU8FU8HU8JU8LU8NU7PU7RT7TS7VQ7WP7UQ7\
+  TQ7RQ7QQm8Ue7WY6YR5_SFaSOcSYdSffSphSyiRwhRvgRufRte\
+  RsdRqcRpbRoaQn`Qm_QkZQjYQiXQhWQgVQfUOaUMYUKTUIOUGK\
+  UEFUM4UH8U2JU4IU5HU7GU8FUMlzOjzPlzQozSrzTtzUwzVyzX\
+  wzZwz`vzbvzcvzavv`vr_umYuhXucWu_VvWTwVSwURxTPySOyR\
+  NzQMzQHnRCmR7mS3mS6mQ8mPAmOCmNEmLGmKJmJLmINmGPcFRc\
+  ETcDVcCVcIVcNVcSUcVUhYTm_TmbSmdSmgRmiRmlRmnPmjOmgM\
+  mcLm`JmXImUGmQFmNHmMJmLLmKNmKPmJRmITmIUmHWmGYmG_mF\
+  amEcmEemDgmChmCdmTdmSemRemPemOemNemLfmKzDJzAHz8Gz6\
+  Fz7Kz7Pz8Uz8Zz8cz9hz9mz9qzCozmmzmkzmiiKziMziOziQzh\
+  TzhVzhXzhZzh`zhbzhdzhfzibzjZzkVzkRzlOzmKzmGznCzo8z\
+  o5zoGzoRzoazolzowzOJzYVzffzoqzhmzbm`XmZRmXLmVFmT9m\
+  R3mP4mS5mU6mW7mZ7m`8mb9mdAmgBmzBmkCmmDmpEmrFmtFmvK\
+  msOmqSmoWmm_mkcmigmgkmeimcgmbezzdzzbzz`zz_zzYzzWzz\
+  VzzTzzRzzQzzOzzMzzLzzQzzMzzJVzGLziOzTHzcvz_ozWhzSa\
+  zOVzKOzGHzMozHVzNGzIDz9Vz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

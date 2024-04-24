@@ -1,0 +1,91 @@
+;     Date: Wed, 17 Feb 2010 10:51:02 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-02-10 (The Big Wheel [No Rating])
+;       Id: <1.5.4.16.20100217105208.2b673e3a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 17, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Laziness took a setback Tuesday when a new job came in, but a 
+; fractal still appeared, almost by magic.  The fractal is another 
+; of the near-Julia Seahorse Valley kind -- this one of order 15.
+; 
+; Most of the effect was achieved by rendering the scene with the 
+; outside set to 'tdis', and also by the coloring.  With nothing 
+; new in the image, I could not give it a rating.  The name "The 
+; Big Wheel" refers to the circular arrangement of fifteen smaller 
+; buds around the circumference of the large bay.
+; 
+; The calculation time of 2-1/3 minutes is surprisingly fast; the 
+; trip to see the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; will be even faster.  But before surfing, give Paul a chance to 
+; post the image.
+; 
+; Light snow continued Monday night here at Fractal Central.  By 
+; the time it ended at 10am Tuesday about 1-inch 3cm had piled up. 
+; Tuesday afternoon turned mostly sunny, while the temperature 
+; hovered around freezing and the fractal cats took things easy.
+; 
+; The next FOTD will be posted in 24 hours.  If all goes well, it 
+; will be something new.  Until then, take care, and if a fractal 
+; isn't broke, don't try to fix it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Big_Wheel { ; time=0:02:21.75-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t
+  center-mag=0/0/0.928 params=89.95/0/89.95/42.6/\
+  0.003/0.87909/0/0/15/0 float=y maxiter=15000
+  inside=255 outside=tdis symmetry=none periodicity=6
+  colors=000000cUBzcMsFPoGRkHThHVwIc`JZYJzXQYWWVVaSU\
+  gPTmMSsJSyHWgD_Q9b86dAEfCMhDUjFalHinIqmNnlSklXikaf\
+  jfcjkaipZiuXbmZXf_Q_`KSbDLc7Ed8Jf9Ng9RiAVjB_kBcmCg\
+  nCkoElkGmgHncJo_KpWMqSNrPTiOY`ObSNgJNlAMq1Mi6KaBIU\
+  GGNKEFPC7UA0Y8C`GNcOYeWhhcsjjhejZ`jPWjFRj5Mj8GcABX\
+  C5QE0KD6JCBJBHJAMJ9RJ8XJ7aJ6fJViFrlCdr`Rxytuktwotx\
+  sqtpopnmlljhjhdhf`fdXdaTa_P_YLYadjidnqdqxdtqbsj`rc\
+  ZqXXpQVoJTnCSnHVhLXbQ_XUaSYdMbfGfiAjk5fhEbeNZbWV_d\
+  RXmNVvKYqH`lEcgBfcIkUOpKVuA`z1ct6fnAhhEkbInXMpRQoP\
+  OoOMoNKnMInLGnKEhMIcNLYPOTQRORVITYDU`8Vc7Yf7_h6aj6\
+  cl5en5gpAbmEZkIViMRgQNeUJcYFaaB__H`ZN`XTaWYaUZ`R``\
+  Pa_Mb_Kd_HeZFfZDgZCeYCdYCbYCaYC_YBZYBXYBWYBUYBTYBS\
+  YGV`LXcQZfU`iZclceohgrliujfvidvhbwg`wfZweXxdVxcTxb\
+  RyaPy`Ny_Sq_XiZabZfVYkNYoGWiKVcOUYRTSVSNZRHaQBeP5i\
+  O0ld5iuAfaJdIRcGP`FNYDMWCKTAJR9HO8GMAJKCMIEPHGRFIU\
+  EKXCM_BOa9Qd8Sg6Ti5Od6HFK }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

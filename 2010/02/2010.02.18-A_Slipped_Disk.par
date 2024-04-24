@@ -1,0 +1,100 @@
+;     Date: Thu, 18 Feb 2010 22:36:26 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-02-10 (A Slipped Disk [7.5])
+;       Id: <1.5.4.16.20100218223733.2ba74394@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 19, 2010 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "A Slipped Disk".  This does not refer 
+; to a medical condition; it refers to the Siegel disks in the 
+; fractal, which have suffered some kind of slippage.
+; 
+; Actually, there are no Siegel disks at all in the image.  Siegel 
+; disks are purely Julia objects, while today's image, which is 
+; rotated 0.02,0.02 degrees from the Julia orientation, comes 
+; close but wins no cigar.  In this case, the tiny rotation makes 
+; a world of difference.
+; 
+; Actually, I have never had a clear idea of exactly what makes a 
+; Siegel disk.  I know the disks appear in the Julia sets of 
+; points on the edge of the Mandelbrot set, but just what parts of 
+; these Julia sets are called Siegel disks?
+; 
+; Well, I guess it really doesn't matter.  As today's image shows, 
+; not-quite-Siegel disks can make interesting images, especially 
+; when they are rendered with the inside set to 'bof61'.
+; 
+; The rating of 7.5 includes a small bonus for the coloring.  The 
+; calculation time of 30 seconds will pass in a flash, as fast in 
+; fact as the trip to view the finished image on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Thursday featured partly cloudy skies and a temperature of 39F 
+; +4C here at Fractal Central.  The fractal cats, who dislike 
+; partly cloudy weather with its on-and-off sunshine, spent only 
+; a few minutes on their sun-shelf before seeking the artificial 
+; heat of the large radiator in the hallway.
+; 
+; My day was close to normal; tomorrow should be the same.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and speak with some wisdom.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Slipped_Disk { ; time=0:00:29.86-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/0.94
+  params=89.98/0/89.98/0/-0.390541/-0.586788/0/0/2/0
+  float=y maxiter=500 inside=bof61
+  logmap=yes symmetry=none periodicity=6
+  colors=000hkNjlRlmUmnYoo`qpcrqgtrjvsmwtqyutzvwzzzw\
+  wwuuuyrhyodylayhYydUy`RyXNyRJyPGsTHnXIh_JccKYfLTjM\
+  OmMGfK8_I0UG6SMCQRHOXNMaTKgYIlcGrhEweCrbAn`8jaAgbC\
+  dbEacFZcHWdJUdLReMOfOLfQIgSGgTDhVAhX7iZ4i_2gb8edDc\
+  gIaiN_lSZnYXqbVsgTvlRxqQzvMowIdxEUyAKzDLsFMmHNgJOa\
+  aazbZxbWwbTvbQubNtbLsbIqbFpbCob9nb6mb4l`5k_6kZ7kY7\
+  kX8kW9kV9kUAjTBjSCjRCjQDjPEjOEjSHiVKiYNiaQidShgVhk\
+  Yhn`hqbhq`fqZeqXdqVcqUaqS`qQ_qOZqNYmO_jO`gOacOc`Pd\
+  YPeUPgRPhOQiKQkHQlEQmLcXSqGUkMVeRW`WYVaZPf_KkVIiRG\
+  hNEfJDeFBcB9b78a9UlBnvEnsHnqJnoMnmOnkRniTngWneZnc`\
+  nacn_enYhnWjnUmnSonQppSpqTprUqsVqtXquYrvZrw_rx`mwY\
+  ivWeuTatRYsOUsMQrKMqHIpFEoCAnA6n87oD8pI8qN9rS9rWKh\
+  TV_QeQNoHKkNNhTQdZTadWYjZVo`RpZNpYJqXFqWBqU7rT3rS0\
+  rR7kSEdTKYURRVYKWcDXj6Yp0Zq6_qC_rH_rN`rS`sY`sb`sha\
+  tmatsatxaikZZ_WONTEBQA8N75L42J10z8hzF`cGVzHPcIJzJD\
+  cK7zK2cfezTMbF2z2vzKmzV0m }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

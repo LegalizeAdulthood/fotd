@@ -1,0 +1,114 @@
+;     Date: Sun, 28 Feb 2010 22:41:54 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-03-10 (Rectangularitis [6])
+;       Id: <1.5.4.16.20100228224309.2b9f77f0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 01, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Just when I thought I had seen all aspects of the Z^2.003 
+; rectangle and had a vague comprehension of its full 4-D shape, 
+; I made a slight parameter change and the rectangle went crazy.  
+; It became a zig-zag thing better seen than described.
+; 
+; The rectangle exists in its most perfect form in the Julia 
+; plane.  Similar much smaller rectangles exist in the patterns 
+; around the minibrots in the Mandelbrot plane, but the original 
+; Julia rectangle totally vanishes in the Mandelbrot orientation.  
+; The Julia rectangle also extends into the Oblate and Rectangular 
+; orientations, and in the rotations between these orientations, 
+; though some degree of stretching and skewing is necessary to pre-
+; serve the rectangular shape.  I have not yet carefully checked 
+; the Elliptic and Parabolic planes, though I have no reason to 
+; doubt that traces of rectangularity exist there also.
+; 
+; Such rectangles exist only in fractals with exponents of Z very 
+; close to 2.003.  I have checked the Julia sets of the same area 
+; of the Z^4.003 Mandeloid and found no traces at all of a rectan-
+; gle.  As to why the Z^2.003 Julia sets seem so blessed with rec-
+; tangles, I have no idea.  Only the deity of numbers knows why, 
+; and he isn't talking.
+; 
+; I named today's image "Rectangularitis" and rated it at a 6, 
+; which in my perhaps too-humble opinion is what it's worth.  The 
+; calculation time of just under 3 minutes seems to be pretty 
+; standard for rectangle views when the maxiter is set at a some-
+; what excessive 32767.
+; 
+; All this calculation may be avoided however by viewing the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; But keep alert if you view the images on the FOTD web site!  The 
+; internet address of the site will change in about one week.
+; 
+; Sunday here at Fractal Central began with a heavy snow shower 
+; that left 2 inches or 5cm of fresh fluffy snow on the ground.  
+; But when the sun came up, the snow melted away as fast as it had 
+; fallen, and by midday the streets were totally clear.  The 
+; fractal cats took it in stride.
+; 
+; My day was acceptable; FL spent most of the day watching the 
+; earthquake coverage on TV-Chile.  The next FOTD, maybe or maybe 
+; not more rectangular stuff, will be posted in 24 hours.  Until 
+; then, take care, and except for those who put their faith in 
+; reason, it's irrational to believe that all questions have a 
+; rational answer.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rectangularitis { ; time=0:02:53.85-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/4508.257\
+  /0.0159/90/-55 params=0/90/0/90/-1.7435/0/0.00019/\
+  0.07682/2.003/0 float=y maxiter=32767 inside=0
+  logmap=63 periodicity=6
+  colors=000CD6DE7DF8DG9DHADIBDJCEKDELEEMFENGEOHBPID\
+  QJERKFTNGWRIYVJ`ZKccLehNhmOkrPnvHpzMqzQqzUrzYrzasz\
+  mzzzzzetzarvYmrUjmRfhNbcJZZFVUBSP8PK9MF9KA9I8FG6KE\
+  4PC3UF5ZI6cK8hN9mPBrSCvUEzXFzZGvZHrZImZJhZKcZKZZKU\
+  YLSXLTXLVWMXWMYVM_VMaUNbTNdTNfSOgSOiROmSGjROgQWdPc\
+  aOkRCwWIt_NrcSohYmlbjpghxnktlfqjanhYkfThdOtw0ecKRK\
+  bCEaC1uE6pGBkIGgKLbMQZOVUQ_QSdLUiHWnCZt2Ys8YrEYqKY\
+  pQYpVYo`YnfYmlcuuYmqSfmMZiGSeAKa4AX5DY5GZ5JZ5M_5P_\
+  5S`5V`DZXLbUTfR`iNhmKpqHzzAxwCwtEvrGuoItlJsjLrgNqd\
+  PjwMmlOpbQsSRvITx8Ux7Rx6Px6Mx5Kx4Hx4FpCGhJHaRIUYJZ\
+  q1NdK9UfBTdCSbER`FQZHPXIOVJNTLMRMLPOKNPJLhHNZILQJJ\
+  29RAEMHJHOOCTP4jfllbjm_inXhoUgpRfqOevEatIcrLdpOfnR\
+  gmUikXji_lgbmdjsegpfengblh`jiZhjcfkcdlcamc_ncYocWp\
+  cUqcSrmQpmOnmMmmKkmIimGhmEfmCzzAzz8zz6zz3zz5zz6zz8\
+  zz9zzBzzCzzEzzFzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

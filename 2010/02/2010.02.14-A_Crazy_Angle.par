@@ -1,0 +1,105 @@
+;     Date: Sun, 14 Feb 2010 12:38:48 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-02-10 (A Crazy Angle [6])
+;       Id: <1.5.4.16.20100214123951.2b9f6894@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 14, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Not surprisingly, the antiquing bug did bite on Saturday, which 
+; explains why this FOTD is late.
+; 
+; The name "A Crazy Angle" refers to the orientation of the image 
+; slice through the 4-D (Z^2+C) Julibrot.  In the background of 
+; the image we see a grossly magnified version of the normally 
+; insignificant period-30 bud on the south shore of East Valley 
+; of the Mandelbrot set.
+; 
+; The ridiculous enlargement is due to the angle at which the 
+; image cuts the actual 4-dimensional bud-complex.  The closer the 
+; orientation lies to the true Julia direction, the greater the 
+; enlargement, and since today's image is cut 0.015,0.015 degrees 
+; from the actual Julia, the enlargement is spectacular indeed.  
+; (At the actual Julia orientation, the enlargement is infinite, 
+; and the same point of the bud is reflected in the entire scene.)
+; 
+; Do not try to visualize how an object may be magnified in two 
+; dimensions by simply varying the direction in which it is 
+; sliced.  It's another of those 4-D mysteries, like exiting a 
+; completely closed room by stepping around the wall, that make no 
+; sense in 3-D space.
+; 
+; I rated the image at a 6, mostly because of the mathematical 
+; interest.  The calculation time of 4-1/4 minutes is slower than 
+; I would have preferred, but with the image maxiter at 120,000 it 
+; is quite reasonable.
+; 
+; And of course, the finished image, for all it is or is not 
+; worth, is posted for immediate satisfaction on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy skies, a high temperature of 30F -1C and a few 
+; flakes of snow made for a typical midwinter day here at Fractal 
+; Central on Saturday.  The fractal cats passed the day sleeping.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and free your mind from the bonds of convention.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Crazy_Angle { ; time=0:04:14.06-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t center-mag=0/0\
+  /1.182144/1/90/0 params=89.985/0/89.985/20/0.26065\
+  /-0.0022/0/0/2/0 float=y maxiter=120000 inside=0
+  logmap=yes periodicity=6
+  colors=000PHZSGYVFXYDW`CVcBUf9Ui8Tl7So5Rr4Qu4Px4Pv\
+  AQuGRsMSrRSqVToZUnbUlgVkjWjkWljXmhXnfXocXp`XqYXrWX\
+  sTXtQXuNXvKXwHXxEXyCXpHOhLG_Q8SU0NPBIKLDFV8Bd9Ab9A\
+  `A9ZA9XB8VB8TC7RC7QD6OD6ME5KE5IF4GF4EF4DJAIMFNQKRT\
+  PWXU___dcdhfimjnqmsvpxzrruslqtglvahwWcxR_uTarVcpXd\
+  mZfj`hhaieckbem`gnYipWjqabgfVZkNQpFHu78rCFpGLmLRkP\
+  XhUbfYhcbnaft_jzZhrYfkXdcXbXW`QVZIUXBUV4VX5WY6XZ6Y\
+  `7Za8_b8_d9`e9afAbhBciBdjCdkCfjCgiChhCjgCkfCSiQShM\
+  ThIThLThPSfUReZQdcPchObmNarM`wL_wKZwJYwIXwHWwGWwFX\
+  wEYwDZwC_wB`wAaw9br3cm8dhCecGfZKgUPhPTiKXjF`kGUlIN\
+  mLCnOGoNJpNNqNQrNUsNXtN`uNcvNgwNjxNcxNcxNcxNcvMcuL\
+  ctKcsJcqIcpIcoHcnGQmzQmzRmzSmzSmzTmzUmzVmzVmzWmzXm\
+  zYmzYmzZmz_mzXmz_mzbmzemzgmzjmzmmzomzrmzumzxmzwmzw\
+  pzvwzvwzvwzuwzuwzuwztwztwztwzswzswzuwzswzrwzpwzowz\
+  mwzlwzjwziwzgwzfwzdwzcwzawz`zz_zzVzzQzzIzzLzzNzzPz\
+  zRzzTzzVzzXzzZzz`zzbzzdzz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
