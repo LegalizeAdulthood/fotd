@@ -1,0 +1,116 @@
+;     Date: Fri, 11 Nov 2011 05:56:26 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-11-11 (A Ghostly Spiral [8])
+;       Id: <1.5.4.16.20111111055737.3847c5ac@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 10, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's FOTD we return to the MandNewt06a formula, which 
+; draws scenes that are a mixture of Mandelbrot and Newton 
+; elements.  (So far however, I have failed to find any pure 
+; Mandelbrot or Newton stuff in the images it draws.  By this time 
+; it would truly be a surprise if I found an intact minibrot or 
+; a few features converging on a root.)
+; 
+; The grainy stuff throughout the scene is typical of images made 
+; with this formula when the cut-off condition is set to a value 
+; around 10^(-30).  The two curved wedge-shaped black open areas 
+; in the background are caused by rendering the image with the 
+; inside set to 'atan'.  I have yet to explore the mess at the 
+; center of attraction, though from what I can see of the area, it 
+; does not appear to hold much of promise.
+; 
+; I named the image "A Ghostly Spiral" because of the broken ghost 
+; spiral, the first bits of which emerge from the ectoplasmic 
+; gloom at the lower right and spiral toward the central chaotic 
+; area, growing ever clearer and better defined as they near the 
+; chaos, only to be ultimately swallowed up in the debris.
+; 
+; Despite this fancy description however, I could give the image a 
+; rating no higher than an 8, and a half point of that is the 
+; coloring bonus.  The image just doesn't have the certain 'oomph' 
+; it would need to rate a 9 or above.
+; 
+; The rather slow calculation time of near 3 minutes almost causes 
+; impatience, but anticipation will build once the top part of the 
+; image appears.
+; 
+; Avoid the calculation by viewing the image already calculated on 
+; the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And see its finer details in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original, now classic, FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The weather took a turn for the worse here at Fractal Central 
+; today, as a cold front accompanird by light rain moved in.  The 
+; fractal cats had no complaint about the temperature of 50F 10C, 
+; but they definitely did not approve of the the raindrops on 
+; their window.  My day was average, which is uneventful but the 
+; way I like it.  FL handled the small remaining amount of 
+; commercial work.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and those skeptical of the paranormal would be wise to be 
+; on guard.  If only one of the many claims of a paranormal event 
+; proves to be true, their skepticism will then be seen as narrow-
+; mindedness.  Of course, skeptics, being rational thinkers, 
+; already know that belief in the paranormal is wishful-thinking, 
+; so they are not at all concerned that the paranormal might some 
+; day be shown to have a basis in reality.
+; 
+; 
+; Jim (I'm not a true believer) Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Ghostly_Spiral { ; time=0:02:58.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandNewt06a passes=1 center-mag=-0.526\
+  342/8.3284/0.0510855/1/-72.5/0 params=2.1/1.2/3.3/\
+  2.3/1.2/3.1/1e-030/0 float=y maxiter=500 bailout=25
+  inside=atan periodicity=0
+  colors=000AGNAGNAGNAGNAGNAGNAGNAGNBGNCGNDGNEGNGHGE\
+  IDGJCJLCLOCOQDQTDTVEVYEY_F_bFbdGdgGgjFfiGehHdgHdgI\
+  cfIbeJaeJadK`cL_bLZbMZaMY`NX`NW_OWZOVZPUYQUXQTWRSW\
+  RRVSRUSQUTPTTOSUORVNRVMQWLPWLPXKOXJNYLTfJNYHIPFCGA\
+  26E77IB7MF7QK7UO7YS7aX8e`8id8mi8qm8uq8zu8qnBjgEb`H\
+  WUJTQPRNUPJZNGcLChJ9mH5rF2wE6tE9qECnEFkDIhDMeDPbDS\
+  _CVXCYUCaRCdOBgLBjIBmFBpCCoEDoFEnGFnHGnIHmJHmKImLJ\
+  lMKlNLlOMkPNkQNkROjSPjTQjURiVSiWSiXThYUhZVh_WgaXgb\
+  YfcYfdZfe_ef`egaehbdibdjcdkdclecmfcngbohbphbqiarja\
+  skatl`um`vm`wkXvjUuiQthNsgJreGqdDpcDoaDn_Dm_DmZDmY\
+  DmYDmYDmYDmYEmYEmYFmZFmZFmZFmZFmZFmZFlZGkZHjZIi_Jh\
+  _Kg_Lf_Me_Nd_Oc_Pb_Qa_R``S_`TZ`UY`VX`WWaXVbYUcZUdZ\
+  UeUUdUUcUUbUUaUUaUUaSUaQUaOUaMU`KS_KQ_KOZKM_KK_KI`\
+  KG`JEaKC`KE`KF_LG_LHZMIZMJYNKYOLXPMXQNWRPVSQVTRUUS\
+  UVTTWUTXVSYWSZXR_ZR`_Qa`QbaPcbPdcOedOfeNgfNhgRdZU`\
+  RXYI_UAcQ1bR2bR2bR2AGD9FD }
+
+frm:MandNewt06a {; Jim Muth
+z=c=(pixel*p1):
+a=z^3+(c-p2)*z-c
+b=p3*z^2+c-1
+z=z-1*a/b
+p4 <= |a| }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

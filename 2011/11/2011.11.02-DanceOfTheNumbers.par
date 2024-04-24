@@ -1,0 +1,117 @@
+;     Date: Wed, 02 Nov 2011 18:50:48 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-11-11 (Dance of the Numbers [7.5])
+;       Id: <1.5.4.16.20111102175152.2b7f7bca@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 02, 2011 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's venture into the hyper-dimensional world of fractals 
+; takes us to the northern valley of the large period-4 bud on the 
+; northeast shore line of the main bay of the Mandelbrot set.
+; 
+; But where is the valley?
+; 
+; The brilliant stripe across the bottom part of the image is the 
+; valley.  It bears no resemblance to a valley because it is 
+; viewed from the side, at an angle close to the Julia, where 
+; Mandelbrot elements extend to infinity in two dimensions.
+; 
+; The spirals in the image are rather curious.  Above the stripe 
+; of the valley, they curve clockwise, while below the stripe, 
+; they curve counter-clockwise.  This shifting curvature is a 
+; situation common to the spirals in the vicinity of all valleys.
+; 
+; I named the image "Dance of the Numbers".  The numbers that 
+; create today's image certainly do appear to be dancing.
+; 
+; The rating of a 7-1/2 includes a half-point bonus for the work I 
+; did on the colors.
+; 
+; The calculation time of 3-1/2 minutes has been carefully 
+; extrapolated from the 14 minutes the image actually took to run 
+; on the P200mhz machine.
+; 
+; For maximum pleasure and minium hassle, check the finished image 
+; on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; For sharpened pleasure, check the high-definition version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And don't forget the original FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day broke with dense freezing fog here at Fractal Central, 
+; and most of the morning remained gloomy, but just before noon 
+; the sun suddenly burst through, leading to a near-perfect 
+; afternoon with cloudless skies and a temperature of 54F 12C.  
+; The fractal cats, never worrying about climate specifics, spent 
+; the day relaxing in the warm sun.
+; 
+; The humans simply got through the day, with FL recovering from a 
+; mild bug and me frustrated with the CD player, which suddenly 
+; died last evening, most likely from a burned-out laser.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and where are our saviors now that we need them?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+DanceOfTheNumbers { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t periodicity=6
+  center-mag=0/0.131074/3.138989/1/-90/0 float=y
+  params=90/90.07/92.48/89.01/0.2438/0.5139/-0.0081/\
+  0.5024/2/0 maxiter=25000 inside=0 logmap=yes
+  colors=000EHsD0qCJoB0mALk90j8Nh70f6Pd50b4R`30Z2TX1\
+  0W2VV20V3XV30V4ZV40U5`U50U6`U60U7_Y80`9Yc90fAViB0l\
+  BSoCArDRqDApCToBAnAUmAAmEUmHAmKUmOAmRUmUAmXXcZAU_W\
+  JaAIbUHcAGeRFfAEhPDiACjNBkACkQCkADlTDlAElVElAFmYFm\
+  JGm_GmMHnbHnQIndInTIobHpTHp_GqOGrUFrKFsNEsEEtHDuED\
+  uBCv8Cv6CrAGnEKjIOgMRcQV_UZWYbTaePeiLimHjqEktHjpJi\
+  oLenObmQZlSWkVWjXWiZWhaWgcWedWceWafW_gWYgWWgVaeUZc\
+  TWaSU_RRYQOXPMVOJTNGRMEPLBNK8MK6PK9RKCUKFWKIZKL`KO\
+  cKReKTgJMiIFkGGmEGoCHqBHrCHrCIrCIqDIpDJoEJnEJmFKlF\
+  KlFKhHIdJH`KGYUFUqEQmDMmCJmBFmABm98m8HmEPmKYmPemVm\
+  j_imdeqjatoYwtczycztczpczkczgczcczZczzczzczzczzczz\
+  czzczzczzczzczzczzczzczzczzczzczzhzzhzzhzzhzzhzzhz\
+  zhzzhzzhzzhzzhzzhzzhzzhzzhzzhzzmzzmzzmzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,111 @@
+;     Date: Wed, 09 Nov 2011 17:29:28 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-11-11 (Gone to Julia Land [8])
+;       Id: <1.5.4.16.20111109173038.2a7710b0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 09, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a few of the curious things that happen when 
+; Z^(2) and Z^(-2) interact in a certain way and the resulting 
+; fractal is viewed in the Julia direction.  The formula that 
+; creates the image is simply a Julia version of the FinDivBrot-2 
+; formula, the FinDivBrot-2J.
+; 
+; The Mandelbrot aspect of the fractal is an E-W string of large 
+; bays inside a triangular area of chaos.  Today's image is the 
+; Julia set of a point on the southern shore line of one of these 
+; bays.
+; 
+; The image consists mostly of 'inside' areas.  The terraced 
+; effect was created by rendering the scene with the inside set to 
+; 'fmod' and a proximity of 0.3.
+; 
+; The name "Gone to Julia Land" describes the 4-D orientation of 
+; the image slice.  The rating of an 8 might be a bit liberal, but 
+; it's not a bad image and the terraced 3-D effect is striking.
+; 
+; The calculation time of a mere 8 seconds is one of the briefest 
+; ever, and will have passed before the fractalist has time to 
+; blink and think.
+; 
+; Avoid the hassle and find peace of mind by viewing the finished 
+; image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Be awe-struck by viewing the image in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And remember the original classic FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; With a temperature of 61F 16C today was another near perfect day 
+; here at Fractal Central.  It was only *near* perfect because of 
+; the early-morning fog.  The fractal cats, never satisfied with 
+; less than total perfection, took the day in stride.  They spent 
+; the morning chasing imaginary bugs and the afternoon sleeping 
+; and eating.  The humans, FL and myself, spent the day wrapping 
+; up loose ends.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and when asked if I think mankind will ever reach the 
+; stars, I usually reply that I have bad news and good news.  The 
+; bad news is that, due to financial difficulties and lack of 
+; resources, we will probably never even reach the other planets 
+; of our own solar system, much less the stars.  The good news is 
+; that by the time all the feel-good techno-talk is finished and 
+; it has become obvious that humanity will never venture into deep 
+; space, no hopeful astronaut now alive will still be around to be 
+; disappointed.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Gone_to_Julia_Land { ; time=0:00:08.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2J function=recip
+  center-mag=0/0/0.02958801 params=-2/25/16/0/-2.552\
+  41736198004/-0.498336741233558 float=y maxiter=3600
+  inside=fmod proximity=0.3 logmap=yes
+  symmetry=origin periodicity=6
+  colors=000rzzVjYamNgqCzt1kq5jo9irChjGggJfejecQceSo\
+  fT`gm_hWYiYXjZWkWVlUUlSTmQSmORnMRnJQoHPoFOpDNpBMq9\
+  Mq7V_OcIdl0ui4qf7mcBj`EfYHbVL_SOWPSSMVPJYLGaHDdEAh\
+  A7k65n3DjBLfJTbQ`ZYhWdeXfbYg`YhYZjV_kT_lQ`mNaoLapI\
+  bqFcsDctAdu8dvFimLmeRrXXvPXvOXvNXwMYwLYxKYxJYyIYyH\
+  ZzFZqFZgFZYFZOFZEF_4EKNV4fk6fk8glAhmChnEioGjpIjqLk\
+  rNlsPltRmuTnvVnwXox_pyYqqWriTt`RuTPvLMxCMxHMxNNwTN\
+  wZNwdOvjPndReYSYRUPLVHEX87TBAPFELJHHNLDQO9US5YV1aZ\
+  5ZZAWZFTZKQZONZTKZYHZbE_`E`ZEbXDdVDfTDhRCiPCkNCmLB\
+  oJBqGAsIApLBmNCiQCfTDbVE_YEW`FTbGQeGMgHUjIZmIcoJmr\
+  KzuLmkJcaHURFKHAD307GCHUHObTZn_YiNZc9_cB`bDabFbn0C\
+  o5Fp9HpDKqHMqLOrPRrTTsXWs`Ytd_thbuldupfpnbkmZgkVbj\
+  RZiNUgJPfFLdBGc7Cb3Ea2Fa2G`2H`2I`2J_2K_1L_1MZ1JSCF\
+  KOBC_74kD4gJ4cP3_W3Wa2Sg2On1Ko1Kp1Lq2Lr2Ms2Mt3NaDN\
+  IOMIQMISLHUKHWJHYJG_IGaHFdGFfGFhFEjEElDEnDDpCDrBCu\
+  ACtCDrEEpGEnJFlLGkNGiQHgS }
+
+frm:FinDivBrot-2J   { ; Jim Muth
+z=pixel, c=(p3), a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

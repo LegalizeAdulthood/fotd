@@ -1,0 +1,119 @@
+;     Date: Mon, 07 Nov 2011 15:14:49 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-11-11 (Sparkling Minibrot [9.5])
+;       Id: <1.5.4.16.20111107151557.29f7d6ec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 07, 2011 (Rating 9.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Because of its almost lifelike appearance, today's image rates a 
+; whopping 9.5.  I did not want to give it a perfect 10 because I 
+; could see a few areas that needed a bit more work.  But 
+; regardless of whether the rating is a 10 or a 9.5, the image is 
+; still (IMO) the best in quite a while.
+; 
+; The scene lies on the X-axis of the ridiculous fractal that 
+; results when some Z^(-100) gets mixed into an everyday 
+; Mandelbrot set.  Well, that's not exactly what the formula does, 
+; but regardless, the result is a fractal with Z^(-100) features 
+; and Z^2 features mixed together in a strange but pleasing way.
+; 
+; The parent fractal resembles nothing as much as a Mandelbrot set 
+; squeezed inside a nest of cogwheels, with its main stem missing 
+; and its large bud flattened.  Today's scene lies in the East 
+; Valley of the shattered M-set.
+; 
+; I have just started to explore the minus-minus fractals created 
+; by the FinDivBrot-2 formula, and have found that the fractals in 
+; this range are very sensitive to the bailout radius.  Today's 
+; bailout is actually a rather critical 1.25 -- (the negative 
+; 14.75 entered as real[p2] plus the 16 automatically added to 
+; this parameter by the formula).  If this value is changed even a 
+; little, the image totally changes, and not for the better.
+; 
+; The name "Sparkling Minibrot" came about when the image reminded 
+; me of sparkling water.  Most of the effect of sparkling water 
+; was created by rendering the scene with the outside set to 
+; 'fmod' and a proximity factor of 0.08.  The rest of the effect 
+; is a result of the coloring.
+; 
+; The calculation time of only one minute is a real bargain price 
+; for an image with a rating of 9-1/2.
+; 
+; And even this brief calculation time may be saved by viewing the 
+; finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; or by viewing the high-definition version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And don't forget the original FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Once the morning fog cleared away, the near-perfect autumn 
+; weather continued here at Fractal Central today, with almost 
+; totally clear skies and a temperature of 57F 14C.  The fractal 
+; cats were pleased with the weather, but not so pleased with a 
+; lop-eared orange tomcat that is prowling and spraying in the 
+; neighborhood.  When the intruder passed through the yard and 
+; sprayed the decorative cat garden ornament, Cassie gave him a 
+; good growl, (from the safety of the indoors).
+; 
+; The day of the humans, (that's what they tell us we are,) was 
+; uneventful.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and there is a corollary that follows from 
+; yesterday's closing comment about disbelief of truth . . . The 
+; stronger the evidence that a thing is untrue, the greater the 
+; number of people who will believe it.
+; 
+; 
+; Jim (Has anyone seen any space aliens lately?) Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sparkling_Minibrot { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip passes=1
+  center-mag=+0.27749834198/0/772137 params=-100/\
+  -100/-14.75/0 float=y maxiter=3600 inside=255
+  proximity=0.08 outside=fmod
+  symmetry=xaxis periodicity=6
+  colors=000HOPHOPHPPHPOHQOHROHROHSNHSNHTNMLSMLSLMRL\
+  MRLMRKMQKNQKNQKNPJNPJOOJOOJOOIONIONIPNIPMHPMHPLHPL\
+  zzzzzzzzzzzzzzzyzzwzzuzzszvrzrqzmpzhozcmyZkxViwRgv\
+  RfvReuSduSctSbtTasT`sT_rUZrUYqUXqVWpVVpVUoVUoWUnWU\
+  mWUmXUlXUlXUkYVkYVjYVjZViZViZVhZVh_Vg_Wg_Wf`Wf`We`\
+  WeaWdaWcaWcbXbbXbbXabXacX`cX`cX_cX_cYZcYZcYYcYYcYX\
+  cYXcYXcYWcYXcXXbXX_WXZWXYVXXVWWUWVUWUTWTTWSSWRSWQR\
+  VPRVOQVNQVMQVLRVKSUKTUKUUKUUKUUKUUKUUKVUKVUKUUKUUK\
+  UUKUUKUUKTUKTULTUMTVNTVOSWPSWPSXQSYRSYSRZTRZUR_VR_\
+  VR`WQ`XQaYQbZQb_Qc`PcaPdaPdbPecPedOfeOgfOggOhgOhhN\
+  iiNijNjkNjlNkmMlnLjmKglJdkIbjH_iGXgFVfESeCPdBMcAKb\
+  9H`8E_7DZ6CY5BX3AW59V58U57U66T66S66R66Q76O76N76M76\
+  L86K86J86I96H96G96F96EA5DA5CA5B95A95A85A75A75A75A7\
+  5A75A85A85A85A85A95A95A95AA4A95A95A94A94AA3A93A94A\
+  94A95A95AA5AA5AA5AA5AA5AA5AA5AA5AA5AA5AA5AB5AB5AB5\
+  AB5AB5AB5AB5AB5AB5AB5Azzz }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

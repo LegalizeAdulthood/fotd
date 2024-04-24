@@ -1,0 +1,106 @@
+;     Date: Tue, 22 Nov 2011 18:09:47 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-11-11 (On the Right Track [7.5])
+;       Id: <1.5.4.16.20111122181107.38c7d4e0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 22, 2011 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent of today's gaudily colored fractal is a Mandelbrot 
+; set that has been corrupted by subtracting Z^(1.01) on each 
+; iteration.  The result is an infinitely divided main stem, with 
+; two large minibrots.  The scene of today's image lies between 
+; the East Valley areas of these two minibrots, very near the 
+; negative X-axis.
+; 
+; The overall impression the image left with me is one of a crazy 
+; rail yard, with tracks running in all directions, an effect that 
+; is very common in fractals with divided main spikes.  After much 
+; meditation about railroading, I named the image "On the Right 
+; Track".
+; 
+; The rating of 7-1/2 includes a half point bonus for the extra 
+; work I put into the coloring.  My humility prevents me from 
+; awarding myself more.
+; 
+; The calculation time of 1-5/6 minutes will pass swiftly once the 
+; top edge of the image appears, with all its deep blues and 
+; brilliant oranges.  And things will get only better as the scan 
+; moves down the screen.
+; 
+; But to totally avoid calculation, view the completed image on 
+; the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; View it in high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Many more images may be found on the original FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Foul weather spoiled things here at Fractal Central today, with 
+; drizzle all morning and rain in the afternoon.  The temperature 
+; of 45F +7C was chilly enough to keep things totally miserable.  
+; The fractal cats disapproved of the wet conditions, and turned 
+; their attention to examining a new easy chair that arrived this 
+; morning.  The humans had a reasonably normal day, with nothing 
+; of note to report.
+; 
+; The next FOTD will be posted in 24 hours.  The postings are 
+; scheduled to continue through the Thanksgiving holiday with no 
+; breaks, since fractals take no holidays.  Of course, if the 
+; unexpected happens, we might miss a day.  Come what may, until 
+; next time, take care, and be aware of subtle differences.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+On_the_Right_Track { ; time=0:01:50.31 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.999567859885/+0.00047736902/4.3e+007\
+  /1/85/0 params=-1/1.01/1/2/0/0/0/0 float=y
+  maxiter=1250 inside=0 logmap=133 periodicity=6
+  colors=00002H03I04J05J05K05L05L05K05I05E04A000000u\
+  eIubIu`IuYKuVKuSKuQKsOLsMLsIKsGJsBJs9Is6Hs4Hs1Gq3G\
+  p2Fn2El3Dl3Dk3Ci4Cg3Bg3Be4Ad49a48`58X58V48R56Q56N5\
+  6K66H54G54gW4yz6qz4jz4cz3Yv2Ss1Mp1Gm0Bi06g02f00c00\
+  e01f12h43i63l84pA4rC5tF6tH6uJ6uL6n73_0AUCDPPMUpSSi\
+  TNdVHYYEVz3LeAUn8Qw5OzJMzDMz7L`0zc1zc1zd0ye0ue0qf0\
+  nh0ki0gk0el0cn0ap0Zs1Yu2Ww2Uy2Rz3Qz3Ng_igTekPdnK`q\
+  HYuDVy9Rz6O00p11k60eA0`F0YL0UR0Q_0Pi0Ns1MFHNIILIGJ\
+  IFJLDJOCLSBLX9M_8Ld8Mg7Ll6Mq6Mu4Lz4Laufcpedldeiece\
+  cbbbYYYYYY_ZZ`ZYdZZeXXgTViQTlOTnMSpJQqHQsDOwBOy9Nz\
+  7Nz5M_00i03s1Brxztuzrrwolslfni`ilXinTfpNcsK`uGYwCU\
+  z9Sz6OOC3RC4SC6VC7XB8YB8`BAbABd9Cg9Di9Dl8Fn8Fp7Gs6\
+  Hu5Hw4Jz4Kz3MlAzl8zl8ym6um6qn6nn4zp4zq5zs4zu4zw4zw\
+  3zy3zz4zz3zz3zzDzzBzzBzzAzzAzzUzzUzzUzzUzzUzzUzzUz\
+  zUzzUzzUzzUzzUzzUzpUzqUzqUzsUzsUzuUzuUzwUzwUzyUzyU\
+  zzUzzUzzUzzUzzUzzUzzUzzUz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

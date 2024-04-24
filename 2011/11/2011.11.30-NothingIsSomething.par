@@ -1,0 +1,115 @@
+;     Date: Wed, 30 Nov 2011 16:58:53 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-11-11 (Nothing is Something [8.5])
+;       Id: <1.5.4.16.20111130170021.2abf5e94@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 30, 2011 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today is the last day of November, and we end the month with 
+; an image that rates a full 8-1/2.  The image lies in the parent 
+; fractal that results when negative Z and (1/Z) are combined and 
+; straight C is added on every iteration.
+; 
+; This parent fractal is little more than a cut-off hyperbola with 
+; its open end facing north and Mandelbrot buds along its edges.  
+; Today's scene is located in some curious debris just inland of 
+; the southernmost part of the hyperbolic main bay, which appears 
+; to be an East Valley.
+; 
+; (To see a surprising cousin of today's scene, change the signs 
+; of the real and imag parts of the p1 and p2 parameters, and 
+; change the sign of the Y center coordinate.  The resulting image 
+; has a different orientation as well as a similar yet somewhat 
+; different coloring.) 
+; 
+; The unusually high rating of an 8.5 is due to the extra effort I 
+; put into the coloring.  I was actually considering a rating of a 
+; 9, but finally decided that the image too closely resembles 
+; yesterday's for such a rating.
+; 
+; The name "Nothing is Something" came about when I started 
+; thinking of empty space, which modern physicists tell us is 
+; anything but empty.
+; 
+; The image takes almost 5 minutes to finish, but the result will 
+; be worth the wait.
+; 
+; The wait may be avoided by visiting the official FOTD web site 
+; and viewing the finished image there.  The web site may be 
+; accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; View the image in higher definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today began with heavy clouds here at Fractal Central.  The 
+; clouds thinned as the day progressed but never cleared totally 
+; away.  The temperature of 46F +8C was too cold for the fractal 
+; cats, who were more interested in a new cat that has been 
+; prowling in the vicinity lately.  The humans spent the day doing 
+; the things that humans do to fill the days.
+; 
+; Unless the world ends, the next FOTD will be posted in 24 hours. 
+; Until then, take care, and it must be a rough time for born-
+; again rational skeptics.  With the TV channels filled with shows 
+; about ghosts and the nonsensical nature of the sub-atomic realm, 
+; skeptics appear to be losing their battle to convince the world 
+; that the paranormal is a delusion and save earth's population 
+; from falling into superstition.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+NothingIsSomething { ; time=0:04:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.01043182743198495/+2.648388444405430\
+  00/1.085964e+012/1/-19.9979210802644793/0 inside=0
+  params=-1/1/1/-1/0/0/0/0 float=y maxiter=15000
+  outside=summ periodicity=6 mathtolerance=0.05/1
+  colors=000L0JM0KM0KM0KO0KO0KO0KP0KP0KR0KR0KR0KS0KS\
+  0KS0KU0LU0LW0LW0LW0LX0LX0LW0JX0LZ0NZ0O`0P`0Qa0Ra0R\
+  c0Tc0Ue1Uf1Wf1Yi3Xi3Zj3`j3al4bl4cn5ep6ep6gr7hr7ht7\
+  kt8lu9luAmwAozCtzAqwAouAmr8kp8jl7gj6gf5de5ca4a`3`X\
+  3ZW2ZT2XS2WP1UN1SK0RM0SJ0RH2PG5OE8MDBLCEJAGI7JH7OH\
+  6SHCDF8LG6XH4lLr5Kf3Ii3Ic2H`2F`2F3`G3ZEf3Fe2Ec2Ea2\
+  C`2CZ2CX1AW1AW1A`2AW1AR08M07J06G05F04B04A03G040620\
+  520410200410621931B31C42F53I54L74O74P95S95WA7ZB7aB\
+  8cD8fD9jF9nFApFBnHEnIGnJIlLKlLNlNPjORjPTjPWiRYiS`i\
+  Urzgjt_biUVZNORHIICAA73420000000000000000000000000\
+  00000100300500700B00C00E00F00I00J00L00M00P00R01S11\
+  U11U11U11W33X43X53Z63Z73`83`B4aC4aE4cF5cH5eI5eL6fM\
+  6fP6iQ7jT7jU7lX8lZ8n`8nb8pe9pf9rjArlAtoAtqAutAuuAt\
+  qBtqCrnDrmEpkEpjFnfGneHlcIlbIjaJj`KiYLiXNfVMfVOeUP\
+  eTQcRRcQRaORaNR`LS`KSaJUcIVeHXfGYiF_jE`lEcnCeiVeZG\
+  YP4RH0LI0JI0JJ0JJ0JJ0JL0J }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

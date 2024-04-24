@@ -1,0 +1,108 @@
+;     Date: Tue, 08 Nov 2011 18:35:34 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-11-11 (Darker Shadows [7])
+;       Id: <1.5.4.16.20111108183643.0d5f26b0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 08, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The potential for today's image came into existence when I mixed 
+; 0.9 negative parts of Z^(-16) with 0.8 negative parts of Z^(4), 
+; then added 1/C on each iteration to create a parent fractal that 
+; consists of nothing more than a slightly distorted and under-
+; sized Mandelbrot set surrounded by looping filaments sprouting 
+; from various points of the M-set.  The actual image came about 
+; when I checked one of these filaments near the point where it 
+; sprouts from East Valley.
+; 
+; The name "Darker Shadows" refers not to a long-gone campy TV 
+; show, but to the overall mood of the image, which, with its deep 
+; purples and lurid golds, is not exactly a cheerful one.
+; 
+; The rating was held to a 7 because the central part of the color 
+; palette was borrowed from an image posted to the list recently.  
+; I cannot give myself a bonus for a color palette that was partly 
+; created by someone else.
+; 
+; The calculation time of only 24 seconds approaches dangerously 
+; close to the speed of light.  If the image were too much faster, 
+; the calculation would actually exceed the speed of light and 
+; finish before it started.  I have no comment on what might 
+; happen if, after seeing the finished image, a curious fractalist 
+; decided not to start it.
+; 
+; Be that as it may, the finished image is posted on the FOTD web 
+; site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A most delightful autumn day prevailed here at Fractal Central 
+; today.  The day began without the usual shroud of fog, and 
+; passed with a cloudless sky and a temperature of 61F 16C.  The 
+; fractal cats were more interested in playing with a left-over 
+; ladybug beetle than the outside conditions.
+; 
+; We the humans spent most of the time doing routine things, plus 
+; a little time pondering the mysteries of existence as well as 
+; politics.  As would be expected, we found no answers.  The next 
+; FOTD will be posted in 24 hours.  Until then, take care, and the 
+; answers to some of the greatest questions are right in front of 
+; us.  All we must do is match the answers to the right questions.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Darker_Shadows { ; time=0:00:24.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+3.783622574746059/-0.003358870239376/\
+  4790313/1/-27.5/0 params=-0.9/-16/-0.8/4/0/0/0/0
+  float=y maxiter=2000 inside=0 periodicity=6
+  colors=000NFfTHi_JmfLpmNssOvqbVpq3rm6sj8tfAvcDw_Fx\
+  XHueSrnaovkhtgbrcWp_QoWOkXNhXLdYKaYIYYHVZFRZEOZLPY\
+  RPXYPWcQVjQUpQTvQSnVWg_Z`caUhdNmhGqk9vn2zq9qpFipL`\
+  pRTo00A00K00A00K00A01DXCobPoc_ocfdZ`_KUUCFAC1AA2A0\
+  00A08E1CK4GUAFcIEoSCuaAyzmzzzym4ua2oS0hI0ZA0O40C10\
+  C10O40ZA0hI0oS0ua0ym0zy0ym0ua0oS0hI0ZA0O40C10000C1\
+  0O40ZA0hI0oS0ua0ym0zy0ym0ua0oS0hI0ZA0O40C10000C10O\
+  40ZA0hI0oS0ua0ym0zy0ym0ua0oS0hI0ZA0O40C10000C10O40\
+  ZA0hI0oS0ua0ym0zy0ym0ua0oS0hI0ZA0O40C10000C10O40ZA\
+  0hI0oS0ua0ym0zy0ym0ua0oS0hI0ZA0O40C10000C10O40ZA0h\
+  I0oS0ua0ym0zy0ym0ua0oS0hI0ZA0O40C10000C10O40ZA0hI0\
+  oS0ua0ym0zy0ym0ua0oS0hI0ZA0O40C10000C10O40ZA0hI0oS\
+  0ua0ym0zy0ym0ua0oS0UoPRnPTlNVjLWhJYgHZeF`cDabBeZMh\
+  WXkTfnfbpt_6`CEdEMgFUkGanIirJquKyxLtoJofIjYGePF`GE\
+  cHIeILgJPiKSkLVmMZoNaqNdsfWuzOvrCwk0vf2ub4tZ5tV7sR\
+  9rNAqJCqFD_DKJBR29X9B`GDc }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
