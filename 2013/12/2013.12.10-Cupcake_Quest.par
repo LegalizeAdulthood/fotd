@@ -1,0 +1,105 @@
+;     Date: Tue, 10 Dec 2013 08:50:01 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 09-12-13 (Cupcake Quest [A-6,M-8])
+;       Id: <1.5.4.16.20131210085002.0d877376@earthlink.net>
+; ---------
+; 
+; FOTD -- December 09, 2013 (Rating A-6,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a math special, which explains the math rating 
+; of an 8.  It is also an entire parent fractal in itself, which 
+; explains why the art rating is an unspectacular 6.
+; 
+; The entire scene has been rotated minus-90 degrees, for a 
+; marginally improved composition.  The fractal actually has 
+; X-axis symmetry.
+; 
+; The real(p2) value of 3.1439495 is not frivolous.  It is the 
+; critical value at which the fractal does have X-axis symmetry.  
+; The value's closeness to the number PI is purely coincidental.
+; 
+; The name "Cupcake Quest" refers to the two cupcake shaped buds 
+; on either side of the fractal's main bay.  These buds and the 
+; filaments extending from them probably hold countless minibrots 
+; of all degrees of interest, but today is not the day we check 
+; for them.
+; 
+; The calculation time of 1-1/3 minutes will cause stress for no 
+; one.  Running a DOS file on some SOTA units can be quite a task 
+; however.  Those with uncooperative machines may find the image 
+; on the web sites.
+; 
+; The pre-calculated image is available online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Heavy clouds, melting ice and a temperature of 36F +2C defined 
+; the day here at Fractal Central.  The fractal cats had a 
+; reasonably uneventful day except when they inadvertently bumped 
+; into each other dashing around a doorway and a little mild cat 
+; profanity was exchanged.  We humans were shocked by the cat 
+; language, but it was nothing we had not heard before.
+; 
+; The next FOTD will be posted in the right time.  Until 
+; righteousness prevails, take care, and feel free to disagree.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cupcake_Quest { ; time=0:01:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.32195/0/1.06271/1/-90/0 params=1.333\
+  /0/3.1439495/0 float=y maxiter=25000 inside=0
+  logmap=yes periodicity=6 sound=off
+  colors=00001S01Q02O03M04K05I06G06E06C0690460230000\
+  00000D6BG6AJ7AL7AO79R79T79SD6SJ3SP0TN5TL9TJEUIIUGN\
+  UERZCVcB_h9cm7hr5lv4pz4gv4Zr5_o6`l7`j8ah9afAbdBbbC\
+  c`DdZEdXFeVGeTHfRHfTKcUM`VOZWQWXTTYVRZXO_ZL``Ju4Ut\
+  BSsIRrOPqVOpaMogLnnJmtIkqNinSglWei`cgdadi_bmaanbao\
+  dape`qg`rh`sj_tk_ul_ukZukZukZukZukZukYukYukYukYukY\
+  ukYudPhYHWR8JL07bMLtfZAoREiWIc_MYdPShTMmXGq`Avc5zb\
+  6wb7ta8raEoaKl`Pj`Ug_Ze_cb_h_ZmYZrVZvTOy0ty7qzAozC\
+  mzEkzGizJgzLezNczPewOftOgqOhnOikOjhOleOmUOnUOoUOpU\
+  OqUOrUMrUKrUJrUHrUFrUErUCrUArU9rU7rU5rU4rU2rU1sU5s\
+  U8sUCsUFtUItUMtUPtUStUWuUZuUauUeuUhuckmhimhhmhgmhe\
+  mhdmhcmhbmmZmhVmhRvhNwhIxhDyh9xhCwmFwmIvmLvmOumRum\
+  UtmXtm_zmczmfzmizmlzmgzmbzmYzmTezzezzgzzhzzizzjzzl\
+  zzmzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

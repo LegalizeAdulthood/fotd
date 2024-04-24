@@ -1,0 +1,114 @@
+;     Date: Sun, 08 Dec 2013 17:21:27 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-12-13 (Wrapped Around [A-8,M-7])
+;       Id: <1.5.4.16.20131208172127.2a37ba44@earthlink.net>
+; ---------
+; 
+; FOTD -- December 08, 2013 (Rating A-8,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I took the expression Z^(1.333)+C, 
+; calculated it 7 levels up the hyperspiral (hyperladder) with the 
+; 'floor' function applied, and checked the resulting fractal.
+; 
+; The name of today's FOTD, "Wrapped Around", does not refer to 
+; the image itself, but to the parent fractal in which it lies.  
+; This parent has been caught in the act of wrapping around the 
+; complex logarithmic hyperspiral and slipping off into uncharted 
+; higher dimensions.  It consists of a large twisted open area 
+; with two broken chaotic filaments extending north and west, and 
+; a prominent bud on the southeast shore line.  Today's scene lies 
+; not too far out in the chaotic filament extending to the north.  
+; I have not yet checked the bud.
+; 
+; The art aspect rates an 8, which is justified because the image 
+; is one of the better ones I have found in the exponent range 
+; between unity and two.  And I really did put extra effort into 
+; the coloring.  The math aspect rates a 7, with a good part part 
+; of the worth lying in the parent fractal, which has been caught 
+; spiraling off into another world.
+; 
+; The calculation time of 1-1/4 minutes is close to the average 
+; time it takes for a fractal to calculate on today's fireball 
+; fast but not always DOS capable machines.  The web sites can 
+; deliver the image faster, with no DOS compatibility problems.
+; 
+; So save calculation time.  See the finished image online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Cloudy cold weather with a temperature of 27F -3C prevailed here 
+; at Fractal Central today, with light snow beginning in the 
+; afternoon and worse to come tonight.  The fractal cats, who do 
+; not appreciate their snug warm home, kept watch for the unlucky 
+; cats outside, who have no snug warm home to go to to keep them 
+; comfortable.  In fact, Nico growled and hissed from the window 
+; when one of them wandered into the yard, looking for food.  The 
+; fractal humans spent the day battening down for the winter 
+; storm, which might not be as bad as some are forecasting.
+; 
+; The next FOTD will be posted in a reasonable time.  If the storm 
+; causes problems, it might not be for a couple days.  Until 
+; whenever, take care, and everyone knows what must be done to 
+; stop climate change and save the earth, but no one wants to 
+; inconvenience themselves enough to do it.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Wrapped_Around { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=-0.5153288927852182/+1.547161935824231/\
+  2075069/1/92.5/0 params=1.333/0/7/0 float=y
+  maxiter=2250 inside=0 logmap=122 periodicity=6
+  colors=000A2YA3XA4WA5VA6UA5TA3SA7RA5QA0PA5OA5NA6MA\
+  2LB1KA3IA3G93E82C72A60850640430220010000000O05c0Rw\
+  0zz0mg0hF0m00z00F0480010zczzzzgtzYmzPfzE_zBQz7Jw3C\
+  s06o04k00g00c00c00c00c00c00c0vz0czFnnYwNqz0pk4nS7n\
+  BBl0Hi0Li0Ne0Lc0La0L_0LY3KWCKUKKRUKOaKMiJPnRUp_Vuh\
+  _wrczzezzizzkzzizzizvgzehyTfwEfu3gr0kp0nn0pk0rh2wf\
+  3yd5zb7z_9zYBzWDzUEzUGJe00p00i00e00a00Y20UB0PL0LW0\
+  He0Dp09z03z10z90zD0zG0uD0r90r50p30p00n00n00n00l00l\
+  00i00i00g00g00g00n40uL0zc0ze0yg0ri0ll2en9ZpFSrMMuS\
+  Fw_9yf3zm0zt0ca1FL704D00H0BRO_aqygluigpjeknafn_anV\
+  YpUUpPRrNNrJJrGFuCBuA7w73w62wBJJF_00zH0zP8iVOcccci\
+  rcpncUlM9ih0gh0`h0Xh0Th0Nh0Jh0Fh0cy0cy0hy0hy0hy0my\
+  2my4my5my0my0my0zy0zy0zy0zy0zyDz_mzcmzhmzjmzomzrmz\
+  vmzymzzmzzmvzmrzmnzmizmezm_zmWzzRzzNzzJzzFzz0zz0zz\
+  0zz0zz0zz7zzEzzLzzTzzazzhzzrzBzz5zz0zz0zz0zz0zz5zz\
+  9zzDzzGzzLzzPzzTzzXyzZtzc }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

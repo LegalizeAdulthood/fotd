@@ -1,0 +1,115 @@
+;     Date: Wed, 04 Dec 2013 16:07:26 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-12-13 (Pseudo-Quadratic [A-9,M-9])
+;       Id: <1.5.4.16.20131204160723.2b4fe50e@earthlink.net>
+; ---------
+; 
+; FOTD -- December 04, 2013 (Rating A-9,M-9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's superior image shows a minibrot in the parent fractal 
+; that results when the expression Z^(1.333)+C is iterated one 
+; level up the hyperladder with no function applied.  This parent 
+; fractal rather resembles the eastern half of the main bay of the 
+; Mandelbrot set, complete with a quite convincing large quadratic 
+; bud on its northern side.  Today's unusually brilliant scene 
+; features a minibrot lying on a tiny disconnected filament 
+; fragment near this almost-quadratic bud.
+; 
+; >From a distance, the minibrot in today's image is shaped 
+; strikingly like the countless Minibrots found in the M-set, 
+; though a closer check reveals huge differences.  The name 
+; "Pseudo Quadratic" refers to this false resemblance.
+; 
+; In my opinion, both the art and the math aspects are worth the 
+; rating of a 9.  The art rating reflects the extra effort 
+; required to achieve the brilliancy.  The math rating is so high 
+; because I have never seen a minibrot so closely resembling a 
+; quadratic minibrot in a fractal with an exponent of Z as low as 
+; 1.333.
+; 
+; The calculation time of 4-3/4 minutes is admittedly slow, but at 
+; least in today's case, the result is well worth the wait.
+; 
+; The finished image is or soon will be available on the following 
+; FOTD web sites:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Fine early winter weather prevailed here at Fractal Central 
+; today.  The day began with heavy fog, but the fog lifted in the 
+; morning and revealed a mostly sunny sky that remained that way 
+; through the afternoon.  The ample sun raised the temperature to 
+; a high of 48F +9C.  The fractal cats appeared too interested in 
+; each other to pay much attention to the sun on the window shelf. 
+; The fractal humans had other things to do.
+; 
+; The next FOTD will be posted in the proper time.  Until 
+; whenever, take care, and which is worse -- conservatives who 
+; want to pass laws to force everyone to obey the rules of 
+; behavior set down in their Bible or liberals who want to pass 
+; laws to eliminate the natural inequalities inherent in humanity?
+; 
+; As I see it, neither of these goals is ever going to be 
+; achieved, but it sure is a lot of fun watching the two sides 
+; continue their futile squabbling.
+; 
+; 
+; Jim (neither right nor left) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pseudo-Quadratic { ; time=0:04:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.3243347326496687/+1.081261598206034/\
+  3.441011e+009/1/172.5/0 params=1.333/0/1/0 float=y
+  maxiter=5000 inside=0 logmap=-305 periodicity=6
+  colors=00000B00C00D00E00F10G20H30I40J50K60L70M80N9\
+  0OA0P50G50H50I50J50K50L50M50N50O50P50Q50R50S60T70U\
+  80T80T71S72S63S64Q53P53O42M40J30H30D208204100zQKtJ\
+  KqAKn8Hj8Dh46g60hB0iH0jL0kP0lT0mX0ma0ne0oi0pm0qq0z\
+  zFzzcVbB7HL6KK6MJ6OI6RH5TG5VF5YE5_D5aC6eD7iD8lD9pE\
+  AsEBwEBzEIyKPyQWyWbyaiygoylmvjkthjrfhpdfnbel`ciZbg\
+  X`eVZcTYaRW_PVYNTWOSVORTOQSPPQPOPPNNQLMQKKQJJRIHRH\
+  GRGESFDSECSJJWOQ_TXcYcgbjk`il_hmZhmYgnXgoWfoVfpUeq\
+  TeqSdrRdrOZzMTzJOzHIzECzC7zDCzDGzEKzEOzFSzFXzG`zGd\
+  zHhzHlzHpzIqzJqzKqzLqzMrzMrzNrzOrzPszQsXQsVRsSStPT\
+  tNUtKctImmKzmMzmOzmQzmSzmUzmWzmYzmZzmZzmZzmZzmZzmZ\
+  zmZxmZymZtmWomTjzRezOczMczJczHczEmzCmzJmzQmzXmzcfz\
+  jmzgmzemzbmz`mzYozWqzUszRuzPwzMzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,116 @@
+;     Date: Fri, 06 Dec 2013 16:08:01 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-12-13 (Straight and Narrow [A-8,M-7])
+;       Id: <1.5.4.16.20131206160801.2b170368@earthlink.net>
+; ---------
+; 
+; FOTD -- December 06, 2013 (Rating A-8,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The strange object in today's image is a fractal bay trying to 
+; become a quadratic bud in the parent fractal that results when 
+; the formula Z^(1.333)+C is iterated 333 levels up the complex 
+; logarithmic hyperladder.  This parent is a very unimpressive 
+; blob, an open area with almost nothing to attract interest.  
+; There is a small bay on the southern shore of the open area 
+; however, and it is this small bay that appears in today's image.
+; 
+; Do not be fooled by the great height of today's scene on the 
+; hyperladder.  The so-called hyperladder actually more of a 
+; hyperspiral, and the images found on it are a recurring periodic 
+; series rather than an infinity of ever new and more interesting 
+; fractals.
+; 
+; The name "Straight and Narrow" does not refer to the difficult 
+; path to heaven.  It describes the filament extending from the 
+; bud, which is filled with small minibrots.  (Some of these 
+; minibrots might be worth a look.)
+; 
+; The artistic worth of an 8 could be just a little inflated; the 
+; math worth of a 7 seems right on the mark.
+; 
+; The calculation time of 1-3/4 minutes is a fair price to pay.  
+; For more fairness check the web sites.
+; 
+; The fastest way to see the finished image is to check it on the 
+; FOTD web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with rain here at Fractal Central.  The rain ended 
+; by 10am, leaving clouds that hung on into the afternoon until 
+; the rain resumed at 3pm.  Ice and snow are expected tonight, but 
+; with a present temperature of 45F +7C, it will have to get quite 
+; a bit colder before anything frozen will fall.  The fractal cats 
+; had little time to worry about the weather.  Jazzy was too busy 
+; acting like a kitten and Nico was too busy watching her act so 
+; crazy.  The humans had a rather quiet day, which is the way we 
+; like it.
+; 
+; The next FOTD will appear in the near future.  Until it does, 
+; take care, and I hear a lot of complaints about a lack of equal 
+; rights.  If this were true, it could be remedied by proper 
+; legislation.  But we have had laws granting equal rights for 
+; half a century.  As I see it, the problem today is both a lack 
+; of the incentive to take advantage of the laws and the inability 
+; to do so.
+; 
+; 
+; Jim (leaning to the right today) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+StraightAnd_Narrow { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=t
+  center-mag=-0.369975/-0.635203/4.61/1/-167.5/0
+  params=1.333/0/333/0 float=y maxiter=4050
+  inside=0 logmap=11 periodicity=6
+  colors=00000000001A12A23C34E45G56I67K77M87O98QA8SB\
+  8SC9SD9SE9SDASDASCASBBSBBSABS9CS9CS8CS7DS7DS9GOAIK\
+  BKGDNCEP8FR4HR9IREJRIKRNLRRMRWNR_PSZQTZSUYTVYUWXWX\
+  XXYWZZW__V``VbaUcbUdcTfdTgeSifSjgRkhRmiQnjQojQmkSl\
+  kUjlVilXhlYfm_em`dmbbncane_ofZohYoiWpkVplUpnSqoRqq\
+  QqrOnoNmlMmiKmgJpdIrcIraGrZFrXErUDrRBrOArMArJlcLlc\
+  MlcNlcOlcPlcQlcRlZSlZTlZUlWUlXVlYWlZXl_Yl`ZlX_lY`l\
+  Zal_bl_bnYZoXWpVSqUPrTLtRIuQEvPBwN7xM4yL1tO5pQ9lTD\
+  hVHcYLc_PcbTcdXce`cedcfhcflcgpciscgrcfrcdrccrcbqc`\
+  qc`qcaqcapcbpcbpcbpcaoc_ocZocYocWnbVndTnfSnhRmjPml\
+  OmnNmoPjpRgqTdqVarXZsZWs`TtbRudOufLvhIwjFwlCxn9yp6\
+  yr4zoAzkAzh0zc1zZ1zU1zP1yK1xF7wACvCIvENuGSuIYtKbtM\
+  gsOmsQrsSwpRsmQpjPmgOjdNgaMdZLabIoaHp`Fq_Dr_BsZAtY\
+  8uX6vW4wW3xV4yV4zU4zU4zT4zT4zTKzSKzSKzRKzRKzQKzQKz\
+  QKzPKzPKzOKzOKzOKzNKzNKzMKzMKzLKzLKzLKzKKzKKzJKzJK\
+  zIKzIKzIKzHKzHKzGKzGKzGKz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

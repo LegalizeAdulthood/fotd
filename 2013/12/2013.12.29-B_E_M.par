@@ -1,0 +1,106 @@
+;     Date: Sun, 29 Dec 2013 16:26:34 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 29-12-13 (B-E-M [A-5,M-5])
+;       Id: <1.5.4.16.20131229162653.2bc747e8@earthlink.net>
+; ---------
+; 
+; FOTD -- December 29, 2013 (Rating A-5,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I applied a very small (0.00001 
+; degree) but complex 4-way rotation to the previous FOTD image, 
+; which was posted December 27.  The slightly different angle 
+; changes the previous nice symmetrical image into a B.E.M. or 
+; Bug-Eyed Monster of the kind that once populated the pages of 
+; the pulp sci-fi magazines.
+; 
+; It's not a very frightening monster however, and the math trick 
+; that created it is quite old, so I could rate the art and math 
+; aspects of the scene no higher than an everyday 5.  But even a 5 
+; is worth a quick check, and the image calculates in a reasonably 
+; fast 2 minutes, so why not boot up Fractint and see the monster. 
+; It might be good for a laugh.
+; 
+; Relief for those who would rather not calculate may be found on 
+; the FOTD web sites, where the image has been calculated and 
+; posted for maximum convenience.  The web sites may be accessed 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The weather here at Fractal Central today left a lot to be 
+; desired.  The steady cold rain that fell all day put a total 
+; damper on any outside plans, while the temperature of 39F +4C 
+; kept all thoughts of snow at bay.  The fractal cats had a slow 
+; day also.  Jasmine wanted to play, but Nico was in a bad mood 
+; and shouted her off when she tried to start a tussle.  The human 
+; mood was only a little better.
+; 
+; The next FOTD will be posted in a day or maybe two.  The only 
+; way to be sure when is to keep checking back.  Until whenever 
+; the fractal spirit strikes, take care, and now that science 
+; (whatever it might be) is proving scientifically that science 
+; is based on a grand illusion, where does this leave us when we 
+; want to know what to consider reality?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+B-E-M { ; time=0:02:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.00295243/\
+  -0.00295243/10/1/45/0 params=89.99999/89.99999/\
+  89.99999/89.99999/-1.22275/0/0/0/4.003/0 float=y
+  passes=1 maxiter=600 inside=0 periodicity=0
+  colors=000AHHAGHAGH9GH9FG9FG8EG8EGynIxmHwmHwlHvlHv\
+  lHukHzYG7BK8C`7Ha9Ka9NdAQcATgBWkBZoCasCbuCcwFeuHfs\
+  JgqLhpNinPjlUzzmzzzzzzzWzmRzcPzUOz_ZmHMcKLZUKPcJZm\
+  HcwGZmFUcEPUDNKCDKAKKBRRCYYDccEjjFqqGwwGrrFmmEihDd\
+  cD_ZCWUBRPANLALGXKCsNGrQKqTOpWRoYVo`Zncamfeliikklk\
+  ijjghiefiddhbch`ag__fYYfWWeVVeU`cUebTjaTo`RkaQhaOe\
+  bNbbLZbKWcITcHQcFNdEJdCGdBDe9Ae87eXE`tLWuI`uGduEhu\
+  CmuAqu8unJshTrbcpXmoVfkU_gSTcRM_SEUQFXOFZNF`LGbKGd\
+  IGgHGiFHkEHmCHoBHr9It8Iv6Ix5Iz9GyDFyHEyLCxPBxTAxX9\
+  x`7wd6wh5wl3vp2vt1vw0vlPXbl8`gD_bHYYLXTPVOUUJYSEaR\
+  AeVCgYDhaEjdGkgHmkInnKprLquMsxNtsTonYkibgdgc_l_Zk_\
+  ZkZZkZYjZYjZYiYXiYXhYXhYWhXWgXWgXVfXVfXVfWUeWUeWUd\
+  WUdVTdVTcVTcVScVSbUSbURaURaUR`TQ`TQ`TQ_TP_SPZSPZSO\
+  ZSOYROYRNXRNXRNWQMWQMWQMVQLVPLUPLUPKTPKTOKTOJSOJSO\
+  JROIRNIRNIQNHQNHPMHPMGOMGOMGOLFNLFNLFMLEMKELKELKDL\
+  KDKJDKJCJJCJJCJIBIIBIIBHI }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

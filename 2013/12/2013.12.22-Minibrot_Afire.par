@@ -1,0 +1,106 @@
+;     Date: Sun, 22 Dec 2013 19:28:39 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-12-13 (Minibrot Afire[A-6,M-6])
+;       Id: <1.5.4.16.20131222192852.2b6f0ca4@earthlink.net>
+; ---------
+; 
+; FOTD -- December 22, 2013 (Rating A-6,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's moderately impressive venture into the land of fractals 
+; came about when I calculated the Z^(1.618034)+C parent fractal 
+; at a point 3 levels up the hyperladder.  This parent consists of 
+; a twisted main bay with its main period-2 bud facing southeast.  
+; A field of debris lies on the northern edge of the main bay, 
+; with today's scene located in the outer part of this debris.
+; 
+; The name "Minibrot Afire" refers to the fiery reds and yellows 
+; surrounding the central minibrot, where they create a small but 
+; impressive effect.  The rating of a double 6 indicates that the 
+; image will set no new standards of quality, but like all 
+; fractals, it pictures something never before seen, making its 
+; viewing a first-in-a-life experience.
+; 
+; The time required to experience this thrill is a not-too-
+; expensive 2-1/4 minutes.  A quicker thrill may be experienced 
+; by checking the finished image and its variations on the FOTD 
+; web sites.
+; 
+; Satisfy your thirst for a view of the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today's record warm temperature of 66F 19C made it feel more 
+; like the middle of spring than the start of winter, while the 
+; clouds brought in moisture that gave a dose of midsummer 
+; humidity.  The fractal cats were more concerned with the 
+; decorations than with the outside conditions.  The fractal 
+; humans spent the day doing human things.
+; 
+; The next FOTD will be posted in four days on December 26.  
+; Until then, take care, and we hear so much about the real 
+; meaning of Christmas, yet so little agreement about what that 
+; real meaning might be.  To me, the real meaning will be revealed 
+; when an Atheist, a Pagan, a Mystic and a born-again Christian 
+; can all agree on and sincerely believe the same meaning.  (BTW, 
+; I do not expect to live to see such agreement.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Minibrot_Afire { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.5616424826528653/+1.134275857078414/\
+  3.89796e+009/1/97.5/0 params=1.618034/0/3/0 float=y
+  maxiter=2500 inside=0 logmap=221 periodicity=6
+  colors=000J1AK2AJ3AI4AI5AH5AH5AG59G48F47F47E47E47D\
+  46D36C36C36B35B35A35A35924824824723723623613512512\
+  412412311301201201100100000zzcst0pt0im0WY0LN0ED076\
+  1nojlmhjkfhiefgcefacd`abZ_`YZZWXYUVWTTURSSPQQOOPMM\
+  NLLLJJJHHHGFGEEECCCBAA9888776554333111mmzmmzmmzmmz\
+  mmzmmzmmzk9elAhmAjmBlnBooCqoCsmBqlBpkBojAmhAlgAkfA\
+  ie9hc9gb9ea8d`8cZ8aY8`X7_W7YU7XT6WS6UR6TQ6SO5QN5PM\
+  5OL4MJ4LI4KH4IG3HE3GD3EC2DB2C92A829718616415304323\
+  202101fPWeOVdNUcNTbMTaMS`LR_LQZKQYJPXJOWIOVINUHMTH\
+  LSGLRFKQFJPEIOEINDHMDGLCGKBFJBEIADHADG9CF9BE8AD7AC\
+  79B68A68957856745635534423322212111000CPyBOvBNtAMr\
+  ALpAKn9Kl9Jj8Ih8Hf8Gd7Fb7F`6EZ6DX6CV5BS5AQ4AO49M48\
+  K37I36G25E25C24A138126014002z35z24z24z23z13z12z12z\
+  11z01z00z00qcfocdncclcbkcajc`mz_mzZmzYmzXmzVmzUmzT\
+  mzSzzRzzQzzPzzOzzNzzMzzKzzJzzIzzHzzGzzFzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

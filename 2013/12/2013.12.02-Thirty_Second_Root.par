@@ -1,0 +1,114 @@
+;     Date: Mon, 02 Dec 2013 16:47:40 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 02-12-13 (Thirty-Second_Root [A-7,M-8])
+;       Id: <1.5.4.16.20131202164735.2ba731a6@earthlink.net>
+; ---------
+; 
+; FOTD -- December 02, 2013 (Rating A-7,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the parent fractal that results when 
+; Z to the power of 1.021897 is iterated at ground level of the 
+; hyperladder with no function applied.  Not coincidentally, this 
+; value is the square root of the exponent of yesterday's image, 
+; and also the 32nd root of 2.
+; 
+; The parent fractal of today's image closely resembles the parent 
+; of yesterday's image, though with less chaos along the edges of 
+; the large bay, which is shaped much like an elephant seal with a 
+; large pendulous nose.  Today's image is located in the chaos 
+; near the straight southern shore line of the large bay.
+; 
+; The amount of semi-organized detail in the scene is unexpected 
+; in a fractal created by an exponent of 1.02..., but images do 
+; not lie, and the stuff in today's image did not come from 
+; nowhere.  (Or did it?)
+; 
+; The name "Thirty-Second Root" refers to the exponent of Z.  The 
+; art rating of a 7 indicates that the image is worthwhile, though 
+; perhaps not as striking as some past fractal scenes.  The math 
+; rating of an 8 shows that the amount of detail in the image is 
+; quite unexpected.
+; 
+; The calculation time of 1-3/4 minutes will pass quickly enough.
+; 
+; For convenience, the image has already been calculated and 
+; posted to the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Variations are available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A cloudy sky and temperature of 41F +5C made today entirely 
+; un-notable here at Fractal Central.  The fractal cats, who are 
+; not quite ready to share the window shelf, took turns watching 
+; the outside scene.  The fractal humans, who wonder what the 
+; world is coming to, kept their wonder alive by watching the TV 
+; news at lunch time.
+; 
+; The next FOTD will be posted soon.  Until whenever that might 
+; be, take care, and when people dislike a big corporation, they 
+; usually fight it by organizing a boycott against the 
+; corporation's products.  The big oil corporations certainly are 
+; disliked, even hated, so where are the cries for a boycott of 
+; products derived from petroleum
+; 
+; 
+; Jim (they got us hooked) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Thirty-Second_Root { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-7.97709/-0.623008/9.910814/1/33/0
+  params=1.021897/0/0/1500 float=y maxiter=3500
+  inside=255 logmap=106 periodicity=8
+  colors=000A0HA0JA0LA0NA0PA0RA0TA0RA0PA0NA0LA0JA0HA\
+  0FA0DA0CA0D00C00C00I00I00I00I00J00J00J00J00L00L00L\
+  00L00M00M00M00M00O00O00O00O00P00P00P00P00R00R00R00\
+  R00M00O00P00R00S00U01W02X04Z05_06a08c09d0Af0Ch0Di0\
+  Er0Et0Gu1Hw4Jz5Kz8Kz9MzCOzDPzGRzHRzKUzMXyO_tPaoRai\
+  SadUa_WaWZaR_aMaaHcaDda9fa5ha1iZ0kW9mPMmESo5Zr0Sp0\
+  Mf0EX18O44G658850A50D50E50J60M81P95UAAXCG_DMcERhGX\
+  kHcoJiwJhrKfmMdhOccPa_R_WSZRUXMWXJW_DUa9Sc4Rf0Ph0O\
+  i0Of0Jc4Ea9AZG8WO4UU0Ra0Ph0Ma2JWCGRKDKWrMdrMprMzrM\
+  zrMzrMzrMwrMvrMtrMrrMprMmrMkrMirMhrMfzaczaaza_zaZz\
+  aXzaWzaZzaazadzahzakzaozarzavzayzazzazzazzazzazzaz\
+  zazzazzazzazzazzazzazzazzazzazzazhrzcrzZrzUrwRrrMr\
+  mHriardarZaraardarharkryorzwrzrrzmrzirzfrzarzZrzWr\
+  zPrzSrzUrzXvzZyzazzczzfzzhzzizzZzzPzzMzzazzizzrzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzaaa }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

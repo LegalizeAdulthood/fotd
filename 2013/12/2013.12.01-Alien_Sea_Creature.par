@@ -1,0 +1,108 @@
+;     Date: Sun, 01 Dec 2013 17:12:47 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-12-13 (Alien Sea Creature [A-6,M-6])
+;       Id: <1.5.4.16.20131201171242.0d873fbe@earthlink.net>
+; ---------
+; 
+; FOTD -- December 01, 2013 (Rating A-6,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; There is little to be said about today's image, which is simply 
+; the parent fractal that results when the expression 
+; Z^(1.044274)+C or Z^(sqrt(sqrt(sqrt(sqrt(2)))))+C is iterated at 
+; ground level of the complex hyperladder with no function applied.
+; 
+; The image reminded me of a scene in the sea of a hypothetical 
+; water world, where a sea creature is swimming toward the 
+; surface.  The name "Alien Sea Creature" soon followed.
+; 
+; The amount of smaller detail in the fractal is striking, 
+; especially in the area of the little 'flipper' just below the 
+; sea creature's head.  This area is most likely to hold 
+; minibrots, though due to the slowness, I have not yet checked 
+; there.
+; 
+; The art and math aspects of the image both rate a 6, which is at 
+; least a little above average.  The calculation time is a rather 
+; slow 3-1/4 minutes, most of which can be saved by checking the 
+; FOTD web sites.
+; 
+; Save a few minutes by checking the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with curious and interesting variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Heavy clouds and chilly temperatures made today an unpleasant 
+; one here at Fractal Central.  The fractal cats, who are learning 
+; fast how to co-exist in peace, had a day of playing and resting, 
+; while the fractal humans did the things humans do on days unfit 
+; for outside activity.
+; 
+; The next FOTD, most likely another venture into the world of 
+; ultra-low exponents, will be posted in the near future.  Until 
+; we see how near, take care, and keep those drugs and those new 
+; electronic gadgets coming.  They keep us distracted from the 
+; pathetic condition of present-day humanity, and the even worse 
+; future that awaits both us and our children.  (And I wonder 
+; when, if ever, high technology will ride to the rescue.)
+; 
+; 
+; Jim (negative but blunt) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Alien_Sea_Creature { ; time=0:03:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident inside=0
+  center-mag=-10.4062/0.743786/0.1168224/1/40/0
+  params=1.044274/0/0/525 float=y maxiter=22000
+  logmap=2 periodicity=10
+  colors=00000F00G00H00I00J00J00K00K00K00L00L00L00M0\
+  0M00M00N00N00N00N00O00O00O00O00P00P00P00P01Q01Q02Q\
+  02Q03R03R04R04R05S05S06S06S07T07T08T08T09U09U0AU0A\
+  U0BU0BV0CW0CX0DY0EZ0F_0G`1Ha2Ib3Jc4Kd5Le6Mf8Ng9OhB\
+  PjCPkEQlFRmHSoITpKTqLUrNVtOWuQXvRXwTZtU`qVbnWckXch\
+  YceZcb_c_acXbcUccRdcOecLfcIgcFhcCicLjWUjPwkIarAGlC\
+  HfEH`FHVHHQJIKKIEMI8OI3PI7SJBUKFWLIZMM`NQbOUdPXgQ`\
+  iRdkShpSgmTfjUegVddWcbXb_YaXZ`U_`S_bOZcLYdHXfEWgAV\
+  h7VfCSdHPcLMaQK_VHZZEXcBWg9UcGS_NQXTOT_mUemUlmUrmU\
+  rmUrmUrmUpmUomUnmUmmUlmUjmUimUhmUgmUfzcdzcczcbzcaz\
+  c`zc_zcazcczcezcgzcizckzcmzcozcqzcszcszctzctzctzct\
+  zctzctzctzctzcuzcuzcuzcuzcuzcuzcugmxdmuamrZmpXmmUm\
+  jRmhcmecmacmccmecmgcmimqkmspmummwjmyhmzfmzcmzamz_m\
+  zWmzYmzZmz`mzamzcmzdmzfmzgmzhzzazzWzzQzzJzzDzz7zzA\
+  zzCzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

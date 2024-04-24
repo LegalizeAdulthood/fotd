@@ -1,0 +1,112 @@
+;     Date: Wed, 11 Dec 2013 00:21:46 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-12-13 (Buried Cupcakes [A-8,M-8])
+;       Id: <1.5.4.16.20131211002149.29df2e46@earthlink.net>
+; ---------
+; 
+; FOTD -- December 10, 2013 (Rating A-8,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene deep within yesterday's parent fractal. 
+; It lies near a much larger minibrot near the outer limit of the 
+; reddish area extending to the right of the bottom of the parent. 
+; This larger minibrot will be revealed if today's image is 
+; recalculated with the magnitude reduced to 600 and the logmap 
+; reset to zero.  Curiously, this larger minibrot is an exact 
+; duplicate of the parent fractal.
+; 
+; To create today's colors I reused yesterday's palette and spiced 
+; it up to add a bit more contrast and reduce the color intensity. 
+; A minibrot lies at the center of the image, but unfortunately, 
+; it is well out of range of the DOS version of Fractint.  The 
+; tiny black dot at the center is not the minibrot.  It is an open 
+; area resulting from an inadequate maxiter.
+; 
+; The art aspect rates an excellent 8, or at least in my opinion 
+; it does.  The math aspect also rates an 8, since the minibrot is 
+; unusually attractive for a fractal with an exponent in the range 
+; of 1.333.
+; 
+; The calculation time of 2-1/3 minutes will pass in a couple 
+; flashes once the quality of the final image becomes apparent.  
+; This time may be cut to a single flash by calculating the image 
+; with the passes set to 'g'.  Otherwise, the web sites can make 
+; things notably less cumbersome.
+; 
+; The image has been calculated and posted on the web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with 1cm 1/2in of light snow and ended with lots 
+; of sunshine.  The temperature of 34 was chilly, but a lack of 
+; wind made it feel reasonably comfortable.  The fractal cats 
+; spent most of the day sleeping.  The new fractal cat Jasmine 
+; slept almost as much as Nico.  He must be teaching her all his 
+; bad habits.  The humans made it through the day uneventfully.
+; 
+; The next FOTD will be posted within a reasonable time, but due 
+; to the holiday decorating that is scheduled tomorrow, the FOTD 
+; might not appear until December 12.  Until whenever, take care, 
+; and watch for inconsistencies and a lack of information before 
+; you sign on to an environmental cause.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Buried_Cupcakes { ; time=0:02:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.2777676689985294/+0.9028184557183553\
+  /4.336525e+011/1/67.5/0 params=1.333/0/3.1439495/0
+  float=y maxiter=550 inside=0 logmap=284
+  periodicity=6
+  colors=00000000044f33a33W22R22L22G11B1160020000000\
+  00000F00C05P9DS9DWAC_DDaFD`J8`D6`L6aI6fGEaJLcGRcGW\
+  cE_iEeoFkuEpzUvz_zyezzevzYmuSmxLnzFnwGosHnoInlKniM\
+  omOqkPqiRrgTrfUseUshYoi`libilQgmQdhffibbk_ZlTVqGzl\
+  IzlIzlKzgMzgNzgPzgPzgRzhSzhUzhWzhWzhXzhYzi_zi`zIYz\
+  IZzI_zI`zIazKbzKczKdzKezKezNfzPgyQgwRhtThsUiqVhnWh\
+  lYhkZhh_hgaifbiedkedkddlaelZemYfmVgnShnPhoMioKkqHk\
+  qDlr9mr8gn8_kATgCLcDE_EzkxzmwznwzpwzrwzsvlYzjSzgNz\
+  bUzY`xOcqEckFchKcfPcdUeaZg`ciZkjYlkXmlWrj0uj0zj0zl\
+  0zo0zq5zsAzuFuxKzyPzyUzzZzzczzhzzmzzrzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzvzzxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

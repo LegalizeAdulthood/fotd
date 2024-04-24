@@ -1,0 +1,105 @@
+;     Date: Tue, 03 Dec 2013 16:25:38 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 03-12-13 (The Absolute Limit [A-5,M-7])
+;       Id: <1.5.4.16.20131203162534.2d5fe1b8@earthlink.net>
+; ---------
+; 
+; FOTD -- December 03, 2013 (Rating A-5,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; How low can you go?  No, we're not talking about the long-gone 
+; fad of limbo dancing, the lowness lies in today's exponent, 
+; which is the 128th root of 2 or 1.0054298, a value so close to 
+; unity that its graph is barely distinguishable from a straight 
+; line.  But thanks to the MandelbrotBC3 formula, and also the 
+; multi-valued nature of the complex log function, we have dredged 
+; up something from almost nothing.
+; 
+; True, today's image consists of nothing more than arcs filled 
+; with smaller arcs all the way down, but the screen is not filled 
+; with a flat pattern and a smooth-edged boundary.
+; 
+; The art rating of a 5 is everyday average.  The math aspect has 
+; more interest, and rates a 7, which is somewhat above average.  
+; The name "The Absolute Limit" refers to my present feelings 
+; about the low-exponent theme.  It does not mean I will never try 
+; to find detail in a fractal with an exponent of 1.0027112, but 
+; it does mean that if I ever do go searching, it will not be for 
+; a while.
+; 
+; With a running time of 4-1/4 minutes, the calculation is a bit 
+; on the slow side, so if time is a factor, check the web sites.
+; 
+; To avoid calculation the image check the FOTD web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of sun and clouds with a temperature of 46F +8C and a calm 
+; wind made today rather pleasant here at Fractal Central.  The 
+; fractal cats spent their waking hours getting to know each other 
+; better and their sleeping hours asleep.  The fractal humans, if 
+; that's what we are, spent the day doing routine things.
+; 
+; The next FOTD will be posted in the near future.  Until the near 
+; future arrives, take care, and have you heard the conspiracy 
+; theory about the existence of conspiracy theories?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Absolute_Limit { ; time=0:04:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-14.7101/1.17509/8.709171/1/19.25/0
+  params=1.0054298/0/0/2400 float=y maxiter=2000
+  inside=255 logmap=405 periodicity=8
+  colors=000D880000000000000000000000000000000050080\
+  0800900900A00A00C00C00D00D00E00E00F00F00G00G00H00H\
+  00I00I00I00I00I00J00J00J00J00L00L00L00L00M00M00M00\
+  M00O00O00O00O00P00P00P00P00R00R00R00R00Q00O00R00R0\
+  0U00U01W02X04Z05_06a08c09d0Af0Ch0Di0Er0Eq0Gu1Hv4Jz\
+  5Kz8Kz9MzCOzDPzGRzHRzKUzMXyO_tPaoRaiSadUa_WaWZaR_a\
+  MaaHcaDda9fa5ha1iZ0kW9mPMmESo5Zr0Sp0Mf0EX18O44G658\
+  850A50D50E50J60M81P95UAAXCG_DMcERhGXkHcoJiwJhrKfmM\
+  dhOccPa_R_WSZRUXMWXJW_DUa9Sc4Rf0Ph0Oi0Of0Jc4Ea9AZG\
+  8WO4UU0Ra0Ph0Ma2JWCGRKEKWGMdIMpKMzMMzOMzQMzSMwUMvW\
+  MtYMr_MpaMmcMkeMigMhiMfkNcmOaoQ_qSZsUXtWWuYZv_awad\
+  xchyekzgozirzkvzmyzozzqzzszzuzAaz0azXaz0azfazzazka\
+  zzaz0azzaz0azzaz0azhrzcrzZrzUrwRrrMrmHriardarZaraa\
+  rdarharkryorzwrzrrzmrzirzfrzarzZrzWrzPrzSrzUrzXvzZ\
+  yzazzczzfzzhzzizzZzzPzzMzzazzizzrzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

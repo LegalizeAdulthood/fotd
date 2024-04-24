@@ -1,0 +1,110 @@
+;     Date: Thu, 12 Dec 2013 07:14:05 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 11-12-13 (Fractal Music??? [A-8,M-9])
+;       Id: <1.5.4.16.20131212071410.2a9f2a60@earthlink.net>
+; ---------
+; 
+; FOTD -- December 11, 2013 (Rating A-8,M-9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has an art rating of an excellent 8.  The reason 
+; is apparent.  The math rating however is a superior 9.  This 
+; rating was earned when I noticed that the scene splits in half 
+; horizontally directly through the origin of the tiny minibrot at 
+; the center.
+; 
+; By itself, this split is not very exciting, but then I noticed 
+; that the left and right halves are symmetrical with respect to 
+; the split, and that the features of the right half are only half 
+; the size of those on the left half.  I have never before seen 
+; such a thing, which IMO earns the math rating of a 9.
+; 
+; The name "Fractal Music???" came about when I noticed the 
+; resemblance of the circular elements to a keyboard.  The three 
+; question marks were added because I have yet to hear any fractal 
+; music that sounded like anything more than semi-organized noise. 
+; And I doubt that I ever will.  (Let me know when a computer 
+; running a fractal program writes a listenable symphony or a 
+; listenable anything musical.)
+; 
+; The calculation time of 40 seconds will pass faster than the 
+; minute waltz.  Those who rock instead of waltzing can find 
+; satisfaction on the web sites.
+; 
+; Check the fractal glory effortlessly on the web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The sunshine was plentiful here at Fractal Central today, but 
+; the brisk west wind and temperature of freezing kept the 
+; outdoors too chilly for full comfort.  The fractal cats spent 
+; the day taking turns gathering sunbeams and playing together, 
+; while the fractal humans spent the day putting up seasonal 
+; holiday (in other words, Christmas) decorations.
+; 
+; The next FOTD will be posted most likely in a day or so.  Until 
+; whenever, take care, and fractal music will have arrived when, 
+; instead of writing a noisy curiosity that people listen to only 
+; once, and even then out of courtesy, a fractal program writes a 
+; composition that people will enjoy listening to again and again 
+; because it moves their spirit.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Music??? { ; time=0:00:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident inside=0
+  center-mag=-0.8120903305079495/+0.9967583787761772\
+  /4.952409e+008/1/31.5/0 params=1.333/0/3.1439495/0
+  float=y maxiter=12000 logmap=104 periodicity=6
+  colors=00000U00S00Q00O00M00K00F00A0050000000000080\
+  00000000000800C00T00Z00m00P00P40PA0RG0RC0R80T6WTAg\
+  T0yl0Vb0Fp0cm0ck0mz0mz0cm0bm00u0ew0esKgu0gzOiz0ii0\
+  0e0mi0zl0oV2oR4zN4qRAkTEeVzbXLXZRR`VNbZHdzCee8z0Tz\
+  0Pz6NzHJzVHzgEzT0zz8zz6zzGvzPszXoveksmgmvdizggzimz\
+  mzzomzzmzzezzdzzdzzdzzbzzbzzbzzbzzbzz`zz`zz`zz`zz`\
+  zz`zmmu`mXNm8Cm0imCzmb0mN0mX6mdEmmJmuRmzZmzemzkmzi\
+  mzimzgmzgmzgmzemxemsdmodmidudbz`bzVbzRHz0zc0zc0zc0\
+  zc0zc2vc8scCocGzcJzmHqzHszHuzHvzHxuHzoHzTHzTHzTHzT\
+  Hzkkzkkzkkzkkzkzzkzzkzzkzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

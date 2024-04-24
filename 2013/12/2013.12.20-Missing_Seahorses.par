@@ -1,0 +1,104 @@
+;     Date: Fri, 20 Dec 2013 17:27:58 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-12-13 (Missing Seahorses [A-7,M-8])
+;       Id: <1.5.4.16.20131220172810.2ddf04c4@earthlink.net>
+; ---------
+; 
+; FOTD -- December 20, 2013 (Rating A-7,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's image we checked the ersatz East Valley of the 
+; parent Zexpe fractal; in today's image we check the ersatz 
+; Seahorse Valley.  We certainly do find a lot of broken seahorse 
+; tails there, but few intact seahorses.  This lack of seahorses 
+; is the inspiration for the name "Missing Seahorses".  But who 
+; needs whole seahorses when their dismembered tails make an image 
+; with an art rating of a 7 despite the preponderance of brownish 
+; and reddish hues?
+; 
+; The somewhat liberal math rating of an 8 is based on the 
+; minibrot at the center, which is the mirror image of the parent 
+; fractal and has the pathological growth on the southeast side of 
+; the main bay rather than the southwest side.  This is the first 
+; time I have noticed this relation, but certainly not the first 
+; time it has happened.
+; 
+; The calculation time of 7-1/2 minutes is slow, and I'm not sure 
+; the image is worth it, but the FOTD web sites are always ready 
+; to cure the problem of slowness.
+; 
+; The completed image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Cloudy skies and occasional sprinkles of rain made today far 
+; less than ideal here at Fractal Central, though the temperature 
+; of 43F +6C kept the outdoors reasonably comfortable.  The 
+; fractal cats were too busy keeping an eye on each other to 
+; notice what was happening outside.  The humans kept themselves 
+; busy making final preparations for the big day.
+; 
+; The next FOTD will be posted in a number of hours.  To find out 
+; the exact number, check here every few hours.  Until whenever, 
+; take care, and everyone has the freedom to speak his mind and 
+; the freedom to disagree with the spoken opinions of others.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Missing_Seahorses { ; time=0:07:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=t
+  center-mag=+0.08486949666/+0.761618516836/735760/1\
+  /-35/0 params=2.71828182845905/0/0/0 float=y
+  maxiter=21000 inside=0 logmap=-626 periodicity=6
+  colors=000000300800C00C00F10F20F30H40L50O60O70S91U\
+  C2WE3XF4_G5bH6eI7hLBkPFnUKqZPtaUwdZzgczjezmgzpiA0E\
+  A0FA2FAAGA1GAAHA4IAAiAAiA3JAA6AALAAYAAXAAaAAYCAdD7\
+  dEFbFKmGLmDCm9Lz6Lz7Kz8Uz9UzAUmBUjCUhDUeEUcFU`GUZH\
+  UWHUUIcSJcPKcNLcKMcINcFOcDPcAQj8Wh0bm3`m1cm8amE_zK\
+  ZzQYzWXzaWzgVziUzkQzmNzoJzrGztCzv9zx6zzUzYpz6pk7pl\
+  7pm7pn8po8pp8pp9pq9pr9psAptApuApuAhtBatCVsCzszzrzz\
+  rzznJzmLzmNzmOzmQzlRzlTzlUzlWzlYzkZzk`zkazzzzzzzzz\
+  zzzzzzzzzzzzzzzhzzfzzczzazz_zzYzzVzzTzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzVzzYzz`zzczzf\
+  zzhzzkzznzzqzztzzwzzyzzvzzszzqzznzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzQzzUzzYzzazzezziz\
+  zlzzGzzGzzGzzGzzGzzUzzgzzuzvvzuvzuvztvztvztvzsvzsv\
+  zrvzrvzrzzqzzqzzqzzrzzszzszztzztzzuzzvzzvzzwzzwzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

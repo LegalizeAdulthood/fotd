@@ -1,0 +1,98 @@
+;     Date: Sat, 14 Dec 2013 17:43:12 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-12-13 (Way Out East [A-6,M-6])
+;       Id: <1.5.4.16.20131214174318.2a4f39f4@earthlink.net>
+; ---------
+; 
+; FOTD -- December 14, 2013 (Rating A-6,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday's image is located in the East Valley of a random 
+; Mandelbrot set at the eastern edge of the 'fan' of the parent 
+; fractal that results when various negative portions of Z^(-1.3) 
+; and Z^(-7.6) are mixed on each iteration.  Today's image is 
+; located near the tip of the main spike of that same M-set.
+; 
+; The 16 small oval rings surrounding the central minibrot in the 
+; image are typical of fractals with double negative exponents.  
+; The raggedness at the edges of the minibrot is a sign that the 
+; magnitude is near the limit of precision.  
+; 
+; Unfortunately for the ratings, the math double-negative trick is 
+; well overworked and the sallow coloring does little to improve 
+; things.  Try as I did to delude myself, I could give neither the 
+; art nor the math aspects of the image a rating higher than a 6.
+; 
+; The calculation time of 3-1/3 minutes is rather slow, but as 
+; always, the web sites are there to bring relief to the impatient.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Snow fell all day here at Fractal Central today, piling up to 4 
+; inches or 10cm by post time, and it is still snowing.  The 
+; temperature of 28F -2C was not too bad however.  The old fractal 
+; cat took it in stride, while the new fractal cat was fascinated 
+; by all the white stuff falling from the sky.  The humans had an 
+; uneventful day, though with the sidewalk to be cleared, tomorrow 
+; will not be as uneventful.
+; 
+; The next FOTD will be posted soon.  To see how soon, check back 
+; at frequent intervals.  Until whenever, take care, and I think I 
+; spotted four calling birds in the back yard this afternoon.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Way_Out_East { ; time=0:03:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+5.36719024726443/+1.188330139613972/\
+  8e+011/1/-52/0 params=-4/-1.3/-0.8/-7.6/0/0/0/0
+  float=y maxiter=1600 inside=0 logmap=-273
+  periodicity=6 mathtolerance=0.05/1
+  colors=000bEDcGEdIFeKGfMHgOIiQJkSKmULoWMqYNt_OwaPz\
+  cQzeRzgSziTzkUzmVzoWzqXzsYzuZzwWsyUowRluOhsMeqJboG\
+  ZmEWkBTg9Rc8PZ7OU6MP5LK4JF3IA2IF8IKEIPJIUPIZUIZ_Ia\
+  dK`aMa_OaYQ_WSYUUVSNVSRQWUL_XHc_Ef`Hd`JcaMaaO`bRZb\
+  TccXhc_mecrffvhjzimzjpzlmvljrlhmlehlbcl_ZlYUmVPnSK\
+  oPKpNKqKJrHJsDJt9Iu6Iu1It0HoJelIdgIddIc_HcXHbSHbOG\
+  aKGaGGZCFV8FO5FMTQao`bkabgabcab_bbWbbTbbPbbLcbHcbD\
+  cbAcbAa_9_X9YU9WR8UO8SL7QI7OF7MC6K96I66G3TE4TE4TE4\
+  TE4TE4TE4TE4TE4UF3VF3WF3XG3YG3ZG3_G3`H3aH3aH3bI3cI\
+  3dI3eI3fJ3gJ3hJ3iJ3jK3jK3kK3lL3mL3nL3oL3pM3qM3rM3r\
+  M3pN5oO6nP7lQ8kR9jSAhTBgUCfWEdYFc_GbaHacI_eJZgKYiL\
+  WkMVmOUmPSmQRmRQmSOmTNmUMmVLmWPmXToXXqY`sYdvZhxZlz\
+  Zhz`ezabzc_zdXzeUzgRzhNzjKzkHzlEznBzo8zq5zr2zsEzpQ\
+  zmazjmzghzgdzg`zgXzgTzgPzgLzgHzgDzg9zg5zgCzdIzbPz_\
+  VzYazWgzTnzRtzPqzXozdmzkkzsizzgzxfzveztdzrczqbzo`z\
+  m_zkZzjYzhXzfWzdUzbTzaSz_ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

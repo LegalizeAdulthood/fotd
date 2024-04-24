@@ -1,0 +1,113 @@
+;     Date: Tue, 31 Dec 2013 18:22:05 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-12-13 (Pentagon Paradise [A-6,M-8])
+;       Id: <1.5.4.16.20131231182225.38e75fca@earthlink.net>
+; ---------
+; 
+; FOTD -- December 31, 2013 (Rating A-6,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Strange rectangles appear in the Julia sets of the Z^(2.003)+C 
+; Mandeloid corresponding to the area on the X-axis just east of 
+; the large, split apart minibrot.  Not surprisingly, rectangles 
+; are also found around the Mandel minibrots in this area.  But 
+; totally surprisingly, when the Julia sets of these Mandelbrot 
+; rectangles are checked, they turn out to be not rectangles, but 
+; concave octagons.  And even more surprisingly, when the julia 
+; sets of the edges of these Mandelbrot rectangles are checked, we 
+; find not rectangles, nor octagons, but pentagons, two of which 
+; appear in today's image.
+; 
+; I named the image "Pentagon Paradise" because of the two 
+; pentagons sitting blissfully at the center of the scene, 
+; enjoying the inevitable boredom of their eternal rest.
+; 
+; The art aspect of the scene is worth only a 6.  We have seen 
+; similar scenes many times before.  The math aspect however rates 
+; a quite honorable 8, at least for those who are into fractal 
+; math.
+; 
+; The image calculates in an average 2 minutes.  This is fast 
+; enough to prevent impatience yet slow enough for a bit of 
+; anticipation to build.  The web sites will avoid all anxiety.
+; 
+; The happiness usually found only in paradise may be enjoyed by 
+; viewing the finished image on the FOTD web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day here at Fractal Central began with heavy clouds and 
+; light snow.  After leaving a dusting on the sidewalk, the snow 
+; moved out, and by afternoon the sun appeared.  The high 
+; temperature of freezing was right on the mark.  The fractal cats 
+; watched the snowflakes fall for an hour or so, then began 
+; playing with each other until Nico grew tired and retired under 
+; a chair cover.  Jasmine soon retired to the chair in her room.  
+; The humans, who are doing absolutely nothing special this year, 
+; had little trouble preparing for the new year's arrival.
+; 
+; The next FOTD will be posted next year.  Until then, take care, 
+; and what will the good people do when they grow bored with the 
+; eternal peace of heaven and want a little action?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pentagon_Paradise { ; time=0:02:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 center-mag=0/0\
+  /40000/1/-177.5/0 params=90/0/90/0/-1.743377131101\
+  082/7.467157179206152e-007/0/0/2.003/0 float=y
+  maxiter=750 inside=0 logmap=289 periodicity=6
+  colors=000TPNIRNcV`aUZ_TWZSUXRSVQPTPNROLPNINMGMMEK\
+  NGIOHGPIEQKCRLASM8TN6UP4VQ2WR0XS0WQ0VO0VM0UK0UJ5_H\
+  9eGDkEHpDFdGDTJBHMA6OA9RABUADXAF_AHbAJeALhANkAPnAR\
+  qATs9Sq8So8Rn7Ql6Pk6Pi5Oh5Of4Nd3Mc3Ma2L`1KZ1KY0JW0\
+  JV3LQ6NM9PHBRDCUFDWHEZJF`KGcMHeOIgQJjRKlTLoVMqXMsY\
+  NtXOuWPuVQvURvTSwSTwRUxQVxPWyOXyNYzMZzMcuOgpQlkSpg\
+  UqiXrk_rmasodsqftsitukuwnuyprzAfwKVuTJsa8qj6coBckG\
+  cgLccQh`RhbRmcRmdRmeRmfQhbRhhRhiRcjRckXc8hzzhzzhzz\
+  hzzhzzhzzhzzhzzhzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzQzmRzmRzlRzlF\
+  zvIztKzrNzpPznBzGDzJEzMGzPHzSJzVKzYMz`NzcPzfQzioz_\
+  kzahzcezdbzf_zhXziUzk`zO_zQZzRZzSYzUYzVXzWXzYWzZWz\
+  _VzaVzbUzcUzeTzfTzgSziSzjRzkJzsMzpPznzzptzonznhznb\
+  zmXzlozlmzllzlkzljzlizlgzlfzlezldzlczlazl`zl_zlZzl\
+  YzlWzlVzlUzlTzlSzl`zF_zHZzJZzLYzNYzOXzQXzSWzUWzWVz\
+  XVzZUz`UzbTzdTzeSzgSziRzk }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

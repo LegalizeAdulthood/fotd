@@ -1,0 +1,111 @@
+;     Date: Thu, 05 Dec 2013 15:36:50 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-12-13 (On the Superspike [A-7,M-7])
+;       Id: <1.5.4.16.20131205153647.2dafee82@earthlink.net>
+; ---------
+; 
+; FOTD -- December 05, 2013 (Rating A-7,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a minibrot lying way out near the tip of the 
+; main spike of its parent fractal.  But this parent is not the 
+; Mandelbrot set.  It is a Z^(1.333)+C fractal with a spike that 
+; puts the spike of the M-set to shame.
+; 
+; To begin, the spike is far longer than the M-set's spike, and it 
+; also points northwest instead of straight west, with far more 
+; fractal detail along its path.  With all these superior 
+; features, I could consider the spike nothing less than super, 
+; which was reason enough to name the image for its location -- 
+; "On the Superspike".
+; 
+; The parent fractal came about when I calculated the expression 
+; Z^(1.333)+C at a height of only one level up the hyperladder (or 
+; hyperspiral) with the cosine function applied.  I think this is 
+; the first time I have applied the cosine function to the 
+; MandelbrotBC3 formula, and at today's hyperlevel it produces a 
+; rather scrambled parent with little but its one superspike.
+; 
+; The image came about as a result of an effort to duplicate 
+; the rating of yesterday's image, but the final result was less 
+; impressive, rating only a 7 for both art and math worth.
+; 
+; The image is a super fast one, finishing in 20 seconds or less 
+; on a SOTA (State Of The Art) machine.  Even on older units it 
+; will finish very fast.
+; 
+; Viewing the finished image is always more convenient than 
+; calculating it however, so enjoy the convenience of direct 
+; viewing by checking the FOTD web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Heavy clouds spoiled the first half of the day here at Fractal 
+; Central today, while rain spoiled the second half.  The 
+; temperature of 57F 14C was quite reasonable for the season 
+; however.
+; 
+; The next FOTD will soon appear.  Until the apparition happens, 
+; take care, and when a totally crazy man wins the mega-lottery 
+; and becomes unimaginably wealthy, should he then be considered 
+; merely eccentric?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+On_the_Superspike { ; time=0:00:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=cos
+  center-mag=-4.185306304415169/+6.636739950187376/\
+  7253877/1/58.75/0 params=1.333/0/1/0 float=y
+  maxiter=2500 inside=0 logmap=41 periodicity=6
+  colors=00000400500700810920A30A10B30C50D81AB27918C\
+  24E35G45I55K65K65N66O86T86W96YA6_B7aB7cC7eD7gD7iC8\
+  kC9mBAjBBeAC`ACW9DR9EM8FH8GC8G79J4AM5BP7CU8DZ9EcBG\
+  hCImDKrFMvGOzHOwGMuFKsEJqDHmCGmBEmAClAAk98j86i75i6\
+  4g53f42e31d30cB0XI0SQ7aX7Yd6Tk5Os4Jz4Fy8JyCMyFPxJS\
+  xMVxQYxT`wXdw`gwcjvgmvjpvnsvqvqpsmppipmepk`phXpeTz\
+  bPz`cz_czZczYczzczzczzczzczzczzctzmtzmtzmpzmmNmjKm\
+  gImcFm`DrYArV8rS6rW6rZ6ma6me6mh6mk6mo6mr6Ou6Os7Oq8\
+  Op9OnAOlAOkBOiCOgDOfEOdEObFOaGO_HOYIOXIRUKTSLVQMXO\
+  OZMP`KQcHSeFTgDUdBWa9XZ7YW5ZZ7_b9_fB_jC_iE_hG_fI`e\
+  J`dL`cN`bP`aQ`ZQgYTdXVbXX`WZYV`WVbUzdRzfPzhNzjKzlI\
+  znGzpEziUzcizYyz_vzatzcrzepzgnzikzzizzgzzezzczzfzz\
+  izzlzznzzqzztzzwzzyzzyzzyzzyzzyzzyzzezzMzz2zz5zz7z\
+  zAzzCzzFzzHzzJzzMzzOzzRzzTzzVzzYzz`zzczzfzzizzlzzo\
+  zzrzzuzzxzzvzzuzztzzrzzqzzpzznzzmzzlzzjzzizzhzzfzz\
+  ezzdzzizzmzzrzzvzzzzzpzzf }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
