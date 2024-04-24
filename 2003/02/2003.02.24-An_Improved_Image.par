@@ -1,0 +1,95 @@
+;     Date: Mon, 24 Feb 2003 08:52:59 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-02-03 (An Improved Image [6])
+;       Id: <1.5.4.16.20030224085621.2b5f2258@pop.mindspring.com>
+; ---------
+; FOTD -- February 24, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It's going to be a hectic day here at Fractal Central.  We have 
+; the drippy roof to get patched, the musty cellar to get dried, 
+; the cats to keep happy, the regular graphic work to do, and the 
+; fractal exploration to hopefully get to.  There is also that 
+; FOTD-CD.  I have had it almost ready for weeks, but I still keep 
+; finding annoying problems with it that keep me from being 
+; satisfied and deciding it is finished.  It will be ready in the 
+; near future, how near, I cannot say with certainty.
+; 
+; With its rating of 6, today's fractal is somewhat improved over 
+; the string of 4-rated images that have appeared recently.  In 
+; recognition of this fact, I named the picture "An Improved 
+; Image".  The curvilinear effect was achieved by rendering the 
+; scene with the outside set to < imag >.
+; 
+; The parent fractal, which was created by subtracting 2 parts of 
+; Z^(-1.8) from 2 parts of Z^(0.75) then adding (1/C), is quite 
+; unusual, resembling nothing as much as a rubber duckie.  I will 
+; likely return to it in the near future for a source of more 
+; FOTD's.
+; 
+; The render time of 19 minutes is slow, but for convenience, the 
+; completed image has been posted to the two FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Sunday was changeable here at Fractal 
+; Central.  The day started foggy, then rain showers arrived, 
+; which changed to wet snow flurries before they ended by noon.  
+; In the afternoon, high winds arose, which scattered the lawn 
+; furniture, but the day ended peacefully, with clear skies and 
+; diminishing winds.  The cats, who appear to be becoming 
+; accustomed to less-than-perfect weather, took the day's events 
+; in stride, satisfying themselves indoors with warmth and good 
+; food.
+; 
+; I've got much work to do today, so until next time, take care, 
+; and be good.
+; 
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+An_Improved_Image { ; time=0:19:46.44--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.34306163986039530/+0.194300897396538\
+  00/2.699783e+007/1/-37.5/-6.01984598488924938e-008
+  params=-2/-1.8/2/0.75/0/0 float=y maxiter=1750
+  inside=0 outside=imag periodicity=10
+  colors=000u9av9cw9e0jm7inEhoLgpSfqYeqddrkcsrbtxbtu\
+  _qsYnqWkoUhmRfkPciN`fLYdJVbGT`EQZCNXAKV8IfZDqx8owA\
+  nvCmvDluFktGjtIisJhrLgrMfoPelRdiUcfWccYaeU_gQYiMWk\
+  IVmEfePrY_pWaoUcmTdlRfkPhiOihMkgLleMkcNkaNj_OjYOjW\
+  PiUPiSQiQRhORhMSgKSgITgGTfEUfCUfETeFTdHTcITbKTaLT`\
+  MT_OTZPTYRTXSTWUTVVTUWTTeOcoJnyExvIwsLwpOwmSvkVvhY\
+  ve`ubdu_guYjtVmtSqtPtsMwsKzsIvnHriFneEj`CfWBbSAZN8\
+  VI7RE5N94J43G07Y1Ab1EJ2Hc2LL2OM3Sh3VN3XIIZEW`Aib6w\
+  SPsIgp8ym9tkApiAkgBgeBcdCZbDV`DQZEMXEIWCRUBZS9gQ8o\
+  O7wMIwKTwJcwHnwGywFttGpqGknGgkGbhGZeGUbGQ_GMXGQaNT\
+  eTWiZZndarjdvpgzvZnlRbbISUAGK2VB5b22r23a6IDNHFLGGK\
+  FIIEKHELFDNECPCBQBAS99U89V78Y87_86a85d95f94h93kA2m\
+  A2oA_1Uc5`g9fkDmoHssKyqNxpPxoRxnTwlVwkXwjZvi`vgbvf\
+  duefudhucjuaqh_wWauXbtYcsYbrXbrWbrVarVarUaqT`qT`qS\
+  `qR`qRcdTeSVgFXfJSfMNfPJeSEeVAeY5e`1_W6USBOOGPKNQH\
+  UmCJnBLoBNpBQqASrAVsAXt9Z }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

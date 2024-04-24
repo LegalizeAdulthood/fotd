@@ -1,0 +1,87 @@
+;     Date: Wed, 19 Feb 2003 13:23:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-02-03 (High-Order Fractal [4])
+;       Id: <1.5.4.16.20030219132631.29f72af6@pop.mindspring.com>
+; ---------
+; FOTD -- February 19, 2003 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Many problems still plague Fractal Central, so we'll have 
+; another short discussion today.
+; 
+; The digging went well on Tuesday, but in the afternoon, a large 
+; pile of wet heavy snow slid off the fractal house roof onto the 
+; cats' porch roof and collapsed it.  In addition, the house roof 
+; has started leaking over the rear bedroom.  But between all the 
+; other distractions I managed to find a quick fractal.
+; 
+; I named it "High-Order Fractal" because it combines 4 different 
+; powers of Z before adding 1/C.  I use this MandelbrotMix3 
+; formula relatively infrequently because the images it draws tend 
+; to be too chaotic, and also because the critical point must be 
+; calculated separately and entered as the real(p5) parameter.
+; 
+; Though I found the image in only a few minutes, it takes 1/2 
+; hour to render.  I could rate the hastily-found result no higher 
+; than a 4.  The 1/2-hour render time can be avoided by download-
+; ing the completely finished GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Monday and Tuesday was partly cloudy with 
+; temparatures around 30F -1C.  But the fractal cats are not 
+; happy.  With their hangout roof collapsed, the dynamic ones were 
+; sullen indeed, spending several hours in full-sulk mode, 
+; hunkered down with thrashing tails stirring up an indoor breeze. 
+; Luckily I stocked up on tuna before the big storm.  Tuna always 
+; restores a cat's good spirits.  (Too bad it doesn't work as well 
+; on me.)  There is still a lot of digging to do, so until next 
+; fractal, take care, and see you in 24 hours.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+High-Order_Fractal { ; time=0:29:38.38--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix3 function=recip passes=1
+  center-mag=-2.24578194714223/-0.007932233500827/2.\
+  324295e+007/1/95/1.171e-007 params=0.3/1.5/0.2/2.5\
+  /0.1/3.5/1/-1.5/1.037043411258671/0 float=y
+  maxiter=1600 inside=255 logmap=202 periodicity=10
+  colors=000iC9mA6kC9jEBiFDgHFfIHeKJdLLbNOaPQ`QSZSUY\
+  TWXVYbVUWW_PWeIWk9TqCWpFYpH_pKapMcpPipSkpUmpXopZqp\
+  artfsscqp`nmYkkVhhTefQbcN_aKYZHVXFSUCPS9MP6JN3GK1E\
+  I5GL8INBKQFMSIOULQXPSZSU`VWcZYea_hdajhclkeongqqhsl\
+  cphZmcUj_QgWLdRGaNBZJ7WQAVXCV`JPdQKhXFlcApj5sq0mo4\
+  hn7clAYkDTiGOhJIfMDeP7cQ8dS9dTAdVBeWCeYDeZEf`FfaGf\
+  cKOBGfdVkrTjoSimRhkQgiPggOfeNecMd`LcZKcXJbVIaTH`R7\
+  d5G`POXgWTz`NneIcjCSn7HmAJlDKkFLjINiKOiNPhQRgSSfVT\
+  eXVd_WdaXe`Wf_VgZUhYTiXSjWSkVRlUQmTPnSOoROpQNqPMrO\
+  LsNKsNKqOJpOJnPJmPJkQJjQIhRIgRIfRIdSIcSHaTH`THZUHY\
+  UHXUHSTONSUIR`DQf8Pm4Os9eVDw6Bs8Ap99mB8jC7gE5cF4`H\
+  3YI2VK1SL4RO7RRAQTDQWGQZJP`MPcOPeROhUOkXNm_NpbNseM\
+  uhMxjMzeKv`JsWHpRGmHPzNFjT3WS6VS8USATSCTSESSHRSJQS\
+  LQSNPSPOSSNSUNSWMSYLS_KDWWSaKgd7ef9dgBbhDaiF_kGZlI\
+  YmKWnMVoOTqPSrRQtTPuVMvQOwWPzaRzfSzlTzqUzpUzoUzoVz\
+  nVzmVzmWzlWzkWzkdz9gz9ccz }
+
+frm:MandelbrotMix3 {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE==================================
+; 
+; 

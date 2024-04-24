@@ -1,0 +1,99 @@
+;     Date: Mon, 17 Feb 2003 09:39:18 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-02-03 (Theme and Variations [5])
+;       Id: <1.5.4.16.20030217094233.29e7a4c0@pop.mindspring.com>
+; ---------
+; FOTD -- February 17, 2003 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I enjoy shoveling snow, but this is ridiculous.  Once again, due 
+; to an immense quantity of snow that must be moved, the 
+; discussion will be very brief.
+; 
+; Today's hastily achieved fractal can rate only a 4, but that is 
+; only a little below average.  The parent fractal, whose formula 
+; is Z^1.19+C, resembles a double-lobed lake, with an immense 
+; filament extending to the SW, far beyond the borders of the 
+; default screen, which BTW has a magnitude of 2/3.
+; 
+; Today's scene is located near the tip of this curved filament.  
+; I have no idea how I found the mis-shapen minibrot on this 
+; totally chaotic filament.  I guess I have developed a fractal 
+; sixth sense, or more accurately a seventh sense, since I already 
+; have precognition.  (No, I cannot turn it on at will.)
+; 
+; The name, "Theme and Variations", was inspired by the melange of 
+; incongruous features that make up the image.  Then again, 
+; perhaps I should have named the image simply "Variations", since 
+; there is no single theme that unifies it.
+; 
+; The parameter file runs in 8 minutes.  The completed GIF image 
+; is available for download on the W.W.Web at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Heavy snow fell all day Sunday here at Fractal Central.  This, 
+; plus the temperature of 14F -10C, swept all thoughts of the 
+; outdoors from the minds of the fractal duo, who spent the day 
+; sleeping where it was warm.  This morning the snow is still 
+; falling.  Since the snow on the ground is about three times as 
+; deep as the cats are tall, they had best resign themselves to a 
+; long confinement.  As for me, I've got a lot of shoveling to do, 
+; and there is no time like the present to get started.
+; 
+; Until tomorrow's FOTD, take care, and, if I get myself dug out 
+; of the snow drift, see you then.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+ThemeAndVariations { ; time=0:08:14.44--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-2.64441871745242100/-7.096189677868118\
+  00/8.730126e+008/1/2.5/-1.66441295210220663e-005
+  params=1.19/0/18.6/0 float=y maxiter=12000
+  inside=0 logmap=118 periodicity=10
+  colors=000IHFOLIUOL_SOeWRkZUbHXU0ZX9XZHWdRNj`Epi50\
+  kK7fIDbGKZFQUDXQCbMAiH9oD7u96pCDkFJgIPbLVZNaUQgQTm\
+  LWsHYyIWwJVuKTsKSqLQoMPmMNkNMiOLgOJePIcQGaQF_RDYSC\
+  WSBUVATYAT`ATbASeASh9Sk9Sm9Rp9Rs9Ru9RvBSvDTwFUwHVx\
+  JWxLXyNYyPZzR_zS`n_bcfcTmeItfZefoSfrVVtXJvZ8qY9lYA\
+  hYAcYB_YCVYCRXDMXDIXEDXF9XF4XG0XG2ZJ4_M6`P8aRAbUBc\
+  XDdZFeaHfdJgfKhiMilOjnQkqSltTmvXnt_nrbopeoohpmkpkn\
+  qiqqhtrfwrdzrcwpaun`sl_qjZohXmfWjdVhbUf`SdZRbXQ`VP\
+  WNIZTO`ZTbdYeibgogiulkzqjsnimlhfih`ggUefObeH`eBZcA\
+  XaAV_9TY9RW8PU8NS8LQ7JO7HM6FK6DI5BG59E58H7GJ9NMBVO\
+  CaMOdLZfKiiJtkPmlUgmZ`ncVnhPomIprCqw6qs7pp8om8ni9m\
+  f9mcAl`AkXBjUCiRCiNDhKDgHEfEEfHIgJLgLOgNRgPUgRYhT`\
+  hVchXfhZihamf`lh_kiZjjYjkXilWhmVgoUgpTfqSerRdsOfyQ\
+  dtSboU`kWZfYYb_WYaUTcSPeQKqV9gPGYKNPFTFA_65eB8fFAf\
+  JCfOEgSGgWIg`LhdNhhPhmRiqTiuVisWgrWfqWeoXdnXcmXakY\
+  `jY_iYZgZYfZWeZVc_Ub_Tc`T }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

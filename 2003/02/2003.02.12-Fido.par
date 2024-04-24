@@ -1,0 +1,96 @@
+;     Date: Wed, 12 Feb 2003 10:32:24 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-02-03 (Fido [5])
+;       Id: <1.5.4.16.20030212103535.29c7c45c@pop.mindspring.com>
+; ---------
+; FOTD -- February 12, 2003 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; When I saw today's image, I saw such a clear image of the 
+; outline of a dog's head facing right that I had no choice but 
+; to name the the picture "Fido", the most generic of all dog's 
+; names.
+; 
+; The midget that forms the head is actually the largest midget 
+; on the largest filament of the fractal that results when the 
+; formula Z^(1.5596104695)+C is iterated 1234 levels up the 
+; logarithmic spiral.
+; 
+; No one has ever seen this spiral, which is even more abstract 
+; than the fractals that lie along it.  I assume that it is 
+; five-dimensional, at least in the case of formulas like today's. 
+; But being no math expert, I am only guessing.
+; 
+; With so little in the image other than the shadow of a dog's 
+; head, I could rate it no higher than a 5.  But the lightning-
+; fast render time of only one minute makes the work of running 
+; the parameter file worth the effort.
+; 
+; For those who prefer to download the finished image, the 
+; download is available at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The snow-covered ground and temperature of 27F -3C kept the 
+; dynamic cats indoors all day Tuesday.  A snow squall in the 
+; evening dropped an additional few centimeters that assures they 
+; will be in jail again today.  Hopefully, the tuna will keep them 
+; satisfied.
+; 
+; I'll be satisfied when the modestly huge amount of work now 
+; before me is behind me.  So until tomorrow, take care, and put 
+; your faith in things that are real -- that is after you have 
+; determined what is real.  (clue -- it might not be what it seems)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fido { ; time=0:01:07.72--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor
+  center-mag=0.0780992/-2.39592/42.40069/1/-85/2.166\
+  66962149503206e-013 params=1.5596104695/0/1234/0
+  float=y maxiter=28000 inside=0 logmap=yes
+  colors=00000C00E00G00H00J00L00N02P06R0AT0EV0GX4J`8\
+  LdEPgJRkPVoTXsZ`zdbziezrjzskzxqzztzzxzztzzpzzmzzkz\
+  xizvgzugzuezvdzxbzz`zzZxzXvzXuzVszTqzRozPmzNkzLizL\
+  gzJezHdzGbzE`zCZzAXzAVz8Tz6Rz4Pz2Nx0Lx0Jv0Hv0Gu0Eu\
+  0Cs0As08q06q04o04o04m44m84kC4kG4iJ4iN4gR4gV4eX4eZ6\
+  dZ6dZ6bZ6bZ8`Z8`Z8`Z8bZAbZAdZAe`Ae`Cg`Cg`Ci`Ck`Ek`\
+  Em`Em`Eo`Gq`GqbGsbGsbHubHvbHvbHxbJxbJzbJzbJzbLzdLz\
+  dLzdLzdNzdNzdNzdNzdPzdPzdPzdPzdPzdPzdRzeRzeRzeRzgT\
+  zgTziTziVziVzkVzkVzkXzmXzmXzmXzoZzoZzoZzq`zq`zq`zs\
+  `zsbzubzubzubzvdzvdzvdzxezxezxezzezzgzzgzzgxzgxzix\
+  zixzixzizzgzzgzzezzezzdzzdzzbzzbzz`zz`zzZzzZzzXzzX\
+  zzVzzVzzTzzTzzRzzSzzUzzWzzYzz_zzazzczzezzgzzhzzizz\
+  jzzkzzlzzmzznzzozzpzzqzzrzzszztzzuzzvzzwzzxzzyzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

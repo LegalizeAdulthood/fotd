@@ -1,0 +1,99 @@
+;     Date: Fri, 28 Feb 2003 08:59:47 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-02-03 (Minibrot Snowstorm [6])
+;       Id: <1.5.4.16.20030228090311.2b6784c8@pop.mindspring.com>
+; ---------
+; FOTD -- February 28, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For at least a month, the view from the Fractal Central windows 
+; has shown everything covered in snow.  So why cannot a fractal 
+; be in a snowstorm?  In fact, as the name "Minibrot Snowstorm" 
+; implies, a snowy fractal is exactly what we have today.
+; 
+; The snowstorm was created by combining portions of 1/Z, Z, 
+; Z^(-1.6) and Z^(-1.4), and then adding 1/C to produce a not-very-
+; impressive parent.  At first glance, the parent appears to have 
+; no open areas, but a careful examination shows it to be riddled 
+; with midgets too small to be visible at the default magnitude.  
+; Today's scene is located in the eastern suburbs of a larger but 
+; still quite tiny midget.
+; 
+; The entire production is through the courtesy of the 
+; MandelbrotMix3a formula, which is like the workhorse 
+; MandelbrotMix4 formula except that it combines 4 different 
+; powers of Z rather than 2, and a critical point must be 
+; calculated by hand, an operation that is little fun.
+; 
+; The rating of a 6 seems about right for an image that has a 
+; brief impact, then soon grows boring -- a sure sign of a work 
+; with insufficient artistic merit.  The render time of 10 minutes 
+; on my 200mhz Pentium-I machine is a bit slow for an image only 
+; slightly above what I currently consider average.  A more 
+; efficient way of viewing the snowstorm is to go to Paul's FOTD 
+; web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or to Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; and download the completed image from there.
+; 
+; Thursday was cold and cloudy here at Fractal Central, with the 
+; snow flurries that fell during the day turning to steady snow in 
+; the evening.  The snow plus the high temperature of only 
+; freezing kept thoughts of the outdoors far removed from the 
+; cats' minds.  They satisfied themselves instead with a treat of 
+; turkey.
+; 
+; Today is starting with light snow and 6 fresh inches 15cm on the 
+; ground.  I guess this means more turkey for the dynamic ones.  
+; For me, it means more sidewalk clearing.  I'll wait until the 
+; snow stops falling to begin.  Until the next FOTD appears, most 
+; likely in 24 hours, take care, and savor every fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Minibrot_Snowstorm { ; time=0:10:47.74--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix3a function=recip passes=1
+  center-mag=+3.26650108165485/-0.05084635835292/4.9\
+  03911e+008/1/-112.5/7.4048215368e-006 params=-1/-1\
+  /1/1/1/-1.6/-1/-1.4/0.2858095886402/0 float=y
+  maxiter=800 inside=0 logmap=103 periodicity=10
+  colors=000mNzqVzu`zxezzmzzszzxzzzzzzzzzzzzzzzzzzzu\
+  zzmzzezuXzoPzkGxe8v`0sV0qP0mJ0kG0gC0dA0`80X60V40R2\
+  2N06J0AG0EE0HA0L60P20T00X00`00d00g00k00g00e00d00b0\
+  0`00Z00X00V00T20T80RE0PJ0NP0LV0K`0Pe0Uk0Zq0cu0hz0m\
+  z0rz0wz0zz0xz0uz0qz0my2ix4ew4av6Yu8Tu8NuAJuCGuCCuE\
+  8uG4uG0uH0uJ0uJ0uL0uL0uN6uNGsPPqPZmRggRqbTzXTzRVzN\
+  VzRXzVXzXXz`XzbXzeXxgXukXsmXoqXmsXivXgxXdzXbzXZzXX\
+  zXTzXRzXTzZTz`VzbVzdXzeXzgZziZxk`vm`uobsqbqsdoudmv\
+  ekxeizegzgdugboiZkiXekT`kRXmNRmLNoHHoGCqC8qA2s60s4\
+  0u00u00vE0vREvdRvqevzuvzzqzzmzvizqezkbzeZz`VzVRzPN\
+  zJJzEGz8Cz28z04z00z00z06z0EzHLz`TzqVxoVxoXxmXxmZxm\
+  Zxk`xk`xk`xibxibxgdxgdxgexeexeexegudgqdgobikbig`ie\
+  `ib`kZZkXZkTXkRXmNVmJVmHVmEToATo8Ro4Ro2Rm4Vk4Xk4Zi\
+  6`g6dg6ee8ge8id8mb8obAqdAsgAvkCxoCzsCzvCzzEzzEzzEz\
+  zGzzGzzGzzGzz8zz2zz0zz0zz0zz0zz0zz0zz0zz4zzEzzNzzT\
+  zzTzzTzzTzzTzzTzzTzzTzzTz }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE==================================
+; 
+; 

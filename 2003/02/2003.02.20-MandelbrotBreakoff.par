@@ -1,0 +1,85 @@
+;     Date: Thu, 20 Feb 2003 08:42:37 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-02-03 (Mandelbrot Breakoff [4])
+;       Id: <1.5.4.16.20030220084554.29dffbae@pop.mindspring.com>
+; ---------
+; FOTD -- February 20, 2003 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday morning, the fractal lady decided she simply had to 
+; make a trip to the store.  I warned her that the roads were 
+; still very bad, and if she went out, she would get stuck.  She 
+; assured me that she could handle it.  About an hour later I got 
+; a phone call from six blocks away.  Guess what had happened . . .
+; 
+; Two hours later, when we arrived back at F.C., I justifiably 
+; lost my cool, which I have relatively little of even on good 
+; days.  The rest need not be described.
+; 
+; The fractal of the day, which was found despite the distrac-
+; tions, is named "Mandelbrot Breakoff".  The name describes the 
+; disconnected nature of the scene.  The rating of 4 is fair 
+; enough for such an ordinary fractal.  The render time of under 3 
+; minutes is also fair enough.  Those who consider even 3 minutes 
+; unfair may download the completely rendered GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Wednesday was not too bad, with some sun and 
+; a temperature of 36F 2C.  The dynamic cats were out of sight 
+; most of the day, most likely avoiding the temper tantrums.  It 
+; would have made no difference even if they had not gone into 
+; hiding.  Their porch is still blocked by the fallen roof and the 
+; ground is still buried under about a meter of soggy snow.
+; 
+; But F.C. has a way of surviving trying times, and the next 
+; fractal is but 24 hours off.  Until then, take care, and I just 
+; don't dig it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+MandelbrotBreakoff { ; time=0:02:49.28--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.3531289942622923/+0.335701792042646/\
+  2178754/1/102.5/1.089800562e-008 params=0.25/1.618\
+  034/-2/-1.618034/1.2/0 float=y maxiter=400 inside=0
+  logmap=47 periodicity=10
+  colors=000AkzAjyAiyAhyAgxAfwAevAduActAbsAarA`qA_p9\
+  ZofK8kYLqjXwrhprejmcdhaZc_TZXNUVHPTBLRO_g`mxTjuMgr\
+  FdoG3vLAtQHrVOp_Vndalhhkjjhllfnncpparr_ttXvvVxwTwo\
+  PvgMu_JtTFsLCrD9r66tC7vI8xO9yU9vXFt_KrbPpeUnhZlkco\
+  ZQrNDtB0hE2XH3LK49N5U12of0mKDpIBsG9uF7xD5zC3tI4oN5\
+  jT6eY7`c8Wh9RnAMsBNNNBBBI_TAfR3mP9kKEiFJhB_NHp1N4Q\
+  SL9AHELDJV9Od6SnOMceHUvCKqIUmNchSmdXvE10eqzdjmz8pz\
+  BtzEvzGxzNzzUzz`zzczzczzczzczzczzczz_zzTzzNzzPzzQz\
+  zSzzTzzRzzPzzNzzMzzDzz4zzUzzczzczzczzczzczzczzczzc\
+  zzczzczzczzczzczzczwcztczqcznczcmzcmzcmzcmzcmzcmzc\
+  mzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmz\
+  cmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcm\
+  zcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzc\
+  mzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmz\
+  cmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcm\
+  zcmzcmzcmzcmzcmzcmzcmzcmz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

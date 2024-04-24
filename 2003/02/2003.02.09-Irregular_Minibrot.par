@@ -1,0 +1,107 @@
+;     Date: Sun, 09 Feb 2003 09:22:38 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-02-03 (Irregular Minibrot [5])
+;       Id: <1.5.4.16.20030209092548.29eff578@pop.mindspring.com>
+; ---------
+; FOTD -- February 09, 2003 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is named "Irregular Minibrot".  The reason for 
+; the name is the shape of the midget and the irregularity of the 
+; features around it.  The midget is irregular because instead of 
+; iterating Z^2, I iterated Z^sqrt(2) and chose a spot 14.142 
+; levels down the logarithmic spiral to do the rendering.
+; 
+; When this low a power of Z is iterated to make a fractal, the 
+; results are totally unpredictable.  Mandeloids generally have a 
+; number of lobes one less than the exponent of Z in the 
+; generating expression.  Thus the formula Z^5+C draws a Mandeloid 
+; with 4 lobes, and the Z^2+C Mandeloid, which is the classic 
+; Mandelbrot set, has one lobe.  Following this progression, the 
+; Z^1.4142 Mandeloid has only 0.4142 lobe, less than half a lobe, 
+; but there is no easy rule determining which fraction of a single 
+; lobe will appear either in the parent fractal or in the midgets 
+; it contains.
+; 
+; Theoretically, today's midget is only less than half there.  Its 
+; buds are smaller than those of the classic M-set and more widely 
+; spaced.  In addition, the buds are in the wrong places and mis-
+; shapen as well.  There are several smaller midgets in the image, 
+; which are easily found by toggling into and out of color mode.  
+; Some of these may also be interesting.  I have not checked to 
+; see.
+; 
+; With all its imperfections, today's FOTD makes an interesting 
+; image, though not interesting enough to rise above the rating of 
+; an average 5 that I gave it.  The render time of 7 minutes is 
+; fair enough for such a mediocre image, and most of that time can 
+; be saved by downloading the fully-rendered GIF image from one of 
+; the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather remained sunny all day Saturday here at Fractal 
+; Central, but the temperature of 25F -4C proved far too extreme 
+; for the whiskers of the cats, who poked their noses out the door 
+; only long enough to sample the chill and determine that they did 
+; not want to be outside.  Today is starting warmer, but it is 
+; cloudy, so the effect on the dynamic duo will likely be the same.
+; 
+; I have nothing much planned for the day, other than exploring 
+; Fractal Land that is, so I'll take it an hour at a time.  Until 
+; next FOTD, take care, and can the shape of fractals be 
+; influenced by the power of thought?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Irregular_Minibrot { ; time=0:07:26:88--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.86416652796344500/+0.512463707154294\
+  50/1904.762/1/67.5/-5.01217123360930827e-012
+  params=1.4142/0/-14.142/0 float=y maxiter=6000
+  inside=0 logmap=73 periodicity=10
+  colors=000SZSQYROXQMWPKVOIUNFTMCSL9RK6QJ3PH4OI4NI4\
+  MI5LI5KJ5JJ5IJ6HJ6GK6FK7FK7EK7DL7CL8BL8AL89M98M97M\
+  96M72L84M96MA8NBANCCOCEODGPEIPFKQGMQHORHQRISSJUSKW\
+  TMYTOYTQXVSXWUWXWWXYVY_VZaU_cU_eT_gT_iS_kR_mQ_oP_m\
+  OYkNXiMWfLVdKUbJU`ITYHTWGSUFSSESPDRNCRLBQIAQG9PE8P\
+  C8O97O77N57N37N49N5AN5CN6DN7EN7GN8HN9IN9KNALNBMNBO\
+  NCPN5PQCQNIULPXJV`GacEggCmjAnhBngCofDoeEpdFpcGqbHq\
+  aIr`JsYGrZIr_Jr`KraLqbMqcOqdPqeQpfRpgSphTpiVpjWokX\
+  olYomZon`noanpbnqcnrdpxcnselnfkjhieig`jfXldSmbOscO\
+  pcOndOldOidOgeOeeOceO`fOZfOXgOVgOSgOQhOOhOMhOJiOHi\
+  OFoIAiODdTF_ZIVcKQiNLnPGsRKnQOjRSeSV_TZXUbWVfUWeWX\
+  eYYd_Zda_cc`ceabhbbkcandaqe`tfdwgbzh`ziZzjXzkVzlTz\
+  mRznPzoNzpLzqJzrHzsFztDzuBzv6zwAzxEzyIzzMzzQzzUzzX\
+  zz`zzdzzhzzlzzpzztzzxzzwzzwzzwzzwzzwzzwzzyzzwzzuzz\
+  szzqzzozzmzzkzzizzgzzezzczzazz_zzYzzWzzUzzSzzQzzOz\
+  zMzzKzzIzzJzzHzzGzzFzzDzz }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 
