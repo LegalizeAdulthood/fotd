@@ -1,0 +1,102 @@
+;     Date: Thu, 15 May 2008 13:31:53 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 15-05-08 (Looping the Loop [No Rating])
+; 
+;       Id: <1.5.4.16.20080515133453.2c07c18e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 15, 2008 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to the busy conditions here at Fractal Central, today's FOTD 
+; is a very hasty one that deserves no rating.
+; 
+; The unusually fast image lies in the fractal that results when 
+; the formula Z^(1.37)+C is iterated at level 1.37 of the complex 
+; log ladder when no function is applied.
+; 
+; This parent fractal is shaped something like a garden mole 
+; pulling itself halfway out of its burrow.  The mole's head 
+; appears as a large period-2 bud, with a pointed snout.
+; 
+; Today's scene is located on a zigzag filament in a clump of 
+; debris on the northeast shore of the main bay.  To add a bit of 
+; interest, the image was rendered with the outside set to 'tdis'.
+; 
+; I named the image "Looping the Loop" for no good reason.
+; 
+; The fireball-fast calculation time of under 23 seconds is made 
+; possible by the unusually small magnitude of 35.  And as always, 
+; the finished image is available for immediate viewing on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Wednesday started sunny here at Fractal Central, but by noon the 
+; sky had clouded over, and by late afternoon light rain had moved 
+; in. The fractal cats observed all this with disinterest.  In my 
+; department the day was unusually busy.  Thursday will be another 
+; busy day, though not as hectic as Wednesday.  If all goes as 
+; planned the next FOTD, as unimpressive as it might be, will be 
+; posted in 24 hours.  Until then, take care, and search for good 
+; fractal fortune.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Looping_the_Loop   { ; time=0:00:22.81-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=0.802447/0.710266/35.36239/1/77.5/0
+  params=1.37/0/1.37/0 float=y maxiter=1500 inside=0
+  outside=tdis periodicity=10
+  colors=000uzlrzkozklzjizjfzjczi`ziZzibzdez`hzXkzTc\
+  zZWzdOzjGzplzjazfSzbIzZ8zWBzSEzPGzLJAIMAFOABNA8LA5\
+  FA98AD8AH8AL9AP6GTDIWJKYQM_WObbQdhSfnThocjpnljjief\
+  g_ceV_cQXaRYdSYfSYiTZkTZnUZpUZrWXoYWm_Vk`UhbTfdSde\
+  RagQ_iPYjOWQagP`dP_aPZZPYWPXTPWRPVOPULPTIPSFPSDMV9\
+  JY6G`2Db0JZ8OVGTRPZNXcJehGmgOkfVieagdhecod_m_WkVTi\
+  QPgMMeHIcCFa8MZ9SXAZVAdSBkQCqOCoOEmOGkOIiOKgOMeOOc\
+  OQdQRdRSdTSdUTdVTeXUeYVe_Ve`WeaWccYbe_`fa_zbZzdXzf\
+  WzgVziTzkSzlQznPzpOzqMzsLzuKzvGzpCzk8zezz`zzWzz_zz\
+  czzfzzjzzmzzjzzgzzdzzazzZzzWzzTzzQzzNzzKzzHzzEzzBz\
+  z8zz5zzIzzVzzfzzczz_zzWzzSzzPzzLzzHzzDzz8zz9zz9zz9\
+  zzAzzAzzAzz4zz6zz8zzAzzCzzEzzGzzIczK`zJYzIVzHSzGPz\
+  FMzEBzAJzDGzCDzBlzk_zZNzM0zE2zD3zD4zC5zC6zC7zB8zB9\
+  zAAzATzbSz`Rz_QzZPzXOzWOzVNzTMzSLzRKzPKzOJzNIzLHzK\
+  GzJFzHFzGEzFDzDCzCBzBIz1Hz2Gz3Gz4Fz4Fz5Ez6Dz7Dz7Cz\
+  8Cz9BzAYzYWzWUzUOz1Pz0Qz0 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

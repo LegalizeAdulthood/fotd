@@ -1,0 +1,109 @@
+;     Date: Thu, 15 May 2008 20:12:23 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 16-05-08 (Celestial Festival [7])
+; 
+;       Id: <1.5.4.16.20080515201524.2ba79ed6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 16, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; When I was but a small child, I was fascinated by the sound 
+; produced by striking the top of the metal bed post with a coin.  
+; The indescribable sound was strangely familiar.  I was sure I 
+; had heard it long before but had forgotten where.  Then quite a 
+; few years later, I heard the same sound on a record of unusual 
+; sound effects, with the note that the sound reminds most people 
+; of something very familiar from the distant past, but long ago 
+; forgotten.  We'll file the nature of this haunting sound as 
+; mystery of life number 13,702.
+; 
+; Today's fractal is not nearly as mysterious.  It is a scene in 
+; the parent fractal that results when 4.5 negative parts of 
+; Z^(-1.05) are combined with 0.8 negative parts of Z^(-8.8) and 
+; (1/C) is added.
+; 
+; This parent fractal is a grossly inflated thing requiring 
+; several outzooms to fit onto the screen, and featuring an 
+; incredible feather-like 'fan' attached to an even larger 
+; circular bay.  Today's scene skips the 'fan', and is found 
+; instead at the end of a filament extending from a bud on the 
+; shore of the circular bay, and terminating in a scalloped ring.
+; 
+; I named the image "Celestial Festival", not that there's 
+; anything particularly heavenly about it.  Then I rated it at a 
+; 7, which is not at all a bad rating.
+; 
+; With a running time of 31 seconds, the included parameter file 
+; will bring the agony of impatience to no one.
+; 
+; The finished image is or soon will be posted to the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy and mild weather prevailed here at Fractal Central 
+; on Thursday, with a high temperature of 72F 22C.  The fractal 
+; cats greeted the periods of sunshine with enthusiasm.  My day 
+; slowed down as the day progressed, but there was still a bit of 
+; hastiness when FOTD time arrived.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and when the world turns against you, open a gift shop 
+; selling candles, teddy bears, and pseudo-country items with feel-
+; good slogans on them.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Celestial_Festival { ; time=0:00:31.15-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=-3.777300433225537/-0.4621972219516149/\
+  1.218883e+009/1/-80/0 params=-4.5/-1.05/-0.8/-8.8/\
+  0/0/0/0 float=y maxiter=1100 inside=0 logmap=86
+  periodicity=10 mathtolerance=0.05/1
+  colors=000FSQAOKBOKBNKBNKBMKBMKBLKBLKBKKBKLBKLBKMB\
+  KMBLNBKNBJJBJLBIKBHJBGJBEIBCHBAGB8GDCJFGMGJPINSKQU\
+  LUXNY_P`bQdeSggUkjVomXrpZvs_yuaxscwqevpgunhuljtkls\
+  inrgorfnpdnobnnamm_mlZmkXmjWlhUlgTlfRkeQkdOkcNkbLj\
+  `Kj_IjZHiYFiXEiWCiVBkSClQDmOEnLEpJFnHGoEGiCHkAIf7I\
+  g5Jb3Kc1KiEVUQeFazH`zJ_zLZzMYzOYzQXvRWrTVpVUpWUpXS\
+  nXRmXPkXOjXMhYLgYJeYIdYGbYFaZE`ZCZZBYZ9WZ8V_6T_5S_\
+  3Q_2P_1Oc`AhfEmkHrpLvuOzzRzyQzyPzyPzyOzxNzxNzxMzxM\
+  zxLzwKzwKzwJzwJJvIKvHLvHMvGNvGOuFPuEQuERuDSuDQtHOt\
+  KMsOKsRIrVGrYEr`CqdAqg8pk6pn4or2ou1ox2mu3ls4kq5jo6\
+  il7hj8gh9ff9ed8ac8Yc8Ub8Qb7Mb7Ia7Ea7Aa8Cb9EcAGcBId\
+  CKeDMeEOfFQgGRgHThIViJXiKZjL`kMbkNhlOmmPrmRviSzeTz\
+  bUzZVzWWzSzzPzzLzzIzzEzzBzzEzzHTzKRzNPzQMzTKzWIzZF\
+  zaDzdzzfzzdzzczzazz`zzZzzYzzWYzV`zUczSezRhzPkzOnzM\
+  qzLszKozJkzIgzIczH`zHXzGTzGPzFMzFLzEKzDJzCIzBIzAHz\
+  9Gz8Fz7Fz7Gz9GzAWzDQz8KzH }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

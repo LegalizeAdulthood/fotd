@@ -1,0 +1,109 @@
+;     Date: Tue, 27 May 2008 19:49:25 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 28-05-08 (Fortune Always Calls [5.5])
+; 
+;       Id: <1.5.4.16.20080527195237.2c17c478@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 28, 2008 (Rating 5.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows one of those generally disappointing mini-
+; brots lying in the Mandeloids with exponents between 1 and 2.  
+; This one lies in the Z^(sqrt(3))+C as it appears 4 levels up the 
+; complex logarithmic ladder.  Due to its modicum of organization, 
+; it squeaks by with a rating of 5-1/2, barely worth the honor of 
+; being declared a FOTD.
+; 
+; At this not-very-lofty log level, the parent fractal resembles 
+; nothing more than a numeral 8 listing to starboard.  Today's 
+; scene is located on the northern side of the west branch of the 
+; prominent valley dividing the main bay into the figure 8.
+; 
+; Choosing the square-root of 3 as an exponent was done in jest.  
+; Significant numbers such as this apparently have no effect on 
+; the quality of the fractals they create.
+; 
+; The name "Fortune Always Calls" has nothing whatever to do with 
+; the image, or with anything at all connected with fractals for 
+; that matter.  It's simply a cute phrase, nothing more, nothing 
+; less.
+; 
+; The calculation time of just over 1 minute is unexpectedly fast. 
+; But the trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is equally fast, and going to the web site will avoid the minor 
+; hassle of copying this FOTD into your Fractint directory (or 
+; folder) in text format with a .par extension and running it as 
+; you would any other Fractint parameter file.
+; 
+; A rather muggy day on Tuesday was interrupted by a shower of 
+; rain (what else?) in the afternoon, which knocked the tempera-
+; ture down from 86F 30C to 73F 23C.  The fractal cats watched the 
+; 15-minute shower with disinterest.
+; 
+; My day was busy but under control.  Tomorrow, when the next FOTD 
+; will be posted, should be the same.  Until then, take care, and 
+; isn't the thought of the perfect fractal heavenly.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FortuneAlwaysCalls { ; time=0:01:24.04-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.199082275456053/+0.1545238480953167/\
+  39000/1/-75/0 params=1.732/0/4/0 float=y
+  maxiter=2000 inside=0 logmap=83 periodicity=10
+  colors=0009KnBJjCIgDHdFHaGGZHFWJETKEQLDMNCJOBGPBDR\
+  AAS97T84U81SC3RF5PJ7OM9NQBLTDKXFJ_HHcJGfLFiNDkPCmR\
+  AoSFmVKkMPhOUeQZbSa_UcXWaVY`T_ZTaYWcXYeV`gUciUfkUi\
+  mUloUoqVqsXsuZtwauyctxesxhqxjpxlowonwqmwslwrkvrjvr\
+  ivrhurgurgurftretrdtrcsrcsrbsrarr`rr_rr_rq`nq`jp`f\
+  p`bo`_o`Wn`Sn`On`Ln`Ln`Km`Jm`Jm`Im`Il_Hl_Hl_Gk_Gk_\
+  Fk_FjZEjZDjZDiZCgY8iZCiZBhYBhYAhYAgY9gY9gY8zW5yX6y\
+  X6xX6xX6wX6wX6wX6vX6vX6uX6uX6uX6tX6tX6sX6sX7sX7rX7\
+  rX7qX7qX7qX7pX7pY7oY7oY7oY7nY7nY7mY7mY7mY8lY8lY8kY\
+  8kY8kY8jY8jY8iY8iY8iY8hY8hY8gY8gY8WgRXfPYeOZeN_dL_\
+  cK`cJabIbaGcaFc`Ed_De_BfZAgY98bb9aaAaaAa`Ba`Ba_Ca_\
+  CaZDaZDaZEbYEcYFdXFeXGfWGgWHhWHiVIjVIkUJlUJmTKnTKo\
+  SLpSLqSMrRMsRNtQNuQOvPOwPPxPPyOzzOzzNzzNzzMzzMzzLz\
+  zLzzLzzKzzKzzJzzJzzIzzIzzIzzHYzHYzGZzGZzF_zFJzmKzh\
+  MzdNz`OzWQzSRzNSzJUzFVzAWz6Xz2Vz6Uz9SzCRzFPzIOzLMz\
+  OLzRJzUIzXGz_FzbDzeCzhAzk }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

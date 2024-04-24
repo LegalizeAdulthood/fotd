@@ -1,0 +1,110 @@
+;     Date: Mon, 26 May 2008 21:28:54 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 27-05-08 (Depths Without End [7.5])
+; 
+;       Id: <1.5.4.16.20080526213205.2bb7e042@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 27, 2008 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image returns to yesterday's scene in the Seahorse 
+; Valley complex of the Z^2+C Julibrot.  I zoomed in on the lower 
+; right part of yesterday's image and turned the view upside down 
+; to produce an image that gives the impression of massive striped 
+; arms floating above an infinite depth.  No wonder I named the 
+; image "Depths Without End".  I created the banded effect by hand 
+; rather than using the banding feature included in the program.
+; 
+; Though the view is double-rotated only two degrees or so (my 
+; estimate) from the Julia orientation, the ghostly remains of 
+; Mandelbrot buds are clearly visible along the top of the image.  
+; The fact that the circular bud outlines are undistorted shows
+; that both parts of the double rotation are equal.  (Mandel-bud 
+; remains are impossible in the exact Julia orientation because 
+; their outlines have enlarged to infinity.)
+; 
+; I rated the image at a 7.5.  Despite its several flaws, it still 
+; has something to offer.
+; 
+; Just to the right of the center of today's image lies a cluster 
+; of tiny bright dots.  These dots are actually holes in the 
+; surface stuff.  Beneath the surface at this location lies a 
+; minibrot with its main bud facing left.  When blown up, these 
+; holes prove to be julia sets of whatever part of the underlying 
+; minibrot they happen to be on top of.  The minibrot itself is 
+; located somewhere in Seahorse Valley, though I have not the 
+; slightest idea of its actual Mandelbrot coordinates.
+; 
+; The calculation time of the included parameter file is only 
+; 3/100 of a second in excess of 5 minutes, a bit slow but nothing 
+; that cannot be quickly accomplished.  The finished GIF image is 
+; or soon will be posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Monday was a repeat of Sunday here at Fractal Central, though 
+; with a few more clouds and a bit higher humidity.  With all the 
+; sun, the temperature reached 84F 29C.  Now, at post time, the 
+; wind is stirring and lightning is flashing in the distant west.  
+; Rain is threatening, but the day is finished, so let it rain.  
+; The fractal cats have their eyes on the sky however.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and if you can't find the fourth dimension, try to be 
+; satisfied with the third.  It's only a consolation prize, but 
+; it's still better than nothing.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Depths_Without_End { ; time=0:05:00.03-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=EvenMoreSlices passes=t
+  center-mag=0.953034/-0.257883/17.1836/1/-167.8/0
+  params=2/0/0/0.15/-0.78/0/0/0 float=y
+  maxiter=15000 inside=255 logmap=22 periodicity=10
+  colors=000088re8097re70A6rg60B6rh50C5rj40D4ql30E4p\
+  k50F5oj60G6ni70H7mh80I9lg90JAkfA1KBjeB2LCidD2MDhcE\
+  3MEgbF4MFeaG5MHd`H5MIb_I6MJaZJ7MK`YK7ML_XM8MMZWN9M\
+  NZVO9MOZUPAMQZTQBMRZSRCMSZRSCMTZQUDMUZPVEMVZOWEMWY\
+  NXFMYXMYGMZWLZGL_VK_GK`UL_HK`TK`HKaSKaIKbRKbIJcQJc\
+  IJdPJdIJdOJeJIeNIfJIfMIgJIgLIhKIhKHiKHiKHiLHjLHjLH\
+  kLGkLGlLGlMGmMGmMGmMFnMFnMFoNFoNFpNFpNFqNEqOErOErO\
+  ErOEsOEsODtPDtPDuPDuPDvPDvOCwPDvPDvPDuQEuQEuQEtREt\
+  RFtRFsRFsSFrSGrSGrTGqTHqTHqTHpUHpUIpUIoVIoVInVJnVJ\
+  nWJmWJmWKmXKlXKlXLlXLkYLkYLjYMjZMjZMiZMwZNw_Nw_Nw_\
+  Ow`Ow`Ow`Ow`PwaPwaPwaPwbQwbQwbQwaRwbQwbQwbQwcQwcQw\
+  cQwdPwdPwdPwePweQweRwfSwfTwfUwgVwgWzgWzhWzhWzhWziW\
+  ziWziWziWzjWzjWzjWzkWzkWzkWzlWzlWzlWzmWzmWzmWznWzn\
+  WznWzoWzoWzoWzpWzpWzpWzrWzqWzpWzpWzoWzoWznWznWzmWz\
+  mWzlWzlWzkWzjWzjWziWziWzhWzhWzgWzgWzfWzfWzeWzeWzdW\
+  zcWzcWzbWzbWzaWzaWz`Wzmzz }
+
+frm:EvenMoreSlices {; Jim Muth
+; P1--exponent, P2--angle,
+; P3--M center, P4--J center,
+z=pixel+(p4), c=p3+(pixel*p2):
+z=(-z)^(p1)+c,
+|z| < 16 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,92 @@
+;     Date: Tue, 13 May 2008 18:20:45 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 14-05-08 (The Blue Minibrot [6.5])
+; 
+;       Id: <1.5.4.16.20080513182345.2c077190@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 24, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, which I named "The Blue Minibrot", came about 
+; when I subtracted Z^(1.1) from Z^(-1.1) and added C to produce 
+; a parent fractal consisting of one multi-bayed main part and a 
+; smaller disconnected Mandeloid which is partially obscured.  
+; Today's scene is located in the East Valley area of this smaller 
+; Mandeloid.
+; 
+; I named the image "The Blue Minibrot" because of the intensely 
+; blue minibrot at the center.  I could just as easily have named 
+; it after the colorful art-nouveau-like features surrounding the 
+; minibrot.
+; 
+; After not too much thought, I rated the image at a 6.5.  I am 
+; only moderately impressed by it.  The calculation time of a fire-
+; ball-fast 41 seconds will make running the attached parameter 
+; file a pleasure.  Another way to see the image is to visit the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it (hopefully) is or soon will be posted.
+; 
+; Thursday turned into an absolutely perfect day here at Fractal 
+; Central, with crystal clear skies and a temperature of 72F 22C.  
+; The fractal cats were more concerned with scampering squirrels 
+; than the fine weather.  And I was more concerned with work than 
+; the weather.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and be one of them.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Blue_Minibrot  { ; time=0:00:41.24-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-2.4660478735/+1.253346387/1310.263/1/\
+  66.5/0 params=-1/1.1/1/-1.1/0/500/0/0 float=y
+  maxiter=1500 inside=0 logmap=44 periodicity=10
+  colors=000QxzNuzKrsHopElmBij8fgCcdF`ZJYTMRNQKHTEBU\
+  K9UP7UU6UZ4Uc2Uh1N8ILAMKCQQKLVSH`ZDef9jm5YeMMZaBIJ\
+  1114JK7_b9pt6_l3Jd03Y28Q3CI5HA6L36VD6cN6lX6ueObheL\
+  kv3mr4jn5gj6df7ab8ZZ9WVAT83MRARiNmiKdiHWj1Ji8MiFOi\
+  LQiSTiYVidXknYijZggZedZc`_aY_VMa`V_fbZljXrrWmkYhd_\
+  cY`ZRbXOkUKcSGXPCPN9IpU_lRUiOOfLIkM2cIDWFNJ7UPCXVH\
+  _`MbfQelVhr_kwcmn_keWihltiisjfskcsk`slYsmWsmTsnQso\
+  NroKrpIrqFrqCrr9rs6rs4rq7spAtoDtmGulIukLvjOvhRwgUx\
+  fWxdZycaybdzafz_dyYbyWaxU_xTYxRXwPVwNUvMSvKQvIPzGN\
+  zFMzIQzKTzMXzO_zQczSfzPczN`zLYzIVzGSzEPzBMz9Jt7GzB\
+  JzELzHNzKPzNRzRTzUVzXXz__zbazfcziezlgzoizrkzumztlz\
+  tlzskzskzrjzrjzqizqiznfzlczj`zgYzeWzcTz`QzZNzXLzUI\
+  zSFzQCzOAzUFzZKzcPzhTzmYzrbzwfzB4zL7zV9zdBzmDzcAzU\
+  7zK5zA2z00zCEzKKzSPzZUzVRzSPzPNzMLzIIzFGzCEz9CzIGz\
+  QKzZOzfSzoWzw_zcezKjzPlzTnzYozaqzfszjtzerzapzYnzUl\
+  z9yzVkzpZzL2zO7zQCzTHzVLz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
