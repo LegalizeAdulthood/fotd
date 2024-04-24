@@ -1,0 +1,116 @@
+;     Date: Fri, 06 Feb 2009 22:40:09 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 07-02-09 (Julia More or Less [?])
+; 
+;       Id: <1.5.4.16.20090206223945.2b177a3a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 07, 2009 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is not a Mandelbrot set, nor is it a Julia set.  
+; It is an Oblate set, a hybrid mixture of Mandeloid and Julia 
+; stuff.  The X-axis lies in the Julia direction, while the Y-axis 
+; lies in the Mandelbrot direction.
+; 
+; I have not yet made up my mind about today's image, which is why 
+; I gave it a rating of a question mark.  At times, these four-
+; dimensional slices through the Julibrots can be spectacular, but 
+; at other times, they are just plain ugly.  Today's image lies 
+; somewhere in between.
+; 
+; The name "Julia More or Less" is absolutely true, but only as 
+; long as we consider the horizontal direction.  When we turn to 
+; the vertical direction, we are moving through a Mandelbrot set.  
+; The other directions lie in the Julibrot, and are neither Julia 
+; nor Mandelbrot dimensions.
+; 
+; The parallel blue stripes in the background are the 'bridges' 
+; that exist only in planes in which only one direction is perpen-
+; dicular to the Mandelbrot orientation.  When all directions are 
+; perpendicular to the Mandelbrot orientation, which is possible 
+; only in spaces of four or more dimensions, we have a Julia set.
+; 
+; Maybe I'll continue this four-dimensional stuff in upcoming 
+; FOTD's, maybe not.  I've gone over it several times in the past.
+; 
+; Perhaps the best feature of today's image is its brief calcula-
+; tion time of only 49 seconds.  And even this minor effort may be 
+; totally avoided by surfing electronically out to the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; Not a single cloud marred the spectacularly blue sky here at 
+; Fractal Central on Friday, while the temperature of 36F 2C felt 
+; like spring.  The fractal cats enjoyed the weather from their 
+; sunny shelf by the big southwest window, taking their breaks 
+; only when hunger called.  My day was busy enough that one would 
+; never guess we are supposed to be in economic hard times.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and it's all real, whatever that means.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Julia_More_or_Less { ; time=0:00:49.79-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideJulibrot passes=1 maxiter=3600
+  center-mag=2.31005/0/9.197812/1.3049 params=0/0/90\
+  /0/-1.3243408/0/0/0/3/1.4 float=y inside=0
+  logmap=6 symmetry=xaxis periodicity=10
+  colors=000P9bL9fI9iE9mA9p69t39w6Br9CnBEjEFeGHaIIYL\
+  ITOIPNILNIGOICPI8QI9RI9SI9TI9UH9VGAXEAYDA_DA`CAbAB\
+  c9Be7Bg6Bi4Bi3Bm9GqFLuLQxQVuSYrT_oUalVciXefYgcZia_\
+  kZagWccUd_RfWOhSMiPJkLGmHEnDKp9Kq6Kq6Kp7mo7mo7mn7m\
+  n8zm8zz8zz8zl8mk9mj9mj9mi9Bi9BhABgABfABeACdACcBCcB\
+  CcBCcBCcBCcCCcCCcCDcCDcCDcDDcDDcDDcDDcDDcEDcEEcEEc\
+  EEcEEcFEcFEcFEcFEcFEcGFcGFcGFcGFcGFcHFcHFcHFcHFcHG\
+  cIHcJHcJIcKJcKJcLKcLLcMLcMMcNMcNNcOOcOOcPPczQczQcz\
+  RczSczSczTczTczUczVczVazW_zXYzXWzYUzZSzZQz_Qz_Qz`Q\
+  zaQzaQzbQzcQzcQzdQzeSzeUzfWzfYze_zdazdczcczcczbczb\
+  czaczacz`cz`cz_czVczZczZczYczYczXczXczWczWczVdzZez\
+  YdzYdzYdzYczYczYczYczYbzYbzYbzYazYazYazYazY`zX`zX`\
+  zX`zX_zX_zX_zXZzXZzXZzXZzXYzXYzXYzXYzXXzXXzWXzWWzW\
+  WzWWzWWzWVzWVzWVzWVzWUzWUzWUzWTzWTzWTzVTzVSzVSzVSz\
+  VSzVRzVRzVRzVQzVQzVQzVQzVPzVPzVPzTKzJ2zK3zK3zK3zK4\
+  zK4zK4zK4zL5zL5zL5zL5zL6z }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

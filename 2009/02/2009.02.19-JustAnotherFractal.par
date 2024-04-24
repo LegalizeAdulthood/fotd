@@ -1,0 +1,87 @@
+;     Date: Thu, 19 Feb 2009 23:47:47 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-02-09 (Just Another Fractal [5])
+;       Id: <1.5.4.16.20090219234734.232711ec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 20, 2009 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I hear that the moon is missing from the icy "Mystic Moonlight" 
+; image that I posted 3 days ago.  In the original discussion I 
+; neglected to mention that the moon is a virtual moon that lacks 
+; the fractal energy to become a real moon.  Of course, if the 
+; image were an oblique view of the rings of Saturn, we would need 
+; no moon.  The distant sun would be causing the glare.
+; 
+; Today's image is nowhere near as striking as the moonlight 
+; picture however.  In fact it's just another fractal, which is 
+; exactly what I named it.  The parent fractal came about when I 
+; subtracted 0.2 parts of Z^3 from Z^2.  This parent fractal is 
+; basically a Mandelbrot set with several new bays out the 
+; negative X-axis.  Today's image is located in a valley between 
+; two of these bays.
+; 
+; Since the image is just another fractal, I had to give it a 
+; rating of a very humdrum 5.  The calculation time of 11 minutes 
+; is admittedly slow, but relief is available on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is posted.
+; 
+; Flurries of snow, brisk winds and a chilly temperature of 30F 
+; -1C made life outdoors unplasant here at Fractal Central on 
+; Thursday.  Luckily, I had no reason to wander far fron F.C. so 
+; the cold didn't bother me.  The fractal cats passed the day by 
+; the heat.  I will post the next FOTD in 24 hours.  Check back 
+; then to see what kind of mischief I can get into.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+JustAnotherFractal { ; time=0:11:11.17-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-0.6541923616778935/+0.0000018876245717\
+  /1.515809e+010/1/-85/0 params=1/2/-0.2/3/0/0/0/0
+  float=y maxiter=3000 inside=bof61 periodicity=10
+  colors=000DTBE`9Fg6Go4Hv2InAJgHK_PKTWLMbMEjN7qN0xS\
+  6sXBoaHjeMfjSaoXYsaUchLPoCAu4Et9IsEMsJ000UrSXqX`pa\
+  dpehojloopntsnxojwlgvhdueatbZsZWrWTqTQpWNkYLg_JcbH\
+  ZdFVfDRwBMz9Iz7EzCDzGCzKBiOAiSAhW9g_8fc7eg6ek6000b\
+  fKadR`bX_`cZZjYXp3Cf6Dh9DjBDkEDmGDnJDpLDqODsQDtTDv\
+  VDwYDy_Dz`EvaFsbGpcHmcIidJfeKcfL`fLYdMabMe`MiZNmXN\
+  qVNusXX000aIBUB0TIOSPkQThOXfM_dLcaJf_HjYGnVEqTCuRB\
+  xPFqSIjVMcYPY`OVXOSTNPPNMMNLLNLLNLKNLKNLJNKJNKINKI\
+  NKHNKHNJGNJGNJFNJFNJENJE7gDIg9Tg6bg3cbKdZ`dVqfUihT\
+  ajSUkRNfPPbORZMTVLVRKXNIZJH`FFbBEd7DeDEgKFiQGlXHnE\
+  29J5IO8RTB_YEhYxlZpm000000000bOphZggWifTjeRkdOmcMn\
+  bJoh2Wg5Zf7ae9ddBgcDjbFmqy9mmKibVeSeR84UBHXDT_Fdhd\
+  ieTmSk4UeDW`LYWT_R`aMhHJ8PINWHaYH6000`mUaHeJUKzpSw\
+  VmK_DOWLSSTVOjbKt960D87H9zLBKOCRSDYWFc_GjhYjfUleRm\
+  dNncKo2SJCPSLM_UJhuCsqDrmEqiFqeGpCPdGOfJNgNMiQLjTK\
+  lXJm_Ioq7s`TKaN`NIXQH`CLE }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

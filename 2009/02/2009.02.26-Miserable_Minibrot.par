@@ -1,0 +1,98 @@
+;     Date: Wed, 25 Feb 2009 23:37:23 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 26-02-09 (Miserable Minibrot [5])
+; 
+;       Id: <1.5.4.16.20090225233716.2b7f0308@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 26, 2009 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Too much work, too little time, and imperfect health ganged up 
+; on Wednesday to hold today's image to a rating of a 5.
+; 
+; The image shows not the ultimate minibrot, but a miserable 
+; little runt of a minibrot stuck on the ridiculously long main 
+; stem of one of the Z^(1.25)+C Mandeloids.  It's a minibrot so 
+; tiny that it is actually starting to break up.
+; 
+; I named the image "Miserable Minibrot".  Don't try to zoom in on 
+; any part of the scene.  Some parts of it are already starting to 
+; break up.
+; 
+; The calculation time of 1-2/3 minutes will ease any disappoint-
+; ment felt when the image is finally seen.  Of course, all risk 
+; of disappointment and wasted calculation time may be avoided by 
+; hurrying to the FOTD web site and viewing the image there.  The 
+; FOTD web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Warm sun and a temperature of 46F 8C kept the fractal cats glued 
+; to their shelf in the sunniest window here at Fractal Central on 
+; Wednesday, while the work kept me glued to the computer desk.  
+; Little else of importance happened.
+; 
+; I'll post the next FOTD in 24 hours.  Until then, take care and 
+; adopt a positive attitude, but don't let it take over your life.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Miserable_Minibrot { ; time=0:01:41.66-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-5.440828082143497/-8.144751993539984/\
+  6.591033e+010/1/-167.5/0 params=1.25/0/0/0 float=y
+  maxiter=25000 inside=0 logmap=100 periodicity=10
+  mathtolerance=0.05/1
+  colors=000hWQh_RhXShYTh_Uh_VfaWcbV_dUWeTTeTQgSNiRL\
+  kRMmQNlQOlQPkQQjPRjPRiPSiPThOUgOVgOWfOXeNXeNYdNZdN\
+  _cM`bMabMbaMbaMacO`dQ_eSZgUYhWXiYXk_WlaVmcUodTpfSq\
+  hSsjRtlQunPwpOxrNytNzuPwrQtpRrnTolUmjVjgWgeYecZ`a_\
+  `_`VX_VVYSTWORWOPYKN_GMaCLc8Ke4Jg5Hi6Fk6Dm7Bo79q87\
+  s95u93wA1zA0s98o8Gk7Og6Vc5b_4jW4qX6rY8rZAr_Cr`EsaF\
+  sbHscJsdLteNteOtfQtgSuhUuiWujXukZvl`vmbvndvnevodto\
+  drodqodoodmodlodjodhodgodeodcodbpd`pdZpdYpdWpdUpdT\
+  pdRpdPpdOpdMpdKpdJocIobHoaGo`Fo_EoZDoYCnXBnWAnV9nV\
+  9nU8nT7nS6mR5zQ4zP3zO2zN1zM0zM0zN2zO3zP5zQ6zR8zS9z\
+  TBzUCzVEzVFzXGzYGzZHz_Hz`IzaIzbJzcJzeKzfKzgLzhLziM\
+  zjMzkNzlNznzzozzpzzqzzrzzszztzzuzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzfzzfzzfzzfzzfzzfz\
+  zfzzfzzfzzfzzTzzFzz2zz5zz8zzAzzDzzGzzIzzLzzOzzQzzT\
+  zzVzzYzz`zzbzzezzhzzjzzmzzozzfzzezzdzzdzzczzbzzbzz\
+  azzazz`zz_zz_zzZzzYzzYzzX }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

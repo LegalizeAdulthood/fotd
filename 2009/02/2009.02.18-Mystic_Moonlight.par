@@ -1,0 +1,114 @@
+;     Date: Tue, 17 Feb 2009 17:02:21 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 18-02-09 (Mystic Moonlight [9])
+; 
+;       Id: <1.5.4.16.20090217170206.2aa71b8a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 18, 2009 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another reworking of an old FOTD image.  The 
+; old image is named "Europa".  It is an imaginary scene on the 
+; icy moon of Jupiter, which appeared on June 21, 1997.  I did 
+; little to the original image other than intensify the colors and 
+; rotate it an infinitesimal bit.
+; 
+; The result is a fractal that strikingly resembles a photograph 
+; of an icy but peaceful seacoast in the light of a full moon.  I 
+; named the new version of the original image "Mystic_Moonlight".  
+; One glance of the image will explain the name.
+; 
+; I wrote the formula, Man-YZ-XZ, when I was experimenting with 
+; rotating images in the 4-D Julibrot figure.  Looking at the 
+; formula today, I'm not sure how it was supposed to work.
+; 
+; I rated today's image at a 9.  I could have been more conserva-
+; tive with the rating, but just because my politics tend to the 
+; conservative side doesn't mean I can't be liberal with my FOTD 
+; ratings on occasion.
+; 
+; The calculation time of 66 seconds will pass like nothing.  The 
+; trip out to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; to stare in awe and wonder at the finished image posted there, 
+; will not only avoid all unpleasantness, but will bring instant 
+; fulfillment.
+; 
+; Tuesday was a nondescript day here at Fractal Central, both with 
+; the weather and the fractal cats.  Sunny skies and a temperature 
+; of 39F 4C kept the cats in and out of their favorite window.  At 
+; one point a squirrel leaped onto the opposite window sill, but 
+; scampered away before the sleeping cats were aware of it.
+; 
+; My day was average.  The work was finished early in the after-
+; noon, which left plenty of time to work on the colors of today's 
+; fractal.  The next in the unending series of FOTD's will be 
+; posted in 24 hours.  Until then, take care, and if it leads to 
+; madness when we wonder what lies behind our sensory images of 
+; the 'outer' world, this probably explains how I could keep the 
+; FOTD going for almost 12 years -- I must be mad!
+; 
+; P.S.  My current re-working of old images does not mean I will 
+; stop posting new images.  I am simply tweaking a few of my older 
+; images that I have long thought need improvement.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Mystic_Moonlight   { ; time=0:01:06.74-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=Man-YZ-XZ passes=1 periodicity=10
+  center-mag=-0.00000686598512544/-1.845082873438826\
+  00/8.246947e+010/-5.121e-005/359.99905692/-89.9990\
+  597420641762 params=0/0/1/0 float=y maxiter=5000
+  inside=255 logmap=yes
+  colors=00008z08z06z06z06z04z04z04z02z02z00x00v00q0\
+  0n00k00i00g00e00b00Y00X00U00S00Q00O00M00H00F00D00B\
+  00900800600400000020020020000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  000000000000000200200400600600800800900900B00D00D0\
+  0F00F00H00K00K00M00M00O00O00Q00S00S00U00U00X00Y00Y\
+  00`00`00b00b00e00g00g00i02i02kU4n04n04qU6qU6sV6sW8\
+  vX9xXDzYUzZUzdZzgazk`v`WvXQiT0kB0g00`00`00X00e98i9\
+  0qBMzBMzBMzBOzDQz0YzFSzFSzFSzHUzHUzHUzKXzKXzMYzMYz\
+  MYzO`zO`zQbzQbzQbzO`zO`zO`zM`zKzzrzzuzzzzzuzzzzzrz\
+  zzzzzzzuzzHAzFAzFAzFAzFAzDAzD`zDAzDAzBAzBAzBAzBAz9\
+  Az9Az9Az9Az8Az8Az8Az8Kz6Az6Az6Qz6Az4Oz4Kz4Kz4Oz2Oz\
+  2Mz2Mz2Mz0Mz0Mz0Mz0Mz0Kz0Kz0Kz0Kz0Kz0Kz0Kz0Hz0Hz0H\
+  z0Hz0Hz0Hz0Hz0Fz0Sz0Uz6Az }
+
+frm:Man-YZ-XZ {; primitive effort at rotation
+; p2 = 0 = Julibrot YZ plane
+; p2 = 1 = Julibrot XZ plane
+; p2 = >0 <1 = Oblique planes
+z=real(pixel)+flip(real(p1)),
+c=imag(pixel)+flip(imag(p1)),
+a=p2, b=flip(cos(asin(p2))):
+z=sqr(z)+((a+b)*c),
+|z| <= 25 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
