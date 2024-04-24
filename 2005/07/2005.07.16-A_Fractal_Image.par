@@ -1,0 +1,82 @@
+;     Date: Sat, 16 Jul 2005 16:11:13 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-07-05 (A Fractal Image [3])
+;       Id: <1.5.4.16.20050716161311.0d7f0018@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 16, 2005 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It is 4:05pm.  Today's FOTD is late due to a heavy storm and 
+; power outage from noon until 3:30pm.  But things are now back 
+; to normal.
+; 
+; I am disappointed with today's image.  When I first saw the 
+; parent fractal, which was created by combining 2 parts of 
+; Z^(-0.1) with Z^2 and adding C, I had high hopes for a great 
+; image.  But alas, my hopes were in vain.  The parent fractal 
+; appears quite interesting on the surface, but deep inside it 
+; has little of worth.  Totally uninspired with the outcome of 
+; the day's exploration, I named the image "A Fractal Image" and 
+; rated it at a lowly 3.
+; 
+; The parameter file, which takes 23 minutes to run, is far too 
+; slow for such an unimpressive image.  A far more efficient way 
+; of viewing the humdrum fractal is to download it from the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; 88F 31C degree heat and high humidity made things uncomfortable 
+; for humans on Friday, but no rain fell, giving the cats a dry 
+; afternoon in the holly thicket.  When dusk arrived, they came 
+; inside for their tuna treats without complaint.  Today is 
+; starting the same, but distant thunder is grumbling.  Unless it 
+; storms, today will likely be another acceptable day for the duo. 
+; For me, it will likely be an uneventful day.  The next fractal 
+; will come from nowhere and will appear as the next FOTD in 24 
+; hours.  Hopefully, it will be an improvement over today's.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Fractal_Image { ; time=0:23:38.98--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.97782662172448200/+0.444979621904237\
+  80/2.368234e+010 params=2/-0.1/1/2/0/0 float=y
+  maxiter=7200 inside=0 symmetry=none
+  periodicity=10 mathtolerance=0.05/1
+  colors=000Y4UW5UV6pU7kT8gS9cRAZQAVPBROCMNDIMEELF9K\
+  G5JG1LI3MK5NM7PO9QQBRRDSTFUVHVXJWZLX_N_VPaRQcNSeJT\
+  hEUjAWl6Xn2Yk5Wi8UfBTdERaHP_KOXNMVQKSTJQWHNZFLaEId\
+  CGgB9MH21N48P6EQ8KRARTCXUEbVGhWFiVEjUDjUCkTBkSAlS9\
+  mR9mQ8nQ7nP6oO5pO4pN3qM3qM2qK2qJ2qH2qG2qE2qD5gA8Y7\
+  AP5AO8AOAAOCAOFAOHAOJAOMAOOANQANTANVANXAN_ANaANcAN\
+  eGLhMKjSImXHoUGnSFmPEmNDlLDlOGjRJhTMfWPdYSb`U`bXZe\
+  _XgbVjeTlgSkdPjbMi`JhYGgWEfUBeR8dP5dN3eL7fKBgJEhII\
+  iHLjFPkESlDWmCZnBboAepDfpGfpIgqLgqOhqQhqThrWirYir`\
+  jscjsekshksjkrigqicqi_piWohTohPnhLmhHmhEaiFQjFEkF3\
+  kF2lG2lH2mH2mI2mI7kJBjKFiLJhMNgMRfNVeOZdPbcQfbQjaR\
+  n`Sr_TvZUzYUy_PyaLxcHxeCwg8wi4vg8vfBveEvdIvcLvbOva\
+  Ru`Vu_YuZ`uYcuXguWjuVmuUpvSqvRqvQqwOqwNqwMrxKrxJrx\
+  IrxHrtIqqJpnKokLohMneNmbOm_OlWPkTQkQRjNSiKTiHUhEVg\
+  BVgCXhDZiE_jFakGckHdlIfmJhnKinNflPdjRbhU`gHDOYXc`V\
+  abS`dQZgOXiMVVCyWAyX8yY6y }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

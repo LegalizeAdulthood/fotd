@@ -1,0 +1,92 @@
+;     Date: Fri, 15 Jul 2005 11:38:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-07-05 (The Wheel of Life [7])
+;       Id: <1.5.4.16.20050715114039.0d6713e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 15, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To create the parent fractal of today's image I took negative 
+; recip(sqrt(Z)) and combined it with Z^2 before adding (1/C).  
+; The resulting fractal is a very distorted main Mandeloid with 
+; twisted disconnected filaments scattered to its east and a large 
+; hole not far to its south, which is connected to the main 
+; Mandeloid.  Today's scene lies on a tiny side filament extending 
+; from the large hole.
+; 
+; I named the image "The Wheel of Life".  Trying to organize my 
+; philosophy, I have worked myself into a kind of mystical mood 
+; lately, and the name fits my mood.  Instead of the usual black 
+; background, today's image has a brilliant white background, 
+; which emphasizes the many sub-holes scattered through it.
+; 
+; The rating of a 7 seems about right.  The colors are quite 
+; intense, perhaps a bit too intense, and the 'tdis' outside 
+; option works quite well at bringing a sense of 3-D reality to 
+; the image.  The magnitude of the image is in the range where 
+; strange things start to happen with its size unless the 
+; mathtolerance entry is included in the parameter file.
+; 
+; The render time of 5 minutes is joyfully fast, giving impatience 
+; little time to rear its head.  Those with machines that are 
+; allergic to Fractint may see the image by downloading it from 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a high temperature of 86F 30C, Thursday turned out to be 
+; not unbearably warm, but it was very humid here at Fractal 
+; Central.  Fractal cats are un-bothered by high humidity however, 
+; unless it starts to fall as rain.  No rain fell while the cats 
+; were taking it easy in the holly thicket, so I guess their day 
+; must be considered a success.  Today is starting much the same.  
+; If the rain holds off again, it will be another good day.  For 
+; me, the work is starting to pile up and it looks like a busy 
+; day.  The next FOTD will appear in 24 hours.  Until then, take 
+; care, and keep your day in tune.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Wheel_of_Life { ; time=0:05:04.78--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.72352856661089870/-0.132149562601626\
+  40/4.256858e+012/1.0001/37.503580311835151/-0.0068\
+  0660533600676437 params=-1/-0.5/1/2/0/0 float=y
+  maxiter=1200 inside=253 outside=tdis
+  periodicity=10 mathtolerance=0.05/1
+  colors=000OObPPcRQeTRgUShWUjXVkZWm_XnaYpbZqY`pUbpQ\
+  dpMfpHhoDjo9lo5mo6lk7kh7kd8ja9jY9iVAiRBhOBhLGfOKeR\
+  PdUTcWXbZaaae`cj_fnZirYkh_gZadQc`GeY7fV8`X9VYAPZBJ\
+  `CDaD8bJA`OBZUDXZEVdFTiHRoIPtJNoKPjLQeMRaNSXOTSPVN\
+  QWJRXESY9TZ5T_AUXFVVJWSOXQSYOXZLa_Je`GjaEnaCkbEhbG\
+  ecIadLZdNWePTeRQfTNfVOdKObAO`0TSCXKN`BYd3he4ef4cf5\
+  `g5Zg6Xh6Uh7Si7Pi8Nj8Lj9Ik9Gk9EgADdAC`ABYAAVB9RB8O\
+  B7KB6HC5EC4AC37C24C15I26N37S47X58a69f79k8CcGFXNIQV\
+  LJaOCiQ5pMCrIItEOvAUx6_y7`s7am7ag8ba8bW8cQ8cLDcOHc\
+  QLcTPcVTcYXc_acaecdicfmciqckucmrgopkpmnqkrriusnTYs\
+  1DkAGcJIWSLO_NGhQ8qS0yU4wV7uVAsVDqWHoWKmWNkXQiXUgX\
+  XeY_cYbaYf_ZiYZlWZoUZnTXnSWmRVmRUlQTlPSkORkOQjNPjM\
+  OjMNfNMcNL_NLXNKTNJQNJMNIJNImpfgfcbX`YNYTDVO3SQ7QR\
+  APSDOTGNUJMWMKXPJYSIZVH_YGa`EbcDcfCdiBelAfk9gj9hi9\
+  hh9ig9jf9je9kd9lc9lb9ma9n`9n_9oZ9pY9pY9lZDi_Ge`Kba\
+  NZbQWcUSdXPe_UEZzrzODMMM` }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,84 @@
+;     Date: Wed, 20 Jul 2005 11:43:44 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-07-05 (Iterative Eruption [4])
+;       Id: <1.5.4.16.20050720114545.2aa7e5d0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 20, 2005 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; After yesterday's abysmal effort, I had hoped to have a better 
+; fractal for today.  The fractal is better, true enough, but how 
+; much praise can I give an image that rates a humble 4?  We will 
+; need to do better still in the next FOTD.
+; 
+; In today's image I set the outside to the 'epsiloncross' option, 
+; an option I rarely use.  The result is an image with black arcs 
+; that seem to be holding hot magma in place.  I named the image 
+; "Iterative Eruption".  It was created by combining various 
+; portions of Z^(-2.2) and Z^(-1.2), then adding (1/C).
+; 
+; The render time of 3-1/2 minutes is within reason, but the 
+; 'passes=g' option will cut another minute from that time.  
+; Perhaps the fastest way to see the image is to download it 
+; already rendered from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A temperature of 93F 34C combined with a hot sun was too much 
+; for the fractal cats on Tuesday.  They passed most of the day 
+; indoors under the air conditioner, going outside only long 
+; enough to convince themselves that the indoors was the better 
+; choice.  A tough looking tomcat wandering the area might have 
+; helped them decide to stay inside.  Today is starting with sun 
+; and clouds, still hot but less humid.  The cats have yet to 
+; decide what to do.
+; 
+; I have no problem deciding what to do.  Having one's work pre-
+; arranged is one of the benefits of adulthood.  The next fractal 
+; will appear in 24 or so hours.  Until then, take care, and get 
+; in there with the big time thinkers.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Iterative_Eruption { ; time=0:03:25.05--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=t
+  center-mag=-1.33454320236390500/+0.006764474083616\
+  00/4464436/1/-36.2/-1.90810631461868496e-008
+  params=2/-2.2/1/-1.2/6.9/525 float=y maxiter=500
+  inside=epsiloncross proximity=0.001 periodicity=10
+  colors=000_ccMmP8vDDsDHpEC6DOkESiEWfE_dEhgIqhKxiMx\
+  gMxgTxeZxeexdkxcpApQYhfrYsxLwxLvxNttMonNjhNeaN`WOW\
+  RPRWVU__WbeZcb_eZ_fWZgSZhOZiMZjIYkEYkCYcTRWfINrARi\
+  IT`SVS_VHgV7m_9odBqiDrnFtsHvxIwxKwxLwxLtxLwxMwxLwv\
+  LwrKwoKwlJwhJweHwaHw`Hw`Hw_Hu_Hq_Im`Hi_He`H`_IX_IS\
+  VqPWnO`lPegPehOeeOedOebMe`MeZMeXLeVLeTLeRL`acfeYbk\
+  d`hbZeeXb`VZWTVRSRNROIPQLPROPTQNUUNVWMXYLY_K_bK`eJ\
+  agJciIclHenHfpHgrJhnMikPifRibTiYWiVYiQ_iMbiHdiEeiA\
+  aoRZueWvrPvlIreBn_BpbBrdBtgBujBvmBvoBvrAvrAvtAvuFv\
+  wKvwNtwRpwUmwXiw`dwcbwf_wjYwnVwqTwocwiko`r`SvOQvMR\
+  vLQvKQvJQvIQvIQvGQvFQvEQvDQvDUvKYqR`lZehfhamiVskPw\
+  kKwVAwYCw`FwbGscIleKffLYfMQjRZmVdpYksbrudwvgwtfwxd\
+  wx_uxTlxOfxI_xOWuQQnTLgXE`_8ZcAYeCYgDXiEWkFWnGUpHU\
+  rJUtKTvMTvMSvNQvNPvOPvOUvTWuYXpaZjd`ci`XlaQobKq_Pl\
+  XUhU_dQdZMhTIlOEoJGlLHiLJfNJdNK`OMYPNWPTXURRVaZbSv\
+  PMvOOvSQvWRvZSvcSvfTtiUrl }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

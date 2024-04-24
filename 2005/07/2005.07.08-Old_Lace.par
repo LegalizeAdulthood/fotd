@@ -1,0 +1,90 @@
+;     Date: Fri, 08 Jul 2005 09:59:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-07-05 (Old Lace [7])
+;       Id: <1.5.4.16.20050708100128.29c7b3e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 08, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The lacy effect of today's image inspired the name "Old Lace", 
+; though in this case no arsenic is involved.  What is involved is 
+; a combination of negative Z and (1/Z), with C added.
+; 
+; It is curious that this combination would produce any fractal at 
+; all.  By itself, negative Z does not make a fractal, and (1/Z) 
+; makes a simple vertical row of small flat disks.  (In the odd 
+; orientations of the Julibrot, (1/Z) produces some striking 
+; effects, but this is another story.)  When negative Z and (1/Z) 
+; are combined however, some very interesting Mandelbrot things 
+; can happen.
+; 
+; In today's image, I added (1/Z) to negative Z.  The resulting 
+; parent fractal is a rough hyperbola with Mandelbrot buds along 
+; its edges, and a small valley at the apex.  Today's scene lies 
+; in the vicinity of this valley.
+; 
+; I rated the image at a 7.  The coloring, which is about as 
+; smooth as can be achieved with only 256 colors to work with, 
+; adds to the impact, and raises the rating from a 6 to the 7.  
+; The render time of 26 minutes is admittedly slow.  But relief 
+; may be found on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the completed image is posted, ready for download.
+; 
+; The clouds remained thick all day Thursday here at Fractal 
+; Central, while the temperature reached a high of 81F 27C.  
+; Luckily, the rain held off until after dark, which gave the cats 
+; a pleasant afternoon in the yard.  They became alert when two 
+; unwanted neighborhood stray cats wandered by, but the other cats 
+; moved on without coming within confrontation range.  Today is 
+; starting with heavy rain however.  Unless it ends in a hurry, 
+; the cats' day will be spoiled.  My day will consist of the usual 
+; work and fractals, the next of which will appear in 24 hours.  
+; Until then, take care, and where do fractals come from?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Old_Lace { ; time=0:26:18.44--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.00697239427666942/+2.648103091012842\
+  00/7219667/1/2.5/-2.90142841345708558e-006
+  params=-1/1/1/-1/0/525 float=y maxiter=2200
+  inside=0 logmap=569 periodicity=10
+  colors=00001P01N07M08L08R09P09S0AQ0AT0BR0BU0CS0CV0\
+  DT9DWAEUAEXBFVBFYCGWCGZDHXDH_EIYEI`FJZFJaGK_GLaHLa\
+  GMbGNbGNcGOcGOdGPdFPeFQeFQfFRfFRgFSgFShEThETiEUiEU\
+  jEVjEVkEWkDWlDXlDXmDYmDYnDZnDZoC_oC_pC`pC`qCaqCarC\
+  brBbsBcsBctBdtBduBeuBeuDfvFfvGgvIgvJivLhvNjvOjvQkv\
+  RkvTmvVmvWovYowZpw`pwbrwcrweswftwhtwjuwkvwmvwnwwpx\
+  wryxqxwpxwoxwnxwmxwlxvkxvjwviwvhwvgwufwuewudwucvub\
+  vtavt`vt_vtZvtYvtXvsWusVusUusTusSurRurQurPtrOtrNtq\
+  MtqLtqKtqJtqItqGurFusEusDvtCvtBvuAwu9wv8wv7xw6xw5x\
+  x3yz4xx4xw5wu5wt6vr6vq6uo7un7ul8tk8ti8sh9sf9reArcA\
+  rbAq`Bq_BpYCpXCoVCoUDoSDnREnPEmOEmMFlLFlJGlIGkGGkF\
+  HjDHjCIiAIi9Ii8IhAJhBKhCLhDMhENhFOhGPhHQgIRgJSgKTg\
+  LUgMVgOWgPXgQYfRZfS_fT`fUafVbfWcfXdfYeeZfe_geahebi\
+  ecjedkeelefmdgndhodipdjqdkrdlsemtgnuilvkjwmhxogyqe\
+  zsczubzz`zxZzyYzzWzzUzzTzzRzzPzzOzzMzzKzzKzzJzzJzz\
+  IzzIzzHzzHzzGzzGzzFzzRzzQ }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
