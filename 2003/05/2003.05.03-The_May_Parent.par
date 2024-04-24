@@ -1,0 +1,98 @@
+;     Date: Sat, 03 May 2003 10:22:17 -0400
+;     From: "Jim M." <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-05-03 (The May Parent [NA])
+;       Id: <1.5.4.16.20030503102126.392fa8e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 03, 2003 (Rating NA)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The Mandelbrot set is sometimes called the most complex object 
+; in the world of mathematics.  And it truly is a complex object.  
+; But there are other fractal objects created by other fractal 
+; formulae, which are more complex than even the M-set.  Of 
+; course, since the M-set is infinitely complex, these other 
+; objects would appear to demand a higher order of infinity.
+; 
+; Today's image could be one of these 'higher' fractals.  It is 
+; titled "The May Parent".  I give it this name because, for the 
+; rest of the month of May, I shall use it as the source of my 
+; FOTD images.  This limitation in no way implies a shortage of 
+; images or a reduction in their quality, though on occasion I 
+; will go beyond my normal style of image with a midget at the 
+; center.
+; 
+; The formula mixes one negative part of Z^(-11) with ten negative 
+; parts of Z^(-1.1), then adds 1/C before being calculated with a 
+; bailout radius of 625.  In some places, the oversized resulting 
+; fractal is filled with holes like a swiss cheese.  In other 
+; places, it appears to hold the usual Mandel-stuff.  In yet other 
+; places, it is filled with rings, while a prominent fan-shaped 
+; element fills the center.  The variety is endless, and the 
+; fractal has midgets hiding almost everywhere.
+; 
+; I gave today's image no rating, since it is not really a 
+; finished product, but rather the source of the next 28 FOTD 
+; images.  The render time of a little over one-minute should give 
+; little difficulty, but for extra convenience, the completed GIF 
+; image is posted to the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The rain that was expected here at Fractal Central on Friday 
+; never arrived.  Instead of the rain, we had a mostly sunny day 
+; with a temperature of 81F 27C.  The fractal cats thoroughly 
+; enjoyed the unexpectedly pleasant day, and spent several hours 
+; romping in the yard.
+; 
+; Today is starting cloudy and quite a bit cooler -- once again 
+; threatening rain.  Will good fortune prevail, giving the fractal 
+; duo another good day?  Only time will tell.  My day will turn 
+; good when the work is finished, so until next time, take care, 
+; and see you in 24 hours with the next image.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_May_Parent { ; time=0:01:11.96--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=3.56788/-0.692098/0.1341384/1/135/-3.77\
+  822773067748585e-014 params=-10/-1.1/-1/-11/0/525/\
+  0/0 float=y maxiter=400 inside=0 logmap=yes
+  periodicity=10 colors=000CHgEIfGJgIJgKKcLLhNMePMiR\
+  NhTOjVPkXPkYQl_RlaSmcSmeTmgUmiVmjVmkTmlRmmPmmOmnQl\
+  oSjpUipWgqYfr_dsacscate`ugZwiYzkUwmRroOrqLmsImuFhw\
+  CFw9Au69t69t69s69s68r68r68q68q67p67p67o67o66n66n66\
+  m66m65l65l65k65k64j64j64i64i64i65g75f85e96cA6bB6aC\
+  7`D7ZE7YF8XG8WH8UI9UJ9UK9ULAUMAUNAUOBUPBUQBURCUSCU\
+  TCUUDUVDUWDUXEUYEUZEUZCUYAUX9UY9UY9UY9UY8UZ8UZ8UZ8\
+  UZ7U_7U_7U_7U_7T_FScMSfURi`RleYeidZmkTqrMuyGowMjvS\
+  etY`scVqiQpoLnuGmzHmxImwJmvJmuKmtLmrMmqMmpNmoOmnOm\
+  mVm8Wx9Xw9YwAYwAZwB_wB`wC`wCawDbwDcwDcwEdwEewFfwFf\
+  wGgwGhwHiwHiwHgwJewKcwMawN_wOYwQWwRUwSSwUQwVOwXNwY\
+  LwZJw`HwaFwbDwdBwe9wg7wh5wi3wk1wl0wm6whBwcGwZLwURw\
+  PWwK`wFewAjw5mw6ow7qw8sw8uw9wwAywAvwFtwJqwOowSmwXj\
+  w`hweewicwnawrIw8NwBRwEVwGZwJcwLgwOkwQowTswVtwUuwU\
+  vwUvwUrwWnwYkw_gw`dwb`wdYwfUwgQwiNwkJwmGwnCwp9wr5w\
+  t2wu8whEwWKwJPw7Ow9OwAOwBOwCOwDOwFOwGNwH }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
