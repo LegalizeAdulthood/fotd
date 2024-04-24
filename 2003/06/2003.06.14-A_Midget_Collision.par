@@ -1,0 +1,92 @@
+;     Date: Sat, 14 Jun 2003 11:18:57 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-06-03 (A Midget Collision [4])
+;       Id: <1.5.4.16.20030614111840.2a4fe71c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 14, 2003 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to a flood and power failure, I had little time to find an 
+; honorable fractal for today.  What I did find was a collision 
+; and partial merger of two midgets in the fractal created by 
+; adding portions of Z^4, Z^5.
+; 
+; The real(p3) parameter is very critical to the shape of the 
+; combined midgets, and changing its value by as little as 
+; 0.000001 makes a noticeable change in the image.
+; 
+; I named the image "A Midget Collision" because that's what it 
+; is.  I rated it at a 4 because that's all it's worth.  The 
+; render time of just over 1 minute takes some of the disappoint-
+; ment from the FOTD.  As always, the image can also be seen by 
+; visiting one of the FOTD web sites and downloading it from 
+; there.
+; 
+; Paul's site is:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Scott's is:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Friday, with its temperature of 86F 30C, was a fine day until 
+; 7pm when a thunder-storm of biblical proportions arose, flooding 
+; the fractal basement to a depth of 6 inches and cutting the 
+; power.  (I have always wondered how a sump pump is supposed to 
+; keep the water down when the storm causes a power failure, as 
+; usually happens.)  But it was far worse a couple blocks down the 
+; road, where a sudden 10-foot flood washed the neighborhood cars 
+; into a single heap of wreckage, with a Lincoln Towncar sitting 
+; proudly on top.  There were numerous high-water rescues in the 
+; area.  Luckily, the fractal cats were well ensconced in the 
+; darkest closet during the spectacular noise.  More severe storms 
+; are forecast for later today, so we'll see how it goes.
+; 
+; For me, I'm going to finish as many chores as possible before 
+; the next deluge and power failure.  It's sunny at the present, 
+; and the cats are in the yard.  All is temporarily well.  Until 
+; next FOTD, take care, and be at ease.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Midget_Collision { ; time=0:01:48.75--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-10.8815/-1.72085e-015/3.908693
+  params=1/4/0.1/5/-0.991909/0 float=y maxiter=1200
+  inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000QFDNFDLECJEBGEAEDACD99C87C77C06C45C74CB3\
+  CE3CH6EI8FIBGIDHIFIIIJJKKJMLJPMJRNJUOKWPKYQK`RKbSK\
+  o`YpX`qTcrPfsLisHkpFhnEelDbiC_gBXeAUc9S`7PZ6MX5JU4\
+  GS3DQ2AO18R6BTBDVFGXKI_PKaTNcYPeaShfUjkWloZnt`pxbm\
+  wakv`hu_ftZdsZarY_qXXqWVpVToVQnUOmTLlSJkRHkRKlPMmO\
+  OnMQnLSoJVpIXpGZqF`rEbrCesBgt9it8ku6mv5ov4pu7puApu\
+  CqtFqtIqtKrsNrsPrsSsrVsrXsr_tqbtqdtqgtqiqphnpglpgi\
+  offofdoeaoeZndXndUncRncPmbMmbJmaHmaFk_EjYDiWCgUBfS\
+  AeQ8cO7bM6aK5_I4ZG3YE8_HCaJGbLLdNPePTgRYhUajWekYjm\
+  _nnarpcvoesmdpmcmmbkmbtoJqqKoqKloKjmKgmLemLbmL`mLY\
+  mMWmMTmMRmMQmLPmKOmJOmINmHMmGLmFLmEKmGJmIImKHmLGmN\
+  FmPEmRDmSCmUBmWAoY9qZ8s`7ub6wd5xeJzdXzcjzcnz8rzMvz\
+  _czeLzk2zqAznHzlPziWzgczdjzbkzalz`lz_mzZnzYnzXozWB\
+  zkWzbozVpzWpzXqzYqzYrzZrz_sz`sz`tzatzbwzftzbJzK`zS\
+  qzZkzXfzV`zUWzSQzRLzPBzHEzLGzOJzSLzVOzZQzaTzeVzhUz\
+  cUz_TzVTzRSzMSzIXzGUzFSzE }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

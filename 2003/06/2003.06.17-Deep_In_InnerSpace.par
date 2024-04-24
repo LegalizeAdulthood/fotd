@@ -1,0 +1,94 @@
+;     Date: Tue, 17 Jun 2003 09:48:06 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-06-03 (Deep in Inner Space [9])
+;       Id: <1.5.4.16.20030617094750.0d679af8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 17, 2003 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Does today's visionary fractal image actually rate a 9?  Well, 
+; maybe not, maybe a rating of 8 would be more accurate, but I've 
+; been hard on myself lately and it's about time I give myself a 
+; break, so I decided that today's image rates a 9, which equals 
+; 'one of the all-time best'.
+; 
+; The parent fractal was produced by subtracting Z from Z^(-1.08) 
+; and adding (1/C).  The resulting image resembles a distorted and 
+; somewhat lopsided Mandeloid standing on its nose.  Today's scene 
+; is located in the East Valley area of this parent, which in this 
+; case is a north valley.
+; 
+; I named the image "Deep in Inner Space" because I'm in a rather 
+; subjective mood this morning.  The picture has unusually smooth 
+; coloring, at least on my fractal monitor, with the bands being 
+; almost invisible.  The overall effect is one of a serene, hazy, 
+; fantastic fractal landscape, with gossamer arms composed of 
+; clouds of invisible smaller midgets extending outward from the 
+; central midget in a star-like shape.
+; 
+; The price to pay for all this serenity is the 1/2 hour required 
+; to render the scene from the attached parameter file.  And even 
+; that price may be avoided by downloading the completed image 
+; from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Lots of clouds spoiled the day here at Fractal Central on 
+; Monday, but the temperature of 73F 18C was close to perfect, and 
+; the fractal cats made the most of it.  Today is starting cloudy 
+; again, with rain forecast for later in the day.  The duo will 
+; have a marginal day at best.
+; 
+; I'm having a fair to good day -- so far that is.  I hope the 
+; pleasantness can continue.  With any luck at all, it will.  In 
+; any case, until next time, which will arrive in 24 hours, take 
+; care, and last year the farmers prayed for rain.  This year 
+; their prayers are being answered.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Deep_In_InnerSpace { ; time=0:29:24.20--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.02357251356169931/+0.372397927789504\
+  30/1.14291e+008/1/10/1.30309761642993793e-006
+  params=1/-1.08/-1/1/0/300 float=y maxiter=2500
+  inside=0 logmap=644 periodicity=10
+  colors=000EAUFBVFBVFBWFBWFBXGBXGBYGBYGBZGBZHB_HD_H\
+  D`HD`HDaIDaIDbIDbIDcIDcJDdJDdJDeJEeJEfJEfLEgLEgLEh\
+  LEhLEiMEiMEjMEjMEkMFkNFlNFlNFmNFmNFnOFnOFoOFoOFpOF\
+  pJGqMFqNFqOFqPFqQFpREpSEpTEpUEoVEoWDoYDoYDn_Dn_Dna\
+  BnaBmbBmcBmdBmeAmfAmgAmhAmiAlj9lk9ll9lm9kn9ko7kp7k\
+  q7jr7js7js6ju6iu6iv6iv6ix4kw6jw6iw6iw6hw6hv7hv7hv7\
+  gv7gv7fv7fv9ev9ev9dv9cv9cuAbuAbuAauAauAauAatB_tB_t\
+  B_tB_tBZsDYsDYsDXsDXsDWsDWsEVsEVsEUsEUsETtBUsDTsET\
+  sETrFTqFTqGTpHTpHToITnITnJTmLTmLTmMTlMTlNTkOSjOSjP\
+  SiPShQShRShRShSSgSSfTSfUSeUSdVSzVSzWSzpPzpQzpRzpSz\
+  pSbQTaPUaNUaLV_IW_FX_GW_HWaHWaIWaIWaJVaJVaLVbLVbMV\
+  bMVcNUcOUdOUdPUdPUeQTeQTeRTfRTfSTfSTgTSgUShUShVShV\
+  ShWRhWRhXRiXRiYRiYRjZQj_Qk_Qk_Qk_QlaPlaPlaPmaPmbPm\
+  bPmcOmdOndOneOneOofNofNogNpgNphNreMqgNphNoiOnjOmlP\
+  mmPlnPkoQjqQirRhsRjuPktQmtRntRpuSrvUsvTuwTvxSxySzz\
+  RzzRzzQzzQzzPzzPzzOzzOzzN }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

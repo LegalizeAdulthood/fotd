@@ -1,0 +1,115 @@
+;     Date: Tue, 03 Jun 2003 08:56:23 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-06-03 (Unity and a Half [6])
+;       Id: <1.5.4.16.20030603085556.2b6fa83c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 03, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We seem to be developing a theme for the month of June.  I had 
+; no intention of having two 'theme' months in a row, but 
+; sometimes fractals have a will of their own, and a theme of 
+; midgets in the many Z^(1.5)+C fractals seems to be developing.
+; 
+; Today's image is the third consecutive scene in the set of 
+; fractals created by the formula Z^(1.5)+C.  As the lengthy 
+; real(p2) parameter shows, the parent fractal was found by the 
+; evolver feature.  I could have rounded off this parameter to 
+; -46.7 with little change in the resulting image.
+; 
+; Fractals with exponents in the X.5 range are the most prone to 
+; the type of discontinuities that fill today's image.  Fractal 
+; discontinuities decrease in significance as the exponent nears 
+; integer values, and vanish entirely when the exponent is an 
+; integer.  I normally use the <floor> function with the 
+; MandelbrotBC1 formula, but for a change, I used the <recip> 
+; function in today's image.
+; 
+; In today's image, which lies in the most-discontinuous range of 
+; exponents, the attractive symmetrical patterns that surround 
+; midgets in the classic Mandelbrot set are totally absent.  
+; Today's half-midget is surrounded by a kind of star-burst with 
+; an obvious break in the upper part.  This break totally destroys 
+; any pretense of symmetry, though it does make an interesting 
+; feature.
+; 
+; To add more interest, I rendered the image with the outside set 
+; to < fmod > and the proximity set to 0.5.  The other outside 
+; options also make interesting variations of the basic scene, and 
+; are worth checking.
+; 
+; I named the image "Unity and a Half" as a description of the 
+; exponent.  I could rate the final result at only a 6.  The 
+; rating is held down by the coloring, which could have used a bit 
+; more work.
+; 
+; At least, the render time of 6 minutes is reasonable.  The 
+; download of the finished image file is even more reasonable.  
+; That download can be found at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Another perfect day here at Fractal Central on Monday produced 
+; perfect cats.  The not-quite-dynamic duo spent the better part 
+; of the day in their porch chairs, watching the world, enjoying 
+; the temperature of 73F 23C, and remembering the days when they 
+; were actually dynamic.
+; 
+; Today, unfortunately, is starting cloudy, with rain promised by 
+; afternoon.  For me, it will be just another workday.  Until next 
+; time and next fractal, take care, and sometimes fractals are not 
+; all they're cracked out to be.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Unity_and_a_Half { ; time=0:06:08.50--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=recip passes=1
+  center-mag=-0.73254313764763500/+0.180334958341697\
+  00/4.605696e+007 params=1.5/0/-46.74114200262459/0
+  float=y maxiter=4200 inside=0 proximity=0.5
+  outside=fmod symmetry=none periodicity=10
+  colors=000CvNBnPBfRBZTASVAKXACZA5`WSZpnYokZnhZmeZl\
+  bZk_ZjX_iU_hR_gO_fL_eI_TFYHCXMIYQNYVSYZXYbaYgfYkkY\
+  opYkk`gfccae_XhXSjTNmPIpLDrH8uE4wF6rF7mG9hGAcO8TV6\
+  Ia47WGFQSMKcUEo`9zgBxcCv`DtYErVGpSHnPIlMJjJKiGPlJU\
+  nMZpPcrShtVmvYks_ipagmcfjedggbdi`ak_ZmYWoWTqUQsTNu\
+  RPrPQoOSmMTjLUhJWeIXcGY`E_YD`WBaTAcR8dO7eMBcOEaPI`\
+  RLZSOYTNTRMPPWnaSoYOpVJqRFrNBsK7tG3tD5qE6nF8lG9iHB\
+  gICdJEaKF_KHXLIVMKSNLPONNPOKQPIQY9Kf1Fg7DgCCgIBhNA\
+  hT9hY8ic7ih6im5ciAYfFScJN`OHYTBVX5Sa0Pe3Of6Og9OhBO\
+  iEOjHOkJOkMOlPOmROnUOoXOpZOp_Kl_Hh_Dd`A``6X`3T`0Qb\
+  2Td3Ve4Xg6_h7aj8ckAfmBhoCjpEmrFosGquItvJvxKxyLzwOy\
+  vQxuSwtVvsXurZtqaspcroeqnhpmjollnkomjqlislngkrWkUg\
+  W6sGBcSGOcL8nODmQHlTMkVRjYWi__iadhdhgfmfiqekudiwib\
+  vkbti_odWj_TfVQaQMXLJTGFOBCJ69F1BE2CE3ED3FD4HC4IC5\
+  JB5LB6MA7OA7P98R98S89T89SBBSDCSGESIFSKHRNIRPKRRLRU\
+  MRWOQZPQ`RQbSQeUQgVQiWJpR }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

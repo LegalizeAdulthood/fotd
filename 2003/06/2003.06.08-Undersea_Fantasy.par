@@ -1,0 +1,98 @@
+;     Date: Sun, 08 Jun 2003 08:34:09 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-06-03 (Undersea Fantasy [7])
+;       Id: <1.5.4.16.20030608083347.2ab78e40@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 08, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With today's image, we sink all the way down to an exponent of 
+; Z^(1.015) and the hard-to-find chaos that lies in the resulting 
+; fractals.  We examine this lowly fractal at a point 275 levels 
+; down the logarithmic spiral, though from the degree of disorder 
+; in the image, I assume the spiral has long since ceased to 
+; resemble the spiral shape we are familiar with.
+; 
+; Not only is the image filled with discontinuities, but the 
+; discontinuities are discontinuous.  The whole thing vaguely 
+; reminds me of an undersea scene, and I named it "Undersea 
+; Fantasy" accordingly.  It's a spectacularly colored image, with 
+; colors perhaps a bit too gaudy, so I held the rating to a 7.  
+; 
+; As I warned earlier, the chaos in these very low fractals is of 
+; a very high maxiter and quite hard to bring out.  The render 
+; time of 1 hour and 5 minutes for today's image demonstrates this 
+; fact.  This slowness will grow only worse as we continue our 
+; descent toward our ultimate but perhaps unreachable goal of 
+; Z^(1.009).
+; 
+; Luckily for fractalists with other things to do, the finished 
+; image of today's fractal will soon be available on the FOTD web 
+; sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; With the temperature hovering around 66F 19C, heavy rain fell 
+; all day here at Fractal Central on Saturday.  It came to an end 
+; shortly before sunset, but by that time the cats' day had been 
+; totally spoiled.  Their moods were sour, and the tuna treat only 
+; partially restored their spirits.  Today is starting cloudy, but 
+; at least it is dry.  If all goes well, and the forecasted 
+; showers hold off, the dynamic duo will have a better day.
+; 
+; The fractal basement took on water in the rain, so my task for 
+; today will be to dry things out down there.  Until next FOTD, 
+; take care, and how low can you go?  Stay tuned to see.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Undersea_Fantasy { ; time=1:05:47.33--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-4.41217/0.0769257/4.96124/1/12.5/1.784\
+  961067841095e-013 params=1.015/0/-275/10000 float=y
+  maxiter=12000 inside=255 logmap=202 periodicity=10
+  colors=050LJYNJXNSXPHVPHV_HTQGTSGSSGQTGQTEPVEPVENS\
+  ENXDLXDKeDKYDI_BI_BH`BH`BFb9Eb9Ed9CY9Ce7AV79g79`77\
+  h67h65j65j64k52k52m51m51o50o50p50h50r50r50s50s50k5\
+  0s50s50s50s50s50s50s50s60m60s70s70s90s90hB0sB0uD0u\
+  D0uE0uE0uG0uG0uH0uH0jJ0uJ0uK1uK1jM1uM1uO1wO2wP2wP2\
+  wR2wR2wS4wS4wU4wU4wV4wV5jX5wX5wY5wY5x_7x_7xa7xa7xc\
+  7xc9xd9xd9xf9xf9xgAxgAxiAxiAxjAzl9xjAxjAwjAwjAuiAu\
+  iAuiAsiAsgArgArgArgApgApfAofAofAofCmdCmdCkdCkdCkcC\
+  jcCjcChcChcChaCgaCgaCeaCe_Ce_Cd_Cd_Eb_EbYE`YE`YE`Y\
+  E_XE_XEYXEYXFYVGXVHXVIVVJVVKVULTUMTUNSUOSSPSSQQSRQ\
+  SSPSTPRUPRVNRWNRXLPYLPZLP_KP`KOaIObIOcHOdHOeHMfFMg\
+  FMhEMiEKjEKkCKlCKmAKmAJmAJm9Jm9Jm7Hm7Hm7Hm5Hm5Gm4G\
+  m4Gm4Gm2Gm2Em1Em1Em1Em0Dm0Dm0Dm0Dm0Bm0Dm0Dm0Em0Em0\
+  Gm0Gm0Hm0Hm0Jm0Jm0Km0Km0Mm0Mm0Om0Om0Pm0Pm0Rm0Rm0Sm\
+  0Sm0Um0Um0Vm0Vm0Xm0Xm0Xm0Ym0Ym0_m0_m0am0am0cm0cm0d\
+  o0do0fp0fr0gr0gs0is0iu0ju }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,97 @@
+;     Date: Sun, 01 Jun 2003 09:29:00 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-06-03 (Curlers [5])
+;       Id: <1.5.4.16.20030601092833.2aaf1332@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 01, 2003 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We've been talking about multi-valued functions a lot lately, so 
+; here's a formula and an image that takes advantage of multiple 
+; values.  It's not a new formula; I have posted many FOTD images 
+; created by it in the past.  But it gives an example that good 
+; things can sometimes come from fractured fractals.
+; 
+; The formula being iterated is Z^(1.06)+C, a formula that 
+; normally would produce nothing but a tiny featureless dot in the 
+; center of the screen.  (Change the real (p2) parameter to pi to 
+; see this dot.) But thanks to those multiple values and today's 
+; formula, which takes advantage of them, the tiny dot has been 
+; transformed into an immense cigar with many fields of chaos 
+; around its edges.  Today's scene is a blow-up of the edge of one 
+; of those fields of chaos.
+; 
+; I have named the image "Curlers" because of the many loops that 
+; fill it.  Not really impressed with the image, I have rated it 
+; at only a 5.
+; 
+; The render time of 1/2 hour is almost entirely expended on the 
+; top inch or so of the image, so don't be concerned when nothing 
+; much happens for a while.  Those who prefer not to wait the 1/2 
+; hour can download the finished image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Rain fell off and on all day Saturday here at Fractal Central, 
+; while the temperature reached 73F 23C.  A thunder-shower at 6pm 
+; climaxed the day's events as well as the cats' dis-satisfaction. 
+; Needless to say, a good treat of tuna was needed.
+; 
+; Today is starting cloudy, windy and chilly, with occasional 
+; bursts of light rain -- not a good sign for fractal cats.  For 
+; me, it's a sign I might not be able to trim the grass, but may 
+; have to go along on a shopping trip.  Until next time, take 
+; care, and don't get broken up over fractured fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Curlers { ; time=0:38:53.19--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-6.07363/12.6745/0.4719481/1/72.5/-1.23\
+  3735336114705e-014 params=1.06/0/121.2/3000 float=y
+  maxiter=4200 inside=0 symmetry=none periodicity=10
+  colors=0007EXCCZHB`M9bR7dW6f`4hd3je7feAceE`eHYfLVf\
+  OSfSPfVLfZIgaFgeCgh9gl6go3dl5bi6`f8Zc9W`BUYCSVEQSF\
+  NPHLMIJJKHGLFDMHHPJKSLNVMQXOT_QWbRZdTagVdjWglXgmYf\
+  mxSuxRvsSsoSpjTmfTjaUhYUeTVbPV_KWXGWVFYQF_ME`IEbDD\
+  c9De5Df1Fc5Ga9H_DIXHJVLKTPLRTMOXNM`OKdPHhQFlRDpSBs\
+  PAnM9iJ8dH7_E6VB5Q94L63G32B116D3NP5c`7tZ8qY9oXAmWB\
+  kVCiUDgTEeSFcRGaQH_PIYOJWNJUPMTQPSSRSTURUWRWZQX`QZ\
+  cP_eP`hObjOcmNdoNbmMalL`jKZiJYhIXfHWeGUcFTbESaDR_C\
+  PZBOXANW9MV9OXBPZDQ`ERaGScIUeJVgLWhNXjOYlQZmR_kP`i\
+  OagNbeMccLdaKd_JeZLeYNfXPfWRgVThUVhTXiSZiR`jQbkPdk\
+  OflNhlMj`VqQcxSerUflWgfYi`ZjW`kQbmKdnEeo9`n8Wn7Sn6\
+  Nn5In4En39n24n10n09j4Ig8QdCOeAMf9Kg7Ig6Gh5Ei3Cj2Bj\
+  1bl6hn9moCrqFwrItnJrkKphKmdLkaLiZMfVNdSNbPO_LOYIPW\
+  FQTBQR8RP5RKGPFRNBaL6lJ2wI4wJ6wJ7wK9wKBwKCwLEwLFwL\
+  EvNEuOEtPDsRDrSDqTCpVCoWCnXBmZBl_Bk`AjbAicAhdAheDk\
+  cGmbJoaMq_PsZSuYVwX4IT2GU }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

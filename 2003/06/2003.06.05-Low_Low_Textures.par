@@ -1,0 +1,107 @@
+;     Date: Thu, 05 Jun 2003 09:12:54 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-06-03 (Low-Low Textures [5])
+;       Id: <1.5.4.16.20030605091231.2b3fc1d6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 05, 2003 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's FOTD I wrote that I had once found a midget in 
+; the Z^(1.04)+C fractal.  The graph of Z^1.04 is nearly a 
+; straight line, and since linear functions do not make fractals, 
+; it should not be expected to create a fractal.  But in today's 
+; image, we wander far from the principal image, and at the remote 
+; level 100 turns up the logarithmic spiral, Z^(1.04)+C produces 
+; an interesting parent fractal -- a sprawling oversized bay with 
+; much chaos on the southern shoreline and a smaller amount of 
+; chaos on the northern shoreline.
+; 
+; Today's image is a scene in the chaos along the northern shore-
+; line of the parent.  I have named the image "Low-Low Textures", 
+; since the exponent of Z is so small and the image consists of 
+; nothing more than a simple texture, with the elements endlessly 
+; repeated at smaller scales.
+; 
+; Yes, I once did find a real midget that did not vanish when the 
+; maxiter was increased in one of the Z^(1.04)+C Mandel fractals.  
+; I have no idea where I found it.  There could be an infinity of 
+; midgets in today's image, in fact there certainly are, but in 
+; the range of 1.04 they are so tiny and buried so deeply, with no 
+; hint of symmetry around them, that they are virtually impossible 
+; to find.
+; 
+; I rated today's image at a perfectly average 5.  If I had 
+; actually found one of those impossible-to-find midgets, I might 
+; have rated the image a 6.  The render time on my worn-out 
+; fractal machine is 1/100 second less than 6 minutes.  It will be 
+; faster on more vigorous units.  The fastest way of all to see 
+; the texture in today's image is to download the completed GIF 
+; image file from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The rain continued through the day here at Fractal Central on 
+; Wednesday.  The temperature hovered at 57F 14C.  The two fractal 
+; cats had no time at all in the great outdoors, and as a result, 
+; were unhappy cats.  A treat of tuna in the evening made them 
+; less unhappy, but fish is no substitute for a trip to a great 
+; place.  The feline duo ended the day in a mood of resignation.
+; 
+; I finished yesterday's work on time, and hope to do the same 
+; today.  The next fractal will arrive in 24 hours.  Until then, 
+; take care, and hidden jewels are sometimes found in the lowly 
+; places.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Low-Low_Textures { ; time=0:05:59.99--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-6.563247556907927/+1.425281219594758/2\
+  66.6667/1/-5/9.7999386383662568e-013 params=1.04/0\
+  /100/1000 float=y maxiter=600 inside=255 logmap=116
+  symmetry=none periodicity=10
+  colors=000LJWMKXMLYMNYNOZNP_NQ`OSaOTbOUbPVcPXdPYeQ\
+  ZfQ`gQagRbhRciRejSfkSglShlTjmTknTloUmpUoqUpqVqrVrs\
+  VttWuuWvvWwvVvuVuuVutVttVstVssVrsUqsUqrUprUprUoqUn\
+  qUnqTmpTlpTlpTkoTjoTjoTinTinShnSgmSgmSfmSelSelSdkR\
+  ckRckRbjRbjRajR`iR`iR_iQZhQZhQYhQXgQXgQWgQWfPVfPUf\
+  PUePTePSePSdPRdOSePRdPRdQRdQQdRQdRQdSPcSPcSPcTOcTO\
+  cUOcUNbVNbVNbVNbWMbWMbXMbXLaYLaYLaYKaZKaZKa_J`_J``\
+  J``J``I`aI`aI`bH_bH_cH_cG_cG_dG_dFZeFZeFZfEZfEZfEZ\
+  gEZgDYhDYhDYiCYiCYiCYjBXjBXkBXkAXlAXlAXj9TlAXmA`oB\
+  cpBgqCksCntDovCpuDquDruDsuDttDutDvtDwtExsEysEzsEzs\
+  EzrEzrEzrFzrFzrFzqFzqFzqFzqFzpGzpGzpGzpGzoGzoGzoGz\
+  oHznHznHznHznHznHzmHzmIzmIzmIzlIzlIzlIzlIzkJzkJzkJ\
+  zkJzjJzjJzjJzjKzjKziKziKziKziKzhKzhLzhLzhLzgLzgLzg\
+  LzgLziKzgLzfLzeLzdLzcLzbLzaMz`Mz_MzZMzYMzXMzWNzVNz\
+  UNzTNzRNzQNzPNzOOzNOzMOzLOzKOzJOzIPzHPzGPzFPzEPzI7\
+  zJ9zJAzJBzKDzKEzKFzLGzLIz }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

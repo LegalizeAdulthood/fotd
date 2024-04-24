@@ -1,0 +1,98 @@
+;     Date: Wed, 18 Jun 2003 10:23:56 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-06-03 (Ker-splash [6])
+;       Id: <1.5.4.16.20030618102342.298f4502@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 18, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another scene in the East Valley area of the 
+; parent fractal of yesterday's image.  Many of the same elements 
+; are there, but with the outside being rendered with the 'fmod' 
+; option, today's image is different enough to stand on its own 
+; merits.
+; 
+; Today's rating of 6 is a big come-down from yesterday's perhaps-
+; overblown rating of 9.  It is still worth a look however.  The 
+; colors, which are not nearly as finely tuned, still get the 
+; point across.
+; 
+; When I studied the image, searching for a name, I had the 
+; impression of a Mandelbrot set being dropped into a body of 
+; colored liquid, creating a huge splash.  What could I possibly 
+; have named the image other than "Ker-splash"?
+; 
+; Curiously, if the bailout radius of today's image is raised to 
+; 10^100, the image evaporates, leaving a blank screen of all-
+; inside points.  Then, if the 'fmod' inside-fill option is 
+; applied to the blank image and the proximity is kept at 0.9, 
+; today's image will re-appear, the only difference being that 
+; instead of rendering in 13 minutes, it now takes an hour to 
+; render, and the inside of the midget now contains detail.
+; 
+; The fastest way to observe today's inside-or-outside image is to 
+; download it in completed form from either Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's web site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Clouds hung around all day Tuesday.  The sprinkles that began at 
+; 1pm turned into a steady rain by 6pm.  The temperature reached 
+; 66F 19C, but what good is a pleasant temperature when rain is 
+; falling?  The dynamic duo thought it was no good at all, and 
+; quickly turned sulky, demanding a treat of tuna before resuming 
+; their good spirits.  Since this morning is cloudy with more rain 
+; promised, I had best stock up on the tuna.
+; 
+; The heavy clouds do not relieve me of the duty of doing the 
+; waiting work however, so if I hope to finish, I had best get 
+; started.  Until next FOTD, take care, and watch for lurking 
+; fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Ker-splash { ; time=0:13:16.68--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.02507098225420995/+0.507300152811625\
+  00/24216.06/1/-60/4.61438734444818976e-011
+  params=1/-1.08/-1/1/0/300 float=y maxiter=1200
+  inside=0 proximity=0.9 outside=fmod
+  logmap=yes periodicity=10 sound=off
+  colors=0003tk2sh3qf3oe3mc3kb3i`4g_4eY4cX4aV4_U5YS5\
+  WR5VQ5TO5RN6PL6NK6LI6JH6HF7FE7DC7BB799778444767979\
+  B8CE9EGBHICJLDMNEOPFRSHTUIWWJYZK``LbbNeeOggPjiQliL\
+  wjOrkRnlTimWenY`o`XpbSqeOrgJsjFun8tm9tlAtlBtkCtkCt\
+  jDtiEtiFshFshGsgHsfIsfIseJseKsdLtfKseLsdLscLrbMraM\
+  r`Mr`Mq_NqZNqYNqXNpWOpVOpVOpUOoTPoSPoRPnQQnPQnPQnO\
+  QmNRmMRmLRmKRlJSlJSlISlHSkGTkFTkETjDUjDUjCUjBUiAVi\
+  9Vi8Vi7Vh7Wh6Wh5Wh4Wg3Xg2Xg1Xh0Yg1Xg1Wg1Vf2Vf2Uf2T\
+  e2Te3Se3Re3Rd3Qd4Pd4Oc4Oc4Nc5Mb5Mb5Lb6Kb6Ka6Ja6Ia7\
+  H`7H`7G`7F_8F_8E_8D_1B_4CZ6CY8DXBDWDEVFEUHEUIFUJGU\
+  KHUKIUKJUKKUKLUKMUKNUKOUKPUKPUKQUKRUKSSKTQKUOKVMKW\
+  KKXKKYKKZKKYKKZKKZKK_KK_KK`KK`KK`KKaKKaKHbKFbKDcIB\
+  cD6eE7dF8cG9cGAbHAaIBaJC`JD_KD_LEZLFYMGYNGXOHXOIWP\
+  JVQJVQKURLTSMTTMSTNRUORVPQVPQWQPXROYSOYTNZTM_UM`VL\
+  `WKaWKbXJbYIcZIdZHe_He`GfaFgaFgbEhcDidDjdCjeBkfBlg\
+  AlgBlgAlgAm`AoVApPAoPAnPA }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

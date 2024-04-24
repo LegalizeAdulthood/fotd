@@ -1,0 +1,102 @@
+;     Date: Sat, 07 Jun 2003 09:56:20 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-06-03 (First Flight [6])
+;       Id: <1.5.4.16.20030607095557.299f8af0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 07, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us into even lower territory -- down below 
+; yesterday's Z^(1.04) into the land of Z^(1.025)+C.  Down in 
+; these depths, the chaos becomes harder to find, but as today's 
+; image shows, it is still there.
+; 
+; The lengthy real(p2) parameter shows that the value was found by 
+; the Fractint randomizer.  I could have rounded it to a 7 with 
+; little change in the parent fractal.
+; 
+; Yesterday's image reminded me of a fleet of fantastic space 
+; craft taking off from a Martian invasion base.  Today's image 
+; reminds me of jagged shards of something being swept up and away 
+; into infinite space by a sudden wind.  Since the wind is the 
+; first in thousands of years to blow in this particular place, I 
+; named the image "First Flight".
+; 
+; Today's image attempts the same effect as yesterday's superior 
+; image, but compared to that image, today's rates only a 6.  But 
+; today's image is not without its interest.  Despite the almost 
+; total descent into chaos, there are still traces of order in the 
+; image.  The curving trails of bright debris in the background 
+; appear on the verge of organizing and creating a new class of 
+; order.  I must examine this tendency of chaos to organize in 
+; fractals with exponents even closer to unity.
+; 
+; The 16-minute render time can be avoided by downloading the 
+; completed image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; A mostly cloudy but mild day here at Fractal Central on Friday 
+; left the duo of fractal cats satisfied.  After spending the 
+; afternoon enjoying the temperature of 75F 24C, they ended the 
+; day enjoying a treat of turkey.  Their moods will be far less 
+; pleasant today however.  It is already raining, heavy rain is 
+; forecast and a flood watch is in effect.
+; 
+; I'm going to spend the day searching for fractals, working on 
+; the CD, or just plain watching the rain.  Until next time, take 
+; care, and let's see a few Mandelbrot midgets.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+First_Flight { ; time=0:16:40.24--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=recip passes=1
+  center-mag=-2.62369017010877200/-0.375504820890258\
+  10/91.72629/1/175/-1.06827741097603734e-012
+  params=1.025/0/6.942381054109317/1000 float=y
+  maxiter=4200 inside=255 logmap=190 periodicity=10
+  colors=000iYDeaDa_F_XHbVHHXIjVIHVKHVKFULFULFUNDSPD\
+  SPDSQCQQCQSCQSASUAPUAKH9Q`APVANQANSALSCKQCKPCINCIN\
+  YHLDFKDFIXDIDCHDCFWADFADV9CF8AF8AH79H78H57H47H45I2\
+  4I12I12I01I00K00K00K00K00I00K00L00N00P00Q00S00S00U\
+  00V00X00Y00_00_00a00c00d00f00h00j00j01l01n01p01r01\
+  s02s02v02w02z02z04z04z04z04z04z05z05z05z05z05z07z1\
+  8z28z59z79z8AzAAzCCzDCzHDzIFzKFzNHzPHzQIzUIzVKzXKz\
+  _LzaNzcNzfPzhPzjQwnQwpSwrSvvUvwVvzVszXszXszYqzYpz_\
+  oz_nzKmzAkz8izAgzCezEczGazI_wKYvMWsOUrQSpSQpUOnWMl\
+  YKj_IjaGhcEfdCdeAdf8cg6ah5_i6_j7Yk7Xl8Vm9Vm9UmASmC\
+  QmCQmDPmFNmFLmHLmIKmIImKHmLHmLFmNDmPCmPCmQAmS9mS8m\
+  U8mV7mV5mX4mY4nY2o_1pa0qa0rc0sd0vc0zd0zd0zd0zf0zf0\
+  zf0zf0zh0zh0zh0zh0zj0zj0zj0zj0zl0zl0zl0zl0zj0zj0zj\
+  0zj0zh0zh0zh0zh0zh0zf0zf0zf0zf0zf0zd0zd0zd0zd0zc0z\
+  c0zc0zc0zc0za0za0za0za0za0z_0z_0z_0z_0zY0zY0zY0zY0\
+  zY0zX0zX0zX0zX0zX0zU0zS0z }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

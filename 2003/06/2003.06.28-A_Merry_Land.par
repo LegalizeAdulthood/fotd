@@ -1,0 +1,97 @@
+;     Date: Sat, 28 Jun 2003 09:45:28 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-06-03 (A Merry Land [4])
+;       Id: <1.5.4.16.20030628094521.2ab71ea2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 28, 2003 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates only a 4.  This sub-standard rating is 
+; justified because the image has a flaw known in the world of 
+; visual art as muddiness.  Muddiness results when colors with too 
+; great a difference in brightness are mixed together.  Today's 
+; image has exactly this flaw, which earns it the 4.  Some of the 
+; muddiness can be eliminated by changing the inside color from a 
+; flat black 00 00 00 to something like a grey 40 40 40.  But 
+; nothing can save a fractal picture like today's, which is flawed 
+; from the start by too much detail.
+; 
+; I named the picture "A Merry Land".  The name has nothing to do 
+; with the fact that Fractal Central happens to be located in the 
+; state of Maryland.  I gave it the name because, despite the 
+; muddiness, there is a kind of merriness in the picture.
+; 
+; The generating formula takes the tiniest bit of Z^100 and adds 
+; Z^(-2) to it.  Even though the portion of Z^100 is only 1/10^32, 
+; this tiny bit overwhelms the Z^(-2) and creates an oversized 
+; lopsided hole filled with a triangle.  Today's scene is located 
+; near the tip of the western arm of the triangle.
+; 
+; Like yesterday's image, today's is slow.  It takes over one hour 
+; to render on my machine.  The best way to see the image is to 
+; wait an hour or so for Paul and Scott to render it, and avoid 
+; the hassle of rendering it yourself by downloading the completed 
+; GIF image from one of the FOTD web sites:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The sun and temperature of 90F 32C on Friday here at Fractal 
+; Central was just what the dynamic fractal cats needed to put 
+; them in a good mood.  They spent the afternoon romping in the 
+; yard and lounging on the porch.  At one point the cat from two 
+; doors down the hill appeared, lurking behind the holly trees.  
+; Luckily, I was there to restrain Tippy, who was ready to start a 
+; fight.  The day ended peacefully, with a pair of exhausted but 
+; hungry cats ready to eat and sleep.
+; 
+; Today is starting cloudy and cooler.  I've got enough work to 
+; keep me busy an hour or so, and there is always the grass to 
+; trim.  It looks like it will be another normal day here at F.C.  
+; The next FOTD will appear in 24 hours.  Until then, take care 
+; and life could be a never-ending fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Merry_Land { ; time=1:21:18.60--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.67128436773857100/-0.029296149029013\
+  39/5.503277e+009/1/116.9017790300461/1.20521654432\
+  482617 params=1e-032/100/1/-2/0/0 float=y
+  maxiter=7200 bailout=5 inside=0 periodicity=10
+  colors=000bQ`cP`dOaM1pWChdNamYVwhPvgOvfOueNudNucNt\
+  cMtbMtaMs`Ls_LrZKrZKrYKqXJqWJqVJpUIpUIpTIoSHoRHnQG\
+  nPGnPGmOFmNFmMFlLElKElKEkJDkIDjHCjGCjFCiFBiEBiDBhC\
+  AhBAj86iA8hBAhCCgEEfFGfGIeIKdJMdKOcMQbNSbOUaQWaRY`\
+  S__Ua_VcZWeYYgYZiX_kWamWboVcqUetVdsWdrWdrXdqXdqYdp\
+  YdoZdoZdn_cn`cm`claclackbckbcjcciccidbhebhebgfbffb\
+  fgbegbehbdhbciacjabjabkaaka`la`la_ma_maZn`Yo`Yo`Xp\
+  `Xp`Wq`Vq`Vr`UvZVr`UoaTlbTidSfeScfR`hRYiQVjQSlPPmP\
+  MnOJpOGqNCsMDrNDqNDqNDpNEpNEoNEoNEnNFmOFmOFlOFlOGk\
+  OGkOGjOGiOHiOHhPHhPHgPIgPIfPIfPIePJdPJdQJcQJcQKbQK\
+  bQKaQK`QL`QL_QL_RLZRMZRMYRMXRMXRNWRNWRNVRNVSOUSOUS\
+  OTSOSSPSSPRSPRSPQTQQTQPTQOTQOTRNTRNTRMTRMTSLUSKUSK\
+  USJUTJUTIUTIUTHURHVTHUUHTVHTWHSYHSZHRWRXUUVSXUQ_TO\
+  bRMeQJhPHkNFnMDqLBtJ9wI7yH8wI9vJAuJBtKCsKDrLEqLFpM\
+  GoNHnNImOJlOJkPKjPLiQMhRNgROfSPdSQcTRbTSaUT`VU_VUZ\
+  WVYWWXXXWXYVYZUZ_TZ`S_aR_ }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,95 @@
+;     Date: Mon, 02 Jun 2003 10:27:47 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-06-03 (Burbles [7])
+;       Id: <1.5.4.16.20030602102721.2aa7d23e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 02, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The FOTD for June 2 once again takes advantage of the multi-
+; valued nature of the complex log function.  The iterated expres-
+; sion is a very simple Z^(1.5)+C.  The trick in the MandelbrotBC1 
+; formula is that an unlimited number of different images can be 
+; produced by the expression Z^(1.5), depending on which of the 
+; infinity of returned log values are chosen.  The real(p2) 
+; parameter of the formula makes the choice.
+; 
+; Today's image is part of the particular Z^(1.5) fractal that 
+; results when the real(p2) parameter of the MandelbrotBC1 formula 
+; is set to -31.  The amorphous thing at the center is a midget of 
+; order 1.5.  I have no idea what the jagged-edged colored disks 
+; surrounding the midget are.  I have never seen anything quite 
+; like them.
+; 
+; I have named the picture "Burbles".  Those disks reminds me of 
+; something bubbling.  The rating of a 7 seems correct for the 
+; image, which has more math interest than artistic worth.
+; 
+; To see these truly unique fractal burbles, run the attached 
+; parameter file and wait 5 minutes, or download the finished GIF 
+; image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Sunday started blustery and chilly here at Fractal Central, but 
+; by afternoon, the sun appeared, the wind slacked off, and the 
+; temperature rose to 66F 19C.  The cats had a good day.
+; 
+; This morning is starting much better.  The cats will likely have 
+; another good day.  For me, it's several hours work before my day 
+; will be good.  Until next time, take care, and keep blowing 
+; those burbles.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Burbles { ; time=0:05:06.76--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.72523926124837650/+0.172183551614105\
+  20/488923/1/-62.5/9.1405363139562823e-010
+  params=1.5/0/-31/0 float=y maxiter=12000 inside=0
+  logmap=105 symmetry=none periodicity=10
+  colors=000GstKptNmuQkuThvXev_cwb`weYxiWxlTyoQyrOyo\
+  NvmNskMpiMmgMjeLgcLdaLa_KZYKWWJTUJQSJNQIKOIHMIEOJG\
+  QJISJJUJLVJMXJOZJQ`KRbKTcKUeKWgKYiKZkK`lKajRdhYgfd\
+  jdkmbrp`xsYvrWtrUsqRqqPppNnpKmoIkoGjnDhnBgm9em6dl4\
+  bl2al3bk3cj3di3ei4fh4gg4hf4hf5ie5jd5kc5lc6mb6na6o`\
+  6o`5la5ia5fa5ca5`a5Yb5Vb5Sb5Pb5Mb9PcDSdGVeKYfN`gRc\
+  hVfiYijalkdolhrmlunoxoszpvzpozahyNaw9aw9aw9aw9aw9b\
+  vAbuBbuBctCctDcsDcsEdrFdrFdqGdqHepHepIepIeoJeoJfnK\
+  fnLfmLfmMglNgkNgkOgjPhjPhiQhiQhhRihSigSigTifUjfUje\
+  VjeWjdWkdXkcYkcYkbZla_la_l``m`am_am_bmZcnZcnYdnYen\
+  XeoXfoWfoWgoVhpVhpUipUjpTjqSkqSlqRlqRmrQnrQnrPorPp\
+  sOpsOqsNrsNrtMstMttLttLuuKvuKvuJwuJwsJwqKwoLwmMwkN\
+  wiOwgPweQweRweSwfTwfTwgSwgSwgSwgSuhRwiRwiRwjQwjQwk\
+  QwkQwkPwlPwlPwmOwmOwnOwnNwnNwoNwoNwpMwpMwqMwqLwrLw\
+  rLwrLwsKwsKwtKwtJwuJwuJwvJxvJywJzwJzxJzxJzyJzyJzzJ\
+  zzJzzJzzJzzJzzJzzJzzJzzJz }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 

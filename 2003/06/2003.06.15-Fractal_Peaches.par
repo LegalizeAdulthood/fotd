@@ -1,0 +1,86 @@
+;     Date: Sun, 15 Jun 2003 09:43:55 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-06-03 (Fractal Peaches [4])
+;       Id: <1.5.4.16.20030615094338.2ab7d892@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 15, 2003 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A day of cleaning up after the big storm, which dropped 6-1/2 
+; inches or 16-1/2 centimeters of rain on Fractal Central in under 
+; one hour, left but little time for fractal diversion.  But I did 
+; find a few spare moments, and in those moments, today's FOTD 
+; is what I found.  It rates only a 4, and the render time is a 
+; dragging 20 minutes, so it is not the best value of all time.  
+; But it is worth at least a quick download.  I named the image 
+; "Fractal Peaches" for reasons I have already forgotten.
+; 
+; The formula takes Z^3 and adds 1/100 part of Z^(-99) before 
+; adding the final (1/C).  The resulting parent fractal is a 
+; grossly enlarged Mandeloid rotated 180 degrees and surrounded by 
+; extended fields of chaos.  Today's scene in located in the East 
+; (or in this case, the West) Valley of the parent.
+; 
+; The less-than-superb fractal for today can be seen by running 
+; the attached parameter file and waiting 20 minutes or by down-
+; loading the finished image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Saturday was a much improved day here at Fractal Central, for 
+; which the dynamic fractal cats were thankful.  The temperature 
+; reached 88F 31C.  The only rain was a light shower late in the 
+; afternoon, but by then the duo had satisfied their wanderlust.
+; 
+; The rain is forecast to be light again today, so the cats should 
+; once again be happy.  I'll be happy when I finish the clean-up 
+; from Friday.  Until next FOTD, take care, and see you in 24 
+; hours.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractal_Peaches { ; time=0:20:35.16--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-162.1990694820002/-0.06542605764978/10\
+  64827/1/47.5/-2.81791724725255488e-007 params=1/3/\
+  0.01/-99/0/0 float=y maxiter=2700 inside=0
+  logmap=348 symmetry=none periodicity=10
+  colors=000K0BN2CP3DR4DT5EV7FX8FZ9GaAHcBHeDIgEJiFJk\
+  GKmHKiLHfPFbTC_XAW`7Tc5R_7PX9OUAMRCKNEJKFHHHFEJEBK\
+  DCMDDODEQDERDFTDGVDHWDHYDI_DJ`DKbDKdDLeDMgDNiDNjDM\
+  kDLlDKlDJmDImDHnDHnDGoDFoDEpDDpDCqDCqCMrBWsAet9ou8\
+  yuEvqKtmPqiVoe_laejYjhVifWidXicYiaZi__iZ`iXahVbhUc\
+  hSdhQehPfhNghLhhKhiJgjIgkHfkGflFfmEenDenDdoCdpBdqA\
+  cq9cr8bs7bs7b9U9POOdJasEotHmtKluMkuPjvSivUhwXgw_fw\
+  aes_dpZdmXdjWdfVccTc`ScYRcfOkoLrkOggQYcSO_UE`XFaZF\
+  baGccGdeGdhHejHflHgoIhqIhsIcrJ_qJWpJSoJNnKJmKFlKBk\
+  KIjLPiMWhNbgOifPofPncNmaMlZKkXJjUIiSGhPFgNEfPHfRKf\
+  TNfVPfWSfYVf_Xfa_fbbfddffgfhjfildimcinbin`io_ipZip\
+  XiqWirVirTisSitRitPgqOeoNcmMaj001L_hKYfJWdIYaH__Ga\
+  YFKVEcTCcRBcPAcM9cK8cI7cF6dD5eB4f93g62h41i2VjjTkgS\
+  leQmcPnaNo_MpYLqWJsTIuRGwPFxNEzLCzJBzH9zE8zC7zA5z8\
+  4z62z41z2XzKVzJUzITzISzHRzGQzGPzFOzFNzEMzDLzDKzCJz\
+  BIzBHzAGzAFz9Ez8Dz8Cz7Bz6 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

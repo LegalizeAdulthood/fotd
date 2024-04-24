@@ -1,0 +1,100 @@
+;     Date: Tue, 24 Jun 2003 10:19:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-06-03 (Good Fortune [6])
+;       Id: <1.5.4.16.20030624101924.2ab7921a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 24, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The formula that created today's image is one of the simplest -- 
+; Z+Z^3+C.  Yet it creates a parent with scenes that rate at least 
+; a 6, as in today's picture, and likely with scenes that would 
+; rate a 9, if only they could be found.
+; 
+; Curiously, adding Z to Z^2 makes no change in the appearance of 
+; the Mandelbrot image, though it does move it to the west, but 
+; adding Z to Z^3 totally changes the appearance of the resulting 
+; fractal.
+; 
+; The parent fractal of today's scene consists of an obvious 
+; Mandelbrot set standing on its nose, with much interesting 
+; detail beyond its East (or North) Valley, and an almost 
+; completely obscured Mandelbrot set hidden beneath the detail 
+; beyond the first Mandeloid's East Valley.  This second M-set is 
+; visible only with carefully chosen coloring.
+; 
+; Today's image is located in a spiral in a valley near the 
+; northern extremity of the parent.  The unusually-well-defined 
+; pattern surrounding the midget is a result of the coloring.  
+; With other palettes the pattern vanishes.
+; 
+; I named today's image "Good Fortune".  When I gave it this name, 
+; I had an idea in mind, but whatever it was, it has eluded me.  
+; So let's just say the scene in the image is very lucky to have 
+; been found.  The odds against it ever having seen the light of 
+; day are at least one-googol-to-one.
+; 
+; The image takes 1/2 hour to render on my machine.  This is a bit 
+; of a drag for busy fractalists.  So I recommend downloading the 
+; completed GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Summer weather finally arrived at Fractal Central on Monday, as 
+; the temperature reached 89F 32C and the hot sun beamed down on 
+; the fractal cats, who were pleased with the turn of events and 
+; showed their pleasure by playing like kittens.  Tippy actually 
+; scampered up a holly tree, while Thomas watched with amusement.  
+; No tuna was needed.
+; 
+; Since today will be a repeat, I expect a repeat performance from 
+; the dynamic duo.  I'll do my part by finishing the work early.  
+; But to finish the work, I must first start it, so until next 
+; FOTD, take care, and wait until the fractals come home.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Good_Fortune { ; time=0:29:42.99--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.00290337839407/+1.12763603161069/6.4\
+  25424e+008/1/-177.5/-0.00023613749 params=1/1/1/3/\
+  0/0 float=y maxiter=4200 inside=0 periodicity=10
+  colors=000AVK8TK6TM6RM4PM2PM0OM0MM0MM0KM0IM0GI0IM0\
+  IO0IP4IR6ITAIVCIXGIYIIbMIdOIeRIgTIiXIkYIlbIndIpgIs\
+  iIulIwnIxrIzsIzwIzxIzzIzzIzzIzzIzzIzzIzzIzzIzzIzzI\
+  zzKzzMzzOzwPzpRziTzbVzVXzOYzG_z4XzA_zGdzKgzPkzVnzY\
+  rzduzixwlzunwwpswrpwslwuiwwewx_wzXwzTwzPwzMwzIwzCw\
+  z8wz4wz0wz0wz0wz0sz0wz0xz0zs8zkEzbKzTRzKXzCbzI_zMY\
+  zPXzTVxXTu_RrePniOllMipKesIbwG_zEXzCTzAPz8Oz6Kz4Gz\
+  2Cz2Az08z06z06z04z02z02x00u00p00l00i00e00_00X00T00\
+  P00K00G00C008006006006004004204602A02C02G02K00O00P\
+  00T00X00Y00b00e00i00k00n00r00u00w00z00z00z00z00z00\
+  z00z04z4IsEVgPgXYsKgz6rz0zz0zz0zz0zz0zz0xz0uz0sz0p\
+  x0nu0kr0in2ek4dg6_d8Y_AXXCTTERPGOMIMIKIEMGAOC6PA2R\
+  60T40V00X00Y00_00b00_00Y00X00V00V22T46R6AP8COAGOCK\
+  MEOKGRIIVGKYGMbEOdCPgARk8Tn8Vr6Xu4Yx2_z0bz0dz0iz0n\
+  z0sz0xz0zz0zz0zz0zz0zz2zw6zrCzlGzgKzbOzXRzRVzM_zGd\
+  zAgz4kz0nz0rzG_KEYKCXKCXK }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

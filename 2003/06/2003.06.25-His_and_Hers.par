@@ -1,0 +1,89 @@
+;     Date: Wed, 25 Jun 2003 09:58:04 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-06-03 (His and Hers [7])
+;       Id: <1.5.4.16.20030625095754.298780e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 25, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Adding Z to Z^3 changes the entire shape of the resulting 
+; fractal.  Adding Z to Z^2 merely shifts the position of the 
+; fractal without changing its overall shape.  When the exponent 
+; is between 2 and 3, the closer to 3 the greater the change.  For 
+; today's image I varied the exponent between 2 and 3 to observe 
+; the gradual change.  I settled on Z+Z^2.05+C because I noticed a 
+; lot of interesting chaos along the splitting negative X-axis.  
+; Today's image is located in this chaos.
+; 
+; Most of the artistic effect is created by the 'fmod' option, 
+; which was applied to the outside parts of the image.  Don't ask 
+; me why I chose the name "His and Hers".  I can see nothing 
+; whatever in the picture to justify such a name.
+; 
+; But even though the name makes little sense, the image is still 
+; worth a 7.  The render time of 5 minutes is reasonable for the 
+; above-average result.  And the completed GIF image is available 
+; on the internet for download at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; A perfect summer day with lots of sun and a temperature of 91F 
+; 33C on Tuesday here at Fractal Central made for perfectly happy 
+; cats who spent several hours on guard in the yard.  When the cat 
+; from two doors down appeared in the brush, Tippy was ready to 
+; attack.  Luckily for someone, the cat backed off and no force 
+; was needed.  Thomas slept through the danger.
+; 
+; The similar forecast for today should bring similar conditions.  
+; And if I finish the necessary work early enough, I might find 
+; some time to enjoy the day myself.  Until next time, take care, 
+; and search for that lost fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+His_and_Hers { ; time=0:05:02.98--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.57498835838500200/+0.013976629359833\
+  04/1.084695e+011/1/80/-0.0922994127536091724
+  params=1/2.05/1/1/0/0 float=y maxiter=650 inside=0
+  proximity=0.25 outside=fmod logmap=yes
+  symmetry=none periodicity=10
+  colors=000SGdRGdQHcQHcPIcOIbNJbNJbMKaLKaKL`KL`JM`I\
+  M_HN_GQYHN_HLaIJcIHeIFgJDhJBjJ9lK7nK5pL0qK2qK3qJ4q\
+  J5qJ6qI7qI9qIAqHBqHCqHDqGEqGGqGHqFIqFJqFKqELqENqDO\
+  qDPqDQqCRqCSqCUqBVqBWqBXqAYqAZqA`q9aq9bq9cq8dq8eq8\
+  er8fq8fp8fo8fn8fn8gm8gl8gk8gj8gj8hi8hh8hg8hf8hf8he\
+  8id8ic8ib8ib8ia8j`8j_8j_8jZ8jY8kX8kW8kW8kV8kU8kT8l\
+  S8lS8lR8lQ8lP8mO8mO8mN8mM8mL8mLAnNCnODnPFoQGoRIoSJ\
+  pTLpUMpVOqWPqXRqYSrZUr_Vr`XsbYsc_sd`tebtfctgeuhhui\
+  kujnvkqvltvmwwnzwozwpzxuyxswwquuostmqskoqimpgkoeim\
+  cglaej_ciYahW_fUYeSWdQUbOSaMQ_KOZIMYGKWEIVCHU9HTAF\
+  SBDRBBQCAPD8OD6NE4MF2LD3KE3JF3IG3HH3GI3FJ3EK3FK3GL\
+  3HM3JN3KO3LP3MQ3NR3OR3PS3QT3RU3SV4UW4VX4WY4XY4YZ4Z\
+  _4_`4`a4ab5bcAddFedKfePgfUhgZihdjijkjolkumjxmkulkp\
+  lkjkkejk_jlVilPhlKhlFgl8fl7fm7em7dm7dm8cm8bm8bn8an\
+  9`n9`n9_n9ZnAZoAYoAXoAXoBWoBVoBVpBUpCTpCTpCSp6Uw9T\
+  sCSpFRmHRiWDfVEfUEeTFeTFe }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
