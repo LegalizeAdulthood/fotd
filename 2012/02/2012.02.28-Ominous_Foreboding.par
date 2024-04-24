@@ -1,0 +1,112 @@
+;     Date: Tue, 28 Feb 2012 19:40:37 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 28-02-12 (Ominous Foreboding [8])
+;       Id: <1.5.4.16.20120228194238.2cafcfbc@earthlink.net>
+; ---------
+; 
+; FOTD -- February 28, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, a scene in one of the infinity of Z^(1.5)+C 
+; Mandeloids, rates an 8, in my opinion.  The parent fractal is a 
+; lumpy thing.  It has a large minibrot lying in a field of debris 
+; just southwest of its main body.  This minibrot vaguely 
+; resembles a Mandelbrot set with its west half cut off and two 
+; East Valleys instead of one.  Today's image lies in one of the 
+; two East Valleys of this minibrot.
+; 
+; The rating of an 8, which includes a full point for the 
+; coloring, might be a bit too liberal for an image with such a 
+; dark aura.  The rating is based mostly on the effect of 
+; sunlight breaking through dark clouds, though the 'sun' is 
+; actually only a minibrot.
+; 
+; The name "Ominous Foreboding" expresses the dark, threatening 
+; feeling that the image somehow brings.
+; 
+; The calculation time of 2-1/2 minutes will pass quickly by 
+; fractal standards, where calculation times of hours or days are 
+; common.  And the FOTD web sites can eliminate even this brief 
+; wait.
+; 
+; Save time and energy.  Visit the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; where the image has already been calculated and is posted in 
+; finished form.
+; 
+; The high definition image is posted in at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original classic FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Total sun and a mild temperature of 48F +9C made today an 
+; unusually pleasant end-of-February day here at Fractal Central.  
+; The fractal cats, who never worry about the outdoor conditions, 
+; were quite happy with the weather, and spent most of the 
+; afternoon stretched out in the sun on their shelf.  With too 
+; much repetitious things to do, we humans rarely get to stretch 
+; out in the sun.  We spent the day doing stuff too ordinary to be 
+; worth mentioning.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and if everything is an illusion as mystics say, then the 
+; realization that everything is an illusion must also be an 
+; illusion.  And of course, it follows logically that the above 
+; sentence must also be an illusion.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ominous_Foreboding { ; time=0:02:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=6
+  center-mag=-0.791927327867/-0.10521281488/1567359/\
+  1/-82.5/0 params=1.55/0/0/0 float=y
+  maxiter=2500 inside=255 logmap=263
+  colors=000400500600500700000100200300400501A00E19F\
+  2HG3P03E03J13O23U33c43m53z69v7Fr8Km9QhAWcB`cCfcDkc\
+  HlcKlcOlcRmcVmcYmcamcdnchnckncnncomcolcolcokcpkcpj\
+  cpjzpizpqzqszqzzqqzqxzqzzpzzpzzpzzpzzzzzzzzzzzzzzk\
+  kHkkJkkKkjLkjMkjOkjPkiQkiRkiSkiUkhVkhWkfXkhYjfZie_\
+  i__h``h``g_acVafXbeWbeUcVKcZRdcQdbOeG9XOEf`KgHETG3\
+  U95M87K38F97N85G84K52I61O60L60Z70ZA0WD0UF0SX4dY4b_\
+  4_`4Yb5Wb5Uc5Sd5Pf6Ng6Lh6Jf6Hg7Jh8Kh9Mh9NfAOfBQeCR\
+  eCSdDUbEVaFW`FY_GZYH_XIaWIbUJcTKeSLfQLgPMiONjNNkQQ\
+  iSShVUfNuSNvVMvYMw`LwcLxfLxhuJNrIRpHUnGXlF_jFbhEef\
+  DhdCkbCneBvcAya9zd9zfHxhProXkvd`xkbyrdzyevwgruiotk\
+  krlgqndop`nrXlsUkuQiwNhx`Y6a_8a`AbaCbbDbdFceHcfJcg\
+  KfPZi6lkAjlDimGhnJfoMepPdrSbsVatY`u`ZvcYwfXtgZqh_n\
+  iakjbhkdfkeclg`mhYnjVokTomQpnNqpKrqHssFstHroIqkKpg\
+  LocNn_OnWPmSRlOSkKUjGViCWi8NzzEzz6zz5zz4zz3zz2zz2z\
+  z5zz8zzAzzDzzFzzIzzOzzzzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,101 @@
+;     Date: Fri, 24 Feb 2012 00:25:07 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 23-02-12 (Barely There [7])
+;       Id: <1.5.4.16.20120224002704.37af154e@earthlink.net>
+; ---------
+; 
+; FOTD -- February 23, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The name of today's image, "Barely There", refers to the parent 
+; fractal, which certainly is the least promising parent of all 
+; time.  To create this parent I combined 20 negative parts of 
+; Z^(-0.2) with 2 negative parts of Z^(-5.2) and added (1/C) on 
+; each iteration.
+; 
+; Ignoring the unattractive colors, this parent is nothing more 
+; than a tiny, partly open circle with a speck of a valley inside 
+; it.  At first glance, this tiny bit of valley appears to have 
+; little potential, but being stubborn, I checked its depths 
+; anyway.  To my surprise, I found today's scene lurking at a 
+; depth of over 7*(10^11).
+; 
+; The muddy, unpleasant colors around the edges are an intentional 
+; contrast to the brilliant pink shades inside the spiral circle 
+; and its smaller attached spirals.  I feel that I went a bit too 
+; far in muddying the outside colors however, which holds the 
+; rating to a un-notable 7.
+; 
+; The calculation time of 4-1/4 minutes is admittedly slow, but 
+; here is where the FOTD web sites charge to the rescue.
+; 
+; The finished image is posted on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The entire FOTD image history is online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Blue skies dotted with puffy white clouds made today feel like a 
+; day in April here at Fractal Central.  The temperature of 54F 
+; 12C just added to the spring-like atmosphere.  The fractal cats 
+; spent most of the afternoon sleeping peacefully in the sun, but 
+; grew a little testy whenever the sun ducked behind one of the 
+; small passing clouds.  FL and I avoided political talk and had 
+; yet another uneventful day.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and when you have a problem, take 
+; a pill to cure it.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Barely_There { ; time=0:04:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+0.0621392864600844/+0.0054473589104924\
+  /7.550971e+010/1/-125/0 params=-20/-0.2/-2/-5.2/0/\
+  -30/0/0 float=y maxiter=2750 inside=0 outside=tdis
+  symmetry=none periodicity=6 mathtolerance=0.05/1
+  colors=010GA3G93D93H83K82J82J62G62I62N62L52L52K52K\
+  52K52I82I82I82H72H72H72L52P63U63X73Y76_89`8Bc8Ed8H\
+  f8Kg8Mj9Pl9Sn9UqAXtB_wBbxBuxSvxSvxSvxSvxevxevxevxe\
+  xxexxexxSxxSwxDtxBqxBoxAkxAixAgxAexAbxA_xAXuAUrARo\
+  APn9Kl9Ik9Fj9Cj9Ah86h85g87g8Af8Cf8Fd8Id8Kd8Nc8Qc8T\
+  b8Vb8Xb8_`8ca8f`9h`9ka9nc8df8Xj9Pl9HoAA`8JOERENc5V\
+  n5Zl8`kBdkFfjIjjLmiOqjTtiWxiZxjbxiexjhxijxjixihxhf\
+  xgfxfexfcwdatbapb_m`Zj_YgZWdXUaWTZUSVTQSROPPNNOMMN\
+  LKNJHLIDLNGPTHUXHXbI`gKdkLhqLkwMoxMrmdxZoxIxxJxxLw\
+  xLtxMrwMnrMknNhjNegObcNZ_OVVPSSOPPNNNNLKKKKLMNKMPJ\
+  MRIMUGMXFNYEN`CNcBNd8Ng7Nj6Ok5On6Oq6Or_fdxxXxxatxd\
+  pxfmxjjxlexm_xoVxqH52C41E51xA7xDZaRgbQhbPh`Ng_Nf_N\
+  dYMcXMcXMbWM`UK_UK_TKYRKXQ7VK62J62H62G52G52K52I62I\
+  52H72F51F51E71E51C61B89B78975B66E56B57868666466465\
+  2333A43A41931921911911911911911711911911A11A11A11C\
+  31C41E51E71E81F91BB0HC0ED }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

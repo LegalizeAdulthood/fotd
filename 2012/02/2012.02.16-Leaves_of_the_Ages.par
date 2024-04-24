@@ -1,0 +1,111 @@
+;     Date: Thu, 16 Feb 2012 22:13:28 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-02-12 (Leaves of the Ages [9])
+;       Id: <1.5.4.16.20120216221518.39078bf6@earthlink.net>
+; ---------
+; 
+; FOTD -- February 16, 2012 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates a mighty 9, and I think it's worth it.  The 
+; parent fractal is an almost-Mandelbrot set rotated 180 degrees 
+; so that the main spike points east along the positive X-axis 
+; instead of west along the negative X-axis.
+; 
+; I call this parent fractal an 'almost' Mandelbrot set because it 
+; has an extra bud beyond its East Valley, (which is on the west 
+; side of the main bay), and also a very unusual mini-something 
+; where the large minibrot on the main stem would be expected.  
+; Beyond this strange 'something' the main spike splits into two 
+; branches.
+; 
+; The parent came about when I subtracted 11 parts of Z^(2.1) from 
+; 11 parts of Z^(1.9) before adding straight C on each iteration.  
+; It's an unlikely combination that results in a fractal with far 
+; more in its depths than would first be expected.
+; 
+; Today's scene ignores the strange 'something' on the main spike 
+; of the parent, which I might examine tomorrow, and dives into 
+; the northern branch of the East Valley.  The image is actually a 
+; mix of inside and outside stuff, with the inside parts brought 
+; to life by the 'bof61' fill.
+; 
+; The name "Leaves of the Ages" simply popped into my head as I 
+; studied the image. I have no idea what the name might refer to, 
+; though it does seem poetic enough to be the name of a fractal.
+; 
+; The calculation time of 3-3/4 minutes is rather slow, but once 
+; again the warhorse web sites are ready to trot to the rescue.
+; 
+; The completed image is posted on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition rendering is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic 15-year-old web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The weather took a turn for the worse here at Fractal Central 
+; today, as heavy clouds moved in overnight and light snow began 
+; at 9am.  With the temperature around 36F +2C, the snow never 
+; amounted to much and changed to rain before noon.  The fractal 
+; cats soon forgot an afternoon in the sun and retired for the day 
+; to their shelf by the heat.
+; 
+; The humans, FL and I, had a day with little to remember, which 
+; is how it goes when the adventurous days of childhood turn into 
+; the routine days of adulthood.  The next FOTD will be posted in 
+; 24 hours.  Until then, take care, and when the going gets tough, 
+; the tough guys let a woman solve the problem.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Leaves_of_the_Ages { ; time=0:03:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=+0.0528755229234613/+0.00726740883032/\
+  3.48016e+010/1/-2.5/0 params=11/1.9/-11/2.1/0/0/0/0
+  float=y maxiter=1000 inside=bof61 periodicity=6
+  colors=00004E05F06H07I28J39J5AK6BK8CL9ELBGLCIMEKMF\
+  MNHONIQOKSOLUOOWRRYUU_XWa_Zcaaedchgfjmilrknvnpzprz\
+  pqznnzjjvferbamZXhVScRNZNJUJEPF9KB4F70A60560060060\
+  0600600600600EwzGwzHwzIwzJuvKsrOrmRqhVpcYpZaoUEZkD\
+  _rC`yGYuJWrMToPRlSOiVMfYKc`H_cFXfCUiARl7Oo5Lr3Iq4M\
+  q5Qq6Tq7Xq8_q9cpAgpBjpCnpDqpEupFxoEtoDqoCmnBjnAfn9\
+  cm8_m7Xm6Tm6QhAWcD`ZGeUJjQMoSPpTSqUVrVXsW_tXbtZeu_\
+  gv`jwamxbpycryhmflhOpd6WoCCyIEuLGrOHoRJlTKiWMfZNc`\
+  P`cRYfSVhUSkVPnXMpYJs_Gv`DxZIqXNkVSeTX_S`Uhbbe_abX\
+  a_U`YS``VWcYRe`MhcHjfCmi7ok3qi9rgEseKtcPuaVv__wYex\
+  WjyUouSprQpoPplNpiMpfKpbIp_HpXFpUEpRCpOBpULqZVrdds\
+  intnxuqkftZThMFaA1bB4cC6dDDfEFbFMZGOXHVUIXRJcPKeML\
+  lIMnFNpBOr7Pt4Pv8OtCOrFOpJOnNNlQNjUNdXNb`MWdMPgMIk\
+  MBnMAcZSTkiIwzFcpCKfA1X94Z96`89b8Bc8Ee7Gg7Ih7Lj6Nl\
+  6Qn69o5Aq5Bq5Cq7Do9EkAFfCGbEHZFIUHJQILMFMICMF9MC6K\
+  83I50G20E40C60A708906A04C }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

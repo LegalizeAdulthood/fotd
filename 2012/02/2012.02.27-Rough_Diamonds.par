@@ -1,0 +1,109 @@
+;     Date: Mon, 27 Feb 2012 17:49:13 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 27-02-12 (Rough Diamonds [7.5])
+;       Id: <1.5.4.16.20120227175113.383f122a@earthlink.net>
+; ---------
+; 
+; FOTD -- February 27, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, which resembles a minibrot with a necklace of 
+; jewels, came about when I combined Z^1.5 with half as much Z^3 
+; and added straight C on each iteration.  This parent fractal 
+; consists of two well-separated Mandelbrot sets connected by a 
+; broad strait, with the northeast area of the main bay of one 
+; connected to the southeast area of the main bay of the other.  
+; The math energies in the connected parts of the minibrots are 
+; mirror images, so they blend harmoniously.
+; 
+; The inner details of the two Mandelbrot sets are what would be 
+; expected in the same areas of the classic Mandelbrot set.  But 
+; the strait connecting them, where today's image lies, holds 
+; totally new stuff.
+; 
+; I named the image "Rough Diamonds".  The name was inspired by 
+; the sparkling jewel-like areas surrounding the central minibrot, 
+; which remind me of diamonds.
+; 
+; The rating of a 7-1/2 includes a half point for the coloring.  
+; Without the effort I put into the coloring, the image would be 
+; nothing.
+; 
+; The calculation time of 50 seconds is unusually fast, leaving no 
+; time for impatience to raise its fidgety head.  Of course, it is 
+; always a minor task to set up and run the included parameter 
+; file.
+; 
+; So make life easier for yourself.  View the completed image on 
+; the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; without the need to calculate it.
+; 
+; The high-definition version of the image is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original, classic FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Clouds and sun mixed together here at Fractal Central today, 
+; while the temperature reached a pleasant high of 55F 13C.  The 
+; fractal cats nodded their approval of the conditions, but it 
+; seemed apparent to me that they would have preferred more sun.
+; 
+; We humans had a relatively normal day of doing the routine 
+; things adult humans do to avoid pondering the mysteries of 
+; reality.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and the days of one's life might be very similar, but 
+; no two days are exact duplicates.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rough_Diamonds { ; time=0:00:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=-0.2648584710739/-0.0373166628626/4.064\
+  188e+009/1/155/0 params=1/1.5/0.5/3/0/0/0/0
+  maxiter=750 inside=0 logmap=82 periodicity=6
+  colors=00000900C00F00H00K00N00S00V00Z00c00g00k00o0\
+  0r05A05A05A05A05A05A05A05A05A05A05A05A05A05A05A05A\
+  05A050050666999DDDGHGJLJNQNQUQ`j`Yd`_kkhpnjvluzrzz\
+  z0uz3lwBelGZlJblNglQllUrlOpXOlIOiGOjGOlENlEUj9Zi5e\
+  g2j`0pQ0j90b00m89nTSp_VrdVtlhuruzzzzzzNG6B86006006\
+  808S08N08E08809O0BeBJwNUzZbzjlzwuzz0zz0zzzzz0zz0zr\
+  SzUOz6LzcU0z`0zX0zW0zU0zQ0zO0zN0zJ0zG5zD9z9Gz6Lz3Q\
+  z2Sz0Uz0Wz0Xz0Xz0Zz0`z2`zDbzQbzbcznczzXyjSyXNwJGw5\
+  Bu06u0WzwZyu`rtbircbrgWpiNnjGll9lbQuSezIwz8zzIzzSz\
+  z`ztjzjtzcuziuzlwznwppycryUtzItz8uz0wz0yz0yu0zp0zj\
+  0zc0zZ3zU9zNEzIJzDOz6Uz2`z0ez0jz0pz0uzNG0OL0QQ0QU0\
+  SZ0Ub0Ug0Wj0Xp0Xt0Zy0Zz0Sz0Lz0Ez08z02z00z20z50z65n\
+  0OS0i60z00z00z00z03z0Bz0Lz0Uz3bz5jz6tz3jz0cz0Xz0Qz\
+  0Jz0Dz06z00z00z60zD0zJ0zQ0zX0zc0zj0zr0zy0zz0zz0zz2\
+  zz3zz3zzDzzLzzUzzbzzlzzuzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

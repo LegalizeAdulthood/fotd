@@ -1,0 +1,110 @@
+;     Date: Mon, 20 Feb 2012 14:33:44 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-02-12 (Filamentary Chaos [7.5])
+;       Id: <1.5.4.16.20120220143538.0dffa1ba@earthlink.net>
+; ---------
+; 
+; FOTD -- February 20, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us into the lowlands, the land of Z^(1.333) 
+; to be exact.  We check the area 1333 levels up the complex-
+; logarithmic hyper-ladder, where we find a distorted Mandeloid 
+; facing southwest.  This Mandeloid is easily recognized as a 
+; distorted Mandelbrot set, but its straight main stem, pointing 
+; southsouthwest, has grown to an incredible length, terminating 
+; at a distance around 8 from the origin.  Today's image lies well 
+; out on this stem.
+; 
+; I named the image "Filamentary Chaos" because of the zig-zagging 
+; network of filaments all through it.  I have not yet checked the 
+; tiny minibrot at the center, and probably never will, since I 
+; doubt that much of interest lies down there.
+; 
+; The rating of a 7-1/2 indicates that I feel the image could have 
+; been improved with some more work, but due to an attack of 
+; laziness, I let it go as is.
+; 
+; The calculation time of 1-1/2 minutes is reasonable; viewing the 
+; finished image on one of the web sites is more reasonable.
+; 
+; Save time and maybe a little money by viewing the pre-calculated 
+; image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Then increase your pleasure by viewing it in the glories of high 
+; definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day began with a few clouds here at Fractal Central, but by 
+; noon the clouds vanished, leading to a splendid afternoon of 
+; total sunshine, which brought out the best in the fractal cats.  
+; Nicholas set up shop on the new lamp table, which he has now 
+; made into a cat table, while Cassie curled up on the scratching 
+; post next to Nicholas.  FL and I had a typical day.  At lunch, 
+; we almost got involved in a discussion about the addictions 
+; plaguing western culture, but common sense ultimately prevailed 
+; and the subject changed to the weather.
+; 
+; The next FOTD will be posted in 24 hours; most likely it will 
+; appear as scheduled.  Until next time, take care, and don't even 
+; think of trying to list all the addictions afflicting our 
+; 'western' society.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Filamentary_Chaos { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 float=y
+  center-mag=-1.776392325500523/-7.344818351189372\
+  /1.188619e+010/1/140/0 params=1.333/0/1333/0
+  maxiter=15000 inside=0 periodicity=6
+  colors=000lR_jTZhVZfWZdYYbZYa`Y_bXYcXWmcUmcSmcQmmO\
+  zzMzzLzzKzUJzzIzzHzUGzzFmUEmUDmUCmUBmUAlU9kU8iU7gU\
+  6eU5cU4XU3RU0PW3KU6KT8KSBUREUPGUOJUNLUMOUKRUJTUIWU\
+  HZUF`UEcUDeUChUAkU9mU8pU7rU6cUGQUQSUSTUUVUVWUXXUYZ\
+  U__U`aUbbUccUeeUffUheUkgUiiUhjUglVfmYdo`cpbbreazh_\
+  zkZznYzqXzsWzpXznXzlXziYzgYzeYtcZt`ZsaZsb_rc_qd_qe\
+  `pf`pg`ohanianjamkbmlblmbznbhoZepWaqTZrPVsMStJOuFL\
+  vCHw9Ex6ayWyztuzqrzoozmlzkhziezgbze_zcWzaTz_QzYNzW\
+  JzUGzSDzQAzO5zI7zM8zQ9zU7zWAzXDzXGzXIzXLzYOzYRzYTz\
+  YWzZZzZazZgzYczZ_zZWz_TzlTz_QzWOzTMzPKzMHzLFzLDzKB\
+  zK9zK7zJ5zJ3zJ7zIBzIFzIJzINzIRzHVzHZzHXzRazMezIL80\
+  900C00F00I00L20O40R60U80VB0YD0_F0aI0dK0eQ0fO0hV0kX\
+  0lZ0m`0nb0od0pf0qh0rj0sl0tn1up2vr1wt1ur2sp2qn3ol3m\
+  j4kh4if5gd5eb5c`6aZ6_X7YV7WT8UR8SP8QN9OL9MJAKHAIFB\
+  GDBB9AECBGECIGCKIDMKDOMEQOFSQKUSPWUUYWZ_Yca_hcamec\
+  rh`wjYzlVznSzpPzrMzpOmnQd }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

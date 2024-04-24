@@ -1,0 +1,106 @@
+;     Date: Wed, 01 Feb 2012 23:41:47 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-02-12 (Filigree [8])
+;       Id: <1.5.4.16.20120201234323.2b477c58@earthlink.net>
+; ---------
+; 
+; FOTD -- February 01, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For the first day of the new month, we return to the 
+; MandAutoCritInZ formula, a work-horse if ever there was one.  We 
+; check the parent fractal that results when 2 negative parts of 
+; Z^(-22) are combined with 10 negative parts of Z^(-1.2) and 
+; (1/C) is added on each iteration.
+; 
+; This parent fractal is an oversized thing consisting mostly of a 
+; large 'fan' with minibrots scattered along the edge of its 
+; blade.  Today's scene is located in the East Valley of one of 
+; these minibrots.
+; 
+; I named the image "Filigree" because of the delicate lace-like 
+; network surrounding the prominent central minibrot.  Most of the 
+; lacy effect was created by rendering the image with the 
+; 'outside' set to 'summ'.
+; 
+; The rating of an 8 is well above average, though I'm not sure it 
+; justifies the 8 slow minutes required to run the included 
+; parameter file.
+; 
+; Make life easy by viewing the finished image on the FOTD web 
+; site at: 
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; without the need of running the parameter file.
+; 
+; Experience an extra thrill by viewing the image in high-
+; definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Give in to nostalgia by viewing the entire FOTD image history at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Except for those in heaven, all good things must come to an end. 
+; The end of the sunny, spring-like weather came to Fractal 
+; Central today as clouds and rain moved in.  The temperature of 
+; 52F 11C was still mild enough, but the mildness was hard to 
+; enjoy with the showers falling.
+; 
+; The fractal cats checked the weather from their window shelf, 
+; then decided it would be a better day by the heat.  The two 
+; local humans made it through another day uneventfully.  The next 
+; FOTD will be posted in 24 hours.  Until then, take care, and 
+; where would we all be if the big bang had never happened.  (Then 
+; again, since no one observed it, maybe it never did happen.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Filigree { ; time=0:08:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+2.84125675228796/+0.01897202711806/\
+  1.80139e+009/1/170/0 params=-2/-22/-10/-1.2/0/0/0/0
+  float=y maxiter=32000 inside=0
+  outside=summ periodicity=6
+  colors=000000agZcd_fa_hZ`kV`mSapParMbtJbsIcrHcqGdp\
+  FdoEenDemCelBfkAfj9gi8gh7gg6hf5he4id3ic0jd2ie3if5i\
+  g6ih8ii9hjBhkChlEhmFhnHhoIgpKgqLgrNgsOgtPgrQeqRdoR\
+  bnSalS_kTZjTXhUWgUUeVTdVRbWQaWO`XNZXLYYKWYIVZHsvMU\
+  ZG2875CA7GCAKFCOHFSKHWMK_OMcRPgTRkWUoYXuaWs_VqZUoY\
+  TmXSkWRiVQgTPeSPcROaQN_PMYOLWMKULJSKIQJHOIINGHMHGM\
+  IGMIFMJFMKEMKEMLDLMDLMCLNCLOBLOBLPALQAKQ9KR9KS8KS8\
+  KT7KU7KUAMQDOMIRFGQIFPKEONDNPCNRBMUALW9KZ8J`8Id7Jb\
+  7Ja7J`7J_7JZ7JY7JX6KW6KV6KU6KT6KR6KQ6KP5LO5LN5LM5L\
+  L5LK5LJ5LI2JI5LH8NGBPFEQFHSEKUDNWCR_9PXCNUELRHJOJH\
+  LMFJODGRBDT9AW77Y54`20c32b44a56`68_7AZ8CY9EXAGWBIV\
+  CKUDMTCRaDNTEKKFHBB82GE3LJ3PP4UU4Z_5ef4bd5`c5Za5W`\
+  5UZ6SY6QX6NV6LU6JS7GR7EP7CO79K4AN7BQACSCDVFEXHF_KG\
+  aMHdPIfRJiUnCjoDioDioEhoEhpFgpFgpGgqGfqHfqHeqIerId\
+  rJdrJcsKcsKbsLbsLbqOaoQamT`kV`iX`g__ea_ddZbfZ`hZZk\
+  YXmYVpXTrXPxWStXUqYXnYZkZ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

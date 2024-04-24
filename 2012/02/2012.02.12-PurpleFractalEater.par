@@ -1,0 +1,114 @@
+;     Date: Sun, 12 Feb 2012 16:57:21 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 12-02-12 (Purple Fractal Eater [?])
+;       Id: <1.5.4.16.20120212165907.2bafb036@earthlink.net>
+; ---------
+; 
+; FOTD -- February 12, 2012 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in an almost-Julia set of a point in a 
+; valley in the outskirts of its incredible parent fractal, which 
+; is a Mandelbrot set corrupted by Z^(-13) energies.
+; 
+; I named the image "Purple Fractal Eater".  Eating fractals is 
+; far more acceptable than eating people.  Fractals are in 
+; infinite supply, while people are not.  (Yes, I know the 'Purple 
+; People-Eater' song is over half a century old, but at least to 
+; me, an admitted old-timer, it still sounds a lot better than the 
+; 'pop' stuff they feed kids today, the only function of which, as 
+; far as I can see, is to satisfy the noise-addiction it first 
+; induces.)
+; 
+; I rated the image at a question mark, mostly because I have no 
+; idea what to make of it.  The calculation time is a very brief 8 
+; seconds, which will bring no regret to those who make the effort 
+; to run the included parameter file and are then disappointed by 
+; what they see.
+; 
+; Avoid the task of setting up and running the parameter file by 
+; viewing the completed image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image is posted in high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site, which has been online for almost 15 
+; years, may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Typical midwinter weather prevailed here at Fractal Central 
+; today, with a strong wind drifting the three inches of snow that 
+; fell overnight into 18-inch, 45cm, drifts.  The temperature of 
+; 27F -3C felt notably colder due to the wind.  With no sunlight 
+; on their window shelf, the fractal cats spent most of the day by 
+; the heat.
+; 
+; My day began with clearing the fractal sidewalk, half of which 
+; was already blown clear, while the other half was covered by a 
+; snowdrift.  FL kept the coffee piping hot.  For a short time the 
+; cats watched the action with interest, but they soon got too 
+; cold by the window.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and would the real end of the world 
+; please stand up.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+PurpleFractalEater { ; time=0:00:08.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip float=y
+  center-mag=-1.78399/-1.54775/0.2183369/1/50/0
+  params=-13/1300/89/0/89/0/1.68388/1.33685/0/0
+  maxiter=1500 inside=fmod proximity=3.4 outside=real
+  symmetry=none periodicity=6
+  colors=000qCcpGbpKbpOapSapW`p_`pb`cQZSDXG1VK2OO3HR\
+  3BZGEfTHneKuqNklPagRScSTaQT`OT_MTZKTYITXGTWESyCTtI\
+  TpNTkTTgYTbbTZhTUmTQrNPqIPqDPqCWfBaXAgM9mC8s2Eb8JN\
+  EFLDVGBjB9y68x7Ax8Bx8Cx9Dx9ExAFwBGwBHwCIwCJwDKwDLr\
+  LKmTKh`KcgKeeMgcNiaOk_QmZRoXSqVUsTVuSWdZNOeFLWEILC\
+  G2hG5XG8MTtfMYRhMuZIePEQQTsMNdJHQ2h39S7SQ97SLANICJ\
+  GEFD1td9YQ8zPC`IG33G66G998SNXa4Z64VFMSOc_`TgmIoy7Y\
+  6CQQFJhHLjGNlGPnGViH`eHfaHkYH`SKRNMHHP7CRASXDfbFug\
+  oHzDNc_2Gc8MfDSiJYlObpUhsZnvdtyiytlwpnvlqugstcvs_x\
+  rWzqZph`f_cXReNIgEAdCGaBMZASW9YT8cQ7i17j18q8CmFGiL\
+  KeSOaZSYdWUk_QqbNo`LnZKlXJkVIjTHhRGgQFfODdMCcKBbIA\
+  `G9_E8ZD78xL7tM7pM7lN6hN6dN6aO5YO5UO5QP4MP4JQ4FQ3B\
+  Q37R33R30R9AMFJILSER`9Xi5br1gg5kX8oMBcjSdiRdiQdhPd\
+  hOedUfaZfZcgVigSnhPshMxdbnaseZigW`iTSjaRZjQNrPBiZD\
+  ahEUqFahPh_ZoRhgOm_LrTIwOKvJLuENu9Ot5Pt8SmAVfDY`F`\
+  UIcNKfHNiAPl4VdC`YJfQQlJX }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

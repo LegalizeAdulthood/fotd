@@ -1,0 +1,105 @@
+;     Date: Fri, 17 Feb 2012 18:00:03 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-02-12 (Wriggly Squigglies [7.5])
+;       Id: <1.5.4.16.20120217180154.2b77a3b2@earthlink.net>
+; ---------
+; 
+; FOTD -- February 17, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image opens a can of worms.  It reminds me of nothing as 
+; much as a wriggling pile of worms like the ones we played with 
+; when we were kids.  (Those were the days when it was all right 
+; to play dodge ball or climb on a jungle gym, and we had to walk 
+; all the way over to our friend's house and ring the bell when we 
+; wanted to talk with him.)  The name "Wriggly Squigglies" came to 
+; mind almost at once.
+; 
+; The parent fractal came about when I combined Z^(-0.5) with 
+; Z^(-2.5) and added (1/C) on each iteration.  This parent is an 
+; oversized thing shaped like a peanut lying north-south, with 
+; most of the action in its north half.  Today's scene is located 
+; in a squiggly filament on the western side of the far-more-
+; active north half of the parent.  (The south half of the parent 
+; has a valley jutting into it from the bland western shore line.  
+; At first glance however, this valley appears to hold little of 
+; interest.  But I'll check just the same.)
+; 
+; The rating of a 7-1/2 includes the standard half-point bonus for 
+; my extra coloring effort.  The brief calculation time of only 50 
+; seconds is a real bargain, but it is not sold in stores, and is 
+; available for a limited time only.  ;-)
+; 
+; But wait!  Find the pre-calculated image on the official FOTD 
+; web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Find the image rendered in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Find the entire library of FOTD image at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Typical harmless winter conditions prevailed here at Fractal 
+; Central today.  The partly cloudy skies and temperature of 48F 
+; +8C offended no one but the fractal cats, who were annoyed by 
+; the sun, which kept coming and going.
+; 
+; The humans spent the day doing routine things such as 
+; discussing politics and remembering the days before our culture 
+; began disintegrating.  The next FOTD will be posted in 24 hours. 
+; Until then, take care, and is it really necessary to include a 
+; warning in the cooking instructions of a frozen dinner to let 
+; the consumer know that the product will be hot when it first 
+; comes out of the oven?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Wriggly_Squigglies { ; time=0:00:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=-1.307753083162388/+4.997592221248452/\
+  1.913282e+009/1/-130/0 params=1/-0.5/1/-2.5/0/0/0/0
+  maxiter=1500 inside=0 logmap=68 periodicity=10
+  colors=00000600600700700B00800900900A00A00B00B00D0\
+  0D00F00F00G00H01I02I03K04L05N06TA7P48VI9PAAUN9P5CU\
+  Q7PBCYS4OICXiCNoKNtUMycMzmzzXzumKz_zqmzzgHpmGzjzom\
+  znPEnQDmSCmTBlVAlW9kY8kZ7j`7ja6ic5id4hf3hg2gi1gj0g\
+  k0dg3bc5_`7YX9WUBTQERNGPJIMGKKCMI9OX7Sk5Wz3Zx8UvDQ\
+  uILsNHqSDpX8na4mf0nd1ob2pa3p_4qY5rX6sV7sT8tS9uQAuP\
+  AtRBtSBtUBtVBtXBtYBtZBt`BtaCtcCtdCteCtgCthCtjCtkCt\
+  lCsjDriDrhDqgDpfDpeDocDnbDnaEm`El_ElZEkXEjWEjVEiUE\
+  hTFhSFgRFfPFfOFeNFdMFdLFcKGbIGbHGaGG`FG`EG_DG_CGY9\
+  DW79U46T23U34V44V44W54X64X64Y74Y74Z84_94_94`A5`A5a\
+  B5bC5bC5cD5cD5dE5eF5eF5fG5fG5dH6bI7`J8_K9YL9WMAVMB\
+  TNCRODQPDOQEMRFLRGJSHHTHGUIEVJCWKBWL9XL7YM6ZN4_O2`\
+  P1`P3aR5bT7cV8dXAeZCf_DgaFhcHieJjgKkiMljOmlPnnRopT\
+  prUpsWqqXrpYsn_tm`ukavjbwhdxgezefzdhzbizajz_kzZkzZ\
+  kzZkzZkzZlzZlzZlzZlzZlzZlzZlzZlzZlzZlzZlzZlzZlzZlz\
+  ZlzZlzZlzZlzZlzZlzZlzZmzZ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

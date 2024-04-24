@@ -1,0 +1,104 @@
+;     Date: Fri, 24 Feb 2012 15:40:25 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-02-12 (Mystical Wonderland [8])
+;       Id: <1.5.4.16.20120224154223.36d7b032@earthlink.net>
+; ---------
+; 
+; FOTD -- February 24, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image I break out the 'biomorph' feature of Fractint, 
+; an option I rarely use.  To me it seems too 'artificial', with 
+; too much trickery and not enough math.  But this is only my 
+; personal opinion.  Some fractalists might enjoy the patchwork of 
+; colors it creates, a perfect example of which is seen in today's 
+; image.
+; 
+; If the image had come about naturally, without using the 
+; biomorph trickery, I might have rated it as high as an 
+; exceptional 9.  As it is, I could give it a rating no higher 
+; than a pretty good 8.
+; 
+; The parent fractal was created by subtracting Z^(-2.8) from 
+; Z^(-1.1) and adding (1/C) on each iteration.  This parent is not 
+; much of a fractal -- only two disembodied lobes of Mandelbrot 
+; stuff with a network of twisting filaments on its east side.  
+; Today's scene lies in the outer edge of this network.
+; 
+; I named the image "Mystical Wonderland", perhaps over-stating 
+; its immediate effect a bit.
+; 
+; The calculation time of 1-1/2 minutes is well within reason if 
+; the task of setting up and running the parameter file is ignored.
+; 
+; The hassle of running the parameter file may be avoided by 
+; viewing the finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past FOTD images may be seen at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today here at Fractal Central was spoiled by heavy clouds.  Only 
+; a few sprinkles of rain fell, but the temperature of 43F +6C and 
+; the dampness kept an unpleasant feeling in the air all day.
+; 
+; The humans had a rather pleasant day, during which nothing went 
+; wrong.  The fractal cats always have a pleasant day, provided 
+; they get everything they want, and get it quick.  The next FOTD 
+; is scheduled to be posted in 24 hours.  Until then, take care, 
+; and search for the more subtle truths of existence.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+MysticalWonderland { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+2.795092906612666/+0.6474369169982751/\
+  4.317986e+011/1/50/0 params=1/-1.1/-1/-2.8/0/0/0/0
+  float=y maxiter=1200 inside=0 biomorph=120
+  periodicity=10 mathtolerance=0.05/1
+  colors=000E0dC0`ft2RugCuzd0ALAZ5Tv5kz5Zz5Ls58e60TA\
+  0GdLHzuHzu4zu0zkHzRgxNZmJPbFGRE6GA05605405E05L05T4\
+  5`C5iJ6qR8uZAue5sJ5g05X0Et0`u0ut2z`4sR8XHAA8E50G50\
+  HJ2HZ4Hm4Hd2EV0AL08C045025005005408C2JJ4VR8fZAqeCf\
+  iHVkNJmT8oZ5qd5si5tm5mu5ez5Zz8RzGLzI`uImTIu0Iu0Aq0\
+  5TT54u50z50z5Hz5Zq5qg5uZ5uP5uZ5ue5um5uu5uzIggdRNzA\
+  2z00fbZ5uzLTzd0ok0Gq00X02E0N56i5EzAKUcKEcKPU0`cKkc\
+  KvUKUWJUa0UANLIKU500N00e00V00Z40dC0dT0kN05_0mX0i`0\
+  gb0Ra0qN0uH0zA8z4Hz0Pz0zi0zW0me0ge0deA`MJXgVT`cPoo\
+  LouHouEzuAouGouLeuReuXeub5ug5sk5oq5kv5gz5cz5`z5Xz5\
+  Vz5Xz5Zz5`z6bzCczIezNgzViz`kxfmvkoufckbVbXLVTALN0E\
+  J04G00z2zz0zz0zu0zo0zg0z`0zT0zN0zG0z80z50z50z50z50\
+  u50o80gA0`E0VG0NJ0GL0AN0GP0JR8NTFRVNVXX`Zcd`kgbskd\
+  uoZumVukRuiNugJueGudCub8u`5uZ5uX5uV5ue5uo5uq5uq8uq\
+  CuqGuqJuqNuqRusVusZusbusfusiusmusousxqizcbzRTzELzA\
+  Pz6Tw2Xo0`f0dZ0gP0kI0oG0i }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

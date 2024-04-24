@@ -1,0 +1,107 @@
+;     Date: Thu, 09 Feb 2012 10:18:09 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-02-12 (Spring Garden [7.5])
+;       Id: <1.5.4.16.20120209101953.2bcf63fc@earthlink.net>
+; ---------
+; 
+; FOTD -- February 08, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I am currently involved with some nonsensical things I have 
+; discovered in the fractals created by the new JulibrotMulti2 
+; formula.  Until I can make more sense of the nonsense, I will 
+; work with the workhorse MandAutoCritInZ formula, which, if 
+; nothing else, does make at least a little sense.
+; 
+; The generating expression of today's image combines 3 negative 
+; parts of Z^(-5.6) with 6 negative parts of Z^(-2.5) before 
+; adding (1/C) on each iteration, which produces a parent fractal 
+; beyond description.  Today's image is located in a ring near the 
+; terminal of a filament on the northeast edge of the parent.
+; 
+; The image makes use of several 'tricks'.  To begin, it is 
+; partially 'evaporated'.  And it has been rendered with the 
+; outside parts set to 'tdis' and the inside parts set to 'bof61'. 
+; The result is a scene that for some reason reminds me of a 
+; garden in the springtime, and earns the name "Spring Garden".
+; 
+; The rating of a 7-1/2 includes a half=point bonus for the 
+; coloring, which required some extra effort.
+; 
+; The calculation time of 35 seconds will pass in a flash, leaving 
+; no time for impatience to raise its head.
+; 
+; Save the calculation effort entirely by surfing over to the 
+; official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; where the finished image is posted for instant viewing.
+; 
+; The high-definition version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A temperature of 32F 0C, thick clouds and light snow marred 
+; today's weather here at Fractal Central.  The fractal cats took 
+; one look at the outside conditions and decided to spend the day 
+; by the heat.  The humans had too much other stuff to do to let a 
+; measly 1 inch (2cm) of snow disturb them.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and before we wonder when the forces of good will defeat 
+; the forces of evil, we should decide exactly what is good and 
+; what is evil.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spring_Garden { ; time=0:00:35.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.364171267662479/+1.203607197877085/\
+  1.314689e+009 params=-3/-5.6/-6/-2.5/0/6250/0/0
+  float=y maxiter=1500 inside=bof61
+  outside=tdis periodicity=6
+  colors=000`LSdIS000X5rU8lSAeQD`NGWLKQKLLIPGFSCDW80\
+  00Dv4Gz6Lj2QN0W40`00S00L90DL08Z000000zP0d002004005\
+  00600801905A09C0DD0IF0LG0PI0SS0bb0ll1xx4zz0pp0`Z0c\
+  K0A60K80U80d90p90L0000000900K00W00g00v00l00b01U04L\
+  06D0961C02F02G0D24P08`02d00e00g00j006G00z60dFQFNx0\
+  Lz4LzDKzNKzZIzlIzxAAAAAAeU8pI0W90SA0ND0KF0GI0KK0GN\
+  0KP0GS2LU5GX8DZA9bD9dG4gK0kL0nP0qS0sW0uZ0yb0ze0zg0\
+  xe0rd0nd0gb0db0Z`0W`0QZ2NZ5IX4I`GKvCIx9Gz5Fz4Dz2Fz\
+  2Fz1Fz1Gz1Gz0Gz0Gz0Iz0Iz0Iz0Kx0Kx0Kx0Kx0Lx0Lv0Lv0N\
+  v0Nv0Nv0It0Lv0Nv0Pv0Sv0Uv0Wv0Zx0`x0bx0ex0gx0jx0nz0\
+  pz0rz0vz1xz1zz0zz1zz6vnCnbIgSQ`IXW9dP1lK0zD0tF0dF0\
+  QF0FF14F50FA0FF0LA4S6FZ2Qe0dn0rv0zz0zz0zz0zz0zv0vr\
+  0rn0nj0le0gb1dX2`U5ZQ6WN8SKAPGCNDDKAGG8I9A4F5KK0bP\
+  0zP0vP5rPDnPPlP`gPldPz`80ZGSZPzZKz`GtbDjdAbe8Wg4Nj\
+  1Gl09n04p00x00t00p04n0Aj0Ge0Nd0U`0bX0jW0rS0zQ0vS1r\
+  S4nS8jSAeSFbSKZSNWSSSSWPS }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

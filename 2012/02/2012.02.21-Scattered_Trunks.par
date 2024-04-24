@@ -1,0 +1,122 @@
+;     Date: Tue, 21 Feb 2012 18:00:06 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-02-12 (Scattered Trunks [8])
+;       Id: <1.5.4.16.20120221180200.2ba7df3e@earthlink.net>
+; ---------
+; 
+; FOTD -- February 21, 2001 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The valley on the east side of the Z^2 Mandelbrot set is 
+; sometimes called Elephant Valley.  The radicals found there 
+; rather convincingly resemble elephants.  Every bud has one 
+; elephant standing over it, trunk raised and curled in defiance.  
+; The Z^3 Mandeloid has two elephants guarding every 2-lobed bud 
+; in its Elephant Valley; the Z^4 Mandeloid has three elephants 
+; guarding every 3-lobed bud, etc.  The series continues, with the 
+; elephants growing ever more numerous and smaller, always 
+; numbering one less than the exponent of Z.  But what happens 
+; when the exponent of Z is reduced?
+; 
+; The same series continues.  Today's image shows the elephants, 
+; or what is left of them, in the Elephant Valley of the Z^(1.5) 
+; Mandeloid.  We have half an elephant guarding every half-bud.  
+; And it happens to be the front half of the elephants that 
+; remains.  The image shows disembodied elephant trunks scattered 
+; everywhere, but not a single whole elephant.  With little 
+; thought, I named the image "Scattered Trunks".
+; 
+; The parent Mandeloid is a rather shapeless thing that came about 
+; when I returned to the 'MandelbrotBC2' formula and checked East 
+; Valley of the fractal that results when the expression Z^(1.5)+C 
+; is calculated 1.5 levels up the logarithmic ladder.
+; 
+; Today's scene lies on the south side of the valley, where the 
+; front halves of the elephants remain.  (On the north side of the 
+; valley their rear halves remain, but elephant rumps are far less 
+; impressive than elephant trunks, so I chose to check the trunks.)
+; 
+; I rated the image at an 8, mostly for its mathematical interest. 
+; The coloring is a bit flat, though it is smoother than usual and 
+; its flatness does give an atmospheric effect.
+; 
+; The calculation time of 2-3/4 minutes is rather slow by FOTD 
+; standards.  This is where the FOTD web sites stampede to the 
+; rescue.
+; 
+; The trunks are on display at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; where they may be seen without the task of calculation.
+; 
+; High-definition trunks may be seen at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Over 4-thousand FOTD images may be seen at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Cloudy skies and a temperature of 42F +6C made today an un-
+; notable one here at Fractal Central.  The fractal cats disliked 
+; the lack of sun, and settled by the house heat early in the 
+; afternoon.
+; 
+; FL and I had a day as uneventful as the weather.  Yes, I know it 
+; makes boring reading, but I have to tell it like it is.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and one thing absolutely certain is that the end of the world is 
+; coming, just like those 'scare' shows say.  The only question is 
+; when.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Scattered_Trunks { ; time=0:02:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+0.17056338/\
+  -0.00784447/757/1/33.1/0 params=1.5/0/1.5/0 float=y
+  maxiter=15000 inside=0 logmap=30 periodicity=6
+  colors=00010c20d31e42f54g66h79i8Cg9FfBIeCLdEOcFRbH\
+  UaIW`JY_K_ZLaYMcXPeWPgVOiULkTGmNBoIApJCqLFrQLsWSta\
+  Ytgcsmiqskprlnqmlpnkpokopknqknrkmskltllulkvnjwpjxq\
+  iyrhzrhpvQmsTkpWinZfkadidbig_ijYimWioXilXiiXifYidY\
+  iaYiZZjXZlUZnRZoP`jUbfZdbbfZghVljRphSlfShdSdbS``TY\
+  ZTUXTQVTMUTJTSKSSKSRLRRLQQMQQMPQNOPNOPONOOMOPMNPLN\
+  QLNQKORKPSKQSKRTKRTKSUKTVKUVKUWKUWJUVJUVJUVJUVJUVJ\
+  UVJUVJUVJUVJUVJUVJUVJUVJUVIUXHUYGU_FU`EUbDUcCUdBUf\
+  AUg9Ui8Uj7Ul4Uq6Um5Uo4Up`XE_WFZVGYVHXUIWTJWTKVSLUS\
+  MTRNSQORQPRPQQORPOSONTNNUMMVMLWLLXKKYUJZUJ_UI`UIaU\
+  HbUGcUGdUFeUEfUEgUDhUDiUCjUBkUBlUAmU9nU9oU8pU7lU6m\
+  U5mU5mU4mU5mU5mU5mU5mU5mU5mU5mU5mc5mc6mc6mc6mc6mc6\
+  mc6mc6mc6mc6mc7mc7mc7mc7mc7mc7mm7zm7zm7zm8zm8zm8zm\
+  8zm8zm8zm8zm9zmAzmAzmAzmAzmAzmAzmAzmAzmAzmAzmAzmAz\
+  mAzmAzmAzmAzmAzmAzmAzmAzmAzmAzmAzmAzmAzmAzmAzmAzmA\
+  zmAzmAzmAzmAzmAzmAzmAzmAz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

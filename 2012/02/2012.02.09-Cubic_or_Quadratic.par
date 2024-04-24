@@ -1,0 +1,112 @@
+;     Date: Thu, 09 Feb 2012 16:54:49 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 09-02-12 (Cubic or Quadratic [7.5])
+;       Id: <1.5.4.16.20120209165633.38bf27f4@earthlink.net>
+; ---------
+; 
+; FOTD -- February 09, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "Cubic or Quadratic" because I'm uncertain 
+; what it is.  The minibrot at the center is clearly a cubic one, 
+; with its main bay divided into two large sections.  But the 
+; hexagonal pattern around the minibrot is divided into 6 parts, 
+; where one would expect it to be divided into one of the powers 
+; of 3, such as 3,9,27....  Clearly the quadratic element is still 
+; playing a major part in the action.
+; 
+; The parent fractal is an everyday Mandelbrot set.  The value of 
+; 1000 given to the real(p1) parameter assures the cubic 
+; corruption lies quite deep.  At a magnitude of over 3*(10^11) 
+; however, today's image lies well within the range of cubic 
+; corruption.
+; 
+; The image is located in a bit of debris in a tiny minibrot on 
+; the west branch of the filament extending from the large 
+; period-3 bud of the parent Mandelbrot set.  I rated it at a 
+; 7-1/2 because I had too little time to give it the coloring it 
+; deserves.
+; 
+; The calculation time of 6 minutes borders on slowness, but 
+; relief may be found on the FOTD web sites.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Total sunshine on the fresh 1-1/2 inches (4cm) of snow made 
+; today quite brilliant here at Fractal Central.  The temperature 
+; of 41F and light winds kept the outdoors quite comfortable.  The 
+; fractal cats approved of the weather but did not like the cat 
+; footprints that appeared overnight in the snow in the back yard.
+; 
+; FL and myself heartily approved of the weather but were too 
+; occupied with the more mundane tasks of the day to enjoy it.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and fight to make the world safe for fractals.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cubic_or_Quadratic { ; time=0:06:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip passes=1
+  center-mag=-0.142935711425101/+1.018936551710222/\
+  3.22728e+011/1/-35/0 params=3/1000/0/0/0/0/0/0/0/0
+  float=y maxiter=3600 inside=0 logmap=662
+  periodicity=6 mathtolerance=0.05/1
+  colors=00000A00B00B00C00D00E00F00G10H20I40K60M70O9\
+  0RA0SC0UD0VF0XG0YI0_J0`L0bN0cO0eQ0dR0cT0aU0`W0_X0Z\
+  Z0X_0Wa0Va1Vb3Uc5Ud7Ud9TeBTfDTgFSgHShJSiLRjMRjORkQ\
+  QlSQmUQmWPnYPo_PpaOpcOqdOrfNshNsjNtlMunMvpMwrLxtLy\
+  vMzuOztQzsSzrUzqWzqYzqczqczqczqizqjzqkzqlzqrzqszqm\
+  zrmzszztzzuzzvzzwzzxzzyzzzzzzzzzzzzzzzzzzzzzzmzzmz\
+  zmzzmzzmzzKRCHKDFBDGAFHCGHBHIBIJCKJCLKIMLNNLOOMOQM\
+  PRNPSOVTOVUP`WQ`XQaYRaZT``Sa_Ra_RbZQbZQcYPcYOcXOdX\
+  NdWNeWMeVMeVLfUKfUKgTJgTJhSIhSHhRHiRGiQGjQFjPGiLFj\
+  NFjPEjQEkSDkUDkVClXClZBl_BlaAmcAmd9mf9nh8ni8ok7qz7\
+  rz6sz6zz8zpAzzBzzDuzFtzGooImoKlnLgnNcnOZnQUmOPcNKU\
+  LFKJAAH55F00zmnzeom`ojSofDoc6oalpVgoOcnI_nBWm5Sm_W\
+  2W`FTeRQjcNnoKmtHmyUgzfaze`vd`sc_ob_laZh`Ze_YbZYZY\
+  XWXXSWWPVWMPTXKRfjtumzajz`gz_dzZazYZzXWzWTzVUzUczT\
+  czSczRmzQmzPmzOzzNzzKzzNzzPzzSzzUzzXzzZzz`zzZzzXzz\
+  VzzUzzSzzQzzOzzNzzHzzAzz3 }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

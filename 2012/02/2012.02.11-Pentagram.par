@@ -1,0 +1,118 @@
+;     Date: Sat, 11 Feb 2012 18:32:25 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 11-02-12 (Pentagram [7])
+;       Id: <1.5.4.16.20120211183410.0daf10b0@earthlink.net>
+; ---------
+; 
+; FOTD -- February 11, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD image is named "Pentagram".  It has nothing to do 
+; with werewolves or Satanic rituals however.  The name refers to 
+; the near perfect pentagram star surrounding the central quintic 
+; minibrot.
+; 
+; The parent fractal is a Mandelbrot set with Z^5 corruption so 
+; severe that it appears even on the surface, in the form of bits 
+; of debris in the interior of the buds, with a trace of this 
+; debris also in the main bay.  Today's image lies in the debris 
+; cluttering the north part of the main period-2 bud of the parent 
+; M-set.
+; 
+; The rating of an everyday 7 is all I could give the image.  It's 
+; not all that impressive mathematically and it proved very 
+; difficult to color, but despite the rating the star around the 
+; minibrot is certainly worth a look.
+; 
+; The calculation time of the parameter file is just over one 
+; minute, fast enough to keep impatience at bay and insure that 
+; little time will have been wasted if the image bombs.
+; 
+; The hassle of setting up and running the parameter file may be 
+; avoided by visiting the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and viewing the already calculated image there.
+; 
+; The image is posted in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site with all the images since April 1997 
+; may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The weather took a definite turn for the worse here at Fractal 
+; Central today.  Dawn broke with heavy clouds.  Showers of snow 
+; began at midday and continued through the afternoon, growing 
+; even heavier at post time.  The temperature hung around 34F +1C, 
+; so the pavements remained merely wet, but on the grassy areas 
+; the snow piled up to one inch, 2cm.  The fractal cats enjoyed 
+; the big fluffy flakes for a while, then retired to the warmest 
+; places they could find.
+; 
+; The humans, FL and I, took a short afternoon trip to a nearby 
+; antique emporium, making it back just before the temperature 
+; dropped.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and I hear that married people tend to be happier 
+; than unmarried people.  Does this mean that marriage brings 
+; happiness or that fewer want to marry unhappy people?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pentagram { ; time=0:01:10.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip passes=1
+  float=y center-mag=-1.054400978411/+0.062210075561\
+  /7.995e+008/1/-26.25/0 params=5/500/0/0/0/0/0/0/0/0
+  maxiter=2400 inside=255 logmap=46 periodicity=6
+  colors=000zzzwwotulrtnpsolroiqocpoZooTmoOloIkoDjo8\
+  io9fk9chA`dAYaBVZBSVCPSCMPDJLDGIEDFEABF78F45E99DDD\
+  CIHCMLBRPAVS9_W9c_8hc7lg5ri7pj9njBljDkjFijHgkJfkLd\
+  kNbkPakQ_kSYlUXlWVlYTl_SlaQmcOmeNmgLmiJmiHnjImjImj\
+  ImkImkImkImlJllJllJlmJlmJlmJlnKknKknKkoKkoKkoKkpLj\
+  pLjpLjqLjqLjqLjrMirMirMisMisMitLksMirNgqNfpOdoOcnP\
+  amP`lQZkQYjRWiRVhSTgSSfTQfTPeUNdUMcVKbVJaWH`WG_XEZ\
+  XDYYBXYAWZ8VZ7U_5U_4T`6S`7Ra8Qa9PaAPbBObCNcDMcELcF\
+  LdGKdHJdIIeJHeKHfLGfMFfNEgODgPChPDgQDfQDeQEeQEdQEc\
+  QFcQFbQFaQGaQG`QG_QG_QHYRHXRHWRHVRHUSITSISSIRSIQTI\
+  PTJNTJMTJLUJKUJJUKIUKHVKGVKFVKEVIHWHKXGNYFPZES_DV`\
+  AYbCXaDWaFW`GV`HU`JU_KT_LTZNSZORZPRYRQYSQXTPXVOXWO\
+  WYNWZNV_MVaLVbLUcKUeKTfJTgITiISj0Sj0Tk0Sk0Rk0Rl0Ql\
+  0Ql0Pm0Om0Om0Nn0Nn0Mn0Lo0Lo0Ko0Kp0Jp0Ip0Iq0Hq0Hq0G\
+  r0Fr0Fr0Er0Ep0Do0Dm0Dl0Cj0Ci0Cg0Bf0Bd0Bc0Ba0A`0AZ0\
+  AY09W09V09T08S08Y0_a0bzz0 }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

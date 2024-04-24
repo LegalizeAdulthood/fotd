@@ -1,0 +1,103 @@
+;     Date: Wed, 22 Feb 2012 16:44:25 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-02-12 (Midget in a Trunk [7.5])
+;       Id: <1.5.4.16.20120222164621.2bbfd0d4@earthlink.net>
+; ---------
+; 
+; FOTD -- February 22, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD image takes us into one of the disembodied elephant 
+; trunks in yesterday's image, where I checked for minibrots.  The 
+; search did not take long.  Within 5 minutes I located the 
+; minibrot at the center of today's image.
+; 
+; This minibrot is unusually well-formed for one in a fractal with 
+; an exponent of 1.5.  Actually the minibrot resembles the classic 
+; Mandelbrot set far more closely than its parent fractal, which 
+; is little more than a shapeless blob with a well-defined East 
+; Valley on the X-axis.
+; 
+; I retained the rather pale basic color palette of yesterday's 
+; image, tweaking the colors only when necessary to achieve more 
+; smoothness.  (Some bands still show, since total smoothness is 
+; impossible with only 256 colors.)
+; 
+; The rating of a 7-1/2 is high enough to make the 1-3/4 minute 
+; calculation time worth the effort.  And as always, the finished 
+; image is available on the web sites.
+; 
+; For the completed image, check the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site with thousands of images may be 
+; accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day turned out unexpectedly pleasant here at Fractal 
+; Central, with enough sun and a temperature of 57F 14C.  The 
+; fractal cats took full advantage of the conditions, and spent 
+; most all afternoon on their window shelf.  The humans had 
+; another uneventful day, which is not nearly as boring as it 
+; seems.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and sometimes I wonder whether the trouble with religion 
+; is that so many people believe it or that too few believe it.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Midget_in_a_Trunk { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+0.170759311/\
+  -0.00818564225/25953/1/-56.9/0 params=1.5/0/1.5/0
+  float=y maxiter=15000 inside=0 logmap=135
+  colors=00005X05Y05Z05_05`05a05b05c05d05e05f05g05h0\
+  5i05j05k15l26m37o48q59s6At7Bu8Cu9DtAEsBFrCGrDHoEIk\
+  FJgGKdHMaIOXJQUKSYIUaGWeFYiF_mEaqEctCdpBclAai9Ze8V\
+  a7RZ5NV4LR3JO2IK1HI6GH8GGBHGEJIILJMNLQOMMUOJZQGdSD\
+  iTAoV7tX4yY4uc3rc3mc3gc2ac2Wc2Qc1Kc2Gd3De4Bf59g68h\
+  79i8Cg9FfBIeCLdEOcFRbHUaIW`JY_K_ZLaYMcXPeWPgVOiULk\
+  TGmNBoIApJCqLFrQLsWStaYtgcsmiqskprlnqmlpnkpokopknq\
+  knrkmskltllulkvnjwpjxqiyrhzrhpvQmsTkpWinZfkadidbig\
+  _ijYimWioXilXiiXifYidYiaYiZZjXZlUZnRZoP`jUbfZdbbfZ\
+  ghVljRphSlfShdSdbS``TYZTUXTQVTMUTJTSKSSKSRLRRLQQcQ\
+  QcPQcOPcOPcNOcMOcMNcLNcLNcKOcKPcKQcKRmKRmKSmKTmKUm\
+  KUmKUmJUmJUmJUmJUmJUmJUmJUmJUmJUmcUzcUzcUzcUzcUzcU\
+  zcUzcUzcUzcUzcUzcUzcUzcUzcUzcUzcczcczcczcczcczcczc\
+  czcczcczcczcczcczcczcczcczcczcczcczcczcczcczcczccz\
+  cczcczcczcczcczcczcczcczcczcczcczcczcczcczcczcczcc\
+  zcczcczcczcczcczcczcczccz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

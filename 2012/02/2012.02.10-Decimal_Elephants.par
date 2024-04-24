@@ -1,0 +1,111 @@
+;     Date: Fri, 10 Feb 2012 18:42:25 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-02-12 (Decimal Elephants [8])
+;       Id: <1.5.4.16.20120210184409.2b5f9bf6@earthlink.net>
+; ---------
+; 
+; FOTD -- February 10, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "Decimal Elephants" because it lies in the 
+; East Valley of a Mandelbrot set corrupted in its depths by Z^10 
+; energies.  The exact location is in the 'star' on the rump of 
+; the period-19 elephant on the southern shore line of the valley.
+; 
+; I put enough effort into smoothing the colors to reward myself a 
+; bonus of a full point, raising an otherwise humdrum 7-rated 
+; image to one with a rating of a pretty good 8.
+; 
+; The only trick in the image is the passes=b option, which is the 
+; fastest with this particular image.  This option doesn't always 
+; work correctly, but when it does, it works great.  It cut 
+; today's calculation time from a slow 4-1/2 minutes to a much 
+; speedier 2-3/4 minutes.
+; 
+; Avoid all concern about calculation speed by viewing the image 
+; already calculated on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; View it in stunning high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And remember the original FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; which has the entire FOTD image history posted.
+; 
+; Uneventful conditions prevailed here at Fractal Central today, 
+; with cloudy skies and a temperature of 41F +5C.  Things are 
+; expected to become more active tonight however, when snow is 
+; expected.  The fractal cats complained briefly about the lack of 
+; sun, then took up residence by the heat for the rest of the day.
+; 
+; FL and I had an average day, which might seem boring to 
+; youngsters, but is exciting enough for those who have grown 
+; beyond the youngster stage.  The next FOTD is due in 24 hours.  
+; Since tomorrow will be a Saturday, there is a chance it could be 
+; late.  Until whenever, take care, and Athiests are right when 
+; they point out the harm religion has done over the centuries.  
+; But what would we replace it with?  A universal rational view of 
+; the world would fail miserably.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Decimal_Elephants { ; time=0:02:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip passes=b
+  center-mag=+0.2760591912709121/-0.0067265588677325\
+  /4.450124e+010/1/-25/0 params=10/1e+015/0/0/0/0/0/\
+  0/0/0 float=y maxiter=2400 inside=255 logmap=459
+  periodicity=6 mathtolerance=0.05/1
+  colors=000fRsfSsfVpfWpgWphWqiWriXrjXskXtjZsi_sh`qf\
+  aoeamcbk`ciYdgXdeVecSfaOg_MgYHhWDiUAjS8jQBjRDjSGjT\
+  IjULjUNjVQjWSjXVjXXkY_kZak_dk`fk`ikaklbnlcplcoidof\
+  doddoado_dnXdnUcnUbnUamU`mU_mSZmQYkOVgNTdLR`JPYHMV\
+  GKREIOCFKADH8BD79A566343129sZ8pX8mV7jT7gR6dP6aN5ZM\
+  5WK4TI4QG3NE3KC2HB2E91B7185053021nb6j_5gX5cV4`S4YQ\
+  4UN3RK3NI2KF2HD2DA1mU1zZmzUctKSs6Ip5Hm5Gk5Fi4Eg4Df\
+  4De4Cd3Bc3Ac39c39b28a27_26Z15Y14X14W13V02U01U00QU1\
+  NR0LP0JM0HK0FH0DF0AC08A0670450220fv2cr1ao1_l1Xi1Vf\
+  1Tc1R`1OY1MV1KR0IO0FL0DI0BF09C06904602303ST2PQ2NO2\
+  LL2IJ1GG1EE1BC199077044022eGD_EBVC9QA8L86F64A43521\
+  gwidsfaoc_l`XhZVeWSaTPZRNVOKSLIOIFLGC`zATo7Le57523\
+  2lbmi`zgccoXDcWCaUB_SBYRAVP9TN9RM8PK7NI7LG6JF5HD5E\
+  B4CA3A83862651431210`UiVPbQLWLHQFCJA8D546icnfakd_i\
+  bYg`WdZUccTccRccPccNmcLmcKmmKzmKzmKzzUzzUzzUzzUzzU\
+  zzUzzUzzUzzUzzUzzUzzUz000 }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

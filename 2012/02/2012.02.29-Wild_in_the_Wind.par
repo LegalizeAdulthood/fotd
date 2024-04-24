@@ -1,0 +1,111 @@
+;     Date: Wed, 29 Feb 2012 19:28:58 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 29-02-12 (Wild in the Wind [7])
+;       Id: <1.5.4.16.20120229193100.2a3f2e26@earthlink.net>
+; ---------
+; 
+; FOTD -- February 29, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's rather unexceptional image lies in the debris on the 
+; northern shore line of the parent fractal that comes about when 
+; the formula Z^(1.5)+C is iterated at a strange level of 439.65 
+; steps down the complex logarithmic hyperladder, which is 
+; actually more of a hyperhelix than a ladder.
+; 
+; Why I picked this level I cannot say.  With the 'floor' function 
+; built into the formula, the same image could certainly have been 
+; found at many other levels on the hyperladder.
+; 
+; To me, the parent fractal resembles a wild young woman speeding 
+; down the road in a tricked out sports car with a large hood 
+; ornament, with her hair flying behind her in the wind.
+; 
+; But don't get your hopes up.  In today's image the only 
+; remaining sign of the wild woman is in the name of the image, 
+; "Wild in the Wind".  All we have to show in the FOTD image is a 
+; fractal scene with routine features.
+; 
+; If more of the woman were in the image, it might have earned a 
+; much higher rating.  As it is, I could give it a rating no 
+; higher than a 7.
+; 
+; The 55 seconds it takes to run the parameter file will pass in a 
+; flash.
+; 
+; The official FOTD web site with the image already calculated may 
+; be accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version of the image is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original annotated FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and steady rain here at Fractal Central, with a few 
+; stray snowflakes mixed in, made today a day to be forgotten.  
+; The fractal cats, large Nicholas and small Cassie, forgot the 
+; day soon after it began, when FL brought out a battery operated 
+; toy cockroach that gave them great exercise all morning.
+; 
+; The two humans had another typical day in a typical small town, 
+; wondering where humanity went wrong.  The next FOTD, the first 
+; of a new month, will be posted in 24 hours.  Until then, take 
+; care, and if everything is an illusion, then I must be an 
+; illusion also.  But what is imagining that I exist?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Wild_in_the_Wind { ; time=0:00:55.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+0.3115167767\
+  651029/+1.07581719627323/6.560204e+008/1/-95/0
+  params=1.5/0/-439.65/0 float=y maxiter=800 inside=0
+  logmap=100 periodicity=6
+  colors=000Zpl`ml_jiYgdTcYOXSJQLEJE9C75617A38E59H6A\
+  L8BO9DSBEVDFZEGaGHeHJhJKlLLoMMsONuPmpSzjQveOrdNmbL\
+  h`Jc_IZYGUXFUZLU_Q``Wha`obeKkMIjLGiLEhKCgKAfK8eJ6d\
+  J5cJ4ZM4VO4RR4NT3IV3EY3A_36a4Ac5Ed5If6Mg6Qh7Uj7Yk8\
+  am8en9io9mqAqrAusCptEltGhtIcuK_uMWuOSuNTrMUpMVnLWl\
+  LWjKXhKYfJZdJ_bI_`I`ZHaXHbVGcTGcRJaSL`TO_UQYVSXWVW\
+  XXVY_TZaS_cR`fQahObkNcmMdoLdmNekOeiPegQefRedSebTe`\
+  UfZVfYWfWXfUYfSZfQ_fP`fRWgSRgTMgUHhVChW7hX2hH3p24x\
+  78tBBqFEnKHkOLhSOeXRa`UZdYWi`TmcQqfNuiKseNqbPpZSnW\
+  UmSXkPZjLahIcgEfeBhd7kb4ma1o`Ci_NdZY_YhV_dTa`RbYPd\
+  UNfQLgNJiJHjGFjLMjQTjV_jZejcljhsjlyfmvcns`opYpmVqj\
+  SrgPsdMtaJuZGuWPmeYeofYxe_vd`udbsccrcdqbfoagnail`j\
+  k`kj_mhZngZpeYqdYrcXoaWl`Vi_UfZTcYS`XRYWQWVPTUOQTN\
+  NSMKRLHQKEPJBOJ9NODOSHPWKP`OQdSRhVRgugeredocblaai_\
+  _gZZdXYaVWZTVWRTUQSROQOMPLKOJJMILLHMJGOVsnSrlPrjMq\
+  gKqeHpcEo`BoZ8nX6nVGq`Psf }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
