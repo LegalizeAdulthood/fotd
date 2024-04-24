@@ -1,0 +1,115 @@
+;     Date: Fri, 28 Aug 2009 16:07:00 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-08-09 (Various Distortions [No Rating])
+;       Id: <1.5.4.16.20090828160920.2bc7b316@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 29, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Check the philofractal list for a longer discussion.
+; 
+; Today's image is more a fractal study than any kind of art work. 
+; But as a combination of Z^2 and Z^(-2) it is still worth a look.
+; 
+; The image is named "Various Distortions".  I gave it this name 
+; when I saw in it the three types of distortion that can afflict 
+; Mandeloids.  These distortions surely have sound mathematical 
+; causes, but other than the non-critical type of distortion, I 
+; have no idea what these causes might be.
+; 
+; The first type of distortion appears in the dark Mandeloid 
+; fragments vaguely showing in the background in the northeast and 
+; southeast parts of the fractal.  This distortion appears when 
+; the starting point of Z is set to a non-critical value.  This 
+; particular distortion can be readily seen by calculating the 
+; type=mandel Mandelbrot set and setting the parameters to 
+; something between zero and one.  The distortion simply cuts off 
+; part of the set.
+; 
+; The second type of distortion is clearly visible in the two 
+; prominent Mandeloids on the X-axis.  In the Mandeloid on the 
+; left, the main period-2 bud is too large and the higher-order 
+; buds are bunched toward East Valley, while in the Mandeloid on 
+; the right, the main bud is too small and the higher-order buds 
+; are spread out toward the main bud.  I have no idea of the 
+; mathematical cause.
+; 
+; The last type of distortion is visible in the two smaller 
+; asymmetrical Mandeloids at the top and bottom of the image.  
+; In this case the entire system of buds is skewed to one side or 
+; the other.  In the buds in the image, this skewing is not too 
+; severe, but it sometimes becomes so severe that the main 
+; period-2 bud is impossible to find without checking the actual 
+; orbits of the points.  Once again I have no idea of the cause.
+; 
+; Since the image is more a mathematical study than a work of art, 
+; I could give it no rating.  But with a calculation time of under 
+; 15 seconds, at least on my recently rehabilitated middle-aged 
+; 2000mhz machine, there is no reason for anyone to miss seeing 
+; the distortion.
+; 
+; Of course, the trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is still more fun than calculation.
+; 
+; Heavy clouds and periods of rain spoiled Friday here at Fractal 
+; Central.  The temperature of 70F 21C was irrelevant. The fractal 
+; cats checked the outside several times, but when they saw too 
+; much rain and no sign of the end of the world. they went back to 
+; sleep.
+; 
+; My day was rather busy but not frantically so.  The next FOTD is 
+; scheduled to be posted in 24 hours.  If an unexpected antiquing 
+; expedition comes up, the FOTD might be delayed however.  Until 
+; next time, take care, and prepare.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+VariousDistortions { ; time=0:00:14.88-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.861346/0/0.814578 params=0.1/-2/0.55\
+  /2/0/0/0/0 float=y maxiter=350 inside=0
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000wkCri0mg3he6cc9ZbCU_BPXAKU9FR9ANH5JO1FV1\
+  Ba07h03z9DzINzQXzZfzfpzamzXjzSgzNdzIazDZz8Wz4UzCQz\
+  KNzSJz_GzgDz_AzS8zL6zD4z62zWSzMBzNAzNAzNAzNAzNAzNA\
+  zNAzNAzNAzNAzNAzNAzNAzXSzehncimajl_jkYkjWliUlhSmgR\
+  mfPneNodLocJpbHqaFq`Dr_CrZFs_Ht_Ju_Lu_Nv_Qw_Sw_Ux_\
+  Wy_Yy_iwOuvDtrFsoHrlJqiLpfNobPn_RnXSmUUlRWkNYjK_iH\
+  ahEchBdiEejGekIelLemNemPenSfoUfpWfqZfr`frbfodble_j\
+  fXghUeiRbjO`lLYmIWnFTpCRq9Or6Ms3Pp4Rn5Tk6Vi7Xf8_d9\
+  aaAc_BeXCgVDjSElQFnNGpLHrIItGJvPXxYjzexzguzhrziozj\
+  lzkjzlgzmdznazoZzpXzqUzrRzsOztLzuJzvLDwzFxzGyzIzzJ\
+  zzLzzMzzOzzPzzRzzSzzUzzVzzWzzTzzQzzOzzLzzJzzGzzDzz\
+  Bzz8zz6zz9zzBzzDzzFzzHzzJzzLzzNzzPzzRzzTzzVzzTzzRz\
+  zQzzOzzNzzLzzKzzIzzHzzFzzEzzCzzBzkEzeGz`IzWKzRMzMH\
+  zKCzI7zG2zE7zFBzGFzHJzIOzJSzKWzL_zMczIfzEizAlz6oz2\
+  gz3_z4Sz5Kz6Cz79z67z65z53z51z5vzNqzOlzPgzQbzRYzSTz\
+  TOzUJzVEzW9zX5zYCzZWzUSzP }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

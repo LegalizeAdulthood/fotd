@@ -1,0 +1,105 @@
+;     Date: Sun, 02 Aug 2009 14:33:41 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-08-09 (A Deep Dark Forest [No Rating])
+;       Id: <1.5.4.16.20090802143544.2bcff6a6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 02, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As I expected, I had to make a trip to Old Fractal Central on 
+; Saturday, and did not get back to new FC until noon Sunday, when 
+; the FOTD was already late and there was far too little time for 
+; a proper fractal search.  In a rush, I found today's image and 
+; named it "A Deep Dark Forest".
+; 
+; The image is actually a tiny part of a Julia set.  Curiously, 
+; the entire Julia set consists of an infinite string of similar 
+; but gradually changing elements.
+; 
+; The name refers to the blue, egg-shaped things surrounding the 
+; central element in the frame, which are actually fractal trees 
+; that have not quite fully formed.  A large number of trees makes 
+; a forest, thus the name.
+; 
+; I never rate such hastily found images, and today is no 
+; exception, though if I were to rate it, I would probably give a 
+; rating of a 6.5, mostly for the coloring.
+; 
+; The calculation time of 1-3/4 minutes may be cut in half either 
+; by setting the symmetry of the image to X-axis or by viewing the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; But before going to the web site, give Paul a fair chance to 
+; calculate and post the image.
+; 
+; The weather was quite muggy at Old Fractal Central on Saturday, 
+; where the temperature reached 86F 30C and the one remaining old 
+; fractal cat, Thomas, spent the afternoon stretched on the stones 
+; in front of the fireplace.  I hear things were pretty much the 
+; same back here at New Fractal Central, where the two new fractal 
+; cats, Nicholas and Cassie, spent the afternoon stretched under 
+; the cool air.
+; 
+; If all goes well, the next FOTD will be posted in around 9 
+; hours, but there is no guarantee, so don't hold your breath 
+; waiting for it.  Until whenever, take care, and philosophize.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Deep_Dark_Forest { ; time=0:01:46.80-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideJulibrot center-mag=+16.94930143\
+  560947/0/1.83592e+011/1 params=90/0/90/0/-0.77/0/0\
+  /0/1.05/1.5 float=y maxiter=6400 inside=0
+  logmap=174 periodicity=10 mathtolerance=0.05/1
+  colors=000MEMNGNOIOPKPQMQRORSQSTSTUUUZZZccchhhmmmz\
+  zzmmmccc```YYYVVVSSSPRoMDUBIBJHARH9ZG8c32eA5fG7hNA\
+  mR0kS6iTCkQ9mNCmQFmTImWLmZOmaRrdUre_rgbqddpb`q`YrY\
+  UtWQwUNzRLzOJzLHzIFzFDzDBzHPzLazOnfHZRAKBF5CF8DKAE\
+  QDFWFGaHHgKImMIrOzzZzzZmzdcvaUrZKmXvhLmcKdZKXeKWbJ\
+  W`IWZHQaOLcVGe`Bhg6jn1ltAfqJanRWk_RhgLepGbxB`ZNkAY\
+  vVWioVYTMO7DFDPII_KCVR6QY0Ld5Og9QjESlIUoMWqNRpONoP\
+  InQEnR9mS5lS1lb0kl0zeDz_PzT`zNlzHxzJuzLrzNpzPmzQkz\
+  N`zKRzHGzF6zJ9zNCzQEzUHzXJz2oz9izFczFpzFjzFdzFZzFT\
+  zFOzJSzMVzPYzT`zWczZfzWezUdzSczQbzObzLdzJez5szBlzH\
+  fzN_zTUzZNzcHz`JzYLzVNzSPzhazaYzWVzQRzJOzDKz1Bz7Hz\
+  DMzJRzPWzVaz`fzfkzf8zkpzgozcnz_mzWlzSkzOjzHlzKjzMh\
+  zPfzRdzTbzW`zYZzScz_XzXazVezTjzRnzOMzOPzORzOUzJ1zL\
+  CzMMzOWzPezKyzNtzQozTkzWfzZbzaYzYYz`WzbVzdUztRzoSz\
+  jTzfTzaUzXVzTVzOWz70zCBzGMzKWzOfzsBzUvzSpzQjzhqzWh\
+  zPdzIazBZz0_z4Wz8TzCQzGNz }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

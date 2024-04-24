@@ -1,0 +1,96 @@
+;     Date: Sun, 02 Aug 2009 18:42:40 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-08-09 (The Worm Turns [6])
+;       Id: <1.5.4.16.20090802184443.2a5f19f4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 03, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Don't be shocked if today's image seems strangely familiar.  
+; It's merely a near-repeat of yesterday's image, with only a 
+; little tweaking of the same color palette and an 0.02-degree 
+; double rotation from the Julia orientation.
+; 
+; The name "The Worm Turns" refers to the tiny departure from 
+; the true Julia direction.  The rating of a 6 is generous for a 
+; near-repeat.
+; 
+; The result is a bit more interesting than yesterday's image, 
+; though still far below top-FOTD quality.
+; 
+; But why all this obsession with quality, whatever fractal 
+; quality might be?  Fractals are for enjoyment.  And today's 
+; image can be enjoyed to the fullest only 56 seconds after the 
+; included parameter file starts running.
+; 
+; Another way to see the image is to view it on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Sunday started with light rain here at Fractal Central, but by 
+; mid-afternoon the sun appeared and the temperature reached 82F 
+; 28C, making the rest of the day quite pleasant.  The fractal 
+; cats forgot their fractal roots when they got into a spat over 
+; the one remaining catnip rat.
+; 
+; The next FOTD, not another repeat, will be posted in 24 hours.  
+; Until then, take care, and the asteroid that will eventually 
+; strike earth is already on the way.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Worm_Turns { ; time=0:00:56.37-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideJulibrot center-mag=4.94067/0/1.8
+  params=89.98/0/89.98/0/-0.77/0/0/0/1.05/1.5 float=y
+  maxiter=600 inside=0 logmap=25 periodicity=10
+  colors=000I6IJ8JKAKLCLMEMNGNOIOPKPQMQRORSQSTSTUUUZ\
+  ZZccchhhmmmzzzzzzzzzmmmmmmcccUUUPRoMDUBIBJHARH9ZG8\
+  c32eA5fG7hNAmR0kS6iTCkQ9mNCmQFmTImWLmZOmaRrdUre_rg\
+  bqddpb`q`YrYUtWQwUNzRLzOJzLHzIFzFDzDBzHPzLazOnzHZz\
+  AKzF5zF8zKAzQDzWFzaHzgKzmMzmOzmZzmZzmdzmazmZzmXzhL\
+  zcKzZKzeKzbJz`IzZHzaOzcVze`zhgzjnzltzfqzanzWkzRhzL\
+  ezGbzB`zNkzYvzWizVYzMOzDFvPIr_KmVRZQYcLdZOgUQjPSlK\
+  UoMWlNRfON`PIVQEQK9UO5YS1bb0fl0zeDz_PzT`zNlzrzzjwz\
+  eszUqzPmzQkzN`zKRzHGuF6pJ9kNCkQEpUHuXJz2oz9izFczFp\
+  zFjzFdzFZzFTzFOzJSzMVzPYzT`zWczZfzWezUdzSczQbzObzL\
+  dzJez5szBlzHfzN_zTUzZNzcHz`JzYLzVNzSPzhazaYzWVzQRz\
+  JOzDKz1Bz7HzDMzJRzPWzVaz`fzfkzf8zkpzgozcnz_mzWlzSk\
+  zOjzHlzKjzMhzPfzRdzTbzW`zYZzScz_XzXazVezTjzRnzOMzO\
+  PzORzOUzJ1zLCzMMzOWzPezKyzNtzQozTkzWfzZbzaYzYYz`Wz\
+  bVzdUztRzoSzjTzfTzaUzXVzTVzOWz70zCBzGMzKWzOfzsBzUv\
+  zSpzQjzhqzWhzPdzIazBZz0_z }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

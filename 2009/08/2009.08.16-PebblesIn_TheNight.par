@@ -1,0 +1,88 @@
+;     Date: Sun, 16 Aug 2009 22:13:46 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-08-09 (Pebbles in the Night [7])
+;       Id: <1.5.4.16.20090816221559.2bcf70ca@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 17, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the fractal that comes about when 4.4 
+; negative parts of Z^(-1.4) are combined with 0.4 negative part 
+; of Z^(-4.4) and (1/C) is added.  To make things more interest-
+; ing, the scene was half-evaporated by increasing the bailout 
+; radius to 850.
+; 
+; Then, to add still more interest, the final image was rendered 
+; with the outside set to 'tdis' and the inside set to 'fmod' with 
+; a proximity of 0.2, which makes it quite difficult to tell the 
+; inside from the outside parts.
+; 
+; The final result rates a nominal 7, which might be a bit 
+; liberal.  The name "Pebbles in the Night" refers to the smaller 
+; bits and pieces in the image, which, with a little imagination, 
+; might be seen as pebbles lying on some forgotten beach.
+; 
+; I would prefer the calculation time of 7 minutes to have been 
+; shorter, but that's how it goes sometimes.  If 7 minutes is too 
+; long to wait, why not visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the finished image there.
+; 
+; Midsummer heat continued here at Fractal central on Sunday as 
+; the temperature reached 91F 33C.  The fractal cats spent the day 
+; doing nothing, while asking for more cool air.  My day was slow, 
+; leaving lots of time for contemplation, which I did quite well.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and be happy in your sleep.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+PebblesIn_TheNight { ; time=0:07:05.28-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.5882197682228385/-1.557107074318487/\
+  4.726208e+007/1/-137.5/0 params=-4.4/-1.4/-0.4/\
+  -4.4/0/750/0/0 float=y maxiter=1500 inside=fmod
+  proximity=0.2 outside=tdis periodicity=10
+  colors=500XZFUZERYEOYDMXDJXCGWCCXBEWCFWCHWCIWCKWCL\
+  WDNWDOWDQWDRWDSWEUWEVWEXWEYWE_WF`WFbWFcWFeWFfWGgWG\
+  iWGjWGlWGmWHoWHpWHrWHsWHtWHsYIsZIr_Ir`IqaJqcJqdJpe\
+  JpfKogKoiKnjKnkKnlLmmLmoLlpLlqMkrMksMkuMjvNjwNixNi\
+  yNizNjxPjvQjuRjsSjqTkpUknVklWkkXkiYlgZlf_ld`lbalab\
+  m_cmYdmXemVfmUgkWejXdhZcg_beaadb`cd_aeZ`gYZhXYjWXk\
+  VYlUYlTZlSZlRZlQ_lP_lO_lO`mN`mM`mLamKamJamIbmHbmHb\
+  nGcnFcnEcnDdnCdnBdnAenAeo9eo8fo7fo6fo5go4go3go3dm4\
+  bl5`j6Zi7Wg8Uf9SdAQcARaER_HRZKRXNSWQSUTSSXSR_TPbTO\
+  eTMhTLkVNhXOfYQc_RaaTZbUXiNYpGZ_IaJJcKKaLL`MM_MNZN\
+  OYOPWPQVPRUQSTRTSSUQSVPTWOUXNUXMVYKWZJX_IX`HYaGZbE\
+  _cD_dC`eBafAbg8bh7ci6dj5dj4af5_c5Y`5WY6UV6SS6QP7OM\
+  7MJ7KG7JF9IEAHDBGCCGBDFAEE9FD8GD8HC7JB6KA5L94M93N8\
+  2O71P60Q60R73T75U77V79W7BX7DY7GZ7I_7K`7Ma7Ob7Qc7Sd\
+  7Ve7Xf7Zg7`h7bi7dj7gk7il7km7mn7oo7qp7sq8pr8nr8lr8i\
+  s8gs8eslaHiaHf`Gd`Ga_GZ_F }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
