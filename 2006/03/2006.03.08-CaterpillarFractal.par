@@ -1,0 +1,88 @@
+;     Date: Wed, 08 Mar 2006 23:52:21 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-03-06 (Caterpillar Fractal [6])
+;       Id: <1.5.4.16.20060308235525.29f72f94@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 09, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For some reason, today's image reminded me of a caterpillar, so 
+; I named it "Caterpillar Fractal".  The rating of a 6 is just a 
+; little above average.
+; 
+; The image is almost a Julia set of the Z^(1.5)+C Mandeloid.  It 
+; is not a true Julia set because I have rotated the slice a small 
+; bit from the true Julia orientation.  The rotation is less than 
+; one degree, but to see the difference such a small rotation can 
+; make, change the four p1 and p2 parameters to 90.  This will 
+; show the true Julia set.
+; 
+; The render time of 16-1/2 minutes is slow enough to make the 
+; download of the finished image worth the slight effort of 
+; visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A fine late winter day on Wednesday here at Old Fractal Central 
+; pleased the aging fractal cats.  Partly cloudy skies with a 
+; temperature of 50F 10C and little wind made conditions in the 
+; yard quite pleasant.  The duo spent over two hours outside, 
+; watching for intruding cats.
+; 
+; Meanwhile, inside, the work was heavy, but was kept under strict 
+; control by me.  The next FOTD fractal is expected in 24 hours.  
+; And unless something arises that would prevent it, the fractal 
+; actually will appear as scheduled.  Until that awesome moment 
+; arrives, take care, and don't get awe-struck too soon.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+CaterpillarFractal { ; time=0:16:34.98--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=1 center-mag=0.2\
+  8169/0/1.253133 params=89.93/90.1/90.03/89.09/\
+  -0.187/0/0/0/1.5/0 float=y maxiter=10000
+  inside=0 outside=real periodicity=10
+  colors=000D0ID0DF0EH0EI1EK2EL3EN4FP5FQ6FS7FT8FV9GX\
+  AGYBG_CG`DGaEIbGJbILcKMdMOdOPeQReSSfVUgXVg_XhaYid_\
+  if`jibjkcmfkpbsrZzmcphggckYZoPUsFPw6mo7ll6ki6kf6jd\
+  5ia5iZ5hW4gU4gR4fO3eL3eJ3cM9aOF_QKYSQXUVVW`TYfR_kP\
+  aqOcvNerMgnLikKjgJldIn`HpXGqUFsQEuNDwJCxFBzCAz89z5\
+  DwAGqFJkKMfPP`USVZVQcYKh`Emc9rbEsbJsbOsbTsaYsabsag\
+  salsapsgsolulrwiwyfzzcywavt_sqZpnXmkWjhUgeTdbRa_P_\
+  YOYWMWULUSJSQIOMGLIFLLGLNGLQGKTGLWGL_GMbGMfGNiGNlG\
+  OpGOsGOvGPsHQqIQoJRmKRkLSiMTfNTdOUbPU`QVZRVXSVXSWX\
+  SWXSWXSWXSXXSXXSXXSXXTYXTYXTYXTeXWYXTYXTZXTZXTZXTZ\
+  XT_XU_XU_XU_XU`XU`XU`XU`XUaXUaXUaXVaXVaXVbXVbXVbXV\
+  bXVcXVcXVcXVcXWdXWdXWdXWdXWeXWeXWeXWeXWqyPpxQpxQpw\
+  QpwQpvQovQovQouQouQotQotRntRnsRnsRnrRnrRnrRmqRmqRm\
+  pRmpSmpSmoSloSlnSlnSlmSlmSlmSklSklTkkTkkTkkTkjTjjT\
+  jiTjiTjiTjhTjhUigUigUigUifUifUieUheUhdUhdUhdVhcVhc\
+  VgbVgbVgbVgaVgaVg`Vf`Vf`W }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

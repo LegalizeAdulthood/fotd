@@ -1,0 +1,95 @@
+;     Date: Fri, 10 Mar 2006 23:34:42 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-03-06 (FOTD for 11-03-06 [Not Rated])
+;       Id: <1.5.4.16.20060310233748.2aa78882@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 11, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The tension continues to increase here at Old Fractal Central as 
+; the time of the move to the New Fractal Central grows ever 
+; nearer.  Fractal lady and I find ourselves snapping at each 
+; other over things that normally would pass hardly noticed.  So 
+; far, the tension has not rubbed off on the fractal cats, who 
+; most likely consider humans silly creatures anyway.
+; 
+; Today's image takes us 343 levels up the logarithmic ladder to 
+; check a Julia set of the Z^(1.3)+C fractal as it appears there.  
+; The Mandeloid at this level resembles an upside-down teardrop 
+; with a few minor buds scattered around the edges of the main 
+; teardrop bay.  The corresponding point of today's Julia set is 
+; located in the center of the narrow southern part of the large 
+; teardrop-shaped bay.
+; 
+; Most of the image consists of inside points brought to life by 
+; the 'bof61' inside fill.  Several of the other active inside 
+; fills also work with today's image, but the 'bof61' fill works 
+; best.
+; 
+; As has been the case so often lately, I neither named nor rated 
+; today's image.  I have no excuse.  I just didn't feel inspired.  
+; But named or not, the image calculates in 12-2/3 minutes on my 
+; tired old computer.  And it is also posted on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; from where it may quickly and easily be downloaded.
+; 
+; A record high temperature of 77F 25C here at Old Fractal 
+; Central on Friday, combined with bright sun, greatly pleased 
+; the fractal cats, who were in the yard from 10:30am until 
+; sunset.  Strangely enough, only the friendly black cat from two 
+; doors up the hill showed up for a visit.  When the duo finally 
+; came inside, they were ready to settle for the night.  My day 
+; was continued very busy.  The next in the long series of FOTD 
+; images will appear in 24 hours.  After that, I will probably 
+; have to miss a few days.  Until tomorrow, take care, and be one.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_11-03-06 { ; time=0:12:40.66--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=-0.371715/\
+  -0.139907/0.7456852/1/80/1.31075705844807544e-014
+  params=1.3/0/343/0/0.0125/-0.6075/0/0 float=y
+  maxiter=1000 inside=bof61 logmap=yes
+  symmetry=none periodicity=10
+  colors=0006U4sP34Kz3j26F59E7CD9ECBHBDKAFN9HP8KS7PV\
+  6UX5Z`AbdEhiIrnNzqRzuVzzZzzdnzibuoRttFty3sGTpHWmHZ\
+  jHahHdeHgbHj`HlYLkVPkSTkPWkN_kKcjHfjEjjBnj9qjZZRxG\
+  8wK7vN7uQ6tT6sW5rZ5qa4pd4o_4nV4mQ4mM4jQ7gT9dWBbZD_\
+  aFXdHVgJUcLU`MUYNUVOTSPTPQTLSTITSFUSCVS9WS6XP7YM7Y\
+  J7YH7YE7YB7Z97Z67Z37Z17Z66WA5TE5QI4NM3KQ3HR4KS5NT6\
+  QU6TV7WW8YX8`Y9cZAf_Ai`BkaCnbCqcDtdEwdEyeDweCveBuf\
+  AtfAsf9rf8qg7pg6og6nh5mh4lh3kh3jk5km6lo8mq9msAnuCo\
+  wDpyEptFcpFRkGEgG1eH3cI5bJ7`K8ZLAYLCWMDVNFTOHRPIQP\
+  KOQMMRNLSPJTRITSjk4lfAnaFpXLrSQtOVoRYkU`gXbb_eZbgV\
+  ejQhmMkoInrEptGkpIglKchM_dOW`QRXSNTUJPWFLYBH_7EZTb\
+  YnzQjfIfNAc3Bb7BbBCaECaID`LD`PE`SE_WF__FZbGZfGYiHY\
+  mHYpIZlIZiJZeJZbKZZKZWLZSLZPMZLMZINZENZBOZ7OZ4OZ1P\
+  _6Q_AR_FS`JT`OU`SV`WY`W``WXcVTfVQiVMlVJoVFrVCtVGrS\
+  KpQOnNSlLWjI_hGcfDgdBkb8o`6nY9nWBnUEnSGnQJmNLmLOmJ\
+  QmHTmFVmDXnEWnEWoEW9c58Z5 }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

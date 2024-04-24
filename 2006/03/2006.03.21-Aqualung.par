@@ -1,0 +1,78 @@
+;     Date: Tue, 21 Mar 2006 22:54:56 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-03-06 (Aqualung [9])
+;       Id: <1.5.4.16.20060321225810.29d73dd8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 22, 2005 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Do not miss today's image.  That rating of a 9 is no mistake.  
+; At least in my opinion, the image is one of the all-time best.  
+; The iterated formula takes Z^(1.5), combines it with a bit of 
+; Z^3, then adds C.  The resulting parent fractal consists of two 
+; widely separated Mandelbrot sets connected by an open highway.  
+; Today's image is located on the eastern shoulder of the highway, 
+; very near the X-axis.
+; 
+; I named the image "Aqualung" when I had a vague impression of an 
+; undersea scene.  The render time of 3-1/4 minutes will try no 
+; one's patience, though it may try the ability of some S.O.T.A. 
+; machines that do not do DOS.  Those with such fractally 
+; challenged units may download the finished image from the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Cloudy skies, unusually cold temperatures and a few flakes of 
+; snow kept the fractal cats safely inside all day Tuesday here at 
+; Fractal Central.  The evening tuna was welcome indeed.
+; 
+; My day was exceptionally busy.  Today will likely be the same.  
+; Hopefully, it will not be busy enough to keep the next FOTD from 
+; appearing on schedule right here in 24 hours.  Until next time, 
+; take care, and teleport with care.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Aqualung { ; time=0:03:15.15--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.25918026439188250/-0.024608357569720\
+  99/11131.99/1/-147.5/2.20972601328028873e-010
+  params=1/1.5/0.135/3/0/0 float=y maxiter=500
+  inside=0 logmap=55 symmetry=none periodicity=10
+  colors=0000LE0MG0NI0OK0PM0QO0RQ0SS0TU0UW0VY0W_0Xa0\
+  Yc0Ze0_g0`i0ak0bm0co0dqdqUit_nyeszlxzszzzxyqtxjqwe\
+  nv_jsUgoQdlKaiFZfBWb6T_1QY0NV0Kb0Ha0Od0Wg0aj6inDoq\
+  LxtUzvazoZziXybWxXUvRTtLRsGQsCObGLOKKBOJ0TH1WC4Z76\
+  a48d0Bg0Ad28a87_G6XN6UW5Tb4Ql2Nt2LzZHxzFtzGjzGbzGW\
+  zGOzGHzGByG5yG0sH1nH4iH5dH7_HAWHBRHDNHGJHHFHKBHN7H\
+  O6LQ5OR4RT2UU1ZU0aW0dX0gZ0jZ0iao0ed7ZWGTLQLD_GCXNB\
+  UUBTaAQiAOq8Nj7Ld7KZ6JU6HO5GJ5GF4FA4D52C12B01A01A0\
+  1B01B01B01B41B71BB1CF1CJ1CN1CR1CW1C_BGXLKWXNTiRRvU\
+  QgWZUWgHXo6Xy0Xz0ay1dq4gi6jb8nWBqODtHGxCHyFJzHKzKL\
+  zNNzQOzTQzWRzZRz_NzWKzRHzNFzJBzF8zB6z74z40z00z00z0\
+  0z00z00z00z10z40z70zB0zD1zH1zL2zO4zT5zX5z_BzLHzANz\
+  0Oz0Qz1Qz1Rz2Tz2Tz4Uz5Wz5Wz6Xz6Zz8ZzF_zLazTaz_bzgb\
+  zodzxezzgzzizzizzdzz_zzWzzTzzOzzKzzHzzDzzAzz6zz4zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

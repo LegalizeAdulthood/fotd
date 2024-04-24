@@ -1,0 +1,77 @@
+;     Date: Thu, 16 Mar 2006 07:32:02 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-03-06 (No Name Or Rating)
+;       Id: <1.5.4.16.20060316073512.29ef6b80@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 16, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's belated FOTD is a Julia set of the middle of the main 
+; bay of the Z^(sqrt(2))+C Mandeloid as it appears 16 levels up 
+; the log ladder.  Most of the fractal consists of inside stuff 
+; made visible by the 'bof61' inside fill.
+; 
+; Putting only 10 minutes into the entire effort, I could not give 
+; it a name or rating.  The 13 minute render time makes a download 
+; of the completed image the better choice.  That download will be 
+; available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Though it may be an hour or two before Paul has a chance to 
+; render and post the image.
+; 
+; High winds and chilly temperatures kept the fractal cats solidly 
+; inside all day Wednesday here at Old Fractal Central.
+; 
+; Unexpected work kept me solidly busy.  The next FOTD is supposed 
+; to appear in about 16 hours.  Whether or not it does depends on 
+; how things go for the rest of today.  Until next time, hopefully 
+; in 16 hours, take care, and be curious.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_16-03-06 { ; time=0:13:36.13--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=-0.294163/\
+  -0.141272/0.735823/1/90/3.88578e-016 params=1.4142\
+  /0/16/0/-0.4461/-0.6135/0/0 float=y maxiter=1000
+  inside=bof61 symmetry=none periodicity=10
+  colors=003NB5PFARJFTNKVRPXVUZZZ`bcbfhcjmdnrhrvnvzs\
+  wzvxzuzzbreZdXSROOEFI17E03F03z03zc3z03zc3z04F05F05\
+  FUzF07F18F3AF4AF4BF6BF7CF8EFAEFAFFBFFDHFEHFGIFGKFH\
+  KFJLFKLFKNHLOHNOHOPHQPHQRHRSHTSHVUHWUHWVHYVHZXH`ZH\
+  `ZHa_Hc_HdaHfbHfbHgdHidHjeHlgHlgHnhHohHqjFomHqjHrh\
+  KteLvdOwaPw_SyZUyVXyUZyRayPayPdyOeyOgyOhyOjyNjyNjy\
+  NjyNjyNjyLjyLjyLjyLjyLjyKjyKjyKjyKjyIjyIjyIhyIgyIe\
+  yHdyHbwHawH_wHZwFXwFWvFUvFSvERvEPvEOtEOtEOtCOtCOtC\
+  OrCOrCOrBOrBOrBOqBOqAOqAOqAOqAOoAOo8Oo8Oo8Oo8On8On\
+  7On7On7On7On7Lj5Ig5Hf5Ec5Ba59Z57Y54V52T54T75T85T87\
+  TA7TA8TB8TB9TC9TEBTEBTFCTFCTHETHETIFTKFTKHTLHTLITN\
+  ITNKTOKTOLTPLTRMTRMTSOTSOTUPTUPTVRTXRTXSTZSTZUT_UT\
+  _WTaWTaXTbXTdZTdZTe_Te_TgaTgaThbTjbTjdTkdTkeTmeTmg\
+  TnjVmhTngTneRneRndQnbQnbOpaOp_Np_NpZLpXLpXKrWKrUJr\
+  UJrSJrRHrPHrPGsOGsMEsMEsLDsKDsKBuIBuHAuHAuF8uE8uE8\
+  uFAsFAsHBrHBrIDrIDpIEpKEn }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

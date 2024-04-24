@@ -1,0 +1,89 @@
+;     Date: Fri, 17 Mar 2006 22:22:08 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-03-06 (Jaded Fractal [8])
+;       Id: <1.5.4.16.20060317222519.29bfd322@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 18, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image returns us for the first time in quite a while to 
+; the MandelbrotMix4 formula, where we examine the fractal that 
+; results when Z^(-1.5) is subtracted from Z^(1.5) and (1/C) is 
+; added.
+; 
+; The parent fractal appears as a moderate-sized Mandeloid lying 
+; well north of the origin, with smaller, mostly shapeless holes 
+; scattered about.  One of these scattered holes has a rudimentary 
+; East Valley on its east side.  Today's scene is located in this 
+; valley.
+; 
+; I rendered the image with the outside set to 'tdis', which IMO 
+; works best.  Several other outside options also work well.
+; 
+; Perhaps a bit over-enthusiastically I rated the image at an 8.  
+; It appears unique enough to earn such a superior rating.  I 
+; named the image "Jaded Fractal".  The name was inspired by the 
+; jade green coloring.
+; 
+; The passes=b option works with today's image, and it is by far 
+; the fastest, rendering the image in well under two minutes on my 
+; worn-out old machine.  The image may also be seen by downloading 
+; it from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Morning clouds and flurries of snow, followed by too-chilly 
+; afternoon temperatures here at Old Fractal Central on Friday 
+; kept the fractal cats outdoor time limited to less than 1/2 
+; hour.  But despite the inconvenience, their moods remained 
+; acceptable.
+; 
+; With all the work and all the stuff that needs to be done, my 
+; mood tended toward the sullen side.  The next FOTD is due in 24 
+; hours.  Until then, take care, and is the search for the meaning 
+; of life a true search, a folly, or none of the above?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Jaded_Fractal { ; time=0:01:46.06--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=b
+  center-mag=-0.18033703023777850/+0.390885560333783\
+  60/860514.9/1/157.5/7.11596189403862489e-008
+  params=-1/-1.5/1/1.5/0/0 float=y maxiter=600
+  inside=255 outside=tdis periodicity=10
+  colors=0003RI0OE0KAcYniVhSIbTMYSPSLNMFLH9JBP1`K5UG\
+  8OBBI7ECKmTIiRHfPGcNE`LrzpoznegcaVbYIbbRWg_QlhKpqE\
+  joKdmQZkWTjaNhgHfmBesH`mMWgRRbWNXaIRfDMk8Gp4Bm6Dj8\
+  EgAFeBGbDH_FIYGJXFPXFUWFZWEdVEiVEnYMr`Uvbazedshflj\
+  iemkZpnSrpLusEwu8tr9rpAomBmkCkiDhfEfdFdbG__NWYURW_\
+  NUfISlEQsAOyFMqJKiNIaRGUVEMZDFZJDZPBZUAZ_8Ze6Zj5_f\
+  A`bFaZKbVOcRTdNYeJbeGfc`_auTYjZV`dSRjWNi_JicFigBik\
+  8if9dbA_ZBVVCQRDLNEGJEBFFABG87H7NxHLuGKrFJoEHlEGiD\
+  FfCDcBMeZKjYIoXHsWoC0ZE24J6JG4KcbI`_GZXFXUDVRCTOAR\
+  L9PI7NF6LC4J91I92H82H82H82H72H73H73H63H63H66ar5Yi5\
+  Va4RU4OM3KELqgJndIkaHiZFfXEcUDaRCZPAWM9UJ8RG6OE5MB\
+  4J88Gs7Hi6H_5HQ4HGXaBIR8n_NkYLhXKeWJbVI_UHXSGURFRQ\
+  EOPDLOCIMBFLACK99J86I78D16E35F44G5AdA8`97X86T85P74\
+  L6k9sgAodBk`BgYCcUD_RDWNETKEPGFLDGH9GD6H9o0Ze4TW7N\
+  MBHCEB`FoKGT2Tc3S`3RY3QV3PS3OP3NN3MK3LH3KE3JB3I82w\
+  r3sm3oi3le3ha3eY3aU3YQ000 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

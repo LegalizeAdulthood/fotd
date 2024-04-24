@@ -1,0 +1,85 @@
+;     Date: Tue, 07 Mar 2006 00:37:36 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-03-06 (No Name Or Rating)
+;       Id: <1.5.4.16.20060307004040.2acf983a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 07, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I really enjoy fractal trees, and today's image is a fine 
+; example of a fractal tree.  Actually, the image shows part of a 
+; 'figure 8' Julia set of the Z^(1.5)+C Mandeloid as it appears 
+; PI levels *down* the log ladder.
+; 
+; The same image could be calculated in a little over half the 
+; time by the 'JuliaMiN' formula, since setting the p2 parameter 
+; of the JuliaBC formula to minus-PI is the same as calculating 
+; (-Z)^(1.5)+C, which is what the JuliaMiN formula does.  But 
+; under 4 minutes is not too unreasonable a time to wait for a 
+; tree to grow, so I let the JuliaBC formula do the job.
+; 
+; As has been the case so often recently, I gave the image no name 
+; and no rating.  If I had named and rated it, I would have chosen 
+; a name something like "Monkey Puzzle Tree" and a rating around 
+; 6.  These fractal trees are far too plentiful and far too easily 
+; found to rate much higher.
+; 
+; For the benefit of time-pressed fractalists, the finished GIF 
+; image is available for viewing on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A partly cloudy chilly day with the threat of rain or snow kept 
+; the fractal cats safely indoors all day Monday here at Old 
+; Fractal Central.  A bit of extra tuna kept them happy.  My day 
+; was continued busy, but somehow we managed to keep things under 
+; control.  Unless something unexpected happens, the next FOTD 
+; will appear in 24 hours.  Until then, take care, and what ever 
+; happened to rock-solid reality?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_07-03-06 { ; time=0:03:53.65--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=0.100156/\
+  0.179749/31.44654 params=1.5/0/-3.14159265358979/\
+  0/1.15/0.0015/0/0 float=y maxiter=1000
+  inside=255 logmap=yes periodicity=10
+  colors=000JsTIsTHsTGtTFtTEtTDtTCuSDtTDsTDrTDqTDpTE\
+  oUEnUEmUElUEkUFjUFiVFhVFgVFfVGeVGdVGdWGcWGbWHaWH`W\
+  H_WHZXHDUIEUIFUIGUIHUIIUJJUJKUJLUJMUJNUIOUIPUIQUIR\
+  UISUITUIUTIVTIWSJXRKYRLZQM_QN`POaOPbOQcNRdMSeMTfLU\
+  gLVhKWiJXjJYkIZlI_mH`nGaoGbpFcqEdrEesDftDguChvBiwB\
+  jvAkuBltAmsAnrAoqAnpAmoAlnAkmAjkAiiAggAeeAccAaaA__\
+  9YY9XW9WU9VS9UQ9TO9SM9RK9QI9PG9OF9ND9MB9LA9KC8JD8I\
+  E8HF8GG8FH8EI8DJ7DK7FM7GN7HO7IP7JQ7KR7LS6MT6NU6OV6\
+  QX6RY6SZ6T_5U`5Va5Wb5Xc5Yd5_f5`g5ah4bi4cj4dk4el4fm\
+  4gn4ho4fn5en6dn8cnAbnCanE`nGZnIYmKXmMWmOVmQUmSTmUR\
+  mWQmYPm_OlaNlcMleLlgJliIlkHlmGloFlqEmsFmuGmwHmxImy\
+  JmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKm\
+  zKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzK\
+  mzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmz\
+  KmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKmzKm\
+  zKmzKmzKmzKmzKmzKmzKmzKmz }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

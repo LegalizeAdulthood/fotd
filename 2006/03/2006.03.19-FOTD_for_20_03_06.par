@@ -1,0 +1,80 @@
+;     Date: Sun, 19 Mar 2006 23:59:00 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-03-06 (FOTD for 20-03-06 [6])
+;       Id: <1.5.4.16.20060320000212.3847e508@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 20, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's rather un-glorious fractal is the Julia set of what 
+; appears to be the Seahorse Valley area of the Z^(sqrt(2))+C 
+; Mandeloid as it appears at level minus-PI of the logarithmic 
+; spiral.
+; 
+; The details of the fractal are of a Seahorse Valley nature, with 
+; the expected thick bulky spiral arms, but the overall shape is 
+; totally different.
+; 
+; After careful consideration, I rated the image at a 6.  After a 
+; little more consideration I decided not to name it.  The render 
+; time of a couple minutes may be avoided by downloading the 
+; finished GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; On Sunday the fractal cats' outdoor time was limited once again 
+; by the chilly winds here at Old Fractal Central.  Luckily, the 
+; evening tuna treat eased their displeasure.
+; 
+; I actually managed to do almost nothing of value all day, which 
+; is the proper way to live at least a small part of one's life.  
+; The next FOTD is due in 24 hours.  It might appear; it might 
+; not.  Check back here in 24 hours to find out.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_20-03-06 { ; time=0:04:30.62--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=-0.0125196\
+  /0.162839/0.85918/1/-32.5/-2.50563458870090017e-014
+  params=1.4142/0/-3.14159265358979/0/0.1064/0.756/0\
+  /0 float=y maxiter=10000 inside=0
+  logmap=yes symmetry=none periodicity=10
+  colors=000b96cDAdHDeLIfPLgTPhXSiZSi`PjbNjdKkfIkhFk\
+  jCllAln7mp5mr2mt0ku1iv2gw2ev3du3bs4`q4Zo5Ym5Wk6Uh6\
+  Se7Rb7P_8NX8LU9KS9IQAGOAEMBBK8DIBEGDFEFGCHHAKIAMJC\
+  OKDQLFTMHVNIXOKZPL`QL_RKZSJZTJYUIXVIWVHVWGVXGUYFTZ\
+  FS_ERaDS_ERZFQXGPWHOUINTJMRKLQLKPMJNNIMOHKPGJQFIRE\
+  KRDMRCOSBQSASS9UT8WT7YT6_U5aU6cU6eV8gV9iVAkVBmWCmX\
+  DkYEjZFh_Gf`HeaIcbJbcK`dLZeMYgOWhPUiQTjRRkSQlTOmUM\
+  nVLoWJpXIqYGrZEs_Dt`Bua8wcAvbCvaEu`Gu_ItZKtYLsXNsW\
+  PrVRrUTqTVqSXpRYpQ_oPaoOcnNenMgmLimKjmJikHhjGghFfg\
+  EeeDedCdbBcaAb_9aZ8`X7`W6_V7_V8_V9ZVAZVAZVBZUCYUDY\
+  UEYUEXUFXUGXTHXTHWTIWTJWTKVTLVTLVSMVSNUSOUSOUSPTSQ\
+  TRRTRSTRSSRTSRUSRVSRVRSWRSXQTXQTYPUZPUZPV_OV`OV`NW\
+  aNWbNXbMXcMYdLYdLZeLZfKZfK_gJ_hJ`hJ`iIajIakHblHbmH\
+  bnHboKapNaqP`rS`sU_tX_u__vaZwdZxf_yi`zkazlbzmczncz\
+  oczpczqczrczscztczuczvczwdzxezyfzzgzzgzzhzzhzzizzi\
+  zzjzzjzzkzzkzzlzzlzzmzzmz }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

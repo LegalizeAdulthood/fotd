@@ -1,0 +1,88 @@
+;     Date: Tue, 21 Mar 2006 00:13:22 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-03-06 (FOTD for 21-03-06 [No Rating])
+;       Id: <1.5.4.16.20060321001636.29af64b6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 21, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an 'evaporated ' one created by the good old 
+; MandelbrotMix4 formula, the most prolific producer of FOTD 
+; images in my collection.
+; 
+; To achieve the image, a bit of Z^(-11.1) was combined with 
+; Z^(-1.1), and (1/C) was added.  Then the entire thing was 
+; 'evaporated' by raising the escape radius to an astronomical 
+; one-googol, which means that every point on the Cartesian plane 
+; is trapped, leaving the screen a flat color.
+; 
+; But luckily, the Fractint program can do things with such 
+; hopeless images.  It has certain inside fills that check the 
+; things the points do even though they are trapped.  In today's 
+; case, the 'bof61' inside fill reveals the ghost of a midget that 
+; was located at that point before the image was evaporated.
+; 
+; Since I am reasonably unimpressed with the result, I gave the 
+; image neither name nor rating.  The rather slow render time of 
+; 16-1/2 minutes may be avoided by downloading the finished GIF 
+; file of the image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A few months ago, Paul Lee, who runs the FOTD web site, made an 
+; offer to expand the site.  At the time I declined the offer, but 
+; I think I will soon reconsider.  Stay tuned for possible changes 
+; soon to come.
+; 
+; The unseasonably chilly weather continued Monday here at Old 
+; Fractal Central, making things rather unpleasant for the fractal 
+; cats, who desire warm breezes and lots of tuna.  Unfortunately, 
+; the tuna was all they had on Monday.  In my department, the work 
+; turned heavy, though still under control.  The next FOTD is due 
+; to appear in 24 hours.  It actually might do just that.  Until 
+; then, take care, and be of good faith.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_21-03-06 { ; time=0:16:29.09--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=+0.82050388487167360/-1.614875118366748\
+  00/3.736367e+010/1/155/-0.000477405687423902714
+  params=1/-1.1/0.06/-11.1/-0.3/1e+100 float=y
+  maxiter=7500 inside=bof61 periodicity=10
+  colors=000BmJ2rK9mJFhILcHR_HXVGbQFhMFnHEtCDz8DwDHu\
+  HKrMNpQRmUUkZXhb`fgcckfaoiVbmORqIFuKLlMQdNVXP_PQdH\
+  MgJJiLGkNCnP9pR6rTWt`uugtl_scTrVMqMEzD7o50e79zmHNz\
+  QDcz4De5Ji6Ol7Tp8Ys8bvB`rE_nHYkKXgNWdPU`STYVSUYQR`\
+  PNbOK_PNXQPURRSSUPTWMUYJV_H00EXdBYf9Yh8_f8`d7ac7ba\
+  6c_6dZ5fX5gW4hU4iS3jR3kP3lO6TL8AJ7DM7GP7IS6LV6NX6Q\
+  _5Sb5Ve5Xg4_j4am4dp4frGkgSoYcsOowEnvGmuImuKltMltOk\
+  sQjrSjrUiqWK0XfoUdnSamQ_kOXjLViJSgHQfFOeDNaHMZLLWP\
+  KSTKPWJM_IIcHFgHCjFFiEIhCLgBNf9Qe8Td6Vc5Yb3`a2b`6a\
+  Y900CaUG`RJ`PM`NQ_KT_IW_GNIAF05I47L78OA9REATHCWKDZ\
+  OEaRFcUHfYIi`JlcKnfLjbOgZRcVU`RXYNZ`K`bIadGbfEciCd\
+  kAem8fo6gd8kV9oLBsBCw1Dz4Fy7GyAIyDJyGKyJMxMNxOPxRQ\
+  xURxXTw_UwbWweXwgYweZtd_rc`pbanabl`cj_dhYefXfdWgbV\
+  h`UiZTjXOkVLhXMeYNcZO`_PYaXAKWAOVAKUAGTBCSC8RD4QE0\
+  P90O40N60M70L90KA0JC0ID0HF0HGcGIcFJcELcEMlTLvgLvuL\
+  vtMutNttNstOrtOqaWGTaHKgI }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

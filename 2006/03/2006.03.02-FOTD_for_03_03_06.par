@@ -1,0 +1,80 @@
+;     Date: Fri, 03 Mar 2006 00:10:39 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-03-06 (No Name Or Rating)
+;       Id: <1.5.4.16.20060303001339.29d7fc6e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 03, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD will be the last until next Tuesday, March 07.  
+; Have no fear, the FOTD will return on schedule at that time.
+; 
+; Today's very fast image takes us to the 555th level of the 
+; Z^(1.1)+C fractal, where we find a starburst-like Julia set.
+; 
+; Since I put almost no effort into the image, I could give it 
+; neither name nor rating.  The render time of 37-1/2 seconds 
+; shows how little time I devoted to today's FOTD image.
+; 
+; The finished GIF image is available as always on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Cloudy skies, occasional showers of rain, and a temperature of 
+; 39F 4C kept the fractal cats confined indoors here at Old 
+; Fractal Central on Thursday.  Their moods were hard to determine 
+; however, since they did little but sleep and eat.
+; 
+; My mood was grouchy, due to too much work and too little time.  
+; But somehow the fractal managed to get itself found.  In a like 
+; manner, the next fractal will also manage to be found, but not 
+; for 4 days.  Until this same time four days from now, wax philo-
+; sophic if you can find him.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_03-03-06 { ; time=0:00:37.52--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=0.0438185/0.22547/\
+  0.8336113/1/112.5/-1.2337353361147052e-014 passes=b
+  params=1.1/0/555/0/-0.2269/0.0644/0/0 float=y
+  maxiter=1000 inside=255 logmap=12 periodicity=10
+  colors=000gSSgSQgSOgRMgRKgQIgQGfPEgPCgOAgO8gN6gN4g\
+  M2gM0_HB000K9Kz0Km6JfCObIUZOZVUdR_iNenSgoXioajpflp\
+  mmppppvvvzzzohje_cWRXMIQC9JFCIHEHKGGMIFPKERMDUOCWQ\
+  BZSA`U9cW8eY7h_6ja6f_9cZC_XFXWIUVLQTONSRKRUNTSPVRS\
+  XQUZPX`OZbNadMcfLfhKhjJjiMkiOlhRnhTogWpgYndXlaWjZV\
+  hWUfTTdQT`RWYSYVS_STaOUdLUfIVhFWjBWm8Xo5Yq2Ys6`qAc\
+  pEenHhmLjlPmjToiWrh_tfcwefydaxeYwfUvgQuhMtiIsjErkG\
+  njHkjIgiKdiL`iMYhNUhPRgQNgRKgSGfUDfV9eW6eX3eW5fW6g\
+  V7hV9iUAjUEjTIkTMlSQmSUnPYnMapJerGitDmvAmvAjuCgsDd\
+  rFaqGYoIUnJQmLMiNLfPKcRJ_THXVGUXFRZEN`DKbBHdADf9Ah\
+  87i74h96gB8gDAfECeGEeIGdKIcLKcNMbPOaRQaSS`UU_WW_XY\
+  YY_XZaV_cU`eSagRaiPbkOcmMdoLeqKerfsTdoWbkYag__cbZ_\
+  dXWfVSiUOkSKmRHoUFmWElZDj`CicAhe9fh8ej7cm5bo4ar3_t\
+  2Zv1YrBZnKZkT_ga_cj``s`YtXWtUTuRRuNPuKMvHKvEIvAFw7\
+  Dw4Bw1Ep5Gi9IbDKWHMPLOIPQBTS4XUDSVMOWVJYcFZlA_u6Yq\
+  8Wn9UjASgBRcCP`DNYELUF000 }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

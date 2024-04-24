@@ -1,0 +1,81 @@
+;     Date: Fri, 24 Mar 2006 22:06:02 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-03-06 (Inferno [8])
+;       Id: <1.5.4.16.20060324220919.299ff6c2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 25, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an extra one, a quickie that I am presenting 
+; because of its fiery red colors.  I named it "Inferno" for 
+; obvious reasons.  The rating of an 8 seems fair enough for the 
+; image.
+; 
+; The parent fractal came about when I added 0.2 parts of Z^(-3) 
+; to Z^2 before adding C.  This parent consists of little more 
+; than debris scattered in the vague shape of a Mandelbrot set.  
+; Today's scene is located in one of the northern clumps of debris.
+; 
+; The terraced effect was achieved by rendering the image with the 
+; outside set to 'tdis'.  Except for the equal-iteration-bands 
+; option, the other outside options create too much chaos to be 
+; useful with this particular fractal.
+; 
+; The render time of 2-1/2 minutes seems just about right.  In any 
+; case, the finished image will soon be posted to the FOTD web 
+; site, which may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Sun, clouds and slightly chilly temperatures gave the fractal 
+; cats just enough outdoor time to keep them happy on Friday here 
+; at Old Fractal Central.  When two other local cats got into a 
+; noisy fight in the bushes next door, the fractal cats had all 
+; the excitement they could handle.  For me the work continues 
+; very heavy, so the next FOTD will be delayed one day until 
+; Monday the 27th.  Until then, take care, and all is illusion.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Inferno { ; time=0:02:31.48--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.41250578364338400/+0.760670886302808\
+  50/1.278248e+008/1/60/-4.63888290690855909e-006
+  params=1/2/0.2/-3/0/0 float=y maxiter=1000 inside=0
+  outside=tdis logmap=42 periodicity=10
+  colors=057zz7oI7zSJz`YzilzUWuFHi57d5Aa5JW5RU5YP5eL\
+  5mI5sQ5mW5gdFbjB7pZRi_ebUcY5c057090F58J57L57Q57W57\
+  a57f57l57pA7uF7zK7zP7zU7zZAzcFUURQVOPXMNZLL_JI`FGb\
+  DFdCDfAGk7Io7dw7zz7piFiPca5zUGmLS`DbM4n80y7Ds8UnMg\
+  iZwdlz_xzVzz`szgcznOzt7zz7zz7zg7zK7l5FUUZBwrLgeVUU\
+  QXWN_YKbZGfZBi`7lb4oc1sc2qg2qj2ol2on2opDsUNu8Wy7fu\
+  7osLyo`znpukejiW_gMPfCDd71b72d72d72d74dC4dH4dM4dQ7\
+  XYBPcFGjI7pL5vP5zQ5zY5zd5zlCvrNszXnzflznhzfUz_HzU7\
+  zN7zG7zF7zF7zFOzFbzFrzFzzNzzVuybpnkldsgVzbLzYo5Rj5\
+  Uf5Ya5ZY5bU5eP7gKCjGGlILnKPpLSsNVuPZvQ`zSdzUgzIQz6\
+  7z05z25z77uDGnKPhPXbUdWY_hbVuYXvUZvQZvL_vG`vD`v7bv\
+  4bvzIzzNzzSzzXzz`zzfzykzuozttzpyznzzlzzjzzjzzizziz\
+  zizzgzzgzzfzzfzzfzzdzzdzzdzzazz_zzYzzVzzUzzSzzPzzz\
+  zZLzzIzzGzzFzzDzzBzzBzzAzzAzzAzg7zj7zm6zp6zs6zv4zz\
+  4zz4zzDzmzzUUzAaz7gz7zz7iz7iz7iz7iz7jz7jzCjzHjzOjz\
+  TlzZlzclzjlznrz7iz7_z7Qz7 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
