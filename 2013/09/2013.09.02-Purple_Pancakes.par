@@ -1,0 +1,111 @@
+;     Date: Mon, 02 Sep 2013 16:45:31 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 02-09-13 (Purple Pancakes [A-7,M-6])
+;       Id: <1.5.4.16.20130902164634.2a870eec@earthlink.net>
+; ---------
+; 
+; FOTD -- September 02, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's deep toned and rather depressing fractal is a venture 
+; into one of the rogue zexpe fractals -- the one that appears 
+; when the expression Z^(epsilon)+C is iterated 9999 levels up the 
+; complex hyperladder with no function applied.
+; 
+; The parent fractal appears as a fairly conventional zexpe 
+; fractal, with the expected two large period-2 buds.  But it is 
+; rotated a bit clockwise and surrounded by much smaller minizexpe 
+; fractals disconnected from the main body.  Today's scene is 
+; located in what appears to be an East Valley of the largest 
+; satellite minizexpe, which lies just south of the southwest 
+; period-2 bud of the main zexpe.
+; 
+; I named the image "Purple Pancakes", not a very appetizing name 
+; but fully appropriate when one attempts to count all the purple 
+; blotches scattered about the scene.
+; 
+; The art and math ratings are unexceptional, since the image's 
+; tricks have already been done many times in the past.  The image 
+; is still totally new however, and well worth the 1-1/2 minutes 
+; required to rename and run this letter as a parameter file.  Of 
+; course, the nuisance of running the parameter file may be 
+; avoided by checking the finished image on one of the web sites.
+; 
+; The web sites may be accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Typical summer weather prevailed here at Fractal Central today, 
+; with a mix of sun and clouds, a temperature of 90F 32C, high 
+; humidity and the expected thunder clouds in sight, though not at 
+; FC.  The fractal cat made the most of things by sleeping and 
+; eating.  The humans, who had their holiday on Friday, kept watch 
+; on things.
+; 
+; The next FOTD will be posted in the foreseeable future.  Check 
+; at regular intervals, because who knows? the future might be 
+; tomorrow.  Until whenever, take care, and when things are going 
+; wrong, forget the bright side of things with the associated 
+; positive attitude.  It's a lot of unfounded wishful thinking.  
+; Get with reality, forget the feel-good dreams, develop an honest 
+; negative attitude, and look for the dark side.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Purple_Pancakes { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident float=y
+  center-mag=-0.5450986126031908/-0.9537212212288588\
+  /2.034e+008/1/55/0 params=2.71828182845905/0/9999/0
+  maxiter=2200 inside=0 logmap=166 periodicity=6
+  colors=00045A66E89GACKCFOEISGLWIO_MScOWZRZTUeNWjHZ\
+  oBat5hw0mx0ty0zz0wy0uu0tr0rp0mo0mn0mm0ml0mk0hj0ci0\
+  Zh0Tg0Sf0Se0Rd0Qc0Qb0Pa0O`0O_0NZ0MY0MX0LW0KV0KU0JT\
+  0JS0IR1IR0HQ0HP0GO0FN0FM0EL0DK0DJ0CI0BH0BG0AF09E09\
+  D08C07B07A0690580mVzlUzkTzjSziQzhOzgMzfKzeIydHvbGt\
+  `Fq_FoYElWDjUCgTCeRBbPA`OAYM9WK8TI7RH7OF6MD5JC5HA4\
+  E83C62952731410200K00K00K00M60B00KA0T00K00ISFGPDEM\
+  CCJAAF89C679556333117KU6KU6KU5KU5KU4KU4KU4KU3KR3KO\
+  2IL2FI2DF1AC179056023JGcIFbIFaHF`HE_HE_GEZGDYGDXFD\
+  WFCWECVECUEBTDBTDBSDARCAQCAPBAPB9OB9NA9cA8cA8c98`9\
+  7Z87X87W86V76U76S75Q65O65M55K54I54G44A439438337327\
+  2262252141131131020010000FT0AJ059FBRECQEEQEEPDEPDK\
+  UDKUDKUCKUCKUCKZCKZBKZBKZBKZAKZAKcAKcAKc9Kc9Kc9Kc9\
+  Kc8Kc8Kc8Pm7Pm7Pm7Pm7Pm6Pz6Pz6Uz6Uz5Uz5Uz5Uz4Uz4Uz\
+  4Uz4Uz3Uz3Uz3Uz3Uz2Uz2Uz2Uz1Uz1Uz1Uz1Uz0Uz0Uz0UzCU\
+  zAUz9UzAUzAUzAUzAUzAUzAUz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,104 @@
+;     Date: Mon, 16 Sep 2013 15:28:17 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-09-13 (Mystical Minibrot [A-9,M-7])
+;       Id: <1.5.4.16.20130916152932.2b8f3904@earthlink.net>
+; ---------
+; 
+; FOTD -- September 16, 2013 (Rating A-9,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image of a fancy minibrot lies in the parent fractal 
+; that results when 4 parts of straight Z, 3 parts of Z^2, 2 parts 
+; of Z^3, and 1 part of Z^4 are mixed together before C is added 
+; on each iteration.  This combination has a convenient critical 
+; value of -1, which produces a parent fractal of a basic classic 
+; Mandelbrot set surrounded by a field of disconnected dots, with 
+; each dot containing an entire fractal universe.
+; 
+; Today's image lies in a string in a dot near the tip of the main 
+; spike of the parent M-set.  Its artistic worth of 9 is mostly 
+; due to my extra work.  The math rating of a 7 is about FOTD 
+; average.
+; 
+; The name "Mystical Minibrot" might be an exaggeration, but then 
+; again, maybe not.  After all, every fractal is kind of mystical, 
+; since we never know the details of what they might hold until we 
+; actually go there and look.
+; 
+; Today's image calculates in a speedy one minute, leaving ample 
+; time for any tasks that might be more pressing and need to be 
+; done.
+; 
+; A little bit of extra time might be saved by checking the 
+; finished image at the following web sites:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with a brief shower here at Fractal Central.  When 
+; the shower ended the clouds remained however, and the rest of 
+; the day was cloudy with a temperature of 70F 21C and only a few 
+; brief bursts of sun.  The fractal cat, now nearing senior cat 
+; status, slept through most of the non-excitement, while the 
+; fractal humans watched the news of the latest shooting.
+; 
+; The next FOTD will definitely be posted within a reasonable 
+; time.  Its rating is yet to be determined.  Until the fractal 
+; appears, take care, and we must pass some laws to end these 
+; outrageous shootings.  Let's pass a law prohibiting the anger 
+; that causes a shooter go out and kill innocent people to avenge 
+; a perceived wrong that was done to him.
+; 
+; 
+; Jim (both left and right) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Mystical_Minibrot { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotMix3a function=ident passes=1
+  center-mag=+0.44089178013265180/+0.000008999523773\
+  35/2.5e+012/1/-158.25/0 params=4/1/3/2/2/3/1/4/-1/0
+  float=y maxiter=750 inside=0 logmap=54
+  periodicity=6 mathtolerance=0.05/1
+  colors=00000D00H00K00P00W00_00c00g00l00p00z08z0Fz0\
+  Lz0Sz0Uz5WzAYzF_zKazPczUezUhzUkzUnzUqzUtzfwzpzzzzz\
+  zjxzcvzZtzRozOiyJcxGYwCSvALuCCuE0uG0qH8kJGfLN_NYVP\
+  ePSmJUxEWz8WzGUzNUzUSzaSzgSxoPtxPozNmzNizNgS00U00W\
+  00Y00_00a00a00c00e00g00i00k00k00e00_00U00N06H0CC0H\
+  80N20W00a00g00m00t00z00z00x00q00i00c00Y04P2AJ6GECL\
+  6GU0J_0Pe0Uk0Yq0_o0ao0co4eoEgoNioYkogggicai_UkWNkS\
+  GmPAmL2mH0oE0oA0q60q40q40o40m20m20k0ao2am4ak8aiAae\
+  EacG_aJ__L_YP_US_SW_PYYNaYLcYJgYGiYEmYCoYAtW8vW4zW\
+  2zW0zW0zW0zW0zU0zS0m00m00m00m04m0Am0Hm0Nm0Um0am0gm\
+  0mm0vm0zm0zmYzzxxzocz_JzH0v20t80tC0tG0qJ6qNCqSHoWN\
+  o_Uoc_keYgeYceW_eWWgUSgUNgUJgSGiSziPziPziPzmUzoWzt\
+  _zvazvezxgzxkzzmzzqzztzzxzzzzzzzztzzmzzgzzazzWzzPz\
+  xHzvCzv6zt0zq0zo0zo0z_0zC0z00z00z00z02z0Cz0Lz0Wz0e\
+  z0ozmzzmmzmczmUzmJzkAzz0zvEzzSzzezztzzzzzzzzzzzzzz\
+  vzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

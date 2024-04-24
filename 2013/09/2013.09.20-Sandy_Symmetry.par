@@ -1,0 +1,120 @@
+;     Date: Fri, 20 Sep 2013 15:29:21 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-09-13 (Sandy Symmetry [A-6,M-7])
+;       Id: <1.5.4.16.20130920153040.2c271f9a@earthlink.net>
+; ---------
+; 
+; FOTD -- September 20, 2013 (Rating A-6,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the same parent fractal as yesterday's, 
+; but it is located far from the area where yesterday's was found. 
+; Today's image lies in a field of debris in the northwest 
+; quadrant of the parent, just north of the X-axis where the axis 
+; intersects the western edge of the football-shaped main bay.
+; 
+; I named the image "Sandy Symmetry" when I noticed that the large 
+; minibrot is symmetrical with respect to its center.  The most 
+; unusual aspect is that, despite the symmetry of the minibrot, 
+; the lower iteration parts of the surrounding pattern have no 
+; symmetry at all.
+; 
+; With more time, I might have found a better color palette for 
+; the image.  As it is, I could rate the art aspect no higher than 
+; a modest 6.  But at a rating of an above-average 7, the math 
+; aspect takes some of the sting out of the missing artistic worth.
+; 
+; The calculation time of 2-1/2 minutes will seem to pass faster 
+; when there is some other activity to fill the wait.  The fastest 
+; way of all to view the image is to check the web sites.
+; 
+; The completed image is available on the web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Early morning fog gave way to partly cloudy skies by 10am here 
+; at Fractal Central, with an afternoon temperature of 79F 26C.  
+; The fractal cat slept through most of the fine weather, 
+; wondering why the humans were so busy doing unnecessary human 
+; things.
+; 
+; The next FOTD will appear almost by magic in the appropriate 
+; time.  Until that time arrives, take care, and the U.S. is not 
+; only the most frightening nation on earth, it is also apparently 
+; the most frightened.  (I do not call our country 'America' 
+; because this is the name of the continent.)
+; 
+; But what are we so frightened of that makes so many of us turn 
+; our homes into virtual armories and respond with such anger when 
+; we hear anything that might reduce free access to guns?  I doubt 
+; that any other country would be able to defeat our military 
+; forces and turn us into slaves without destroying themselves and 
+; the entire planet in the process.
+; 
+; As I see it, we are basically frightened of our mortality, which 
+; is the underlying fear infesting our modern technologically 
+; advanced but spiritually bankrupt culture!  The other threats 
+; simply serve as things that make our spiritual fears appear 
+; more concrete and rational.  I will have more to say about this 
+; curious situation in future discussions.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sandy_Symmetry { ; time=0:02:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.148230552926612/+0.04356462695361098\
+  /1638.059/1/85/0 params=1.6666666666667/0/3.141592\
+  65358979/0 float=y maxiter=6400 inside=0
+  logmap=27 periodicity=6
+  colors=00060A70B80C91DA2EB3FC4GD5HE6IF7JG8KH9LIAMJ\
+  BNKCOJCNIDLHEJGEHFFGEGEDGCCHABI9AI79J58K38K2AN5FQ7\
+  KS9PVBUYDZ_FcbHheJmgKrjKvmKzoKzrKzuKzzKzzKzzKzzKzz\
+  PzzUzzczzhzzmzzzzzzzzzzzzzzzzznmKpmFqzCrzEnzFjzGfz\
+  IczJ_zKWzMSzLTzLTzLTzLTzLTzKUzKUzKUzKUzKUzKUzJVzJV\
+  zJVzJVzJVzIWzIWzIWzIWmIWmFVmIWmKWmMWmLWmLWmLWmKWmK\
+  WmKWmJWmJWmJWmIWmIWmIWmHWmHWmHWmGWmGWmGWmFWcFWcFWc\
+  FWcEUcETcEScERcEQUEPUEOTENTEMUELUEKUEJVEIVEHVEGVEF\
+  _DIdDLiCNnCQsBTxBVrCXlDZfE_`FaTIdWGbZE``C_cBYe9Xh7\
+  Vj6Ui8Ti9SiBShCRhDQhFQgGPgHOg8Sk6Uo5VGzZGzYGzXGzWH\
+  zVHzUHzTHzSIzQIzPIzOIzNJzMJzLJzKJzJUzmUzmUzmUzmUzm\
+  UzmUzmUzmZzmZzmZzmZzmZzmZzmZzmZzmhzzhzzhzzhzzhzzhz\
+  zhzzhzzhzzhzzhzzhzzhzzhzzhzzhzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

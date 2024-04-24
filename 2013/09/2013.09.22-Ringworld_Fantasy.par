@@ -1,0 +1,110 @@
+;     Date: Sun, 22 Sep 2013 18:42:28 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-09-13 (Ringworld Fantasy [A-7,M-6])
+;       Id: <1.5.4.16.20130922184348.2b0f7fc6@earthlink.net>
+; ---------
+; 
+; FOTD -- September 22, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the oversized monstrosity of a fractal 
+; that results when 3.3 negative parts of Z^(-1.3) are combined 
+; with 1.3 negative parts of Z^(-3.3) on each iteration before 
+; (1/C) is added.
+; 
+; This parent fractal is an immense thing, extending far beyond 
+; the default screen.  It consists of two giant rings surrounded 
+; by smaller rings, some connected, some not, with a large 
+; Mandelbrot set between the two giant rings.  The 0,0 point lies 
+; on the western perimeter of the southern ring; today's scene 
+; lies on the eastern perimeter of the same ring.
+; 
+; I have not yet checked the large Mandelbrot set, though I might 
+; do so in a day or so.  I have found that these blatant M-sets 
+; usually contain mostly typical M-set stuff, and little new 
+; stuff, with the really unusual features lying in the least 
+; likely places of the parent.
+; 
+; The name "Ringworld Fantasy" came about when I found myself 
+; pondering other possible worlds.  I seem to be entering one of 
+; those philosophical spells that come every few years, and the 
+; effects are likely to show in the FOTD titles of the next month 
+; or so, as well as the closing philosophizing.
+; 
+; The artistic rating of a 7 is due mostly to the strong coloring. 
+; The math rating of a 6 shows that there is really no new math in 
+; the image.
+; 
+; The calculation time of 1-3/4 minutes will pass quickly enough.  
+; It will pass even quicker for those who fill the time pondering 
+; the meaning of life.
+; 
+; Relief for built up emotional stress may be found by viewing the 
+; finished image online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Morning sun and afternoon clouds made the day eminently 
+; forgettable here at Fractal Central.  The temperature of 66F 19C 
+; was mild enough.  The fractal cat, who is never bothered by 
+; clouds, spent the afternoon as a lump under a chair cover.  The 
+; credulous humans made it through the day with little difficulty 
+; or emotional stress.
+; 
+; The next FOTD will be posted before too long.  Until that 
+; unknown time arrives, check the FOTD web site for the 
+; non-fractal political etc. philosophy, if interested.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ringworld_Fantasy { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+6.614872334534/+0.252350032949/5473663\
+  /1/115/0 params=-3.3/-1.3/-1.3/-7.3/0/0/0/0 float=y
+  maxiter=1500 inside=0 logmap=115 periodicity=6
+  colors=000xbux`uxZuxXtxVsxSqxPoxMmxJstFkjFWoGZeCTg\
+  BNZAIZ8DL67N63D30C20320000720B30G40M60V90XA0gD2iE3\
+  oH5mG5tJ7uJ8xQ7xN8xK9sH9oF8kC8f88a79Z89`HI`DNaLVcL\
+  ei_qlaumptgjlakgXo_ZttTxcIzLJtLQzRTrTXnVanZV_TingZ\
+  cWTXLQT8MP0JM0FR0CU0mm5mmAzzEmmKmmJ5Pz7KzBHzCEzHJw\
+  KPwTXwJNw9Fw4Bm08m05m0Ac4FcCMcLScVY3TT5TQ9SMBSJDSE\
+  DQ9EQ6GQ4JT7HXEJ`KKcTNgZOkcNmiMcaLVWKPSJHMFCHA9CC6\
+  8CSVYsvufrlWzjNzdHrTBYHgxsxzuxzuch`9O8070033D6UCBT\
+  FLTETTEeUAUO9NJ8HF6BA34612302042596CFFJMPRW__cihks\
+  spzujpj`eYQVOPSKNKBNE32876AGAAQFB_KBjQDuUEuDfuAYg6\
+  QM6M94J07O4AR8CUCDYGGaLIeQJhUHnTGrTFvTEzSDzSCzSAzQ\
+  PxSHnNBeJ6XG8XI9XKAXMBXOIYRS_U`eYingingsxqxzuqvnin\
+  gfnb_nUTnNMnIGnCCn74n`DnZVn_gnbxncxkWxjRxiMx`GxiBx\
+  s8xz6xz6xu6xq6xr6xr6xr6xr6xr6xz6xz7xzAxzFxzJxzIxzH\
+  xznxzrxztxzuxzuxzuxzuxzuxzpxzcxzTxzKxzCxzBxzAxz9xz\
+  8xz8xz7xzMxzexzuxzuxzuxzu }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,111 @@
+;     Date: Thu, 05 Sep 2013 16:19:08 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-09-13 (Proximity 0.01 [A-7.5,M-7])
+;       Id: <1.5.4.16.20130905162014.2abf86d8@earthlink.net>
+; ---------
+; 
+; FOTD -- September 05, 2013 (Rating A-7.5,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The math behind today's image combines 4 parts of Z^2 with 3 
+; parts of Z^4 and 2 parts of Z^3, then subtracts a whopping 100 
+; parts of Z^5 before adding C on each iteration.  This crazy 
+; mixture creates a parent fractal shaped somewhat like a sickle 
+; cell, with X-axis symmetry and a large main spike pointing west.
+; 
+; This large period-2 bud on the negative X-axis appears quite 
+; normal, but the shapes of the other buds around the main bay 
+; are wildly varied.  Today's scene is located in a bud on the 
+; northeast shore of the large sickle-shaped main bay of the 
+; parent.
+; 
+; I did not try to find an additional critical point of the 
+; generating expression.  The value of zero so frequently works as 
+; a critical point with this formula that I generally try it 
+; first.  In today's case, zero works quite well, though I might 
+; check for other critical points and see what kind of parent 
+; fractal results.
+; 
+; The unusual coloring effect in today's image was achieved by 
+; rendering the scene with the outside set to 'fmod' with the 
+; proximity unchanged from the default 0.01.  This is what 
+; inspired the name "Proximity 0.01".
+; 
+; With a rating of 7-1/2, the artistic value, at least in my 
+; opinion, is worth a little more than the math value, which rates 
+; a whole-number 7.
+; 
+; The MandelbrotMix3a formula is a slow one, which slows the 
+; calculation to a turtle-like 3 minutes.  So don't let the turtle 
+; win the race.  Check the finished image at one of the web sites.
+; 
+; Enjoy freedom from turtles by viewing the finished images at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today here at Fractal Central began with cloudy skies, but the 
+; clouds cleared off by noon, leading to a pleasant, mostly sunny 
+; afternoon with a temperature of 75F 24C, low humidity and a 
+; refreshing north wind.  The fractal cat, fully refreshed, spent 
+; the afternoon watching the local pigeons, which are starting to 
+; get out of control and might eventually have to be cleared from 
+; the surrounding eaves.  The fractal humans had a routine day, as 
+; most days are here at FC.
+; 
+; The next FOTD will be posted in the right time.  Until that time 
+; arrives, take care, and check the first FOTD web site for the 
+; politically charged comments of the day.
+; 
+; Jim (neither right nor left) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Proximity_0.01 { ; time=0:03:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix3a function=ident passes=1
+  center-mag=+0.05921017762628365/+0.181266449610439\
+  /4.5583e+008/1/82.5/0 params=4/2/3/4/2/3/-100/5/0/0
+  float=y maxiter=600 inside=0
+  outside=fmod periodicity=6
+  colors=000UU5UV4UU4UT4UQ5UN6UK6UH7UF7UC8U99U69U3AU\
+  1AUeoVZgVS`WLTWEMX7EX07Z3C`5Hb7Md9RfBWhE`jGelIjnKo\
+  pMsnLqlKpjJohJnfImdHlbGk`Gj_FiYEhWEgUDfSCdQBcOBbMA\
+  aL9`J9_H8ZF7YD6XB6W95V74U64T74S84R84R94Q94PA4PA4OB\
+  4OB4NC4MC4MD4LD4LE4KE4JF4JF4IG4IH4HH4GI4GI4FJ4EJ4E\
+  K4DK4DL4CL4BM4BM4AN4AN49O48O48P47P47O59O6AN7BN8CM9\
+  DMAFLBGLCHKDIKEJJFKJGMIHNIIOHJPHJQGKRGLTFMUFNVEOWE\
+  PXDQYDR_CS`CTaBUbBVcAWdAXf9Yg9Yh8Zi8_j7`k7am6bn6co\
+  5dp5eq4fr4gt3hu3iv2jw2kx2ky4jv5jt6jq8jo9ilAijCigDi\
+  eEibGh`HhYIhWJhTLgRMgONgMPgJQgHRfETfCUf9Vf7Wf5Vh9U\
+  jCUkGTmJSnNSpQRqURsXQt`PvcPwgOyjOzmPvjQshRpeRmcSj`\
+  TgZTdWUaUVZRVWPWVMcNKcIHcFFcGCcDAcA7d75e42f10e22a3\
+  3Z34V46S57O58L6AH7BF7CC6EA6F76G56I27J08K18M28O39P4\
+  AR5BS6CU7DV8EX9FZAG_BHaCIbDJdEKeFLgGMiHNjIOkJPlKQm\
+  LQnMRoMRoMSoNSoNSoNTnOToOTnOUnPUnPUnPUnQUnQUnQUnRU\
+  nRUnRUnSVnSWnSWmSWmSWm6CU }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

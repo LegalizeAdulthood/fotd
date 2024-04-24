@@ -1,0 +1,107 @@
+;     Date: Wed, 18 Sep 2013 17:31:02 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-09-13 (Seahorse Symphony [A-8,M-8])
+;       Id: <1.5.4.16.20130918173219.2ba79f42@earthlink.net>
+; ---------
+; 
+; FOTD -- September 17, 2013 (Rating A-8,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's striking image combines four parts of straight Z with 
+; three parts of Z^2, two parts of Z^3 and only one part of Z^4 on 
+; each iteration before adding straight C.  This whimsical 
+; assemblage of numbers creates a parent fractal that is basically 
+; a classic Mandelbrot set.  This M-set however is surrounded by a 
+; vast cloud of satellite dots, each of which is an entire fractal 
+; universe.  Today's scene is located in one of these island 
+; universes in the interior of the north branch of Seahorse Valley 
+; of the parent M-set.
+; 
+; The terraced effect was created by rendering the image with the 
+; outside set to 'tdis', which measures the total distance a point 
+; travels before it escapes over the fractal horizon.
+; 
+; The critical point of today's concoction was rather easy to 
+; find.  When the first rough approximation registered -0.9998..., 
+; it was a pretty sure sign that the exact critical point is 
+; likely minus-1, a common critical point.  When I entered this 
+; value, it proved to be correct.
+; 
+; The art and math values both rate an 8, at least in my opinion.  
+; The rather slow calculation time of 3-1/2 minutes is a drawback 
+; however, though the web sites can take care of this time problem.
+; 
+; Checking the following web sites will save time.
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A cloudless sky and a temperature of 66F 19C made today near 
+; perfect for the end of summer here at Fractal Central.  The 
+; fractal cat must have thought so as he sat on his scratching 
+; post and pondered the pigeons feeding in the back yard.  The 
+; humans spent the day wondering what is wrong with the world.
+; 
+; The next FOTD will be posted in the right divine time.  Until 
+; the deity speaks, take care, and when a man kills 12 people with 
+; a gun, blame the gun, then try to get the politicians to pass 
+; legislation that would reduce the number of mass shootings.  
+; (I'll have much more to say about such simple minded thinking in 
+; a day or two.)
+; 
+; 
+; Jim (neither on the right nor the left) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Symphony { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotMix3a function=ident passes=1
+  center-mag=+0.7859446718496711/+0.0203918179218428\
+  /3.352754e+009/1/-75/0 params=4/1/3/2/2/3/1/4/-1/0
+  float=y maxiter=900 inside=0 outside=tdis
+  periodicity=6 mathtolerance=0.05/1
+  colors=000OzaMzcLx`JrYJlXIdTG_SGTPFMOFGLDAJC3GC0FA\
+  0CA0AC06D33FA0GJ0IS0I_0FV0DS0AP19M46J74GA1DD0AG07J\
+  04M01P00L00G00C00700G91PS7XjDdzjfzrzzdlfLrP0K90K4K\
+  l0Ug0ac0f_0jV0oXFrYTu_gy`vzazzazsdzifyYguOipCjm1lj\
+  IdiY_fmTdzOTpgIdzaMpv4gz0_6zzCxvIrjOlYSfM`cXgado`m\
+  v_voVyiQzcMzXIzQDzL9zF6zLCzQIzXMzOIzFFz4Az07z04z03\
+  zMdMG`OCXP6SQ0OS0JTFCQY4Op0Lz0JrYPczTVzQOvOFoL7gI0\
+  `F0TD0XL0_S1`_4cf7dmIjdSoXauOjyFuz6zz0zz0yV1l0DjD7\
+  jd1oi4rl7uoAyrDzuGzxJzzMupGggAVY4IP04G0GIPQIrXMjaP\
+  dgT_lXTr_OxcIzfCzi6SzaTzTVzMVzFGzL1zP_r09fA4_G0SM0\
+  LS0DY06a04c03d43dA1fG0gL0gX4Xf9MrDAzI0pMAdQLTVVJ_d\
+  7co0gy0jz9QlV6Qp06OJX0ou0im0df0__0VS0QL0LD0G60C04F\
+  6OICfLJxMPyOOzPLzQJzQGzSFzTCzVAzV9z_AscCjgDclFVpFM\
+  uGFyI6zJJQfPQdVQa`Q_fQXjQVdSY`S`XScSSdOSgJSjFSlJTa\
+  MTTPTJSTAVT1TMFSGQQ9cP3oO0zM0zI4zFJzII0JP0LX0Mc1Mj\
+  6OrAPyFPzI_zPgzXpzagz_`pX }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+
+
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

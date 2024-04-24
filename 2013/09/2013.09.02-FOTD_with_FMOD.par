@@ -1,0 +1,99 @@
+;     Date: Mon, 02 Sep 2013 09:58:12 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-09-13 (FOTD with FMOD [A-8,M-7])
+;       Id: <1.5.4.16.20130902095915.309f134c@earthlink.net>
+; ---------
+; 
+; FOTD -- September 01, 2013 (Rating A-8,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a non-existent one.  The expression behind 
+; today's image, Z^(0.09)+Z^(-0.09)+C, does not make a fractal.  
+; Try it and see.  It merely draws a blank screen of dead inside 
+; stuff.
+; 
+; But the Fractint program has inside fills that can make 
+; something dead come alive, and in today's image, the 'FMOD' 
+; inside fill with a proximity of 0.65 has brought a basically 
+; dead screen to a zombie like life.
+; 
+; I have given the art aspect of the image a rating of a very 
+; honorable 8, while the math aspect comes in at a 7.  I spent 
+; quite a bit of time on the impossible task of smoothing out a 
+; 256-color GIF palette.  The result is moderately successful.
+; 
+; The name "FOTD with FMOD" simply states the situation as it is.  
+; The calculation time of 6 minutes is slow however.  So don't 
+; forget the web sites.
+; 
+; Find the freedom you deserve!  Check the finished images at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of sun and clouds with a temperature of 88F 31C made today 
+; ideal for most any outdoor activities here at Fractal Central, 
+; including water things.  The humidity was a bit on the high 
+; side, but simply added to the summer atmosphere.  The fractal 
+; cat spent most of the day asleep on the entertainment center, 
+; the rest of the day watching the local pigeons.  The humans 
+; survived the day without mishap.
+; 
+; The next FOTD will soon be posted.  To see how soon, check back 
+; frequently.  Until soon arrives, take care, and why did God set 
+; standards of behavior that, because of the weaknesses He Himself 
+; built into us, are impossible for any human being to achieve?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_with_FMOD { ; time=0:06:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-421.878100629715/+0.1550629443494898/\
+  12782.1/1/-45/0 params=1/0.09/1/-0.09/210/5000/0/0
+  float=y maxiter=1200 inside=fmod proximity=0.65
+  logmap=yes periodicity=6
+  colors=0000lp0lq0lo0kq0kq0kq0jp0ip0hp0gn0gn0fn0fl0\
+  el0el0dk0ck0bk0bi0ai0ai0ag0`g0_g0Zf0Yf0Xf0Xd0Wd0Vd\
+  0Vb0Ub0Ub0Ta0Sa0Ra0Q_0Q_0P_0OY0OY0NY0NX0MX0LX0LV0K\
+  V0JV0IU0IT0HT0HR0GR0FR0ER0ER0DR0DO0CO0BO0BN0AN09N0\
+  8L08L08L07J06J05J04I04I02I02G01G01G01E00E00E00D10E\
+  31G51I62J82L92NB4ND4OE6QG6RI6TJ8VL8XN9XO9YQB_RBaTD\
+  bVDdXDfYEf_EgaGibIkdKlfMngOniQpkSqlUsnWtpYwqZxs_xt\
+  `zwazxbzzczzdzzezzfzzgzzhzzizzjzzkzzlzzmzzlzzkzzjz\
+  zizzhzzgzzfzzezzdzzczzbzxazw`zt_zrZzqYzoWznUzlSzkR\
+  ziQzhQzfQzdQzbQzaQz_OzYOzXOzVOzTOzROzQKzQKzOKzOKzN\
+  KzNKzNKzLJzLIzLHzJGzJFzIFzIFzIFzGFzGFzGFzEFzEFzDFz\
+  DEzDEzBEyBExBEw9Eu9Es9Eq8Eo8Em6Ek6Ei6Cg4Ae49c48a26\
+  _24T24M13K1Dt0Ds0Ds0Ds0Ds0Ds0Et0Ds0Ds0Ds0Ds0Ds0Ds0\
+  Ds0Ds0Ds0Ds0Ds0Ds0Ds0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs0Bs\
+  0Bs0Bs0Bs09s0Dt0Dt0Dt0Dw0Dw0Dx0Dx0Dx0Dz0Dz0Dz0Dz0D\
+  z0Dz0Dz0Dz0Dz0Dz0Dz0Dz0Dz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
