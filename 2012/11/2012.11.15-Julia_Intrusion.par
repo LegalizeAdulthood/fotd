@@ -1,0 +1,99 @@
+;     Date: Thu, 15 Nov 2012 15:52:27 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-11-12 (Julia Intrusion [7])
+;       Id: <1.5.4.16.20121115154946.2abfac0a@earthlink.net>
+; ---------
+; 
+; FOTD -- November 14, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The formula behind today's image takes 0.8 part of Z^(-5.8) and 
+; subtracts 0.8 part of Z(-9.9) from it on each iteration before 
+; adding (1/C).  The resulting parent fractal is little more than 
+; a mostly open ellipse with its longer axis in the vertical 
+; direction and eight patches of debris arranged in a ring just 
+; inside the perimeter of this ellipse.  Today's scene is located 
+; in the debris along the negative X-axis at the western edge of 
+; the open ellipse.
+; 
+; The name "Julia Intrusion" refers to the 'almost' Julia set at 
+; the center.  Such miniature Julia sets in Mandelbrot images 
+; indicate that an unseen Mandelbrot set or minibrot lies hidden 
+; beneath the surface detail of the image.  The shape of the Julia 
+; set corresponds to the part of the M-set over which it lies.  A 
+; bit of the underlying Mandelbrot set shows through the surface 
+; Julia set as the bright bluish debris filling the left half of 
+; the J-set.
+; 
+; The rating of a 7 is based mostly on the coloring, which in turn 
+; was created by the outside=tdis option.
+; 
+; The calculation time of one minute has been rounded for 
+; convenience, but the parameter file will run in about this time 
+; on most SOTA (State of the Art) computers.  Those with machines 
+; that lack art appreciation may view the image on one of the web 
+; sites.
+; 
+; The image has already been calculated and is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with high-definition variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; After a few early morning clouds, the day passed with total sun 
+; and a temperature of 46F +8C.  The next FOTD will be posted in 
+; the near future.  Until whenever, take care, and ask questions.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Julia_Intrusion { ; time=0:08:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.89492913214/+0.01017421388/579726/1/\
+  -80/0 params=0.8/-5.8/-0.8/-9.9/0/0/0/0 float=y
+  maxiter=15000 inside=0 outside=tdis periodicity=6
+  colors=000QfNWcNa`OgYOmVPsSPyQPvONsMMpLLmJKjIJgGHd\
+  FGaDFZBEWADT8BQ7AN59K48H27E16J58N8ARBBVEDZHFbKGfNI\
+  jQKnTLoRJpPHpNFqLDrJBrH9sF7tD5tC4oG7jK9eNB`REWVGRY\
+  IcaKceNchPclRcoTclVciXcfYmnOmnPmnQmnQmnRmnSmoTmoTz\
+  oUzoVzoWzoWzpXzpYzpZzpZzp_zp`zqazqazqbzqczqdzqdFqe\
+  FrfErgErgDrhDriCrjCsjBskBslAsmAsm9sn9to8tp8tp7tq7t\
+  r6ts5ut6ts7tr7sq8sq8sp9roArnAqnBqmBqlCpkDpkDpjEoiE\
+  ohFnhGngGnfHmeHmeImdJlcJlbKkbKkaLk`Mj`Mj_NiZNiYOiY\
+  PhXPhWQhVQgVRgUSfTSfSTfSTeRUeQVePVdPWdOWcNXcMYcMYb\
+  LZbKehJbfK`dKZbKXaKV_KTYKRXKPVLNTLLRLJQLHOLFMLCKKD\
+  LLDLLDMMDMMDNNDNNDOODOODPPDPPDPQDQQDQRDRRDRSESSEST\
+  ETTETUEUUEUVEUVEVWEVWEWXEWXEXYEXYEYZEYZEYZFZ_FZ_F_\
+  `F_`F`aF`aFabFabFbcFbcFbdFcdFceFdeFdfGefGegGfgGfhG\
+  ghGgiGgiGhjGhjGikGikGjlGjlGkmGkmFmnGlmGlmGkmGkmHkm\
+  HjmHjmHjmHimIimIilIhlIhlIglJglJglJflJflKflKelKekKe\
+  kKdkLdkLckLckLckLbkMbkMbk }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,100 @@
+;     Date: Thu, 08 Nov 2012 16:40:48 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-11-12 (Slightly Deficient 6.5])
+;       Id: <1.5.4.16.20121108164525.2bcfb24c@earthlink.net>
+; ---------
+; 
+; FOTD -- November 08, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The exponent of Z in the past few days' images has been somewhat 
+; greater than two.  The exponent of today's image is 1.9, which 
+; is somewhat less than two and also explains the name "Slightly 
+; Deficient".
+; 
+; The parent fractal is basically shaped like a Mandelbrot set, as 
+; are all such fractional fractals with an exponent close to 2.  
+; This parent is rotated about 180 degrees, with two large 
+; period-2 buds on the eastern side of the main bay, one north and 
+; one south of the X-axis.  A large disconnected minibrot lies 
+; just east of the southern bud, with a smaller disconnected 
+; minibrot nearby.  Today's scene with its scrambled minibrot at 
+; the center lies not too far from this smaller minibrot.
+; 
+; The rating of 7-1/2 is based on the colors.  The little math 
+; interest is hardly enough to deserve a higher rating.  The 
+; calculation time of 2-5/6 minutes is reasonable, though slower 
+; than would be preferred.
+; 
+; Avoid all impatience by viewing the finished image on the 
+; official web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Check the glorious high-definition variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And don't forget the back images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Decreasing clouds and increasing temperatures prevailed here at 
+; Fractal Central today.  The high temperature of 46F +8C would 
+; have felt warmer if the winds had not been so brisk.  The next 
+; FOTD will be posted in 24 hours.  Until then, take care, and see 
+; the official web site for the closing remark.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Slightly_Deficient { ; time=0:02:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+1.519854358476405/-0.2217400613360854/\
+  5.712965e+007/1/-95/0 params=1.9/0/1.9/0 float=y
+  maxiter=3200 inside=0 logmap=277 periodicity=6
+  colors=000A0Q50LA0P50JA0O50IA1M52GA3N54FA5O56IA7N5\
+  8HA9LAAZABZA7OADXAEXAFXABUAFRAITAHQAKNAIPAMLAKIAOF\
+  AKCAN9AL6AH1AJ3AK4AL5AN7AO8AP9AQBASCATDAUFAVGAXHAY\
+  JTMPXKLaIHeGDiE9y80zF6zSBgGCQ7CTACVDCXFCZIC`KCbNCd\
+  PCfTChVCjZCl`CndCpfCrjCtlCvpCxrCtoBqkAmg9jd9f`8cX7\
+  _U6XS6UP5QM4NJ3JH3GE2CB1980660881AA2BC3DD4EF5GH6HJ\
+  7JK7KM8MO9NQAPRBQTCSVDTXEVYEW_FYaGZcH`dIafJchKhmLd\
+  iK`fKXcKU`JQYJMVJISJFPIBMI7JI4GIERNN`RXjVetZcqbamf\
+  _jjYgm_bk`ZjaUibQhdNifKihIjjFjlCknAklBjkCijDiiEhhF\
+  ggGgeHfdIfcJebKdaLd`McZGX_Nc_Tj_ZqVcjlVcmUgnTlpSqq\
+  RvrRzsWss`mtegtjauoWutQuyKotJipIclHZhHTcGN_FHWECSE\
+  BUE5P_5Tc5WgQhcLlXGqQBvCCuKCtRCtYgmjknhongsoevodok\
+  YihSbdMXaGRZAV_BY`B`aBdbBgcBjdBneBqfBtgBpdDmbEicGf\
+  hHbmJ_mKWmMTmNPmPMmQJmRMrPPvOSzMVzLYzK`zIczHfzGizE\
+  lzDozCzz8zzNzzGzz9zzHzzPzzXzzdzzlzzszzbzzMzz5zzKzz\
+  ZzzlzzkzzkzzkzzkzzczzWzzO }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

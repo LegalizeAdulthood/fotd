@@ -1,0 +1,95 @@
+;     Date: Sun, 11 Nov 2012 18:28:21 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 11-11-12 (FOTD for Nov-11 [5])
+;       Id: <1.5.4.16.20121111183259.2bffb23e@earthlink.net>
+; ---------
+; 
+; FOTD -- November 11, 2012 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates a 5.  It is one that would normally be 
+; discarded, but I made it FOTD for today because I have decided 
+; to show the fractals that usually head straight for the trash 
+; can.  I also have a serious case of fractalist's block.
+; 
+; The parent fractal is the same shapeless one that gave us 
+; yesterday's image.  The scene lies in the same general area as 
+; yesterday's image.  The central minibrot appears split directly 
+; down the middle.
+; 
+; The name "FOTD for Nov-11" simply states a fact.
+; 
+; The calculation time of 1-1/4 minutes is brief enough to bring 
+; no impatience, yet slow enough to let a bit of anticipation 
+; build.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High-definition variations are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Near perfect Autumn weather prevailed here at Fractal Central 
+; today, with cloudless skies, light breezes and a temperature of 
+; 61F 165C.  The next fractional fractal will be posted before 
+; long, very likely in 24 hours.  Until whenever, take care.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Nov-11 { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=mandelbrotbc3 function=ident
+  center-mag=-1.227133792556/+0.007005797985/2555911
+  params=2.236/0/4/0 float=y maxiter=2700 inside=0
+  logmap=-132 periodicity=6
+  colors=000OJSLTaJbjlbpfVe`NWVFMP8CS9GVAKXAN_BRaBVd\
+  CYfCaiDdkDhnElpEosFsuFvrEspEpnDmlDjjCghCdfBacBZaAW\
+  _ATY9QW9NU8KS8IODFLICHNAES7AX47a2Bc7FdBJeFNfKRgOVh\
+  SYiXaj`ekdilimmmqnqtouolskjqggocem_clW`jRZhNWfJUeF\
+  ScBPa7N_3LZ4NY4PX4RW4TW4VV4XU4ZU5`T5bS5dR5fR5hQ5jP\
+  5kP9bRDUSHLULCVP4WR3TS3RT3PU3NV3LX3JY3HZ3F_3D`3BbE\
+  CdOCfYDhgDjqDf`KbKQZ3WZ4UZ5SZ6RZ7PZ8OZ9MZALZBJZCHZ\
+  DGZEEZFDZGBZHAXKCWNEVQFUTHTWIRYKQ`LPcNOfONiQMkRLgU\
+  LdWK`ZKY`KVcJReJOhJLjIHmIEoZMaZNaZN`ZO`ZO__P__P__Q\
+  Z_QZ_QY_RY_RX_SX_SW_TW_TW_UV_UV`VU`VU`VT`WT`WS`XS`\
+  XS`YR`YR`ZQ`ZQ`_P`_PXZMZ_O`_Pb`Rd`SfaThaVjbWlbYncZ\
+  pc_rdatdbwcbvdcudctecsecrfcqfcpgcogcnhcmhclickicjj\
+  cijdhkdgkdfldelddmddmdcndbndaod`od_pdZpdYqeXqeWreV\
+  reUseTseSteRteQuePueOveNveMwfNveOueOtdPsdPsdQrcQqc\
+  RpcSpbSobTnbTmaUmaUl`Vk`Vj`Wj_Xi_Xh_YgZYgZZfZZeY_d\
+  Y_dX`cXabXaaWbaWb`Wc_VcZV }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,94 @@
+;     Date: Mon, 12 Nov 2012 19:12:37 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 12-11-12 (Root of Epsilon [5])
+;       Id: <1.5.4.16.20121112191716.359ff944@earthlink.net>
+; ---------
+; 
+; FOTD -- November 12, 2012 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is one of the sights we discover on a journey into 
+; the parent Z^(1.64872)+C Mandeloid as it appears 130 levels down 
+; the infinite hyperladder.
+; 
+; This parent is a near-symmetrical oval-shaped main bay with two 
+; large irregular buds, one on the north and one on the south 
+; shore lines.  The image for today lies in the debris field on 
+; the northwest shore line of the main bay.
+; 
+; The name "Root of Epsilon" refers to the exponent of Z, which by 
+; some strange twist of fate is the square root of 'epsilon'.
+; 
+; The rating of 5 is not much.  I admit the lack, but the 
+; calculation time of 1-1/3 minute is not much of a wait either.  
+; And the web sites can cut down even this brief wait.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High-definition variations are online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Too many clouds spoiled the temperature of 66F 19C here at 
+; Fractal Central today.  The next FOTD will be posted within a 
+; day or so.  Until next time, take care, and grow with the times.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Root_of_Epsilon { ; time=0:01:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.489177619169/+0.70722309564/8645276
+  params=1.64872/0/-130/0 float=y maxiter=3600
+  inside=0 logmap=107 periodicity=6
+  colors=000EVbAVe7Uf4VdJWbXX`_YZXYXUYVKYTAYR7YP7YN7\
+  `R7bV7dZ7baVWfQP`LJVHDPC7J81EB3HD5KF7NI9QKBTMDWOFZ\
+  RH`TJcVLfXNi_PlaRocTreVthXkkYbm_Vp`MraEtcFveFzgGmi\
+  GciHUfHKcHDcJNcKXcLfcMpcNyoOynPymPymPylPylQykQykQy\
+  jQyjUxicwimvirvjvukztlztmzsozrpzrrzqrzprzpnzqkzrla\
+  rnZsoWtqTtrQutNvuKvwHwxEwyBnlPe`bYPpTMdOKTJHHFF5LK\
+  7QO8VSA_WBe_DjcEogGtkHyoIvmKtlMqjNoiPlgQjfSgdUecVb\
+  aX``YYZ_WYaTWbRVdPUeSTaVSYYRU`QQcPNfOJiNFlMBoL7qL4\
+  jN3cP3XR3RS3KU3DW36Y30Z3ApGCqJEqMGqOIqRKqUMqWOqZQq\
+  `SqcUqfWqhYqk_qmZomZmmYlmYjmYhmXgmXemXdmWbmW`mV_mV\
+  YmVWmUYmUZmUZmTZkTaiTcgTceSccScaSc_SmYSmWTmUUmTVmS\
+  WmQWmPXmOYnMZmLZmK0mw6msBmoGmlLmhQzeVza_zYdzVizRcz\
+  OczKczHczEczCcz9cz7cz4cz2cz6czAczDczHczKczOczRczVs\
+  zZtzatzeuzhuzlvzovzsvzvozphzjzzdzzZzzTzzNzzHzzBzz6\
+  zzDzzJzzPzzVzz`zzfzzlzzgzzbzzZzzUzzPzzLzzGzzBzz7zz\
+  BzzEzzHzzKzzNzzQzzUzzXzz_ }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

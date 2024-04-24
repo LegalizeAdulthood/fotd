@@ -1,0 +1,114 @@
+;     Date: Sun, 04 Nov 2012 13:19:13 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-11-12 (Two and One Half [7.5])
+;       Id: <1.5.4.16.20121104132346.40a77040@earthlink.net>
+; ---------
+; 
+; FOTD -- November 04, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Things have finally settled down enough here at FC to once again 
+; devote energy to the FOTD.  Today's image is a scene in the 
+; parent fractal that results when the expression Z^(2.5)+C is 
+; iterated 5.2 levels up the hyperladder with no function applied.
+; 
+; This unimpressive parent resembles a Mandelbrot set rotated so 
+; that the area normally on the west faces northwest, with a large 
+; jagged bay where its East Valley should be and a main bud that 
+; has two equally large sub-buds.  Filaments extend from each of 
+; these sub-buds, with large minibrots on these filaments.
+; 
+; Today's scene lies in the large minibrot on the filament 
+; extending from the north sub-bud.  This minibrot has two 'main' 
+; buds, with a rudimentary bay between them.  This bay is the home 
+; of today's image.
+; 
+; I rated the image at a 7-1/2.  If I had had more time, I might 
+; have improved the colors enough to raise the rating to an 8.  As 
+; it is, the image is not all that bad to look at, and well worth 
+; the 1-3/4 minutes required to calculate it.
+; 
+; The name "Two and One Half" refers to the exponent of Z.
+; 
+; The finished image is posted on the official (whatever that 
+; means) FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; enriched versions of the image and related images are online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today was cloudy with a temperature of 43F +6C.  The fractal cat 
+; is doing fine.  His new companion is due on November 14.  The 
+; humans are still in the clean-up process.
+; 
+; I have much to say about the big N.E. storm and the things I am 
+; hearing about it, but these things are mostly political, with 
+; lack of knowledge abounding, and this is a fractal list.  I'll 
+; soon voice my opinion on the official FOTD web site, where I 
+; will be starting a blog where anything goes.
+; 
+; The next FOTD will be posted when I get a 'round tuit'.  Until 
+; whenever, take care, and instead of continuing to blather about 
+; the Arctic ice, let's talk about what's happening to the much 
+; more plentiful ice in the Antarctic.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Two_and_One_Half { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-1.313645604957682/+0.6344385534013239/\
+  5.515427e+010/1/-97.5/0 params=2.5/0/5.2/0 float=y
+  maxiter=2250 inside=0 logmap=248
+  periodicity=6 mathtolerance=0.05/1
+  colors=00006c07c08c09c0Ac0Cb0Ea0G`0I_0KZ0MY1OX2QX3\
+  SX4UX4XX9Z_E`aJbdOdfTfiYhkbjnflpgimgfkhcih`fiYdiVb\
+  jS_jPYkMWkJTlGRlEPiFRgGSeHUcIVaJX_KYYL_WL`VJaUIbTG\
+  bTFcSDcRCdRAdQ9eP7eP6fO4fN3gN2gS7mXCrUGoSKlQOiOSgL\
+  WdJ_aHcZFgXCkUAoR8sO6wMAqNDkOGfPK`QNWQQQRULSXFT_AT\
+  XBRVBQTBORBNOBMMBKKCJICHFCGzzzzzczzCzmBzcFzUJzKMrF\
+  QpAUkAXc8TW6NO4HG2C71094AB6HD9OEBQGDSIGVJIXLL_NNaO\
+  PcQSfSUhTWjY_NUWPRSQ`DYd4aZDXULTPTPJaKEiG9qCIZ5CYJ\
+  7YW2Yh8bVDfHLXPTNW_EbdqVdlZdhadddd_gdWjdSmdOpXWiQc\
+  bJkWCsP5zJLsN`lQpfTjeWdeYZe`TebNedHegBei6ekpR7T4lL\
+  LfDa`6qV9kYCf`EabHXeJSgNXhQciUkjKdcmskzzlVZmSQnQHo\
+  RJkSKgTLcUN_VOWWPSWQPZfMavJNWOjKWQpjU6QPFPOXWLOPHX\
+  O8`QLIvHUdvPKfVMS`NtNqZIMOUN28_2d48eEucVfdSSeQHzAG\
+  zEFzHEzL9z_BzWCzSmz0BzpCzfDzXzzOzzOzzOzzIzzKzzLzzN\
+  zzGzzJzzMzzizzczzZzzTzzmzz`zzhzzbzzYzzTzzMzzNzzOzz\
+  ozzezzXzzlzz_zzkzz_zzdzzZ }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

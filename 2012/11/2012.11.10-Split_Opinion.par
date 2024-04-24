@@ -1,0 +1,99 @@
+;     Date: Sat, 10 Nov 2012 18:12:39 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-11-12 (Split Opinion [6])
+;       Id: <1.5.4.16.20121110181716.2bafa440@earthlink.net>
+; ---------
+; 
+; FOTD -- November 10, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows another image in a fractional fractal.  The 
+; fractional exponent of the image is 2.236, which, not accidental-
+; ly, is the square root of 5.  This expression was calculated 4 
+; levels up the hyperladder with no function applied.
+; 
+; The parent fractal produced by this operation is little more 
+; than a shapeless blob with a prominent split along the X-axis.  
+; But some distance west of the main mass, just north of the 
+; X-axis, lies a totally cut-off minibrot.  Today's scene lies in 
+; an East-type valley of this minibrot.
+; 
+; The rating of 6 indicates that inspiration for the fractal was 
+; lacking.  The name "Split Opinion" points to the split along the 
+; X-axis.  The relatively fast calculation time of 1-1/2 minutes 
+; assures that not too much time will have been wasted if the 
+; image fails to satisfy.
+; 
+; Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and high-definition variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Light rain ruled the early morning here atF.C., while clouds 
+; ruled the rest of the day.  The light winds and temperature of 
+; 55F 13C made the day seem quite comfortable however.
+; 
+; The next FOTD will be posted before too long.  Until whenever, 
+; take care, and my current dis-spirited attitude is not connected 
+; to the outcome of the recent election.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Split_Opinion { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula   formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-1.28787966181/+0.043392037384/2.52e+007
+  params=2.236/0/4/0 float=y maxiter=3600 inside=0
+  logmap=224 periodicity=6 mathtolerance=0.05/1
+  colors=00050X61Y82_93aA4cB5eC6gG7iJ7kN8kQ8lT8lX9m_\
+  9mcAnfAniAomBopBpsBptGmuLjuQhvUewZcwc`xhZylWyqUzvR\
+  zzPvxOswOpvOmtOisOfrNcpN`oNXnNUlNRkMOjMKhMHgMEfMBe\
+  MFaPJZSNVVRSYVO`ZLcbHffEijAln7or3ru0tr3sp6sn8slBsj\
+  EshGsfJsdLsbOs`RsZTsXWsVYsQShLNYGINBDC6818A2AC3CE4\
+  EF5GH6HJ7JL8LM9NOAPQBRSCSTDRTEPTFOTGMSILSJKSKISLHR\
+  NFROERPDRQFPRGNRIMRJKSLISMHSOFTPETRCTSAUU9UV7UX5VY\
+  4V_2V`1Vmzeivbfr_cnY`jVYfSVbQSZNPVLLRI020INFFJDCFA\
+  9B7675332gxScsQ`oOYjMVfKSbIPYGMUEIQCFLACH89D668434\
+  298v87q76l66g65b54Y44T33O32J22E119004TAZP8UL7QI6LE\
+  5HA3D7283142ZN1WL1TJ1QH1OF1LE1IC0GA0D80A7085053021\
+  OL2MJ1LI1JH1IF1GE1FD1DB1CA1A90970760650430320110qg\
+  tjalcXeXRZRMSKGLDBE657xs3so2ok2kg2gd2cc2vcEucEtcEr\
+  cEqcEpmEomEmmDlmDkmDjmDhmDgmDfzDezDczCazC_zCYzBWzB\
+  VzBmzAmzAmzAmz9mz9mz9mz8mz8zz8zz8zzLzzXzzYzzYzzYzz\
+  XzzXzzXzzXzzXzzXzzZzz_zz` }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

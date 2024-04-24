@@ -1,0 +1,95 @@
+;     Date: Wed, 07 Nov 2012 18:21:16 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 07-11-12 (More of the Same [No Rating])
+;       Id: <1.5.4.16.20121107182552.2ad78d0a@earthlink.net>
+; ---------
+; 
+; FOTD -- November 07, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that comes about when 
+; the expression Z^(2.06)+C is iterated 18 levels up the 
+; hyperladder with no function applied.  This parent resembles a 
+; Mandelbrot set with two main buds and a large split along the 
+; negative X-axis.  Today's scene is located near the tip of a 
+; wedge-shaped area of chaos extending westward just south of the 
+; split.
+; 
+; The name "More of the Same" indicates that this is the fourth 
+; consecutive similar image.  The similarity prevents me from 
+; giving it a rating.  The calculation time of one minute will 
+; pass in a flash.  The flash may be avoided by viewing the image 
+; on one of the web sites.
+; 
+; The finished image is at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition variations are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day dawned cloudy here at Fractal Central, then the clouds 
+; hung on for the rest of the day.  The forecast hints at snow 
+; tonight, but the temperature of 43F +6C would seem to make that 
+; unlikely.  The next FOTD will be posted in the proper universal 
+; time.  Until whenever that is, take care, and think positive.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+More_of_the_Same { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.174308345901659/-0.0904782035179286/\
+  6.741058e+012/1/115/0 params=2.06/0/18/0 float=y
+  maxiter=1800 inside=0 outside=tdis
+  periodicity=6 mathtolerance=0.05/1
+  colors=000nJzjMzfPzcSz_VzWYzT`zPczMezNgzNhzOjzOkzP\
+  mzPnzPpzQqzQszRtzRvzSwzSyzSzzMvzGszNszUrz`rzfrzdUz\
+  b6zd3zCBzR5zTTzMbzElz6vzEwzMxzUyzbzz`yzZxzXwzUvzSu\
+  zQtzOszLrzJqzHpzFozCnzAmz8lz6kz3izE`zQRz`Izl8zfDz`\
+  IzUNzOSzIXzBbz91zA3zC5zE7zEAzEDzEGzEJzEMzcFzYRTXPT\
+  VMTUKTXPW_TZbXae`dhdgkhjnlmcWWcXovSjvOevKavFXvLTuH\
+  OuCJu8Fu4Au06q17m28i38e49a5AY5AU6BQ7CM8CI9DAAAAAAA\
+  9AA9AA8AA8AA7AA7AA6AA6AA5AA5AA5AA4AA4AA3A_3La2Mb2M\
+  d1Nf1Ng1NMMpNNoOOnPPmPQlQRkRSjSTiSThTUgUVfVWeVXdWY\
+  cXZbY_aY_`Z`__aZ`bY`cXadWbeVcfUcfTbcRaaQa_P`YO_WN_\
+  UMZSLYQKYOJXMHXKGWIFVGEVEDUCCTABT8AS69S48W4A_4Bc4D\
+  g4Fk4Go4Is4JoANlFRhKVePZaVaZ_eVdiSimPnpXnrcnsjntqn\
+  uobqmSnkHki6hi6Pi65g86e97cA7aB8_C9YE9WFAUGBSHBQICO\
+  KDMLDKMEINFGOFHPFHPFHQFIQFIQFIRFJRFJSFJSFKSFKTFKTF\
+  LUFLUFLUFOTGQTGSTGVTHXTHZSHaSIcSIeSIhSJjRJlRJoRKqR\
+  KsRKuNMvKOwGPxDRyASuDUqGW }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

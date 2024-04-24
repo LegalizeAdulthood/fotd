@@ -1,0 +1,105 @@
+;     Date: Mon, 05 Nov 2012 19:43:01 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-11-12 (Pseudo-Symmetry [6.5])
+;       Id: <1.5.4.16.20121105194735.2ae74766@earthlink.net>
+; ---------
+; 
+; FOTD -- November 05, 2012 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The name of today's image is "Pseudo-Symmetry".  The name refers 
+; to the shape of the parent fractal, which came about when I 
+; whimsically calculated the expression Z^(2.34)+C at a level 4.32 
+; turns up the hyperspiral.  At first glance this figure-eight-
+; shaped parent appears to have 'origin' symmetry, but a closer 
+; look reveals that the symmetry is only approximate.
+; 
+; Today's scene is located in a valley of a larger minibrot lying 
+; on a filament extending from a mis-shapen bud on the northeast 
+; shore line of the northern bay of the parent.  The semi-
+; symmetrical shape of the minibrot at the center of the image 
+; reflects the shape of the parent.
+; 
+; The coloring is nothing exceptional, but with the minor math 
+; interest, still earns a rating of 6-1/2.  The calculation time 
+; of 2-2/3 minutes lies within the normal range.  As always, 
+; calculation may be totally avoided by checking the image on the 
+; FOTD web sites.
+; 
+; The pre-calculated image is posted on the official FOTD web site 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today began with clouds here at Fractal Central, but in the 
+; afternoon, the sun finally made a brief appearance, its first 
+; since October 25.  The temperature of 45F +7C was rather chilly 
+; for early November.  Fractal cat Nicholas' anticipation is 
+; building as the arrival date of his new companion Callie nears.  
+; She is due on November 14.  Meanwhile, the humans simply made it 
+; through another day.
+; 
+; The next FOTD will be posted when it is ready.  Until whenever, 
+; take care, and who are you voting against on Tuesday?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pseudo-Symmetry { ; time=0:02:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.581511067122/+0.663743919851/1.3e+007
+  params=2.34/0/4.32/0 float=y maxiter=5000 inside=0
+  logmap=243 periodicity=6
+  colors=000pQgnPilOkkOniNpgMrfLtdKvbJxaJzcMydOxeQwf\
+  SvgUvhWuiYtj_skarlcrmeqngpoiopknqmnrkjsigtgdudavaZ\
+  wZWxWTyUQwSNwQKvOHrKHmFGhAGc5Fa2F_2EY2EW2DU2DU1CU1\
+  CT1BS1BR1AQ1AQ00Q19Q19P18N18K17K17K16F06F05F05F04F\
+  04F03F03F02F02F01F01F00A09A08A08A08A07A07A07A07A06\
+  A06A06A06A05A05A05A05A04A04A04A04A03A03A03A03E02D0\
+  2B02A02901701601501300200100wytwxswwrmvqmuqmtpctoc\
+  sncrnUqmUplUpkUokUnjUmiPlhPlhPkgPjfPiePheLhdLgcLfb\
+  KebKdaKd`Jc`Jb_EaZE`YD`YD_XDZWCYVCXVCXUBWTBVSBUSBT\
+  RASQASPARP9QO9PN9OM8OM8NL8MK8LJ7KJ7KI7JH6IH6HG6GF5\
+  GE5FE5ED5DC4CB4CB4BA3A9398388287IDaL7eO2hS4ZV5PY6F\
+  eCXbGV`KTaPYaTbbYgbalbeqqE8lPQgZgchxcfocdfccYcaPc`\
+  HmbMmdRmeVmg_mhcmjhmklciecg_cfTcdNccHceNmfTmgZmhdm\
+  ijmjombgmV`zOTzGMz9FzJSzScz`ozXpzUqzUqzlnzUozUpzUq\
+  zUqzcrzcszcszctzcuzcvzcwzcxzcyzcyzcxzcwzcvzcvzcuzc\
+  tzctzcizc_zcQzcGzc6zc9zcB }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

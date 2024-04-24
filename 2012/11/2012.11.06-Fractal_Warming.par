@@ -1,0 +1,107 @@
+;     Date: Tue, 06 Nov 2012 18:56:01 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-11-12 (Fractal Warming [7])
+;       Id: <1.5.4.16.20121106190035.376f880a@earthlink.net>
+; ---------
+; 
+; FOTD -- November 06, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's little oddity lies in the parent fractal that appears 
+; when the expression Z^(2.12)+C is iterated at ground level with 
+; no function applied.  This parent is shaped like a squashed 
+; Mandeloid with a large main bay and a large period-2 bud on the 
+; north shore line.  Today's scene lies in a minor valley on the 
+; west side of this bud.
+; 
+; I named the image "Fractal Warming" because of the fiery reds 
+; surrounding the central minibrot, and also because of a recent 
+; show on TV about the dangers, real or imagined, of 'climate 
+; change'.
+; 
+; The rating of a 7 is near FOTD average.  Some extra effort on 
+; the coloring might have raised the rating a point or so.
+; 
+; The calculation time of 1-1/3 minutes is well within reason.  A 
+; bit of additional time might be saved by viewing the image on 
+; one or more of the web sites.
+; 
+; The image has already been calculated and posted to the official 
+; FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds, with a temperature of 45F +7C made 
+; today feel quite like November here at Fractal Central.  Fractal 
+; cat Nicholas took advantage of the sun when it was shining and 
+; his food dish when it was not.  The humans made it through 
+; election day without becoming too concerned over who might be 
+; the winner.  Regardless of who wins, the next FOTD will be 
+; posted in the near future.  Until whenever, take care, and 
+; climate change (aka global warming) is real!  It has already 
+; begun!  We had better believe it and start preparing!  Do not 
+; make the error of thinking we can stop it or even slow it by 
+; forcing a few controversial bills through congress or by signing 
+; a few emission reduction treaties that are sure to be violated.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Warming { ; time=0:01:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.429916265389/+0.98567433255/8.6e+007\
+  /1/-57.5/0 params=2.12/0/0/0 float=y maxiter=2750
+  inside=0 logmap=186 symmetry=none periodicity=6
+  colors=000ZYh`YgbZge_fg_ei`dkadnacpbbrcatcarbbpaco\
+  `dm_ek_ejZfhYgfXheWicWiaVj`UkZTlXSmWSmUQnSOnRNoPLo\
+  OJpMIpLGqJEqIDqPHkWLfaP`hTWoXQu_LqYJnWIjUGgSFcQD`O\
+  CYMAUK9RI7NG6KE4GC3DA1A90A809708707607606505405404\
+  30330220210110000zCArB9mB9hB9cB9ZB9UA9UA8UA8UA8UA8\
+  UA8U98U98U97U97U97U87U87U87U87U86U86U76U76U76T76S7\
+  5R65R65Q65P65P65O65N54M54M54L543fU3eT3dS3cR3bR3aQ3\
+  `P3_O2YO2XN2WM2VL2UL2TK2SJ2RI2QI2PH2OG1MF1LF1KE1JD\
+  1IC1HC1GB1FA1E90001D91C80A709608607506405304303202\
+  1010ttFrrEqqEooDnnDllDkkCiiChhBffBeeBccAbbAaaA__9Z\
+  Z9XX8WW8UU8TT7RR7QQ6OO6NN6LL5KK5JJ5HH4GG4EE3DD3BB3\
+  AA2882771551441220110Um9Tl8Tk8Sk8Sj8Sj8Ri8Ri8Rh8Qg\
+  8Qg7Qf7Pf7Pe7Pe7Od7Oc7Oc7Nb7Nb7Nc6Oc6Pc6Qm6Rm6Sm6T\
+  m6Um6Vw6Ww6Xw5Yw5Zw5_w5`w5aw5bz5cz5dz5ez5fz4gz4hz4\
+  iz4jz4kz4lz4mz4nz4oz3pz3qz3rz3sz3tz3uz3vz3wz3zz3zz\
+  2zz0zz0zz0zz0zz0zz0zz0zz0 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

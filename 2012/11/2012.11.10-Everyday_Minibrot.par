@@ -1,0 +1,90 @@
+;     Date: Sat, 10 Nov 2012 08:05:15 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 09-11-12 (Everyday Minibrot 6])
+;       Id: <1.5.4.16.20121110080951.36a7c9c6@earthlink.net>
+; ---------
+; 
+; FOTD -- November 09, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies at the edge of the infinitely subdivided main 
+; spike of the Z^2.00001+C Mandeloid, just east of the large 
+; minibrot.  This parent very closely resembles a Mandelbrot set, 
+; a great magnification being necessary to reveal the difference.
+; 
+; I named the image "Everyday Minibrot" because that's what it is. 
+; The rating of a 6 indicates a scene that will never set the 
+; world afire.
+; 
+; The calculation time of 2-1/3 minutes is slow enough to make the 
+; image worth less than its cost.  The web sites have a better 
+; deal however.
+; 
+; View the finished image on the official FOTD web site without 
+; the need of calculating it.  The web site may be accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High-definition variations are online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Weather conditions took a decided turn for the better here at 
+; Fractal Central today.  The sky was mostly sunny, the winds were 
+; much lighter, and the temperature reached a high of 54F 12C, 
+; making the day pleasant for almost any outdoor activity.
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Everyday_Minibrot { ; time=0:02:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.749357747989381/+0.00019329584512746\
+  /2.0456e+010/1/147.5/0 params=2.00001/0/0/0 float=y
+  maxiter=2250 inside=0 logmap=277 periodicity=6
+  mathtolerance=0.05/1
+  colors=000fJOeHOdGOcEOcCObAOa8Oa7OY6MU6LQ6JN6IJ6HF\
+  6FB6E86DNAHaKKpUNkcMgmMcpMhtMmwMrzMvzMzzMzrMzmMzhP\
+  zcRz_TvVVrVXmUPiSPiQPhPPgNPfLPWJKYGV_DfaAqbXabrMco\
+  JcmHckEciCcg9ce7dcCebGfaKg`Oh_SiZWjY_f_fYamR_oJZpE\
+  YnCUjAQd8KY6EQ48J7BK9ELBGMDJNFMOHOOQTNYYNfaNnfNvjN\
+  smVqpansilvpjxwTZhUbaUfVVjO1cG6ZF8UE6PD4KC2FB0AB6F\
+  DCIEIMF7SC8XD9aE9eFCaHFYIIUKLRLONNRJOUFQXCRVNgTXxQ\
+  `xOdxMgxKkxIoxGrxEvxCyxBpYBg8GPBL7DTKQ`Xahinouzgrj\
+  _oWSlGLi1Tj9`kGhlOpmVwnaspepqhmrkisoftrcuudqodmidi\
+  cdeZdaTdYNdVIeXJeYKfZLf_LgaMgbNhcOhdOYWIONCEF7F74F\
+  01VnHWrAWu4Zs7`q9coCenEglGjjJdRLzgNZ`SKVW5P_AN`EL`\
+  IK`MI`RH`VF`ZE`bC`fB`bLWCEkBGmAIo9Lq9Nr8Pt7Sv6Ux6W\
+  yDVrJVlQVfWV`bUUhUOoUIuUCqWFmXIjcKfcNccQ_mSXmVTmYQ\
+  m_MzbUzeUzgczjczmczomzqmzrmzszztzzuzzvzzrzzozzlzzh\
+  zzezzbzz_zzWzzTzzQzzNzzHzzBzz5zz9zzCzzFzzJzzMzzPzz\
+  TzzWzzZzzMzzLzzKzzJzzIzzH }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
