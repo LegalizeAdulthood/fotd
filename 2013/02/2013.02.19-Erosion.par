@@ -1,0 +1,102 @@
+;     Date: Tue, 19 Feb 2013 17:28:04 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-02-13 (Erosion [7.5])
+;       Id: <1.5.4.16.20130219172646.37af5816@earthlink.net>
+; ---------
+; 
+; FOTD -- February 19, 2013 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the debris in the western part of 
+; yesterday's fractal.  Most of the expanse of the image is inside 
+; stuff brought to life by the 'fmod' inside fill, though the more 
+; detailed elements consist of  'outside' stuff rendered with the 
+; 'tdis' option.
+; 
+; All this trickery blends together to create an image that, at 
+; least in my opinion, rates a 7-1/2, one-half point of which is a 
+; bonus for the extra effort I put into the coloring.
+; 
+; The name "Erosion" is a comment on the way the scene appeared 
+; when I first saw it, with the inside a flat black.
+; 
+; The calculation time of 1-1/2 minutes is brief enough to cause 
+; no distress to those with other things to do, and slow enough to 
+; let a bit of anticipation build.
+; 
+; Be a big-time thinker.  View the finished image on the FOTD web 
+; site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and thereby escape the need of calculating it.
+; 
+; Enjoy high-definition renderings at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And check the back images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; An inch of wet slushy snow fell this morning here at Fractal 
+; Central.  The clouds continued when the snow ended, but when the 
+; afternoon temperature reached 39F +4C the slush vanished almost 
+; by magic.  The fractal watch cat observed the big fat flakes 
+; with interest for a few minutes, then retired to his current 
+; favorite sleeping spot, on his blanket on top of the tall 
+; bookcase.  The humans had a typical day, though FL, who is not 
+; feeling up to par and has work to finish, was rather testy.
+; 
+; The next FOTD will be posted in the right cosmic time, (if there 
+; is such a thing).  Until that hopefully eagerly awaited moment 
+; arrives, take care, and to solve a difficult problem, become one 
+; with the problem.  (But don't ask how.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Erosion { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=cosxx passes=1
+  center-mag=-1.01074854/+0.01219294/518.3415/1/105/0
+  params=-2/2.3/1/4.6/-0.02/0/0/0 float=y inside=fmod
+  maxiter=1800 proximity=0.045 outside=tdis
+  colors=000U69V69X69Y69Z69UBAcebdedeffffhd`ccWZbRUa\
+  MP`HK_CFXBEVBETBEQBDOADMADJ5CH5CF0CG4DG7DHADHKDHPE\
+  IYEzzEJzEzzFJzFzzFKzFzsFJpIzlLGiOzfRzbUz_XzX_zTbzQ\
+  e5mh4mk9mhDmfHmcMmaQmZUmXYmUbmSfmPjmNnmLlmMjmMhmMz\
+  UzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzcz\
+  zczzczzczzczzczzczzczzczzczzczzczzczzczzczzcz`mQcm\
+  NemKhmHkmEmmCTmY8mrBmqEmpGmoJmnLmmMmcMmVKmXJmZHm_G\
+  maEmbDmdBmeAmg8mi7mj5ml4mm2mo1mpbITdKReMQfOPgQOhSN\
+  jULkWKlYJm_InaHheKbiNXlQZiP_fO`cNaaMcZLdWKeUJfRIhO\
+  HiMGjJFkGEmEDnBCo8Bp6AhCD`IGTOJLUMD_P6eR7fT8fU9gVA\
+  gXAhYBhZCi`DiaDjbEjdFkeGkfGkgGliHjfIhcIg`JeYKcWKbT\
+  L`QMZNMYL`iKotJmsUlrdjqoipzknxllwmkvkjujizihzggzbg\
+  zbfzbezadz`cy_bxZawY`vW_uVZtUYsTXrSWpRVnQUlPTjOShN\
+  ReMQcLOaKN_JMYILWJOVJQUJTUKVTKYSK_SKbRLdQLgQLiPMlO\
+  MnOMqNMsNEWoHRmBM4CK4DJ5DI5EH6FF7FE7GD8HC8HA9I99J8\
+  AJ7AL69M69N69P69Q69R69T69 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

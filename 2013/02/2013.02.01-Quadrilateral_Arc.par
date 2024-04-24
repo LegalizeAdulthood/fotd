@@ -1,0 +1,98 @@
+;     Date: Fri, 01 Feb 2013 18:58:58 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-01-13 (Quadrilateral Arc [7])
+;       Id: <1.5.4.16.20130201185724.29df5798@earthlink.net>
+; ---------
+; 
+; FOTD -- January 31, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image will be the last until at least February 4.  We're 
+; doing a bit of remodeling here at FC.
+; 
+; The image rates a 7.  I'm not sure why I gave it such a rating.  
+; Perhaps it is the most disorganized of all time.  I can spot at 
+; least a dozen themes in the scene, all trying to predominate but 
+; none winning.  The arc of quadrilaterals, which inspired the 
+; name, is probably the most obvious, though several others are 
+; giving notable competition.
+; 
+; The parent fractal came about when I combined 10 negative parts 
+; of Z^(-1.2) with 0.1 negative part of Z^(-12.2) and added (1/C) 
+; on each iteration.  It consists of two well-separated parts.  
+; The main part, which lies at the center, holds a superb fractal 
+; 'fan'.  The second part lies well northeast of the main part and 
+; consists of a series of rings with a well-defined minibrot 
+; within these rings.  Today's scene lies at the northeast edge of 
+; the superb 'fan'.
+; 
+; The calculation time of 3-1/2 minutes borders on slowness.  And 
+; unfortunately, the image will not be posted on the official web 
+; site for several days.  It will be available sooner however at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The library of FOTD back images is at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today brought a mix of sun and clouds with occasional heavy 
+; showers of snow to Fractal Central.  Luckily, the above freezing 
+; temperature of 34F +1C melted the snow about as fast as it fell. 
+; The fractal cat spent most of the afternoon in his watch window, 
+; chasing the sun and wondering what all the snow was about.  The 
+; humans passed the day finishing the commercial work.
+; 
+; The next FOTD will not be posted before February 4, and maybe 
+; not until a day or two later.  Until whenever, take care, and as 
+; the millionaire who had just gone bankrupt said, "put the past 
+; behind you and look ahead to the future."
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Quadrilateral_Arc { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+1.994509076742968/+1.331693835073464/\
+  1322976/1/91.75/0 params=-10/-1.2/-0.1/-12.2/0/\
+  1000/0/0 float=y maxiter=2400 inside=0
+  logmap=246 periodicity=6
+  colors=000C8LJGMMHNPLPRLQVRRYTS`XTd`UgaUjfUneUplUp\
+  hSrnQrjPrlNqkMqjLqiJphIpgHpfFoeEodCocBnbAna8n`7ra5\
+  n_6kZ7hY8dX9aWAZVBVUCSRDPOELLFIIFFFFBDF8BF5AF8AJAD\
+  ECCEEDEHFFTFPRENPDMNBKLAIJ9HH7FF6ED5CD39C4BC4CC5EC\
+  5FC5GC6IB6JB7LB7MB7NB8PB8QB9SA9TA9UAAWAAXABZAB_7AZ\
+  AB`DCbGDdJDeMEgPFiSFjVGlYHn`HocIqfJsiJtgLqfNoePmcR\
+  jbShaUf_WdZYaY__W`YVbWUdTSfRRhPGpKQiNZbQhWTpQXqPWq\
+  PVqOVrOUrOTrNTrNSsNSsMRsMQsMQtLPtLOtLOuKNcKNuKMcJL\
+  vJLcIKvIJcIJwHIcHIzHHcGGzGGcGFzFEcFEzFDmEDwECmEBzD\
+  BmDAzDAmEBvFBmGCsHCqIDpJDoKDmLElMEjMFiNFgOFePGdQGb\
+  RHaSH_THZUIXUIWVJUWJTXJRYKQZKO_LM`LLaLJaMIbMGcNFdN\
+  DeNCfOAgO9hP7iP6iP6hP5gQ5gQ4fQ4eR3eR3dR3dRDcKMbEVa\
+  8ca2ac3`d4Ze4Yf5Wg5Vh6Uj7Sk7Rl8Pm8On9Mo9LqAKrBIsBH\
+  tCFuCEvDDwDFtFGrGHoIImJJkKKhMLfNMdPNaQO_RPYTQVURTW\
+  SRXTOYUM_VK`WHbXFcYDdZAf_8g`6hb8gd9feAegBdhCcjDbkE\
+  amF`oG_pHZrIYsJXuKWvLVxMU }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

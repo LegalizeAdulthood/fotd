@@ -1,0 +1,105 @@
+;     Date: Tue, 05 Feb 2013 18:08:59 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-02-13 (Night Watch [7.5])
+;       Id: <1.5.4.16.20130205180729.2a7f587e@earthlink.net>
+; ---------
+; 
+; FOTD -- February 05, 2013 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is based on the combination of 4.71 parts of Z^3 
+; and 3.14 parts of Z^4.  The parent fractal produced by this 
+; unlikely combination is an undersized Mandelbrot set with two 
+; open areas some distance to the west.  Today's scene lies on the 
+; north shore of the southern open area, near what appears to be a 
+; mostly-obscured rudimentary East Valley trying to get organized. 
+; The buds along this rudimentary valley are not yet fully formed, 
+; but appear to be of a cubic nature.
+; 
+; The image's stripes were achieved by rendering the image with 
+; the outside set to the 'tdis' option.
+; 
+; The colors themselves are based on the Fractint default palette, 
+; though I have made many changes in this not-very-attractive 
+; color scheme.
+; 
+; The name "Night Watch" is a comment on the overall darkness 
+; pervading the scene.
+; 
+; The rating of 7-1/2 is as good a guess as I could make about the 
+; final value of the image.  Any rating excess is made up for by 
+; the very fast calculation time of around one minute.
+; 
+; But fractal calculation can be tedious.  So be smart and avoid 
+; calculation altogether by viewing the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Sharper renderings are or soon will be online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; About 3/4 inch (2cm) of snow fell overnight here at Fractal 
+; Central, but the high temperature of 34F +1C had disposed of it 
+; by mid-afternoon.  The fractal cat kept careful watch over the 
+; situation, then, when he saw that everything was under control, 
+; retired to his blanket on top of the tall bookcase.  The humans, 
+; who also prefer things to remain under control, spent the day 
+; keeping them that way.
+; 
+; The next FOTD will be posted when it is ready, with no promises 
+; stated or implied.  Until next time, whenever that may be, take 
+; care, and if technology is making our lives ever better, why are 
+; so many people so unsatisfied with their lives?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Night_Watch { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=+0.1714951778975432/-0.0040565105431643\
+  /2.40102e+007/1/110/0 params=4.71/3/3.14/4/0/0/0/0
+  maxiter=1500 inside=255 outside=tdis periodicity=6
+  colors=000zzezz0zzezz0zzezz0zzezzLzzzzzLzzzzzLQRQR\
+  RR000000555888BBBEEEHHHKKKMMMOOOPPP___ccchhhmmmsss\
+  zzz00zG0zV0zj0zz0zz0jz0Vz0Gz00zG0zV0zj0zz0jz0Vz0Gz\
+  00z00zG0zV0zj0zz0jz0Vz0GzVVzbVzjVzrVzzVzzVrzVjzVbz\
+  VVzbVzjVzrVzzVrzVjzVbzVVzVVzbVzjVzrVzzVrzVjzVbzhhz\
+  lhzqhzuhzzhzzhuzhqzhlzhhzlhzqhzuhzzhuzhqzhlzhhzhhz\
+  lhzqhzuhzzhuzhqzhlz0zS7zSEzSLzSSzSSzLSzESz7zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz7zzEzzLzzSzzSzzSzzSzzSzzSzzS\
+  zzSzzSzzOzzLzzHzzEzzEzzEzzEzzEzzEzzEzzEzzEzzHzzLzz\
+  OzzSzzSzzSzzSzzSzzSzzSzzSzzSzzQzzOzzMzzKzzKzzKzzKz\
+  zKzzKzzKzzKzzKzzMzzOzzQzzSzzSzzSzzSzzGzzGzzGzzGzzG\
+  zzCzz8zz4zz0zz0zz0zz0zz0zz0zz0zz0zz0zz4zz8zzCzzGzz\
+  GzzGzzGzzGzzGzzGzzGzzGzzEzzCzzAzz8zz8zz8zz8zz8zz8z\
+  z8zz8zz8zzAzzCzzEzzGzzGzzGzzGzzGzzGzzGzzGzzGzzFzzD\
+  zzCzzBzzBzzBzzBzzBzzBzzBzzBzzBzzCzzDzzFzzGzzGzzGzz\
+  Gzz0zz0zz0zz0zz0zz0zz007K }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

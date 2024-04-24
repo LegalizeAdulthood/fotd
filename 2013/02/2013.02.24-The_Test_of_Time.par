@@ -1,0 +1,111 @@
+;     Date: Sun, 24 Feb 2013 23:16:39 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-02-13 (The Test of Time [7])
+;       Id: <1.5.4.16.20130224231527.2aff6252@earthlink.net>
+; ---------
+; 
+; FOTD -- February 24, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The expression behind today's image combines 1.96 negative parts 
+; of Z^(2.3) with 0.98 parts of Z^(4.6), then adds C on each 
+; iteration.  When written as a function, this expression has two 
+; critical points, zero and -1.  (I previously had this wrong.)  
+; The MandAutoCritInZ formula automatically initializes Z to zero, 
+; but Z can be initialized to -1 by entering that value as the 
+; real(p4) parameter.
+; 
+; For some strange reason, the minibrots in the fractal that is 
+; produced when initial Z is set to zero are quadratic M-sets, 
+; while the minibrots in the fractal with initial Z set to -1 are 
+; of order 2.3.  This might be because the value of -1 is a point 
+; of inflection on the graph of the function, while the value of 
+; zero is the tip of a parabola.  In both cases the derivative is 
+; zero and the fractal will therefore be undistorted.  I'm not 
+; sure if this is true of all fractas created by expressions with 
+; multiple critical points.
+; 
+; Regardless of the correctness of the math, today's image lies in 
+; the fractal that results when Z is initialized to -1.  The 
+; minibrot at its center is of order 2.3 as expected.
+; 
+; The rating of a 7 is perhaps a bit conservative.  I did put a 
+; half hour or so of effort into the coloring.
+; 
+; The calculation time of 8 minutes is slow.  Much time may be 
+; saved by viewing the finished image on one or more of the FOTD 
+; web sites.
+; 
+; Check the finished image at the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And the variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A typical late winter day passed uneventfully here at Fractal 
+; Central, with lots of clouds during the morning and a clearing 
+; in the afternoon.  The temperature of 37F +3C was right on the 
+; mark.  The fractal cat played with his catnip ball until the sun 
+; appeared.  Then he stretched out on his shelf in the southwest 
+; window.  The humans made it through the day with a minimum of 
+; annoyances other than the usual miseries of the flu.
+; 
+; The next FOTD will be posted when it is ready.  Until whenever, 
+; take care, and I hear from Old Fractal Central back in Bodymore 
+; Murderland, (as the locals there call Baltimore, Maryland), that 
+; the weather forecast there today is partly cloudy with a near 
+; 100-percent chance of scattered bullets.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Test_of_Time { ; time=0:08:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=cosxx float=y
+  center-mag=+0.102350608821/-0.60041985916/3.4e+008\
+  /1/150/0 params=-1.96/2.3/0.98/4.6/0/0/-1/0
+  maxiter=5400 inside=0 logmap=365 periodicity=6
+  colors=000KMUKMUKMUKMUKMUJMUIMWGOXEQXCSXAUX8WX6X`B\
+  YdG`gLbkQfnVjrZnuTrzNvzIxzCzz7pzIczTUmcUcmbWzHvMJn\
+  zPNzPNzPNzQNzQNzRNzRNzRNzSNzSNzTNzTNzgQyfPxfPwePwe\
+  PvePudPWSxBt9JoGQjNXeUc``jWgqRmrTkrVjrXhsZgs`esbds\
+  dbteatg_tiZtkXumWuoUuqTurSsnUqkVphWneYlbZk__iXagUb\
+  fRcdOebLfaIg_FiYCjX9k`WScY9o_KzIUzJTzJTzKSzKSzLSzM\
+  RzMRzNQzOQzOQzPPzQPzQOzROzSOzSNzTNzdWzaTzZRzWPqqJp\
+  pKooKonKnnKnmKmlKmlKlkKzjLziLziLzhLzgLzgLzfLzeLzdL\
+  zdMzlJzrGzzCpzEmuGguIgvKfvMewOewQbsR`pSYmSWjTTfTRc\
+  UP`UMYVKVWHRWFOXCLXAIY8FY7JX7NX7QW6UW6XW6`V5cV5gU5\
+  jU4nU0zm0zmmzTmzQGSNTT_RVaQXbOZdNaeKdfKhhKizUpkUpl\
+  Uomcnocmpcmqcqnhozjnpmmfmmcrm`vmZzmWzmQzmTzmWzkZzm\
+  VzmQzmMzmIzmIzmIzmIzmJzcJzcJzcJzcJzcJzcJzcJzcJzcJz\
+  cJzcKzcKzXKzXKzXKzTOzXKzWKzWKzWKzWKzWLzWLzWczWczWc\
+  zVczVczVmzVmzVmzVmzVmzVzzVzzUzzUzzUzzUzzUzzUzzUzzU\
+  zzUzzTzzTzzTzzTzzTzzTzzTz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

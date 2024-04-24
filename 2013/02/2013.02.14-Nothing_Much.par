@@ -1,0 +1,107 @@
+;     Date: Thu, 14 Feb 2013 12:07:42 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-02-13 (Nothing Much [7])
+;       Id: <1.5.4.16.20130214120749.2a974b56@earthlink.net>
+; ---------
+; 
+; FOTD -- February 13, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To create today's image, I combined 10 negative parts of 
+; Z^(-1.6) with 2 negative parts of Z^(-3.7) and added (1/C) on 
+; each iteration.  When the calculation was finished, I found 
+; myself with a parent fractal that was little more than a large 
+; irregular open hole with Mandelbrot features along its southern 
+; boundary and a large cloverleaf object floating inside its 
+; northern part.  I found today's scene when I checked the eastern 
+; edge of the obviously Mandelbrot stuff on the southern boundary 
+; of the large irregular hole.
+; 
+; The name "Nothing Much" describes what I found there.  But 
+; 'nothing much' implies a little something, and a little 
+; something is what we find in today's image, which is perhaps 
+; most notable for its well-divided areas that are unusually flat. 
+; Actually, these flat areas would have been nearly totally flat 
+; if I had not used the 'tdis' outside option when rendering the 
+; scene.
+; 
+; As it is, the image rates a nominal 7, good enough to be worth 
+; the 2-1/4 minutes required to calculate it.  Curiously, I think 
+; this is the first image in which I have used a negative maxiter 
+; with the 'tdis' outside.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High-definition versions are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A cloudy day with a temperature of 41F +5C ended with a burst of 
+; wet snow at nightfall.  The snow never amounted to more than an 
+; inch (2cm) however, and by midnight, had ended.  The fractal cat 
+; had an average day for an indoor cat.  (Indoor cats live far less 
+; exciting but far safer lives than the stray and feral cats that 
+; roam the area.)  The humans had an average human day.
+; 
+; The next FOTD will be posted in approximately 36 hours.  Until 
+; then, take care, and I hear that our schools now need far more 
+; computers and internet access in the classrooms if they hope to 
+; do an adequate job of teaching students.  But if this is so, 
+; how, in primitive classrooms without computers, did we learn 
+; enough to develop the present day computers that have now become 
+; so necessary?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Nothing_Much { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=+1.097932482367496/-1.698027822201469/\
+  4.926059e+008/1/140/0 params=-10/-1.6/-2/-3.7/0/\
+  525/0/0 maxiter=5000 inside=0 outside=tdis
+  logmap=-150 periodicity=6
+  colors=000zz0Y4nW7gUA`SDUQFNsRtM3lR5iW7f`8cdA`iCYn\
+  DVsFSwGQdDaMBm49xEEsNJnWOidTdmY`aQWRISGAO53K87NAAQ\
+  CDTFGWHJZJMaLPdKTdJWdI_dIbdHfdGidFmdFpdGkeGffGafGY\
+  gGTgGOhGKhONiVQjaTkiWlpZmwamqcgkdafeW`gQVhKQiEZZQf\
+  P`nEkv4vdGeNRP5a8DXDLSHSOM_JQfFUdEVbEW`EX_EY_EZ_EZ\
+  _E__E`_E`_Ea_EabCUdAMg9Fi77k60d99YCHSEPeaXsxdtteuq\
+  evnewkexheyeezbez_escdlfdeicZlcSobMrbRtWWuQ`vKewEj\
+  mGncIrVJlXHfZF``EVbCPdBJf9Dg8GeAIcCKaEM_GOYHwJ6VDc\
+  PvzSuqVtiYs``rTcqKfqCw5Ywi8tg7qf6oe5lc4jb3ga2e`1Hu\
+  OGmNFeMEZLDRKDKJPIQ_HXlOayUfpWcgY`Z_ZQaWIcUFdQCdN9\
+  dK7dHDZKITNONQTHTZBWc5Zh0a_2UR3NI4G959062031MYB`_H\
+  cZMgXSjWXnVaqTguSlxRquTrrUsoWtlXtPWX2VA8_BDcCKgDXl\
+  DgpEntFzzFUcLNUQG3VN8_UDd`IhgNmnSrtXvgThVQWIMJ6J69\
+  NIBQTDUdFXoH_zRVm_R`hNOqJBrF9rB7r85eLKTYYHjkFfmEcn\
+  C`oBXq9Ur8RsEOnKLjQIeWFak4df7ba9`XBZSDXNGVIITDKR9M\
+  QkjpZ`TZXaZUi_Ol_Io_Cq_6t }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,109 @@
+;     Date: Thu, 21 Feb 2013 04:25:57 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-02-13 (The Phantom Revealed [7])
+;       Id: <1.5.4.16.20130221042441.2ad7cdbe@earthlink.net>
+; ---------
+; 
+; FOTD -- February 20, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The FOTD that appeared two days ago on February 18 was named 
+; "A Phantom Parent".  In that image it is apparent that another 
+; fractal lies buried beneath the surface fractal, but because the 
+; surface fractal is critical, that hidden fractal must be forever 
+; obscured.  But things are not nearly as bad as they first 
+; appear, for in today's image I take away the surface stuff and 
+; reveal that phantom fractal in its full glory, which explains 
+; the name "The Phantom Revealed".
+; 
+; The trick lies in choosing the alternate critical value of 
+; initial Z.  The generating expression actually has two critical 
+; values.  In the previous image, the initial value of Z was 
+; automatically set to zero, one of the critical values.  In 
+; today's image, I have reset the value of initial Z to -1, the 
+; second critical value.  The result of this change is to move the 
+; previously buried fractal to the surface, and bury the fractal 
+; that was previously on the surface.  Fragments of the previous 
+; surface image now appear as the bits of orangish stuff scattered 
+; about today's scene.
+; 
+; Calculating complex critical values is not much fun.  One of 
+; these days I might find a formula that can switch the critical 
+; values of initial Z automatically, but that day is not in the 
+; foreseeable future.  Until then, I will continue to find the 
+; alternate critical values with the graphic method.
+; 
+; The rating of a 7 totally reflects the mathematical value of the 
+; image.  The artistic value hardly exists.  But I will dive into 
+; today's image and post what I find there as tomorrow's FOTD.  
+; Who knows, I might find something worth a higher rating.
+; 
+; Check the fractal phantom at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; With a deeper analysis at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And the spooks from the past at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Typical midwinter weather prevailed at Fractal Central today, 
+; with a temperature of 28F -2C and frequent but light flurries of 
+; snow.  The fractal cat made a break-out but got caught before he 
+; got into trouble, and was soundly scolded for his efforts.  The 
+; humans made it through the day with only one spat, which was due 
+; to FL's testiness.  My patience, approaching that of Job, kept 
+; things under control however.  The next FOTD will be posted in 
+; 24 hours.  Until then, take care, and when will the over-zealous 
+; technophiles realize that technology cannot solve all of man's 
+; problems because it has created many of them itself?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+ThePhantomRevealed { ; time=0:00:10.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=cosxx float=y
+  center-mag=0/0/0.69 params=-2/2.3/1/4.6/-0.02/0/-1/0
+  maxiter=750 inside=0 symmetry=xyaxis periodicity=6
+  colors=000GSNTT_RVaQXbOZdNaeLdfKhhIliHpkFplEomCnoB\
+  mpAmq9mn8mk8kh7if7gc6f`6eZ5dW4cT4bQ3aO3`L2_I2ZG3YK\
+  4XO4WR5VV5UYzmazmdzmezmfzmfzmgzmgzmbzmZzmVzmQzmMzm\
+  IzmIzmIzmIzmJzcJzcJzcJzcJzcJzcJzcJzcJzcJzcJzcKzcKz\
+  XKzXKzXKzTOzXKzWKzWKzWKzWKzWLzWLzWLzWLzWLzVLzVLzVL\
+  zVLzVLzVLzVMzVMzVMzUMzUMzUMzUMzUMzUMzUMzUNzUNzTNzT\
+  NzTNzTNzTNzTNzTNzTNzJOzLNzNNzPNzRNzLMzMNzMNzNNzNNz\
+  NNzONzONzPNzPNzPNzQNzQNzRNzRNzRNzSNzSNzTNzTNzgQyfP\
+  xfPwePwePvePudPudPtcPscPrcPrbPqbPpaOpaOoaOn`Om`Om_\
+  Ol_Ok_OkZOjZOiYOhYOhYOgXNfXNfWNeWNdWNzVNzVNzUNzUNz\
+  UNzTNzTNzBYzCXzDXzDWzEWzFWzFVzGVzHUzHUzIUzJTzJTzKS\
+  zKSzLSzMRzMRzNQzOQzOQzPPzQPzQOzROzSOzSNzTNzdWzaTzZ\
+  RzWPqqJppKooKonKnnKnmKmlKmlKlkKzjLziLziLzhLzgLzgLz\
+  fLzeLzdLzdMzcMzbMzbMzaMz`Mz_Mz_MzZMzYNzYNzXNzWNzVN\
+  zVNzUNzTNzx`zw_zv_zu_zuZztZzsZzrYzrYzqYzpXroXzoXzn\
+  WzmWzlWzlVzkVzjVziUziUzhU }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

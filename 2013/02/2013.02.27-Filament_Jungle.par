@@ -1,0 +1,104 @@
+;     Date: Wed, 27 Feb 2013 17:54:03 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 26-02-13 (Filament Jungle [7.5])
+;       Id: <1.5.4.16.20130227175253.2bf7e252@earthlink.net>
+; ---------
+; 
+; FOTD -- February 26, 2013 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Since both FL and I are down with a bug of some kind, today's 
+; discussion will be brief.  The image is therefore left to speak 
+; for itself.
+; 
+; The parent fractal came about when I combined 1.4 negative parts 
+; of Z^(-7.4) with 7.4 negative parts of Z^(-1.4) and added (1/C) 
+; on each iteration.  Today's image is located in the northernmost 
+; part of this parent.
+; 
+; The name "Filament Jungle" refers to the twisting filaments that 
+; infest the scene.  The rating of 7-1/2 means that I put only a 
+; minor extra effort into the coloring.
+; 
+; The calculation takes only 1-1/4 minutes, which will waste no 
+; one's precious time.  And the web sites will be even faster.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Variations in hi-def are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The sky was cloudy all day here at Fractal Central.  Light rain 
+; began in the afternoon, but a temperature of 39F +4C made it too 
+; warm for any frozen stuff.  The fractal cat accepted the lack of 
+; sun early, and retired to the cozy bed we have set up for him on 
+; top of the tall bookcase in the spare room, where he can feel 
+; like king of the (cat) world.  The under-the-weather humans 
+; somehow made it through the day.
+; 
+; The next FOTD will be posted shortly.  Until then, take care, 
+; and I hear that those who live near wind generators have been 
+; complaining about ill effects.  Apparently, in addition to 
+; killing lots of birds, the generators create subsonic sound 
+; waves that disorient and sicken those who live nearby.  I guess 
+; the greenies who are so concerned about climate change had best 
+; pin their hopes on solar panels.  But I wonder how many thousand 
+; square miles we would need to cover to satisfy our ever-increas-
+; ing demand for electric energy.
+; 
+; There is a real solution, but no one wants to do it.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Filament_Jungle { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=+0.5380106218817268/+2.065537317552037/\
+  889259/1/92.5/0 params=-1.4/-7.4/-7.4/-1.4/0/0/0/0
+  maxiter=1500 inside=0 logmap=75 periodicity=6
+  colors=000UAWT9VS8UR7TQ6SP5RO4QN3PM4OL4NK4MJ5LI5IL\
+  8FG8CLB9KA7NEAODDQHGSKJUMMWRPYTS_YUa_Xcd_efbgkeimh\
+  krkmpnmvoowqowsqxuqxwsyzsyzuzzuzzwzzL9YMAXMAXNAWNA\
+  WOAWOAVPAVPAVQAUQAURAURATSATSATVEJYH9_K0aJ1bI1cH1d\
+  K1eK2fK2gK2iP2jU2kZ3lZ3mZ3nZ3oZ3_LGKZT4ke9egD`iIVj\
+  MQlRKmVFoZApXFkVKgTObSTZQXUOaQNeMMgJMhHLiFLjDKkBKl\
+  9Jm7Jn5Io3Ip1Kj2Le3M`4NW4OR5QM6RH6SC7T78U28h1Fv0Mt\
+  0Ls0Lq0Kp0Ko0Jm0Jl0Ik0Ii0Hh0Hg0Hf1Ie1Jd2Kc2Lc3Mb3N\
+  a3O`4P_4Q_5RZ5SY6TX6UX6VioQgpTfpVepXcqZbq`aqb`qdZr\
+  fYrhXrjVslUsnTspSsrUnkWjeYf__bUYfRWjNVmKUhJUdIUcHU\
+  cGQcCMc8Ic5FcBDcHAcM8cS6mXCh_HcbMZezVhzQkzLnzHqzOs\
+  zVtz`uzgwzmxztyzzzzqwzitzYszMrzBrzzlzzgzzbzzYzzTzz\
+  OzzXzzezznzzwzzuzzszzrzzpzzozzmzzlzz`zzYzzWzzUzzSz\
+  zQzzbzznzzczzUzzJzz9zzIzzRzzZZzQkzHxz8RzKNzKJzLGzL\
+  CzMBzIAzK9zM8zO7zQ6zS6zT5zV4zX3zZ2z`2za5zV8zPBzIEz\
+  CCz2Gz6JzANzERz_mzbizcezc }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,105 @@
+;     Date: Mon, 04 Feb 2013 17:50:54 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-02-13 (Epsilon Afire [7.5])
+;       Id: <1.5.4.16.20130204175050.2d4ff3aa@earthlink.net>
+; ---------
+; 
+; FOTD -- February 04, 2013 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Let the banners wave, the trumpets blare and the fireworks 
+; explode!  I'm back with another semi-glorious fractal, this one 
+; located in one of the several East Valleys of the 'Zexpe' 
+; fractal as it appears 10 levels down the hyperladder with no 
+; function applied.
+; 
+; The image rates a mildly impressive 7-1/2, but a good part of 
+; this is due to the coloring, on which I spent over 1/2 hour.  
+; Without the fiery color scheme, the image would be just another 
+; chaotic fractal.
+; 
+; The name "Epsilon Afire" refers to both the exponent of Z and 
+; the fiery colors of the image.  The calculation time of four 
+; minutes is about average, but the trip to one or all of the web 
+; sites is still worth the minor effort.
+; 
+; Check the finished image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And thrill to the glories of the high-definition renderings at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; though I'm not sure Hal is caught up quite yet.
+; 
+; The FOTD back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Typical midwinter cold continued here at Fractal Central today, 
+; with partly cloudy skies and a temperature of 30F -1C.  The 
+; forecast is for another dusting of snow tonight, which will be 
+; about the fourth dusting in the past week.  The fractal cat took 
+; a few glances out the window, but spent most of the afternoon 
+; sleeping on his blanket on top of the tall bookcase.  The humans 
+; had an everyday afternoon.
+; 
+; The next FOTD will be posted when things are right, the most 
+; favorable time being tomorrow around this same time.  Until 
+; whenever, take care, and Hooray!  Our team held on to win the 
+; Stuporbowl!
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Epsilon_Afire { ; time=0:04:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident float=y
+  center-mag=+0.393523343081/-0.061624411585/\
+  1.439566e+007/1/142.5/0 params=2.71828/0/-10/0
+  maxiter=3200 inside=0 logmap=-420 periodicity=6
+  colors=000`NE`PF`QG`SH`TI`VJ`WK`YL`ZL`_M`aN`bO`dP`\
+  eQ`gR`hSbmV`iSZeQYaOWYMVVJTRHSNFNCDE6AM8BYQCfZDohE\
+  xwHwtGwqFwnEwkDwhCveBvbAv_9vX8vU7vR6uO5uL4uI3uF2uC\
+  1uA1tC2tD3sE4sF5sG6rH7rI8rJ9qKAqMBpNCpODpPEoQFoRGo\
+  SHnTInUJvYHrWJnVKjULfSNcRO_QPWPQSNSOMlLUmHUzDKz90m\
+  60c80U9CKA8AC2ADDAEFKGFUHETIETKESLESMEROEQPEQQEPSD\
+  OTDOUDNWDMXDMYDL_DL`CKaCJcCJdCIeCHgCHhCGiCGhEHhFHh\
+  GHhIHhJHhKHhLHgNHgOHgPIgRIgSIgTIgUIfWIfXIfbIfcIfjI\
+  fkJflJenJeoJekJelJenJeoJepJgqLeqJgeIiZGkRFmKDoDCq6\
+  BlAFgDJbHN_OlZMaYKRXIGUE3WG5XI6YJ7ZL8_MA`OBaQCbRDc\
+  TFdUGeWHfXIgZJi`LjaMkcNldOmfQngRoiSpkTqlVrnWsoXtqY\
+  xu`vs_urZsqYrpXpoWozVmzUlzTjzSizRzzQzzPzzOzzNzzMzz\
+  LzzKzzJzzIzzHzzGzzFzzEzzFzzEzzEzzDzzDzzCzzCzzCzzBz\
+  zBzzAzzAzzzvzzxzztzzqzznzzkzzhzzezzbzz_zzXzzUzzRzz\
+  OzzLzzIzzFzzHzzIzzJzzKzzLzzMzzNzzOzzWzzWzzXzzXzzXz\
+  zYzzYzzZzzZzz_zz_zz`zz`zz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
