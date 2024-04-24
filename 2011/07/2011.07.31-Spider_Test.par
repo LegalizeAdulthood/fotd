@@ -1,0 +1,99 @@
+;     Date: Sun, 31 Jul 2011 23:07:27 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-07-11 (Spider Test [6.5])
+;       Id: <1.5.4.16.20110731230838.1217b1c8@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- July 31, 2011 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is one in a series of tests, which is what I named 
+; it.  I originally calculated the image with the passes set to 1. 
+; The resulting image took near 16 minutes to calculate, but was 
+; pictorially perfect.  The passes=g option was fast enough but 
+; left too many holes in the web.  Passes=b finished in 5 minutes, 
+; but totally missed the web.  This left me with passes=t, which 
+; finishes in just under 10 minutes, and misses only a few minor 
+; bits of the spider web.
+; 
+; The image lies in the parent fractal that results when 10 
+; negative parts of Z^(-1.1) are combined with Z^(-11.1) before 
+; (1/C) is added on each iteration.  This parent fractal is 
+; another of those indescribable ones that appear when double 
+; negative powers of Z are calculated.  And since the powers are 
+; negative, the fractal is subject to evaporation.
+; 
+; Today's image is an evaporated one, though instead of setting 
+; the bailout to one-googol, I set it to 10^40, which is still 
+; large enough to evaporate the scene.
+; 
+; The rating of a 6-1/2 is an improvement over recent images, 
+; though still far short of traditional FOTD quality standards.  
+; The image may be thoroughly enjoyed by running the parameter 
+; file, or by viewing it on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Saturday and Sunday here at Fractal central were near perfect 
+; days, with tons of sun, lower humidity and a near perfect 
+; temperature of 88F 31C.  The fractal cats enjoyed the conditions 
+; as much as is possible for cats to enjoy a thing, while the 
+; humans had a pleasant two days.  The next FOTD will be posted in 
+; 24 hours.  Until then, take care, and let your mind soar to the 
+; stars.  Your body is stuck to the ground.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spider_Test { ; time=0:09:55.69-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=t
+  center-mag=+4.8057119805/+1.925110761/48177/1/\
+  -172.5/0 params=-10/-1.1/1/-11.1/0/1e+040/0/0
+  float=y maxiter=1500 inside=bof61 periodicity=0
+  colors=000DcbFc`GcZIcYJcWLcUMcTJcRKcSLcSLcSMcSMcSN\
+  cSNcSOcSOcSPcSPcSQcSQcSVcTZcUbdVgYVkRWoKXsDXoCVlCU\
+  `nSalVajYbh`cfcdcfeaif_lA0FtdvgWqWOlJFg54`77b89cAC\
+  eBEfDHgEJiFLjHOkIQmKTnLVoNYqO_rOdvPasQ_qRYnSWlSUiT\
+  SgUQdVObWM_WKYXIVYGTZEQ_CO_AMXDPVFRSHTQJVOLYLN_JPa\
+  HScEUeA0FAYjP8dP8eP7fP7gP6iP6jP5kP5lP4mP4nP3oP3pP2\
+  qP2rP1sP1tO2sN2sM2sM2rL2rK2rK2qJ2qI2qI3pH3pG3pG3oF\
+  3oE3oE3nD3nC3nC3nE2kG2hI2eJ2bL2`N2YO2VVPXS1PU1NV1K\
+  X1HZ1E_1C`2Ea2Fb2Hc2Id2Ke2Lf2Ng3Oh3Qi3Rj3Tk3Ul3Wm3\
+  Xn4Zo4_p4aq4br4ds4et4gt4hq7fo9emCdkEciGagJ`eL_cNZe\
+  RagUciYfk`hmckogmqjpidhuquwcwxo1zo3hc4mc5US6NM7QO6\
+  TP6WQ6YR6`S6cT6fU6hV6kW6nX6pY6qW9qUCrTFrRIsQLsOOsN\
+  RtLUtJXuI_uGbvFevDhvCjqBkmAki9ld9l`8mX7mS6nO6nK5oF\
+  4oB3p73p84n95l96jA7iB8gB9eCAdDBbDC`ED_FEYFFWGGVGHT\
+  HIRIJQIKOJLMKMLKNJLOHMOGMQENRCNSBLUEKWHJYKIZMH`PFb\
+  SEcUPCYPBZPB_PA`PAaP9bP9c }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
