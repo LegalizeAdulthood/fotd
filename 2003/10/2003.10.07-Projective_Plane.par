@@ -1,0 +1,93 @@
+;     Date: Tue, 07 Oct 2003 08:18:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-01-98 (Projective Plane)
+;       Id: <1.5.4.16.20031007081910.0d5759b0@pop.mindspring.com>
+; ---------
+; 
+; Classic F.O.T.D., January 01, 1998 (Projective Plane)
+; 
+; Fractal visionaries:
+; 
+; The world of higher dimensions is filled with objects which are 
+; impossible in our three-space, and can be represented here in 
+; only a distorted way.  The Klein Bottle is one such object.  In 
+; three dimensions it appears as a closed figure which intersects 
+; itself and joins itself in such a manner that despite having no 
+; breaks it has only one side.  The inside is also the outside.
+; 
+; But this is a distortion of the true object, which can exist 
+; only in spaces of four or more dimensions.  In four dimensions, 
+; the Klein Bottle is constructed by taking a rubber sheet, 
+; curling it and connecting one pair of edges so that a tube 
+; results, then bending the tube and joining the open ends into a 
+; doughnut shaped object.  But before joining the edges, and with 
+; no cutting, the tube is given a half-twist and turned inside-
+; out, so that without self-intersection, the resulting doughnut-
+; shaped object has only one side.  Its inside is also its outside.
+; 
+; The Klein Bottle is difficult enough to visualize, but the 
+; Projective Plane is even more difficult.  In fact it is 
+; difficult to even describe.  In this case, the sheet of rubber 
+; is given a half-twist into a kind of Moebius Strip tube before 
+; being curled and given a second twist before the open ends are 
+; joined to each other, forming the Projective Plane.  In this 
+; case, even a distorted model is nearly impossible in three-space.
+; 
+; Well, if an accurate model of a Projective Plane is impossible 
+; in three dimensions, one could never hope to illustrate the 
+; monster on a two-dimensional screen.  I named today's fractal 
+; "Projective Plane" only because that's what I thought of when I 
+; saw the image.  Actually, it is a picture of a curious feature 
+; that appears at Z=0.00019,0.07388 C=-1.7435,0.0 in the Z^2.003 
+; Julibrot figure.  This object is extremely thin and exists only 
+; very near the Julia orientation, where it appears as a near-
+; perfect rectangle.
+; 
+; To create today's image, I gave the object a 2-degree double 
+; rotation from the Julia orientation, which distorted the 
+; rectangle into the curved shape in the picture.  A little 
+; playing with the colors produced the effect of a flying sheet 
+; of rubber.
+; 
+; The flying plane has landed at Paul's web site at:
+; 
+;          http://home.att.net/~Paul.N.Lee/FotD/FotD.html
+; 
+; Tomorrow, I'll have another interesting FOTD.  At this time I 
+; have no idea what it will be, but something will turn up -- as 
+; it always does.  Until then, take care, and keep finding those 
+; fractal gems.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Projective_Plane { ; 3-1/2 min on a P200 at SF5
+  reset=1960 type=formula formulafile=multirot.frm
+  formulaname=multi20031 function=flip/ident/ident\
+  /flip passes=1 center-mag=-0.00037327503160875/\
+  +0.00003799627771399/514.8005/1/25
+  params=88/88/0.00022/0.0755/-1.74308/0 float=y
+  maxiter=1800 bailout=25 inside=253 logmap=yes
+  symmetry=none periodicity=10 colors=000QVZ<2>PXZ\
+  PYZP_Z<7>PlZPnZRt_<4>PmZPkZOhZ<6>MTZMRZMQZ<12>I9\
+  ZI8ZJ6a<19>I8OI8NH9KH9IH9HH9IH9IH9HH9FH9FH9H<11>\
+  HA9HA9JCB<2>OIGQJHRMJ<7>dgVejWgkY<3>nncooeqnf<3>\
+  wshxuixwjyylyzm<4>zwizvhzugzugztgzthzshzsh<10>pl\
+  `ol_mkZ<7>YfTWfSVdR<3>RZOQXNPYN<6>IUHHTGGUG<3>I_\
+  IJ`IJ`I<38>asSXrT<19>stPttPvvJvuM<3>oqWmpZmqZ<3>\
+  moZnoZopZskZwzZzwZzwZ }
+
+frm:multi20031 {; Jim Muth, best=ifif, fiif, fifi, iffi
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
+z=z^2.003+c,
+|z| <= 100 }
+
+; END PARAMETER FILE==================================
+; 

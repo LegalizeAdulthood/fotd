@@ -1,0 +1,90 @@
+;     Date: Tue, 21 Oct 2003 09:28:34 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-06-00 (A Head of Bubbles)
+;       Id: <1.5.4.16.20031021092938.0d47ab96@pop.mindspring.com>
+; ---------
+; 
+; Do not go to the fractal image of June 2000.  Today's version is 
+; a slight outzoom of the original image.  The color has also been 
+; refined.
+; 
+; ==========================================================
+; 
+; CLASSIC FOTD, June 10, 2000  (Break-away Fractal [6])
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is another surrealistic scene created with one 
+; of the MandNewt formulae, which are actually the Ikenaga 
+; function in disguise.  I chose formula number 1 to explore for 
+; today's image, and the formula did not let me down.
+; 
+; As is the case with many images created with these formulas, the 
+; inside fill has been set to bof60, which has a tendency to 
+; create bubbles.  The bof61 inside fill also works well with 
+; these formulas, as was demonstrated with yesterday's FOTD.
+; 
+; The picture itself is another surrealistic one, with a mass of 
+; bubbly froth at the bottom and bubbles of assorted sizes and 
+; shapes all through the scene.  The largest bubble is off-screen, 
+; though its lower part fills the upper left of the picture.  The 
+; intense purple background speaks of infinite depth.
+; 
+; I named the picture "A Head of Bubbles" when I noticed the 
+; effect of individual bubbles breaking away from the mass of 
+; froth.  The parameter file takes all of 6-1/2 minutes to render 
+; on a P200 machine.  If that is too slow, the GIF image file has 
+; been posted to Paul Lee's web site at:
+; 
+;         <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The fractal weather today was quite warm, but without the 
+; oppressiveness we have so much of in this area in the summer.  
+; The temperature of 88F (31C) was a bit warmer than the fractal 
+; cats would have preferred, but they spent the afternoon on the 
+; back porch anyway.
+; 
+; My philosophy once again floundered -- I'll try again tomorrow.  
+; Until then, take care, and when it's hot, try a cool fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Head_of_Bubbles { ; time=0:06:45.10--SF5 on a P200
+  reset=2000 type=formula formulafile=mandnewt.frm
+  formulaname=MandNewt01 passes=1 center-mag=0.10382\
+  /0.313706/13.77989/1/-42.5/-1.2337353361147052e-014
+  params=-3.979/-3.596/1.305/-2.202/3.594/1.401
+  float=y maxiter=175 bailout=25 inside=bof60
+  logmap=yes symmetry=none periodicity=0
+  colors=000zzzzzzzyyxxyswyouyjsxgqxdpxaox_nwXmwUlwU\
+  kvUjvUiuUhuUgtUftUesUdsUcrUbrUaqU`qU_pUZpUYoUXnUWm\
+  UVlUUkTTjSSiRRhQQgPPfOOeNNdMMcLLbKKaJJ`IH_HFZGDYFB\
+  XEAWD9VC7TB6RA4O930c4zc6zc6zc6zc6zc7zc7zc7zc7zc7zc\
+  7zc9zc9zc9zc9zc9zcAzcAzcAzcAzcAzcAzcCzcCzcCzcCzcCz\
+  cCzcCycCycDycDycDycFx00000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  0000000000000000000000000 }
+
+frm:MandNewt01 {; Jim Muth
+z=c=pixel:
+a=z^3+(c-1)*z-(p1*c)
+b=3*z^2+(p2*c-1)
+z=z-p3*a/b
+.00005 <= |a| }
+
+; END PARAMETER FILE==================================
+; 

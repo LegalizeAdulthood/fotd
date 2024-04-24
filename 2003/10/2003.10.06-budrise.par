@@ -1,0 +1,86 @@
+;     Date: Mon, 06 Oct 2003 10:39:12 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-11-97 (Budrise)
+;       Id: <1.5.4.16.20031006104004.2b4fd5d4@pop.mindspring.com>
+; ---------
+; 
+; F.O.T.D., November 22, 1997 (Budrise)
+; 
+; Fractal visionaries:
+; 
+; How can I describe today's fractal?  Well, to begin, I'll let my 
+; imagination run wild.  (It won't be difficult; that's my usual 
+; mental state.)  :^)
+; 
+; Picture yourself alone at night on an alien beach, standing 
+; under a sky filled with strange constellations.  In the darkness 
+; you can hear the alien surf washing gently up the sands and 
+; swishing back out.  Out on the methane ocean, strange lights 
+; are gently blinking on and off.  You have no idea what they are 
+; -- this world is supposed to be uninhabited.  In the distance to 
+; your right, a barely discernible glow like that of a city below 
+; the horizon reveals where methane ends and sky begins.  Perhaps 
+; this planet is not deserted.
+; 
+; But as you watch and wonder, the glow increases and spreads, 
+; until at last, in its undiminished splendor, its radiance 
+; piercing the high clouds, accompanied by the opening of "Thus 
+; Spake Zarathustra" the great cosmic bud rises into the sky.  Day 
+; has come and you are still alone, but those dots that were 
+; lights blinking in the night still mar the horizon. . . .
+; 
+; OK, so I exaggerated a little!  Perhaps today's fractal isn't 
+; quite that spectacular, but it's still a striking one, and I 
+; feel it's good enough to make it as the FOTD for 22-11.  When I 
+; saw this image, a sunrise, or budrise in this case, was my first 
+; and only impression.
+; 
+; The image is a scene in the Z^24-(1.1*Z) figure, sliced halfway 
+; between the Mandelbrot and Oblate directions.  It is another 
+; example of an order-2 object where none should appear.  I had 
+; intended to post a different formula today, but this particular 
+; fractal so struck me that I felt it must be shown at once.
+; 
+; And so here it is -- my FOTD for 22-11 -- not my best, but not 
+; my worst either.  The finished image, which takes 6 minutes on 
+; an 80486-DX4 at 100mhz, is posted to Paul's web site at:
+; 
+;           http://home.att.net/~Paul.N.Lee/FotD/FotD.html
+; 
+; Tomorrow, if I find no more irresistable images in the M-O 
+; rotation, I'll post an image from the M-R rotation.  Until then, 
+; take care and put your best fractal forward.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE==================================
+
+budrise { ; 55 seconds on a P200--SF5
+  reset=1960 type=formula formulafile=minusrot.frm
+  formulaname=M-O-rotation passes=t
+  center-mag=1.26462/-3.33067e-016/4.372549/1.454/-90
+  params=24/44.5/0/0/0/0 float=y maxiter=1200
+  bailout=100 inside=253 logmap=yes periodicity=10
+  colors=000A00PF0UF0XG0aE0aI0`H0RG67CL7CN8DN<2>7C\
+  R6CP<2>8BKEBHKBFJACJ9AJ87H64J75K75H85<2>LC5MD5MD\
+  5LE5<2>NE5NF5MF5<25>vL6<29>lbhkcjlckmdloel<6>tao\
+  paor`o<36>rJzrJzrKx<13>rWjqXiqYhpZgo_f<13>ekTelS\
+  dmRdmQenP<3>frLfsKgrK<28>et9gz2<4>cmIbzMbzPayS`v\
+  V_vX<8>deZdcZccX<12>hadzwP7V`7U` }
+
+frm:M-O-rotation {; Jim Muth
+; real(p1)=power of Z,  imag(p1)=rotation angle
+; p2=parallel planes,  p3=rotation point 
+a=real(p1), b=imag(p1)+.0000000000001,
+z=sin(b*.01745329251994)*real(pixel)+p2,
+c=cos(b*.01745329251994)*real(pixel)\
++flip(imag(pixel))+p3:
+z=z^a-(1.1*z)+c,
+|z| <=25 }
+
+; END PARAMETER FILE====================================
+; 

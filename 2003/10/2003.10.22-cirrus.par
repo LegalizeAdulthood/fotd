@@ -1,0 +1,96 @@
+;     Date: Wed, 22 Oct 2003 09:00:21 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-10-97 (Cirrus)
+;       Id: <1.5.4.16.20031022090126.0fcf6e3c@pop.mindspring.com>
+; ---------
+; 
+; NOTE: This image has been changed from the original version.
+; 
+; =====================================================
+; 
+; CLASSIC F.O.T.D., October 03, 1997 (Cirrus)
+; 
+; Fractal visionaries:
+; 
+; Today's unusual fractal is a view of the sky -- nothing solid, 
+; just vapor and ice crystals.  I was undecided whether to name it 
+; "Cirrus" or "Skyscape".  I finally decided on "Cirrus", but I 
+; could just as easily have given it the other name.
+; 
+; There may still be some who doubt that clouds are one of 
+; nature's fractals.  If so, today's picture should end that 
+; doubt.  It is a photograph taken from a window of F.C., showing 
+; a clear blue sky filled with cirrus streamers.  Well, actually 
+; it's not a photograph at all, but rather a scene in the Z^2+C 
+; Julibrot, sliced in the oblate direction, in the area of the 
+; second valley beyond Seahorse valley, the one at -1.368 on the 
+; X-axis.
+; 
+; One of my fractal projects is to collect fractal representations 
+; of all the cloud types.  I have had several fine cumulonimbus 
+; cloud fractals for quite some time, but today's cirrus fractal 
+; is my best cirrus scene to date.  That leaves nimbus and stratus 
+; fractals yet to be found.  And of course I'll also want all the 
+; combination clouds, such as cirro-cumulus and alto-cumulus, etc.
+; 
+; The formula draws the oblate slices of the Julibrot, which I 
+; define as the slices determined by the Mandelbrot Y-axis and the 
+; Julia X-axis.  The VB in the formula name stands for Variable 
+; Bailout.  I recently discovered that a very low bailout radius 
+; does strange things in some of the odd planes, particularly in 
+; that area known as Seahorse Valley, so I altered my formulas to 
+; add an easily changed bailout feature.
+; 
+; BTW, I wonder what happened to Elephant Valley at the east end 
+; of the Mandelbrot set.  It has some very good fractal scenes 
+; also, and one almost never hears about it.  Maybe elephants are 
+; simply too clumsy to be associated with fractals.  :-)
+; 
+; Whatever the case, today's picture of the cirrus clouds has been 
+; posted to:
+; 
+;         http://home.att.net/~Paul.N.Lee/FotD/FotD.html
+; 
+; Until tomorrow then, keep looking up.  You might see a UFO; you 
+; might see a fractal!
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=============================================
+
+cirrus { ; 2 minutes at 200mhz, 640x480
+  reset=1960 type=formula formulafile=cirrus.par
+  formulaname=OblateVB passes=1 center-mag=-1.584890\
+  27912513300/+0.01512015871562687/137.8441/1.9206/\
+  -4.818/3.522 params=0/-1.36818/6/0 float=y
+  maxiter=200000 bailout=100 logmap=yes periodicity=10
+  colors=000e1Te1Te1Tf1Uf1Uf1Uf1Uf1Vg1Vg1Vg1Vg1Wg1Wh\
+  1Wh1Wh1Wh1Xh1Xh1Xi1Xi1Yi1Yi1Yi1Yj1Zj1Zj1Zj1Zk0Yj0Z\
+  j0_i0_h1`h1ag1bg1bf1ce1de1ed2ec2fc2gb2ha2ha2iZ2jW3\
+  mT3rQ3wN3zK3zK3zK3zK3zK4zK4zK4zL4zM4zN4zO4zP5zQ5zQ\
+  5zP5zO5zN4zN5zN6zO7zO7zO8zO9yOAyOByPCyPCyPDyPEyPFy\
+  PGyQHyQHyQIxQJxQKxQLxRMxRMxRNxROxRPxRQxSRxSRwSSwST\
+  wSUwSVwTWwTWwTXwTYwTZwT_wU`vU`vUavUbvUcvUdvVevVevV\
+  fvVgvVhvViuWjuWjuWkuWluWmuWnuXouXouXpuXquXrtYstZtt\
+  _tt`utavtbwtcxudxueytfztgzshzsizrjzrkzqlzqmzrnzsoz\
+  tpzuqzvrzwszxtzyuzzvzzwzzxzzyzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzlXVlWUlWUlVTmVTmU\
+  SmUSmTRnTRnSRnSQoRQoRPoQPoQOpPOpPNpONpOMqNMqNLqMLr\
+  MKrLKrLJrKJsKIsJIsJHsIHtIGtHGtGGuFHtGG`2N`2N`2Na2O\
+  a2Oa2Oa2Oa2Pa2Pb2Pb2Pb2Pb2Qb2Qc2Qc1Qc1Qc1Rc1Rc1Rd1\
+  Rd1Sd1Sd1Sd1Sd1Se1Te1Te1T }
+
+frm:OblateVB {; Jim Muth
+z=real(pixel)+flip(real(p1)),
+c=flip(imag(pixel))+imag(p1),
+a=sqr(p2):
+z=sqr(z)+c,
+|z| <= a }
+
+; END PARAMETER FILE===============================================
+; 

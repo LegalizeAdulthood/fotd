@@ -1,0 +1,82 @@
+;     Date: Tue, 14 Oct 2003 09:52:30 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-03-99 (Edge-on Galaxy)
+;       Id: <1.5.4.16.20031014095329.0d674a86@pop.mindspring.com>
+; ---------
+; 
+; CLASSIC FOTD March 12, 1999 (Edge-on Galaxy)
+; 
+; Fractal enthusiasts:
+; 
+; Today was bright and sunny, but chilly here at Fractal Central.  
+; The temperature of 41F 5C was perfect for a journey through 
+; fractal land.
+; 
+; My journey took me to the same area as yesterday's shamrock 
+; fractal.  I wrote a new formula just for the trip, which will 
+; let me view the scene from an entirely new direction.  The angle 
+; of the slice has been turned -10 degrees from the Rectangular 
+; direction toward the Oblate direction, giving the effect of a 
+; galaxy seen edge-on through clouds of interstellar dust.  
+; 
+; I named the picture "Edge-on_Galaxy" as a straightforward 
+; description.  And yes, once again I have sinned by loading the 
+; GIF file into a graphics program for some fine-tuning:
+; 
+; The gently illuminated galaxy is visible on Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where you will find links to lots of hyper-dimensional stuff, 
+; and some pretty far-out hyper-fun-stuff also.
+; 
+; I've been busy today, so I'll have to cut the discussion short, 
+; but the fractal is good enough to make up for a lack of words.  
+; After all, one picture of a three-dimensional object is worth a 
+; thousand words, so a picture of a four-dimensional object must 
+; be worth a million words.
+; 
+; Until tomorrow, take care, and don't get lost in the stars.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=========================
+
+Edge-on_Galaxy { ; 0:01:43.64--SF5 on a P200
+  reset=1960 type=formula formulafile=allinone.frm
+  formulaname=multimin-xz-yw-new passes=1
+  center-mag=+0.05750247255816/+0.00097963198354/204\
+  .5845/0.04123 params=90/-10/3.5/0/0.03907/-0.28621\
+  /0.8042/0 float=y maxiter=1200 bailout=25 inside=0
+  logmap=16 periodicity=10
+  colors=000RAWQAVPAUOATNASMARLAQLAQKAPJAOIANHAMGALF\
+  AKEAJD9JB9J89I6BI4BI1BG0BG0BG0BE0BE0BD0BE0BE0BE0BG\
+  0BG0BG0BI0BI0BI0BJ0BJ0BJ0BJ0BL0BL0BL0BL0BN0BN0BN1B\
+  O1BO1BO1BO2BQ2BQ2BQ4BR4BR4BR6BT6BT6BT6BT8BV8BV8BV9\
+  BX9BX9BX9BXBBYBBYBBYDB_DB_DB_DB_E9aE9aE9aG9bG9bG9b\
+  I9dI9dI9dI9dJ9fJ9fJ9fL9gL9gL9gL9gN9iN9iN9iO9kO9kO9\
+  kO9kQ9lQ9lQ9lR9nR9nR9nT9pT9pT9pT9pV9qV9qV9qX9sX9sX\
+  9sY9tY9tY9tY9t_9w_9w_9wYDt_9w_8xa6za4za1zb0zb0za0z\
+  a0zb0zb0zb0zd0zd0zd0zd0zd0zf1zf1zf2zf2zf2zg4zg4zg4\
+  zg6zi6zi8zi8zi8zi9zk9zkBzkBzkDzkDzlEzlEzlEzlGxnGxn\
+  GxnIxnIxnJxpJxpJxpLwpLwpNwpNwqOwqOwqOwsQwsQtsQtsRt\
+  sRttTttTttVttVttVswXswXswYswYsxYsx_sx_sxaqxaqzaqzb\
+  qzbqzdqzdqzdqzfpzfpzgpzgpzgpzipzipzkpzknzlnzlnzlnz\
+  nnznnzpnzpnzplzqlzqlzslzslztlztlztlzwkzwkzxkzxkzxk\
+  zzkzzkzzkzxlzxlzwlzwlzwlzwnzwnzxpzzqzzszztzzwzzxzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:multimin-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=(-z)^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE===========================
+; 

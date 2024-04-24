@@ -1,0 +1,97 @@
+;     Date: Sat, 25 Oct 2003 09:57:51 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-10-03 (Inside-Out Midget [7])
+;       Id: <1.5.4.16.20031025095858.2a977d62@pop.mindspring.com>
+; ---------
+; 
+; FOTD October 25, 2003
+; 
+; I include the original discussion that went with today's 
+; fractal, but the image is almost totally new.  The original 
+; image as it appeared on May 15, 2001 consisted of a Mandeloid-
+; shaped object at the center of a largely empty frame.  As it 
+; appears today, the Mandeloid has been turned upside down, and I 
+; have zoomed in much tighter.  The color is also entirely new.  
+; All these changes make the image virtually a new one and have 
+; justified a name change from "All Pooped Out" to "Inside-Out 
+; Midget".  The sizzling render time of one minute should make 
+; running the parameter file almost a joy.
+; 
+; ===========================================================
+; 
+; Classic FOTD -- May 15, 2001 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Where are all those extra FOTD's coming from?  Every time I post 
+; through AOL, it seems to happen.
+; 
+; Today's FOTD holds a surprise.  During the first half of the 
+; render, it looks notably unimpressive, but the lower half 
+; features a most unusual Mandeloid.  This is not a midget -- it 
+; is the whole fractal, which explains why the render goes so fast.
+; 
+; The iterated formula is a simple one, subtracting a portion of 
+; Z^(-0.7) from Z^(0.7) then adding 1/C.  The result is a picture 
+; of a totally pooped-out Mandeloid lying flat on its face.  I had 
+; no choice but to name the image "All Pooped Out".  I rated it a 
+; 7 because I think it's kind of cute, though I really don't care 
+; much for funny-face fractals.
+; 
+; The render time of under 3 minutes is reasonable.  If it is not 
+; reasonable enough, the GIF file of the image is available on the 
+; Web at Paul's site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather today was reasonably pleasant, though a dry 
+; squall spoiled the evening.  The afternoon temperature of 73F 
+; (23C) kept the cats happy.
+; 
+; I've got a busy day coming, so that's it for now.  Until next 
+; FOTD, take care, and see you soon.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Inside-Out_Midget { ; time=0:01:17.94--SF5 on a P200
+  reset=2001 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip float=y
+  center-mag=-0.0158567/-0.125422/53.23071/1/-32.5/\
+  -1.7772588956e-013 params=1/0.7/-1/-0.7/-4.5/5000
+  maxiter=440 inside=atan logmap=yes periodicity=10
+  colors=000ZWSZWS_VR`VQ`VQaVPbVPbVO7MM7MM7MM7ML6ML6\
+  Ma6M`6M_6MZ6MY6MW6MV5MU5LS5KR5JQ5IO5HN5GM4EJ5EK6EK\
+  6DK7EK7EL8FM8FN9GP9HQAHRAISBITBJUCJVCKWDVYDVZEW_EW\
+  `FXaFXbGYcGYdHZfH_gI_hI`iJ`jJakKalKbmLcoLcpMdqMdrN\
+  esNetOfuOfvPeuQetQdsRdrRcqScqTbpTboUanUamV`lV`lW_k\
+  X_jXZiYZhYYhZYgZXf_Xe`Xd`WcaWcaVbbVabU`cU_dT_dTZeS\
+  YUFKUA0UFKUFKeQUePTePSeOPeOKeNFeNAeN5eM0fM0gL0hL0i\
+  K0jK0kJ0lJ0m00n10o20p30q40r50s60t70u80v90vK0v90u80\
+  t70s60r50q40p30o20n10m00l00k00j00i00h00g00f00eTOdU\
+  PcUQbVRaWR`XS_YTZZUXZVV_WU`XTaYSbYRcZQc_Pd`OeaNfbM\
+  gcLhcKidIieHjfGkgFlhEmiDniCnjBokApl9qm8rn7so6so7rn\
+  7rn7qn7qn8qn8pm8pm8pm9om9om9nl9nlAnlAmlAmlAmlBlkBl\
+  kBkkBkkCkkCjjCjjCjjDijDijDijDhiDhiEgiEgiEgiEfhFfhF\
+  fhFehFehGdgGdgGdgGcgHcgHcgHbfHbfIafIafIafI`eJ`eJ`e\
+  J_eJ_eJ_eKZdLZcLZcMZbNZbNZaOY`PY`PY_QY_RYZRYZSXYTX\
+  XTXXUXWVXWVXVWWUXWUXWTYWT }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

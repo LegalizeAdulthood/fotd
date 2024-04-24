@@ -1,0 +1,79 @@
+;     Date: Sun, 05 Oct 2003 08:41:07 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-06-97 (Prophet)
+;       Id: <1.5.4.16.20031005084158.0d0fc4be@pop.mindspring.com>
+; ---------
+; 
+; Fractal of the Day, June 19, 1997
+; 
+; Fractal visionaries:
+; 
+; Every once in a while there comes a fractal picture that fairly 
+; shouts its name.  Today's image is one of those.  Despite the 
+; abysmal initial coloring, the moment I saw the image, with its 
+; stylized figure standing on a mountain top, showering blessings, 
+; I knew it could be named nothing but "prophet".  It took only a 
+; carefully selected palette to bring the prophet to life.
+; 
+; The formula is one of my failed efforts.  But though the formula 
+; doesn't give me exactly what I was after, it does draw some very 
+; interesting images, which have earned it a place in my permanent 
+; formula file.
+; 
+; Probably half the formulas in my collection were failures when I 
+; first tried them.  But success can sometimes come from failure, 
+; and unless a formula draws nothing but a blank screen, I almost 
+; never give up on it until I have tried a wide variety of 
+; parameters.  My current effort to draw all the oblique and skew 
+; planes in the julibrot figure is producing an unusually rich 
+; variety of formulas and images.
+; 
+; For tomorrow's fractal, I'm going to wing it.  Maybe I'll post 
+; another of my lucky accident fractals; maybe one of my older 
+; gems.  But whatever it turns out to be, it will be interesting.
+; 
+; Today's image has been solemnly posted to Paul's web site at:
+; 
+;         <>
+; 
+; for the convenience of those who can't tie up their machines.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+prophet { ; 22 seconds at 200mhz, 640x480
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=Test1XY passes=1 center-mag=2.66454e-0\
+  15/-1.31262/0.2554581 params=0/0.5/0.5/0/-2/0
+  float=y maxiter=1000 bailout=100 inside=bof60
+  logmap=yes symmetry=yaxis periodicity=10
+  colors=00000000BFBDFFEGLGIQHKRJLSKNTMOUNQVPRXQTYSU\
+  ZTW_VX`WZaY`bZcc`fdbieclfeogfqhhtiiwjkzklzmlzmlzll\
+  zllzlmzkmzkmzzzzyyzxxywwxvvwuuvttusstrrsqqrpppoonn\
+  nlmnjlnhknfjndinchncgobfoaeo`do_coZboZaoYaoYaoX`oX\
+  `oW_oW_oV_oVZoUZoUZpTYpTYpSXpSYpRYpRXpQXpPXpOXpOXp\
+  OXpPXpPWpPWpPWpPWpPWpQWpQVpQVpQVpQVpRVpRVpRVpRUpRU\
+  pRUpSUpSUpSUpSUpSTpTTpTTpTTpTTpTTpTSpUSpUSpUSpUSpU\
+  SpVSpVRpVRpVRpVRpVRpWRpWQpWQpWQpWQpXQpXQpXQpXPpXPp\
+  XPpYPpYPpYPpYPpYOpZOpZOpZOpZOpZOpZNp_Np_Np_Np_NpZM\
+  pZMpYLpYLpYKoXKoXJoXJoWIoWIoWHoVHnVGnVGnUFnUFnUEnT\
+  EnTDmTDmSCmSCmSBmSAmR9mR7mR5mQ3mQ1mQ0mP0mP0lO0lO0k\
+  O0kN0jN0jN0iM0iM0hM0hL0gL0gL0fK0fL0eK0eJ0dI0dH0cG0\
+  bF0aE0`D0_C0ZB0YA0X80W60V40U20T00S00R00Q00P00O00N0\
+  0M00L00K00J00I00H00G00F00E00D00C00B00A009008007006\
+  00500400300200100000000000000000000000000000000000\
+  0000000000000000000000000 }
+
+frm:Test1XY       {
+z=real(pixel)+(p1*(imag(pixel)))+flip(real(p2)),
+c=imag(pixel)+(p1*(real(pixel)))+flip(imag(p2)):
+z=z^p3+c,
+|z| <= 16 }
+
+; END PARAMETER FILE===========================================
+; 

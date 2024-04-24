@@ -1,0 +1,77 @@
+;     Date: Mon, 13 Oct 2003 09:56:20 EDT
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 17-02-99 (A Little Lotus)
+;       Id: <1d5.124dd042.2cbc0904@aol.com>
+; ---------
+; 
+; FOTD February 17, 1999, (A Little Lotus)
+; 
+; Fractal visionaries:
+; 
+; It was a bright and sunny day here at the Fractal Place -- 
+; unusually warm for winter, but pleasant nonetheless.  The 
+; temperature of 64F 18C was perfect for hunting fractals, and as 
+; you might expect, I hunted.
+; 
+; Yesterday's FOTD was a bit disappointing, so I decided to post 
+; an extra impressive fractal as today's FOTD.  The workhorse 
+; MandelbrotMix4 formula once again did its job when I needed it, 
+; turning up today's lotus-like picture after only 15 minutes of 
+; searching.  The scene I stumbled upon resembles an unfolding 
+; lotus blossom, so I named it "A Little Lotus".  The parameter 
+; file runs slow, but as always, the GIF file of the image has 
+; been posted to:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Now, I must make a confession.  I hate to disappoint my 
+; philosophy lovers, but I've got no words of wisdom today.  I've 
+; been irritable all day from a job that went sour, and it's hard 
+; to philosophize when you're in a bad mood.
+; 
+; Tomorrow is another day, however, and it will bring another 
+; fractal.  It might even bring some babble, so check then to see. 
+; Until next time, take care, and don't stare too long at any one 
+; fractal.  They do strange things if they're stared at too 
+; intensely for too long a time.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE============================
+
+A_Little_Lotus { ; 21 min on a P200 SF5
+  reset=1960 type=formula formulafile=critical.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.43928832160053900/+0.04139571017709617\
+  /1.414159e+010 params=100/0.9/101/-1.1/-0.985/100
+  float=y maxiter=12000 bailout=25
+  inside=0 logmap=361 symmetry=xaxis periodicity=12
+  colors=000jT0jT0iT0gT0fT0dT0cT0aT0`T0_T0YT0XT0TT0Q\
+  T0ST0QT0PT0QT0ST0QT0TT0SV0SV0VV0TX0TX0VX0VX0TY0XY0\
+  VY0VV0YV0YT0YS0_S0_Q0_O0cP0cO0dO0dM0dL0dJ0gJ0gI0gG\
+  0iG0iF0iD0mF0mC0mA0oC3oA3o93rA7r97r77u70r77o69m6Dm\
+  6Gi6Mg1Og1Td1Yc1``1dc3mc1rc3yd4zc4zc6zd7zf9zgCziFz\
+  lGzmIzoLzpMzrPzsQzuTzuVyxYyx_xycxzfxzfxycuxasu_ru_\
+  rrXooVmoTmmTmiPiiPiiMigMidJgdJgcIg`Ig`Fg_FdXCdXCdX\
+  9dT9cQ7cQ7cP4cL4_J1_G1YD0XC0VAiu0ez0az0Yz0Ux0Qr0Mm\
+  0Ig0Ec0Aa0E_0Ia0Mc0Qe1Tg1Wi4Yk4Zm9_o9aqCcmCdmDdoDf\
+  oGgrGirJjuJluMmxMoxPpyPryTrzTuzVvzXxzYyz_yz`zz`zzd\
+  zzdzzgzzgzzizzjzzmzzmzzpzzpzzuzzuzzxzzxzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==============================

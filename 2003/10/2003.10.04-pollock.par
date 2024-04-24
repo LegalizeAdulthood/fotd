@@ -1,0 +1,69 @@
+;     Date: Sat, 04 Oct 2003 08:56:11 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-09-97 (Pollock)
+;       Id: <1.5.4.16.20031004085702.2aa7700a@pop.mindspring.com>
+; ---------
+; 
+; F.O.T.D., September 28, 1997 (Pollock)
+; 
+; Fractal visionaries:
+; 
+; Today's prize-winner fractal is named in honor of that not quite 
+; so famous American abstract artist, J. Pollock.  The resemblance 
+; to the paint drippings which made him almost famous is apparent.
+; 
+; I achieved such an effect by taking a nondescript Rectangular 
+; plane fractal and redoing it with the inside fill set to epsilon 
+; cross.  I'm not sure how this option achieves its effects.  I 
+; think it colors the image according to whether the points' 
+; orbits come closest to the real or imag axis.
+; 
+; Until recently I had never used this option, considering such a 
+; fancy fill method artificial, but I have now had second thoughts 
+; about fractals.  There is no such thing as a "natural" or "pure" 
+; fractal other than the bare formula.  And since a natural frac-
+; tal doesn't exist, it makes no sense to try to maintain fractal 
+; purity.  And since I no longer must try to keep my fractals 
+; pure, I will be able to use the entire range of Fractint's 
+; coloring options without compunction.
+; 
+; For best effect, today's fractal should be drawn at a minimum 
+; resolution of 1024x768, to prevent the streaks of paint from 
+; breaking up.  The finished image is available at:
+; 
+;         http://home.att.net/~Paul.N.Lee/FotD/FotD.html
+; 
+; Until tomorrow then, may your fractals be infinitely beautiful.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=============================================
+
+pollock { ; 17 seconds on a P200--SF5
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=Rectangular passes=1 center-mag=-7.\
+  77156e-016/-2.05391e-015/1.369962/0.6701
+  params=0.42/0.33 float=y maxiter=500 bailout=100
+  inside=epsiloncross logmap=yes
+  symmetry=origin periodicity=10
+  colors=000Wgq00ZTal<4>LN_000HHVGETEBQzsfz0dD8O\
+  <6>ObZm``db_Xd_KhZ<6>q`dg9z<3>rVhu_dve_vjWgEJnRM\
+  ucPvoSenU3yL<9>gYkHRiOSjYFK<12>BQiGBN<4>9Up8Yv4r\
+  N5l`6fn7`zHdvRhqQ_A`np<5>`hd`gb`fa`e`<12>`ZTUZE\
+  <8>mZugrnkhtklzmgznbz<2>rQusLsv8y<7>nd_Dyz<9>Spf\
+  <9>OfiOeiPbe<2>NgqMhuNmzMkz<5>LaoL`mLZj<5>KPZCQW\
+  <10>XKYTDl<6>aQNcOH<12>Xa`XbaWed<4>UrqBkzFmz<4>Y\
+  vraxpgzqfzp<3>bwoavnatn<4>XolZrm<7>Tbl`pyZmvXjs }
+
+frm:Rectangular {; Jim Muth
+z=flip(real(pixel))+real(p1),
+c=flip(imag(pixel))+imag(p1):
+z=sqr(z)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE===============================================
+; 

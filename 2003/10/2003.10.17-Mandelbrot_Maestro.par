@@ -1,0 +1,75 @@
+;     Date: Fri, 17 Oct 2003 10:10:00 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-10-99 (Mandelbrot Maestro)
+;       Id: <1.5.4.16.20031017101101.2b17d6fc@pop.mindspring.com>
+; ---------
+; 
+; CLASSIC FOTD October 10, 1998 (Mandelbrot Maestro)
+; 
+; Fractal visionaries:
+; 
+; It was cloudy today here in fractal land, with a few light 
+; showers in the evening.  The high temperature of 68F 20C was 
+; perfect for exploring a hyperfractal, which I did with my 
+; Mandel_4-D formula.
+; 
+; Every fractal explorer knows that when the starting point of Z 
+; is perturbed, the features of the resulting image are distorted. 
+; But when the fractal is a four-dimensional Mandelbrot set, the 
+; distortion can be downright grotesque, as today's image shows.
+; 
+; The mis-shapen object in today's picture is the prominent midget 
+; on the negative tail of the 4-D hyper-M-set, viewed in a remote 
+; perturbed plane.  I have named the picture "Mandelbrot Maestro" 
+; because that phrase popped into my head as I studied the image. 
+; I can't begin to explain why the image appears as it does.  Nor 
+; can I explain exactly what the formula does.
+; 
+; At times, the fractals drawn by this formula don't make sense, 
+; leading me to suspect that some of the images are artifacts.  
+; I'll need to do quite a bit of testing before I can add comment 
+; lines -- something that I have resolved to start doing with all 
+; my formulas.  (Nothing is more annoying than having a formula 
+; and not knowing how to make it work.)
+; 
+; The GIF file of today's quick image has been posted to:
+; 
+;         http://home.att.net/~Paul.N.Lee/FotD/FotD.html
+; 
+; Tomorrow . . . who knows?  I'll be here again with another 
+; fractal -- that's for sure, but as to what type of fractal it 
+; will be -- I won't know until I actually see it.  Even then I 
+; may not know.  So until then, take care, and didn't someone 
+; once claim that the fractals of Autumn are the best of the 
+; entire year?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE============================
+
+Mandelbrot_Maestro { ; 25 seconds on a P200 at SF5
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=Mandel_4-D center-mag=-1.75909/0.0021\
+  9158/69.70197 params=0/0/0/1.137/0.001/0 float=y
+  maxiter=1200 inside=0 logmap=yes periodicity=0
+  colors=000KYN<8>1u43n7029<3>06H47H<4>TEOYAPbGQg7R\
+  lISmCTnPUoIVpVWpOXq`YrPZsc_oNzsb_lHgkaekJckZakL_k\
+  WYkNXkYVkPTkVRkRP<3>kVIkWGlYH<12>hD0<7>4p0<13>l7y\
+  <3>DRq0_r<7>VA_Z7Yb1X<13>R_MRaMPcO<6>EpWHxa<2>BhZ\
+  4f`<12>u9N<2>lTCi_9dd3<12>sg_<15>a38<10>SgUNoMJwF\
+  <14>ZaV_`W`ZZ<9>bPx<3>lxe<6>ZrmYrnWpl<9>L``<2>GlZ\
+  KcQNVIfJHy7HdALKDOVLY<3>NWQ }
+
+frm:Mandel_4-D {; 4-D Mandelbrot, 8-D Julibrot
+a=(p1), b=(0,0), d=p2+2:
+f=sqr(a)-sqr(b)+pixel
+b=d*a*b+p3
+a=f
+|a|+|b| <16 }
+
+; END PARAMETER FILE==============================
+; 
