@@ -1,0 +1,73 @@
+;     Date: Sun, 10 Apr 2005 11:28:46 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-04-05 (Iterative Pancake [5])
+;       Id: <1.5.4.16.20050410112944.2aa7b28c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 10, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal looks like four elephants.  It also looks like 
+; a fancy pancake, so I named it "Iterative Pancake".  The image 
+; is actually a scene in the fractal that results when the tiniest 
+; bit of Z^(-1.5) is subtracted from 2 parts of Z^(0.9) and the 
+; difference is added to (1/C).
+; 
+; It's only an average image, which is worth no more than a rating 
+; of an average 5.  The render time of 4-1/2 minutes is thankfully 
+; short.  And as always, the finished GIF image is available on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Saturday was a totally perfect spring day here at Fractal Cen-
+; tral, filled with nothing but sun, gentle breezes, and a high 
+; temperature of 66F 18C, which made the fractal cats as happy as 
+; aged cats can be.  Since today is starting the same, I expect 
+; a repeat.  For me, the work is light and the fractals keep 
+; coming.  The next one will arrive in 24 hours.  Until then, 
+; take care, and be of stout heart, but not too stout.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Iterative_Pancake { ; time=0:04:35.94--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-20.47073614755954000/+44.5836361173614\
+  9000/7963483/1/-90/3.88578058618804789e-016
+  params=2/0.9/-3e-006/-1.5/0/0 float=y maxiter=1000
+  inside=0 logmap=73 periodicity=10
+  colors=0000000000000000000000000000000000000000000\
+  00000000000zy5ut4qp4lk3hg3cb3_Z2XV2UQ2UM1VH1YD1`80\
+  c40o8wm7wg4wg5wh5wh5wh6rh6mh6ch6Zh9UhCUhEVhHVhJWhM\
+  WhOXhRXhTYhWYhYYdZ_`_aY`cUaeQbgNciJdkFemCfoIbmO_lU\
+  Xk_UieRhkOgqLffO_XQTNTMDVF3X9Ekxa8w`7s_7oZ6kY6gY5c\
+  X5_W4WV4TU3PU3LT2HS2DR19Q15Q12O9FMGRKOcJVoXLkjBgfE\
+  cbG`ZIYVLVSNSOPPKSMGUJCWG9YD7RA5K83D5162UrwTpuSosF\
+  aWEaWD`WC_XB_XAZX9ZXA`XAbXBcXBeXCfXChXCiXFhZHh_Jg`\
+  LgaNfbPfcRedTeeVefXdgZdh`cibckdblfbmhanjaolapn`qp`\
+  rr_st_tvZuxZvzZw9dIAaHAZHAXHAUHASHAPHAMHAKHAHHAFHA\
+  CHAAHBKLBUPBcTBmXCkWDjVEiVFhUGgTHfTIdSIcRJbRKaQL`P\
+  M_PNYOOXNPWNPVMQULRTLSSKTQJUPJVOIWNHWMHXLGYJFZIF_H\
+  E`GDaFDbECbDCaFDaGE`HF`JG_KH_LIZMJZOKYPLYQMXSNXTOW\
+  UPWVQVXRVYSUZTU`UTaVTbWScXSeYRfZRg_Qi`QjaPkbPlbOja\
+  Ni`Nh_MgZMfYLeXKdWKbVJaUJ`TI_TIZSHYRGXQGVPFUOFTNES\
+  MDRLDQKCPJCNJBMIBLHAKG9JF }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

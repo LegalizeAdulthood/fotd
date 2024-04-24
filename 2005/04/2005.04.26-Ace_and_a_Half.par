@@ -1,0 +1,96 @@
+;     Date: Tue, 26 Apr 2005 11:49:07 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-04-05 (Ace and a Half [5])
+;       Id: <1.5.4.16.20050426115016.29bf0018@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 26, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal takes us into the wilderness created by the 
+; formula Z^(1.5)+C, where we investigate a valley with a tiny 
+; midget in it.  The name "Ace and a Half" refers to the exponent 
+; of Z.  All in all it's an average fractal, perhaps with a bit 
+; more delicate feathery detail than usual, but still worth no 
+; more than a rating of 5.  The render time of over 24 minutes is 
+; a bit excessive for such an average image, so the better choice 
+; may be to download the completed GIF image from the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; My philosophical thoughts continue, but are unorganized.  Right 
+; now, I am wondering exactly what is meant by statements such as 
+; 'the present state of the universe' or 'at the present time, the 
+; universe is 15-billion years old'.  Relativity shows that there 
+; is no such thing as a present moment of time that exists through-
+; out the universe, since everything in it is in relative motion.  
+; Are different parts of the universe a different age even though 
+; they all supposedly started at the same time in the same 'big 
+; bang' event?  Are we seeing the 'twin paradox' in action?  Per-
+; haps the whole concept of a universe is a fantasy we invented to 
+; squeeze things down to a level that is somewhat intuitive.  I'll 
+; do some pondering on this situation in the days to come.
+; 
+; The weather here at fractal headquarters on Monday was partly 
+; cloudy, but the high temperature of 63F 17C was a bit chilly and 
+; the brisk wind increased the chill.  Seeing these conditions, 
+; the intrepid cat duo ventured bravely forth into the yard.  They 
+; met with little excitement there, and were quite satisfied when 
+; they returned to civilization an hour later.  My day was satis-
+; factorily busy, with the philosophy progressing slowly.
+; 
+; Today is starting sunny, but clouds and rain are due by evening.  
+; Hopefully, the cats will finish their adventure early.  The next 
+; FOTD is due in 24 hours, and the chance of it appearing at that 
+; time is almost certain.  Until then, take care, and what time 
+; is it?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ace_and_a_Half { ; time=0:24:37.67--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.99063222857496640/+0.778814550180425\
+  30/4624.491 params=1.5/0/0/0 float=y maxiter=10000
+  inside=0 logmap=366 periodicity=0
+  colors=000UvKUvJTwIRxJTwIVtIXqIZnI`kIbhIdeIfbIg_Ii\
+  XIkUImRIoOIqLIsIIuFIvCIuFIuHIuJItMItOItQIsTIsVIsXI\
+  sZIraIrcIreIqhIqjIqlIpmFqnIroLspOtqRurUvsXwt_xubyv\
+  errjysgxtXwqMxqAvoBumBtlCsjCriCqgDpeDodDnbEmaEl_Ek\
+  YFjXFiVGhUGgSGfQHePHdNHcMIbKIaII`HJ_FJZEJ_FM`GPaHR\
+  aIUbJXcKZcLadMceNfeOifPkgQnfQqgRpgRpgSpgSpgTpgTpgU\
+  pgUogVogVogVogWogWogXogXogYngYngZngZng_ng_ng_ng`ng\
+  bmgdmgfmghmgjmglmgmminmkokmniongqmesmctmaul_vlYwlZ\
+  xk_yk`zjayjbxjbwicuidtieshfrhgqhgpghoginfjmfklflke\
+  mjemienhdogdpfcqecrdcrcbsbbtabu`av_aw`cy_awZ`vY_uX\
+  ZtWYrVXqUWpTVoSUmRTlQSkPRjOQhNPgNOfMNeLMcKLbJKaIJ`\
+  HIZGHYFGXEFWDEUCDTBCSABRBAQCBRDBSECTFCUGCVHDWIDXJD\
+  YKEZLE_MF`NFaOFbPGbQGcRGdSHeTHfUIgVIhWIiXJjYJkZJl_\
+  Km`KnaLnbLocLpdMqeMrgMsiNtkNumOvoOwqOxsPyuPzwPzxRz\
+  ySzzUzzVzzWzzYzzZzz_zzazzbzzdzzczzczzczzbzzbzzbzza\
+  zzazzazz`zz`zz`zz_zztzzuz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,88 @@
+;     Date: Fri, 29 Apr 2005 11:42:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-04-05 (A Quarter of Six [6])
+;       Id: <1.5.4.16.20050429114353.29ff5b4c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 29, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a midget in the Z^(1.5)+C fractal.  As is 
+; true with all fractals created with fractional powers of Z, the 
+; features are discontinuous.  This discontinuity prevents any 
+; well-defined pattern from emerging around the midgets in the 
+; parent fractal, but there are still less-obvious differences to 
+; be noticed.
+; 
+; Today's image is one of the more striking ones I have found to 
+; date in the fractals with exponents between 1 and 2.  I named it 
+; "A Quarter of Six", which is not the time of day, but refers to 
+; the fact that the exponent of Z, which is 1.5, is one-quarter of 
+; 6.  The fact that the rating is also a 6 and the render time is 
+; 6 minutes is purely coincidental.
+; 
+; For the convenience of those who do not render, the finished 
+; image may be found on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With lots of sun and a high temperature of 66F 19C, Thursday was 
+; mild enough here at Fractal Central.  But the wind was quite 
+; gusty, and fractal cats do not like high winds, which cover the 
+; sound of approaching danger, so their outdoor time was limited 
+; to under one hour.  Though they did not demand a tuna treat in 
+; the evening, I rewarded them with a treat anyway.  This morning 
+; is starting cloudy and chilly, with showers forecast.  It could 
+; be another less-than-perfect day for the duo.  For me it looks 
+; like a rather busy day coming up.  The next FOTD will appear in 
+; 24 hours.  Until then, take care, and know the meaning of things.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Quarter_of_Six { ; time=0:06:26.73--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+1.04687270978214200/+0.627331687174816\
+  60/8625017/1/-37.4999999844678555/-1.3790757487364\
+  1359e-008 params=1.5/0/0/0 float=y maxiter=1200
+  inside=0 logmap=167 periodicity=10
+  colors=000PDYQGVSJTUMRVPOXRMYUJ_XHa_FbbCdeAeg8eg8d\
+  f8de8ce8cd8bc8ab8ab8`a7``7__7__7ZZ7ZY7YY7XX7X5lV6i\
+  U7gS8dR9aPAZOBXMCULDRJEOIFMGGJFHGEIEFGCGEAHC9IA7J8\
+  6K64L43M21N00O52P93PE4QI6QM7RR8RV9SZBScCTgDTkE_ZXf\
+  NodLicJdbH_aFV`EQ_CLZAGY8BX76YDB_IF`OJbTOdZSfcWhj`\
+  jqdlvhmzlnuknqknnjnjjnfincin_inWhoThpPgqLgrIfsEftB\
+  fs8cr5`r2YoIPmYHkl9heMe_YbUi_OuZQpYSkXUfWWaVYXU_ST\
+  aNScIReDRf8SmDTtIUzNYpXaffZebXd_UdXScUPbQNbNKaKIaH\
+  MegOcgQbgSagU`gV_gXZgZYg`XgbWgcVgeUggTgiSgjRgfPdcO\
+  b_N`XLZTKXQJVMHSJGQFFOCDM8CK5BI99PC7WF5aI3hL2nIBkF\
+  KhCSf9`c6i`3qZ6n`9kbCidFffIchLajOZkRWmUUoXRq_OsbMu\
+  eJwgHxfKweNvdQucTubWtaZsaas`dr_gqZjqYmpXpoXroWolWm\
+  jWkhWifVgcVeaVc_VaYU_VUYTUWRUUPUSNVVRVXVWZYW`aXceX\
+  ehYglYioReiKbdEZZ7WU1TP3WN4YM6_L7bK8dJAfIBhHCkFEmE\
+  FoDGrCItBJvAKx9LyBMzDNzFOzGPzIQzKRzMRzNSzPTzRUzTVz\
+  UWzWXzYXzZUz_Rz`OzaLzbNz_ }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

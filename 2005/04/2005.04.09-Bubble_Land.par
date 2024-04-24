@@ -1,0 +1,64 @@
+;     Date: Sat, 09 Apr 2005 10:24:48 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-04-05 (Bubble Land [5])
+;       Id: <1.5.4.16.20050409102545.29d7e912@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 09, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the fractal that results when 
+; negative portions of Z^(-1.5) and Z^(-6.55) are combined and 
+; added to (1/C).  I named it "Bubble Land" after the bubbling 
+; effect.  The rating is an average 5.  The completed GIF image 
+; is available at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The rain ended early and the cats had a good day Friday.  Today 
+; is starting sunny and only slightly cool.  The work is light; 
+; the fractal is yet to be determined.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Bubble_Land { ; time=0:03:07.30--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+3.33209734105120600/-4.142620215531334\
+  00/1362.616/1/-70/-8.15455342140225525e-012
+  params=-1/-1.5/-0.25/-6.55/0/0 float=y maxiter=1000
+  inside=0 logmap=47 periodicity=10
+  colors=00000064DDAJKGPRMVXS`cYfjcljdrljnhjkdpg`cdW\
+  icSTbOCbFSuUTggTVrgJzVIJJH27G4GJ5OL6WO8dQ9lTAqVCnU\
+  DjTFgTGdSHaRJZRKVQmrzmlzcjzRkzNnaJkVFdPBdJGgMLiOQk\
+  QVmT_oVdqXem_eiafedfafgYigUkgQm`NiVKfOHbIE_CCXJLZQ\
+  T_W`abhbipdoxepp_qhVr`PsTKnUMiUOdVQ_VSVWUQWWMWYQUW\
+  UTUYSS`RRZUSXQWVMZTIaRFePBhN7kL4nMCfNK_ORSPZLQfDQm\
+  6otviirc_oYPkSFhUHeWJbYL_ZNY`PVbRScSQXPPRNPKLPEJP8\
+  ZM3nJ7lKBjLFhMJfNNdORbPV`QZZRbXSfVTjTUnRVrQVoPYlO`\
+  jNcgMfeMibLl_KoYJrVIuTIxXJv`JudKshKrlLppLonMnlMmkM\
+  liMkhMjfNieNhcNhaNg`NfZOeYOdWOcVObTOaSOaRP`RQ`QQ_Q\
+  R_PS_PSZOTZOTYNUYNVYMVXMWXMWXNXWOXWOXVPXVPYUQYUQYT\
+  RYTRYTTWVVVWXUXZSZ_R_aQ`cPaeNcgMdhLejJglIhnHioGjkH\
+  igHhcIg`IfXJeTJdQJdMKcIKbELaBL`7M_3MZ0MZCWSOeM_nGb\
+  mFdmEflDhlCjlBlkAnk9pj8rj7tj6gdHW_SKUb8PlDNhHLdMJ`\
+  QHXUFUSIVRKWPMXOOXMQYLTZJVZIX_GZ`F``DcaCebAgb9ic7k\
+  d6mdBk`FiYKhUOfRTdNXcKric }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
