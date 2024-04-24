@@ -1,0 +1,113 @@
+;     Date: Mon, 04 Apr 2011 22:29:12 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-04-11 (Extra Redundancy [7])
+;       Id: <1.5.4.16.20110404222911.145fcc38@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 05, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The skewed minibrot in today's image lies in the Z^(2.1)+C 
+; Mandeloid as it appears PI levels up the complex logarithmic 
+; hyperladder when no function is applied.  This parent Mandeloid 
+; closely resembles the minibrot at the center of today's image, 
+; though it is rotated so that the main period-2 bud lies on the 
+; north side of the main bay.  This bud has small valleys on its 
+; east and west sides.  Today's image lies in the western valley.
+; 
+; The name "Extra Redundancy" is a play on words.  Since the word 
+; 'redundant' implies an overabundance, the word 'extra' is itself 
+; redundant.  Today's exponent of 2.1 is also redundant, since it 
+; is more than enough to draw the classic Mandelbrot set, which, 
+; at least IMO, is the world's best fractal.
+; 
+; Today's image rates a 7.  The rating of a 7 is getting to be all 
+; too routine, so I might recalibrate the rating scale so that a 
+; present rating of 7 would become a new rating of a 5.  Then, a 
+; present 6 would equal a new 4, and so on.
+; 
+; Today's image calculates in 5-1/2 minutes, somewhat slower than 
+; ideal, but still fast enough to prevent a big disappointment.  
+; Those who wish to view without calculating may do so by hopping 
+; down to the currently active FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; and viewing the finished image there.
+; 
+; The original web site is still available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; My own FOTD web site is still in the building, checking and 
+; adjusting stage, but I have a feeling that I may post the web 
+; address in tomorrow's FOTD.
+; 
+; Lots of clouds spoiled Monday here at Fractal Central, though 
+; the temperature reached a mild 63F 17C.  The fractal cats spent 
+; several hours waiting for the sun to appear.  Finally, when it 
+; did not, they made sympathetic faces and asked for extra treats.
+; 
+; In the human department, the day was average busy, the web site 
+; made progress, and nothing unexpected turned up.  If all goes 
+; well, tomorrow could be the same.  The next FOTD fractal will 
+; probably be posted in 24 hours.  Until then, take care, and I 
+; read in the morning paper that some scientists are seriously 
+; considering intentionally altering the earth's atmosphere in an 
+; attempt to slow 'man-made' global warming.  If they actually try 
+; to do so, we will know who to blame for any subsequent disasters 
+; due to severe weather.  (Lawyers start advertising now.)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Extra_Redundancy { ; time=0:05:32.79-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.35834972189/+0.92985649615/393902/1/\
+  137.5/0 params=2.1/0/3.14159265358979/0 float=y
+  maxiter=15000 inside=0 logmap=240 periodicity=6
+  colors=000KkZLlYMnXNoW`_XnKXlIVkGTjERiCPhANg9LcDM_\
+  HMWLMSPMPSMOULOWKOYKO_JNaINcINeHNgGNiGMkFMmEMoEMqD\
+  MrDSlGYfIbaKhWMmROsLQxGS0vr5unAukEuhJteOtaStZXsWas\
+  TesQfqUfoXfm_fkbfiffgifelfcohfijhcljZnlTooNqqIssCu\
+  uAvwKwwUxxcyymzuwxrrvmmthhrccpZZmUZlPZlK`jHbiFdhJf\
+  fOheTjdXlbanafp`jrZotYtvXxxWurVsmUpgTnbSkXRiSQfMPd\
+  HOaBN_6NY1QX4SW7VW9XVC_UFaUHdTKfTMiSPkRSnRUpQXsP_u\
+  PaxOdzOfwMgtLhrJioIjLBcNBhQBmSBrVCnXDjZEf`EbbFZdGV\
+  fHRhHNbGKXGIRFFLFDFEA9E83E64H84JA5LC5ND6PF6RH7TJ7V\
+  K8XM8ZO9`Q9bRCcUFcXHdZKdaMdcPefRehUfkWfmZfp`grcgue\
+  gwddvdavcZvcXvcUvbRvbOvbMvaJvaGvaEv_HvYKvWNvUQvUTv\
+  UVvUYvM`vUcvcfvchvckvcnvcqvctvcvvmtwmrxmqymozmmzml\
+  zrjzzizzfzzdzzbzz`zzZzzXzzYzzZzm_zmazmczmezmgzmizm\
+  kzmmzmozmqzmszmuzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwzmwz\
+  mwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzw\
+  zzwzzwzzwzzwzzwzzwzzwzzwz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

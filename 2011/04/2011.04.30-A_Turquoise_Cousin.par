@@ -1,0 +1,110 @@
+;     Date: Sat, 30 Apr 2011 23:19:49 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-05-11 (A Turquoise Cousin [8.5])
+;       Id: <1.5.4.16.20110430231953.1447c6b6@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 01, 2011 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "A Turquoise Cousin".  The reason for the 
+; word 'turquoise' is obvious; the reason for 'cousin' is less 
+; apparent.  Actually, the minibrot at the center is not a pure 
+; quadratic, only a close cousin.
+; 
+; The parent fractal was created by the formula Z^(1.98)+C calcula-
+; ted 1.98 levels up the hyper-ladder, with no function applied.  
+; This parent closely resembles a Mandelbrot set that has been 
+; rotated so that its main bud faces southeast, a position that 
+; puts its large south bud on the northeast side of the main bay.  
+; Today's scene lies in a small blunt valley jutting into this bud.
+; 
+; The rating of an 8.5 includes a half point bonus for the cool 
+; coloring.  At least the colors look pretty cool to me, almost 
+; like a mint.
+; 
+; The calculation time of just over 1-1/2 minutes is very near 
+; FOTD average, and is a bargain for an image rating an 8.5.  But 
+; setting up this message as a parameter file is still a minor 
+; chore, so for ultimate convenience the finished image may be 
+; viewed with total satisfaction on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and enjoyed in hi-def at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Paul's classic FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Friday here at Fractal Central began with a light shower, 
+; followed by clouds and occasional sprinkles the rest of the day. 
+; A brisk wind and temperature of 57F 14C made it feel quite 
+; chilly, especially after the summer-like warmth of the past 
+; several days.  The fractal cats remained well under control most 
+; all day, though Nicholas worried us a few times for an extra 
+; treat of cheese.  Saturday brought more sun, a temperature of 
+; 68F 20C and contented cats.
+; 
+; While all this was happening, the humans' days were acceptable.  
+; The next FOTD is scheduled to be posted in 24 hours.  As always 
+; however, I make no guarantee that it will actually be ready on 
+; time.  Until whenever, take care, and how can we determine the 
+; secrets of the universe when we don't even know what we are or 
+; how we came to be here?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Turquoise_Cousin { ; time=0:01:35.13-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.5430329672717207/+0.6525570342040315\
+  /2.2935e+010/1/-52.5/0 params=1.98/0/1.98/0 float=y
+  maxiter=1500 inside=0 logmap=132
+  colors=0000HF2KK4MN6PQ8UUAZZCccEhhGmmIrrKvvjzzzzzz\
+  zzmmmKKKdvtBdf8WY6OP4GH288X6DG36z4cr3Zj3Ub2PV2K3GI\
+  OaEgwBakAX_9SP8ND7I26M69Q9BUDDYGFaKHeNJhQLgZPggSgp\
+  WgyZ_nTTdNMVH970EKB7A5Yj5Tc4OX3JQ2EK29D1460kbmcWdW\
+  QXOJPGDG868GtBCh89Y66M43B2dmmZeeTZZNSSHLLBEE577SKS\
+  MGMGCGB8B545SU_IKO9AC9Gz7Dq6Bh59_36R24I129hSVUIKF9\
+  AvaanXXgSS_NNTJJMEEE997445Pi3IY2CN16ByPIlKE`FAOA7C\
+  53xlpUOQSvsETSRESD7EsUplQieMbZIXSFQLBJE7D736Bc49Y3\
+  7S26M24H13B1150gj4bk7Xd6RY5MR4GK3BD2561wlzkbm_T`OJ\
+  PC9C9es7Xg5PX3GM18B1cfTYnOSeJMYEHP9BH458ba4YX3TS3O\
+  N2JJ2EE19914405Jk4Ge3E_3BU29O17I14C026l5QvmYTPH28j\
+  16c15X14Q03K02D0163YP2RK1KF1DA065iTXYLONEGB78UGlKA\
+  WA5GQJPD9CEr49s24t1Pu8Kv6Gw5Cx48z24z1OzeCzLQzYKzRF\
+  zKAzDzz6zzvzzbzzJzzezzZzzSzzLzzEzz7zzWzzGzz5zz4zz3\
+  zz3zz2zz1zz1zz0zzXzzOzzGzz8zzDzzBzz9zz8zz6zz4zz3zz\
+  1zz7zz4zz2zzrzzhzz_zzRzzI }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

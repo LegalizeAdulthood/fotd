@@ -1,0 +1,119 @@
+;     Date: Wed, 13 Apr 2011 22:12:15 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-04-11 (Fireworks Explosion [6])
+;       Id: <1.5.4.16.20110413221217.139f2520@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- April 14, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image resembles an explosion in a fireworks factory.  At 
+; least, that's what it reminds me of.  I named it "Fireworks 
+; Explosion" to make things perfectly clear.
+; 
+; Actually, the image is part of a Julia set of the (-Z)^2.003+C 
+; Mandeloid.  The corresponding point in the Mandeloid lies in the 
+; East Valley of the split-apart large minibrot on the fractalized 
+; stem of the parent.  The image is a close relative of the 
+; 'mysterious rectangle' fractal, but the sign of iterated Z has 
+; been switched.
+; 
+; The rating of a 6 might have been higher, but a certain amount 
+; of muddiness spoils the colors and keeps a cap on things.
+; 
+; To view the image, run the included parameter file and watch the 
+; action.
+; 
+; To avoid running the parameter file, take a trip to my new FOTD 
+; web site at:
+; 
+; <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; where the finished image is posted.  The site is still in its 
+; baby stages, but will grow rapidly as we continue working on it.
+; 
+; The image may also be seen on Hal's web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; where he is posting hi-def renderings of the FOTD images.
+; 
+; The original FOTD web site is at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; but I haven't checked in some time to see how it is doing.
+; 
+; Wednesday began with a chilly rain here at Fractal Central, 
+; which continued all morning.  And then, occasional showers 
+; spoiled the afternoon.  The sky showed no signs of clearing 
+; until sunset, but by then the day was over.  The temperature of 
+; 48F +9C added to the fractal cats' ill tempers.  Only an extra 
+; treat of tuna and cheddar kept trouble from breaking out among 
+; them.
+; 
+; The humans had a typically busy day.  But this was not so bad.  
+; After all, if we had not been busy, we might have had time to 
+; watch one of the TV news channels and hear that the world is 
+; about to end.  (Come to think of it, the end of the world would 
+; not be so bad either.)  Assuming that the world does not end, 
+; the next FOTD will be posted in 24 hours.  Until then, take 
+; care, and pass the time with fractals while waiting for the sim-
+; mering Yellowstone volcano to erupt.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FireworksExplosion { ; time=0:00:40.80-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot5 center-mag=-0.000139571\
+  /0.000418933/29.9 params=90/90/90/90/-1.74713/0/0/\
+  -0.0945085/2.003/0 float=y maxiter=500 inside=255
+  logmap=yes symmetry=none periodicity=6
+  colors=0007A58A59A5AA5BA5CA5DA5EA5FA5FA5FA5FA5FA5F\
+  A6FA8000110220330440552664776888A8AC8BE8CG9CI9BN9B\
+  S9BWAB_AAcA9gA8kA7mA6oA5qA4sA3uA2wA1yB0xC0xD0xD0xE\
+  0xE2xF4xF6xG8xGAwHCwHEwIGwIIwJKwJMwKOwKOwLPwLPuQOt\
+  UNrYNqbMofMnjLloLksKjwKksIloGlkEmgCmcBn_9nW7oS5oP4\
+  mO5kO6iO7gO7eO8cO9aOA_OAYOBWOCVOCTNDRNEPNFNNFLNGJN\
+  HHNIFNIDNJBNKANKCLHEJFFIDHGBJE9KD7MB5O93P81S94UA6W\
+  A8ZBA`CCbCFeDHgEJiELlFNnGQpGSsHUuIWwIYqLZkO_eQ__T`\
+  UV`OYaI_aLabNcbPecSgcUidWkdZme`oebqecpdcoccncdnbdm\
+  bdlaekaek`ej`fi_fh_fhZggZgfYgeYheXhdXhcWhcWhcXidXi\
+  dYjdZjd_zz0zzckeapkfleah`XdVS_PORJJNEEI89J9CMAETCH\
+  UDKWEMXFPZGR_HUaJXbKZdLaeMdhKhgMfePedRccTbaV``YZ__\
+  YYaWXcVWfTUhRTjQSlOQoNPqLQqLRqKSqKTqKTqJUqJVqJWqIX\
+  qIYqIZqI_qH`qHaqHaqGbqGcqGdqFeqFeqFdpGcoGcoGbnGbnH\
+  amH`mH`lH_lHZkHZkHYjIYjIziIWzIWhIVzIUgIUgJTfJTfJSe\
+  JRdJRdJQcJQcKPbKObKg_jzzz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

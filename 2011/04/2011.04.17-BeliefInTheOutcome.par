@@ -1,0 +1,105 @@
+;     Date: Sun, 17 Apr 2011 22:05:34 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-04-11 (Belief in the Outcome [4])
+;       Id: <1.5.4.16.20110417220541.12af2a54@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- April 18, 2011 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates a 4.  But this is on the new scale.  On the 
+; old scale it would rate a respectable 6.  The name "Belief in 
+; the Outcome" means whatever the fractal fan wishes.
+; 
+; The actual image shows a minibrot rather deep in the parent 
+; fractal that results when the formula Z^(1.75)+C is iterated 
+; just one level down the logarithmic ladder.
+; 
+; This parent fractal is a lopsided thing squashed on the X-axis, 
+; with one large mis-shaped bud on the north side and two buds on 
+; the south side.  Today's scene is located in a kind of East 
+; Valley of an out-of-place but large minibrot just inland of the 
+; northeast shore line of the main bay.
+; 
+; The calculation time of 8-1/2 minutes is admittedly more than 
+; the image is worth.  The way out of this dilemma is to view the 
+; already-calculated image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site, with all the past images, may still 
+; be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; though I would not count on it being there forever.
+; 
+; After Saturday's downpour, Sunday's scattered heavy clouds 
+; seemed fair indeed here at Fractal Central.  The temperature of 
+; 59F 15C was spoiled by a strong wind however, which made it feel 
+; quite chilly in the open.  The fractal cats chased the sun 
+; during the times it was out, and slept when the clouds moved in. 
+; The humans took it easy most all day.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and rational thinkers believe in quarks, which no one has 
+; seen, and at the same time, do not believe in ghosts, which many 
+; have seen.  I guess it's all in the mind.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+BeliefInTheOutcome { ; time=0:08:24.22-SF5 on P4-2000
+  reset=2004 type=formula formulafile=jim.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.9062916652297548/+0.3114101611961053\
+  /7.976225e+010/1/-97.5/0 params=1.75/0/-1/0 float=y
+  maxiter=5200 inside=0 logmap=632 periodicity=6
+  colors=000PGPPJHPIAPG2PZmPEcPEKPFIPThPN_PHR4BI259u\
+  jmmdffZ`_TVTNPLHIEBC706zcUkKlcHdWDXOcOGcG8c8ccEmcC\
+  zcAUc8Mc6Fc47c2LcRIUNFUKDUGAUD7UA5zm2zm5zm3zm2zm1z\
+  1HzMDzHAzD6z83z4qzIRz9xzsdzOUzIzzCzz6zzMzzJzzGzzDz\
+  zBzz8zz5zz2zzNzzezzgzzizzjzzlzzmzznzzhzzczzZzzUzzO\
+  zzRzzUzzZzzczzhzzmzzmzzrzzvzzzzzzzzzzzzzzzzzzUNHUM\
+  YULWUKUUJSUIQUHOUGMUFKT2ATp5MCLNHzKFImCmDACus96563\
+  23C5VA4R93N73J62F41B317103e_A_U8UP7OK5IF4CA2651x`Q\
+  WcPRYLMSHIMEDHA9B7453PjQLdMIZJFTGCND9H96B6353dHj6X\
+  N4QI3JD2D91640cI000027013EJXAEO79G348q3f_2SI1EzvCs\
+  nAlg9d_7YT6MM4EE3771xncUPKmaP`SIPJCC96psqkpicjaW_U\
+  OPNGEF877PmpXpWObOGQG8D88p46z35q24U23M12F1170uCWi9\
+  PY7JN4CB26gD0mB0V90z70I50C30610dcxrcR0cqNcnJceFcYB\
+  cP7cH3c8PcnKceGcYCcP8cH4c8mgw`zhPzUCzFzzyoznezdzzV\
+  zzKzzAzz6zz4zz2zz0zz0zz0zz07zz4zz2zzCzzAzz9zz7zz6z\
+  z4zz3zz1zzszzYzzTzzPzzLzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

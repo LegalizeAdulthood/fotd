@@ -1,0 +1,100 @@
+;     Date: Tue, 19 Apr 2011 22:49:23 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-04-11 (Fractal Evaporation [7])
+;       Id: <1.5.4.16.20110419224921.16c7487a@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- April 20, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA ALERT!
+; 
+; Today's image was created by a new formula, which I tweaked up 
+; Tuesday.  The formula appears at the end of this message.  
+; Delete the initial <frm:> and copy it into your favorite formula 
+; file.  The formula is the same as the original MandNewt06 except 
+; for the new p4 parameter, which adds a variable bailout capabil-
+; ity.  Increasing the value of p4 evaporates the images; decreas-
+; ing the value solidifies them.  (The exponent is negative and 
+; works in reverse.)
+; 
+; The image was calculated with a bailout value of 2*(10^-29), a 
+; value at which the background has broken up into dots but not 
+; yet totally evaporated.  Lowering the negative exponent actually 
+; increases the parameter value and causes the background dots to 
+; become more numerous.  Increasing the exponent has the opposite 
+; effect.
+; 
+; The name "Fractal Evaporation" describes the action.  The rating 
+; of a 7 would be an 8 on the old scale.  I actually think the 
+; image is pretty attractive.
+; 
+; The calculation work may be avoided by viewing the finished 
+; image on the official but unfinished FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image may be seen in hi-def at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site is still to be found at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; but it has not been updated for several months.
+; 
+; Weather misery prevailed here at Fractal Central on Tuesday, as 
+; a steady rain fell all day and the temperature hardly budged 
+; from a chilly 48F +9C.  The fractal cats spent the day doing 
+; things other than watching the rain.  The day of the humans was 
+; near normal.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and keep checking the new FOTD web site.  You 
+; never know when some outrageous stuff might be posted there.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FractalEvaporation { ; time=0:03:30.93-SF5 on P4-2000
+  reset=2004 type=formula formulafile=mandnewt.frm
+  formulaname=MandNewt06a passes=1 center-mag=-489/\
+  448/0.001246667/1/180 params=1/2/3/3/2/1/2e-029/0
+  float=y maxiter=500 inside=atan periodicity=0
+  colors=200211322334454666878999BBBDDDFFFHHHJJJLKLM\
+  MMOOOQQPRRRTTSVVVXXWZYZ___aaaccceeegfghhhiiijjjlll\
+  nnnpppqqqsssqqqpppnnnllljjjiiigggeeecccbbb```ZZZYY\
+  YWWWUUUSSSRRRPPPNNNLLLKKKIIIGGGEEEDDDBBB9997775554\
+  4422200001203404606807A09C0AE0CG0DI0FK0GM0IO0JQ0LS\
+  0MU0OW0PY0R_0Sa0Uc0Ve0Xg0Yi0_k0`m0bo0cq0es0gu0hw0j\
+  x0kz0jx0hv0gt0er0dp0bn0al0_j0Zh0Xf0Wd0Ub0Ta0R_0QY0\
+  OW0NU0LS0KQ0IO0HM0FK0EI0CG0BE09C08A068056034022000\
+  211432653874A85CA6EC7GE8IF9KHAMJBOLCQMDSOEUQFWSGYT\
+  H_VIaXJcZKe_LgaMicNkeOmfPohQqjRslSunTwpVxqWzsXxqWv\
+  pVtnUrlTpjSniRlgQjePhcOfbNd`MbZLaYK_WJYUIWSHURGSPF\
+  QNEOLDMKCKIBIGAGE9ED8CB7A9687565444322100040060080\
+  0A00C00E00G00I00K00M00O00Q00S00U00W00Y00_00a00c00e\
+  00g00i00k00m00o00q00s00u00w00x00z00x00v00t00r00p00\
+  n00l00j00h00f00d00b00a00_00Y00W00U00S00Q00O00M00K0\
+  0I00G00E00C00A00800600400 }
+
+frm:MandNewt06a {; Jim Muth
+z=c=(pixel*p1):
+a=z^3+(c-p2)*z-c
+b=p3*z^2+c-1
+z=z-1*a/b
+p4 < |a| }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
