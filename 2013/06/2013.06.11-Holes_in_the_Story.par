@@ -1,0 +1,109 @@
+;     Date: Tue, 11 Jun 2013 19:40:47 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 11-06-13 (Holes in the Story [A-6,M-6])
+;       Id: <1.5.4.16.20130611194107.2a4f9c12@earthlink.net>
+; ---------
+; 
+; FOTD -- June 11, 2013 (Rating A-6,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is filled with tiny holes -- thousands of them -- 
+; and each hole holds an entire fractal universe.  Noticing the 
+; abundance of universes, I named the image "Holes in the Story".  
+; Of course, the name has nothing to do with one of those trendy 
+; watered-down 'light' murder mysteries made for the ladies.
+; 
+; The large minibrot filling the center of the frame is under-
+; resolved.  Raising the maxiter to around 3000 would eliminate 
+; this flaw, but it would also change the coloring, which is not 
+; all that great to begin.  (I am a constant critic of my own 
+; frequently flawed work.)
+; 
+; The formula behind all the madness is totally whimsical.  For no 
+; particular reason I combined 11.1 negative parts of Z^(-1.11) 
+; with 1.11 negative parts of Z^(-11.1), and then added (1/C) on 
+; each iteration.  The resulting parent fractal is an oversized 
+; thing with a prominent 'fan' with the blade pointing east along 
+; the X-axis.  Today's scene is located on the southern edge of 
+; the fan blade.
+; 
+; The artistic and mathematical worth both rate an everyday 6.  
+; The image is not great, but those who do not check it will never 
+; know what they have missed.
+; 
+; Unfortunately, the calculation time of 5-3/4 minutes will drag, 
+; even for the most ardent fractal fan.  Here is where the time-
+; saving web sites rush to the rescue.
+; 
+; For instant serenity.  Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; If hi-rez is your thing, check the image at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Armchair archaeologists may check the ancient FOTD images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day turned out not so bad here at Fractal Central.  A brief 
+; shower in the morning cleared out in time for a partly cloudy 
+; afternoon, with a temperature of 77F 25C.  The fractal cat gave 
+; approval by sleeping through most of it.  The humans had an 
+; average day of getting the things that needed to be done out of 
+; the way.  FL spent time admiring her roses, which are giving the 
+; best performance in years.
+; 
+; The next FOTD will be posted when the time is right.  Until the 
+; right time arrives, take care, and Big Brother is surely already 
+; among us.  All we need to do is recognize him?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Holes_in_the_Story { ; time=0:05:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.42737934414/-2.347260171984/1984005/\
+  1/60/0 params=-11.1/-1.11/-1.11/-11.1/0/100/0/0
+  float=y maxiter=2000 inside=0 logmap=-282
+  periodicity=6
+  colors=000IgoJieMdaOZYRUVRRRRPQVKPZFMbAKe8Ig9Gi9Ck\
+  D9kH9mMAcHAUF6O83H33J44N49P5ET6LV6QZ7V`7`d9gfAmkBs\
+  nCxfEo`MeVUXSXTOeOIoGExCCzCCzCCzCCzCCzCKzCPuBUmA_d\
+  8eY8oVEvQKzMOzPMzQMxRMvSKuTKsWJqXJoYGmZGk_Gi`FdXI`\
+  ULVRORPPOMPMJTJGXFE`BAd99g99kAAoBBsCCvCCxH333G84LF\
+  5PK6TQ6XV7`b9dgAjmBnsCszCuzCyzCzzCzzCyzCrvFiiJbYOV\
+  PNNBRJ5XP6bU8gZDmdGshLxnOzrSzvUzyXzzZzz`zzrxxxnxzZ\
+  szfuzlwzquuvvvuvmxxdzyWzzMzzCzuCzqCznCziCzfCxaCvZC\
+  uUBqOAoLAkG9iC9g99d88b77a77T6FO5RL8eJBuECzCCzHCzK8\
+  dN4IP5KR5LTENTNPVUR`dVbmXgx`hz`hz`CQzCMzCJzCEzCCzC\
+  CzCCzCCzCCzTF6VK6VO6VTCXXK_bTbgafmhhqmjvrjzxjzzlxu\
+  kqoiiicdbde`dg_dg_fiYfiYfkXhmVhmVhoUjoUjqSjsRlsRlu\
+  PluPvmCznCznCznCznCznC`zzZyzXwzWuzUszSrzcozcmzckzc\
+  izcfxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

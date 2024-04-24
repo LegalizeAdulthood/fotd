@@ -1,0 +1,114 @@
+;     Date: Fri, 14 Jun 2013 15:48:06 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-06-13 (Tree Time [A-7,M-6])
+;       Id: <1.5.4.16.20130614154827.2a476b72@earthlink.net>
+; ---------
+; 
+; FOTD -- June 14, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have used today's formula very rarely, so it is almost like a 
+; new one.  It might be wise for newer fractal fans (if any) to 
+; include it in one of their formula files.
+; 
+; There have been many fractal trees in FOTD history, and today's 
+; image is another tree.  Most FOTD trees have been shaped like 
+; apple trees, but today's tree resembles a pine tree, or more 
+; specifically a Christmas tree, since it appears to be decorated 
+; with lights.
+; 
+; The image is also the entire parent fractal, which was generated 
+; by calculating the expression Z^(1.1)+Z^(-1.1)+C in the Oblate 
+; direction and rotating the scene 90 degrees.  This parent 
+; fractal is actually a sideways view of the Seahorse Valley of 
+; the critical Mandeloid slice of the parent Julibrot.
+; 
+; The name "Tree Time" is a simple comment on the image and the 
+; frequency of fractal trees in FOTD history.
+; 
+; The artistic value of 7 and mathematical value of 6 are close to 
+; average, which makes the calculation time of 45 seconds kind of 
+; a bargain.
+; 
+; Make life even easier by checking the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And check the hi-def renderings at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Thousands of FOTD back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A very pleasant though slightly chilly day was enjoyed by all 
+; here at Fractal Central today.  I enjoyed the interesting clouds 
+; in the sky; FL enjoys the near perfect mix of sun and rain that 
+; has her garden in top shape; the fractal cat Nicholas enjoyed 
+; his extra treat of turkey and cheddar.  For the record, the sky 
+; was partly cloudy and the temperature reached a high of 75F 24C.
+; 
+; The next FOTD will be posted within a matter of hours.  Exactly 
+; how many hours remains to be seen.  Until whenever, take care, 
+; and why stop halfway with only *gun* control?  Let's pass a law 
+; to control everything that could be used to hurt anyone.  No, 
+; that wouldn't work.  We would have to ban fists, which certainly 
+; can cause injury, and that would mean removing everyone's hands. 
+; And what about mouths, which sometimes utter words that can 
+; cause more harm than fists and guns combined?
+; 
+; It appears that banning things would not work.  We'll just have 
+; to pass a law to control human behavior.  But then who would 
+; write the laws describing which type of human behavior would be 
+; banned -- idealistic young liberals striving for social equality 
+; or greedy old capitalists striving for more profit . . . or 
+; maybe Big Brother, or even the aliens from Sirius-C.  Too bad -- 
+; I guess nothing is going to change.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Tree_Time { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=dec-97.par
+  formulaname=OblateMix center-mag=3.20558/0/0.3299/\
+  9.2497/90/0 params=1/1.1/1/-1.1/0/-1.36989 float=y
+  maxiter=5000 inside=253 logmap=yes periodicity=6
+  colors=00000b00a00`00_01X02Y03Y04Z05_06_07`08a09a0\
+  Aa0Ba0Ca0Da0Ea0E`0F`0G`0I`0J`0K`0L`0L_0M_0N_0O_0OZ\
+  0PZ0RZ0TZ0WZAYYK`YUcYceYmgYsiXtkXumXvnXwpcxumzzzzz\
+  zyzmxwcwtYvqZunZtmZskZriZqg_pe_oc_nb`mb`laakaaj`ai\
+  `ah_bg_bfZbeZbdYccYcbXcaXc`Wd_WdZVdYVdXUeWUeVTeTSf\
+  TSfTRfTReTQeTPeTPdTOdTOcTNcUMcUMbULbUKbUKaUJaUIaUI\
+  `UH`UH_UG_UF_UFZUEZUDZUDYVCYVBYVBXVAXVAWV9WV8WV8VV\
+  7VV7VU7UT7TT7TS7SS6SR6RR6QQ6QQ6PP6OO6OO5NN5NN5MM5L\
+  M5LL5KL5KK4JJ4IJ4II4HI4GH4GH3FG3FF3EF3DE3DE3CD3BD2\
+  BC2AC2AB29A28C29D29E39F39G49H59I69J69K79ZAcZAcZBdZ\
+  BdZCdYCeYDeYDeYEfYEfYEfYFfYFgXGgXGgXHhXHhXHhXIiXIi\
+  XJiWJjWKjWKjWLkWLkWLkWMlWMlVNlVNmVOmVOmVOmVPnVPnVQ\
+  nUQoURoURoUSpUSpUSpUTqUUqUWqUXrTYrT`rTdsTgsTjsTotT\
+  mtTltSjuSguSeuSduSdvScvScwSbwRawR_vQZuQYtPXsOWrNVq\
+  NUpMToLSnKRmKQlJPkIOjHNiHMhGLgFKfGLgHLgHKgIKgIJgJJ\
+  gJJfKIfKIfLHfLHfHAKMHfNGf }
+
+frm:OblateMix {; Jim Muth
+z=real(pixel)+flip(real(p3)),
+c=flip(imag(pixel))+imag(p3),
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

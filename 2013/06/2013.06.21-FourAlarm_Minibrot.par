@@ -1,0 +1,104 @@
+;     Date: Fri, 21 Jun 2013 15:28:52 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 21-06-13 (Four Alarm Minibrot [A-8,M-6])
+;       Id: <1.5.4.16.20130621152940.301ff010@earthlink.net>
+; ---------
+; 
+; FOTD -- June 21, 2013 (Rating A-8,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is one of the fieriest of all time.  And for good 
+; reason.  The generating expression adds 666 parts of Z^(666) to 
+; (1/Z) before adding straight C on each iteration, and we know 
+; what happens to those who dabble with the number 666.  They 
+; become ensnared by the beast and then spend all eternity with 
+; him in the fiery pit down below, which I hear is hotter than a 
+; nuclear furnace.  Today's image gives us just a glimpse of that 
+; pit.  (Good gosh, I hope I don't end up down there!)
+; 
+; The name "Four Alarm Minibrot" refers to the fires in the fiery 
+; furnace.  I have no idea if a minibrot might lie in the midst of 
+; the actual inferno, but I do see one at the center of today's 
+; image.
+; 
+; The image's artistic rating of an 8 reflects the extra effort 
+; expended creating the effect of a nuclear fiery pit.  The math 
+; rating of a modest 6 indicates that nothing very unusual is 
+; going on in the math aspect of the image.
+; 
+; The calculation time of a mere 30 seconds will pass virtually 
+; un-noticed.  But the annoyance of setting up and runnind a DOS 
+; parameter file may be eliminated by checking the image on one of 
+; the web sites.
+; 
+; Calculation may be avoided by checking the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A hi-def rendering is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The first official day of summer brought typical summer weather 
+; to Fractal Central.  The temperature reached a moderately hot 
+; 84F 29C under a hazy sun.  The fractal cat wanted the cool air 
+; turned on, but we humans are putting it off as long as possible. 
+; A lot of the winter chill is still trapped in the heavy brick 
+; walls of FC.
+; 
+; The next FOTD will be posted within a reasonable time, which is 
+; most often but not always 24 hours.  Until whenever, take care, 
+; and the world certainly has changed since I was a kid, but I 
+; have yet to decide if the change is for the better or worse.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FourAlarm_Minibrot { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2000 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=-0.18405946781423/+0.12052312284457\
+  /8.71e+008/1/-117/0 params=1/-1/666/666/0/0/0/0
+  maxiter=2500 inside=0 logmap=77 periodicity=10
+  colors=000D00A00F00H00H10K10K20O20N30R40Q50U60U70X\
+  80X90ZA0_B0aC1bD2dE3dF4fG5hH6iI7kJ8lK9mLAnMBoMCpND\
+  qOErQDsSDtUDuVDvWDwXCxYCyZBz_Bz`BzaBzbAzcAzdAze9zf\
+  9zg9ziAzkKznUzqcztmzwzzzzvwzsumpscmqUjoQimQhkQgiPf\
+  jPekPdlPcmPbnOanO`nO_nOZnO`nOanObpSbnQbmObkMbiKbgI\
+  bfGbfEbeCbdA`e8ae8bd8cd8dd8ed8fc8gd8he8ie8jf8km8lm\
+  8mm8nm8om8pm8qm8rm8sm8tm8um8vm8wm8xm8ym8ym8zm8zm8z\
+  m8zm8zm8zm8zmAzmCzmEzmGzmIzmKzmMzmOzmQzmSzzUzzWzzY\
+  zz`zz_yzZyzYxzXxzWwzVwzUvzTuzSuzRtzQtzPzmPzmOzmNzm\
+  MzmLzmKzmJzmIzmHzmGzmFzmEzmDzmCzmBzmAim9im8hm7jm6k\
+  m4jm5im6gm8fm9emAdmBbmDamE`mF_mGYmImmJmmKmmLmmNmmO\
+  mmPmmQmmRmmSmmUmmVmnWmoYmpYmqYmrYzsYztYzuYzvYzwYzx\
+  YzyXzzXzzXzzXzzXzzXzzXzzXzzXzzXzzXzzXzzXzzXzzXzzXz\
+  zXzzXzzXzzXzzUzzLzzDzzEzzGzzHzzJzzKzzMzzNzzPzzQzzR\
+  zzTzzUzzWzzXzzYzz_zzZzzZzzYzzYzzXzzXzzWzzWzzVzzVzz\
+  JzzIzzGzzFzzDzzCzzAzz9zz7 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,97 @@
+;     Date: Mon, 03 Jun 2013 20:32:48 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 03-06-13 (Patches and Spots [6])
+;       Id: <1.5.4.16.20130603203301.359fc93e@earthlink.net>
+; ---------
+; 
+; FOTD -- June 03, 2013 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a venture into the fractal that results when 
+; the formula Z^(2.25)+C is iterated at a depth of one level down 
+; the hyperladder.  The parent fractal appears as a large bay 
+; split along the X-axis, with prominent period-2 buds on the 
+; northwest and southeast sides.  The image is located near the 
+; west edge of the main bay in some debris just north of the 
+; X-axis.
+; 
+; The name "Patches and Spots" refers to the curious circular 
+; elements filling the frame.
+; 
+; The rating of a 6 indicates only slight satisfaction.
+; 
+; But the fireball fast calculation time of a mere 30 seconds will 
+; pass well before boredom has a chance to set in.
+; 
+; The official FOTD web site is up and running at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High-definition variations will soon be posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Scads of back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A pleasant partly cloudy day was fully appreciated by all those 
+; here at Fractal Central today.  The temperature of 79F 26C was 
+; right in the middle of the comfort range, and was made all the 
+; better by the lower humidity.  The next FOTD will be posted 
+; before long.  Until then, take care, and don't be discouraged by 
+; the human condition.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Patches_and_Spots { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.7364825061/+0.0949250143/2823/1/\
+  -147.5/0 params=2.25/0/-1/0 float=y
+  maxiter=1500 inside=0 logmap=31 periodicity=6
+  colors=000EY`EVaESaGUbIWcKYcL_dNadPceQeeSgfUigVkgX\
+  mhZoh_qiasjfupjwzmzzSbdFFY20R3BO3DL3GI6ELACPFFUKIU\
+  PLUUMUPNUKNPFOKAQK8SL9SP9UTAWXAX`BYdBZhCZlC_pD`tD`\
+  wKqsOoiRn_UmQXlGUcFSWEQNDOFDOJFOMHOQJOTLOWNO_PObRO\
+  fTOiVOlXOpZOs`OvbSr_VoXZlVaiSeePhbNl_KoXHrUFnXGjZG\
+  gaGccG_fGXhGTkGQmGMpGIrGFuGBwG8yGDvHHsHLqHPnITkIXi\
+  I`fJdcJhaJlZKpWKtUKsSLsRMsQNsOOsNOsMPsKQsJRsISsGSs\
+  FTsEUsCVsBWsAWrBUqCTqDSpERoFPoGOnHNnIMmJKlKJlLIkMH\
+  jNFjOEiPDiQCkUDlYEmaFoeGpiGqmHsqItuJuxJvizwVzxGzy2\
+  zw6zv9zuDzsGzrKzqNzpRznUzmYzl`zkdzigzhkzgnzfqzcjz`\
+  czYXzVQzSJzQCzREzRGzRIzSJzSLzSNzSPzTQzTSzTUzTVzTUz\
+  TTzTTzTSzTSzTRzTQzTQzTPzTPzXWz_azbgzemz`jzWhzSezNc\
+  zJazNZzQWzTTzWQz_NzbKzeHzhFzfDzeBzc9zb7z`5z_3zY1zX\
+  0zY2zY4zY6zY8zYAzZCzZEzZGzZIzZKzZLzZJzZHzZGzZEzZCz\
+  ZBzZ9zZ7zZ6z`7za7zb7zd7ze7zf7zg7zi7zj7zk7zm7zn7zo7\
+  zp7znBzlFzjJzhNzfQzEdzEaz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

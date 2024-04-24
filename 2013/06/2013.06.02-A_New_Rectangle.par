@@ -1,0 +1,54 @@
+;     Date: Sun, 02 Jun 2013 20:13:27 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-05-13 (A New Rectangle [No Rating])
+;       Id: <1.5.4.16.20130602201339.2b8ff78a@earthlink.net>
+; ---------
+; 
+; FOTD -- May 31, 2013 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_New_Rectangle { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=trashed.frm
+  formulaname=testrot-XY-ZW function=flip/ident
+  center-mag=-0.071007/-0.0544167/1.310716/1/12.499/0
+  params=93.1/86.3/0/0/-0.2/0.05 float=y maxiter=255
+  inside=bof61 periodicity=6
+  colors=000PXeQWjRUoSTtVRpYPl`NhcLdfJ`iHXlFToDPqBLp\
+  EJoHInKGmNFmQDkTCjWAiW9hWCfWFdWKbWP_WUXWZVWcTWhRWm\
+  PVrNSuLTuJUvHVvEWuHXtJYsL_rNaqPcpQeoQgnQimQklQmmRq\
+  oRtzRwzUzzczzmzzvzzzzzzzzYQGTMOOIWKEcFAkB7sLBrUFqb\
+  JpkNpcLnXJmQHkJGjKFgLEeMDcNDaOCZPBXPBVQATR9RS8OT8M\
+  U7KV6IV6GW9IXBKYDMZFOZHQOPPOQPPRQPRRPSSQTTQUUQUVRV\
+  WRWWRWXRXYSYZSY_SZ`T_aT_aT`bUacUadUbeUcfVcgVKhVKhW\
+  KiWKjWKkXKlXKmXKnXKnI_l2Pl3Qk3Qk3Qj4Qj4Qi4Qi4Rh5Rh\
+  5Rg5Rg6Rf6Rf6Re6Se7Sd7Sd7Sc8Sc8Sb8Tb8Ta9Ta9T`9T`AT\
+  _AT_AUZAUZBUYBUYBUXCUXCVWCVWCVVDVVDVUDVUEVTEWTEWSE\
+  WSFWRFWRFWQFWQGXQGXPGXPHXOHXOHXNHYNIYMIYMIYLJYLJYK\
+  JYKJZJKZJK0IK0IL0HL0HL0GL0GM0FM0FM0EN0EN0DN0DN0CO0\
+  CO0BO0BP0AP0AP09P09Q08Q08Q07R07R06R06R05S05S04S040\
+  02Y03S04M04G05A065066076076076F76G86G86H86H86I96I9\
+  7J97J97KA7KA7LA7LA7MB7MB7NB7NB8NB8OCKHDLHELIFLJGLJ\
+  HMKIMLJMLJNMKNNLNNMOONOPO }
+
+frm:testrot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=4*((-z)^0.9+z^0.9)+c,
+|z| <= 36  }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

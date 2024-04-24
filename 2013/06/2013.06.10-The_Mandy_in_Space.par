@@ -1,0 +1,114 @@
+;     Date: Mon, 10 Jun 2013 17:26:38 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-06-13 (The Mandy in Space [A-7,M-6])
+;       Id: <1.5.4.16.20130610172656.2ba7deee@earthlink.net>
+; ---------
+; 
+; FOTD -- June 10, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in an easily missed parent fractal that comes 
+; into existence when Z^(100) is blended with 2 parts of Z^2 
+; before straight C is added on each iteration.  This parent is a 
+; lopsided series of circles, one inside the other, centered well 
+; west of the origin, with a tiny Mandelbrot set along the X-axis, 
+; rotated 180 degrees, with its west end facing east.  Today's 
+; scene lies in an elephant-trunk spiral in the East Valley of 
+; this tiny M-set.
+; 
+; If the formula function is changed from 'ident' to something 
+; else, the parent fractal loses its circular X-axis symmetry and 
+; changes into any number of grotesque shapes, but the inner 
+; details remain the same.
+; 
+; The name "The Mandy in Space" has some connection to a 
+; futuristic scene in some old sci-fi movie.  I forget exactly 
+; which movie was the inspiration.
+; 
+; The artistic rating of a 7 indicates a little above average 
+; satisfaction; the math rating of a 6 indicates near average 
+; mathematical interest.
+; 
+; The calculation time of 1-1/4 minutes will pass as swiftly as 
+; the time required to check the image on one of the web sites, 
+; but checking the web sites will eliminate the task of setting up 
+; and running the parameter file.
+; 
+; Total relief from calculation pains may be found on the official 
+; lo-rez FOTD web site, which is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The hi-rez image is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Lots more FOTD fractals are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today was rather unpleasant here at Fractal Central.  Heavy 
+; clouds hung overhead all day, and rain fell constantly, varying 
+; from very light to rather heavy but never stopping entirely.  To 
+; make things worse, the air was totally saturated, making the 
+; temperature of 70F 21C quite oppressive.  The fractal cat took 
+; no notice of outdoor things, finding satisfaction instead in his 
+; treat of turkey and cheese.  The fractal humans had an everyday 
+; day indoors.
+; 
+; The next FOTD will be posted one day in the very near future.  
+; It could even be tomorrow.  Until whenever, take care, and every 
+; time I see or read an official scientific explanation of how the 
+; neural network of the brain creates self-awareness, I just can't 
+; grasp the connection between the material neural network and the 
+; non-material conscious awareness of one's own existence.
+; 
+; I guess I'm not as smart as I thought I was.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Mandy_in_Space { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=-0.8662519660562518/-0.0868356105845902\
+  /6.607561e+011/1/67.5/0 params=1/100/2/2/0/0/0/0
+  maxiter=3000 inside=0 logmap=133 periodicity=6
+  colors=00000501702903B03D04F05G06H07I18J2AK3CK4EL5\
+  GL6IL7KK8MK9OKAQKBSJCUJDWJDYJE_JFaJGcMHePIgUJiZJkc\
+  KlhLmmLnrLovJpzJnvImrHkmHjhGhcGfZGdUGaQHZNHVMHSLHP\
+  KHJJIFIIAHI6GJ8JJFLKKOKPQLUTMZVMbYNg_NlbOpdOtgPxiO\
+  vjMtjLrkJplInlGlmFjnEhoCeoBcp9aq8_q6Yr5Ws3Us2St3Ts\
+  3Uq4Wp5Xn6Ym6Zl7`j8ai8bh9cfAeeBfcBgbChaDj_DkZElYFm\
+  WGoVGpTHqSHrRGpSFnSEmSEkSDiSChSBfSBdSAcS9aS8`S8ZS7\
+  XS6WS5US5SS4RS3PS6QR8RQBSPDSPGTOIUNLVMOWLQXKTYJVYJ\
+  YZI__Hb`GeaFgbEjcDlcDmdCmeBmfAmeAmeAmdBmdBmcBmbBma\
+  Bm`Cm_CmZCmYCmbDmbDmcDmdDleDlfEkgEjhEjhEihEhhEghFm\
+  mFmmFmmOmmOmmUmmUmmcmmcmmmmmmmmzmmzmmzmmzmmzmmzmmz\
+  mmzmmzmmzmmzmczmczmczmczmczmczmczzczzczzczzczzczzc\
+  zzczzczzmzzmzzmzzmzzmzzmzzmzzmzzfzzfzzfzzgzzgzzgzz\
+  hzzhzzhzzhzzizzizzjzzjzzjzzjzzkzzkzzkzzkzzlzulzzlz\
+  zmzzmzzmzznzznzznzzozzozzpzzpzzqzzqzzrzzrzzrzzszzt\
+  zzuzzvzzwzzwzzxzzyzzyzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

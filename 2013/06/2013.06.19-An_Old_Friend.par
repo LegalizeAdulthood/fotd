@@ -1,0 +1,117 @@
+;     Date: Wed, 19 Jun 2013 16:55:34 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-06-13 (An Old Friend [No Rating])
+;       Id: <1.5.4.16.20130619165548.2bbfefce@earthlink.net>
+; ---------
+; 
+; FOTD -- June 19, 2013 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows an old friend in a new light.  The old 
+; friend is the curious Julia Z^(2.003)+C rectangle, which in 
+; today's image is located at the point where the arms branch out 
+; from the main trunk of the vaguely human figure.  Actually there 
+; are an infinity of rectangles in the image, so don't try to 
+; count the extras.
+; 
+; The new light is the fact that the image is not a pure Julia 
+; scene.  It is double rotated 0.03,0.03 degrees, or 1.8,1.8 
+; minutes, from the true Julia orientation.  (Double rotation is a 
+; strange motion that is possible only in space of more than three 
+; dimensions.)  1.8 minutes of rotation does not seem to be much 
+; of a change, but when it is done very close to the Julia 
+; orientation it makes a big difference.  In today's image it has 
+; totally obliterated the left half of the humanish figure.
+; 
+; This rectangle is one of the first things I found when Fractint 
+; gained the ability to calculate fractional exponents, which I 
+; think was in 1992.  The rectangle struck me at once.  It has no 
+; right to be there.  It just doesn't make sense.  But there it is 
+; anyway, for all the world to see.
+; 
+; Since the rectangle as well as the human-like figure has 
+; appeared so often as a FOTD, I could give the image no rating.  
+; It's still kind of pleasant to look at however, and with a 
+; calculation time of 25 seconds, it will cause no impatient 
+; fidgeting.
+; 
+; An alternative way to view the image is to check it online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And the back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Near perfect weather made everyone happy here at Fractal Central 
+; today.  The sky was a clear Photoshop (or old Kodachrome) blue 
+; with only a few small puffy white clouds, while the temperature 
+; reached a comfortable high of 77F 25C.  The fractal cat made it 
+; through the day in true feline fashion, alternating between 
+; playing, eating and sleeping.  The fractal humans had an average 
+; day, with nothing out of the ordinary to report, which is boring 
+; to report but was pleasant.
+; 
+; The next FOTD is coming, and will be posted in a day or two.  
+; Until whenever that great moment arrives, take care, and what 
+; happened to the squatter who was dis-satisfied with his lot?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+An_Old_Friend { ; time=0:00:25.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/-0.0248852\
+  /9.655172 params=89.97/0/89.97/0/-1.7435/0/\
+  0.000175/0.073883/2.003/0 float=y maxiter=2400
+  inside=0 logmap=yes periodicity=6
+  colors=00070R70Q60Q60P60P60O60N50N50M50L50L50K40K4\
+  0J40I40I40H40G30G30F30F30E30D20D20C20B20B21A12A139\
+  1481581670761862973A85B96CA7DB9ECAFDBGEDIFEKGFMHHO\
+  HIPIJQJLRKMSKNTIOUGQVETWDWXCZYBaZAd_9g`8ja7mb6pc5p\
+  e4sgAwiKzkUtmcsomqqzkszkqziomgmcekUcjKajM_jQYjUVgV\
+  TeVRcVPaVN_VLYVIWWGUWESWCQWAOW8MWBOXEQYHSZJU_MW`PX\
+  `SZaU`bXbc_ddbeddgegifjkgmmhonhhfjb_lXSnQLpKDrE6tJ\
+  CnNIiSOcWUZ`_TdeOadRZcTWbVTaXQ`ZN_`L_bIZddYOaVSZSW\
+  WP`UNdRKhOHlLEpJCtOFuTIvXKvaNwfQxjSxoVysXyfTtUPpHL\
+  k5Hg8JfBKfELfHNfKOfNPfQQfTSeWTeZUeaWedXegYeiZeZL_`\
+  UdbXidZneVsgQl_LeaJZcZSeULgPEiK7kG0mL5kPAiTFfXKb`P\
+  YeUUiZPmcLqhHulGpiFkgEfeEcbDa`C_ZCYWBWUAUSASQIUNPW\
+  KWYHb`EicBpi8wn5sl9okCkiFhhIdfL`eOXiSUgVQfYMd`IccF\
+  bfCah9cj6cl4cn7clAhkDhjGhiJhgMmfPmeSmdVmbYma`m`bm_\
+  amZarZarY`rY`rY`rX`rX_rX_rW_zW_zWczXfzYiz_lz`ozarz\
+  bQzi4zt3zp3zl3zi2ze2za2zZ }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,88 @@
+;     Date: Tue, 25 Jun 2013 18:29:55 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-06-13 (Ground Base [A-7,M-6])
+;       Id: <1.5.4.16.20130625183007.2b770f96@earthlink.net>
+; ---------
+; 
+; FOTD -- June 25, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Ground Base".  The name has nothing to 
+; do with a mountain climbing expedition, it is simply a name I 
+; grabbed out of the air and gave to the image.
+; 
+; The generating expression is rather unusual.  It adds 6.1 parts 
+; of Z^(0.1) to a whopping 6100 parts of Z^(100) on each iteration 
+; to make a fractal resembling a heart lying on its side.  Today's 
+; scene lies near the bottom (east) point of the heart-shaped bay.
+; 
+; The artistic worth is a 7, the math value, a 6.  The calculation 
+; time of 1-1/4 minutes will pass in a flash.  But the flash may 
+; be avoided by checking the web sites.
+; 
+; The rendered image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A hi-def rendering is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back fractals are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The heat and humidity here at Fractal Central today was broken 
+; in the afternoon by a light thunder-shower, which dropped the 
+; temperature from 90F 32C to 77F 25C.  Both the fractal cat and 
+; fractal humans approved.  The next FOTD will possibly be posted 
+; soon.  It is also possible that the next fractal could be many 
+; months away.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ground_Base { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=-5.126410111140562/+0.02644449329121534\
+  /1.132883e+009/1/32.5/0 params=6100/100/6.1/0.1/0/\
+  0/0/0 maxiter=5000 inside=0 logmap=59 periodicity=6
+  colors=00005F05F05F05G05H05I05J05K05L06M29R4DV5H_A\
+  LcKPg_WggbZphczmiwkfsfdpbamY_hUXcPUbOSgGPzZ_zUjzKk\
+  oPmkVnf_oadzXmzTtzQkzqHmZK28QsNaramrLKc`dkmVPnjc8U\
+  jJalUindqphiMkoXmtgCd8MiKWoWetg08QIgXRlbZpggum0oII\
+  sVZvfzmttsskDilPkmannmpUmHds_IXBUfQdpd7kBIoMUrXdvg\
+  MO6VamempuUqsdrqorFnY9PBKObAbQOj_ari8nlNrnavpKTE1C\
+  06T3IaG_v1eMt`SsWYrQbpLhoaPaq6OmENiMNdTM``LkTXuMhX\
+  aY9qO`b`OtZawhlrkmunnwpG8oPMpYZqflrZYHdgUjpfZevcju\
+  gotktsnZ8YXTcfaipjNpDo9IoRVohfsXkrdmqkopz0uz0rz0vz\
+  0rz0gz0jz0mz0jz0Qz0Zz0bz0gz0kz0Qz0gz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz2zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zzhzz9zzWzzQzzozz\
+  pzzqzzrzzfzzizzlzzozzUzzbzzjzzOzzczzazzezzjzznzz0z\
+  zXzzozzYzzbzzhzzmzzqzzrzz_zzizzOzzWzzczzkzzbzz8zzO\
+  zzczzazzjzzxzzuzz1zzSzzMzzUzzbzzjzzBzzQzzdzzRzz`zz\
+  izzwzzuzzszzZzzLzzazzezzi }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

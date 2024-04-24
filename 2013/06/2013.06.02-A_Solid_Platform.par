@@ -1,0 +1,52 @@
+;     Date: Sun, 02 Jun 2013 20:07:32 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 26-05-13 (A Solid Platform [No Rating])
+;       Id: <1.5.4.16.20130602200745.2b8fdbda@earthlink.net>
+; ---------
+; 
+; FOTD -- May 26, 2013 (No Rating )
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Solid_Platform { ; time=0:00:10.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=multirot-XY-ZW-new function=flip/ident
+  center-mag=1.39793/0/0.4733975/1/90/0
+  params=90/12/2/0/0/0/-2/0 float=y maxiter=400
+  inside=255 logmap=yes periodicity=6
+  colors=000D07G0AK0DP1GU2JZ3Mc4Ph5Tm6Xr7`u7dy7hzDmz\
+  BrzAvzAzwBztCzqDznEzkFzhGzeHzdIzdJzdKzeLzeJzeHzeGz\
+  fEzfUzfUzfUzhUzgUzfUzfUzeUzdUzdUzcUzbUzbUzaUzaUz`U\
+  z_cz_czZczYczYczXczWczWczVczVczUczTczTczSczRczRczQ\
+  czPczPczOczOczNczMczMczLczKczKczJczJczKczKczKczLcz\
+  LczLczLczMczMczMczNczNczNczNczOczOczOczPczPczPcmPc\
+  mQcmQcmQcmRcmRcmRcmRcmScmScmScmRcmScmScmScmS`aS``S\
+  ``S`_S`ZS`ZS`YSaXSaXSaWSaVSaVTaUTaTTaTTaSTaRTbRTbQ\
+  TbPTbPTbOTbNTbNTbMTbLTbLUcKUcKUcJUcIUcIUcHUcGUcGUc\
+  FUcEUdEUdDUdCUdCUdBVdAVdAVd9Vd8Vd8Ve7Ve6Ve6Ve5Ve4V\
+  e4Ve3Ve2Ve2Ve1Ve1Yd3`c4bb5ea7g`8j_9rW6oY8l_Ai`CfbE\
+  ccG`eIYfKVhMTiNQkPNlRKnTHoVEqXBrZ8t`6uaPnhggny`twb\
+  rucpsdnqelofjmghkhfjjehkcfladm_bnY`oWZpUYrTWsRUtPS\
+  uNQvLOwJMxHIzHKyGLyGMyFOyFPxEQxESxDTxDUxCWwCXwCYwB\
+  _wB`wAavAbv9dv9ev8fv8hu8iu7ju7lu6_lT`lU`kUakU`oSam\
+  TakUajUahVbfWbeWbcXbaYPPz }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

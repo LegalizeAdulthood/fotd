@@ -1,0 +1,114 @@
+;     Date: Mon, 17 Jun 2013 15:49:01 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-06-13 (The Lost Monument [A-9,M-6])
+;       Id: <1.5.4.16.20130617154925.2a1f4d74@earthlink.net>
+; ---------
+; 
+; FOTD -- June 17, 2013 (Rating A-9,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has an art rating of a 9.  This is because I went 
+; out of my way to find a coloring that would make the image 
+; resemble a real 3-D monolith.  The rating shows that I consider 
+; my efforts pretty successful.
+; 
+; The math rating is a humdrum 6.  After all, how interesting can 
+; the expression Z^(1.009)+C be regardless of how far up the 
+; hyperladder it is calculated.  As a matter of interest, today's 
+; image was calculated 120 levels up the ladder.
+; 
+; The parent fractal is a grossly oversized thing resembling a 
+; primitive stone arrowhead plunging back to earth.  Today's scene 
+; lies in the chaos on the eastern edge of the arrowhead.
+; 
+; The name "The Lost Monument" implies that regardless of how far 
+; one might search, he would never find the scene depicted in the 
+; image, since it exists only in the world of fractals as well as 
+; in the mind.  I leave it to the individual fractalist to decide 
+; if mathematical fractals and human thoughts are to be considered 
+; in any way real.
+; 
+; The calculation time of 6-1/2 minutes is slow enough to bring 
+; impatience to the more restless fractalists, so hooray for the 
+; web sites, which can bring relief.
+; 
+; Find relief from mathematical anxiety by viewing the finished 
+; image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Extra happiness may be found by viewing the hi-def rendering at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Total bliss lies on the web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where the FOTD back images are posted.
+; 
+; Rather sultry conditions prevailed here at Fractal Central 
+; today, with partly cloudy skies, some humidity and a temperature 
+; of 86F 30C.  The fractal cat felt playful in the morning, but 
+; calmed just after noon to enjoy a quiet afternoon sleeping.  The 
+; humans had a busy day, with FL working in her garden while I 
+; supervised.
+; 
+; The next FOTD will be posted in a period of time that will seem 
+; to pass in a flash.  Until then, take care, and before a problem 
+; can be solved, the nature of the problem must first be 
+; recognized.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Lost_Monument { ; time=0:06:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.652403251/+1.25954557/386/0.9057/\
+  -45/0 params=1.009/0/120/2400 float=y maxiter=1800
+  inside=255 logmap=645 periodicity=6
+  colors=000W_zW_zX_zY_zV_zW_za_zZ_zb_zb_zX_zX_z`_z`\
+  _zW_zUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdz\
+  UdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUd\
+  zW_zU_zS_zR_zP_zF_zK_zO_zS_zU_zU_zU_zU_zU_zU_zU_zU\
+  dzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzUdzP_z\
+  P_zP_zP_zP_zP_zP_zP_zP_zP_zP_zP_zP_zP_zP_zP_zU_zT_\
+  zS_zR_zQ_zQ_zP_zO_zN_zM_zM_zN_zO_zP_zP_zQ_zU_zU_zU\
+  _zU_zU_zU_zU_zU_zU_zU_zU_zU_zU_zU_zU_zU_zU_zU_zU_z\
+  U_zU_zU_zU_zU_zU_zU_zU_zU_zU_zT_zQ_zO_zL_zI_zF_z8_\
+  zD_zI_zN_zR_zW_zU_zU_zU_zU_zU_zW_zU_zU_zU_zu_zt_zt\
+  _zs_zr_zq_zq_zp_zo_zo_zn_zm_zl_zl_zk_zj_zi_zi_zh_z\
+  g_zt_ym_xg_wa_vV_uPdtKisKnrUsqcsvzxtzvtrtsmrmhllci\
+  lZgkUdjPZdMWcJUcJQbIPXIIWILWIJV8FKDDJ8BID9ID3HD6G8\
+  4F83FDDE3DDD8U88CD1CI1BI1B81B810010D1AD10D1A010D1A\
+  D10D1A01081A81A31081A81A010010D1C810D1BD1A010C1AD1\
+  0D1AE1A510F1A510G10C1AB1A }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
