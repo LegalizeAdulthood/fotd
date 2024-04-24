@@ -1,0 +1,104 @@
+;     Date: Sat, 14 May 2016 19:53:22 -0400 (GMT-04:00)
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTX -- May 14, 2016
+;       Id: <19690377.1463270002775.JavaMail.wam@elwamui-huard.atl.sa.earthl
+; 	  ink.net>
+; ---------
+; 
+; FOTX -- May 14, 2016 (Rating A-9,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As today's unusually fast image shows, I am getting back into my 
+; old routine of finding rather attractive fractal patterns.  I 
+; might not yet be in overdrive, but I am running in second gear 
+; at least.  And do not expect one of those apocalyptic zooms to a 
+; ridiculous magnitude of something like 10^10000.  Such zooms 
+; might make one gasp and say 'WOW' but at the end they all tend 
+; to look pretty much the same, admit it or not.
+; 
+; Today's FOTX, (The 'X' means I have not yet decided how often 
+; the FOT... will appear.), is a scene at a depth of a very modest 
+; 0.1 -- a Julia set of a point on the negative X-axis of the 
+; Z^4.01+C Mandeloid.  In this case, the extra 0.01 in the 
+; exponent makes all the difference.
+; 
+; While pondering fractals over the past few months, I have also 
+; been pondering the old philosophical warhorse, the nature of 
+; reality.  So far I have come to little in the way of an answer.  
+; In fact, I'm not even sure what the question is about.  All I'm 
+; reasonably sure of is that I (whatever 'I' might be) am having 
+; a conscious experience.  Whether the stuff around me commonly 
+; called material is real or not, it certainly does appear to be 
+; there.  And if it is an illusion, does this mean nothing at all 
+; is there, or does it mean I am perceiving what is really there 
+; in a way that does not totally correspond to the true reality.
+; 
+; Be this as it may, the FOTX web site should be up and running 
+; again in a few days.
+; 
+; Today was partly cloudy with a temperature of 68F 20C and a few 
+; insignificant showers here at Fractal Central.  The fractal cats 
+; spent most of their time doing what cats do best -- sleeping.  
+; Nicholas chose my favorite chair just after noon and lounged in 
+; it all afternoon.  Between showers, FL did a little work in her 
+; garden, where the columbines are near their peak.
+; 
+; Until next time, take care, and if the theory of the Quantum had 
+; not been discovered, I might have run out of things to ponder 
+; after all this time.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Surreal_Fantasy { ; time=0:01:59.13 SF5 at 200MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=0.0514205/0/0.1 periodicity=0
+  params=90/0/90/0/-1.64788477144322/0/0/0/-4.01/0
+  float=y maxiter=3200 inside=0 symmetry=xaxis
+  colors=000zz0B8E96B748435212_N8UJ6OF5IB4C72631ZG6T\
+  D5NA4H83B52521NHpIDeDAV96L43ASF2W7tT6oRczP5gM5cK4_\
+  I4WG3SD3OB2K92G61C418204CrzA`m9Xh8Tc7QZ6MU5IP4EK3B\
+  F27A135X8BS79O68K56G45C34822411KpkHieFb_CXUAQO7JI5\
+  DC266acRXXNS_KNUGJODEIA9C6463DaKAUG7MC5F8274aRFXOD\
+  TLBPIALF8GC6C95m00wwKczzzUz`3VS2NI1F907Pj8Nf7Lb6J_\
+  6WWzfAKDP4BL39I37E25A1371130gSlcPg_McWKZSHVOFQKCMG\
+  AHC7D858000AUz8Qm7Qd6MX5HR4DM3AG26B135K35I24H24G24\
+  E23D23C13A12912812611501401200100sBInAGi9Fe8D`7CW6\
+  AS59N47I36E24913401kRc_KUODKC6AwGcqE_lDWfBTaAPW8LR\
+  7IL5EG4AA27513XeCT`APW9MS8SsCWsCasBisBosczzmzzzzdR\
+  zQftCvsLcwc0qIcqRXqMRqOLqQEqS8qT2oV8nXEmZJl`PjbVid\
+  _hfeghkfjpcdn`_mYUkVPjSJhPEgM8eK3dG2Y9D4D2RA1K61D3\
+  06cz7Ei5AY47N23B1pDXlCUiBSfAQb9O_8MX8KT7IQ6GN5EJ4C\
+  G4AD38926614302GL1EJ0DI0CG0BF0AE09C08B0000zzz57045\
+  0340220110QIWNGTLEQIDNGBK }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

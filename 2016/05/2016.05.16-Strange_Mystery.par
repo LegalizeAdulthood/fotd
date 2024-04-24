@@ -1,0 +1,110 @@
+;     Date: Mon, 16 May 2016 19:44:54 -0400 (GMT-04:00)
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTX -- May 16, 2016
+;       Id: <5051414.1463442295064.JavaMail.wam@elwamui-rustique.atl.sa.eart
+; 	  hlink.net>
+; ---------
+; 
+; FOTD -- May 16, 2016 (Rating A-7,M-9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is strange.  The strangeness does not appear on 
+; the surface, which is a simple image of the large minibrot on 
+; the main stem of the Mandelbrot set.  But do not yet give up 
+; hope.  To see something strange indeed, check the obvious 
+; minibrot at the top center edge of the frame, on the filament 
+; extending from the northern bud of the large minibrot.
+; 
+; What is this we find?!  An order 7 minibrot with quadratic 
+; surroundings!?
+; 
+; Assuming that you have already seen the mysterious 'brot, how is 
+; it possible?  The minibrot is of order 7, nothing at all like 
+; the quadratic minibrot from which its filament extends.  In 
+; fact, everything deeper in the same parent fractal is of order 
+; 7, while everything closer to the surface has a quadratic 
+; nature.  The formula does it all.
+; 
+; As an extra surprise, raise the already huge imag(p1) parameter 
+; a few orders of magnitude and watch the order 7 minibrot 
+; gradually morph into a quadratic one.
+; 
+; Another bonus with this formula, which is several years old, is 
+; that it is possible to generate minibrots of fractional orders 
+; with none of the discontinuities that spoil scenes and minibrots 
+; created the easy Z^(2.5)+C way.
+; 
+; The day here at Fractal Central began clear and frosty.  It was 
+; reported that this morning's low of 34 was the coldest it has 
+; ever been in Central Pennsylvania this late in May.  But once 
+; the sun got to work later in the morning, the temperature 
+; reached a rather pleasant 68F 20C.  And yes, we do have kittens 
+; under the fractal back porch.  Their mother had them out 
+; exploring the fractal yard this afternoon.
+; 
+; Well, I guess that's it for now.  I'm sorry to hear that I 
+; should take it easy on the divisive philosophy for fear of 
+; causing too much off-topic debate.  But as I see it, according 
+; to the scientists who have spent their lives studying such 
+; things, the sub-atomic world and fractals are actually the same 
+; things -- the mental images created in people's minds by the 
+; underlying numbers, and it's hard to accept a real objective 
+; world or a real fractal world made of building blocks that are 
+; no more solid than mathematical abstractions.  If I'm wrong 
+; here, squelch the debate in the bud by showing where my 
+; thinking has gone astray.
+; 
+; If I see things getting too contentious on the list, I might 
+; start my own mailing list, where fractal philosophy will come 
+; first.  I hope not, since I'm working on a few very interesting 
+; new Fractint formulas.
+; 
+; The next FOTX will be posted in a couple days.  Until then, take 
+; care, and why does merely discussing reality cause such intense 
+; feelings?  Maybe it's not fractally correct.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Strange_Mystery { ; time=0:00:33.40 SF5 at 200MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip float=y
+  center-mag=-1.76264/0/34.7844 params=7/20000000\
+  000.0/0/0 maxiter=1500 inside=0 periodicity=6
+  colors=000J36NUURtpVsqZrrbrsfqtjqtflrbgpZcoVZmRVlN\
+  QjJMdGIbFG_DFWACQ89J56D236ke3WS2GE1rYPRHCGT`DOUAJO\
+  8EI59C246VUmPPdKKXFFPAAG558VmxOckIU_CKO6AC26F15C14\
+  A137025012dzJWmFO`BGP78C3O60J40E309204105aQ4WM3RI2\
+  LE2GB1A7053OkaCOJ8lGY2_T1UO1PJ1KE0F90A405atCJS6Im3\
+  Fd2CX29P16G1380pNjQBNrzvjqmbheV_XNRPFIG798SQ4MK3GF\
+  2BA1550u9Ul7Pd6LX5HO3CG28814e41_30V30Q20L20F10A105\
+  00ZuoGInAfq5LRABG558rRxhMm_IcRDUI9K94AgOraLkXIdRFY\
+  MCRG9KB6D536SaBMU8GM6BF4572PUH5A6TeTOZOJSJELE9E947\
+  4amMVdIPXEJPBCG7683rUZ_KNIABN8kJ6cF5WB4O72G3183aJ2\
+  WG2RD1LA1G80A5052oF1Jt3Ca26J1b89W67Q56J44D23611eVW\
+  VNOLFGA78RPSNLOJHKFEGBAC778334a11X00S00N00J00E0090\
+  0400K55H44E33B228225112007vX5gO3TG1E8oXRhSNbOKWKGQ\
+  GDJCAD86643g12Z01Q01H00800WSoQNfLIYGEQA9H548g2v_1l\
+  T1bM1TE0J709M59G36B24512RPgNLaKIXGFRDCMA9G66B335ZY\
+  vQPgHHT88Ex0Mp0Jh0Ga0DU0B }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
