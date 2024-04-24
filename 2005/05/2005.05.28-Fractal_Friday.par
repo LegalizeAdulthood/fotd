@@ -1,0 +1,89 @@
+;     Date: Sat, 28 May 2005 11:30:41 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-05-05 (Fractal Friday [5])
+;       Id: <1.5.4.16.20050528113214.37a75038@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 28, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The recipe for today's image is a simple mixture of Z^3 and Z^5, 
+; with a little C added for flavor.  The result is a scattering of 
+; fractals, the largest of which has open areas with four lobes 
+; strung along its main stem, which in this case points north.  
+; These open areas have tiny straight filaments radiating from 
+; them.  I checked a filament radiating from one of the very small 
+; open areas near the tip of the stem, and found today's fractal.
+; 
+; The midget at the center is standard enough.  The nearly-
+; straight star-studded filaments radiating from it are what makes 
+; the image worth being declared FOTD for May 28.  Actually, with 
+; a rating of only an average 5, the image kind of sneaks onto the 
+; honor roll by the skin of its teeth, but even a 5-rated fractal 
+; is worth 3 minutes spent in calculating it.
+; 
+; As I tried to think of a name for the image, many cute and artsy 
+; phrases came to mind and were quickly discarded.  I finally 
+; settled on the name "Fractal Friday" in honor of the day on 
+; which I found the image.  I realize that the image will not be 
+; posted until Saturday, and not seen by some until Sunday, but 
+; the 'Friday' name is the one the image will forever bear.
+; 
+; There are two ways of seeing the Friday fractal: first, by 
+; running the included parameter file and waiting a few minutes; 
+; second, by downloading the completed image from the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Lots of sun, gentle breezes, and a temperature of 81F 27C made 
+; Friday a perfect day for the fractal cats, who spent over 6 
+; hours in the yard.  Today is starting much the same, but I see 
+; showers in the forecast for later today.  For me the day looks 
+; very slow, which is the way I like it.  The next FOTD will 
+; appear in 24 hours.  Until then, take care, and be lively.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Friday { ; time=0:03:11.64--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.00900244971839993/-0.673234783574483\
+  20/6.237726e+012/1/-0.238074244069548191/0.2380742\
+  440695485 params=1/3/0.2/5/0/0 float=y maxiter=1500
+  inside=fmod proximity=0.26 outside=tdis
+  periodicity=10 mathtolerance=0.05/1
+  colors=000kz00z06z0Iz0Tz0Tiz6vxOzOrzzmz`gzCEMGOg6V\
+  z0zddxzEzpmrzIPOrZdi`zGv0VnRGgt08z0Gz0Oz0Vz0zzkzzR\
+  pz64O0Mr0VzeZzO`z4zt000m00r00v20xP0xk0xz0xz0xz0tzI\
+  pzZmrniize`zbbzTbzKdzAdz0dz0PeKA`i8Xd8IZ82T80P00V0\
+  6`0Gd0Gi0Gm0Gp0Gt0Gx0Gz0Gz2Gz4Gz8GzAGzCKzCOzERzEVz\
+  GZzGbzIezIizKmxKptMtrMxpOzkOzgOzbOzZOzTOzPOzKOzGOz\
+  CKG0`RCbk2bz002M2VAMv0z20`X00x00t00r00p00g60``0gz0\
+  mzAvzTn0KzbTzCzn0zx0zz0nz0zxerzE0K`8eKOz2mmzizgezG\
+  0008P0Or0d4zbPgbiPbz6z0zzGzxbbmzC4bzMzZz0zvGtnbZgz\
+  AptbizCvKzkp`mCXgmARzxXzOvz8pz2kz0ez0zzixzG0OT6gEO\
+  z0xbzprpizKz`znxZmzmEvVOzGVz0RzkVzXXzI`z2z0RpKEip0\
+  z0gx6TpXGiv0O6PRRGVi6Zz00gzzm2zz0nz0zk8zt2rz0iz0VK\
+  zZpVIz8Tz000ZAbAzC0xV0pm0iz0z400p60gg0rTEzGRz0zdmz\
+  nXzzInz2000060AX0Pv02zKGz8Rz0IzE0A`0`KKx2znOnzzgzR\
+  z0bvIMkn4gzOdz4MidVzEzz`nr4iz0ez0K0zRMtXpMzznxzTmz\
+  8Gv0g02zvTzzEnz000nzMKvg8 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

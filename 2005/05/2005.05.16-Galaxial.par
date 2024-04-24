@@ -1,0 +1,89 @@
+;     Date: Mon, 16 May 2005 11:49:49 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-05-05 (Galaxial [6])
+;       Id: <1.5.4.16.20050516115111.29afc6b0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 16, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image continues the adventures of our 'almost' Mandel-
+; brot set, in which the exponent of Z is 2.0001 rather than 2.  
+; This time we have rotated the set until the large southern 
+; filament intersects the negative X-axis.  As expected, the 
+; filament breaks up near the point of intersection, and the 
+; midgets on the filament do strange things.
+; 
+; The discontinuities in today's scene are so slight as to be 
+; almost invisible, but the large, totally chaotic area around the 
+; midget is something unexpected on the southern filament of the 
+; M-set, where ever more finely divided but sharply defined 
+; filaments are the rule.
+; 
+; I named the image "Galaxial".  The word simply came to mind as I 
+; stared blankly at the image.  (I do a lot of blank staring.)  
+; The rating of a 6 is a bit above average, and the render time of 
+; 20 minutes is a bit above average also.
+; 
+; The download from the FOTD web site is as convenient as always, 
+; though it does require going online at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather threatened on Sunday here at Fractal Central, but 
+; the rain never fell and the temperature rose to 75F 24C.  The 
+; cats took full advantage of the situation by spending most of 
+; the afternoon tucked safely away in the holly patch.  After 
+; heavy rain during the night, the morning is starting cooler but 
+; with full sun.  The cats will likely find the day acceptable.  
+; My day will feature some work and a few fractals.  Until next 
+; FOTD, take care, and watch your excess iterations.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Galaxial { ; time=0:20:38.24--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-1.04146049900585600/-0.000000303888590\
+  44/8.407404e+010 params=2.00001/0/142200/0 float=y
+  maxiter=4200 inside=0 logmap=547 periodicity=10
+  colors=000D_6E_8F_9G_AH_CI_DJ_FK`GNaHQbGTcGWdGZfFa\
+  gFdhFgjEjkGmlIpmKsnMuoOwpQxqSyrUwsVutWsuXovYkwZiu_\
+  gs`cpa_mbWjcSgdOceK_fGWgCSh8Oi6Me2Ka3IY3GU4FQ5HM6J\
+  K6LK7NK8PK9RK9SKFTKLUSRUdTSaVR_WPXYOVZMS`LQaJNcILd\
+  GIfFGmDDwCBoB9bECWHFPKIHNLAQO3SQ9PUENXKK`PIcUFf_Dj\
+  dAmj8qo5tt3wd5sQ7oB8kC4kYHTrTAgdEYoIaoNeoSfSqkMrpG\
+  stBtpIhlOYhVMd`B`f0QZIGR_6Kp4Ls3Lu2Lw1Ly2Ns3Pm3Rh4\
+  Tb5VX5XS6ZM6_H7aH7bH7cH7dH7eH7fH7gH7hHAfLDePGcTJbX\
+  Ma_KVUJPOIJJHQIHWIGbHGhHWiEkiBghFcgJ_fMWfQSeUOdXKc\
+  `Gccbdnyextcvpbulash_rdZp`Yo_blZgiYlfYqdXkdXedW_dW\
+  UdVOdVIdUCdU7d`AffChlEjrGlzzhzzKbzdmzlxzsbz__zTXzM\
+  VQGXOKZNN`LQaKTcIXeH_gFbhEefJZeOSdSMcXFb`9moyggsa`\
+  mWThQMbKEXF7SK5aO4jPEfPNcPW`PdXPmUPvRTVVW4Yudntgis\
+  ierlarnYqpUpsQouMowIjqNekRaeWX`_SVdOPhJJmFEqDKnBQk\
+  AWi8af7gd5ma4r_8hcCZfGPjJFmMJnONoRRoTVpVZpX`hYaaZb\
+  U_dN`eFaf8bg1`dBZbLe`3b`5 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

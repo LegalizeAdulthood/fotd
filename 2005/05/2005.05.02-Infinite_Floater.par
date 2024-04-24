@@ -1,0 +1,75 @@
+;     Date: Mon, 02 May 2005 12:18:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-05-05 (Infinite Floater [5])
+;       Id: <1.5.4.16.20050502121955.2abfddda@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 02, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the fractal that results when 
+; negative portions of Z^(-0.5) and Z^(-2.5) are combined, and 
+; (1/C) is added.  It resembles a scene on an alien planet, with 
+; a strange alien object floating in the alien sky.  I named it 
+; "Infinite Floater".  The effect was achieved by rendering the 
+; scene with the outside set to 'fmod'.
+; 
+; Since I enjoy pictures of fantastic otherworldly vistas, I rated 
+; today's image at a 5.  Those who do not enjoy fantasizing about 
+; what might be seen on other planets might rate it closer to a 3. 
+; Luckily, the image is a fast one, and even luckier, the finished 
+; GIF image is posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Rather pleasant weather on Sunday made for rather pleasant cats, 
+; who needed no tuna to end the day.  This morning I see increas-
+; ing clouds with rain forecast.  The duo's good day might not be 
+; repeated.  My day will be kept occupied by an unexpectedly heavy 
+; arrival of new work.  Until next FOTD, take care, and take it 
+; easy.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Infinite_Floater { ; time=0:01:02.74--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=+0.10506163064603690/+0.368852867150980\
+  80/1322661/1/85/7.83872640686134048e-008
+  params=-6/-0.5/-0.6/-2.5/0/-80 float=y maxiter=1000
+  bailout=9 inside=0 proximity=1 outside=fmod
+  logmap=yes periodicity=10
+  colors=000bMVaMVaNW`NX_OX_OYZPZYPZXQ_XQ`WR`VSaVSbU\
+  TbTTcSUdSUdRVeQVfQWfPWgOXhNYhNYiMZjLZjL_kK_lJ`lI`m\
+  IanHanGboGboJcnMdnOenRfmTgmWhmZilajldjlfklilklmjon\
+  jqoisphuphvphupftofrofqndpndnmdmmcllbjlbikbgkafjae\
+  jaciabi`ah`_g`Zg_Xf_Wf_Ve_TeZSdZRdZPcYOcYMbYLbYKaX\
+  IaXH`XG`XFaYFaYFaYFbYEbYEbZEcZEcZDcZDcZDd_Dd_Cd_Ce\
+  _Ce_Ce_Cf`Bf`Bf`Bf`Bg`AgaAgaAhaAha9ha9ib9ib9ib8ib8\
+  jb8jb8jc8kc7kc7kc7kc7ld6ld6ld6md6md5me5ne5ne5ne4ne\
+  4oe4of4of4pf3pf3pf3qg3qg2qg2qg2rg2rh1rh1sh1sh1sh1s\
+  h4pi6nj8lkBjlDhmFfnHdoKbpM`qOZrQXsTUtVSuXQv_OwaMxc\
+  KyeIzhGzjEzlCznAzoBzoCzoDzoDzoEzoFzoFzpGzpHzpHzpIz\
+  pJzpJzpKzpLzqLzqMzqNzqNzqOzqPzqPzqQzrRzrRzrSzrTzrT\
+  zrUzrVzrVzsWzsXzsYzsYzsZzs_zs_zt`ztaztaztbztcztczt\
+  dztezuezufzugzugzuhzuizuizujzvkzvkzvlzvmzvmzvnzvoz\
+  vozumzulzujzuizuhztfzteztcztbztazt_zsZzsXzsWzsVzsT\
+  zsSzrQzrPzrOzrMzrLzrJzqIz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

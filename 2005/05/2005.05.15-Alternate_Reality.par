@@ -1,0 +1,97 @@
+;     Date: Sun, 15 May 2005 11:33:29 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-05-05 (Alternate Reality [6])
+;       Id: <1.5.4.16.20050515113451.381f500e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 15, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's FOTD we continue rotating a near-Mandelbrot set to 
+; see what happens when its various parts cross the big split on 
+; the negative real axis.
+; 
+; We have gone only 7500 levels up the spiral, to a point where 
+; the big split intersects the south branch of Seahorse Valley.  
+; What we have found there is a midget with the typical Seahorse 
+; Valley features, but with those features broken and re-arranged.
+; 
+; I have named the image "Alternate Reality".  Alternate realities 
+; are currently quite fashionable among the popular-scientific 
+; set, and I might as well go along with the trend of the times.  
+; And who knows?  There really might be an infinity of myselves in 
+; nearby but invisible universes, becoming world famous by finding 
+; the greatest fractals of all time and showing how the fractals 
+; are the solution to the search for the theory of *almost* every-
+; thing.  Maybe an infinity of myselves have actually managed to 
+; include self-awareness in the theory and solved a theory of 
+; *actually* everything.  What I keep wondering is, are these 
+; alternate-reality fractal geniuses really me or merely others 
+; who just happen to look like me?
+; 
+; Today's image will solve no theories of anything, but it managed 
+; to earn a rating of 6.  The render time of 1/2-hour is a bit too 
+; high a price to pay for such an image, so I advise downloading 
+; the finished product from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a high temperature of 83F 28C, and with full sun, Saturday 
+; turned out to be unexpectedly pleasant here at Fractal Central.  
+; The two Fractal Central cats made the most of things by spending 
+; the entire afternoon in the yard.  The weather grew threatening 
+; in the evening, when thunder started rumbling, but by the time 
+; the rain arrived, the cats were safely inside.  Today is start-
+; ing much the same, with showers again forecast.  The next FOTD 
+; will appear in 24 hours.  Until then, take care, and if your 
+; fractal seems corny, shuck it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Alternate_Reality { ; time=0:30:27.54--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.75104206020983430/+0.000000728984679\
+  96/7.145716e+008/1/-72.5/1.56923412979181887e-006
+  params=2.00001/0/7500/0 float=y maxiter=6000
+  inside=0 logmap=668 periodicity=10
+  colors=000qIRpIPpJMoJJoJHnKEnKBnK9jMEgNIdPMaQQZSUW\
+  TYTUbQWfNXkKZoH_tE`xFbzGdzHfzHfzJczK_zLWzMRzNLzMKx\
+  MKuLJrLJpKJnKIkJIiJHfIHdIHbKIaMJaNKaPLaRMaSMaUNaVO\
+  aXPaZQa_QaaRacSadTafUagUaeS`dR_cQ_bPZaOY`MY_LXYKWX\
+  JWWIVVGUUFUTETSDSRCSUGUXJV_MXbPYeSZhV`kYan`cqcdtee\
+  qefndfkdghcgfchcbh`biYaiWaiYckZel_gm`ioakpbmqcosdq\
+  tesufuwgwxhyyizzhtvgnrfinfckeYgdTccN_cIXZTZUb`Plad\
+  kMsj7oiEkiKhhQdhX`gbYgh_bg`ZfaUfbQedMdeHdfDcg9ciH_\
+  kPXlXUndQplNqoKopMnqOmoPknRjlTikUghWffYedZcaYaYX_V\
+  WYSVWQUUPUSMTQHSOCRMAQLAQKASEANBAK8AMHCXHGYGK_FO`F\
+  SaEWcDadKgeUmfcqgmzhUihKaiC_jCZkCYmBXlBWmBUnBTnBSo\
+  BAZBQqBPqTQniQlfPkcOk`NkYMkVLkSKjPJjMIjJHjGGjEGjFF\
+  lGFmHGnIGpKGqMHrOHtQHuSIvUIwWKuYLs_MqaNocOmePlgQji\
+  RhkSfmTdoUcqX`s_YubVweSxhQzkAzjDziGzhIzgLzgOzhQziT\
+  yjVykYxl`wmbvnevogupetqcsrars_ptWquXqvYrzZrx_cyYez\
+  YgzZizZmzXlzYkzZrzZrzXqzU }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

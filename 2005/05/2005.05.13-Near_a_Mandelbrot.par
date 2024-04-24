@@ -1,0 +1,106 @@
+;     Date: Fri, 13 May 2005 11:48:11 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-05-05 (Near a Mandelbrot [5])
+;       Id: <1.5.4.16.20050513114931.30afea9c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 13, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today is Friday the 13th, an event that happens once or twice 
+; every year.  It is supposed to be a bad luck day, though I doubt 
+; that is any unluckier than any other day of the year.  Nothing 
+; unusually bad has ever happened to me on a Friday the 13th, so 
+; I consider the bad luck thing to be an unfounded superstition, 
+; most likely originating long ago, when the decree that ordered 
+; the elimination of the Knights Templar was passed on a Friday 
+; the 13th.  My view would seem to be confirmed by today's image, 
+; which is notably un-notable.
+; 
+; Today's image is a scene in a fractal that is almost a 
+; Mandelbrot set.  What keeps it from being a Mandelbrot set is 
+; the exponent of Z in the iterated formula, which is 2.00001.  
+; This is a very tiny difference, but to make a big deal of a 
+; minor event I examined the fractal 100,000 levels up the complex 
+; log hyperspiral, at a level where it has rotated approximately 
+; 70 degrees.  At this level the negative real axis cuts through 
+; what is normally the S.S.W. shoreline of the M-set.
+; 
+; At this lofty level, the parent fractal still resembles a 
+; classic Mandelbrot set, and the inner detail is basically 
+; unchanged.  The one difference is along the negative real axis, 
+; where a tiny discontinuity exists.  This break is so small that 
+; it does not become visible until the magnitude reaches 500000, 
+; but the break still does strange things to the inner detail of 
+; the area.
+; 
+; The name "Near a Mandelbrot" refers to the exponent of Z, which 
+; makes the parent fractal nearly but not quite a perfect 
+; Mandelbrot set.  The rating of 5 means that I am not unusually 
+; impressed by the image.  The render time of almost 17 minutes is 
+; slow, making a download of the completed image from:
+; 
+;      <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; a wise choice.
+; 
+; The clouds cleared unexpectedly on Thursday afternoon, giving 
+; the fractal cats an unexpected great afternoon in the holly 
+; thicket.  For 15-year-old cats, a great afternoon means a 
+; peaceful uneventful afternoon, and peaceful it was.  When they 
+; returned indoors in the evening, a small tuna treat closed their 
+; day with a whimper.  Today is starting with sun and clouds.  
+; It remains to be seen which will prevail.  For me the work is 
+; rather light, which will give extra time for fractals.  The 
+; next FOTD will appear in 24 hours.  Until then, take care, and 
+; if life serves you an apple, make it a napple.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Near_a_Mandelbrot { ; time=0:16:54.64--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.70976131907690630/+0.000002313855428\
+  97/3.870999e+007/1/42.5000007756963427/-1.18881678\
+  390359014e-007 params=2.00001/0/100000/0 float=y
+  maxiter=4000 inside=0 logmap=395 periodicity=10
+  colors=000aPTaOUbOVcOWcNXdNYdMZeM_eL`fLafLagK_gKZg\
+  KYgKXgJWgJVgJUgJTgJSgIRgIQgIPgIOgINgHMgHLgHKgHJgHI\
+  gGHgGGgGFgGEgGDgFCgFBgFAgF9eC9gF8hH8iK8kM7lO7mR7oT\
+  7pW6qY6s_6tb6ud5wg5xi5zj3yk5yk7yl8ylAylBymDxmExmGx\
+  nHxnJxnKxoMwoNwpPwpQwpSwqTwqVvqWvrYvrZvr`vsavscvsd\
+  tqcrobpmbnkaliajg`hf`fd_db_b`Z`ZYZXYXVXVUXTSWRQWPO\
+  VNMVLKUHIZKJUMKPOLLRLGTMCVN7XN3DWh`YWw_JvYOvWTvVXv\
+  TauSeuQjuPnuNsuMwtNusOtsPsrQqrRpqSoqTnpUlpVkoWjoXh\
+  nYgnZfm_em`clabkbakc_jdZjeYifXigVhhUhiTgjRgkQflPfm\
+  OenMeoLdpKisFdpJ_mNWjRRgVNdZIabEZf9bj4fo5gn5fn5dm5\
+  em6el6dl6ak6fk7cj7Sj7Si7Si8Rh8Rh8Rg8tg9zf9zf9Qe4Od\
+  7Pe9QeBQfDRfGRfISgKTgMThPUhRUhTViVViXWi_XjaXjcYkeY\
+  khZkjZll_ln`mq`msamuanwbnybnx`oxZoxXpxVpxTpxRqxPqx\
+  NrxLryLsxKrxJrxJrxIrwHqwHqwGqwGqwFqvEpvEpvDpvCpuCo\
+  uBouBouAou9ot9nt8nt7nt7ns6ms6ms5ms4ms4mr3lr2lr2lr1\
+  ls0mt0mu0mv0mw0mx0my0mz0m }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

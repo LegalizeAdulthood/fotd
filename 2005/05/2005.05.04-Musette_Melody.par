@@ -1,0 +1,82 @@
+;     Date: Wed, 04 May 2005 12:08:10 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-05-05 (Musette Melody [7])
+;       Id: <1.5.4.16.20050504120925.29d7f69e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 04, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is simply a scene in the fractal created by the 
+; formula Z^(1.5)+C.  I chose it because the midget at the center 
+; is unusually interesting for one created by the exponent 1.5.  
+; It is so interesting that I rated it at a 7.
+; 
+; The name "Musette Melody" invokes images of the green hills of 
+; Scotland, with the sound of distant bagpipes drifting on the 
+; wind.  It has little to do with the appearance of the image.
+; 
+; The 4-3/4 minute render time is fast enough for all but the 
+; most impatient fractalists, or those with Fractint-challenged 
+; machines.  Those who would not or can not render will find the 
+; finished image posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather on Tuesday here at Fractal Central was not perfect.  
+; The temperature reached only 59F 15C, the wind blew, and the sun 
+; shone only part of the time, but the fractal cats made the most 
+; of the less-than-perfect conditions, and enjoyed over three 
+; hours adventure in the holly thicket.  My day was uneventful.  
+; Today promises to be a repeat.  The FOTD will also be repeated 
+; in 24 hours.  Until then, take care, and be wise.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Musette_Melody { ; time=0:04:43.58--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.70822397496087670/+0.410103256784967\
+  50/2745.83/1/20/1.96689331488641983e-011
+  params=1.5/0/0/0 float=y maxiter=2000
+  inside=0 logmap=89 periodicity=10
+  colors=000Z98X86W85U7AR6EN5JJ4NE3RA2W61_20cA6eIBgP\
+  HhXMjcSkkXmo_nnbljcjfdibegZffVgdRhbNiaJj_FkZBlX7lW\
+  8mU9nSAoQBoOCpMDqKEqJFiHFaGFUEFMDDPEBSEAVE8YF7_F5b\
+  F4eG2hG1jG0gH0eH0cI0aI0_J0YJ0WK0UK0SL0QL4SJ7TIAVHD\
+  WGGXFKZEN_DQaCTbBWcA_e9bf8eh7hi6kj5f_8aPBYFEZKCZOA\
+  ZS8_W6__4_c3bb7ebBhbEkaInaMpaPodOofNbgNQhNDiN1jN6i\
+  OBhPGhQLgRPfSUfTZeUcdVgdVjaSmZPoWNrTKuQHwOF9HbAMXA\
+  QRBUMBYGCaBCe5Ci0V`4mS8hWEc_KZcQ`ePafPcgPdhOfiOgjO\
+  ikNjlNlmNmnMooMppMrqLsrLusLvtLrrNnqOjpPfoRbnSZmTVl\
+  VRkWNjXJiYMjWOjVQjTSjSUjRXjPZjO`jNbkLdkKgkIikHkkGm\
+  kEokDqkCojBmiBkiAihAgh9eg9cg8af8_e8Ye7Wd7Ud6Sc6Qc5\
+  Ob5Nb5La7K`8J_9IZAGYBFXCEWDDVEBUFATG9SH8RI7RJFVPMZ\
+  VTb__fefjkmmps_rxMstQopTllWihZfdbcae`YhYUkVQoSMrPI\
+  uMFxJHyLJzMLzNNzOPzPRzQTzRVzSTzTRzUPzVNzVLzWJzXHzY\
+  DzOFzNHzNJzNLzMNzMPzMRzLTzLVzLXzKZzK`zKbzJdzJfzJlz\
+  KqzKpzLozLozLnzLYzDYzBZzA }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

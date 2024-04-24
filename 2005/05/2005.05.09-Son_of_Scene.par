@@ -1,0 +1,93 @@
+;     Date: Mon, 09 May 2005 11:55:14 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-05-05 (Son of Scene [7])
+;       Id: <1.5.4.16.20050509115633.2a4fdf9a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 09, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's FOTD discussion I mentioned that I had not yet 
+; glimpsed the midget that lies at the center of the frame.  In 
+; today's FOTD image we remedy that shortcoming.  In today's image 
+; I used the same color palette with only a few minor changes, so 
+; today's image closely resembles yesterday's, though the pattern 
+; this close to the midget itself is far more broken.
+; 
+; Today's image might be considered better than yesterday's, but 
+; it is also a near-repeat.  Considering both these things, I 
+; rated it at a 7, which is the same as the rating of yesterday's 
+; FOTD.  Remembering those great old 1950's horror movies, I named 
+; the image "Son of Scene".
+; 
+; Since today's scene is far deeper than yesterday's, the render 
+; time is over twice as long.  But as always, relief is at hand in 
+; the form of the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the completed image will soon be posted.
+; 
+; In tomorrow's FOTD, I might zoom in even farther and fill the 
+; frame with the midget.  We'll see how it goes.
+; 
+; The weather was near perfect here at Fractal Central on Mother's 
+; Day Sunday.  Only a brisk wind kept it from being absolutely 
+; perfect.  The high temperature of 75F 24C and cloudless skies 
+; lured the cats into the farthest reaches of the yard, but the 
+; constant blowing of the wind kept them from venturing into 
+; regions unknown.  Today promises to be equally perfect, with far 
+; less wind.  We will see what the duo makes of it.  For me, the 
+; work is moderate and the fractals are unending.  Until next 
+; FOTD, take care, and be at one with whatever you choose to be at 
+; one with.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Son_of_Scene { ; time=0:22:08.76--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-1.25338697940287400/+0.346669700387608\
+  00/6.801715e+010/1/-17.5/-0.000864541449251347849
+  params=1.5/0/1/0 float=y maxiter=4500 inside=0
+  logmap=655 periodicity=10
+  colors=0009DABFEDHHFJKHLNJNQLPTNRWPTZRVaTXdVZgX`jZ\
+  bm`dpbes`go_hlYiiXkfVlbUm_SoXUpUZqQcsNhtKmuHqwDtxA\
+  wy7zz4zw3zu3zs3zq3zo3zm3zk3zi2yg2xe2wc2va2u_2tY2sO\
+  KtFapMelThhZkden`lqYrt`ppbomenjgmgjldlk`ojYqiVthSv\
+  gPsfQpfQnfRkeRieSfeSddTadTZdUXcUUcVScVPbWNbWKbXIbX\
+  LaWO`VR`UU_TWZSZZRaYQdYPfXOiWNlWMoVLqVLk`HffEalBXr\
+  8Sx5Us6Vo6Xj7Yf7Zb7`Y8aU8bQ8gOHkMQpKZtIgxHorRtl_xf\
+  Wp`SiWPaQLVKHNFEG9A8471`aNVZJQVGLcDMh9Po6Ut3awK_rH\
+  VjFQbCLVAFM7AE5572867645434322111hAso_bbRTQIJD99uW\
+  _kQUaLOTGIJAC956sAGk8Dc7BW59O46G24812Qsj4Pw3Ih2CU1\
+  6F7qQ5hL4_H3RD2I8194Yp2Sg1MZ1HQ1BH0580e9jX7`P5SG3I\
+  819eVCLF6Fp_AZO5HC2ic1YU1NK0BAi43U22F11fsE`lCWeAQZ\
+  8LS7GL5AE3571sVUEVxeIAVD7L95A42O8LfoZ`hUWbQQWLLUHG\
+  XDA_85b4Ne5IhADkF9nK4qPjtU`wZSzcIzh9zm`zrVzvQzzLzz\
+  FzzAzz5zzazzSzzJzz9zzPzzLzzHzzEzzAzz7zz3zzjzzVzzFz\
+  zzzzqzzhzzkzzczzWzzOzzGzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

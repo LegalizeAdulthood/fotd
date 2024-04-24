@@ -1,0 +1,84 @@
+;     Date: Sat, 07 May 2005 09:22:27 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-05-05 (Comets and Circles [7])
+;       Id: <1.5.4.16.20050507092344.2ad72972@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 07, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's annoyingly slow image is a scene deep in the half-moon 
+; that appeared in the 'Lunahalf' image 2 days ago.  In the 
+; original image, the detail inside the circle became obscured 
+; when the logmap spread out the iteration bands there.  In 
+; today's image, the logmap has been turned off and the rendering 
+; done with the outside set to 'tdis'.
+; 
+; The result is a rather gloomy scene filled with ferns and 
+; highlighted by colorful circles and comets.  The 'comets' and 
+; 'circles' are unusual enough to give the image a rating of a 7.
+; 
+; The name "Comets and Circles" describes the colorful objects 
+; scattered through the image.  The render time of one hour and 40 
+; minutes is very slow.  I strongly recommend downloading the 
+; already-rendered image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The sky stayed cloudy all day here at Fractal Central on Friday, 
+; but the rain stayed east of us, and even though the temperature 
+; reached only 54F 12C, the cats managed a reasonably good 2 hours 
+; in the holly thicket.  They did ask for a bit of tuna in the 
+; evening however.  Today is starting partly cloudy.  The cats' 
+; day should be better.  The next FOTD will appear in 24 hours.  
+; Until then, take care, and who is right?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Comets_and_Circles { ; time=1:40:25.71--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.70965744031310400/-0.209435894187028\
+  00/3.02452e+007/1/-122.25/-2.03390234168598916e-008
+  params=1.5/0/100/0 float=y maxiter=42000 inside=0
+  outside=tdis periodicity=10
+  colors=000EzoBzsCzrCzqCzpCzoCynCwmCvlCtkCrjCpiCnhC\
+  lgCjfDieDgdDecDcbDKKD_`DY_DXZDUYDSXDPWDNVDKUEIVDIU\
+  DITCHSCIRBIQBIPAIOAJN9JM9JL8JK8KJ7KI7KH5ID7KG9LIBM\
+  KCNMEOOGPQIRTJTVLVXNYZP_`Q`bSaeUbgWciXdkZem`foagq`\
+  ep`do`co`an``n`_m_Zm_Xl_Wl_Vk_Uk_SjZRjZQiZPiZNhZMh\
+  ZLgbAd`FfZKgXPhVUiTZjRckPhlNmmLrnJwoHzpEztFzrGzqHz\
+  pHzoIznJzmJzlKzkLzjLziMzhNzgOzfOzePzdQzcQzbRzaSz`S\
+  z_TzZUzYUzXVzWVzVVzUVzTVzSWyRWxQWwPWvOWuNWtMXsLXrK\
+  XqJXoIXnHYmGYlFYkEYjDYiCYhBZgAZf9Ze8Zd7Zc6WW7Y_6Zb\
+  6_e5`h5bl4co4dr3eu3fv4fv5gv5gv6hv6hv7iv7iv8jv8jw9j\
+  wAkwAkwBlwBlwCmwCmwDnwDnwEnxFoxFoxGpxGpxHqxHqxIrxI\
+  rxJtwIrxJqxJpxJoyKnyKmyKlzKjzLizLhzLgzLfzMezMdzMgz\
+  HczM_zQWxVSvZOtcKrgGplCnp6mu9ltBktDktGjsIjsKisMisP\
+  hrRhrTgrVgrYfq_eqaeqddpfdphcpjcpmbooboqaosaoq`mp`l\
+  o`km`jl`ik`hi`gh`fg`ee`dd`cc`ba`a```TOcUQbVS`WUZXW\
+  YYYWY_VVdYSh`PlcNpfKuiHyl }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

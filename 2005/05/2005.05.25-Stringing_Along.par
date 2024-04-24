@@ -1,0 +1,102 @@
+;     Date: Wed, 25 May 2005 11:45:11 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-05-05 (Stringing Along [5])
+;       Id: <1.5.4.16.20050525114641.381f71d2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 25, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; On Tuesday evening I wondered what would happen if the almost-
+; Mandelbrot set were rotated 180 degrees, so that the main stem 
+; fell on the positive half of the real axis instead of the 
+; negative half.
+; 
+; With the exponent of Z so close to the integer 2, I needed to go 
+; 3,141,585 levels up the hyperspiral before the fractal rotated a 
+; full 180 degrees.  (I assume the proximity to the number PI is 
+; coincidental.)
+; 
+; What I found at this cosmic level is little more than a mirror 
+; image of the ground-level figure.  The main stem once again is 
+; infinitely divided, with the 'explosion in a rail yard' effect 
+; prominent.
+; 
+; Instead of investigating the east valley of the largest midget, 
+; I checked the east valley of a sub-midget on the main stem of 
+; the large midget, and found a nest of sub-midgets arranged as 
+; though they were strung out like beads on a string.
+; 
+; I named the image "Stringing Along", and rated it a 5, which is 
+; average.  It might be worth a 6 or so, but I am starting to grow 
+; bored with the 'infinitely divided main stem' theme, and could 
+; give the image no higher a rating.
+; 
+; The render time of 9-1/2 minutes on my 10-year-old machine is on 
+; the slow side, especially in a world moving at a hectic pace.  
+; But quick relief for latent impatience is on hand at the FOTD 
+; web site, which can be found at the URL:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the completed GIF image waits, ready for download.
+; 
+; A cold, dreary, rainy day on Tuesday here at Fractal Central 
+; left the cats' moods on the surly side.  Extra tuna made them 
+; feel somewhat better in the evening, but it could not make up 
+; for an entire day of forced confinement.  Today is starting 
+; cloudy and cold, with rain scattered around the area.  It could 
+; be as bad a day as yesterday.
+; 
+; For me it's work first.  The fractals come later.  Until 24 
+; hours have passed, take care, and where do prime numbers come 
+; from, if from anywhere?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Stringing_Along { ; time=0:09:38.86--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+1.78357259738345500/+0.000006023651137\
+  31/1.04065e+008 params=2.000001/0/3141585/0 float=y
+  maxiter=5000 inside=0 logmap=228 periodicity=10
+  colors=0000000000000000000000000100200300400500500\
+  600600800801801901902A02A02A03B04B04C05C05E06E06F0\
+  9F0CE3GC8KBCPAHSAKUAMUAOUAQUASUAUUAWUAYUA_UAaUAcUA\
+  eUAgUAiUAkUAmUAmUAmUAmVAmWAmYAm_AmaAmcAmeAmgAmiAmk\
+  8nm6ro9rqArsCruErwGrxHryKrzMrzPrzQrzTrzVrzYrzZrzar\
+  zcrzfrzhrzlrznrzqrzrrzvrzxrzzrzzrzveyoTxhJta9vZ2rY\
+  1qW1oW0nV0lT0hT0fS0eQ0cQ0aP0ZN0YN0WM0VK0TK0QJ0PH0N\
+  H0MG0JE0KG0MJ0MM0NP0NS3PV5PY8Q`AQaCSeGThJTlMVoPVrT\
+  WvWWyZYzaZzfYzeWzeVzeTzeSzcQzcPzcNzcMzaKzaJzaHzaGz\
+  `Fz`Ez`Cz`BzZzzZzzZzzZzzYzzY4zY2zW3zY3zY3yZ3vZ3t`3\
+  r`3q`4na4la4jc4fc4ee4ce4ae5Zf5Yf5Wh5Th5Sj5Qj5Pj6Ql\
+  6Sl6Un6Wn6Yo6_o2`z6aoBbeGcWMcMScEYc6cd0je0qf0og0oh\
+  0ni0nj0lk0ll0jm1jn3ho5hp8fqAfrCesFetHcuKcvNawQawT`\
+  wW`wZZwaZweYxhYyjWzeWzaWzZVzWVzTVzPTzMTzJTzGSzESzA\
+  Sz8Qz5Qz3Qz1Qz0SzASzNTzaTzqSzrQzrPzrNzrNzrMzrKzrJz\
+  rJzrHzrGzrFzrFzrEzrCzrBzr }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

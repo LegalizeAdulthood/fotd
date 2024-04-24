@@ -1,0 +1,94 @@
+;     Date: Tue, 24 May 2005 11:51:01 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-05-05 (Baleen [7])
+;       Id: <1.5.4.16.20050524115230.2aafbc34@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 24, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Baleen".  Baleen is the bony material, 
+; better known as whalebone, that baleen whales have hanging in 
+; their mouth.  It acts as a filter to collect the tiny organisms 
+; on which they feed.  Baleen was also used as corset stays to 
+; give the ladies their waspish waists when wasp-waists were in 
+; fashion.  I am not sure what baleen has to do with math and 
+; fractals, but for some strange reason I thought of it when I saw 
+; today's image.
+; 
+; The scene is once again the East Valley of the large midget on 
+; the main stem of an almost-Mandelbrot set, with the difference 
+; being that we are no longer at ground level of the logarithmic 
+; hyperspiral.  At this level, the same effect of an explosion in 
+; a railroad switching yard is there, though some subtle changes 
+; have appeared.
+; 
+; The image is striking enough to earn a rating of a 7.  The 
+; render time of 11 minutes (on my machine) is not strikingly 
+; short, but the minor delay may be avoided by downloading the 
+; pre-rendered GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The rain threatened on Monday here at Fractal Central, but it 
+; never arrived.  The temperature reached a mild 66F 19C.  This 
+; is chilly when compared to the normal 77F 25C, but the fractal 
+; cats didn't mind.  They spent several hours in the yard, happily 
+; watching the birds fly by.  This morning is starting cloudy and 
+; quite chilly, with the rain finally in progress.  We'll have to 
+; see what the cats do about it.
+; 
+; For me it's business work first and fractal play second.  The 
+; next FOTD will appear in 24 hours.  Until then, take care, and 
+; if a four-dimensional planet existed, it could rotate in two 
+; different directions at the same time.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Baleen { ; time=0:11:03.61--SF6 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-1.74943279579828000/+0.000015340344480\
+  69/1.301765e+010/1/72.5000023442275108/9.170595638\
+  25678437e-006 params=2.000001/0/4/0 float=y
+  maxiter=2500 inside=0 logmap=345 periodicity=10
+  colors=000C48B59B6AA7BA8C99D9AE8BF8CG7DK7INDMTIQWO\
+  YbTflZotczzfqZglVggShbPhYMhTJiOGiJDjEAj97j44cBFXIQ\
+  QP_RNZSMZTLZUJZVIZWHZXFYYEYZDY_BY`AYa9Ya8YRMTG_O5l\
+  K7jL9iLBgLDfLEeLFeOHdRIdUdNWz6X3Tu6TE`LEZHWYDm7RW8\
+  T_9VbAXeBZhC`kLebUjUhoMutDzz5mmME6aD5`C5_C4_B4ZB4Z\
+  LC_UJ_bQ`kX`ihfhslgnbfiUfdKe_BeV2kZ5qb8ieHbhQWkZ87\
+  oD6jH5eL4`P3WT2RX2MaELfQLjaKomKsxKrarvMwtKpsJirIbq\
+  HWpGPoFJhLPaRVVW`PLWKAS5iS8eTAaUCZVEVVHRWJOXLKYNHY\
+  UER_BKc8Dz66zCIzONz_S9kX8mT8nP8oL8pH7qD7r97s57t16s\
+  35s54r73r82rA1qC0qE0qF2rO4sX6td8umAuuEnsHhrKbpNXoQ\
+  QnTKlWEkZ8jXDZWIOTGSQEWODZLBbINmGczDczBczLcc4cJu0G\
+  i2LY4QM6VB7_uF0mG5fHA_IESIJLJNEKS7KWGPYPT_YYafacof\
+  exjgJCRIHNHLKGPGFUDEY9Da6C`6B`6uKYoLPiMHcN8ZN0_O2_\
+  P3`Q4`R6aS7aT8bTAbUBcVCcWEdXFdYGdYHPcSccbccdmcfwcg\
+  zcizXkzTlzSmzRnzRnzQozQozPpzOqzOqzNrzNrzMszMszOqzQ\
+  pzRozTmzUmzUmzUmzUmzUmzUm }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

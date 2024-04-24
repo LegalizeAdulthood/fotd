@@ -1,0 +1,90 @@
+;     Date: Mon, 23 May 2005 12:04:51 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-05-05 (Rectangular Miracle [6])
+;       Id: <1.5.4.16.20050523120619.38e70e22@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 23, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I tried to make something of the Julia aspect of the 'Miracle' 
+; fractal that appeared on May 17, but to no avail.  All is not 
+; lost however, for the Rectangular aspect of the scene proved to 
+; be quite interesting, completely transforming the original 
+; diamond into a vague safety-pin shape.  It is this Rectangular 
+; aspect that appears as today's FOTD.
+; 
+; I picked up the color palette from the original 'Miracle' image, 
+; applied it to today's image, and named the result "Rectangular 
+; Miracle".  An honest evaluation of the image convinced me that 
+; it was worth a rating of no more than a 5, but I rated it at a 
+; 6 anyway.
+; 
+; Those who choose to run the included parameter file will wait 
+; around 4-1/2 minutes to view the distorted miracle.  Those with 
+; the most modern machines will view it in a minute or so, that is 
+; unless their state-of-the-art fireball machines are Fractint 
+; challenged, in which case they will need to visit the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and download the completed image from there.
+; 
+; Near perfect weather made for saintly cats here at Fractal 
+; Central on Sunday.  Unfortunately, being saintly is not much 
+; fun, so there is little activity to report.  The duo spent the 
+; day quietly in the holly patch.  Today is starting with increa-
+; sing clouds and forecasts of afternoon rain.  The cats had best 
+; take their daily outing early.
+; 
+; For me the work is on the light side.  If I don't turn totally 
+; lazy, this could mean a superior fractal for tomorrow.  Until 
+; then, take care, and prepare for the infinite.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+RectangularMiracle { ; time=0:04:24.31--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=flip/ident
+  center-mag=-0.00000016066169414/+0.000000000158181\
+  08/758157.5/27/166.723380099685556/-76.33078348867\
+  65733 params=0/90/2.000001/0/-1.749851541979/4.742\
+  589e-006/-1.749851541979/4.742589e-006 float=y
+  maxiter=5000 inside=0 logmap=325 periodicity=10
+  colors=000Q9QdKmcKlbKkaKj`Ki_KhZKgYKfXKeWKdVKcUKbT\
+  KaSK`RI_QGYO9WMFUKLS4Q31X06a0Af0Dl0Ip4Mu9PzDTzIXzM\
+  azJfsIllGpcDvXCzPAvLDsIFpFGlAJi7Lf4Mc1OX7JQDGLJCDP\
+  97V41`1CTAMOIXIP`LMcOJfQGjTDmXAp_9mf6jm4gs3dz1az0O\
+  fLAIc9Pf7Vg7`i6gj4ml4sm7v`AyODzAFz070zF0rL0jS0cY0V\
+  d0Oj0Gp09u0Jx0Tz0csAXmOPg`IaoAXz3Qz0`zAiyPrrazjpzc\
+  zfgoFl`PVP_DDi03c6CYFJSOQMVYGcdAll4us0zzIos`alsPfr\
+  LdpIdpFdoCdo9dUUUcccmmmzzzzzzzzzzzzzvzzszzpzzmxzju\
+  zgrzdoz_mzTmzOmxIlsClp6lm1lo0mo0op0pp0rr0sr0ur0uj3\
+  jcJaXYTSVSOSQJPPFMOCLOLIQTGS`DTiCVr9Xy7YoDQdJLXPDM\
+  V7C`03d0LzzCzg3zITdzOgzJjpFmc9oS4rF0u3MO0D_04j0_00\
+  T40PC0JL0FSOA_F4g70o0mXzf`r_ciTf`MiSFmI9p91s0Lr9Gs\
+  6Ds39u06u01v00v04_LlOG0Az0Qf0fGpSOa`FOg79o0Cgz3oTv\
+  Xmfc_QiLAp60zI0zD0z90z40y00y0VzOQzJMzFKzAPz7Uz3Zz0\
+  cz0hz6kz3nz1qz0tz0wz0zz0zzLzzFzzAzz6zz0zz0zzQzzQzz\
+  Qzz9zzZzzOzz7zzCzz9zz6zz3 }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

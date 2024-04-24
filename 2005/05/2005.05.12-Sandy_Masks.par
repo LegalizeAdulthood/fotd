@@ -1,0 +1,91 @@
+;     Date: Thu, 12 May 2005 11:55:27 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-05-05 (Sandy Masks [6])
+;       Id: <1.5.4.16.20050512115647.29a7576a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 12, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In this ever-changing world, only a few things remain constant 
+; -- things such as the velocity of light and the mass of the 
+; electron.  Or do they?  I have just received the June issue of 
+; 'Scientific American' magazine, and in it I see an article that 
+; examines the possibility that these constants have changed over 
+; the life of the universe.  Heavens, if the speed of light can 
+; change, what will be next -- the shape of the Mandelbrot set!?
+; 
+; Today's formula is not new, but I have included it in my working 
+; 'allinone' formula file for the first time.  It works exactly 
+; the same as yesterday's formula, except that it calculates (-Z) 
+; rather than Z.  To produce today's image, I set the exponent of 
+; Z to 1.5 and examined the resulting Mandeloid for a point that 
+; might have an interesting Julia set associated with it.
+; 
+; The result is today's image, which reminds me of discarded masks 
+; lying scattered on a sandy beach.  I named it "Sandy Masks".  I 
+; have no idea what kind of wild party might have been in progress 
+; on the beach the night before, but it must have been interesting.
+; 
+; The image itself is . . . not bad.  It rates a 6.  The render 
+; time of (virtually) exactly 4 minutes is not bad also.  The ease 
+; with which the completed GIF image may be downloaded from the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is once again not bad.
+; 
+; Another near perfect day, with lots of sun and a temperature of 
+; 81F 27C, pleased the dynamic duo here at Fractal Central on 
+; Wednesday.  Today is starting cloudy and cooler.  It is not too 
+; bad a day, but still not up to yesterday.  The cats will have to 
+; make a judgement.  For me it's a matter of doing the things that 
+; need to be done, and then pondering the mysteries of the uni-
+; verse.  The next FOTD will appear in 24 hours.  Until then, take 
+; care, and if life serves you a peach, ignore the pit.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sandy_Masks { ; time=0:04:00.01--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JulibrotInvZ passes=1
+  center-mag=-0.0578953/0.074155/5.143809/1/-95/8.94\
+  423424213641738e-014 params=1.5/0/0.5/0.703027/0/0
+  float=y maxiter=2500 inside=0 outside=real
+  logmap=yes periodicity=10 sound=off
+  colors=000GfmHdkIbjK`iLZhMXfNVeOTdPScSVdUYdW_eYbe`\
+  dfbgfdigflgkpjhngflddjabh_`fXZdUXbRU`PSZMQXJOVGMTE\
+  KRBIP8GO6MP9SQCYREbRHhSKnTMtUPyURvXUt_Xra_odbmfeki\
+  hhlkfnndqqbstip1jn2jm2kk2kj2kh2lg3le3ld3mb3ma3n_4n\
+  Z4nX4oW4oU45xLoT4qV6rW7sX8tY9uZAv`CwaDxbEycFzdGqgI\
+  hiK`kMSmOKoQBqS4yW3sT3mQ3hN3bK3YH2SE2NB2H82C526221\
+  054476798BBAEDCHFELIHOKJSMLVONYQPaSRdZOhUTgPXfK`eG\
+  ddBhc6lb2pau0iu1gu1fu2du2cu2bu3`u3_vgzu3Zt2Ys2Xr2X\
+  q2Wp1Wp1Vo1Un1Um0Tl0Tk0Sk0Sm5Un9VoDWpIXrMYsQZtV_uZ\
+  `wbaxgbykczodxl`wjXvgTuePtcMs`IrZEqWApU6oS3nR5nR7n\
+  R8nQAnQCnQDnPFmPHmPImOKmOMmONmNPmNRySUmNSaIRQDPE8O\
+  23N95LF7KL9JRBIXDHbFGhHFnJEtLDzNCtKDnHDhFDbCDXADR7\
+  DK1AL5DM9GMDJNHMOLPSSTOOSLKRIHQEDPBAO86N53M4BO3IQ2\
+  QS1XU9VYHT`PSdWQgcOkkNnsLrzKuwMstNrqOqnPpkQohSneTm\
+  bUk_VjXWiUYhRZgO_fL`e6puJadVOOfA8tuHrpLqlOpgRncUmZ\
+  XlV_jQbiMehHhjEogDkEjoFhn }
+
+frm:JulibrotInvZ {; Jim Muth
+; Draws oblique slices of order n inverse Julibrot Figure
+; P1 defines power of Z, P2 determines center of slice
+; P3 determines angle of slice
+z=pixel, c=p2+(pixel*p3):
+z=(-z)^p1+c,
+|z| < 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,97 @@
+;     Date: Tue, 10 May 2005 08:38:48 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-05-05 (Grandson of Scene [4])
+;       Id: <1.5.4.16.20050510084006.29e72c60@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 10, 2005 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Has the FOTD 'jumped the shark'?  Jumping the shark refers to 
+; the outstanding event in a great series that marks the start of 
+; the decline in quality that leads inevitably to the end of the 
+; series.  The past few weeks have hardly seen great FOTD's.  The 
+; images have been ho-hum.  The discussions have been terse and 
+; have merely repeated what everyone already knows.  The philoso-
+; phy is still brewing, but seems stuck in some grey nether land.  
+; There has been no outstanding event, but I must keep careful 
+; watch over this trend.
+; 
+; Today's image is a close-up of the midget that appeared at the 
+; center of yesterday's 'Son of Scene' image.  What name could be 
+; more appropriate than "Grandson of Scene"?  Three consecutive 
+; visits to the same point in the world of fractals really is a 
+; bit too much.  I could therefore rate the image no higher than a 
+; lowly 4.  To make matters worse, the render time of 55 minutes 
+; is well into the slow range.
+; 
+; With its broken arcs, diffuse shorelines, and small crooked 
+; buds, the midget is about what would be expected in a fractal of 
+; order 1.5.  The magnitude of almost 6x10^11 is high enough that 
+; I included the mathtolerance entry in the parameter file to be 
+; certain that the image renders at the correct size.
+; 
+; The best way to avoid rendering problems is to download the pre-
+; rendered GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Monday's weather was the best so far this spring here at Fractal 
+; Central.  Absolutely clear skies, gentle winds, and a tempera-
+; ture of 77F 25C were just what the fractal cats were waiting 
+; for.  The 9 hours they spent in the yard set a new record for 
+; time outdoors in a single day.  Today is starting with more blue 
+; skies and warmer temperatures, it looks to be another great cat 
+; day.  For me it looks like just another workday.  The next FOTD 
+; will appear in 24 hours.  Until then, take care, and if life 
+; serves you a watermelon, spit out the seeds.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Grandson_of_Scene { ; time=0:55:33.40--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2
+  center-mag=-1.25338697940232200/+0.346669700387809\
+  50/5.822357e+011/1/-17.5/-0.000441531350640803066
+  params=1.5/0/1/0 float=y maxiter=25000 inside=0
+  logmap=1048 periodicity=10 mathtolerance=/1
+  colors=000cPtbPsaPr`Pq_PpZPoYPnXPmXPlXPkVPjUPgTPdS\
+  PbRP_QPXPPUOPSNPPMPMLPJKPHJPEIPBHP8GP6xSHsUJnVKjWM\
+  eXNaYOX_QT`ROaSKbUFcVBdWFfXJgYMiZQj_Tk`Xma_nacpbfq\
+  cjrdmtequftvfmogfih`ciUYiNRjHLkAFl49l6Bi8DgAFdBHbD\
+  J`FKYGMWIOUKQRLSPNTMPVKQXISZFU`DVaBR_EOZGKYIHWKDVM\
+  AUOEKJIAFL0BH2ME3XA4g75qD4oJ4nP4mV3k`3jf3il2gr2fx2\
+  eU6M0A398GH6TP5eV7k`8qcEpfKoiQolWnn`nqfmtlmwrlywlY\
+  kaSceMWiHOmBGq69uAEpEIkIMfMQbQUYUYTYbOafKejFinAmr5\
+  pv1nr2lo2jk2hh3fd3da3bY4`V4ZR4XO5VK5TH5RD6PA6N66L3\
+  6QADVHJZNPcUWh`alfgqmnvttzzzqzzhzzkzzczzWzzOzzGzz9\
+  DABFEDHHFJKHLNJNQLPTNRWPTZRVaTXdVZgX`jZbm`dpbes`go\
+  _hlYiiXkfVlbUm_SoXUpUZqQcsNhtKmuHqwDtxAwy7zz4zw3zu\
+  3zs5zqAzoFzmKzkPziUygZxecwchvamu_rtYvsOztFzpMzlTzh\
+  Zzdez`lzYrz`pzbozenzgmzjlzlkzojzqizthzvgzsfzpfznfz\
+  keziezfezddzadzZdzXczUczSczPbzNbzKbzIbzLazO`zR`zU_\
+  zWZzZZzaYzdYzfXziWzlWzoVz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

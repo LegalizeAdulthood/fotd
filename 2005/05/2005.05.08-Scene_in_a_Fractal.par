@@ -1,0 +1,88 @@
+;     Date: Sun, 08 May 2005 12:07:06 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-05-05 (Scene in a Fractal [7])
+;       Id: <1.5.4.16.20050508120824.2cc7bcd0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 08, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Scene in a Fractal".  The fractal is 
+; the Z^(1.5)+C Mandeloid as it exists 1 level up the complex-log 
+; hyperspiral.  The scene is located deep in the East Valley of a 
+; midget that lies on what passes for the main stem of the 
+; fractal, in an area where the patterns around midgets resemble 
+; slices of human brains.  Actually, the 'main stem' is more of a 
+; zig-zagging filament that a main negative stem, and the midgets 
+; that lie on it are not easy to find.
+; 
+; A sub-midget obviously lies at the center of today's image, 
+; though I have not yet ventured down there to glimpse it.  The 
+; brilliant coloring is an accident that happened as I struck the 
+; 'enter' key, which produces a new random color palette at every 
+; strike.
+; 
+; The rating of a 7 seems appropriate for such a brilliant image.  
+; In contrast to yesterday's dawdling image, today's renders in 
+; only 9 minutes.  The finished product is always available on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Saturday was quite a pleasant day here at Fractal Central.  The 
+; fractal cats made the most of the situation.  They were in the 
+; yard from before noon until evening.  Today is again starting 
+; pleasant but the wind is up.  Things look marginal for the duo. 
+; For me the day looks peaceful; how the fractals turn out remains 
+; to be seen.  Until 24 hours have passed, and tomorrow's FOTD 
+; appears, take care, and where did it all come from?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Scene_in_a_Fractal { ; time=0:09:15.08--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-1.25338697908398700/+0.346669699903004\
+  30/2.016383e+008/1/75/7.02462281718108095e-007
+  params=1.5/0/1/0 float=y maxiter=1500 inside=0
+  logmap=269 periodicity=10
+  colors=0009DABFEDHHFJKHLNJNQLPTNRWPTZRVaTXdVZgX`jZ\
+  bm`dpbes`go_hlYiiXkfVlbUm_SoXUpUZqQcsNhtKmuHqwDtxA\
+  wy7zz4zw3zu3zs3zq3zo3zm3zk3zi2yg2xe2wc2va2u_2tY2sO\
+  KtFapMelThhZkden`lqYrt`ppbomenjgmgjldlk`ojYqiVthSv\
+  gPsfQpfQnfRkeRieSfeSddTadTZdUXcUUcVScVPbWNbWKbXIbX\
+  LaWO`VR`UU_TWZSZZRaYQdYPfXOiWNlWMoVLqVLk`HffEalBXr\
+  8Sx5Us6Vo6Xj7Yf7Zb7`Y8aU8bQ8gOHkMQpKZtIgxHorRtl_xf\
+  Wp`SiWPaQLVKHNFEG9A8471`aNVWJQQGLLDMH9PB6U03euK_mH\
+  VfFQ_CLTAFL7AE5572867645434322111hAso_bbRTQIJD99uW\
+  _kQUaLOTGIJAC956sAGk8Dc7BW59O46G24812Qsj4Pw3Ih2CU1\
+  6F7qQ5hL4_H3RD2I8194Yp2Sg1MZ1HQ1BH0580e9jX7`P5SG3I\
+  819eVCLF6Fp_AZO5HC2ic1YU1NK0BAi43U22F11fsE`lCWeAQZ\
+  8LS7GL5AE3571sVUEVxeIAVD7L95A42O8LfoZ`hUWbQQWLLQHG\
+  JDAD8564No1Id0DV09K04A0jtI`hESYAIM79B3`CaVAWQ8RL6L\
+  F5GA3A515ahaSXSJMJ9B9PBML9IH7FE6CA49736313jJfVCSF6\
+  EzKIqHFhECk6Lc7JW9HOAEGCC }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

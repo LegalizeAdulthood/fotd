@@ -1,0 +1,88 @@
+;     Date: Sat, 14 May 2005 09:15:41 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-05-05 (Pseudo-Bailout [5])
+;       Id: <1.5.4.16.20050514091702.35e7744e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 14, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday's FOTD took us 100,000 levels up the complex-log hyper-
+; spiral of the Z^2.00001+C Mandeloid.  Today's image takes us 
+; 940,000 levels up the spiral, to a level where the M-set is 
+; rotated 180 degrees, and East Valley lies on the negative real 
+; axis, which is where the tiny discontinuities are concentrated.
+; 
+; Today's image is a scene in East Valley, very close to the nega-
+; tive real axis where the major split occurs.  It consists of 
+; typical East Valley stuff, but the stuff is broken and arranged 
+; in unfamiliar ways.  I named the image "Pseudo-Bailout" because 
+; it gives the impression that it lies very close to the escape 
+; radius, which in this case is 100.
+; 
+; All things considered, the rating of an average 5 seems appropri-
+; ate.  The render time of 6-1/2 minutes can be shortened by down-
+; loading the completed GIF file from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The clouds won the battle with the sun here at Fractal Central 
+; on Friday.  As a result, the high temperature was held to 61F 
+; 16C.  This was good enough for the dynamic duo however, and they 
+; spent several hours lurking in the holly thicket.  Their day 
+; ended with tuna.  Today is starting partly cloudy with showers 
+; and warmer temperatures forecast.  Things look marginal for the 
+; duo.  For me, things look settled.  For the fractals, things 
+; look infinite.  The next FOTD will appear in 24 hours.  Until 
+; then, take some care, and if life serves a cheeseburger, hold 
+; the onions.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pseudo-Bailout { ; time=0:06:32.83--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.27532277851590110/-0.000000442416795\
+  04/1.680416e+007/1/132.50000002129633/-2.537899397\
+  58108929e-008 params=2.00001/0/940000/0 float=y
+  maxiter=2000 inside=0 logmap=125 periodicity=10
+  colors=000PSFQUFRWFSZET`EUbEVdEWfEXiDYkDZmD_oD`qDa\
+  sDapDamDakDahDaeDacDa`DaZDaWDaTDaRDaODaLDaJDaGDaED\
+  bHGcJIdMLeONfRQgTShWViZXi`Zjbakeclgfmihnlkonmpqpqs\
+  rqutrvprvmrvjrwgrwdrwaswZsxWsxTsxQsyNsyKtyHtyEtzBt\
+  z8tz5tz2rv5qs8ppBomEnjHmgJldMkaPjZSiWVhTYgQ_fNbeKe\
+  dHhcEkbBna8p2JX3KY3KZ4K_4K`5Ka5Kb5Kc6Kc6Kd7Ke7Kf7K\
+  g8Lh8Li9Lj9LjALkALlALmBLnBLoCLpCLqAMsCLqEKpGJoIJnK\
+  IlMHkNGjPGiRFgTEfVDeXDdZCb_BaaA`cA_e9Yg8Xi7Wm4Sj7V\
+  h9YfC`dEbbGe_JhYLkWNmUQpSSsQUuNZtLctIhsGlsFjnEijDh\
+  eCfaBeXAdT9bO8aK2bC7`GB_JFYMJXQNVTRUWVTZZRbbQefOhj\
+  NlnLorLrxMwvNutOtrPsqQroRqmSokTnjUmhVlfWkdXicYhaZg\
+  __fY`eXacVbbTcaRd`PeaQf_RgZRhYSiXSjVTkUUlTUmSVnRVo\
+  PWpOWqNXrMYsLYtJZuIZvH_zG_xFXyGVzGTzHRzHOzHMzIKzII\
+  zIGzJDzJBzJ9zK7zK5zK6zO7zR8zV9zYAzaBzdCzhDzkEzoFzr\
+  EzwFzuFzsFzrFzpFznFzmFzkFziFzhFzfFzdFzcFzaFz_FzZFz\
+  XFzVFzUFzSFzQFzPFzNNzFOzF }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
