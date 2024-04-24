@@ -1,0 +1,103 @@
+;     Date: Mon, 04 Aug 2003 09:36:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-08-03 (Cosine-Square [6])
+;       Id: <1.5.4.16.20030804093646.2a9fee5c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 04, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A number of years ago, a local auto dealer ran a series of ads 
+; proclaiming that nobody has better cars and nobody sells them 
+; for less.  The ads worked great until a second auto dealer 
+; started calling himself Mr. Nobody. and took advantage of the 
+; first dealer's advertising.  The clever second dealer won the 
+; day by making something of nothing.
+; 
+; Today's image, which was created by the Mystic2 formula, 
+; consists entirely of blank inside space, which in traditional 
+; fractal rendering is nothing.  But that nothing has been turned 
+; into something by the bof61 inside fill.  Like that clever auto 
+; dealer, (and true mystics), I have turned nothing into something.
+; 
+; I named the image "Cosine-Square" simply because those two 
+; functions are used in its creation.
+; 
+; It is an unusually complex image for one that consists only of 
+; inside stuff.  The 4-way symmetry almost gives the impression 
+; that a Mandelbrot midget lies at the center.  But don't bother 
+; looking.  At a slightly deeper level, the apparent 4-8-16-way 
+; symmetry breaks down into an awkward figure with 13 lobes, and 
+; then the entire image goes flat blank.
+; 
+; Considering the image's assets and faults, I decided that a 
+; rating of 6 would be best for it.  Its chief asset is the render 
+; time, which is only a bit over one minute.  One of its faults is 
+; the color palette, which uses only a few of the 256 available 
+; GIF colors, and gives a rather muddy overall effect.
+; 
+; As always, those who choose not to render may pick up the 
+; finished GIF image at one of the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Sunday turned questionable in a hurry.  The temperature reached 
+; only 83F 28C, but just after noon a series of thunder-showers 
+; moved in.  The rain was not unusually heavy, but it persisted 
+; until sunset, and was enough to keep the fractal cats confined 
+; to the indoors, sulking about their confinement and skittish 
+; about the prolonged rumbling.  The evening treat of tuna eased 
+; their nerves and disappointment.
+; 
+; Today is starting even worse than Sunday.  It's raining already. 
+; As a result, I expect another sulky cat day.  Between showers, 
+; I'll accomplish a few other tasks and find a few fractals, one 
+; of which will appear as the next FOTD.  Until 24 hours from now, 
+; take care, and don't get caught in a square cosine.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Cosine-Square { ; time=0:01:20.53--SF5 on a p200
+  reset=2002 type=formula formulafile=jim.frm
+  formulaname=Mystic2 function=cos passes=1
+  center-mag=0/0/8.226655 params=-6.3/9.2/-3.4/-1.4\
+  /-7.1/6.2 float=y maxiter=95 inside=bof61
+  logmap=yes periodicity=10
+  colors=000UoroMGgaZ7F5HSLRU`iAzfLwdWuafrzzzXcmcmkw\
+  clcpzcvBJNBSbW7KXHWcAAjChrKkqSnpMX_Tgh_3icrGbqQaqZ\
+  `qgSlZVndYpjIvfooUgpeklmeooVSvXZtYdsZkq84iSvJVtVYr\
+  eLYjTgmsY8ldNeka3Lir`2meFhiScmd8kSMnda`AfsHMULTe`m\
+  WhfflwBmqMnkXoegpr4PhTbv0ZcknOPRUccdkZangFhcadJQ8z\
+  VVu5nNLpaPguTksXnq60sEErLRqTdpXUmZeo7Iaus8mrNfqapa\
+  LkeTgi`cmhx6NqIVkUaeeiU0zXRuXZ9YeOZkbl_KfdQciZamgY\
+  m7ZoU7ZwHetRkrvnIpoRjp_dqhB5eKMiSamDuILsUTreXmSZod\
+  IGPOTZUegO4fRHiUTkXenmRRfdcUYMXgahRIYMoZUpZap_ipq`\
+  vTq7hd459488XMVf_wk_tnSW6WfUTUuOmDRnNUoXXpfNWgRajU\
+  flXlnV9xXLvYWtZfr7_FFdPMhYTmgG_3NeKUk`oAiiPldcnmlC\
+  DWJJP2FREBTQ8VaDcfIlkei8SbFEXMOZRX_Wfa`oberUitMmvE\
+  q_VcDjQJmTPpVVsY_u_t8Yz_wsdulhsemqFBcQXjhADIJYNSbR\
+  `gWilawD`tXohtikrdnqje6ghIdkUanesV0aOE`bYG38LGKQTV\
+  VeeNdWRhaUkfXnk_yD_vR_scnq`iqfdqkzrMs_bndfihidmmYE\
+  rZSq_dpm9ZhOdcbj9hyGkvNmt }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100 }
+
+; END PARAMETER FILE==================================
+; 

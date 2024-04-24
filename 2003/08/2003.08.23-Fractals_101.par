@@ -1,0 +1,102 @@
+;     Date: Sat, 23 Aug 2003 10:40:36 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-08-03 (Fractals-101 [3])
+;       Id: <1.5.4.16.20030823104058.29c788c2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 23, 2003 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It was a bad day Friday here at Fractal Central, with a broken 
+; air-conditioner and complaining customers.  I finally got the 
+; work problems behind me in the evening, though it was nature 
+; that supplied the cool air.  Unfortunately, the letter from the 
+; fracprogrammers list appeared with its 'you have been unsub-
+; scribed' notice at exactly the right moment to act as the target 
+; for the frustration that had been building all day.
+; 
+; After my outburst, I settled down and found a fractal.  I looked 
+; exactly where someone just beginning their exploration in the 
+; world of fractals might look -- along the main stem of the 
+; Mandelbrot set, deep in the East Valley of the large midget.  I 
+; did make a slight change however -- I double rotated the scene 
+; 45 degrees before starting my exploration.
+; 
+; Surprisingly, the rotation makes little difference in the image 
+; that appears on the screen, though the larger midget in whose 
+; East Valley it appears, as well as the appearance of the M-set 
+; itself, have been totally changed.
+; 
+; I named the image "Fractals-101", since such images serve as an 
+; introduction to the world of fractals.  The rating of a below-
+; average 3 might be a bit harsh, but I'm disappointed with myself 
+; for blasting the list administrator, who is probably not respon-
+; sible for sending the notice, and I feel I deserve no better a 
+; rating.
+; 
+; There is certainly nothing lacking with the render time, which 
+; at less than 1-1/2 minutes is probably less time than it will 
+; take to download the completed GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Friday, with a temperature of 95F 35C, was very hot and humid 
+; here at Fractal Center, especially indoors when the cool air 
+; stopped working.  In the evening, a spectacular but harmless 
+; rain and lightning storm arose and cooled things down to 70F 
+; 21C.  The fractal cats spent the entire afternoon outdoors, 
+; lurking in the shade of the holly trees, and venturing inside 
+; only when the thunder began.  They must have sensed my bad mood.
+; 
+; Today promises to be much better.  My mood can be only better.  
+; The next FOTD, which should also be better, will appear in 24 
+; hours.  Until then, take care, and hope for the best.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractals-101 { ; time=0:01:24.75--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  passes=1 center-mag=-2.47457594999916800/0/4.60569\
+  6e+007 params=-45/45/2/0/0/0/0/0 float=y
+  maxiter=1800 inside=0 logmap=274
+  symmetry=xaxis periodicity=10
+  colors=000eK0fK0gK0hK0iK0jK0kK0lK1kQAgWIc`R_fZWlgT\
+  qoUtmUvmUxoZzqczshzumzvmzwmzxmzymzzmzzVSbn9lkDciGV\
+  gKNeNEcQ6`O5YN4VL3TK3pfCqeIrdNsdTtcYuccvbhvbmYdi9e\
+  eE84rJhR9MyMAVB5AUz5FVbUQTMJJFD976fIBL95dcm8gu6Xf4\
+  MT2BExWdhOUUGKF8AYWIMLCBA6iqWNRGDDZBc6WleCa88P54C2\
+  BcGSjeENLLmNF`HAPB5C5Aw75U303j02V01F_rpNSkHL_BEO57\
+  CqkRc_KRODDC6cZyQNdDBKr_Y_OMICBSHLE8AN6PB3CySyzJzj\
+  EjV9VF4FgmeX`VMPLBCAfeeWVVLLLAAAdmnsldSOKVrCFR6N2w\
+  H1hB1U50FybJVJ9_N0RH0IB0950H8DC69846423cCzQ8eD4LkT\
+  7_L5OE3C714SZ2IN19BUIcF9K3lSF`SAOI5C9JlZ9OHMZuBHT_\
+  WhuUytuzaaeJJLqyx_dcIKKH`n8IPR9lKLjEHiMbOXWLgQJqKH\
+  MYBVc8cl5lw2tz0gRgYepOtyOJuVTq`bmflilveYqXKlP6gHI_\
+  KTTNcMQcYLmEM`AGP7BC4kC35q0x_0cI0KCusUmENKwBKUCCv8\
+  Eb4GJXIlOK_GMO8OCgQeTSSEUEFWM7_c5aU3cK1eAqgT_iJIk9\
+  Imw9oUNqNNseBuL5wA3z72z51z2PzPGzG8z8mzbPzJDzaczpQz\
+  ZDzH9zM6zG4zB2z5hzXjzPlzH }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE==================================
+; 

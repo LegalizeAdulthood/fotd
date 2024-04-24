@@ -1,0 +1,90 @@
+;     Date: Sun, 03 Aug 2003 09:32:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-08-03 (Fractal Explosion [7])
+;       Id: <1.5.4.16.20030803093245.2b2773b6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 03, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image comes on with a bang.  Or at least it 
+; appears to.  It is another of those 'anything can happen' images 
+; produced by my little-used 'Mystic2' formula.  Curiously enough, 
+; in today's image, the function that produces the best picture is 
+; the function with an error in it -- the 'cosxx' function.
+; 
+; Since the image consists entirely of 'inside' material, an 
+; active inside fill is needed to reveal the details.  Today's 
+; image uses the 'bof61' inside fill, though several other fills 
+; work almost as well.
+; 
+; When I saw the explosive nature of the image, I immediately 
+; named it "Fractal Explosion".  I rather like the image, so I 
+; rated it a 7.  The render time of 4 minutes can be avoided by 
+; downloading the completed GIF file from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; But when downloading, be cautious.  I have seen a report that 
+; the version of Fractint that Scott is using might draw incorrect 
+; images with the 'Mystic2' formula, which creates images that 
+; consist entirely of inside fill.  If so, this is an unusual 
+; situation.  Scott's images are almost always correct.
+; 
+; Saturday was warm and muggy enough.  The temperature reached 86F 
+; 30C, but it did not rain, and the cats had an enjoyable several 
+; hours in the yard.  Today is starting exactly the same, so there 
+; is no reason to expect anything other than happy cats.
+; 
+; For me, it's a lazy day.  I think I'll simply read some thought-
+; provoking articles in the magazines piled on the shelf, and see 
+; if I can provoke some thoughts.  Later, I'll turn to fractals.  
+; Until next time, which will be in 24 hours, take care, and think 
+; deep thoughts.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractal_Explosion { ; time=0:04:27.60--SF5 on a P200
+  reset=2002 type=formula formulafile=jim.frm
+  formulaname=Mystic2 function=cosxx passes=1
+  center-mag=+0.00401393777775/-0.9968332050329/347.\
+  2512 params=1.1/3.6/2.6/-3.1/-0.6/-0.4 float=y
+  maxiter=100 inside=bof61 logmap=yes periodicity=10
+  colors=000DEABC8000NqTMnRLlQKjPJhOJeNR7MVRLQMJGXIF\
+  VHETGDRFDOECMDBKBAIAAF99D88B7796ObuSZtWVq`RndNkhJh\
+  lFeWouXqpYrkZse_t``uVavQekPi`OlQOaZNSgMIpMJqRKqVLq\
+  ZMrcNrgOrkOroQpmSnlUlkVmgWmcXm_YmWZmS_mOWjSThVQfZN\
+  daKadH_hEYkBWnAgbAsRAzGIuIPkJWaLbSM`QVZOcXMlVKuUIu\
+  zwurvqjvkcueWuZOtTHtNLnTOiZSdcVZiZUnaPtdKuaZd_lLYi\
+  KWfJUcIS`HQZFOWEMTDKQCINBGLAEI9CF87FIAC7896zTmxQhq\
+  OcjLZcJUYGPREKKBFD9ApuudhhUWWIJIDu9Cn8Bh8Aa7AW79Q6\
+  8J67D5RlsOfkL`dIVYFPQCJJ9DCsugnocij_deW_`SVWOQRKLM\
+  GGHCBC8veirben_bjX_fVXbSUZPRVNNRKKNHHJFEFCBB98GeVE\
+  _QDUMBOIAID8C9jaSg_QeYPcWOaVMZTLXRKVPJTOHRMGOKFMJD\
+  KHCIFBFDADC8BA7986V_rUYoTXmSWkRViQTgPSeORcNQaMP_LN\
+  YKMWJLUIKRHJPGHNFGLEFJDEHCDFBBDAAB999887z`uyZqvXnr\
+  VkoThkSehQbdO_aMXYLTVJQRHNOFKKEHHCEDABA88Vq9Pe8JU7\
+  DI6VzHRpFNgDJZBFP9BG7nwgkteiqcgoael_cjYagW_eVYbTW`\
+  RUYPRWNPTLNRJLOIJMGHJEFHC }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100 }
+
+; END PARAMETER FILE==================================
+; 
