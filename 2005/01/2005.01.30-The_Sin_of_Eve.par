@@ -1,0 +1,89 @@
+;     Date: Sun, 30 Jan 2005 11:47:51 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-01-05 (The Sin of Eve [5])
+;       Id: <1.5.4.16.20050130115013.2aaf7d44@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 30, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the four-dimensional Julibrot 
+; created by the formula (Z^1.1)*(C^-0.1)+C.  It is neither a 
+; Mandelbrot set nor a Julia set.  It is a slice through the 
+; Julibrot in what I call the Oblate direction, which is the 
+; plane determined by the imag(c) and real(z) axes.
+; 
+; Don't let the name "The Sin of Eve" lead you to believe that the 
+; image is in any way . . . um . . . dirty.  I gave it this name 
+; because one of the early color palettes that I tried reminded me 
+; of an apple with a bite removed.  The coloring I finally chose 
+; produces an effect more of a splash than an apple.
+; 
+; The rating of a 5 is about right for such an average image.  The 
+; render time of a very brief 1/2 minute means that little time 
+; will be required to see the fractal splash appear onscreen.  The 
+; completed GIF image is available for download on the FOTD web 
+; site faithfully maintained by Paul Lee at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy skies and a temperature of only 34F 2C kept the 
+; fractal cats' time in the yard limited to less than 1/2 hour on 
+; Saturday.  The duo remained in a surprisingly good mood however, 
+; and were satisfied with only the usual amount of tuna for their 
+; evening treat.  Today is starting with 2inches 5cm of new snow 
+; on the ground, with light snow still falling.  It looks to be a 
+; poor day ahead for the duo.
+; 
+; For me, the main task will be clearing away the ice.  I'll start 
+; the job in an hour or so.  The next in the unending series of 
+; FOTD's will appear right here in only 24 hours, plus or minus a 
+; few hours.  If I feel extra energetic, I might include some new 
+; and thought-provoking philosophy in the philo-fractal version.  
+; Until then, take care, and sleep secure within the great cosmic 
+; fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Sin_of_Eve { ; time=0:00:34.49--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multXYZWcompjb-min function=ident/flip
+  center-mag=0.844885/1.42109e-014/0.05969098/1/-90/\
+  3.885780586188e-016 params=0/90/1.1/0/0.9/0/0/0/0/0
+  float=y maxiter=1200 inside=0 periodicity=10
+  colors=0000051032513A04F16H29K2BM3EP4GR4JU5LW5OZ6R\
+  `7Uc7We8Zg8`h7bi7cj7ek6fl6hm6in5ko5lp5mq4nr4os4pt3\
+  qu3rv3su5tu7uu8vtAwtBxtDysFzsGzsIzsJDnsGipJdnM`kOW\
+  iRRgUNdXIbZE`YGaXHbWJcVKcVMdUNeTPeSQfRSgRTgKbZDkQ6\
+  tI8rIAqICoIDmIFkIHjIJhILfINdIOcILaNI_SGZWDX`BWdCUe\
+  CSeCQeCOeDMeDKeDIfDGfEEfECfEAfE8fE6fG9hHCiIFkJIlLL\
+  mMOoNRpOTqPUnPUlPUjPUhPUfPUdPUbPU`PUZPUXPUVPUTPURP\
+  UPPUNNVOLVPJVQHVQFVRDVSBVS9VT7VU5VU7TP8RLAPGBNCCL8\
+  HQGMVOR_WWdc_ij6LcDN_KPXQQUXSRbTOiVLoWIjYOfZTQGdOJ\
+  fNMgMOhKRiJTjIWkGYlF`nEboCepBgqAjr8ls7ot6qu9orCmoF\
+  klIjiLhgOfdQeaTcZWaWZ_UaZRdXOgVLiUJeTKbTKZSKWSKSSK\
+  PRKLRKIRKPVJVZJ`bIfeIliHrmHxpHpfBhY6iWDjVJkTPlSVlR\
+  `kPZkOYkNXkMWkLVjKTjJSjIRjHQjGPjFOhEMfDLdCJcBIaAG_\
+  9FZ9DX8CV7AT69S57Q46O34N33P54R65T75U86W96YA7_B7`C8\
+  bD8dE9fF9gGAiHAkIBlJBbZZUmvWjrXhoZel_ciaafbZcdX`eU\
+  YgSVhQSjNPkLMlJJkLHkMGkNF }
+
+frm:multXYZWcompjb-min {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p4,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p5:
+z=(-z)^(p2)*(c^(p3-1))+c,
+|z| < 400 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

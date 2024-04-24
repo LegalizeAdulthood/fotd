@@ -1,0 +1,88 @@
+;     Date: Sat, 29 Jan 2005 12:02:02 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-01-05 (Copper Terraces [4])
+;       Id: <1.5.4.16.20050129120425.0d87327a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 29, 2005 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With today's image we return to that old warhorse, the overused 
+; MandelbrotMix4 formula.  But the return is not a noble one, for 
+; we have again fallen below fractal average.  Try as I might, I 
+; could rate today's "Copper Terraces" image, with its muddy 
+; terraces, no higher than a 4.
+; 
+; The formula that wreaked this minor havoc combines portions of 
+; Z^(-1.2) and Z^(2.1) before adding C.  I tried to add a little 
+; interest by rendering the scene with the inside set to 'bof60' 
+; and the outside set to 'fmod', but the improvement was minor.  
+; In the end I decided to be stoic and post an image that was not 
+; up to FOTD standards.  After all, this is hardly the first time 
+; a deficient FOTD image has been posted.
+; 
+; Thankfully, the image renders in under 6 minutes on my machine, 
+; which must be a decade old.  In the computer world, this is 
+; about as state-of-the-art as a cave-man.  On a modern unit, the 
+; image will render in a minute or so.  And if even one minute is 
+; too slow, the completed image can be downloaded from the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A bit of philosophical rambling is included in the philofractal 
+; version of today's message.
+; 
+; The sun was bright, but the cold temperature of 23F -5C and the 
+; solidly frozen snow pack kept the cats confined to the porch all 
+; day Friday here at Fractal Central.  When evemnong came, they 
+; demanded extra tuna.  Today is starting with hazy sun, cold 
+; temperatures, and snow again in the forecast.  I suspect the duo 
+; will not enjoy the outside conditions.
+; 
+; I have a little work to finish and a lot of fractal exploration 
+; to do.  Until next time, take care, and don't fear the dark.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Copper_Terraces { ; time=0:05:46.15--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.84253097446520620/-0.105017701083716\
+  60/3.373927e+007/1/87.5/6.71509495994704331e-008
+  params=-0.25/-1.2/0.5/2.1/0/0 float=y maxiter=1200
+  inside=bof60 proximity=1 outside=fmod periodicity=10
+  colors=000KyfVDlUGlTJkSMkRQjQTjOWiNZiMbhLehKhgJkgH\
+  offCvHofGpfFqgErgDsgCthCthBuiAvi9wi8xj7yj6yk7yk9yk\
+  BxkDwkFvlHvlJulLtlNslPrmUpmZmmcjlhhlmekrbks_jp`gq_\
+  frZdsXesWbsUYsTWtRTtPRtOPuMMuLKuJHuIFvGDvFAvD8wB5u\
+  E8tF9sG9rHAqIAoJBnKBmLClMCkNDiODhPEgQEfRFeSFcTGbUG\
+  aVH`WH_XIYZJXfOWnUrsFrtEquDrqItlOvhUxc_zZeub_q`ZnZ\
+  YjYXgWWcUV`TUXRTUPTQOSNMRJKQGJPCHO9FN5DM9HN9JN8LN8\
+  NM8PM7RM7TM7VL6XL6_L5aL5cK5eK4gK4iK4kJ3mJ3oJ2rI2rI\
+  2qI0qH2pH2pG2oG2nF3nF3mE3mE3lD3kD3kD3jC4jC4iB4hB4h\
+  A4gA4g94f95e87a89Y7EYDKYJQXQWXWaXagWheXhcYgaZf_`eY\
+  aeWbdUdcSebQfbOgaMi`Kj_Ik_GmZEnYCoXAqWBoXCmYDj_Eh`\
+  GebHccI`eJZfKXgMUiNSjOPlPNmRKoRKnRKmRKlRKjRKiRJhRJ\
+  fRJeRJdRJcRJaSI`SI_SHYSHXSGWSGVSETSESSDRRDPQCOPCNO\
+  BLNBLMBKLBJKBIKAIKBHLCGMDFNEEOFFPGFQHFRIFSJFTKFULF\
+  VMFWNFXOFYPGZQI_RK`SMaUObWQcYSd_UeaWfcYge_hgaiicjk\
+  ekmgloimqjnrjosjptjqujrvj }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

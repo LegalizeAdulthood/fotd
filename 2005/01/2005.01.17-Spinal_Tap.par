@@ -1,0 +1,92 @@
+;     Date: Mon, 17 Jan 2005 11:48:05 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-01-05 (Spinal Tap [3])
+;       Id: <1.5.4.16.20050117115018.29df2ed0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 17, 2005 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is part of the fractal that results when 1/Z is 
+; subtracted from Z before C is added.  The parent fractal is 
+; little more than a hyperbola symmetrical to the X-axis, with the 
+; open end on the east side.  In this case the 'main bay' is 
+; truly impressive.  In fact, it is quite possibly infinite.  But 
+; infinite or not, its shoreline is filled with typical Mandelbrot 
+; things such as buds and spirals.  Today's image lies rather deep 
+; in one of the spirals.
+; 
+; I gave the image the rather unpleasant name of "Spinal Tap" 
+; because the elements surrounding the central midget remind me of 
+; a spine, with its loosely connected discs and bones.
+; 
+; Unfortunately for those in a hurry, the image is a very slow 
+; one.  It takes over an hour to complete on my aged unit.  The 
+; dark dreary colors add little to the image, and drag its value 
+; down to a 3.  When the render time is figured in, the overall 
+; worth registers a shameful 4.7.
+; 
+; But as in most all fairy tales, salvation is at hand.  The task 
+; of rendering may be avoided.  The finished image will soon be 
+; posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; from where it may conveniently be downloaded.
+; 
+; The philosophy of the day appears in the philofractal version of 
+; this discussion.
+; 
+; A cloudy cold day here at Fractal Central on Sunday, with a 
+; temperature of only 34F 1C, kept the duo safely indoors.  When a 
+; few snowflakes started falling in the evening, they knew they 
+; had made the right decision.  This morning is starting sunny but 
+; blustery, and even colder.  I had best have the tuna ready 
+; again.  As for the work, it is still a bit heavy, but I now have 
+; FOTD's in storage for the days when there is no time to do 
+; completely new ones.  The next FOTD will appear on schedule 
+; right here in 24 hours or so.  Until then, take care, and if you 
+; want to catch a squirrel, climb a tree and act like a nut.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spinal_Tap { ; time=1:03:24.36--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+2.82715396322678/-0.00004849471454/1.6\
+  01449e+011/1/82.5/0 params=-1/-1/-1/1/0/0 float=y
+  maxiter=10000 inside=0 logmap=1152 periodicity=10
+  colors=000hOVhOViPVjPVjQWkQWkRWlRWlSWmSWmTXnTXnUXo\
+  UXoVXpVXpWYqWYqXYrXYrYYsYZsZZtZZt_Zu_Zu`Zv`_va_wa_\
+  wb_xb_xb_vYWtUSrPPpLLnHHlCEj8Ai47h68h78g88g98fA9fB\
+  9fC9eD9eF9dGAdHAdIAcJAcKAbLBbMBaOBaPBaQB`RC`SC_TC_\
+  UC_VCZXDZYDYZDY_DX`EXaEXbEWcEWeEVfFVgFVhFUiFUjFTkG\
+  TlGSnGSoGSpGRqHRrHQsHQtHQuHPtGPtGPsGPsGOrGOrGOqFOq\
+  FNpFNpFNoFNoFMnFMnEMmEMmELlELlELkELkEKjDKjDKiDKiDJ\
+  hDJhDJgDJgCIfCIfCIfCIeCIeCHdCHdBHcBHcBGbBGbBGaBGaB\
+  F`AF`AF_AF_AEZAEZAEYAEY9DX9DX9DW9DW9CV9CV9CV8CU8CU\
+  8DT8ET8cS8GS8HR7IR7gQ7KQ7LP7MP6NO6OO6PN6QN6RM5SM5K\
+  I5UL5UK6UK7UJ8UJ9UIAUIBzHzPZzKUzFGFEFGEEHEDIDCJDCK\
+  DCLDCMDDNDDOCDPCDQCDRCDSCDTBDUBEVBEWBEXBEYBEZAE_AE\
+  `AEaAFbAFcAFd9Fe9Ff9Fg9Fh9Fi9Gj8Gk8Gl8Gm8Gn8Go7Gp7\
+  Gq7Hr7Hs7Ht7Hu6Hv6Hw6Hx6Hy6Iz6Kz5Kz5Kz5Kz5Iz5Iz4Hz\
+  5Iz6Jz7Kz8Lz9MzANzBOzCPzDQzEKzFKzGKzHKzIKzJKzKKzLK\
+  zMKzNKzOKzPKzQKzRKzSKzTKz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

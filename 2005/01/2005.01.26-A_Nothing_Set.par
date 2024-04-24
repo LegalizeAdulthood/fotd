@@ -1,0 +1,101 @@
+;     Date: Wed, 26 Jan 2005 09:39:52 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-01-05 (A Nothing Set [7])
+;       Id: <1.5.4.16.20050126094212.2a9fd97a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 26, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I wrote another quick new formula since yesterday's FOTD, and 
+; gave it the impressive name 'multXYZWcompjb-min'.  The only 
+; difference from yesterday's formula is that today's calculates 
+; (-Z) instead of (Z).  The difference in the formula is small, 
+; but the change in the appearance of the fractals with fractional 
+; exponents of Z is great.
+; 
+; Today's fractal shows a scene in the four-dimensional Julibrot 
+; of the formula (-Z)^1.4142*C^0.03+C.  The orientation of the 
+; slice is very close to the Julia direction.  But being close 
+; does not make today's image a Julia set, so I have named it "A 
+; Nothing Set".
+; 
+; The true Julia set may be seen by changing the value of (p1) 
+; from 81,90.2 to 90,90.  The Mandelbrot aspect of the scene 
+; appears when (p1) is set at 0,0.  The point that corresponds to 
+; today's image lies in the disconnected triangle in the M-set.  
+; The other values of (p1) draw various oblique slices through the 
+; Julibrot, some of which are quite interesting, while others have 
+; little to offer.
+; 
+; The image relies mostly on intense coloring for its effect.  As 
+; a result I limited its rating to a 7.  But the render time is a 
+; fast 2-3/4 minutes, which boosts the overall worth to 257.  And 
+; don't forget the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the completed GIF image has or soon will be posted for the 
+; convenience of those who would prefer to leave the rendering to 
+; someone else.
+; 
+; The clouds hung tough most all day on Tuesday here at Fractal 
+; Central, but the temperature rose to 36F 2C, which was comfort-
+; able enough for the fractal cats.  Unfortunately, the warmer 
+; temperatures started melting the snow, which then wet the paws 
+; of the duo, sending them scurrying back to the porch, where they 
+; sat for nearly an hour watching the birds fly by.  The evening 
+; treat of tuna was a bit larger than average.  Today is starting 
+; warmer with lots of clouds.  But with so much snow still on the 
+; ground, it looks doubtful that the duo will have a good day.
+; 
+; Since the work is still caught up, my day will be good.  And 
+; when 24 hours have passed, the next FOTD will appear in all its 
+; glory and wisdom.  Until then, take care, and be awe-struck in 
+; the presence of a fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Nothing_Set { ; time=0:02:43.52--SF6 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multXYZWcompjb-min function=ident/flip
+  passes=1 center-mag=-0.306729/0/1.253133
+  params=81/90.2/1.4142/0/1.03/0/0/0/-0.76/0 float=y
+  maxiter=2000 inside=0 symmetry=xaxis
+  logmap=yes periodicity=10
+  colors=0004AA6AA8AAAAACAAEAAGAAIGLKKPMNTPQXST`VWdY\
+  Zh`alcdqfgtiixikyikzhkzgkzflzelzdlzclzbly`mx_nwZov\
+  YpuXqtWrsVsrUtqTtpStoRtnQtmTrlVpkXnlZkm`hnbeodbmf`\
+  khYijVglSelPcjMagJ_dGYaDWZAUW7SS5QP4OM4MO3KQ2ISCGU\
+  EFVGGWIHXJIYKJZKK_KK`KKaKKbKKcKKdKKdKKdKKdKHdKEdKA\
+  cK7bK4aK6`K7_K8ZIAYGBXFCWDEVBFUAGT8IS6JR5KP3MN1NK0\
+  OKh8ervdsodthdzaccXcYScMNcAJcFNcJQcNTcRWcVZcZacbda\
+  fgZjjWnmTrpQvsOupNtnMskLriKqfJpdIpaHo_GnXFmVElSDkP\
+  CkMPhKKeKFaK0ZH3WI6TH9VGCXGFZGI`FLbFOdERfETgEUcDV_\
+  DWWDWSDXODYKDYGDVJKTLRROYPQdTPgWOi_NkbMmeLoiKqlJso\
+  IujGmfEfaC_YBT`AWb9Ye8_g7ai6cl5en4gq3is2ku1ml4fc7`\
+  VAVMDPQCRTCTWBVZBWaAYdA_gA`hGXhLUiQQiVNj_JjdGkiCkn\
+  9elF`jLWhRRfWMdaHbgCalHZjLXhQVfUTdYRbbPafN_jLYoJWs\
+  HUwFTsHSpISmKSiLSfNScOS`PS_UO_YL_aH_eE_jB_n7_r4_v1\
+  buBetLgtVjsdmrnorxnmumhrlhpkkmknkmqcotXqwPszIuzBqz\
+  LSzbUzfXziZzl`zoTznLzmDzm }
+
+frm:multXYZWcompjb-min {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p4,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p5:
+z=(-z)^(p2)*(c^(p3-1))+c,
+|z| < 400 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
