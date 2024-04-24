@@ -1,0 +1,49 @@
+; April 17, 1997: Dewdrop Lattice 
+;
+; dewdrop
+;
+; Fractal visionaries:
+; Here's a soft and pleasant three-armed fractal fern generated from the
+; power-1000 Mandelbrot figure.  Normally, such a large exponent will give
+; nothing more than a circle, but the extra term in the formula not only
+; turns the figure inside out, it reduces the number of arms to 3, while
+; retaining the delicate fern-like characteristics of the ultra-high order
+; Mandeloids. Like yesterday's fractal, this one also seems nearly
+; impossible to color poorly.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA==================================================
+
+Dewdrop_Lattice    { ; time=0:00:13.40-SF5 on P4-2000
+   reset=1950 type=formula formulafile=basicer.frm
+   formulaname=fracfern passes=1 center-mag=2.85889/0\
+   /0.084716/1/90/0 float=y maxiter=10000
+   inside=bof60 logmap=yes periodicity=6
+   colors=00070800D57F4BK3GP4MU5UZ6Zc6ch7hm8mr9rvAvzz\
+   zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+   zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+   zzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwzzwz\
+   zwzzwzzwzzwzzwzzwzzwzzwzzvzzuzztzzszzrzzqzzpzzozzm\
+   zzlzzkzzjzzizzhzzgzzfzzezzdzzczzczzczzczzczzczzczz\
+   czzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzcz\
+   zczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzdzyd\
+   zxezwfzvgzuhztizsizrjzqkyplxomwnmvmmtlmskmrjmpimoh\
+   mmgmlfmkemidmhcngbneand`nc_naZn`YnZXnYWnXVnVUnUTnU\
+   SnVRmVRmWRmWQmXQmXQmYPmYPmZPmZOm_OmZOmYNmXMmWLmVKm\
+   UJmTImSHmRGmQFmPElODkNCjMBiLAhK9hJ8gI7fH6eG5eF4dE3\
+   cD2bC1aB0`A0_90Z80Y70X60WmEVnEUnDUoDToDTpCTpCSpCSq\
+   BRqBRrBQrAQsAPsAPt9Ot9Ou9Nu8Nv8Mv8Mw7Lw7Lw7Lx5Mw6M\
+   v7Lu9LtAKsBKrCJqDJpFIoGIoHInIHmJHlLGkMGjNFiOFhPEgR\
+   EfSDeTDCHABHAAGAAG99F98F9
+}
+
+frm:fracfern {; Jim Muth
+  z=c=pixel:
+  z=z^1000*(c^(-1002))+c,
+  |z| <= 10000
+}
+
+; END PARAMETER FILE==============================================
+;

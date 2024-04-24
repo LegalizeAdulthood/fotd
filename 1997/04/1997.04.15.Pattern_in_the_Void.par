@@ -1,0 +1,67 @@
+; April 15, 1997: Pattern in the Void
+;
+; pattern
+;
+; Fractal visionaries:
+; I just drew a couple of those pseudo-true-color, overlapping fractals.
+; What else can I say but, "Wow! they're great!"  But I still prefer my
+; formulas simple -- the simpler the better. Attached below is a simple
+; Julia formula and par file that takes advantage of the bof60 inside
+; coloring option of Fractint. The few minutes it takes to draw it will be
+; well worth the effort.
+; I have always been fascinated by the way "real" world patterns keep
+; turning up in various fractals.  I have seen trees, ferns, ice floes,
+; among many other patterns.  But the pattern of the attached fractal is
+; something entirely new, which has no immediate counterpart in the "real"
+; world.  (I enclose "real" in quotes because after 10 years of working
+; with fractals I'm beginning to think like Mr. Pickover, and question
+; exactly what it means to "exist" and "be real".)
+; The formula itself is a specialized instance of my JulibrotInvZ formula,
+; which I posted previously.  It's curious that as the power of (-Z) gets
+; smaller and the outer shape grow simpler, the interior grows more
+; complex.
+; My interest in fractals is somewhat specialized. Although I have the
+; means of producing high-definition fractal posters, I don't seem to be
+; able to work up enough interest to exert the effort.  I enjoy the search
+; and discovery aspect of fractal geometry, seeking new twists in old
+; formulas.  The day after I find another "great one", my enthusiasm for
+; that particular fractal has exhausted itself.  I file the image away
+; never to look at it again, and go searching for the next great one.
+; It's satisfying to know that I'll never run out of places to search.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA==================================================
+
+Pattern_in_theVoid { ; time=0:00:36.03-SF5 on P4-2000
+  reset=1950 type=formula formulafile=basicer.frm
+  formulaname=woven passes=t center-mag=0.29668/0.69\
+  1194/2.040883 params=0.64888/1.33663 float=y
+  maxiter=90 inside=bof60 logmap=yes periodicity=0
+  colors=000noeig_d_V_TPVLJQDEL58SIRYVhYYiXajXdkWgkW\
+  jlVnmVqnOFqKOlHXgDfaAoX6xSDpPJgMQ_JXSHcKEiBBp38iIK\
+  bWWVjfOxrQpiSh`V`TXTKZLB`D2aJ8cOFdULfZSgdYhicjojkt\
+  pahoTYoSblQghPleNpbMuZKzWMt_OmdQghSalUVqWPuTXpRdlP\
+  _hMVeKQaIMZGHVDCSB7OUUq_Ab`DYbGTcJOdNIeQDgT8hW3sn5\
+  kiBbeHV`NMXTESZLTWRUTYVQcXMjYJpZGw_DpXEiUFbRFWOGOK\
+  HHHIAEI3BJGBKUBLfBLsBMeEHTGCPHBLIBGKACLA8M9AQBBTDD\
+  XFE`HGdJHgMJkOKoQMsSNvUPzWQwUSsSTpQVlOWiMYeKZbI`ZG\
+  aWEcSCdPAfL8gI6iE4jB2jC6jDAiEEiEIiFMiGQhHThIXhJ`hJ\
+  dgKhgLlaGmWCnQ7o0VTql2kdBeXJ`QSVI_PAhGFEHCOI9YJ6g7\
+  BtC8rG5qe0ba1eZ1gV2jR2lN3nHX7HTDIPJILPJIUJE_KAeK6k\
+  IU4IPCJLKJGTKC`K7hCdzEVwGMuICr_IcYGeWEfUChSAjQ8lO6\
+  mM4ovugbUlDR5FLHHFTJ9dfUscRs`NrYKrVGqSDqP9pM6pDAvn\
+  uKcbVULexcgsZhnViiQjcLlZGmUCnP7o7md9gfAagCWiEQjGKl\
+  HEmJ8oZ3DR3X8ZOCOYGDg8bBUNhq`nRnkVojZphbrgfsejtdnu\
+  baeQQPED91G9DKAQNAaQAmzv5
+}
+
+frm:Woven {; Jim Muth
+  z=pixel, c=p1:
+  z=(-z)^1.05+c,
+  |z| <= 100
+}
+
+; END PARAMETER FILE==============================================
+;

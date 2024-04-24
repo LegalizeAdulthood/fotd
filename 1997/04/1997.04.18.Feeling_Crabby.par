@@ -1,0 +1,50 @@
+; April 18, 1997: Feeling Crabby 
+;
+; crabby
+;
+; Fractal visionaries:
+; After yesterday's serene lacy fractal, I thought I'd present something a
+; bit more lively.  As a rule, I prefer my colors on the subdued,
+; conservative side.  But since I'm going for gaudy colors, I might as
+; well go all the way.  This fractal, though it appears at first glance to
+; have been drawn with the inside fill set to bof60, was actually drawn
+; with the inside set to 0. The draw time on a 486-100mhz is 10 minutes.
+; The curious thing about this fractal is that different parts of it have
+; totally different characteristics.
+; A note about the formula -- it works only with the periodicity set to 0.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA=================================================
+
+Feeling_Crabby     { ; time=0:00:43.77-SF5 on P4-2000
+  reset=1950 type=formula formulafile=basicer.frm
+  formulaname=carnival passes=1
+  center-mag=-0.54717/0/0.7473842/1/-90/0 float=y
+  maxiter=300 inside=0 logmap=yes periodicity=0
+  colors=000ZOG_NHaMIbLJdKKeJLfIMhHNiGOjEPlDQmCRoBSp\
+  ATq9U0YV0WW0UV2SS3QQ4PO5LM6HK7CM88O94QC5PE5OG5NI5N\
+  K5MM5LP6KR6KT6JV6IX6HZ6G`6Gb6Fd6Ef6Dh6Cj6Cm7Bo7Aq7\
+  9s79u78w77vHAuMEtTHuZLvbOwdRvcOu`LtXJqTGkSGbQFUOFK\
+  NEBLE2KD4ME6NF8PGAQICSJEUKGVLJXMLYNN_OPaPRbRTdSVeT\
+  XgUWeUVcVUaVT`VSZWRXWQVWPTXORXNQYLOYKMYJKZIIZHGZGE\
+  _FD_EB_D9`C7`DCaDGbELdFPeFUfGYgGbhHfiIkkIolJtmJxnL\
+  wkMviNvfOudPuaQt_RtYTsVUsTVrRWrOXqMYqJZpHXnLWlPUjS\
+  SgWRe_PccNafM_jKYnIVrHTuFRyESwETtDUrCWoCXmBYjAZh9_\
+  e9`c8b`7cZ7dW6eU5fR5gP4hM3jK2kH2lF1mC4jT7gi9fiBdhD\
+  chFagH`gJ_fLYfNXePVeRUeSTdURdWQcYOc_NbaMbcKaeJagH`\
+  iG`H9VHCVGFWGIWGLXGOXFRYFUYFXZF_ZEb_Ee_Eh`Ek`DnaDq\
+  aDtaBSzBRwBRsBQpCPlCOiCOeCNbCN_FLXIKVKITNHRQGOTFMV\
+  DKYCIRPTLacEmm7zx7yv6ws6vq5un5sl5ri4qg4pd4nb3m_3lY\
+  2jV2iT2hR3fW3e_3dc4ch4al4`p4_t7`tAbtDctGetJftMhtQi\
+  tTktWltZntaotdqtgrtdgfaYT
+}
+
+frm:carnival {; Jim Muth
+  z=c=pixel:
+  a=(z*z*z)+(c-2)*z-c
+  b=2*(sqr(z))+c-1
+  z=z-1*a/b
+  .000000000000000000000000000001 <= |a|
+}

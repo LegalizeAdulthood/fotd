@@ -1,0 +1,80 @@
+; April 26, 1997: Halebopp Falls to Earth
+;
+; halebopp
+;
+; Tale of a Lost Midget
+; Today's fractal has a little story behind it.  As you know if you live
+; in the northern hemisphere, there is a comet now visible in the evening
+; sky -- the brighest in many years.  The other evening as I sat comet
+; gazing, I remembered a fractal comet I had discovered a year or so ago.
+; I recalled some work I had done in the ultra-low-exponent Mandeloids.
+; As is common knowledge, the larger the exponent of Z, the more and
+; larger the midgets become, and the less interesting they become in the
+; resulting fractal, until finally the midgets become vague, lopsided
+; circles with a bit of fern- like detail in between.  The most
+; interesting midgets appear in the classic Mandelbrot set, with an
+; exponent of 2.
+; But what of the midgets in the Mandeloids with exponents less than 2?
+; If the higher-order midgets are less interesting, one would think the
+; lower-order midgets would be even more interest ing.  To check this out,
+; I tracked down a few midgets in the Z^(sqrt(2))+C figure.  In this range
+; the midgets become ever harder to find, because they slip off the screen
+; into imaginary planes, but I managed to find a few that were still
+; visible.  The results were interesting, but not quite worth the effort.
+; Then I thought of the most obvious midget of all -- the one on the
+; negative tail at -1.76.  What happens to this midget when the exponent
+; drops below 2?  A quick check told me that it vanishes into some obscure
+; imaginary space.  Then I remembered the cmplxmarksmand formula in
+; Fractint, which splits and spreads the fractal along the negative tail.
+; What would happen to the buried tail midget if I tried the
+; cmplxmarksmand trick on a Mandeloid with an exponent of 1.5 or so?
+; Surprise.  The additional term pulled the buried tail midget out from
+; its hiding place onto the screen, where its distortions were clearly
+; visible.  Now, by carefully adjusting the exponent and additional term,
+; I had a means of keeping the midget in sight while I lowered the
+; exponent to any arbitrary value.
+; I stopped at an exponent of 1.065, which has the midget resembling a
+; comet, and is the image built by the attached formula and parameter
+; file.  But 1.065 is by no means a lower limit.  I'm hoping to track this
+; midget, which actually still is the main midget on what's left of the
+; negative tail, down to an exponent of under 1.01.
+; The image takes 15 minutes to draw on a 486-100mhz, and of course is
+; posted to ABPF.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA===================================================
+
+HaleBopp_Falls_to  { ; time=0:00:31.36-SF5 on P4-2000
+  reset=1950 type=formula formulafile=basicer.frm
+  formulaname=JimsCompMand passes=1 logmap=yes
+  center-mag=-1.14547434438765100/+0.006011885318538\
+  45/421.2545/1/-85/0 params=1.065/0/1.651/0/0/0
+  float=y maxiter=860 inside=255 periodicity=10
+  colors=0000dS0bQ0aO0_L0YJ0XH2VF4TC7SA9Q8BP6BR7BS7B\
+  T8BU8Q0RP0RN0RM0RL0RK0RI0RH0RG0RE0RD0RC0R91S91S82S\
+  62S53S43S34S14S05S06S06S07S07S08S08S09T0AT0AT0BT0B\
+  T0CT0CT0DT0ET0ET0FT0FT0GT0GT0HT0HT0GS0GS0FR0FR0FR0\
+  EQ0EQ0EQ0EQ0DP0DP0DP0CO0CO0CO0BN0BN0BN0AM0AM0AM0AM\
+  09L09L09L08K08K08K08K08J09H09G1AF2AE3BC4BB5CA7C99D\
+  7BD6DE5FE4HF2JF1LG0NG0PH0QH0QI0QJ0RK1RK3RL5RM6RN8S\
+  OASPBSQDSQFSRHSSITTKTUMTVNTWPTWRUXTUYUUZWSXWPWWNUW\
+  PTWIRXFQXDOXANX8LX5JX4IX2GX1FX0DY0CY0AY09Y07Y07Z08\
+  Z08_09_09`0A`0Aa0Ba0Bb0Cb0Cc0Dc0Dd0Dd0Ee0Ee0Ff0Ff0\
+  Gg0Gg0Hh0Hh0Ii0Ii6GiDDjJBjQ8jP9iPAhOBgNCfNDeMEdLFc\
+  LFbKGaJH`JI_IJZHKYHLXGMXGNWFOVEPUEQTDRSCSRCSQBTPAU\
+  OAVN9WM8XL8YK7ZJ6WK5UL4RM3ON2MO1JP0GQ0ER0BS08T06U0\
+  3V00W00X00Y00Z00_00_00_00_00_00_00_00`00`00`00`00`\
+  00`00`00`00`02Y04W06T08R0AP0CM0EK0HL0JN0MO0PP0RQ0U\
+  S0XT0ZU0aV0dX0fY0iZ0gWzzz
+}
+
+frm:JimsCompMand {; Jim Muth
+  z=c=pixel:
+  z=z^p1*(c^(p2-1))+c,
+  |z| <= p3+100
+}
+
+; END PARAMETER FILE==============================================
+;

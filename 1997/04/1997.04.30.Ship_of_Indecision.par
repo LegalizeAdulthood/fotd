@@ -1,0 +1,50 @@
+; April 30, 1997: Ship of Indecision 
+;
+; ship
+;
+; Fractal visionaries:
+; A proper work of fractal art should get attention.  It should cause
+; viewers to ask, "what is it?"  Today's fractal brought quite a few
+; comments, (not all complimentary).  It takes 15 minutes to build on a
+; 486 100mhz machine.  A bit more detail shows up if the passes is set to
+; 1, but then the fractal takes over an hour to run.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA===================================================
+
+Ship_of_Indecision { ; time=0:01:14.64-SF5 on P4-2000
+  reset=1950 type=formula formulafile=basicer.frm
+  formulaname=snowarch passes=t
+  center-mag=-0.142312/0/0.329932/1/-90/0
+  params=3/0/0.63/0/1e-030/0 float=y maxiter=608
+  inside=bof61 logmap=yes periodicity=0
+  colors=0009VrAVrBWrCWrDXrEXrFXrGYrHYrIYrJZrKZrL_rM\
+  _rN_rO`rP`rQ`rRarSarTbrUbrVbrWcrXcrYcrZdr_dr`eraer\
+  bercfrdfrefrfgrggrhhrihrjhrkirlirlirkgpjenidlhbjg`\
+  hf_feYddWbcV`bTZaRX`QV_OTZMRYLPXJNWHLVGJUEHTDGUDFU\
+  DFVDFVDFVDFWDFWDFXDEXDEXDEYDEYDEYDEZDEZDEZDE_DE_DE\
+  `DE`DE`DDaDDaDDaDDbDDbDDcDDcDDcDDdDDdDDdDDeDDeDCeD\
+  CfDCfDCgDCgDCgDChDChDChDCiDCiDCiDCjDBjDBkDBkDBkDBl\
+  DBlDBlDBkEDjEFjEGiFIiFJhFLhFMgFOgFQfGRfGTeGUeGWdGX\
+  dGZcH_cHabHcbHdaHfaHg`Ii`Ij_Il_Im`Jl`JkaKjaKibLibL\
+  hcMgcMfdMedNdeNceOcfObfOagP`gP_hQZhQYiRYiRXiRWjSVj\
+  SUkTTkTSlTRlURmUQmVPnVOnWNoWMoWLpXLpXKqYJqYImXMjVP\
+  fUTbTWZR_WQbSOfONiPNiPOiQOiQOiRPjRPjSPjTQjTQjUQjUR\
+  jVRjWSkWSkXSkXTkYTkYTkZUk_Uk_Uk`Vl`VlaVlaWlbWlbWla\
+  Wm`Vn_VnYUoXUoWTpVTpWWWWYBYWA_V9aT8cR7eP6gO6iM5kK4\
+  mI3oH2qF1sD0jF1aH2TJ3KL49M2BM3DN5FN6HO7IO8KPAMPBOQ\
+  CQQDSQFURGWRHXSIZSK`TLbTM
+}
+
+frm:snowarch {; Jim Muth
+  z=c=pixel:
+  a=sqr(z)+c-p1*z-c
+  b=p2*sqr(z)+c-1
+  z=z-1*a/b
+  p3 <= |a|
+}
+
+; END PARAMETER FILE==============================================
+;

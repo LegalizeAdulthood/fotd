@@ -1,0 +1,97 @@
+; April 24, 1997: Solar Symbol 
+;
+; solar
+;
+; Fractal visionaries:
+; Fractals are things of many mysteries.  They raise one question after
+; another.  During the ten years I've been working with them, these
+; questions have almost constantly been in my mind.
+; Perhaps the most immediate question is: how can an infinity of detail be
+; encoded in such a simple formula?
+; This question is relatively easy to answer.  The answer lies in the
+; recursive nature of the fractal formula.  The fractal formula as written
+; does not contain infinite detail, but the formula tells which way to go
+; to see the infinite detail that is waiting there.
+; Reiterating the Mandelbrot formula is like motoring along a highway.
+; The instruction to reiterate the formula Z^2+C for every point of the
+; complex plane is the same as the instruction to start at Atlantic City,
+; keep traveling west on Route 40, and observe the sights as you go.
+; Everyone who follows the same simple fractal instructions will see the
+; same glorious fractal scenery for the same reason that everyone who
+; follows the same simple highway directions will see the same glorious
+; real world scenery.
+; A more difficult question is: what are fractals -- did they exist before
+; computers were invented?
+; The simplest answer to this question is that fractals are infinitely
+; complex images which appear on computer screens when complex formulas
+; are reiterated and mapped to the complex plane. Since such images
+; obviously did not exist before computers, it could be said that fractals
+; did not exist before computers.
+; But a fractal is not a mere physical image on a computer screen, it is a
+; mathematical abstraction, an archetype with no more physical existence
+; than the naked number seven without seven objects of some kind to give
+; it reality.  Since fractal arche types have no real physical existence,
+; it is meaningless to speak of a time before computers, when fractal
+; archetypes had even less existence.  The fractal archetypes always
+; existed in a kind of virtual state, even as they do now.  We simply were
+; unaware of them before computers, because we lacked the means to
+; manifest them.
+; There are even more curious aspects to fractals.  Behind the world of
+; fractal images lies the ultimate reality of mathematical formulas.  When
+; no one is looking, nothing is there but the fractal formulas.  Behind
+; the world of everyday objects lies the ultimate reality of the quantum
+; world -- a world of incredibly complex mathematical formulas.  Quantum
+; theorists tell us that when no one is looking, nothing is there but the
+; quantum formulas.  What does this curious similarity imply?  Could the
+; world of everyday objects also be a mere image?
+; Unfortunately, for now this mystical question must remain unanswered,
+; for I'm still pondering it.  Meanwhile, it's time to get to today's
+; fractal.
+; I named the formula and picture Gamut because they covers such a wide
+; range of effects.  With six variable parameters to tweak, one could
+; spend years before they discovered all this formula can do.  The formula
+; is a bit more complex than I prefer, but it creates such unusual
+; pictures that it's worth it.  As always, the finished image is posted to
+; ABPF for those who prefer not to tie up their machines.  For those who
+; wish to watch the picture come to life on their screens, it takes XXXX
+; to build on a 486-100mhz.
+;
+; Jim Muth
+; jamth@mindspring.com
+;
+; START FORMULA===================================================
+
+Solar_Symbol       { ; time=0:00:03.52-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=gamut center-mag=-4.114731896495253/\
+  0/131.3539/1/-90/0 params=3/1/0.5/1/-1/5e-031
+  float=y maxiter=430 inside=0 periodicity=0
+  colors=00013i42U61FXBNR8HK5BE25xxYfcMPKBcgNETFIY77\
+  iNKoTVqcesnkotyxzVPOK96MJ6OT7Pa7Rk8Tu8zz7yq8xh8v`9\
+  uS9tJAsABs1Bj19b18U26L24D23421CA4LH7TPA`WChcFqjIyr\
+  LkjLXcMJWM4OM5MK5JJ6HH7FG7CE8AC87B959ylQk`JZODLC6O\
+  OWIGLD8A_16M03xhHjXCYM8LB46b169r9pF8Q71sJLOfIIWECL\
+  B6AvnQiaJXPDKC6apoUcbNQQFDDS7RN5KI3DD16sBug8fW5TK2\
+  Elrwd`wUOcJCKUojv95jF0Qy`CyiIjOOW3A0a8Fc6Ud3gf1vgD\
+  ofOhd_accUYfMSjEMm7GswZceaOOdFTQ7Lq9c2wRwjKhYDUL6F\
+  hiq_YcQNRHBDhi0_Y0QN0HB04xT6UEsyUcdKOKARYR5t76a47J\
+  2fPTVGJJ890sh4SMOwrbrUNRFX1jK0NITuEJaB9Jmzmbj`TVPI\
+  FCIwYTybOiTIVJDF9B`w55t72SX3kR2_K1OE0CWxtKUSXu5pIo\
+  eDbU9QJ4D3DY66HiYi_PYRHNH8BSL1NG1IA0D50Zj0QV0HF0on\
+  0da0UP0JC03VZ6FHAMa9EP87Cc0ZO0Hq1yV0VIIsD9SwSleIWP\
+  9GBV95Cl68W74GoMHdGDUB8J54vOTtkscW`OGIKD6dU7XM5OF3\
+  G710jQ4NDzxBgc7QK31py4Zd6HK9HY8BM85Bh760BcG8YC4HzP\
+  LlJGZCAL654b`6QO7DCgotXpy
+}
+
+frm:Gamut {; Jim Muth
+  z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+  d=imag(p2), e=real(p3), f=imag(p3):
+  h=z^a+(g-b)*z-g
+  j=c*z^d+g
+  z=z-e*h/j,
+  f <= |h|
+}
+
+; END PARAMETER FILE==============================================
+;
