@@ -1,0 +1,98 @@
+;     Date: Mon, 24 Mar 2014 20:07:33 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-03-14 (Crispy Critters [A-7,M-6])
+;       Id: <1.5.4.16.20140324200742.2bdfce12@earthlink.net>
+; ---------
+; 
+; FOTD -- March 24, 2014 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the parent fractal that results when 
+; the expression Z^(2.02)+C is iterated 1/10 of one step down the 
+; hyperladder with no function applied.  This parent is basically 
+; a Mandelbrot set with its main bud split into two parts.  
+; Today's scene lies in the spike extending from the northern 
+; half-bud, which has degenerated into an area of chaos.
+; 
+; The name "Crispy Critters" has little connection to the image.  
+; I simply thought it sounded rather catchy.
+; 
+; The art rating of a 7 indicates that IMO the image is somewhat 
+; above average.  The math rating of a 6 shows that we have been 
+; here several times before.
+; 
+; The calculation time of a speedy 45 seconds will leave little 
+; time wasted if dis-satisfaction arises.  A check of the web 
+; sites will always assure satisfaction however.
+; 
+; The finished image is available at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Puffy clouds decorated the sky here at Fractal Central today, 
+; but the morning temperature of a chilly 18F -8C kept thoughts of 
+; spring at bay.  The fractal cats had an average cat day, as the 
+; humans did also.
+; 
+; The next FOTD will be posted soon.  Until next time, take care, 
+; and don't be worried if you just don't get it.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Crispy_Critters { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.570274703396159/+0.06513374099477261\
+  /2.257364e+008/1/160/0 params=2.02/0/-0.1/0 float=y
+  maxiter=1300 inside=0 logmap=74 periodicity=6
+  colors=0006XwAXuAWqAVmAUgASbAQ`AOYAMWAKUAITBGPCFMD\
+  ELEDKFBID9HB7F95D73A527414302200dA9eEEfHIgLNgORhSW\
+  iV_jYijbpkizlnzmrzmrznrzorzppzpozqkzrjzsizsizthVuh\
+  SvgOvfLwfHxeExeBugFrhIpiLfZWXPfOFpQHmRIkSKiTLgUNeV\
+  OcWQ`XRZYTXZUV_WT`XRaYPb_NbaMccKdfJehHejGflEgnDhpB\
+  hrAgsBgsCgtDftEftFfuGeuGeuGevHevIdvJdwKdwLcxLcxMcx\
+  NcyObyPbzQbzRazRazSazT`zU`zV`zW_zW_zX_zYZzZZz_Zz`Z\
+  zaYzaYzbYzcXzdXzeXzfWzfWzgWzhVziVzjVzkawO_wSZwWYw_\
+  XwcWzgfw5ew8dwBcwEcwGbwJawM`xO`yR_zUZzWYwZYwamwcmw\
+  fmwimw4mw6mw7mw8mwAmwBmwCmwEmwFmwGmwHmwJmwKmwLmwNm\
+  wOmwPmwQmwSmwTmwUmwzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

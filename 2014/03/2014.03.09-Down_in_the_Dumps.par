@@ -1,0 +1,109 @@
+;     Date: Sun, 09 Mar 2014 18:21:23 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 09-03-14 (Down in the Dumps [A-8,M-5])
+;       Id: <1.5.4.16.20140309182118.2bf7d3c6@earthlink.net>
+; ---------
+; 
+; FOTD -- March 09, 2014 (Rating A-8,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Down in the Dumps".  The name does not 
+; refer to a duck fight at the city dump, it indicates the mood of 
+; the image.  I have rarely seen such a depressed looking minibrot 
+; sitting so sorrowfully in the middle of such a depressed color 
+; scheme.
+; 
+; The parent fractal came about when I iterated the expression 
+; Z^(1.3)+C at a level of 11 steps up the complex-logarithmic 
+; hyperladder.  This parent is shaped much like the minibrot in 
+; today's image, though it is standing on its downcast head.  
+; Today's scene is located in a field of debris surrounding the 
+; period-5 bud on the northeast shore line of the main bay of the 
+; parent.
+; 
+; Because of the overwhelming gloominess in the image, a good part 
+; of which was created by the colors, I have rated the art aspect 
+; at a cheerful 8.  The math aspect is worth an average 5, since 
+; these multi-valued log images are nothing new.
+; 
+; The calculation time of 1-2/3 minutes might seem to go slowly at 
+; the start, but once the image's gloominess becomes apparent, it 
+; will slow down markedly.
+; 
+; Those who find no enjoyment in the gloom of setting up and 
+; running parameter files may view the finished image at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The official FOTD web site is still behind, but will be caught 
+; up in a matter of a few days.
+; 
+; Except for the slightly lower temperature of 45F +6C, today, 
+; with its near total sun, was a repeat of yesterday.  The 11-year-
+; old fractal cat enjoyed the sun on the window shelf for the 
+; entire afternoon, while the 6-1/2-month-old fractal kitten 
+; remained confined to her private room until she recovers from 
+; her recent talk with the doctor about the facts of life.  The 
+; fractal humans passed the day being human.
+; 
+; The next FOTD will be posted in the very foreseeable future.  
+; Until then, take care, and it's really hard to maintain a 
+; totally depressed outlook on things.
+; 
+; 
+; Jim (the exuberant) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Down_in_the_Dumps { ; time=0:01:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=+0.8928501674/+0.2292060082/15068.3/1/\
+  -145/0 params=1.3/0/11/0 float=y maxiter=30000
+  inside=0 logmap=-128 periodicity=6
+  colors=000A0i80j60j40f40c52V61N42G23628J2DV2Gf2Ir8\
+  MsDPtIYuOavT`wYdxblyZdtVZpSWkOSgKObHLZMRYQSYUTXYUX\
+  aUXJWiHYjG_lFamDcnCdoBeq9fr8gs7mt6mu7mz8mz8mz9mzAm\
+  zAwzBwzCwzCwzDwzEwzEwzFwzFwzGwzHwzHwzIwzJwzJwzKwzL\
+  wzLwzMwzNwzNwzOwzOwzPwzQwzQwzRwzSwzSwzTwzUwzUwzVwz\
+  WwzWwzXwzXwzYwzZwzZwz_wz`wz`wzawzbwzbwzcwzewzczzbz\
+  zkzzkzzkzzkzzkzzkzzkzzkzzkzzkzzkzzkzzkzzkzzkkzkkzm\
+  pzppzppzppzppzppzppzppzppzppzppzppzppzppzppppppppp\
+  uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

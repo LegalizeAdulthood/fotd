@@ -1,0 +1,105 @@
+;     Date: Wed, 19 Mar 2014 08:41:42 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-03-14 (A Bad Case of Zits [A-7,M-7])
+;       Id: <1.5.4.16.20140319084146.3537fcf4@earthlink.net>
+; ---------
+; 
+; FOTD -- March 18, 2014 (Rating A-7,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the East Valley of a skeletized 
+; Mandeloid in the parent fractal that results when a Mandelbrot 
+; set is corrupted by (1/Z) energies.  This parent has other 
+; Mandeloids strung along its X-axis, some of which could be quite 
+; interesting.
+; 
+; The art and math aspects both rate a 7.  I think the image is at 
+; least a little above average, even though the name "A Bad Case 
+; of Zits" is not likely to enhance the artistic impression.  But 
+; don't blame me for the name.  I'm only reporting what I saw in 
+; the image.
+; 
+; The zits can be made larger or smaller by changing the real(p2) 
+; parameter.  Increasing its value makes the zits smaller; 
+; decreasing the value makes them larger.  But don't go too far in 
+; either direction.  Things could get totally out of control.
+; 
+; The calculation time of just over 2 minutes is fair enough.  
+; It's too bad that real life zits can't be banished this quickly.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began cloudy and dreary here at Fractal Central, but the 
+; clouds cleared away shortly after midday, leading to a very 
+; pleasant afternoon with a temperature of 45F +7C.  The fractal 
+; cats took turns enjoying the sun on the shelf, both wishing the 
+; other would choose another non-activity, while the humans, no 
+; longer sure whether they are liberal or conservative, or whether 
+; there is any difference, pondered the world situation.
+; 
+; The next FOTD will be posted in the proper time, which most 
+; often means the next day.  Until whenever, take care, and I just 
+; watched the second in the TV series of 'Cosmos' remakes.  The 
+; message I got from the program is that, in the dispute over the 
+; thoreies of intelligent design versus random natural selection, 
+; the natural selection theory is the winner, at least in the 
+; rationalist camp.  My advice to the series producers is to make 
+; their agenda a little less obvious and find some background 
+; music that could put a little more spirit into their series.  Of 
+; course, I'm not sure that rational skeptics want anything to do 
+; with spirits.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Bad_Case_of_Zits { ; time=0:02:10.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip passes=1
+  center-mag=+0.2634748827406843/-0.0025621653726951\
+  /1.61e+007/1/42.5/0 params=-1/-100/400/0 float=y
+  maxiter=2000 inside=0 logmap=-200 periodicity=6
+  colors=000mmmzzzzzzzmzmmzmmmmmm_kq00U00c00000000U0\
+  0055PAQqCkzCzzCzzCzzCzzCzzCzzCzzCzzCzzCzzCzzCzzCzz\
+  Czzhzwgztfzqrzzmzjmzg`zgCzcCzcAlX7ZV6IU67U66U55P55\
+  P55P55P55P33GzCLsCHmEEzVBzXCzXC22B0000000000007Z7C\
+  zLCzcCzzOzzwtzzXz1612B23G34K4161000000000000000000\
+  000000000000611U66qAAzHCzPCzXCz_CzcCzhCzkCznCvrBdv\
+  NRv`FhF7U64K4161000000zzCzzCzzCzzCzzCzzCzzCszCczCP\
+  zCEzCPzC`zJjz`qqqzkzz`zukzkmzLllAqbCzTCzHCzCCzC5P5\
+  zCPzCCvBBlAAcD8UF6h99qAAzCCzCCzCLzC_zCnzCszCvzCzzC\
+  zzCzzCsz`jzt`zzOzzCkzC_zCXzCXzCTzCTzCTzCEz_CEzCCzC\
+  CzCCzCJlIZZWvWXzJzcCezzSzzErzChzCXzChzSpzkzzzzzzzz\
+  zzzzzzzzzzkezTCzEEzCTzChzCvlAlcccXzbJzXOzlOzvOszOe\
+  zROzPCzPCzPCzhCzvCzzOzzezzyzzztzzezztzyzzezzOzzCzz\
+  CzzCzzCzzCzC_zzCzzzzzzzzzzzzyzzSzzCzzCzzCzzCzzCzzC\
+  zzCzzCszCkzC_zCTzCHqO8VcCEzCCzCCz9BBkzCzsCzkCzcCzX\
+  CzPCzXCzheztzzzzzzezzCzzC }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

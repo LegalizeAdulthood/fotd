@@ -1,0 +1,105 @@
+;     Date: Tue, 11 Mar 2014 08:21:09 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-03-14 (Cobweb Country [A-8,M-5])
+;       Id: <1.5.4.16.20140311082106.2c0f8a30@earthlink.net>
+; ---------
+; 
+; FOTD -- March 10, 2014 (Rating A-8,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the Z^(3.001)+C Mandeloid as it 
+; appears when rendered by the MandelbrotBC3 formula at ground 
+; level with no function applied.  The scene is located very close 
+; to the negative X-axis, in a valley that is spread into a wedge.
+; 
+; The name "Cobweb Country" describes the web-like effect of the 
+; skeletized image.  This cobweb effect was achieved by rendering 
+; the scene with the logmap set to an un-necessarily large value.  
+; The art rating of an 8 reflects the success of this idea, but 
+; the math value remains at an average 5, since the math trick has 
+; grown pretty tired by this time.
+; 
+; The calculation time of one measly minute will pass fast.  The 
+; web sites can offer an even faster view.
+; 
+; Check the finished image at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The official FOTD web site is still down but will be up to date 
+; in a day or two.
+; 
+; With lots of sun and a temperature of 55F 13C, today brought a 
+; pleasant preview of spring to Fractal Central.  Fractal cat Nico 
+; enjoyed the afternoon sun on the shelf in the southwest window.  
+; Fractal cat Jazzie soaked up as much sun as she could find in 
+; her room where she will be confined for another week until the 
+; doctor gives her the all-clear.  The fractal humans enjoyed the 
+; pleasant conditions as best they could, while tending to the 
+; other things that needed to be done.
+; 
+; The next FOTD will be posted in the proper time.  Until the time 
+; gets proper, take care, and I wonder why the need for sleep has 
+; never evolved out of the higher-order animals.  It certainly 
+; would be a great survival advantage to have no need to fall 
+; unconscious for several hours every day and thereby become so 
+; unaware of nearby danger.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cobweb_Country { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.091996544292507/+0.00134638356855061\
+  /7.037395e+011/1/-77.8/0 params=3.001/0/0/0 float=y
+  maxiter=1250 inside=0 logmap=143
+  periodicity=6 mathtolerance=0.05/1
+  colors=000000_bN`dPaeQcgSdiUekVflXgnYhpciqmahzUczc\
+  czmczcczUczKhzAkz6mz6mz6mq5msKhuKkwUnzZqzctzhwzmzz\
+  mzzzzzzzzzzzidzsbzlZhfce_caUcZNcVHcSAcO4cLAcNGcOLc\
+  QRPRWSTaWUg_WlbXrfZwi_odch`gaXjUTnNPrGLuKOrOQpSTnV\
+  VlZXjb_gfaeiccmfaqh_tjYodVkZTgTRcOP_cNWcLScJOcHNcH\
+  McGLcFKcFKcEJcEIcDHcDGcCGcBFcBEcADcACc90c0Cc8Bc8Ac\
+  79c78c68c57c56c45c44c34c23c22c11c10c0xcUwcTvcTucSt\
+  cSscRrcRqcQpcQocPncPmcOlcOkcNjcNicMhcMgcMfcLecLdcK\
+  ccKccJbcJacI`cI_cHZcHYcGXcGWcFVcFUcFTcESmERmDQmDPm\
+  COmCNmBMmBLmAKmAKm9Jm9Im8Hm8Gm7Fm7Em7KmdLmcMmbNmaO\
+  m`Pm_QmZRmYSmXTmXUmWVmVWmUXmTYmSZmR_mQ`mPamO`mS`mW\
+  amZambasebyiasdasbasaas_asZasXasW`sU`sT`sR`sQ`sO`s\
+  N`sL_sK_sI_sH_sF_sE_sC_sBZs9_sCmsDmzFmzGmzImzJmzLm\
+  zMmzOmzPmzQmzSmzTmzVmzWmzYmzZzz`zzazzczzdzzezzgzzh\
+  zzjzzkzzmzznzzpzzqzzszzszzszzszztzztzztzztzzuzzuzz\
+  uzzvzzjzz_zzOzzNzzLzzKzzI }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

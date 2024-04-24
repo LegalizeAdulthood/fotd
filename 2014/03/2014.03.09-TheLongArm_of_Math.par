@@ -1,0 +1,107 @@
+;     Date: Sun, 09 Mar 2014 18:21:25 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-03-14 (The Long Arm of Math [A-7,M-6])
+;       Id: <1.5.4.16.20140309182120.2bf7d878@earthlink.net>
+; ---------
+; 
+; FOTD -- March 08, 2014 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the parent fractal that results 
+; when the formula Z^(1.3)+C is iterated one small step up the 
+; hyperladder with no function applied.  This parent consists of a 
+; large bay shaped somewhat like a half-moon, with a few minor 
+; bays around the edges and a field of cross-shaped filaments 
+; extending to the south.  Today's scene lies near the southern 
+; edge of this field of filaments.
+; 
+; The effect of an island in the middle of nowhere was achieved by 
+; rendering the image with the logmap set too high and coloring 
+; the very large area covered by the 001 register total black.  
+; This took a little extra work, which raised the art rating to a 
+; 7.  The math rating scores only a 6.  I can see nothing very new 
+; or unique in the math aspect.
+; 
+; The name "The Long Arm of Math" refers to the unusually long 
+; main filament extending northeast from the oddly shaped order 
+; 1.3 minibrot at the center.
+; 
+; The image calculates in 55 seconds, which will pass unbelievably 
+; fast.  Those who still cannot believe may find calculation 
+; relief on the FOTD web sites.
+; 
+; The finished image is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The official web site will be back in operation in a few days.
+; 
+; Clouds spoiled today here at Fractal Central, though the mild 
+; temperature of 50F +10C prevented a total loss.  The new fractal 
+; cat Jasmine remained confined to her room with a collar around 
+; her neck.  The old fractal cat Nicholas wondered what was wrong 
+; with her.  The humans simply took it as easy as possible.
+; 
+; The next FOTD will be posted in the not-too-distant future.  
+; Until whenever, take care, and our president says this is the 
+; 21st century and the world has moved beyond the days when one 
+; nation can impose its will on another nation by force.  So do as 
+; the U.S. says, not as it does.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheLongArm_of_Math { ; time=0:00:55.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.5516410406928077/-1.356369190773757/\
+  1.182505e+008/1/150/0 params=1.3/0/1/0 float=y
+  maxiter=32000 inside=255 logmap=110 periodicity=6
+  colors=00000014M25O38Q4IS5MU6PWCZYXgQpsKloJilJfiIb\
+  eI_bHX_HTXGQTGNQFJNFGKEDGE9DD6AD37D8BCCECGHCKLBOOB\
+  SRBXT8WUBWVEVWGVXJVYMUZOU_RSUWU_TVdRWiPXoNYtLSyNZy\
+  JdyGjyDhuBfrAdo9bk8`h7Ze6`f8af9bfAdgBegCfgDghEihFj\
+  hGkiHliIniJojKpjLslNqjMphLofKmdJlbIk`HiZHhXGgVFeTE\
+  dRDcPCbNC_OEXOGUPIRPKOQMLQOIRQFRSCSU9SWCTVETVGTVIT\
+  VLTVNTVPTVRUVTUVWUVYUV_UVaUVcUVcTWcSXcRXcQYcPYcPZc\
+  OZcN_cM_cL_cLYcLWeNUgPSiRQkTOmVMnWKlWIjWGzUEzSFzQF\
+  zOFzMGzKGzHGzEHzBHz8Hz5Fz6Hz7Iz8JzALzCMzDNzEPzGQzH\
+  RzJTzKUzLPzMVzM`zNfuNlwOryNyxOwwPuvQsvRruSptTntUms\
+  VkrWirWirWht`cud_whVxlRvjTuiUthVsgWqfXpeYodZnc`mba\
+  kabj`ci_mhZmgYmbamYezUizPmzKqzGtzDmzBmz9mz7mz4mz5m\
+  z6mz6mz7mz8mz8mz9mz9mzAmzBmzBmzCzzCzzKzzRziYzadzUn\
+  zSkzNhzIezDbz8_z3Yz4Wz5Uz6Sz7Qz8Oz9MzAKzBIzCGzDDzB\
+  FzEzzGzzIzzLzzNzzPzzSzzUzzWzzPzzYzzdzzezzfzzgzzhzz\
+  hzzfzzdzzbzz`zzZzzXzzVzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

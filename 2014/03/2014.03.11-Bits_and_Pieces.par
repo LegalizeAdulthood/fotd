@@ -1,0 +1,100 @@
+;     Date: Tue, 11 Mar 2014 20:26:08 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 11-03-14 (Bits and Pieces [A-8.5,M-5])
+;       Id: <1.5.4.16.20140311202604.2bc7de30@earthlink.net>
+; ---------
+; 
+; FOTD -- March 11, 2014 (Rating A-8.5,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we began with yesterday's parent fractal and 
+; tweaked the exponent of Z from 3.001 to 3.01.  Then, instead of 
+; checking the valley on the negative X-axis, we checked the 
+; valley on the positive X-axis.  Today's image, which rates an 
+; exceptional art value of 8-1/2, is the result.
+; 
+; The art rating is worth every half point, but the math aspect is 
+; so overworked that I could rate it ho higher than a modest 5.
+; 
+; The name "Bits and Pieces" can mean whatever one wants it to 
+; mean.  In today's image it refers to the semi-organized confetti 
+; scattered throughout the frame.
+; 
+; The calculation time of 2 minutes will pass quickly enough once 
+; the brilliant colors become apparent.  Visiting the web sites 
+; can cut the wait even faster.
+; 
+; Check the finished image at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The official FOTD web site will be up to date very soon.
+; 
+; Lots of sunshine and a high temperature of 64F 18C made today 
+; the most enjoyable day so far this year here at Fractal Central. 
+; The older fractal cat enjoyed the sunshine, while the younger 
+; continued her recovery.  The humans wished they had more time to 
+; enjoy the sun.
+; 
+; The next FOTD will be posted shortly.  Until shortly arrives, 
+; take care, and I see that the second "Cosmos" series has hit the 
+; TV after a wait of over 30 years.  I wonder if it will be just 
+; another plug for rationalism and the scientific method.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Bits_and_Pieces { ; time=0:02:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+1.089601472903944/-0.01698422089345075\
+  /4.346141e+008/1/-75/0 params=3.01/0/0/0 float=y
+  maxiter=1500 inside=0 logmap=190 periodicity=6
+  colors=0000000000000000000000000200300600880CG0EQ0\
+  IZ0Ki0IZ0GQ2EK3EC4C66A0880A80C60E40E40I60K80MA0OC0\
+  SE0UG0XI4ZIAdKGfMMiOQkQXqSdtUkwXtyXyzStzOqzKkzIizE\
+  fzAaz6Zz4Uz2Sz0Qz0Mz0Kz0Gz0Ez0Cz00n20aA0QK0GU0EM0E\
+  GUEAUC3UC0UC0UC0UA0UA0UA0UA0UICd6AS08K06A04z03z02z\
+  00z0k00n00n00q00q00t00t00w00w00y30y60zA0zCS60QA0OC\
+  0ME0KG000A00G00K00O00S30XA0aI2fQ8kZEqiMwtSzqOwnKtk\
+  GqiCni8kf4id2fa0dZ0aZ0ZX0XU0US0SS0QK0SCCU4XX0wX0tQ\
+  0tM0qI0qE0nA0n60k30k00M802G00O00Q00Q00Q04Q0AQ0GQ0M\
+  Q0SQ0ZQ0fQ2nQ2wQ3zQ3zQ3zQ6zOAtMCiMGZKIQIMIIOAGS2EU\
+  0EZ0Ck0AjFAi08n06cK6i03d02Z00S00O00K00E00A00600200\
+  0wG0tI0nK0kM2fO6dQEZUMXXUSZdQan_dwcfycaycZzcUzmSzm\
+  OczMczKczEczAcz4mz2mz0mz0mz0mz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zzczzczzczzczzczzczzczzczzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
