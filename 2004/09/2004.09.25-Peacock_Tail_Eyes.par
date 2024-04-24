@@ -1,0 +1,86 @@
+;     Date: Sat, 25 Sep 2004 08:51:05 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-09-04 (Peacock-Tail Eyes [4])
+;       Id: <1.5.4.16.20040925085150.2b0f6356@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 25, 2003 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the fractal that results when 0.6 
+; part of Z^(-1.212) is subtracted from 0.6 part of Z^(2.2) and 
+; (1/C) is added.  As are many fractals created by this type of 
+; formula, today's parent fractal consists of a distorted, over-
+; sized Mandeloid. The scene is located rather deep in a broken 
+; spiral in what passes for an East Valley of the parent.
+; 
+; I rendered the scene with the outside set to 'fmod' and the 
+; proximity set to 1.1.  This departure from my usually purist 
+; outside=iter rendering came about because the 'iter' option 
+; draws a rather boring image.
+; 
+; While searching today's fractal for a name, I was reminded of 
+; the 'eyes' in a peacock's tail, and named the image "Peacock-
+; Tail Eyes".  Unfortunately, I could find nothing that could 
+; raise the rating beyond a humble 4.  The render time of just 
+; over 9 minutes results in an overall value of 44.
+; 
+; The image may be seen by running the included parameter file.  
+; Those whose system balks at running Fractint parameter files may 
+; download the completed GIF file from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The Thursday and Friday weather was near perfect here at Fractal 
+; Central, and so was the attitude of the fractal cats, who had 
+; more time in the yard than they knew what to do with.  Today 
+; looks like another great day.  I expect the same for the duo.  
+; In my department, the work is nearly caught up.  The next FOTD 
+; will appear on Sep 27.  The FOTD will likely resume its daily 
+; basis on Oct 1.  Until next fractal, take care, and don't get 
+; lost chasing fractal UFO's.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Peacock-Tail_Eyes { ; time=0:09:07.77--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.76262248560970150/+0.291908339275541\
+  80/6.10102e+011/1/-7.50049017609904478/-0.00336675\
+  416591392107 params=1/2.2/-1/-1.212/-0.4/0 float=y
+  maxiter=1200 inside=0 proximity=1.1
+  outside=fmod logmap=yes periodicity=10
+  colors=000C9AIEDNJFSOHXTKaYMfaOZSISJCL96E00H79KEIM\
+  LRPS_SZhUeqTcnTbkS`hS_eSZbRX_RWXQUUQTRQSOPQLPPIONF\
+  OMCOLAPIIQFPQCWR9bR6iS3pS1wR2rR3nR4jR5fR6bQ7YQ8UQ9\
+  QQAMQBISDLUFNVGPXISYKU_LW`NZbP`cQbgWYwoHroLnoQinUe\
+  nZ`nbXngSmkOmpJmtFmxIjrKhlMffOd`QaVS_PUYJWWEYSBZP9\
+  _M6`J4aG2cF3eE4gD4iC5kB6mA6o97q88s78u69w5Ay4Az3Bz3\
+  Bx6Fs8JnBNiDQeGU`IYWL`RNdNQhISkDVo8Xs4ZvCVpKRjSNd_\
+  KZgGToCNv9Hp8Lk8Of7Ra7UX7XR6`M6cH5fC5i75lE4hK3dR2`\
+  X2Xc1Ti0Po0LgBJ`LHUWFNeDGoBFqLEsVEudDwnDyxFsuGmrHh\
+  pIbmJXjKShMQeNPbON_PMXQLVSJSTIPUGMVFJWEH_DKbCMfBPi\
+  ARmAUp9Wt8Zw7`z7by6ey6hx6kx6nw6qw6tc8hL9YOxiMy_KyR\
+  JyIHy9Gy0MzNSzhWhmdmilqfuubzy_quUlnQigNfaKcVH`ODYI\
+  AVB7S54PD8MKBKRELYINdLPkOQrRNqQLpPJoPHnOFmNDlNBkM9\
+  jMCdLEZLGTLINKKHKMCKhfiebdbZ``WXYSSVOOTLKu4GCOvM_s\
+  WjpeumatgZsbVsXSrSPrNOmROhUOcYOZ`OUdOPgOLjSRiVWhZ`\
+  gaefdjeT_aHPZ5FW6IUxcBzdA }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,93 @@
+;     Date: Wed, 29 Sep 2004 11:47:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-09-04 (A Blobby Fractal [6])
+;       Id: <1.5.4.16.20040929114823.29c7f5b6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 29, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; When today's image appeared on the screen, it took me no more 
+; than 10 seconds to think of the name "A Blobby Fractal".  The 
+; elements filling the screen reminded me of that old movie 'The 
+; Blob', one of my favorites. . . . Well, let's admit it, all the 
+; junky old movies are my favorites.  (That original blob was 
+; finally done away with by electrocuting it, or was that how they 
+; eliminated 'The Thing'.  Maybe I'm remembering wrong and it was 
+; 'The Thing' that was electrocuted, and the blob that was frozen. 
+; I guess I'll have to play one of my old videotapes.)
+; 
+; Today's image is part of the fractal that results when 1/100 
+; part of Z^(-100) is combined with (1/Z) before C is added.  This 
+; parent fractal at first appears nearly hopeless, consisting of 
+; overlapping flat disks with scalloped edges.  The few areas of 
+; interest appear where the scalloped disks overlap.  Today's 
+; scene lies in one of these areas.
+; 
+; The image is actually a rather attractive one, well worth its 
+; rating of an above-average 6.  The render time of 10 minutes 
+; gives an overall value of 60.  The completed image may be down-
+; loaded from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Clouds moved in on Monday here at Fractal Central, but the rain 
+; held off until after dark, giving the fractal cats a full day in 
+; the yard.  The heavy rain that fell most all day Tuesday caused 
+; much flooding in the local area and kept the duo confined to 
+; their shelf by the window, uncharacteristically resigned to 
+; their fate.  Luckily, the fractal basement escaped with nothing 
+; more than a puddle along the side wall.  Today is starting 
+; mostly cloudy and breezy.  If no more rain breaks out, the duo 
+; will have a marginal day.
+; 
+; For me, the serious work is basically caught up.  All that needs 
+; to be done is to get the workplace in order and to keep things 
+; caught up.  The next FOTD will appear on Oct. 1, when the every-
+; day schedule will in all probability resume.  Until then, take 
+; care, and enjoy the endless wonders.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Blobby_Fractal { ; time=0:09:59.01--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=ident passes=1
+  center-mag=-0.28034401046869440/+0.609333884977504\
+  30/5.726332e+007/1/27.5/8.2436568175914271e-008
+  params=10/-1/0.01/-100/0/0/0/0 float=y maxiter=900
+  inside=0 outside=tdis logmap=79 periodicity=10
+  colors=000zzunOwjRwfUwbXwZZwVawRdwNfwJiwFlwBnw7qw3\
+  tw0ww0yw0zw0ys5xnCwlJuhQtdXsabqYipUppRnmRniRnfSnbS\
+  `G5aG7bG7eF7fF8hF8iF8lF9mF9nF9pF9tR7xa5zl3zw1nzKZz\
+  aJzs4zzEzzMzqUzhazZizQqzGyx8wy8uy8ty8sz8qz8nz8mz8l\
+  z8jz8iz8fz8ez8dz8bz8az8`z8VzBRzCNzEJzFFzIBzJ7zK3zM\
+  bu8YwBSxCOxFJyGFyI9zK4zM0zO0zQ0zR0yO1wM7tJCqGInENl\
+  BRh9Xe7ab4f`1lY0qV0uS0pR1lQ8hOEdNKZNQVMXRKaNJhJJmF\
+  z0QzGZzbhzxewfbsR`n9Zj0dl4hlEllNplYtlfxlpzlynmhbnR\
+  Qp9Eq0Fs0Gs0Is0Js0Ks0Ms0Ms0Nt1Ot3Qt4Rt5St7Ut8Ut8Xq\
+  EYpIZmM`lQbjUdhYefafdeibijamlZqmYunXyiUleRZ`QNXN9S\
+  M0eazfYxhVwiRtjOslMpmInnFlpCjjFmeGn`IpVKqQMsKNtFQu\
+  9Rw5Sx1OzIUtXZjjdbbmSXuJOz9zf0zf0zJdzNfzQhzUjzXlz`\
+  nzbpyesyitxlwxpxwszwuzuqitnSsj9sh0pb0mZ0jV4hR8eMCb\
+  IG`EKY9NaIRdQVfYYiealmenthpuiqwiswiuxjwxjzyjzylwzl\
+  uzltyntxptxqswssutsuustwqsxqsyqqzppzppzpnzpnzzzzyz\
+  ztzElzEdzEXyEOxEGuE8tE0sE }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 
+; 

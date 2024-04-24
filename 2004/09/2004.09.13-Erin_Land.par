@@ -1,0 +1,86 @@
+;     Date: Mon, 13 Sep 2004 11:57:08 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-09-04 (Erin Land [7])
+;       Id: <1.5.4.16.20040913115746.29bfec8e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 13, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Things are still hopping here at F.C., so once again the discus-
+; sion will be short.
+; 
+; Today's image lies in the parent fractal that results when some 
+; Z^(-2) is subtracted from some just plain Z and (1/C) is added.  
+; This parent appears as a vague Mandeloid rotated -120 degrees.  
+; Its most identifiable feature is its East Valley, which in this 
+; case lies on the NNW border of the main bay, a feature that 
+; could more accurately be called the ocean, for there is little 
+; resemblance to a bay.
+; 
+; I named the image "Erin Land".  For some reason, most likely its 
+; overall green color theme, the image reminds me of Ireland.  For 
+; variety, I used the outside=atan option in rendering the scene.  
+; It gives a livelier appearance than the basic and overworked 
+; outside=iter option.
+; 
+; The colors are rather brilliant, a fact that I noticed when I 
+; gave the scene its rating of a liberal 7.  Unfortunately, the 
+; slow render time of almost 52 minutes permits an overall value 
+; of only 13.  But the image is still interesting, and as always, 
+; will soon be available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The near-perfect weather here at Fractal central over the past 
+; few days kept the fractal cats quite happy.  Today is progres-
+; sing near perfectly also, so I expect more happiness from the 
+; cat quarter.  For me, I think I see light at the end of the 
+; work backlog tunnel, but there is still a way to go.  It looks 
+; like the next FOTD will appear on Sep 15.  Until then, take 
+; care, but don't take so much care that you take away all the 
+; fun.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Erin_Land { ; time=0:51:56.36--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=-2.05193900971597000/+3.629922260995730\
+  00/4075305/1/-110/6.86470697994212564e-008
+  params=1.04/1/-1.36/-2/0/0/0/0 float=y maxiter=5000
+  inside=0 outside=atan periodicity=10
+  colors=0000sC0uC0uA0uC0uE0uG0uI0uK0uM1uM4uO6uP8uRA\
+  uTCuVCuVAuY8sa8se6si4ql4qo1qs0ov0oz0oz0qz0oz1nz6lz\
+  AjzEizIgzMexRcvVauY_uaYseXqiVoqPzlVog_eaeTViEXiIYi\
+  M_iPaiTciXci_eicgigiijjinliqiaqlisonusuvvzxzzzzzzz\
+  zzizoPzcTzgVziYxj_nnaeoeXqgOsiCvl1xn0zq0zo0zn0zl0z\
+  l0zj0zi1zg6zgAzeEzcIzcMzaPz_TzYXzY_zXczVgzPizVjz_l\
+  zelzjnznnusooxojzqezq_zsVzsPzuKzuEsvaMxx0zz0xz0lz0\
+  _u6OiCAX_0TI0M06E0G60KA0NC0QE0TI0WK0ZM1aP4dR6gTAjX\
+  CmYGp_IsaMueOwgPxiTylVznYzo_zsczuezvezzgzxizvjzulz\
+  qlzonznozjqziqzgszcuzavz_xzXxzVzzTzzPzzOzzMzzIzzGz\
+  zEzzGzzCzx8qu6iq1Yl0Pi0Ge06a00Y00Y04X08V0CV0GT0KT0\
+  PR0TP0XP0_O0cO0gM0jK1nK1qK4sM4qO1oQ0nS0lU0iW0gY0e_\
+  0ca0ac0Ye0Xg0Vi0Tk0Pm0Oo0Nq0Qs6Tu0Ww6Zx6ay8dz8gzAj\
+  zAmzCqzCszEqzEmyGiwGguGcsI_qKWoMSmMOkOKiPIgPKeROcT\
+  PaTT_VVYXYWXaUYcS_gQ_iMalGcz1VnEcVOl8Xu0iz0ez0cz0a\
+  z0YzMiIIjGElGAnG8nE4oE0qE }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

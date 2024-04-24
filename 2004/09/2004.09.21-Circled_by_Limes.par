@@ -1,0 +1,107 @@
+;     Date: Tue, 21 Sep 2004 11:54:44 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-09-04 (Circled by Limes [4])
+;       Id: <1.5.4.16.20040921115529.29d7a1b2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 21, 2004 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Over the past several days I have been trying different things 
+; with the 3200mhz machine I recently purchased for business 
+; purposes, to see how fast I could get it to render fractals.  I 
+; got so involved in the project that I neglected the FOTD.  Since 
+; the new P4-3200 unit is 16 times as fast as the old P200 fractal-
+; dedicated machine, it would appear to be able to  calculate 
+; fractals in 1/16 the time, but so far I have managed only an 8x 
+; increase in speed, which is actually a bit better than I had 
+; expected.  I suspect that, though the new unit runs 16 times as 
+; many cycles per second, each cycle does only half as much work.  
+; The 8x increase in fractal speed might be all I'll get from the 
+; new machine.  This is of little importance, for it will be quite 
+; some time before the new unit will be available full-time for 
+; fractals.
+; 
+; Today's fractal image lies in the fractal that results when the 
+; Mandelbrot formula Z^1.5+C is calculated 13 levels down the 
+; complex logarithmic hyperspiral.  The parent fractal looks some-
+; thing like a little man in a racing car (It reminds me of Smokey 
+; Stover for those old enough to remember).  The image is located 
+; in a prominent valley on the southern shore of the parent.
+; 
+; I named the picture "Circled by Limes" because of the lime-green 
+; circular spiral basins that surround the midget at the center.  
+; While searching for a rating, I could find little out of the 
+; ordinary that might make the image an above-average one.  As a 
+; result, I was able to give it a rating no higher than a 4.  But 
+; that lowly rating is raised to an overall value of 95 by the 
+; relatively short render time of 4+ minutes.
+; 
+; While rendering a fractal for oneself is the most fun, seeing 
+; the completed image is more convenient.  The completed image may 
+; be conveniently found on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Friday was showery here at Fractal Central; Saturday was cloudy, 
+; windy and chilly.  But Sunday and Monday were ideal for cats, 
+; who took full advantage of the ideal conditions by spending 
+; almost the entire two days hiding in the holly patch at the 
+; bottom of the yard, cleverly avoiding the burdock burrs.  Today 
+; is again starting ideally.  The cats should be happy.
+; 
+; If I had not started trying things with the new computer, the 
+; work backlog would have been under control.  But as it is, the 
+; work is still a bit behind.  A week or so of effort should bring 
+; it under control however.  The next fractal will appear in two 
+; days on Sep 23.  Until then, take care, and never lose your 
+; sense of fractal wonder.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Circled_by_Limes { ; time=0:04:11.84--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=+0.7\
+  3206915204115540/-0.16342381564101770/146751/1/-90\
+  /3.8857805861880479e-016 params=1.5/0/-13/0 float=y
+  maxiter=1200 inside=0 logmap=105 periodicity=10
+  colors=000AFKAGLAHMAINAJOBKPCLQDMR9NOCORFPQHQUKRYN\
+  SaPTeSUiVVmXWq_XubYxdZzg_zgXzi_zlazmeoohlpkismftpc\
+  vs`wvYyxVzzSsvPoqNklLfgJbbHZXEUSCQOAMK8IG6MEAQDDUC\
+  GYBJaAMe8Pi7Sm6Vq5Yu4`z2bx3cv4dt5dr5ep6en7fl8fk8gi\
+  9ggAheBhcBiaCi_DjZDjXEkVFlTGlRGmPHmNInLJnKJoIKoGLp\
+  EMpCMqANq8Or5Mw7Or8Pn9RjASfBUbCVZDWVEYQFZMG`IHaEIc\
+  AJd6Hg1Ke2Nd3Pc3Sa4V`4X_5_Y6bX6dW7gU7jT8nR7lS8kT9j\
+  TAiUBhUCgVDfWEeWEdXFcXGbYHaYI`ZJ__KZ_LY`LX`MWaNVaO\
+  UbPTcQScRRdSPdSOeTNeUMfVLgWKgXJhYIhZHiZGi_Fj`EkaDk\
+  bClcBldAme9me8nf7og6oh5pi4pj3qk2qk3pi4oh5nf5me6md7\
+  lb7ka8j`9jZ9iYAhXBgVBgUCfSDeRDdQEdOFcNFbMGaKHaJH`I\
+  I_GJZFHXDJZEL_FM`GOaHPbIRcJSeKUfLVgMXhNYiO_jP`lQbm\
+  RcnSeoTfpUhqVisWktXluYnvZow_qx`ry`szWszSszPszQtzUs\
+  zYszarzerziqzkqzmszouzqwztxzwzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 
