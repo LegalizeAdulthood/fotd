@@ -1,0 +1,84 @@
+;     Date: Thu, 29 Dec 2005 10:11:15 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-12-05 (Tan Tank [2])
+;       Id: <1.5.4.16.20051229101327.0d477c0e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 29, 2005 (Rating 2)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I rarely post a FOTD that rates as low as today's 2, but when I 
+; put only 3 minutes into finding a fractal and 30 seconds into 
+; coloring it, what else could be expected?
+; 
+; Today's image, for what it is worth, is a scene in a valley of 
+; the fractal that results when negative portions of Z^(-1.5) and 
+; Z^(-6.6) are combined and (1/C) is added.
+; 
+; I named the scene "Tan Tank".  The color theme is tan, which is 
+; not one of my favorite colors, and the rating tanked.
+; 
+; Luckily, the render time of under 6 minutes means that little 
+; time will be wasted running the included parameter file.  Of 
+; course, if time is a total illusion, there is nothing to save.  
+; But that's another story.
+; 
+; For the convenience of those with uncooperative computers, the 
+; finished image will soon be fully rendered and posted on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy skies and a relatively mild temperature of 48F 9C 
+; here at Old Fractal Central on Wednesday gave the two fractal 
+; cats enough outdoor time to keep them happy.  A stray cat was in 
+; the yard when Tippy emerged from the door, but the stray ran 
+; like **** when he saw Tippy.  Little tuna was needed at the end 
+; of the day to insure contentment.  My day was unexpectedly busy, 
+; and the next two or three days will be repeats, which is why 
+; there will be no further FOTD's until January 3.  Until then, 
+; take care and try to think of the answer.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Tan_Tank { ; time=0:05:45.27--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.47624901595563100/-1.940914188763939\
+  00/461917.2/1/-105/8.99664807929578814e-010
+  params=-1/-1.5/-0.3/-6.6/0/0 float=y maxiter=650
+  inside=0 outside=tdis periodicity=10
+  colors=000`MbfK`lI_qHZmJWjLUgMSdOQaQOYRMVTKSVHPWFM\
+  YDI_BF`9Cb79d56e3FfBOgIWgPdhWlhbedg_alTYqNVvHSzITu\
+  JTpKUkLUfMUaNVXOVTPWOQWJRWESX9TX4UX0X`6_dBahGdlLfp\
+  QitVkx_mpboiepbgrVjtOmuHorImpJlmKkkKjhLifMgcMfaNeZ\
+  OdXOcYRXYTRYWKYYEY`7Yb1Z`2_Z2`X2aV2bT2cR2cQ2dO2eM2\
+  fK2gI2hG2hF2jK6lOAmSEoXIq`MrdQMpYOmWQjVSgUTdTVaSXZ\
+  RZWQ_TPaQOcNNeKMfILhKKiMJjOJkQIlRInTHoVGpXGqZFr_Ft\
+  aEucDveDwgCxhCumSrrfovumopkilibhgXceQ_cKWdKVdKVdKU\
+  dKUdKTeKTeKSeKSeKReKRfKQfKQfKPfKPfKOfKOfTRfaTfjWYS\
+  o_ZqaesclueswfyyUKRRLOOLMMMKJMIGMFENDBNB9N9MKPYHci\
+  FrjPkkZdlgZmqSnzM`hVNScABk8Fh6Je4Nb3Q`7NYBKWFHUJES\
+  NBQIlnJlmJllJlkKljKki_b6KkiLkhLkgLkfMjeMjdMjdNjcNj\
+  bNiaOi`Oi_Oi_PiZPhYPhXQhWQhVQhVRgURgTRgSSgRSgQSfQT\
+  fPTfOTfNUfMUeLUeLVeKVeJVeIWdHWdGWdGXdFXdEXcDYcCYcB\
+  YcBZcAZb9Zb8_b7_b6I5rJ6qJ6qJ6pJ7pJ7oK7oK8nK8nK8mK9\
+  mK9lL9lLAkLAkLAjLBjLBiMBi }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

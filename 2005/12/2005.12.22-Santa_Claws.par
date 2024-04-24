@@ -1,0 +1,96 @@
+;     Date: Thu, 22 Dec 2005 08:17:00 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-12-05 (Santa Claws [5])
+;       Id: <1.5.4.16.20051222081907.29df508e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 22, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Wednesday was so busy that I had no chance to write and post 
+; today's FOTD until this morning.  Since the upcoming days will 
+; be even busier, the next FOTD will not appear until December 28.
+; 
+; Today's image is a colorful scene in the Seahorse Valley area of 
+; the Julibrot.  It is a totally oblique view, with an orientation 
+; closest to the Julia direction.
+; 
+; I named the image "Santa Claws".  The claw-like feature inspired 
+; the name.  This claw is the edge of a larger feature, which is 
+; only being skimmed by today's slice.  The tiny spiral in the 
+; lower right part of the frame is actually the most important 
+; feature in the image.  Change the first 4 parameters to 90 to 
+; see it explode and take over the entire frame.
+; 
+; Being an honest man, I could rate today's fractal no higher than 
+; an average 5.  I really put almost no effort into it.
+; 
+; The render time of 2-3/4 minutes is within reason for an average 
+; FOTD, and the fractal may also be accessed by downloading the 
+; finished GIF file from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it will soon be posted.
+; 
+; Wednesday's weather was a repeat of Tuesday's here at the old 
+; Fractal Central.  It was once again too blustery and chilly for 
+; sensitive fractal cats to venture out of doors.  They spent the 
+; day toggling between sleep and watching the outside from the com-
+; fort of their window shelf.  My day was busier than average, but 
+; still well under control.  However, with so much holiday stuff 
+; piling up, and with the search for the new Fractal Central still 
+; in full swing, I must take a 5-day break from the FOTD.  The 
+; next FOTD will appear in 6 days, on or about December 28.  Until 
+; then, take care, and wait with bated but not abated breath.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Santa_Claws { ; time=0:02:47.09--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 passes=t logmap=yes
+  center-mag=0.139971/-0.0401784/2.724938/1/120/0
+  params=85/79.5/70.3/84.9/-0.753/-0.033/-0.501/\
+  -0.017 float=y maxiter=2500 inside=0 periodicity=10
+  colors=000PNVHR_8Ve0Zj4`k7alBcmEdnIfoLgoOfoLenIdmF\
+  clCbkAajC`iE_hGZgIYfKXeMWdOVcQUbSTaUS`WR_YQZ_P_aO`\
+  dN`fM_iKYlIWoGUpESoCQnAOmDMlGLkJKjMQiPWhSbgVhfYne`\
+  leckdfjciibkhaig`hf_fe_ed_ec_eb_fa_g`_i__kZ_mY_oQh\
+  pIdrUaseZtqZrpZppZnpZlpZkpZipZgpZfpZfpZepZdpZdpZdp\
+  ZepZfpZff_fX_gO`hO`iOajOakOblObnOcpOcrOdtOdvOgvOkv\
+  OovOsvOwvOzvOyrRyoTxlVxiXxeZwb`w_cvXevTgvQiuNkuKmu\
+  HorGloFimFgnOanXWneQnnKnvEisJdqN_oRVmVQkZLicGggBek\
+  6co1as5Zr8XrBUrESrINpMJnQFlUBjY7haAdeDahGYlJVpMSsP\
+  OwSLzVIuTJpSJkRJgQJbOKYNKTMKPLKSJLVIMXHN_FOaEPdDPg\
+  BQiARl9Sn7Tq6Us5UgEhXMwUOpSQjQScOUYLWRJYLH_EFa8H`C\
+  I_GKZKLYONXROWVQVZRUbTTfUSiaMYiGMqAAnCDlEGiFIgHLdJ\
+  NbKQ`MSYOVWPYTR_RTbOUdMWgKXiNZfP`dSbaUc_WeXZgV`hSb\
+  jQelOgmLjoJlqGnrEqtBsv9uw7sxEqxKpxQnxWlybkyhiyngyt\
+  fyzWvyMtxCrw2pwoMpmPolRokTniWnhYng_meamddlcflahl`j\
+  k_mkYojXqjWsjYqg_oeanccl` }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

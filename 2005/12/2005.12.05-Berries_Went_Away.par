@@ -1,0 +1,98 @@
+;     Date: Mon, 05 Dec 2005 21:39:06 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-12-05 (Berries Went Away [5])
+;       Id: <1.5.4.16.20051205214101.0d87adda@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 06, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Let the trumpets blare, let the cats rejoice.  I'm back!  And I 
+; have already created another fractal.
+; 
+; Unlike carbs and trans-fats, today's fractal is most certainly 
+; not hazardous to your health.  It is a harmless Julia set of the 
+; Z^(1.3)+C Mandeloid as it appears 13 levels up the logarithmic 
+; ladder to infinity.  The large inside part of the image has been 
+; activated by the 'bof60' inside fill.
+; 
+; I named the image "Berries Went Away" because an earlier version 
+; of the image looked like a pile of blackberries, and, while 
+; trying to decide on a name, I heard a news report on the radio 
+; that, due to legal problems, electronic blackberries might soon 
+; become useless.  (I couldn't be less concerned.)
+; 
+; Mostly due to its amber coloring, the image rates a 5, which is 
+; the every-day average.  The render time of just under 1-1/2 
+; minutes will be reduced to mere seconds on the fastest machines.
+; 
+; But some fast S.O.T.A. machines are allergic to Fractint.  Those 
+; with such delicate prima-donna units can see the image by going 
+; to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and see the image posted there, without the chore of running the 
+; parameter file.
+; 
+; The weekend search for the new Fractal Central went reasonably 
+; well.  We checked two properties in Lewisburg, which is located 
+; in the Susquehanna Valley area of central Pennsylvania.  But we 
+; have much more shopping to do before we make a final decision.
+; 
+; Temperatures that were too chilly for comfort limited the cats' 
+; outdoor time over the past few days.  But my sister, who kept 
+; the cats from becoming lonely while we were away, and also kept 
+; them overfed, reports that the duo made the most of things, 
+; taking brief advantage of the few rays of sun that managed to 
+; filter through the clouds and holly trees, while enjoying the 
+; extra-generous treats of tuna.
+; 
+; Until the next FOTD appears in 24 hours or so, start taking care 
+; again.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Berries_Went_Away { ; time=0:01:24.92--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=-0.135593/-0.096485\
+  2/0.6666667/1/-77.5/2.583350200424661e-014 passes=1
+  params=1.3/0/13/0/0.168/-0.444/0/0 float=y
+  maxiter=256 inside=bof60 logmap=yes periodicity=10
+  colors=000B8AEAAHCAKEANGAQIATKAWMCZOEaRGdUMgXSj_Ym\
+  bbpefsjkvnpzsuzvzzzzzxzzuzztzzrzzozznzzozzpzzpzzrz\
+  zryzsxztvztvzuuzutzvszxszxrzyph_MfTOeMOzevzVozLiz9\
+  bzGfzMizSkzWnzapzftzkvzoyztzzyzzzzzzzzzzzzzzzzzyzy\
+  bsuetrhtojukluiovervbtvZvxVyxSzyOzyLzzGzzDzzEzyEzy\
+  EyxEuxEsvEovEkuEhuEeuZZZpS9sZPtdavinxoyztzzyzstzjp\
+  zalzSixIerYepkepahyQjzSnzTpzVszWuzYxzZzz_zzazybzxd\
+  zxbzybzybzybzybzybzybzyazyazyazyazyazyazyazybzzbzz\
+  bzzbzzdzzdzzdzzdzzdzzbzzbzzbzzbzzazyazxazvaxuaut_s\
+  s_pr_np_ko_jnehnjfnnensdnvbnzanz_nzboudoreolfohiod\
+  joZkoTloPnorzzzzzzzzzzzzzzzzzzzzzzzzzzzuzykzxazvQz\
+  uGzJYzY_fja0je9jhIjjPjnWjpajshjvnjytjzzjzzkzzkzykz\
+  ulzslyplxlnxjnvhnudouaotYosVpsSprOppLppInrLlsMjtOh\
+  uQeuSdvTaxWZyYWzZVz_TzVTzPSzLSzESz9PzIMuOJpTGj_Dee\
+  9Zj6To9YrD_sGbtJeuMixPkySnzVpzYtz_vzbyzezzhzziyziu\
+  zipzilziixidui_siWriQoiMl }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

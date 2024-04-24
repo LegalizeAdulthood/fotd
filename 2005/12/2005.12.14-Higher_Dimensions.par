@@ -1,0 +1,88 @@
+;     Date: Thu, 15 Dec 2005 01:03:07 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-12-05 (Higher Dimensions [4])
+;       Id: <1.5.4.16.20051215010509.37df35e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 15, 2005 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We had an unexpectedly busy day on Wednesday, so the image is 
+; very fast and the discussion is short.
+; 
+; Today's image is named "Higher Dimensions".  The name refers to 
+; the 4-dimensional Julibrot fractal, which is the source of 
+; today's image.
+; 
+; The image shows an attractive Seahorse Valley midget from an 
+; entirely new direction.  It is neither a Mandelbrot image nor a 
+; Julia image, but an image sliced in a random direction.
+; 
+; The rating of a 4 is all I could do for the image, which is not 
+; at all attractive when seen from today's direction.  The 
+; Mandelbrot aspect of the scene is far more pleasing.
+; 
+; The render time is an unusually fast 53 seconds, but the 
+; finished image is still posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A lack of sun, snow-covered ground, and a high temperature of 
+; 23F -5C kept the fractal cats solidly indoors all day.  But they 
+; now appear to have adjusted to the limited outdoor time, and are 
+; spending their days looking forward to tuna rather than going 
+; out.  My day was notably neutral.  The next FOTD will appear 
+; without fail in 24 hours.  Until then, take care, and be ready.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Higher_Dimensions { ; time=0:00:53.33--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 passes=1 periodicity=10
+  center-mag=0/0/1.062917e+008/0.0683/-34.5291825197\
+  818198/-72.9973164417551317 params=42.858/-22.976/\
+  -82.713/149.193/-0.7957458443595292/-0.18480832907\
+  16682/-0.7957458443595292/-0.1848083290716682
+  float=y maxiter=1500 inside=0 logmap=65
+  colors=0000`JD_UCZ_BXdAUk9Qp8MqAKoBJiDHdEGZFFTHDOI\
+  CIJBDIFCHICHLCGOBGRBFUBFXBE_AEbADeADhAIjDNlGRmJWoM\
+  `qPdrSitVmuXnlanceoVjoMnoDrhQtaavVnxOzzPwxQuvQstUq\
+  nYpi`nddmZglUkjPoiJrgEvf9ye4uf8qgCmhFiiJfjMbkQZlTV\
+  mXSn_Ol`Kj`GhaCfa8db4bb0abDgVPlNarFmw7qnPuefyXwsYr\
+  nZmi_id`d_a`VbWQcSLdNGeJLdHPcFUbDYaBb`Af_8kZ6oY4tX\
+  2xW1tX2qY3nZ3k_4h`5ea5bb6_c6Xd7Ue8Rf8Og9LhAIiAFjBC\
+  kBDlEElHElJFlMGmOGmRHmTImWImZJn`KncKneLnhLnjKkkKhl\
+  KflJcmJamJZnIXoIUoISpHPpHNqHKrGIrGFsGDsNKgUQW`WKZV\
+  MYVOWVQVVSTVUSUWQUYPU_NUaMUcLUdKVhJWkIXnIYqJXrKXrL\
+  XrMXsNXsOXsPXtQXtRXtSXuTXuUXuVXvWXvWXvQYwLZxF_yA`z\
+  BYuCVpDTkEQfFOaGNcGNeGNfGNhGNjGNkIMiJMgKMeMMdNMbOL\
+  `QL_RLYSLWULVVKTWKRYKQZKO_KM`KLXQMTWNQaOMgPJlPLmNM\
+  mLOmJPmIRmGSmEUmCVmBXm9Ym7_m5`m4Yk7Wi9UgBReDPcGNbI\
+  K`KIZMGXPDVRBTT9SVEUWIWXMYXQ_YUaZYbZad_ef`ih`mjaqk\
+  ajbVcUOXLIQCBJ45GF9DQCA`G }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

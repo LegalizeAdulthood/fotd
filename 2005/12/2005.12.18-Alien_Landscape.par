@@ -1,0 +1,105 @@
+;     Date: Mon, 19 Dec 2005 01:58:18 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-12-05 (Alien Landscape [5])
+;       Id: <1.5.4.16.20051219020021.2a7ffb42@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 19, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today, with the aid of the SliceJulibrot2 formula, we enter 
+; 4-dimensional hyperspace.  Hyperspace is any space of more than 
+; 3 dimensions.  I confine my investigations to 4-dimensional 
+; hyperspace, which we can come the closest to visualizing with 
+; our 3-dimensional brains.
+; 
+; The formula draws most slices of the 4-dimensional Z^2+C 
+; Julibrot figure.  Being unable to visualize all possible 
+; orientations in 4-D hyperspace, I will not claim the formula 
+; draws every possible orientation, but I have not yet found a 
+; slice that it cannot draw.
+; 
+; Today's slice is orientated close to the Parabolic direction, 
+; but rotated 1/3 of the way toward the Elliptic direction.  As 
+; should be evident from the elements that resemble goofy eyes, 
+; the scene is located in the East Valley area of the Mandelbrot 
+; set.
+; 
+; There are no 'inside' areas appearing in the image.  The area 
+; that resembles a blue sky with patches of haze is actually 
+; composed of very high iteration 'outside' stuff made more 
+; interesting by being rendered with the outside=imag option.
+; 
+; The picture vaguely resembles a scene on an alien planet, which 
+; is why I named it "Alien Landscape".  The rating of a 5 shows 
+; that I am not thrilled with the result.  The render time of 
+; 5-1/2 minutes is fair enough.  Rendering may be totally 
+; eliminated by downloading the finished image from the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The report is that the weather was uneventful at Fractal Central 
+; while we were away over the week-end.  The ice-storm stayed well 
+; out of our way to the west and south.  We found one possible 
+; home for the new Fractal Central, but it has problems that would 
+; need to be worked out.  My sister reports that the fractal cats 
+; seemed unconcerned that fractal lady and I were gone for two 
+; days, though they were concerned that their accustomed tuna, 
+; might not be served on time.  They also demanded that they be 
+; allowed to check the weather for themselves.  The next FOTD will 
+; likely appear in 24 hours.  (I will no longer say certainly.)  
+; Until then, take care, and not even the appearance of the FOTD 
+; fractals, is absolutely certain.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Alien_Landscape { ; time=0:05:31.48--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2
+  center-mag=+0.25000501074059570/-0.051641324143515\
+  65/4.739839e+008/0.04713/-156.857105609805927/65.4\
+  90051767333938 params=30/90/0/0/0/0/0/1 float=y
+  maxiter=500000 inside=0 outside=imag periodicity=10
+  colors=000jrWirVhrVgrUfrUfrTerTdrScrSbrRbqRaqQ`qQ_\
+  qPZqPZqOYqOXqNWqNVqMVqMUqLUqLUqKUqKUqKUoJUmJUlIUjI\
+  UhHUgHUeGUcGUbGT`FTZFSYESWERUDRTDQRCQPCPOCPMBPKBPJ\
+  APHAPF9PE9PC8PA8P98PB9PDAPFBQHBRJCSLDUNEZPETQFNRGH\
+  TIBUJ5VKSbSmi_nhVngQogLofGpfBpe6pe2nf6lf9kgCigFghI\
+  fhLdiOciRajU_jYZk`XkcWlfUliSmlRmoPnrOnuQmsRlqSkoUj\
+  mVjlWijXhhZgf_gd`fcaeacd_ddYecWfbVhaTi`Rj`Pl_NmZMn\
+  YKoYIqXGrWEsVDtVBvU9wT7xS5yS4wQ5uP6sO7qM8pL9nKAlIA\
+  jHBiGCgEDeDEcCFbAG`9GZ8HX6IW5JU4KS2PQ1UP6ZOCcOHhOM\
+  mNSrNWvN`zMezMezMezLezLezLezLfzKgzKgzKgzJfzJezJdzI\
+  dzIdzIdzIdzHdzGezFezEfzDfzDfzFgzGgzHgzIhzJhzKhzLhz\
+  NhzOdvPdrQdmRfhSieTleSjcRiaQg_PfYOdWNcUMaSL`QKZOJY\
+  MIWKHVIGTGFSEEQCEPAVEbUGaTH`SI_RKZRLYQMXPNWOPVOQUN\
+  RTMSSLURKVQKWPJXOIZNH_MH`LGaKFcJEdIDeHDfGChFBiEAjD\
+  AkDCjEDiFFhGGhHIgIJfILeJMeKNdLPcMQbMSbNTaOV`PW_QX_\
+  QZZR_YSaXTbXUdWVeVVgUWjrW }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
