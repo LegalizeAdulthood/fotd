@@ -1,0 +1,99 @@
+;     Date: Tue, 25 Mar 2008 17:54:29 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 26-03-08 (Only a Minibrot [7.5])
+; 
+;       Id: <1.5.4.16.20080325165644.2a5fbe24@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 26, 2008 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes the same parent fractal that held 
+; yesterday's image and doubles the portions of both Z^1.25 and 
+; Z^2.5.  In the resulting fractal, the two M-sets are no longer 
+; partially merged, but are now well separated, connected by only 
+; a narrow 'inside' N-S band centered symmetrically on the X-axis. 
+; Today's scene is located very near the point where this band 
+; intersects the X-axis.
+; 
+; When rendered in the usual manner, the scene is rather dull and 
+; lifeless.  So to add some life I rendered the image with the 
+; outside set to 'tdis' and the inside set to 'fmod'.  The 
+; proximity factor of 11 was a mistake, but it worked so well that 
+; I decided to keep it.
+; 
+; When the time came to rate the day's effort, I found enough 
+; pizazz in the image to rate it at a 7.5, giving myself a 
+; generous half-point for the coloring.  The name "Only a 
+; Minibrot" refers back to yesterday's image, which held a gaping 
+; hole and an impressive spiral in addition to the minibrot, while 
+; today's image has only the minibrot.
+; 
+; With a calculation time of just under 6 minutes, the parameter 
+; file borders on the slow side, but IMO, the small effort is 
+; worth it.  And for instant gratification, the finished image may 
+; be accessed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Near perfect 50F 10C early spring weather continued at Fractal 
+; Central on Tuesday, and the fractal cats continued to enjoy the 
+; sun.  My day was unusually busy, but never beyond control.  The 
+; next in the near-endless string of FOTD fractal images will be 
+; posted in 24 hours.  Until then, take care, and dwell in peace 
+; in hyperspace, where I might soon take a tour of a hypersphere.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Only_a_Minibrot    { ; time=0:05:54.49-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=mandautocritinz function=ident passes=1
+  center-mag=+0.233227944685145/+0.0082092285206308/\
+  1.051e+007/1/-148.75/0 params=2/1.25/1/2.5/0/0/0/0
+  float=y maxiter=10000 inside=fmod proximity=11
+  outside=tdis symmetry=none periodicity=10
+  colors=000CszHkzNezT`uZVodPigTdkXZo`TsbPveJziEzr0z\
+  o4PH00000040CAUPPHdLRsR`zX000qzguzbvzXxzTzzNzzJzzE\
+  zzAzz4zz0zz0zz0zz6meL`H`P0oN8uLJxLXzJgzHuzHzzCzz8z\
+  z4zv0zq0zi0zd0zZ0zN0zE2z46z0Az0Cz0Cu0Em0Ee0EZ0GR0G\
+  J0GC0H40H00H00A602N00b00X20R80LG0GL0AR04Z00d00k00q\
+  00v00q40m80iC0eG0`J0XN0TR0PV0JZ0Gb0Cd08e0Ae0Ce0Ee2\
+  Ge6He8JeALgH6gN0eL0dL6bLC`LJZLPXJXVJbTJiRJqPJvNHzL\
+  HzJHzHHzGHzGHzLNzRTqXZV`bAid8qe6xg4zi4zk2zm0zo0ze0\
+  zW0zO0z00u00e00T20GA080200020460AA0EE0JH0PL0TP0ZT0\
+  dX0g`0md0sx0ke0vP2z86z00z08z0Ez0Lz0Rz0Zz0dz0kz0qz0\
+  xz0zy0zx0zw0zv0zuAzuJzuRzu_uqfolnihkddibbl`bqZbpZb\
+  qXbpV`oT`pT`oR`oP`mN_kN_kL_iJ_vNjiJdZHTNGHC82CE8CJ\
+  CCPGCVLCZPCcTCcZCcbCceCckCcoCcsCcxCczCcz6cq0cd0cR0\
+  cE0c00c04cm8cmAcmCcmEcmGcmHcmLcmNcmPcmRcmTcmUcmVcm\
+  Zci`cebcbdc`ebXgZTiTR`czZcvZsqXqkXoeVm`VkVTiPTgJTe\
+  ERgLPiTNk`LmgJmmHouGqzEsz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

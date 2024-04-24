@@ -1,0 +1,100 @@
+;     Date: Mon, 17 Mar 2008 21:59:00 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 18-03-08 (Deeply Fractured [6.5])
+; 
+;       Id: <1.5.4.16.20080317210107.0dbfff4e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 18, 2008 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image exists in the Z^(1.2)+C Mandeloid as it appears 
+; PI levels up the complex logarithmic ladder when no function is 
+; applied.  The parent fractal at this level isn't much to look 
+; at, but it is surrounded on its west side by bits and pieces of 
+; cut-off spirals, and the image sits on a node of one of these 
+; pieces of a spiral.
+; 
+; Actually, the pattern around the tiny minibrot at the center is 
+; unusually well organized for a scene in a fractal in this low 
+; exponent range, with tiny cut-off pieces of spirals hiding every-
+; where, and the 4-way near-symmetrical arrangement of elements 
+; adding just enough interest to raise the rating to a 6.5
+; 
+; The name "Deeply Fractured" describes the broken-up nature of 
+; the scene.  The calculation time of just over 1 minute will 
+; cause no one to lose patience.  And if all else fails, the fin-
+; ished image is or soon will be posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Monday turned out very pleasant here at Fractal Central.  There 
+; could hardly be a better way to end winter than with a Saint 
+; Patrick's day of full sun and a temperature of 48F 9C.  The 
+; local fractal cats must have agreed, for they got into a tussle 
+; over who would sit in the sunniest window.
+; 
+; My day was mostly average; tomorrow should be the same.  The 
+; next FOTD will be posted in about 24 hours.  Until then, take 
+; care, and when science tells us that the universe is about 13.7 
+; billion years old, what is doing the talking?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Deeply_Fractured   { ; time=0:01:01.73-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident float=y
+  center-mag=-2.704804574677948/+1.557515314601944/\
+  4.747e+009/1/-10/0 params=1.2/0/3.14159265358979/0
+  maxiter=2400 inside=0 logmap=154 periodicity=10
+  colors=000F2EL5HR7KX9NbBQcETcGWcIZcKanbXcsdTzifzfz\
+  h0zzUQhNPXHOPAOF4xlpsohoqaksUguNhlPidQiXSjPTjHUcIV\
+  zIKzIKzIKgJXgJXfJYfJYdGTbEO`BJ_9Fm6Am45V21Y2B`2Lc2\
+  Ve2daLdZbdWtd_o_bjWfeSi`NzWJzRF8k09i29g39f59d69b89\
+  a9AdABfACiBDkBEnzFpzGsCGuCInFJhHLaJMWLNPNPJPQCRR6T\
+  N5VJ5XF5ZC4_84a44c14d86cE8cKAcRCcXEcbGccN`cTZc_Xce\
+  UclScrQcxOP`TBEXBMRBUKBaEDcFEdFFeFHfFIgFJhFLiFMjFN\
+  kFPlFQmFRnFToFUpFVqFWrFYlE_gEabDcYDeSCgNCiIBkDBm8B\
+  k9EjAGhBJgCLeDOdEQcFSaGV`HXZI_YJaXKc_LgaLjdMmfMpiN\
+  skNviOuhOtgOsfOrdOrcOqbPpaPo_PoZPnYPmXPlWPlZUiaYgd\
+  aefeciialm_nqYopWopVooUooTooRonQonPonOomNomLomKolJ\
+  olIolHkjFhiDdgBaf9Ze8bg7eh7ii7lj7pl6sm6wn6zo6tpBnq\
+  FhrKcsOYtSSuXMv`HwdBxi5ym0zq9znHzkPziYzfezcmzaizce\
+  zeazgYzhUzjQzlMznIzoHznHznGznGznGznFznFznEzmEzmEzm\
+  DzmDzmCzmCzmCzmEzkGzjIzhKzfMzeOzcQzaSz`UzZWzXYzWVz\
+  UazWezVizUmz9qzBtzDwzFzzH }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

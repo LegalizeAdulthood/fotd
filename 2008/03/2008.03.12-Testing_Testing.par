@@ -1,0 +1,94 @@
+;     Date: Tue, 11 Mar 2008 19:57:38 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 12-03-08 (Testing Testing [7.5])
+; 
+;       Id: <1.5.4.16.20080311185941.0dafbc36@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 12, 2008 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "Testing Testing" because I found it 
+; almost by accident while I was running a time test.  The rating 
+; of a 7.5 includes 1/2 point for my semi-skilled coloring, which 
+; is responsible for the rather moody silvery-blue palette.
+; 
+; The parent fractal is the result of combining various negative 
+; portions of Z^(-1.15) and Z^(-7.5), then adding (1/C).  This 
+; parent consists of a north-south string of large bays, with the 
+; southernmost bay being the most mandel-like.  The filaments 
+; extending from the buds along this bay terminate in rings, 
+; shaped more like lima beans than circles.  Today's image is 
+; located in the inside of one of these lima-bean rings.
+; 
+; The calculation time of 31-1/2 seconds is surprisingly short for 
+; such a pleasing fractal.  No one with a computer that can still 
+; handle DOS has a reason not to run the included parameter file.  
+; And those with machines unskilled in DOS may see the image on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A pleasant day prevailed at Fractal Central on Tuesday, with 
+; partly cloudy skies and a temperature of 46F 8C.  The fractal 
+; cats spent the afternoon enjoying the periods of sun and being 
+; sulky when the clouds blocked the sun.
+; 
+; My day was eminently average, which, after the recent hectic 
+; activity, was all that could be hoped for.  The next FOTD will 
+; be posted in 24 hours.  Until then, take care, and who first 
+; wrote 'It was a dark and stormy night.'?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Testing_Testing    { ; time=0:00:31.57-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=-2.946876788769/-4.19126281472/11868.3/\
+  1/-167.5/0 params=-5/-1.15/-0.75/-7.5/0/0/0/0
+  float=y maxiter=280 inside=0 logmap=29
+  colors=0008HOCLSGPWKT_OXcSYgTcjQclUhoUjqbmscpvkrxm\
+  tzzzzzzzvvvmmmcccUUUKMCFOFFRKGTPHWUIYZJ`cKbhLemMgr\
+  NjvOlzPozQqzRszQrzPrzPrzOrvOrrNrmNrhMrfLrcLraKr_Kr\
+  YJrWJrUIrSIrQ7dSD`UJXWOTXUPZ_L_dHajDbp9du5ez1gz0hz\
+  0_z0Rz0Iz0Az0Fz0Kz0Pz0Tz0Yz0bz0gz0kz0pz0uz0yz3sz6n\
+  zAhzDczGZzpSzkZzfezalz_mzYnzXozVpzUqzSrzQszPtzNuzM\
+  vzKwzJxzIszHnzGjzGezF`zEXzDSzDOzFSzGWzHZzIbzJfzKiz\
+  LmzOqzRtzUqzXoz_mzbjzehzhfzkcznazq_ztazwbFzcHzeKzf\
+  MzgPziRzjUzkWzlXzmXzmXzmXznYznYznYzoYzoZzoZzpZzpZz\
+  pWzoTznKzC`zFZzIYzKXzMWzO`zMezLjzJozItzGxzFvzKuzPt\
+  zUszZqzcpzhozmnzrmzmlzilzekz`kzXjzTjzPOzTQzWRzZSza\
+  TzdUzgRzdPzaMzZKzXSzU_zRgzPozMwzJzzHqzjkzaezT`zLFz\
+  gIzZLzQOzH`zMlzRxzVzzczzlzzuzzsyzqwzouzmrzjpzhnzfl\
+  zdjzblzZmzWnzTpzQqzNrzKtzHuzEvzBxz8yz5zz2zzRzznvzi\
+  ozehz`azXVzSOzOPzJQzFRzARz6YzEdzLjzTqz_xzgzznaztAz\
+  zJzvRzrZzogzkozgwzdszeYzN }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

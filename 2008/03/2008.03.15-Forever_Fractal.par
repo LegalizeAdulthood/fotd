@@ -1,0 +1,100 @@
+;     Date: Fri, 14 Mar 2008 23:11:39 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 15-03-08 (Forever Fractal [8.5])
+; 
+;       Id: <1.5.4.16.20080314221346.0defd0c4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 15, 2008 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Unless I'm mistaken, today is that ill-fated day, the Ides of 
+; March.  And what better way to celebrate the day than with a 
+; fractal.  The fractal in question is a near-Julia set of the 
+; Seahorse Valley area of the (-Z)^1.44+C Mandeloid.
+; 
+; The difference between a near-Julia set and a pure Julia set is 
+; immense.  To see the difference, change the (p2) parameter to 
+; 0,0 and re-run the parameter file.  Actually, a near-Julia set 
+; is simply an oblique slice through the four-dimensional Julibrot 
+; figure, very close to but not exactly in the Julia orientation.
+; 
+; The unusually terraced effect of the image was created by 
+; rendering it with the outside set to 'tdis', which draws the 
+; bands according to how far the points travel before passing 
+; beyond the escape radius.
+; 
+; I named today's image "Forever Fractal".  Fractals are creations 
+; of mankind as much as the complex numbers that bring them into 
+; being.  I rated it at an 8-1/2, including an extra 1/2 point for 
+; my coloring expertise.
+; 
+; Finally, the calculation time of 2-1/2 minutes should cause no 
+; one to feel impatience.  And as always, the finished image is 
+; available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; An unusually pleasant day graced Fractal Central on Friday, when 
+; lots of sun and a temperature of 61F 16C brought out the best in 
+; both man and cats.  The lighter than expected work gave ample 
+; time to enjoy the outdoors.  Unfortunately, rain moved in just 
+; after nightfall, and Saturday will not be nearly as pleasant.  
+; But whatever, the next FOTD will appear, probably on schedule in 
+; 24 hours.  Until that enlightening moment, take care, and to 
+; where is our over-developed intellect and under-developed wisdom 
+; leading us?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Forever_Fractal    { ; time=0:02:31.65-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=EvenMoreSlices center-mag=-0.289695/0/\
+  1.253133 params=1.44/0/0.004/0.004/-0.7393818/\
+  0.0302556/0/0 float=y maxiter=10000 inside=0
+  outside=tdis periodicity=10
+  colors=000HhzHczGZzGUvFPmEKcEFUD0K70BA0CD0DF0EI0FL\
+  0GN0HQ0ET0BQ18T49V79XA9ZD9`F9bI9dL9gOAiRAkTAmWAoZA\
+  qaAsdAze7wf9ufAsfCqfDofFmfGkfIhgJfgLdgMbgO`gPZgRXg\
+  SUhUShVQhXOhYMh_Kh`IhbFicDieBif9ih7ii5ik1kn3il5gk7\
+  fj9diBbgCafE_eGZdIXbKVaLU`NS_PRZRPXTNWUMVWKUYIS_HR\
+  aFQaEPbCNcAMd9Le7Kc4Dc5Ge6Jg7Mi8Pk8Sm9VoAYqB_rCbsC\
+  etDhuEkvFnwGqzFwxGuwGsuGqtGorGnqGloHjnHhlHgkHeiHch\
+  HafI_eIZcIXbIV`ITeMLbKP_ISXGVUEYRC`OAcL8fJ7iK9hLBh\
+  MCgNEgNFfOHfPIeQKeRLdRNdSOcTQcURbVTbVUaWVaXV`YW`ZW\
+  _ZX__YZ`_Za`YbnYas`boZbkYbgXbdWb`VbYUbWTbTSbQRaOQ`\
+  LP_IOYEOYGNZHN`JNaKNbLNcNMcOMcPMcRMcSMdULdVLdWLdYL\
+  dZLd_LeaKebKedKeeKefKfhJfiJfjJflJfmJgoHfnJfmKflMek\
+  NejOeiQehRdgTdfUdeVcdXccYcbZca`b`ab_cbZdbYeaXgaWha\
+  Vi`Uk`Tl`Sn`Ro_Qp_Pr_Os`Lu_Nt_OtZPtZQtZRtYTtYUtYVt\
+  XWtXXtWZsW_sW`sVasVbsVdsUesUfsUgsThsTjrSkrOlzNmzNm\
+  zMmzMmzLmzKmzKmzJmzJmzImz }
+
+frm:EvenMoreSlices {; Jim Muth
+; P1--exponent, P2--angle,
+; P3--M center, P4--J center,
+z=pixel+(p4), c=p3+(pixel*p2):
+z=(-z)^(p1)+c,
+|z| < 16 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
