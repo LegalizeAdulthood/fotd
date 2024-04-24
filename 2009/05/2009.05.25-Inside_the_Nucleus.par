@@ -1,0 +1,107 @@
+;     Date: Mon, 25 May 2009 13:37:42 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 25-05-09 (Inside the Nucleus [8])
+; 
+;       Id: <1.5.4.16.20090525133850.2b673098@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 25, 2009 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, which is a slight reworking of an earlier FOTD 
+; image, reminds me of what one might see if he could shrink 
+; himself to the size of an atomic nucleus.  In my earlier years I 
+; pictured the nucleus as a boiling raspberry, but this was before 
+; I realized that things like atomic raspberries and tiny solar 
+; systems are mere ideas, models that help us think logically 
+; about the atomic realm.
+; 
+; Atoms and sub-atomic 'particles' cannot be pictured because they 
+; lack the attributes we associate with 'reality', including 
+; appearance.  The mere fact that we sometimes wonder whether 
+; atoms are truly tiny real 'objects' or mere mental fantasy shows 
+; that we have no conception of what lies beneath the classical 
+; world of the five senses, another fantasy world, upon which 
+; materialists have bestowed the exalted status of 'ultimate 
+; reality'.
+; 
+; Today's image is definitely virtually real and it has a definite 
+; appearance.  It is the Julia set of the Z^(1.3) Mandeloid as it 
+; appears 3 levels up the logarithmic ladder.  Most of the action 
+; was achieved by rendering the scene with the inside set to bof61.
+; 
+; The name "Inside the Nucleus" refers to my impression of the 
+; image.  Even though the image is a virtual repeat, in my opinion 
+; it still rates an 8.  And the calculation time of only 16 
+; seconds will seem to pass in a chronon.
+; 
+; The finished image is available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Oppressive heat and humidity here at Fractal Central on Sunday 
+; was interrupted at 5pm by a heavy but otherwise harmless thunder-
+; shower, which dropped the temperature from 86F 30C to 68F 20C.  
+; The fractal cats paid little attention to the rain.
+; 
+; My day was spent mostly in recovery from Saturday's trip to 
+; O.F.C.  The next FOTD will probably be posted on schedule in 
+; about 8 hours.  Until then, take care, and what do we mean by 
+; meaning?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Inside_the_Nucleus { ; time=0:00:16.66-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=-0.00327762/0.00070\
+  084/9.34161 params=1.3/0/3/0/-0.74930081/0.3777896\
+  /0/0 float=y maxiter=1000 inside=bof61
+  logmap=6 periodicity=10
+  colors=00000N00s00s00O00K00K00L00N00S00T00V00P00V0\
+  0b01e04Y16U47h78v9B_CCUFEjIHjKIbMKjQMjTOlRQiUSlbVl\
+  eWmcYmlamobmscovgoyoozjozlozmqzzzxmsvmstmssxtqotoo\
+  vmrzlzzhzzgzzezzczzzzzzzzzzzzzzzzzzzzzzzzzz1lz0hz0\
+  sz0ex0bt0`q0tz0Yj0Ve0Tb0gs0OW0MT0LQ0az0KM0KL1IL1Qe\
+  3HK3HI4FI04H3EH6EFcCF7CE7CC8BCcBB09B999B89c88078C7\
+  7E67E66C13E66F87HB9IEBKHELKFMMIOQKQTMSWOT_QzYOzWOz\
+  WMzVMzVMzTLzTLzSKzQKeQKgOIhOIjMHzMHzLHzKFzKFzIEzIE\
+  zHEzHCzFCzEBzEBzCBzCAzB9zB9y9Cx9Ev9Ft9Hs8Ko8Lm8Ml8\
+  Oj7Sh7Te7Vc7Wb7Y`6`_6bW6cV6eT4hS4jQ4lM4mL4oK3sI3tH\
+  3vE3xC1zB1z91z81z84z71z60z40t30m10g00`10b10c11e17g\
+  3Ch3Hj3Ml3Tm3Ym6Vo7To8SqBQqCOsEMsHLtIKtKItMHvOFvQE\
+  xTCxVByW9yY8y`6zb4zc3zg1zh0zj0zm0zo0zq0zt0zv0zx0zz\
+  0zz0zz0zz0zz0zz0zy0vx0sv0ms1hTOQSKOSHMQELOBIO8HM4F\
+  L1EL0CK0BK09I0BH0CF0CE0EC0FB0F90H80I70I60K40L30L10\
+  M00O00O00Q00S00S0PY0cc0vY }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,115 @@
+;     Date: Thu, 14 May 2009 22:32:25 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 15-05-09 (The Elephants Go West [5])
+; 
+;       Id: <1.5.4.16.20090514223324.2a87aff2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 15, 2009 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We have just seen the weird rectangular things that appear on 
+; the negative stem of the Z^2.003 Mandeloid.  But what would 
+; happen if the parent fractal were rotated 180 degrees so that 
+; East Valley lies on the negative stem?  At a height of 1050 
+; steps up the logarithmic hyperladder, the MandelbrotBC3 formula 
+; does just that.
+; 
+; When East Valley lies on the negative stem it spreads out into a 
+; wedge, while the elephant stuff along its north and south edges 
+; breaks up into a series of circular herringbone things.  Today's 
+; scene with its circular herring bones lies in the debris between 
+; two larger herring bones.
+; 
+; Unfortunately, the image proved almost impossible to color satis-
+; factorily.  It is far too chaotic to produce any kind of smooth-
+; ness to contrast with its over abundance of chaos.  As a result, 
+; I could rate it no higher than a 5.  More work might have found 
+; better colors, but I had no time to search.
+; 
+; The name "The Elephants Go West" describes the 180-degree trip 
+; taken by the normally eastward-bound elephants before they 
+; reached today's state of decay on the west end of the fractal.
+; 
+; The calculation time of 6 minutes, 6 and 66/100ths seconds has a 
+; lot of sixes in it.  I guess it could be a sign that the beast 
+; is prowling nearby.  To avoid the wrath of the beast, it is best 
+; to calculate the parameter file with caution.
+; 
+; The image may be seen risk-free by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it is or soon will be posted for immediate bliss.
+; 
+; Heavy clouds, high winds and frequent heavy showers spoiled the 
+; otherwise pleasant temperature of 68F 20C here at Fractal 
+; Central on Thursday.  The fractal cats were so distracted by two 
+; prowling tomcats that got into a fight in the side yard that 
+; they never noticed the inclement weather.
+; 
+; My day was acceptable, but FL got a bit cranky when dirty 
+; pictures started popping up on one of the computers.  I think 
+; the bug has now been cleared out, but only time will tell.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and I didn't realize the 666 beast was into fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheElephantsGoWest { ; time=0:06:06.66-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 function=floor passes=1
+  center-mag=-0.254082178434463/-0.0011403938506048/\
+  7.2428e+007/1/-105/0 params=2.003/0/1050/0 float=y
+  maxiter=4000 inside=0 logmap=286 periodicity=10
+  colors=000UccUcbUcaUc`Uc_UcZUcYUcXUcWWcV_cUbbSfaQi\
+  `Om_NpYLtWJwUItQHrNGoKFmHEkEDhDGfCIcCKaBN_BOXAPVAQ\
+  T9SQ8TO8VM7YJ7_H6`F6aJBaNFcQJeUNgXSh`Wic_kgcmjgnjh\
+  kjhhjhdnh`rhXvhTzhPzhLzhHzhEzjGznHzrJzvKzzMzzNzzPz\
+  zQzzRzzTzzUzzWzzXzzZzz_zz`zzazzbzzczzdzzezzfzzgzeh\
+  zcizajzZkzXlzVlz`ezf_zStzVszXrvZqr`pmbohdncfmZhlQj\
+  kOljLniJphHrgFtfDveEw`FwWGxSGxNHyJIyEIyAMxDPwGTwJW\
+  vM_uPbuSftVitYms`prctrfwqizqkthao_SjSJTOUBLdAQfAUh\
+  AYiAakAelAjnKnpUrqcvsmmtmgqzcozalz_jzYhYWeaUceSaHP\
+  hDKdAG`7CX48TH6`U5hPDeLLcHSaD_Z9fX5nV1uT5pU8kVBfWE\
+  aXIXYLSZON_RI`KLbDOd5Rc7Qe8Pg9OhANjBMlCLmDLoEKiFJc\
+  GIcHHcIGcJGcKFcKEcKDcKCcLCcLBcLAcL9qL8pM8pM7oM6nM5\
+  mM5mO8jPBhQEfSHdTKbUN`WQZXTWYWU_US`UQaUOcUMdUKhUMe\
+  UIcUFaUCWUFRUIMUKHUNCUQ7USBU_E`g5muHgnTbgcY`o`UzcO\
+  shPmmQgrRavSWzTQzUKzVEzW0z`8zXGzTNzQVzMazJ`zI_zHZz\
+  GYzF`z2XzETzQPzaJznuzWxzc }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

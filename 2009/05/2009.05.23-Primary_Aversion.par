@@ -1,0 +1,100 @@
+;     Date: Fri, 22 May 2009 18:19:28 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 23-05-09 (Primary Aversion [6])
+; 
+;       Id: <1.5.4.16.20090522182034.2aa76576@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 23, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an improvement over yesterday's, though not as 
+; much of an improvement as I had hoped for.  It's an evaporated 
+; scene in the parent fractal that results when various portions 
+; of Z^(-1.15) and Z^(-5.5) are combined and (1/C) is added.
+; 
+; The obvious flaw is the raggedness.  I was a bit too enthusias-
+; tic with the magnitude and went too far beyond the limit of 
+; resolution.  But the jagged edges can actually be taken as a 
+; part of the texture, so I inserted the mathtolerance entry into 
+; the parameter file and let it go.
+; 
+; Like so many of the names I give to the FOTD images, the name of 
+; today's image, "Primary Aversion" means nothing more than what 
+; the viewer might put into it.
+; 
+; The rating of a 6 is 2 points higher than yesterday's abysmal 4, 
+; but still only the slightest bit above average.  The calculation 
+; time of 3-1/2 minutes is true on the 2000mhz unit.  On other 
+; machines the parameter file will run faster or slower.
+; 
+; And as always, the finished image is posted on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Midsummer arrived in full force here at Fractal Central on 
+; Friday, with near total sun and a temperature of 88F 31C.  The 
+; fractal cats spent most of the day watching the local stray cats 
+; attacking the catnip mint plants FL planted in her garden the 
+; evening before.  By the end of the day, the catnip was gone and 
+; the neighborhood cats were quite happy.  My day was near average.
+; 
+; The next FOTD might not be posted until midday Sunday, since 
+; I'll be making a short trip back to Old Fractal Central on 
+; Saturday.  Until whenever, take care, and have a good time.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Primary_Aversion   { ; time=0:03:29.68-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+2.299459189430742/-1.308475692667019/\
+  1.22481e+013/1/-102/0 params=-5/-1.15/-1.5/-5.5/0/\
+  1e+100/0/0 float=y maxiter=2500 inside=bof61
+  periodicity=10 mathtolerance=0.05/1
+  colors=000Q40D2020000000000002004606F08M0BS0Da2Fg2\
+  Hp4Jw0Hz4Mz8OzBQyFSwJVuMXrQ_pSanXcjaegcgegjcllann_\
+  rpXurVzp6zz0zn0z_0zJ0z44z00z04y0Bw0Hr0Op6VnD_jJegO\
+  leVraay_gzMrzSnzXlzajzegzjezncwrarw_pzXlzjpzVjlFer\
+  HzS0a00000020680JH0XO0j20zH0yV0uj0py0pw0lu0gr2cp2_\
+  n4Vl6Sj8Og8JeBFVeeVzOXpVXaa_Jg_4n_0r0z00z00u00n00e\
+  00_00S00J00D0000020260DD4OHBXOHgSQr_Xzcczjjzlwznpz\
+  plzrgzrczu_zwVwwQryMlzHgzDcz8_z4Vz0Qz0Mz0Hz0zz0zz0\
+  wz0pu0lj0ea0aQ0VH0Q60J00F00B00H00M00S00X40cB0gF0lM\
+  0rS2w_6zeBzlFzeHnQFrSDeJB_FBQB8H46F4400400V00020n0\
+  0000200200O00200400400400404600N00PV660O4e64062062\
+  2g0S60H60H60OS0S6Dn6jX6SFSB0600600n0za0zz00l0zr00z\
+  00z0zz0zz0zz00z00z0zz0zz00z4zz62z8zyDBuFFpHHlJzgDB\
+  c68_06V0zS00O00J00F0zD06F0nH0SH0cJ4pMDzMOzOXzQgzQp\
+  zOnzMlzJlzHjzFgzDgzBez8cz6cc4zXSzSSzVSzXSz_Sza6Oc6\
+  Me8Jg8HjBFlBDzHMyDFnBBa84 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

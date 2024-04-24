@@ -1,0 +1,108 @@
+;     Date: Tue, 26 May 2009 18:53:27 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 27-05-09 (Elusive Flutterby [7.5])
+; 
+;       Id: <1.5.4.16.20090526185436.2bbf276a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 27, 2009 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I took a second look at the parent 
+; fractal that results when various portions of negative 1.5 and 
+; negative 5 are combined and (1/C) is added.  Like most fractals 
+; that combine negative exponents, this parent is beyond descrip-
+; tion, though it is quite simple to reproduce.
+; 
+; I chose to investigate a tiny valley on the northwest shore line 
+; of the southernmost large bay, which appears to have the best 
+; developed Mandelbrot characteristics.  In a matter of minutes I 
+; found a minibrot very near the limit of resolution, which became 
+; today's FOTD.
+; 
+; I named the image "Elusive Flutterby" when for some reason it 
+; reminded me of a butterfly.  I believe this class of insects 
+; were originally called flutterbys.  The rating of a 7.5 might 
+; stretch the truth a little, but what the heck.  Sometimes I 
+; stretch the truth quite a lot.
+; 
+; At least the calculation time has not been stretched.  It took 
+; an entire 5 minutes to calculate the image on the fast 2000mhz 
+; machine.  And don't forget the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image is or momentarily will be posted for immediate 
+; and absolutely total gratification.
+; 
+; Heavy clouds, steady rain, and a chilly temperature of 54F 12C 
+; kept things well dampened here at Fractal Central on Tuesday.  
+; The fractal cats' spirits were especially well dampened, but an 
+; extra treat of tuna and cheddar took their minds off the bad 
+; weather, and a dose of fresh catnip kept their minds off the 
+; weather.
+; 
+; For me it was a back to work day.  Luckily, the work was not 
+; very heavy, and was out of the way just after lunch.  To fill 
+; the afternoon I watched one of the junkiest of junky old sci-fi 
+; movies, "The Creeping Terror", which is so bad that it must be 
+; seen to be believed.  Actually, the movie's awefulness gave me 
+; just the push I needed to find today's image.  The next FOTD 
+; image will be posted in 24 hours.  Until then, take care, and 
+; since dreams happen inside the brain, how is it possible to 
+; dream of something too large to fit in the brain?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Elusive_Flutterby  { ; time=0:05:05.55-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+0.06238493615275089/-1.513718825559952\
+  /2.08e+012/1/-37.5/0 params=-5/-1.5/-1.5/-5/0/0/0/0
+  float=y maxiter=7200 inside=0 periodicity=10
+  mathtolerance=0.05/1
+  colors=000YZZb`YgcXleWVUiDIvCKrCLoCNkCOhCQeCRaCTZC\
+  UWCWSCXPCZLC_ICaFCbBCd8Ce5Dc9EbCF`FG_IHYLIXOJVRKUV\
+  LSYMR`NPcOOfPMiQLlRKoPJkNIgLHcJH_IGWGFSEFOCEKBDG9D\
+  C7C85B44B159757D55J53P51V82XA2ZC2_E2aG2cJ3dL3fN3hP\
+  3iR3kT3lR7gPBcNFZMJVKNQIRMGVHFZDDb8Bf4Ai0Fj2Jj3Nj4\
+  Sj5Wj6_j7dj8hj9ljAmiDniGniJoiMpiPphSqhVrhYrh`shcsh\
+  f000WNMKCB821C50G80KB0NE0RG0VJ0YM0aP0eR0hU0lX0p_0s\
+  a0mU6hNCbGHY9NT2S5nA6jD6fG6bJ7ZM7VP7RS8NV8JY8F`8Bb\
+  9A_9AX9AUAARAAOAALAAIBCJBDJBEJBFJBGJBHKBIKCKKCLKCM\
+  KCNLCOLCPLCQLCRLHTJLVIPXHUZFY`EaaDY`CV_BSZAPY9MX8J\
+  X7LSGMOONJWPFdQAlR6t_GhgPXoYLZJn_PkaVib`fdfcelaZie\
+  TghNekHbnB`q5Zt7`o8bkAdgBfcChZEjVFlR2mT7nRBnPGnNTu\
+  9QrENpIKnMHkQEiUBgY3eaAjZCnW8vRErTKnUQkVWgWadXg`YO\
+  qxkMJmYZsfyqgupgqnhmmhitqnpljlhfhcbd_Z`VVXRRTMNL7C\
+  NDGPIKRNOSSRUYVWbZYgbPonUmiZleck`mqNjmSgjXefabcfPS\
+  x``jkiXvBGvXIEPbJRaOU`TW_ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
