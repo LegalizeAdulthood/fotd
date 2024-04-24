@@ -1,0 +1,103 @@
+;     Date: Mon, 13 Oct 2008 17:41:21 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 14-10-08 (Depressed Minibrot [No Rating])
+; 
+;       Id: <1.5.4.16.20081013174258.2aa715e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 14, 2008 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The minibrot of order 1-1/3 at the center of today's image 
+; gives me a feeling of gloom.  Just look at the dark somber 
+; colors filling the screen.  No wonder I named it "Depressed 
+; Minibrot".
+; 
+; The shape of the minibrot pretty much mirrors the shape of its 
+; parent fractal, whose main spike it lies on.
+; 
+; Putting almost no effort into the image, I could hardly give it 
+; a rating.  Then again, maybe it is better than I think.  Some-
+; times I come up with these images intuitively, almost without 
+; effort, and therefore consider them worthless.
+; 
+; The calculation time of 29 seconds is faster than light, which 
+; means that the calculation will be finished 34 seconds before 
+; it is begun.  I make no comment on what will happen if, 34 
+; seconds after seeing the finished image appear on your screen, 
+; you decide not to run the parameter file after all.
+; 
+; All such paradoxes may be avoided by viewing the completed image 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Lots of clouds marred the sky over Fractal Central on Monday, 
+; but the temperature of 68F 20C kept things quite pleasant.  At 
+; least the fractal cats thought so as they checked the back yard 
+; to be sure no unwanted stray cats were in the vicinity.
+; 
+; My day was another hectic one.  I guess we'll just have to wait 
+; to see what tomorrow brings.  The next FOTD will most likely be 
+; posted in about 24 hours.  Until then, take care, and don't be a 
+; gloomster.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Depressed_Minibrot { ; time=0:00:29.64-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident inside=0
+  center-mag=-6.680899592359807/-4.08385816487839/\
+  5364601/1/-31.25/0 params=1.3333333333333/0/14/0
+  float=y maxiter=32767 logmap=40 periodicity=10
+  colors=000iMqSM`SKYQIVPHTOGQNEOMDMKCJJBHI9FH8CG7AF\
+  68F8BFAEFCGFEJFGMFIOFKRFMUFOZFQcFShFUmFWrF_vFczBZm\
+  8Oc7GU68K51ABAAHJFNSKT`OVYPWWPXTQYRQZOR_MR`KRbHScF\
+  SdCTeATf7Ug5Uh3UdG_`SdXdjTpoVqmWqkXriYrg_se`scatab\
+  t`duZeuXfvVgvTiwRjwPkxNlxMitLfqKcnJ`jIYgHWdHahPfkW\
+  lncqqjrngrkerhbrf`rcYr`WsZTsWRsTOsRMsOJsLHsJFlNEmR\
+  EmUEmYEm`EmdEmgEmfDmeCmeBmdAmd9mc8mc7Db7Eb6Ea5Fa4G\
+  `3G`2H_1H_1JZ3LZ5UZ6cZ8mZ9mZBmZCmYEmYGmYHcYJ`YKbYM\
+  cYNdXOeWPfXQgYRhZSi_Tj`UkaVlbWmcXndYoeZpf_qgfrhmsi\
+  tvjtyktxlqwmovoluqjushtueswcrz`rzZqzXzzUzzSzzQzzKz\
+  zFzz9zz4zzGzzRzzazzlzzgzzczz_zzWzzS5zN5zJ5zF4zB4z7\
+  4z39z4Ez4Iz4Nz4Rz4Wz4_z4dz4hz4mz4qz4rz9szEtzJtzOuz\
+  SvzXvzawzfxzkxzorzjmzehz`bzWYzRTzMOzIMzJLzKJzLIzMG\
+  zMFzNEzOCzPBzQ9zQ8zR6zS5zT4zTQzWjzYbz_VzaOzbNzdMze\
+  MzgLzhLziKzkKzlJznJzoIzpIzrHzsHztKzrMzpOzoRzmTzkVz\
+  jXzkZzl_zmazmczndzofzpgzp }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
