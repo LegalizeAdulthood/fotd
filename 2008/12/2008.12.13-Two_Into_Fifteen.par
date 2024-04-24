@@ -1,0 +1,101 @@
+;     Date: Fri, 12 Dec 2008 14:53:09 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 13-12-08 (Two Into Fifteen [6])
+; 
+;       Id: <1.5.4.16.20081212145434.2a5f166a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 13, 2008 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows what happens when a fractal with a positive 
+; exponent of Z (in this case 2) starts to change into a fractal 
+; with a negative exponent of Z (in this case minus 15).  As the 
+; real(p2) parameter of 0.0000001 shows, a very small departure 
+; from zero makes a great change in the appearance of the result-
+; ing fractal.  Curiously, the image is also quite sensitive to 
+; the bailout radius.
+; 
+; The original Mandelbrot set is still present at the center of 
+; the image, but the 16 points of the minus 15 Mandeloid are 
+; already fully formed, symmetrically surrounding the Z^2 figure.
+; 
+; I named the image "Two Into Fifteen" because it shows a Mandel-
+; brot set already well on the way to being a Z^(-15) Mandeloid.  
+; There are almost certainly many interesting minibrots deep in 
+; today's image, which is actually its own parent fractal.  I 
+; might search out a few of them in upcoming FOTD's.
+; 
+; As for a rating, I decided on a 6.  I really put too little 
+; effort into the coloring to rate the image higher.
+; 
+; Even with the passes set to 1, the image is extremely fast, 
+; finishing in a mere 15 seconds.
+; 
+; The already finished image is posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Friday dawned with wet snow falling here at Fractal Central, but 
+; with the temperature around 34F +1C, it melted almost as fast as 
+; it fell.  A little sun peeked through the breaking clouds in the 
+; afternoon, too little too late to make the fractal cats happy.
+; 
+; My day was rather busy, though not as hectic as it would have 
+; been if problems had come up.  The next FOTD is due to be posted 
+; in 24 hours.  A lot of graphics work remains to be finished 
+; however, so there is no guarantee that the FOTD will appear as 
+; scheduled.  Until next time, take care, and shun disappointment.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Two_Into_Fifteen   { ; time=0:00:15.42-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideBrot6 passes=1
+  center-mag=-0.03296/0/0.295 params=-15/19/1e-007/17
+  float=y maxiter=1000 inside=0 logmap=yes
+  symmetry=xaxis periodicity=10
+  colors=000FoctThhKzmx0hzzHcdHUYHKSJMPKONLQLNSIOUGP\
+  WEQYCMUKIQREMYAIdFKZKMUPOPUPKZRFcTAgU5hTMhTahTqiOs\
+  jJukEzl9zl4zk7zj9ziBzhDzgFzfHzeJzeLziWzmezqoztyzrQ\
+  z6YzJJzW4z`IzeVzdUzdTzdSzdRzdQzdPzdOzbTzaYzcUzdRzf\
+  NzgKzhHzdIzaJzZKzWLzSMzPNzMOzJPzIQzIRzHSzHTzHUzHXz\
+  p2z2Rz8SzETzKTzQUzWVzaVzgWzlWzAdzEezHezKezNezQezOX\
+  zNOzK_zIkzGwzSpzcizoczHUzKOzNJzQDzT8zNizRhzzhfzhhz\
+  hjzhkzdez``zXWzVOzTGzUUzTSzTQzTOzTNzTLzTJzSIzSGzSE\
+  zSDzSBzS9zbNzXFzXgzUQzSezSbzS_zSYzSVzSSzSQzSNzSLzS\
+  IzSFzSDzSAzUdzkgzfazaWzXQzSKzNEzI8zE2zF3zG4zH5zI6z\
+  J7zK8zK9zIAzGAzEAzCBzABz8Bz6BzCQzHczMqzQjzKazETz8K\
+  zTebmzYntUonPqhLscNudOweQxfRygSzgzzezzdzzczzbzzazz\
+  `zzazzbzzczzczzdzzezzfzzfzzgzzizzjzzkzzkzzkzzkzzkz\
+  zkzzkzzkzzkzzkzzkzzkzzkzzkzzkizkkzjlzjmziozipzhqzh\
+  rqhozdmzakzZizWjzXjzXjzXkzYkzYkzYkzYlzZlzZlzZlzZmz\
+  _mz_mz_mz_izTfzNczHczGbz7 }
+
+frm:DivideBrot6   { ; Jim Muth
+z=(0,0), c=pixel, a=real(p1), b=imag(p1)-2,
+d=real(p2)+0.00000000000000000001, f=imag(p2)+16:
+z=z^(a)/(z^(-b)+d)+c
+|z| < f }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
