@@ -1,0 +1,102 @@
+;     Date: Mon, 31 May 2004 10:10:12 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-05-04 (Not Quite Insane [6])
+;       Id: <1.5.4.16.20040531101402.2b073878@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 31, 2001 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To create today's image I added a small, (0.03), imaginary part 
+; to the exponent of the Z^2.01+C Mandeloid, and stood back to see 
+; what would happen.  What happened is that the Mandelbrot set 
+; suffered a total breakdown, both in its macroscopic and micro-
+; scopic aspects.
+; 
+; The real axis split completely apart, especially on its negative 
+; side.  Seahorse Valley dissolved into two vague disconnected 
+; valleys, and East Valley broke apart as though an earthquake 
+; fault had appeared and slipped down its center.  To find today's 
+; image I examined the southern side of East Valley, or more 
+; accurately, what is left of East Valley.
+; 
+; I found the valley totally changed, a whole new world waiting to 
+; be explored.  I chose a narrow sliver of chaos to examine, and 
+; there I found today's scene, which for some crazy reason I named 
+; "Not Quite Insane", and rated at a 6.
+; 
+; I have no idea why I have so rarely used complex exponents in my 
+; fractals.  Perhaps I am keeping things a bit too simple.  But 
+; now that I have seen what complex exponents can do, I will be 
+; using them more often.  In fact, I have already found several 
+; additional interesting scenes in today's parent fractal, which I 
+; will be presenting in the days to come.
+; 
+; Today's image, with its very fast render time, has an overall 
+; value of a whopping 337.  Those who prefer their fractals pre-
+; cooked may find the completed GIF image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Lots of clouds, with some sun and a temperature of 75F 24C, kept 
+; the dynamic duo happy under the holly trees most of Sunday 
+; afternoon.  When evening arrived, they came indoors without 
+; complaint.  Unfortunately, this morning is threatening rain.  I 
+; fear the good day will not be repeated.
+; 
+; My ever-present graphic-design work is heavy but bearable.  One 
+; of these days I'll collect my million dollars from one of those 
+; international lotteries.  I have won at least 100 of them, but 
+; never collected my winnings.  Then I'll be able to devote all 
+; my time to fractals.  But today is not that day, so it's time 
+; to get to work.  Until next FOTD, take care, and those who 
+; enjoy fractals are the richest on earth.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Not_Quite_Insane { ; time=0:01:46.56--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+0.2966005299\
+  4884770/-0.01118730711845938/6.463393e+007/1/-75/1\
+  .8412302334180897e-007 params=2.01/0.03/0/0 float=y
+  maxiter=950 inside=0 logmap=71 periodicity=10
+  colors=0009R85R64T84V94XA4ZC4`D3bE3dF3fH3hI3jJ3kK7\
+  jOBiRFiUJhXNg_RgbVffZeibelfdojcrmcuhWocOjZGeU8`P1W\
+  R4YT7ZV9_WC`YEa_Hb`KcbMddPeeRfg9AfBDfDFfFIfHKeJMeL\
+  PeNRePTaMQYKOUILQFJMDGIBEE8BA696477EB8NE8WI9eLAnPA\
+  wSDvRGvRJvRMuQPuQSuQUuQXtP_tPbtPesOhsOksOmsOgrPbrQ\
+  XrRSrSMqTHqUBqV6qVAoXDmZGl`JjbMhdQgfTehWcjZbla`nd_\
+  p`WnXSlTPjPLhLIgINjGRlDVnBZp9_j8`d7aZ5bU4cO3dI2eDP\
+  b6Nd7Mf7Lh7Kj7Jl7In8Hp8Gr8Ft8Ev8Dw8CuBBtDAsG9rI8pL\
+  7oN7nQ6mS5kV4jX3i_2ha2gc7f`CfZHeXMeVQeTi8nfChcGbaK\
+  YZOSWSMUWHTXJSXKRYLRYMQZNPZOP_PO_QN`RN`SMaTLaULbVK\
+  bWJcXJcYOffSioRliQodTmeVkfXif_ggaegccheahh_ijYilWj\
+  nUjgTfaSbVR_PQWJPSCOP6NL0NI2MM3MP4LS5MV6NY7O`8Pd9Q\
+  gASjBUmCWpDYsE_vDatCcrCepBgnBilAkjAmi9og8qe8sc7ua7\
+  w_6xY6yX8zZAz`BzbDzdFzfGzhIzjJzkLzgNzcPz_RzWTzSVzO\
+  XzKZzG`zCbz8dz4ez0fz2gz4gz6ezEdzLczSazZ`ze_zlZzs`z\
+  paznbzkczidzfezdNzHIzEEzB }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

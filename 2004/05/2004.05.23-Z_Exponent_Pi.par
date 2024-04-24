@@ -1,0 +1,89 @@
+;     Date: Sun, 23 May 2004 11:33:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-05-04 (Z-Eexponent-Pi [3])
+;       Id: <1.5.4.16.20040523113702.0d6f44b2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 23, 2004 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Unless I am mistaken, today's image is the third consecutive one 
+; with a rating of a lowly 3.  FOTD quality seems to be slipping.  
+; The work rush here at F.C. is taking its toll.
+; 
+; There is an infinite family of 'zexpe' fractals with an exponent 
+; of epsilon, so why not a family of 'zexpi' fractals with an 
+; exponent of pi?  In fact, there is a family of 'zexpi' fractals, 
+; (I just decided there is), and one of its infinite number serves 
+; as the source of today's image, which I have named Z-Exponent-Pi.
+; 
+; The scene of the image is very near the negative real axis of 
+; its parent, in an area filled with discontinuities.  The render 
+; time of 4-1/2 minutes gives an overall value of 65, which, 
+; depending on the individual fractalist, may or may not be worth 
+; the effort.  The simplest and quickest way to see the image is 
+; to view it on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Saturday was quite warm and sunny here at Fractal Central.  The 
+; high temperature of 90F 32C was near perfect for both fractal 
+; cats and cicadas.  The cats watched from the yard while the 
+; cicadas sang in the trees, and as far as I could tell, everyone 
+; was happy.  When evening arrived, the cicadas stopped singing 
+; and the dynamic duo came indoors for their treat.  Today is 
+; starting the same.
+; 
+; I'm going to take it as easy as possible today.  It looks like a 
+; very busy week coming up.  Until next FOTD, which I still hope 
+; to have ready in 24 hours, take care, and see you then.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Z-Exponent-Pi { ; time=0:04:34.96--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.44889489820032070/-0.008655752583507\
+  26/1687871/1/-80/1.02041138039243862e-009
+  params=3.14159265358979/0/0/0 float=y maxiter=1400
+  inside=0 logmap=114 periodicity=10
+  colors=000VMGIIDFF9BB8S84O400002604D06F29G4BG6DI8F\
+  I9P`O`qaeyghzlauhVhcPZZIMTG6GDBO9GT6MZ4Pc0Vh0`n0es\
+  0Mw0hy0sz0zz0jw0Rs08p00n0DZ0aK0gR0jX2nc8shBwpFzuIq\
+  sMjsPcqRXqVPqZGp`9pc2ng0nh0n6az2`z0Zz0Xz0Vz0Tz0Rz0\
+  Pz0Zz0Oz0KzBFzMBzZ6zh2zs0zz0zz0yz0wz2uz8szFqzKpzPn\
+  zXlzalzgjznhzsgzyezzczzazz`zz`zzZzzXzzVzzVzzTzwRzs\
+  RzpPzlOzgMzcMz`KzXIzTIzPMzMPzKTwGXuF`qBcp9gl6hh2lg\
+  0pc0sa0wZ0zX0zT0zR0zT0zV0zX0zZ0z`2z`4zyVzzuzzzgjzK\
+  Xz0Tz0Pz0Oz0Kz0Gz2Fz4Bz69z66z82z90zB0zB0zD0zF0zG0z\
+  F0zG0zG0zG4zIBzIGzIOzKTzKZzKezMjzMqzMwzOzzOzzOzzIz\
+  zOzzTzzZzzczzhwzlsyqpwwlszhpzelzlczajzTqzKyzBzu2zn\
+  0zg0z`0zZ8yZKlXV`XgMXq9Vz0Vz0Vz0cz0jz6qzDyzKzzRzzV\
+  zzXzzZzzZzzZzz`zz`zz`zzazzazzazzczzczzczzezzczzazz\
+  `zzZzzZzzXzzVzzTzzRzzRzzPzzOzzMzzMzzIzzGzzFzzDzzDz\
+  zBzz9zz8zz8zz6zz4zz4zz6zz8zz9zzBzzDzzFzzGzzGzzIzzK\
+  zzMzzOzzPzzRzzTzzTzzPzz0z }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

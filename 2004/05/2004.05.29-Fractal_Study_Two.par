@@ -1,0 +1,115 @@
+;     Date: Sat, 29 May 2004 09:45:27 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-05-04 (Fractal Study-Two [7])
+;       Id: <1.5.4.16.20040529094915.0d6f2e2e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 29, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It seems as though every time I ponder the question, 'What is 
+; the world made of?' the answer is different.  In my lifetime I 
+; have seen it made of atoms, sub-atomic particles, probability 
+; waves, energy, quarks, multi-dimensional strings and membranes, 
+; holograms, information, thought, and even nothing.  Of course, 
+; all of these things are inventions, the result of trying to 
+; reduce something beyond our understanding to the level of 
+; everyday experience, and they are all a little right but mostly 
+; wrong.  We could keep inventing the basic stuff of existence for 
+; a million years, and we would never find an answer that totally 
+; works.  The universe is actually a fractal, and fractals are 
+; made of numbers.  (BTW, I cannot prove this.)
+; 
+; The universe is made of numbers.  As for the constitution of 
+; numbers, well, they are most likely made of God, or whatever 
+; non-offensive word Atheists choose to use.  And as to the 
+; nature of God . . . I refuse to speculate.
+; 
+; There are an infinity of numbers however, and this leads to the 
+; question of which of the infinity of numbers are the basic 
+; building blocks.  My guess is that the whole numbers, positive 
+; and negative, are the building blocks, with the positive number 
+; 'one' being by far the most common.  Of course, I could always 
+; be wrong.  ;-)
+; 
+; Today's image pictures a midget in the Z^((sqrt(2))+0.03i)+C 
+; Mandeloid.  I rarely use complex exponents in my fractal 
+; explorations, but decided to try it today anyway.  Adding just 
+; 0.03 part of 'i' went a long way, totally changing the shape of 
+; the parent fractal.  I'll have to do this more often.
+; 
+; I named the image "Fractal Study-Two", though I could just as 
+; easily have named it "Kilroy Was Here".  The central midget is 
+; shaped suspiciously like that character with the oversized nose 
+; who was seen peeping over every fence during the time of the 
+; Second World War.
+; 
+; Yesterday's image took almost 4 hours to render, and even then 
+; rated only a 5.  Today's image renders in only 2 minutes, and 
+; rates a 7.  This gives it an overall value of 326, a vast 
+; improvement over yesterday's rating of a miserable 2.
+; 
+; Regardless of ratings or render time, the FOTD images are always 
+; available for download from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A partly cloudy day here at Fractal Central on Friday, with a 
+; temperature of 79F 26C, gave the fractal cats several pleasant 
+; hours in the yard.  When the day ended, they came indoors 
+; without complaint.  Today is starting sunny and cooler.  These 
+; are conditions that promise the best for the dynamic duo.
+; 
+; I must clear away more of the backed-up work before I start 
+; thinking again of fractals, and the time to start is now.  Until 
+; next time, take care, and fractals are neither real nor unreal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractal_Study-Two { ; time=0:02:09.02--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.47098430823224210/+2.838089870359976\
+  00/2135.219/1/-65/-3.95622423710051407e-012
+  params=1.414213562373/0.03/-1/0 float=y
+  maxiter=1800 inside=0 logmap=50 periodicity=10
+  colors=000B0NB0OB0RB0VB0YB0aB0bB0fB0iB0lB0pA0qE0lI\
+  0iM0fQ2bV8_`DXfITlLQrQNyVJzaGzgDzm9zr6zv2zdBzTIzGQ\
+  x4Xq0dl0kn0lp0lq0ns0nt0pw0px0qz0qz0sz1sz2tz6tz8wz9\
+  wzDxzExzGzzIzzLzzNzzOzzQzzOzzzpzzztzzwzzwzzwzxwzpw\
+  zgwzawzTwzLwzEwz6wz0sz0pz0lz0kz0gz0dx0at0_s0Xq0Tn0\
+  Ql0Ok0Li0Ii0Ei0Di0Gi0Ji0Li6OiDRiJTiRXiY_idaikdiqfi\
+  xdizdizdizbizbizbizqifziGzi0zi0zi0zi0zi0zi0zi1zi2z\
+  i4xi6wi8tiBqiDpiEliGkiIgiJfiLbiNaiO_iQYiOXiOViNTiN\
+  RiNXiIaiDfi8ii2ki6li8li9niBniDpiEqiIqiJsiLsiNtiOti\
+  QwiTxiVxiXziYzi_ziazibzifxigwiitiltinsipqiqpitpiwn\
+  ixlizkizkiziizgizfkzflzdnzbpzaqzaszftzgwzixzkzzlzz\
+  nzwpzsqzpszntzkwzixzgzzdzzbzzazzYzzXzzVzzRzzQzzOzz\
+  LzzJzzIzzEzzDzzBzz8zz6zz4zzDzzLzzTzzazzizzpzzgzzaz\
+  zVzzNzzGzz9zz1zz0zz0zz0zz0zz0zz1zz8zzEzzLzzRzzYzzd\
+  zzkzzqzzxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzxzzwzztzz8zz9zzDzzGzzJ }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

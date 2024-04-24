@@ -1,0 +1,101 @@
+;     Date: Sat, 22 May 2004 10:05:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-05-04 (Hexafault [3])
+;       Id: <1.5.4.16.20040522100927.0d2fb16c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 22, 2004 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'm still far behind in the work, so the discussion will once 
+; again have to be brief.
+; 
+; I think it was Lee Skinner who named the Z^(2.1828...) fractal 
+; the 'Zexpe' fractal.  To create today's image, I have taken the 
+; 'Zexpe' fractal, and with the MandelbrotBC2 formula, calculated 
+; it at a different level to produce a different yet similar 
+; fractal.
+; 
+; This fractal is indescribable, basically a Mandeloid standing 
+; on its nose, with branch cuts and irregularities everywhere.  
+; Several jagged spirals lie on the northwest part of this 
+; fractal; today's scene is rather deep in one of these spirals.
+; 
+; I named the image "Hexafault", because the midget at the center 
+; is sliced almost perfectly symmetrically by six major branch 
+; cuts, or fault lines.  It is rare to see such fault-line 
+; symmetry in a fractional-power fractal.
+; 
+; Unfortunately, I gave almost no effort to the coloring, not that 
+; it would have made much of an improvement if I had.  As a 
+; result, the rating is another lowly 3.  But the very fast render 
+; time of 33 seconds raises the overall value to a very respect-
+; able 534.
+; 
+; Those who prefer to avoid rendering may download the completed 
+; image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was pleasant enough here at Fractal Central on 
+; Friday, with some sun and a temperature of 81F 27C, but the cats 
+; had to be escorted as they took their daily walks in the yard, 
+; to keep them from overstuffing themselves with those easy-to-
+; catch cicadas that are flying around by the millions.  Today is 
+; starting sunny and quite warm, and the cicadas are quite active. 
+; It looks like another chaperoned day for the duo.
+; 
+; For me, it looks like I'm going to try to get caught up.  If I 
+; make reasonable progress in the work, the next FOTD will appear 
+; in 24 hours.  If not, it might be 48 or 72 hours.  Until next 
+; FOTD, take care, and who will be first to realize that the 
+; universe is a great fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Hexafault { ; time=0:00:33.67--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=-1.3193191562\
+  43292/+0.2253921211100132/1952924/1/-165/-5.999734\
+  35516655e-009 params=2.71828182845905/0/0/0 float=y
+  maxiter=1000 inside=0 logmap=23 periodicity=10
+  colors=000AMQ8OH6Q9DUAKXBR_CYbDdeEkhFrkGphIofKncLm\
+  aNkZPjXQiVShSUgQVeNXdLZcI_bGaaEbbHdcKfdNheQjfTlgWn\
+  hZpiarjdtkgvliwkkvjlujnuiotiqthrsgtrgurfwqfxqbsp_o\
+  pXkpTfpQbpNZpM`oLbnLcmKelJgkJhkNdgQ`cTY`WUX_RTbNQe\
+  KMhGIkDFlCIlBLlBOlARlAUl9Wm8Zm8am7dm7gm6jm6lk7EjCH\
+  iHKhMNgRPfWSe`VdeYcj_`hXYgUVeRTdPQcMNaJK`GI_EGaDEd\
+  CCfAAh98k86m74o68m7Bk8Fi9IgALeBPcCSaDV_EZYFaWGeUHh\
+  SIkQJoOKrMLuKMnPOgTP`XRU`SNeTGiV9mW3qX4rZ5r`6sa7sc\
+  8se8tf9thAtiBukCumCvnDvpEvrFwsGwuGwvEtsDqqCqnArl9s\
+  i8tg6ud5vb4w_3xY2y_2za2zc1ze1zg1zi0zk0zm0zo0zp4zl7\
+  ziBzfEzcIz`LzYOzVQzTTzQVzOYzL_zJbzHdzEgzCiz9lz7nz5\
+  pz7rz9tzBvzDwzEdzaMzxMzwMzwMzwMzwMzwMzwMzwMzwMzwMz\
+  wMzwMzwMzwMzwQztTzqWznZzlazidzfgzdezcczbazb_zaZzaX\
+  z`Wz_UzZTzZRzYQzXOzWNzWCzN2zF8zKEzOKzSQzWVz_`zdfzh\
+  lzlrzpwztqzokzjfze`z`VzXQzSKzNEzI9zECzKFzQIzWLzaOz\
+  fEz3Iz5Lz7JzjIzmIzoFzfDzY }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

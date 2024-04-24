@@ -1,0 +1,89 @@
+;     Date: Wed, 26 May 2004 12:14:07 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-05-04 (Little Joe [6])
+;       Id: <1.5.4.16.20040526121754.0d772c20@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 26, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Another busy day means another brief discussion.
+; 
+; There is not much to be said about today's image, which was 
+; found in the same way as yesterday's.  To add a bit of interest, 
+; I rendered the scene with the outside set to 'fmod' and the 
+; proximity set to the default 0.01.
+; 
+; The midget at the center is another shapeless thing, though not 
+; quite as shapeless as the midget in yesterday's image.
+; 
+; For some reason now forgotten, I named the image "Little Joe".  
+; I rated it at a 6 because blue is one of my favorite colors.  
+; The render time of 13 minutes results in an overall value of 45.
+; 
+; The image is available, already rendered, on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Sunny very warm weather here at Fractal Central on Tuesday gave 
+; the cats a pleasant afternoon in the yard.  The temperature 
+; reached 88F 31C, then at 7pm, a whopper of a thunder-storm moved 
+; in, but by that time the cats were inside for the evening.  They 
+; took shelter in the closet until the noise passed, then came out 
+; for their evening treats.  Today is starting cloudy and very 
+; humid, with more storms due.  The cats are already checking the 
+; outdoor conditions.
+; 
+; I have quite a bit of work to finish before I turn to fractals, 
+; so I had best start working.  Until next FOTD, take care, and be 
+; decisive.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Little_Joe { ; time=0:13:17.96--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.1814731907900935/-0.0169584462205538\
+  5/8693.298 params=1.5/0/2.5/0 float=y maxiter=16000
+  inside=0 outside=fmod logmap=60 periodicity=10
+  colors=0006vy7ux7tw8sv8ru9rt9qsAprBoqBnpCmoCmnDlmD\
+  klEjkEijFhiGhhGggHffHeeIddIccJccKbbKaaL``L__MZZMZY\
+  NYXNXWOWVPVUPUTQUSQTRRSQRRPSQOTPNTPMUOLUNKVMJVLIWK\
+  HXLFWKHWKIVKJVKKUKLUKMUJOTJPTJQSJRSJSSJTRIVRIWQIXQ\
+  IYQIZPI_PHaOHbOHcOHdNHeNHfMGhMGiMGjLGkLGlKGmKFoKFp\
+  JFqJFrIFsIFtIFuIHtIIsIJsIKrILqIMqINpIOpIPoIRnISnIT\
+  mIUlIVlIWkIXkIYjIZiI_iIahIbgIcgIdfIefIfeIgdIhdIicJ\
+  ldIjcIhbIfaHd`Hb_H`ZGZYGXXGVWFTVFRUFQTFOSEMREKQEIP\
+  DGODENDCMCALC8KC6JD3IC4JC5JC6JC7JC7JB8JB9JBAJBBJBB\
+  JACJADJAEJAFJAFJ9GJ9HJ9IJ9JJ9JJ8KJ8LJ8MJ8NJ8NJ7OJ7\
+  PJ7QJ7RJ7RJ6SJ6TJ6UJ6VJ6VJ9SKBQLDOLFMMHJNJHNLFONDP\
+  PAPR8QT6RV4RW5SX5SX5TY5TY5TZ5UZ5U_5U_5V`5Va5Va5Wb5\
+  Wb5Wc5Xc5Xd5Xd5Ye5Yf5Yf5Zg5Zg5Zh6_h6_i6_i6`j6`k6`k\
+  6al6al6am6bm6bn6bn6co6cp6cp6dq6dq6dr6er6es6es6ft6f\
+  u5ht6fs7er7dr8cq8bp9ap9`oAZnBYKlNJmQInTHnVGoYFp`Eq\
+  cDqfCriBskAtn9tq8ut7vw5wz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

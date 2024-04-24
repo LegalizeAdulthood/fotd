@@ -1,0 +1,99 @@
+;     Date: Sun, 30 May 2004 10:22:18 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-05-04 (Midget on the Mount [5])
+;       Id: <1.5.4.16.20040530102607.29aff276@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 30, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image reminds me of one of those probably fictional 
+; hermits who sits in total isolation on a mountain top, 
+; meditating on the mysteries of existence and dispensing wisdom 
+; to any with the fortitude to struggle all the way to the top of 
+; the mountain to receive it.  I have never heard how the hermit 
+; could be expected to survive without assistance on the exposed 
+; mountain top for the 20 or 30 years it takes for him to reach 
+; his enlightened state.  I guess it's a miracle.
+; 
+; I have named today's image "Midget on the Mount" and rated it at 
+; a 5.  The unexceptional coloring brings down the rating.  If I 
+; had put a little more work into the coloring, the image could 
+; have rated a 6.  But all is not lost.  With a render time of 
+; only 2 minutes, the image is a fast one.  And that speed boosts 
+; the overall value to a respectable 239.
+; 
+; The parent fractal is a close relative of yesterday's parent, 
+; with just a bit more 'i' added.  I must experiment more along 
+; this line.  Complex exponents do interesting things to fractals.
+; 
+; As always, today's image is available for download on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was nearly perfect here at Fractal Central on 
+; Saturday.  The dynamic cats took full advantage of the 
+; perfection by spending the entire afternoon by the holly trees 
+; at the bottom of the yard, thoroughly enjoying the warm sun 
+; and temperature of 73F 23C.  Even the noisy cicadas failed to 
+; disturb their repose.  When the sun went down and the cicadas 
+; stopped singing, the dynamic duo came inside for their treat of 
+; tuna.  Today is starting nearly the same, but it's unlikely that 
+; the duo can have two perfect days in a row.
+; 
+; As for me, I'm going to trim a small plot of overgrown grass, 
+; and then settle down to ponder the mysteries of the universe.  
+; When I finish pondering, I'll take a trip to fractal land.  If I 
+; find anything of worth there, it will appear as tomorrow's FOTD. 
+; Until then, take care, and one mystery leads to another.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+MidgetOnTheMount { ; time=0:02:05.45--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+2.36224752783415900/+7.021481211098950\
+  00/1646.061/1/90/3.88578058618804789e-016
+  params=1.4142/0.08/-1/0 float=y maxiter=1800
+  inside=255 logmap=38 periodicity=10
+  colors=000dbVbaU`_U_ZTYXSWVRVUQTSQRRPQPOOONMMMLLMJ\
+  KPIJRHIUGIWFHYEG`DFbCFdBEgADi9Cl8Cn7Bp6As59u49w5Ct\
+  6Er7Gp8Jm9LkANiBQfCSdCUcHWcLXcPYcTZcX`c`acdbchccld\
+  cheedfg`giXhkTimPjoLkqHltDmwAmzCnzEozGozIpzKpzMqzP\
+  qzUrzZrzcszeszgozikzkgzmczo_zqXzsTzuPzwLzxHzyEzzDz\
+  zCzzBwzArz9mz9hzGczNZzTUz_PzfKzlIwsHuyHstFroEpkDoo\
+  CnqBls9ku8iw7hx6gy5ezEczMazV_zbYzkXzsazmezgiwamwWq\
+  uQusKyqEzoLzmRzkXzibzg_zeYzcWzcUzcSzcPzcNzcLzcJzcH\
+  zcFzcIzcLzcOzcRzaUz_XzY_zWbzUezShzQkzOnz0qz0tz0wz0\
+  yz2zz4zz6zz8zzAzzCzzEzzDzzCzzDzzEzyFzxGzwHzvIzuJzt\
+  KzsLzrMzqNzpOzoPznQzmRzmSzmTzmUzmVzlWzlXylYxlZwl_u\
+  k`skaqkbokcmkekkhihkgenecqc`tcZwcWzHTzGRzEOzCRzBUz\
+  KXzT_zabziezchzckzcnzcqzctzcwzczzjzzkzzkzzlzzlzzmz\
+  zmzznzznzzozzozzpzzpzzkzzgzzczz_zzWzz`zzezzizznzzs\
+  zzwzzjzzZzzNzzMzzLzzLzzKzzJzzJzzIzzIzzHzzGzzGzzFzz\
+  FzzCzz9zz6zz3zz8zzYzzXzzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

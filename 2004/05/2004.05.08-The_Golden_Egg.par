@@ -1,0 +1,97 @@
+;     Date: Sat, 08 May 2004 09:33:43 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-05-04 (The Golden Egg [5])
+;       Id: <1.5.4.16.20040508093720.29a79e20@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 08, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's parent fractal I combined positive and negative 
+; Z^1.5 with 1/3 as much positive and negative Z^4.5, and set 
+; initial Z to -1.  This parent fractal is not really a single 
+; fractal, but rather a scattering of tiny open areas, some of 
+; which are small Mandelbrot sets, while others are mere shapeless 
+; holes.  The place I chose to explore was the area just east of 
+; the tiny westernmost M-set.
+; 
+; This area holds many scattered bits and pieces of fractal 
+; debris.  Much of this debris is concentrated around large 
+; central disks, like satellites circling a planet.  The debris is 
+; plentiful, but only a few pieces contain midgets.  Today's image 
+; shows a midget lying in this field of debris.
+; 
+; I named the image "The Golden Egg".  The golden color is 
+; obvious, but as for that egg, well, I have no idea where it 
+; might be.  I rendered the image with the outside set to 'tdis'.  
+; I find I am using this option more often, since it does rather 
+; well on disconnected scenes such as today's, where the standard 
+; 'iter' rendering falls flat.
+; 
+; I could rate the image no higher than a 5.  It is not all that 
+; striking and we have seen many similar images before.  But the 
+; render time is only 3-1/2 minutes, which raises the overall 
+; value to a respectable 147.  Perhaps the most respectable way to 
+; see the golden egg image is to download it from Paul's web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Friday here at Fractal Central was warm and sunny enough until 
+; 2pm, when a rain squall arrived and the temperature dropped from 
+; 86F 30C to 67F 19C.  When the wind arose, the cats beat a hasty 
+; retreat and spent the rest of the day on their window shelf, 
+; watching the outside activity from inside.  By evening they were 
+; mildly annoyed, but only a minor treat of tuna was needed to 
+; make them happy.  This morning it is cooler with lots of clouds. 
+; The duo is likely to have another less-than-perfect day.
+; 
+; For me it's likely to be an uneventful day, that is unless the 
+; aliens arrive from space.  Since I expect no aliens, I will be 
+; free to return in 24 hours with another fractal.  Until then, 
+; take care, and I wonder if the aliens know about fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_Golden_Egg { ; time=0:03:24.70--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix3a function=recip passes=1
+  center-mag=-1.54575313438937500/+0.827504998767173\
+  40/3.087104e+007/1/-170/-3.94734106006627838e-006
+  params=1/-1.5/-1/1.5/0.333/-4.5/-0.333/4.5/-1/0
+  float=y maxiter=500 inside=0
+  outside=tdis periodicity=10
+  colors=000AJ08T08d06m66xC4zH4zL0zE0s80g24dARbGm`Ls\
+  REvJ8zC2z40z00z00z00z00z00z00z00x00u00q40o60uAEzCX\
+  zGqzHzzJzuRzbXzJdm0i`4ZP6PE8G2A60C00XC0oR0zd0zg0zi\
+  0zm0zo0zs2zu4zx6zz8zvTssmbozNmzRbzVRzZGzb4ze0zi0zm\
+  0zq0zu0zx4xzEqiHiVLbEPX0TP0XJ0RH0LH8GGGAGN4EV0Eb0E\
+  e4GgEHkNJmVLqdNsmPvvRxzRkxNZuJLqGAkE0gA0d60`40XEEV\
+  NZRXsPdgbiZomNzqEzu4zxzzXieGGG000000bECkPLs`Vzkdzv\
+  mzzvzdXzC8z00uZ0Zz0Cz2Lz2Vz4bz4kz4uu6zq6zm6zi4xe4d\
+  b2JZ20V20X60X82XCEZERZHbZJm0uE0oGAkGRgHedHmVJuNLzG\
+  Nz6Pz0Rz0Tz0Vzz8ozAdxCToEHdE6TG0JH08J00J06GCECVL8m\
+  T4z`0ze0zdCzbNz``zZkuZv6GL00e00x00s00o00k00g04d28`\
+  4CX4EVbXmzozz00z00z00v08m2Ge4Lqd6zz0qzzvzvzzkzz`zz\
+  NzvCzq0zm0zb0zT4zJCzAJz0Rz0Zo8NXNCEd00s00m00gA0dH0\
+  ZR0T`0Pg0Jq0Gx2TvCduLqsVzqdzomzmdzgXzbNzZGzT6zN0zJ\
+  EzGTzEgxAvo8zg6z8mz0zz0zzCezTJzk0zz0kv0TsH8od0kzgR\
+  0biNXzuTxs44`66N86AA80C80 }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE==================================
+; 
+; 

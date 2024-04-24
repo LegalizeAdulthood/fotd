@@ -1,0 +1,90 @@
+;     Date: Fri, 21 May 2004 12:20:10 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-05-04 (Splash [3])
+;       Id: <1.5.4.16.20040521122354.2267eec6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 21, 2004 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The discussion for today must once again be brief.  The shelves 
+; here at F.C. are filled with work waiting to be done.
+; 
+; Today's quickie image takes us to the fractal that results when 
+; the expression Z^(sqrt(2))+C is iterated.  I use the square root 
+; of two because this value causes the midgets to reveal their 
+; presence by the 2-way symmetry that often surrounds them.  The 
+; existence of a midget in today's image must be inferred.  The 
+; actual midget at at the center lies far beyond resolution.
+; 
+; The fragmented, sharply angular features radiating from the 
+; unseen midget are typical of midgets in fractals created by 
+; exponents of Z between 1 and 2.  The scene itself actually lies 
+; in the 'East Valley' area of a larger midget.
+; 
+; Seeing little of interest in the image, I rated it at another 
+; lowly three, and named it "Splash".  One look at the finished 
+; image will justify the name.  When the 7-minute render time is 
+; considered, the overall value comes in at an unimpressive 40.
+; 
+; The render time and value become meaningless when the completed 
+; GIF image is downloaded from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With light sprinkles of rain continuing through the day Thurs-
+; day, the duo had little opportunity to get outside.  A generous 
+; treat of tuna eased their disappointment.  Today is starting 
+; cloudy, and we have already had one thunder-shower.  It does not 
+; look good for the duo.  For me, it will look better when the 
+; customers are satisfied.  Until next time, take care, and see 
+; you soon.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Splash { ; time=0:07:34.56--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=-0.3372158749\
+  447071/+1.146008548386008/3.684655e+011/1/115/-0.3\
+  303244820299197 params=1.414213562373/0/0/0 float=y
+  maxiter=1500 inside=0 logmap=355 periodicity=10
+  colors=000`v_`r_`nZ`jZ`fY`bYaZXaVXaRWaNWaJVaFVY0_a\
+  BVdLRgVNkdInnEox4qxArxGsxMtxRuxXvxbwxhsrzxxmyrnymn\
+  yhoycoyYpyTpyOqyJqvImsHjpGgmFdkEahDZeCWbCS_BPYAMV9\
+  JS8GP7DM6AE58K67P67V67_76e76k53j76j89j9CjBFiCIiDLi\
+  EOiGRiHUhIXhK_hLbhMekQghNhfLicJjaHk_FlXDmVBnJB7T9n\
+  QGjNNgKUcI``FgXCnU7wPAuRCtSFrTHqVJpWMnXOmZRk_Tj`fx\
+  PViaxZxJWmKXoKXpKXqKXrLXsLXtLYuLYvMYwMYxMYyMYzO_yP\
+  `xQbxRcwSdvTfvUguViuWjtXksYmsZnrZst_or_lq`ip`foacn\
+  a_lbXkbUjcRigNucOh`OXXPKYR9UP8RO8NN8KM8GL7DK79J74F\
+  66I77L79N8AQ8CT9BV1DV9UyFFVGwRC00G3AH6JI9TJBaJC`MD\
+  `PE_SE_VFZXGZ_GZbHYeIYhJXjJXmKWpLWsLWuKXrJYoIYmHZj\
+  GZhF_eE`cD``CaZBaWAbU9cR8cP7dM1cM7dKDeJJfHPfGVgE`h\
+  DfhBliArj8yi3xj7xjBxjExjIxjLxjPwkSwkWwkZwkbwkewkiw\
+  kloegg`c`W_TQWLLSEGOIFMLFKPFJSFHVEGZEEaEDdEBhE9kD8\
+  nD6rD5uD3xD2uH3rK3pN4mR4jU5hX5e`6bc6ae1`f6_fA_gEZg\
+  IZgMYhQYhUXhYWia_yZYyi_z` }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

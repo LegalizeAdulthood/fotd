@@ -1,0 +1,105 @@
+;     Date: Tue, 18 May 2004 09:27:56 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-05-04 (Random Shapes [*])
+;       Id: <1.5.4.16.20040518093139.29cfb9ec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 18, 2004 (Rating *)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The time has come for the next FOTD to appear, but I am still 
+; behind in my work.  I do not wish to disappoint, so I have gone 
+; to Fractal Land and taken the first thing I found, which in this 
+; case, not surprisingly, turns out to be a midget.  The fact that 
+; it is not quite a quadratic midget is a bit more surprising.
+; 
+; The generating expression is Z^(2.03)+C, which means that, when 
+; the MandelbrotBC2 formula is used, the resulting image can be of 
+; many different shapes.  In this case however, since the exponent 
+; is so close to 2, most fractals will be a rotated version of the 
+; traditional Mandelbrot set, with a bit of distortion thrown in 
+; to make things interesting.
+; 
+; In today's case, the parent M-set is rotated only slightly 
+; clockwise.  The main bud has come apart, with near total chaos 
+; in the area between the two competing remnants.  Today's image 
+; lies in this chaos..
+; 
+; I gave the image a wild-card rating.  I put too little effort 
+; into it to consider a firm rating.  In fact, I am not even 
+; certain it is worthy of being a FOTD.  I named the image "Random 
+; Shapes" which is basically a full description.  The render time 
+; of under 3 minutes makes it almost worth the effort of running 
+; the included parameter file.
+; 
+; I still have quite a bit of work to do, plus drifts of cicada 
+; shells to sweep away, so if I miss a FOTD or two in the coming 
+; week or so, don't be concerned.  I merely will be still trying 
+; to catch up in the work.
+; 
+; The image, for what it is worth, is available on Paul's FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather has been pleasant here at Fractal Central since the 
+; last FOTD, with the exception of Monday afternoon, when an 
+; intense thunder-storm moved in, with 2 inches (5cm) of rain, 
+; 1 inch (2.5cm ) diameter hail, terrifying (at least for some) 
+; lightning and thunder, and winds of 65mph (100kph).  Needless to 
+; say, the cats dashed into hiding, and were not seen for several 
+; hours.  Today is looking to be a repeat.  We'll see how it goes.
+; 
+; I'm still a bit behind in my work, so the thing for me to do is 
+; start working.  Until next FOTD, take care, and do dare.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Random_Shapes { ; time=0:02:51.59--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-1.19187521524887300/+0.035312902072153\
+  03/422.451/1/-127.5/-1.03011349450454759e-012
+  params=2.03/0/0/0 float=y maxiter=1200
+  inside=0 logmap=26 periodicity=10
+  colors=000diNfkLglKinIkpGlqFnsDotChmBbgAXa9RW9LQ8F\
+  K79E74FA7GCAHFDIHHJKKKMNLPQLRUMTXNW_OYbP`fQbiRelSg\
+  oSilTgjUehVcfWadX_bYY`ZWZ_UX`SVaQTbORcMPdKNdIPeHRe\
+  GTfGVfFXfFZgE`gEbhDdhDfhChiCjiBljBnjApjAT4WS3YR3_Q\
+  2`P2bP1cO1eN0fM0hM0iC2d23`ABcIJfQQiYYleeollqUmhBn_\
+  Aka9ic9gd8df8bg7`i7Yj6Wl6Um5Ro5Pp4Nr4LsBOmHQhNScTU\
+  Z_WUeYPk_KqaFoZGnWHmUHlRIkOJjMJiJKhHKlOGpVCs`8tWFu\
+  SMvOTwK_xGfyCmxDjwEhwFfvGduHbuI`tIYtJWsKUrLSrMQqNO\
+  qNMaROMVQ6ZS9UWCPZFKaIFdLAgO5jQ0mgIpx_sF1vG7wHCxII\
+  yINwSPw`RwiSwiPwiNwiLwiIwiGwiEwiBwi9wi7wi5wCDwDEwD\
+  EwEFwEFwFFwFGwGGwGGwHHwHHwIHwIIwJIwJIzXNzjRzkPzkNz\
+  kMzlKzlJzlHzlGzmFznEznDzoCzoBzpAzp9zq8zq7zr6zr5zsC\
+  zsIztPztVzuazuczvczvcztczrczpcznczlczjczhczg`zeZzc\
+  WzaUz_SzYPzWNzVKzTIzRGzPDzNBzL8zJ6zI4zG6zF8zEAzCCz\
+  BEzAGz8Iz7Kz6Mz4Oz3Qz2SzKQz`PzqOzoPznPzmPzlPzkPzjP\
+  ziPzgQzfQzeQzdQzcQzEfzFgz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 
+; 

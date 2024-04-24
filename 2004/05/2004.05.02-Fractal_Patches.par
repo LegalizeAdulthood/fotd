@@ -1,0 +1,117 @@
+;     Date: Sun, 02 May 2004 12:17:47 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-05-04 (Fractal Patches [3])
+;       Id: <1.5.4.16.20040502122119.2b2f655e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 02, 2004 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a second thought.  When I first stumbled upon 
+; it, I noticed its flatness.  Flat images such as today's often 
+; do quite well with the alternate rendering options, so I tried 
+; some of them.  The 'decomp' feature worked very well with the 
+; image, so I used it for the rendering.  I named the result 
+; "Fractal Cheating", and decided that it would be the FOTD for 
+; today.  I chose this name because the picture said more about 
+; the features of the program than it said about the scene I had 
+; discovered.
+; 
+; Then I decided that the full worth of the 'decomp' feature would 
+; not be apparent unless the 'decomp' version could be compared to 
+; the drabness of the original 'outside=iter' version.  Today's 
+; image is this 'iter' version.  It rates only a 3, but the incred-
+; ibly short render time of 40 seconds results in an unexpected 
+; and unjustified overall value of 449.  The 'decomp' version of 
+; today's scene, which will rate notably higher, will appear as 
+; tomorrow's FOTD.
+; 
+; Actually, all the 'outside' options do better than the standard 
+; 'iter' rendering of today's image, which is basically flat and 
+; featureless, but the scene renders so fast that the viewers can 
+; try these for themselves.
+; 
+; I named the version of the scene that appears as today's image 
+; "Fractal Patches".  That's all it is -- a few flat patches of 
+; color.  The flatness is why the scene renders so fast.  There is 
+; no fine detail to calculate.
+; 
+; The route I took to today's image is rather interesting.  Using 
+; the MandelbrotMix3a formula, I entered 1 and 2 as the p1 
+; parameters, which drew the classic Mandelbrot set.  Then I added 
+; 0.075 part of Z^3.  This moved the M-set a bit to the left but 
+; had no other effect on the screen image.  Next I entered 
+; -8.888... as the real(p5) parameter, which determines the 
+; initial point of Z, and just happens to be a critical point of 
+; the formula.  The result was a blank screen.
+; 
+; Never put off by blank screens, I did an outzoom and discovered 
+; that the action had moved far to the left.  I zoomed in on the 
+; area of interest and found a new M-set.  Except for the oddly-
+; shaped iteration bands, this set looked normal, but on the 
+; X-axis some distance to the right of the new set, I spotted a 
+; tiny dot.  This dot proved to be a tiny disconnected M-set with 
+; even smaller M-sets surrounding it like satellites around a 
+; planet.  And I found that these satellites are in turn surroun-
+; ded by satellites of their own.  Today's image is that of a 
+; satellite of a satellite.  Its surroundings are so flat because 
+; of its extreme isolation.
+; 
+; The image may be seen by running the included parameter file or 
+; by downloading it from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A pleasant spring afternoon here at Fractal Central on Saturday 
+; brought out the best in the dynamic fractal cats.  Lots of sun 
+; and a temperature of 79F 26C were just what they needed for a 
+; comfortable three-hour lounge in the yard.  But today things 
+; look ominous.  It is starting cloudy with heavy rain forecast.  
+; 
+; Heavy rain does not stop the fractals however, so the next one 
+; will appear in 24 hours, give or take an hour or two.  Until 
+; then, take care, and search for answers to the mysteries of life.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractal_Patches { ; time=0:00:39.99--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix3a function=ident
+  center-mag=-22.97767772633961000/+0.06349061612053\
+  014/3.426261e+008/1/-152/0.00023170776981063651
+  params=1/2/0.075/3/0/0/0/0/-8.88888888889/0 float=y
+  maxiter=300 inside=0 logmap=34 periodicity=10
+  colors=000bEKWILPNMIRNCVNQ_ZbdiohtPW2RU5TT8VSAWRDY\
+  QF_PI`OKWVSSa_OhgKooGuwO0MT2OX4Q`6Se8UiAWmCYqEZ0BJ\
+  LDKeFLzHMwFLuELrDLpCLmAKk9Kh8Kf7Kg7KcmzzzVzzWzzWzy\
+  WzxXzwXzvXzuXztWysWxsVwrVvqVuqUtpUspUroTqnTpnTomSn\
+  mSmlSlkRkkRjjQijQhiQghPfhPegPdgOdfOceObeNbdNadNacM\
+  `dM`eL_eL_fLZfKZgKYgKYhJXhJWiJWiIVjIVjIUkHUkHTlHTl\
+  GSmGSmFRnFRnFQoEPoEPpEOpDOqDNqDNrCMrCMsCLsBLtBKtAK\
+  uAJuAIv9Iv9Hw9Hw8Gx8Gx8Fy7Fy7Ez7Ez6Dz6Dz6Cz7Cz7Cz7\
+  Cz8Cz8Cz8Cz8Cz9Cz9Cz9Bz9BzABzABzABzBBzBBzBBzBBzCBz\
+  CAzCAzCAzDAzDAzDAzDAzEAzEAzEAzF9zF9zF9zF9zG9zG9zG9\
+  zG9zH9zH9zH8zG9zH9zH9zHAzHAzHAzHAzHBzHBzHBzHCzHCzI\
+  CzICzIDzIDzIDzIDzIEzIEzIEzIFzIFzIFzJFzJGzJGzJGzJGz\
+  JHzJHzJHzJIzJIzJIzKIzKJzKJzKJzKKzKKzKKzKKzKLzKLzKL\
+  zKLzLMzLMzLMzLNzLNzLNzLNzLOzLOzLOzLNzMOzLOzLOzLPzL\
+  PzLPzLPzLQzLQzLQzLRzLRzLRzLRzLSzLSzLSzLTzLTzLTzLTz\
+  LUzLUzLUzLVzLVzLwzHpzIizJ }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE==================================
+; 
+; 

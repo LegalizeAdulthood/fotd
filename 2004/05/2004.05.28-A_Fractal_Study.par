@@ -1,0 +1,112 @@
+;     Date: Fri, 28 May 2004 09:24:23 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-05-04 (A Fractal Study [5])
+;       Id: <1.5.4.16.20040528092810.0dcf3d4a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 28, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The combination of an unusually heavy work load and a balky 
+; computer has once again put me behind in my work, so today's 
+; discussion will again be brief.
+; 
+; For today's fractal I decided to move in close-up to study a 
+; midget of the order 1.5.  The parent fractal is an unimpressive 
+; thing that appears to spiral around the origin, with a prominent 
+; discontinuity along the positive real axis.  The shoreline of 
+; this parent is lined with irregular buds.  Today's scene is 
+; located on the inside of the northern branch of the valley of a 
+; small bud on the eastern edge of the parent.
+; 
+; To be sure I captured all of the midget, I raised the maxiter to 
+; 500,000.  Even with such an extreme maxiter, it still appears 
+; that the midget is not quite fully defined, but with a render 
+; time approaching 4 hours, the present maxiter will have to 
+; suffice.
+; 
+; The midget itself is typical of midgets in this range, showing 
+; little tendency to develop the semi-chaotic patterns around it 
+; that make quadratic midgets so attractive.  In fact, there is 
+; almost a feeling of 'anything can happen' about the scene.
+; 
+; An orbit check shows that the entire scene has a periodicity of 
+; 3, with but minor variations in the different areas of the 
+; midget.  I have not checked the Julia aspect of today's scene, 
+; though it is certainly equally disorganized.
+; 
+; I named the picture "A Fractal Study" because that's what it is. 
+; Actually, I studied the image very little.  I simply started it 
+; going and let it calculate for four hours while I worked on the 
+; balky machine.  The rating of a 5 could be a gift or a robbery, 
+; depending on one's view.  The extreme render time drags down the 
+; overall value to an abysmal 2.
+; 
+; But all is not lost, for I have sent the finished GIF image on 
+; ahead to Paul, and it will soon be posted on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; ready for immediate download.
+; 
+; Both Wednesday and Thursday were quite warm here at Fractal 
+; Central, with brief showers both evenings.  On both days the 
+; fractal cats managed to hold off the hordes of cicadas long 
+; enough for a few restful hours in the shade of the holly trees.  
+; Today is starting partly cloudy and slightly cooler.  The cats 
+; have not yet decided what kind of day they will have.
+; 
+; If I catch up in the work, today could be restful for me, but 
+; that will take quite a bit of effort.  Until next FOTD, take 
+; care, and despite all appearances to the contrary, we could all 
+; be part of a big hologram.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Fractal_Study { ; time=3:43:15.29--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=t
+  center-mag=+1.32928740683383100/+0.164093949176507\
+  60/76478.92 params=1.5/0/0/0 float=y maxiter=500000
+  inside=0 logmap=1040 periodicity=10
+  colors=000WOVa`Ub`Uc_UdZTeZTfYTfZSgYTgXUgWVhVWhUXh\
+  TYiSZiS_iR`jQajPbjOckNdkMekLflLglKhlJimIjmHkmGlnFm\
+  nEnoFmnEnnDnmDnmCnlCnkBnjBniAnh9ng9nf8oe8od7oc7oc6\
+  ocUUccUccUccUccUcOUcUUccTccScUScURcURcPQccQccPccPc\
+  UOcUNcUNccMccMccLccLcKKcKKccJccIcbIbaHa`H``G`_G_ZF\
+  ZYFYXEYXEWVHUTJSRLQPNONPNLRLJTJHVHFXFDZ97gEC`IHVMM\
+  PRRJVWD``6Z_7YZ7XY7WX8VW8TW8SV8RZ9QT9PS9OS9QTCRTFS\
+  UHTUKVUNWVPXVSYVVZWX`W_aXabXdcXgdNifYlgYohZqiZtlYx\
+  jZviZthZrfZpeZnd_lc_ja_h`_f__dZ`bX``W`ZV`XU`VSaURa\
+  SQaQPaONaMMbKLbIKbGIbEHbCGcAFc8Dc6Cc4BcAAeKBgUAiaA\
+  kaAmaAo`Aq`Fs`Ku`Pv_Uv_Zu_cu_huZmuZrtZwtZwtYwsYwsY\
+  wsYzrXzrXzrXzrXzqZzp_zo`znazmczldzkezjfzihzhizgjzf\
+  kzemzdnzcozbpzarz`sz_tzZuzWwzYvz_vzawzcxzeyzfzzhzz\
+  jzzlzzmzznzzozzpzzqzzrzzszztzzuzzvzzwzzxzzyzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 
