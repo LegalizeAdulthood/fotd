@@ -1,0 +1,114 @@
+;     Date: Tue, 16 Oct 2012 17:40:25 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-10-12 (Forever Onward [8])
+;       Id: <1.5.4.16.20121016174442.2bcf6eea@earthlink.net>
+; ---------
+; 
+; FOTD -- October 16, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I combined Z^2 with 0.2 parts of 
+; Z^3 on each iteration before adding a very unusual log(c).  
+; Since the MandAutoCritInZ formula is meant to produce Mandelbrot 
+; images, we are actually using the logarithm of the pixel.
+; 
+; The resulting parent fractal is little more than a tiny series 
+; of bays spread along the X-axis.  Today's scene is located in 
+; the East Valley area of a prominent minibrot just north of one 
+; of these bays.
+; 
+; The name "Forever Onward" suggests the unending detail of 
+; fractals.
+; 
+; The rating of a solid 8 owes a full point to the coloring, which 
+; I spent nearly an hour getting almost just right.  The image is 
+; one of those rare ones in which a negative logmap gives the best 
+; coloring.
+; 
+; The calculation time of 45 minutes is excessively slow, but 
+; luckily, viewing the image on one of the web sites will reduce 
+; the delay of enjoyment notably.
+; 
+; The finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Pleasant autumn weather prevailed here at Fractal Central today, 
+; with partly cloudy skies and a high of 59F 15C.  The remaining 
+; fractal cat, Nicholas, passed most of the day on the shelf in 
+; the southwest window, watching the world go by, probably remem-
+; bering Cassie.
+; 
+; When Cassie was here she would sometimes hide, then suddenly 
+; dash out and surprise Nicholas, causing him to leap into the 
+; air and get a bristled tail.  Monday evening while Nicholas was 
+; walking peacefully down the hall, he suddenly leaped into the 
+; air and his tail bristled as though Cassie had just surprised 
+; him.  Science (at least the skeptics) says there are no such 
+; things as ghosts, much less cat ghosts.  They say belief in 
+; unseen things such as ghosts is an outdated superstition carried 
+; over from a less enlightened era.  Apparently Nicholas has not 
+; heard the news however.
+; 
+; The humans made it through the day with nothing going wrong, 
+; which is easier said than done.  The next FOTD will be posted 
+; whenever it is posted.  Until whenever arrives, take care, and 
+; if I had created the world, I certainly could have done a better 
+; job.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Forever_Onward { ; time=0:45:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=log passes=1
+  center-mag=+0.04926340855299391/+0.008282418603709\
+  65/3.21828e+009/1/-15/0 params=1/2/0.2/3/0/0/0/0
+  float=y maxiter=8400 inside=0 logmap=-894
+  periodicity=6 mathtolerance=0.05/1
+  colors=000KKaLK`MK_NKZOKZPKYQKXRKWSKVTKVUJUWITYGS_\
+  FSaDRcCQeAPg9Pj9Ll9Im9Fn9Cq99t96q86n76k66h56e46b36\
+  _26X18U1AR1BO1DM1EO1GR0IT0JW0LY0M`0Ob0Pf7MiDJlJHoP\
+  ErVBu`9tbDtcGtdJteMtfPsgSshVsjZskasldrmgrnjromrppr\
+  qsmkrieqe`qf_pgZphYphXoiWojWokVnkUnlTnmSmnSmnRmoQl\
+  pPlqKlqKlmKhiKdeKaaKYYKUUURQUPNUNKULHUKEUIBUG8UF9U\
+  GAUHBUHCUIDUJEUJFUKFcLGcLHcMIcNJcNKcOLcPLcPKmRJmTI\
+  mVHmXGmZFz`EzbDzdCzfBzhAzjAzkWzepz_rzZtzYzzYzzXzzW\
+  zzVzzUzzUzzTzzSzzRzzQzzQzzPzzOzzNzzMzzMzzLzz1zzKzz\
+  JzzIzzIzzHzzGzzFzzFzzEzzDzzCzzBzzBzzAzz9zz8zz7zz7z\
+  z6zz5zz4zz3zz3zz2zz1zz0xz8uz7rz7pz6zz6jz6hz5ez5bz5\
+  `z4Yz4Vz4Tz3Qz3Nz3Lz2Iz2Fz2Dz1Az17z15z02z0_z77zB6z\
+  A6z95z95z85z84z74z74z63z63z53z42z42z32z31z21z21z10\
+  z10z0Qz1Pz0Oz0Nz0Nz0Mz0Lz0Kz0Kz0Jz0Iz0Hz0Hz0Gz0Fz0\
+  Ez0Ez0Dz0Cz0Bz0Bz0Az09z08z08z07z06z05z05z04z03z02z\
+  02z01z00z0rzapz_nzZlzYkzX }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

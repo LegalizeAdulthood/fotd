@@ -1,0 +1,108 @@
+;     Date: Fri, 05 Oct 2012 08:51:14 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-10-12 (A Second Opinion [7])
+;       Id: <1.5.4.16.20121005085523.2b7f6538@earthlink.net>
+; ---------
+; 
+; FOTD -- October 04, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another scene in yesterday's parent fractal, 
+; though instead of checking the large bud, we check the east edge 
+; of the main bay, just south of the broad peninsula that is 
+; trying, though not too successfully, to be an East Valley.
+; 
+; The fractal patterns in this area are entirely different from 
+; those on the shore line of the large bud.  Instead of loops, we 
+; see sharp-pointed, rather dark and ominous elements that would 
+; make a fitting cover for a paperback horror novel.
+; 
+; The name "A Second Opinion" indicates that today's image is the 
+; second venture into the same parent fractal, and, as is the case 
+; with medical doctors, a second opinion sometimes brings an 
+; entirely different outlook.
+; 
+; A rating of a 7 is entirely justified, at least in my opinion.  
+; The pattern surrounding the tiny central minibrot may be highly 
+; fractured, but it is regular enough to make a recognizable, 
+; semi-organized minibrot basin.
+; 
+; The calculation time of 1-2/3 minutes is fast enough to leave 
+; time for fun or business.
+; 
+; Time-saving joy may be found at the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; where the finished image is posted.
+; 
+; Hi-def joy is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are blissfully available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds, fog and drizzle spoiled the entire morning here at 
+; Fractal Central.  Some sun broke through in the afternoon, and 
+; the temperature reached 72F 22C, but by then the damage had been 
+; done and the fractal cats were in unhappy mode, demanding extra 
+; treats.  The humans had another un-notable day, one that was 
+; peaceful to experience but boring to read about.  The next FOTD 
+; will appear in a reasonable geologic time.  Until that wondrous 
+; moment arrives, take care, and debate the debate.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Second_Opinion { ; time=0:01:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.442996736165/-0.063360789746/6e+007/\
+  1/-85/0 params=1.5/0/51/0 float=y maxiter=1750
+  inside=0 logmap=144 periodicity=6
+  colors=000MF`LD_KCWF9QIAOG8LE6H00053D62IA75HB5LG5P\
+  K5TP4XT4bX4h_4mc3rf3wj3wm3wp3wn5wl6rj7mi8hg9ceAYcB\
+  VbCSwDPmENfFKdOH`cESmBQz9YzEgzJYzNNzSNmXMc`MUeLCiL\
+  BhKChJDgIEgHEgGFfFGfFGeEHeDIeCIdBJdAKdAKbBM`BOmCQw\
+  CSwDUhDWhEYhE_hFamFcZGeZGgZHiZHjIHkJIkJIlJImJImJJn\
+  JJoJJoJJpIKoJJpJJpJJpJJpJJpKJpKJqKJqKJqKIqKIqLIzD5\
+  zC5zB5zA5z95z85z75z65zOHzeTzvcftbdrabp``n_ZlZzjYzh\
+  XzgXzeWzcVzaUz_TzYSzWRzUQzTQzVPzXPzYPz_Pz`PzbPzdPz\
+  ePzgPzhPzjPzlPzmPzoPzpPzoOzoNznMznLzmKzmJzlIzlHzlG\
+  zkFzkEzjDzjCziBziAzi9zf9zb9zZAzVAzRBzNBzKBzLAzRUzT\
+  RzUOzVLzXIzYFz_Cz`9za6z_8zYAzXCzVEzTFzSHzQJzOLzNMz\
+  G6zE5zC4zB3zZfQhf9hfEhfIhfMffQcfUbfSafRafQ`fP_fO_f\
+  NbfMd_Lf`Ki`KkaJmaJpbIrbItcHwcGwzGwzFwzFwzHtzJpzLl\
+  zNjzQizThzVgzYfz_ezbdzdczgbzidzgfzehzcizakz_mzYnzW\
+  pzUrzStzQuzOwzMwzKwzIfzMczMazNZzNWzOTzOQzPOzPTzUXz\
+  ZazbezgjzlnzplznjzlQzbOza }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

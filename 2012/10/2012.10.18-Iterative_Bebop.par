@@ -1,0 +1,115 @@
+;     Date: Thu, 18 Oct 2012 16:42:30 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-10-12 (Iterative Bebop [7.5])
+;       Id: <1.5.4.16.20121018164649.224f8e04@earthlink.net>
+; ---------
+; 
+; FOTD -- October 18, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Iterative Bebop".  The name came about 
+; when something in the image reminded me of the 'bebop' music 
+; that developed in the mid 20th century and promised so much more 
+; than it delivered.  In fact, only certain present-day 'music' 
+; delivers less.  IMO, the unabashed popularity of the current 
+; 'music' simply shows the lack of sensitivity of the current 
+; noise-addicted fans.
+; 
+; The parent fractal of today's image came about when I iterated 
+; the expression Z^(1.6)+C three levels up the hyperladder with no 
+; function applied.  This parent resembles a moth-eaten M-set 
+; rotated so that its main bud faces southeast.  A very prominent 
+; disconnected and distorted minibrot lies just north of the main 
+; bay of the parent.  Today's scene lies in what appears to the 
+; East Valley of this minibrot.
+; 
+; The minibrot at the center of today's image is of order 1.6, 
+; though it bears little resemblance to a typical 1.6 minibrot.  
+; The highly fractured surrounding pattern is unusually brilliant, 
+; a result of the colors, which took nearly a half hour to get 
+; almost right.
+; 
+; The calculation time of 2-1/4 minutes is slightly slow.  The web 
+; sites cam speed up things quite a bit.
+; 
+; For maximum speed and convenience the finished image is posted 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; For maximum pleasure it is posted in high-definition at
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; For maximum appreciation the back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day began sunny here at Fractal Central, but by mid-
+; afternoon the clouds moved in, with rain expected by night.  The 
+; temperature reached a comfortable 66F 19C.  Nicholas, the 
+; remaining fractal cat, spent a good part of the day playing in 
+; his cat cube complex.  Curiously, he still acts as though an 
+; invisible Cassie were in the house, playing with him.  I guess 
+; no one has told him that cats do not have spirits.
+; 
+; The humans spent the day doing human things, such as getting the 
+; work finished.  The next FOTD will be posted when it is ready.  
+; Until whenever, take care, and who knows.  Maybe cats do have 
+; souls and maybe Nicholas has gotten over his loss so quickly 
+; because Cassie is still here, at least to him.  (I must ponder 
+; the implications of his behavior.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Iterative_Bebop { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.66753502154/+1.096587351422/4506788\
+  /1/-25/0 params=1.6/0/3/0 float=y maxiter=2750
+  inside=0 logmap=208 periodicity=6
+  colors=000Ge8Fe7Ed7Dc6Ca6BZ5AV59S47O36L35H24E23A12\
+  71130_dzX`qUYlRYaOXUPWGPUGPTHPRHPQHPOIQNIQLJQKJQIJ\
+  QGKQFKQDLRCLRALR9MR7MR6NR4NR3NO2LM2JK2HI2FF1DD1BB1\
+  9110917605403201VzBSuAQq9Om8Mi8Ke7I`6GX5ET5CP4AL38\
+  G26C2481240PkFOiENgDMeDLdCKbCJ`BI_BHYAGWAGU9FT9ER8\
+  DP8CO7BM6AK69I58H58F47D46C35A3482362251131010f7oc6\
+  k`6hY5eW5bT4ZQ4WO3TL3QI3MG2JD2GA1D819506203hY8fW7d\
+  V7bT6`S6ZQ6XP5VN5TM5RK4PJ4NH4LG3JE3HD3FB2DA2B82971\
+  7515413201108wg7sd7oa6l_6hX5eV5aS4ZP4VN3SK3OI2LF2H\
+  C1EA1A7075032QbcDJKEJ3DI2CH2BG2BF2AE29D29C18B17A17\
+  91681571461450340230220110000NAQL9OK8MI8LH7JF6HE6G\
+  C5EB5DA4B839738526414213101mWniTjeRfbPcZM_WKWSITPG\
+  PLDLHBIE9EA6A747323n7Ao69p69q69r68sU8tU8uU7vU7wU7x\
+  Z6yZ6zZ6zZ5zU5zU5zU4zU4zK4zK3zUzzUzzUzzUzzKzzKzzKz\
+  zKzzKzzKzzKzzKzzKzzKzzKzzKzz3zz2zz2zz2zz2zz2zz1zz1\
+  zz1zz1zz1zz0zz0zz0zz0zzsz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

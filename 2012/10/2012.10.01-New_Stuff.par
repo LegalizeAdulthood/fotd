@@ -1,0 +1,110 @@
+;     Date: Mon, 01 Oct 2012 18:13:05 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-10-12 (NewStuff [Low])
+;       Id: <1.5.4.16.20121001181711.2a8f37f2@earthlink.net>
+; ---------
+; 
+; FOTD -- October 01, 2012 (Rating Low)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has a low rating.  Since I did not wish to 
+; embarrass myself, I did not state exactly how low, but it would 
+; be fair to state that the rating would be notably less than 
+; average.  (A rating of 4 would be a good guess.)
+; 
+; The image lies within the tiny bit of debris inside the 
+; Mandelbrot bud that appeared in the background of yesterday's 
+; image.  Today's image is characterized by a near-hopeless nest 
+; of zigzag filaments overlying a totally chaotic background.  The 
+; filaments are much like those found in the 'Siegel Disk' area of 
+; the Mandelbrot set.
+; 
+; The name "New Stuff" is a bit misleading, since there is little 
+; new stuff in the image, which is really only a casual glance of 
+; what lies within a strange little eye-shaped bit of unevaporated 
+; debris.  The calculation time of 8-1/2 minutes is a bit too much 
+; to pay for the image, but once again, the FOTD web sites charge 
+; to the rescue, saving both time and frustration.
+; 
+; Be part of the charge.  View the finished image on the FOTD web 
+; site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Lots more older images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Despite a few minor clouds here at Fractal Central today, the 
+; day brought the impression of a sunny one.  The temperature of 
+; 68F 20C was quite pleasant for the start of October, and the 
+; fractal cats took full advantage of it in their southwest window 
+; as they watched the falling leaves outside.
+; 
+; The humans made it through another day with nothing out of the 
+; ordinary happening, which is boring to report but quite pleasant 
+; to experience in person.  The next FOTD will be posted whenever 
+; it is.  Until then, take care, and be of sound constitution, but 
+; keep the sound level under control.  You wouldn't want your 
+; noisy constitution disturbing the peace.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+New_Stuff { ; time=0:08:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip passes=1
+  center-mag=+0.0017245727/+0.0093780664/10151/1/82/0
+  params=6.5/-6.5/89/0/89/0/-1.626/0/0/0 float=y
+  maxiter=4000 inside=0 logmap=382 periodicity=6
+  colors=000z1Sm8YfEbYKgRQlrzFgvIXtLNrNOpQOnTPlVRjYS\
+  h`TfbVdeWbhX`jZZm_Xp`VrZYkX_dWaYUcRSeKRgDTeEUdEVcE\
+  WbFX`FY_FZZG_YG`XGbTKdPOfMShIWjE_lBcn7gp4kn6il7hj8\
+  gh9ffAedCdbDc`EbZFaXG`VI_TJZRKYPLXNMWOQXPTXQXYQ_YR\
+  cYSfZTjZTmZUq_Vt_Vw_Uu`UtaUsbTrcTqdTpeToeSmfSlgSkh\
+  RjiRijRhkRgkL_fFSaQLh`Enk7tu0zs2xq4wo6vn7tl9sjBriC\
+  pgEoeGndHlbJk`Lj_MhYOgWQfVReSTgQUiOVkMWmKXoIYqGZsE\
+  _tKWoQSkWOgaKcgG_lCWjEVhGVfIUdJUbLTaNT_OSYQSWSRUTR\
+  TVQRXQPYPN_PLaOKbORUUYM_dDek5kj9jiCihFihIhgLhfOgeS\
+  feVfdYec`ebcdbfdZdaWc_TbYQ`WN_UKZSHXQEWOBVM8Tz5rz2\
+  ez6RQARZERgIRpLRyLYyLMz1bG4_N7XUAU`DSfGPmNzCMzBKv8\
+  Jr5In2Hk0Ii1Ih2Ig2If3Id4Ic4Ib5Ia5J_6JZ7JY7JX8JV9JU\
+  9JTAJSAKQBKPCKOCKNDKLEKKEKJFKIFLHELHELGEMGDMFDMFDN\
+  ECNECNDCODBOCBOCBOCBPFDQHFQJHRMJSOLSQMTTOTVQUXSV_U\
+  VaVWcXXfZXh`YjbYlcjJQiIMhGIgFDfE9eD5eC1_J5VQ9PXCKc\
+  GFiJKePPaVTZ_j9Rl7Sn5Sp3S }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,97 @@
+;     Date: Thu, 25 Oct 2012 15:58:32 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-10-12 (Starriest Night [9.5])
+;       Id: <1.5.4.16.20121025160257.2b2721d6@earthlink.net>
+; ---------
+; 
+; FOTD -- October 25, 2012 (Rating 9.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal rates an honest 9.5.  A full point and a half is 
+; due to the coloring, which is about all the image has going for 
+; it.
+; 
+; The scene lies in the parent fractal that comes about when the 
+; Mandelbrot set is corrupted with Z^(0.94145506) energies.  This 
+; parent is mostly cut-off beyond the too-small escape radius.  
+; What shows of it is shaped like a large teardrop.  A larger 
+; escape radius would have revealed more of the parent, but would 
+; have lost today's scene.
+; 
+; The sky part of the image is all outside stuff made visible by 
+; the 'bof60' outside fill.  The lower part is everyday inside 
+; stuff.
+; 
+; The name "Starriest Night" was inspired by a well known painting.
+; 
+; The calculation time of 3-1/2 minutes will pass slowly at first, 
+; but will speed up notably once the calculation reaches the 
+; distant horizon about 2/3 of the way down.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering plus other goodies is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds permitted only a few peeks of sun at Fractal 
+; Central today.  The temperature of 66F 19C was all right, but it 
+; would have been more enjoyable if there had been more sun.  
+; Fractal cat Nicholas spent most of the afternoon on the shelf in 
+; the southwest window, waiting for the sun that never came.  The 
+; humans made it through the day as best they could.  The next 
+; FOTD will be posted soon.  Until whenever, take care, and who 
+; said fractals cannot be art?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Starriest_Night { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=FinDivBrot-2 function=recip logmap=yes
+  passes=1 center-mag=-0.05596778/+0.5609443890/568/\
+  1/-91.1/0 params=0.94145506/1.5/1000000/0 float=y
+  maxiter=15000 inside=bof60 periodicity=10
+  colors=000bzz_nzXgzU`zRVzPPzMLzJJzGHzDFzBDz8By59t5\
+  7q53p53n43k33h23e13c03a03_03Y03W03U03T03S03R03Q03P\
+  03O03N03M03Mn4rp4ur4xt4zs5xr5wq6vq6up7to7sn7rn8qm8\
+  ol9nk9mk9ljAkiAjhBihBhgCffCeeCdeDcdDbcEabE`bE_`KUZ\
+  POYUIWZCVc7Td8Sd9Rd9QdAPdBOeBNeCMeDLeDJeEIeFHfFGfG\
+  FfGEfHDfICgIBgJ9gK8gK7gL6gM5hM4hN3hO2hO1hP0hP1iQ2i\
+  Q2iQ3iQ4iR4iR5iR5iR6iS7iS7iS8iS9iT9iTAiTAiTBiUCiUC\
+  iUDiUEiVEiVFiVFiVGiWHiWHiWIiWIiWGjZEl`CmcAoe8pgCne\
+  FlcIjaLh`PfZSdXVcWYaUL58M48M39N3968978A88E98FA8GB8\
+  MCBUEEcGImIOrNRvTVzWYzZ`zadzdgzejzdjz0WU0UT0RT0PS0\
+  NR0LQ0IQ0GP0EO0CN09N07M05L03L0BO0IQ_PTaWVcbYei_eh_\
+  ef_eeZedZecZeaZe`Ze_YeYYeXYeWYeVXeTXeSXeRXeQXfOZgM\
+  `gKbhIdhGfiEhiCjjAlj8nk6pk4rl6o08m09k0Bh0Cf0Ed0Ga0\
+  H_0JY0KV0MT0NR0PO0RM0SK0UH0VFuXDuXBiXLZXVN`dCanB_o\
+  BYoAWoAUo9Sp9Rp8Pp8Np8Lp7Jq7zq6zq6zq5zr5zr5zr4zr4z\
+  r3zs3zs2zs2zs2zs5zt7zt9zt }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

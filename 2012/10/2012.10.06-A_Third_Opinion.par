@@ -1,0 +1,111 @@
+;     Date: Sat, 06 Oct 2012 10:08:56 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-10-12 (A Third Opinion [6])
+;       Id: <1.5.4.16.20121006101305.37af14e2@earthlink.net>
+; ---------
+; 
+; FOTD -- October 05, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is the third scene from the parent fractal of the 
+; FOTD of October 3, which explains the name "A Third Opinion".
+; 
+; In today's exploration into fractal semi-chaos, we check the 
+; situation far out on the zigzag filament that extends northwest 
+; from the oversized bud of the parent.  Rather than coming to a 
+; well-defined limit, this filament disintegrates into ever 
+; smaller and more disconnected pieces, ultimately becoming a 
+; twisted string of fractal bits, which finally dissipates.
+; 
+; The minibrot in today's image lies far out on this filament.  It 
+; is the last one I could find, though it is certainly not the 
+; last minibrot on the filament.  Most likely there is no last 
+; minibrot.
+; 
+; The rating of a 6 indicates that I consider the image to be a 
+; come-down from yesterday's image, which was a come-down from the 
+; day before.
+; 
+; The calculation time of only 10 seconds (plus shipping and 
+; handling) is no mistake.  The image really is that fast.  But it 
+; is not available in stores.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; But wait!
+; 
+; A high definition rendering is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; After the early morning fog cleared off, today was really quite 
+; pleasant here at Fractal Central, with sunny skies and a 
+; temperature of 77F 25C.  But it could be the last pleasant day 
+; for a while.  The weather people forecast rain and much colder 
+; temperatures for the next few days.
+; 
+; The fractal cats enjoyed the sun, forgetting the extra treats.  
+; The humans, who get all the extra treats they want, had an 
+; average day.  The next FOTD fractal will be posted before too 
+; long.  Until whenever, take care, and always remain fractally 
+; alert.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Third_Opinion { ; time=0:00:10.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident float=y
+  center-mag=-1.196727555403/+2.77816601291/1351948/\
+  1/177.5/0 params=1.5/0/51/0 maxiter=1750 inside=0
+  logmap=31 periodicity=6
+  colors=000MF`LD_KCWF9QIAOG8LE6H00053D62IA75HB5LG5P\
+  K5TP4XUAbZFicKnhPtmUyrZzvaztZzqUymPtnKnkFiaCcUAYKB\
+  VACSwDPmENfFKdOH`cESmBQz9YzEgzJYzNNzSNmXMc`MUeLCiL\
+  BhKChJDgIEgHEgGFfFGfFGeEHeDIeCIdBJdAKdAKbBM`BOmCQw\
+  CSwDUhDWhEYhE_hFamFcZGeZGgZHiZHjIHkJIkJIlJImJImJJn\
+  JJoJJoJJpIKoJJpJJpJJpJJpJJpKJpKJqKJqKJqKIqKIqLIzD5\
+  zC5zB5zA5z95z85z75z65zOHzeTzvcftbdrabp``n_ZlZzjYzh\
+  XzgXzeWzcVzaUz_TzYSzWRzUQzTQzVPzXPzYPz_Pz`PzbPzdPz\
+  ePzgPzhPzjPzlPzmPzoPzpPzoOzoNznMznLzmKzmJzlIzlHzlG\
+  zkFzkEzjDzjCziBziAzi9zf9zb9zZAzVAzRBzNBzKBzLAzRUzT\
+  RzUOzVLzXIzYFz_Cz`9za6z_8zYAzXCzVEzTFzSHzQJzOLzNMz\
+  G6zE5zC4zB3zZfQhf9hfEhfIhfMffQcfUbfSafRafQ`fP_fO_f\
+  NbfMd_Lf`Ki`KkaJmaJpbIrbItcHwcGwzGwzFwzFwzHtzJpzLl\
+  zNjzQizThzVgzYfz_ezbdzdczgbzidzgfzehzcizakz_mzYnzW\
+  pzUrzStzQuzOwzMwzKwzIfzMczMazNZzNWzOTzOQzPOzPTzUXz\
+  ZazbezgjzlnzplznjzlQzbOza }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

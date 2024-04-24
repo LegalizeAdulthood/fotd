@@ -1,0 +1,116 @@
+;     Date: Wed, 03 Oct 2012 17:29:32 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 03-10-12 (Silver Horizon [8])
+;       Id: <1.5.4.16.20121003173339.2a6703ec@earthlink.net>
+; ---------
+; 
+; FOTD -- October 03, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene lies in the Mandeloid fractal that results when 
+; the formula Z^(1.5)+C is iterated 1.5 levels up the logarithmic 
+; hyper-spiral with no function applied.  This parent fractal 
+; resembles a Mandelbrot set with an oversized main bud on the 
+; north shore line of the main bay.  Today's scene is located on 
+; the southwest shore line of this oversized bud.
+; 
+; I rated the image at an 8 because it is one of the finer 
+; minibrot scenes I have found in the fractals with exponents 
+; between 1 and 2.  Although the pattern around the minibrot is 
+; filled with discontinuities, they are arranged so that the 
+; pattern appears quite regular, with some rather attractive curly 
+; filaments extending outward from the minibrot.  The unusually 
+; brilliant colors also help with the rating.
+; 
+; I sometimes wonder whether fractals like today's are actually 
+; true fractals at all.  It seems to me that the MandelbrotBC3 
+; formula invents a new kind of math, and while using it with its 
+; various functions, I am exploring possible alternate mathemati-
+; cal systems rather than real fractals created with accurate 
+; math.  It really doesn't matter however.  The images are 
+; fractals, with all the characteristics of fractals, and real 
+; or not, they can still be unusually attractive.
+; 
+; Do not be deceived by the name "Silver Horizon".  The image is 
+; not one of those fantastic fractal scenes on other planets.  It 
+; is a surprisingly attractive scene of just another irregular 
+; <2 >1 minibrot.
+; 
+; The calculation time of 2 minutes is near the fractal average.  
+; The web sites can cut the wait notably.
+; 
+; The finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image is posted in high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; With partly cloudy skies, a temperature of 77F 25C and high 
+; humidity, today seemed more like an early August day than an 
+; early October day.  The fractal cats would have preferred more 
+; sun, but they still found enough comfort on their chair by the 
+; southwest window.  Except for a midday visit by the dryer 
+; repairman, who did his job quickly, the humans had a typical 
+; day.  The next FOTD will be posted at the right time.  Until 
+; whenever, take care, and I get the feeling that something is 
+; wrong with the world, but I can not track it down.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Silver_Horizon { ; time=0:02:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.1154933507434394/+0.9603539171372509\
+  /7.500726e+008/1/-115/0 params=1.5/0/51/0 float=y
+  maxiter=2500 inside=0 logmap=257 periodicity=6
+  colors=0009P07O05N03L02K02J00I00G00F00E10D20C20B52\
+  B85DAAFCEGEIHGNGJTGLZFOaHQcJTbLW_KZXIaTGdLOVEVL8`D\
+  2e75i59l5Co5Fr5Ju5eu5ovSuz_zzzzzarzXmz3kz5ju5jr7hm\
+  8hj8fe9fbAeZBeVBdSCdODbLEbIEaFFaCG_9I_7IZ3JZ2KX0LX\
+  0LT0JP2GL5EJ9DFBBCE9AI87L53P31S20W10_00d00f01_2ATA\
+  LNGXGPdBZk7fp9jtCmzFpzJrzOuzVxzazzeuzkpOFmEDh5Ce5G\
+  z5Bj5AZ55W52V38S38Q37O37N35K25J25G25F23D23C35E35F3\
+  7G58J59K5AL5BO5CP5DQ5ES7FV7GW7IX8J_8Ka8Lb8Nd9Of9Ph\
+  9QjASmAToAVpAVrBTpCSoDQoEQmFPkGOkIOjJNhKLhLKfQKeWJ\
+  eZIdeIdKOaFV_B_Z7fX2mW0uV0zT0zW0xX0vZ0u_0sa0sb0re0\
+  pf0oh0mj1kk1km2jp2hr2fs2eu2XZ2_X1aW0dV0kT0pS0pQDmQ\
+  FoNKoJKoGQoDQpAXp8Xp5Xu2Xz0dz0kz0hfCzSAzV9zX9k_8kb\
+  8Xe7Xh7Kj5Km53p52s51v30z30z32z9XsDXsIXsOXsTXsZXsdX\
+  skXsrkkxkkzkkzkkzkkzkkzkkzkkxkzxkzLkz0kz0kz0kz0kz0\
+  kz0kz0kz0kz0kz0kz0kz0kz0kz0zz0zz0zz0zz0zz0zz0zz0zz\
+  0zzozzmzzkzzazzZzzXzzVzzS }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

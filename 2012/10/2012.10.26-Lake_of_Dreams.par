@@ -1,0 +1,101 @@
+;     Date: Fri, 26 Oct 2012 18:48:07 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 26-10-12 (Lake of Dreams [9.5])
+;       Id: <1.5.4.16.20121026185234.237f6c4e@earthlink.net>
+; ---------
+; 
+; FOTD -- October 26, 2012 (Rating 9.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a rerun, but it is such a good rerun that I 
+; gave it a superior rating of 9-1/2.  The image is a scene in the 
+; Seahorse Valley area of the Z^2+C Julibrot, sliced in a 
+; direction about halfway between the Oblate and Rectangular 
+; orientations.
+; 
+; The reason for the name "Lake of Dreams" will be obvious once 
+; the image is viewed.  The ripples on the 'water' appear in 
+; perfect perspective, while the coloring so closely resembles 
+; water that it makes me thirsy.
+; 
+; The calculation time of 45 seconds will add to the enjoyment.
+; 
+; Enjoy the serenity of rippling water by viewing the finished 
+; image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; without the inconvenience of calculating it.
+; 
+; A high-definition rendering is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; and the back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The clouds hung tough here at Fractal Central today.  Fractal 
+; cat Nicholas carefully checked the hall closet to be sure Cassie 
+; was not in there, then settled on the scratching post for most 
+; of the afternoon.  The humans once again made it through the 
+; afternoon with nothing to report.  The next FOTD will be posted 
+; on Sunday.  On Saturday I'll be in Baltimore, checking Old 
+; Fractal Central to see it it's prepared for a big storm expected 
+; early next week.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Lake_of_Dreams { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.130564/0/\
+  2.314276/1/90/0 params=40/90/0/90/-0.75/0/0/0/2/0
+  float=y maxiter=100000 inside=255
+  logmap=yes periodicity=10
+  colors=000Q0hR2iS5jT8kUPnVSmWTnXVoYXpZZq_`r`bsadtb\
+  fuchvejwfkwglxfkzekwdjvciubhtagrafq`ep_doZcnYbmXak\
+  X`jW_iVZhUZgUYgTXfSWdRVcRUbQTaPS`OR_NQYMPXMPWLOVKN\
+  UJMSILRHKQGJPGIOFHNEGLDFKCEJBDIBCHABG9AE89D78C67B5\
+  6A55944733622511400320640860A80AA09C09E08G07I07K06\
+  M36O65Q94SB4U93W83Y62_41a31c10c6Ib5Ha5Ha5H`5G_5GY5\
+  GY5GX5FW5FW5FV5FV4EU4EU4ET4ET4DS4DR4DR4CQ4CQ4CP4CP\
+  3BO3BO3BN3BM3AM3AL3AL3AK39K39J39J39I28H28H28G27G27\
+  F27F27E26D26D26C26C15B15B15A15A1491481481371371361\
+  3602502502402301301201201100100000AKQAKmAKmAKmAKmA\
+  KmAKmAKMAKLAKKAKKAKJAKJAKIAKIAKHAKGXKGWKFVKFTKESKE\
+  RKDQKDPKCOKBNKBLKAKKAJK9IK9HK8GK7EH7DG6CF6BD5AC59A\
+  4893683562452341221110AK`AK_AKZAKYAKXAKWAKVAKUAKUA\
+  KTAKSAKRAKQAKPAKOAKOAKNAKMAKLUYKTXJSVIQUIPSHORGNPF\
+  LOEKNDJLCHKCGIBFHAEF9CE8BC7AB68A678567455334222111\
+  0ENuDMsDLrL4dL4dL3eL3eAAA }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
