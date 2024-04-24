@@ -1,0 +1,82 @@
+;     Date: Wed, 18 Aug 2004 12:04:54 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-08-04 (Golden Jubilee [6])
+;       Id: <1.5.4.16.20040818120516.2b4fe974@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 18, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to the continuing rush, today's discussion will be very 
+; short.  But I have just received the September issue of 
+; 'Scientific American' magazine, and a few of the articles 
+; already have me waxing philosophic.  Look for a major outbreak 
+; of not-totally-opinionated philosophy to soon appear on the 
+; philofractal list.
+; 
+; Today's quickie image takes us very deep into the fractal that 
+; results when Z^(-0.99) and Z^(1.11) are combined, and (1/C) is 
+; added.  In fact, the magnitude of 3x10^13 makes a mathtolerance 
+; entry necessary in the parameter file.  Hopefully, the edited 
+; file will run correctly
+; 
+; I named the image "Golden Jubilee" after all the gold in it, 
+; and then, being less than overwhelmed, I rated it at a 6.  The 
+; render time of 8 minutes gives an overall value of 71.
+; 
+; Rendering can be totally avoided by downloading the finished 
+; image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Uneventful weather Monday and Tuesday made life for the fractal 
+; cats uneventful also.  A noisy thunder-shower Tuesday evening 
+; arrived too late to spoil their day.  Today is starting muggy, 
+; with more thunder promised.  Hopefully, the duo will have 
+; completed their outdoor romp before it arrives.  For me, it 
+; looks like lots of work.  Until next FOEFD, take care, and be 
+; skeptical where skepticism is appropriate.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Golden_Jubilee { ; time=0:08:26.41--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.16037061486170520/+0.048743756369508\
+  35/2.842445e+013/1/131.5/-0.0220478909008980442
+  params=0.5/-0.99/-0.5/1.11/1/0 float=y maxiter=1000
+  inside=0 logmap=162 periodicity=10 mathtolerance=/1
+  colors=000CHK7DH2AH39F49E49D58C58B68A7797788774348\
+  76BA8FD9IHBMKCPNETRFWUHZXJb`KecMifNljPpmQspSwsVvqT\
+  uqStoQsnPrlOqjMpiLogKneImdHlbGk`EjZDiYChWAgU9fT8eR\
+  6dP5jI3dO4ZU5T_6Ne7Hk8Bq95wA7vC8uDAtEBsFDrGEqHGpIH\
+  pKIoLKnMLmNNlOOkPQjQRiRSiTUhUVgVXfWYeX_dY`cZdb`ac_\
+  _c_Yd_WdZUeZSeZQeYOfYMfYKgYIgXGgXEhXChWAiW8iW6iW7e\
+  Y8b_9_aAXcBUeCRgDOhELjFIlGFnHCpI9rG5uI6sK6qM6oO6mQ\
+  6kS6iU6gW6eY6c_6a`6_b7Yd7Wf7Uh7Sj7Ql7On7Mp7Kr7It7G\
+  t6Gu7Fu8Fu9Fu9FuAEuBEuBEuCEuDEuDDuEDvFDvGDvGCvHCvI\
+  CvICvJCvKBvKBvLBvMBvMBtLCrKCpJCoJCmICkHCjGChGCfFCe\
+  ECcDCaDC_CCZBCXACVACU9CS8CQ7CP7CO9BNBBMDAMEALGAKI9\
+  JK9JL9IN8HP8GR7GS7FU7EW6DY6DZ6C`5Bb5Ad4Ae49g48i37k\
+  37l39hBBeIDbPEZXGWcIUjHUsJUqLUpNVoOWnQXmSYlTZkV_iX\
+  ahZcg_efaheckddncfqaht`jw_kzZmzYozXpzWizWczWYzWRzW\
+  LzWFzW6zS9zWBzZEzaFzeGzdGzdHzcHzcHzcIzbIzbJzaJzaJz\
+  aKz`Kz`Kz`YzZUzWPzTLzQGzN }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

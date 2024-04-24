@@ -1,0 +1,95 @@
+;     Date: Mon, 30 Aug 2004 09:15:20 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-08-04 (Fractal Fowl-up [7])
+;       Id: <1.5.4.16.20040830091549.2b67b628@pop.mindspring.com>
+; ---------
+; 
+; FOEFD -- August 30, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Fractal Fowl-up.  The name does not 
+; imply that I feel I made a big mistake in creating the image, 
+; nor does it imply that my spelling skills need improvement.  It 
+; refers instead to the chicken-scratchy filaments surrounding the 
+; grossly-distorted midget at the center.  While I was studying 
+; the image, searching for a name, these filaments reminded me of 
+; the chicken scratches one might see on the ground in a chicken 
+; coop. (Not having a chicken coop, I can only guess what the 
+; ground inside one might look like, but my guess probably has at 
+; least a small resemblance to reality.)
+; 
+; The parent fractal, which was created by the simple formula 
+; Z^(2.1)+C, is a distorted Mandeloid with a smaller Mandeloid 
+; lying in the chaos on the southwest edge of its main bay.  This 
+; parent lies four levels up the multi-dimensional logarithmic 
+; hyper-spiral.  Today's image is located in a tangled nest of 
+; filaments just beyond the west end of the smaller Mandeloid.
+; 
+; Thanks to a little bit of extra coloring effort that I put into 
+; the image, I was able to rate it at a 7.  When the fast render 
+; time is considered, the overall value rates a quite impressive 
+; 279.  And, as is always the case, the pre-rendered image may be 
+; downloaded from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Mostly sunny, hot and humid weather prevailed all day Saturday 
+; and Sunday here at Fractal Central.  With the temperature 
+; hovering around 90F 32C, the fractal cats spent their outdoor 
+; time catching up on their sleep.  They seemed happy enough.  
+; Today however promises to bring rain by afternoon, so we'll have 
+; to wait to see how the duo adjusts.
+; 
+; And I wonder how I'll adjust when I get the work caught up.  
+; Only time will tell.  The next FOEFD will appear in one or two 
+; days.  Until that wonderful moment arrives, take care, and even 
+; skeptics are sometimes right.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractal_Fowl-up { ; time=0:02:30.50--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=-0.9\
+  012538323479556/-0.6608122739675539/220000/1/-17\
+  2.5/1.858592793557712e-010 params=2.1/0/4/0 float=y
+  maxiter=1200 inside=0 logmap=54 periodicity=10
+  colors=000JAKHAKFAKDAOBAR9AU7AX5A_7Ab9AeAAhCAkEAnF\
+  AqHAtICwHIzGNzGSzKX_PaVUfQZkMcpHhuCmz8mvWhsrcrsZqt\
+  UqtMpuQpuTnvWmwZlwbkxejxhiykhyjfxjdxicxibwhawh`wg_\
+  wgZvfYvfXveWveVudUudTudSuaRt_QsYPrVOqTNpRMoPLnMLmK\
+  KlIJkGIjDHiBGh9Fg7Fg8Ie9KdANcBPbCRaDU`EW_FZZG`YGbX\
+  KcVNcTRdRUdPYdN`eLdeJgfHkfFnfDrgBug9xg8rc6m_5mW4mS\
+  3mO2mK1mM1mN1mO1mP1mQ1mS1mT1mU1mV1mW1mY1mZ1m_1m`1m\
+  a1m`2m_2m_2mZ2mY3mY3mX3mX3mW4mV4mV4mU4mU4mYBmaHmeN\
+  miTmmZmqdmujmxpmuqmrqmoqmlrmirmfrmcsm`smYsmXlmWemV\
+  _mUTmTMmSGmRImQJmQKmPLmPMmOOmNPmNQmMRmMSmLUmKVmKWm\
+  JXmJYmc8m4Fm8ImRbmXQmbDmLZm4tmHomUjmmfmmlmmrsJZwNG\
+  zKWzKUzKSzk0zNNzMOzLPzcBzUJzlsz_tzUizP_zDGzGKzINzm\
+  azMKzLMzLNzKPzysznkzddzUXzkszS0zP9zMIzJMzKNzKOzKPz\
+  1SzBRzPHzNKzLNzRbzNWzcBzUJzJfzEPzHQzySznRzdRzUQzz6\
+  zdGzgZzaWzWUzQSzuTzkSzbRzTQzb`zTVzWszTkzQdzNXzLQzK\
+  QzKQzZPzVQzRQzNQz4ezpMzlQ }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

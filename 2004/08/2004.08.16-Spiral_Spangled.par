@@ -1,0 +1,86 @@
+;     Date: Mon, 16 Aug 2004 09:13:18 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-08-04 (Spiral_Spangled [7])
+;       Id: <1.5.4.16.20040816091337.2b6faffc@pop.mindspring.com>
+; ---------
+; 
+; FOEFD -- August 16, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As has become the usual state of affairs lately, the work is 
+; still heavy here at Fractal Central, and the discussion will be 
+; brief.
+; 
+; Today's fractal image features spirals -- brilliant, sparkling 
+; spirals everywhere, a good reason to name it "Spiral Spangled".  
+; Those sparkling small spirals, and the large main spiral 
+; surrounding the central midget, raise the rating of the image to 
+; a respectful 7.  The conveniently short render time of 4 minutes 
+; gives the image an even more respectful overall value of 162.
+; 
+; The image lies near the end of a filament extending from a bud 
+; on the north shoreline of the main bay of its parent fractal.  
+; This parent was created by combining 4 parts of Z^(0.5) with 2 
+; parts of Z^(-1.5) and adding (1/C).
+; 
+; The parameter file renders in just over 4 minutes on my now-
+; antique fractal-dedicated machine.  It will go faster on a newer 
+; unit.  And as always, the file of the completed image is, or 
+; soon will be, available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Storm Charley passed by Saturday with 0.08 inch 2mm of rain and 
+; a wind gusting to 5mph 8kph.  The fractal cats watched the non-
+; excitement from the dryness of the porch.  Sunday stayed dry all 
+; day, giving the dynamic duo much time in the fractal yard.  
+; Today is starting sunny.  It looks like another good day for the 
+; fractal duo.
+; 
+; For me it looks like work, and there is no better time to get 
+; started than now.  Until the next FOEFD appears in a few days, 
+; take care, and dig deeply.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Spiral_Spangled { ; time=0:04:19.91--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=b
+  center-mag=-0.21650624140427070/+0.019943127229515\
+  34/4.234284e+009/1/37.5/-0.000450000450211679448
+  params=2/0.5/1/-1.5/1/-70 float=y maxiter=1000
+  inside=255 outside=imag logmap=113 periodicity=10
+  colors=000G0oD0jB0e80a50Z10W03R09O0QN0UN0YN0aN0cN0\
+  aN0YL0UL6QJBLIGGINDGQ8EU5EZ1Df0Bk0Bm09o08q08s0Bu5D\
+  wSGwXIxcLzlNzsUzzczzhzztzzczwUxoLqgJj`InUEoLDqEBu6\
+  9w08x06q05k05g03a03W01Q01L11G30B30850560160681995B\
+  98EB9GBDJDGNEJOELRGOUGRXIZZIgXEoWDxU9zR8zR5zQ3zO0z\
+  N0zL0zL0zJ0zI0xG0wG0xJ0wL1wN9wOIwRQwUZwWgwXowWqrUr\
+  oUrkRujRugQwcQx`OzZOzWNzRNzQGzJBzE6z91z50z08z1Jz3W\
+  z5gz6rz8xz9ozBekQ5WeDLXLBOU1Ga08j00h00h00g00g00e10\
+  e60c90cD0aG0aJ0`O0`R0ZW0ZZ0Za0``0``0aZ3aZ9cXGcXNeW\
+  WeWagUhgUohRwhRzhRzgUzgUxgUrgUngWhgWcgWZgWRgWNgXIg\
+  XDgX8gX3gX0ha0je0kh0nk0oo0qr0rw0rz0uz0uz0uz0uz3uz6\
+  wz9wzDwzGwzLwzOxzRxzWxzZxzaxzexzhrwcnq`hnXchRZcOW`\
+  LQWGLRDGN9BI58E13900500100000000000600D00J00Q00X00\
+  c00j03k0En0Qo0aq5kr8nu1nw0ox0qz0qz0rz0rz0rz0rz6uzE\
+  uzLuzRuzZuzewzUxzIzz6wz5rz3qz1nz0jz00zL0zL3zG6zD9z\
+  9Dz6Gz3Jz0Nz0Oz0Lz3IzD000 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,84 @@
+;     Date: Mon, 02 Aug 2004 11:59:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-08-04 (Mimoids [3])
+;       Id: <1.5.4.16.20040802115935.2b272d3a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- August 02, 2004 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The rush continues here at Fractal central.
+; 
+; Today's image shows a midget in the fractal that is created by 
+; subtracting Z^(-11) from 7 parts of Z^(1.1) then adding 1/C.  
+; It is basically a cut-off scene made more interesting by being 
+; rendered with the outside set to 'fmod'.
+; 
+; The result is not all that interesting, and rates only a 3.  But 
+; the very fast render time of 1 minute gives an overall value of 
+; a respectful 272.  The name I gave the image -- "Mimoids" -- is 
+; a word from the novel "Solaris", where the living planetary 
+; ocean creates forms mimicking the images it finds in the minds 
+; of the visitors from earth.
+; 
+; The task of downloading the completed image from the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is about equal to the task of running the included parameter 
+; file and waiting a full minute.
+; 
+; Warm, muggy weather on Saturday and Sunday here at Fractal 
+; Central kept the dynamic cats confined to the porch.  Occasional 
+; showers kept the grass wet, assuring that the duo would remain 
+; close to home.  Today is starting the same, so I expect similar 
+; behavior from the duo.  For me, it's the same old story -- work, 
+; work, work.  Who said that being self-employed means lots of 
+; free time for fun.  The next FOTD will appear as soon as I find 
+; time to find a worthy fractal, most likely in two or three days. 
+; Until then, take care, and be worthy of your fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Mimoids { ; time=0:01:06.40--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=-0.13795262862347370/+0.041547177846593\
+  86/3.121372e+012/1/150/0.002408448 mathtolerance=/1
+  params=7/1.1/-1/-11/0/0 float=y maxiter=275 inside=0
+  proximity=1.4 outside=fmod logmap=19 periodicity=10
+  colors=000S8XT8XU8WV7WW7WX7WW2UX4VX6WX7WX9XXBXXCYX\
+  EYXFZXH_XJ_XK`XM`XNaXPaXRbXScXUcXVdXXdXZeX_eXafXbf\
+  _XXdRMcSNbSOaSP`SQ_SRZSSYSTXSUWSUVTVUTWTTXSTYRTZQT\
+  _PT`OTaNTaMUbLUcKUdJUeIUfHUhGUiFUk9UiBUkDTkFSmGRmI\
+  OoKLpMIqNFrPCsR9tS7uR8vR8wQ8xQ8yQ8zP8yP8xP8wO8vO8u\
+  O8tN8sN8rN8qM8pM8oM8nL8mL8lL8kK8jK8iK8hJ8gJ8fJ8cI8\
+  aI8_H8XH8WH8VG8UG8TG8SF8RF8QF8PE8OE8NE8MD8MD8LD8KC\
+  8KC8JC8IB8IB8HB8GA8GA8FA8E98E98D55C98DCBDFDDJGEMJE\
+  PLETOFWQFZTFbWGeYGh`GlcHoeHqhHsjEujHsjKqjMojPnjSlj\
+  UjjXhi_fiaeidcigaii_ilYioZjsYirXiqXipWioWinVinUimU\
+  ilTikTijSijRiiRihQigQifPieOieOidNicNibMiaMiaOh_QgY\
+  RgXTfVVeUWeSYdQ_cP`cNbbMdaKeaIg`Hi_Fj_ElZClYAmZBmZ\
+  BmZBmZCnZCnZCnZDnZDoZDoZEoZEoZEpZFpZFpZFpZFqZGqZGq\
+  ZGqZHrZHrZHrZIrZIsZIt_Ju_Jv`Jw`KwaKwaKwbKwbKwcKwcK\
+  wdKwdKweKweKwfKwfKwgKwgKwhKwhKwiKwjKwkKwlKwmKwmKwm\
+  KwmKwmKwmKwmKwmKwmKwmKwmK }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

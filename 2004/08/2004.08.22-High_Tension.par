@@ -1,0 +1,76 @@
+;     Date: Sun, 22 Aug 2004 08:41:23 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-08-04 (High-Tension [6])
+;       Id: <1.5.4.16.20040822084148.2e7faa78@pop.mindspring.com>
+; ---------
+; 
+; FOEFD -- August 22, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to the fractal that results when negative 
+; portions of Z^(-1.7) and Z^(-2.1) are combined, then (1/C) is 
+; added.  It has a kind of electrical feeling about it, which 
+; inspired the name "High Tension".  Unable to decide what I think 
+; of the image, I rated it at a 6.  When the render time of nearly 
+; exactly 3 minutes is considered, the overall value registers an 
+; impressive 200.
+; 
+; The most convenient way to see the high-tension image is to go 
+; to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and download it from there.
+; 
+; A hot sunny day Friday was followed by a cooler cloudy day on 
+; Saturday, with showers.  The fractal cats passed Friday after-
+; noon in the shade.  They passed Saturday sitting by the window.  
+; Today is starting sunny but cool.  It looks like a perfect day 
+; for the dynamic duo.  For me it will be a little work, but 
+; mostly relaxation.  The next FOEFD will appear on August 24, 
+; possibly sooner.  Until then, take care, and be kind to your 
+; web-footed fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+High_Tension { ; time=0:03:00.03--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=+5.40490425672737/+3.945059171105166/38\
+  81427/1/-80/-2.10034696572491963e-006 params=0.7/\
+  -1.7/-0.5/-2.1/0/0/0/0 float=y maxiter=1200
+  inside=0 logmap=54 periodicity=10
+  colors=000DDdDDSED_GDVIDRJDNNDIQDETDDNDB4D9D89LG4T\
+  N1aT0i_0qg0zn0zt0zz0zw0zs0qp0il0ai0Td0La1GY4BV86RB\
+  2OD9LIGILLEORDRX9Vb6Yg4bn1fs0iz0lz0pz0sz0wz0xz0xz0\
+  xz0xz0xz0xz0xz0xz1xx1xz0sz0nz0kz0fz0az0Yz0Tz0Oz0Lz\
+  0Gz0Dz0EwBXq8Tn6Qk2Ng1Jd0I_0EX0BT08Q04N02Q06T19V8D\
+  YGEaNIbTLfaOigQknTnwXqz_szaqzbpzbnzbnzdlzdkzdixdiw\
+  fgtffsffqfatYXxRTzJOzDLz6ztzzpzzktzfnzagzXazRVzNOz\
+  IIzDBz84z20z00z00z00z40z91zE8tJDqOIlTNgYTdbY_gbXlg\
+  VkdTkaRkYRkVQkROkQNkNNkJLkGJkDIk9Ik8GgLGfXEdgEasD_\
+  zDYzGazJbzNfsQgkTkdXlXYpQaqIdtBgw2kz0nz0pz0lz0kz0i\
+  z0gz6fzBbzIazO_zTYz_XzdTzkRzqQzwOzzNzzVzzbzzkzzszw\
+  zzszzqzzkzzfzz_zwVzqQzkJzfEza9zV2zQ0zL0zR0zY0wd1nk\
+  2fp6Yw8QzBIzD9zG2zI8zNBzQEzTJzYNzaQzdVziYzlazpdzsb\
+  znbziazdaz_azX_zR_zNYzIYzDYz9azEdzIgzNizQlzVpzYszb\
+  tzfqzfpzglzibzxazx_zxYzxXzxVzxTzxRzwQzwOzwNzwIzwLz\
+  wJzwIzwzzVzzXzzYgzakzanzb }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

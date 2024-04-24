@@ -1,0 +1,94 @@
+;     Date: Sat, 14 Aug 2004 09:45:46 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-08-04 (Electric Discharge [6])
+;       Id: <1.5.4.16.20040814094604.0dc72370@pop.mindspring.com>
+; ---------
+; 
+; FOEFD -- August 14, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's image we return to the overworked MandelbrotMix4 
+; formula.  The very fast image takes us into the fractal created 
+; by combining various negative portions of Z^(-1.3) and Z^(-3.9), 
+; then adding (1/C).
+; 
+; This parent fractal is a grossly bloated thing far too immense 
+; to fit onto the screen even at the minimum possible magnitude.  
+; Today's image lies near the end of a filament extending from a 
+; distorted bay of the largest Mandel-like feature.
+; 
+; I named the image "Electric Discharge" because of the many 
+; zig-zag electric-arc-blue filaments surrounding the central 
+; midget.  I rated it at a 6 because I consider it a bit above 
+; average.
+; 
+; I rendered the scene with the passes set to 'b'.  Not only is 
+; this the fastest method with this particular image, it is also 
+; the most fun to watch appear on the screen.
+; 
+; The render time of 1-1/2 minutes combines with the rating of 6 
+; to give an overall value of an impressive 378.  The fastest way 
+; to see the image is to run the included parameter file.  With 
+; Paul so busy, it will likely be an hour or two before the image 
+; is posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The unsettled weather continued Thursday and Friday here at 
+; Fractal Central, with enough rain to keep the fractal cats 
+; confined to the indoors.  They were understandably sulky.  Today 
+; is starting cloudy, and the remains of storm Charley are due in 
+; the vicinity later today with deluges of rain.  We'll see how 
+; the cats take this weather.
+; 
+; I still have enough backed-up work to keep me hopping.  The 
+; worst (or best) part is that the new work comes in almost as 
+; fast as the old work is finished.  The fractals are temporarily 
+; slowed down; the philosophy is all but dead.  But the catch-up 
+; point is visible on the distant horizon.  Look for the next 
+; FOEFD around Monday the 16th.  Until then, take care, and maybe 
+; nothing is real.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Electric_Discharge { ; time=0:01:35.35--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=b
+  center-mag=-2.02795783865152300/-0.531289001289163\
+  20/7.840581e+010/1/-122.5/0.129435658686167326
+  params=-1/-1.3/-0.3/-3.9/0/-20 float=y maxiter=900
+  inside=255 logmap=45 periodicity=10
+  colors=000zaJzeBzj2zn2zr2zl2zh2te2lZ2cW2WS2OM2HI47\
+  F609805A01B00N00Z30i90uF0zK0zQ0zU0zY0z`7zcFzfMzjWz\
+  lczplzttzvzzyyzzyzzyzzyzzyzzwzzwzzwwzwuzwqzwozvzzv\
+  zztzytzztzztzztzztzztzztzztyztuztoztkyverw_jyVczPW\
+  zJOzGHzA9z41z20z20z20z2DzDQzRczanzmlzsjzyhzzhzzfzz\
+  ezzezzfzzhzzjzwlzmnzapzTrzJtzAvzBwzDyzDzzGzzGzzIzz\
+  IzzJzzJzzLzzLzzNzzNzzPzzPzzAzz2zz2zzAzzIzzPzzXzzcz\
+  zkzzqzzmzzkzzizzezzczzazz_zzXzzVzzTzzRzzTzzTzzVzzV\
+  zzXzzXzzZzzZzz_zz_zzazzazzazzXzzRzzNzzIzzDzz8zz4zz\
+  AzzGzzLzzRzzXzzazzgzzmzzszzyzzzzzzzzzzzzzzzzzyzzwz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzwzzozzezzXzzPzzGzz6\
+  zz2zz2zz6zzBzzGzzLzzPzzVzzZzzazzgzzkzzqzzuzzzzzzzz\
+  zzzzzzyzzuzzqzzmzzizzczz_zzXzzTzzPzzLzzIzzPzzVzz_z\
+  zezzkzzqzzwzzzzzzzzzzzzzzzzzzzzzzzzzzyzzyzzwzzwzzu\
+  zzszzszzqzzqzzmzzkzzizzgzzezzczz_zzZzzXzzVzzTzzRzz\
+  PzzPzzPzzPzzPzzPzzgzz_000 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 
