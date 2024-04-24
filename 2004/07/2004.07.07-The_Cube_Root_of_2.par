@@ -1,0 +1,98 @@
+;     Date: Wed, 07 Jul 2004 09:48:03 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-07-04 (The Cube-Root of 2 [6])
+;       Id: <1.5.4.16.20040707095213.0d2fe344@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 07, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "The Cube-Root of 2".  The reason is 
+; simple -- the exponent of Z is 1.26, which is approximately the 
+; cube root of 2.  I have complicated things a bit by drawing the 
+; fractal as it exists 70 levels down the hyper-something created 
+; by multi-valued complex-logarithms.  (This something might or 
+; might not be an actual spiral.)
+; 
+; The parent fractal is the nearly shapeless thing that would be 
+; expected to be created by exponents in this low range.  Its most 
+; interesting part lies on its west border, where a nest of 
+; filaments appear to be trying to form a theme.  Today's image 
+; lies near a node in this nest of loosely-organized filaments.
+; 
+; Filaments.  This is one thing that fractals in this range have 
+; an abundance of.  They are easy sources of midgets, but the mid-
+; gets have a tendency to all look the same -- like spiny undersea 
+; creatures.  Today's midget, if that is what a theoretical but 
+; invisible object at the center of the image can be called, is 
+; surrounded by filaments different enough to almost create a 
+; theme pattern.  The effect is striking enough to make the image 
+; worthy of being declared FOTD for July 7.
+; 
+; The rating of a 6 and render time of four minutes (on my tired 
+; old fractal machine) combine into an overall value of 146.  It 
+; is up to the individual fractalist to decide whether to run the 
+; attached parameter file and wait a couple minutes or to download 
+; the completed image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Monday was 95F 35C hot here at Fractal Central, until a brief 
+; heavy thunder-squall cooled things notably at 6pm.  Tuesday was 
+; sunny and cooler, but the strong sun and high temperature of 88F 
+; 31C still made things uncomfortably warm.  The cats made the 
+; best of the conditions.  Today is starting sunny and warmer.  It 
+; looks like another day of overheated cats.
+; 
+; For me, it looks like a lot of work, so my intuition tells me 
+; it's time to get started working.  Until next FOTD in a day or a 
+; few, take care, and be fair.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_Cube-Root_of_2 { ; time=0:04:07.00--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=-1.46\
+  8655458749068/+0.9535213132151095/2446642/1/75/1.16\
+  947064154049318e-005 params=1.26/0/-70/100 float=y
+  maxiter=1200 inside=0 periodicity=10
+  colors=000nNrf_qcXqaVqZSqWPqTMqRKqOHqLEqKAsJCqJEoJ\
+  GnJIlIKkIMiIOhIQfISdHUcHWaHY`H_Z7fPHaYRYe`UmgOwiQu\
+  jSskUqlWomYnn_loajpchqefrgesictkaum_voYwqXxpWxpWxo\
+  WxoWynVynVynVymVymVzlUzlUzkUzkUzkUxjSvjQtiOriNphLn\
+  hJmgIkgGifEgfCeeBce9ad7`d6ab7aa8a`8a_9aZAaYAaWBaVB\
+  aUCbTDbSDbREbPEbOFbNGbMGbLHbKH`MGZNFYOFWPEUQETRDRS\
+  DQTCOUCMVBLXBJYAHZAG_9E`9Da8Bb89c78d76e64h35f65e86\
+  dA6bD7aF7`H8_K8AY8A_9Aa9AcAAeAAgBAiBAkBAmCAoCBqDCs\
+  DDuEEwEFvEGzCFfBHQDKSFNUHQWJTYLWaOZeQaiTdmVgqYjs`m\
+  uboweqxhszkuzmwzpxzryztzznqwnpwnovnnuomuoltoksojso\
+  irphqpgqpfppeorcqpdoodnndmmdkldjkdijdgidfheegecfeb\
+  eeade_ceZbeYcdVaeX`eZ_e_ZfaYfbWfdVgfUggTgiSgjQhlPh\
+  nOhoNiqMirKitJjvIjwHjy5gzGjzRmzapzYjtUdoQZjMTeHL`I\
+  N`JP`JR`KT`KV`LX`LY`M_`Ma`Nc`Ne`Og`Oi`Pj`Pl`Qn`Qp`\
+  Rr`Rt`Sv`Sw`LvVEuQ7tK1sF4qI7oKAmMCkOFjQIhTLfVNdXQb\
+  ZTa`W_cYYe`WgcUifTkhRnkPp }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

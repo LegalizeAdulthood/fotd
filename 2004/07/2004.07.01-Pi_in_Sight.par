@@ -1,0 +1,89 @@
+;     Date: Thu, 01 Jul 2004 11:57:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-07-04 (Pi in Sight [7])
+;       Id: <1.5.4.16.20040701120125.29cfbeb2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 01, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's short discussion I will not wax philosophical, nor 
+; will I wax political.  I will wax fractal.  After all, we're 
+; here because we enjoy fractals, and not to give our opinions of 
+; world events.
+; 
+; Today's quickie shows a midget that is located on a surprisingly 
+; long and straight filament extending from the main body of the 
+; Z^1.314159...+C Mandeloid when this fractal is calculated 62 
+; levels up the logarithmic spiral.
+; 
+; I rated the image at a 7, mostly because of the striking colors, 
+; which I found almost totally by chance.  I named the image 
+; "Pi in Sight".  A closer examination of the exponent of Z will 
+; reveal the reason for the name.
+; 
+; The parent fractal appears to hold several other interesting 
+; areas.  If I find the time, I will do further investigating and 
+; present anything of interest I might find as a future FOTD.
+; 
+; When the render time of 23 minutes is factored into the rating 
+; system, the overall value equals a 31.  That value can be made 
+; higher by downloading the completed image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another in an unending string of near perfect 84F 29C days gave 
+; the fractal cats little to complain about on Wednesday.  I could 
+; complain a bit about the work that is yet to be done -- but I 
+; won't.  Hopefully, what I will do is return in 24 hours or so 
+; with the next FOTD.  Until then, take care, and are fractals 
+; necessary for life?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Pi_in_Sight { ; time=0:22:55.28--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=+7.0\
+  092422286503/+5.547921277829/9.579319e+008/1/15/1.\
+  92347512060556114e-005 params=1.314159265358979/0/\
+  62.85/0 float=y maxiter=120000 inside=0 logmap=63
+  periodicity=10 colors=0004004005105205305405505608\
+  71B81D91GA1JB1MC1PD1SC1VA1Y91`81c71e61g51i41k31m84\
+  oD6qI9sMBuREwWGt`IqdLniNknQZsSUwUUpRUjOWfIYbD_bFab\
+  HcbIebKgbLibNkbOmbQobRqbTsbUu_awYhygbwfctbCfYEfbF`\
+  aDW`BR_9MZ7HY5CX4GV9JUDNTIQSMURQXPV`OZcNcgMgjLkbMf\
+  VMaOMXGMS9MO8KR8JT7IW7HY6G_6Fb5Ed5Df5Ci4Bk4An39p38\
+  r27u26w25y39w4Du5Gs6Kq7No8Rm9UkAYiBagCdeDhcEkaFo_G\
+  rYHvWIyUKxTMwSOvRQuQStPUsOWrNYqM_pLaoKcnJemIglHikG\
+  kjFliELdCHSJDFQ93WDAUGGSJMQNSOQYMTcKXiI_oGbuEckDdb\
+  CeTBeKAhLGjLMlMSnMYpNcrNhmOeiOceOe`OhXOkTOnOOqKOtG\
+  OwcEzz5zx8zwBzvEzuGxtJzsMzrOzlRzfTzaVzWXzR_zLazGcz\
+  Aez5gz8czB`zEXzHUzKQzNNzQJzTGzWCzZ9za6z`5z_5zZ5z`7\
+  za8zb9zcAzeCzfDzgEzhFzjHzkIzlJzmKzlMzlNzkOzkPzjQza\
+  ZzjRzjTziUziVzhWzhXzKezMdzOczQczSbzUazWazY`z_`za_z\
+  cZzeZzgYz6czAbzEazHazL`zO`zS_zV_zZZzaZzeYzCKzGMzKO\
+  zNPzRRzVSz6Az29z3Az3Bz3Cz3Cz3Dz4Ez4Fz4Fz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

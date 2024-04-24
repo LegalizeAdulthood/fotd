@@ -1,0 +1,88 @@
+;     Date: Sat, 10 Jul 2004 08:31:11 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-07-04 (Iterative Insanity, corrected version 
+; 	  [5])
+;       Id: <1.5.4.16.20040710083522.299f60e0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 10, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; (This corrected version replaces a backslash that was 
+; inadvertently omitted from the first version, and caused an 
+; error message to appear when the parameter file was run.)
+; 
+; Today's image is pure insanity.  Never have I seen such a motley 
+; collection of fractal possibilities with so little organization. 
+; There are diamonds, spirals, shapeless fragments, and almost any-
+; thing one could imagine scattered through the image.  The name 
+; "Iterative Insanity" seems quite appropriate for such chaos.
+; 
+; The parent fractal is the same Z^1.26+C Mandeloid of the past 
+; two FOTD's.  To find today's image I went to the north branch of 
+; the most prominent valley of the parent, and dove down to a 
+; magnitude of a modest 1800.  The 47-minute render time is a 
+; result of the unusually high iteration count of the elements of 
+; the image.
+; 
+; Unable to decide whether I liked the image, I rated it at an 
+; average 5, which gives an overall value of 11 when adjusted for 
+; the render time.  The most convenient way to see the scene is to 
+; download the finished GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Near perfect weather both Thursday and Friday made for contented 
+; cats.  With a repeat forecast for today, I expect more content-
+; ment.  I also expect to be working most of the day.  So until 
+; next FOTD, take care, and when you have taken enough care, stop 
+; to have a little fun.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Iterative_Insanity { ; time=0:47:12.01--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.46559005566451/+0.6125030496022825/1\
+  802.776 params=1.26/0/-70/100 float=y maxiter=25000
+  inside=0 logmap=260 periodicity=10
+  colors=000kHjjIjiJjhKjgQjfWjeajdgjcmjbnjboiapi`qi_\
+  riZsiYtiXuiWviVwiUxiUyiWwjXvjZuj_tj`rjbqjcpkdokfmk\
+  glkhkkjjkkhklglnfloelpclrblsalt`lsairbgqceqdcpeaof\
+  _ngYnhWmhUliSljQkkOjlMimKinIhoGgpEgpChmDhkDhiEifEi\
+  dEibFj_FjYFjWGkTGkRHkPHlMHlKIlIIlGIhEPdCV`BaX9gT8n\
+  P6tM5zP9yRCyTFyWIyYLx_OxbSxdVxfYwi`wkcwmfwoiwkdog`\
+  hdXa`SUXONUKGdIDoGAyE8wDAvCBuCDtBEsBFrAHpAIo9Kn9Lm\
+  8Ml7Ok7Pi6Rh6Sg5Tf5Ve4Wd4XbBS`IOZPKXWFVbBTh7biAmjD\
+  mkGrlJemMYnPZoSZpV_qY`r``scatfbuicvlcwodxrejfezwZv\
+  rTrmNnhHjcBg_DeZEdYFcXHbWI`WJ_VKZUMYTNWTOVSQURRTQS\
+  RQTQPVPOWONXMNZLM_KL`JKaIKbHMcGNdGPeFQfFRfETgEUhDV\
+  iCXjCYjB_kB`lAamAcn9dn9eo8eo8eo8eo8eo8eo8do8do8do8\
+  do8do8do8do8co8co8co8cp7cp7cp7cq7br7bs7bt7bu7bv7bw\
+  7bx7ax7ay7ay7bz7ez7hz7kz8nz8qzKtzNwzQzzSzzUzzWzzYz\
+  z_zzazzczzczzczzczzczzczzczzczzczzczzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzcz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

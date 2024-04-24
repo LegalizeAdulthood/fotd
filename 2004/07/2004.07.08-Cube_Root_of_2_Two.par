@@ -1,0 +1,93 @@
+;     Date: Thu, 08 Jul 2004 10:26:45 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-07-04 (Cube-Root of 2-Two [7])
+;       Id: <1.5.4.16.20040708103056.29a7fbf0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 08, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We had a flood in Fractal Town on Wednesday, but the fractal 
+; basement remained dry.  I attribute the dryness to the mystical 
+; power of fractals.  Only unknown magical forces could have kept 
+; the water out of the basement, and fractals are the closest 
+; things to magic that I know of.  My next task is to put the 
+; fractal magic to work on the work backlog.   :-)
+; 
+; Today's quickie image returns us to the same area of the same 
+; fractal that gave us yesterday's image.  The viewer must again 
+; take my word that a midget lies at the center of the conver-
+; gence, for the midget lies far beyond resolution.  In fact, the 
+; image itself is of such a high magnitude that I needed to in-
+; sert the 'mathtolerance' entry in the parameter file to assure 
+; that it renders at the correct magnitude.
+; 
+; I named the image "Cube-Root of 2-Two" for catalog purposes.  
+; I rated it at a 7 because I feel that it is a bit better than 
+; yesterday's effort.  The render time of 10 minutes gives the 
+; whole thing an overall value of 69.
+; 
+; There is not much more to say about the image other than to 
+; report that it is available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A very hot 92F 33C day on Wednesday was cooled to 72F 22C by a 
+; very heavy late afternoon thunder-shower, which sent the dynamic 
+; duo scurrying for cover.  By the time the rain ended, the sun 
+; was setting and the day had come to a close.  The duo emerged 
+; from hiding shortly after nightfall, having totally forgotten 
+; that their day in the yard had been cut short.  Today is start-
+; ing partly sunny and slightly cooler.  This is good for cats and 
+; humans alike.  Unless the unexpected happens, as it sometimes 
+; does, I will return in 24 hours with the next FOTD.  Until then, 
+; take care, and remember that V+F always equals E+2.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Cube-Root_of_2-Two { ; time=0:10:04.34--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 mathtolerance=/1
+  center-mag=-1.225559316846377/+0.7079657188513047/\
+  5.162144e+011/1/42.5/0.003731481390342 params=1.26\
+  /0/-70/100 float=y maxiter=1200 periodicity=10
+  colors=000aVIaTIaTIaTGaTGaTGaTG`SG`SG`SG`SF`SF`QF`\
+  QF`QF`QF`QF`QFaPDaODaODaMDaMDaLDaLDcJDcJDcIDcIDcGD\
+  cGDcFDdFDdDDdDDdCDdCDdADdADMzvOzuOzsPzrPxpQvoQumSr\
+  lSpjToiTmgTjfVidVgcXdaXc`Ya_Y`Y_YX_XV`VT`SS`QQaPPa\
+  MO_LMYJLWIJUFISDGQCFzkXzhVzeTzbSy_QxXPvVPuSOsQMpPL\
+  oMJmLJlIIjGGiDFgCD0TG0SF3QF7PFAOFFMFILFMJDPIDTGDXF\
+  D`DDcCDz7mz9jz9iz9gz9dz9cz9az9_y9Yx9XuATsASrAQpAOo\
+  AMlALjAIiAGgAFdzafz`fz_fz_fzYfzXfzXfxVfuVfsTfpSfmS\
+  flQfiQfgPfdOfaOf`MfYMfVLfTJfQJfOIfMIfJGfGFfFFfCD0z\
+  x1zu3zs4yr6xp7uo9smArlCoiDmgFjfGidIfcJdaLc`O`YP_XQ\
+  XVSVTTSSVQQXPPYMM_LL`IJaGIcDGdCF4d07a09`0C_0DY0FX0\
+  IV0JT1LS1OQ3PO4SM6TL6VJ7YI9_GA`FAcDCdCDCzSDzQFzQFz\
+  QGyQGxPIvPIuPJsPJrOLpOLoOMmOMlMOjMOiMPgMPfLQdLQcLS\
+  aLT`JT_JVYJVXJXVIXTIYSIYQI_PG_OG`MG`LGaJFaIFcGFcFF\
+  dDDdCDfADczvdc_Yxy_vx_uv_su_rs_ps_pr_op`mo`lm`jm`j\
+  l`ij`gi`fiadgadfacdaaca`c }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

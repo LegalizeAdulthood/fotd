@@ -1,0 +1,92 @@
+;     Date: Tue, 27 Jul 2004 08:53:34 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-07-04 (Deep in the North [6])
+;       Id: <1.5.4.16.20040727085343.2adfab3a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 27, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The most recent FOTD took us to a scene deep in East Valley of 
+; the classic Mandelbrot set.  Today's FOTD takes us to a scene 
+; deep in North Valley of the cubic Mandelbrot set.  Just as East 
+; Valley is located on the real axis of the quadratic M-set, 
+; North valley is located on the imaginary axis of the cubic 
+; M-set, and most of what is true of East Valley is also true of 
+; North Valley.
+; 
+; The main difference is that, in today's image, triangles are 
+; everywhere instead of squares.  And the features surrounding 
+; the small central midget are arranged in ascending powers of 3 
+; rather than powers of 2.  The cut-off nature of the elements is 
+; again very prominent, though not so obvious as in the most 
+; recent 'deepeast' image.
+; 
+; The terraced effect of the image was achieved by rendering it 
+; with the outside set to 'tdis'.  The image is also rather 
+; striking when rendered using the conventional 'equal-iteration-
+; band' method.
+; 
+; I named today's image "Deep in the North" and rated it at a 7.  
+; The overall value rates an 11.  The image does not use a 
+; super-fast hard-coded formula, but rather a formula I wrote 
+; several years ago.  The result is a parameter file that takes 
+; over 53 minutes to run.  Luckily, the pre-rendered image will 
+; soon be available for download on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Sunday was cloudy and cool, but dry -- temperature 72F 22C.  
+; Monday was partly sunny and quite pleasant (81F 27C) here at the 
+; Old Fractal Central, soon to be moved to the New Fractal 
+; Central.  Today it is raining.  The cats enjoyed both Sunday and 
+; Monday.  It's too early to see how they will take today's 
+; conditions.
+; 
+; I don't know about the cats, but I'm going to make it a 
+; work-day.  We still have quite a bit of work to put behind us.  
+; The next FOTD will appear in 24, 48, 72 or 96 hours.  Until 
+; then, take care, and cheer up.  Life is just a big fractal 
+; hologram.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Deep_in_the_North { ; time=0:53:57.87--SF5 on a P200
+  reset=2003 type=formula formulafile=slices.frm
+  formulaname=MandelbrotCube passes=1 inside=0
+  center-mag=+0.00000001446441666/+1.088667239670043\
+  00/4.657424e+011/1/30.0026626496268527/-8.93078864\
+  284968521e-007 params=0/0/0/0 float=y maxiter=50000
+  outside=tdis periodicity=10 mathtolerance=/1
+  colors=000rGwtHwsIurJtrKsqLrpMppNooOnoPmnQkmRjmSil\
+  ThlUg`SeQQdFOcFMadW`hVckVfoUhrUkvTnyTpwRiuPcsOYqMS\
+  oLMnMJmNHlOElPCkRGjSKjTOiUShVWhW_gXcfYgfZjbWi_UiXS\
+  hUQhQNhNLgKJgHHfDEfACf7Ae48e16e78dD9cIAcOBbTCbZEad\
+  F`iG`oH_tI_pKbmMejNggPjdQl`SoYUrVVtSXwPYyIVpBSg5PZ\
+  6S`7Pa7Mc8Jd8Ge9DgAAhA7jB4k4Eg5Ch6Ai78j8`X6Wd4Ql3L\
+  t6Kr9JpCInFHlIGjKFhNEfQDdTCbWB`ZAZ`AXVC_PEbJFeDHh7\
+  Jk1Kn2Nm3Ql3Tk4Wj5Zi5ah6dg7gf7je8md9pc9rcCWjFApIEo\
+  KInNLnPPmSSlUWlX_kZbjafjciifmhhphgqjgqkfqlfqmfqneq\
+  oeqperqdrrdrsdrtcrucrvcrw_quXptUpsRoqOopLnoImmFmlC\
+  lk9li6kh3kg4ee4`c4Wa4Q_5LY5GW5AU55S50QFDOOPNX`LelK\
+  bhJ`eIYbHW_GUXFRUEPRDMOCKLBIIAFF9DC8A9786A63F8AKAH\
+  KQJKSLKQDKT0KUMPYOUXNReVaiXcmYeq_guaiyckzhnzmqzrtz\
+  wwzzzYLkbBrf1yg4vg6th8rhAphCn_QfRc_IqTLoWOnYRm_Tka\
+  WjcZieaggcfifelicnlbpnarq_ttZvwYxyXzsYynZxi_wc`vZa\
+  uUbtPcsf4yh6yj8xlAxnCxpEw }
+
+frm:MandelbrotCube {; Jim Muth  real(c),imag(c)
+z=p1, c=pixel+p2:
+z=z*(sqr(z))+c,
+|z| <= 16 }
+
+; END PARAMETER FILE==================================
+; 
+; 
