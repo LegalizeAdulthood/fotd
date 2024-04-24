@@ -1,0 +1,104 @@
+;     Date: Sun, 06 May 2012 22:22:26 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-05-12 (The Birth of Light [9])
+;       Id: <1.5.4.16.20120506222526.2b3ff1ec@earthlink.net>
+; ---------
+; 
+; FOTD -- May 06, 2012 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today I see we have a fractal that earns a splendid 9.  
+; Hopefully, we're beginning a spell of high-quality images that 
+; will bring awe and wonder to even the mildly interested fans of 
+; the wonders of fractals.
+; 
+; Today's parent fractal came about when I subtracted 0.525 parts 
+; of Z^(-1.32) from 0.75 parts of Z^(1.23) then added straight C 
+; on each iteration.  This combination produces a fractal that 
+; resembles a twisted Mandelbrot set with its main bud on the 
+; southwest side of the oversized main bay, and the northeast 
+; shore line of the main bay seriously eroded.  Today's scene lies 
+; on the zigzagging spike extending south from the main bud.
+; 
+; To add a bit of zest to the image I rendered it with the outside 
+; set to 'real', which eliminates the boring flatness that spoils 
+; the normal 'iter' version.
+; 
+; The name "The Birth of Light" sounds rather mystical and is 
+; fully appropriate for an image made of numbers.  The calculation 
+; time of 1-3/4 minutes should cause little impatience.
+; 
+; To eliminate all chance of impatience, a finished 640x480x256 
+; version of the image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high definition rendering is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Thousands of past FOTD fractals and discussions are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today brought morning clouds to Fractal Central and sun for most 
+; of the afternoon.  The temperature of 72F 21C must have satisfied 
+; the fractal cats, who slept the entire afternoon.
+; 
+; There was no FOTD on Saturday, May 5, because FL and I took the 
+; day off to visit an antique emporium in State College, a city 
+; about 60 miles (100km) west of here, where the Penn State child 
+; abuse scandal recently broke.  But, at least while we were there, 
+; one would never guess there had even been a scandal.  Today, we 
+; simply took it easy.  The next FOTD will appear soon.  Until 
+; that vague time arrives, take care, and be alert for the forces 
+; of evil.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Birth_of_Light { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.1124714981231962/-1.120273183136637/\
+  5.93854e+011/1/-23.75/0 params=0.75/1.23/-0.525/\
+  -1.32/0/0/0/0 float=y maxiter=1600 inside=0
+  outside=real periodicity=6 mathtolerance=0.05/1
+  colors=000FLjGJkIHlKFlMDmNBnP9nR7oT5pS2tU3pW4mY5j_\
+  5ga6dc7`e8Yg8Vi9SkAPmBLoBIqCFsDCuE9xA4vE6uH7sK9rNA\
+  qQCoTDnWFmZGkbIjeJihLgkMfnOeqPctRbwSazTbwUcuUdsUdq\
+  VeoVfmVfkWgiWhgWieXicXjaXk_YkYYlWYmUZnSZnQZoO_pM_p\
+  K_qI`rG`rE`qF_qFZqFZqFYpFYpFXpFXpFWpFWoFVoFUoFUoFT\
+  nFTnFSnFSnFRnFRkIUiKWgMZeP`cRcaTeZWhXYjV_mTboRdrPf\
+  tMiwNhvOgvPgvQfvReuSeuTduUcuVctWbtXatYatZ`s__s`_sa\
+  YsbWrcVrdTreRrfRr`YmWaiZbb`aWbcQddJcd5fiDhdLkZTmY`\
+  pUhuNprNppHpmMpkLpiLpfKpdKpbJp_IoYImWHkTHiRGgPEfMA\
+  eK8dI6cF4bD2aB0`80_bORUIGcRRrRSycJzmAujBtgCreCobDo\
+  `DnYEnWFmSFmQGmNGlKHlIIkGIkDJkBJiAIg9He8Gb8F_7EX6E\
+  U6DR6CO5BM5AK5AI49G48E37C36A357254242230120110115F\
+  D5SO5d_5zj7zh8zgAzfBzdDzcEzbGz`Hh_IhZKhXLhWNhVOhUQ\
+  jSRjRSoQUqOVpNXoMYnK_nJ`nI`qCanHbkLchPdeTebYf_agXe\
+  hUihRmmb`rnOnlQkkRgjSdiUahVYfWVeXRdZOc_Lb`H`aE_cAZ\
+  d7Ye2Ze4Xf6Vg8Th9RhBPiDNj }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

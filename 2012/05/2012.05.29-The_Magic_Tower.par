@@ -1,0 +1,117 @@
+;     Date: Tue, 29 May 2012 10:00:02 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 28-05-12 (The Magic Tower [8])
+;       Id: <1.5.4.16.20120529100323.2fbfa4f4@earthlink.net>
+; ---------
+; 
+; FOTD -- May 28, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The most surprising thing about today's image is that its parent 
+; fractal does not exist.  At least it does not exist when 
+; rendered in the normal manner with 'iter' outside and 'numb' 
+; inside.  It is an 'evaporated' parent, consisting entirely of 
+; trapped 'inside' points.
+; 
+; A kind of fractal does appear however when the blank screen is 
+; rendered with the inside set to an active inside fill.  For 
+; today's image I chose the 'bof60'.  The generating formula is a 
+; rather strange one that includes Z^2 divided by Z^(1/Z).
+; 
+; The name "The Magic Tower" refers to the chaotic vertical spike 
+; in the left half of the image, which for some reason seems 
+; hauntingly familiar, a feeling of 'yugen' (check the internet 
+; for a definition), if there ever was one.
+; 
+; The rating of an 8 is what I myself consider the image to be 
+; worth.  The actual fractal value might be closer to a 7.
+; 
+; One thing that cannot be questioned however is that the image is 
+; a fast one.  it will finish in about one minute on most SOTA 
+; machines.  The web sites are online for those whose machines are 
+; not State Of The Art.
+; 
+; Be happy and carefree.  View the finished image on the FOTD web 
+; site with no need to worry about calculating it.  The web site 
+; is at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Or view the image in detail-revealing high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Today's image as well as thousands of others is online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A very noisy but exciting thunder-storm moved in here at Fractal 
+; Central yesterday evening.  I enjoyed the wind, rain and noise 
+; but the fractal cats were uneasy and even FL turned chicken.  
+; After giving the garden a generous watering, the storm moved 
+; out, leading to a peaceful, relatively cool night.
+; 
+; The heat returned today however, when total sun boosted the 
+; temperature to a sultry 88F 31C, causing the fractal cats to go 
+; into hot weather mode.  The humans took things easy, which is 
+; the best way to spend a holiday.  The next FOTD will be posted 
+; in 24 hours.  Until then, take care, and we're always hearing 
+; about enemies of freedom.  I guess they are those people who 
+; would rather be slaves.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Magic_Tower { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideJulibrot center-mag=4.56154/\
+  13.0186/0.1896/1/-2.5/0 params=86/0/86/0/-0.77/0/\
+  0/0/-1/1 float=y maxiter=1500 inside=bof60
+  logmap=yes periodicity=6
+  colors=000720A32D44G56J68M8APACSCEWEG_GIcIKgKMkMOn\
+  OQqQTtSWwUYyV_vT`tP`rN_pKXnIVlGTiERgDQeCOcBOaAN_9N\
+  X8MV7MT6LQ5KO4IM3GJ2EH1CF0AD08C07C07B09B0AB0AC0AE0\
+  AGNQHMRJMTKMUMMWNMYPLZQL`SLbTLcVLeWLfVMgVNgVOgVPgV\
+  PgUQgURgUSgUTgUTgTUgTVgTWhTXhTXhSYhSZhS_hS`hS`hRah\
+  RbhRchRdhRdhScgTbgTbgUagVagV`gW`gX_fXZfYZfZYfZYf_X\
+  f_Xf_Wf_Vf_UeZUeZUdZUdZUcZUcZUcZUcZUcZUcZUcUVPUUPU\
+  SQVRQVPRVNSWMSWKTWJTXHUXFVXEVYCWYBWY9XZ7YZ6YZ4ZZ3Z\
+  Y4YX5XW6WV7VU8UT9TSASRBSQCRPDQOEPNFOMGNLHMKIMJJLIK\
+  KHLJGMIFNHEOGDPGCQFBREASD9TC8UB7VA7WA6XC6XE6YG6YI6\
+  ZK5ZM5_O5_Q5`S5`T3aT1aT5_U8YVCWWFUWJSXMQYQOZTMZXK_\
+  _I`cGafEaT_fGtjHskHrlIqmIpnJooJnpKmqKlrLksLjtMiuMh\
+  vMgvRahVXV_RHcM3bL6aL9`LC_LFZLIYKLXKOWKRVKUUKWTJZS\
+  JaRJdQJgPJjOImNIpMIsLIvLIxNHuPHsRGqTGnVGlXFjZFh`Ee\
+  bEcdEafDZhDXjCVlCTnCQpBOrBMsBKqAIoAHnAGlAFjAEiADgA\
+  CeABdAAbA9`A8_A7XDCXWNMHH }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d), aa=-(real(p5)-2),
+  bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

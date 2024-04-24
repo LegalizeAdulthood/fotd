@@ -1,0 +1,99 @@
+;     Date: Fri, 11 May 2012 19:39:33 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 11-05-12 (Erupting Colors [7.5])
+;       Id: <1.5.4.16.20120511194238.2ac73392@earthlink.net>
+; ---------
+; 
+; FOTD -- May 11, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates a 7-1/2.  Because of its excess busyness I 
+; could not rate it at an 8, but I did award myself an extra 
+; half-point for the colors.  Extra color work was necessary.  For 
+; some reason, this particular image is unusually difficult to 
+; color.
+; 
+; The generating expression is the same as yesterday's, but with 
+; the absolute value of the second exponent of Z lowered from -5 
+; to -0.5.  This change clears most of the debris from the main 
+; bay of the underlying Mandelbrot set of the parent fractal, 
+; while at the same time eliminating much of the original 
+; Mandelbrot outline.  An obvious minibrot lies at the northern 
+; edge of the remaining main bay.  Today's scene lies in the 
+; detail surrounding this minibrot.
+; 
+; The name "Erupting Colors" indicates that I consider the colors 
+; a bit too gaudy.  The calculation time of 4-1/3 minutes is too 
+; slow to be a bargain, but the calculation can be avoided by 
+; visiting the web sites.
+; 
+; Be awesome!  View the finished image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Be awe-struck!  View it in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Be overwhelmed by viewing thousands of back FOTD images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A near perfect May day prevailed here at Fractal Central today, 
+; with blue skies, lots of sun and puffy white clouds.  The 
+; temperature of 72F 22C kept the fractal cats, who are totally 
+; indoor cats, quite satisfied.  The humans meanwhile had another 
+; nondescript day, which needs no description.  The next FOTD will 
+; be posted in 2 days unless an antiquing expedition planned for 
+; tomorrow is cancelled, when the next FOTD will appear then.  
+; Until whenever, take care, and one man's good may be another 
+; man's evil.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Erupting_Colors { ; time=0:04:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-1.061592415924801/+3.142505169644433/\
+  3.63e+009/1/-152.5/0 params=0.25/2/0.5/-0.5/0/0/0/0
+  float=y maxiter=5000 inside=0
+  outside=tdis periodicity=6
+  colors=000zz07zzzzz1z0zz00zzzzz0z0zz00zzzzz4z0zz0D\
+  zzzzzCi0Ad0A_09T09O07J07E06A0650510500400000400600\
+  900C00G00J00M00P00U00Y10`20g10d40b50`70_90YC0WD0UG\
+  0TH0RL2PM5OP7MR9LUCJWEH_HG`JEdMDfPCiTAlU9oY7q`6ud4\
+  zc5wd5sd5nc6id6dd6`g6Wf7Tg7Of7Lf7He9Df9Ag96fA4gA0f\
+  A0hA0hC0jC0jC0kD0jC0kA0kA0k90k70k70k60k50k52k45l27\
+  m47n2Ao2Cp1Dq1Gr1Hs0Jt0Mu0Ou0Pu0Tt0Ut0Wt0Zr0Zw0_w0\
+  bz0_w0Xs0Wo0Tl0Rg0Ob0Qd0Rf1Tg4Tg7ViAXlDXnGUnJXoOYq\
+  RasUdsYfubhwflyipykrzmuzowzqwzoyzmzzkzziyzgwzeuzcs\
+  zaqzYqzSozMnzGlz6iz1gz0gz0fw0ds1bo4`l5_g6Yd9W`AUYC\
+  TUDRRGPOHOMJMJMLGOJDPHARG7UE5WD2YC0`A0b90d70f60g70\
+  i90lA0lA0nC0oD1qD4qE5sG6uG9wHAwJCyJEzLGzMHzMJzOGzQ\
+  EzSDzTCzVAzW9zX6zZ5z`4za2zc1zd5zfAziFzkKzmPzqUztZz\
+  vczrczoczmczicyeZudUsbPoZKlYFiVAfS7dQA`NC_LDWHGTGH\
+  RELODMMCPJARH9TE7PD7MC7JA7G97D77A67757547217007007\
+  0070070070070070070GO0DO0 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

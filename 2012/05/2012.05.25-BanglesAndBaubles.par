@@ -1,0 +1,106 @@
+;     Date: Fri, 25 May 2012 14:23:07 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-05-12 (Bangles and Baubles [8])
+;       Id: <1.5.4.16.20120525142624.2ac74908@earthlink.net>
+; ---------
+; 
+; FOTD -- May 25, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, with its flashy colors, rates a full 8.  This 
+; does not include a bonus for the coloring, which was largely 
+; created by the program and merely tweaked by myself.
+; 
+; The name "Bangles and Baubles" reflects my impression of the 
+; scene, which is filled with trite whirls and spirals adorned 
+; with flashy colors.
+; 
+; The parent fractal consists of a series of Mandel-like objects 
+; lined along the Y-axis.  It was created when I combined Z^3 with 
+; 0.203 part of Z^5 and added straight C on each iteration.  
+; Today's scene lies in the 'East Valley' of a tiny 'minibrot' on 
+; the Y-axis.  I used the quotes because it is a stretch of reason 
+; to call these features actual valleys or minibrots.
+; 
+; The values of the parameters is extremely critical.  The 
+; slightest change causes the entire image to disappear, and only 
+; occasionally does something other than a blank screen replace it.
+; 
+; The calculation time of 2-3/4 minutes borders on slowness, but 
+; the image is flashy and rather worth the effort of calculation.  
+; It is certainly worth a quick visit to the web sites.
+; 
+; The image is posted already calculated at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the images from the past 15 years are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A typical mix of clouds and sun prevailed today here at Fractal 
+; Central.  With the haze, humidity and temperature of 84F 29C, it 
+; felt like a day in midsummer.  The fractal cats were happy with 
+; the weather, but they have yet to settle who gets ownership of 
+; the cat cube.  The only solution might be to pick up a few more 
+; cubes.  Nicholas actually collapsed the cube himself by accident 
+; while playing in it.
+; 
+; Unlike people in the movies, the humans of FC had an uneventful 
+; day.  The next FOTD will not appear until Sunday the 27th.  We 
+; are taking a one-day trip back to old FC on Saturday to take 
+; care of a few chores.  Until next time, take care, and I see no 
+; need to give up on the government schools; they gave up on 
+; themselves many years ago.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+BanglesAndBaubles { ; time=0:02:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=0/-2.146042881609609/7.763786e+008/1/\
+  -90/0 params=1/3/0.203/5/0/0 float=y maxiter=2600
+  inside=0 logmap=259 periodicity=10 sound=off
+  colors=00000A00A00A00B00C00D00E00F00G00H00I00J00K5\
+  5PAAUFFZKKcPPhZZmggrppzuuzzzzztzzozzgzz_zzTzzRzwRz\
+  qPzkPzfPz`NzVNzPLzKLzFLzAKz5Kz0Kz0Rz0Yz0dz0kz0sz0z\
+  z0zz0zz0zz0zz0zu0zq0zk0zh0wc0sY0mV0jP0fL0cG0_B0W80\
+  T30P00N50LA0KF0IK0GP0GT0FY2Dc5Bh8AmB8sD8wAAy6Bu3Do\
+  0Do0Fm0Gm0Gm0Io0Ks0Ku0Nq0Pm0Rj0Tf5VcAY_F_WK`RPuLVm\
+  G_eBcZ8fV5hK3kD0o50q00u00w00u00s0As0Kq0Vo0do0os0ku\
+  0hw0dz0`z0Yz0Vz0Rz8NzPKzfGzfDzfAzf6zz5zzyzzGmNLcWR\
+  _VTWTTVRTRRTPPTLNTILVGLVDKVBIV8GV6oVNzIdz6wz0oq3jm\
+  AcjGYfNTdTV`VVYVzWVVTVVRWVNWWKWWIWWFYWDYWAYW8YPDcK\
+  GfDKz8Nz3RzGTzTTzfTksTkwKjyBhz3f`0I0R00R00R03R0AT0\
+  GT0NT0VV0`Y2hf3oo5uy5zzFzzPzz_zzPyzFozzfzzYzzPzzPz\
+  zPzzPzzYzzfzzozzyzmzzjzzfzzdzz`zz_zzWzzTzzRzzNzzLz\
+  zKzzIzzGzzAzzDzzIzzLzzPmzVmzYmz`mzfmzjmzmmzqmzsmzu\
+  mzwmzymzzmzzmzzmzzmzzmzzmzzmzsmz_mzImz0mz0mz0mz0mz\
+  3mzAmzGmzNmzTmz_mzfmzmmzu }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

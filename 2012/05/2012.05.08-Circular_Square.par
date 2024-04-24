@@ -1,0 +1,109 @@
+;     Date: Tue, 08 May 2012 18:55:18 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-05-12 (Circular Square [8])
+;       Id: <1.5.4.16.20120508185819.2a1f1624@earthlink.net>
+; ---------
+; 
+; FOTD -- May 08, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We're on a roll.  Despite its somber colors, today's image rates 
+; another 8, and it was created by the warhorse MandAutoCritInZ 
+; formula.
+; 
+; The parent fractal came about when I combined 0.25 part of Z^(2) 
+; with 4 parts of Z^(-5) and added straight (C) on each iteration. 
+; This parent appears as the rough outline of an oversized Mandel-
+; brot set, with large irregular-shaped open areas where Seahorse 
+; Valley would be expected, and a minibrot at the spot where the 
+; large main-spike minibrot would be expected.  Most of the main 
+; bay area is filled in with debris, but a small, somewhat distor-
+; ted Mandeloid lies in the area of East Valley, with the East 
+; Valley of this small Mandeloid merging with the East Valley of 
+; the entire outline.  Today's scene lies in the interior of this 
+; valley.
+; 
+; I named the image "Circular Square" because the brighter area 
+; surrounding the central minibrot appears to be a square starting 
+; to change into a circle.
+; 
+; The calculation time of 1-3/4 minutes is brief enough to avoid 
+; all risk of impatience.  The FOTD web sites will bring the risk 
+; even lower, but there is still that parameter file to be run.
+; 
+; To avoid the hassle of setting up and running the included 
+; parameter file, check in at the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering of the image is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Around 4500 FOTD back-images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and steady rain made today a total loss here at 
+; Fractal Central.  The temperature of 64F 18C was pleasant enough 
+; at least for those who enjoy rain.  The fractal cats, who enjoy 
+; staying dry indoors, had nothing to complain about.
+; 
+; The humans had little to complain about with the weather, since 
+; we had nothing to do outdoors.  The local farmers, who have been 
+; praying for rain, were equally satisfied.  The next FOTD will 
+; soon be posted, though no specific time is implied.  Until then, 
+; take care, and maybe it would be easier to solve our racial and 
+; ethnic problems if certain news outlets would stop focusing on 
+; every remaining unsolved problem and start focusing on the great 
+; progress that has been made.  Accentuating the positive aspects 
+; of a troublesome situation has great power to blunt the impact 
+; of the negative aspects.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Circular_Square { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.9314351868225982/-0.0025768898778729\
+  /4.72819e+008/1/-122.5/0 params=0.25/2/4/-5/0/0/0/0
+  float=y maxiter=1500 inside=0 logmap=124
+  colors=000GHQFGODFNCELBCJABH9AF88D67B5694573352231\
+  1100000000000000000000000000000000500A30F55KFFPPPU\
+  ccZkkornosqottouwovyorvpotpkqqhoqemqajrdirWczSZnPS\
+  iMLdNNdNUeO_fOfbPgZPiVPjRMgSJdTHbUE_VCYW9VX7TY4QZ2\
+  OZ4Na6Nd8NfANiCNkENnGNpNTmTYjZYheKegKbhK`XKlK2cK5U\
+  H7RH9PNBZPDcSFjVHhXJf_LdaNbdP`fRZg74fBIfEVeHgeKthN\
+  ukQunTuqWutZuv`urcroeolhlhjielgbodZqaWtZTvWQxUVjW_\
+  XXdJYh6Zh6Yh6YdET`MOXTJU`FQgAMo5Jv1Lu3Mu5zt6zt8zzA\
+  zzczzczzhzzmzzzzzzzzzzzz_pP`pQYkNVfKSaHQYERVIRSLRP\
+  ORNRRKURHXRF_RCbR9eR7hSAjTDkUGmVJnWMoXPqYSrYUs4i`J\
+  PXlIAlH8lH7lG5lF4lF2lE1gE0fD0cD0dD0mD0lC0kC0jC0jC0\
+  iB0hB0gB0fB0eA0eA0dA0hA0hA0i90k90c90c9Kc8Kc8Kc8Kc8\
+  Kc7Kc7Km7Km7Km6Km6Km6cm6cm5cm5czKczKczKczKczKczPcz\
+  PczPczUczUczUczUczUczUczUczUczcmzcmzcmzcmzcmzcmzcm\
+  zcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzc\
+  mzcmzcmzcmzcmzcmzcmzcmzcm }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

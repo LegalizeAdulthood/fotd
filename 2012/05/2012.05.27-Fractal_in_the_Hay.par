@@ -1,0 +1,115 @@
+;     Date: Sun, 27 May 2012 19:55:37 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 27-05-12 (Fractal in the Hay [7])
+;       Id: <1.5.4.16.20120527195857.0d5f7e8c@earthlink.net>
+; ---------
+; 
+; FOTD -- May 27, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's strange looking fractal is a near-Julia set of a parent 
+; Mandelbrot set that has been distorted almost beyond recognition 
+; by Z^101 energies.  This parent resembles the vaguest outline of 
+; an M-set, which is filled with one large fragmentary circular 
+; outline and various fragmentary circular arcs and curves of 
+; other shapes and sizes.
+; 
+; The orientation of the slice is only 0.0001,0.0001 degree from 
+; the true Julia direction of the Julibrot, but this slight 
+; departure fills the empty Julia circles with grossly enlarged 
+; images of some of the fragmentary arcs filling the parent 
+; Mandelbrot set.
+; 
+; I named the image "Fractal in the Hay" when the colors reminded 
+; me of the color of dried hay.  The large horseshoe-shaped object 
+; adds to the impression of a barnyard.
+; 
+; The rating of a 7 will set no new quality record, but the 
+; calculation time of 23 seconds will waste no time either.  And 
+; as always, the FOTD web sites are ready to make the viewing even 
+; easier.
+; 
+; The image is posted in calculated form at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition version is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; FL and I made it to Old Fractal Central and back yesterday with 
+; few problems other than taking one wrong turn.  When we 
+; returned, we were loudly scolded by the Fractal Cats, who were 
+; cranky about having been left alone all day.
+; 
+; Lots of clouds and humidity prevailed here at Fractal Central 
+; today.  But enough sun broke through to raise the temperature to 
+; a sultry 86F 30C.  The fractal cats appear to have gone into 
+; summer mode.  They spent the warmest part of the day stretched 
+; in the coolest places they could find.
+; 
+; The humans had a slow day, resting after yesterday's trip to Old 
+; Fractal Central.  The next FOTD will be posted before long.  
+; Until that incredible moment, take care, and when life serves a 
+; lemon, make a sour face and bite it.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_in_the_Hay { ; time=0:00:23.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=DivideJulibrot passes=1 maxiter=1500
+  center-mag=1.81961/0.00092575/2.211791/1/-45/0
+  params=89.9999/0/89.9999/0/-2.3155315/0/0/0/101\
+  /1.5 float=y inside=0 symmetry=none periodicity=6
+  colors=000nIUsIQxIMZDdA8wGDqMIkSNeXS_bXUhaOmeJldIk\
+  cHjbGiaFh`Eg_DfZCeZBdYAcX9bW8aV7`U6_T5ZT5`V8bXBdZE\
+  e`GgbJidMjeOlgRniUpkXqmZsoauqdvrfwpewoewnexlexkexj\
+  evhbtf`reYpcWnbTl`Rj_OiYMgXJeVHcUEaSC_R9YP7XO5dHJk\
+  AWr3hl7dgB`aFXXITSMPMQLHUHCXEITLNPSSLZXHdjOnxUwiZv\
+  WcvIhu4muCllJkcQkWSlXTmYUnZWo_Xo`YpaZqb`rcasdbsedt\
+  feugfvhgviitjjrkkqllommnnolopkpqiprhqsfruesvctwbux\
+  `vy_vzWozSizOczKYzGRzCLz8Fz49z03dIGK_TLbVLeXLgYMj_\
+  Mm`MobNrcNueNwfPtdRqbTo`VlZXjXZgV`eTabRc_PeYNgVLiT\
+  JkQHmOFoLDpJCnMDlPEjREhUFfXGeZG_WOVUVQRaLPhGNoXPlm\
+  QijNfhKceIacFZ`CWZAUW7RU5PV7RW9SXBUYDVZFW_HY_JZ`L`\
+  aNabPbcRddTedUfcWebXdaZc`_b_aaZbaYd`Ye_XfZWhYViYUk\
+  XTlWSnVRoURpU_e`hVfqKly9rt8np8jk7fg7bb7_Z6WV6SQ6OM\
+  5KH5HD5D84944504235865E95KC5PF5VI5`L5eO5kR5qU5vLps\
+  GlgBhX6dM2aBVJXv1rw4pw7owAmwClxFjxIixLgxNfyQdyTcyW\
+  ayY`z`ZJFqOGmUGiZGecHaiHY }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d), aa=-(real(p5)-2),
+  bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
