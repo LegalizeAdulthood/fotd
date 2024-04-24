@@ -1,0 +1,90 @@
+;     Date: Mon, 15 Mar 2010 23:42:41 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-03-10 (A Phantom Minibrot [5])
+;       Id: <1.5.4.16.20100315224409.2b6f91cc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 16, 2010 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA ALERT!
+; 
+; Today's formula, the MandAutoCritMinZ, is one I worked up when I 
+; finalized the MandAutoCritInZ formula.  It is the same as the 
+; MandAutoCritInZ formula except that it combines powers of (-z) 
+; rather than (+z).  I have done very little with it because it 
+; virtually duplicates the images created by the original formula, 
+; and often fails to find a critical value of initial (z).  But 
+; now and then it comes up with some new stuff.  Today's image is 
+; one of the more interesting images it has produced.
+; 
+; I named the image "A Phantom Minibrot" because of the brilliant 
+; white Mandelbrot shape left of center.  The Mandelbrot effect is 
+; a totally random illusion.  There is no minibrot lying just 
+; beneath the surface.  The minibrot is a phantom.
+; 
+; Ghostly specter or not, I could give the image a rating of no 
+; more than a 5.
+; 
+; It's still an interesting scene however, well worth the 5 
+; minutes required to calculate it from the included parameter 
+; file or the minute or so required to view the image in finished 
+; form on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Monday brought heavy clouds but dry weather to Fractal Central, 
+; with a temperature of 48F +9C.  The fractal cats disapproved.
+; 
+; My day was rather busy; tomorrow will likely be a repeat.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and conspiracies are everywhere.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Phantom_Minibrot { ; time=0:05:05.76-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritMinZ function=ident float=y
+  center-mag=+0.585989628/+0.00007827/4751.262/1/\
+  -117.5/0 params=2.76/-1.4/0.36/-4.4/0/0/0/0
+  passes=1 maxiter=1600 inside=255 outside=tdis
+  logmap=140 periodicity=6
+  colors=000iQPjRPjSPjTQkUQkVRlWRlXRmYSmZSm_Tn`TnaTo\
+  bUocUodVpeVpfVqgWqhWqhWoeVmbVl_VjXViVVgSVePVdMVbJV\
+  aHV_EVYBVX8VV5VR1UU3VW4VY5V_6Va7Vc9VeAVhBVjCVlDVnF\
+  VpGVrHVtIVwJWvJVvJVvJVvJVvJVvJVvJVuJVuJVuJVuJUuJUu\
+  JUuJUuJUtJUtJUtJUtJUtJUtJTtJTsJTsJTsJTsJTsJTsJTsJT\
+  sJTqLUpMVoNWnOXlPYkQZjR_iS`hT`fUaeVbdWccXdbYe`Zf__\
+  gZ`gYahWbiVcjUdkTelSfmQgnPhnOioNjpMkqKlrJmsIntHouD\
+  qvEpuFpuGpuHpuHptIptJptKptKptLpsMpsNosNosOorPorQor\
+  QorRorSoqToqToqUoqVnpWnpWnpXnpYnpZnoZno_no`noannan\
+  nbmncmndmndmmemmfmmgmmgmlhmlimljmllnokmmjmljmjimii\
+  mhhmfhmegmcfmbfmaem_emZdmYdmWcmVbmTbmSamRamP`mOaoM\
+  `mN`lN_kN_jNZiNZhNYgNYfNXeOXdOXcOWaOW`OV_OVZOUYOUX\
+  OTWPTVPSUPSTPSSPRQPRPPQOPQNPPMQPLQOKQOJQNIQNHQNGQM\
+  EQMDQLCRLBRKARK9RJ8RJ7RI6RI5RJ3SI4RH5RH6RG7RG8RF9R\
+  FAREAQEBQDCQDDQCEQBFQBGQAGPAHP9IP9JP8KP8LP7MP2NN4M\
+  O5MO7MP8MPAMQBMQDMRELRzzz }
+
+frm:MandAutoCritMinZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*((-z)^b))+(d*((-z)^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

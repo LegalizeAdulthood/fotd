@@ -1,0 +1,80 @@
+;     Date: Sat, 20 Mar 2010 23:36:06 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-03-10 (Midget Mania [No Rating])
+;       Id: <1.5.4.16.20100320223739.2bafc7bc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 21, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; There will be little discussion about today's image because FL 
+; and I were off on an antiquing expedition to Hagerstown down in 
+; Maryland all day Saturday.  We found nothing of interest but had 
+; a fun time anyway.
+; 
+; The image for today is a minibrot in the Z^(1.23)+C Mandeloid.  
+; It has no rating and is named "Midget mania".  It takes a normal 
+; 4-1/3 minutes to finish, though I recommend viewing it on the 
+; FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The weather today was sunny with a temperature of 77F 25C -- 
+; near record warmth.  When we got back from Maryland around 
+; sunset, the fractal cats were happy.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and fractals may 
+; rule the universe, but who or what made the fractals?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Midget_Mania { ; time=0:04:19.65-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=floor
+  center-mag=-0.3388505239448932/+1.345623109254768/\
+  1.21587e+009/1/35/0 params=1.23/0/-2/0 float=y
+  maxiter=32767 inside=0 logmap=244 periodicity=0
+  colors=000QUQPTTPTWOSZNRaNQdMPgLOjLOmKMkJLjJJiIIgH\
+  GfHFeGDdFCbFAaE9`D7_D6YC4XB3WB2VF6UJ9UMCTQFTUISXLS\
+  `ORdRRgUQkXQo_PrbPoaNl`Mi_KgZJdYHaYG_XEXWDUVBSUAPU\
+  8MT7KS5HR4EQ2CQ1JT9PWHVZO`aWfdclfjiegfddcdbac_ZcXW\
+  bVUbSRaPO`NL`KJ_HG_FDZCBZAE_BH_BK_BN_BP`CS`CV`CY`C\
+  _`CQPKHERNBRT8RZ5RW9RUDRRHRPLRMPRKTRIXRF`RDdRAhR8l\
+  R5pR3tR1xRBsOKnLTiIbdFk_CtV9oYAk`BgcCcfD_iDaeHbbKc\
+  _NdWRfTUgQXhMaiJekGilCnmCrnPvoPzpNup5pp6kp7fg7alBb\
+  iEbjIcmLdpPfrSgsWhtZiuakuelvhmvlnvopvsqvvrvysegmPR\
+  c8AcD9cH8cM7cQ7cU6cZ5cb4cf4cd8cbCc`GcZJ8XN7VR6TU6R\
+  Y5Pa4Ne3Lh3Jl2Hp1Fs1Io5Lk8OhBRdEUbHXcK_cNbcQecThcW\
+  kcZncaqcdtcgvcjschqcfocemcckcbic`zc_zcYzcXzcVzcUzc\
+  SzcRzcUzcXzc_zcazhdzmgzrjzvlzzhzzdzz_zzWzzSzzOzzKz\
+  zGzzCzz8zzCzzGzzKzzOzzSzzWzz_zzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

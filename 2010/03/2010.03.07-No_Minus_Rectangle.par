@@ -1,0 +1,102 @@
+;     Date: Mon, 08 Mar 2010 00:10:30 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-03-10 (No Minus Rectangle [7])
+;       Id: <1.5.4.16.20100308001153.2bb7cd20@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 08, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in a near-Julia set of the area where 
+; the rectangles appear in the Z^(2.003)+C Mandeloid, but the 
+; formula has now been changed to (-Z)^(2.003)+C.  The sign change 
+; makes little change in the appearance of the parent Mandeloid 
+; fractal, but the rectangles have totally vanished from the Julia 
+; sets, and in their place we find a great variety of figures.  
+; Today's image is a sample of the things that have replaced the 
+; rectangles.
+; 
+; The name "No Minus Rectangle" indicates that as far as I know, 
+; no rectangles will be created by today's formula.  The rating of 
+; a 7 is above average, but I think the image, with its feeling 
+; of infinite depth, is truly above average.
+; 
+; The calculation time of just under 5 minutes is just about what 
+; I feel the image is worth.  Those who do not enjoy running 
+; parameter files may view the image on the FOTD web sites.  For a 
+; few more days the finished images may be viewed at both:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; after that, the images will be available on only the second site.
+; 
+; Perfect late winter weather prevailed here at Fractal Central on 
+; both Saturday and Sunday.  On Sunday the temperature reached 57F 
+; 14C and not a single cloud was seen all day.  The fractal cats 
+; enjoyed the conditions to the utmost.
+; 
+; My day Saturday was busy as I tried to keep up with FL in the 
+; antique emporium; Sunday was reasonably uneventful.  The next 
+; FOTD will be posted in 24 hours.  Hopefully, it will be quite 
+; eventful.  Until then, take care, and don't ask too many ques-
+; tions that cannot be answered.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+No_Minus_Rectangle { ; time=0:04:56.57-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1 maxiter=3200
+  center-mag=+0.076375565/+0.094288569/7083/1/54.5/0
+  params=89.999/0/89.999/128.183/-1.747195/0/0/0/2.0\
+  03/0 float=y inside=0 logmap=-25 periodicity=12
+  colors=000OAKOAKOAKNAKNAKMAKMAKLAKLCKKGKKKKKNKKRKK\
+  UKKYKK`KKdKJhKIkKJoKKrKLvKMyKNxKRxKVwKZwKbwKfvJjvJ\
+  nuIruHsvHtwKuxNvyPwzSxzVyzXwz_wzawzdwzgwziwzlwzowz\
+  qzztzzvzzxzztzzpzzlzzizzezzhzzkzzdzzYzzRzzKzzEzzOd\
+  rYaqf_pgZpgYpgXpgWpgVpgBm4cT7bSBbSEaRHaRL`QO`QRZMQ\
+  XJPVGOTDNaOUjY`rggqcbq_YqWUqSPqOLqKGqGCXXDClEWWBnF\
+  8lLEkRJiXOhbUfhZemcbeg_YkXRnUJrRBvO4yQAqSFjTKbVPWX\
+  VOY_H_d9`i2Uf5Od8HbBB`DaWqaRoaPmaNlaLjaJhaHfaBgaFe\
+  aIdaLbaOaaS_aVZaYXd_Va`W_aWYbXVcXTdYRdYOeZMfZKg_Hh\
+  _Fi`EgaDi`Dj`Ck`Cl_Cm_Bo_Bp_AqZArZAsZ9uZ9vY8wY8xY8\
+  yYCwUGuRKsOOqLSoIWmF_kCci9gg6kf3lb8l_DmXImUNnRSnOX\
+  oKaoHfpEkpBpq8uq5yp9wpCupFsoJqoMpoPnoTlnWjnZhnbgne\
+  emhcmlamo_lsTmrZmqcmphqwsmpmjjhgdccZZ`TUYNPUKKRBFO\
+  5ANHJNTRNdZNpfModMncLnbLmaLm`KlZKlYJkXJkWJjVIjTIiS\
+  HiRHhSJjUHhWGiYEj_DkaBlcAmeE0qV3s`5u_8w_AwZCwZEwTg\
+  zTUzS`zSUzRdzRUzQazQUzOfz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

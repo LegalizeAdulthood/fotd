@@ -1,0 +1,97 @@
+;     Date: Wed, 24 Mar 2010 22:54:04 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-03-10 (Window of Opportunuty [6])
+;       Id: <1.5.4.16.20100324215540.2b5fb0e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 25, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a near-Julia set of the valley leading to the 
+; period-3 bud on the northeast shore line of the (-Z)^(1.5)+C 
+; Mandeloid.
+; 
+; The valley itself, or a tiny blown-up part of it, is visible as 
+; the fuzzy, light blue, gently curved wedge in the background.
+; 
+; The image rates a 6 because of the curious things going on with 
+; the 3-armed spirals in he upper part of the image.
+; 
+; The name "Window of Opportunity" must have had a reason behind 
+; it, but if so, I have long since forgotten it.
+; 
+; The calculation time of 4-2/3 minutes is rather slow.  The 
+; slowness may be bypassed entirely by tripping out to the FOTD 
+; web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and viewing the finished image there.
+; 
+; Lots of sun and a pleasant temperature of 63F 17C made Wednesday 
+; feel like spring here at Fractal Central.  The fractal cats, not 
+; worried about outside air temperature, spent most of the after-
+; noon on their sunny window shelf.  My day was busy, but much 
+; better than Tuesday.
+; 
+; The next FOTD is due in 24 hours.  I'll give an 87-1/2-percent 
+; chance that it will make it.  Until next time, take care, and 
+; rational skeptics fear that the world we observe with our five 
+; senses (the physical universe) might be but an infinitesimal 
+; part of the totality of existence.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Window_of_Opportun { ; time=0:04:42.83-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1 symmetry=none
+  center-mag=0.230412/0.106481/0.9114441/1/70/0
+  params=88/0/88/75/0.586/0.327/0/0/1.5/0 float=y
+  maxiter=6400 inside=0 logmap=2 periodicity=6
+  colors=000MCCODDQEESFFUGGWHKYIM_JOaKQcKSeKUgKWiKYk\
+  KYlKWnJUpKWrLYtMYvNYxOWyPUvQPsRKoSFkTAiUAkWClYEn_G\
+  oaIqbKrcMtdOudQraRpZRnWRkXPhXOfXNcXM`XLZXKWXJTXHRX\
+  GOXFLYEJZDG_CD`BBaAGbAKcAMdOMeNLfMKgMJhLIiKHjKGkJG\
+  lIFmIEnHDoGCpGBqFArEAsEBtFCuFDvFEwFFxFGyJIzFKzGOzG\
+  QzGSzGUzGWzGYzH_zHazHczHdzHezHfzIgzIhzIizIjzIkzIlz\
+  JmzJnzJozJpzJqzJrzVszUtzUuzUtzTtzTszTszTrzSrzSqzSq\
+  ySpxRowRovRnuQntQmsQmrQlqPlpPkoPknPjmOilOikOhkNhjN\
+  gjNgjNfjMfiMeiMeiMdiLciLchLbhKbhKahKagK`gJ`gJ_gJgv\
+  mftmermdpmcnmblmajm`hmNBmPEmQHmRKmSNmTQmVTmWWmXZmY\
+  amZdmKwmOsmRpmUmmXjm4zm8xmBvmEtmHrmKpzOnzRlzUjzXhz\
+  gPzfQzfRzfRzeSzeTzeTzeUzdVzdVzdWzdWzcXzcYzcYzcZzb_\
+  zb_zb`zaazaazabzabz`cz`dz`dz`ez_fz_fz_gzWHzXOzYVzZ\
+  azeyzdwzcuzcszbqzaozamz`kz_izXazYbzYbzYbzYczYczYcz\
+  ZdzZdzZdzZezZezZez_fz_fz_fz_gzXgzUjzVizVizVizVizWi\
+  zWizWizWizXhzXhzXhzXhzYhz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,92 @@
+;     Date: Sun, 14 Mar 2010 00:06:33 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-03-10 (Zexpe Below Zero [6])
+;       Id: <1.5.4.16.20100314000801.2bb7a690@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 14, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene lies in the northernmost of the two East Valleys 
+; of the (-Z)^(e)+C Mandelbrot fractal, otherwise known as the 
+; Minus-Zexpe Fractal.  The parent fractal has two East Valleys, 
+; which are the remnants of the single Z^2 East Valley, which has 
+; now split apart and has been caught in today's image two-thinds 
+; of the way through the process of morphing into the northern 
+; Seahorse Valley of the (-Z)^3 Mandeloid.
+; 
+; There is nothing exceptional in the scene.  All I can say about 
+; it is look and enjoy.  The way to look is to run the parameter 
+; file and wait about 1-1/4 minutes, or to surf to the new FOTD 
+; web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Saturday here at Fractal Central was marked by heavy clouds and 
+; high winds.  Some rain fell, though the flooding rains failed to 
+; materialize.  All the while the temperature hovered around 48F 
+; +9C.  Fractal cats generally do not like rain, and the resident 
+; fractal cats are no exception.  They spent the day in sulk mode, 
+; with their tempers showing.
+; 
+; My day was uneventful, which means no antiquing expedition took 
+; place and the FOTD fractal was ready on time.  The next FOTD 
+; will be posted in 24 hours, unless the world ends before then, 
+; that is.  Until next time, take care, and now that the future 
+; has arrived, where are the wonders of the future?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Zexpe_Below_Zero { ; time=0:01:16.57-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 center-mag=+0.104839627\
+  4699141/+0.3670053590720084/3.969899e+008/1/67.5/0
+  params=0/0/0/0/0/0/0/0/2.71828182845905/0 float=y
+  maxiter=6400 inside=0 logmap=158 periodicity=6
+  colors=000SPVQPWOPXMPYKPZIP_GP`APaCPbEPcFPdHPeJPdK\
+  P`MQYNQUPQQRQMSRIUSEZT8cUBhVDmWFrVHsWFtUEsRDqPCoNB\
+  nKAlH8jE7iB6gG5fI4eK3eM4eO5eR5eU6fX7f_7fb8fe9gh9gk\
+  AgnAgpAgrBgpDfnFfkIeiKefMedOdaRd_TcXVcVXbT_bSabSca\
+  TeaUh`Vj`Wl`XnaYo_ZoY_hW`aUaVSbOQcCOdHMeMKfQIgVFhZ\
+  GhcIhhKhlMhqNhsOhuCkw0ky4jv8htCfrGcpKanO_lSXiWVg_T\
+  ecQcgOakM_qL`oKYmKWkJTjJRhJOfIMeIKcIHaHF_HCZHAXG7V\
+  G5TE0UG3UI5UJ7VL9VMCVOEWPGWRIWSKRNWMIgGCuHErHGoHHl\
+  HJiHKfIMcIN`IPYIRVISSJUPJVMJXJJYGJ_DGa8J`AL_COmEQn\
+  FTcHVYJYcL_XMbWOdWQgVXzcziVZUK_EA`GBaIBbJCcLCdNCeO\
+  DfQDgRDhOEiMFjKGkIHlFImDJnBKo9Lp2Jq7Mr5LsCOtJRuQUv\
+  XXwc_xjbypdzqTzlWzgZzbazWezYdzZdz`dzaezbfzdgyehxgi\
+  whjvikukltlmsnnrooqpppiqocrnYsmStlMukGvj9wiAxfAycA\
+  zaBzZBzWBzUBzRCzOCzMCzJCzGDzEDzBDz8gzJhzLizMizOjzP\
+  kzRkzTlzUlzWmzXnzZnz`ozapzcpzdqzfvzeszfqzgozgmzhkz\
+  hizigzidzjbzj`zkZzkXzlVzl }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

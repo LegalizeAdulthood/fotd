@@ -1,0 +1,112 @@
+;     Date: Wed, 03 Mar 2010 18:43:13 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-03-10 (Half-and Half [7])
+;       Id: <1.5.4.16.20100303184431.368f78ca@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 04, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; If the Julia set of a Z^(2.003)+C Mandelbrot rectangle is an 
+; octagon, what would we see if we checked half-way between the 
+; Julia orientation and one of the other orientations -- a 
+; hexagon?  Actually, when the octagon is double-rotated halfway 
+; toward the Mandelbrot direction, it has long since become a 
+; perfect rectangle.  In fact, it morphs into a rectangle well 
+; before the double rotation reaches one degree from the Julia 
+; plane.
+; 
+; Today's image shows how our Julia octagon appears when its 
+; orientation is rotated only 0.000065 degree toward the 
+; Rectangular direction.  It certainly does not appear as an 
+; octagon, though the eight vertices are still vaguely 
+; discernible, and it is nowhere near appearing as a rectangle.  
+; In fact, it is hard to believe that the weird shape will ever 
+; morph into a rectangle.  But strangeness is a way of life in the 
+; world of fractals, and with quite a bit of stretching and a bit 
+; of skewing, the pointed shape in the center of today's image 
+; will be a near-perfect rectangle by the time it is rotated to 
+; the Oblate direction.
+; 
+; The name "Half-and-Half" does not refer to coffee creamer.  It 
+; means that the shape in the image is halfway between its Julia 
+; shape and the Oblate shape.  The rating of a 7 is above average, 
+; which makes the image's calculation time of just under 2 minutes 
+; reasonable enough.
+; 
+; The most reasonable way to view the finished image however is to 
+; view it on the FOTD web site, which for another 10 days or so 
+; may be accessed at both the following addresses:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; or
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Wednesday began with light snow here at Fractal Central.  The 
+; snow ended by midday, leading to a cloudy afternoon with 
+; occasional sprinkles of rain and a temperature of a seasonable 
+; 43F +6C.  The fractal cats would have preferred more sun, but a 
+; special treat of salmon (we were out of tuna) eased their 
+; disappointment.  My day was normal.  FL is still watching the 
+; continuing 24-hour earthquake coverage on TV-Chile.  (It looks 
+; riveting; it's too bad I don't understand Spanish.)
+; 
+; If all goes well, and why should it not, the next FOTD will be 
+; posted in 24 hours.  Until then, take care, and if one wants 
+; nothing, he is certain to get everything he desires.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Half-and-Half { ; time=0:01:51.21-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.000001843\
+  04564558/-0.00000312570156525/33523.52/1/-120/0
+  params=89.999935/0/90/0/-1.743397953167458/1.66204\
+  6652e-005/0/0/2.003/0 float=y maxiter=1800 inside=0
+  colors=000pYRr`TsdVthXulZvo`vmavkbvibvgcvedvddvbev\
+  `fvZfvXgvVhvUhsRiqPioNilKijIihGieDicBia9i_7iZAfZCc\
+  YE`YGZXJWXLTWNQWPOfQMXVWN_dDdmHYbKRTPXUTaVYfWakX_l\
+  WYlVWmVUmUSmTQnTOnSNnSLoRJoQHpQFpPDpOBqO9WW8VW7UW7\
+  TW7SW7RW7QW7PW7OW7MX7JY7DZ8GX8IW8LU8NT8QR8SQAVOEXN\
+  I_LMaKQaIY_HbYFgWElU9qS5mQ6gP7aO8XN9RLAMKBKJCKIDK9\
+  7K11K34K56K78K9AKBCKDFJFHHHJFJLEKNHNMKQMNTLQWLSYKV\
+  `KYcJ`fJbhIekIhnHkqHnvDmsHlpLlmPkkTkhXje`jcci`giYk\
+  hWohTsgQwgOzbMuZKpVIkRGfMEaICXEASA9OAANBBLBCKBDJBE\
+  IBFHBGGe`mZWfTS_NOTHKMLL9JKBHJCFIDDUE1YA2`B3_B4YC5\
+  WC5UC6SD7RD8PE8NE9LEAJFBHF85L98JAAIACHBEGahXZeVXbT\
+  U`SSYQPVONTNKQLzNJzLIzIGzbpzXfzRYzzOzzJzzIzzIzzHzz\
+  HzzGzzGzzFzzEzzFzzFzzFzzFzzFzzFBOFBKFsGAoGBlGBhGCe\
+  GCaGCZGDVGDSGEOGELGEHGFEGF1sA4iC6_D9QEyFewGduGcsGb\
+  qGaoG`nG_lGZjGYhGXfGWdGVcGUaGT_GSYGRWGQVGPTGORGNPG\
+  MNGLLGKKGJIGIGGHmMLnQNoUP }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

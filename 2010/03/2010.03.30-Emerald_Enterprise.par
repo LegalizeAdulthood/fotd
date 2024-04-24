@@ -1,0 +1,93 @@
+;     Date: Tue, 30 Mar 2010 10:57:08 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-03-10 (Emerald Enterprise [7])
+;       Id: <1.5.4.16.20100330095849.2b8fe7a4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 30, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The expression behind today's image combines 1.5 negative parts 
+; of Z^(-0.75) with 0.4 negative part of Z^(1.4), then adds 
+; straight C.  The parent fractal consists of an oblong main bay 
+; with sharp Mandelbrot characteristics only on its east side and 
+; patches of chaos scattered about its inside.
+; 
+; The whole fractal has filaments sprouting from it, with 
+; exceptionally large minibrots on the two most prominent 
+; filaments, which sprout from the northwest and southwest sides 
+; of the main bay.  Today's image is located in a vague 'elephant 
+; trunk' in the East Valley area of the southwest minibrot.
+; 
+; The rating of a 7 means the image is comfortably within the 
+; range worthy of being declared FOTD.  The name "Emerald 
+; Enterprise" refers to the emerald colors, which to me actually 
+; appear a bit washed out.
+; 
+; The rather slow calculation time of 13-1/2 minutes may be 
+; bypassed by tripping out to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and viewing the image in all its subdued glory there.
+; 
+; The dry but cloudy skies here at Fractal Central on Monday held 
+; enough bright patches to make the day not too unpleasant.  The 
+; temperature of 59F 15C kept things reasonably comfortable.  The 
+; fractal cats, who enjoy comfort, spent the afternoon on their 
+; shelf, waiting for the full sun to break through.  It never did.
+; 
+; My day was totally average.  The work is slow and FL is still on 
+; a cleaning binge.  The next FOTD will be posted in its full 
+; glory in 24 hours.  Until then, take care, and how long will it 
+; be until the friendly alien visitors show that they are actually 
+; alien conquerors?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Emerald_Enterprise { ; time=0:13:29.60-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=-5.433119641201442/-10.57593444927423/\
+  5e+007/1/-45/0 params=-1.5/-0.75/-0.4/1.4/0/500/0/0
+  maxiter=15000 inside=0 logmap=742 periodicity=6
+  colors=000BTLBTwBTVBVoBXc6Zh0Zk0Zo0Zm0Zm8ZmFZmMZkT\
+  ZkVZoaZmdZcdX`cXXcWTaVQaXL`TF`U9ZV4ZS0TT0QQ0MT0IT0\
+  FQ0BS08T04T00T00T10S80QB0SB0VD0XF0VH0VI0VL4VMBVMIV\
+  LQVIXTHcTFjTFpTDwTBzT9zT9zX4rZ0j`0aa0Vc0MTFDId69z1\
+  Hy0Ou0Tp0`m0fh0kd0r`0yX0zS0zO0zL0zO0zS0zV0zZ0za1zd\
+  6zh8zkBzoDzrHzuLzyMzzQzzSzzOzzMztIyoHwhDucBtX8rS6p\
+  L1oF0m80k18j4Fh6Of8Vd8ScDQaHM`LLZOHZSFZVDZZ9Za8Zd4\
+  Zh1Zk0Zo0Zk0Zh0Zf0Zc0Z`0ZZ0ZV0ZS0ZQ0ZM0ZI0ZH0ZO0ZV\
+  8faLohnwoszuyzzrzzlzrfzaGwM0o90fD0ZB0SH0XM0`VAccFf\
+  kKktPozUrzZuzcyzhzzmzzhzzczzZzzUuzPqzKlz0jt0ck0Zc0\
+  U`0Pa9SdHUfOZjXakcaojapddo`hmXkmSokOpkItjDwh9zh4zf\
+  0zfDzhOzj`zkjzmfofcZ``IVX0OT0IX0L`0Mc0Of0Qj0Sm0Tp0\
+  Vt0Xw0Zz0`z0az0cz0dz0fz0cy6`rDZmzzzzT`zzzzOOzzzzI9\
+  zzzzD0zzzz80zzzz10zzzz00zzzz08z0Fz0Lz0Sz0Xz0az0hz0\
+  mz0rz0cz1OzD8zO0zZ0zhOzfzzfwzZpzSjzIczBXz1Qz0Iz0Bz\
+  08z06z01z00z60z0zzIzzHzzO }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

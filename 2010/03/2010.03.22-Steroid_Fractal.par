@@ -1,0 +1,86 @@
+;     Date: Mon, 22 Mar 2010 14:07:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-03-10 (Steroid Fractal [No Rating])
+;       Id: <1.5.4.16.20100322130908.0d67444e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 22, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; POSSIBLE NEW FORMULA!
+; 
+; It's another minor variation on the workhorse MandAutoCritInZ 
+; formula.  This might or might not be the first time I have 
+; posted it.  In any case, I'll probably use it very rarely.
+; 
+; We were still a bit depressed here at FC on Sunday, and I 
+; actually felt a bit angry -- not the proper conditions for 
+; fractal work -- but with today's off-beat formula I still turned 
+; up a quick image, which appears as today's FOTD.
+; 
+; The parent fractal is nothing more than two small and distorted 
+; Mandelbrot sets.  Today's image lies in a disconnected area of 
+; chaos near the southernmost Mandelbrot set.
+; 
+; Since I put no effort into the image, I gave it no rating.  The 
+; name "Steroid Fractal" grossly exaggerates the worth of Sunday's 
+; fractal work.
+; 
+; The calculation time of a near-instant 1-2/3 minutes may be 
+; avoided by viewing the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Sunday here at Fractal Central proved to be partly cloudy with a 
+; temperature of 70F 21C.  The fractal cats approved.  The next 
+; FOTD will be posted in 24 hours.  Until then, take care and 
+; prosper.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Steroid_Fractal { ; time=0:01:40.65-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritMinZ2 function=ident
+  passes=1 center-mag=+0.51281696902199680/-1.206448\
+  617750352/2.39553e+013/1 params=0.3/-2/-1/2/0/0/0/0
+  float=y maxiter=1500 inside=0 outside=tdis
+  periodicity=6 mathtolerance=0.05/1
+  colors=000rXarZfq`kpbppdteiqWmoLqmBuk1yiCqfNidXahf\
+  VlpOpqRoqUnqWmqZmq`lqckqekrhjrkirmhrphrrgrufrwfmsd\
+  iobek`ag_XcYT_WPWVLSTGORCKQ8GO4CM09L1AM2BN3CO4DP5E\
+  Q6FR6GS7HT8IU9JVAKWBLXCMYCNZBOYBOYBOXBPXAPXAPWAQWA\
+  QW9QV9RV9RU9RU8SU8ST8ST8STBUZEWdGYjJ_pL`uMbpNdkOff\
+  OhaPiXQkSQmNRoISqD4dX8fTBhPFjMIlIMnFPpBIGwJKrKOmLR\
+  hMVdNY_OaVPdQQhMRkHSoCWt8Us8Tr8XOUWSRVVPVZMUaKUeHT\
+  hFTlCSoAEFAFI9GL9HO9IR9JU9KX9LZ9Ma8Nd8Og8Pj8Qm8Rp8\
+  TDzSHuSKpSOlSRgSVcSVZSTUYUU_UU`UUbUUcUUUL0K5uJ5iJ5\
+  ZTJQaXHji9lSDnZHpTLzcPzcTzcWzcZzcazAdV90O80I80LE0N\
+  K0QP0SVAU_1eK7q4DZQWGjnHikHhhHgeHfbHe_HdXHcUHcR6me\
+  5qg4th3wj2zkOjRhV7_bCSiHJpMBwQJvNQvKXvIdvFkvDrvAyv\
+  8`sICqRGsNKtKOuHSvEWwB_x8cy5RfKFOZPMaZKchIeqHgkNce\
+  T__ZWUdSOjOIpKDoH8oE3oB7hCBbDEXEIRFMKGPEHT8IW2JZ4M\
+  a5Od7Rg8TjAWmBYoC_lRVjeQhtMgsNfsNfsNesNdrNdrNcrNcr\
+  NarKZrHXrEUrB2sT6rQ9rNsUX }
+
+frm:MandAutoCritMinZ2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*((-z)^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

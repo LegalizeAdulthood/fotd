@@ -1,0 +1,102 @@
+;     Date: Wed, 10 Mar 2010 20:32:37 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-03-10 (Amber Thumbs [6])
+;       Id: <1.5.4.16.20100310203401.2bb7a7e0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 11, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Well, I avoided another consecutive rating of 7, but I did it in 
+; the wrong way -- by creating an image with a rating of a 6.  Yet 
+; a rating of a 6 is still a little above average, so why not 
+; settle down and enjoy the scene.
+; 
+; With today's image we return for only one day to the workhorse 
+; MandAutoCritInZ formula.  To create the parent fractal I sub-
+; tracted Z^1.8 from Z^1.2 and added C.  This parent fractal is 
+; a fairly normal Mandelbrot set rotated 180 degrees, so that its 
+; main spike darts out to the east, while its East Valley is on 
+; the west side of the main bay.
+; 
+; So far, so good.  But the East (west) Valley of the parent does 
+; not terminate in a point, it terminates in a broad wedge, with 
+; today's image being located on the southern edge of this wedge.
+; 
+; The name "Amber Thumbs" now makes little sense, though I think 
+; it originally referred to the amberish elements surrounding the 
+; central minibrot.
+; 
+; The rating of a 6 is at least honest, if not exceptional.  The 
+; calculation time of 7 minutes borders on slowness.  To avoid the 
+; risk of excess boredom, the finished image will soon be posted 
+; on the FOTD web sites at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; I advise using the first address.  The latter address will soon 
+; be dropped.
+; 
+; The clouds moved in on Wednesday here at Fractal Central, but 
+; the temperature of 59F 15C kept things quite pleasant.  The 
+; forecast is for a week of mild wet weather, so we'll see how 
+; things go from here on.  The fractal cats, who never concern 
+; themselves with the future, were still dis-satisfied however.  
+; They missed the sun of the past few days.
+; 
+; My day was fair and mild.  I hope for a repeat tomorrow.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and what is most real -- myself, Bugs Bunny or the Mandelbrot 
+; set?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Amber_Thumbs { ; time=0:07:02.60-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-0.0291149242608349/-0.0446315664270709\
+  /1e+010/1/77.5/0 params=1/1.2/-1/1.8/0/0/0/0
+  float=y maxiter=3600 inside=0 periodicity=10
+  colors=000_OoaNqcLteKv6gPAdTDbWH`ZKYbNWeRUhUSkXPo`\
+  NrcLuZGh_Hi_Hj`HknNFlQDkTCjWAhZ9ga7fd6ef5ee4ed4ec4\
+  ec4eb4ea4e_4bWC_SKYPJYNIYOHYQGXSIWUHVXHW_HWbHXeIYe\
+  JZcJZ`K_ZK`XL`VLdQchLvcItZFsWHlTJfRL_ONULPOJRHGTBE\
+  U5EY5E`5Ec5Eg5Ej5Em5MSIT6UPESLMRIUQLVRNWRPXSRYSUZT\
+  W_TY`U_aUaeNchGek9ciGbhM`fS_eYYdcXbiVaoU`uRZpPXkMW\
+  fKUaITYOZWTcVZhTcmSefUg_ViTWkMXlFYzm_dT``_bXfcTmeP\
+  tfLzgNkZOYQPKHQ69_7Xh8sZ6lP5eF4Z63S9CNCKJFSEH_AMdB\
+  RiBVmC_rCcvC_qFWlISgLOcOzzzzvUzmWziPz_IzQBuK4mG7fD\
+  A_ADT6GK3JD0L6HSPXYV_bSYeQcaOiZMoWLtTrmteovUpwIrx6\
+  sycvHbrLbnObjRbfUZeYVdaRceNbhJalF`pB_t7ZwH`uRbs`dq\
+  jfojgnihliikhjihkhglfgmegndflefkffigfhhfgieMwfejfd\
+  kfbkfalf`mfZnfYofWpfVqfUrfSrfRsfPtfOufNvfLwfKxe4Zf\
+  5`f6af7cf8df9ff9gfAifBjfCkfDmfEnfEpfFqfGsfHtfIvfJw\
+  PYySWxUUxWSxYQx`OxbMxdKx6lB8jEAiGCgJEfLFdNHcQJbSL`\
+  VM_XOYZQXaSVcTUeVThXRjZQm }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,109 @@
+;     Date: Wed, 31 Mar 2010 10:35:43 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-03-10 (Epsilon For Ever [6])
+;       Id: <1.5.4.16.20100331093725.2a3f4104@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 31, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the Zexpe fractal, which is the fractal 
+; created by iterating the expression Z^(e)+C.  There is nothing 
+; special about the number 'epsilon' when it is applied to 
+; fractals.  Any other number in the same range would have created 
+; the same kind of parent fractal.  The same is true of other 
+; significant but irrational numbers such as 3.1416... 1.618... 
+; and 1.414...  These numbers may be of utmost importance in 
+; certain other applications, but in the world of fractals they 
+; and their kin are just so many more irrational numbers.
+; 
+; I named the image "Epsilon For Ever".  I was trying to think of 
+; a simple way of explaining to FL the significance of the number 
+; 'e' when I thought of the name.  (The definition of other irra-
+; tional numbers such as PI, the 'golden ratio' and the square 
+; root of two is easy to explain, but saying that Epsilon is the 
+; base of the natural logarithm begs the question of why this 
+; particular irrational number was chosen or even needed when the 
+; whole number 10 is far more intuitive and works just as well as 
+; a logarithmic base.  (Or does it?)
+; 
+; 'Epsilon' will remain forever mysterious, but today's image is 
+; no mystery.  It is located in the chaos on the western side of 
+; the main bay of the parent Zexpe fractal.  The image actually 
+; inherits a bit too much of this chaos.  In fact, it inherits so 
+; much that it lacks a coherent theme, which is why I could give 
+; it a rating no higher than a 6.
+; 
+; The calculation time of 5-1/2 minutes is near what the image is 
+; worth.  The trip to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where the finished image may be viewed, is a true bargain.
+; 
+; Tuesday turned most unpleasant here at Fractal Central as morn-
+; ing clouds gave way to steady afternoon rain.  The temperature 
+; of 41F +5C was made even more unpleasant by a biting northeast 
+; wind.  The fractal cats didn't even think of the sun.  They 
+; satisfied themselves by asking for an extra treat.
+; 
+; My day was average, enough said.  Unless Armageddon arrives, the 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and do soles have souls?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Epsilon_For_Ever { ; time=0:05:29.03-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 float=y inside=0
+  center-mag=-0.7150857488907461/+0.119951277709464/\
+  8.4e+007/1/-115/0 params=0/0/0/0/0/0/0/0/2.7182818\
+  2845905/0 maxiter=5000 logmap=500 periodicity=10
+  colors=000ixOiyNhyLgzKfzIezGhz9ezFczL`zRYzXWzbUzaT\
+  z`Sz`Rz_QzZPzZRzYTzXUzWWzVXzUYzTZzSYzUXzVXzWVzVSzU\
+  QzTNzSLzRJzQGzPEzOCzN9zM7zLoz7mzAkzDizFgzIJzOJzPKz\
+  QKzQKzRKzSLzTLzTLzUPzWSzXWSZYU_`X`d_bgbcjedmhfpkgv\
+  mksmhpnfmncjn`gnYdnVbnTamT_lTZjTXiTWhTVgTTfTSdTQcT\
+  PbTNaTM`TL_TJZTIXTGWTFUTDTTCRTCQTBOUBNUBLUBLUBJVBI\
+  VBGVBFVBFWBEWBDWBEWBDWBDXBCXBBXBAXB9XB8XB8YB7YB6Y5\
+  2YB6YG9UMDPRGL`KGkNCuR7zT1zW3wY4r_6l`7eb9dcBceCafE\
+  `gFZhGYiIWjJVmLRoMUqOcsPmvRwxSzzUyzVxzWxxTwwQwuNws\
+  LwpIvnFVZfVZiWYlWYpWXsWXvXYtXYrXYpYYoYYmYZkZZjZZhZ\
+  Zf_Ze__c__a`_``_Z`_X`_WcbYed_gf`ihbkjdmlepqpzzztrw\
+  vtlzyqzxovvlrtjoshkqfgoddnb`l`XjYUiWQgUMeSJdQFbOBz\
+  M8_K7ZJ7YJ6XI6WI6VI5UH5TH4SG4RG4QG3PF3OF3OF8QJDRNH\
+  SRMTVQUYVVaZWecXigYlXUbMQTBNJFKKILKLLKOKKRPKUUKYZL\
+  `cLehLimLrrLzvLzzLzzOzzRzzUzzXzz_zzbzzezzhzzkzznzz\
+  jzzfzzczz_zzXzzTzzQzzSzzQ }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

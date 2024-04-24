@@ -1,0 +1,94 @@
+;     Date: Mon, 01 Mar 2010 22:35:09 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-03-10 (Mandel Rectangles [8])
+;       Id: <1.5.4.16.20100301223625.2bbf779a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 02, 2010 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As I said in yesterday's discussion, the strange rectangles 
+; exist in the East Valley area of the large split-apart minibrot 
+; on the negative X-axis of the Mandelbrot set of the formula 
+; Z^(2.003)+C.  And to prove my point, today's image shows a 
+; minibrot surrounded by a whole flock of rectangles.  I have 
+; highlighted the rectangles by rendering the image with the 
+; inside set to brilliant white.
+; 
+; I rather enjoy the overall pattern surrounding the minibrot, 
+; which would be worth a FOTD even without the rectangles.   With 
+; the rectangles included, the image rates an 8.  The name "Mandel 
+; Rectangles" explains itself.
+; 
+; The calculation time of 1-1/2 minutes will pass like greased 
+; lightning.  A trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is posted for instant happiness, will 
+; pass even faster.  But note that in a few days the address of 
+; the web site will change.  I will post the new internet address 
+; in tomorrow's FOTD.
+; 
+; The partly cloudy skies and temperature of 45F +7C here at 
+; Fractal Central on Monday kept the fractal cats leaping on and 
+; off their window shelf.  They finally gave up trying to catch 
+; the sun and settled for an extra treat of tuna.  My day was 
+; rather busy.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and walk with your heads held high.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Mandel_Rectangles { ; time=0:01:35.43-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 float=y
+  center-mag=-1.743397952568624/+0.00001662025822986\
+  /1.66e+008/1/-60/0 params=0/0/0/0/0/0/0/0/2.003/0
+  maxiter=1800 inside=255 logmap=212 periodicity=6
+  colors=000AFFAEGACHAAIA8JA6KA4LA3MA5NAAO5KPCQRJWTQ\
+  `VWdXbdbibfp`kv_oqVgmQ`iLUeGNLQX1_e3Xg4Vh5Th7Qh8Oh\
+  9MhAKfCHeDFdEDcFBcH8dI6eJ4gK2iL5eL8bMB_MEXNHWNKUON\
+  SOQQPTMPWIQZEQaAQd6Mg8JjAGmCCnEmpz6rImsJ6qzmqImpzm\
+  pHzozmoGznGznzmmFmmFXmzmjCQcANXKJQ6GJKDC2A5KF4KJ4A\
+  N4ER4JW3O_3Xc3cg3hl2mpArtKvzSzzUzzSzzMzvGsrKmmNlhK\
+  ecHZZESUBLK600000000000JH7RO9ZWBfcDnjEdkEWlEMlEDmE\
+  4mD6lC7lB9kAAk9Bj8Dj8Ej7Fi6Hi5Ih4Jh3Lg2Mg2Ng6IYAEP\
+  EAGH67SLLaZYbYZcY_cX`dXaeWbeWcfVdfVdgVehUfhUgiThjT\
+  ijSjkSkkSkfTkbUkYUkUVkPVkLWkGXkCXk7Yk3Yk6_g8`cAb_C\
+  cWEdTFfRGgQHhPIiOJjNKkMLzLMzJNzIOzHPzGQzFRzESzDTtC\
+  SzBRzBzzBm`AQWAPRAPMAOH9OC9N79N29R3DV3HZ3Lb4Pf4Tj4\
+  Xn5`r5dv5hy5laYzE0zD0zD0zC0zC0zC0zF0zI0zK0zN0zQ0zS\
+  0zV0zY0z_0zZ0zZ0zZ0zZ0zY0zY0zY07Y05Y04X08W0CV0GU0K\
+  U0N_0Vd0bj0jo0rt0zs0ys0xs0xs0ws0vr0vr0ur0tr0tr0sr0\
+  se0tU0tI0tJ0qK0nL0lM0izzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

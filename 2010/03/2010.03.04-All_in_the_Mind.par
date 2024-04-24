@@ -1,0 +1,107 @@
+;     Date: Thu, 04 Mar 2010 23:47:35 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-03-10 (All in the Mind [7])
+;       Id: <1.5.4.16.20100304234854.2b5f75d6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 05, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image I tried something I very rarely attempt.  I 
+; added 0.001i to Z^2.003 in the exponent of Z, making it a 
+; complex number.  This small imaginary component made a big 
+; difference in the parent fractal, especially along the negative 
+; X-axis, where the axis splits and the negative imaginary part 
+; slips east.  Today's image lies in the East Valley area of the 
+; upper half of the split-apart minibrot on the negative stem of 
+; the parent.  (The minibrot is better seen than described.)
+; 
+; The image is filled with the same rail-yard effect that infests 
+; this area of the straight Z^(2.003)+C Mandeloid, though the 
+; imaginary part of the exponent has added additional rail lines.
+; 
+; After carefully considering the image for about 20 seconds, I 
+; rated it at a 7 and named it "All in the Mind", which after all 
+; is where the world of imagination (and imaginary numbers) lies.  
+; But as the existence of the image clearly shows, when a thing is 
+; imaginary, this in no way implies it is not as real as the very 
+; convincing but (IMO) illusory physical world surrounding us.
+; 
+; The included parameter file will finish in one minute on a fast 
+; P4-2000mhz unit, as long as the machine is not over-qualified.  
+; Those with over-qualified units may see the finished image on 
+; either the old FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or on the new site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; I advise viewing the image on the new site.  The old site will 
+; be taken down in a few days.
+; 
+; Near total sun and a temperature of 45F +7C here at Fractal 
+; Central on Thursday made the resident fractal cats very happy.  
+; They took full advantage of the situation by spending most of 
+; the afternoon sunning themselves on the shelf by the window.  My 
+; day featured average dullness.  The next FOTD will be posted in 
+; 24 hours.  Until then, wait anxiously, and idealists do not have 
+; to prove that the objective world is not real; materialists must 
+; prove that it is real.  (IMO the concept of reality is not real.)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+All_in_the_Mind { ; time=0:01:01.21-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-1.751158192\
+  838907/+0.0144570342532074/2.480644e+008/1/-25/0
+  params=0/0/0/0/0/0/0/0/2.003/0.001 float=y
+  maxiter=1500 inside=0 logmap=173 periodicity=6
+  colors=000SElUBnVNzW7tU6kS6cQ5WP5ONANMFMLKMKQLJVLI\
+  _KHeKUjUZpccvcgzcmscwkMzdOEXQEPSEJUDMaDPiDSqDUyHVw\
+  KVvNVuQVsUVrXVq_VobVneVmeUkeTjeSieRheQgePfeOeeNdeM\
+  ceLbeKaiRblXbocbribzobzl_zjYzhWzgUvdSsbQs_OqYLpVJo\
+  SHoQFnODnLBmJ9mH7gI6aI5WI5RI4LI3FI39I24I23H43H53H7\
+  3H82G92GB2GC2GD2GF1FG1FH1FJ1FK1FL9JJGNINRGUVF`YEaA\
+  6YIAUQDQXGMdJczMcwPGqMIkKJeIL_GMVEMVELVEKVDKVDJVDJ\
+  WCczCctCcoBUfBKZBFSAEMADXADX9CX9BX9BX8AX8tsZsrYrrY\
+  rrXqqXpqXpqWopWopWnpVmpVmoVloU8LWAKTCJQDINFHKHGHJF\
+  EKEBNGDQHETIGWKHZLJaMKdNLZOPTPTNQXHR`CRdFXbHaaJf`L\
+  kZNpYPuXOrVOpUNmTNkRMhQMfPMcOLaMLZLKXKKUIJSHJPGJNF\
+  NPJQRNUSRXUV`WZcXbfZfj`jmanqcrtevwfzrcym`xhYxcVwZS\
+  wUPvQNvTKtVIsYGr_Eqbcpdeoggni_ml`lnakpbjqbiqciqciq\
+  diqezrfzrgzrizrkzrmzrrznvzkzzzzzlzzkzzjzzizzizzfzz\
+  czzzzizzezzazzYzzUzzQzzMzzIzzEzzAzz6zz5zz5zz5zz4zz\
+  4zz4zz3zz3zz3zz2zz2zz2zzj }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

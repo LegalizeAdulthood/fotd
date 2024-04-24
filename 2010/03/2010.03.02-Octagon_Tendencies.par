@@ -1,0 +1,104 @@
+;     Date: Tue, 02 Mar 2010 20:03:15 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-03-10 (Octagon Tendencies [!!])
+;       Id: <1.5.4.16.20100302200432.2bbf6308@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 03, 2010 (Rating !!)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday's image showed a Minibrot in the Z^(2.003)+C Mandeloid 
+; with strange rectangles surrounding it.  Today I checked the 
+; Julia set of one of these rectangles.
+; 
+; The rating of a !! (double bang) reflects how I felt when I saw 
+; the Julia set.  Instead of the Julia rectangle, I found a near-
+; perfect octagon.  To add to the surprise, the Julia octagon is 
+; surrounded by the rectangles that were expected all along.  All 
+; I can say about the situation is 'who knows what wonders lurk in 
+; the hearts of fractals'.
+; 
+; I'll check further into this situation tomorrow, and if anything 
+; interesting turns up, (most likely it will), it will appear as 
+; tomorrow's FOTD image.
+; 
+; Today's image is named "Octagon Tendencies".  A quick glance at 
+; the image will reveal why I chose this name.
+; 
+; The calculation time of 2 minutes is well within reason.  The 
+; trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; to view the finished image is equally reasonable.
+; 
+; For the next 2 weeks or so, the FOTD web site can be accessed at 
+; both the old address given above and the new address, which is:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; after that, the old address will be discontinued.
+; 
+; Cloudy skies here at Fractal Central on Tuesday were made more 
+; pleasant by the relatively mild temperature of 46F 8C.  At least 
+; the fractal cats assumed it was so as they spent several hours 
+; on the window shelf even though no sunlight was falling on it.  
+; My day was uneventful though a bit busy.
+; 
+; The next FOTD will be posted in 24 hours, come heck or tsunami.  
+; Until then, take care, and rational skeptics know they are right.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Octagon_Tendencies { ; time=0:01:59.34-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/30147.06
+  inside=0 params=90/0/90/0/-1.743397953167458/\
+  1.66204665216e-005/0/0/2.003/0 float=y maxiter=1800
+  colors=000pYRr`TsdVthXulZvo`vmavkbvibvgcvedvddvbev\
+  `fvZfvXgvVhvUhsRiqPioNilKijIihGieDicBia9i_7iZAfZCc\
+  YE`YGZXJWXLTWNQWPOfQMXVWN_dDdmHYbKRTPXUTaVYfWakX_l\
+  WYlVWmVUmUSmTQnTOnSNnSLoRJoQHpQFpPDpOBqO9qN8qN7_P7\
+  YQ7WR7US7ST7QV7OW7MX7JY7DZ8GX8IW8LU8NT8QR8SQAVOEXN\
+  I_LMaKQaIY_HbYFgWElU9qS5mQ6gP7aO8XN9RLAMKBKJCKIDK9\
+  7K11K34K56K78K9AKBCKDFJFHHHJFJLEKNHNMKQMNTLQWLSYKV\
+  `KYcJ`fJbhIekIhnHkqHnvDmsHlpLlmPkkTkhXje`jcci`giYk\
+  hWohTsgQwgOzbMuZKpVIkRGfMEaICXEASA9OAANBBLBCKBDJBE\
+  IBFHBGGe`mZWfTS_NOTHKMLL9JKBHJCFIDDHE1cA2aB3_B4YC5\
+  WC5UC6SD7RD8PE8NE9LEAJFBHF85L98JAAIACHBEGahXZeVXbT\
+  U`SSYQPVONTNKQLzNJzLIzIGzbpzXfzRYzzOzzJzzIzzIzzHzz\
+  HzzGzzGzzFzzEzzFzzFzzFzzFzzFzzFBOFBKFsGAoGBlGBhGCe\
+  GCaGCZGDVGDSGEOGELGEHGFEGF1sA4iC6_D9QEyFewGduGcsGb\
+  qGaoG`nG_lGZjGYhGXfGWdGVcGUaGT_GSYGRWGQVGPTGORGNPG\
+  MNGLLGKKGJIGIGGHmMLnQNoUP }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

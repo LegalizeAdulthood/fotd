@@ -1,0 +1,98 @@
+;     Date: Fri, 26 Mar 2010 23:14:03 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-03-10 (Deep Meditation [6])
+;       Id: <1.5.4.16.20100326221542.2b67fa64@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 27, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's rather colorful image lies in the parent fractal that 
+; results when 10 parts of Z^(0.1) are combined with 0.1 part of 
+; Z^(10) and (1/C) is added.  This parent is nothing more than an 
+; arc of a circle with a tiny dot lying just outside the arc.  A 
+; closer examination of this dot shows it to be a full-blown but 
+; tiny Mandelbrot set in rather shredded condition.  Today's scene 
+; is located in the East Valley of this tiny M-set.
+; 
+; I named the image "Deep Meditation", not because I practice yoga 
+; but because I had to meditate on the past to come up with the 
+; image.  The meditation must have worked, for the image does 
+; exist and the parameter file of the image is included at the end 
+; of this discussion.
+; 
+; Actually, the image is a minor reworking of an older one.  
+; Curiously, whenever I return to the older FOTD images, I almost 
+; always find ways I could have done them better.
+; 
+; The rating of a 6 indicates that the image is a little above the 
+; long-term FOTD average.  The calculation time of one minute 
+; means little effort will need to be expended to view the image.  
+; Or better still, the image may be seen without any calculation 
+; by viewing it in finished form on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of sun prevailed here at Fractal central on Friday, but a 
+; brisk north wind and temperature of 36F +2C made it feel more 
+; like midwinter than early spring.  The new fractal cats, who, 
+; unlike the original fractal cats, have no holly patch to romp 
+; in, enjoyed the sun on their shelf by the window and didn't 
+; worry about the outside temperature.
+; 
+; My day was average.  FL was wondering when our privately-
+; purchased health insurance will become less expensive.  (I have 
+; not yet told her the bad news, though I think she already knows 
+; it.)  Unless an antiquing expedition arises, the next FOTD will 
+; be posted in 24 hours.  Until then, take care, and it's nice to 
+; see our country living in peace, brotherhood and harmony, I say 
+; ironically.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Deep_Meditation { ; time=0:01:03.34-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=-0.1108289742547393/+0.0006618953398988\
+  /1.31136e+009/1/-145/0 params=0.1/10/10/0.1/0/0/0/0
+  maxiter=6000 inside=0 logmap=99 periodicity=10
+  colors=0000F`0H`0Hb0Id0Mf0Rg0Vi0_m0do0hp0kr0ip0fn0\
+  bm0_k0Wi0Tg0Pf0Md0Ib0F`0C_09Y06W02WF9TVDRgIPvNNzTM\
+  z`KzfTzk_zpgzxnzzvzvpzpmzkizdfz_bzV_yNWyITxDPx7Mv2\
+  Iv0Fv0Cm07d04Y00P00H00A002000000000700NI0db4vx7zz6\
+  zz6pz6fy4Wt4Mm4Cg22b20Y20T40T70V92VA9WDFWFKYHRYKY_\
+  Md_Nk`Rr`TybVzb_z`bz`fz_iz_mzYpzYtzWyzWzzVzzVzzTzz\
+  TzzRzzRzzPzzPzzPtzPnzNgzNbzNWzNPzMKzMDzM9zM2zK0zK0\
+  zK0zK0vM2mN9dPHWRNNTWFVb7Wk0Yr0Y0fKCfKYIKbHMfFMiDN\
+  nCNrANv9Py7Pz6Pz4Rz2Rz0Rz2Pz4Nz4Mz6Mz7Kz7Iz9IyAHxA\
+  FvCDtDDrDCpFAnFApDDrDHrCKtCMtAPvATv9Vx9Yy9`y7bz7fz\
+  6iz6kz4nz4rz4tx9nrDkmIgfMd`R`WWWP_TKdPFiM9mI4rD0xA\
+  0z70z40z00z00z90zK0zW2zg7ztDzzIzzTib`P0YDIV4_R0rP0\
+  zN0zN0yM0tM6nMAiKHdKM_KRVIWPI`KIfHK`DMYANT7NP4PK0R\
+  H0TC0T90RD0PH0NK0MP0KT0IW0H`0Fd0Dg0Cm0Ap09t0Do0Ii0\
+  Md0R_4VU9_PDdKIgFNmATr6Yv0bz0gz0mz0rz0xz0zz0rz0kz6\
+  bzDWzNPzYHzgAzp4zz00zz0zz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

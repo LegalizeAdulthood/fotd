@@ -1,0 +1,106 @@
+;     Date: Tue, 09 Mar 2010 22:18:51 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-03-10 (Something in Sight [7])
+;       Id: <1.5.4.16.20100309222014.2b8fabee@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 10, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'll not try to explain the details of how today's image came to 
+; be.  Suffice it to say it's a four-dimensional very-near-Julia 
+; thing of an East Valley area, made interesting by rendering the 
+; all-outside scene with the outside set to 'real'.
+; 
+; I have lost track of how long the current string of 7-rated 
+; images has been going, but a rating of a 7 indicates an image 
+; that I consider above average, so why complain?
+; 
+; The name "Something in Sight" sounds like it means something, 
+; while it actually has no meaning at all.
+; 
+; The calculation time of a brief 1-1/2 minutes may be avoided by 
+; viewing the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The FOTD images will remain available on the old web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; until A.T.T. takes down the site.
+; 
+; Not a single cloud marred the blue of the sky here at Fractal 
+; Central on Tuesday.  The spring-like temperature of 63F 17C 
+; simply added to the enjoyable conditions.  The fractal cats, who 
+; always enjoy enjoyable conditions, enjoyed things as much as 
+; possible.  They took turns basking in the strong afternoon sun 
+; coming through the large southwest window.
+; 
+; My day was peaceful enough, though I did spend a bit too much 
+; time pondering the mysteries of things such as the nature of 
+; reality, time and space, life and death, God and the universe, 
+; and last but not least, the helplessness of our sorry excuse of 
+; a 'science' to give answers to such questions.  (Don't knock it; 
+; it's all we got.)  FL feels that too much such pondering can 
+; make one crazy.  But with me, who would notice the difference?
+; 
+; Regardless, the next FOTD, glorious or not, will be posted in 24 
+; hours.  Until then, take care, and why is there something 
+; instead of nothing in the world of fractals?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Something_in_Sight { ; time=0:01:31.36-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1 center-mag=0/0\
+  /0.5/1/90/0 params=89.999998/0/89.999998/0/\
+  0.25052381/0/0/0/2.003/0 float=y maxiter=1850
+  inside=0 outside=real periodicity=0
+  colors=000EAZFAQGAOHALIAIJACKADMAEOAFQAGSAHUAIWAJY\
+  FK_LLaQPcVUd`Zeecgjchocilhjjckh`lfYmdVnaSo_PpYMqWJ\
+  qUGmRDjPBgNCdLDaJEZHFWFESCDPACM8BJ6AG4AD2AA0AC1AE2\
+  AF3AH4AJ5AK6AM7AO8AP9ARAATBAUBFQIKMPUIVcEalAgp6nt3\
+  tx6rw9pwCowFmwIlwLjwOhwRgwUewXdwVfvUgvShvRiuPjuOlu\
+  MmtLntJotIptMnrPmpSknVjlYhj`ghcegfdeibclaao__rZYuY\
+  XpXYlWYhWYcVY_UYWUYSTYNSYJSYFRYBRYHOZMM_RK`WIa`Fbe\
+  DcjBdo9dpAbqB`rCZsDXtEVuFTvGRwGQqJNkMLfOI`RGWTEQWB\
+  KZ9F`69c44e2Fh8QjD`mIjoNohGlgIjgJgfKefLbeM`eNYdOWd\
+  PUdQRcRPcSMbTKbUHaVFaWDaXCe`BhcAkfAoj9rm8up8xsFqqM\
+  jpTcnZXmeQklJjrCidMcRWYDeS0oMybdu`bq_amZ`iX_eWZaVY\
+  YUXUSVQRUMQTIOSENRAMQ7LP5QS4UU3YW2aZ1e`0ib2bW3XQ5R\
+  K6LE8F8992GFANLIURQ`WYgaengmtlurioqgioecncYlaSk_Nk\
+  RTkJZkBdk3jj4kj4kj4li4li4mi4mh4nh4nh5ng5og5og5pf5p\
+  f5qf5qf5qf6oe7md8kd9hc9fbAdaBbaC``DZ_EW_FUZGSYGQXH\
+  OXIMWJJVKHVLFGQrHQoJRlKRh }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

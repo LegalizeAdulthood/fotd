@@ -1,0 +1,115 @@
+;     Date: Fri, 05 Mar 2010 23:05:28 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-03-10 (Complex Situation [7])
+;       Id: <1.5.4.16.20100305230648.2a1f5734@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 06, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's FOTD we added 0.001i to the real 2.003 exponent 
+; of Z.   Today we raise the stakes and add 0.5i.  The parent 
+; fractal is quite twisted, but East Valley is still discernible, 
+; where the elephants still romp.  Today's image is located in a 
+; trunk of one of the elephants, though perhaps a woolly mammoth 
+; would be a better description of the fractal pachyderm.
+; 
+; The image shows quite clearly what happens when a complex power 
+; of Z with an increasingly large imaginary part is iterated.  The 
+; features break up until ultimately all order is lost.  Today's 
+; image was captured before the breakup progressed too far.  The 
+; typical East-Valley-spiral features are still there, though they 
+; are totally disorganized, and all trace of the 2,4,8... series 
+; is gone.  (It is hard to have an imaginary number of elements 
+; around a minibrot.)  The image is still rather interesting how-
+; ever, and I decided to rate it at a 7.
+; 
+; The name "Complex Situation" describes the scene, which will 
+; grow ever more disorganized if the imaginary part of Z is 
+; increased.  The brief calculation time of 1-3/4 minutes will 
+; cause no impatience.
+; 
+; A simpler way to view the image is to view it on the new FOTD 
+; web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; or on the old site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The old site will soon be taken down however.
+; 
+; Near total sunshine and a temperature of 48F +9C here at Fractal 
+; Central on Friday gave the local fractal cats a pleasant after-
+; noon on their sunny shelf.  My day began busy in the morning but 
+; turned peaceful in the afternoon once the real (compared to 
+; fractal) work was out of the way.  FL took the afternoon off to 
+; watch the continuing earthquake (terremoto) and tsunami coverage 
+; from Chile, which FL says is celebrating its 200th anniversary 
+; this year.
+; 
+; The next FOTD is scheduled to be posted in 24 hours.  But don't 
+; be disappointed if it fails to appear on schedule.  You know how 
+; prone we are to sudden antiquing trips on Saturdays here at FC.  
+; Until whenever, take care, and if the unfortunate people of this 
+; world will have it better in heaven to make up for their earthly 
+; suffering, does this mean that the fortunate will have it less 
+; good in heaven simply because they suffered less during this 
+; life?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Complex_Situation { ; time=0:01:44.22-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=+0.284915614\
+  605923/+0.06862604147999228/2.851903e+009/1/7.5/0
+  params=0/0/0/0/0/0/0/0/2.003/0.5 float=y inside=0
+  maxiter=1800 logmap=240 periodicity=6
+  colors=000ZLzWRt_9Z_7YX9ZVAZSB_QD_NE_LF`IG`GI`DJaB\
+  Ka9LaAJ_BIYBGWCFUDDTDCREAPE9NF7MG6KG4IH3GH2FG3HG4J\
+  F5LF5NF6PE7RE7TE8VD9XDAZDA`CBbCCdCCeEEcGFaHG_JHYKJ\
+  WMKUNLSPMRROPSPNUQLVRJXTHYUF_VD`WCbXEdYGfYIgZKi_Mk\
+  _Om`QnaSpaUrbWsbYmcagdeaehWflQgoKhsEhvGgtIfrKfqMeo\
+  OemPdlRdjTchVcgXbeYbd__caXbcUaeR`gO`iL_kIZmFYoDYMT\
+  AYS8hS6fdDccG`aJY`LWZOTYQQWTNVWKTYHS`JRhHReFRbER_C\
+  RXBRV9RS7RP6RM4RJ3RH9SKFSMLSPRTRXTUaSVeRXbTW`UWZVW\
+  WXWUYWSZWP`VNaVLbVIdVGeVEfVCgVEdUFbUG`UHZTJXTKUTLS\
+  SMQSOOSPMRQJRRHRTFQUDQVBQW9QYBT_DVaFXcGZeI`gKciMek\
+  NgmPioRkuTrqSmmRiiReeQaaPXYPTUOPQNLMNGIMCEL85K3AL4\
+  EL4JL4NL4SL4WL4`L4dL4iL4mL4rP1qN3qL4qJ6qH7pF8pDApC\
+  BpADo8Eo6Fo4Ho2Io1Jj3If5Ib7HZ9HVAHZ98XJDVSHTUMRWQL\
+  YRL_QMaQOcQReQUgPXiP_kObmOepNhpNkoMnoMqoMtoKwoJzoI\
+  zoHzoGzoKzoPzoUzoZzoczphzqmzrrzsvztzzuzzvzzwzzxzzy\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,89 @@
+;     Date: Tue, 23 Mar 2010 12:50:59 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-03-10 (Land of Pieces [No Rating])
+;       Id: <1.5.4.16.20100323115235.2b9fc4ae@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 23, 2010 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; There might have been a bug problem in the parameter file for 
+; the March 22 FOTD.  If the file draws a blank, bring up the 'Z' 
+; screen and change the wrong value displayed in the real(p2) 
+; window from 0 to -1 .
+; 
+; Today's image is a little better than yesterday's, though 
+; nowhere near a record and hardly worth a rating.  It's a near 
+; Julia set of the East Valley of the Z^1.5+C Mandeloid.
+; 
+; The reason for the name "Land of Pieces" will be obvious when 
+; the image is seen.  But the calculation time of 13 minutes is 
+; more than the result will be worth.
+; 
+; To avoid frustration, I recommend viewing the finished image on 
+; the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and frequent showers on Monday made the temperature 
+; of 64F 18C less enjoyable here at Fractal Central.  The fractal 
+; cats demonstrated their disappointment by taking turns sulking 
+; on their shelf.  The next FOTD will be posted in 24 hours.  
+; Until then, take care, and there is so much stuff out there that 
+; it must all mean something.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Land_of_Pieces { ; time=0:13:40.65-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 periodicity=0
+  center-mag=0.0438185/-0.256785/5.464481/1/90/0
+  params=89.9992/0/89.9992/93/0.1485/1.415e-005/0/0/\
+  1.5/0 float=y maxiter=5000 inside=255 logmap=221
+  colors=000HiQHiVMiYRi_Wib`ideigjiiibciXYhRShLMgFGg\
+  9Ag35Y7CPAIFDP6GVGENQCG_A9h92jM8lZEmkJgjHaiFWhDQgB\
+  Kf9Ee78d53d4EX5PP5_H6j96u16v97wH8xP8xX9yd9zlAzsAvr\
+  AsqAopAloAhnAemAalAZkA`aFaSJbINc8RZ5hU2yM5vF7t89rF\
+  GoMMmTSj_Yhfcelicggacf__eZdZdhTjlMopGutAzo9vj9sf8p\
+  a8mX8iT7fO7cK7`MGYNOWOWTQcRRkOSsMOnPKjSGeVCaY8X`5T\
+  cAVeEWgJXiNZkS_mW`oZRYaHHd80f58h3FR7PAAZHCaNEcTGfZ\
+  IhdKkjLmZJpOIrDHt2GvGBgU6Tg1E_FkcJjfMjiPjlSioVirYi\
+  u`ibYYLVM3TASwHZdCeN7YHJRCVK7fD2rN4iW6ae8UnAMlLHjV\
+  Cid8cfHYgQShZMigGjoWHjePpnWurNgvFVz7IpGGgPEZYCtOKz\
+  SSKP_FMgAKoOX5Q_CSbJTeQVhXXkcYmi`fec_agZdkZgoZjs_r\
+  w`yxcpxfhxh_xlSuhRseRqbRoZRmWRkTRiQRhQNfRJeRFU0BcR\
+  7bR4`P5_N6YL7XJ8VH9UG9hBFiBFjBFhDNgFUeH`dJgbLnaNu`\
+  Ok`Oa_PT_PJZQ9ZQ0XO4WN8ULBTKFRIJQHM`Oz`Pz`Qz`Rz`Sz\
+  `Tz`Uz`Vz`Wz`Xz`Yz`Zz_Zz`Zz`mz`mz`mz`mz`mzamzamzam\
+  zamzamzamzamzbmzbmzbmz00O }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
