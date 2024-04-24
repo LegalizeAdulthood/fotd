@@ -1,0 +1,103 @@
+;     Date: Tue, 05 Feb 2008 17:24:51 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 06-02-08 (Seeing Double [6])
+; 
+;       Id: <1.5.4.16.20080205171500.0da732a8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 06, 2008 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; When I found the first version of today's image with the Hyper-
+; Mandelbrot2 formula, I shifted to the type=hypercomplex formula, 
+; thinking it would be faster.  I was totally surprised when the 
+; type=hypercomplex formula took almost five times as long to draw 
+; exactly the same image.  Since then, I have made a few minor 
+; changes to the parameters, so the final version that appears as 
+; today's FOTD cannot be drawn by the type=hypercomplex.  But it 
+; is only fair to comment that the periodicity need not be turned 
+; off with the type=hypercomplex, which means that images with a 
+; significant amount of 'inside' area, may run in about the same 
+; time under both formulas.
+; 
+; Today's image shows a minibrot in East Valley.  The little guy 
+; is in a bit of trouble, for it appears he is starting to close 
+; up.  Actually, the HyperMandelbrot set consists of two classic 
+; M-sets that can be made to overlap in various ways, and this is 
+; what has happened to the minibrot in today's image.
+; 
+; The surrounding elements have split apart, which is why I named 
+; the image "Seeing Double".  I rated it at a 6 because I can see 
+; nothing out of the ordinary with it, nor did I put any signifi-
+; cant effort into the coloring.
+; 
+; Perhaps the best thing about the image is its fireball calcula-
+; tion time of under 2 minutes.  And even this speed might be 
+; exceeded by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; Heavy clouds and occasional rain spoiled the mild temperature of 
+; 48F 9C here at Fractal Central on Tuesday, while the fractal 
+; cats spent the day watching the world pass by.
+; 
+; I spent the day working and trying not to work.  The work won.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and did reality really exist before someone dreamed up the 
+; concept?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seeing_Double      { ; time=0:01:55.40-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=HyperMandelbrot2 passes=1
+  center-mag=+0.301038546627/+0.023570365936/1.7e+007\
+  /1/115/0 params=0/0/0/0/-0.0025/0/1e-008/0 float=y
+  maxiter=3600 inside=0 logmap=247 periodicity=0
+  colors=000N0UO0UP0UQ0UQ0UQ0UQ0UQ0VR0WR0XR0YR0ZR0_S\
+  3`S3aS4`S4_S4ZS4YP7aM9eJChGElDHpAJsCMqEOpGQoISnKUm\
+  MWlOZjQ`iSbhUdgWffYieYlgZidZfa_bZ_ZW`VT`RQaNNaJKbF\
+  Ha7KbBEcF8cI3nPJyVYuTVrSToRRlQPhPNeOLbMI_LGWKETJCQ\
+  IANH8NC3RG6VJ8`NBeQDlUFtXIw`KzdJy`MxVOwMQzDUwEStFQ\
+  qGOnHMkIKhJIeKGbLE_MCXMAXNBXNBXOCXOCXOCXPDXPDXPDXQ\
+  EXQEXRFXRFXRFXSGXSGXSGZTH`VIbWJdYKfZLh`NjbOlcPneQp\
+  fRrhStiTvkUxlVufWraXoXYlSYiUWfWUcXS`ZQY_OVaMSbLPdJ\
+  MeHJgFGhDDjBAkAAjBBiCChDDgEEfFFeGFdHGcIHaKI`LJ_MJZ\
+  NKYOLXPMWQNUSOTTOSUPRVQQWRPXSOYFyNGvOHsPIpQJmRKjSL\
+  gTMdUNaVOZWPWXQTYRQZ3Tc8RcDQfIPdNObujZmdZfZZZTZpzF\
+  nvGmsHloIkkJiiKhgLgfMfdNdcOcaPb_QaZR_XSZWTYUUXTVVR\
+  WUQXTOY5jP6iQ7mQ8qR9wRAwRBmSBhSChSDiTEjTFkUGlUHmUH\
+  nVLoVPpVUqWZsWcuXhwXmzXrzYvzYzzYzzZzzZzzuzzqzznzzk\
+  zzgzzdzzazzKzzLzzLzzMzzMzzNzzNzzOzzOzzPzzPzzQzzQzz\
+  RzzRzzSzzSzzTzzTzzUzzUzzV }
+
+frm:HyperMandelbrot2 {; periodicity must be turned off
+a=(p1),b=(p2):
+q=sqr(a)-sqr(b)+pixel,
+b=(p3+2)*a*b+p4,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

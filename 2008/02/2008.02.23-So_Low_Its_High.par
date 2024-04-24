@@ -1,0 +1,101 @@
+;     Date: Fri, 22 Feb 2008 23:13:21 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 23-02-08 (So Low It's High [No Rating])
+; 
+;       Id: <1.5.4.16.20080222231507.0de7ac68@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 23, 2008 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I just don't seem able to shake the after-effects of whatever 
+; bug has been bugging me for the past week.  Today's discussion 
+; is therefore once again brief.
+; 
+; The image shows a minibrot in the Z^(1.09)+C Mandeloid.  This is 
+; a fractal of an unusually low order in which to find a minibrot, 
+; but with my secret patented minibrot finder, they can easily be 
+; found.
+; 
+; I named the image "So Low It's High", a name that makes as much 
+; sense as a double-slit experiment.  Since I put so little effort 
+; into finding the scene, I gave the image no rating.
+; 
+; Most of the calculation time of almost 9 minutes is consumed by 
+; the inside part of the minibrot, which is at a maxiter of 
+; 250,000.  This time can be cut considerably by going to the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image soon will be posted, and viewing it at 
+; leisure there.
+; 
+; A most unpleasant day prevailed here at Fractal Central on 
+; Friday.  Light snow all morning was followed by light sleet and 
+; freezing rain in the afternoon, while the temperature hovered 
+; just below freezing.  After dark, everything changed back to 
+; light snow, leaving a total of about 3-1/2 inches, or 9cm, of 
+; sloppy slush covering the ground.  The fractal cats spent the 
+; day ignoring the outside conditions.  The next FOTD will appear 
+; in 24 hours.  Until then, take care, and find the proof.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+So_Low_Its_High    { ; time=0:08:50.25-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-7.065004112040637/-1.161770134502639/\
+  1.472453e+008/1/-147.5/0 params=1.09/0/0/1500
+  float=y maxiter=250000 inside=0 logmap=247
+  colors=000dqFcsFbuFawF_rKYmOXiSVhUThWRhYPh_NgaLgbJ\
+  gdHgfFfhDfjBfl9fmEbkI_iMXhQUfVQeZNcbKbfH`jE_iHahJb\
+  hMcgOegRffTgfWheYje`kdblddm`cjXbgUadQ`aM_ZJZXFYUBX\
+  R8WO4VL1UJ5VH9VGCWFGWEJWCNXBQXAUX9YY8`Y6dY5gZ4kZ3n\
+  Z2lg1ko1fl4bj6Zh8VeARcCMaFI_HEXJAVL6TN2RP4QO5PN7OM\
+  8OLANKBMJDLIELHGKGHJFJIEKIEbRBt_8oWSkTkeUm`UnVUoQU\
+  pLUrFUvAWz5Yz6Zz6_z6`z6az6bz7cz7cz7cz7cz7cz8bc8ba8\
+  c`8dZ8dY7aX6ZW6WV5TU5QT4NS3KR3HQ2EP2BO18N15M93FH18\
+  O02HTAAuHEtGItGMtFQtFUtFYtE`sEdsDhsDlsDpsCtsCwsCsm\
+  JogQlaWm_UmZTnYRnXQoWOoUNpTLpSKqRIqQHrOFrNEsMCsLBt\
+  K9tJ8rIApIBnICmHDkHEiHFhHGfGIdGJbGKaIL_KMYMNXOOZQP\
+  _SP`UQbWQcYRd_ReaSgcSheTigTjiUlkUmmVnoVoqVmsXluYkw\
+  _iz`hzbgzcfzddzfczgbzi`zj_zlZzmYznVzjZzfczbhzZmzVr\
+  zRvzNzzJzzFzzCzzIzzOzzTzzZzzczzizznzztzzyzztzzpzzk\
+  zzgzzczzZzzVzzQzzMzzIzzDzz9zz5zzJzzXzzizzfzzczz`zz\
+  YzzWzzTzzQzzNzzKzzIzzFzzC }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

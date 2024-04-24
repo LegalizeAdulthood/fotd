@@ -1,0 +1,110 @@
+;     Date: Wed, 13 Feb 2008 19:25:53 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 14-02-08 (Split in Infinity [7])
+; 
+;       Id: <1.5.4.16.20080213192731.0dc7871e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 14, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Though today's image looks nothing at all like a typical scene 
+; in East Valley, it actually is an East Valley scene.  Well, to 
+; be honest, it's not East Valley of the Mandelbrot set that the 
+; scene lies in, it's East Valley of the Z^2.01+C Mandeloid.  And 
+; to further confuse matters, the parent fractal has been rotated 
+; about 180 degrees by the MandelbrotBC3 formula, so that East 
+; Valley lies on the west side of the complex plane. 
+; 
+; As a result of the rotation, the negative X-axis split now 
+; intersects East Valley, and works no end of mischief with it.  
+; Instead of terminating in a point, the valley has broadened into 
+; a wedge, with totally new elements along the north and south 
+; corners of the wedge.  Today's scene lies in some of this new 
+; stuff on the south side of the valley-wedge.
+; 
+; I rated the image at a 7, even though I was a bit cursory with 
+; the coloring.  Then I named it "Split in Infinity".  The name 
+; implies that fractals are infinite, and the East Valley in 
+; today's parent fractal is all split up.
+; 
+; The calculation time of 7-1/2 minutes is slightly slow.  So why 
+; not get relief by viewing the finished image on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; By the way, sometimes Paul cannot calculate and post the images 
+; immediately.  If they are not there when you visit, try again a 
+; little later.
+; 
+; Freezing rain fell all morning here at Fractal Central on Wednes-
+; day, while the temperature hovered just below freezing.  Strange-
+; ly enough, when the temperature rose 3 degreess above freezing 
+; in the afternoon, the rain changed to snow.  The fractal cats 
+; amused themselves watching the passers by slipping and sliding 
+; on the icy sidewalks.  My day was spent working.
+; 
+; The next FOTD is due in 24 hours.  If all goes well, it will 
+; appear on schedule.  Until then, take care, and seek the right 
+; light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Split_in_Infinity  { ; time=0:07:33.03-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.252278582924513/-0.008434427532035/\
+  7.078046e+012/1/165/0 params=2.01/0/20.3/0 float=y
+  maxiter=5000 inside=0 mathtolerance=0.05/1
+  colors=000c8Mc9McAMdBMdCLdDLdELeFLeGLeHLeIKfJKfKKf\
+  LKfMKfNKdMJcMJbLJaLJ`KJ_KIZJIYJIXIIWIIUHHTHHSGHRGH\
+  QFHPFGOEGNEGMDGLDGKDGMHKOLOQOSRSVTWZVZbXbfYfi_imam\
+  qbptcqqcqocrldrjdrhdsedscesaetZetXeuUfuSfuQfvNfvLg\
+  vJgwGgwEgwCMvE0vGCnDOfA_Z7jR5fO9cMC_KFXIIUGLQEONCR\
+  JAUG8XD6_F4`G3aI1bJ0brV1pZHobXnekoelofmofnneomeome\
+  oldokdokdpjdpjcpicphcphbqgbqfbqfbqeaqeardarc`rc`rb\
+  `rb`raYo`Vl_Si_PgZMdYJaYH_XGYXGWXGUXGSWFQWFOWFMWFK\
+  WFIVEGVEEVECVEAVE9UJAUOAUTAUYAUbAUgAUkAViCWgEWfFXd\
+  HXbIYaKY_LZYNZXO_VQ_UR`ST`QUaPWaNXbLZbK_cIacHbcIbd\
+  KbdLbeMbeNbfPbfQbfRbgSbgUbhVbhWbhXbfZdd`ebaf`cgZeh\
+  XfiVhjTjkSkl4ca5rWIkaVdfgYksSppTmmTkjUigUgdVebVcYW\
+  aTX`PX_KYYGYXBZW7ZV8XU8VU8UT9ST9QS9PS9NSALRAKRAIQB\
+  GQBFPBDPBBPCAOC8OC6ND5ND3MD1MD0MDI6HL7KO7OR8RT8UW8\
+  YZ9``9cc9gfAjiAmkAqnBtqBwsBuoLtkUsgcrdlp`ioYgmVdlR\
+  bjO`iLYgIWfEUdBRc8Pb5Nc7M }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
