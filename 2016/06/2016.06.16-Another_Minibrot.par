@@ -1,0 +1,86 @@
+;     Date: Thu, 16 Jun 2016 19:17:32 -0400 (GMT-04:00)
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTX -- June 16, 2016
+;       Id: <196632.1466119053317.JavaMail.wam@elwamui-hound.atl.sa.earthlin
+; 	  k.net>
+; ---------
+; 
+; FOTX -- June 16, 2016 (Rating A-8,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's acceptably good image lies in the parent fractal that 
+; results when 2.3 negative parts of Z^(-3.3) are combined with 
+; 0.8 negative part of Z^(-8.3) and (1/C) is added on each 
+; iteration.  This parent fractal is a roughly circular thing with 
+; scalloped edges and a prominent minibrot, (or maybe maxibrot, 
+; since it's the largest Mandelbrot set shaped thing in the parent 
+; fractal),  Today's scene is located on the southeast shore line 
+; of the main period-2 bud of the large minibrot.
+; 
+; The art rates an 8, since I did put some extra work into the 
+; coloring.  The math is old hat, so it rates only a 5.  The 
+; calculation time of just under 20 minutes is true on a 
+; 15-year-old 200mhz work horse.  On any SOTA (state of the art) 
+; machine the parameter file will run in only a few minutes.
+; 
+; The weather was unpleasant here at FC today, with dampness, low 
+; clouds and fog hanging on all day, and a temperature of 68F 20C. 
+; Other than wandering in Fractal land, I passed the day finishing 
+; a small 90-minute job and wondering why we can't even agree on 
+; what to do about the violence.  Why don't we try something 
+; everyone can agree on?  It might not solve any problems, which 
+; are probably impossible to solve, but it sure would make us feel 
+; better.
+; 
+; The next FOTX or FOTD will probably be posted tomorrow.  Until 
+; then, take care, and doing something meaningless is better than 
+; doing nothing . . . I guess.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Another_Minibrot { ; time=0:19:18.54 SF5 at 200MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+0.1865338083042705/+1.326628335422849\
+  /1e+011/1/115/0 params=-2.3/-3.3/-0.8/-8.3/0/0/0/0
+  float=y maxiter=2750 inside=0 logmap=-380
+  periodicity=6 mathtolerance=0.05/1
+  colors=0008CY8EY8GY9K_9M_9P_9Sa9Va9YaA`cAccBgdCl`O\
+  pZK55ZpZXrYWrXUmWRmTShVRcXPZYOU_`PaUKcQLcMKZIJUDIP\
+  ACK0IFzzzmzzUzzXlz6DP00033A00I55K59N6DPBITGOVLTYRY\
+  _XbcWugbeeidlqVszUyzczzhuzcnw_jpefieZflSazSeuOirJs\
+  mIzhJzcHzZIuUJpPJkFKf5Lk0Lp5NuANzUNzUPzUPzUQuUUzUQ\
+  zULzcIumLezNazSdzVfzXhzZiz`kzanzeozgqyisyktylvwpvw\
+  rwwtyxvzzyppplllgflYYlQQlIJlCClCClCClCCl99_67P3DE5\
+  NA9_9ClCFzFFyFFyFFyFFwFFwFFwFFwFEuEFuEFuEFuEMuEUuE\
+  bzFbuEanCaeAa_9cVAeSCeOEXQEORFLVHH_JCcLBgMCnQDsSFy\
+  bFwVFwPEuIFyHEuEDsDInDRlC_gBlgCziFsWSiDZcClcFzdFzf\
+  FzgFziFyjFykHwmLwmRuoWupbsqgssoruuuwwwzzywwwsssttw\
+  lmyemzZmzSmzNmyHmnCmc7mV5mM6mG3mE6m9HzFKzFPuQRm_Rm\
+  UQmPMmHNmCzc7zc6zc7zc7zc9zc8zc6zz5zz4zz3zz7zzBzzIz\
+  zNzzTzz_zzezzlzz_zzRzzJzzEzz9zz9zzAzzAzz9zz9zz9zzG\
+  zzUzzQzzLzzQzzUzzWzzZzzezzlzzuzzzzzzzzyzzwzzuzzszz\
+  pzznzzlzzizz`zz`zzaDzaDza }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, esc=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,109 @@
+;     Date: Thu, 2 Jun 2016 13:06:09 -0400 (GMT-04:00)
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTX -- June 02, 2016
+;       Id: <27644233.1464887169990.JavaMail.wam@elwamui-royal.atl.sa.earthl
+; 	  ink.net>
+; ---------
+; 
+; FOTD -- June 02, 2016 (Rating A-8.5,M-7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "Periodic Wandering".  To see why, try to 
+; track down the periodicity of the features surrounding the 
+; central mininbrot, which is beyond resolution but certainly of a 
+; quartic nature.  In some areas the cubic series seems to 
+; prevail, while in others it could be either the quadratic or 
+; quartic.
+; 
+; Actually, the parent fractal, at least on the surface, is 
+; nothing more impressive than an everyday Mandelbrot set (a 
+; fractal that of itself is quite impressive).  But today's parent 
+; M-set has contracted a Z^(4)+C virus that is working wonders in 
+; its depths, and at its impressive (by double precision 
+; standards at least) magnitude of over 10^13, today's image is 
+; certainly deep enough to feel the infection. 
+; 
+; The scene is located near a much larger quartic minibrot deep in 
+; the trunk of the period-22 elephant on the south shore line of 
+; the East Valley of the parent.  The prominent banded effect was 
+; achieved by rendering the scene with the outside set to 'tdis', 
+; plus some of my own semi-skilled coloring.
+; 
+; With a calculation time of only 9 minutes on an old 200mhz 
+; pentium machine that should have given up many years ago, the 
+; parameter file will certainly prove to give a reward well worth 
+; the effort of runnung it.
+; 
+; The FOTD web site will soon be back in action to make life 
+; easier for those whose machines roll over and play dead when 
+; faced with the forgotten letters DOS.
+; 
+; Life was pretty good here at Fractal Center today.  The most 
+; excitement was in the afternoon when a tomcat fight erupted in 
+; the fractal yard, causing the three fractal cats to dash to the 
+; window to watch the action.  Luckily for one of the fighting 
+; cats, the fight ended after they decided who could curse at the 
+; other the loudest.
+; 
+; For some reason, I decided to eat breakfast today at the local 
+; big-chain fast food outlet.  The food was good enough, but while 
+; sitting in my booth reading my morning paper, I started to feel 
+; like an obsolete old fogy.  Looking at the row of booths across 
+; the store, I noticed one person in every booth, each one of them 
+; pecking at their smart phone.  'What am I doing reading a 
+; newspaper?' I wondered.  I should be downloading the latest app. 
+; But then I wondered what those gadget addicted people would do 
+; if the internet were ever to go down.  How could they get in 
+; touch with their friends who live two blocks away?
+; 
+; While pondering such unfathomable mysteries, I guess the time 
+; has come to say so-long until the next FOTX appears.  Until 
+; whenever that might be, take care, and when will the Fractint 
+; app be released...   ;-) ;-)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Periodic_Wandering { ; time=0:09:13.76 SF5 at 200MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip float=y
+  center-mag=+0.2728877196297931/-0.004994932576963\
+  96/1.77e+013/1/2.5/0 params=4/500/0/0 maxiter=1500
+  inside=0 outside=tdis mathtolerance=0.05/1
+  colors=000dEedEddEdcEdcEccEccEbbEbbEabEaaE`aE`aE_`\
+  E_`EZ`EZ_EY_EY_EX_EXZEWZEWZEVYEVYEVYEUXEUXETXETWES\
+  WESWERWERVJQVRQVZPUfPVk_JhzKKK00U0A9000001AU28b36l\
+  4Pz5zzzzlAzhCzcFzcHzKJzKLzKPK0SG0VC0YBPZAJ_AE_GJYM\
+  OWSSUYXScaQiePifSifVigYig`igcfkYcnS`qMYtGVwBjoQciP\
+  XdPR_OKVOEQN7LN1GN6HOAHPEIQJIRNJSRJTMJPIKJOKDUbN_t\
+  WbnRehMhbHkXCnR8aVDPZICbN0fRCeMOdIeDzdExdFwdFvdGud\
+  GtcHscHqcIpcIocJnbJmbKlbKkbLibLhbMgaMfaNeaNdaOcaOa\
+  `P``P_`QZ`QY`RXaQX`RW`RW`RW`RW`RV_RV_RV_RV_RU_RUZR\
+  UZSUZSTZSTZSTYSTYSSYSSYSSYSSXSSXSRXTRXTRXTRWTQWTQW\
+  TQWTQWTPVTPVTPVTPVUOVUOUUOUUOUUOUUNUUNTUNTUNTUMTUM\
+  TVMSVMSVLSVLSVLSVLRVKRVKRVKRVK`X0WWARVKMUUHTc9PqBQ\
+  oCRnDSmETlGUkHUjIViJWhLXgMYfNYeOZcP_bR`aSa`Tb_UbZW\
+  cYXdXYeWZfVfeQdfRcfSbfT`fT_fUZgVXgVWgWVgXTgXShYRhZ\
+  PhZOh_Nh`9o_Mh`Za`lZTkYVkXXkWZjV`jUbjTdiSfiRhiQjhP\
+  lhOnhNpgMrgLtgKvgKweMucOt }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

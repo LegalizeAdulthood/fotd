@@ -1,0 +1,113 @@
+;     Date: Fri, 3 Jun 2016 15:14:59 -0400 (GMT-04:00)
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTX -- June 03, 2016
+;       Id: <11626953.1464981300479.JavaMail.wam@elwamui-huard.atl.sa.earthl
+; 	  ink.net>
+; ---------
+; 
+; FOTD -- June 03, 2016 (Rating A-8,M-9.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Hopefully, I now have the dates in order.  These mixed-up dates 
+; are what happens when I find fractals on one date and post then 
+; on a different date.
+; 
+; Today's FOTX shows a rather colorful basin of attraction around 
+; a minibrot near the tip of the negative X-axis of a Mandelbrot 
+; set that has been corrupted in its depths by mathematical 
+; energies of the sixth order.
+; 
+; But look closer!  Something is not right.  The color palette 
+; rotates in the wrong direction.  The point at the center is not 
+; a pit that wants to suck everything into a minibrot at its 
+; center; it is a hill that repels everything from the peak at its 
+; center.  And the number of elements converging on the center 
+; does not keep doubling in powers of two as we go inward; it 
+; keeps being divided in half, from 16 at the outer edge to 2 at 
+; the center.  And the actual center is not an open hole; it is a 
+; blank area of the lowest iteration count surrounded by higher 
+; iteration stuff -- an anti-minibrot!  Unfortunately, the center 
+; part of the image lies beyond the range of resolution, but we 
+; can come close enough to see that the number of elements there 
+; has divided to 2.  Nothing lies beneath the number two but the 
+; ultimate fractal oblivion of unity.
+; 
+; One problem of today's anti-minibrot is that with the higher 
+; iteration stuff lying around the edges, Fractint's automatic 
+; logarithmic color palette, which is activated by entering the 
+; numeral 2, does not work.  It leaves the center of the image, 
+; where the number of elements divides to two, a featureless flat 
+; area.  This curiosity is not too bad in today's image, but I 
+; have seen it result in an almost totally blank screen.
+; 
+; Most of the shapes in the image were created by rendering it 
+; with the outside set to 'tdis', which colors the points 
+; according to how far they have traveled before escaping.  (The 
+; points closer to the center of today's image have not gone very 
+; far.)  The extra brilliancy of the colors was created in a 
+; separate color manipulation program.  (It's not a sin, since 
+; Fractint drew the shapes.)
+; 
+; In my opinion, the art value of the image rates an 8.  Its vivid 
+; colors put it at least a little above the average.  But the math 
+; rates a superlative 9.5, since these anti-minibrots are some of 
+; the most unusual things I have yet discovered in the world of 
+; fractals.
+; 
+; The day here at Fractal Central left much to be desired.  The 
+; high temperature of 79F 26C was fair enough, but occasional rain 
+; kept a damper on things.  The fractal cats spent the day in the 
+; watch window, watching for other cats.  The other cats spent the 
+; day keeping dry.  The fractal humans simply made it through 
+; another day with nothing unusual happening.
+; 
+; The next FOTD will be posted whenever it is.  Until that unknown 
+; moment arrives, take care, and watch for those quantum erasers.  
+; No one knows exactly what they might do.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Anti-Minibrot { ; time=0:01:09.81 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip float=y
+  center-mag=-1.987114419686404/+0.00000000031660164\
+  /3.8e+011 params=6/1e+020/-12/0 maxiter=1500
+  inside=0 outside=tdis mathtolerance=0.05/1
+  colors=000z0000Az00z00z00x00x00v00u00u00s00q00q00o\
+  00m00xzuzzsozubzuNzvAvviHzz0zz0zzAzzRzzezzuzzvzzvz\
+  uvzmxvgxo`xgVxbib`xH`z0Zz0Zz0bz0dz0ez0gz0iz0kz0mz0\
+  oz0mz0mx0ms0ko0kk0kg0md6o`HqXTsTduPovLzxHzzGzqGziG\
+  z`GzTGzJGzC2Z4zzz000000200600A00E00H00zu0N60PC0RJ6\
+  TRCVZHHH4PzzXdLdoTkzbszi4T0qbZzbbe0TbezA0ALgddmouc\
+  xzvzzzzmMUT00Z60XG0JP08000000de0zz0zz0zz0zz0zx0zo0\
+  ne0_X0hPbq0ZH0mqZemR`iLVgGNdAH`4CZ0JZ6RZEXZJbdReiX\
+  iodmuiqzouzvxzzzzzmzzZzzJzz4zz0zz0zzPGoGTH6e02N404\
+  N00d00`64XCETHLPNVLTdHXkEZdAZX6ZP4ZJ0ZC0Z40Z00Z00N\
+  0ZE8z0To0mP0z00z00z08z0Jz0Vz0ez0qz0kvNeeg`PzX8zP6z\
+  H6zC4z44z04z02z02z02z0AzGGzXNvoTmzZdsz6gzEXmJLZPCH\
+  X02b00g00m0GP0v0Cz0Pz0bz0oz0zz0zT2z0HsVmLzzXxzgisq\
+  XezHVz2Hz06z04z04z04z04z02z02z02z02z00z00z00z00z00\
+  z00z00z00z00z00z00z00z00z00z00z00z00z00z00z00z00z0\
+  0z00z00z00z00z00z00z00z00 }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
