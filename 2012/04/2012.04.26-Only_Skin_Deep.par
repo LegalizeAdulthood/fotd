@@ -1,0 +1,108 @@
+;     Date: Thu, 26 Apr 2012 23:10:00 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-04-12 (Only Skin Deep [5])
+;       Id: <1.5.4.16.20120426231252.2b3f925a@earthlink.net>
+; ---------
+; 
+; FOTD -- April 25, 2012 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I seem to have developed a case of fractalist's block, which 
+; sometimes strikes fractalists just as writer's block strikes 
+; writers.  Fractals that normally might appear pretty good now 
+; appear totally worthless.  Like writers, the cure is to work 
+; through the block until a better state of mind makes things seem 
+; better.
+; 
+; Today's image is a fully evaporated one that consists totally of 
+; inside stuff, the outside parts having totally evaporated away 
+; to nothing.  The inside stuff has been made visible by being 
+; rendered with the inside set to bof61.
+; 
+; The parent fractal came about when I combined 3 negative parts 
+; of Z^(-1.618) with 0.8 negative part of Z^(-8.8) then added 
+; (1/C) on each iteration.  This parent resembles a peanut with a 
+; short stubby tail and two rabbit-like ears.  Today's image lies 
+; in the valley between the ears.
+; 
+; There is a large Mandelbrot set well east of the main part of 
+; the parent, but this does not figure in today's image. 
+; 
+; The rating of a 5 might be unfairly low, but my fractalist's 
+; block, makes everything I turn out seem worthless.
+; 
+; The name "Only Skin Deep" has no relation to the image.  It is 
+; simply something I wrote when the time came to write something.
+; 
+; The calculation time of 4-3/4 minutes is too high a price for 
+; the result.
+; 
+; The image is posted, fully calculated, at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high definition rendering is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past FOTD images are filed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day actually turned out rather pleasant here at Fractal 
+; Central, with partly cloudy skies and a temperature of 61F 16C.  
+; The fractal cats had better things to do than worry about the 
+; weather, such as meowing for extra tuna.  The humans simply made 
+; it through the day, which sounds simple but is sometimes far 
+; more difficult than it appears.  The next FOTD will be posted in 
+; 24 hours.  Until then, take care, and watch that next dream.  It 
+; might be a doozy.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Only_Skin_Deep { ; time=0:04:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+0.5432345125676232/+1.498194015611466/\
+  6.854724e+007/1/87.5/0 params=-3/-1.618/-0.8/-8.8/\
+  0/1e+050/0/0 float=y maxiter=1500 inside=bof61
+  outside=tdis periodicity=6
+  colors=777OOcOOcOOcOOcOOcPPcPPcPPcQQcQQcQQcRRcRRcS\
+  ScSScVVVXXXZZZaaacccfffiiimmmpppllleeefffiiilllkkk\
+  hhhgggffffffffffffhhhfffeeeddddddddddddaaaYYYTTTQQ\
+  QMMMJJJLLLMMMNNNNNNPPPbbbWWWXXXaaafffnnnssssssssss\
+  sssssssssssrrrkkkeeeXXXPPPJJJOOOPPPTTTTTTVVVVVVUUU\
+  TTTUUUYYYaaaeeegggggghhhhhhiiijjjjjjkkkkkkmmmqqqss\
+  sssssssrrrqqqooonnnlllkkkjjjiiihhhhhhgggdddbbbg``Z\
+  ZZXXXWWWVVVUUURRRPPPPPPQQQQQQQQQRRRRRRTTTUUUZZZ___\
+  jjjffffffhhhhhhhhhgggffffffeeedddddddddddddddddddd\
+  ddddeeeeeefffggghhhgggffffffggggggggghhhhhhhhhhhhh\
+  hhiiiiiijjjjjjkkklllolqmmmlllhhhddd```XdXRRRMMMHHH\
+  DDD999868707707707707909B0BEEEJJJNNNTTTYYYcccddddd\
+  ddddddddddddddddddddddddd___VVVPPPLLLHHHDDDAAAAAA9\
+  99999AAABBBCCCGGGNNNUUUWWWbaWVVVPPPMMMNNNUUUf_mddd\
+  ddd___D0PMMMC0HDDDDDDEEEHHHEEEEEEH0HNNNTTTaaaddddd\
+  dddddddddddddgggkkkooosss }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

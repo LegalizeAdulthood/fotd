@@ -1,0 +1,126 @@
+;     Date: Sun, 22 Apr 2012 19:38:26 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-04-12 (Very-Dry Valley [8])
+;       Id: <1.5.4.16.20120422194113.2b7f8bd4@earthlink.net>
+; ---------
+; 
+; FOTD -- April 22, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to the main stem of a Mandelbrot set 
+; corrupted in its depths by Z^(1.9)+C energies.  The effect of 
+; this corruption is to create a main stem that on the surface 
+; appears to be infinitely deep but comes to a dead end.  As a 
+; result, the minibrots on the stem suffer increasing amounts of 
+; cut-off distortion as they grow smaller, until a level is 
+; reached where minibrots no longer exist.
+; 
+; Today's scene lies in the minibrot around -1.67, which has a 
+; huge chunky valley where the west part of its main bay and large 
+; period-2 bud should lie.  The scene of the image lies in a nest 
+; of filaments in this valley.
+; 
+; The object that fills the image is what I call a dry valley, a 
+; pattern with apparent two-way symmetry that appears to have a 
+; minibrot at its center but dies out before the minibrot is 
+; reached.  Take my word, there is no unresolved minibrot at the 
+; center of today's image.
+; 
+; One thing I do see however is eight stands of fractal trees 
+; trying to grow around the edge of the valley.  Just enough 
+; resolution remains to fill the screen with one of them.
+; 
+; The rating of an 8 is based mostly on the brilliant colors in 
+; the central part of the image.  The much smoother bluish outer 
+; part was created by myself.
+; 
+; The name "Very-Dry Valley" refers to the richness of detail in 
+; what could have been a fractal failure.
+; 
+; The calculation time of 3 minutes is a fair price for such a 
+; colorful fractal.
+; 
+; The finished image is posted on sale in all its glory on the 
+; FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version, which simply oozes glory, is posted 
+; at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past FOTD's since April 1997 are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where they bring more than enough fractal enjoyment for one 
+; lifetime.
+; 
+; Today brought heavy clouds with increasing wind and rain to 
+; Fractal Central.  The fractal cats checked the temperature of 
+; 46F +8C, took a few glances out the back window, decided that 
+; the unwanted cats were at a safe distance, and found comfortable 
+; places to curl up and sleep.  The humans just took it easy.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and what will we do if it turns out that the world is a 
+; dream after all?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Very-Dry_Valley { ; time=0:03:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip passes=1
+  center-mag=-1.674475219419467/+0.00000091823482684\
+  /2.510105e+012/1/70/0 params=1.9/5000/0/0/0/0/0/\
+  0/0/0 float=y maxiter=1250 inside=255 logmap=326
+  periodicity=6 mathtolerance=0.05/1
+  colors=000TfjTfiSfhSegRefRdeQddQccPcbPbaOb`Oa_NaZN\
+  `YM`XM_WLZVKYUJXTIWSHVRGUQFTPESODRNCPMBNLALJ9KI8IG\
+  8GF7FD6DC5BA4A9487366254133011UO9OJ7IE5C93641YbMSW\
+  IMQEHJBBD75637_D6XC5UB5RA4O94M83J73G62D52B41831520\
+  218Hz7Fz6Dm5Bc4AU48O36J25E139014Xe`T`XQXTNTPJPMGLI\
+  DGE9CB687343SmBPiANe9La8JY7HU6FQ5CN5AJ48F36B247123\
+  0zlovhkrehnbej_bfXZbUWZRTVOQRLMNIJJFGFCDB997663334\
+  md3i`3eY3aV2YS2UP2QM1NI1JF1FC0B9076033tzbroJqh3lc2\
+  gX2bT2YQ1TM1OI1JE1EB0970430oR`hNWbKRWGNQDIJADD6963\
+  4z97s65m43c21Ua_KYW`VTXRQTOMPKJKHGGDDCA9866433BK4A\
+  I39G38F37D26C25A2591471361240130010``VYYSVVQSSNPPL\
+  MMJJJGHHEEEBBB98875542221Mm0Ki0Jf0Hc0G_0EX0DU0BQ0A\
+  N08K07G05D04A0260132f11c01`01Y01V01S01P01M00K00H00\
+  E00B0080050020MYlITeFOZCJS9EL69E347hte_hXRYPIMG9B8\
+  c`aZWXVSTQOPMKLHGGYbHWZGVVEURDSNCRJAQF9PB8RD7SF7UH\
+  7VJ7XK6YM6_O6`Q6bR5cT5eV5 }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,111 @@
+;     Date: Sun, 01 Apr 2012 18:07:05 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-04-12 (Prancing Numbers [6])
+;       Id: <1.5.4.16.20120401180935.2b979cac@earthlink.net>
+; ---------
+; 
+; FOTD -- April 01, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's unspectacular image lies in the parent fractal that 
+; results when Z^4 is subtracted from 0.1 part of Z^(-0.2) and 
+; straight C is added on each iteration.  This parent is basically 
+; the Z^4 Mandeloid rotated 180 degrees, with obvious distortions 
+; in its buds and the valley on the negative X-axis broadened into 
+; a wedge.  Today's scene is located in this wedge.
+; 
+; The name "Prancing Numbers" can mean anything the viewer wishes. 
+; To me it is a vague reference to the creative antics of complex 
+; numbers when repeatedly iterated.
+; 
+; The rating of a 6 indicates that in my opinion the image is 
+; average, worth a look but nothing that has not often been seen 
+; before.
+; 
+; The calculation time of one minute is perhaps a little more than 
+; the image is worth.  This is where the FOTD web sites dash to 
+; the rescue.
+; 
+; See the finished image online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; without the chore of calculation.
+; 
+; A high-definition rendering is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past 15 years' FOTD's are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Clouds ruled here at Fractal Central today, with the few brief 
+; intervals of sunshine too few and far between to change the 
+; impression of a cloudy day.  Light rain that set in by 5pm just 
+; made things worse.  The temperature of 55F 13C was just about 
+; average, at least in the opinion of the fractal cats, who grew 
+; frustrated early with the lack of sun, and decided to see if 
+; they could wheedle an extra treat from the submissive humans.
+; 
+; The humans began the day watching the Sunday morning TV news 
+; comments about the world's problems.  At first we took the 
+; commentators' opinions half seriously, but when the topic turned 
+; once again to race relations and the need for a serious 
+; discussion about the problem, we simply smiled and shook our 
+; heads, wondering why one more 'serious discussion' could be 
+; expected to succeed when a hundred earlier ones have achieved 
+; nothing.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and both FL and I have hoodies in the closet.  Our 
+; frustration is due to the apparent inability of society to 
+; discuss the entire racial situation openly and honestly.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Prancing_Numbers { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=-0.63337886641829/-0.04457352232842796\
+  /3.284e+009/1/148.5/0 params=0.1/-0.2/-1/4/0/0/0/0
+  maxiter=1500 inside=0 logmap=98 periodicity=6
+  colors=00000A00B00C00D00E00F10G10H20I20J30K30L40M4\
+  0N51O52P53Q55R56S58T59U5AV6AW6AX7AY7AZ8A_8A`9Aa9Ab\
+  AAczSKzUBz_3zeDzoMzyVztTdi_XgaQfcKaREYE9U2CZBFbJHf\
+  SKj_MnhPrpRvxQwzJKWLIXNFXODYQBZS8ZT6_V4`W2`_9YbFVe\
+  MShSPkYUndcqjmtpmrkmpghnccm_ZkWUiSPhOLfKHdGHcCHa8I\
+  _4IZ0IY1HY1GX1GX1FW2FW2EW2DpchofhNH6MIALJEKKIJLMJM\
+  QINUHOYGPaFQeFRiHSjISjKSzLSzNSzOTzQTzRTzTTzUTzWUzX\
+  UzZUz_UzaUzbUzdVzeVpgVqhVqjVqkWrmWrnWrpWsqWsrWssZr\
+  s`qscqtepthotjoqhmofkmdjjchhagf_ecYdaXb_VaXT_VRZTQ\
+  XQOVOMUMKSJJRHHPFFOCDMACL8AJ58I36G15F47G69H8BIADIC\
+  FJEHKGJKILLKNMMPMORNQTOSUOUUPWUQYUR_URaUScUTeUTgUU\
+  iUVkUVmUWoUXMaUNcUOdTQeSRgSSjRTmQVpQWsPXsOYsO_tN`t\
+  MatLctLdtKetJftJhtIitHjtHktGmuFnuFouEquDruDsuCtuBv\
+  uBwuAxu9yu9xvAxvBxvBwvCwvCwvDvvDvvEvvEuvFuvFuvGtvG\
+  tvHtvIsvIsvJsvJrvKrvKrvLqvLqvMqvMpvNpvNpvOovOovPov\
+  QnvQnvRnvRmvSmvSmvTlvTlvU }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

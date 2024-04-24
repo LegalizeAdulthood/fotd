@@ -1,0 +1,115 @@
+;     Date: Mon, 23 Apr 2012 15:42:37 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 23-04-12 (Elephants Amok [No Rating])
+;       Id: <1.5.4.16.20120423154526.2bc7db1e@earthlink.net>
+; ---------
+; 
+; FOTD -- April 23, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Feeling merciful, I decided to rescue one of the several 
+; elephant images that were due to be posted as the FOTD's for 
+; April 16, 17 and 18, but never made it because of a health bug 
+; that we picked up here at FC.
+; 
+; The name "Elephants Amok" fairly describes the scene, which lies 
+; in the East Valley area of the Z^2+C Julibrot, at an angle 
+; double rotated 0.2,0.2 degrees from the true Julia orientation.
+; 
+; At this weird angle, there is no relation between the elephants 
+; and the remains of the Mandelbrot buds.  The elephants have gone 
+; totally amok, which explains the name "Elephants Amok".  Instead 
+; of standing guard over their appointed buds, they are running 
+; madly about, devastating everything in their path.
+; 
+; For some strange reason, the ghost bud on the left is being 
+; crushed by a horde of baby elephants.  Maybe they think the bud 
+; is their mother.  The rest of the elephants are wandering 
+; aimlessly about, apparently in a state of four-dimensional 
+; confusion.
+; 
+; But confused elephants are still elephants, and elephants are so 
+; common that I could give the image no rating.
+; 
+; The time required to see the elephant disaster is a brief 1-3/4 
+; minutes.  The finished image may also be seen on the web sites.
+; 
+; The image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; FOTD's beyond counting are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds, occasional periods of light rain and a few wet 
+; snowflakes made today a day to be forgotten here at Fractal 
+; Central.  The temperature of 43F +6C felt more like December 
+; than April, causing the fractal cats to wonder where the heat 
+; was.
+; 
+; The humans, FL and I, had a typically average day.  Our main 
+; task was simply getting through the time between the day's start 
+; and its end.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and pay no attention to those rumors that the 
+; FOTD's are becoming potboilers.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Elephants_Amok { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0.123909/\
+  0.531148/2.264493/1/111.25/0 params=89.8/0/89.8/90\
+  /0.2662514139207/-0.0034281189961/0/0/2/0 float=y
+  maxiter=32767 inside=0 logmap=yes periodicity=6
+  colors=000fPMfQMfQMfRMfSNfTNfTNfUNfVOfVOfWOfXOfXOf\
+  YPfZPf_Pf_Pf`QfaQfaQfbQfcQfdRfdRfeRffRffSfgSfhSfhS\
+  fiSfjTfkTfkTflTfmUfmUfnUfnUfnUdnWcmXamY`lZZl_Yk`Xk\
+  aVjbUjcSieRifPjgOihNiiLhjKgkIflHemGdnFclFbkEajE`hE\
+  _gD_fDZfDYdDXcCWbCUaCT_BSZBRYBQWAPVAOUANS9MR9KQ8JP\
+  8JN8JM7IL7HK7GK6FK6EK8DKACKCBKEAKG9KI8JK7IM6HO5GQ4\
+  FP3EP2DO2CO2BO2AN29N29M29M28M28L28L28K28K28K28A28A\
+  27A27I27I27H27F27A27A27F26F26F26C26D26F16K16K16H16\
+  K15K15K15K15K15K25K35K45K64K86KA8MCAOECQGDSIEUKFWM\
+  GYOH_QIaSJcUKeWMgYOi_QkaSh_QdYOaVMYSKVPHRMFOJEKGCH\
+  DADA8A76644N16M15L15L15K15K15K15K15K15K15K15L15M14\
+  N14O14P14Q14S14U14U14U14V14W14X13Y13_13a13c13c13d1\
+  3e13f13g13h1Am2Am1Km1Km1Km1Um1Um1Um1Um1cm1cm1cm1cm\
+  1mm1mm1mm1mm1zm1zm1zm1zm1zm1zm1zm1zm1zm1zm1zm1zm1z\
+  m1zm1zm1zm1zm1zmAnmAlmAkmAimAzmAzmAzmAzmAzmAzmAzmA\
+  zmAzmAzmAzmAzmAzmAzmAz000 }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

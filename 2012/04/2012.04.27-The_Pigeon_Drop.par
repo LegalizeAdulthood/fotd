@@ -1,0 +1,110 @@
+;     Date: Fri, 27 Apr 2012 19:16:37 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-04-12 (Tinseltown Toyland [8])
+;       Id: <1.5.4.16.20120427191930.2ba7fe9a@earthlink.net>
+; ---------
+; 
+; FOTD -- April 27, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates a 6, nothing to brag about but still better 
+; than the image of two days ago, which rated an even lower 5.  
+; Today's image is half-evaporated, with the open inside parts 
+; rendered with the inside set to 'bof61'.  "bof61" refers to page 
+; 61 of a certain book about fractals, on which the algorithm 
+; first appears.  The outside is set to 'imag', which is short for 
+; imaginary.
+; 
+; The half-evaporated state means exactly what it says.  The 
+; imaginary(p3) parameter, which sets the bailout radius, is set 
+; to 6000.  In fractals with two negative exponents of Z, the 
+; outside parts begin to evaporate as the bailout is increased.  
+; In today's image the evaporation has progressed about half way.
+; 
+; The effect of all this manipulating is today's image, a very 
+; sandy one indeed, far too busy for an exceptional rating, yet 
+; with enough interest, at least IMO, to be declared FOTD for the 
+; day.
+; 
+; The name "The Pigeon Drop" has nothing to do with the image, nor 
+; with the mess pigeons leave behind.  It's the name given to an 
+; old scam in which gullible victims would be tricked into turning 
+; over their money to the scammer, expecting a quick profit in 
+; return.
+; 
+; The calculation time of 2-1/4 minutes is a minor scam.  The 
+; image is not really worth it.  But those who do not take time to 
+; calculate the image will never know what they have missed.  
+; Luckily however, there is a way out of the dilemma at the web 
+; sites.
+; 
+; The calculation may be avoided by viewing the finished image on 
+; the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition version is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The past images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and a temperature of 50F 10C made today feel more 
+; like November than late in April.  The fractal cats wanted more 
+; sun but settled for more tuna.  The humans spent the day doing 
+; routine business.  The next FOTD is due to be posted in 24 
+; hours, but things have been unpredictable here lately so don't 
+; be surprised if it is late.  Until whenever, take care, and the 
+; great breakthrough is coming.  But who knows where we will go 
+; from here.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Pigeon_Drop { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.773275419694291/+1.386414033011382/\
+  2.205521e+010/1/-5/0 params=-3.2/-2.2/1.6/-4.4/0/\
+  6000/0/0 float=y maxiter=1800 inside=bof61
+  outside=imag logmap=135 periodicity=6
+  colors=000000EGEBEA8D7BG9EJAHLBKOCNRDQJEJFGWSHOMIa\
+  cJdfKghLzkNznOzpPzsQzvRzxSzwUzvVzvXzuYzt_zt`isbgsc\
+  erecqf`qhZpzXozVozYszMszUtzXuz_vzbrzeszhtjkuimvipd\
+  grOft7esAdsCcrEbrHarJaqL`qN_qQZpSYpUYpWXoZWo`VobVn\
+  dUngTniSmkRmmRmpQlrPltOlvOiuNguNeuNcuNauM_uMYuMWuM\
+  UuLSuLQuLOuLMuLKuKIuKGuKEuKCuJAuJ8uJ6uJ4uJ3vI3vI3v\
+  I3vI3vH3vH3wH3wH3wH3wG3wG3wG3xG3xF3xF3xF3xF3xF5yE6\
+  yE8yE9yDAyDCyDDyCFyCGyCHyBJyBKyBLyANyAOyAQy9Ry9Sy9\
+  Uy8Vy8Wy8SlJP`UMPdNOeNNeNMeOMeOLeOKePKePJePIeQIeQH\
+  eQGeRGeRFeREeREePFbOG`NHYMIWLJTKKRJLPIMMHMKGNHFOFE\
+  PDDQACR8BS5AT39T1BU2CU2DU3EU3FV4GV4HV5IV5JV5KW6LW6\
+  MW7NW7OX8PX8QX9RX9SX9vOSsNRqMQoLPlKOjJNhIMfHLmHLmG\
+  KmFJmEIzDHzCGzBFzBFzAGzAHz9Iz9JzzJzzKzzLzzMzzNzzNz\
+  zOzzPzzQzzQzzSzzTzzUzzWzzXzzYzz_zz`zzazzbzzdzzezzf\
+  zzhzzizzjzzkzzmzznzzozzqzzrLzsLztMzsMzsNzsNzsNzrOz\
+  rOzrOzrPzqPzqPzqQzqNzPKzL }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

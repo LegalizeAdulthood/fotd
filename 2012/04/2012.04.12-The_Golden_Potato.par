@@ -1,0 +1,118 @@
+;     Date: Thu, 12 Apr 2012 13:28:04 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 12-04-12 (The Golden Potato [7.5])
+;       Id: <1.5.4.16.20120412133043.2b9fc456@earthlink.net>
+; ---------
+; 
+; FOTD -- April 12, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; There was no FOTD for April 11.  It's a minor tragedy, but the 
+; resilient FOTD has survived and will continue into the 
+; indefinite if not quite eternal future.
+; 
+; Today's image takes us into the parent fractal that results when 
+; the formula Z^(1.5)+C is iterated 11 levels up the hyperladder 
+; with the recip function applied.
+; 
+; This parent is curious in that it has a prominent main period-2 
+; bud, while the East Valley area appears to have been absorbed in 
+; its surroundings.  Today's image lies in the chaotic debris that 
+; marks the area where I assume the East Valley should be found.
+; 
+; The rating of a 7-1/2 shows that I consider the image to be in 
+; every way average, though I did add an extra 1/2 point for some 
+; extra coloring work.
+; 
+; The name "The Golden Potato" shows what can happen when whimsy 
+; is given full rein.  It has nothing to do with the image, but 
+; could draw a few extra viewers who might be curious about what a 
+; golden potato has to do with fractals.
+; 
+; The calculation time of 7-1/2 minutes will drag.  Luckily, a 
+; great speed-up is available on the web sites, where the image 
+; may be viewed instantly.
+; 
+; Live in peace by viewing the finished image on the official FOTD 
+; web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Extend the peaceful feelings by checking the high-definition 
+; version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Appreciate the full extent of the fractal grandeur on the 
+; original FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of clouds and sun with a temperature of 57F 14C made today 
+; a typical mid-April day in Central Pennsylvania.  The fractal 
+; cats took the day as it happened.  They were neither happy nor 
+; dis-satisfied.
+; 
+; The humans had a typically busy day.  Typical means nothing 
+; happened to make the day memorable.  The next FOTD is scheduled 
+; to be posted in 24 hours.  Don't be disappointed however if it 
+; is delayed.  The posting schedule has been rather irregular 
+; recently.  Until whenever, take care, and everyone knows 
+; eaxctly what the real answers to the world's problems are.  But 
+; what is wrong with those who cannot see the truth of these 
+; answers?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Golden_Potato { ; time=0:07:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-0.5113007384686734/+0.1460151322137333\
+  /1.811376e+010/1.0765/27.5/0 params=1.5/0/11/0
+  float=y maxiter=14400 inside=0 logmap=-397
+  periodicity=6 mathtolerance=0.05/1
+  colors=000jpRfiObbL_XJWQGSJDPDBwLrkLr_LrOLrVUjzbzz\
+  jXzkTzzQztMzpJzkFqkCmk8ck5daBjSHmIMhFK`CJT9IL6GD3A\
+  5143402761AC0DH5ESAFaFGkKHuMOmOUfQ__ReTSaPTZLUVHUS\
+  DVO9WL5WI2QS1K`1Ej08z0mz6MjBTfGZbLhXNqROzLPmTT`_WO\
+  gZBnaC__CLYC6Xvp_rkYnfWkaUgXScSQ`NOXIMUEKVIJVMJVQI\
+  WUIWYHW`H`ZEdXChVAmT7qR5uP3fR6TT9EVC0WE4XF8YFCZFG_\
+  GK`GN`GWUCdN9bUA``BZfBXmCWsC3mE9mBEm9Jm7Pm5UmzZmzV\
+  mzRnzOyzY_zaYzeWziVzmTzqSznmzbmzSmzHmzKmzNmzQmzTmz\
+  WmzZmzamzdmzgmzjmzmmzomzmmzkmzimzgmzfmzdzzbzz`zz_z\
+  zYzzWzzUzzTzzQzzOzzTzzXzz`zzdzzizzmzzqzzuzzuzzuzzu\
+  zzuzzuzoqzemzXizbezgazmYzrZzmZzh_zd_z__zWWzUSzTPzR\
+  LzQIzOEzNBzMFzIIzFFzJCzN9zR6zV9zSBzQDzOFzMHzKJzILz\
+  GOzEQzCSzAUz8Wz6Yz4_z2Wz5Sz7OzAKnCGnFDnHApK7qNBpME\
+  pMIoMLoMPnMSnMVnMZmLamLelLhlLlkLokLrkLsiMsgNteOtcP\
+  uaQu_RvYSvWTvUTqZSmbShfSdkR_oRWsRSwRMzWGz_Azc5zg8z\
+  eBzdSznRznQznRzlRzjpzYnzU }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,102 @@
+;     Date: Sun, 22 Apr 2012 09:37:32 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 21-04-12 (Scene [7])
+;       Id: <1.5.4.16.20120422094020.2b87a424@earthlink.net>
+; ---------
+; 
+; FOTD -- April 21, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows what happens in the East Valley of the large 
+; minibrot on the infinitely divided main stem of a Mandelbrot set 
+; that has been corrupted in its depths by Z^(2.1)+C energies.
+; 
+; The railroad track effect is typical of fractals of this type in 
+; this area.  This familiarity holds the rating to a modest but 
+; still worthy 7
+; 
+; The name "Scene" means that I could think of no better name to 
+; give the image.
+; 
+; The calculation time of 1-5/6 minutes is a fair enough price to 
+; pay for the image.
+; 
+; The completely rendered image is posted on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the FOTD's are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The morning was fair enough here at Fractal Central, with lots 
+; of sun and a noontime temperature of 73F 23C.  But dark clouds 
+; rolled in during the afternoon, bringing a cool wind from the 
+; north and occasional showers of rain.  By evening a steady rain 
+; had set in and the temperature had fallen to a chilly 55F 13C.  
+; The fractal cats slept through most all of it, while the humans 
+; had an uneventful day.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and the latest discoveries of 
+; science might lead to the end of science.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Scene { ; time=0:01:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip passes=1
+  center-mag=-1.745480306883863/+0.00044649355199448\
+  /1.659107e+012/1/-132.5/0 params=2.1/1000/0/0/0/0/\
+  0/0/0/0 float=y maxiter=1250 inside=0 logmap=187
+  periodicity=6 mathtolerance=0.05/1
+  colors=00000720940B61D82FA3HC4JE5LG6NI7PK8RM9TOAVQ\
+  BXSCZUD`WEaYFb_GcaIdcKeeMfgOgiVhj_hjcgnh`pmVrpammY\
+  hcXcURUKKLAEC08D3AE6CF9EGCGGEIHHKIKMJNOKQQKSSLVUMY\
+  WN`YOc_OeaLiXJlTHoPEqKCsGKsCUrHcoMZjRUeWP``KWeFRbB\
+  MZ9HU9CPAAKA8FA6AA4AA2AA0AOQY`ZQmgJbaISXIHSH7NHBPK\
+  FQMJSONTRRVVZZaccghhmmmsTJXXKV`LUdMTiORlPQnQOuQNxQ\
+  MrPQlPTfPW`PZVObPOeJOhEOkKTlPXmL_tU`na`hiabgY6fW8f\
+  U9eSBeQCdODcMFcKGbIIaGJaEL`CM`BN_EMZGMYILXKLXMKWOK\
+  VQKUSJTUJTWISYIR_HQaHJZINaHQcHTeGXgG_iFbkFZDxbWafh\
+  JemFdrBby4cx6cw7cv8zu9ztAzsBzrCzqDzpEcoFbgHb`IbUJb\
+  NLbGMb9Nd0Pb2Oa3N`4NZ6MY7MX8LVAKUBKTCJREJQFIPGHNIH\
+  MJGH1sIJHLAGNAGQAGSAFVAFXAF_AEaAEdQEfQDiRDkSDnSCpT\
+  CsUCwWAxUCyUEzUGzUHzUJzULzUNzUOzcQzcSzcUzcbzcVzcPz\
+  cOzcOzmOzmOzmOzmOzmOzmOzmOzmOzmOzmNzmMzmMzmLzmLzmK\
+  zmKzzJzzIzzIzzHzzHzzGzz2zz9zzGzzMzzTzz_zzezzazzZzz\
+  WzzTzzQzzNzzKzzHzzEzzBzzq }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

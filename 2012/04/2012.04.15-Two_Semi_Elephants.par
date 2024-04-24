@@ -1,0 +1,121 @@
+;     Date: Sun, 15 Apr 2012 19:29:29 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-04-12 (Two Semi-Elephants [No Rating])
+;       Id: <1.5.4.16.20120415193211.2b9f708c@earthlink.net>
+; ---------
+; 
+; FOTD -- April 15, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is the second variation on the theme of the East 
+; Valley elephants.  I have named it "Two Half-Elephants".  
+; Actually, the name is not quite correct.  The elephants in 
+; question are not exactly half-elephants, they are 12/25 
+; elephants, which makes them a little less than half-elephants.
+; 
+; The problem with today's elephants is that the parent fractal is 
+; not the Mandelbrot set, it is the Mandeloid that results when 
+; the expression Z^(1.48)+C is iterated 11 steps up the hyper-
+; stairway with the floor function applied.  This figure is a near 
+; shapeless blob, with a rudimentary East Valley.  Today's scene 
+; lies on the south side of this valley.
+; 
+; The curled trunks of the elephants are quite apparent, as are 
+; their fat rumps, but their middle sections seem to have 
+; vanished.  The beasts still faithfully guard their appointed 
+; buds however, even though the buds are shrunken shriveled things 
+; that almost no one but a fractal fanatic would find interesting.
+; 
+; The semi-elephants are filled with smaller semi-elephants, 
+; apparently all the way down.  The image is also filled with 
+; minibrots, though I have made no effort to track them down.
+; 
+; The name "Two Semi-Elephants" fairly describes the scene.  Since 
+; by this time the elephant theme is a bit worn out, I declined to 
+; rate the image.
+; 
+; The calculation time of 9-1/4 minutes is far more that what the 
+; image is worth.  Here again, the FOTD web sites gallop to the 
+; rescue.
+; 
+; Check in at the official FOTD web site to see the finished image 
+; without the need of calculating it.  The web site may be 
+; accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition version is online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the past FOTD's may be found at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day began with heavy clouds and light sprinkles of rain here 
+; at Fractal Central, but by noon the clouds broke, leading to a 
+; partly cloudy afternoon with a temperature of 75F 24C.  The 
+; fractal cats had a relatively normal day of sleeping anywhere 
+; they could find.  With the warmer weather here, they no longer 
+; seek the afternoon sun.  Meanwhile, the humans had a quiet day, 
+; except for FL, who spent the afternoon working in her garden.
+; 
+; The next FOTD, a continuation of the elephant theme, is 
+; scheduled to be posted in 24 hours.  From the way things have 
+; been going lately however, I would not be surprised if it were 
+; late.  Until then, take care, and even the wisest among us know 
+; almost nothing.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Two_Semi-Elephants { ; time=0:09:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=floor float=y
+  center-mag=+0.1315118895857274/+0.0741804615612379\
+  /3827.567/1/-10.75/0 params=1.48/0/11/0
+  maxiter=50000 inside=0 logmap=50 periodicity=6
+  colors=000fPMfQMfQMfRMfSNfTNfTNfUNfVOfVOfWOfXOfXOf\
+  YPfZPf_Pf_Pf`QfaQfaQfbQfcQfdRfdRfeRffRffSfgSfhSfhS\
+  fiSfjTfkTfkTflTfmUfmUfnUfnUfnUdnWcmXamY`lZZl_Yk`Xk\
+  aVjbUjcSieRifPjgOihNiiLhjKgkIflHemGdnFclFbkEajE`hE\
+  _gD_fDZfDYdDXcCWbCUaCT_BSZBRYBQWAPVAOUANS9MR9KQ8JP\
+  8JN8JM7IL7HK7GK6FK6EK8DKACKCBKEAKG9KI8JK7IM6HO5GQ4\
+  FP3EP2DO2CO2BO2AN29N29M29M28M28L28L28K28K28K28A28A\
+  27A27I27I27H27F27A27A27F26F26F26C26D26F16K16K16H16\
+  K15K15K15K15K15K25K35K45K64K86KA8MCAOECQGDSIEUKFWM\
+  GYOH_QIaSJcUKeWMgYOi_QkaSh_QdYOaVMYSKVPHRMFOJEKGCH\
+  DADA8A76644N16M15L15L15K15K15K15K15K15K15K15L15M14\
+  N14O14P14Q14S14U14U14U14V14W14X13Y13_13a13c13c13d1\
+  3e13f13g13h1Am2Am1Km1Km1Km1Um1Um1Um1Um1cm1cm1cm1cm\
+  1mm1mm1mm1mm1zm1zm1zm1zm1zm1zm1zm1zm1zm1zm1zm1zm1z\
+  m1zm1zm1zm1zm1zmAnmAlmAkmAimAzmAzmAzmAzmAzmAzmAzmA\
+  zmAzmAzmAzmAzmAzmAzmAz000 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
