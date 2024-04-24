@@ -1,0 +1,114 @@
+;     Date: Tue, 24 Jul 2012 17:25:58 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-07-12 (Wrecked Rectangle [8])
+;       Id: <1.5.4.16.20120724172911.2a0799da@earthlink.net>
+; ---------
+; 
+; FOTD -- July 24, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image gives an unexpected view of one of those strange 
+; rectangles in certain areas and at certain orientations of the 
+; Z^(2.003)+C Julibrot.  It shows that these figures are not 
+; really rectangles at all.
+; 
+; To create the distortion, I first found a minibrot very close to 
+; the X-axis of the Mandelbrot plane, with rectangles in its 
+; surrounding pattern.  Then I calculated the Julia set of this 
+; Mandelbrot rectangle.  Surprisingly, the Julia set of the 
+; rectangle is a concave octagon.
+; 
+; To produce the effect of two pentagons connected by a narrow 
+; thread, I double rotated the orientation of the slice 0.0021 
+; degrees from the true Julia direction, which is the point where 
+; the octagon is ready to split into two rectangles.
+; 
+; The result is today's image, which I have named "Wrecked 
+; Rectangle".
+; 
+; I rated the image at an 8, because of both the brilliant colors 
+; and the mathematical interest.
+; 
+; The calculation time of 55 seconds will seem to pass in the 
+; blink of an eye once the strange geometric object at the center 
+; comes into view.
+; 
+; Find the image already finished at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Find high-definition variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Find thousands of back images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A typical partly cloudy midsummer day passed uneventfully here 
+; at Fractal Central.  The temperature of 91F 33C was a bit on the 
+; hot side, but a refreshing breeze and relatively low humidity 
+; kept things bearable.  The fractal cats spent most of the day 
+; lounging in their cat cubes; the humans spent the day attending 
+; to assorted tasks, which is true for almost every human on earth.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and the dangers that the media are not reporting are 
+; likely to be more dangerous than the things they *are* reporting.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Wrecked_Rectangle { ; time=0:00:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=+0.000023902\
+  45110228/-0.00011070773475015/3164.17/1/-87.5/0
+  params=89.9979/0/89.9979/0/-1.74323693381586/\
+  1.24151879e-007/0/0/2.003/0 float=y maxiter=360
+  inside=0 logmap=84 periodicity=6
+  colors=000GD5GB0EA0HA0HA0HA0HA0HA0HA0HB0HG0HI0HJ0H\
+  Q0Lc2HZ0EX0BU09T06Q04P01N00L00H00G00E00D00B0090080\
+  0000600E00L09U0Le0zz0Xn0ETD0Bc00z00z01z05z09z0Gx0L\
+  v0Qs0Xq0en0ll0si0zg0ze0vi0in0Zs0Pv1Gz61zB0zG0zH0zJ\
+  0zJNzLNzNNxNNvPgsQgqQgnTglUgiUsgXzeXzcTz`Pz`Nz`JsZ\
+  HgZEUZBQZ9PX6LX5HX26X00U00U00U00X00UH0TlJT`LLQLEHN\
+  89N22P00P00J00E0KD0KH0K40K00K00K00K00K00U10U10U24U\
+  48c5Ec5Jc9LcDNcHPmLQmQTmUTmNNmHJmBGm6Dm29z06z04z01\
+  z00z00z10z40z80zD0zH0zG0zG0zG0zG1zG6zGDzGJzGQzGZzG\
+  gzGqzGzzGzzEzzEzzDzzDxzBszBqzBnz9lz9iz8ez8cz6`z6Zz\
+  6Xz5Tz5Qz5Pz5Nz5Lz5Jz4Lz5Hz6Gz8Dz9B5B84B64D42E21G1\
+  1H00H00J00L00N00P00T00P09N0QL0lG0iJ0gN9eQPcUgcZz`X\
+  xZUvXUqUTnTQiQQgPPcNN`LNXJLUHJQGJPEHLDHJBJJBLL9PN8\
+  QN8TP6UQ6XQ5ZT5`U4cU4eX2gZ2iZ1n`0qc0sc0ve0xg0zg0zi\
+  0zl0zl0zn0zn0zl0zl0zl0zi0zi0zi0zg0zg0zg0ze0ze1ze1z\
+  e1xc0gL0gJ0gH0gG0gE0zN1gD }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

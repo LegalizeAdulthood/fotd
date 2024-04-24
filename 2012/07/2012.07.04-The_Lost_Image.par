@@ -1,0 +1,119 @@
+;     Date: Wed, 04 Jul 2012 16:49:21 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-07-12 (The Lost Image [7*])
+;       Id: <1.5.4.16.20120704165220.29efc686@earthlink.net>
+; ---------
+; 
+; FOTD -- July 04, 2012 (Rating 7*)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is extremely lucky, (if images can be considered 
+; to have luck, that is.)  It was originally intended to be the 
+; FOTD for this past June 20, but I accidentally lost it because 
+; of a power glitch before I could bestow the honors upon it.  (I 
+; run Fractint from a virtual ramdrive.)  But today, much to my 
+; surprise, I found that I had saved its full parameter file under 
+; the unlikely name 'todim.par' in my 'real' Fractint directory on 
+; the 'real' C: disk, so the image, which is a very fast one, was 
+; not lost after all.  The name "The Lost Image" is obviously self-
+; explanatory.
+; 
+; The parent fractal is a Mandelbrot set with so much Z^3 
+; corruption that the effects are just starting to show on the 
+; surface.  Today's scene is located in the 'main spike' area of 
+; the large minibrot on the 'main spike' of the parent M-set, 
+; where the Z^3 corruption is especially strong.
+; 
+; The rating of 7* has a star attached, which indicates that the 
+; image is not a new one, and also points out the resolution 
+; breakdown just starting to appear along the band edges.  The 
+; magnitude of over 10^13 is beyond the range of perfect 
+; resolution and makes the mathtolerance entry necessary.
+; 
+; But despite the extreme magnitude, the image is a very fast one, 
+; which calculates in a fireball 30 seconds.  And even this minor 
+; calculation hassle may be avoided by checking the web sites.
+; 
+; Check the finished image on the official site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and the high-definition version plus interesting variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; and don't forget the original, now classic web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Typical July 4th weather prevailed here at Fractal Central 
+; today, with all the expected ingredients.  We had hot sun, the 
+; usual high humidity, and a temperature of 91F 33C.  There were 
+; even rumors of the typical rain storm that arrives at fireworks 
+; time.  The fractal cats were skittish most of the day due to the 
+; sporadic firecrackers going off in the neighborhood.  When 
+; darkness arrived and the fireworks increased, they took to their 
+; security places.  Meanwhile, the humans did little out of the 
+; ordinary.
+; 
+; The next FOTD will be posted within a reasonable time.  Until 
+; whenever, take care, and what difference will the discovery of 
+; the Higgs particle make in the life of the average person who is 
+; not a physicist?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Lost_Image { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti2 function=recip float=y
+  center-mag=-1.750947207550318/0/1.037696e+013/1/\
+  -30/0 params=3/16/0/0/0/0/0/0/0/0 maxiter=1500
+  inside=0 periodicity=6 mathtolerance=0.05/1
+  colors=000_H7WF6TE6PC5LA4I83E73A52731310w4Fm3Cc2AU\
+  27K15A02zb5oW4eQ3VJ2LD1A60ZWDVSBROANL8JH7FE5BA4772\
+  3319EK7CH6AE58B368245122uZKaNDJB6ZLuQFfHAT85EnI7iG\
+  6eF5aD5YC4TA4P93L72H62C41831410cuMUfGKTBAE5QBBJ88D\
+  55622I3nG2iF2eD2aC2YA1T91P71L61H40C308104tO2oM1kK1\
+  fI1bG1ZE1UC1QB0L90H7000000040000000000000000000000\
+  0000cCzUTmJZWH_TGXREUPDRMCPKAMI9JG8GD6DB5B94862541\
+  22neAf_8_U7TO5LI4EC2761v5Fn4Dg3B_39T27M15E13701CDh\
+  VafQW_MRUHLODGI8AC456u_2oW1iS1cP1YL1TI1NE0HA0B70Zf\
+  F`hDbgIdgNfgSggXig`kfelfjnfopftqfxmgriglehgahaYhXU\
+  iRQiMMiGIjBEj5Bj0Fn2Ir3Lv5Oy6Lw9JuCHsFEqICoLAmO8kQ\
+  AlSBmTDnVEoWFpXGSeEP`6HDCMXBJT9GP8EL6BG48C358124RG\
+  3D81S4TP3QN3OL3LI2JG2GE2EB1C919717404202xvmrphlkcg\
+  e_a`VXWRRQMMLIGGDBA9554RooPkkNggLccJ``HXXFTTDQQBMM\
+  9II7EE5BB3771331Wp0Pe0JV0CL06ANNWFFL77AoLWfHQYELQA\
+  GH7A835uSCqQBmOAjM9fL9bJ8 }
+
+frm:JulibrotMulti2  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1),
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 6 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

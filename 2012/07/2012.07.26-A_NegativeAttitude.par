@@ -1,0 +1,110 @@
+;     Date: Thu, 26 Jul 2012 14:52:34 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 26-07-12 (A negative Attitude [8])
+;       Id: <1.5.4.16.20120726145547.376f425c@earthlink.net>
+; ---------
+; 
+; FOTD -- July 26, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the same area of the same split minibrot 
+; as yesterday's image.  But instead of Z^(2.003)+C, today's 
+; generating expression is (-Z)^(2.003)+C.  Both parent fractals 
+; are identical on the surface, but the inner details, especially 
+; along the negative X-axis, though similar, are decidedly 
+; different.
+; 
+; The color palette was created by the Fractint program with a 
+; single stroke of the <enter> key.  I did slightly tweak a few 
+; registers, but the colors are almost totally computer generated.
+; 
+; The name "A Negative Attitude" came about because in today's 
+; image it is negative (Z) that is iterated.  FL also gets a bit 
+; of credit for the name, since she thinks my attitude toward life 
+; is too negative.  (I consider my sometimes-negative attitude to 
+; be realistic in a sometimes-negative world.)
+; 
+; Today's rating of an 8 is once again above average.  IMO, the 
+; unusually rich field of colors makes the image worth its rating.
+; 
+; The calculation time of 2 minutes borders on slowness, but once 
+; the top of the frame is finished and the rich colors appear, the 
+; eagerness to see the entire image will outweigh any restlessness.
+; 
+; All restlessness may be avoided by viewing the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition rendering is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heat and humidity returned to Fractal Central today, with a 
+; temperature of 91F 33C, humidity to match and the ever-present 
+; threat of thunder-storms.  The fractal cats spent the day 
+; keeping cool.  The humans, always cool, passed the day doing 
+; routine work.  The next FOTD will be posted within a reasonable 
+; time.  To discover what a reasonable time might be, check back 
+; here in about 24 hours.  Until whenever, take care, and I am in 
+; favor of positive thinking, but not when it is carried to the 
+; point of self-deception or denial.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_NegativeAttitude { ; time=0:02:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1 periodicity=6
+  center-mag=-1.621624019017873/+0.000000017744904\
+  36/3.182439e+009/1/-122.5/0 params=0/0/0/0/0/0/0/0\
+  /2.003/0 float=y maxiter=1500 inside=255 logmap=245
+  colors=000dG8`F7XD6UC6QA5M94I73F63B42731310p_mlXih\
+  VfeScaQ_ZOXVLUSJQOGNLEKHCGE9DA7A7463231w80s70p70m6\
+  0j60g50d50`50Y40V40S30P30M20I20F20C1091060030b_p`Y\
+  mZWjXUhVSeTRbRP`PNYNLVLJTJIQHGNFELDCIBAF99D77AmU7g\
+  S5dQ2aO0ZM0WK0SH0OF0KC0GA0C70850420o9iY6UH3Fhq7en6\
+  ck6ah5_f5Xc5V`4TZ4RW4OT3MR3KO3IL2FI2DG2BD19A168145\
+  0220YzhWveUscSo`QlZOhWMeUKaRIZPHVMFSKDOHBLF9HC7EA5\
+  A7375132xUWtSUpQSmOQiMOfLMbJKZHIWFGSEFPCDLABH89E77\
+  A5573331163h52e52c52a42_42Y42W42U31R31P31N21L21J21\
+  H21F10C10A108006004002HKHGJGFIFEHEEGEDFDCECBDBBDBA\
+  CA9B98A8898787676565565454343232222111000aLHaJIbII\
+  cIKcIMcHNhHPmHRzHSmHUcHVUGXKGUAGK0GK0GK0FK0FK0FK0F\
+  K0FK0FKVLaIQS5VI4TG4RF4PE3ND3LC3JB2HA2F92D71B61951\
+  74053032MMJ011G3_E2WC2SA2O81K71G51C308104dAaZAXUAS\
+  PANKAJFAEAA95A4I5zG4sE3lC3eA2Z82S61L41E207JAvGAoEA\
+  hCAbAAW8AQ6AJ4AD2A6lAAzzz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

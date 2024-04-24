@@ -1,0 +1,112 @@
+;     Date: Mon, 23 Jul 2012 18:07:24 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 23-07-12 (Sieve of Integers [7])
+;       Id: <1.5.4.16.20120723181035.376725f4@earthlink.net>
+; ---------
+; 
+; FOTD -- July 23, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have little ambition to write the discussion for today's 
+; image.  All I need to say is that it is an outzoom of 
+; yesterday's image, which lies near the right edge of the 
+; curious comb-like object in today's image.
+; 
+; I named the image "Sieve of Integers".  The large object filling 
+; the frame certainly could be taken as a sieve, and integers 
+; certainly are a part of any fractal.
+; 
+; With few good or bad points, the image rates an average 7.
+; 
+; The brief calculation time of 45 seconds will leave no one with 
+; a feeling of disappointment if the image lays an egg.
+; 
+; All risk of disappointment may be avoided however by viewing 
+; the finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image is available in high definition at>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The entire past FOTD library is online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today brought a return of the heat to Fractal Central, with lots 
+; of sun, high humidity, and an afternoon temperature of 93F 24C.  
+; The fractal cats stretched out for the afternoon in the coolest 
+; places they could find.
+; 
+; The humans passed the day pondering human things, especially the 
+; existence of evil.  FL tells me I am spreading negative energies 
+; by calling people idiots and their opinions asinine.  Maybe I 
+; am.  But as I see it, our culture is already overflowing with 
+; negative energies.  The least I can do is recognize the rampant 
+; negativity and point it out.  I'll go into more detail in an 
+; upcoming FOTD.
+; 
+; The next FOTD will be posted when it is ready, most likely in 
+; around 24 hours.  Until then, take care, and if we wish to see 
+; the ultimate cause of the latest massacre, we should turn on the 
+; TV, go to the movies, read the latest romance and action novels, 
+; play the latest video games, and listen closely to the current 
+; popular songs on the radio.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sieve_of_Integers { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.011883267\
+  34218610/+0.00442452419706781/30199.4/1/-55/-25.64\
+  10058243059709 params=89/89/89/89/-1.7435/0/\
+  0.000175/0.073883/2.003/0 float=y maxiter=32767
+  inside=0 logmap=65 periodicity=6
+  colors=00000B00D10F20H30J40M50P60S80VA0YC1`E2cG6fI\
+  9iKDlPGmQJmRNmSQoTUnUXlV_kWciXfhYigVfcTd`QbYO`ULYR\
+  JWOGUKESHBPE9NA6L74J4DBRM3mQ9hUEcXKZ`PUdVPg_LhXKiV\
+  KiSKjQKkNKkLKlIKlGKcLPWQTOUYGZa8beAcdBdcCecDfbFgaG\
+  gaHh`Ii_Kj_LkZMlYNlYQmXSmXUnXWnWYoW_oWapWcpVeqVgpV\
+  iqUksUmuUowUpwTpwSpwRqwRqwQqwPrwOrwOzbNzaMz`Lz_LzZ\
+  NhcPcbRZbTUaVPaXKaZP`_T__X_`aZ`eZaiYanYbrXbvXbqWdm\
+  WeiWfeWgaVhYViUVjPVkLVlHUmDUn9Uo5Up1UqDOoPIn`Cm`Dn\
+  _Dn_DnZEnZEnYEnYEoYFoXFoXFoWFoWGpWGpVGpVGpUHp9TsUH\
+  qTHqTHqTIqSIqSIrRJrRJrQJrQJrQKsPKsPKsOKsOLsOLtNLtN\
+  LtMMtMMtLMtLNuLNuKNuKNuJOuJOvJOvIOvIPvHPvHPwGPwGQw\
+  GQwFQwFRxERxERxERxDSxDSyCSyCSyBTyBTyBTzATzAUz9Uz9U\
+  z92U93V93V93W94W94W94X95X95Y95Y96Y96Z96Z97Z97_97_9\
+  8`98`98`99a99a99a9Ab9Ab9Ac9Bc9Bc9Bd9Cd9Cd9Ce9Ce9Df\
+  9Df9Df9Eg9Eg9Eh9Fh9Fh9Fi9Gi9Gi9Gj9Hj9Hk9Hk9Ik9Il9I\
+  l9Jl9Jm9Jm9Kn9Kn9Kn9LoSDG }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

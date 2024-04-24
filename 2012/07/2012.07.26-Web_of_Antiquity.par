@@ -1,0 +1,107 @@
+;     Date: Thu, 26 Jul 2012 10:03:24 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-07-12 (Web of Antiquity [8])
+;       Id: <1.5.4.16.20120726100648.0da7705e@earthlink.net>
+; ---------
+; 
+; FOTD -- July 25, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's discussion is brief.  The reason is the best one 
+; possible -- I don't feel like writing.
+; 
+; The fractal brings another scene in the Z^(2.003)+C Mandeloid.  
+; The location is in the fractured main stem, very near the 
+; X-axis, just east of the largest minibrot to the east of the 
+; large minibrot.
+; 
+; The rating of an 8 might be a bit liberal.  I'm not sure the 2 
+; minutes I spent tweaking the colors brought that much of an 
+; improvement.
+; 
+; The name "Web of Antiquity" soulds poetic, but has little to do 
+; with the image.
+; 
+; The calculation time of 40 seconds makes the unusually brilliant 
+; image a real bargain, but the web sites eliminate all concerns 
+; about time.
+; 
+; The finished image is at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-definition rendering is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today brought the best possible weather for outdoor activity to 
+; Fractal Central.  The temperature of 82F 28C was perfect, the 
+; low humidity was perfect, the cloudless blue sky was perfect, 
+; and the gentle breezes were perfect.  The fractal cats were 
+; perfectly behaved also, but the same cannot be said of the 
+; humans, who always have some obscure philosophical point to 
+; disagree on.
+; 
+; The next FOTD will be posted in the proper time.  Until 
+; whenever, take care, and I just checked the burning ship 
+; fractal.  It was still ablaze yesterday, but I think it sank.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Web_of_Antiquity { ; time=0:00:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-1.620544817\
+  386523/+0.00000050654561927/1.398348e+008/1/-17.5/0
+  params=0/0/0/0/0/0/0/0/2.003/0 float=y maxiter=1500
+  inside=0 logmap=82 periodicity=6
+  colors=222225225414524825B36E46H57M68Q7AW8C_AH`FJc\
+  HNfLRhUWncasnVuwzokGqeGoZGnVFlSFlOFkKFjHEnFFmGHW8C\
+  52A22511621893GG6PPBZYFjfInmKrhWTfhEjeEkbFlYFoWGqT\
+  GrRHn_Rjgamoofli_jbRgXKfSH`REWPBSPAOO7JN6HO5DO5AOA\
+  CNFEMKELQGMZINgKOoNPdQSWSVQQTMWXGcaBheDojEvnBhkBYj\
+  FRjLMiOEiUAiZAiS8`N6TIAOEEHBHE8NAZDMK6PB7WA5N93EA3\
+  7B36B36B36B37F49K5BO6ET7GY8JcAMhBOnCQ`CNOKOJQNCaOK\
+  ZRTYWYY_jdfvfitebtcVtdPtcIteHtfHtgHWTBDH72968C6KHD\
+  WOOkXZdNXZFYWAaTAfUkd55M66QAATJIXRQ`_YdfeilloWWZEE\
+  M22B22A32A72AA3AE3AJ5BM5BQ6CW8D`9EfAFkCHoDIdDKUFML\
+  INHKRANW8Q`8QaARcDSdFSfIUgLViOWjRWjTZkX_m_andcoeeq\
+  gerietketgboe_maWi_VfYScVOZTNXQKTOHRNGPLDMKBKJAIHA\
+  HHAHGBGGBGGBGFCGFCGFCGEDGEDGEDGCCFDDGAEH9GH7HI6JJ5\
+  LJ5ML6NM6OMHHKgJQcJPZJNWIMSJMOIKLHIHGGFFGDGFBGE8HD\
+  6JC5JB5KB5KB5MF6NJ6ON6QS7RWATaDWgFYnH_tJXrLVrNSrOR\
+  rQPqRMqSIqTGqTCoVCoXCoI`C }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,111 @@
+;     Date: Fri, 13 Jul 2012 17:15:39 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-07-12 (On the Bright Side [7])
+;       Id: <1.5.4.16.20120713171844.22d711ec@earthlink.net>
+; ---------
+; 
+; FOTD -- July 13, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's parent fractal is once again an almost-Mandelbrot set.  
+; This set came about when I went 22 levels up the complex 
+; logarithmic hyperladder and calculated the expression 
+; Z^(2.00001)+C.  But this almost-Mset set is rotated 180 degrees 
+; so that its East Valley falls on the negative X-axis, where the 
+; discontinuities usually lie.
+; 
+; The plan was to check the East-Valley type discontinuities 
+; there, but I never found any.  What I found was an everyday East 
+; Valley scene.  To make something of nothing, I worked on the 
+; colors a bit and came up with today's image, which I named "On 
+; the Bright Side" because of the unusually bright color values of 
+; the image.
+; 
+; The only fractal 'trick' was rendering the scene with the 
+; 'outside' set to 'summ'.  A better rendering and coloring might 
+; have been possible, but I saw too little potential to make a 
+; real effort.
+; 
+; Considering the image's calculation time of over 12 minutes, the 
+; rating of a 7 might be a bit liberal.  (The older I grow, the 
+; more conservative I become.)  Those who prefer their fractals 
+; brilliant might consider the result worth the effort however.
+; 
+; To view the image without the need to spend 12 minutes 
+; calculating it, check the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image may be viewed in the majesty of high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the FOTD images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Thickening clouds, increasing humidity, and a temperature of 91F 
+; 33C made today less than ideal here at Fractal Central.  The 
+; fractal cats do not demand perfection however, and they passed a 
+; good part of the day curled in their cat cubes.
+; 
+; Meanwhile, the humans had a passable day, with little of note to 
+; report.  The next FOTD will be posted in the prescribed time.  
+; But most likely, there will be no FOTD's for July 15, 16 and 17. 
+; Until whenever, take care, and perhaps reality is nothing more 
+; than interacting field patterns.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+On_the_Bright_Side { ; time=0:12:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip
+  center-mag=-0.2529472194990865/+0.0000000017984885\
+  /3.69507e+012/1/155/0 params=2.00001/0/22/0 float=y
+  maxiter=10000 inside=0 outside=summ
+  periodicity=6 mathtolerance=0.05/1
+  colors=000RBPQBPQBPQBPQBQPBQPBQPBQPBRPBROBROBSOBSO\
+  BSNBSNBTNBTNBTMBTMBUMBUMBUN9TMAUMBUMCVMDVMDVLEWLFW\
+  LGWLGXLHXKIYKJYKJYKKZKLZJMZJN_JN_JO`JP`IQ`IQaIRaIS\
+  aITbHTbHUcHVcHWcHXdGXdGYdGZeG_eG_fF`fFafFbgFbgFcgE\
+  dhEehEfiEfiEgiDhjDijDijDjkDkkCllCllCmlCnmComArnBpm\
+  ComDmmElmEjmFilGglHflHelIclJbkK`kK_kLYkMXkNVjNUjOT\
+  jPRjQQjQOiRNiSLiTKiSIjTJiTJiTKiTKiTLiTLiTLiTMiTMhT\
+  NhUNhUOhUOhUOhUPhUPhUQhUQgUQgURgVRgVSgVSgVTgVTgVTg\
+  VUfVUfVVfVVfVVfWWfWWfWXfWXfWYeWYeWYeWZeWZeW_eX_eX`\
+  eX`eX`dXadXadXbdXbdXbdXcdYcdYddYdcYecYecYecYfcYfcY\
+  fcYgcWgbXfcXhcYgcYgcZgcZhc_hd_hd`id`idajdajdbjdbke\
+  ckeckedledleemeemefmffnfgnfgnfhofhofipfipgjpgjqgkq\
+  gkqglrglrhmsimsjnskntlotmotnpuopuqqvsqvurvwrwxswyv\
+  yzuxztxzswzrwzqwzpvyovxnvwmuulusluqktojtmiskhsigsg\
+  freerddrdcqdbqcbqcapc`pb_obZobYoaXnaWnaVn`Um`Tm`Tm\
+  _Sl_Rl_QkZPkZOkZNjYMjYLjY }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
