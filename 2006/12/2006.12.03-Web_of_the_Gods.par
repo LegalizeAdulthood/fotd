@@ -1,0 +1,92 @@
+;     Date: Sun, 03 Dec 2006 22:27:42 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-12-06 (Web of the Gods [8])
+;       Id: <1.5.4.16.20061203222936.29b7c828@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 04, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image reminds me of a spider web in purgatory, with the 
+; brilliant light of hope visible in the distance.  I named it 
+; "Web of the Gods".  I am not sure whether the church doctrine 
+; says purgatory still exists, but regardless, the image is a 
+; striking one.  And if a God did not create the possibility of 
+; fractals, who or what did?
+; 
+; The fractal formula subtracts Z^(-0.5) from Z^(1.5) to produce a 
+; parent fractal that resembles a warped Mandelbrot set with a 
+; field of twisted filaments lying to the northwest.  The image is 
+; located rather deep on one of these filaments.
+; 
+; I could have rated the fiery image at either an 8 or a 9.  Being 
+; on the conservative side, I decided on an 8, but I guess the 
+; most accurate rating would be an 8-1/2.
+; 
+; The render time of 7-1/2 minutes is well within reason for such 
+; a striking image.  Running the included parameter file is the 
+; most enjoyable way to view the web of the gods, but visiting the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the completed image there is the most efficient.
+; 
+; Sunny skies and a temperature of 43F 6C made Sunday an average 
+; day here at Fractal Central.  The fractal cats were unusually 
+; frisky most of the day, chasing each other up and down the hall-
+; way, with their feet on the wood floor creating the sound of a 
+; distant stampede.  But by the time the evening treat was served, 
+; they had settled down enough to eat their fill.
+; 
+; My day was uneventful, which allowed me the time to find and 
+; create today's unusually attractive image.  If tomorrow is 
+; equally uneventful, the FOTD fractal is likely to be well above 
+; average again.  But in the world of fractals, nothing is guaran-
+; teed, so check back then to see what happens.  Until next time, 
+; take care, and how much time would it take for today's fractal 
+; to reach the Andromeda Galaxy?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Web_of_the_Gods { ; time=0:07:37.26--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.60018581308502960/-0.176748721957931\
+  80/2.141276e+011/1/-130/0.0007 params=1/1.5/-1/\
+  -0.5/0/0 float=y maxiter=1000 inside=255
+  logmap=156 periodicity=10 mathtolerance=0.05/1
+  colors=000000220430630841A52C53E64G65I76K87M88N99P\
+  AAQABRBBSBBUDAVEAXF9YG9_H9`I8aJ8cK8dM7fN7gO7hP6jQ6\
+  kR6mS5nT5oU5p_4re3tk2wp2zm3zk3wi3mg3cd3Ub3K`3IZ3IW\
+  3IU3HS3HQ3HN3HL3HJ3HH3HE3HC3HA3H83DG6AO96WC3bFDzEN\
+  wDOuEPsEQqERoESmFThFUcFVZFWXGXVGYSGZQGdOHjMHpKHvHH\
+  wFIsDIoBIj9IcHLaPO_XRYcUWkXUs_TzbUwbVtbWqbXobYlbZi\
+  b_fb`dbaabbZbcWbdUbeRbfObgMbeN_dNYcNWbNUaNS`NQ_NOZ\
+  NMXOJWOHVOFUODTOBSO9RO7QO5TP6XQ7_R8cS9fSAdRCcQDbQF\
+  `PG_PHZOJXNKWNMVMNUMOTQNTUMTYLSaKSeJSiISmHLgREa_7W\
+  h0QqGLgWHYjDPkERlFSmGTnGUoHVpIWqJYrJZsK_tL`uMavMbu\
+  Q`tTZtXXs_WscUrfSqiQqmPppNptLowJozInyGnyFnxEmxDmwB\
+  mwAmv9lv8lu7lu5kt4kt3ks2ks1dm0Yg0Ra0LX0PW7TVEXUK_U\
+  RcTXgScjSiSUUAWEDZDG`CIcBLeAOg9QjATlFVnKVoPVoUVpZV\
+  pcVphVqmVqrVrvVrzVrzVszVszVtzVuzVvzUwzUxzTyzTzzSzz\
+  SzzRzzRzzQzzQzzPzzPzzPzzNzzLzzJzzHzzGzzEzzCzzAzz8z\
+  z7zz5zz3zz1zz0zzCzzNzzzzp }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,85 @@
+;     Date: Sun, 24 Dec 2006 23:58:44 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-12-06 (Season's Greetings [7])
+;       Id: <1.5.4.16.20061225000056.226751f4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 25, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A jolly good fractal image for a jolly good day.  Today's image 
+; is not great, but it does rate a 7, which is notably above aver-
+; age.  The formula behind all the fun mixes 0.1 part of Z^(4.4) 
+; with 2 parts of Z^(0.4), then adds C to produce a distorted and 
+; rotated Mandeloid set with a new bay which may be entered 
+; through a split down the middle of East Valley.  Today's scene 
+; is located on the shoreline of this new bay, very near the point 
+; where it enters into the main cardoid bay.
+; 
+; The image consists of about half-inside and half-outside fractal 
+; areas.  The more festive parts of the image are its inside parts 
+; rendered with the inside=fmod option.  Sometimes this under-used 
+; option works surprisingly well.
+; 
+; I named the festive image "Season's Greetings", a generic name 
+; that will offend no one.  But the calculation time of 12-1/2 
+; minutes may be offensive to the more impatient fractalists or 
+; those with DOS-deprived computers.  For these few, the gift of 
+; the season is the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the completed image is posted for quick and easy viewing.
+; 
+; The day was quite busy here at Fractal Central, with visitors 
+; and presents to tend to.  The weather outside was delightful -- 
+; sunny skies and a temperature of 48F 9C.  The fractal cats kept 
+; the festive spirit alive when they both climbed into the tree at 
+; the same time and tipped it over.  Luckily, no damage was done 
+; to tree or cats, and the day ended peacefully.  The next FOTD 
+; will appear in 24 hours, give or take a few.  Until then, take 
+; care, and say good-bye to Santa Fractal for another year.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seasons_Greetings { ; time=0:12:39.95--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.122707213001584/-0.1067224794760697/\
+  6.782375e+011/1/-15/0.0153 params=0.1/4.4/2/0.4/0/0
+  float=y maxiter=1000 inside=fmod proximity=0.932
+  periodicity=10 mathtolerance=0.05/1
+  colors=000utkuvkuxklphchfV`dMTbPV_RWYTXWVZUX_SZ`Q`\
+  bObcLddJffHhgFjhDljBnk9pl9oj9ohAngCneDmcFmbGm`HlZJ\
+  lYKkWMkVNjTPjRQjQRiOTiMUhLWhJXhIYhIWhJVhJTgJSgKQgK\
+  PgKNgLMgLKgLJgLIaMNWNRQOVKPZEQbDRfDRjDSiDSiDTiDThF\
+  UhHUhJVgLVgOWgQWgSXfUXfXXfZYe`YebZeeZeg_di_dk`dn`c\
+  pacractacqYhnUlkQqiMuhOthQshSshUrhWrgXqgZpg`pgbogd\
+  ogfnfgmfimfklfmlfokfpkdribtg`ueZwcXyaVz_TzYSzXUzWV\
+  xVWuUXsUYqTZnS_lR`jRagQbePccPdeRdfSdhUdiVdjXdlYdmZ\
+  dn`epaeqcerdeteeugevhexjeykezl`zmWznRzoMzpHzqDzrDz\
+  rDzoEzmHzkKziNygPweSucVtaYr_`qYcoWenUbkT`hSZfRXcQV\
+  aPTZORXNPUMMSMKPLINKGKJEIIDFHDDGDAFD8FDHJDQNDZRDgV\
+  DpZEybFzeIzaKzZMzWOzTQzPSyMVwJXvGZuC`s9br9dq9an9Zl\
+  9WjCThEQeHOcKLaNI_PFXSDVVDTYDR_DP`DNaDLbDJbDHcDGdD\
+  EeDCeDAfD8gD7gD9eEBcHCaKE`NFZQHXTIVWKUZLSaNQdOOgQN\
+  jRLmTJoUIjSJoBmqBmrBmsElsGlsJlsLlsNlsQlsSltVltXltZ\
+  ltaktcktekthkujkumkuoruqz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

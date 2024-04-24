@@ -1,0 +1,98 @@
+;     Date: Thu, 07 Dec 2006 22:23:24 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-12-06 (Deep and Low [6])
+;       Id: <1.5.4.16.20061207222523.29b7889c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 08, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's somewhat ominous image exists in the fractal that 
+; results when the formula Z^1.1+C is calculated at a level 11 
+; turns up the logarithmic ladder.  The escape radius of 1000 is 
+; necessary because the parent fractal is so large that nothing 
+; less will include all of it.
+; 
+; The midget at the center might more accurately be called a blob. 
+; Its shapeless oval form holds little of interest.  But the 
+; pattern around the midget is unexpectedly rich for a midget of 
+; such a low order.  As is true of almost all midgets in this 
+; range, the pattern consists of ominous dagger-like elements 
+; thrusting toward the midget.  But these daggers are far more 
+; varied than is usually the case.
+; 
+; I found the midget by calculating the parent fractal with the 
+; outside set to 'fmod' and the logmap turned off.  The 'fmod' 
+; feature makes finding midgets in such low-order fractals quite 
+; simple.
+; 
+; At first, I was going to give the image no rating, but on second 
+; thought, I decided it was worth at least a modestly worthwhile 
+; 6.  The name "Deep and Low" has no special significance.  It 
+; simply refers to the mood of the image.
+; 
+; With a fast render time of a little over 3 minutes, the included 
+; parameter file will try the patience of few.  Even better news 
+; is that the finished image is ready for immediate viewing on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy skies, snow flurries, and a temperature of 34F 1C 
+; here at Fractal central on Thursday, made things a bit brisk for 
+; outdoor activity.  The fractal cats never go outdoors however, 
+; and they were quite happy alternating between playing, watching 
+; from the window, and asking for their treat.
+; 
+; My day was adequate, which is all that can be said for it.  
+; Tomorrow will probably be another adequate day with another 
+; adequate fractal.  Until then, take care, and be of good cheer 
+; for the rest of the year.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Deep_and_Low { ; time=0:03:12.96--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-13.61962497368373/+10.0018730975\
+  0523/141837/1/7.5/1.73666019483154077e-006
+  params=1.1/0/11/1000 float=y maxiter=7500
+  inside=0 logmap=80 periodicity=10
+  colors=000V4gY3d`3Tc3IQ1OW3L`5Je7Hd8EbAClQ2`D8gCMP\
+  C_6CmBXVFpDDdJBTPAHUHHYOHaVHdaHhhHlnHooGkoGhpFdpFa\
+  pFZoROobEom4hj8ahBWeFPcII`MCZPATR8NT6HV4BX25Z00`79\
+  YEIWLRUS_SZhQeqOftMfwLfzKdrRbjY`bdZVkXNqedgmvYjuTh\
+  tPftKcsGasB_r7Yr3NcTCPqINoOLmUJk_HieFgjDfiBelDboF_\
+  rHXuJUpNWkQYfT_aXaX_cSbeOegRLcT0_O4eJ8kFBpCChAC`7C\
+  U5CM2CE0C77NFDXMKfTQp_WzfFhaNjeUkh`mlhnoopsvqvCW0I\
+  L9OAIU0QV7UVEXVL`VScWZfWejWlmWspRriNrbJqXFqQBpJ7pD\
+  DlFJhHPdIV`K`XLfTNlQOjJ_iCkh5veGlcRb`aTZlJXvA_mMbd\
+  YdWiEeEJbVO_jRZmTZoVZrXZtZZw`ZyRMiH9VJ7SK6PL5MN4KO\
+  3HP2EQ1CT9EVHGXPIZXJ`dLblNdsOicHc`NYZTTXZNVdITjMYh\
+  PbgSfeVkdYpb`taUvYNxVHySTjMdWGoHBmMCkRCiWCh_DfdDdi\
+  DcmDdpLesTeu_amcYffU_iQTlMMpIFsE8vB1yO2v`3sl3qhBmd\
+  Ji`QfXYbTeZQlWKoZEqa9sdAtgBtjCtmCtoDrlDoiEmfFjcFha\
+  KjYOlVTmSXoPaqMerJh`XjKiYRrXOpWLoVInUGlTDkZ6RVAQRD\
+  ONHNJKLANR3NSAKRHHQOEPVBO }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,86 @@
+;     Date: Fri, 22 Dec 2006 10:17:51 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-12-06 (FOTD for Dec 22, 2006 [No Rating])
+;       Id: <1.5.4.16.20061222102002.2a4f7f20@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 22, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image was created when 10 parts of Z^(0.1) were 
+; added to Z^(1.5).  The parent fractal is a fairly conventional 
+; Mandelbrot set rotated about 45 degrees.  Some of it is missing 
+; however.  The large period-2 bud is totally obliterated, along 
+; with much of the southwestern shoreline of the large bay.  The 
+; northeast part of the set is fairly intact however, and today's 
+; image is located in some debris flung off from the northeastern 
+; period-5 radical.
+; 
+; The image was done in an entirely conventional manner, with the 
+; inside set to the number zero and the outside set to the itera-
+; tion count.  The unusual effect is entirely due to the coloring 
+; and the naturally odd shapes of the iteration bands.
+; 
+; Not overly impressed by the final result, I gave the image 
+; neither name nor rating.  But it is worth at least a brief look, 
+; and its calculation time of just over 1 minute is probably 
+; faster than the time required to view the completed image on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Thursday started with light rain here at Fractal Central, but by 
+; noon the rain had ended and the sun appeared.  The temperature 
+; reached a relatively mild 45F 7C.  The fractal cats spent the 
+; day inside, batting around ornaments they knocked off the deco-
+; rated tree.  Cats who do not go outside do not worry themselves 
+; about the weather.
+; 
+; My day was rather busy, mostly with seasonal stuff.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and be 
+; lucky.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_For_Dec_22_06 { ; time=0:01:15.08--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-9.30798361101837900/-0.806691551173196\
+  00/7626.99/1/27.5/8.11299777359053564e-011
+  params=1/1.5/10/0.1/0/0 float=y maxiter=1500
+  inside=0 logmap=yes periodicity=10
+  colors=000RVYFz2IoBKeJMVSz1gm8d`Faa5XVDZIh_Kb_LX_N\
+  R_g_j`VfUQbMiCN`KOTSibs1CT7FVDHXJJZ5OGANLFMQKLVZRf\
+  TObLG`MI_NK_yIrfKhiA8aEIVIRsUVcPYN2Iu4ziAqZGh3NsEM\
+  ixDreHhhu3nnMedRXVWSXnQTiPPdaRpXPjXHVaP`eXeZQPSJ9Z\
+  Q7eW6la5sg4jX4bM4VC4W`zOUvHNs9Gp29m7QpBfsFvv9pr3ko\
+  9dkEYgIRcJRc70pC6kGBgKGchp1Y`JUpZR`_UkmVWqTTlRQhPN\
+  c6lwFZkPd01`9EzBJeOav1VcJM2DNCPiMtQwFPcQL83MCCNFKO\
+  IS7PnHGnJIjLJfNKbUkdSdbRYaPR`0ZwCSkkE5py9adN5A3ADC\
+  FGKKJSkzdX_nSSfy2ko7hfCeXHb0a56XDCTLIPT2GyeK7YBhTG\
+  cyX7Xb_UX_RR_OcQOXUORXTiNRbRQXUPRXbqGZhLV`QRTVu4gi\
+  AdZGadICWKOiz8FK8KLMup8d`M73xBcQGXUKRXmro1a57XDDTL\
+  JPTy74lCF_HQS0QQBVeyh`neXdcSVaR02PBJoNcaMamb3c3MY9\
+  RTFWtw`YpPT`VvOtjNmZMfgrO`fSUWWezO`oRXeUSVXC5`ID_2\
+  5tABmHGfvoKjdQZVVGkxJboMUguWmXjPUaTRTXQS_QEfPGdPIb\
+  OK`fmpXZguwulmodcjWUd6c7xDTkGW_JYJDgkH5eID_JLUKTbB\
+  aZE`VG`RJ_bdpH5KKBQMGVUdW }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 

@@ -1,0 +1,85 @@
+;     Date: Wed, 06 Dec 2006 23:37:46 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-12-06 (Decorated Fractal [7])
+;       Id: <1.5.4.16.20061206233944.29effdb0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 07, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To generate today's 7-rated fractal image I combined negative 
+; Z^3 and negative Z^5 to create a parent fractal shaped somewhat 
+; like the dome of a Buddhist temple.  On the northeast shoreline 
+; of the main bay lies a partially obscured bud, which at first 
+; looks totally non-critical -- the last place in the fractal 
+; world one would expect a midget.
+; 
+; But in the world of fractals, nothing can be taken for granted 
+; until it is thoroughly checked out.  One of the wedges converg-
+; ing on the mouth of this bud actually has midgets all through 
+; it.  They are not easy to find, but they are there.  Today's 
+; image shows one of these midgets.
+; 
+; When I saw the image I was reminded of Christmas ornaments and 
+; decided on the name "Decorated Fractal".  The colors however 
+; have little to do with the season.  The ornamental effect was 
+; achieved by rendering the scene with the inside set to 'bof60', 
+; which fills the inside parts with tiny balls.
+; 
+; The render time of 5-1/2 minutes is reasonable for an image that 
+; rates a 7.  And the image may be seen even faster by going to 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing it there.
+; 
+; A temperature of 46F 8C and partly cloudy skies made conditions 
+; near ideal for the fractal cats here at New Fractal Central on 
+; Wednesday.  For me the day was rather slow.  The next FOTD will 
+; appear in 24 hours.  Until then, take care, and keep thinking 
+; fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Decorated_Fractal { ; time=0:05:35.75--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=+0.49584343632567830/+0.375372629316643\
+  10/47839.52/1/-90/3.88578058618804789e-016
+  params=-1/3/-1/5/0/0 float=y maxiter=1600
+  inside=bof60 logmap=yes periodicity=10
+  colors=000zzzzyxzxrxwlvvfrubrp`mlRfeHaYDVAHZMG_QIf\
+  VJgaKkgMomNsqOwmPzhJzTDzNAzD7yC8uB9qAAm9Ai8Be7Ca6D\
+  000ZBL_GTCj_EsYFqXGpWHnVHmVIkUJjTKhSKgSLeRMdQNbPNa\
+  PO_OPZNPYNQeQQlSRsURzWQyXQxYQwZPvZPu_Pt`PsaOraOqbO\
+  pcOpcRpaTp_VpYYpW_pUapSdpQfpOhpMkpKmpIopGqpEkhVeak\
+  `VzaWwbWtcXqcXmdXjeYgfYdfZ`gZYhZVi_Si_Oj`LkZIkXFlU\
+  JlRMlMQmHTmCXm8_pIZrLYrOXrRWrUWqXap_foblneqkhwihz`\
+  luTpoLsiDwc5zYHmaT`edOipBlsQgudbwrZmoVclRViNLfJCdF\
+  TdRidbydnwbkuahs`eqZboY_mXXkVUiURgTOeRLcQIaPF_ODfY\
+  VlglrjzoiwlcpiYjgScdMYaGR_ALQYcKeVEmL8uCDtIIsONrUS\
+  q_Xpe`ojYhaWbUTWLRQDQUCQYCQ`BPdBPgAPiANgDMdFLaHJYK\
+  IVMHSOOTMUTK_UIeUGlVErVCxWAzW8w_AqcCjgEdkGYoISsKLw\
+  MFzOImMKjLNcKPWJROIUHHW9GY2Fd3Ik4Lr5Ox6Qs6Po6Oj6Nf\
+  6Ma6LY6L_BT`G_bLfcQmaEzdUtghiiw_goXfgVe`TcTRbLPaEN\
+  dJOgNOjSPmWPeNZYFgQ1pR7pRDpRJpROpSUpS_pSepSgpSjpTm\
+  kTpgYqbbrYfrTksOosJttE5hr }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

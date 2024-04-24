@@ -1,0 +1,85 @@
+;     Date: Fri, 15 Dec 2006 23:01:48 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-12-06 (Layer_Upon_Layer [5])
+;       Id: <1.5.4.16.20061215230353.29af9a3c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 16, 2006 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal expression -- 5*(Z^(0.4))+Z^(2.6)+C -- draws a 
+; rotated Mandelbrot set with a crooked main stem that terminates 
+; then fizzles out in a crooked extended string of dots and 
+; dashes.  Today's image is located on one of the dashes.
+; 
+; I named the image "Layer Upon Layer".  The colored layers are 
+; what I noticed first as I studied it.  The layered look was 
+; achieved by rendering the image with the 'outside' set to 
+; 'tdis'.  The 'tdis' idea seemed good at the start, but the 
+; final result fell a bit short of my expectations, resulting in 
+; the rating of a not bad but not good either 5.
+; 
+; One thing actually good about the image is its speedy render 
+; time of 2-1/2 minutes, which should try the patience of very 
+; few.  Another good thing may be found on the FOTD web site 
+; where the already-rendered image is posted and ready to be seen 
+; by all.  The FOTD web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A cloudy morning gave way to a partly sunny afternoon here at 
+; New Fractal Central on Friday, while the temperature reached a 
+; very mild 57F 14C.  The fractal cats ignored the weather.  They 
+; were more interested in batting a wad of crumpled paper around 
+; the house and searching for mice.  The futile effort had them 
+; ready to settle to sleep by the time their evening treat was 
+; served.
+; 
+; My day was about as close to normal as it is possible for a day 
+; to be.  May most days be the same.  The next FOTD will appear in 
+; 24 hours.  Until then, take care, and could it be possible that 
+; fractals can cure a broken heart?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Layers_Upon_Layers { ; time=0:02:27.23--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-3.66846143570733700/+0.520672683413754\
+  60/1.365974e+012/0.9999/112.5/0.0060917773143341
+  params=5/0.4/1/2.6/0/0 float=y maxiter=450 inside=0
+  outside=tdis periodicity=10 mathtolerance=0.05/1
+  colors=000MUPGMJBFC576WdqPFTLDPIBLF9IC7E95A6373131\
+  GS08EkCmeAf_9`U7VO6PI4IC3C616wF8kC6_94O63C31CQ8AM6\
+  8I56E4RbTHdX8e`HhZPjXXmVeoTmrRutPdeQORR7DRFNLAFECa\
+  2577aWhJGMwlImcFcWCUO9KG6A83LGoIDgFB`C9T96M64E327K\
+  TflU1bO0TI0JC0960ECHB9D87A546223sckSKOZfXEYwBSm9Mc\
+  7HU4BK25Arp4jn`4jT3ZM2NE1B78UF6PC5KA4F72A5152zTNqP\
+  KhLHaIEWEBPA8I75932XszOe`GSP8ECOZPGNG8B8TlkPeeL__I\
+  UUEOOAII7CC366Tg8NZ6HQ4BH3581fyJSdCEK6aVNPKFCA7Upw\
+  QirMbhIX`FQUBJM7DF367nHmmDmmAmm6mm3mm1b10JRJ72C219\
+  1161030Ign05ClsAbg8TX6JM49B2JRsFMiCI`9DS69I349BkHp\
+  IQ6PC6AR35D0Sx0Lh0EU07FGetCVe8LS4AEq9Xj7Sc6OX5KR4G\
+  K3CD28614Lp6EZ47H2wrtURSe2tmTRdOMXJIPEDG99844J`3B1\
+  D80A607405202bseMXYISTFNOCIJ9EE6993446Ei4B_38R25I1\
+  29Il`CWO6GC8Gp6IB4D8395142102001001000000cccUUUKKK\
+  AAA5`k4Vd3QY2LR2FK1AD0562Nm1Ic1DU09K04AsWtgPhXJYMC\
+  MB6BgjC`by0rJ0dE0R90D4SaW }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

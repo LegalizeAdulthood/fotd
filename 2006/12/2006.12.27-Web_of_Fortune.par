@@ -1,0 +1,86 @@
+;     Date: Wed, 27 Dec 2006 23:59:46 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-12-06 (Web of Fortune [No Rating])
+;       Id: <1.5.4.16.20061228000200.2e0f9e56@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 28, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's unrated fractal image gives a small example of what 
+; happens when 0.1 part of Z^(0.1) is mixed with 2 parts of Z^(2). 
+; The parent fractal closely resembles the classic Mandelbrot set, 
+; but the main negative stem has been fragmented into cantor dust. 
+; This parent fractal resembles the stems of Mandeloids in the 
+; range of Z^(2.01)+C.  Today's image lies in the East Valley of a 
+; large midget located in the split-up main stem.
+; 
+; I named the image "Web of Fortune".  I can give no real reason 
+; for such a name except that it popped into my head as I studied 
+; the scene.  Most of the effect is due to the random color 
+; palette created by striking the 'enter' key while in color mode. 
+; 
+; The calculation time of 6-1/2 minutes is slow enough to give the 
+; more impatient fractalists reason to skip today's image, so to 
+; avoid disappointment, the finished image is posted on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A flurry of snow in the morning and a partly cloudy afternoon 
+; with a temperature of 41F 5C here at New Fractal Central on 
+; Wednesday was ignored by the fractal cats, who continue to show 
+; more interest in the left-over holiday stuff than the outdoors.  
+; They managed to pull a dozen or so ornaments off the tree and 
+; bat them to all corners of the house.  Their enthusiasm did not 
+; diminish until the evening treat was served.
+; 
+; My day was pretty routine.  The holiday is over and the work 
+; could no longer be put off, but I finished it in time to find 
+; today's fractal.  Tomorrow will likely be a similar day, with 
+; another fractal to ponder.  Until 24 hours has passed, take 
+; care, and be of fractal temperament.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Web_of_Fortune { ; time=0:06:41.78--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-0.92773355738011890/+0.041813997571321\
+  59/6.406306e+008/1/-67.5/1.52567713315038267e-006
+  params=0.1/0.1/2/2/0/0 float=y maxiter=1200
+  inside=0 periodicity=10
+  colors=000v8NlBQcDSUFULHWBSJ1a642H218pB_Z7OH3CNM55\
+  Nq3Hc2BR15DSgDQEwD7U8rb6dT4RJ2D90I50C3061b59Q36D13\
+  NcFHUBBK75A3PMKGED876cCdK6Kg3lT2WE1GGSEeWSY3NM2FB1\
+  73j91N4cjWKNGdQ2UJ1KD1A60EAIDoXr3K8yn6ia4VP2FCvO`T\
+  CIfxEWhALU7AF37iUqEx_9cI4KccRQQIDD9qB__7OI3C5IEKk6\
+  F_4AO35C1nArP5RuDhT6Mzp7eZ4LH2n17Y04H02LzfFjWAVL5F\
+  AcrVUdNKRFAD7ORtCDS7n43P2RHGKUNAFB4OMXY0GH0SeXLVOE\
+  LG7A8fAEL57wjCaeuSVfJLT9AEkei_VYOLNCABeILSCEE67qdy\
+  cUiRKVDAFA4X52Gg4OM2CMp9Gb6BQ45D2Zas2PE1G9084OI8GC\
+  5862piDQN6TzfEVL1SwZi_HNI6F1eLaSEPE7Cl_zY9EM69B34s\
+  Nwgm7X`5MP3BC1a0y47J24C126ZD2H61QNvJHgDBT65EOJcAHf\
+  7CW58L24A0Mv0BTySmUciFKNzmgj`XVPMFCBWAkL6WA3G`5MZF\
+  vH7Tnh5PM2`JwREhI9U94FRQ8KJ6DD4662TjgLZXENM7BBhKmt\
+  zBSV5`yGIV89_76O43C2eYuVPfLHTA8E8RB4D5o9Tb6LQ4ED27\
+  UInF9PHJX89GqAfWWuOOfGGT88EA0n50Peu_LTILSEYA3P72H5\
+  1820biPOPiGGU9BJMAKY9Lj8M }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

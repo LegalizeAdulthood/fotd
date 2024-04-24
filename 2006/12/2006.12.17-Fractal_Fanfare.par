@@ -1,0 +1,83 @@
+;     Date: Mon, 18 Dec 2006 00:21:32 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-12-06 (Fractal Fanfare [6])
+;       Id: <1.5.4.16.20061218002340.2a0fcb56@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 18, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent of today's fractal was created when I subtracted 
+; Z^(1.5) from Z^(-0.5).  It is shaped like an unusually distorted 
+; Mandelbrot set.  Today's scene is located deep in some debris 
+; just beyond the main stem.
+; 
+; I rated the image at a 6 and named it "Fractal Fanfare".  I have 
+; no logical reason for the name.  I simply like the way it sounds.
+; 
+; The first impression of the image is that it lies near the 
+; escape radius of the parent fractal.  In fact, it is near a 
+; cut-off point, but this point is not the bailout.  It is a very 
+; strong discontinuity.
+; 
+; The effect was achieved by rendering the image with the outside 
+; set to 'tdis'.  The 5-1/2-minute render time is reasonable, but 
+; it is still easier to visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the image there.
+; 
+; The clouds here at New Fractal central on Sunday did not hold 
+; down the temperature, which reached 54F 12C.  The fractal cats 
+; were unusually active.  They spent most of the afternoon batting 
+; their toys around the place.
+; 
+; My day was about average.  The next FOTD will appear in about 24 
+; hours, which is quite average.  Until then, take care, and be 
+; one.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Fanfare { ; time=0:05:23.90--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.09397790372923559/-2.473990102403021\
+  00/6.28241e+011/1.0421/17.853729149773649/1.521156\
+  07205887438 params=1/-0.5/-1/1.5/0/0 float=y
+  maxiter=1500 inside=0 outside=tdis periodicity=10
+  mathtolerance=0.05/1
+  colors=00000z02s02Z22G720B00G00L02P02V02Z04d04g04e\
+  02d02b22b72`B0ZE0YJ0YM0lPLzRezR0uW0j`De0eV0jL5oBGu\
+  2Pz0Zz0`z0`v0bs0bo0Yq5VsEPsOMuYHvgEvqAxz7xZGZAPB0Z\
+  0Dzg5zd0z`0zZ5gjHOvT7zR2sP0eO0RO0ER0GT4GVAGWHGZPH`\
+  WHbdHdjH00AGBGWRMDzBJxEPuHVqJ`mMgjP8L0PWRTYRWZRZ`R\
+  bbRedRieRWJlZOi`RedVbeYZi`WjdTz08z5DzHHsVM0PD0TG7W\
+  HEYJO`MKKKzV0zO0zJ0zE0TzzEeRDbZDZeDYlDVsDRzDPzA0WV\
+  szPqzMooJmgGlYBjO8iG5g72g04j74mD5oL5sR7vZ7xeGsl0RV\
+  WjzdgzldzGmW0v00m20gA0ZH0TP0LY0Ee08m0Lg0Wg0gd0s`0z\
+  Y0zVJbgi2suGxzVzzgzzexzeqzdlzdexdZubVqbOobJ2JO0HP0\
+  GP0LT5PWETZMY`Vbddegljjuml0oY5mWGlVRjTbiRG0HM7LTGM\
+  ZPOeZPz0sz0mz4izDdvOZqYV0HzGVl0zzMxgdP2eT7gWAiYDi`\
+  HjbLleOE5LJBMOGOTMOYRPbYPgbR00s0Ex0Js2MoAPjHTgPYbY\
+  `ZedVqzEozHmvLlmOze0zg0zoHzv`zzuvzzuzzszzqzzozzmzx\
+  VjuDPs07q54iE0bO0VW0Oe0Go0Ax04v00v70uH0uT0sd0so0qz\
+  0qz0gz0Zs4RiGJ`RARb2Ho08z }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

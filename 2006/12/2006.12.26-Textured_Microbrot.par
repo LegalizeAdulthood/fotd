@@ -1,0 +1,91 @@
+;     Date: Tue, 26 Dec 2006 23:36:20 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-12-06 (Textured Microbrot [5])
+;       Id: <1.5.4.16.20061226233833.2b37f48c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 27, 2006 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image illustrates what happens when the expression 
+; Z^(1.1)+C is calculated at a level 111 turns up the logarithmic 
+; hyper-helix.  The parent fractal is little more than a mis-
+; shaped open area with much chaos on its southern shoreline.  
+; Today's scene is located in the outskirts of this chaos.
+; 
+; The midget at the center of today's image can hardly be called a 
+; midget.  It is little more than a mis-shaped hole mirroring the 
+; shape of its parent.  But the richness of the detail surrounding 
+; it more than makes up for its lowly condition.  Midgets in this 
+; low range tend to be all alike, which is why finding an extra 
+; spectacular one like the one in today's image is an event worthy 
+; of FOTD status.
+; 
+; Most of the unusually rich detail in the image arranges itself 
+; into rings around the midget, which I have emphasized in the 
+; coloring.  The final result impresses me as being worth a rating 
+; of 5.  The name "Textured Microbrot" simply describes the image.
+; 
+; The render time of about 6-3/4 minutes on my tired worn-out old 
+; computer is barely reasonable for today's notably average image. 
+; A more reasonable way to see the image is to visit the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and enjoy the pre-rendered image posted there.
+; 
+; The Tuesday weather here at Fractal Central featured clearing 
+; skies and a nominal temperature of 45F 7C.  The cats agreed with 
+; the conditions and had a pleasant day finishing off the wrapping 
+; paper.  My day was slow, which was a pleasant break.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and get in 
+; touch with the within.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Textured_Microbrot { ; time=0:06:41.39--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.55180061728245560/-2.310672624440068\
+  00/1.310628e+009/1/20/-1.38899688548188571e-005
+  params=1.1/0/111/0 float=y maxiter=2400 inside=0
+  logmap=199 periodicity=10
+  colors=000XVMNMPDDRY_YSdTNiOLcSKYVITYHNTFHZECcC6hB\
+  1mTC1luHOdjLccJcXchQmuJckLIYMJVNKSOMPPNMQOJRPGSEYO\
+  MUKTRG_OCgK8nH4uE0tD5swArwEqAJmmUo8Sn7Xnw`o5_o5_o4\
+  _o4_o4_lIZiVYggYbiaZzeUkhQllMmoXelgYjrRhwQzhPecPdh\
+  LbmH`rDZw9YsHXoPXdRRUSLJUF8V9IVFSVKaVPkVUtVZsRZrNZ\
+  qKZzbmpDZhEUaFPVGKOHFHIAAJ53J1AK7GLCNMITMN_NSeOYlP\
+  brPgpPhnPhlPhjPhWGpI7zJ9zJAzJBzJCzJDzJEiJFgQNbXVYc\
+  bTjjOqrKlnPgjUbfYZcbU_gPWkKSpGPtEPlDPeBPZAPS8PL7PE\
+  BqCA_zBYsCWlDUeET_FRTGPMHNFIM9VKOgIbtHqoEkjBef8_a5\
+  UY2PSASMHVGOYAV`5acCQdJEdQ3dV2_Z2Vb1Qg1Lk0Go0Bs07g\
+  8BXFEMMHHTSCZa7dl2jvEhpPfk_dfjcak`XlYTlVPmSLnPHzMD\
+  zJ9zG5zHAzIFzJKgzPezUczZazc`zhYzbVzXSzRPzLNzFTzCZz\
+  Acz7iz5nz3pzFrzRhzSZzSPzSFzS5zS7zT8zTAzUBzUDzVEzVF\
+  zVKzbOzjSzrUzFSzZQzqRzpSzoTznUzmVzlWzkXzjYzjdzgazd\
+  _zbYz_VzYTzVRzTOzQMzOKzLHzJFzGDzEBzCLzGRzIYzKdzNkz\
+  PqzRkzSezT_zUUzVezNqzGfzJ }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

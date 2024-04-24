@@ -1,0 +1,79 @@
+;     Date: Tue, 19 Dec 2006 00:08:07 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-12-06 (Redder Ranger [6])
+;       Id: <1.5.4.16.20061219001016.0d9f0cbc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 19, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's adventure in the land of 'tdis' came about when I mixed 
+; 1.3 parts of Z^(-0.75) with 1.3 negative parts of Z^(0.95) to 
+; create a parent fractal that is one of the most distorted 
+; Mandelbrot sets I have ever seen.  The period-2 bud in this set 
+; is actually twice the size of the main bay.  Today's scene is 
+; located in a string of debris that extends fron the tip of the 
+; main stem of this M-set.
+; 
+; I named the image "Redder Ranger".  I have no idea why I chose 
+; such an unlikely name.  It just kind of popped into my head.  
+; The rating of a 6 seems about right for such an everyday image.  
+; The render time is an unusually brief 53 seconds -- less time 
+; than it takes some computers to start up.
+; 
+; As always, the finished image is available from the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Morning rain gave way to afternoon clouds and a temperature of 
+; 48F 9C here at New Fractal Central on Monday.  The fractal cats 
+; were cats through all of it.
+; 
+; My day was humdrum.  The next FOTD will appear in more or less 
+; 24 hours.  Until that golden moment arrives, take care, and be 
+; alert for runaway fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Redder_Ranger { ; time=0:00:52.51--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident float=y
+  center-mag=-10.6320844947563/-8.061881237056673/\
+  3.486286e+007/1/-35/6.28612928792183e-006 inside=0
+  params=1.3/-0.75/-1.3/0.95/0/100 maxiter=750
+  outside=tdis periodicity=10 mathtolerance=0.05/1
+  colors=000eQZ`SWXTTSUQOVNJXKFYHAZE4`96_B7ZD9ZFAYHC\
+  YJDXLFXMGWOIVQJVSLUUMUWOTY86MPTZculeojfjhgefh_diVb\
+  kQ`lKZmFXnAVs0Uo5Tl9SiERfIQcNQ`RPYWOV_NScNTaOT`PTZ\
+  QTYRTWSTVTTUUTSVURWUPXUOYUNZUL_UK`UIaUHbTIeUGcUFaU\
+  D_UCYUAWV9UV7SV6QV4OV3MV2KS6JQ9JODIMGIKKIHNHFRHDUG\
+  BYG9`GAcMAeRAgWAi`AkeAmjAooAqtAkuAfvA`wAWxEUsITnMR\
+  jQQeUO`YNXaLSeKNiIJmHEqF9tE5oD4kD4fC4bC3YB3UB3PA2L\
+  A2G92C917813816E29K3CQ4FW5Ia5Lg6Om7Rs8Uy8cyBmyDzyF\
+  zyHzyJzyLzyOvyQrySmyUhyWcyYZy_Uy_PzZOwZPs_Qo`RkaRh\
+  bSdbT`cUXdUUeVQfWMfXIgXFhYBiZ7j_3keEqkPxjPwiPuhOtf\
+  OreNqdNobMnaMl`LkZLiYKhXKfWJeUJcTIbSI`QH_PHYOGXMGV\
+  LFUKFSIEQIFQIGRJHRJISKKSKLTLMULNULOVMQVMRWNSWNTXOV\
+  YOWYOXYNZYN_YN`ZMbZMcZMdZLfZLg_Lh_Kj_Kk_Kl_Jn`Jo`J\
+  p`Ir`Is`ItaHvaHwaHxaGzbMudTpf_kiefklansXpzSsMTHMTH\
+  NUHWUTWWVVYWV_XUaYUcZTe`TgaSibSkcSmdQj_OhWMfSKcO__\
+  gcYggVgkSgoPgwLjrNgnOdiPa }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

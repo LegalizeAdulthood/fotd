@@ -1,0 +1,87 @@
+;     Date: Sat, 02 Dec 2006 22:49:39 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-12-06 (Star of the Season [No Rating])
+;       Id: <1.5.4.16.20061202225134.226734e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 03, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent of today's image was created by combining 10 parts of 
+; Z^(-2.1) with Z^(-10.5) and adding (1/C).  It appears as a large 
+; flat disk with the fractal action on the southwest side.  
+; Today's scene is located in one of the stubby arms extending 
+; from this area of action.
+; 
+; The image is not quite worth a rating, but if I had rated it, I 
+; would have given it a rating around 5.  Its effect is due almost 
+; entirely to the color palette, and not to any great fractal 
+; discovery.
+; 
+; The name "Star of the Season" was inspired by the 8-pointed star 
+; around the central midget.  Yes, I know that seasonal stars have 
+; 5 or 6 points, not the 8 points we have in the image.  But what 
+; the heck?  A star is a star, and real stars have no points at 
+; all.
+; 
+; The calculation time of 1-1/2 minutes is thankfully fast.  The 
+; minor task of calculating the image may be dispensed with 
+; entirely by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the seasonal star there.
+; 
+; A mostly cloudy and blustery day with a temperature of 43F 6C 
+; on Saturday was ignored by the fractal cats, who spent most of 
+; the day on their shelf by the window, watching for birds.
+; 
+; My day was about as close to normal as it is possible to come.  
+; This might seem dull, but when things get too hectic, a bit of 
+; dulness is just what the doctor ordered.  The next FOTD will 
+; appear in 24 hours.  Until then, take care, and be serene but 
+; alert.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Star_of_the_Season { ; time=0:01:37.71--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.31768504268745900/-0.360059499562594\
+  60/3.698292e+007/1/-10/-9.32659162518334472e-007
+  params=10/-2.1/1/-10.5/0/0 float=y maxiter=1200
+  inside=0 outside=tdis periodicity=10
+  colors=000EQeFOgFMjFLlGKjGJiGIhGHgGHfHGdHFcHEbHDaH\
+  D`ICZIBYIAXI9WI9VJEZKIaLNdMRgNWkO_nPdqQhtQlwoPhnNi\
+  mMjmLklKllImkHnkGojFpjEqiEpiEohEohEnhEngEmgEmgElfE\
+  kfEkfEjeEjeEieEigHkhJliLmkNnlPomRpnTqpVrqXsrZtt`uu\
+  bvvdwwfxshtpjpmkljmifnecpa`qZYsVUtRRvOOwKLyGIzDKsC\
+  LlCMeCNZBOSBPLBQEBPHDOKFNNGNQIMTJLWLKZNKaOJdQIgRHj\
+  THlUKmSNmRQnQTnOWnNZoMaoLdpJgpIjpHmqGpqEsrDvrCyrBk\
+  tDZvEMxF9zGCtKFnOIiSLcWOZ_RTcUNgXIkWCVU7eQCkWGjVKp\
+  TOoRSnOWnM_mKclHglFkkDokFklHglJclK_lMWmOTmQPmRLmTH\
+  nVDnX9nY6nZ6mZ6m_6l_6l_6k`6k`6j`6jW6iW6iW6hW6hb6gb\
+  6gb6gUBVQDPMGIIICEK6GM0JQ4MU8PYCSaGVeJYiN`mRcqVhuZ\
+  myamzbOkbNdbMZcLScKLcKFcWCSg9Hs66oK4kY3gk1cx0ho8lg\
+  FpZMtRTvCYTkAXmC_nDcoEfpFE`OIe`LwtTQa`7SdKYhXblihp\
+  vmnoemhZlaRkVKlWQlWVlW_kUejSkiQqjVhk__lVWldRIXii9P\
+  jLMkXK2Yt8hYThQ8rEJoFTmGbjHPrE`mGHD4PL8XTBd`FJm0Yj\
+  9sFooUZ58ORRLUTkDVYDT`zSz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

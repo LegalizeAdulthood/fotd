@@ -1,0 +1,87 @@
+;     Date: Fri, 22 Dec 2006 23:24:53 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-12-06 (Ample Backlighting [6])
+;       Id: <1.5.4.16.20061222232704.2f678bbc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 23, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal formula mixes 0.2 part of Z^3 with 0.2 part of 
+; Z^(-4), then adds C to create a broad ring of various fractal 
+; holes and filaments with X-axis symmetry.  Today's image is 
+; located in some fractal debris near a large, vaguely Mandel-
+; shaped open area near the northern extremity of the parent 
+; fractal.
+; 
+; I named today's image "Ample Backlighting".  While studying the 
+; image I had a strong impression that the brilliant yellow-green 
+; fringed foreground objects are strongly backlit.  But it takes 
+; more than backlighting to make a great fractal, so I could rate 
+; the image no higher than a 6, which is not all that bad BTW.
+; 
+; The calculation time of just over 5 minutes is about what would 
+; be expected for an everyday fractal.  And as always, the minor 
+; task of calculating the image may be avoided by going to the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the already-calculated image there.
+; 
+; A totally unpleasant day here at New Fractal Central on Friday, 
+; with rain and a temperature of 39F 4C, left the fractal cats 
+; unmoved.  Their entire afternoon was spent annoying the decora-
+; ted tree, climbing up into it, knocking ornaments off the 
+; branches and batting them up and down the hallway.  To add 
+; insult to injury, some cat actually dropped a tiny decorative 
+; angel into Cassie's water dish.
+; 
+; My day continued hectic.  The work was only average, but the 
+; holidays are near and much remains to be done.  If all goes 
+; well, and why should it not, the next FOTD will appear in 24 
+; hours.  Until then, take care, and is anyone else on the lists?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Ample_Backlighting { ; time=0:05:09.45--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-0.7122095815896/+1.0272519336432/\
+  123967.3/1/55/-5.86103452854258578e-008
+  params=0.2/3/0.2/-4/0/0 float=y maxiter=1500
+  inside=0 logmap=79 periodicity=10
+  colors=000XmcWmeVlhVlkUkmTkpSjsUmySjuQhrPeoNclL`hK\
+  ZeIWbHU_FRWDPTCMQAKN9IKGNLMRMT`NazizzZZ_OYQD_J0XH2\
+  UG3RF4OD6LC7FC5IB8KBBMBDOBGQAISALUANWAQYAS_9Va9Xc9\
+  _e9ag9di8fk8im8ko8nq8poAnmBmkCkiEjgFieGgdIfbJd`KcZ\
+  MbXN`VO_QUUSRXUPZWNaYLcZJf`HhbFkdDmfBphAtg9rf9pf8o\
+  e8me8kd7jd7hc7fb6eb6ca6aa5``5Zn5ag5_`5YU5WK4SN5VQ6\
+  YT7`V7cY8f`9icAlfBteAqeAodAldAjcAgcAebAbbA`aAYa9W`\
+  9T`9R_9O_9MZ9JZ9HY9EY9CYA7Y9AY9DY8FY8IY7KY7NY6PY6S\
+  X4TY6UY8VZ9WZBX_DY_EY`GZ`I_`J`aLaaNbbObbQccSdcTecV\
+  fdXgdYge_heaifbjfdklfjiekfekdekaek_elXelVelSelPdmN\
+  dmKdmIdmFdnDdnAdn6en8dn9cnAbnBanC`nD_nEZnFYnGXnHWn\
+  IVnJUnKTnLSnMRnNQnOPnPOnQNnRMnTNpSMnSLlSKkSJiSIhSH\
+  fSGeSGcSFbSE`SD_SCYSGWSKVSOTSSSSWQS_PScNSgMSkKSoJS\
+  sHOv1SzGVzUEzfYzgszoqzkpzgnzdmz`kzXjzUizQgzMfzJdzF\
+  czBaz3bz6bz8czAczCdzFdzHdzJezLezNfzQfzSfzUgzWgzYhz\
+  `hzbizdizfizhjzkjzmkzoYz` }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,89 @@
+;     Date: Sun, 24 Dec 2006 00:07:23 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-12-06 (Squiggles [5])
+;       Id: <1.5.4.16.20061224000935.29c74d7c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 24, 2006 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's average fractal image exists in the parent fractal that 
+; results when the formula Z^(2.003)+C is calculated 68 levels up 
+; the complex logatirhmic ladder.  The image is located on the 
+; western shore of the south branch of Seahorse Valley.
+; 
+; On the surface, the parent fractal resembles a normal everyday 
+; Mandelbrot set rotated 10 degrees.  But deep down in the area 
+; of the negative X-axis some strange discontinuous things are 
+; happening.
+; 
+; The unusual effects are due entirely to the discontinuities in 
+; the everyday iteration bands of the image.  No special methods 
+; were used to create them.
+; 
+; I named the image "Squiggles" on a whim.  The squiggliness in 
+; the actual image is rather vague.  The average rating of a 5 
+; goes perfectly with such an average image.
+; 
+; The render time of 8-1/4 minutes on my tired old computer is a 
+; bit show, but calculating the image with the passes set to 'g' 
+; will knock a minute or so off the render time.  And if all else 
+; fails, the image may be viewed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The rain ended at daybreak and the sun appeared at noon here at 
+; New Fractal Central on Saturday.  The temperature reached 52F 
+; 16C during the afternoon, but the fractal cats were more interes-
+; ted in the decorated tree than the weather.  They didn't forget 
+; the tree until their evening treats were served.  My day was 
+; plenty busy with holiday things.  The next FOTD will appear in 
+; 24 hours.  Until then, take care, and be lively.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Squiggles { ; time=0:08:14.39--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.81500031903966940/+0.000308123039507\
+  28/6.170118e+008/1/100/-7.53289878361457221e-006
+  params=2.003/0/68/0 float=y maxiter=12000
+  inside=0 logmap=189 periodicity=10
+  colors=000JWlGYoD_sAav7byDeqIgjOjbTlWYnPZgVZa`h7K9\
+  Zw3057Tm6Nc4HU3BK15ACX16G0LmHIeEFZCCS99L76E4372Uir\
+  FNR93D72B629517315203101nJIlXbWMQGBDr_2RI1QaKJSFDJ\
+  A695c9c7FBJ7pG6hD5`A4U83M52F217ot9hl7be6WZ5QS4JL3D\
+  E2671PkRKcMGWICOD8G9484T6XP5SL4OI3KE3GA2C718304t0s\
+  S0SEhKCaHAWE8PB6J84C5262dPPZLLUIIPFFKCCF99A665330i\
+  g0YX0NM0BBhooqm`_XOIGC4iw3_k2R_1IO09CZCTH6EC3gA2a9\
+  2X71R61M41G30B105`h9T_7MR5EI3791yj`l`T`SMOIEC97lpp\
+  WZZGHH_vISjELZAEN77B3Tm8JX59G2_cGRUCIK89A4`7LT5GM4\
+  CE287149H_6BO35Cxsookgfc`YWTQOMHGE887QbkcYRKHDmRyX\
+  IdG9KQLALH8HE6DA5873431hp4MQ2ZWqTQhNU_HURBUI5U9CUt\
+  AZk8cc6hW5mO3rG1v8Pz4Lz3Iz3Fz2Cz29z16z13z0lzkbzaTz\
+  SJzJ9z9Pz3Kz2Gz2Cz18z14z0LzvAzT1zp0zZ0zHKzMHzJFzGC\
+  zDAzB7z85z52z2zzVnzNczIUzDKz9Az4SzUtzgjz_azTSzMJzE\
+  9z7Nz5Iz4Dz39z24z1BzT8zL5zE2z77z6GzMDzIAzE8zB5z72z\
+  31zX0zS0zN0zI0zE0z90z4Szu }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

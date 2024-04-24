@@ -1,0 +1,85 @@
+;     Date: Thu, 28 Dec 2006 22:40:57 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-12-06 (Fractal Curlicues [6])
+;       Id: <1.5.4.16.20061228224312.30b75e52@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 29, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's fractal recipe I mixed 2 parts of Z^(2) with 0.1 
+; part of Z^(0.1) and added C.  The resulting parent fractal is 
+; shaped pretty much like the Mandelbrot set.  But closer exami-
+; nation reveals strange things happening, especially in the 
+; vicinity of the large period-2 bud and the negative stem, which 
+; have undergone such a transformation as to be barely recogniz-
+; able.  Today's scene is located on the northwest shoreline of 
+; what remains of the large bud.
+; 
+; I named the image "Fractal Curlicues".  That's what I thought of 
+; when I first saw the swirling, twisting elements surrounding the 
+; compulsory central midget.  With its rating of a 6, the image is 
+; just barely above average.
+; 
+; And as for that pesky calculation time, the 3-3/4 minutes should 
+; try the patience of few if any.  Those who for some reason do 
+; not calculate fractals from parameter files may view the image 
+; by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it is or soon will be posted for all the world to see.
+; 
+; Cloudy skies and an unseasonably mild temperature of 46F 8C made 
+; conditions relatively harmless here at New Fractal Central on 
+; Thursday.  The fractal cats were still amused by the shreds of 
+; gift wrapping we left lying around for them to play with.  They 
+; do not concern themselves with mundane things such as outside 
+; weather.  My day was a little busy, but nothing that I could not 
+; handle.  The next FOTD will appear in 24 hours, give or take a 
+; few.  Until then, take care, and be serene as you travel from 
+; day to day.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Curlicues { ; time=0:03:49.26--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.69742932543910920/+0.077626824215782\
+  51/4868.984/1/-90/3.88578058618804789e-016
+  params=0.1/0.1/2/2/0/0 float=y maxiter=650
+  inside=0 logmap=46 periodicity=10
+  colors=000GIdKN_NSVRXQUaLYfG`kBabYaVtQ3HMDNIMSEVXA\
+  cm7lzDdjIYYNQUSJQXCMNMFDW8GYGI_NL`VNbajIVgCLgHOgLR\
+  gQTgUWgZZgb`ggcgkelpiwzmzzqwskiaecQ_YFUS4PW6S_8Vb9\
+  XfB_jDbmEdqGgtHihRVX_HLh3o3RldErQ7xB1vO6t`ArmEdnFR\
+  oGEoGCrLBuQAxUBmOBbJCSDCH8GIHJIQNIZQIgTIpSSgSaZRkQ\
+  RuIYlEcdBiX8`ZHS_PJ`XAad2bl7cpBdtFdxJYrNSlQMfUG`YA\
+  V`4Qb7PcAOdDNeGMfJLgMKhPJiSJeXPb`V_d`WhfTllQprNtwS\
+  lqXdkaXefP_nQVoPXpOYqOZrN_rN`sKVtIPuFJvDDuJIuPNtVR\
+  t`Wtf`sldsriswmbeqMPt68wTChnGVmESlCPkBNj9Ki7Hh6Fg4\
+  Cf3AUEEHPI4ZMXNbyBrtDqoEqjGpfHpaIpXKoSLoOMoKGmGAkC\
+  5jrAvoBpmBjjBdhBZeBTcBOO`g8zzFrvLksSdpYYmcQjjJgpCd\
+  v5au6at7as8`r9`qA`pA`oB_nC_mD_lEZkFZjGZiGZhGWgGUfG\
+  ReGPdGNcGKbGIaGG`GD_GBZG9YG6XG4WG2WL9WPFWTMWXS__Uc\
+  aVgcWkfYohZsj_`jkIjvJksKlpLmmMnjNogOpdPqaQq_RrXSsU\
+  TtRUuOVvLWwIXxFXxDUyKRzQOzWLzabzfszkfzTYzqazmfzijz\
+  eozaszYiza`zdRzhIzk9znDzi }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,79 @@
+;     Date: Tue, 05 Dec 2006 23:50:32 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-12-06 (Snowflake Symphony [6])
+;       Id: <1.5.4.16.20061205235229.0e1f870a@pop.mindspring.com>
+; ---------
+; 
+; FOTD --  (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Snowflake Symphony".  The reason for the 
+; name is obvious.  The parent fractal, a distorted Mandelbrot set 
+; with a split East Valley and an augmented main stem, was created 
+; by combining 10 parts of Z^(1.1) with one part of Z^(11) and add-
+; ing C.  Today's scene is located in the fancy chaos near the tip 
+; of the main stem.
+; 
+; Though not of exceptional quality, the image deserves at least 
+; some kind of rating.  I obligingly gave it a rating of 6.  The 
+; render time of 2 minutes is fast enough on even my tired old 
+; machine.  An even faster way of viewing the image is to visit 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it is posted in completed form.
+; 
+; Lots of clouds and occasional flurries of snow, with a tempera-
+; ture of 32F 0C and a biting wind, made the outdoors quite uncom-
+; fortable here at New Fractal Central on Tuesday.  The fractal 
+; cats spent the day inside however, busy tearing up a newspaper.  
+; Their energy waned by treat time.
+; 
+; My day was acceptable.  Tomorrow should be the same.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and stay 
+; on the warm side.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Snowflake_Symphony { ; time=0:02:08.42--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.45475523650970650/-0.096631092682053\
+  72/2.539294e+012/1/-87.5/0.001 params=10/1.1/1/11/\
+  -0.9/0 float=y maxiter=1000 inside=0
+  logmap=43 periodicity=10 mathtolerance=0.05/1
+  colors=00000Y00Z00_00`00b00d00b00`00Z00W00Uzzzszzq\
+  zzlvzjqzglzbgz`bzZZzVVzTRzRMzMIzLFzIBzDDy9Fn6Fe2HX\
+  0HO0IH0I80L10L00M00M00O00O00L00H00F00B009006012041\
+  0801B0480060040020010000000000000200B00I00T00`00j0\
+  0`08RZ0BX68TB2RI0OR0MX0Ie0Hl0Fv0Dz0Is0Mj0R`0VT8ZLH\
+  bDRg6`nFbsObzZezjeXjL`jLbgIggIjgIsVBzL4z90z10z00z0\
+  00z00z01z04z08z0Bz0Hz0Lz2Oz6TzBXzFbnLgvOlzVqzZvzbs\
+  zVszMszFsz8sz1sz0sz0sz0qz0nz0lz0jy6jzBlz9nz8qz8sz6\
+  vz4yz4zz2zz1zz1zz0zz0zz0zz0zz0zz0zz2zz6zz9zzBzzFzz\
+  IzzMzzRzzTyzDjz1Zz0Mz0Dz09z06z02z00z00z00z00z00z00\
+  z00z00z20z60z90zD0zH0zM0zT6zZLze`zlsesXjXFnD0q00s0\
+  0s00s00s00s00s00s00s00s00s00s00s00s00s00s08q0Hq0On\
+  0Zn0jl0sl0nj0jj0eg0`g0Ze0Ve0Re0Mb0Ib0H`0D`09Z06Z04\
+  Z01`00b00e00e00g00j00l00l00n00z00z00z10z91zIBzTMzb\
+  HzZDzV8zR4zO0zL0zH0zD0zB0z80z40z10z00z00z00z00z00z\
+  00z00z00z02z0Bz6LzDVzMgzX }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

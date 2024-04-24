@@ -1,0 +1,82 @@
+;     Date: Fri, 08 Dec 2006 21:32:03 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-12-06 (Spots Before the Eyes [7])
+;       Id: <1.5.4.16.20061208213402.29efbb2c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 09, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Though the formula behind the image, Z^(0.947)+Z^(-0.947)+C, is 
+; most arbitrary, today's fractal is different enough to earn it a 
+; rating of 7.  The parent fractal appears as a smooth-edged egg-
+; shaped oval with only a tiny bit of Mandel chaos on the western 
+; edge.  The FOTD for today was found in the area where the chaos 
+; merges into the smooth edge of the egg-shaped oval.
+; 
+; The image is composed partly of inside and partly of outside 
+; stuff.  The outside parts have degenerated into little more than 
+; a field of scattered dots, leaving most of the image made of 
+; inside stuff.  But this inside stuff responds quite nicely to 
+; the 'bof61' inside fill, which completes the image and reveals a 
+; Mandelbrot midget at the center.
+; 
+; I have named the image "Spots Before the Eyes" because it is 
+; composed mostly of spots of various shapes, sizes, and colors.  
+; The calculation time of almost 12 minutes is a bit slow, but 
+; still worth the effort.  And finally, if all else fails, the 
+; image is available for viewing on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A very cold day here at Fractal Central on Friday, with a temper-
+; ature of 23F -5C and flurries of snow, went un-noticed by the 
+; fractal cats, who passed the day sleeping and chasing each other 
+; up and down the hallway.  My day was spent clearing away a few 
+; small odd jobs that have been hanging around for several days.  
+; The next FOTD will appear in 24 hours, give or take an hour or 
+; two.  Until then, take care and expect the unexpected.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SpotsBeforeTheEyes { ; time=0:11:49.20--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.36006249858245400/+0.443164915983890\
+  50/8046.89/1/117.5/-7.00608737691510441e-011
+  params=1/0.947/1/-0.947/0/0 float=y maxiter=1000
+  inside=bof61 logmap=yes periodicity=10
+  colors=000HO9FK9DF9EUnDQgDN`CKUCHN000zQ5p7Ig8G_9ER\
+  ACJBAIrWHlTGgQFaNEXKDRH000BGBcyjWl`P_SINIETWDOQCKK\
+  BFEW1khY_XQR000Bc7g`jbXdbPwdPveQugRziRrzmmzSmfQjaO\
+  dcUcRKUUQWXWY_aZbg`ezacnzboc`pd_qeZqfXrgeshUtiTtjS\
+  ukzzlPwmOwmPtnQqnRooSloTjoUgpVdpWbqX_qXYqVWmTUiRTe\
+  QRbOPZMOVKMRJKOHJKFHGDFCCE9pMXgJSVp6YqA_UDbsGdtJfU\
+  MiUPkwSmjVktSipPhmNfiKefIKD9abGYZFUVEQRDMNCIJBEFAb\
+  44T76K986oM7iK8cI9YG9SEAMCBGA`D_XCWTCSPCOMBKIBGEBC\
+  eH_aGWYFTUEPQEMMDJICFEBCfP_aNWXLSTJOOHKKFGFDCr8ij9\
+  bc9XXARPALIBFmHXcFRUELKCF1GnlcuPlhMd`JXUGQNDIGfhga\
+  cbXZYTUTOPOKKJFFE_1JHvcGoZFhVEaQDVMCOHBHDoFKdEHVDE\
+  LCBOV3HL6mrafjX`cSUXNOPIHIDcLV_JSWIPTHMPGKLEHIDEEC\
+  B7PQ8NN9LL9JIAHGAFDBDBCxZBpVBiRBbNBWKBPGBICHvmGnfF\
+  f_EZTDRMCJFfgw_`lUUbNOTHHJXL9TJ9QI9NG9KF9HD9EC95gW\
+  10v43i66Y99L1VW3SS4PP6MM7JI9GFADCwIMZEFvJxfGfRDQrU\
+  PgPLXKHMFDTk7Qf8Oa8MY8KT8 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,75 @@
+;     Date: Wed, 20 Dec 2006 23:30:04 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-12-06 (Soaring madonna [No Rating])
+;       Id: <1.5.4.16.20061220233213.2b4fdc1c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 21, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With a big holiday rush on today, I have next to no time to 
+; write a discussion.  All that needs to be said is that today's 
+; image shows a midget in the fractal that results when the 
+; formula Z^(1.095)+C is calculated 95 levels up the logarithmic 
+; ladder.
+; 
+; Having put so little effort into the image, I could give it no 
+; rating, though I did name it "Soaring Madonna".
+; 
+; The render time of just under 5 minutes is not too slow for an 
+; image with at least a little interest.  And even this short time 
+; may be avoided by viewing the image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was typical December fare here at New Fractal 
+; Central.  The fractal cats had a routine day, though my day was 
+; quite hectic.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and be fractal-wise.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Soaring_Madonna { ; time=0:04:55.27--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2
+  center-mag=-2.59027715920184700/-2.733593963211395\
+  00/70700.56 params=1.095/0/95/0 float=y
+  maxiter=7500 inside=0 logmap=143 periodicity=10
+  colors=000mJhjQigYj1T3LZQy9wcCcdMfdWiw4EpHQjT`dlfd\
+  ihdfjWPvZTs`Xpb`mD0uNEqWSnEHyLNuSTrZZn3BGMQWEKfNRh\
+  WYjGZB6reFngOkhXgjDbKRcYsz1ij8fgSF5ZOHcXTgDgaRefh2\
+  3v_IqaQmbXhcd3AqDIoMQnWYlaVIbZScaanZRpvPmqVjm`ghfu\
+  G5pNGlTRhZatUUTxqXqo`jmVYm_albKRlL_jQbhVef_h_vKbmY\
+  NmiTjjZgkku5glR`s_bnccig1AbLQglenidmfdl59iHKjTVkgv\
+  Xfq`emddhh1NcBXMsXmoZlk`lgbkmBpjLngVlW6gd4jdHkdTkL\
+  puVjpN1hW`4`bQABpQQmuzFloW1XVL`cXeD_dPbd`2mHFjSSga\
+  jyugnpqD1ucAodNid_FkyOhtXfoydIp03F81OJHXUXrjNnhUkg\
+  _geeDbTKcYRcbYdgD2bRMge0CO6sTFqXOo`XmlBXiLafVfoaMi\
+  cZKDp7kGGiOOgWXecB92LKIVVXYxv`qrbjnhbDfcV_2wbMqUjL\
+  aERbLXcSadZf0y6ErKSkYn`Tjb_gcecQvdVrd_nzIfYj5agRnF\
+  ojOmgXlrosmkphgmpcdjdh2w2vsnpnmjil5bCiIqgOofUne_l9\
+  5RHEXPNaXWfAKTLR_VYeCN8KSIRWSY`aB_fQbirYkpU_nQOlMD\
+  gPObSZZUig0ta6sXCsSHsNBVI56FHGCSP9bY7mfNlkSjkWhk`f\
+  kyz`rrdkkhvHlpPkjXkVN5pBf }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

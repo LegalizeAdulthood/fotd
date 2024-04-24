@@ -1,0 +1,94 @@
+;     Date: Wed, 13 Dec 2006 22:59:06 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-12-06 (Curling Floaters [6])
+;       Id: <1.5.4.16.20061213230110.2297fada@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 14, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's curious image exists in the fractal created by the 
+; formula Z^(1.05)+C as it appears 555 levels up the logarithmic 
+; spiral.  The very low-order parent fractal consists of little 
+; more than a large bay, with a partly jagged and partly chaotic 
+; shoreline.  The whole thing somewhat resembles a comet.  Today's 
+; scene is located in a chaotic area on the northern shoreline of 
+; the bay.
+; 
+; I named the image "Curling Floaters", which fairly well 
+; describes it.  When I look at the image, I see a blue sky in the 
+; background nearly obscured by a writhing mass of curly things 
+; rising from below.  Others may see almost anything their imagina-
+; tion can picture.
+; 
+; I rated the image at a 6.  It has no midget at the center, but 
+; it is still a rather enjoyable fractal to observe, with an 
+; unusually pronounced 3-dimensional effect produced entirely by 
+; the coloring.
+; 
+; The render time of 5-1/2 minutes is within reason for such a 
+; fractal.  Sometimes however, we have more pressing matters than 
+; calculating fractals.  If today is such a day, do not despair.  
+; The finished image is or soon will be ready to be viewed on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A rainy morning gave way to a sunny afternoon here at New 
+; Fractal Central on Wednesday, while the temperature reached a 
+; balmy 54F 12C.  More interested in play than weather, the 
+; fractal cats spent the day getting into various mischief.  
+; When their evening treats were served, they were totally 
+; exhausted.
+; 
+; After taking two days off, I had a busy day catching up.  But by 
+; the time dusk arrived, all was as it should be.  The next FOTD 
+; will appear not quite by magic in 24 hours.  Until then, take 
+; care, and be prepared.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Curling_Floaters { ; time=0:05:XX.XX--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-6.18138/3.82175/2.069197/1/-155/5.1271\
+  4870559705105e-014 params=1.05/0/555/1000 float=y
+  maxiter=7500 inside=255 logmap=51 periodicity=10
+  colors=000pjZqjZqjZrk_rk_sk_sk`tk`tl`ulaulavlavlat\
+  j_rhZqgXoeWncUlbTk`RiZQhYOfWNeULcTKbRI`PHZNE_OG_PH\
+  `QI`RJaSKaTLbUMbVNcWOcXPdYQdZRd_Se`TeaUfbVfcWgdXgd\
+  Zhe_hf`igaihbjicjjdjkeklfkmglnhloimpjmqknrlnsmotno\
+  uooupnsqmrtlpwkozkmzjlzijzhizggzgfzfdzeczdazd`zc_z\
+  bYzaXz`Vz`Uz_SzZRzYPzXOzXMzWLzVJzUIzUHzVIzWIzWIzXI\
+  zXIzYIzZIzZJz_Jz_Jz`JzaJzaJzbJzbKzcKzdKzdKzeKzeKzf\
+  KzfKzgLzhLzhLziLziLzjLzkLzkMzlMzlMzmMznMznMzoMzoNz\
+  pNzqNzqNzrNzrNzsNzsNzqOzpOznOzmOzlOzjOziOzhOzfOzeO\
+  zdOzbOzaOz`OzZOzYOzXOzVOzUOzSOzROzQOzOOzNOzMOzKOzJ\
+  OzIOzGOzFOzEOzCOzBOzAOz8Oz7Oz5Nz6Oz7Pz8Qz9QzARzBSz\
+  CSzDTzEUzEVzFVzGWzHXzIXzJYzKZzLZzM_zM`zNazOazPbzQc\
+  zRczSdzTezUezUfzVgzWhzXhzYizZjz_jz`kzalzalz`kz_jzZ\
+  jzYizXhzWhzVgzVfzUfzTezSdzRdzQczPbzPbzOazN`zM`zL_z\
+  KZzJZzJYzIXzHXzGWzFVzEVzDUzBSzDUzEWzFXzGZzH`zJazKc\
+  zLezMfzNhzOjzQkzRmzSozTpz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
