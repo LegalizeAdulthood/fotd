@@ -1,0 +1,108 @@
+;     Date: Tue, 07 Jan 2014 18:14:12 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 07-01-14 (Rectangle Vestige [A-?,M-5])
+;       Id: <1.5.4.16.20140107181440.2ba7c440@earthlink.net>
+; ---------
+; 
+; FOTD -- January 07, 2014 (Rating A-?,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene lies deep inside one of the strange rectangles 
+; that haunt the area of the Z^(2.003)+C Mandeloid that lies on 
+; the negative X-axis just east of the large minibrot complex.
+; 
+; I could not give the art aspect a rating.  I'm not sure the 
+; image, with its apparently random splash of colors, even has an 
+; art aspect.  The math rating however is an everyday 5.  We have 
+; been this way quite a few times before.
+; 
+; The image is double rotated 0.4,0.4 degrees from the true Julia 
+; orientation, so the parent rectangle is quite distorted.  This 
+; distortion inspired the name "Rectangle Vestige"
+; 
+; The calculation time of 2-1/4 minutes will pass quickly enough.  
+; And if the image fails to bring gratification, not much time 
+; will have been wasted.  To eliminate all chance of wasted time, 
+; try the web sites.
+; 
+; The easy path to fractal gratification may be found on the FOTD 
+; web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with a temperature of -8F -22C and rose to a balmy 
+; afternoon high of +5F -15C, accompanied by media warnings of the 
+; danger of frostbite.  The sky was mostly sunny, but with the air 
+; so cold, the sun had no effect on the icy roads and sidewalks.  
+; The fractal cats were unusually playful, which for a cat is 
+; worth being mentioned.  The humans were successful at keeping 
+; warm.
+; 
+; The next FOTD will be posted in the near future human time, 
+; almost instantly cosmic time.  Until then, take care, and I 
+; heard that global warming is the cause of the unusual cold.  
+; Either that or a nuclear winter has begun.  In either case, I 
+; guess a hefty tax on carbon emission would solve the problem.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rectangle_Vestige { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=-0.00048501099573621/+0.002209588115359\
+  59/1.6116e+008/1/-73.75/0 params=89.6/0/89.6/0/\
+  -1.7435/0.0001/0.000175/0.073883/2.003/0 float=y
+  maxiter=1800 inside=0 logmap=265 periodicity=0
+  colors=00001c02c23c45c66c97cB9cDAcGBcIDcLEcNFcPHcS\
+  IcUJcWLcZMc`NcbPceQcgRcjTc987JGETPL1A22K54V75dA6nC\
+  8yF22644D66K88RAAYCCdEEkHHr1203415727938C3AE4CG5EJ\
+  6FL6HO7JQ8LS9MV9OXAQ_BSaCUdD1213535857A69D8BGADJBF\
+  LDHOFJRGLUIMWKOZLQaNScPUfQWiSYlU_nVaqXctZew`120351\
+  5827B39E3AH4CK5EN6GP6IS7JV8LY9N`9PcARfBTiC320741B6\
+  2E82IA3MC4PE4TG5XI61403804D16H17L29Q2AU3CY3Db4Ff4H\
+  k540590BE0HJ1MO1ST1YY1cb2hg2nl2tq3z331663A95DD7GG9\
+  KJBNMCRQEUTGXWI`_KcbMgeNjhPmlRqoTtrVxvX00200400600\
+  800A11200C00E00G00I00K00M00O00Q00S00V68TDHRJPPQYMW\
+  eKbnIiwFbsGWoHOkIHgJ9bLAbLCbLEaMehSimV211532844A65\
+  D87G98IB9QDBTECWGEYIF`JGcLIeNJhILeLMjONfQPbTQcWS84\
+  CH8OQC`1333665A97DC9GFBKIDNLFQOHURJXUL_XNc_PfbRje1\
+  103314516728829A3BC3CE4EG4GH5HJ5JL6KN6MO7OQ7PS8RU8\
+  TW90211431652972B93DB4FD4IF5KG5MI6OK7RM7TO8VQ8XS9_\
+  U9aVAcXBeZBh`CjbCldDnfEqh }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

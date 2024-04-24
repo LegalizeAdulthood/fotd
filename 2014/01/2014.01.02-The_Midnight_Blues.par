@@ -1,0 +1,113 @@
+;     Date: Thu, 02 Jan 2014 15:15:25 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 02-01-14 (The Midnight Blues [A-7,M-5])
+;       Id: <1.5.4.16.20140102151548.2bbf5f6c@earthlink.net>
+; ---------
+; 
+; FOTD -- January 02, 2014 (Rating A-7,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene lies in the fractal solar-system that results when 
+; the formula Z^(2.5)+C is iterated 18 levels up the hyperladder 
+; with no function applied to the calculation.  I call this parent 
+; fractal a solar-system because it consists of a scattering of 
+; minor fractals surrounding a large central fractal.  Today's 
+; scene is located deep in a valley in a large minor fractal just 
+; southeast of the main fractal.
+; 
+; The name "The Midnight Blues" does not refer to a state of 
+; depression.  It is the first thing that popped into my mind when 
+; I emptied it of all other thought, which some say is my usual 
+; mental state.
+; 
+; The art rating of 7 indicates that I see some worth in the 
+; image.  The math rating of a 5 shows that the math trick has 
+; produced many fractals in the past, some of which are notably 
+; better than today's.
+; 
+; The calculation time of 5-3/4 minutes might be slow enough to 
+; give boredom and the resulting blues a chance to arise.  Here is 
+; where the web sites can be a real 'upper'.
+; 
+; Beat the blues by checking the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began cloudy here at Fractal Central.  Snow began at 
+; 1pm, with up to 8 inches expected by midnight.  The temperature 
+; reached a high of 30F -1C at noon, but fell steadily through the 
+; afternoon to a forecast low tonight of 0F -18C.  The fractal 
+; cats, who prefer snug warm comfort, watched the flakes for a few 
+; minutes before snuggling up in their warm blankets.  The humans 
+; also enjoy comfort, but they know that the world is fickle and 
+; often unfair, and personal desires are not always fulfilled on 
+; request.
+; 
+; The wishes for more fractals will be granted however.  In fact, 
+; the next one will be posted in about 24 hours at this same spot. 
+; Until then, take care, and God is sometimes fickle in fulfilling 
+; worthy requests, but the FOTD has fulfilled the desire for free 
+; fractals for almost 17 years.  (Does this make me more generous 
+; than God, or merely a hypocritical boaster who will some day 
+; face the divine wrath?)
+; 
+; 
+; Jim (whatever) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Midnight_Blues { ; time=0:05:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+1.195684835622485/-0.1591907650565708/\
+  2.532651e+012/1/97.5/0 params=2.5/0/18/0 float=y
+  maxiter=3600 inside=0 logmap=694 symmetry=none
+  periodicity=6 mathtolerance=0.05/1
+  colors=00001233424815B26E28H2AL3CO3ER4GU4IX4KY5MZ5\
+  O_6Q`GSbGUcHWdHYeH_gIahIciJdjJfkJhmKjnKloLnpLprLrs\
+  MttMvuJwvKsrKomKmmJjmIgmHbnGdnHfoIhoIjpJlpKnqLpqMr\
+  rMtrKmnIgjHafFWbDP_CJWADS87O71LC3PG4TL5XP7`T8dY9ha\
+  BlfCpjDtnExmIqmMkmPemT_lXTl_NlcHlfBfdE`cGVaIQ`KKZM\
+  EYO9XQDUMGSIJQFMNBQXlVaj`fiekgkpfpuduzcaakIDrR5rqw\
+  5rt6rq7rn7rk8si9sg9seAscAtaBr_CrYCqWDnUDlSEjPFeKF`\
+  FGWAHR5HM0IH0JC0J70K20K50P80UA9ZD8cF8hDDiBIiAMj8Rj\
+  6Wk5_kDOrYubWu_UvXSwUQwROxOMyLLyIKsKKmMJhOJbQIXSIS\
+  UHMWHHYHXtFUsDQsAMs8Jr6Fr4CrAIpFNoLSmKCyRHxXLwbPvh\
+  UunYttasm_qfZp_Yn0F90CB0ADDMHPYK`hNV`PQTRLLTGDV8HJ\
+  JKBIF4RAF_KQc`cqkkzpuymmyjeyhYxeQxbIx`BpZEiXGdaD`e\
+  BXh9Tc7SeERYKQPQcUXmUbmUhZeaS`ZcWWcRTcNQcPPcRPcTPc\
+  VPcXOcZOc`OcaOZfJSjEMnABrQ1udKvQ2wBXxfgyqeznczkazh\
+  _zeBzWLzaVzfdzlmzqozsqzuszwzzyzzzzzrzzjzzbzzVzzNzz\
+  Fzz8zzIzzSzz`zzjzzszzKzzt }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

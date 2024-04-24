@@ -1,0 +1,110 @@
+;     Date: Thu, 16 Jan 2014 20:25:33 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-01-14 (Tulip Trouble [A-9,M-5])
+;       Id: <1.5.4.16.20140116202609.2bc7e8a6@earthlink.net>
+; ---------
+; 
+; FOTD -- January 16, 2014 (Rating A-9,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The artistic rating of today's image is a monumental 9, while 
+; the math rating is a very average 5.  The reason is that I spent 
+; several hours trying to turn a nothing minibrot into something.  
+; I was only moderately successful, but to reward myself for all 
+; the work, I inflated the rating.  The image, with all its 
+; disorganized and hectic colors, is actually worth more like a 7.
+; 
+; The generating expression is Z^(1.2)+C as calculated PI levels 
+; up the hyperladder with no function applied.  The parent fractal 
+; is a Mandeloid every bit as shapeless as the minibrot at the 
+; center of today's image and surrounded by a field of disconnected 
+; bits and pieces of filaments.  Today's scene lies on one of the 
+; filament pieces to the west-northwest of the main body.
+; 
+; The name "Tulip Trouble" came about when the minibrot reminded 
+; me of a tulip.
+; 
+; The calculation time of just over 3 minutes is faster than 
+; expected for an image with a maxiter of one-million.  And this 
+; time can be cut to near 2 minutes by resetting the passes to 
+; 'G'.  Doing this loses only a few dots at the edge of the 
+; minibrot.  An even better choice is to do away with calculation 
+; altogether and check the image on one of the web sites.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Total sun prevailed all day here at Fractal Central today.  With 
+; little wind, the temperature of 37F +3C was quite comfortable 
+; for mid-January and the start of the coldest 30-day period of 
+; the year.  The fractal cats took turns enjoying the afternoon 
+; sun on their shelf in the southwest window.  The fractal humans 
+; passed the day taking down the last of the holiday decorations.
+; 
+; The next FOTD will be posted, which is all I'm saying about the 
+; actual time it will appear.  Until whenever, take care, and if 
+; high technology has given us such a great life style, why have 
+; there been around thirty school shootings in the past year?  
+; Could something in our lives be missing?
+; 
+; 
+; Jim (the Atheist?) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Tulip_Trouble { ; time=0:03:10.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-2.7048045746792/+1.557515314603271/\
+  1.1651e+011/1/-10/0 params=1.2/0/3.14159265358979/0
+  float=y maxiter=1000000 inside=0
+  logmap=221 periodicity=6
+  colors=000QMKSHPRF60YKMdKKJKRIKcUKUZKUZUUcUQKUb`Uc\
+  TUccUTX7d_8RWC0KC0MU1Vc2MU2H83KU0NY0ZBQdWzzzyqhkgW\
+  __MSWDLT8CR37P316100000000041C_8TzYo7zzIzw_qpiiiYU\
+  VY5Am44W44W49WFIWQRWWWbbbtttzzzzzzzzzfek49Yzc7zg7k\
+  h7dqFbzQazzzzddzhlylaqbTiVMdOEYH7RB2N52H21C11C3BCB\
+  000000000c0000426L4E_7Nt9XzBZzU1100475fG9zXJzsXzzp\
+  zzzzzzzzzzzqqy`avLOt9Dq66i59d5D_4GzzzzzPzzzzzzzuxz\
+  mttfpnZmkVngSqeNtazvZzvtz7tJPtJkzSzt7ptzVtHHtG7tL7\
+  zYJzaPzgVzmcTTT___dddnnnvvvzzzlzXzzAzzAzzAzzQzzAzz\
+  AzzUzzUzzAzzWzzWzzUzzUzzTzzTzzTzzRzzRozzmyzozzpzzp\
+  zzpzzrzzszzszzszzszzszzuzzuzztzzwzzvzHvzHzz7zI7yN7\
+  vR7vY7tb7qi6qt7rzAtzEzGzzHzzIzzIzzJzzKzzKzzLzzNzyM\
+  zyMyyOyyOvvPtvQtvQrvSrvSqvUpvWpvWovXov_ov_nv`nvcmt\
+  aktdltfltflthlthktjmtmmtmmtootmmtmmtmjqjgqjgqkeqke\
+  qkcqkaqkaqk_qlYqlYqlWqnWnmTnnRpqSoqQptPrvQqvPsyQsz\
+  OszNtzOtzNtzNszMrzKszLtzK }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

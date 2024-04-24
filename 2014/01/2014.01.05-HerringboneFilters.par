@@ -1,0 +1,116 @@
+;     Date: Sun, 05 Jan 2014 20:30:36 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-01-14 (Herringbone Filters [A-6,M-6])
+;       Id: <1.5.4.16.20140105203102.2bb7f6ca@earthlink.net>
+; ---------
+; 
+; FOTD -- January 05, 2014 (Rating A-6,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is found in the everyday parent fractal that 
+; results when the formula Z^(2.001)+C is iterated 4.7 levels up 
+; the hyperladder with no function applied.  This parent is a 
+; near-Mandelbrot set rotated 180 degrees so that East Valley 
+; falls on the negative X-axis, and the main spike, where even 
+; more action is happening, lies on the positive X-axis.
+; 
+; Today we focus our attention on East Valley, which instead of 
+; coming to a sharp point, has been broadened into a wedge 
+; infested with sickle-shaped debris.  Today's scene lies in this 
+; debris.
+; 
+; The coloring is rather chaotic, and both the art and math tricks 
+; have been seen before, which holds the ratings of both of them 
+; to a routine 6.
+; 
+; The name "Herringbone Filters" has nothing to do with the field 
+; of TV repair.  It came to mind when something in the scene 
+; reminded me of herringbones.
+; 
+; Most of the coloring effect was produced by rendering the scene 
+; with the outside set to 'tdis'.  Other options produce different 
+; effects, some of which have potential.
+; 
+; The calculation time of a dragging 11-1/2 minutes will pass 
+; slowly even for the most devout fractal fans.  But relief is 
+; always at hand on the web sites.
+; 
+; To view the image without calculating it, check the FOTD web 
+; sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The morning was sunny here at Fractal Central today.  But clouds 
+; moved in by noon and by mid-afternoon freezing rain was falling, 
+; with a temperature of 28F -2C.  The fractal cats were too busy 
+; chasing each other up and down the hallway and tussling to worry 
+; themselves with the weather.  The fractal humans were simply 
+; glad there was no reason to go out.
+; 
+; The next FOTD will be posted in a matter of minutes, which will 
+; also be a matter of seconds, hours, weeks, months or years, 
+; depending on how time is measured.  To find the exact numbers, 
+; check back at regular intervals.  Until whenever, take care, and 
+; a local eight-year-old boy was recently asked what was the best 
+; thing that happened to him in 2013.  He replied it was when he 
+; got his mini I-pad for Christmas.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+HerringboneFilters { ; time=0:11:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=t
+  center-mag=-0.2521599928326848/-0.0019727729038808\
+  /2.614896e+009/1/-40/0 params=2.001/0/4.7/0 float=y
+  maxiter=8600 inside=0 outside=tdis periodicity=6
+  colors=000sfqsivb`pMTj5Le7Oa9RYBUUDWQFZMHaIIcFDfM9\
+  iS3ubFlgRdkbWpnOtiKndHi`EdWA_S7VN4QJ1LN8OQFQTMSWTU\
+  __XbfZem`hsbkocmlcoidqfdscdu`ewYeyVehWlSXrCYxLSoTM\
+  faGYcAP88HUAJ10K02D03MD0NB6O94PA0M54J0AG0AD52A0AC0\
+  5E25G55I5Th64eCFaHQYN`VckRmuOrq_lccckcUieKffAdhqvz\
+  ipjakaUfTM`KEMB7R28W39U3Ad3Ah3Bl4zz4Du4Dy4Lx9TwEzw\
+  JgvOhtQyzzjpUknWllYmj_zhaogbjhceid`jeWjfRkgMlhHmiD\
+  miIfiM`iQUiUOiYHiaBie5izAjzEkXJlUNmRSnOWoKdYHwbDgh\
+  Awm6es3cx9xtFeqLxnRxjXxgbmdhm`nmYtmVymSwmWvsZuqaso\
+  drlhqjkohnnfqmdtkeqiengfkffihdhicgjbfkaem`dnZcoYbp\
+  XarW`sV_tTZuSYwRXxQWyPVzOUwQRuROrTLpUInVFkXCiY9`lG\
+  `lG_lG_lGZlFZlFYlFYlFYmFXmEXmEWmEWmEVmDVmDUmDUmDTm\
+  DTmCSmCSmCRmCRmCQmBQmBPmBPmBPmBQlCQlCRlCRlDRkDSkDS\
+  kDTkETkETjEUjEUjFUjFVjFViFWiGWiGWiGXhGXhHXhHYhHYhH\
+  ZgIZgIZgI_gI_gJ_fJ`fJ`fJafKafKaeKbeLbeLceLcdLcdMdd\
+  MddMddMecNecNfcNfcNfcOgbO }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

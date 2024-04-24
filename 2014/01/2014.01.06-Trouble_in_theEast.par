@@ -1,0 +1,106 @@
+;     Date: Mon, 06 Jan 2014 17:50:06 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-01-14 (Trouble in the East [A-7,M-7])
+;       Id: <1.5.4.16.20140106175031.2bc7b872@earthlink.net>
+; ---------
+; 
+; FOTD -- January 06, 2014 (Rating A-7,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; While yesterday's image took us to East Valley of the parent 
+; almost-Mandelbrot set, today's image takes us to the main spike, 
+; where we examine the northeast shore line of the large minibrot, 
+; which at today's orientation lies on the southwest side.  The 
+; minibrot itself is beginning to break up, a sure sign that 
+; interesting things are likely to be found there.
+; 
+; I named the image "Trouble in the East", not as a comment on 
+; world affairs, but as a reminder that the scene lies in a 
+; troubled area of the parent fractal.  The fact that I skewed the 
+; image to twist the chain of 'yellow teeth' from a rhombus to a 
+; near-perfct square also entered into the name.
+; 
+; The art and math both rate a 7, making the image well worth the 
+; 1-1/3 minutes required to calculate it.  But time is time, so 
+; remember the web sites.
+; 
+; Save both time and energy by checking the finished images on the 
+; web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of clouds and sun added interest to the sky here at 
+; Fractal Central today.  But the temperature of 50F 10C at 
+; daybreak fell to freezing by afternoon, which with a blustery 
+; wind, made the interesting sky not too enjoyable.  And the low 
+; of 0F -18C forecast for tonight will make things only worse.  
+; The fractal cats passed the day wondering what kind of trouble 
+; to get into, while the fractal humans tried to keep out of 
+; trouble.
+; 
+; The next FOTD will be posted within a reasonable time.  Until 
+; next time, whenever that might be, take care, and I already see 
+; politicians trying to buy votes with promises of increased 
+; benefits for the voters if they are elected.  I wonder what the 
+; difference might be between this kind of bribery and classic 
+; political corruption.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Trouble_in_theEast { ; time=0:01:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+1.744506240835/+0.014698570775/2673270\
+  /1/-61.25/6.0885268721 params=2.001/0/4.7/0 float=y
+  maxiter=2000 inside=0 logmap=120 periodicity=6
+  colors=000C0LC0MB0OA0QA0R90T91U82W73Y74Z65`66a57c4\
+  8e49f3Ah3Bi2Ck2Dl5Ek8FjBGiEHhHIgKJfNKeWPecUdzr0zmb\
+  ucDmUEfSE_QETOEMMEFKEEIKDGUCEcBCmAEm9Gm8Im7Km4Mo0O\
+  y1Qo2Sf3UX6VOAWFFUJKVNPYRU`VZcZccbhbfhaem`eo_dqZdr\
+  T`rRYrOVrMSpJPnHMlEJjCGhGOfKW`HSVEOPBKK8GE5C828304\
+  5036037A38K29U2Ac2AmHAtBGU7M34SBCYIKcPSiX_ocgujozq\
+  wmktacmQUcEKU2AK90AFAKMAUSAUYAPdALjmGpmCqmGqhJrcMr\
+  ZQsUTsPWsKZtFVuCSv9Pw6Mx3JoIRgXZ_kfSymKcEwL1vO3vQ5\
+  uT7uV9tYBt_DsbFsdHt_JtVLtQNtMPuHRuCTu7Vu3WjDY`NZYT\
+  YWYYUcYShYQnYOsYUtb_ufdvjjwnoxrZDEZCCYCBYB9XA7XA6W\
+  94W82W81UA4SB6QC9PDBNEDLFGKGIIHKGINEJPDKRBLU9MW8NY\
+  APZCQ_ES`GTaIVbKWcMYdOZeQ`fRafTNMU91VB4VD6WF8WHAXJ\
+  CXLEYNHYPJZRLZTN_VP_XR_ZTb_Ve`XhaZkb`ncbqddteetgct\
+  hati_tjYtkWtlUtmStnQtpOtqMtrKtsIttztuztvztwzrvzquz\
+  ptzotznszmrzkqzjqzipzhozgnzfzH7zA8zD8zF9zH9zJAzLAz\
+  OBzQBzSCzUCzWCzYDzWEzUFzS }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

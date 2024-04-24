@@ -1,0 +1,122 @@
+;     Date: Sat, 18 Jan 2014 08:27:55 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-01-14 (Divine Revelation [A-9,M-5])
+;       Id: <1.5.4.16.20140118082831.2a773b26@earthlink.net>
+; ---------
+; 
+; FOTD -- January 17, 2014 (Rating A-9,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday's garish image shows what happens when low-order 
+; minibrots are decorated with brilliant colors.  Today's subtly 
+; colored image shows what happens when the colors are kept to a 
+; minimum.  Instead of the carnival-like atmosphere, we have a 
+; fractal that could be a divine vision.
+; 
+; Being a marginally religious person, I named the image "Divine 
+; Revelation".  The brilliant light in the upper left of the scene 
+; may be identified as any divine thing or person the viewer 
+; chooses.  And skeptical Atheists could even consider this light 
+; to be just another feel-good delusion of the superstitious and 
+; gullible.
+; 
+; The generating expression is Z^(1.15)+C as iterated 15 levels up 
+; the hyperladder with the 'recip' function applied.  The odd 
+; value of the maxiter is actually one less than 2^(15), and was 
+; once the maxiter limit of Fractint.  This large value slows down 
+; the calculation but also increases the definition of the bril-
+; liant minibrot, which is nearly hidden in the glare and can be 
+; more clearly seen by changing its inside color to black.
+; 
+; The art rating of a 9 is again overblown, but at least in my 
+; opinion, the image is worth the rating.  The math rating of a 5 
+; is more honest.  I have been doing these very low-order minibrot 
+; images for quite a few years, and today's image brings nothing 
+; new to the world of fractal math.
+; 
+; The calculation time of 5-1/4 minutes is true on my fireball 
+; machine.  On a lesser or greater fireball, the time could be 
+; much slower or faster.  As always, visiting the FOTD web sites 
+; will end all timing worries.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The clouds moved in just after sunrise today here at Fractal 
+; Central and hung overhead for the rest of the day, while the 
+; temperature of 39F +4C kept the outside conditions quite bear-
+; able.  The forecast is not so pleasant however, since we expect 
+; up to several inches, or about 8cm, of snow tonight and tomorrow.
+; 
+; The fractal cats had a typical contented cat day.  A little more 
+; sun would have made them happier however.  The humans, never 
+; fully contented, once again made it through the day with nothing 
+; to bring serious discontent.
+; 
+; The next FOTD will be posted when it is ready, but no sooner 
+; than the evening of the 18th Eastern Standard Time.  Until when-
+; ever, take care, and if the investigations of rational science 
+; stopped finding things that cause people to question their 
+; religious beliefs, quite a few people would be more content.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Divine_Revelation { ; time=0:05:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-1.703119592947089/+1.737103617718856/\
+  5.644438e+011/1/95/0 params=1.15/0/15/0 float=y
+  maxiter=32767 inside=255 logmap=-470
+  periodicity=6 mathtolerance=0.05/1
+  colors=00064875986A97BA8CB9DCAEDAFE9GFAKGBKHCUIDUJ\
+  EUIGUHIUFKUEMUGOZIQZKSZNUcPWcSYhU_hXahZchaehcghfih\
+  hkhjmhkohoqhqshquhtwhwwhwwhwwiwwjwwkwwlwwmwwnxxoyy\
+  pzzqzzrzzszztzzuzzvzzwzzxzzyzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
