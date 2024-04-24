@@ -1,0 +1,103 @@
+;     Date: Fri, 21 Jun 2002 10:51:55 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-06-02 (A Nebular Minibrot [6])
+;       Id: <1.5.4.16.20020621105211.2a07c546@pop.mindspring.com>
+; ---------
+; FOTD -- June 21, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As I write these words, it is 9:24am EDT, the moment of the 
+; summer solstice in the northern hemisphere.  The sun is now as 
+; far north as it ever gets.  Actually, the sun is not located any 
+; farther north that it always is, for there is no north and south 
+; in space.  What has happened is that the earth has reached the 
+; point in its orbit where the north end of its axis is tilted 
+; directly toward the sun, which makes today the longest day of 
+; the year.  Today is not however the day with the latest sunset.  
+; Because the sun is now falling farther behind clock time each 
+; day, the day of latest sunset arrives in about one week.
+; 
+; In the southern hemisphere, where everyone hangs from the 
+; earth's surface by their feet and Christmas comes in the summer, 
+; all this is reversed!
+; 
+; Today's fractal is not upside down, but it *has* been rotated to 
+; the 'normal' position, with the negative stem actually pointing 
+; left, the way all proper stems should point.  The image is the 
+; latest in the apparently unending series of Minibrots, and as 
+; such, features an object sometimes known as an atom, but better 
+; known as a Mandelbrot Midget.  The formula that created not only 
+; today's scene but an entire fractal universe, mixes portions of 
+; Z^(-1.16) and Z^(-12.5) then adds 1/C instead of just plain C.
+; 
+; I named the image "A Nebular Minibrot".  The name is justified 
+; because the image does have a galactic feeling to it, complete 
+; with stars and greenish glowing clouds of gas.  I rated the 
+; image at a 6, which is above average but not outstanding.  The 
+; rendering time, for those who choose to run the parameter file, 
+; is a nominal 5-1/2 minutes on my lazy P200 machine.  And as 
+; always, the completed image will soon be available on the two 
+; FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Thursday here at Fractal Central was 
+; pleasing to man and cats alike, though the cats had more time to 
+; enjoy the perfection.  Brilliant sun, crystal blue skies, puffy 
+; white clouds, gentle winds, and a temperature of 83F 28C made 
+; everyone happy.
+; 
+; As is usually the case however, I have a bit of work to 
+; accomplish before I can enjoy today, which promises to be a 
+; repeat of Thursday.  Until next FOTD, which will arrive on the 
+; 24th, take care, and I'm not as dumb as I appear and not as 
+; smart as I pretend.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Nebular_Minibrot { ; time=0:05:27.90--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.9255785497758036/-1.12533132705048/8\
+  .889599e+009/1/10/0.000691584037123986473
+  params=1/-1.16/0.8/-12.5/0/0 float=y maxiter=1200
+  inside=0 logmap=112 periodicity=10
+  colors=000E758939C49E5AG5AJ6AL6BN7BQ7CS8CU8CX9DZ9D\
+  `AEcAEeBEgBJcCO`CTYCYVCbSCgPClMCqJCpNCoRCnUCmYClaC\
+  ldCkhCjlCioChsCgwCrqCXpWNgoQUUSG8PHBNIELIGJJJHJMFK\
+  ODKRBLT9LW7MZ5M`3Nc1Ne3Rb5U_7YX9`UBcRDgOFjLHmIJqFL\
+  tCMwAKvBIvBGvBEvCCvCAvC8vC6vD4vDzzD1vD5uB8uACu9Ft8\
+  Jt7Mt5Qs4Ts3Xs2_s1clMgefkZziYvhYsfYpeYldYibYfaYb`Y\
+  _ZYXYYTWYQVYNUYJSYGRYDQYAPXEOXHNXLMXOMXSLXVKWZJWaJ\
+  WeIhzHWlGWoGWrHZmI`iJbeKeaKgYLiUMlQNnMOpIOrERoFTmG\
+  VkHXiIZgJ`eKbcLe`LgZMiXNkVOmTPoRQqPRsNRhWTZdVPlWSk\
+  XVkYXkY_kZbk_dk_gk`jjaljaojbrjctjcwjdyjdtgcoeckccf\
+  aca_cYYcTVbPTbKRbFPbBNb6Lb2JbQ`_lqXnkUpfRr`OtWLvQI\
+  wLFqMLlNRgNWbOaYPgTPlOQrJQwMbcPnKSz0Uv4Vs8WoCXlGYi\
+  KZeO_bS`ZWaW_bTbZVaWW`SX`PY_LZZI_ZE`YBaX8bXFcTMePT\
+  gL_iIfkEmmAto7sq9rsBquDpwEoyGnzImzJlzLkzNjzOizQhzS\
+  hzTizRjzQkzOlzNlzMmzKnzJozIpzGpzFqzErzCszBszArzRrz\
+  frzvnzujztazHazHWzEQzBKz8 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}
+
+; END PARAMETER FILE==================================
+; 
+; 

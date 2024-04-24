@@ -1,0 +1,95 @@
+;     Date: Mon, 03 Jun 2002 09:53:07 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-06-02 (Cubic Mandelbrot [6])
+;       Id: <1.5.4.16.20020603095309.2fef2f8e@pop.mindspring.com>
+; ---------
+; FOTD -- June 03, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Things are moving on schedule here at fractal headquarters, 
+; which means that the CD is entering the late mid-stage, the 
+; ongoing fractals are continuing to appear, the cats are 
+; sleeping, but I have yet to receive the 24-million dollars I 
+; was promised by that man who sent me the e-mail.  :-)
+; 
+; Today we take a trip to the cubic Mandelbrot set to see a 
+; cubic midget.  The cubic set is basically an extension of the 
+; classic quadratic set M-set, with corresponding features in 
+; corresponding areas.  The main difference is that there are 2 
+; lobes in the buds, and instead of the 2,4,8... arrangement of 
+; elements around the midgets, the arrangement is 3,9,27...  It 
+; also becomes meaningless in the cubic set to orient midgets in 
+; the 'normal' manner, as I do with quadratic midgets, since cubic 
+; midgets have 4-way symmetry.
+; 
+; I have given today's midget a diagonal orientation, which is 
+; both dynamic and somewhat artistic.  As is the case with most 
+; of the FOTD's, the coloring is done with the standard equal-
+; iteration-band method, with the inside set to black.
+; 
+; Feeling that the image has at least a modicum of worth, I rated 
+; it at a 6.  The name "Cubic Mandelbrot" is a description of the 
+; image, with no pretense at cleverness.  The 11-minute render 
+; time makes running the parameter file a drag.  The wiser choice 
+; is to let Paul and Scott do the dragging, and download the 
+; completed image from their web sites.  Paul's site can be found 
+; at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Scott's is at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Sunday here at Fractal Central was near 
+; perfect, with total sunshine and reasonably happy cats.  The 
+; slightly too-warm temperature of 88F 31C was offset by low 
+; humidity and a fresh breeze.  The cats would rather have had no 
+; wind, because wind conceals the presence of intruders.  But they 
+; took the breezes in stride and explored the yard peacefully.
+; 
+; Being faced with a day of work, I must now end this latest 
+; chapter in the unending series of FOTD's, but I'll return on 
+; schedule on the next day evenly divisible by 3 -- June 6.  Until 
+; then, take care, and search for the meaning in fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Cubic_Mandelbrot { ; time=0:11:06.68--SF5 on a P200
+  reset=2002 type=formula formulafile=slices.frm
+  formulaname=MandelbrotCube passes=1
+  center-mag=-0.00037280362079087/+1.091145090358868\
+  00/1.05861e+010/1/-19.9998811849355604/-0.00012469\
+  0785224791656 params=0/0/0/0 float=y maxiter=6000
+  inside=0 logmap=836 periodicity=10
+  colors=000Skz_mzhozspzqqzqrzqtzqtzqtzqszqrzqqzppzp\
+  ozpnzpmzplzpkzpjzpizphzngznhznhznhznizniznjznlznkz\
+  mlzmkzmkzmkzmizmizmhzmhzmhzhgzegzbgu_enXehUe`PcWMc\
+  OJcIGbCEb5Bb06`08b08b08b08b08b18b29b59c69c89cB9cC9\
+  cEBcFBcIBeJBeLBeOBePCeRCeUCeWCgXCgZCg`EgbEgcEggEgh\
+  EhiEhmFhnFhpFhqFhuFhvFiwGizGizGizGizGizGizGizZX0XW\
+  0XW0WW0WW0WW0UW0UW0UW1SW4SW5RW6RW8RW9PWBPWCPWEOWGO\
+  WIMWJMWLMWMLWOLWPJUPLWRMWSMXUOXWOXXPZZPZ_RZ_S_`S_b\
+  U`cU`eW`gWbhXbi__hXbiWekUhmSimRmnOppMsqLuqJwsIzuFz\
+  vEzvCzwBzy9zyBzvCzsCzpEzmEyiFvgGscGp`InZIkWJhSLePL\
+  bMM`JMZGOWEPRBPO8RJ5RF2SB0S90W80X80Z90_90`91bB1c92\
+  e92gB4hB4iB5kC5mB6nB6pC8qC8sC8uC9vC9wBByBBzBCzBEzB\
+  GzBJz9Mz9Pz9Sz9Wz9Zz9`z9czGgzMizSmzZpzeszkvzqwzwyz\
+  uzzszzqzznzzmzykzwhzugzsezqczpczmczkcziczhczeczccz\
+  bcz`czZczXczWczPczUczXcz_czcczgczgczgczgczgczgczgc\
+  zgczgczgczgczgczgczgczgcz }
+
+frm:MandelbrotCube {; Jim Muth  real(c),imag(c)
+z=p1, c=pixel+p2:
+z=z*(sqr(z))+c,
+|z| <= 16 }
+
+; END PARAMETER FILE==================================
+; 
+; 
