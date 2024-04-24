@@ -1,0 +1,107 @@
+;     Date: Tue, 16 Apr 2013 23:48:37 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-04-13 (Bottom of the Pile [5])
+;       Id: <1.5.4.16.20130416234808.2acf7840@earthlink.net>
+; ---------
+; 
+; FOTD -- April 16, 2013 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image it looks like we have come to the end of the 
+; road.  The exponent of Z is 1.004, and even searching as much as 
+; I could, I found none of the fractal semi-chaos that produces 
+; the most interesting designs.  What I did fine was today's 
+; image, which is quite fractal in nature, remaining the same no 
+; matter how deeply into it one dives.
+; 
+; So I guess this is the end of the road as we approach an expo-
+; nent of unity, at least with my less-than-light-speed 12-year-
+; old fractal dedicated machine.  A super-speed SOTA unit might 
+; find that some interesting stuff does lie beyond the edges of 
+; today's image, but I'm not going to try to find it.
+; 
+; The rating of a 5 is below FOTD average.  The name "Bottom of 
+; the Pile" indicates the position of the generating expression.  
+; The calculation time is inexcusably slow.  Over 1/4 hour will 
+; pass between the time the <enter> key is struck and the image-
+; finished chirp sounds.  I recommend turning to one of the web 
+; sites for relief.
+; 
+; The finished image may be viewed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; and back images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of clouds, a little sun and a few showers, with a tempera-
+; ture of 68F 19C made today a pretty average one here at Fractal 
+; Central.  The fractal cat Nicholas grabbed my chair when I got 
+; up from it at lunch time to reach for the remote control, and 
+; turned defiant when I tried to return to it.  FL was on Nico's 
+; side in the chair dispute.
+; 
+; The next FOTD will be posted within a reasonable time.  Until 
+; reason prevails, take care, and it looks like we need tighter 
+; controls on those household items and substances that could be 
+; used in the creation of explosives.  It might be impractical but 
+; at least it would make us feel better.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Bottom_of_the_Pile { ; time=0:16:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-1.04288/-9.26179/34.5/1/163.7/0
+  params=1.004/0/1.54/2400 float=y maxiter=5000
+  inside=0 logmap=-737 periodicity=6
+  colors=000I6GH6GG5HF4IE4JD3JC3KBCLAEL94M96N9EO9EP9\
+  AQ9CR9ER9GS9HT9JU9LV9MW9PX9SX9UY9XZ9__9b`9ea9haEkV\
+  JoPOrJStDRvEQsEQpEPnEPkEOhFOfFNcFM`FMZFLWFLTGKQGKO\
+  GJLGIIGIGGHDHHAHG8HG5HF2HF0H52786AAADCDGFHJHKMJOOM\
+  SROVUQZXSa_VebXidZlgapjcsmewpgzrjnambLpS4nR6lQ8kP9\
+  iOBhNChSLhWUh_ahcjhgridqjaqj_pkXplVolSomPnnNnnKmoI\
+  mpFlpClqAkr7kr5js2js0jpChmNflPelQdlRdlTclUckVbkXak\
+  YakZ`k``ja_jbZjdZjeYjfYkfYleZmeZme_nd_od`ocapcaqbb\
+  rbbracsadt`dt`eu_ev_fv_fuZeuYdkLLtYctXbsXasW`sV`rV\
+  _rUZqUYqTXpTWpSWpRVoRUoQTnQSnPRmPQmOQmNPlNOlMNkMMk\
+  LLolknihngfnedmbbm`_mZYlWWlUUlSRkPPkNNu0vt1ut1tt2s\
+  t2rs3qs3ps4os4or5nr5mr6lr6kr7jq7iq8iq8hq9gp9fpAepA\
+  dpBcpBcoBboCaoC`oD_nDZnEYnEXnFXmFWmGVmGUmHTmHSlIRl\
+  IRlJQlJPkKOkKNkLMkLLwluvktvjsvjruiquiquhpugotgntfm\
+  tfmtelsdksdjsciscirbhragrafr`fq`eq_dqZcqZbpYbpYapX\
+  `pW_oWZoVZoVYoUXnTWnTWnSV }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

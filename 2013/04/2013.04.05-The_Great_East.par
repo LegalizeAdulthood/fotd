@@ -1,0 +1,109 @@
+;     Date: Fri, 05 Apr 2013 17:10:06 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-04-13 (The Great East [7.5])
+;       Id: <1.5.4.16.20130405160929.2e8734ae@earthlink.net>
+; ---------
+; 
+; FOTD -- April 05, 2013 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a different view of a tiny minibrot in the 
+; east valley area of a larger minibrot on the main stem of the 
+; Mandelbrot set.  The minibrot is sliced in the Rectangular 
+; direction, which explains why it looks nothing at all like a 
+; Mandelbrot minibrot or a mini-Julia set.
+; 
+; As is usually the case with fractals created by taking odd 
+; slices of the Julibrot, the image has been stretched and skewed 
+; to bring it to reasonable proportions.  The thin diagonal yellow 
+; lines through the open area are parts of the west branch of the 
+; large valleys on the north and south shore lines of the main bay 
+; of the underlying minibrot.
+; 
+; The rating of 7-1/2 is largely earned by the coloring, which is 
+; just about all the image has going for it.  The name "The Great 
+; East" simply tells that the scene lies to the east of a larger 
+; minibrot.  The calculation time of 3-1/4 minutes is within 
+; reason.  The web sites can completely remove the need to 
+; calculate.
+; 
+; The official FOTD web site is again up and running at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High definition versions are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Spring arrived with a day of total sun and a chorus of bird song 
+; here at Fractal Central today.  The temperature of 59F 15C was 
+; the warmest in at least one entire month.  The fractal cat, 
+; taking advantage of the strong sun, passed the afternoon on his 
+; shelf in the southwest window.  The humans passed the day 
+; working, though FL's gardening enthusiasm is growing fast.
+; 
+; The next FOTD will be posted when it is ready.  Until that 
+; glorious moment arrives, take care, and political correctness 
+; might keep people happy, but it all too often fails to admit and 
+; solve the problems.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Great_East { ; time=0:03:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=0/0/3.920133e+007/1.6807/102.3920236694\
+  89504/35.4 params=90/90/0/90/-1.7857285921/0/\
+  -1.7857285921/0/2/0 float=y maxiter=7500 inside=0
+  logmap=314 periodicity=6
+  colors=00000F00G00H00I00J00K00L00M00N00O00P01Q02R0\
+  3S04T05U06V07W08X09Y0A_0B_0Ca0Dc0Ec0Df0Dg1Ch2Dk3Cm\
+  4Cn5Cq6Bs7At89v99xA9zBBzCDzDFzEHzFJzGLzHNzIQzJSzKU\
+  zIWzFYzC_v9ar5fm6ch7ac7_c8Yc8WZ9UZ9SZAQUAOUBMKCKKC\
+  IEDGEDEEECEEAEF8ED7FF6EH6EJ6EL5EN5EP5FR4JS4MU4PW4S\
+  Y3U_3Wa3Yc2`e2af2bh2cj1dl1em1gn0ip0kq2mr4os7qtAquF\
+  qvKpwQoxRomYmcPmUEm8HmdIXdLYcO_cR`cUacXcb_dbbebegb\
+  hhakiankaqlJwVatmUtqNttJqjGo`DlRAjH2g77h8Bh9FhAJiA\
+  NgBReCVcDZbDdaEeaFeaGdaGd`Gd_HdYHdVHbRH`NHaIHdDHj8\
+  Hz5Gp4Hj3Hd3HZ2HU2HO1HI1HC0H70H83L95PA7TB9WBB_CEcD\
+  GfEIjFKnFMqHOnIPkKQhLReNSbOT_QUXRWUTXRUYOWZLX_IZ`F\
+  _aDZ`GY`JX`MW`PV_SU_VT_YS_`RZcQZfPZiO`lNcoMhrLmuLr\
+  xNvvPzuQumRqeTmYViQXeI_aA__6_Y2`Z5`Z7`ZAaZCaZFaZHa\
+  cKbcMbcPbcRbcUccWcmZcm`cmacmbzzJzz0zz3zz5zz8zzAzzD\
+  zzFzzIzzKzzJzzJzzJzzJzzJzzJzzJzzJzzJzzJzzJzzJzzJzz\
+  JzzOzzSzzXzz`zzczzdzzezze }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

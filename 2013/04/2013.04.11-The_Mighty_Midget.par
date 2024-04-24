@@ -1,0 +1,106 @@
+;     Date: Thu, 11 Apr 2013 09:09:05 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-04-13 (The Mighty Midget [8.5])
+;       Id: <1.5.4.16.20130411090832.363f2b6c@earthlink.net>
+; ---------
+; 
+; FOTD -- April 10, 2013 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The formula behind today's image is Z^(1.09)+C, a hopeless 
+; expression if ever there was one.  But as today's image shows, 
+; things need not always be as hopeless as it first appears, and 
+; an expression as close to linearity as today's can produce 
+; interesting fractals when calculated with one of the alternate 
+; complex logarithms.
+; 
+; The parent fractal is shaped like a torpedo, much as the 
+; minibrot at the center of today's image.  In the range of 
+; exponents so close to unity, most all the fractals tend to 
+; resemble torpedoes, but this does not mean they are necessarily 
+; all the same.  Check the minibrot in today's image, which 
+; actually creates a rather pronounced 3-D effect.
+; 
+; Most of this effect is due to my semi-skilled coloring of 
+; course, and I rewarded myself with a full half point for the 
+; effort.  The name "The Mighty Midget" is a comment on how the 
+; image gets so much from so little.  The calculation time of 
+; 2-1/2 minutes borders on slowness.  The web sites are there to 
+; avoid impatience.
+; 
+; So make life easy.  Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And check the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are filed online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Midsummer arrived with a bang here at Fractal Central today, 
+; with a temperature of 86F 30C and an afternoon thunder-shower.  
+; The fractal cat said enough heat is enough and started searching 
+; for a cooler spot than the window shelf.  The humans meanwhile 
+; had an average day.
+; 
+; The next FOTD will be posted before long, though I'm not sure of 
+; the route.  Until whenever and however, take care, and be ever 
+; aware of the dangers inherent in making hasty decisions that 
+; will do nothing but make someone feel better.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Mighty_Midget { ; time=0:02:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.192308145885724/-1.991515836863857/\
+  2998.507/1/57.5/0 params=1.09/0/525/0 float=y
+  maxiter=5000 inside=0 logmap=140 periodicity=6
+  colors=00060F70F70F80F90F90FA0FA0EB0EC0DC0DD0DD0EE\
+  0EF0FF0EG0DG0BH09I08I06J14J03K14K24K34L44L54L64M74\
+  M84M94NA4NB4NC5ND5OE5OF5OG5PH5PI5PJ5QK5QL5QM5QN5RO\
+  6RP6RQ6SR6SS6ST6TU6TV6TW6UX6UY6UZ7U_7V`7Va7Vb7Wc7W\
+  d7We7Xf7Xg7Xh7bn7_k7Xh7Ve7Sb7Q_7NX7KU7IR7FO7DL7AI7\
+  7H58G68G78G78G88G98G98GA8GB8GB8GC8GD8GD8GE8GF8GF8G\
+  G8GG8FH8FI8FI8FJ8FK8FK8FL8FM8FM8FN8FO8FO8FP8FQ8FQ8\
+  FR8FR8ES8ET8Qh8Qg8Qf8Qe8Qd7Qc7Qb7Qa7Q`5UeN6SQBWTGZ\
+  VLaYQe`Vhd`mbZkaXj_VhZTgXReWPdVOcTMaSK`QIZPGYNEWMC\
+  VN9WLBUKDSJEQIGPGINFJLELKDMIBOGAQF9RD8Tz6Vz5Wz4cz4\
+  `z3cz3Xz3cz3Uz3cz3Uz2cz2Uz2cz2Uz2czUUzUUzUUzUUzUcz\
+  UczUczUczUczUczUczUczUczUczUczUczc_kcbjceichhckgcn\
+  fclecjechecfecdeccecceccecceccecczcczcczcczcczcczc\
+  czcczcczmmzmmzmmzmmzmmzmmzmmzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

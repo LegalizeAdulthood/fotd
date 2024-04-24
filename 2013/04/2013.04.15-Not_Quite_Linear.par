@@ -1,0 +1,108 @@
+;     Date: Mon, 15 Apr 2013 09:28:10 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 14-04-13 (Not Quite Linear [7.5])
+;       Id: <1.5.4.16.20130415092935.362f591a@earthlink.net>
+; ---------
+; 
+; FOTD -- April 14, 2013 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in one of the Z^(1.02)+C parent 
+; fractals.  Since the complex logarithm is multi-valued, there 
+; are multiple fractals the expression can create.  Most of these 
+; fractals are over-sized torpedo-shaped things, though only some 
+; have the interesting fractal semi-chaos along their edges.  
+; Today's scene lies in a bit of this semi-chaos along the 
+; southwest shore line of its parent.
+; 
+; This parent fractal is unusual in that it has a small island-arc 
+; of debris lying inside its main bay, totally disconnected from 
+; the nearest shore.  I have not yet checked this island, though 
+; at first glance it appears relatively unpromising.
+; 
+; The name "Not Quite Linear" describes the generating expression. 
+; The rating of 7-1/2 is about average.  I did put a little extra 
+; effort into the coloring, though it is debatable whether my work 
+; made much of an improvement.
+; 
+; If you run the parameter file, do not be concerned if nothing 
+; appears on the screen for a minute or two.  The top inch or so 
+; of the image is a flat color.
+; 
+; With a calculation time of 12 minutes, the image is a slow one.  
+; The web sites can relieve impatience however.
+; 
+; The completed image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Hi-def variations are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A perfectly average mid-April day passed uneventfully here at 
+; Fractal Central today, with partly cloudy skies and a 
+; temperature of 59F 15C.  The fractal cat ignored the weather, 
+; exhausting his energy playing under an afghan.  The humans had 
+; a day as average as the weather.
+; 
+; The next FOTD will be posted in one day, maybe two.  Until 
+; whenever, take care, and when the going gets tough, get going.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Not_Quite_Linear { ; time=0:12:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-21.7682/0.605373/1.223368
+  params=1.02/0/0/3500 float=y maxiter=3500
+  inside=255 logmap=80 periodicity=6
+  colors=000GC8AFMADLAGLAEKAHKAGJAIIAHIAJHAIHAKGAIGA\
+  LFAKFBMGBMHCNICOICPJDQKDRLDSLETMEUNEVNFWOFXPGYQGZQ\
+  G_RHaSHbTHeTIfUIiVIkVMmWPnXToXWpY_qYbrZfs_it_mu`pv\
+  `twawvasu_ptYlsWitUetSbuQ_uOWvMTvLPwJMwHJxFFxDCyB8\
+  y95z72z6BqBJiGSaL_TQhLVpD_x5cv8buAbtCbsFbrHaqJapLa\
+  oOanQ`mS`lU`jX`iZ`h`_gc_fe_eg_diZclZbnZapZ`rZ_p`Zn\
+  aYlbXjcWhdVffUdgUchTaiS_jRYkQWmPUnOSoNQpNPqmNrmLtm\
+  JumHvmFwmDxmCymGpmJgmMZmL`mLbmLcmLemLfmLhaLiaKkaKm\
+  bKnbKpbKqbKsbKteQjhVak_TndKqiBsn2mh8hbDccJccOccUcc\
+  Zcccccacc_ccYccXccVccTccSccQccOccMccLpbvpcvpdwpewq\
+  fwqhwqiwqjwrkwrlwrmwrnxsoxsqxsrxssxttxtuxtvxtwxuyy\
+  txxtwxtvxtvxtuwttwtswtswtrwtqvtqvspvsovsnusnusmusl\
+  uslusktsjtsitsitshtrgsrgsrfsresrmrrmrrmrrmrrmrrmqr\
+  mqqmqqmqqmpqmpqmpqmpqmpqmoqmoqzoqzoqzorzprzprzqszq\
+  szrtzrtzstzsuztuztuzuvzuvzvvzvwzwwzwwzxxzxxzyxzzxz\
+  ywzxvzxuzwtzwtzwszvszvA0F }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

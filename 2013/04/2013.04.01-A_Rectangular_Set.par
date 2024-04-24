@@ -1,0 +1,114 @@
+;     Date: Mon, 01 Apr 2013 18:27:59 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-04-13 (A Rectangular Set [No Rating])
+;       Id: <1.5.4.16.20130401172718.2e1f1502@earthlink.net>
+; ---------
+; 
+; FOTD -- April 01, 2013 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a new view of a minibrot hole on the main stem 
+; of the Mandelbrot set.  The minibrot looks so unusual because it 
+; is sliced in the Rectangular orientation, which lies at a right 
+; angle to the Mandelbrot orientation and is determined by the 
+; imag(z) and imag(c) axes.
+; 
+; The brilliant green bars slicing diagonally through the open 
+; area are actually Mandelbrot valleys viewed at a right angle.  
+; The bars are straight edged because regardless of where points 
+; in the M-set are initialized, they will eventually settle into 
+; the same orbits unless they escape first.
+; 
+; There is no way I could give a rating to such an overworked 
+; theme, but being fascinated by things beyond visualization, I 
+; continue returning to the four-dimensional Julibrot for ever new 
+; surprises.
+; 
+; The name "A Rectangular Set" is a bit misleading.  The image is 
+; merely a small part of one of an infinity of Rectangular sets.
+; 
+; The calculation completes in 25 seconds, fast enough to waste no 
+; one's time.  The web sites are more convenient but probably no 
+; faster.
+; 
+; When the official FOTD web site is back in operation, it will 
+; be found at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Until then, the finished images may be seen in hi-def at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day began pleasant enough here at Fractal Central today, 
+; with breaking clouds and a temperature of 50F 10C, but by midday 
+; the clouds and rain had returned, and the temperature had 
+; dropped to 45F +7C.  The fractal cat observed all this with 
+; dis-interest, while the humans made it through another day with 
+; no unexpected disasters happening.
+; 
+; The next FOTD will be posted soon.  Until we find out how long 
+; 'soon' is, take care, and when disasters happen, look to the 
+; bright side.  But before you look, be sure a bright side 
+; actually exists.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Rectangular_Set { ; time=0:00:25.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/10166.07\
+  /1.3984/29.6185420924715608/28.9858769262522351
+  params=90/90/0/90/-1.690128/0/-1.690128/0/2/0
+  float=y maxiter=3200 inside=0
+  logmap=28 periodicity=6
+  colors=000BamCalD`kE_jFZiGYgHXeIWcJVaIU_ISYHQVHOSG\
+  MQGKNFIKFGIDDGBADA89846713940B72E94HC6KF8OHARKCUME\
+  YPG_SGbUFdXEf_DiaCkdBmfAlgClhDkiEkjFjkHjlIilJimKhn\
+  LhoNgpOgqPfrQfrRhoUjmXlk_nibpgerehtckvanx_qqXlkUgd\
+  RbZOYSLTMIONJJOLPWSUpfGoaHnYHmTHlPHkLHgNIcOI_PIWRJ\
+  SSJPTJSPGVMEYIC`FAaJDaNGbRJbVMcYOcaRdeUdiXem_epadm\
+  bdjbdgbLTRLUQKVQKWQJXPJYPIYPIZPH_OH`OGaOGbNGcNFcNF\
+  dMEeMEfMDgMDhLCiLCiLBjKBkKBlKAmJAnJ9oJ9oJ8pI8qI7rI\
+  7sH6tH6uH6uH7tI7sI8sJ8rJ9rK9qK9qLApLApMBoMBnNBnNCm\
+  OCmODlPDlPDkQEkQEjRFjRFiSFhSGhTGgTHgUHfUHfVIeVIeWJ\
+  dWJdXJcXKbYKbYLaZLaZM`_M`_M_`N_`iSVgTVeTVdTVbUV`UV\
+  _VVYVVWVVVWUTWURWUQXUOXUMYULYUJYUHZUGZUE_UC_UB_U9`\
+  U7`U6`U7aT8bT9bT9cTAcSBdSCdSCeSDfSEfRFgRFgRGhRHhQI\
+  iQIjQJjQKkQLkPLlPMlPNmPNmPOnOPoOQoOQpORpNSqNTqNTrN\
+  UsNVsMWtMWtMXuMYuLZvLZwL_wL`xLaxKayKbyKczKczKbxLaw\
+  L`vM`uM_tNZsNYrNYqOXpOWoP }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

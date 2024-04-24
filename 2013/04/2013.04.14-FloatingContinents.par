@@ -1,0 +1,106 @@
+;     Date: Sun, 14 Apr 2013 09:43:35 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 12-04-13 (Floating Continents [7])
+;       Id: <1.5.4.16.20130414094304.30074d7c@earthlink.net>
+; ---------
+; 
+; FOTD -- April 12, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a trip into the world of close-to-linear 
+; fractals.  The exponent of Z is 1.009, which is not quite linear 
+; but close enough to give a good idea of how things might go as 
+; the exponent approaches ever closer to unity but never quite 
+; reaches it.
+; 
+; I gave the image the unlikely name "Floating Continents".  The 
+; inspiration most likely was a painting by Magritte, which 
+; depicts large chunks of landscape floating in a vast empty space.
+; 
+; The parent fractal is another of those very low order torpedoes, 
+; with today's scene located in a bit of debris at the edge of the 
+; nearly featureless main bay.  There might possibly be minibrots 
+; hidden somewhere in this debris, but so far I have found none.
+; 
+; The rating of a 7 is only average; the calculation time is an 
+; annoyingly slow 13 minutes, but this annoyance can be avoided by 
+; checking the finished image on one of the FOTD web sites.
+; 
+; Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and the hi-def versions at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Rain with occasional grumbles of thunder hung on most all day 
+; here at Fractal Central, while the temperature stopped short at 
+; a rather chilly 50F 10C.  The fractal cat wanted more sun but 
+; satisfied himself with more food instead.  The humans wanted 
+; less rain.
+; 
+; The next FOTD will be posted in a number of hours.  The question 
+; is the exact value of that number.  Until whenever, take care, 
+; and why have those 'end of the world' shows become so popular on 
+; TV?  Could it be that people are disturbed by what they see 
+; coming in the not-too-distant future?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FloatingContinents { ; time=0:13:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-3.893895417262991/-1.242689299920607/\
+  1.939e+009/1/-177.7/0 params=1.009/0/2/3500 float=y
+  maxiter=3600 inside=255 logmap=-1238
+  periodicity=6 mathtolerance=0.05/1
+  colors=000rzztycsxGrwGqvGtucrtGnsGmrIlqGkpFjqEinDh\
+  mCglAfk9ej8di7ch6bg5af6`e6_d7Zc7Ya7W`8V_8UZ8TY9SW9\
+  RV9PUAOTANSAMQBLPBKOBINCHMCGKCFJDEIDDGDBEEABE99E87\
+  F75F71D64F76H88I9BKBDLCFNDIOEJQFKRHLTINUJOWKPXMRZN\
+  S_OTaPVbQWdSXeTYgU_hV`jXakYcmZdn_ep`fqadrbcrcard`r\
+  dZseYsfWsgVshTshStiQtnFznEznDznCzuFzqDznCzkBzhAze9\
+  zb8z_7zX6zU5zS2zR4zR5zR7zR8zRAzRBzRDzQEzQGzQHzQJzQ\
+  KzQMzQNzPPzPQzPSzPTzPVzPWzPYzPZzMWzKTzIQzGNrEKsBHt\
+  9Eu7Bv58w07z26y36x56w66v86u96uB6tC6sE5rF5qH5pI5pK5\
+  oL5nN5mO5lQ4kR4kT4jU4iW4hX4gZ4g_4fa3eb3dd3ce3bg3bh\
+  3aj3`k3_m2Zm2zm2zm2zm2zm2zm2zm1zm2zm2zm3zm3zm4zm4z\
+  m5zm5zm6zm6zm7Vm7Vm8Vl8Vl9Vk9VjAViAzhBzhBzgCzfCzeD\
+  zdDzdEzcEzbFzaFzaGz`Gz_HzZHzYIzYIzXJzWJzVKzUKzULzT\
+  LzSMzRMzQNzQNzPOzOOzNPzMPzMQzLQzKRzJRzISzJRzJRzKRz\
+  KRzKRzLRzLRzMRzMRzMRzNRzNQzOQzOQzOQzPQzPQzQQzQQzQQ\
+  zRQzRQzSPzSPzSPzTPzTPzUPz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

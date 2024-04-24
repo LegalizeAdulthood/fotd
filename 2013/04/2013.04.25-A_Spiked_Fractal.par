@@ -1,0 +1,106 @@
+;     Date: Thu, 25 Apr 2013 09:22:24 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-04-13 (A Spiked Fractal [6])
+;       Id: <1.5.4.16.20130425092400.2a277c24@earthlink.net>
+; ---------
+; 
+; FOTD -- April 24, 2013 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's minor fractal diversion is a scene on the X-axis of the 
+; fractal that results when 0.1 part of Z^(-4) is combined with 
+; Z^2, and straight Z is added on each iteration.
+; 
+; The resulting parent fractal is an oversized but skeletal 
+; Mandelbrot set, with today's scene located in a blank area on 
+; the phantom X-axis.
+; 
+; With too little time to really work up a good coloring, (that is 
+; if any colors could have helped the image), I could rate the 
+; scene no higher than a 6.  The name "A Spiked Fractal" refers to 
+; the sharply pointed dark areas surrounding the rather large 
+; minibrot.
+; 
+; Without doubt, the best feature of the image is its unbelievably 
+; fast calculation time of under 5 seconds.  But of course, this 
+; does not include the time required to set up and run the 
+; parameter file.  The web sites will eliminate the need to run 
+; the parameter file however.
+; 
+; The completely calculated image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with high-definition variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back imaged may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Sunny weather and a temperature of 72F 22C made today near ideal 
+; here at Fractal Central.  Clouds and a rain shower moved in at 
+; 6:00pm, but by then the fine day was in the bag.  The fractal 
+; cat and the fractal humans both enjoyed the fine weather while 
+; it lasted.
+; 
+; The next FOTD will be posted before too long.  Until whenever 
+; that happens, take care, and I hear that some teen-aged girls 
+; around town are swooning over the surviving Boston bomber, and 
+; even planning to have his picture tattooed on their bodies.  I 
+; guess they think he's cute or something, but to me it seems 
+; strange to be honoring a 19-year-old man who is almost certainly 
+; a mass murdering terrorist.  At the same time, it is also a 
+; relief for any worried men, since it appears that such frivolous 
+; women will be totally unable to replace men in any significant 
+; numbers in the prestigious but formidable high-paying fields of 
+; science and technology.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Spiked_Fractal { ; time=0:00:05.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-3.254107804724713/0/5524.303
+  params=0.5/2/0.1/-4/0/0/0/0 float=y maxiter=265
+  inside=0 logmap=7 symmetry=xaxis periodicity=6
+  colors=000SQmUSmWUmYWm`Ymc`mfcmifm005K00000BJFIUHP\
+  cJWmL_kIczGfzDjhBmz9i_FeTKaMQYcVUc_QUWNUSJUOGcKCcG\
+  9cDDkaJmZPoWVcU`cRfcPhcRjcSkcTmcVnmWpmXqmYkmXemW`m\
+  WHmlAmf3m`7mWBmRAmV8mZ6mb5mf3mj2mn9mlGmjNmiTmg_mef\
+  mdmmbsmanmcjmefmfjmJjmJjlJjlJjlIjlIjlIjlIjlIklIklI\
+  klIklIklHklHkkHkkHkkHkkHkkHkkHkkGkkGlkGlkGlkGlkGlk\
+  GlkGljFljFljFljFljFljFljFljFljFmjEmjEmjEmjEmzEmzEm\
+  zEmzEmzDmzDmzDmzDmzDmzDmzDnzDnzDnzCnzCnzCnmCnmCnmC\
+  nmCnmCnmBnmBnmBnmBomBomBomBomBomAomAomAozAozAozAoz\
+  AozAozAoz9oz9pz9pz9pz9pz9pz9pz9pz8pz8pz8pz8pz8pz8p\
+  z8pz8pz8nz9lzAkzAizBizAhzBhzBhzBhzChzChzCgzDgzDgzD\
+  gzEgzEgzEfzFfzFfzFfzFfzGfzGfzGezHezHezHezIezIezIdz\
+  JdzJdzJdzKdzKdzKdzKczLczLczLczMczMczMbzNbzNbzNbzOb\
+  zObzOazPazPazPazPazQazQazQ`zR`zR`zR`zS`zS`zS_zT_zT\
+  _zT_zU_zU_zU_zUZzVZzVZzVZzWZzWZzWYzXYzXYzXYzYYzYYz\
+  YZzZYzYYzYYzYYzYYzYYzYYzY }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

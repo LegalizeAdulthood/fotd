@@ -1,0 +1,111 @@
+;     Date: Thu, 18 Apr 2013 13:03:05 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-04-13 (Rainbow Rider [!!!])
+;       Id: <1.5.4.16.20130418130237.2bf763a6@earthlink.net>
+; ---------
+; 
+; FOTD -- April 17, 2013 (Rating !!!)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates three 'bangs'.  Last evening I actually 
+; found a passable fractal image in the parent mandeloid that 
+; results when the expression Z^(1.001)+C is iterated 37.21 levels 
+; up the hyperladder.  That fractal appears as today's FOTD.
+; 
+; The parent fractal is a squashed and distorted oval with mostly 
+; smooth edges on the southeast half and sawtooth edges on the 
+; northwest half.  A most unexpected valley lies on the southern 
+; shore of the oval, while some slight irregularities appear on 
+; the southeast shore line.  Today's image lies in these southeast 
+; irregularities.
+; 
+; I named the image "Rainbow Rider", since the open area appears 
+; to have a head somewhat like a horse's, while the rest of the 
+; open space is drawn out into a rainbow-like arc.  The smoothly-
+; blended rainbow colors supplied the final inspiration.
+; 
+; The open area in the image is not actually a minibrot, since it 
+; fills in if the maxiter is increased, but it is certainly more 
+; than I expected to find way down here in the bottom lands.
+; 
+; The down side of the image is its calculation time, which at a 
+; half-hour is beyond all resemblance of reason.  Luckily the web 
+; sites are online to save time and tempers.
+; 
+; Check the completed image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Enjoy the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Look back at the past images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today was as close to perfect here at Fractal Central as it is 
+; possible to come.  The blue sky, brilliant sun and temperature 
+; of 66F 19C could hardly have been improved upon.  The fractal 
+; cat enjoyed the sun on his shelf, but the sun is now getting so 
+; high in the sky that it misses half the shelf.  The humans 
+; meanwhile attended to everyday things.
+; 
+; The next FOTD will be posted soon.  Until whenever that might 
+; be, take care, and it appears someone is spreading ricin through 
+; the mail.  I guess we'll have to ban either the mail or the 
+; castor bean plants.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rainbow_Rider { ; time=0:30:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-3.15118/-3.4669/34.75141/1/-17.5/0
+  params=1.001/0/37.21/9900 float=y maxiter=4500
+  inside=0 logmap=-3110 periodicity=6
+  colors=000GcHFcJFcNEcKDcIDcGCcECcBBc9Bc7Ac5Ac1Ad3A\
+  d4Ad5Ad6Ad7Ad8Ad9AeAAeBAeCAeDAeFAeGAeHAfIAfJAfKAfL\
+  AfMAfNAfOAfPBfQCfRDfSEfTFfUGfVGfWHfXIfYJfZKf_Lf`Lf\
+  `MfaNfbOfcPfdQfeQffRfgSfhTfiUfjVfkWflWflXfmYfnZfo_\
+  fp`fq`frafsbftcfudfvefwdeyefwfguggthhrihpjiojimkjk\
+  lkjmkhnlfolepmcrnaqmbpmbolcnlcmkclkdkjdjjeiiehiegh\
+  ffhfeggdggcfgbfhaeh`ei_diZdiYcjXcjWbkVbkUakTalS`lR\
+  `mQ_mP_mOZnNZnMYoLYoKXoJXpIWpHWqGVqFVqEUrDUrCTsBTs\
+  9StATsATsAUsBUsBUsBVsBVsCVsCWsCWsCXrDXrDXrDYrDYrEY\
+  rEZrEZrFZrF_rF_qF`qG`qG`qGbqGcqHdqHfqHgqLUnJXpH_qF\
+  brDesBht9ju7lv5nw6lu7jt7hs8gr8ep9co9anA`mAZlBXjCWi\
+  CUhDSgDQeEPdENcFLbFKaHJbJJbKIbMIbNIcPHcQHcSGcUGcVG\
+  dXFdYFd_Ed`EdbEedDeeDegCehCfjCfkBfmBfoAfpAgrAgs9gu\
+  9gv9gqBemCdhEbdFa`H`WIZSKYNLWJNVFOUGQSHSRHTQIVPJWO\
+  JYNKZMK`LLaKMcIMeHNfGNhFOiEQkDRlCTnBWm5VoAUpFSqKRr\
+  OUsTZtYcuahw`mx_ryZwzYzxX }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

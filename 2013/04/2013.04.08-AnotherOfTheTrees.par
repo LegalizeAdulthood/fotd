@@ -1,0 +1,107 @@
+;     Date: Mon, 08 Apr 2013 16:12:45 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-04-13 (Another of the Trees [7])
+;       Id: <1.5.4.16.20130408161400.2b17396e@earthlink.net>
+; ---------
+; 
+; FOTD -- April 08, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an almost-Julia set of the X-axis at the 
+; western extremity of the (-Z)^(1.55)+C Mandeloid.  It's almost 
+; a Julia set because it is double-rotated 0.01,0.01 degree from 
+; the true Julia orientation.  (To see the true Julia version, 
+; change the (p1) and (p2) parameters to 90.)
+; 
+; I might have rated the image a point or so higher if there were 
+; not so many similar tree-like images in FOTD history.  As it is, 
+; the rating of a solid 7 is perfectly average.  The name "Another 
+; of the Trees" indicates my dis-satisfaction with a fractal theme 
+; that is becoming hackneyed.
+; 
+; The calculation time of 4 minutes is rather slow, and I'm not 
+; sure the image is worth the wait.  This is where the web sites 
+; become a blessing in disguise.
+; 
+; Check the finished image posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Spring was in full bloom here at Fractal Central today as the 
+; temperature reached 72F 22C and the sky remained nearly 
+; cloudless.  The fractal cat enjoyed his appointed time in the 
+; sun on his shelf, though with the sun now at an increasingly 
+; high angle it is missing the back edge of the shelf.  The humans 
+; passed the day working and sometimes pondering the pathetic 
+; state of our 'modern' culture.
+; 
+; The next FOTD will be posted in the proper time.  Until 
+; whenever, take care, and what will we do when the internet is 
+; turned off by the same dark forces that created it and then were 
+; satisfied at how easily we became addicted?
+; 
+; (I'm not serious of course . . . or am I?)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AnotherOfTheTrees { ; time=0:04:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1
+  center-mag=0.218919/0/13.36618/0.8579/90/0
+  params=89.99/0/89.99/0/-1.1352113/0/0/0/1.55/0
+  float=y maxiter=1500 inside=255 periodicity=6
+  colors=000ES000a00a00a00_00_00Y00Y00Y00X00X00X00W0\
+  0W00W00U00U00S00S00S00Q00Q00Q00O00O00O00M00M00K00K\
+  00K00K00I00I00I00G00G00G00E00E00C00C00C00900900900\
+  80080080060060030030030000000000000000000000000000\
+  00000000000000000000000000000000000000000000000jzw\
+  jzwhzufzrezqcxoawn_tlYrjYqhXofWneUjcShaQf_QdYObXM_\
+  WKYUIXSGWQGUOEQKCOI9MG8KE6GC3E93C80960830300000000\
+  00000000000000000IzzGzzEzzCzz9xz8ux8qu6nq3hl0eh0_c\
+  0XY0SW0OQ0IK0EG089033000000000W8fU6eU6cS6cS6aQ3aQ3\
+  _O3YO3YM0XM0XK0WK0UK0UI0SI0SG0QG0OE0OE0MC0MC0K90I9\
+  0I80G80G80E60C60C309309008006006003003000000000000\
+  000000000000000000000000000000000000xS0tO0qM0nK0jI\
+  0eG0aE0Y90W80S60M30I00E00900600000000000000tz0rz0q\
+  z0qz0oz0oz0nz0nz0lz0lz0jz0jz0hz0hz0fz0fz0ez0ez0cx0\
+  aw0au0_u0_t0Yr0Yq0Xq0Xo0Wn0Wl0Ul0Uj0Sh0Sf0Qf0Qe0Oc\
+  0Oa0Ma0K_0KY0IX0IW0GW0IOO }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

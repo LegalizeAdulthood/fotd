@@ -1,0 +1,108 @@
+;     Date: Thu, 18 Apr 2013 19:35:54 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-04-13 (Superluminal [7])
+;       Id: <1.5.4.16.20130418193527.2bcf6252@earthlink.net>
+; ---------
+; 
+; FOTD -- April 18, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a minibrot in the Z^(1.04)+C Mandeloid.  
+; Despite the impossibility of moving through space faster than 
+; light, the minibrot appears to be doing just that.  I 
+; appropriately named it "Superluminal".
+; 
+; The parent fractal is shaped much like the minibrot in today's 
+; image, though the parent is zooming toward the east.  Today's 
+; scene is located in a narrow band of chaos on the southern shore 
+; line of the parent, near its rounded tip.
+; 
+; The rating of a 7 is close to average.  The rather muddy colors 
+; prevent me from giving the image a higher rating.
+; 
+; The calculation time of 8 minutes is slow.  I admit it.  But the 
+; web sites are up and running, and will eliminate the need of 
+; booting the 30-year-old DOS-OS just to run the parameter file.
+; 
+; Enjoy the convenience of viewing the image without the chore of 
+; calculating it by viewing the completed image online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and don't forget the interesting variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; or the thousands of back FOTD images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A heavy bank of clouds hung over Fractal Central all day, while 
+; the temperature reached a relatively pleasant 61F 16C.  The 
+; fractal cat didn't complain about the lack of sun, but he did 
+; grumble about being served the wrong flavor of food at his 
+; midday meal.  (He wanted turkey; he got beef.)  The humans 
+; passed the day working and wondering about the current spate of 
+; disasters.
+; 
+; The next FOTD will most likely be posted in 24 hours.  If it is 
+; not, then it will be posted in 48 hours.  Until whenever, take 
+; care, and we can avoid future fertilizer plant disasters by 
+; moving fertilizer plants far away from residential areas.  (The 
+; only good thing in all the recent bad news is the disappearance 
+; of the Jodi murder trial from the news media.  Apparently God 
+; has had mercy on us.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Superluminal { ; time=0:08:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-1.030010403518456/-1.732735590658575/\
+  2.622e+007/1/122.5/0 params=1.04/0/525/2400 float=y
+  maxiter=10000 inside=0 logmap=800 periodicity=6
+  colors=000OSeOSdPSdPSdQSdQScRScRScSSbSSbTSbTSaUSaU\
+  SaVSaVR`VR`WR`WR_XR_XR_YRZYRZZRZZRZ_RY_RY`RY`RXaRX\
+  aRXaQWbQWbQWcQWcQVdQVUVVUVUUVUUVUUVTUVTUVTUUT`SN`S\
+  N_SN_SN_SNZSNZSNYSNYSNXSOXSOXSOWSOWSOVSOVSOVSOUSOU\
+  SOTSOTPITOISOISNIRMJRMJQLJQKJQKJPJJPIKOIKOHKNGKNGK\
+  MFKMELLELLDLKCLKCLKBLJAMJAMI9MI8MH8MH7MG6NG6NF5NF4\
+  NE4NE3ND2OI6EI6DH6CH6CG6BF6AF6AE69E69D68D67C67B66B\
+  65A65A649639638627518628628728728228828929129A29A2\
+  952952962942A62JCKKFHKDDLBAE97G73I73821B4KC5KD7KE8\
+  UF9UHEUIHcJIcKPcLQmMUmOUmPUm3cz3Xz3cz3Uz3cz3Uz2cz2\
+  Uz2cz2Uz2_zUPzUKzUKzUPzULzUSzUPzUYzUPzUZzUPzUZzUPz\
+  UZzUPzUZzcVkcbjmeimhhmkgmnfmlemjemhemfemdemcemcemc\
+  emcemcemczmczmczmczmczmczmczmczmczmmzmmzmmzmmzmmzm\
+  mzmmzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

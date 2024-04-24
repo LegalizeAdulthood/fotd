@@ -1,0 +1,103 @@
+;     Date: Wed, 03 Apr 2013 20:16:33 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 03-04-13 (No Ifs Ands or Butts [8])
+;       Id: <1.5.4.16.20130403191553.30af66fe@earthlink.net>
+; ---------
+; 
+; FOTD -- April 03, 2013 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a Julia set of the point where the positive 
+; X-axis crosses the eastern extremity of the main bay of the 
+; (-Z)^(2.5)+C Mandeloid.  A kind of East Valley lies at this 
+; point, though it is too small to be seen without enlargement.
+; 
+; I named the image "No Iffs Ands or Butts".  I refuse to admit 
+; the inspiration for the name.  At least a full point of the 
+; rating of an 8 is due to the coloring, which I put almost an 
+; hour into.
+; 
+; The calculation time of 3-3/4 minutes borders on slowness.  
+; Relief may be found at one of the web sites however.
+; 
+; The web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; is temporarily down, but the image will soon be posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds, with a temperature of 43F +6C and brisk 
+; winds made today feel unpleasantly cool here at Fractal Central. 
+; The fractal cat enjoyed the periods when the sun was out, while 
+; the humans tried to figure out why we cannot gain access to the 
+; FOTD-crosscan web site web site.
+; 
+; The next FOTD will be posted soon.  Until whenever, take care, 
+; and the environmentalists who protest against oil pipelines 
+; should be ready to set an example and stop consuming the oil 
+; that makes the pipelines necessary.  If they are unwilling or 
+; unable to kick the oil habit themselves, they should remain 
+; silent and stop pushing for laws to force others to comply with 
+; their own particular ideas.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+NoIfsAnds_or_Butts { ; time=0:03:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula  formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1
+  center-mag=-0.388106/0/1.04/1/90/0 params=90/0/90/\
+  0/0.372582/0/0.372582/0/2.5/0 float=y maxiter=12000
+  inside=255 logmap=yes periodicity=6
+  colors=0006LS3KU0KW3KZ6La9MdCNfFNjKRhPUeUXbZeZcmWh\
+  uTmyWrzZvzdzzmzzzzzzzzzzmzzmzzmzzmzzkzziJzgKzeLzcM\
+  zcMzcQzcUzcXzc`zcdzcgzckzcozcrzcvzcyzcuzcqzcnzcjzc\
+  fzacz__zYWzWTzUPzSLzQIzPEzPAzP7zSAzVDzXFz_IzbKzdNv\
+  cQrcSmcVmcXmc_mcamcmmcmmcmVcmKcmKcmK_mKamKcmKamK_m\
+  KYmKWmKUmKSmKQmKOmLMmJJqIInHHkGGhFFfEEcDDZCCUB9PA5\
+  K90580A705000000000000KUKNkkNkkNkjMjjMjjMjjMijMijL\
+  ijLijLhjLhjKhjKgjKgjKgjMilLhkKgjJgiJfiIfhHegHefGdf\
+  FdeFcdEccDbcDbbCaaB``B``A__9_Z9ZY8ZY7YX7YW6XV5XV5W\
+  U4WT3VS2UR3VS3VS4VS4VT4VT5VT5VU5WU6WU6WU6WV7WV7WV7\
+  WW8WW8XW9XW9XX9XXAXXAXYAXYBXYBYYBYZCYZCYZCY_DY_DY_\
+  DY_EZ`EZaEZbEZbEZcE_dF_eF_eF_fF_gF`hF`hG`iG`jG`kG`\
+  kGalGamGanHanHaoHbpHbqHbqHbrIbsIctIctIcuIcvIcwGdxI\
+  cwJbwLavMavO`uP_uR_tSZtUYsVYsXXrYWr_Vq`VqbUpcTpeTo\
+  fSohRnjNriPpiRniSmhUkhVjhXhgYfg_eg`cfbbfc`feZefYeh\
+  WhlWfjVeiVdgUcfUbeUacT`bT }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

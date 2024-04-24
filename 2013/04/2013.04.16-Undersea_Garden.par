@@ -1,0 +1,107 @@
+;     Date: Tue, 16 Apr 2013 09:42:20 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-04-13 (Undersea Garden [!!])
+;       Id: <1.5.4.16.20130416094151.38a7f230@earthlink.net>
+; ---------
+; 
+; FOTD -- April 15, 2013 (Rating !!)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we're down to Z^(1.009) yet the interesting 
+; images keep coming.  I named the scene "Undersea Garden" because 
+; something about it reminds me of an undersea scene.
+; 
+; The parent is another oversized torpedo-like open area with 
+; patches of semi-chaos spotted along the edges.  Today's scene is 
+; obviously located in one of these chaotic areas.
+; 
+; The rating of two 'bangs' indicates my surprise at finding 
+; something worthwhile this close to Z^(1) (or straight Z).  If I 
+; find anything even closer to unity in future FOTD's, I'll 
+; increase the number of 'bangs' in the rating.
+; 
+; The big drawback is the calculation time of 12 minutes, but 
+; relief is available as always on the web sites.
+; 
+; Nobody runs DOS programs nowadays, so make life easy by viewing 
+; the finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And be sure to check the hi-def versions and the variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The thousands of back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A great mid-April day was fully enjoyed by both cat and humans 
+; here at Fractal Central today.  The temperature of 66F 19C and 
+; partly cloudy sky could hardly have been improved.
+; 
+; The next FOTD will soon be posted.  Maybe we can find something 
+; even closer to unity.  Until whenever, take care, and a certain 
+; woman I know well, who claims to want nothing more than peace on 
+; earth, feels that we should withdraw all US military troops from 
+; foreign countries.  This makes good sense, but this same woman's 
+; favorite music is 'classic rock', including protest music from 
+; the Vietnam War era, which all too often seems violently angry 
+; to me.  And when I played 'The Planets' for her, thinking she 
+; would enjoy 'Venus, the bringer of peace' she surprised me by 
+; naming 'Mars, the bringer of war' as her favorite section.  
+; Women are sometimes truly hard to understand.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Undersea_Garden { ; time=0:12:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip
+  center-mag=-0.7609181081167751/+4.589745372939182/\
+  649/1/42.5/0 params=1.009/0/1.9/3500 float=y
+  maxiter=7500 inside=255 logmap=334 periodicity=6
+  colors=000HnkHnkHpkIpnIrnIrnKtnKvnMvnMxpMxpOzpOzpQ\
+  zpQzpQzrSzrSzrSzrUzrUzrWztWztWztXztXztUzxXztZzp`zn\
+  bzjdxfftdhn`jjXkfWnbSpXOrUMtQIvKFxHDzDAz87z55z22z2\
+  0z00z00z05z0Az0Dz0Iz0Oz0Uz0kz0dz0Xz0Qz7IzFCzO7zX0z\
+  f0zp0zz0zz0zz0zr0xj0r`0kU0hM4fK4fK4fK4fK4fK4fK4dK4\
+  dK4dK4dK4dI4dI4bI4bI4bI4bI4bI4bI4`I4`I4`H4`H4`H4`H\
+  4ZH4ZH4ZH4ZH4ZH4ZH4WK0XI2ZH4ZH4`F5`D5bD7bC8dC8fAAf\
+  8Ah8Ch7Dj5Dj5Fk4Fk4Hn2Ip0Ip0Kr0Kr0Mt0Ot0Ov0Qx0Qx0S\
+  z0Uz0Uz0Wz0Wz0Xz0Xv0Sn0Mf0IZ0DS0AM05F0280020000000\
+  0000000000000000200M70700800C00J50RB0I40K50O80QA0U\
+  D0WF0XI0`K0bO0fQ0hU0jW0nZ0p`0td0vf0zk0zp0zv0zz0zzz\
+  zzzzzzzzzzzzzzzzzzzzzzz0zz0zv0zr0nn0jk0fj2bh2Zf4Wd\
+  5Sb5O`7OW2MX5MZ7M`AMbCMdFMfHMhKMjMMkQMnSMpWMrXMt`M\
+  vbMxfMzhMzkMznKzrMzpMznOznOzkOxkQvjQtjQrhSphSkfSjf\
+  UhdUfdUdbWbbW``XZZXXZXUXZSXZQWZOW`MU`KU`ISbHSbFQbC\
+  QdAOd8Of7Mf5Kf4Kh2Ih0IYYu }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
