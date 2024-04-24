@@ -1,0 +1,96 @@
+;     Date: Sun, 29 Nov 2009 18:43:31 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-11-09 (Quartic and a Pint [7])
+;       Id: <1.5.4.16.20091129184327.392715e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 30, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; While contemplating the mysterious rectangle in one of the 
+; Z^2.003 Julia sets, I wondered if any Z^4.003 sets also have 
+; rectangles.  I found no rectangles, but I did find a rather 
+; interesting image, which appears as today's FOTD.
+; 
+; Well, actually it's one of the Z^4.0017...  Julia sets that 
+; appears in the image.  I found the exact exponent with the 
+; evolver.  But regardless of how the image was found, it's 
+; certainly worth the measly 10 seconds required to render it 
+; from the included parameter file.
+; 
+; The rating of a 7 is just about right for the image.  The name 
+; "Quartic and a Pint" is pure whimsy.  I gave the image a square 
+; format because the nearly circular Julia set doesn't fit very 
+; well into the standard full-screen 4x3 rectangle.
+; 
+; Those who do not have a spare 10 seconds to run the parameter 
+; file may view the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Full sunshine and a temperature of 61F 16C made the fractal cats 
+; deliriously happy here at Fractal Central on Sunday.  Little 
+; work to do made me happy.  One of those latin bodice-rippers on 
+; TV made FL happy, while I avoided the TV room.
+; 
+; Since things are going so well, I'll make no promises of 
+; continued good times, but if nothing unusually bad happens, the 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and I saw on the internet that Richard Dawkins has just proved 
+; the existence of God, and will soon announce his discovery.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Quartic_and_a_Pint { ; time=0:00:09.12-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/22/1.3333
+  params=90/90/90/90/-1.220627413556322/0/0/0/4.0017\
+  46584063235/0 float=y maxiter=1500 outside=tdis
+  inside=0 symmetry=xyaxis viewwindows=1/1/yes/0/0
+  colors=000pNPoNPnMPmMPlMPkMPBUJCTKDSKESLFRLFRMGQMH\
+  QNIPNJPOJOOKOOLNPMNPNMQNMQOLRPLRQKSRKSRJSSJTTITUIU\
+  VHUVHVWGVXGWYFWYFWWGVVGVUGVTHVSHUQHUPIUOIUOITOJTQJ\
+  TSJTUITWITYIT_HTaHTcGTeGSgGSiHSkISmJSoKSqLSsMSuNSx\
+  ORyQQzSPzUPzWPzXPzYPz_PzaPzcPzcPzcP9QV9QT9OSANQALP\
+  ALNAKMBEKBDJBDHBCGBBECADCABC9AC88BJwCcwCImDIwDHAd7\
+  Si7Um6Wq6YoB_mFalJcas1_kDYcOX_MXXKXUIXQGXNEXKDYGNZ\
+  DW_Ae`7nd9jgBgjCdmEapGYsHVvJSqKPwTMze_zrczzznnJhjM\
+  bfPXbSRZSLVTFRWAOYHQUNSQUUMMmHNmHOmIPmIQmISmITnIUs\
+  JVsJWxJYxJZxJ_xK`tKbtKcoKdoKeozfozhpLipLjpzkpMmpMn\
+  pMopMpqMqqNsqNtqNuqNvqNwqNvpMvoMunLunLtmLtlKskKskJ\
+  rjJriJqiIqhIpgHpfHofHoeGndGzmGzcFmbFlaElaEl`Ek_DkZ\
+  DjZCjYCiXCiWBhWBhVBgUAgUAfT9fS9eR9eR8dQ8dP7cO7cO7b\
+  N6bM6bM6aN8aO9aOBaPCaPDaQF`RG`RH`SJ`SK`TL`UN_UO_VP\
+  _VR_WS_XT_XVZYWZYYZZZZ__Z_aZ`bY`cYaeYbfYbgYciYcjXd\
+  kCkGDlGElGFlGHlGIlHJlHKlH }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

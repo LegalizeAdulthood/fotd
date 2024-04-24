@@ -1,0 +1,90 @@
+;     Date: Thu, 19 Nov 2009 19:13:45 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-11-09 (Once Again Fractal [5])
+;       Id: <1.5.4.16.20091119191332.2baf773e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 20, 2009 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We seem to be stuck in a fractal lean period.  An infinity of 
+; great fractals lie somewhere, waiting to be discovered, but I 
+; can't find a single one.  Oh well, these slow periods seem to 
+; come and go.  Sooner or later I'll find a super image.
+; 
+; Today's image is simply average -- a minibrot that lies on the 
+; eastern edge of the curiously-shaped parent fractal that results 
+; when Z^2 is combined with Z^100 before C is added.  This parent 
+; is shaped like a Mandelbrot set lying inside a Z^100 Mandeloid 
+; and partially obscured by it.
+; 
+; Today's image is nothing that has not been seen several times 
+; before.  I gave it a little extra coloring effort, not enough 
+; however to raise its rating above an everyday 5.  The name is 
+; pure nonsense.
+; 
+; The calculation time of 1-1/3 minutes will pass like a Leonid 
+; meteor, a few of which were visible here at FC this past week.  
+; The trip to the FOTD web site will be almost as much fun as a 
+; meteor storm.  The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy clouds and occasional rain spoiled Thursday here at 
+; Fractal Central.  The temperature of 57F 19C was mild enough, 
+; but it's hard to be comfortable when rain is falling.  The 
+; fractal cats, mascots of FC, slept through all of it.
+; 
+; My day was uneventful.  Could anything be less interesting than 
+; that?  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and why are we here in the Milky Way Galaxy instead 
+; of out there in the Andromeda Galaxy?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Once_Again_Fractal { ; time=0:01:19.58-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.07466919198208906/-0.027207195754955\
+  13/3.353469e+011/1/-132/0 params=1/100/1/2/0/0/0/0
+  float=y maxiter=316 inside=0 logmap=60
+  periodicity=10 mathtolerance=0.05/1
+  colors=000UAzUAzSAwQAtOAqMAnKAkIAhGAeEBcDHcGNcITcL\
+  YcPcZUiUcoPmuKqzKryUrxcvwmuzzuzzuzzzsmzrczqYzpazod\
+  zngvmkrnnmmqmmtmonmohmncmmYjkTfiVcgX`eZYc_VaaS_cPY\
+  eLXfIVhFTjCRl9Pm6No3Lq0Kr1Kl2Kf3K`4KVzzPzzJzzEzzZz\
+  zYzzYzzYzzYzzYzzXzzXzzXzzXzzXzzWzzWzzWzzWzzWzzUdzz\
+  czzazz_zzZzzXzzVzzUzzSzzQzzPzzNzzLzzKzzVzzXzzhzzbz\
+  zzzzkzzezzazz9zzIzzQzz5zzFzzPzz_zzZzzNzzTzzzzcmzbg\
+  zRazFbzHczJdzLezMVzOLzQBzSJzOQzKczh`zTezsazZrzflzZ\
+  gzSbzLKzoOzeRzXVzNizoczX4ziJzUWzaXzUYzMQzGSzwNzPhz\
+  zbzafzbizjez_azP3zIOz5TzAWzAXzCZzpYzcYzRwzvjz_dzp`\
+  zXlzyhzmdza`zQIzJbzI`zGZzFAzFGzEMzESzEIzKQzHzzxrzl\
+  kz`dzPizEezEazEZzlYzVAzyMzauzlPzoSzbVzQkzjgzadzU`z\
+  MAzfGzZMzSSzLmzDgzEbzEbzlNzbRzUVzM2zRDzMOzICzdIzYN\
+  zRTzKZzmYzdYzWYzN6zXGzQPzK1zv0zh9z`HzTQzL1zs3zUJzM\
+  4zvhzhdzY`zOlzrdzYAzrIzdQzRKz`lzwdz`uzb_zjZzazzUzz\
+  MTwr3z4HzWQzNxzGjzF2zuCz` }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

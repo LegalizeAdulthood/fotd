@@ -1,0 +1,98 @@
+;     Date: Sun, 29 Nov 2009 13:17:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-11-09 (Emerging Rectangle [No Rating])
+;       Id: <1.5.4.16.20091129131709.232715e8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 29, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image could have been named "The Big Bang".  It shows 
+; the beginning of one of the strange rectangles in a Julia set of 
+; the East Valley area of the overlapping minibrots on the 
+; infinitely divided main spike of the Z^(2.003) Mandeloid.  Yes, 
+; this is where it all begins.
+; 
+; As the value of real(C) is decreased, the rectangle shrinks and 
+; eventually fills in with what I call sandy debris.  Today's 
+; image captures the curious rectangle on the verge of vanishing 
+; completely, or if we look at it from the other direction, a 
+; single moment after birth.
+; 
+; Choosing the birth aspect, I named the image "Emerging 
+; Rectangle", though because of its almost total mathematical 
+; interest, I could give it no name.  The real(p3) parameter is 
+; extremely critical -- change it even slightly at your own risk.
+; 
+; The calculation time of under 3 minutes is within reason, as 
+; also is the trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; to view the finished image without the inconvenience of 
+; calculating it.
+; 
+; A mixture of sun and clouds with a temperature of 50F 10C made 
+; Saturday an off-and-on day here at Fractal Central.  As far as I 
+; could tell, the fractal cats slept through most of it.
+; 
+; The next FOTD is due to be posted as always in 24 hours.  Until 
+; then, take care, and does anyone really believe that the 'green' 
+; movement can actually make a difference in the earth's climate?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Emerging_Rectangle { ; time=0:02:52.59-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 center-mag=-0.000000275\
+  4171323/+0.0003917573011645/2.587047e+012 passes=1
+  params=90/90/90/90/-1.742904629841241/0/0.00018/0.\
+  076/2.003/0 float=y maxiter=15000 inside=bof61
+  logmap=258 periodicity=10 mathtolerance=0.05/1
+  colors=0004Kw5Ku7Ks8Kq9KoALmBMkCNiDOgEMeFKcGI`HGXH\
+  EUICRJANK8KL6HM4DN2AN07O5AP9CQDFRHHSLJSQMTUOUYQVaT\
+  WeVziXzlMzoBzr0zl6zfCz`IvVOrPUmOVhMVcKWZKWUKWPKXKK\
+  XKKUKKUKKUKKUKKUKKUKKUKKUKKUKJUKIUPI_MH`JG`FG`CF`9\
+  E`6E`UBWq9RmDTjHUgLVdPXaSYZ0Zzzzzzzzzzzzzzzzzzzzza\
+  zzbzzbzzczzczzdzzdzzezzfzzfzzgzzgzzhzzhzzizzizfjze\
+  jzekzekzelzelzemzenzen7zo7zo6zp6zp6zq5zq5zr4zr4zs3\
+  zs3zt1zu3zt4zs6zszerzeqzfqzfpzfozfozfnzgmJzmLzlMzk\
+  OzkPzjQziSziTzhVzgWzgYzfZze`zeazdczcdzczjbzjazjazj\
+  `zkZzj_zj_zj_zj_zj`zj`zj`zj`ziaziaziaziazibzibzibz\
+  ibzhbzhczhczhczhczhdzhdzhdzgdzgezgebzeazeazf`zf`zf\
+  `zf_zf_zgZzgZzgYzgYzhYzhXzhXzhWzizeizeizeizejzejzd\
+  jzdjzdjzdkzdkzdkzdkzdlzclzclzclzcmzcmzcmzcmzdnzcmz\
+  blzakz`jz_izZhzYgzXfzVfzWezWelzelzekzekzejzejzdizd\
+  izdhzdPzTSzQRzRRzSQzSQzTPzTPzUOzUOzVOzVNzWNzWMzXMz\
+  XLzYLzZLzZKz_Kz_Jz`Jz`Iza }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

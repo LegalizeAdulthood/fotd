@@ -1,0 +1,76 @@
+;     Date: Mon, 02 Nov 2009 22:08:38 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-11-09 (Numbers Without End [7])
+;       Id: <1.5.4.16.20091102221155.2b473402@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 03, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Hooray!  Today's quickie image actually rates a 7.  It's a scene 
+; in the parent fractal that results when 1.34 parts of Z^(-1.2) 
+; are subtracted from 0.83 part of Z^(1.2) and (1/C) is added.
+; 
+; Since time is at a premium, I'll make no effort to describe the 
+; image, but with a calculation time of a mere 35 seconds the 
+; included parameter file can be run with little risk of bitter 
+; disappointment.
+; 
+; The risk of let-down may be totally bypassed by viewing the 
+; completely calculated image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Lots of sun on Monday here at Fractal Central, combined with a 
+; temperature of 57F 14C, gave the fractal cats a pleasant 
+; afternoon in the sun.  My day was quite busy.  The next FOTD 
+; will probably be posted in 24 hours.  Until then, take care, and 
+; be alert for minor discrepancies.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+NumbersWithout_End { ; time=0:00:35.85-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.823047589/+0.837390532/5261/1/-160/0
+  params=-1.34/-1.2/0.83/1.2/0/0/0/0 float=y
+  maxiter=350 inside=0 outside=tdis periodicity=10
+  colors=000pQPqOVkKYeG_`DbV9dQ6fY4jd3nl2rs1vz0yy7ry\
+  EkyLdyRlxYRzbKzrDxq7wg6vY5uP4tFjs6nl73e74Z75S86L87\
+  E888897D9FI9KO9UV9c`9mgczzmmhcccMUZTzUZEPdzMkIJqzH\
+  wJczzRrHWoH`mzekFjhEofEtdzwdGzdHzdHwdImdJcdK`dKZdQ\
+  Y`WYXaYTgXPmXLrXHkWFeWEZWDTVCMVBGVAHT8HR7HP6HN5HL4\
+  HJ3HI2KEDMBOO7ZQ4iS1sRBaQLKPU3SPBVKJXGR_BZa7fzzdzz\
+  bzzazz_zzZzzKzzKzzJzzJJzzIzzHzzHzzGzzFzzFzzzzGzzGz\
+  zbzz_zzXzzzLzzJzzHzzFzzmzMkxLjvLiuLhsLgrLfzKezKdzK\
+  czKbzKazK`zJ_fJZdJYcJXaJW`JUZITYISWIRVIQTIPSIOQHNP\
+  HMNHLMHKKHJJHIHGHGGGEGFDGEBGopQlmPjjOhhOeeNccNa`MZ\
+  ZLXWLVUKTRKQPJOMIMKIJHHHFHFCGgJkfIjeIidIhcIgcHgbHf\
+  aHe`Hd`Gc_GcZGbYGaXG`XF_WF_KpcHniEloCjuGitKhsOgrSf\
+  qVeqP`mJXiDTe7Pa1LY8QZFVZMZZTcZ_hZflZaiWXfUTcSO`QK\
+  YOFVMBSKHYYNbkGZY9VL3S8`fmuQ_v4xFldNaVUSMJgoOhnTin\
+  YjnbknglmlmmqnmvomuintdnsZosUorOoqJppDpp8pplroc`nV\
+  JnN1oO3pP5qQ6rR8sS9tTBnTI }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

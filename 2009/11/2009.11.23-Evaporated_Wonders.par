@@ -1,0 +1,88 @@
+;     Date: Mon, 23 Nov 2009 19:07:27 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-11-09 (Evaporated Wonders [7])
+;       Id: <1.5.4.16.20091123190718.2be77b4e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 24, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image was created when I mixed various negative parts of 
+; Z^(-1.5) and Z^(-5.6), added (1/C), and raised the escape radius 
+; to one-googol, which evaporated the scene.
+; 
+; The parent fractal is an irregular thing with several large near-
+; circular bays, some with mandel-buds along their shoreline, some 
+; without.  Today's scene is located in a tiny dot in an unlikely 
+; area on the east side of the parent.
+; 
+; The rating of a 7 seems about right, at least in my opinion.  
+; The name "Evaporated Wonders" refers to the 'evaporated' nature 
+; of the image, in which all the 'outside' stuff has evaporated 
+; and the remaining inside stuff has been brought to life by the 
+; 'bof61' inside fill.
+; 
+; The calculation time of 1-1/2 minutes is a real bargain for an 
+; image that rates a 7.  Those who do not care to hunt for 
+; bargains may avoid the calculation and see the finished image on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A mixture of sun and clouds, with a temperature of 55F 13C made 
+; Monday a routine day here at Fractal Central.  The fractal cats 
+; agreed fully.  They had a routine day also.  And the work was 
+; pretty routine too.
+; 
+; The next FOTD is scheduled to be posted in 24 hours.  But there 
+; is no ironclad guarantee that it will appear on schedule.  Until 
+; the next time, take care, and be ready to do what is to be done.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Evaporated_Wonders { ; time=0:01:29.51-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.93006699132/+0.78031334355/183291.5/\
+  1/-32.5/0 params=-4.5/-1.5/-1.6/-5.6/0/1e+100/0/0
+  float=y maxiter=750 inside=bof61
+  outside=tdis periodicity=10
+  colors=000GPZFVYKTTPSPUQLZPHcOChM8mL4rK0kN3006ZS9T\
+  UBRTEQTHPTKOSNNSPMSSLSVJRYIR`HRbGReFQh000DQnCQpDTq\
+  EWqEYqF`rGbrGerHhsIjsImsJotKrtKtt000cibaSVidUaVTea\
+  TceSacS_bRYaRW_QUZPSXPQWOOUOMVNKSN8AJHJIPWHY_GegFm\
+  oFceza_z_VzZQzXKzVFzUAzWC0YEzFGh`IzaKzcMzdOzfQzgSz\
+  iUzjWziYzhZzh_zg`z00zfczfdzeezefzaczZazV_zSYzOWzLU\
+  zISzEQzBOz7Mz4Kz1Iz6HzBHzGGzKGzPFzUFzZFzbEzgEalD_q\
+  DYuDXsCR0BMoAHm9Ck97h8Ae7Db7G_6JY6MW7OU7QS7RQ7TP7U\
+  N7WL7YJ7ZH7`G7aE7cC7eA7f87h77iE6fK5cR4aX3Zb2X_5YX8\
+  ZVA_SD`QGaNIbKLcIOdFQeDTfAWg7Yh5`i2cj0ek_C8ZDAZDBZ\
+  DDZDEZDFZDHZDIYEKYELYEMYEOYEPYERYESYETYFUYGVYGWYHX\
+  YHYYIZYI__J_aJ_cJ_eJ_eOXeSUeWRe`OedLehIkVdjXbjY`iZ\
+  Zi`XhaWhbUhcSgeQgfOfgNfiLejJekH7Om8Sk9ViAZgBbeCfcD\
+  iaEm_FqYGtWIsUfkIKrTMrSOqRQqQSpPTpOVoMXnLZnK`mJbmI\
+  dlHY_bZa`_bZ_cX`dVaeTafRbgPchNciLdjJekHwp3uo4to5so\
+  6qn7pn8on9nnAlmBkmCjmDHJ` }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

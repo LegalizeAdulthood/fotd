@@ -1,0 +1,89 @@
+;     Date: Fri, 06 Nov 2009 23:35:38 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-11-09 (A Minibrot in the Sand [8])
+;       Id: <1.5.4.16.20091106233514.2ad79588@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 07, 2009 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I was going to name today's image "Sandy Claws", but I decided 
+; to name it "A Minibrot in the Sand" instead.  The image is a 
+; scene on the main stem of the chaotic Mandeloid that results 
+; when Z^(2) and Z^(-2) are combined in a crazy way.
+; 
+; When a negative exponent of Z is involved in a formula, the 
+; resulting fractal is highly dependent on the bailout radius.  
+; The 3000000 entered as the second parameter acts as somewhat as 
+; a bailout radius.  I set this parameter at the point where the 
+; image is on the verge of evaporating, and let it rip.  The 
+; result was interesting enough to be FOTD for today.
+; 
+; The rating of an 8 might be a bit optimistic, but I feel the 
+; image is worth it.  The calculation time of 2-3/4 minutes is 
+; certainly a bargain.
+; 
+; The most convenient way to view the sandy image however is to 
+; surf out to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and be exalted in its radiant glory there.
+; 
+; Total sun but chilly temperatures prevailed here at Fractal 
+; Central on Friday.  The fractal cats enjoyed the sun while it 
+; was beaming in the window, then took their places by the hall 
+; radiator.
+; 
+; My day was average, which is just about all I can say about it.  
+; Due to a trip back to Old Fractal Central on Saturday, there 
+; will be no FOTD for November 8.  But the FOTD for November 9 
+; will be posted on schedule.  Until then, take care, and don't 
+; get caught up in the feel-good craze.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Brot_in_the_Sand { ; time=0:02:44.05-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=AllNewDivideBrot function=recip float=y
+  passes=1 center-mag=-1.785765881132176/0/3.218e+008
+  params=-2/3000000 maxiter=5000 inside=0 logmap=400
+  symmetry=xaxis periodicity=10 mathtolerance=0.05/1
+  colors=000gEahBeiFfiJfiNfiRfiUfiYfiafiefihfilfipfi\
+  tfiwf0ZU3WT5TT7QT9NSBKSEHSGESIBRK8RM5RO3RN5SM6TM7U\
+  L8VK9WKAXJBYIDZIE_HF`GGaGHbFIcFJcMRYSYSYeMclG_mIWm\
+  JTzKPzLMzMIzOzzzBzzzzz4zzzzz3zzzzz6zzzzzAzzzzzDzzz\
+  znGzpzzsJzuzztNpsOnrQlqSjqThpVfoXdnYbm_`maZlbXkdVj\
+  eUjhTfjSclR`oQYqPVsOSqNPoMNnMLlLJjLHiKFgKDeJBdJ9cI\
+  BcHDbGEbGGaFIaEJaEL`DN`CO_BQ_BSZATZ9VZ9WU8XQ7YM6YI\
+  5ZE4ZGAcIGgKMkMSpOYtPbxO`wNZvMXuLVtKTsKSsJQrIOqHMp\
+  GKoGJoFHnEFmDDlCBkCAkFEiHHgJKfMNdOQcQTaTX`V_ZXbY_e\
+  WahVckTzn0et0ez0_p0zf0zY0mO0GEBB5CA4A949938837836L\
+  BJYJWjRhvZun_tf`tZataPpdDlf1hdDjbPl``nZlpXxr`tkcpd\
+  glZjhSmdMieNfeObeO_ePWeQTeQPeRMeSIeSFeTCeTAgV8hW6i\
+  X4jY5i_6ha6gb7gd7ff8eg8di9dk9clAbnAboGmELmAPm7Tm4Y\
+  mPami`mk_mnZmpZwrYwpXwoWwmVzlUzjXznLzcAzTBzRCzPDzN\
+  DzLEzJFzHGzFGzDHzBIz9Iz7HzBHzEHzIHzLGzPGzSGzWGzZGz\
+  bFzeFziFzlFzpFzsdzNezSfzX }
+
+frm:AllNewDivideBrot   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+b=imag(p1)+0.00000000000000000001:
+z=b*(z^2*fn1(z^(a)+b))+c
+|z| < 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

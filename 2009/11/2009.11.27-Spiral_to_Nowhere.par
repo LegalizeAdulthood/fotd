@@ -1,0 +1,89 @@
+;     Date: Fri, 27 Nov 2009 22:13:36 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-11-09 (Spiral to Nowhere [7])
+;       Id: <1.5.4.16.20091127221331.2b3fbb36@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 28, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To me, fractal spirals appear to be overdone in the world of 
+; 'fractal art'.  However this does not mean that I never come 
+; upon any.  Today's image shows a spiral I stumbled upon in the 
+; parent fractal that is created when 1/100 part of Z^(-100) is 
+; mixed with plain Z and C^2 is added.
+; 
+; As expected, the parent is a double-bayed thing.  Today's image 
+; is located in a narrow strip of debris in one of the bays.  The 
+; deep-blue background consists of high-iteration stuff that 
+; disappears when the maxiter is lowered.
+; 
+; The name "Spiral to Nowhere" indicated that most of these 
+; fractal spirals keep going forever.  The rating of a 7 might be 
+; overdone, but at least it might persuade an additional fractal-
+; ist or two to actually run the rather slow parameter file.
+; 
+; A alternate way to see the image is to view it on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Friday stayed dry here at Fractal Central, but heavy clouds, a 
+; brisk northwest wind and temperature of 43F 6C kept a winterish 
+; chill in the air.  The fractal cats had a short spat to decide 
+; who would get to curl up on the clothes in the laundry basket, 
+; which were still warm from the drier.  Cassie prevailed with one 
+; very un-ladylike hiss.  Nicholas eased his disappointment in the 
+; most comfortable spot he could find by the radiator.
+; 
+; My day was average.  The next FOTD is due in 24 hours, but I 
+; think another antiquing trip is being planned for Saturday, so 
+; do not be surprised if the FOTD is late.  Until whenever, take 
+; care, and one person's myth is another's reality.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spiral_to_Nowhere { ; time=0:12:58.89-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=sqr float=y
+  center-mag=+0.047083682/+0.049793103/2379/1/90/0
+  params=1/1/0.01/-100/0/0/0/0 maxiter=4500 inside=0
+  colors=000ZO`ZPa_Qa_Ra_Sa`Sb`Tb`UbaVbaWcaXcbYcbZcc\
+  _dc_dc`ddaddbedcemdeemeefmwgffwfghwgmzzrazkghlgzmh\
+  inhzohlrziohzmfekzciczga_m`Ybzm`YUZzScUcUTOSmMUPUO\
+  cIMMG0LE0JC0HA0G80F50D69E69E69E78F78F78F87F87F87F9\
+  6G96G96G96GA5HA5IB5IB5JC5JC5KD5KD5LD5LE5ME5NF5NF5O\
+  G5OG5PH5PH5QH5QI5RI5SJ5SJ5TK5TK5UK5UK5UK5UJ6UJ6UJ6\
+  TJ6TJ6TJ6TJ6SI6SI6SI6RI6RH6RH6QH6QG6QG6QG6PG6PF6PF\
+  6OF6OF6OE6NE6NE6ND6MD6MD6LE6LC6KC6KC6JC6IB6HB6GB6F\
+  A6EA6DA6CA6B96A969968UUUUUUUUUUUUUUUUUUA7CB7CC8CD8\
+  BE8BF9BG9BH9AIAAJAAKAALB9MB9NB9OC9PC8QC8RD8SD8TD7U\
+  E7VE7WE7XF6YF6ZF6_G6`G5aG5bH5cH5dH4eI4fI4gI4hJ3iJ3\
+  jJ3kK3lK2mK2nL2oL2pL2gQB_VJS_SJd_Bih3np2op2op2op2p\
+  p2pp2pp1qp1qq1qq1rq1rq1rq0sq0sq0sq0tq0tq0tq0tq1sp1\
+  ro1rn1qn2pm2pl2ol2nk2nj3mi3li3lh3kg3jg4jf4ie4hd4hd\
+  4gc5fb5fb5ea5d`5d`6c_6bZ6bY6aY6aX7`W7_W7_V7ZU8YT8Y\
+  T8XS8WR8WR9VQ9UP9UP9TO9SN }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

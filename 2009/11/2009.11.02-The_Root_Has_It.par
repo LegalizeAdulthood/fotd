@@ -1,0 +1,87 @@
+;     Date: Mon, 02 Nov 2009 16:32:03 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-11-09 (The Root Has It [No Rating])
+;       Id: <1.5.4.16.20091102163519.2abf6b62@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 02, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Another late fractal.  I'm still getting caught up.
+; 
+; Today's image lies in the parent fractal that results when the 
+; formula Z^sqrt(2)+C is calculated a whopping 4321 levels up the 
+; logarithmic ladder, a level I chose purely on a whim.
+; 
+; It is an unusually good image for such a low exponent of Z.
+; 
+; Since the image was found in a hurry, I could not give it a 
+; rating, but the calculation time of under 2 minutes means that 
+; no one will have wasted much time if the image turns out to be 
+; disappointing.
+; 
+; The name "The Root Has It" came to mind as soon as I shut down my 
+; brain, (which I am told takes very little effort).
+; 
+; To see the rather dark image, either run the included parameter 
+; file or visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Monday here at Fractal central featured sunny skies, a 
+; temperature of 57F 19C, and happy cats.  My day was quite busy, 
+; but I still managed a fast FOTD.  The next FOTD is due in about 
+; 6 hours.  Check then, but do not be disappointed if it is late.  
+; Until next FOTD, take care, and be happy in your fractal work.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Root_Has_It { ; time=0:01:58.84-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+0.8737443818\
+  611416/-1.340159768589525/9.624077e+009/1/87.5/0
+  params=1.414213562373/0/4321/0 float=y maxiter=1500
+  inside=0 logmap=241 periodicity=10
+  colors=0009AZ7AZ4AZ2AZ0AZ3AY0AW3AV5AT7AS9AQABPCCND\
+  DMEELGDIHCGJBDK9BL89N76L64K02F0IzzfUU1LI5OK9SNDWPH\
+  _SLbUPfXTkZXoa`tcdxfhzhlzjpzeltaipYfnTcjP`eLX`HUWC\
+  RT8OR4LP0II1NG2SF3X84a24e47f5Af6CfAFfFIfKGePEbUPfZ\
+  RccT`hVYmXVrZSv`PzaMvdWrgeminhhjchfZgcVf_SeXQdTNbQ\
+  LYMIVJFRFDRCAQ88P58PB8PH8QM8RS8SY8Tb8Zh8cn8ds9er9f\
+  s9fv9gx9hz9hzAizAizAjzAkzAkzAlzAlvBjrBhmCghCezDdzD\
+  bzEazE_zFZzFXjGWjGUjGTjFQkFNjELiDIhDFhCDgBAgB8gA9f\
+  99f89f8Af7Af6Af6Af8Ff9JfBOfCSgEWhF`iHdjIhkJbgKXcKS\
+  `LMXMGTMBQN5MN0JNIARJEVJIYKMaKPdLThLXkM`oMcrNgvNky\
+  NnzMZzLJzK4cL66L76L86LA6LB6LC5ME5MF5MG5MI5MJ5MK5ML\
+  6ON7PP8QR8RS9SUATWAUXOXUYZS``PcbNheKmgIriFwkDzmBvl\
+  CqlCmlChkDejDaiDYhEUgERgEUhGWhHZiJ`iKbiMekNgkPilQl\
+  mSnnTpnUqpKrqGssDtt9uu6vv7ww8xz8yz9zz9zzAzzAzzBzzC\
+  zzCzzDzzDzzEzzEzzNzzVzzbzzczzczzczzczzdzzdzzdzzdzz\
+  ezzezzezzezzfzzfzzfzzfzzc }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
