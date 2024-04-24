@@ -1,0 +1,90 @@
+;     Date: Mon, 11 Sep 2006 17:11:21 EDT
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 12-09-06 (Elliptic Elephant [4])
+;       Id: <586.55cd2d8.32372af9@aol.com>
+; ---------
+; 
+; FOTD -- September 12, 2006 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I draw attention to today's fractal, which returns us to East 
+; Valley, where we check a Mandelbrot midget that lies 
+; deep in the trunk-spiral of an elephant.  This elephant itself 
+; lies fairly deep in the valley.
+; 
+; To be a little different, I have calculated the Elliptic view of 
+; this midget.  Since it is not a Mandelbrot view, I have not 
+; violated my promise to have no Mandelbrot midgets during the 
+; month of September.
+; 
+; At this orientation, the midget appears as little more than a 
+; shapeless hole.  But the pattern around it remains intact, 
+; fairly shouting to the world that this is a scene in East Valley.
+; 
+; I named the image "Elliptic Elephant", though no elephants are 
+; visible in the frame.  I rated it at a meager 4.  After all, 
+; haven't I already done this kind of thing numerous times?  The 
+; 6-minute calculation time may be avoided by downloading the 
+; completed GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Clouds and cool temperatures here at New Fractal Central on 
+; Monday bothered the new fractal cats not at all.  They spent the 
+; day chasing each other up and down the long hallway and occasion-
+; ally checking the window to see if any squirrels or birds were 
+; in sight.  By 4pm they were ready for their treats -- tuna for 
+; Cassie, cheese for Nico.
+; 
+; My day was quite busy, which explains the almost-automatically 
+; found fractal.  The rush will peak tomorrow, which might or 
+; might not produce a FOTD for the 13th.  But by Wednesday the job 
+; will be delivered and the FOTD for the 14th is almost a sure 
+; thing.  Until next time, which will be in either 24 or 48 hours, 
+; take care, and remain fractally correct.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Elliptic_Elephant { ; time=0:06:15.34--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  center-mag=0/0/8.073738e+009/0.01316/-89.804935684\
+  2955717/89.7960595356130682 params=90/0/2/0/0.2525\
+  320556995364/0.0002050585540034/0.2525320556995364\
+  /0.0002050585540034 float=y maxiter=7500
+  inside=0 logmap=1032 periodicity=10
+  colors=000KZEJYFJXFIWGIVGHUHGTIGSIFRJFQJEPKDOLDNLC\
+  MMCMMELPFLRGKTHKWIKYJJ_KJbLIdMIfNIiOHkPHmQGpRGrSGt\
+  VIoYKj`MebOaeQXhSSkUNmWJpYEs_9u`5sa8qaAobCmbFkbHic\
+  JgcLecOcdQadS_dVYeXWeZUe`bZQjSFrM4qO8qPBpQEpRHpTLo\
+  UOoVRoWUnYYnZ`m_cm`fmbjlcmldplesmbtn`toZtpXtqVtrTt\
+  sQutOuuMuvKuwIuxGuxEup9si5qb1pd2ke3gg3bh4Zj5Uk5Qm6\
+  Ln7Ho7DfGFYOGQWIHdJ8lL0tM3qN6nN8lNBiNEfNGdNJaOMZOO\
+  XORUOUROWPOTQQQQRNRSLRTISUFSVCTWATXj2Ah8CgDEeIGdNI\
+  bSKaXM`aObcRcdTdfVegXgiZhj`ilcjmelogmpinrkosmnrjnq\
+  gmpdmoamoZlnWlmTklQkkNkkLhhMeeNbbP__QXXRUUTSRUPOVM\
+  LXJIYGFZDC`A9a86bB7_E7XH7UK7RN7OQ7MT8JW8GZ8Da8Ad87\
+  g85dC9bGC`KGZNJXRNUVQSYUQaXOe`MhcNedOcdOadPZdQXdQV\
+  dRSeSQeSOeTLeUJeUHeSGcRGbPG`OG_MFZLFXKFWIFVHFTFESE\
+  ERCEPBEOAENEqPHoQJmRMlROjSQhSTgTVeTYdU_bUa`Vd_VfYW\
+  h_WdbZaeaZgdVjgSnjPqmLtpIwsFzvCzxEztGzpIzmKziMzeOz\
+  bQzZSzWUzSWzOYzL_zH`zE_zV }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 

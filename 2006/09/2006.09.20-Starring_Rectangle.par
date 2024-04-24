@@ -1,0 +1,108 @@
+;     Date: Wed, 20 Sep 2006 22:58:07 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-09-06 (Starring a Rectangle [NO])
+;       Id: <1.5.4.16.20060920225913.2a9762d6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 21, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Since September is a month with no minibrots, I have decided to 
+; spend a few days manipulating the mysterious rectangle in the 
+; Z^(2.003)+C Julia set.  To see the rectangle in its pure form, 
+; bring up the julzpower formula, set the value of C to -1.7435,0 
+; and the exponent of Z to 2.003.  Then go to the F6 screen and 
+; set the center point to 0.00019,0.07388, set the magnitude to 
+; 125 and strike the 'enter' key twice.  A few minutes later a 
+; most unusual fractal will fill the screen.  This empty rectangle 
+; and its incredible variations will be the subject of the next 
+; few FOTD's.
+; 
+; Don't be deceived by the emptiness inside the rectangle.  The 
+; empty area is paper thin and lies exactly in the Julia orienta-
+; tion.  Even the slightest variation of the imaginary part of C 
+; totally destroys the perfect rectangular shape and fills the 
+; empty area with detail.  In today's image I have added a tiny 
+; imaginary part to the exponent of Z rather than to initial C.  
+; This tiny change has not only broken up the rectangle and filled 
+; it with intricate detail, it has rotated the rectangle.
+; 
+; I named today's image "Starring a Rectangle", and why not?  The 
+; rectangle certainly is the star of the show.  I have featured 
+; this same fractal object so many times that I could not give 
+; today's version a rating, but the image certainly is worth the 
+; 2-1/2 minutes required to render the scene from the included 
+; parameter file.
+; 
+; Rendering can be a nuisance on over-qualified machines.  Those 
+; with such units may view the rendered and dismembered rectangle 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Mostly cloudy skies, gusty northwest winds, and a temperature of 
+; 66F 19C here at New Fractal Central on Wednesday made conditions 
+; a bit brisk for the fractal cats -- not that it worried them.  
+; They spent the afternoon inside, getting into trouble.  The 
+; mischief peaked when Cassie tried to climb the living room 
+; curtains to catch a fly on the ceiling and ended up on the floor 
+; with the drapes on top of her.  Oh well, it's a cat's duty to 
+; get into trouble.
+; 
+; In my department, the work remained on the slow side, which 
+; means the fractals were on the fast side.  More of the same is 
+; expected tomorrow, so I can see no reason the FOTD will not 
+; appear on schedule.  Until then, take care, and who knows what 
+; might come next?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Starring_Rectangle { ; time=0:02:29.46--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=+0.00020125342561368/-0.000100679231968\
+  01/92.98646 params=90/90/90/90/-1.7435/0/0.00019/\
+  0.07388/2.003/3e-005 float=y maxiter=1500 inside=0
+  logmap=51 periodicity=10
+  colors=0002Qk2Qj2Qi2Qh2Qg2Pf2Oe2Nd2Mc2Lb2Ka2J`2I_2\
+  HZ2GY2GX2GX2FW2FW2FV2EV2EU2DU2DT2DT2CS1CS1BR1BR1BQ\
+  1AQ1AP1AP1AO1AO1AN1AN1AM1AM1AL1AL1AK1AK1AJ1AJ1AI1A\
+  I1AH1AH1AG1AG1AF1AF1AE1AE0AD0AD0AC09C09B08B08A08A0\
+  79079078068067057056056045045034034033023022012000\
+  000000000000000000000000000000000000000000c`Ab_9cZ\
+  9cZ9cY9cY9cX9cX9cW8cW8cV8cV8cU8cU8cT8cT7cS7cS7rR7r\
+  R7rQ7rQ7rP6rP6rO6rO6rN6rN6rM6rM6rL5rL5rK5wK5zJ5zJ5\
+  zI5zc4zc4zc4zc4zc4zc4zc4zc3zc3zc3zc3zc3zc3zc3zc3zc\
+  2zc2zc2zc2zc2zc2zc2zc1zc1zc1zc1zc1zc1z41z30z30z20z\
+  20z10z10z00zF4zE3zE3zE3zE3zE3zE3zD3zD3HmzHmzGmzGmz\
+  GmzGmzGmzFmzFmzFmzFmzFmzEmzEmzEmzEmzEmzDmzDmzDmzDm\
+  zDmzCmzCzzCzzCzzCzzCzzBzzBzzBzzBzzBzzAzzAzzAzzAzzA\
+  zz9zz9zz9zz9zz9zz8zz8zz8zz8zz8zz7zz7zz7zz7zz7zz7zz\
+  6zz6zz6zz6zz6zz5zz5zz5zz5zz5zz4zz4zz4zz4zz4zz3zz3z\
+  z3zz3zz3zz3zz2zz2zz2zz2zz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,88 @@
+;     Date: Wed, 13 Sep 2006 00:48:24 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-09-06 (Side Attraction [6])
+;       Id: <1.5.4.16.20060913004925.29d7cc36@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 13, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The continuing rush on Tuesday meant anther hurried FOTD image.
+; 
+; Today's rather unusual scene is a feature of the Julibrot.  It 
+; is located some distance to the viewer side of the large midget 
+; at -1.75,0 of the Mandelbrot set.  It is sliced in he Oblate 
+; direction, which is the orientation determined by the real(z) 
+; and imag(c) axes of the Julibrot.
+; 
+; I named the image "Side Attraction" because it is located to the 
+; side of the Mandelbrot set.  I rated it at a 6 because it is 
+; just interesting enough and colored well enough to deserve that 
+; rating.
+; 
+; The render time of under 1 minute means that those who rendered 
+; the image themselves and are disappointed by it, will not have 
+; wasted much computer time.  Those who don't render may find the 
+; image already rendered on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The cloudy, chilly weather here at New Fractal Central on 
+; Tuesday, with a temperature of only 63F 17C, worried the fractal 
+; cats not the least.  They are showing all signs of being 
+; permanent indoor cats, which is the healthiest, but perhaps not 
+; the happiest life for a cat to lead.  In the evening, they 
+; romped and enjoyed their treats of tuna and cheese.
+; 
+; For me, the current rush is rapidly coming to a close.  The 
+; current one went well enought, but I hope these rushes don't 
+; come too often.  I fear I'm getting too old for this kind of 
+; stuff.  The next FOTD is quite likely to appear as scheduled in 
+; 24 hours.  Until that glorious moment, take care, and philoso-
+; phize mightily.
+; 
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Side_Attraction { ; time=0:00:57.27--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  center-mag=-1.04707416/+0.005111185/225.2066/0.4584
+  params=0/90/2/0/0/0/-1.7475/0 float=y maxiter=10000
+  passes=1 inside=0 logmap=yes periodicity=10
+  colors=000AVKAYFA_AAb5Ad1Aa4A_7AY9AVCATEARHAOJAMMA\
+  KOAENAFPAERAASACTAETAGTAIUAKUAMUAOVAQVASV9UX8WX7YX\
+  6_XBa`FcbJeeNghSikWkm_mqaoscqzeszguziwzkxzmyzhzzcS\
+  ZZGQU5IP6HK6HF7HJ7HN7GR8GU8GY9Ga9Fe9FiAFmAFt6CpAFl\
+  EIiIKeMNaQPZUSVYURaXOeZMdaKccIbfGahF`jD_mBZo9Yr7Xt\
+  6XvAWtDVrGUqKToNSnQRlTQkXPi_OhbNfhOdeNecNeaMe_MeYM\
+  eWLeULeSKcSLeSMfSNhSNiSOjSPlSPmSQnSRpSSqSSrSTtSUuU\
+  WxSUvRStQQrPOqNMoMKmLIlKGjJEhHCfGAeF8cE6aE5JD5`43n\
+  C5qL7vJ6tI6rG5pF5nE4mC4kB3i93g82e72dOIacYZsmWaqbLu\
+  hLuhLvhLvgLvgLvfLvfLveLveLveKtdKwcJxbUyaUz`Uz_UzZc\
+  zYczXcz0czWmzVmzUmzTmzSwzSwzRwzQwzPzzOzzNzzMzzLzzK\
+  zzJzzIzzHzzGzzFzzEzzEzzDzzCzzBzzAzz9zz8zz7zz6zz5zz\
+  4zz3zz2zz1zz0zzgzzfzzezzezzdzzczzczzbzzazzazz`zz_z\
+  z_zzZzzYzzYzzXzzWzzWzzVzzUzzUzzTzzSzzSzzRzzQzzQzzP\
+  zzOzzOzzNzzMzzMzzLzzLzzKzzJzzJzzIzzHzzHzzGzzFzzFzz\
+  EzzDzzDzzCzzBzzczzZzzUzzP }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

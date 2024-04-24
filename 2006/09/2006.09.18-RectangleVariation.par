@@ -1,0 +1,87 @@
+;     Date: Tue, 19 Sep 2006 00:14:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-09-06 (Rectangle Variation [6])
+;       Id: <1.5.4.16.20060919001522.22674808@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 19, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a variation of the curious rectangle in a Julia 
+; set of East Valley of the large midget on the infinitely-split 
+; negative X-axis of the Z^(2.003)+C Mandeloid.
+; 
+; One day quite a few years ago, I stumbled upon this rectangle, 
+; which still remains the most surprising discovery of all my 
+; fractal explorations.  The rectangle is impressive even in its 
+; pure form, but to add interest I have given it a slight transla-
+; tion and rotation, reducing it to the shapeless yet interesting 
+; mass featured in today's image.
+; 
+; I named the image "Rectangle variation", which is what it is.  I 
+; rated it at a 6, which is what I feel it is worth. The render 
+; time of 2 minutes on my tired old machine should try the 
+; patience of no one.  For convenience the finished image is 
+; posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; An absolutely perfect day here at New Fractal Central, with full 
+; sun and a temperature of 81F 27C, went unappreciated by the 
+; fractal cats, who passed the afternoon sleeping and playing.  
+; With not too much work to do, I enjoyed the day a bit more than 
+; the cats.  I hope to enjoy tomorrow as much as today.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and be 
+; careful.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+RectangleVariation { ; time=0:02:06.72--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=0.00876166/0.00777778/26.82512
+  params=91.81/90.94/91.93/89.48/-1.7435/3e-005/0.00\
+  019/0.07388/2.003/0 float=y maxiter=1000
+  inside=bof61 logmap=51 periodicity=10
+  colors=000000000000000000100900H00P00Y04g19p6Ex9Kz\
+  EPzKUzP_zUez_jzbpzjK_r00x01z01z04z14zH6zU6zg9zx9zz\
+  CzzCzzzj040zP0zg0zz0xz0rz0mz0ez0_z4Uezzbzzbzz_zz_z\
+  zYzzYzzUzzUzzSzzSzzSzzPzzPzzMzzMxzKuzKrzHrzHpzEmzE\
+  mzEjzCgzCez9ez9bz6_z6_z4Yz4Uz4Uzxrzzzzzzzzzzzzzzzz\
+  zzzzzzzzxzxrzupxujrremp_gpUbmSYjMSjHMgCHe9Ce46b01_\
+  00_00Y00U00U00S00P00P00M00K00K00M00P00P00S00U00U00\
+  Y01Y06_0Eb0Kb1Se4Yg9egEjjKpjMxpHzrEzu9zx6zz1zz0zz0\
+  zz0zx0eu0Hr00p00m00g00b10Y60SC0MH0HM0CS06Y01b00j00\
+  p00u00z00z00z00z00z00z00zz00z00z00z00z60zK0zY0zj0z\
+  x0zu0zr0zr0zp0zm0zm0zj0zg0zg0ze0zb0zb0z_0zY0zY0zU0\
+  zS1zS4zP6zM9zMCzKEzKEzHCzC9z96z44z14z09z0Cz0Eu0Hp0\
+  Kj0Pe0S_0UU0YP0_K0bE0g90j40m00p00r00u00r10r90rE0pK\
+  1pS9pYHmbPmjUmpbmujjzrjzxjzzgzzgzzgzzgzzjzzmzzpzzr\
+  zzrzzuzzxzzzxzzrzzpxzmxzguzerz_pzYmzSjzPgzMezHbzE_\
+  z9Yz6Uzz6zz9zzCzzCzzEzzEz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

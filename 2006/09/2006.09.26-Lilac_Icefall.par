@@ -1,0 +1,94 @@
+;     Date: Tue, 26 Sep 2006 17:23:50 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-09-06 (Lilac Icefall [Not rated])
+;       Id: <1.5.4.16.20060926172247.3b4fcc54@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 27, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we make a quick return to the MandelbrotBC2 
+; formula to check a scene in the Z^(1.2)+C Mandeloid as it 
+; appears 12 levels up the infinite complex logarithmic spiral.
+; 
+; I assume that a midget or a hole of some sort lies at the center 
+; of today's image.  But even if it is a bottomless pit in the 
+; image, the scene is still attractive enough with its lilac and 
+; blue tones and its lightning-like filaments circling the 
+; depression.
+; 
+; Since the image is another almost-automatic one, I did not give 
+; it a rating.  The name I chose, "Lilac Icefall", came to me as a 
+; whim.  I really see little in the picture to remind one of a 
+; mass of shattered blocks of ice.
+; 
+; The passes=b option works best with today's image, and it is 
+; also the fastest.  The 1-1/2 minute render time should try the 
+; patience of only those with handicapped computers.  For conven-
+; ience, the finished image is posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The partly cloudy weather on Tuesday with a temperature of 75F 
+; 24C made no impression on the fractal cats here at New Fractal 
+; Central.  They were more interested in chasing invisible crit-
+; ters up and down the hallway.  (I would like to see them catch 
+; one of the things they chase, so we could see what it is.)  When 
+; the cats failed to catch anything, they satisfied themselves 
+; with their faces in their food dishes.
+; 
+; My day was very busy.  The job is about half finished.  From the 
+; rate things are moving, I cannot guarantee an FOTD for tomorrow 
+; (actually I never can) but I'll see what I can do.  I'll give a 
+; 67-percent chance that an FOTD of some sort will actually 
+; appear.  Until next time, in 24 or 48 hours, take care, and 
+; don't get frustrated if your fractal will not iterate.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Lilac_Icefall { ; time=0:01:39.12--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=b
+  center-mag=-1.66780124201185200/+2.552517437489564\
+  00/1.003565e+010 params=1.2/0/12/0 float=y
+  maxiter=1050 inside=255 logmap=112 periodicity=10
+  colors=00002M02K01I00G00E41CA2FF2NK3RP3VT4`Z4fc5lf\
+  5qhEriNskWtldtgaocZj_XeWU`SSWOPRKMMGKHCHC8F8AHECJJ\
+  ELPGMUIO_KQdMRjOToQVuRWzSVxTUvUTuVTsWSrXRpYQoZQm_P\
+  l`OjaNibNgcMfdLdeLcfNagP`gRZhTYiVXiXVjZUj`TkbRldQl\
+  fOmhNnjMnlKonJooI3Uo6Xn8ZnA`nCbmEdmGfmIhlKjlMllOnk\
+  QpkSrkVsjYti_thYqfWodVlbTj`SgZQeXPbVN`TLYRKWPXlPdo\
+  KcmLckMciNbhObfPbdQbbRaaSa_TaYUaWV`VW`TX`RY`QZWSVR\
+  TSMUPIVMDWJ8XG4YDFaBPeA_i9im8sp7oq8kq9hq9dqA`rAYrB\
+  UrBQrCNrCPqDQpDRoDSnDTmDUlDWkEXjEYiEZhE_gE`fEaeEbd\
+  HccJcbMdaOe`Re_TfZWfZYWXaMVeBTi1Sl6TnBUoGVpLVqQWsV\
+  Xt_YucYv`ZlY_cV_US`LQ`CPaDPbDPcDPdDPeDPfDPgDPgDOhD\
+  OiDOjDOkDOlDOmDOnDOnDTkIYiNbgSgeXlcapaen_flYgjWhhU\
+  hfSidQjbOk`MkZKlXImVGnTEnRCoPApN8qM6qO9pQCpSEpUHoW\
+  JoYMo_PnaRncUneWmgZmh`mfUpdNsbGu`9x_2zeBmjK`oTPtaC\
+  yj0nS5c99e8Bf7Dg7Fh6Hi6Jj5Lk5Ml4Om4Qn3So3Up2Wq2Xi3\
+  Wb4WW5WP6WI6WH5SH4PH4MG3I }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

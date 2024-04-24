@@ -1,0 +1,100 @@
+;     Date: Mon, 25 Sep 2006 17:18:16 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-09-06 (Momentary Diversion [Not rated])
+;       Id: <1.5.4.16.20060925171714.3f877126@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 26, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The expected rush job has arrived, so I will need to keep 
+; today's discussion brief.
+; 
+; Today's scene is a slice of the Z^(2.000001)+C Julibrot, cut at 
+; an oblique angle through the East Valley of the large Midget on 
+; the Mandelbrot main stem.  The tiny hole at the center is broken 
+; into two parts.  In the Mandelbrot plane, the hole appears as a 
+; quadratic midget, with part of a second midget nearby, exactly 
+; as is the case with the hole at the center of today's scene..
+; 
+; In this area of the parent mandeloid fractal, the negative spike 
+; is infinitely divided, though much enlargement is necessary 
+; before this division becomes visible.  Today's scene lies at the 
+; edge of the nest of spikes.
+; 
+; I did not give the image a rating but I did give it a name.  I 
+; named it "Momentary Diversion" because I found it almost in a 
+; moment.  There was no surprise involved.  I knew from the begin-
+; ning that I would find this scene.
+; 
+; The render time of just over 5 minutes may be dispensed with by 
+; going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the full image there.
+; 
+; Things started slow but soon got busy here at New Fractal 
+; Central on Monday.  With lots of sun and a temperature of 68F 
+; 20C, the weather was near perfect, but the fractal cats, who got 
+; too little attention to fill their needs, were too sulky to 
+; notice it.
+; 
+; For me things were again hectic.  I just managed to finish the 
+; FOTD.  The next in the unending series of FOTD's is scheduled to 
+; appear in 24 hours or so.  It might be a brief one, but I am 
+; reasonably sure that when the time comes it will be there.  
+; Until then, take care, and walk with the birds.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+MomentaryDiversion { ; time=0:05:00.17--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=0/0/1.086732e+009/0.1086/85.99025357631\
+  41884/-82.3355502698509554 params=85/75/7/29/-1.74\
+  94980382806/4.62062404e-006/-1.7494980382806/4.620\
+  62404e-006/2.000001/0 float=y maxiter=1800 inside=0
+  logmap=188 periodicity=10
+  colors=000QCTSEXVG`XHd_JhaLlcMpdPoeSofVngYnh`micmj\
+  fmkjllnlmrknvknykjpcfbWbUPZLHVC9S82V39X4FMQMCaT2h_\
+  7dZBaZFZZKVZOSZSPZXLY`IYdFYiBYm8Yq5Yp4Wo4Un4Tn4Rm4\
+  Pl4Ok4Mk4Kj4Ji4Hh4Fh4Ek6Km7Qo9WqA`sCfuDlwEqtCrrBro\
+  Arm9rk8rhAofCldDibFf`HcZI`XKYVMVTNSRPPPQNRRQSSSTTU\
+  UTWVUYWV_XVaYWcZXf_Xh`YjaZlbZnc_pd`re`td_rdZpcZncY\
+  lbYjbXhaWfaWd`Vb`VabS_dQZfOYhLXjJWkHViNSgSQeYNcbLb\
+  `Ka_KaYK`XK`VK_UK_SKZRKYQJYOJXNJXLJWKJWIJVHJVGJRHI\
+  NIHKJHGKGDLG9MF6MF8RKAVOCZTEcXGgaIkeKpjMtnOxrMwkKw\
+  dIwYGwREwKCwDBw7GsDKoJOlPThVXd``afYbgVbgTbhQbhObhM\
+  aiJ`kG`lD_mAZn7Yo5Yp6Xq6Wq6Wq7Vq7Vq7Uq7Uq8Tq8Tq8Sq\
+  8SqAUnBWlCYjDZgF`eGbcHc`IeZKgXLhUMjSNlQPmNQoLRqJSr\
+  HVsJXtLZuN`vPZwRYxTWyUVzWUzYSzZzz`zzbzzczzezzfzzbz\
+  zZzzVzzSzzOzzKzzGzzDzz9zz5zz2zz3zz3zz3zz3zz4zz4zz4\
+  zz4zz4zz4zz4zz4zz4zz4zz4zzFzzPzzZzzhzzrzzgzzXzzMzz\
+  PzzSzzVzzYzz`zzDzzHzzLzzP }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

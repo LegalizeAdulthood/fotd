@@ -1,0 +1,98 @@
+;     Date: Sun, 24 Sep 2006 02:03:32 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-09-06 (Forever Rectangular [Not Rated])
+;       Id: <1.5.4.16.20060924020438.38971220@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 24, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; There are six mutually perpendicular planes through every point 
+; of the four-dimensional Z^(2.003)+C Julibrot.  The strange 
+; rectangle that has appeared in the recent FOTD's apparently 
+; exists only in the Julia plane, but I wondered how the rectan-
+; gle, or the area in which it lies, would appears in the other 
+; five planes.
+; 
+; Today's image is a slice through the vicinity of the rectangle 
+; in a direction rotated 10 degrees from the Oblate orientation 
+; toward the Rectangular orientation.  Surprisingly, the rectangle 
+; still appears quite clearly at the center of the image.
+; 
+; The rectangle is obvious, but its surroundings have undergone a 
+; dramatic change.  Instead of the converging tree-like features, 
+; we have near total chaos -- an image that cannot be described 
+; and must be seen to be appreciated.
+; 
+; I named today's image "Forever Rectangle".  It appears that the 
+; rectangle will remain visible regardless of the direction from 
+; which it is viewed.  I gave the picture no rating.  If I had 
+; rated it, a score of 6 would have been appropriate.
+; 
+; The render time of under 11 minutes is slightly slow.  But when 
+; the image is viewed on the FOTD web site, rendering is not an 
+; issue.  The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Early morning rain gave way to a partly cloudy and warm after-
+; noon, with a high temperature of 77F 25C.  The fractal cats paid 
+; no notice.  They were too busy chasing each other all around the 
+; place.  They did not settle down until treat time arrived in the 
+; evening.  My day was average; tomorrow looks to be a repeat.  
+; The next FOTD will appear in 24 hours, when I'll see what other 
+; havoc I can wreak on that Z^2.003 rectangle. Until then, take 
+; care, and be of sound mind and body, but don't be too strong on 
+; the sound.  You would not want to disturb the neighborhood.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+ForeverRectangular { ; time=0:10:51.64--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=-0.00016211607850631/+0.000876409345622\
+  04/1359.729/0.01759/-90/79.5200240071283986
+  params=10/90/0/90/-1.7435/0/0.00019/0.07388/2.003/\
+  0 float=y maxiter=15000 inside=0 periodicity=10
+  colors=000O8tP1yM1vJ1sG1pD1mA1j71g41d11b83_E4XL5VR\
+  6SY7Pc8Nj9KpAIlDGiFFfIEbKD_NCXPBTSAQU9NW7JZ6G`5Dc4\
+  9e36h23j10l03j15h17g1Ae1Cd1Eb1G`1J_2LY2NX2PV2ST2US\
+  2WQ2YP2ZS4ZV6_Y7_`9`cB`fCaiEalGboHbrJcuLcwMZpJVjHQ\
+  cFMYDISADL89F65948B8BCBDDEGFIIGLLHONISQKVSLYVMaXNd\
+  _PgaQkdRnfSqkUrpWstYts_rsaprcnrdlqfjqhhpjfpkdomboo\
+  `nqZnrXknUhjSfgQccO``MZXKWTHTQFRMDOJBLF9JC7HE9GGBF\
+  ICEJECLFBNHAOI9QK8SM6UN5VP4XQ3ZS2_T7aXBb_GdcKefPgj\
+  ThmYjqaktbjrbiqbhpbgnbfmbelbdkcdicchcbgcafc`dc_ccZ\
+  bcZaZH`U0`_EWeSRkeMpsIlqKioMfnNclP`jQYiSVgTSeVPdWM\
+  bYJaZOcVTdSYeObfLggIlhEqiBuj8tg7se6rc5ra4q_3pY2oW1\
+  oU0nT3mT5mT7lT9lSBkSDkSFjSHjRJiRLiRNhRPhRRlMSoHTpR\
+  GpAOrCUsDZtEduFivGowHtxIyuJyrKyoLylMyiNygOyfLteIpd\
+  FlcChc2cc9dcFecLfHjkNTe76oSC`gNGiKJkHMmFPoCSqAVk9U\
+  e8U`8UV7UP6TK6TE5T30P95TEAWJFZPKaUPd_VjZUgZTdYSaYR\
+  ZALnMOeDpMFhSHaYJUcKNhMFn }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

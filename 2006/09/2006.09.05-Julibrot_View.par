@@ -1,0 +1,107 @@
+;     Date: Tue, 05 Sep 2006 22:49:32 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-09-06 (Julibrot View [8])
+;       Id: <1.5.4.16.20060905225027.0e5f7bca@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 06, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's final visit to Seahorse Valley is a bit overwhelming, 
+; showing both the familiar Julia set and Seahorse Valley itself 
+; in the same image.  The outer shell of the fractal is the Julia 
+; set of Seahorse Valley, while the interior stuff is the valley 
+; itself, grossly enlarged and seen from an angle which is double-
+; rotated less than 1 degree from the Julia direction.  The two 
+; branches of Seahorse Valley can be plainly seen converging on 
+; the center of the image.
+; 
+; Don't try to visualize how it can be this way.  It's the path 
+; to mental congestion.  Even a four-dimensional student studying 
+; four-dimensional geometry would have trouble with it.  The 
+; enlarged and distorted view of the valley involves hyperangles 
+; with two independent arc measurements between planes that inter-
+; sect in a single point.  It's hard enough to visualize a hyper-
+; sphere, much less the whole convoluted Julibrot.
+; 
+; I rated the image at an 8.  In my opinion, it's worth it.  The 
+; colors were pretty much a happy accident, but being the creating 
+; fractalist, I can take any credit.  (As well as some occasional 
+; blame.)
+; 
+; The name "Julibrot View" is a simple description.  The render 
+; time of 28 minutes with passes=t may be cut in half by calculat-
+; ing the parameter file with passes=g, but the price is the loss 
+; of some detail.  The passes=b option finishes in 1 second, but 
+; misses the entire image.  The passes=1 option captures every 
+; last speck of detail, but takes over an hour to do it.
+; 
+; The passes=t version has been posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; from where it may be conveniently downloaded.
+; 
+; Heavy clouds and occasional light rain did not concern the new 
+; fractal cats, who glanced out the window once or twice between 
+; bouts of play.  When they finished their evening treats of tuna 
+; and cheese, I told them that they will soon be world famous with 
+; their pictures posted on the FOTD web site.  They continued to 
+; wash their faces.
+; 
+; With the work still up to date, I was not concerned either.  But 
+; the potential still exists for a rush job to come in around 
+; Thursday.  The next FOTD will appear in 24 hours, and will take 
+; us to East Valley to check the elephants that live there.  Until 
+; then, take care, and be fondly optimistic.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Julibrot_View { ; time=0:27:58.47--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 center-mag=0/0/0.85918
+  params=90.642/90.608/90.945/90.346/-0.75/0/0/0
+  float=y maxiter=100000 inside=0 passes=t
+  logmap=yes periodicity=10
+  colors=00057h67f77d87b97`A7ZB7YC7XDCWFHXGMYGRaGWeG\
+  _hGdlGhoIgpJfqKeqLerLdrLcsMcsMbtMauNauN`vN_vO_wOZw\
+  OYxOYxR_vTauVbsXdrZfqagocinejmglkinjlohnqgpsfrtdtv\
+  cvwbrrdnnfjjhffibbk_YmWUoSQpOMrKItHEuYFenGQ_OVLV_O\
+  T`RR`UP`XOa_MabKaeJahHbkFbnDbqCctAcw8cx7cvBfsFipIk\
+  mMnjQqgTshRphPnhOlhMjiLgiJeiIciGajFZjDXjCVjATj9RhA\
+  PfAOdBMcBLaCK_CIZCHXDGVDETEDSECQFAOF9NF8PJCRMGTPKV\
+  SOXVSZYW``_bccdfgfikhlojoslrwnuzowzqvzruzstztrzupz\
+  vozwmztkzrhypdxn`vlXtiUsgQqeMocJnaFl_CkaIibNhcSfdX\
+  efbcggbhl`iq_jvZcqXYlUSgSUcTV`UWYVYVWZSX_PX`MYbJZc\
+  G_dD`eA`USjJhsNgmRfhVebZdYbcTfbNjaInaDYcLIeTLhRNjP\
+  QjNSjLVjKXjI_lGapEctD_rJWqPTpVPo`LnfImkKkiMihOgfQe\
+  eSccUabW_`YY__WYmLOaUXcSVeQUgOSiMRkKPkzqlznlwllsjl\
+  phllflidlfbmb_m_YmWWmTUmPSmMQxb_xYXwTUrORdHxfIrgIm\
+  hIhjJbkJYlJT9ofUmX`lUbhZcecebhfZmhWriTwkPzlMzqzzpx\
+  zoqzojzncznXzmQzSmzIezH`z }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

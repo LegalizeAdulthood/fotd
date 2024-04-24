@@ -1,0 +1,84 @@
+;     Date: Sat, 9 Sep 2006 17:55:36 EDT
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 10-09-06 (Elephant Run [5])
+;       Id: <c0d.400ff44.32349258@aol.com>
+; ---------
+; 
+; FOTD -- September 10, 2006  (Rating 5)
+; 
+; Fractal Visionaries and Enthusiasts:
+; 
+; The big rush is in full swing, but I still found a few minutes 
+; for a trip to East Valley to see the elephants as they have 
+; never been seen before.  We are actually viewing the pachyderms 
+; from the Oblate direction, which is the plane determined by the 
+; imag(c) and real(z) axes of the Julibrot.  I named this orienta-
+; tion Oblate because when the Jilibrot is sliced through its 
+; origin in this direction, an oblate open area appears.
+; 
+; In this particular orientation, the elephants are not just 
+; sitting there, guarding their buds.  They are running as though 
+; fleeing a brush fire.  As they near the right edge of the image, 
+; they scrunch themselves up and dive down out of sight, eventual-
+; ly losing all resemblance to elephants and curving around to 
+; become part of the goofy eyes of the Julia sets of East Valley.
+; 
+; The straight line across the image around the elephants' feet is 
+; what I call a bridge.  These straight-edged features never 
+; appear in Mandelbrot or Julia sets, but they are quite common in 
+; the sets of the four odd planes of the Julibrot.  I have no time 
+; right now to explain why they are so straight, but I will do so 
+; when the rush subsides.
+; 
+; Inamed the image "Elephant Run" because I imagined I saw running 
+; elephants in it.  I rated it at a 5 because I put so little 
+; effort into it.
+; 
+; As for the fractal cats, they are doing fine, though wondering 
+; why they are getting so little attention.  If the work keeps 
+; moving, the next FOTD will appear in 24 hours.  If not, look for 
+; it on the following day.  Until whenever, take care, and even 
+; thinking about the fourth dimension can be hazardous to your 
+; health.
+; 
+; 
+; Jim Muth
+; 
+; 
+; START PARAMETER FILE====================================
+
+Elephant_Run { ; time=0:06:22.01--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  passes=t center-mag=+0.37097269855928490/-0.003112\
+  53640045051/584.8368/0.01431 params=0/90/2/0/0/0\
+  /0.2615/0 float=y maxiter=50000 bailout=10
+  inside=0 logmap=yes periodicity=10
+  colors=000P`KObKNeJMgJLjIKlIJnIIqHHsHGuHFqLEmPEiSD\
+  eWCaZCAbBAfABiACm9Dp8Et8FwAGsBJpDMmEPjGSgHWdJZaKaZ\
+  MdVNgSPkPQnMSqJTtGVwDWzAUw9St9Rr9Po8Nl8Mj8Kg7Id7Hb\
+  7F_6DX6CV6AS58P57N55K43H42F47J9CNDGRHLVLQZPUbTZfYc\
+  jagnelriqvmuzqeriQkaBdUZ1tY4uX7uWAuWCvVFvUIvTLvTNw\
+  SQwRTwRVwQUtQTrQSoQRmQQjQQhQPfQOcPNaPMZPLXPLVPKSPJ\
+  QPINPHLOGIOGGOFEOEBOD9OC6OB4OB2aVUaVWbWYbWZbW`cWbc\
+  WdcWedXgdXidXjeXleXneXoZUiSScLQYFOTHPUJQVKRWMSXOTY\
+  PUYRVZTW_UX`WYaYZbZ_b``cbadcbeecffcfeage`he_heZidX\
+  idWjdVkdUkcSlcRlcQmcPnbNnbMobLobKpbJpZzzVzzRzzNzzK\
+  zzGzzCzz8zz4zz1zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zzFzz\
+  CzzPzzRzzTzzUzzPzzLzzHzzDzzXzz`zzdzzhzzlzzpzztzzqz\
+  znzzkzzhzzezzczz`zzYzzVzzSzzQzzNzhKziHzjEzkCzlFzkI\
+  zjLziOziQzhTzgWzgZzfazeczdfzdizclzbnzbjz_fzXbzU_zR\
+  WzOSzLPzISzGVzFYzE_zDbzCezBgzAdzCczEZzGXzIUzKRzMPz\
+  NMzPJzRHzTEzVBzX9zYpzNfzT }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE======================================
+; 

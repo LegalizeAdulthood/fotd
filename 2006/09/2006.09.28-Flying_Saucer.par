@@ -1,0 +1,91 @@
+;     Date: Thu, 28 Sep 2006 23:52:01 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-09-06 (Flying Saucer [Not Rated])
+;       Id: <1.5.4.16.20060928235314.385760b0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 29, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image keeps us in the vicinity of the 2.003 rectangle.  
+; This time we view it, or what is left of it, in the Parabolic 
+; direction.  And what remains is very little.
+; 
+; The brilliant blue background in the center is the leftovers of 
+; our once near-perfect rectangle.  Such a total transformation is 
+; rarely seen.  The entire image consists of normally invisible 
+; 'inside' stuff made visible by the bof61 inside fill.
+; 
+; I put not enough effort into the work to give it a rating.  The 
+; name "Flying Saucer" was inspired by the vaguely UFO shaped ring 
+; of red elements surrounding the saucer.
+; 
+; The 6-3/4 minute wait for the image to calculate may be avoided 
+; by viewing the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Morning sun gave way to midday clouds and afternoon downpours 
+; here at New Fractal Central on Thursday.  The accompanying 
+; thunder caught the attention of the fractal cats, but not for 
+; long.  They somehow got into a boxing match, unarmed of course, 
+; and finished the day sulking at each other.
+; 
+; My day started in a rush, but came under control by the time the 
+; rain moved in.  Things look like they will be on the slow side 
+; well into next week, which can only mean better fractals.  The 
+; next glorious fractal will appear in 24 hours.  Until then, take 
+; care, and if 1 plus 1 equaled 3, what kind of change would it 
+; cause in the world of fractals?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Flying_Saucer { ; time=0:06:40.19--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=-0.00001840140143798/0/32447.2/0.01219/\
+  -90/-1.23373533611470521e-014
+  params=0/90/0/0/-1.7435/0/0.00019/0.07388/2.003/0
+  float=y maxiter=275 inside=bof61 periodicity=10
+  colors=000zhkzikzkOzkOzkOzkOzkOzkOzjQzkPzkOzkNKmzo\
+  lL68y87J97tA7rB7pC7nD7lE7jF6hG6fH6dI6bJ6`K6ZL6XM5V\
+  N5TO5RP5PQ5NR5LS5Ji5HW9IYDI`GIbKIeOIzRIjVIlZIoaIqe\
+  ItiIzzzmZRdM_X9gVAjTAmRzpQBrOBuMBxLBzIJxFRvCZt9fr6\
+  nqDkpKhoReoYbnd_nbamabl`cl_dkZekYfjXgjVhiUiiTjhSkh\
+  RlgQmgPnfOofRkcUhaWd_ZaYaYWcVUfRRhOPkKNnHLpDJsAHu7\
+  Ft9EtAEsBEsCErDErEDqFDqGDpHDpIDoJDoKCnLCnMCmNCmOCl\
+  PBlQBkRBkSBjTBjUBhUGfUKdUObUS`UBZU_XUdVUhTUlRUpPUt\
+  OUxRTvUTuXTt_TsaSqdSpgSojSnlSmkRnjQniQnhPngPnfOneO\
+  ndNncNnbMoaLo`Lo_KoZKoYJoXJoWIoVIoWJrYLsZNt`PtaQub\
+  SvdUveVwgXwhZxi_ykaylczmdzlcvkcsjcojclichhcegcagcZ\
+  fcVecSecPdaQc`RbZSaYT`XU_VVZUWZTXYRYXQZWO_VN`UKzTK\
+  bSJcSIdRGeQFfPAgOChNBiM9jL8kL7l6lh7fc8`Z9VUAPPBJKB\
+  EFCDGDDGDDHEDHEDIFDIGCIGCJHCJHCKICKICLJBLKBLKBMLBM\
+  LBNMBNMBNLCPKDQKERJFTIGUIHVHIXGJYGKZFK`FLaEMbDNdDO\
+  eCPfBQhBRiASjASk68k68r000 }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,101 @@
+;     Date: Sun, 24 Sep 2006 23:32:45 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-09-06 (Nobody's Perfect [Not Rated])
+;       Id: <1.5.4.16.20060924233353.2aef7d9c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 25, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is titled "Nobody's Perfect".  The body I am 
+; referring to is myself.  I recently wrote that the strange 
+; rectangle appears only in the Julia sets of the Z^(2.003)+C 
+; Julibrot.  But today, just to be double sure, I carefully 
+; checked the Mandelbrot aspect of the area.
+; 
+; Nobody could have been more surprised than me when I found the 
+; near-perfect rectangles scattered everywhere.  To make things 
+; even worse, there are Mandelbrot midgets in the area, surrounded 
+; by empty rectangles.  All this goes to show that, just because I 
+; have been writing the FOTD for over 9 years, makes me no expert 
+; in the field of fractals, which remain unpredictable.  I doubt 
+; that anyone including Mandelbrot himself could claim to know any 
+; more than a tiny part of all there is to know about fractals.
+; 
+; Today's image shows a most curious feature, which almost looks 
+; like a living figure.  It has round holes and rectangles every-
+; where.  The quadratic midgets within it are not that difficult 
+; to find, but I will show none until the month ends.  After all, 
+; this is supposed to be a month without a midget.
+; 
+; The render time of 7-1/2 minutes may be ignored by visiting the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the GIF image of the scene there.
+; 
+; Sometimes it was cloudy here at New Fractal Central on Sunday, 
+; and sometimes it was almost clear.  There were even a few drops 
+; of rain in the morning.  But the temperature reached a pleasant 
+; 75F 24C, and the fractal cats totally ignored it.  A friendly 
+; cat tussle got a bit out of control at one point, but the duo 
+; quickly made up.
+; 
+; My day was good enough.  With any luck, tomorrow will be the 
+; same.  But I think that a rather sizable job might come in by 
+; afternoon.  If all goes well, the FOTD will appear before the 
+; job arrives.  Until next time, take care, and be of good cheer 
+; even if your team lost the big game.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Nobody's_Perfect { ; time=0:07:32.86--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4
+  center-mag=-0.00000032538104575/-0.000000103263196\
+  45/2.43078e+008/1/-52.5/-1.14117049143658278e-013
+  params=0/0/0/0/-1.7435/0/0/0/2.003/0 float=y
+  maxiter=4500 inside=0 periodicity=10
+  colors=000OZkLYmJXoGWqEVsBUu9Tw7Tx9SwBRvCQvEQuFPtH\
+  OtIOsKNrLMrNLqOLpQKpRJoTJnUInWHmXHmWFkWEiWDgWCeWBc\
+  WAaW9_V8YV7WV6UV5SV4QV3OV2NW1MX1MX1MY1LY1LZ1LZ1L_0\
+  K`0K`0Ka0Ja0Jb0Jb0J`4M_7PYBSXEVWIYUL`TPbSSeQWhPZkO\
+  bnMeqLitKlvJjtJhrIfqIdoIbmH`lHZjGXhGWgGUeFScFQbEO`\
+  EMZEKYDIWDGUDFTFJVHMXIPZKS`LVaNYcO`eQdgRgiTjjUmlWp\
+  nXspZvr_ys`xtawtbwtbvucuuduudtuesvfsvfrvgqvhqwipwi\
+  owjowknxkmxlmxmlxmkynkyojyojyjdwf_vaUuYPtTKrPEqK9p\
+  G4oJ5lL6jN7gP8eS9bUA`WAYYBW`CTbDRdEOfFMiGJkGHmHEoI\
+  CrJ9tK7vL4xM2zM0tN1oO2iO3dP4ZP5UQ6PQ7RO9TNBVMDXLEZ\
+  KG`JIbIKdHLfFNhEPjDRlCSnBUpAWr9Yt8ZoDXkIWgNVcSUZXS\
+  VaRRfQNkPJpOLlKNhGPeDRa9SZ6U_6Wa7Yb7_c7ae7cf7eh7gi\
+  7ij7_d8QZ8GT86N89SCCWFF_JHdMKhQNlTPpWNoULnTJmSIlRG\
+  kQEkPCjNBiM9hL7gK5fJ4fI7eHAdHCcHFcHIbHKaHN`HQ`HS_H\
+  VZHXZHU_FS_DP_CN`AK`9I`7Fa5Da4Aa28a19c4Ad6Be8CfADh\
+  DEiFFjHGkJHmMYacV`eT_gQZi }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

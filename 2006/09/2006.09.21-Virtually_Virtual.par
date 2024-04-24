@@ -1,0 +1,101 @@
+;     Date: Fri, 22 Sep 2006 00:07:16 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-09-06 (Virtually Virtual [Not Rated])
+;       Id: <1.5.4.16.20060922000822.2fd7d17e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 22, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The day started normally enough on Thursday here at F.C.  When 
+; I checked my e-mail, I found that I had won three lotteries that 
+; I did not buy tickets for, and I also needed to verify my identi-
+; ty for three internet banking accounts that I do not have.  One 
+; would doubt that anyone would actually fall for these scams, but 
+; from the way they keep proliferating, it is hard to believe that 
+; they totally fail to catch a few suckers.  Maybe I should start 
+; selling certified authentic Mandelbrot sets.
+; 
+; Today's striking image consists almost entirely of 'inside' 
+; stuff made visible by the 'bof61' fill.  It is another variation 
+; of the strange rectangle in one of the Julia sets of the 
+; Z^(2.003)+C Mandeloid.  The orientation is rotated only one 
+; degree toward the Elliptic plane, but the result is a very 
+; unusual variation.
+; 
+; The rectangle is not really there.  When the inside is set to 
+; the normal flat black, there is no sign of the rectangle.  It 
+; has become a virtual rectangle.  But the rectangle was virtual 
+; from the start, so now it has become virtually virtual, which is 
+; what I named it.
+; 
+; The 'bof61' inside fill is not the only one that works with 
+; today's image.  The 'fmod' fill also works quite well, and the 
+; 'zmag' fill works reasonably well also.  The other inside fills 
+; simply color the inside areas a flat color.
+; 
+; I did not rate the image, but if I had, it would probably have 
+; earned a rating of 8 or 9.  The passes=b option not only works 
+; fastest with the image, it is by far the most interesting one to 
+; watch in action.  The render time of 9-1/2 minutes will be irrel-
+; evant if the image is viewed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy skies and a brisk high temperature of 68F 20C made 
+; things reasonably pleasant for the fractal cats, who spent the 
+; day indoors, unconcerned with the outside conditions.  The light 
+; work load made my day pleasant also.  The next FOTD will appear 
+; in 24 hours.  Until then, take care, and if someone offends a 
+; fractal, expect no violent protest.  Fractals are very peaceful.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Virtually_Virtual { ; time=0:09:24.40--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=b
+  center-mag=-0.00368788/0/42.12754 params=90/0/89/0\
+  /-1.7435/0/0.00019/0.07388/2.0031/0 float=y
+  maxiter=1500 inside=bof61 periodicity=0
+  colors=000wwwzzzzzzzzzpvxfnsjdrP_kHTf8Lc1FZ09X08V4\
+  7U88S00CE7PH5PL4OP4NV4N00Bf4Mk5Nf5Nc6N`6O60BU7NR7N\
+  M7MK7OJ9O3A`FBPDCPBBR7BR5CR1C`0CS0CS0BV0BX0BY0Ae0A\
+  b0Ac0Af09h09i08m09n18p18x17u28w26r37z38x27r27u27s1\
+  7n27p28p18k17m18k17i17h18h07b07e08cM8b07`07`77R55S\
+  74OU2V91GB0DD0AG08J05`0MP01R02M12S23U54g5GV85V95SA\
+  5XC5YE5hM5ZH7`J7YK6bN7bO7hS8cS8eV9bW8fY9fZ9kXAhbAi\
+  cAidCkfCkgCmaDiiDikDimFinFipFpeFisHiuHhwIhxIizJvbH\
+  frKemLeiNdfNcbOicQcZRcXTcWUcWWbXYg__ZXYYYYYYYZYZ`_\
+  bkZc`_e`ah_`i_`mZanY`rWasVbwUbxUbzGae7hP0iB0n00c44\
+  VAAMFo`ILDPT6Ya0ej0mf2heccbG_`OYYXXXXWZeUZnRYxOYzN\
+  YzOZsQYmRYeTWZTUUUVUVVOUXJWXDXY8ZY3`xpzunzrlxpkumi\
+  rjgnigkedhccebbbZZZXXXUUURRROOOOOOMMMJLJGLHFJGCIDA\
+  IA8H85G54G33H42I51J61L71M80M90OA0PB0RC0SD0UE0UG0VG\
+  0XI0YJ0ZK0ZL3nZDzm4rZ0eL0`N0YO0VQ0SQ0PU1NV2KY3JZ3G\
+  b5Ec7Df7BhBGkFJmJNnOSrQVs }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

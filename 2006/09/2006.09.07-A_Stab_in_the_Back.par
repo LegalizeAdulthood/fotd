@@ -1,0 +1,105 @@
+;     Date: Thu, 07 Sep 2006 22:23:05 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-09-06 (A Stab in the Back [7])
+;       Id: <1.5.4.16.20060907222402.29d7e266@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 08, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I goofed.  In yesterday's FOTD I stated that it would take 
+; 10^64 transfers to solve the Tower of Hanoi puzzle.  Actually, 
+; it would take only 2^64 transfers.  This means that time is 
+; running out faster than we thought.
+; 
+; Today's image might be the cover of a cheap horror novel about 
+; a homicidal maniac, but it is actually an almost-Julia set of 
+; East Valley.  The outer shape of the Julia set is there sure 
+; enough, and the symmetrically placed bubbles in the interior are 
+; as expected, but the intruding dagger certainly does not belong 
+; in such an otherwise serene image.  That dagger inspired the 
+; name "A Stab in the Back".  The rating of a 7 seems about right 
+; for the picture.
+; 
+; Actually, the dagger is East Valley itself, hugely enlarged and 
+; rotated out of position.  How can it be this way?  For a hint, 
+; consider the hugely increased length of your shadow when the sun 
+; is setting.  The shadow is stretched in one dimension by the 
+; oblique projection.  But in four-dimensional space, an object's 
+; shadow may be stretched equally in two dimensions by projection, 
+; which amounts to enlargement.
+; 
+; The formula is a new one with a variable escape radius, written 
+; specially for today's image.  The bubbly effect was achieved by 
+; rendering the image with the inside set to 'bof61'.  The outside 
+; consists of the usual equal-iteration bands.  The extreme bail-
+; out of 25100 was necessary to give a few spare bands for the 
+; highlights on the bubbles.  The slight horizontal stretching is 
+; just for effect.
+; 
+; The render time of under 5 minutes will try no one's patience, 
+; unless they have more important things to do.  But what could be 
+; more important than calculating a fractal never before seen?  
+; The unfortunate fans with SOTA units that crash when they hear 
+; the word 'Fractint' will find the finished image posted in GIF 
+; format on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Thursday started foggy here at New Fractal Central, but by 11am 
+; the fog burned off, leading to a perfect sunny afternoon with a 
+; temperature of 81F 27C.  The New Fractal Cats were too busy 
+; romping with each other to notice the sun.  They stopped misbe-
+; having only when it was time to enjoy their evening treats.
+; 
+; My day was busier than average, and the work will only get worse 
+; over the next few days.  I'll try to keep the FOTD going during 
+; the rush, but there are no promises.  The next FOTD might appear 
+; in 24 hours.  (I'll give 50-50 odds of it appearing.)  If it 
+; fails to show up, check for it the following day.  Until next 
+; time, take care, and dimensions may be all in the mind, but in 
+; which dimension is the mind?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Stab_in_the_Back { ; time=0:04:49.68--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JulibrotZ-New passes=1 center-mag=0/0/\
+  0.8935863/1.0347 params=2/0/0.2501/0/0.0003/\
+  -0.0004/25000/0 float=y maxiter=10000
+  inside=bof60 logmap=yes periodicity=10
+  colors=000isvfoqclg`iZYfWVcSS`PPYMMVJJSGGPDGMEEKAC\
+  J6FJ1II3LJ5OK7RL9UMBWODYQF_SHaUJbWLcYNd_PcaRbbTacR\
+  `dU_dX`e_afbbfechgchicikcimcjocjqcksckuckwckxckzN4\
+  OWCPdLQmTRv`SuZQtYOsXNrWLqVJpUIoTGnREmQDlPBkO9jN8i\
+  M6hL5eN7bP9_RAXTCUVESXFPZHM`JJbKGdMEeND`PDXRDSSCOU\
+  CJVCFXBBZB6_B2aA0bA0dA0eO3`aHWnVRoTPoROoQNoOMoMLpL\
+  JpJIpHHpGGpEFpDEnGFmIGkKHjMHhOIgQJeSJdUKbWLaYM__MZ\
+  aNXcOWeORSRMETH0VK2UM3TO4SR5RT6QV7PY9O_ANaBMdCLfDK\
+  hEJjFIkINlLRmOVnS_oWcp_gqclrgpskttoxupwwqvxswytxzu\
+  yzvzzwzzxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:JulibrotZ-New {; Jim Muth
+; Draws oblique slices of order n Julibrot Figure
+; P1 defines power of Z, P2 determines center of slice
+; P3 determines angle of slice
+z=pixel, c=p2+(pixel*p3):
+z=z^p1+c,
+|z| < p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

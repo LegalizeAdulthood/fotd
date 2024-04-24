@@ -1,0 +1,98 @@
+;     Date: Mon, 04 Sep 2006 23:44:09 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-09-06 (Is This Seahorse Valley? [7])
+;       Id: <1.5.4.16.20060904234503.2a0f7f02@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 05, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Seahorse Valley never looked like this before.  The unexpected 
+; shape inspired the name "Is This Seahorse valley?"  But the 
+; image most certainly is one of Seahorse valley.  The scene is an 
+; oblique view of the valley, rotated 13 degrees from the Julia 
+; orientation toward the Rectangular orientation.  If anyone 
+; doubts this, change real(p1) to 90 and watch the Seahorse Valley 
+; Julia set appear.  And while you're at it, change poth parts of 
+; (p1) to zero and watch Seahorse Valley itself appear at the 
+; center of the screen, awkwardly rotated 90 degrees.
+; 
+; With all these unfamiliar aspects, what shape then is the entire 
+; Seahorse Valley area of the Julibrot?  It is a tapering four-
+; dimensional wedge that terminates in a sharp plane.  A sharp 
+; plane would describe the razor edge that a 4-D man would use to 
+; shave his chin, just as a 3-D man uses a blade with a sharp line 
+; as the cutting edge.  Yes, I know it's silly to think that a 
+; plane could be sharp, but the fourth dimension makes many imposs-
+; ible things possible.  A sharp plane could extend indefinitely 
+; in all directions, yet a 4-D man could cut himself seriously if 
+; he carelessly touched it.
+; 
+; Thank goodness we can see our fractals only two dimensions at a 
+; time.
+; 
+; The included parameter file of today's image runs in a little 
+; over 1-1/2 minutes.  The image is also conveniently available 
+; for download on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; I'll probably post a few more unexpected aspects of Seahorse 
+; Valley before moving on to East Valley, which, if anything, is 
+; even more varied than Seahorse Valley.
+; 
+; The weather turned quite pleasant here at New Fractal Central on 
+; Monday, with warm sun and a temperature of 73F 23C.  The fractal 
+; cats enjoyed the fine weather as they sat on their scratching 
+; posts, soaking up the sun.  My day was reasonably quiet, but 
+; that big job is still looming for later this week.  The job will 
+; not arrive tomorrow however, so expect the next FOTD to be 
+; posted on schedule in 24 hours.  Until then, take care, and a 
+; four dimensional man would probably cut himself in half if he 
+; stepped on one of our sidewalks.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+IsThisSeahrsValley { ; time=0:01:39.03--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XY-ZW-new function=flip/ident
+  passes=1 center-mag=0/0/1.127829/1/-90/-1.2337e-014
+  params=77/90/2/0/0/0/-0.75/0 float=y maxiter=50000
+  inside=255 logmap=yes periodicity=10
+  colors=000E2hC2iA2p82o62n40m50l60k70j70i80h90gA0fA\
+  0eB0cC0aD0_D0XE0UF0RF5OCAKAEH7HL5KQ2LV0MZ4PZ8SZCUZ\
+  GXZJ_ZMYZOWZQU_SS_UQ_WO`YM`_K`aIacGaeEagCbiAbk8cm6\
+  co4bq4aq4`p4_p4Yp4Xp4Wp4Vo4Uo4To4Ro4Qn4Pn4On4Nn4Mn\
+  4Km4Jm4Im4Hm4Go2Em4Fl6Fj7Gi9GgAGfCHdDHcFHaGI`IIZJI\
+  YLJWMJVOJTPKSRKQTKPULNWLMXLKZMJ_MHaMGbNEdNDeNBgOAh\
+  O8jO7kP5mP2qR4nP5kO7hM8eL9bJB`ICYGDVFFSDGPCINAJNFK\
+  NKMNPNNUPNUONUOOUPOZROcTOhVOmTOgROaPOWNOQLSJJWDH_7\
+  Eb0Gc1Ic2Jc2Ld3Md3Od4Pd5Re5Se6Ue6Vf7Xf8Yf8_f9`g9bg\
+  AcgBehBfhChhCihDkiEliEniFoiFnjEnkEnkEmlDmlDmmDmnDl\
+  nCloCloCkpBkqBkqBkrBjrAjsAjtAit9iu9ju9kv9kw8mx8oy8\
+  rz7sz8uz8uz8sz8qz9nz9lz9jy9ix9hwAfvAfuAftAftBftBft\
+  BesBesBesCerCerCdrCdqDdqDdqDdpDcpDcpEcoEcoEeoEgoFi\
+  oEkoEmoEooDqoDsoDuoCwoCxoCzoCzoBzoBzoBzoAzoAzoAzo9\
+  zo9zo9zo9zo8zo8zo8zo7zo7zo7zz7zz8zz9zzAzzBzzCzzDzz\
+  EzzFzzGzzHzzzzzzzzzzzzzzz }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 

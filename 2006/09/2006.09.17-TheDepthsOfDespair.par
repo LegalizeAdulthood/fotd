@@ -1,0 +1,100 @@
+;     Date: Sun, 17 Sep 2006 22:52:19 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-09-06 (The Depths of Despair [7])
+;       Id: <1.5.4.16.20060917225323.29d75b6e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 18, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I promised that September would be a month without a quadratic 
+; Mandelbrot midget.  And my promise remains unbroken.  Yes, I 
+; realize that a hole of sorts must lie at the center of today's 
+; image, but it is totally invisible, lying far beyond the range 
+; of conventional math, and even if we could reach it, the midget 
+; would look nothing like a miniature Mandelbrot set.
+; 
+; The scene is located in a twisting and spiraling, cut-off fila-
+; ment of the Z^(1.15)+C Mandeloid as it appears 115 levels up the 
+; logarithmic ladder.  Midgets are quite difficult to find in 
+; Mandeloids of such a low order, and were it not for the 'fmod' 
+; inside fill, I would likely have never found the one that lies 
+; invisibly at the center of today's image.
+; 
+; I named the image "The Depths of Despair".  After all, I know of 
+; no law that says fractals must always be cheerful.  The image is 
+; really not all that gloomy however.  True, it holds a lot of 
+; blue, but the brilliant white highlights add a kind of sparkling 
+; vivacity that chases away the blues and brings a ray of hope.
+; 
+; The rating of 7 reflects how I feel about the image.  The extra 
+; effort I put into the coloring raises the otherwise average 
+; scene to an above-average one.  The render time of 4-3/4 minutes 
+; may be eliminated by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the image there.
+; 
+; A damp and foggy morning gave way to a brilliantly sunny after-
+; noon here at New Fractal Central on Sunday.  The temperature 
+; reached 77F 25C, but the fractal cats were more interested in 
+; finding mischief than watching the weather.  Cassie managed to 
+; overturn a waste basket and spread the contents across the 
+; floor.  And I'm not so sure Nicholas was as innocent as he 
+; pretended.
+; 
+; My day was pleasantly quiet.  Hopefully, more of the same will 
+; follow.  The next FOTD is near certain to follow in 24 hours.  
+; Until then, take care, and be at one with the object of your 
+; choice.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheDepthsOfDespair { ; time=0:04:45.83--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.78107692488533510/-2.839509333090241\
+  00/4.341345e+011/1/7.49828937455790534/0.001459075\
+  1429640683 params=1.15/0/115/0 float=y maxiter=1200
+  inside=0 periodicity=10 mathtolerance=0.05/1
+  colors=00083i82e92`91X91SA0OzzJuatnWngRh`LbUGXNARG\
+  5LCozBdpBVfAKYAAO_fFYcFXaFVZFUXFSVFRSFPQFONFNLFLJF\
+  KGFIEFHBFF9FE7FC4FB2Fjh3he4fc5d`5bZ6`X7ZU7XS8VQ9TN\
+  9RLAPIANGBLECJBCH9DF7ED4EB2F5Iw6Ht6Gr6Fp6En7Dl7Dj7\
+  Ch7Bf8Ad89b89`88Z87X96V95T94R94PA3NA2LA1JaNDdRGfUI\
+  hYLk`NmcPogSqjUtmWvqZxt`zwbtwcowdiwddwe_wfUwfPwgKw\
+  hEwh9wi4wi5qeA1F6kb6e_7_X7UU8OR9IO9CLA6IOE2ND3MC4L\
+  B5LB5KA6J97I87I88H79G69F5AF5BE4BD3CC2DC2DB1EA0F3ot\
+  4io5dk6_g6Vc7Q_8KV8FR9ANA5JUDBQACN8DK6DG4ED2FBDjAB\
+  fAMhRQvA7YA6NA5RA3OA2LA1IE9cD8_D7WC6SC5PC4NB3MB2MA\
+  1KA0Hzzzvwhildcg_YVWSNSMFNG7JOB4NA5M96L87K78J78I69\
+  H5AG4BF3CE3CD2DC1EB0FmzUPzQmzMFFIupYqkWmgVicTf_SbW\
+  QZSPWONSKMOGKLzJH8HD4GolQieOcZMYSLSLJMzIG7GcFuaEr`\
+  DpzznzzlWBjVzhUAfzzdR8bP7`O7ZzzXL5VK5TzzRH3PF2NE2L\
+  C1JB0HoKxfGnZCeQ8XI4OvwWooTihRc`PYUNSMLMFJG7HeuobJ\
+  iYGdUD`QAWM8SI5NE2J74s83n }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
