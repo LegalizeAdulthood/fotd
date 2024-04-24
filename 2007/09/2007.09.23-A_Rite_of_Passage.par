@@ -1,0 +1,98 @@
+;     Date: Sun, 23 Sep 2007 10:54:50 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 23-09-07 (A Rite of Passage [7])
+; 
+;       Id: <1.5.4.16.20070923105533.2abf15b4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 23, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To begin, I must apologize for the lateness of the FOTD.  But we 
+; were out all day Saturday, leaving no time for a proper fractal 
+; search.
+; 
+; With its rating of a 7, today's fractal turned out unexpectedly 
+; well, considering the little time I spent on it.  The expression 
+; being iterated subtracts 2.3 parts of Z^(-1.75) from 2.3 parts 
+; of Z^(-1.25) and adds (1/C).
+; 
+; The resulting parent fractal contains twin Mandeloids connected 
+; at the hip and surrounded by a large field of chaos.  This chaos 
+; is filled with many small Mandelbrot sets, with today's scene 
+; being located in the East Valley area of one of the two largest 
+; sets.
+; 
+; The image is potentially quite a good one, maybe an 8 or a 9, 
+; but as it is, I was too hasty with the coloring, which tends to 
+; the muddy side.  Still, it's an interesting fractal, well worth 
+; a look.  The name is pure whimsy.
+; 
+; To take that look, run the included parameter file or view the 
+; image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; But because of the lateness of this FOTD, it may be a little 
+; while before Paul gets the image posted.  So be patient.
+; 
+; The weather was quite good here at Fractal Central on Saturday 
+; (sunny, 86F 30C), which is why we decided to go out and have 
+; fun.  The fractal cats slept through most of the day.  The next 
+; FOTD will arrive at this same spot, on time in around 12 hours.  
+; Until then, take care, and please curb your fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Rite_of_Passage  { ; time=0:04:59.89-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+2.419082571631869/+1.824668113269568/\
+  1.26264e+011/1/115/0 params=2.3/-1.25/-2.3/-1.75/\
+  0/0/0/0 float=y maxiter=3400 inside=0 logmap=570
+  periodicity=10 mathtolerance=0.05/1
+  colors=0009LYBPWCPVDP`FKeGFkHBpNPkSbgd2yZ1rU1lO0fJ\
+  0`E0VF3SG6QH9NICLJFIJIGKLELOBMR9NU6OX4OZ2NX7MVBLTF\
+  KRJJPOINSHLWGJ_FHdEFhDDlDCpGP_J`KLl4Jm6In7Hn8Go9Fo\
+  ADpCCqDBqEArF9rG7sI6tJ5tK4uL3uMAoGGjBNe5T`0Ra5Qb9O\
+  cDNdHMdMKeQJfUHgYGgbFhfDijCjnBjrCipChoCgmCflCekCdi\
+  CchDbgDaeD`dD_cDZaDY`DY_KSVRMRYHMhBIm6Ec9AIB74D49I\
+  6EN7IS8NUAUmBcmCmmEwpFwuGwzHwtIwoJmmKcmLYmMUmNRmOO\
+  mPLmQImRFmSGmTHmTImTImTJmUKmUKmULmUMmUNmVNNVOPVPQV\
+  PRVPSRPTOOUMNULMUKLUJKUIJVHIVGHVFGVEFVDSgbK`MPfVfH\
+  `dKacNabQa`Ta_WaZZbYabWdbVgbUjbgiwejudjscjqbjp`kn_\
+  klZkjYkiWlgVlzUlc0LD0VMXcVeHocJnaKmMRlKSkJUiHVfVSc\
+  TTcaKb_KaZYeXcdWjcUkbYdHXKMWKQVKVUkZzVAzXDzZGz_Iza\
+  LzcOzdQzfT_hWYiYVk`SaPTcRTdSTeUTfVTgWThYTiZTZ`TZaK\
+  ZbMZbOZbQZbSibqdVmhXimYfrZbv__z`Wzaazu_zrZzpYzmXzk\
+  WziVzfUzd7zf9zeAzeCzeDzeEzdGzdHzdIzdKzcLzcNzcOzcPz\
+  bRzbSzbPzrQzoRzmRzk9zU9zP }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

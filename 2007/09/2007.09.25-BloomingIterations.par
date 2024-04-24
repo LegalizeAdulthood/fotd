@@ -1,0 +1,105 @@
+;     Date: Mon, 24 Sep 2007 21:44:48 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 25-09-07 (Blooming Iterations [7])
+; 
+;       Id: <1.5.4.16.20070924214532.2a575e04@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 25, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is part of a parent that is on the verge of 
+; turning inside-out.  (To turn the parent fractal inside-out 
+; change real(p3) from zero to -0.2)  This parent fractal, with 
+; its 2 large bays, resembles a figure 8, with lots of added 
+; attractions in the form of interesting nooks and crannies to 
+; explore.  Today's scene is located in an area near the origin 
+; that is easier seen than described.  This area appears to be 
+; fragments of two or more overlapping bits of Mandeloid stuff.
+; 
+; In addition to a very critical value of the real(p1) and 
+; real(p2) parameters, the imag(p3) parameter, which sets the 
+; bailout radius, is also a bit critical.  Changing the first two 
+; parameters totally loses the scene, while changing the third to 
+; a lower value loses the scene also.  Raising the third parameter 
+; to a higher value works subtle but interesting changes.
+; 
+; I named the image "Blooming Iterations".  There is no good 
+; reason why I gave the image this name except that it sounds 
+; strange enough to be the name of a fractal.  The rating of a 7 
+; was well earned by the 30 minutes I spent tweaking colors.
+; 
+; The calculation time of 1-1/3 minutes on the P4-2000mhz Dell 
+; fireball stretches to around 8 minutes on the tired old P200mhz 
+; unit.  As always, the best and easiest way to see the image is 
+; to go to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view it there.
+; 
+; Another perfect day prevailed here at Fractal Central on Monday. 
+; The cloudless skies and temperature of 81F 27C could hardly be 
+; improved upon.  At least, that's what the fractal cats thought 
+; as they stretched out in the sun coming in the side window.
+; 
+; My day was neutral -- not busy, not boring, just average.  The 
+; next FOTD is due to appear right here in 24 hours.  Until then, 
+; take care, and if fractals are made of numbers and the universe 
+; is a fractal, is the universe then made of numbers?  Or is it 
+; that numbers best describe what the universe *is* made of?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+BloomingIterations { ; time=0:01:23.64-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+0.17339511997376180/-0.105223649893324\
+  40/1529334/1/-90/3.88578058618804789e-016
+  params=-0.85/1.1/0.85/-1.1/0/-60/0/0 float=y
+  maxiter=1500 inside=0 logmap=162 periodicity=10
+  colors=050_CfdKzd5qe5qc7leAn_CfcDiWA`cDgT5W`AcQ5TY\
+  5aO5SV5WM5OP5SJ5PM5AF5AI50B50E505707TZ2mZ0zZCtbOgd\
+  ZUfkNqv5oz5uzzczzzz5ozzzvFfsJdqPboT`mWZkaZheXiiVdn\
+  TflRRzktiRzc8zd0rK0zW0iA0nP5c57iIAU5Eb5I85MQ7O0AR0\
+  CV0DZ0Fb0J`0Hd0Fh0Dk0Cs0Dm0Fh0Hb0JX0LR5NO8PICRCIT7\
+  MU0PU0RU0TU0TU0VU0XU0XU0ZU0`U0`W0bW0dW0dW0fW0hW0hW\
+  0iW0kW0mW0mY0oY0qY0qY0sY0uY2uY2vY2xY2x_2z_2z_2z_2z\
+  _5z_5z_5z_5z_5z_5za5za5za7za7za7za7za7ht7or5vn2zm0\
+  zk0zr0zi0z_AzTMzJXuAho5si5zf5zd5zd5zd5zd5zd5zd5zd5\
+  zd5xd5ud5sd5qf5if5df5Zf5Tf5Of5If5Cf57h50f50d52b55`\
+  57Z58X5AV5CO5AT5EX5Ib5Mf5Pi5Ro5Vs5Zx5bz5fz7hzAkzAo\
+  zCszDvzDxzLvzRuvYukcs`kqRpqPtsOvuMzuKzvIzvIzxGzxEz\
+  zCzzAzz0zzAzzKzxTzubzqkzmuzizzfzzbzzZzzXzzVzxVzxTz\
+  vTzvRzvRztVzt`zrfzrkzrqzrvzrzzrzzrzzrzzrzzrzzrzzrz\
+  zrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzrzzr\
+  zzrzzrzzrzzrzzrzzrzzrzzrz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

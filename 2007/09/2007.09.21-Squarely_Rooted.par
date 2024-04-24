@@ -1,0 +1,105 @@
+;     Date: Thu, 20 Sep 2007 22:17:56 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 21-09-07 (Squarely Rooted [5])
+; 
+;       Id: <1.5.4.16.20070920221837.0da7baf4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 21, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us back to the MandelbrotBC2 formula and the 
+; complex logarithmic hyperspiralling ladder.  Today however we do 
+; not need the ladder, since we explore the Z^(sqrt(2))+C fractal 
+; at its ground level.
+; 
+; The parent fractal is a most curious Mandeloid, with a triangu-
+; lar period-2 bud as large as the main bay and an unusually long 
+; zig-zagging main spike extending far into positive-imaginary 
+; territory.
+; 
+; Today's scene is located deep in a valley separating the large 
+; triangular bud from a large sub-bud on its northern edge.  The 
+; depth of the scene in the valley makes today's image much slower 
+; than the FOTD images of recent days.
+; 
+; I named the image "Squarely Rooted" because its exponent is the 
+; square root of 2.  I rated it at a hum-drum 5 because it is 
+; plagued by the excessive chaos that is so typical of fractals 
+; with exponents of Z in the range between 1 and 2.
+; 
+; The calculation time of 12 minutes on the P4-2000mhz computer 
+; would be near one hour on the old P200mhz unit.  So why not 
+; visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the image effortlessly there.
+; 
+; Another typical end-of-summer day prevailed here at Fractal 
+; Central on Thursday.  The morning fog lifted by 10am, leading to 
+; a sunny afternoon with a temperature of 82F 28C.  The fractal 
+; cats made the most of it by lounging in the sun streaming in the 
+; southwest window for most of the afternoon.  My day was neutral.
+; 
+; The next FOTD will be posted for all it is worth right here in 
+; 24 hours.  Until then, take care, and remember Fractint in your 
+; will.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Squarely_Rooted    { ; time=0:12:11.04-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=-0.1234698959\
+  7/+1.53149499923/3184551/1/90/3.88578058618805e-016
+  params=1.4142/0/0/-97.25 float=y maxiter=7200
+  inside=0 logmap=1174 periodicity=10
+  colors=00060K60K60K70K70J70I80H80I80J80K90L90M90NA\
+  0OA0PA0Q90RA0SA0TA0UB1TB2SB3RB4QC5PC6OC7ND8ND9NDAN\
+  DBNECMEDMEEMFFMFFMFFMFGLHHKIIJKJJLKINLIOMHQNHROGTP\
+  GUQFWRFXSEZTE_UDaVDbWCdXCeYBgZBh_Aj`Aka9la9la9j_6h\
+  Y3fW6dU9cSBdQEeOGfMJhKLiKOjLQkMTlNVmOYoQ_pRbqSdrTg\
+  sUitVlwVquWnsWlqXjoXhmXfkYdiYbhY`fZZdZXbZV`_TZ_RX_\
+  PV`NU`LS`JQaHOaFMaDKbBIb9Hb7F_6EY6DW5CU5AS49Q48N37\
+  L35J24H23F12D14E35E47E58E6AF7BF8DF9EFAGGCHGDJGEKGF\
+  MHGNHHPHIQHJSILTIMVINWIOYJPZJQ`JRaJScOPdTMeXJgaGhe\
+  DijAkn7ls4lz0mw2nt3oq4pn5qk6rh7se8tbAu_BvXCwUDxREy\
+  OFzLGzJHzGEpDBgB8Y85Q52K30E73BA6CD9EGCGKFHNIJQLKTO\
+  MWQO_TPbWRfcSjmUnzWkzXfzZ`z_VzbUzbPZbKRbKJaK9`KB_K\
+  D_KFZKGYKIYKK_OLbNNbSPbRQdQScQUcPWbOXaOZaN``Ma`Mc_\
+  LeZKfZKhYJjYJk_Oj`SiaWhc`gddfehfhcikZkmUnpPptBzrKr\
+  qSjp_bngVmoNcxChwFmwIrwLvwOzwRzwUzwXzvWzvWzuVzuVzt\
+  UztUzsUzsTzrTzrSzqSzqRzQH }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

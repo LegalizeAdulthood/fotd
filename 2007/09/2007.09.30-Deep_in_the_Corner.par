@@ -1,0 +1,108 @@
+;     Date: Sat, 29 Sep 2007 22:59:36 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 30-09-07 (Deep in the Corner [8])
+; 
+;       Id: <1.5.4.16.20070929230025.0db7c1f8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 30, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Early in my research with the MandelbrotMix series of formulas I 
+; found that the expression (Z^2)+(2*Z)+C is simply a more complex 
+; way to produce the Mandelbrot set.  Not wanting just another 
+; Mandelbrot set, I changed the (2*Z) in the expression to 
+; (2*(Z^0.999)), which resulted in a parent fractal that is almost 
+; but not quite a duplicate of the Mandelbrot set.
+; 
+; This parent fractal closely resembles the Z^(2.003)+C figure, 
+; though the chaos along the negative X-axis has no symmetry and 
+; is less orderly.  Today's image is located in a tiny valley on 
+; the east side of what once was the large minibrot on the 
+; negative spike, in an area that is filled with features that 
+; resemble tracks in a railyard.
+; 
+; I named the image "Deep in the Corner" because the elements in 
+; the upper-right (and lower-left) corners have a far greater 
+; iteration value than even the area around the minibrot at the 
+; center.
+; 
+; I rated the image at an 8 because I think it is worth it.  
+; Unfortunately, the calculation time of almost 15 minutes is 
+; rather lengthy.  But relief for fractal indigestion is available 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is posted.
+; 
+; Perfect weather prevailed once again here at Fractal Central on 
+; Saturday, and the fractal cats made the most of it.  They spent 
+; the better part of the afternoon lounging in the sunlight 
+; streaming in the side window.  At one time they had some kind of 
+; a quarrel going on, but whatever it was about, it ended before I 
+; found the cause.
+; 
+; My day was peaceful enough.  The next FOTD will appear in 24 
+; hours.  Until then, take care, and the theory of relativity 
+; tells us that time and space are not absolute, but change with 
+; the individual observer's relative motion.  If they appear dif-
+; ferent to different observers, how then can they be considered 
+; objectively real?  Perhaps the old song was right, and nothing 
+; is real -- not even fractals!  (But if so, it's still a lot of 
+; fun pretending they are real.)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Deep_in_the_Corner { ; time=0:14:45.35-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-1.74584369496664200/+0.005937502955490\
+  11/8.95604e+009/1/102.5/0
+  params=1/2/2/0.999/0/0/0/0 float=y maxiter=60000
+  inside=0 logmap=747 periodicity=10
+  colors=000OB`QEdSHhUKjWHlYMn_Rp`UraYsbauccwcexcgyc\
+  iyckxcmwcoxcqydszfuzhwzmyzrzzvzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzjYei_\
+  fibhhdihfkghmfjnfmpeoqdqsdstcuvcwwWujOtZGsM8rAAqFC\
+  pKEoOGoTInYKmaMlfNljQmkSnkUolWplYql_rmbsmdtnfunhvn\
+  jwolxonxoineeeW`XMXOCTF3VH4XI4ZK4`L4bN4dO5UQ5UU5iK\
+  5kK5U06UA6qK6sK6tK6oO8kHAfFCb8EZ1FX4IV6LT8ORBQPDTN\
+  FWLIZJK`HMcFPfDRiBTk9Wn7Yq5_sDatLbtTct`euUUUUbwhhk\
+  aiaVjSOrIHs9Jr8LK8NK8PK8RK8TX8VU8XS8cMHiGQoBYpEWqH\
+  UqKTrNRrQPsTOzcMtZKUKJudHvgFvjEUFTSERQEPODNNDLYDJJ\
+  CHICFGBDEBBWBAaCFNDJSENXER`FVeG_jGcoHgbIkkIofXhZSd\
+  YSiLIZETV7L`04P8AVFGoMMdTaX_Yofctmhyjfxhexedwccwaa\
+  vZ`vX_uVZuSKcQKcNKcLFcJKcGFcEKcCFrIKsN_sS`sYatbbtg\
+  ctZdcQeOUfPXgQ_hRbiSejTdkXbl_`mcZnfXojWpmXqlYrlZsl\
+  _tl`ulavlbwlcxldykezkfzkgzkhzkizkjzkjzkkzjlzjmzjzz\
+  jzzjzzzzzczzzzzzzrzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

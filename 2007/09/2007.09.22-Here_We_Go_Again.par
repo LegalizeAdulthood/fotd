@@ -1,0 +1,102 @@
+;     Date: Fri, 21 Sep 2007 22:25:02 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 22-09-07 (Here We Go Again [5])
+; 
+;       Id: <1.5.4.16.20070921222543.0d8ff090@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 22, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; "Here we go again", I thought as I struck the 'enter' key to 
+; create today's very fast fractal image.  How many times have I 
+; searched for interesting midgets in the fractals with exponents 
+; of Z in the range between 1 and 2?  And how many times have I 
+; come away only marginally satisfied?  Too many times to count!
+; 
+; Today's scene lies in the Z^(sqrt(2))+C Mandeloid as it appears 
+; 1.4142 turns up the logarithmic hyperspiral ladder, where it is 
+; little more than a shapeless bay surrounded by a field of chaos, 
+; with one dreary bud attached.  The image is located at the edge 
+; of the chaos on the west side of the shapeless bay.
+; 
+; I named the image "Here We Go Again" because I knew ahead of 
+; time from long experience that the result would not be worth the 
+; effort.  Still, I saw enough in the tortured little minibrot at 
+; the center to work a bit on the colors and declare the image the 
+; FOTD for today.
+; 
+; I could rate the result no higher than a 5, but a 5 is not too 
+; bad when the image calculates in a hyper-speedy 14-2/3 seconds.  
+; And even the little bit of effort required to load and run the 
+; included parameter file may be avoided by viewing the finished 
+; image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another near-perfect day prevailed here at Fractal Central on 
+; Friday.  The morning fog burned off by 10am, leading to a sunny 
+; day with a temperature of 84F 29C.  The fractal cats enjoyed the 
+; weather from the indoors, watching the squirrels gathering nuts.
+; 
+; My day was notably normal.  The next FOTD will be posted in 24 
+; hours, give or take a few.  Until then, take care, and might the 
+; secrets of the universe be hidden in the manifested abstractions 
+; known as fractals?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Here_We_Go_Again   { ; time=0:00:14.65-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=-1.20822656/\
+  +0.69457459/2303/1/-120/0 params=1.4142/0/1.4142/0
+  float=y maxiter=2000 inside=0 logmap=45
+  colors=000Q5KSAOUFSWNWYR__Vca_gcdkfinhmrjnvgkyagzS\
+  cyHZv7R6BU7FZ7Id8Mj8Po8Rm8Th8U`8WV8YO8ZI8ZDAZ9BZ5C\
+  Z1DW3JU4PS5VP7`N8fL9lJAqeXLbWJ`VHYUFWTDTSBRR9PR7PZ\
+  FPfMPzTPz_czNmzAmzA_eAcc9Hc8acYvYwkZjaZYSZLIZ8VhFf\
+  qMrzTisV`mWSfXJcYAcZ2c_7cZCcYHcXMdWRhVWlU`pTetSfrW\
+  fq_focfnfegadaYccUbcQacM`cIYcUVcdShoPszSrsVrmYrgSf\
+  WMcKHc8NcFSbMXkSUgUScVPcWNcXKcYIcZFc_Dc`DcYDcVDcSD\
+  fPDmMDsJDyGAjO7cV4ca9cdDcfHchLcjPclTjnXnpahjfcekZ_\
+  pcVtcQkcaccmWcyTcrRclPcfMc_KcUIcOGcIFcRFcZElgEwokP\
+  ulSplUklWflYal_XlaSlcNleJjgRhiYfkedmlcnsaip`dn_clZ\
+  djYegXgeWicVkaUmYUoUTqQTrNSsJStFSuCLvVEwmMxjTyg_zd\
+  fzamzZpzerzkozmmznjzphzqfzrAztazu_zvWzqTzlQzhMzczz\
+  JzzLzzTzz_zzgzznzzuzzozzizzczzYzzVzzTzzQzzOzzMzzNz\
+  zOzzPzzQzzRzzNzzJzzFzzBzz7zz3zz0zz5zzAzzFzzKzzPzzU\
+  zzYzzazzezzizzlzzpzzizzczzYzzSzzMzzTzzZzzdzzjzzpzz\
+  vzzuzztzztzzszzrzzrzz2zz2 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

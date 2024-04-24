@@ -1,0 +1,104 @@
+;     Date: Wed, 05 Sep 2007 22:59:36 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 06-09-07 (Too Much Too Soon [8.5])
+; 
+;       Id: <1.5.4.16.20070905230003.2acf15b4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 06, 2007 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's evaporated image probably sets a new record for FOTD 
+; gaudiness.  It lies in the parent fractal that results when 5.5 
+; negative parts of Z^(-1.4142) are combined with 1.1 negative 
+; parts of Z^(-4) and (1/C) is added.
+; 
+; This parent fractal is almost beyond belief.  It is a bloated 
+; Mandeloid with several large bays and a smoothly curved main 
+; spike that terminates at the center of a ring that is larger 
+; than the Mandeloid it springs from.  Today's image is found on a 
+; side-shoot of the main spike near the point where it ends at the 
+; center of the large ring.
+; 
+; I named the image "Too Much Too Soon" when I couldn't decide 
+; what to make of it.  The colors are basically accidental, though 
+; I did tweak a few registers to fine tune the palette.  The 
+; rating of an 8.5 could easily have been a 9 if the colors had 
+; been a bit more organized.
+; 
+; The calculation time of 75 seconds will offend no one.  Even on 
+; an 11-year-old P200mhz unit, the calculation will finish in 
+; about 7 minutes.  But on some over-qualified S.O.T.A. machines 
+; calculation can become problematical.  In this case, the easiest 
+; way to view the image is to visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image is or soon will be posted, and enjoy it there.
+; 
+; Wednesday here at Fractal Central was a bit too warm and brought 
+; a few too many clouds for absolute perfection, but with a 
+; temperature of 84F 29C and low humidity, it was close enough.  
+; The fractal cats were occupied watching a squirrel gathering 
+; material for its winter nest, and paid no attention to the 
+; weather.
+; 
+; My day was kept busy designing a logo to print on a tote bag of 
+; a health-care organization.  Oh well, I guess it's a living.  
+; The next FOTD image will appear in all its glory in 24 hours.  
+; Until then, take care, and go ahead and do it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Too_Much_Too_Soon  { ; time=0:01:15.52-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-14.19486797243935/+3.358196340354399/\
+  5.573916e+010/1/97.6365368770451738/-0.015089388127
+  params=-5.5/-1.4142/-1.1/-4/0/1e+100/0/0 float=y
+  maxiter=550 inside=bof61 logmap=82 periodicity=10
+  colors=000000C_cCaaCc_BeYBgWQ12SA9UJFWRLY_S_hYapcv\
+  lpsVZf2S`9IVG8ZaWavrcQ_hIimBsGXjqbkQflUemZgncio00r\
+  lzzqtzuqzrpponollnijlfhkcgj`eiYcgVbfSbePcdMcbJcaGc\
+  `Ed_GeXIfUKbRM_OOVLPQIRLFTHCVC9X76Y34lf1ne3od5pd7r\
+  c8scAtbCvaDwaFx`Hy`IlYF`VCPS9RVATYBV_CXbCZdD`gEaiE\
+  cdCd`AgS7iN6jJ4lE3mA1n60oA1oD2pG3pJ4pM5qP6qT6rW7rZ\
+  8ra9sdAsgBsjBbkVMkmlTYhV`eXcbZf_`iXalWWjUQhTKfSFdO\
+  JaLNZIRWFUTCYQ9aN6dLzlXuiYpfZkc_g``bYaYVbTScPPdLaZ\
+  HmTJlRKkQMjPNjOOiMQhLRgKSgJ`bMhZOpVRxRTuUVsWWqZXo`\
+  YmbZke_ig`fiadlbbnc`pdZseXufVwgXvdYubZt_`tYasVbrTc\
+  rRdnTdkUdgVddWd`XdYYdUZdR_eOaeKbcnD`lEYjFVhGTgGQeH\
+  NcIKaJH_KFZKG_MH_NH`OI`PI`QJaRJaSKbTKbULbVLcWMcXMc\
+  YTaWZ_UeYTkWRrUPxTOeNxfPvgQugRshSrhTpiVoiWmjXlkYkk\
+  Zil`hlafmbemccndbneag_VaUOWOHQJBOKCMKDKKEJKEHLFFLG\
+  ELGCLHAMI9MI7MJ5MK4MK6ON7PP9QSARUBSXDUZEVaGWcHXfIY\
+  huBDlFKcJRVNXMRcDUiCWgCYe }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,105 @@
+;     Date: Sat, 15 Sep 2007 19:36:05 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 16-09-07 (Dry Valley Ambush [4])
+; 
+;       Id: <1.5.4.16.20070915193640.2ba7af0c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 16, 2007 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Dry Valley Ambush".  I gave it this name 
+; because I was ambushed by it.  Dry valleys are symmetrical 
+; features that look like they have a midget at their centers, but 
+; when the symmetry is enlarged, it dies out in a flat blank area. 
+; A flat blank area is what I found when I eagerly dove into the 
+; broad double spiral in today's image, fully expecting to find an 
+; unusual midget at its center.
+; 
+; Due to my disappointment, I rated the image at a lowly 4.  I 
+; doubt that it is worth much more.  But with its clashing bright 
+; oranges and dark blues, there is a certain mischievousness about 
+; it that merits publication.  So I decided to change what should 
+; have been an immediate discard into the FOTD for today.
+; 
+; The parent fractal resulted when I combined 0.01 part of Z^(-77) 
+; with 0.01 part of Z^(79) and added (1/C).  This parent is little 
+; more than a thin ring of radius 1 centered on the origin, with 
+; the fractal stuff lying in the interior of the ring.  At first, 
+; the entire ring looks promising, but only the parts of the ring 
+; that lie on the X-axis are actually in the critical state.
+; 
+; Today's scene is located near the point where the ring inter-
+; sects the negative X-axis.  Because of the location, I expected 
+; more at the center of the spiral in today's image than I found 
+; there.  But fractals are unpredictable, and one is sometimes un-
+; expectedly surprised or, as in today's case, disappointed.
+; 
+; At least, the image is a fast one, finishing in 53 seconds on 
+; the fast P4-2000mhz machine.  It would take near 5 minutes on 
+; the old P200mhz unit.
+; 
+; The finished image is posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A slightly chilly but otherwise near perfect day prevailed here 
+; at Fractal Central on Saturday.  The fractal cats enjoyed the 
+; pigeons scrounging for food on the sidewalk.  I enjoyed having 
+; the work caught up, even though the day's fractal left something 
+; to be desired.  The next fractal will appear in 24 hours.  Until 
+; then, take care, and fill in life's blanks with fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Dry_Valley_Ambush  { ; time=0:00:52.79-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-1.00587732385816700/+0.000000760828969\
+  08/5965409 params=0.01/-77/-0.01/79/0/0/0/0 float=y
+  maxiter=310 inside=255 logmap=50 periodicity=10
+  colors=0000AK0AK0AK0AK0AK0AK0AK0AK0AK0AK0AK0AK0AK0\
+  AJ0AM0AP1AR2AU3AU4AU5AU7AU9AUBAUDAUFAUHAUKAUNAUQAU\
+  TAUWAUZAUaAUdAUfAUiAUkAUmAUoAUpAUrCUtFSvIPwLNxOLyQ\
+  KzSJzUIzSGzQFvOErMDmKChIAcG9cI8cL7cO6cS8cWAc_CeaEn\
+  cGnaHo_IoYJpWJpUFmS8jQ8gO8dM8bK8_I8XG8UF7RG7PG7MI7\
+  PLAUODZRGaUJcXM`_PYbSVeTShTPfTNdTKbTH`TEZTBXT8VTYT\
+  TfRTgWZl`cudhsbfraeq_doZcnXamW`kU_jTZiRXgQWfOVeNUf\
+  ORgOPhONiOKiOIjOGkODlOBlO9mMCnLFnJIoILpGNpFQqDTrCW\
+  rBYpDZoEZmG_lH_jJ_iK`gM`fNadPacQaaSb`TbZVcYWcXXcTV\
+  fQUhNTjKRmHQoEPqBOsCQsDSsEUsFVsGXsHZsI`sJasC_o6Yk0\
+  Xg4`d8caBf_FiXIlUMoSPrPTuMWxKTxRRxYPxcNxjLxpPtnTqm\
+  Xnk`kjchhgegkbeo_drXcnZ`j_Zf`XcbV_cSWdQTfOPgMLhJIj\
+  HEkFAlD7mB8qv9psAppBpnCokDoiEofFndGnaHn_IjZJgZJcYK\
+  `YKYYLUXLRXMOXNKWNHWOEWOAVP7VP4VODUNMTMVSMcRR`PVYO\
+  _VNcSLhPKlMJqJHuGGyDFwCJvBMuBPsASr9Vq9Yp8`n7dm7gl6\
+  jj5mi5ph4sg4va7sXAqSDoNGm }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
