@@ -1,0 +1,98 @@
+;     Date: Sat, 03 Jan 2009 23:35:43 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 04-01-09 (Filament Abundance [6.5])
+; 
+;       Id: <1.5.4.16.20090103233728.2b9751ec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 04, 2009 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's quickly-found image returns us to the MandelbrotBC3 
+; formula and the fractal that is formed when the expression 
+; Z^(1.5)+C is iterated 22.15 levels up the logarithmic hyper-
+; ladder with no function applied.
+; 
+; This parent fractal doesn't look like much at first glance, but 
+; it has an interesting area near the southeast shore line of its 
+; main bay.  Today's image is located on a filament extending from 
+; a larger minibrot in this area.
+; 
+; I rated the image at a 6-1/2, with the extra half-point added by 
+; my modest coloring efforts.  The name "Filament Abundance" gives 
+; away the appearance of the image even before it is calculated.
+; 
+; The calculation time of 8-1/4 minutes borders on slowness.  To 
+; avoid all chance of impatience, I recommend surfing out to the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the already-calculated image there.
+; 
+; Near full sun and a temperature of 37F 3C kept the fractal cats 
+; on their best behavior here at Fractal Central on Saturday.  I 
+; am almost always on my best behavior, so nothing more need be 
+; said.  The next FOTD will in all likelihood be posted in 24 
+; hours.  Until then, take care, and keep taking care until there 
+; is no more care to be taken.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Filament_Abundance { ; time=0:08:15.24-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.778594649890781/+0.04565415904501465\
+  /3.0825e+009/1/-27.5/0 params=1.5/0/22.15/0 float=y
+  maxiter=6000 inside=0 logmap=825 periodicity=10
+  colors=000KKcKKcKKcKKcKKcKKcKKcKKcKLcKMbKNbKObKPbL\
+  QbMRbRKhTKhVKhXKhVKhUKhWKhYKjZHlXKjWPgUPeSPcRPaPPf\
+  NJjLRnKQrJPwIOvHNuHMuGKtFItFHtEGtDJtDMtCPtBStBVtAY\
+  t9`t9ct8ft7it5rx7lt8gp9alAXiCSeDMaEHYEDXFCWFCVFCUG\
+  CTGCSGBRHBQHBPHBOIBMIAKIAIJAEJAAJAAL9AJAAIAAGBAFBA\
+  DCACCABCA9DA8DA6EA5EA3FA2FA0DA1FA2GA3HA4IA5JA6KB7L\
+  C8MD9NEAOFAPGESFIVFMXFQ_FUbFYdFahFemFirFmvFzzFzzFz\
+  zGzvFztFzrFzpFznFzkFziFzgFzeFvcFr`FmZFhXFfVFeTFpfo\
+  menjemgeledlbdk_djXcjVciSchPbhMbgKbfHafEaeBad5ig9a\
+  dCVbFN_JHWIGYIG_IG`HGbHFcHFeGFfGFhGEjFEkFEmFEnEDpE\
+  DqEDsF9sEDtEGuDLvDOwDRxCWyCZzBczBfzBjzAnzArzAuzZkf\
+  zgSzcTz`UvXVrUWmPThRWcSYZT`UUbQVeRWgTXiVYlXZnZ_q``\
+  sbcxaaza_z`Yz`Wz_Uz_SzZQzcSzaPzcNzeLzgIziGzkGNmEOo\
+  DOqCPsAPu9zw8zz6zz5zzczzczzczzczzzzzczzczzVJzzJzUK\
+  zUKzUzzUKzzLzULzUzzTMzzLzRLzQLzzLzOKzNzzMKzzKzKJzJ\
+  zzzJzHJzFzzLLzzMzXOzaPzzR }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

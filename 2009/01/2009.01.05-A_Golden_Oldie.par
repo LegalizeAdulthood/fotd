@@ -1,0 +1,114 @@
+;     Date: Sun, 04 Jan 2009 23:04:15 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 05-01-09 (A Golden Oldie [4])
+; 
+;       Id: <1.5.4.16.20090104230602.2bdf5ba8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 05, 2009 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With almost the entire day spent at a nearby antique emporium, 
+; I was left with no time to find a new image on Sunday, so I 
+; worked up a new view of an old image -- the image from Dec 3, 
+; 2008, which was named "Golden Nonabrot".
+; 
+; The formula behind the image, the DivideJulibrot, appears rather 
+; awesome on the surface.  But it does draw any Julibrot angle of 
+; any scene calculated by the DivideBrot5 formula.
+; 
+; That image was an everyday Mandelbrot view of the scene, while 
+; today's view of the same area is an oblique view through the 
+; Julibrot.  Most of the image is a repeat of the earlier image, 
+; including the same color palette.  The main difference is the 
+; shape of the minibrot at the center, which instead of an 8-lobed 
+; Mandelbrot midget, now appears as a narrow slit.
+; 
+; Because the image holds very little that is new, I could rate it 
+; no higher than a sub-standard 4.  The name "A Golden Oldie" 
+; refers back to the original image, which appeared a month ago.
+; 
+; The calculation time of under 4 minutes might be a bit too much 
+; to ask for an image that is a virtual repeat.  The better choice 
+; may be to hop on out to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the pre-calculated image there.
+; 
+; Clear skies in the morning gave way to afternoon clouds and 
+; light evening rain here at Fractal Central on Sunday, while the 
+; temperature reached 37F 3C for the third consecutive day.  The 
+; fractal cats were unhappy about the clouds that moved in and hid 
+; the sun in the afternoon.
+; 
+; I spent the day with FL, looking at the stuff other people threw 
+; out, yet still managing to find the time for a FOTD when we 
+; returned after dark.  The next glorious fractal image will be 
+; posted in 24 hours.  Until then, take care, and be unbounded yet 
+; finite.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Golden_Oldie     { ; time=0:03:56.45-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot center-mag=0/0/\
+  4.266495e+009/0.0131/88.53859228715406/-89.1361541\
+  431742808 params=-92/189.6/-26.6/58/-442.137773374\
+  8792/0.1697133339657901/-442.1377733748792/0.16971\
+  33339657901/9/250 float=y maxiter=60000 inside=0
+  periodicity=10 sound=off mathtolerance=0.05/1
+  colors=000neSlbUk`WiZZgX`fVbdTddQkcRfcRbcRZcRVbSRb\
+  SNbSJbSF`OAbSBdVBfZBhaCjdClhCnkDpoDrrDsuDpsCnrClqC\
+  joBhnBfmBdkAbjA`iAZg9Xf9Ve9Xl0Vh5Td9S`DQXHOTLNPQLL\
+  UJHYIDaG9eF5iQNZYeP_dO`cNacMcbLdbLeaKgaJh`Ixb0i`IV\
+  ZZ8VzHYoP_dXaUdcJpb2nd5le8jfAhhDfiFdjIblK`mNZnPXpS\
+  VqUTrXTuZRsZPrZNpZLoZJmZCpcIlZOhVUeQ_aMeYHkVDqR8Lk\
+  uc_VvO4rP6oQ7lR8iSAfTBcUC_VEXWFUXGRYIOZJL_KWObh8ue\
+  CtcFs`IrZLrXOqURpSUoQXoN_nLbmIelGhlEkkBnj9qi7tiArl\
+  CqnEpqGosInvKmxSamZzbfzSmzIdzHWzGNzFzzEzzDzzBzzAzz\
+  5zqhzzMzwRzgKJzDBz6zQECoY9YM6zBMefzzSzzEzzBzz8zz5z\
+  z2ztENeAGS79z3RsK5rG4dC4z83z4GzV`C6zz3zzCzz9zz6zz3\
+  zz4zz3zz9zz1PFeO`CZSHhKLrBPz3TbcEWPdXL`WNWVPRURMUT\
+  IRahiShyUJWE9ORkHHWA8GWKNOEHa9BA05s3Re2KT0DG06U0dN\
+  0UG0K94Alnz`ajQPVECFMkECN7knHXXBm_YjYVhWSXUPYOLZPJ\
+  _QGaSKcVNfYRi`UlbYoe`rhdukfwmezodzncyocxpcwqcwrczs\
+  cztczuczvhzwmzxrzyvzzzogQ }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

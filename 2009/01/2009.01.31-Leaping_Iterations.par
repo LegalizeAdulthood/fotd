@@ -1,0 +1,97 @@
+;     Date: Fri, 30 Jan 2009 23:34:13 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 31-01-09 (Leaping Iterations [7.5])
+; 
+;       Id: <1.5.4.16.20090130233622.2bcf905a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 31, 2009 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that resulted when I 
+; combined various negative portions of Z^(-2.1) and Z^(-9.2), 
+; then added (1/C).  This parent fractal consists of a few large 
+; circular bays with a small satellite figure-8 shaped lake some 
+; distance to the east.  The scene of today's image lies in a 
+; valley of this figure-8 thing.
+; 
+; The general area has both critical and non-critical elements, so 
+; when I first checked it, I had little hope of finding an intact 
+; minibrot.  I expected only dry valleys, but I stumbled upon the 
+; tiny minibrot at the center of the image almost by accident.
+; 
+; To express my surprise, I named the image "Leaping Iterations", 
+; and then I gave it a rating of a 7-1/2, including a half-point 
+; reward for my coloring work.
+; 
+; I would have preferred a shorter calculation time than 6-1/2 
+; minutes, but this short wait may be avoided by hurrying out to 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; Partly cloudy skies with occasional heavy snow squalls 
+; highlighted the weather here at Fractal Central on Friday.  
+; The fractal cats must not have considered such conditions 
+; a highlight, for they spent most of the day near the heat.  
+; My day was once again unacceptably busy.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and whatever it is, it's all in the mind.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Leaping_Iterations { ; time=0:06:30.97-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.413306648958554/+0.0002551522349509/\
+  1.291e+010/1/-15/0 params=-4/-2.1/-0.9/-9.2/0/0/0/0
+  float=y maxiter=3600 inside=0 outside=tdis
+  periodicity=10 mathtolerance=0.05/1
+  colors=000HLaEMcCNfAOh9Pf9Qd8Qb8Ra7S_7SY6TW6UV5UT5\
+  VR4WP4WO3XM3YK3YJ4_L5aN6cP7eR7fS8hU9jWAlYAmZBo`Cqb\
+  Dsdflrflpfkneklekjejhdjfdjddiaci_chYchWbhUbgSbgQbg\
+  O_dMXbKV_ISYHPWFNTDKRBIPAQGCY7ElWFi_NgcUdg`bkg`onz\
+  pkzqhzrfzrczs`ztZzuWzuTzvRzwOzwMzrRzmVSh_SccTZgTUl\
+  TPpTKtPOnLShHWbD_X9cR5fM6hP6jR6kT6mV6nX6pZ6ra6sz6u\
+  z6vz6xz6yzz42z64z76zL8zQ9zVBz_DzbFz_GzVIzQKzGUxHUu\
+  GSrGQoGOlFMiFLfFKcEK`EJYEJVCJSBIPAIM8HJ7HE7HL0GO8F\
+  Q6EQ9DP0CQ0CR0ES0GU0HW0JY0LY0MY0OX0PW0RU2TR4UP6WN8\
+  YKAZIC`GEaHFbIFbJEcJDcKCdLBdMAeMAeN9fO8fP7gP6gQ5hR\
+  4hR4hQ5gQ6fQ6eQ7dQ8cQ8bQ9aPA`PA_PBZPCYPCXPDWPDWOHU\
+  NKTMNSMQRLPOLPMLPKURQaTViV`qXeyYjmWkbUlRSmGRmLWfQ`\
+  `VeU_jOdoHitBmx5dX8X5BUG8RR5O`3R_4UZ4XY4_X4bW4dW4g\
+  V4jU4mT4pS4rS4sVAtXFuZLv`QvbVwd`xfeyhkzjpzlusbsmUr\
+  fKp`BoV2nW4lW5kW6jX8hX9gXAfYBeYDcYEbZFaZG`ZIZ_JY_K\
+  X_LWYIUVGRTEPQGSOHULIXJJZ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

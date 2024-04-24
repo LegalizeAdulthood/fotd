@@ -1,0 +1,106 @@
+;     Date: Fri, 09 Jan 2009 21:26:49 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 10-01-09 (From the Abyss [7.5])
+; 
+;       Id: <1.5.4.16.20090109212839.2bd7b394@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 10, 2009 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is a simple Julia set of the East Valley area of 
+; the large minibrot on the infinitely divided main stem of the 
+; Z^(2.003)+C Mandeloid.  The corresponding Mandelbrot point is at 
+; the edge of one of those curious rectangles that I occasionally 
+; mention.  Yes, the rectangles also exist in the Mandelbrot 
+; aspect of the Z^2.003 fractal.  In fact, today's image is filled 
+; with tiny rectangles.
+; 
+; Today's image is extremely sensitive to very small changes of 
+; some parameters, while other parameters may be changed to any 
+; value with no effect on the image.
+; 
+; I named the image "From the Abyss", probably thinking of one 
+; of those great old sci-fi movies, where creatures like Godzilla 
+; emerge from abysses.  I rated it at a 7.5 because I can see 
+; nothing in it worth more.  The fast calculation time of 1-1/2 
+; minutes will leave lots of time for non-fractal activities.
+; 
+; As always, the finished image is or soon will be posted for 
+; instant viewing bliss on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy skies, a temperature of 30F -1C and a biting 
+; northwest wind made the outdoors unpleasant here at Fractal 
+; Central on Saturday.  The fractal cats do not go outdoors 
+; however, and there was enough afternoon sun to keep them happy.  
+; But we'll see how they take to the foot or so of snow forecast 
+; for the FC area tomorrow.
+; 
+; My day was too busy to be pleasant.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and be careful of 
+; the creatures in the abyss.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+From_the_Abyss     { ; time=0:01:33.55-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=0/0/920/1/-37.5/0
+  params=90/90/90/90/-1.743488082976184/3.2412432010\
+  25422e-007/0/0/2.003/0 float=y maxiter=800
+  inside=0 logmap=226 periodicity=10
+  colors=000JFFKEKLDPMCTOBYQ9bS8fT7kT6pR5tW0v`3tc2rf\
+  1pi0nlAmmCmnEmoGmpImqKmqMmqOmqQmqSmqUmqWmrYmramsem\
+  thnulnvpnvsnvrlvrjvrivqgvqfvqdvpbvpavp_vpZnkYgfY`a\
+  XTXXMSWFNW8IWAKZCMaEOdFQgHSjJTlLVoMXrOZuQ`xRazYLWY\
+  42_96`E9aJCdOFgSIjXLmaOrfRvkUzoXzrVzrTzrRznPzkOvgM\
+  rfKmeIhdGccFZaDW`BY_9_Z7`Y6bW8cUAdSCeQEgOFhMHiKJjI\
+  LkGMbLLVPLNTKFXK7`KA_PDZTGYXJXaLWeOViRUnUTrXSvZRzj\
+  UoZZqObrCgt1ku4gu6du8auAZuCWuFTuHQuJNuLKuNHuLHrKHo\
+  JHlHHiGHgFHdEHaCHZBHWAHU8HR7HO6HL5HJAMOERTIVYMUbRU\
+  fVUkZUpbUufUyjWfU6OU7QU7RUCTUHUUMVUQWjVXg_YgZWecZc\
+  g`acb_cdYcf_cgWchTciQcjNckKllGilDfmAdn7ao4Zp1Xp4Yn\
+  7YmAYlDZjGZiJZhMZgO_eR_dU_cX_b_``b`_e`ZeXZg`YidXkh\
+  WmkVooUqsTrvSprTnnTmjTkfTjcTh_UfWUeSUcOUbLUZRWVWXS\
+  `ZOf_KkaHpzMXYRkTzzzzuzzzzTkURlWQnZOp`NrcLseKuhIwj\
+  HxlJtmKqnLnoNjpOgqPdrR`sSYtTVuUSuyPIrSPkVVdY`Y`gRc\
+  mLhrKfsKesKdtJ55U99cDCmHF }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

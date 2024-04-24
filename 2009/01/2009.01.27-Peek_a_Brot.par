@@ -1,0 +1,97 @@
+;     Date: Tue, 27 Jan 2009 13:30:04 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-01-09 (Peek-a-Brot [8.5])
+;       Id: <1.5.4.16.20090127133210.2b9fa1d2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 28, 2008 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's lively little image came about when one part of Z^3 was 
+; subtracted from three parts of Z^2.  The resulting parent 
+; fractal is a slightly under-sized Mandelbrot set located just 
+; beyond the left edge of the opening frame and rotated 180 
+; degrees so that its negative spike is now a positive spike, (at 
+; least it's pointing in a positive direction), and its East 
+; Valley is now a West Valley.  There is little out of the 
+; ordinary about the details of the parent fractal except for a 
+; scattering of disconnected extra stuff beyond both the positive 
+; (negative) spike and West (East) Valley.  Today's image is a 
+; scene deep in the most distant bit of debris in the scattering 
+; of debris west of West (East) Valley.
+; 
+; When rendered in the 'normal' manner, with the 'normal' equal-
+; iteration bands, the scene is dull indeed, but when rendered 
+; with the outside set to 'fmod', the scene really comes to life.  
+; The entire image has been rotated 180 degrees to return the 
+; parent fractal and the minibrot at the center of the image to 
+; the normal position, with the spike pointing west.  This is a 
+; self-imposed rule that I usually follow.
+; 
+; I rated the image at an 8-1/2 which includes a half-point reward 
+; for the coloring, which gets something from nothing.  To see the 
+; 'nothing' change the outside from 'fmod' to 'iter'.  The name 
+; "Peek-a-Brot" must have some significance, but at the moment I 
+; can see very little reason for it.
+; 
+; The very brief calculation time of 18 seconds can be made even 
+; briefer by viewing the finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Still proud of catching the mouse on Monday, the fractal cats 
+; stood tall here at Fractal Central on Tuesday.  The lack of sun, 
+; the threat of snow, and the temperature of 27F -3C, didn't worry 
+; them a bit.  My day was about average.  The next FOTD will be 
+; posted in 24 hours, which is the average time between FOTD 
+; postings.  Until then, take care, and never stop searching for 
+; the ultimate fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Peek-a-Brot { ; time=0:00:18.86-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-2.524958827887493/0/2.880577e+011/1/180
+  params=3/2/-1/3/0/0/0/0 float=y maxiter=290
+  inside=0 proximity=1 outside=fmod logmap=28
+  symmetry=xaxis periodicity=10 mathtolerance=0.05/1
+  colors=000zzz0vz0rz0mz0hz0cz0Zz0Uz0Pz0Kq0Kh0Kf0Lj0\
+  Fn0AqLCnPEkTGhWIf`KZdKRhKKlKCpK5oK0oK0nKAnKEmKImKA\
+  lK3oLFmMKmNKmOKmPKmQKmRKgSKaTKWUFQV8KW1CXJ4Y`JZVY_\
+  Ql`LkaGjbBic6hd2geRefMcgJahH_iFYjDWkBUl9Sm7Qk5Oh6N\
+  e6Lb6K_6IX6HU6FR6EO6CL6BI69G68C6696556426545665674\
+  7947A38C38D29F29G2CH2FH2II2LI2OJ2RJ2TJ2UK2UK2UK2VK\
+  2WK2XK2YK2_K6`KA`JDaIHbHLcGOcFNcENcCNcAJc9Fb9Ba98`\
+  DB_GEZJH_MK`QNaTQbWTcZWd_`e_dg_hh`mk`qnamqaitaewaa\
+  y`Yz_ThU5mc5xUAwQAwOAvOAvMAuMAuPAtRStUOsWKsYGr`Crb\
+  8X7jaEaeLUjSLnZDnNFnULoVJoWIpXGpYFpZDq_Cq`Aqa9rb7r\
+  c6h`OiaMjaLjaKkaJlbIlbGmbFmbEncDocCocApc9qd8qd7rd6\
+  zi0yh1xh1xg2wg2vf3vf3uf3te4te4sd5rd5zcdyc_xcWwcRvc\
+  NucItcEsb9FekJdfNdbRdZVdUZdQbdMfdHjdDnd9lclmcimcfn\
+  ccnc`ncYocVocSpcPpcMpcJqcGqcDraArc7_cdacabcZdcWecT\
+  gcRhcOjcLkcImcGncDpcAqc7UluWkpYjl_jhaidch`ehXggTig\
+  PkfLmeHoeDqd9gBamQL68GABF }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
