@@ -1,0 +1,101 @@
+;     Date: Sun, 13 Mar 2011 19:52:53 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-03-11 (Shadow Dance [6])
+;       Id: <1.5.4.16.20110313185250.13cf2aa6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 14, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Things have been very wet here at Fractal Central these past 
+; few days, wet enough in fact to flood the FC basement 10cm deep. 
+; But by Sunday the water had subsided, and things were getting 
+; back to normal.
+; 
+; In the fractal department, I have returned to an old formula for 
+; today's image -- the Mystic2 formula, which is at least 12 years 
+; old.  When the inside is set to a flat color, this formula draws 
+; nothing but empty circles, but when an active coloring such as 
+; the 'bof61 is applied to the inside, strange things begin happen-
+; ing.  Today's image shows some of these strange things.
+; 
+; The image consists entirely of inside stuff made visible by the 
+; 'bof61' inside fill.  It is very sensitive to changes in the 
+; inside fill, the function and the p3 parameter.  The p1 and p2 
+; parameters have a far lesser effect.
+; 
+; The name "Shadow Dance" sounds kind of Native Americanish, but 
+; it has little to do with the appearance of the image.
+; 
+; Due to the lack of organized colors, I could rate it no higher 
+; than a 6.
+; 
+; The finished image soon will be available on the current FOTD 
+; web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be found at:
+; 
+; <http://www.Nahee.com/FOTD/>
+; 
+; My own FOTD web site will soon be up and running, though due to 
+; problems dealing with the flooded basement, it has made no 
+; progress since the last report.
+; 
+; Sunday brought clouds and a temperature of 43F +6C to Fractal 
+; Central.  The fractal cats took it all in stride.  They were 
+; more interested in being fed.  My day was spent recuperating 
+; from the flooded basement and watching far greater disasters on 
+; TV.  The next FOTD will be posted in a couple days.  Until then, 
+; take care, and no matter how bad things seem, they are never so 
+; bad that they could not get worse.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Shadow_Dance { ; time=0:01:31.62-SF5 on P4-2000
+  reset=2004 type=formula formulafile=jim.frm
+  formulaname=Mystic2 function=cotan passes=1
+  center-mag=0/0/31 params=1/-3/3/4/3/5.899 float=y
+  maxiter=255 inside=bof61 periodicity=6
+  colors=000TETTFRTHPTIMTJKTLIoMGTNETOCPQFzZ0jALHSJG\
+  eHFQGDOECNDBMB9LA8J87I7zH54G43E21D10C00H01C3C003DB\
+  ztF5Fm6EO7Fm8FW9G`AGdBHhCHlEIeGIZIJSKJLLJEOICRHAUG\
+  8XF6_E4bD2dD0cE4bE7aEB`FE`FH_FLZGOYGSYGVXHYWHaVHdV\
+  HgYEb_BYa8Uc5Pe2Kg0GX9IMIKBRM1_O4ZM7YK9XICWGEVEHUC\
+  JTAMS8OR6RQ4TP2WO0YN0`M0bM0aL2`K9_JGZIOYHVXGaXFhPD\
+  THBD9A0II5RPB_XIgcOddMbeL`fKYgIWhHUiGSjFLaOFUW9Mc3\
+  EkBFZJGMRH9ZI0QT0Ic0`RKEhUJYSNNQRCPV1NZ0MY0OX1PW6R\
+  WASVFUUKVTPWTTYSYZRb`QgaQkbSgaTcaV`aWXaXUaZQa_Na`J\
+  abGacCad9a`6YX3VU1SQ0OM0LJ0ILIKNfMGcWA`eAacAaaAb_A\
+  bZAcXAcVAcUD_SGWRISPLOOOKNQGLTCKV9JXAHYBFZBD_CB`D9\
+  aD8bE6cF4dF2eG0fG0UN0HT05Z08W0AU0DR1FP1IM2KK3MI3PF\
+  4RD5UA6W86Z57`38b18U49M79E995C90F90H90G80G80F70F73\
+  E66E69E6BD5ED5HC4KC4MC4LC4JC3HC3GD2ED1CD1BD09D07D0\
+  6E04E02E01E00E00E00D01D22D43D74DA5DC6DF7DH8DK9DNAD\
+  PBDSCDUBBQB9MA7IA5F94B927 }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

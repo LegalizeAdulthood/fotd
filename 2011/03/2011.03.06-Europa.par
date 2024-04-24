@@ -1,0 +1,93 @@
+;     Date: Sun, 06 Mar 2011 17:41:07 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-03-11 (Europa)
+;       Id: <1.5.4.16.20110306174106.1357e558@pop.mindspring.com>
+; ---------
+; 
+; FOYD -- March 06, 2011  (Rating 9*)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's blast from the past is a fractalized imaginary scene on 
+; Europa, the ice-covered moon of Jupiter.  It first appeared in 
+; June of 1997.  It appears again today in an updated version, 
+; which will likely be worked on a bit more before making it to 
+; the new FOTD web site.
+; 
+; The name "Europa" says it all.  Since the image is a repeat, I 
+; could give it no rating, though if I had rated it, a rating of 9 
+; would have been justified.  The effect of a distant sun reflect-
+; ing off a surface of rough ice is remarkably convincing, though 
+; I doubt that the wispy clouds could exist in such a scene, since 
+; Europa has no atmosphere.
+; 
+; The formula is a test that I discarded long ago, but it had a 
+; few good images in it, so here it is in all its unglory. 
+; 
+; The image may be seen by running the included parameter file or 
+; by visiting the current FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; BTW, plans are to have the first page of my FOTD web site up and 
+; hopefully running sometime this week.  We'll see how it goes.  
+; Stay tuned for imminent excitement.
+; 
+; Saturday brought lots of clouds to Fractal Central, but it also 
+; brought a temperature of 59F 15C, which kept the fractal cats 
+; satisfied.  The rest of the day went along routinely.  Sunday 
+; brought a chilly rain, with a steadily dropping temperature.  
+; The next FOYD will be posted in a few days.  Until whenever, 
+; take care, and balance that budgie.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Europa { ; time=0:01:36.72-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=man-yz-xz passes=1
+  center-mag=-0.00000686598512544/-1.845082873438826\
+  /8.246947e+010/-5.121e-005/359.999056918636597/\
+  -89.9990597420641762 params=0/0/1/0 float=y
+  maxiter=5000 inside=255 logmap=yes periodicity=10
+  colors=0007Ry7Rx8Qw8Qv9Qt9PsAPrAPqBOpBOoCNnCNmDNkD\
+  MjDMiEMhELgFLfFLeGKcGKbHKaHJ`IJ_IJZIIYJIWJIVKHUKHT\
+  LGSLGRMGQMFPNFNNFMOELOEKOEJNEJNEJMEJMEJLDJLDJLDJKD\
+  JKDJKDJJDJJCJICJICJICJHCKHCKGCKGBKGBKFBKFBKFBKEBKE\
+  BKDAKDAKDAKCAKCAKBAKBAKBAKA9KA9K99K99K99K89K89K88K\
+  78K78K68L68L68L58L57L47L47L47L37L37L37L26L26L16L16\
+  L16L27M27N38N38O49O49P4AQ5AQ5AR6BR6BS6CS7CT7CU8DU8\
+  DV8EV90W90XA0XA1YA2YB3ZB4ZC5_C6`C7`D8aD9aDAbEBcECc\
+  FDdFEdFFeGGeGHfHIgHJgHKhILhIIiJNjJOjJPkKKkKQlLRlLR\
+  mLRnMRoNKpNSpNTqNVzJazJezKhzUhzOfzGdzGbzK`zMZzSPvS\
+  SwTYxTYyTYyTZzU_z0czV`zV`zV`zWazWazWazXbzXbzYczYcz\
+  YczZdzZdz_ez_ez_ezZdzZdzZdzYdzYdzYczYcztzzvzzxzzzz\
+  zzzzzzzWbzWbzVbzVbzVazVazUazUazUazUazTazT`zT`zT`zS\
+  `zS`zS`zS`zR_zR_zR_zR_zQ_zQ_zQ_zQZzPZzPZzPZzPZzOZz\
+  OYzOYzOYzNYzNYzNYzNYzMXzMXzMXzMXzLXzLXzLXzLWzKWzKW\
+  zKWzKWzJWzJWzJVzJ`zJazJaz }
+
+frm:Man-YZ-XZ {; Jim Muth, Thanks to Benno
+; p2 = 0 = Julibrot YZ plane
+; p2 = 1 = Julibrot XZ plane
+; p2 = >0 <1 = Oblique planes
+z=real(pixel)+flip(real(p1)),
+c=imag(pixel)+flip(imag(p1)),
+a=p2, b=flip(cos(asin(p2))):
+z=sqr(z)+((a+b)*c),
+|z| <= 25 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

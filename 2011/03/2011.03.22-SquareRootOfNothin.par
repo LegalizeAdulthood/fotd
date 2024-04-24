@@ -1,0 +1,96 @@
+;     Date: Tue, 22 Mar 2011 13:29:25 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-03-11 (Square Root of Nothing [6])
+;       Id: <1.5.4.16.20110322122923.12c7d216@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 22, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is late.  This usually means things are unusually 
+; busy here at FC, as is true at the present time.
+; 
+; The name of today's image, Square root of Nothing", refers to 
+; the power of Z that created the parent fractal.  This parent 
+; fractal resembles a Mandelbrot set with a triangular main bud 
+; on the northwest side of the main bay and a zigzag filament 
+; extending out from the bud, and terminating some distance to the 
+; northwest.  A cut-off nest of filament fragments lies some 
+; distance to the east of the main fractal.  Today's scene is 
+; located in this cut-off nest of filaments.
+; 
+; Due to a shortage of time, I was unable to find the best color-
+; ing for the image, but the colors I did find are sufficient to 
+; show the nature of the scene and allow a rating of a 6.
+; 
+; The calculation time of 3 minutes should cause no one undue dis-
+; tress.  To make matters even better, the pre-calculated image 
+; may be viewed at the FOTD web site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site may be accessed at:
+; 
+;      <http://www.Nahee.com/FOTD/>
+; 
+; Settled and near normal conditions prevailed here at FC on 
+; Sunday, with partly cloudy skies and a temperature of 50F 10C.  
+; Monday brought similar temperatures, but was spoiled by morning 
+; rain and afternoon clouds.  The fractal cats took it all in 
+; stride.  The next FOTD is scheduled in about 32 hours.  Who 
+; knows if it will actually be ready in time?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SquareRootOfNothin { ; time=0:03:05.16-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+1.294065337556993/+0.8218935124636804/\
+  7.008061e+008/1/70/0 params=1.4142/0/2/0 float=y
+  maxiter=2400 inside=0 logmap=198 periodicity=6
+  colors=000pcgmcckc_icWg`Se`Ob`K``KZ`KX`KV`JU_IT_HV\
+  _AS_FPZJMYNJXRHVVEUZBTb8Sf6Rj8Vk9YkA`kCckDgkEjkGmk\
+  HpkIskGrjEriDrhBrg9rf8re6rd5rd6df6Sg6Eh61iGFkPTmZf\
+  ogtqfomejideecaacXZbSVaOR`JN_EJ_AGd8Jh7Ml5Pp4St3Vp\
+  2Mm1Dj04nADrKLvUTyc`v`XsYUpVRmSNjQKgNHdKDaHAaE7kC4\
+  nP6q`7tdGwhOzlXzpdzslzvrzzzuxzvwqwulusjsqiqoirmism\
+  hslhtlhtkgukgujgujgpgdleahbZd`W`YTXWQTTNPRKUXQZaVc\
+  f_hkempjruowztoqjhhaa_SVRJOI9H90BJ56T91aD8YIFUNLQS\
+  SMXZIadEeTlWVmVWmUXmTYmTZmS_mR`mQamQbmPcmOdmObjNag\
+  N_dNZaMXZMWWMUUMTRLROLQLLOIKNFKLCKKAKM9IO8HQ7FS7EU\
+  6DW5BY4A_49Y9DXEHWJLVOPUTTTYXSb`RgdTfeVffXfgYfh_fi\
+  afjbfkdflffmgfnifokfplfp9OIDEAH43M62Q82UA2ZC2bE2fG\
+  2gN6hUAi`EjfIkmMltQmzU2_GEUSQOc`IoaNkbRgcVdcZ`dbYe\
+  fUejQfnNgrJgvGjpKlkNofQqaTsXWmmUmmSmmQmmOmmMmmKmmI\
+  mmGgrEfrCerBgrGhrKirPjrTkrYmzanzfozjpzoqzsmzjmzamz\
+  RmzGmz5mzoszsyzwvzstzorzk }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
