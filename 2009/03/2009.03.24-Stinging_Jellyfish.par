@@ -1,0 +1,101 @@
+;     Date: Mon, 23 Mar 2009 21:17:38 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 24-03-09 (Stinging Jellyfish [N.A.])
+; 
+;       Id: <1.5.4.16.20090323201754.2bc7745c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 24, 2009 (Rating N.A.)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I gave today's image no rating because it is not a new image.  
+; It is merely a slight modification of an FOTD image that I 
+; posted several years ago.  I'll leave it to the curious to track 
+; down the original image.  I occasionally re-use older images 
+; when I run into bad luck finding a worthy new one and time is 
+; running short.
+; 
+; I named the image "Stinging Jellyfish" when I remembered a day 
+; on the shore of Chesapeake Bay many years ago, when I leaped 
+; into the water and found myself in a bunch of "sea-nettles".  Of 
+; course, this name has nothing to do with today's image, nor does 
+; it have any similarity to the name of the original image.
+; 
+; As for the parent fractal, the image is the parent fractal, a 
+; Julia set of the Z^(1.11)+C Mandeloid as it appears 111 levels 
+; up the logarithmic ladder.
+; 
+; With a calculation time of 1-1/4 minutes, the image is a fast 
+; one, bringing no grief to those who would rather do it them-
+; selves.  Those spoiled by modern conveniences may see the image 
+; already finished on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where unimaginable happiness can be found.
+; 
+; The crystal blue skies and brilliant sun were diminished by an 
+; un-springlike temperature of 36F 2C here at Fractal Central on 
+; Monday, with a very un-springlike low of 14F -10C forecast for 
+; Monday night.  Not bothered by technicalities, the fractal cats 
+; enjoyed the sun while it was shining on their window shelf.  My 
+; day was about average.  The next FOTD will be posted (by me) in 
+; 24 hours.  Until then, take care, and believe the unbelievable.  
+; It just might be true.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Stinging_Jellyfish { ; time=0:01:14.62-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=-0.120052/\
+  -0.119167/1.35/1/-87.5/0 params=1.11/0/111/0/\
+  -0.041/0.146/0/0 float=y maxiter=256 inside=bof60
+  logmap=yes periodicity=10
+  colors=000edddcacbZaaW_`TY_QVZNSYKPXIMWHKVFIUDGTCE\
+  SACR9AQ78P6zzz00000000000000040M60O80R90T90W90YA0`\
+  A0cB4eB9hBDjCFmDGoEFrFFtGEwHImIHoJHpKGqKGrKGsKFuJF\
+  vHEwFEx4aG5ZL6XQ7UU8SZ9QbANgBLlCIpDGujgqzv0zt0zr0z\
+  pVznWzlYzjZzhUzgPzeKzcAza0z_0zY0zW0zU0zT0zR0zP0INr\
+  HLsGJuFHvEFxHs4Gq7Go9GmCGlEGjHGhJFfLFeOFcQFaTF_VFZ\
+  XEX_EVaETdESfEQiEOkDMmDLpDJrDHuDFwJW1IT9HRHGPOGNWF\
+  KcEIjDGruLIpKNkJSfIXaHaXHfSGkNFpIEu5QZ6P`6Ob7Nc7Ne\
+  8Mf8Lh9Lj9KkAJmAInBIpBHrCGsCGuDFvDExaoeZjhWfjTblQZ\
+  nOUqLQsIMuoQDhVGa`KVeNNjQGpU9uX2z_EybQxe`xhlwkwwno\
+  shgpc_lZTiTLeODbJ6_EG`HQaJZbLc_KhYJmVIrTIsUPtVWuVb\
+  vWiwXpwXvoVuhUuaTtVRtOQsHPsKSlMVfPY`R`VUcOWfIZiC`k\
+  6Xj9UiCQhFNgIKgLEcG8_B3W76YE8_LAaRG_MMZISYEYW9cV5h\
+  U1bW3YX5TZ7O_9JaBEbD9cETQHkCJeBL`ANW9PR8QM7SH6UC6V\
+  BQKBh9LiIViRdj_njhwjpWV`4FM8INCKOGMPJOPNRQRTRVVSYX\
+  S`aWbf_dkcfpghukjzorh`ySM }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,101 @@
+;     Date: Thu, 05 Mar 2009 23:32:39 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 06-03-09 (Technicolor Dream [7])
+; 
+;       Id: <1.5.4.16.20090305233238.2bdf73e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 06, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is named "Technicolor Dream".  The name came 
+; about when I had trouble getting the over-abundance of colors 
+; under control.  The rating of a 7 indicates that I never did 
+; totally control the colors.  The calculation time of just over 
+; nine minutes leaves plenty time to pour a drink or do other 
+; convenient things while the parameter file at the end of this 
+; discussion is running.
+; 
+; Those with no drink to pour or no convenient things to do may 
+; avoid the calculation time by surfing to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and enjoying the already-calculated image posted there.
+; 
+; The formula behind the image subtracts 2 parts of Z^(-1.8) from 
+; 2 parts of Z^(0.75), then adds (1/C).  This formula creates the 
+; rubber-duck parent fractal of the "Astro-Iterations" image of 
+; March 4.  Today's scene however is located on the front of the 
+; rubber duck's neck.
+; 
+; There is a disconnected hole just east of the parent rubber 
+; duck, which I have yet to check.  If I find anything of interest 
+; there, it will appear as tomorrow's FOTD.
+; 
+; The total sun continued here at Fractal Central on Thursday, but 
+; this time the temperature reached 50F 10C, which made things 
+; really feel like spring.  The sun in the window was actually a 
+; bit too much for the fractal cats, who deserted their shelf for 
+; the floor when the shelf got too warm for cat comfort.
+; 
+; Unfortunately for me, the day was still very busy, leaving no 
+; time at all to think of outdoors, though I did notice a look of 
+; gardening thoughts in FL's eyes.  If the work slows down, the 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and like it or not, good luck always trumps hard effort.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Technicolor_Dream  { ; time=0:09:17.23-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.3478657298924145/+0.1805475756575933\
+  /9.249713e+011/1/-152.5/0 params=2/0.75/-2/-1.8/0/\
+  0/0/0 float=y maxiter=3600 inside=0 logmap=640
+  periodicity=10 mathtolerance=0.05/1
+  colors=000mUUmUUmUUmUUmUUmUUnUUzYUzMUpTUgQScJPbFN_\
+  IKXIHUJFRHCOF9LD7IB4GA2HB4HB6IB8IBAJBCJBEKBGKBIFPR\
+  DOPBNO9MN7LM6LL7KK8KK9KKAKKBKKBKKCJJDJJEJJFJJGJJGJ\
+  JHIKHHLHHMHGMHFNHFOHEPHEPHDQHCRICSIBSIBTIAUI9VI9VI\
+  8_I7XI7oI6YJ6ZJ5_J4`J4qJ3sJ3bJ2cJ1cJ1dJ0eJ0eLplKom\
+  KnmKnmKmmKmmKlmKlmJkmJkmJjmJimJimJhmJhmIgnIgnIfnIf\
+  nIenIdnIdnHcnHcnHbnHbnHanHanH`nH`nJalLbjNchPdfRedS\
+  fcUgaWh_YiY_jWakUblTdmRfnPhoNjpLlqJmrIosGqtEsuCuvA\
+  vv9sqEpmImiMjeRgaVeYZbUb_QgXMkUIoSEsTDqTDpUDoUDmUD\
+  lVDkVDjWDhWDgWCfXCuXCkYCbYCaYC_ZCZZCYZCXWGUTKSRdPO\
+  ZNLVKJYIGaFEdDBhA8f86o5zs3mw13u2zz26t28s2Ar2Br2Dq2\
+  Fp2Gp2Io2Kn3Ln3Nm3Pl3Ql3Sk3Uj3Vj3Xi3Yi3Xe8XbDWZIWW\
+  NVSSVPWVL`UIeUEjTBoT7tT4zU6zV8zWczXczYczZcz_cz_cz`\
+  czaczbczcczdczeczzczzUzzTzzTzzTzzTzzTzzSzzSzzSzzSz\
+  zSzzRzzRzzRzzRzzRzzQzzQzzQzzQzzQzzNzzKzzHzzEzzBzz8\
+  zz5zzWzzVzzUzzTzzSzzRzzQz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

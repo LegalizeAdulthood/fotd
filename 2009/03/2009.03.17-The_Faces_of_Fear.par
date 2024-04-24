@@ -1,0 +1,104 @@
+;     Date: Mon, 16 Mar 2009 17:35:16 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 17-03-09 (The Faces of Fear [6])
+; 
+;       Id: <1.5.4.16.20090316163524.2b1f907a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 17, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The name of today's image, "The Faces of Fear", sounds something 
+; like the name of one of those 'shocking' reality shows that fill 
+; the TV programming.  But the name is fully justified.  The first 
+; thing I noticed when I saw the finished image was the ring of 
+; stylized but terrified profiles of human faces surrounding the 
+; central minibrot.  These profiles are most obvious in the lower 
+; left part of the image.
+; 
+; All this fear was generated when I combined 7.5 parts of 
+; Z^(-0.5) with 0.75 part of Z^(-5), added (1/C) and iterated the 
+; mixture with a bailout radius of 40.  The parent fractal is 
+; little more than an empty circle with something that looks like 
+; a lobster claw on its northeast shoreline.
+; 
+; There is an obvious mandel-type bud in this claw however, with a 
+; curving filament extending from it.  Today's scene is located 
+; far out on this filament, near the point where it terminates.
+; 
+; The rating of a 6 is near what I think the image is worth.  The 
+; calculation time of only 39 seconds makes running the included 
+; parameter file quite a bargain.  But the best bargain of all can 
+; be found on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image already has been or soon will be calculated and 
+; posted for immediate viewing pleasure.  
+; 
+; The temperature of 54F 12C was fair enough here at Fractal 
+; Central on Monday, but the cloudy skies totally failed to 
+; satisfy the fractal cats, who spent most of the day in the 
+; living room, sulking conspicuously.  The treat of tuna cheered 
+; them some, though they still would have preferred an afternoon 
+; in the sun on their sun shelf.
+; 
+; My day was average, which means just enough work to keep boredom 
+; away.  I'll post the next FOTD in 24 hours.  Until then, take 
+; care, and when one is young, science has the all answers.  But 
+; the older one grows, the fewer questions science can answer.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Faces_of_Fear  { ; time=0:00:39.41-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.3338053113603147/+0.0914822065138245\
+  /3.05e+010/1/-22.5/0 params=7.5/-0.5/0.75/-5/0/-60\
+  /0/0 float=y maxiter=1600 inside=253 outside=tdis
+  logmap=17 periodicity=10 mathtolerance=0.05/1
+  colors=000x3ON7s53z79u9FqBLmDRiFXeHaaQdeYgifjlnmpv\
+  os6Yu7Vq8Tm9QjAOfBMb00KTJOSFOCERkSnoZosdpzzzzzzzoX\
+  weBwYHtRMlLSbHXZDbVAgPGZJMQDSHczcZjfadie_khUnlPpoJ\
+  srEujLvbRwVXzObxGhy8nz1tz9frGTjNFbU2VX5T_8RbBQeEOh\
+  HMjJLiPZhUlgZzfXtfWzfUhfTcfRYfQSfOMfNHXPTORcSPYWOS\
+  _NNcLHgKCkJ6nI1TqAMnFFlK9jPBeSCaVDYYEU`GQcHMfIIiJE\
+  kLIiMLhOPgPSfQVdSZcTabUdam2Xm3Ym3Ym4Ym4Ym4YeB_ZH`S\
+  OaLUbE`c7fd0le2gf3cf5_g6Wg8Sh9OhBKiCGiLW_UkRazIawQ\
+  atXaqcankakrahybfwbdubcsbaqb`obZmbYlgXhlXeqWbuW_Wg\
+  f6smHpdSmWbjNmgExe5rcBlaHg_NaZSXXYRVcMUhLThJSgHRfG\
+  QfEPeCOdBNd9Mc7Lb6Kb4Ja2I`1H`DBkP6uJBdDGO7L8AI9CGA\
+  FEAHBBK9BM7CP4CR2DT0DSAKRJRWghNkcEp_6tWEoYMk_Ugaac\
+  ch_eYhdNqcDzbHtcLncPhcSbcWXc_RcbLccIVdGMeEDeC4`ICW\
+  NKRTSMY_IbfHdhGejFflEgnDhpCirCjtEisGisIisJisIloHnl\
+  GpiFsfaRZcYXVSRMNMDIG4DBFKAQR9`Y8kd7vk6tfDsaJrXQqS\
+  WpOahVd``fUfhiNYZfzeaNkfH }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

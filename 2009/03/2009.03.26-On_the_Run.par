@@ -1,0 +1,103 @@
+;     Date: Wed, 25 Mar 2009 23:51:56 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 26-03-09 (On the Run [7])
+; 
+;       Id: <1.5.4.16.20090325225212.2b679cd2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 26, 2009 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I ended yesterday's FOTD discussion with a casual question about 
+; what benefits the space program has ever produced.  And one of 
+; the replies was GPS -- the global positioning satellite system.  
+; This is indeed a benefit.  In the bad old days, we actually had 
+; to do things like note the positions of the stars and the time 
+; of day, and then do some mathematics if we wanted to know where 
+; on earth we were.  (I wonder if they still teach celestial navi-
+; gation at the Naval Academy.)
+; 
+; Luckily, there is no navigation problem with today's image, 
+; which was produced by subtracting Z^(2.6) from Z^(2.4).  To see 
+; the action, simply load up the included parameter file, strike 
+; the 'go' button and within a few minutes the parameter file will 
+; generate the image.
+; 
+; I named the image "On the Run".  There is about as much reason 
+; behind the name as there is behind some of my ratings.  And BTW, 
+; I have been considering dropping the rating system.  All it does 
+; is deter some people from checking the images.  If I do drop the 
+; ratings, viewers who want to know the quality of the day's image 
+; will have to calculate the image themselves or go view it on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and make their own rating.
+; 
+; BTW, today's image rates an adequate 7.  I really don't think it 
+; is worth much more.  (Opposing opinions cheerfully accepted.)
+; 
+; Increasing clouds marred Wednesday here at Fractal Central, 
+; though the temperature of 55F 13C was not at all bad.  The 
+; fractal cats complained when their afternoon sun failed to 
+; appear, but otherwise were happy enough.
+; 
+; My day was rather busy.  Tomorrow should be the same.  The next 
+; FOTD will be posted in 24 hours.  Until then, take care, and I 
+; just saw a Higgs particle pass through the room.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+On_the_Run         { ; time=0:06:49.61-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-1.766272449888003/+0.0115958894054906/\
+  5.083122e+010/1/-20/0 params=1/2.4/-1/2.6/0/0/0/0
+  float=y maxiter=3000 inside=0 logmap=346
+  periodicity=10 mathtolerance=0.05/1
+  colors=000K5cK5cK5cK5cK5cK5cK5cK6cK7cK8cK9cLBcLDcL\
+  FcLHcLJcJIcHHcGFc1Ec2Dc4Cc5Bc7Ac9DZAFTBIOBMJEQKHSL\
+  KTMMUNPUOSROVNPXJQ_FRbBSe7Tg4TjBUlHVnNWpUXr_YteZi`\
+  VZWROSODNK3JH6HK9GNBFQEDTGCWJBZLA`O8cR7fT6iW4lY3o`\
+  2rb1t`6s_AsZEsYJsXNsWRsVVsU_sTcsSgsRlsQpsPtsOxsMwm\
+  LvhJucItZGsTFrODqJCpEBp9EoCGoEInGKnJMnLOmNQmPSmSzz\
+  UzwWzrZzn`wkbmkddhbdf`ecZeaXfZVfXTfVRgSPgQNhNLhLJi\
+  IHVTmUZaUdRUjFUp4QoBNnHKmNHlTEk_Bjz8iz5hz6fr6dj7be\
+  7``8ZV8YR8WN9UI9SEAQ9AO5AN1CO2DO2FP3GP3IQ4JQ4LR5MR\
+  5NS5PS6QT6ST7TU7VU8cV8mV8vRBzODzLFzIHzEJzBLz8Nv5Pd\
+  AKNFG5JC4KE4LG4MI3NK3OL3PN3QP2RR2ST2TU1UW1VY1W_1W`\
+  3XY5YW6ZU8ZSA_QB`ODaMFaKGbIIcGKdELdCNeAPf8Qf6Td8Vc\
+  9YbA_`Cb_DdZEfYFYVPPSZGPh8Nr9Ft9Fv9KwBPrDUnFZjGchI\
+  hmKmrLrvNvzPzzzzJSzzUzzzz7Xzzzz7SzzzzDOzzMzzzzMIzz\
+  FzzzzWBzz9zzzzd5zz3zzzzh8zzzzeCzzEzzzz`JzzLzzzzWPz\
+  zRzzzzSWzzYzzzzaazzczgzzk }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

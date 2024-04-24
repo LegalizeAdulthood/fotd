@@ -1,0 +1,102 @@
+;     Date: Thu, 19 Mar 2009 23:19:35 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 20-03-09 (Looping Bridges [In Doubt])
+; 
+;       Id: <1.5.4.16.20090319221947.2be77e4e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 20, 2009 (Rating in Doubt)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's strange image is a scene in an almost-Julia set of the 
+; northeast shore line of the main bay of the Mandelbrot set.  It 
+; is not part of a Julia set, nor is it part of a perturbed 
+; Mandelbrot set.  It is an oblique slice through the Z^2+C 
+; Julibrot figure oriented within a degree or so of the Julia 
+; direction.
+; 
+; The straight bright bar across the lower part of the scene is 
+; what I call a bridge.  It appears straight because regardless of 
+; where Z is initialized in a perturbed M-set, the points will 
+; always settle into the same orbits unless they escape first.
+; 
+; I had no idea how to rate such an image, so I left the rating in 
+; doubt.  The name "Looping Bridges" describes the many loops and 
+; spirals dancing around the bridge.
+; 
+; The calculation time of 2 minutes is thankfully fast, though the 
+; trip to see the completed image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; could be even faster.
+; 
+; A cloudy start gave way to a partly cloudy afternoon here at 
+; Fractal Central on Thursday.  The fractal cats enjoyed the times 
+; when the sun was shining and made the best of things when it was 
+; not.  The temperature hovered around 52F 11C most all afternoon. 
+; 
+; My day continued busy.  The next FOTD will be posted in about 24 
+; hours.  Until then, take care, and look for light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Looping_Bridges    { ; time=0:02:08.44-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=t maxiter=18000
+  center-mag=0.00665081/0.170958/3.138989/1/-90/0
+  params=90/90.07/92.48/89.01/0.2438/0.5139/-0.0081/\
+  0.5024/2/0 float=y inside=0 logmap=-3 periodicity=9
+  colors=000jRhh0efVbd0_bYX`AVZaSXKPVdMTKKRgHPKENkBK\
+  N4Ml9OMDQcHRLLTWQVKUXVYW0cYQaZ0`_NZ`0YaNXb0VcNUe0S\
+  fURg0QhVOi0NjSMk0KmTJn0HoVGphlqijrnCsXBtYDtYEzzFtz\
+  GtzHtZJtZKCzxCzxCzxDzxDzxDzxDzxEzxEzxEzxEzxFzxFzxF\
+  zxFzxGzwGzwGzwGzwHzwHzwHzwHzwIzwIzwIzwIzwJzwJzwJzw\
+  JzwKzwKzwKzwKzwLzxLzxLzxLzvMzxMzxMzxMzxNzxNzxNzyNz\
+  yOzyOzyOzyOzyPzyPzyPzyPzyQzyQzyQzyRzyRzyRzyRzzSzzS\
+  zzSzzSzzTzzTzzTzzTzzUzzUzzUzzUzzVzzVzzVzzVzzWzzWzz\
+  WzzWzzXzzXzzXzzXzzYzzYzzYzzYzzZzzZzzZzzZzz_zz_zz_z\
+  z_zz`zz`zz`zz`zzazzazzazzazzbzzbzzbzzbzzczzczzczzc\
+  zzdzzdzzdzzezzezzezzezzfzzfzzfzzfzzgzzgzzgzzgzzhzz\
+  hzzhzzhzzizzizzizzizzjzzjzzjzzjzzkzzkzzkzzkzzlzzlz\
+  zlzzlzzmzzmzzmzzmzznzznzznzznzzozzozzozzozzpzzpzzp\
+  zzpzzqzzqzzqzzqzzXzzXzzXzzYzzYzzYzzYzzYzzYzzYzzYzz\
+  YzzYzzYzzYzzYzzYzzZzzZzzZzzZzzZzzZzzZzzZzzZzzZzzZz\
+  zZzzZzz_zz_zz_zz_zz_zz_zz }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

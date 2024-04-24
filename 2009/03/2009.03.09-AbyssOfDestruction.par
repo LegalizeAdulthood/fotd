@@ -1,0 +1,110 @@
+;     Date: Mon, 09 Mar 2009 10:17:55 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 09-03-09 (Abyss of Destruction [No Rating])
+; 
+;       Id: <1.5.4.16.20090309091759.2b2f6b7c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 09, 2009 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image with the ominous name was created with the Mystic2 
+; formula, a formula that does God only knows what.  I certainly 
+; don't know.  One thing I do know is that the image consists 
+; entirely of 'inside' stuff brought to life by the 'bof60' active 
+; inside fill, which colors the points according to how close they 
+; come to the origin in their wanderings.
+; 
+; The Mystic2 formula draws nothing but blank circles of radius 1. 
+; All the action comes from the trapped areas inside the circles.  
+; As today's image shows, the things that might be done with the 
+; areas inside the circles are endless.
+; 
+; The image reminds me of the cover of a cheap "terror" novel so I 
+; named it "Abyss of Destruction", a name that might be given to 
+; such a story.  I gave no rating because I consider it unworthy 
+; of one.
+; 
+; The image is sensitive to the values of the parameters, particu-
+; larly both parts of the p3 parameter.  The fast speed of the 
+; image makes experimentation very easy.  Changing the function 
+; totally changes the image, as does changing the inside fill.  So 
+; actually, an entire range of images are waiting to be made 
+; manifest by tweaking these parameters.
+; 
+; The calculation time is only 25 seconds on my P4-2000mhz unit, a 
+; time that will bring satisfaction to those, if any, who might be 
+; disappointed by the result.
+; 
+; Of course, calculation may be entirely avoided by viewing the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A partly cloudy springlike day with a temperature of 75F 24C 
+; when I left Old Fractal Central at 1:00pm on Sunday turned into 
+; a raw overcast drizzly day with a temperature of 48F 9C by the 
+; time I reached New Fractal Central at 4:30pm.  The new fractal 
+; cats greeted me when I arrived, caught a scent of Thomas, the 
+; old fractal cat, and asked what I had been doing for the past 32 
+; hours.  I answered their question with a double treat of tuna 
+; and cheddar cheese.
+; 
+; The next FOTD will be posted in about 12 hours.  Until then, 
+; take care, and let me know when the world ends.  I don't want to 
+; miss it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AbyssOfDestruction { ; time=0:00:25.45-SF5 on P4-2000
+  reset=1960 type=formula formulafile=jim.frm
+  formulaname=Mystic2 function=cotan passes=1
+  center-mag=0.0541584/-0.60902/5.821744 logmap=yes
+  params=-0.065/-5.122/6.003/-6.845/5.664/0.303
+  float=y maxiter=300 inside=bof60 periodicity=10
+  colors=000zzzwvptrcpmYlhWhc0dZ0`U0XP0TKFNFKICI8DG0\
+  DE0DC0BC0CC0DC8DDCEFECFOEGIGMHHOFMTJShM_mQgrTmvZrw\
+  `uvdwuhwtkrsglrlhqpfpqelmchjbcfa_b`WZZSVYORXKOWFKU\
+  BGT7LU9QVAVWC`YEeZFj_Ho`ItaKpbMlbNhcPdcR`dSXeUSeWO\
+  fXKfZGg`Cga8hcFkZ4hdoNXdLSUKOJIK6FF9HGBJGELHHNIKPI\
+  MRJPTKSVKVXLXZM_`MbbNedOgfOjhPqjRmjQijOdiN`iLXiKTi\
+  IPiHKhFGhEChCCiBDkADl8En7Eo6Ep5Fr3Fs2Ft1Hu7IuDKuIL\
+  vOMvTOvZPvcUgT_TJdE8iCAmACr8Er9DrACrBBqCAqD9qE8qF7\
+  qG6qH5qI4pJ3pK2pL1pM0pM0mO2kP4hR6fS8dT9aVB_WDYXFVZ\
+  HT_JR`KObMMcOP_NSWMVSLYOL`KKcGJfCIi8HiAIhCJhEKgGLg\
+  IMfKNfMPfOQeQReSSdUTdWUcYVc_WxoWupWrpWoqWlrWirWfsW\
+  ctW`tWYuWVvWSvWPwWNwWMtXLqXKnXKlXJiXIfXHcXHaXGZXFW\
+  XETXERXDOXCLXNZbXkigyohwkjtgkrblpZnnVokRqiNrgJseEu\
+  bAv`6s`6q_5n_5kZ5iZ4fY4dY3aX3ZX3XW2UW2SW2NR8JMDFII\
+  BDO79T34YCAVLFSULPaRLjWIsaFs`Hs_Ks_MtZPtYRtXTtXWtW\
+  YtV_uUbuUduTguSipRjjPkeOl }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
