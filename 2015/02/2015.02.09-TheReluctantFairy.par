@@ -1,0 +1,113 @@
+;     Date: Mon, 09 Feb 2015 13:50:12 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 09-02-15 (The Reluctant Fairy [A-6,M-7])
+;       Id: <1.5.4.16.20150209135326.2baf8a9c@earthlink.net>
+; ---------
+; 
+; FOTD -- February 09, 2015 (Rating A-6,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Perhaps we should rename the FOTD the FOTM -- "Fractal of the 
+; Month".  It's been a couple weeks since the last image appeared. 
+; But despite appearances I am still searching for fractals in 
+; between doing other things such as drawing by hand the 
+; other-worldly surreal landscapes I often try to capture in 
+; fractal images.
+; 
+; Today's image is an odd-plane scene in Seahorse Valley of the 
+; Mandelbrot set.  I chose it as today's FOTD because of the 
+; prominent spiral that changes direction as it crosses the 
+; valley.  As is usually the case in these odd-plane images, some 
+; stretching and skewing was needed to bring the scene to 
+; recognizable proportions.
+; 
+; The rather poetic name, "The Reluctant Fairy", has nothing to do 
+; with the image.  It simply came to mind when I shut off my 
+; rational thinking, something FL claims I often do.
+; 
+; The art rates a nominal 6 because of the not very exceptional 
+; coloring; the math rates a 7 because of the curious two-way 
+; spiral.  The calculation time of 4-1/2 minutes might be a little 
+; more than the image is worth.
+; 
+; The image may be viewed by running the parameter file or by 
+; checking the web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; where it might be posted.  The official web site is currently 
+; down.
+; 
+; Miserable winter weather prevailed here at Fractal Central 
+; today, with a steady light rain, a temperature of 32F 0C and 
+; spotty icy spots making both walking and driving treacherous.  
+; The fractal cats, who neither walk outdoors nor drive anywhere, 
+; were unconcerned.  The fractal humans passed the day indoors, 
+; avoiding the outside weather.
+; 
+; I haven't the foggiest idea when the next FOTD (FOTM) might 
+; appear, but I have a good feeling it will eventually show up.  
+; Until whenever, take care, and spiritual bankruptcy goes far 
+; deeper than simply not believing in God.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheReluctantFairy { ; time=0:04:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrotSqr passes=1
+  center-mag=0/0.521639/12.12754/0.4453/90/68.6631407
+  params=10/90/0/90/-0.7492/0/0/0/0/0 float=y
+  maxiter=4800 inside=0 logmap=32 periodicity=6
+  colors=0003ia7eaB`aFXaJVgNUdRTaVSZZRWbQTfPQjONnNKr\
+  LHrMIoMImMJjMJhMJeMKcMK`MKZMLWMLUMLWNPYOT_PXaQ`bRd\
+  dShfTlhUpiUtjVqkWolXlmYjmYhnZeo_cp``p`ZqaXrZUsWStT\
+  asQWsSQvUDtWHsYKrXNqWQpUToTWnS_mQblQekQhjPknOmkMni\
+  LngJneIncHnaFn_EnYDnWBnUAnS9nQ7nO6nM5nN7mO9mPBlQDl\
+  REkSGkTIjUKjVMiXLkWMjWNiWOhVPgVQgVRfUSeUTdUUcS_fUU\
+  cWOaXJ_ZDX`7V`5Ua2Tb5Pc7MdAJeCGfFCgH9hK6iM3iO0ZP4P\
+  Q8FRC4ND5PF5RG5TI5VJ6XL6ZM6`O6bP7dR7fS7hU4pP6lS7iV\
+  8eX9b_A_aBWdCTfEQiFMlGJnHGqICsJ9vK6xRFsXKoWKjVKeUK\
+  fUKfUKfTIgUGgQEhMDgMFgOGgPIgRJgSLgUNgVOgXQgYRg_Tga\
+  PqaSl`UgWXbQZYKaTFcO9fJ4hFEgGOgHXgIffJdfKafK_gLYhL\
+  XiMWjMPkNIkNJiRKhULgYMf`NecOdgPcjQbmRaqS`tU`vS_wQZ\
+  wOYwMYwKXwIWwGWxEVxCUxAUx8Tx6Sx5Sx7Qv9OuBNsCLrEKpG\
+  IoHHmJFlLDkMCiOAhQ9fR7eT6cV4b71kK2fW3am4Wj3Xg3Yd2Z\
+  a2_Z2`SBY5LMMJWaHdpBoqFmqIkrLirOgsResUdsYbt``tcZug\
+  XskVsocssmwwzwwzwwzzwzzwz }
+
+frm:SliceJulibrotSqr   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z*z+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
