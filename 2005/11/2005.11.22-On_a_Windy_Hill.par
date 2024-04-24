@@ -1,0 +1,92 @@
+;     Date: Tue, 22 Nov 2005 23:36:24 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-11-05 (On a Windy Hill [7])
+;       Id: <1.5.4.16.20051122233810.2a979d7e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 23, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image shows a tree clinging to a high and windy 
+; hill, so I named it "On a Windy Hill".  Well, actually it shows 
+; an entire Julia set of the Z^1.15 Mandeloid as it appears 115 
+; levels up the complex-log hyperspiral.  The windy hill of the 
+; name, and the tree as well, are only figments of my imagination.
+; 
+; But sometimes figments can be quite attractive, as today's image 
+; shows.  One can almost feel the brisk east wind blowing along 
+; the ridge top from the right.  And yes, I realize that the 
+; colors of the tree are unusual, but the tree is located on an 
+; alien planet, so this is no problem.
+; 
+; When the time arrived to rate the image, I decided on a rating 
+; of 7.  I rather like the image of a tree with dark blue branches 
+; and dull red flowers.  The render time of a very brief 66 
+; seconds helped justify the rating of a 7.  Most of the speed is 
+; due to the unusually low maxiter of 50.  The low maxiter is 
+; needed to keep the background sky from filling in with too much 
+; debris.
+; 
+; But speed is of no importance to machines with a Fractint 
+; phobia, which will never know the joy of running Fractint.  
+; Those with such machines may download the completed GIF image 
+; from the FOTD web site at:
+; 
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Occasional rain, cold 41F 5C temperatures, and high winds, made 
+; Tuesday totally hopeless for the duo of fractal cats.  Realizing 
+; that they would not be able to enjoy their usual outing, they 
+; settled themselves on the shelf by the double window to pass the 
+; day dreaming and wishing.  An extra treat of tuna in the early 
+; afternoon helped ease their distress.  My day was moderately 
+; busy, with nothing to set the day apart from hundreds of similar 
+; days.  The next glorious FOTD will appear in 24 hours.  Until 
+; then, take care and search for the real.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+On_a_Windy_Hill { ; time=0:01:06.64--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=-1.41759\
+  /0.0889863/1.173709/1/70/-2.50563458870090017e-014
+  params=1.15/0/115/0/-0.364/-0.925/0/0 float=y
+  maxiter=50 inside=60 logmap=yes periodicity=10
+  colors=000KA0KA0KA0KA0KA0KA0KA0KA2KA4KA7KAAKADKAGK\
+  AJKAMKAPKAPKASKAVKAXKAYKAZKA_KB`MHbOMeQRfVWi_`jdfk\
+  iklntztzzzzzxxzttzrmhqfgnbejYcgTbeO`cJZcFYcJSfNNeQ\
+  HeUCdY6d`1aZBZXLWVVTTdQSnKZfRYpQ_nP`mAaz_ihWhhThhQ\
+  ghMfhJfhGehCeh9dh6dh6ai5Zk5Wl5Sm4Po4Mp4JqBMcIORPRD\
+  VT0SU6QUCNUHLUNJVTGVYEVcCVhEUiFTiGSjISjJRkKQkLQkNP\
+  lOOlPNmRNmSMnTLnULnQRpMXrIatEguAlw6ry2wz4ux6tw7su9\
+  rtBqsCpqEopGnnHmmJllLkjMjiOigQhfRgeVl`ZqWbvSfzNjzJ\
+  upWpl_kibffeaciX`lSYoNVsISvEPyDTvCXtB`rBcpAgn9kl9n\
+  j8rh7vf7ydQ9JhLWaRYWWZP`_JfaCkb6pc0ud5pf9lgDhiHdjM\
+  `lQXmUToYPp_Ql`QhaQdcQ`dRXeRTgRPhRLiSzkSzlSzmSznSz\
+  mQzmPzlNzlMzlKzkJzkHzjGzjEzjDzlIzmNzoRzpWzq_zkkzew\
+  zjmzndzrWzvNzzEzwFztGzqHzoIzlJziJzgKzdLzaMz_NzXNzU\
+  OzSPzPQzMRzKRzFYzAdzCgzEizGkzImzKozMqzOszQuzRqzRmz\
+  SjzSfzTczT_zTXzTXzUWzUWzUWzUVzVVzVVzWTzVUzVUzWUzWT\
+  zWTz7xz9vzBtzCrzEpzFnzDnz }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

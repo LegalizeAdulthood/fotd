@@ -1,0 +1,92 @@
+;     Date: Fri, 25 Nov 2005 01:56:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-11-05 (All Inside Stuff [6])
+;       Id: <1.5.4.16.20051125015800.2aa75424@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 25, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yesterday's discussion was short because I inadvertently deleted 
+; the regular discussion and wrote over its disk space before I 
+; realized the file was gone.  That's two discussions I've lost 
+; this month.  'Wordperfect5.1', the DOS program I use, does not 
+; have a waste basket.  The lost discussion was about oddities of 
+; the fourth dimension and the three-dimensional slices of the 
+; Z^2+C Julibrot.  One of these days I'll re-write it, but today 
+; we have more immediate things to discuss.
+; 
+; Today's image is part of the inside of a Julia set of the 
+; Z^1.15+C Mandeloid as it appears 55 levels down the spiral.  It 
+; consists almost totally of inside stuff made visible by the 
+; 'atan' inside fill, and is one of the most unusual all-inside 
+; images I have seen.  The eight leaf-like features surrounding 
+; the hole at the center at first appear symmetrical, but first 
+; impressions are sometimes deceiving.  In addition to being 
+; colored differently, each leaf has a slightly different shape 
+; and a different inside pattern.
+; 
+; I named the image "All Inside Stuff" as a mere description.  I 
+; rated it a 6 because I feel it is at least slightly above 
+; average.  The render time of the parameter file, just under 8 
+; minutes, borders on slowness.  A notably faster way to see the 
+; image is to go to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and download the finished image from there.
+; 
+; A light snow fell overnight Wednesday here at Fractal Central, 
+; but the 1/2 inch (1cm) melted away as soon as the sun rose.  
+; Unfortunately the grass remained too wet for the sensitive paws 
+; of the fractal duo, who once again passed the day on the shelf 
+; by the window.  My day was occupied by the Thanksgiving goings 
+; on.  The next FOTD will appear as scheduled in 24 hours or so at 
+; this same place.  Until then, take care, and when you row your 
+; boat, remember that life is but a dream
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+All_Inside_Stuff { ; time=0:07:41.15--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1
+  center-mag=0.198246/-0.362094/1.593045
+  params=1.15/0/-55/0/0.547/-0.465/0/0 float=y
+  maxiter=255 inside=atan periodicity=10
+  colors=333uLMumOmMMB48nMMkOMiROeUMcVLZVGUXCRZCXNCc\
+  IFkHHrJJuLL`DDKNOHljLuuLuPKtY_abnUpuruE5CG69I77K77\
+  M88O99Q99RAARAAUBBVBBVBBXCCZCCZCC`DDbEEbEE77K77I55\
+  E44B337225111111111111111DDb422542763994BD5DE5FI7G\
+  K7IO9LRAMUBPXCRZDUbGVcHYgI`kL`lLcpNdrPguQhuSjuSjuS\
+  luTmuTmuTggNjuSiuQhuQfuOeuOeuNduNbuLauL`uLZtKXrJXp\
+  JVnIUnISlHQkHOiGMgGMgGLeFJcFHbEG`DEZCEZCCXCBVBBUBA\
+  RAARAntKMMMLLuLLuKKtMJkSPcVVVZZYgeSqubptWnkOneIn_I\
+  nVI4986GCJMJbWQui`ufYucVubSuZOugbuWLuYNua`eRbubuut\
+  uukuuburWuoOuiJpYLucLueHliGbnIXuNRuPLuLLuRLuYLueLr\
+  kNotTludnuWpuQtuLkfLurLuuLuuLlllgggc_a`MUtKWRAK337\
+  74BO9GgGPuL_uLUpJQgGJXCCO99E555223735E58M8BUCEbHGi\
+  NJpSLucLuWGgKCXCBUBCRAOQ9gSGuWLuYLuVLuTLuRLuNLuMLu\
+  LLuLLrJJUBB522uLUrPMXPCZHCMK8HVBFeFLuLInID`D8M8373\
+  424111737VBNpWeumpuVtlLucLuuuurrufhkVZ`KURG96CCXAA\
+  RD8MF6GM8GUBI`DJeFKlHKtKM }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

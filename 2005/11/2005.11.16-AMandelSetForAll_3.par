@@ -1,0 +1,87 @@
+;     Date: Thu, 17 Nov 2005 00:04:20 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-11-05 (A Mandel Set for All-3 [6])
+;       Id: <1.5.4.16.20051117000603.29bfc220@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 17, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image subtracts a little Z^5 from some Z^3 before adding 
+; C.  The result is midget not quite like any I have seen before.  
+; In fact, it's not only the midget that's weird.  The whole area 
+; of the parent fractal in which the midget lies is kind of weird. 
+; It deserves more investigation, which I will likely give it in a 
+; day or two.
+; 
+; The real p1 and p2 parameters are critical.  Even a small change 
+; totally loses the scene.  The rating of 6 seems about right for 
+; the image.  The render time of 1-1/2 minutes is lightning fast, 
+; but a download of the finished image is more convenient.  That 
+; download may be found on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; While browsing the December issue of 'Scientific American' 
+; magazine recently, I came upon a speculative article stating 
+; that spacetime might be a kind of fluid much like the luminifer-
+; ous ether of 19th century physics.  If it were so, it would mean 
+; the end of 20th century ideas such as relativity and quantum 
+; mechanics, but since these theories are mutually incompatible, 
+; their time to fade into the past might be approaching anyway.  
+; I may have more to say about all this new stuff once I have read 
+; the article more carefully and given the topic more thought.  
+; Right now I will only wonder what the spacetime fluid is sup-
+; posed to be made of.
+; 
+; Wednesday was warm enough here at Fractal Central, but it was 
+; breezy, and there were frequent showers.  The cats spent the 
+; afternoon sulking on their window shelf, watching the wind blow 
+; and the showers move over.  My day was fairly routine, with only 
+; a minimum of sulking.  The next FOTD will be posted in 24 hours. 
+; Until then, take care, and is the world of fractals good, evil, 
+; neutral; or is it whatever one makes of it?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AMandelSetForAll-3 { ; time=0:01:23.54--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-0.43154027465265790/+0.005072105040872\
+  53/4.920411e+007/1/20/-2.57364112225821895e-006
+  params=0.965/3/-0.193/5/0/0 float=y
+  maxiter=1200 inside=0 periodicity=10
+  colors=000GMNGNOHPQ8qqCnmFkjIhgMecPc`S`YVYVZVRaSOd\
+  QLgNIkKEnHBqE8tC5sH8sLBsQErUHrYKrbMrfPqjSqoVqsYqw_\
+  gsaZpcPldGif7fg7eh8eh9eiAeiAdjBdjCdkDdlDclEcmFcmGc\
+  nGbnHboIboJbpJaqAKo9HoCIlFIjIIhKIfNIdQIbTI_VIYYIW`\
+  IUcISeIQbFP`CPZAPX7OV4OT2OX8R_EUcJXfP`jUdm_hqdltjq\
+  wowztzlghgcfb`cYXaSTZNPXIMUDIS8EP3BN89KD8IH7GM6DQ5\
+  BV49Z36c24g12Z4EQ6PH9`8Bk0Dv8CsGBqNAnV9lb8ji7gq6ex\
+  5ct9ZpDUlGPhKLdOG`RBXV6UY2clm_jjWigShdOfbKe_GdXCbV\
+  8aS4`P1_N5fR9mUDsXDr_DqcDpgCtnDpjDlgDhdDeaDaYDYVEV\
+  SERPENLEKIEGFECCE99KKBQUCVcE`mFgxEewGNFuOGuPGtQGsR\
+  HrRHrSIqTIpUJpVJoWKnWKnXKmYLlZLk_Mk_Mj`NiaNibOhcOg\
+  dNhcOgcPfcQecRdbRcbSbbTabU`aU`aV_aWZaXY`XX`YW`ZV`_\
+  U`_U_ZT_YS_XRZWQZVPZUOYUNYTMYSLYRKXQJXPIXPHWOGWNFW\
+  MFWLEVKDVKCVJBUIAUH9UG8UF7TF6TE5TD4SC3SB2SA1UB0SA1\
+  RA1Q91P92O82N82M83L73J73I63H64G64F54E55D45C45B45C6\
+  7C89DABDBCEDEEFGFHIFIJFKL }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

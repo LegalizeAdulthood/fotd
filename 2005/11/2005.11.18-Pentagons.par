@@ -1,0 +1,80 @@
+;     Date: Fri, 18 Nov 2005 23:00:13 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-11-05 (Pentagons [8])
+;       Id: <1.5.4.16.20051118230155.0d873c84@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 19, 2005 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD rates an 8, and with its glowing pentagons, the 
+; image is unusual enough to make it an honest 8.  The image is a 
+; Julia set of the Z^1.11+C Mandeloid as it appears 111 levels up 
+; the complex log spiral.  The Mandel aspect of the scene is an 
+; egg-shaped open bay surrounded by much chaos.  Today's Julia set 
+; is associated with a point just offshore of the southwest shore-
+; line of the bay, a point where the chaos is at a minimum.
+; 
+; A quick glance will reveal the reason why I named the image 
+; "Pentagons".  It is filled with bits and pieces of near-perfect 
+; Pentagons, with a few whole pentagons thrown in for good 
+; measure.  The rating of an 8 is the first rating this high in a 
+; number of months.  The render time of 4-1/4 minutes can be elimi-
+; nated by downloading the finished image from the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The sun shone bright all day Friday here at Fractal Central, but 
+; the temperature of 39F 4C was too cold for the ears and paws of 
+; the fractal cats.  They decided to spend the day sleeping on 
+; their shelf by the window, only occasionally opening their eyes 
+; to check for passing birds.  My day was satisfactory.  The next 
+; in the near-endless string of FOTD's will appear in 24 hours.  
+; Until then, take care, and iterate until you drop.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Pentagons { ; time=0:04:15.95--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=-0.120052/-0.119167\
+  /1.31844/1/90/3.88578058618804789e-016 passes=1
+  params=1.11/0/111/0/-0.041/0.146/0/0 float=y
+  maxiter=256 inside=bof60 logmap=yes periodicity=10
+  colors=000cdLacN_bPYaRW`PU_NSZLQYKOXIMWHKVFIUDGTCE\
+  SACR9AQ78P6zmc40930C20E10H20J40M60O80R90T90W90YA0`\
+  A0cB4eB9hBDjCFmCGoCFrDFtDEwXImVHoTHpRGqPGrNGsLFuJF\
+  vHEwFEx4aG5ZL6XQ7UU8SZ9QbANgBLlCIpDGujgq`vQ_tSZrTY\
+  pVXnWWlYVjZUh`TgaSecRcdQafP_gOYiNWjMUlLTmKRoJPpINr\
+  HLsGJuFHvEFxHs4Gq7Go9GmCGlEGjHGhJFfLFeOFcQFaTF_VFZ\
+  XEX_EVaETdESfEQiEOkDMmDLpDJrDHuDFwJW1IT9HRHGPOGNWF\
+  KcEIjDGruLIpKNkJSfIXaHaXHfSGkNFpIEu5QZ6P`6Ob7Nc7Ne\
+  8Mf8Lh9Lj9KkAJmAInBIpBHrCGsCGuDFvDExaoeZjhWfjTblQZ\
+  nOUqLQsIMuoQDhVGa`KVeNNjQGpU9uX2z_EybQxe`xhlwkwwno\
+  shgpc_lZTiTLeODbJ6_EG`HQaJZbLc_KhYJmVIrTIsUPtVWuVb\
+  vWiwXpwXvoVuhUuaTtVRtOQsHPsKSlMVfPY`R`VUcOWfIZiC`k\
+  6Xj9UiCQhFNgIKgLEcG8_B3W76YE8_LAaRG_MMZISYEYW9cV5h\
+  U1bW3YX5TZ7O_9JaBEbD9cETQHkCJeBL`ANW9PR8QM7SH6UC6V\
+  BQKBh9LiIViRdj_njhwjpWV`4FM8INCKOGMPJOPNRQRTRVVSYX\
+  S`aWbf_dkcfpghukjzorh`ySM }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

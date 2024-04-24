@@ -1,0 +1,81 @@
+;     Date: Wed, 16 Nov 2005 01:09:22 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-11-05 (A Mandel Set for All-2 [7])
+;       Id: <1.5.4.16.20051116011105.29d75a5e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 16, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal combines negative portions of Z^2 and Z^3, then 
+; adds C.  The resulting parent fractal is a Mandelbrot set with a 
+; few added frills and a lot more action in East Valley.  Today's 
+; image is located rather deep in the added action of East Valley.
+; 
+; I named the image "A Mandel Set for All-2", which is more a 
+; catalog listing than a proper name.  The unusual effect was 
+; achieved by rendering the image with the outside set to 'fmod' 
+; and a proximity of 1.1.  The mathtolerance entry in the para-
+; meter file assures that the image is rendered at the right 
+; magnitude.
+; 
+; The rating of a 7 indicates that I consider the image well worth 
+; the effort of rendering it.  At the same time, the render time 
+; of 10-1/2 minutes is slow enough for the download to be the 
+; better choice.  The completed GIF file may be found on the FOTD 
+; web site, ready for download.  The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The clouds hung heavy all Tuesday morning here at Fractal 
+; Central, but the sun emerged in mid-afternoon and the 
+; temperature was warm enough for the cats to make the most of 
+; things.  They spent the afternoon lurking (more likely sleeping) 
+; in the holly patch.  Their day was made complete by a dish of 
+; tuna in the evening.  My day was relatively uneventful.  The 
+; next FOTD will appear here in 24 hours.  Until that mystical 
+; moment arrives, take care, and enjoy the mystery.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AMandelSetForAll-2 { ; time=0:10:29.55--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.83507435707595210/+0.000000401545732\
+  68/8.265932e+011/1/102.5/0 float=y params=-1.05/2/\
+  -0.21/3/0/0 maxiter=1250 periodicity=10 inside=0
+  proximity=1.1 outside=fmod mathtolerance=/1
+  colors=000WZuWZuX_uX_tX`tXatYasYbsYbsYcsZcrZdrZerZ\
+  eq_fq_fq_gp`gp`hp`ho`ioajoajnaknaknblmblmbmmanobmn\
+  bmmbmmbmlcmkcmkcljcljdlidlhdlhdlgelgekfekeekefkdfk\
+  dfkcfjbgjbgjagjagj`gj_hj_hiZhiYhiYiiXiiXiiWihVjhVj\
+  hUjhUjhTkhSkhSkgRkgRlgQlgPlgPlgOnhPlgOjfNheMgdMecL\
+  cbKaaK``JZ_IXZHVYHUXGSWFQVFOUENTDLSCJRCHQBGPAEPADO\
+  9CO8BO7AO89O89O89O99O98O98O98OA8OA8OA8OA7PB7OB7PB7\
+  PB7PC6PC6QC6PC6QD6QD6QD5QD5RE5RE5RE5RE4SF4SF4SF4SF\
+  4TG4TG3TG3TG3UH3UH3UH1VG3VH5WI7WJ8WJAXKCXLDYMFYMHZ\
+  NJ_OK_PM`PO`QPaRRbSTbSVcTWcUYdV_eV`eWbfXdfYfgYghZi\
+  h_ki`li`jQXf2Rh6Ui9WjCYlG_mJanMcoPeoOeqKjoNemPakRY\
+  iTUgVQfXLdZHb`D`b9Zd5Xi0Yg1Yf1Zd1Zc1_b1_`2`_2`Z2aX\
+  2aW2bV3bT3cS3cR3dP3dO3dN4eL4eK4fJ4fH4gG5gF5hD5hC5i\
+  B5i96j86j76k56k46k36i58h69g7Ae9BdACcBDbDE`EF_FGZHI\
+  XIJWJKVLLUMMSNNRPOQQPPRQNTSMUTLVUJXVIYWHZXG`YEaZDb\
+  _CdaAeb9gd8jf7lh5ni4ql3sn }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

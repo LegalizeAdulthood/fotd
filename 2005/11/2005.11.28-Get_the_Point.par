@@ -1,0 +1,103 @@
+;     Date: Mon, 28 Nov 2005 23:48:41 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-11-05 (Get the Point [7])
+;       Id: <1.5.4.16.20051128235032.39172ade@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 29, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image pictures part of the empty inside of a Julia set 
+; of the Z^(1.009)+C Mandeloid as it appears 109 levels up the 
+; infinite logarithmic spiral.  This empty inside was brought to 
+; life not by a bolt of lightning, as the Frankenstein monster 
+; was, but by the bof60 inside fill.
+; 
+; So far, so good.  But something is wrong.
+; 
+; The image has no 'bof60' feeling to it.  It consists of a cloud 
+; of floating daggers arranged into a large broken spiral, with 
+; the bright blue background barely showing through.  Normally, 
+; the bof60 inside fill produces a scene with circular bubbles, 
+; much like the 'fmod' fill does.  It is this unexpected nature 
+; of the image that adds the interest which raises the rating to 
+; a 7.
+; 
+; Also interesting is the fact that the exponent of Z, at a value 
+; of 1.009, is so close to unity, a value that does not make 
+; fractals.  Curiously enough, in this almost-linear range, most 
+; of the action is in the inside parts of the fractals.  The con-
+; ventional inside-outside fractals tend to resemble rather boring 
+; mis-shaped eggs.
+; 
+; The coloring appears quite full, but actually only 20 or so 
+; different colors appear in the scene.  Luckily, 20 colors are 
+; all that is needed to "Get the Point", which BTW is what I named 
+; today's image.
+; 
+; The image is just the center part of the whole inside of the 
+; parent fractal.  For an additional surprise do an outzoom and 
+; check the entire parent, which is nothing like what one would 
+; normally expect.
+; 
+; Today's FOTD render time of 8 minutes borders on slowness.  But 
+; the finished image may be downloaded from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; which will eliminate the task of rendering.
+; 
+; The partly cloudy skies and mild temperatures of 68F 20C on 
+; Monday here at Fractal Central were spoiled by occasional light 
+; sprinkles and wet grass, which limited the cats' outdoor adven-
+; ture time to under 30 minutes.  My outdoor time was limited by 
+; the work that needed to be done after the holiday.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and the 
+; FOTD images will one day vanish, but the fractals themselves 
+; are eternal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Get_the_Point { ; time=0:08:17.03--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=-9.19539/\
+  -0.872849/1.513537 params=1.00897/0/109/0/-4.662\
+  /7.437/10000/0 float=y maxiter=256
+  inside=bof60 periodicity=10
+  colors=000ka9iZ97fkAelDglGhlIjlLklOmlMklNklPklQklS\
+  jlTjlVjlWjlYimYglYekXbjX`hXYgWWfWTeWRcVObVMaUJ_XKZ\
+  _MYbNXePWhQUkSTnTSqVRtXPtXPsXOrXNqWMpWLoWKnVJmVJlV\
+  IkVHjUGiUFhUEgTDeUDcWD`YDZ_DXaCUcCSeCQgCNiCLkBJmBG\
+  oBEqBCsB9uA9rB9nC8jE8fF8bH7_I7WK7SL6ON6KO6HQ5DR59T\
+  55U41W84VC7UGATKDSOGRTJQXMP`POdSNhVMmZKgaJ`eHUiFOl\
+  DHpBAt9Bs9Cq9Eo9Fn8Gl8Ij8Jh7Kg7Me7Nc7Ob6Q`6RZ6rc5l\
+  Z6eU8ZP9VLBOICKFEICFM9HODIRHJULKZPcZmzamzcmzcmzcmz\
+  cmzcmzclzcjzchzchzchzchzcfzcczcazc_zcYzjV_iS`gPahS\
+  biWdjZfkbgleimiknllopnpsprwrmjjgYbbLVX8NVAMTCKREIP\
+  GGNIELKDJMBHO9FQ7DS5KOGRKSZGcSIXLLPENH7Q99RABSBEUC\
+  GVDJXFLYGNZHQ`ISaJVcLXdMZeNagOchPfjRfkSelUdnWcoYbq\
+  _ara`sc_ueZvgYxiYuhXqfWmdWibVe`Ub_UZYTVWSRURNSRQPS\
+  TLSWHTZDTa9Ud5Vh1cg7lfDvdJvaLuYNtVPsRRrOTqKVpGXoKX\
+  mPXkUXiZXhcXfhXdmXbrYbrXcrVdqUeqSfpRfpPgoOhoMioKjn\
+  JjnHkmGlmEmlDnlBok9nh9le9 }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

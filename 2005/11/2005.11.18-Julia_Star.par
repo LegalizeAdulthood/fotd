@@ -1,0 +1,103 @@
+;     Date: Fri, 18 Nov 2005 02:04:01 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-11-05 (Julia Star [6])
+;       Id: <1.5.4.16.20051118020543.384755e4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 18, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; When I checked my e-mail this morning, I found a message from my 
+; credit-card company informing me that my card had been charged 
+; 4,900 dollars for a big-screen TV set.  The e-mail instructed me 
+; to click on the included link and go to the card company's web 
+; site if I thought an error had been made.  Since I have never 
+; purchased a big-screen TV, it appeared that some fraud had 
+; indeed taken place.  Luckily for me, I open all my e-mail in 
+; text mode, and I noticed at once that the link was fraudulent.  
+; The link actually was to a web site with an address something 
+; like 243.43.561.37.  The letter was a 'phishing' scam, designed 
+; to steal my personal information.  (The e-mail informing me that 
+; I had won a lottery was also a scam.)  The only thing genuine in 
+; all this is today's image.
+; 
+; Today's fractal shows a Julia set of the Z^1.11+C Mandeloid as 
+; it appears 11 levels up the logarithmic spiral, where the parent 
+; fractal resembles a huge stretched out ellipse.  Today's Julia 
+; set is associated with a point near a small valley on the south-
+; ern end of the ellipse.
+; 
+; The Julia set resembles an off-center star, which I have colored 
+; in a rather sensational manner.  The maxiter of 256 gives every 
+; color in the 256-color map a role to play, though only the first 
+; 75 or so colors play a significant role in the appearance of the 
+; image.
+; 
+; The rating of a 6 may be taken as a recognition of my fractal-
+; coloring skill.  Normally, my humility prevents me from admit-
+; ting how great I am, but for one day I'll forget my humility.  
+; The name "Julia Star" refers to the shape of the fractal.  The 
+; render time of 27 seconds is fast enough to please even the most 
+; impatient fractalist.
+; 
+; For the convenience of those with over-qualified computers, the 
+; completed GIF image has been posted to the FOTD web site, which 
+; may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was mostly sunny here at Fractal Central on Thurs-
+; day, but the wind was up and the temperature never rose over 41F 
+; 5C.  The cats went outside on schedule.  Within an hour they 
+; decided that warmth was better than adventure.  At one point I 
+; heard them chasing each other up and down the stairs, something 
+; they once did every day but have not done in months.  I guess 
+; their inner kittens are acting up.  The next FOTD will appear 
+; 24 hours from now in its full glory.  Until then, take care, and 
+; be at peace with your fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Julia_Star { ; time=0:00:27.74--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=-0.115487/-0.208774\
+  /0.8191828/1/32.5/-2.50563458870090017e-014
+  params=1.11/0/11/0/-0.388/-0.245/0/300 float=y
+  maxiter=256 inside=255 logmap=yes periodicity=10
+  colors=0000AA0AA0AA0AA1AA2AA3AA4AA5AA6AA7AA89A9BFA\
+  CLBERCFXDHbFIhKNgPSgTXg_agfhlmortuwjnl`haSbUKYPDUK\
+  7QGHN5raDhcP_e`VggWiiWkqWlzcbhjTZqJPxAGuJIsRKpZMnf\
+  OknQivRbfNXSKRDHZUOfjVZkTSlRKmPDnOFpTHqYJraLsfNukP\
+  woQxiQzcRzYRzTRzNSzHSzBSz6Vz6Xz6Zz6`z6bz6dzAezEfzI\
+  gzMhzQmzUszYwz`zzfzzlzzrzzRzzBzztzz6zzjzzjzzazzUzz\
+  LzzDzzCzzKzzRzzYzzdzz`zzYzzVzzTzzRzzOzzMzzKzzIzztz\
+  zqzznzzkzzWzzGzz1zz2zz2zz2zz2zz2zz2zz2zz8zzEzzKzzQ\
+  zzWzz`zzYzzVzzSzzPzzMzzJzzHzzRzz_zzizzrzzizz`zzSzz\
+  JzzAzz2zz7zzBzzGzzKzzPzzUzzSzzRzzQzzPzzSzzVzzYzz`z\
+  zczzazz`zzZzzYzzWzzVzzPzzJzzDzz7zz2zzCzzLzzVzzczzm\
+  zzvzz_zzEzzDzzDzzDzzDzzDzzDzzJzzPzzUzzRzzOzzMzzJzz\
+  HzzEzzCzzizzhzzgzzfzzezzezzczzazz_zzZzzXzzVzzUzzWz\
+  zYzz_zzazzczzezzgzzizzkzzmzzozzqzzszzuzzvzzrzzozzk\
+  zzhzzdzzazzYzzVzzPzzJzzEzzAzz6zz3zzAzzHzzOzzVzzazz\
+  hzznzzAzzMzzXzzzzzzzzuzzq }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

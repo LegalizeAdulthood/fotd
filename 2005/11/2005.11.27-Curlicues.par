@@ -1,0 +1,86 @@
+;     Date: Sun, 27 Nov 2005 02:04:03 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-11-05 (Curlicues [7])
+;       Id: <1.5.4.16.20051127020553.2a87e812@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 27, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's different looking image shows the open inside of a 
+; Julia set of the Z^(1.1)+C Mandeloid as pictured 109 levels up 
+; the hyperspiral.  The image consists totally of 'zmag' inside 
+; fill, which curiously enough makes an image both chaotic and 
+; orderly.
+; 
+; I named the image "Curlicues" because of its resemblance to 
+; those decorative flourishes added to fancy signatures.  The 
+; rating of a 7 is perhaps a bit high, but I feel I have not done 
+; too much exaggeration.
+; 
+; The coloring appears adequate even though only a small part of 
+; the 256 available colors were actually used.  The image is 
+; divided so finely that the few colors blend into an effective 
+; illusion of far more colors.
+; 
+; The render time of 7-1/2 minutes is within reason, though a bit 
+; slow for the hectic pace of today's active world.  To speed up 
+; things, the completed GIF image is posted on the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A partly cloudy and slightly milder day Saturday here at Fractal 
+; Central was still not warm enough for the fractal cats to be 
+; comfortable in the yard.  After spending 15 minutes outside, 
+; they retreated to pass the afternoon in the comfort of their 
+; window shelf.  A generous treat of tuna in the evening kept the 
+; day from being a total loss.  My day was again average.  The 
+; next FOTD will appear in 24 hours, which is the average time 
+; between postings.  Until then, take care, and wonder why.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Curlicues { ; time=0:07:25.33--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=-0.398904/-0.064900\
+  2/1.251213/1/67.5/1.31075705844807544e-014 passes=1
+  params=1.1/0/109/0/-0.2563/-0.7076/0/0 float=y
+  maxiter=255 inside=zmag periodicity=10
+  colors=000OKzOKzOKyOKxOKwOKuOKtOKrOKqOKoOFnOAlOAjN\
+  AgNAeNBcNBaNC`NC_NCZNDXNDWNEVNEUNETNFSMFRMGQMGPMGO\
+  MHNLGMKFLJEKIDJHCIHBHHAGHAFIAELBFNCFPDFREFSFFTGFVH\
+  FWHFXHFYHFZHF_GF`GFbGFcGFdFFeFFfFGgEGhEGjEGkEGlDGm\
+  DGnDGrDGvFGzKGzPGzUGzZGzcGzcGzcIzcHzcGzcFycExaDw_C\
+  vYBuWBtYAs_9sa8rc7qe6qg5pi4qk2pi4og6ne7md9lcBkbCja\
+  Ei`Gh_HgZJfXLeVMdTOcRQbPRaOT`MV_KX`LWaLWbLWcLWdLVe\
+  LVeLVfLVgLVhMUiMUjMUkMUkMTlMTmMTnMToMTpNSqNSqNSrNS\
+  sNRtNRuNRvNRxOQvNRtNSrNTqMUoMVmMWlLXjLYhLZgK_eK`cK\
+  aaKb`JcZJdXJeWIfUIgSIhRHiPHjNHkLHlKGmIGnGGoFFpDFqB\
+  FrAFs8Gt6Gu3Hv5Hu6It7Is8Jr9JqAKqBKpCLoDLnEMmFMlGNl\
+  INkJOjKOiLPhMPgNQgOQfPReQRdRScSSbUTcTTbTUbSUbSVbRV\
+  bRWbQWbQXaQXaPYaPYaOZaOZaN_aN_aN``M``Ma`La`Lb`Kb`K\
+  c`Kc_Jc_Jc_Ic_Ic_Hc_Hc_GcZHc_Ic_Ic_Jc_Jc_Kc_Lc_Lc_\
+  Mc_Mc_Nc_Oc_Oc_Pc_Pc_Qc_Rc_Rc_Sc`Sc`Tc`Uc`Uc`Vc`Vc\
+  `Wc`Xc`Xc`Yc`Yc`Zc`_c`_c` }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

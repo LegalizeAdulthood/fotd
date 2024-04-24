@@ -1,0 +1,101 @@
+;     Date: Sun, 13 Nov 2005 09:56:02 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-11-05 (A Julia Set for All-3 [7])
+;       Id: <1.5.4.16.20051113095743.2aa7b742@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 13, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's fractal we return to the Z^(2.01)+C Mandeloid and 
+; check it 300 levels up the logarithmic spiral, where it has 
+; rotated nearly 180 degrees, so that East Valley lies on the 
+; negative X-axis.  The local elephant herd has has shifted west, 
+; perhaps in search of water.
+; 
+; But once an elephant, always an elephant.  Since elephants can 
+; not become seahorses any more than people can become elephants, 
+; the basic shape of the Julia set of our western East Valley is 
+; still what one would expect of an East Valley Julia set.  This 
+; is where the similarity ends however.  The fine-tooth-comb stuff 
+; that fills today's Julia set is a horse of a different color.  I 
+; have never seen anything like it in any East Valley Julia set of 
+; the classic Mandelbrot set.
+; 
+; The rating of a 6 is a bit above the average, which however is 
+; nothing to crow about.  Perhaps if I had monkeyed around with 
+; the colors a bit further, I could have rated it at a 7, which 
+; would have made me proud as a peacock, but to be honest, the 
+; image really is little more than a humdrum Julia set of East 
+; Valley.
+; 
+; The name "A Julia Set for All-3" indicates that it is the third 
+; in the series of similar Julia sets.  I doubt that there will be 
+; a fourth in the series, and I'm not lion.  I would be bats if I 
+; continued this unimpressive series.
+; 
+; Today's image renders in only 1-3/4 minutes, which is quick as a 
+; bunny.  Those with over-progressive machines that have forgotten 
+; how to do DOS may see the image by flying like an eagle to the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and downloading the finished image from there.
+; 
+; A totally perfect day here at Fractal Central on Saturday kept 
+; the fractal cats quite happy.  Only the brief incursion of an 
+; unwelcome stray cat marred their happiness.  But the other cat 
+; quickly departed when Tippy approached him and went into fight-
+; ing stance.  The day ended with both cats' noses in their tuna 
+; dish.  Today is starting perfect again.  My day will not be per-
+; fect, as human beings have too many other things to be concerned 
+; about, but it looks like it will be pretty good.  Until the next 
+; FOTD appears in 24 hours, take care, and will the real mystery 
+; please stand up.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AJuliaSetForAll-3 { ; time=0:01:XX.XX--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1
+  center-mag=0/0/1.041667/1/87.5/3.885780586188e-016
+  params=2.01/0/300/0/-0.267125/-0.006185/0/0 float=y
+  maxiter=500 inside=255 logmap=yes periodicity=10
+  colors=000AcjAagAXcAWbAV`AUZASXAPVAMRAJOAGKADIACIA\
+  AIA9JA8JA9KAAKACKADLAGLAIMALMKNNUPNcPNkZszwytstoop\
+  ikldgh_cdX_`UXXQTTNPPJLLGHHCDD999665A57D59G5AJ4CN4\
+  EQ4FT3HW3I_3Kb2Mc2Nc2Pc2Qc3Oc4Mc4Lc5Jc5Ic6Gc6Fc7De\
+  7Cc8Fa9I_BMYCPWDSUEVSFYQHaOIdMJgKKjILmHMpKLlMKiOJf\
+  RIbTI_VHXXGU_FQaENcEKcDGcCDcBAcB7cC8cD8cE9cE9cFAcG\
+  AcHFcHKcIPcJUcKZcKccHhcEmcCra9wX7z_BzbFzdIzgMzjQzl\
+  TzoXzq_znXzkUzhRzeOzbLzMrdMreNrfNsgOshOsiPsjPtkPtl\
+  QtmQunRuoRupSuqSvrTvsTvtTvuSsvSqwRoxRlyRjzQhzQezPc\
+  zPazPZzOXzOVzNSzNQzNOzMLzMJzMHzOOzPUzQ_zRezQbzP`zO\
+  YzNWzNUzMRzLPzKNzKKzJIzIGzHDzHBzG9zF6zE4zE2zLCzSMz\
+  YWzYZzYazYczYfzYizYkzYnzYqzYszXqzWozWnzVlzVkzUizUh\
+  zVfzVezWdzWczWbzX`zX_zXZzYYzYXzYWzWTzVRzTOzSMzQKzP\
+  HzNFzMCzKAzJ8zH5zG3zF1zG6zHBzIGzJLzKQzLUzMZzNczOhz\
+  PmzQrzRvzYgzdTzkEzr0zp4zo8znCzlGzkKzjNzhRzgVzfZzdb\
+  zcfzbiz`hz_hzYhzGazFdzFgz }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

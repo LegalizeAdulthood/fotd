@@ -1,0 +1,75 @@
+;     Date: Sun, 20 Nov 2005 01:20:37 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-11-05 (Spheres [5])
+;       Id: <1.5.4.16.20051120012222.29d7510a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 20, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I combined various portions of 
+; (1/Z) and Z^(-2), then added (1/C).  The parent fractal consists 
+; of three oversized lobes, with today's scene located rather deep 
+; in the valley between the north and east lobes.  There appears 
+; to be considerably more interesting stuff in this particulad 
+; parent fractal.  If time were not limited, I might spend an 
+; eternity or two exploring it.
+; 
+; The effect of spheres is quite strong, and is the reason I named 
+; the image "Spheres".  The rating of a 5 means I consider the 
+; image to be merely adequate.  The render time of 29 minutes is 
+; on the slow side, but may be eliminated by downloading the 
+; completed GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The effect of the bright sun was lessened by the chill in the 
+; air here at Fractal Central on Saturday.  The fractal cats 
+; checked the outdoors several times, but never remained out 
+; longer than 20 minutes.  My day was near average, as are most 
+; of my days.  The next FOTD will appear in 2 hours.  Until then, 
+; take care, and always look up.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spheres { ; time=0:29:13.94--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.57781307627547200/+2.156071254042420\
+  00/1.922166e+008/1/40/-2.394941087875e-005 float=y
+  params=-1/-1/-0.5/-2/0/0 maxiter=1200 inside=fmod
+  proximity=0.1 outside=tdis periodicity=10
+  colors=000JEkMJgQOcUTZXYV`bRcgNdeOedOfcPgbPhaQi`Qi\
+  ZRjYRkXSlWSmVTnUTxXCnTTaPiQMxPNwPNvPNuPNtPNsPNrPNq\
+  ONpONoONnOOlOOkOOjOOiNOhNOgNOfNOeNOdNOcMMcNObOPaPQ\
+  `QR_RSZSTYSUXTWWUXVVYUWZUX_TY`SYaRZcQ_dP`eOafNbgMc\
+  hLciLahN`hO_hPZgQYgSkwThsUeoVbkX_hYXfZUf_ReaPebOec\
+  NcdMbdLabK_dJZdIYdHVeGUeFTeEReD`qC`rB_sA_t9_uFYtLX\
+  sRWrWVraTqgSpmRorQopPnoOnmNnlMnjLmiKmgJmfImdHlcGla\
+  Fl`ElZDkYCkWBkVAkT9jS8jQ7jP6jM5lO6jQ6hR6gT6eV6cW6b\
+  Y6`_6Z`6Yb6Wc6Ue6Tg6Rh7Pj7Ol7Mm7Ko7Jp7Hr7Ft7Eu7Cw7\
+  Ax79x77x75x74x87x99x9BxADxBFxBHxCKxCMwDOwEQvESvFUu\
+  GXtGZtH`sHbsIdrJfqJiqKkpLmpLooMqoMslLqjKohKmeJkcJi\
+  aIg_IeXHcVHaTG_QFYOFWMEUKESHDQFDODCMBCKAFMAHOAJQAL\
+  RAOTAQVASWAUYAX_AZaA`bAbdAefAggAiiAkk7ljAmlCmnFnoH\
+  nqKosMotPpvSrxRrxQrxjXsVTiPmtPksOiqNhpMfnMdmLclKaj\
+  K_iJZgIXfHVdHUcGSaFQ`_atX_qVZoTYmRWkPViNUgLSeJRcHQ\
+  aCrGDrHDqIDpJDoJDnKDmLDlL }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

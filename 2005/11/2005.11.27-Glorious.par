@@ -1,0 +1,85 @@
+;     Date: Mon, 28 Nov 2005 01:28:57 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-11-05 (Glorious [6])
+;       Id: <1.5.4.16.20051128013048.2a1f0d86@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 28, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The string of low-order Julia sets is unintentionally turning 
+; into a kind of running theme.  Today's image pictures a Julia 
+; set of the Z^(1.1)+C Mandeloid calculated 109 levels up the 
+; spiral.  Despite the unusually intricate features, the image was 
+; rendered in the traditional way, with the inside, (of which none 
+; is visible), a flat black and the outside set to 'iter'.
+; 
+; I named the image "Glorious", letting the viewer decide what is 
+; the glorious aspect of it.  The rating of a 6 indicates that I 
+; consider the image just the slightest bit above average.
+; 
+; The render time of under 2 minutes should try no one's patience, 
+; unless they are using a Fractint-challenged computer, that is, 
+; in which case they will need to download the pre-rendered image 
+; from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Alto-stratus clouds moved in on Sunday here at Fractal Central, 
+; but the temperature reached a relatively balmy 52F 11C, which 
+; was mild enough to give the fractal cats the time in the holly 
+; patch they needed to keep them happy.  Tippy actually climbed 
+; half way up a holly tree after a bird, which as expected, flew 
+; away long before he reached it.  A minor treat of tuna in the 
+; evening kept the duo happy.
+; 
+; My day was uneventful.  To some this might seem a bit dull, but 
+; actually, I consider myself lucky to have escaped being dragged 
+; to a holiday dinner.  The next glorious or not so glorious FOTD 
+; will appear in 24 hours.  Until then, take care, and after 
+; wondering, be sure to recognize the answer when you find it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Glorious { ; time=0:01:49.52--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=0.384776/\
+  0.291432/2.5063 params=1.1/0/109/0/0.2102/0.705/0/0
+  float=y maxiter=2500 inside=0 periodicity=10
+  colors=000f1LXXcFizPdg``OlX1MguTdl`cci`VTlu`rvgxxo\
+  zxvzyzzzvzpvrgvi_v`PvSGvJ7u90yM0z_0zm0lA4cCCVFJMGQ\
+  DIY3Ld0d4GTaJffOsjQfi_glfgooirYjXPoDfaifXafQXgLPlF\
+  Jg9Cd34dPDc_7`j0_u0Xz0OSQ6Li0CzXYPdcOmjMvpLzvJzzGz\
+  xDzp9zj4xc0sY0oQ0iQ9VDIF0QO04c9Sl4av0lz0vz0zlCXlLQ\
+  jSLj`Fmm7zz`meJ_OVTDfO1rTFcTI_TLPQJLOQaGYiAcp3jx0p\
+  z0xzFduJfyOizSjzXmzSgzOazIVzTfzQ_pOSdJJTGCID46900M\
+  MVTYi_ivfuzTclTjoVprVxuXzx_lodomjplrslxujzxizzgmrg\
+  cmdTj`JfY9aTciiddmf`sgXxiSzjMzlLmpDYmLrrCgv4Yz0OjM\
+  jfOccPX_QPXSISTAOV1zgGA1GA3GC4IC7JD9LFAMFDOGFPIIQD\
+  CS74T30V00XD4fTIriVzzizaVzDGz00zzzzzoxz_fzJOz36z00\
+  z00z70zI4xTAudGpoMmzSiz_fzXczS_xPXsLSmIPiDLc9Ic7Fa\
+  6C`49_16Y03X00V00`01g03m06u1Dr3Lo4Sl6_i7gd9idDjcJl\
+  cOmaTo`_p`cr_isYorV_oSJlP3lQDlTOlXYjYij`sjczifzsLx\
+  z0fpIYc`PQsGCz6GzDMzLSvTYp`cjigjillirlivmizmizoizp\
+  gzsjzvmzypzzszzvzzyzzzzzz }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

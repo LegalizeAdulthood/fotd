@@ -1,0 +1,91 @@
+;     Date: Wed, 09 Nov 2005 12:18:04 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-11-05 (She Sells Sea Shells [6])
+;       Id: <1.5.4.16.20051109121943.2ae7d70e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 09, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; She sells sea shells down by the seashore.  It's an old tongue-
+; twister that I learned back in the middle of the last century.  
+; The first four words, "She Sells Sea Shells", is the name of 
+; today's fractal, which reminds me of a pile of colorful sea 
+; shells washed up on some remote beach.
+; 
+; The image, which is a 50-50 mixture of inside and outside stuff, 
+; was created by combining generous portions of Z^(-0.2) and 
+; Z^(-5.5) then adding (1/C).  To create some extra excitement, 
+; the inside was set to 'fmod' with a proximity of 5, while the 
+; outside was set to 'tdis'.
+; 
+; The parent fractal appears as a circular hole with some unim-
+; pressive features scattered inside it.  Only a small area shows 
+; potential, and it is this area that I chose to investigate.
+; 
+; IMO, today's image rates a 6.  A recent note on the list sugges-
+; ted that I might rate the FOTD's according to more than simply 
+; how much effort I put into the coloring.  I am considering an 
+; expanded rating system which will break the rating into two 
+; parts -- a fractal part and an artistic part.  We'll see what I 
+; eventually decide to do.
+; 
+; Today's image takes 4-3/4 minutes to come to life on my old and 
+; impossibly-outdated fractal-dedicated machine.  Newer machines 
+; will bring it into existence in only a fraction of that time.  
+; Of course, the completed image has been posted as always to the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; There wasn't much sun here at Fractal Central on Tuesday, but 
+; the temperature reached a high of 70F 21C, which kept the frac-
+; tal cats quite happy.  They spent a long uneventful afternoon 
+; lurking in the holly patch, watching for unwanted tomcats.  But 
+; today is starting cloudy with rain in the area.  I doubt that 
+; the good day will be repeated.  The next FOTD will be posted in 
+; 24 hours, give or take an hour or two.  Until then, take care, 
+; and what's it all about?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; START PARAMETER FILE=======================================
+
+SheSellsSeaShells { ; time=0:04:43.58--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.07359315904045856/+0.004686271523444\
+  79/2.673082e+007/1/-90/3.88578058618804789e-016
+  params=20/-0.2/16/-5.5/0/0 float=y maxiter=1500
+  inside=fmod proximity=5 outside=tdis periodicity=10
+  colors=000K7LJ7PH7TG7X_ZAaY8cW7dU6fS5hQ3jO2lM1mL0l\
+  N2lO3kP5kQ6kS8jT9jUBjVCiXEiYFhZHh_IhaKgbLgcNgdOifP\
+  jhPljQmlRopQnmRmjRlgSkdSkbSj_TiXThUTgRUgPUfMUeJVdG\
+  VXDkdEVg2HkEEoQCr`Avl8yw6wsAvoEukIshMrdPq`ToYXnU`m\
+  QdlNghPeeQcbRaZS_WUZTVXPWVMXT1VZJYSe`O__MVZLQZKLYI\
+  GXHAYFBXGCXGDXHEXHFWHGWIHWIHWIIVJJVJKVKLVKMUKNULOU\
+  LN`GOULQLQPOPPROPUNOXMO_LOaKOdJNgINjHNmGNoGWpXdpla\
+  miZjgWheTecQbaN`_LYYIVWFTUCQS9NQ6LO3IM1GK7IICJHHKF\
+  MLERMDWNB`OAeP9jQ7oR6sY0tS5uMAvGFx7KwBKvFKvJKuNKtR\
+  KtUKsYKraKreKqiKpmKryLppKogKm_KlRKjIKj3LiAKhGKgNJf\
+  TJe_IdeIdkIbfNaaS`XXZSaYNfXIkVBsWDoWFlXHhXJeXLbYNZ\
+  YPWROYYQTgTKdSObSS_SWYS_VScTSgQSkOSoMSsIhfFyVIwUKu\
+  TMsSPqRRoQTmPWkOYiN`iN_hMZhLYgLXgKWfKVfJVeJUeITdIS\
+  dHRcHQcGQcGOdLMePPgVLeTHdSDbR8`PAaQCbREcSGdTIeTKfU\
+  LgVNhWPiWRjXTkYVlZWlZHITIHSIGRIFQIFQJEPJDOJDNJCNKB\
+  MKBLKAKK9KL9JL8IL7HN8CL7H }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

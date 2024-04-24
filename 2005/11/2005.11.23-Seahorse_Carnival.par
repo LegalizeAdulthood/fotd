@@ -1,0 +1,65 @@
+;     Date: Wed, 23 Nov 2005 22:50:22 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-11-05 (Seahorse Carnival [6])
+;       Id: <1.5.4.16.20051123225209.0d37b696@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 24, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an oblique view of Seahorse Valley.  It may be 
+; seen by running the parameter file or by downloading it from the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The next FOTD is due tomorrow.
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seahorse_Carnival { ; time=0:16:11.03--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot2 passes=1 float=y
+  center-mag=-1.28719/-0.16188/28.777 periodicity=10
+  params=45/90/85/90/-0.75/0/0/0 maxiter=75000
+  colors=000zz`cSabTbaUc`Vd_WeZXfYYgXZhW_iV`jVakVblV\
+  cmVdnVemVeoVepVeqWdoXcmYckZbiZag_ae``ca_aa__bZYcYW\
+  dYUdXSeWQfWOgVMgUKhUIiTGjSEjSDkRDkRDkRDlRDlRDlRDmR\
+  DmRDmRDnRDnRDnRDoRDoRDoRDoRDpRDpRDpRDqRDqRDqRDrRDr\
+  RDrRDsRDsRDsRDsRDrQEqQFqQFpPGpPGoPHoPHnOImOJmOJlNK\
+  lNKkNLkNLjMMjMMiMNhLOhLOgLPgLPfKQfKQeKRdJSdJScJTcJ\
+  TbIUbIUaIVaIVWMZRQbMUeGYiBalAeoAdrAcqAboAanA`nA_nA\
+  ZnAYnAXnAWnAVnAUnATnASnBRnCQnDPnEOnFNnGMnHLnIKnJJn\
+  KInLHmMHlNHkOHjPHiQHhRHgSHfTHeUHcVHbWHaWH`XH_YH_ZH\
+  ZZHY_HX`HWaHVaHUbHUcHTdHSdHReHQfHPgHOgHOoaDwv3ur4s\
+  n4rj4pf4oc4m_4lW4jS4hO4gL4eH4dD4b94a64`A3`E3`H3`L2\
+  _O2_S2_W1_Z1Zb1Ze0Zi0Zl0`i4bf8dcBf`FhZIjWMlTPnQToO\
+  WnPUnQTnRRmRQmSPmTNmUMlUKlVJlWIlXGkXFkYDkZCkZBh`Ee\
+  bGcdI`fKZhMWjOUlQRnTOpVMrXJtZHw`EvbCudDrcEobFlaGi`\
+  Gf_HcZI`YJYXJWWKUVLVUMWTMXSNYROZQP_PP`PSaOUbOXeOZh\
+  O`kOhnGeqIatLZwNWzPVzRVzS logmap=y }
+
+frm:SliceJulibrot2   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,89 @@
+;     Date: Tue, 15 Nov 2005 01:43:21 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-11-05 (A Mandel Set for All-1 [6])
+;       Id: <1.5.4.16.20051115014502.38df0a74@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 15, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We recently had a short series of Julia sets for all, so why not 
+; a similarly short series of Mandelbrot sets for all?  Today's 
+; image is the first in the series, but it has a problem -- it 
+; looks nothing like a Mandelbrot set.  It looks more like an 
+; apparition of a golden shield.
+; 
+; A quick glance gives the impression that the image has L-R 
+; symmetry.  But a second glance reveals that first appearances 
+; can be deceiving.  The fractal has no symmetry.
+; 
+; Today's image actually is the Mandelbrot set that results when 
+; portions of Z^(-0.7) and Z^(-1.7) are combined and (1/C) is 
+; added.  Of course, to create the special effects I used a few 
+; tricks.  Rendered in the usual manner, the Mandeloid is little 
+; more than a roughly circular empty hole, with a few bits of 
+; debris scattered about.  The extra excitement was added by 
+; rotating the image minus 90 degrees and rendering it with the 
+; inside set to 'atan'.  Several other inside fills also work 
+; satisfactorily, but I had to choose one, so I chose the 'atan' 
+; fill.
+; 
+; The name of the image is "A Mandel Set for All-1".  I might have 
+; done better if I had named it something like "Golden Shield" or 
+; "Sunburst", but a name is a name and today's name has been 
+; determined.
+; 
+; The image renders in 4 minutes on my machine.  It downloads in 
+; even less time from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Monday here at Fractal Central turned out to be another day with 
+; lots of sun and unusually warm temperatures.  As a result, the 
+; cats behaved like angels.  My day was about as close to average 
+; as it is possible to come.  The next FOTD will appear right here 
+; in 24 hours.  Until then, take care, and fractals might exist 
+; only in the mind, but from where did they enter the mind?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AMandelSetForAll-1 { ; time=0:04:01.07--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-19.0779/0/0.01902579/1/-90/-1.2337e-014
+  params=0.5/-0.7/0.25/-1.7/0/0 float=y maxiter=1500
+  inside=atan logmap=yes periodicity=10
+  colors=000cAUaAUYAUUAUTAUEAU7AU0AU4AU8AUAAUCAUCAUD\
+  ATDASDARDAQDAPDAPDAODANDAMDALD9LD9KD9ID9FD9CD99C96\
+  B93A90A80A70A60A50A40A30A20A10A00A00A00A00A009B0DB\
+  0AA0A90A80A70A60A50A40A32A24A16A08A0AA0CA0EA0GA0ID\
+  0KG3MJ6OM6QP5SS4UV6WY7Y`8_b9acBcdCeeDgfEihGkiHmjIo\
+  kJqlLsmMunNwoOxqQyrRzsSztTzuVzvWzwXzxZzu`zrazoczmd\
+  zjdzgezdezbez_fzXhzWizVjzVkzVlzVmzVozVqzUozUmzUkzU\
+  izUgzQezUczXaz__zc_zfZwiYtlYqiWngUkeTgcReaPb_O`YMY\
+  WLWUJTSHRQGOOEMMCJKBHI9EG8CICGKFKMJNOMRQQURTYTXaV_\
+  dXchZfk`joamr`kp`in`hl`fk`di`cg`ae`_d`Zb`X``VZ`UY`\
+  SW`QUZNV`PTaRRcTQdUOfWMgYLi_Jj`IlbGmdEofDpgBri9sk8\
+  vm6zn4zl5zk6zj7zi8zh8yg9xfAweBvdBvcCvbDvaErbEqaFp`\
+  Go_HnZHmYKmXMmWOm`QmcSmfUmiVlgWkfXjeYidZhc_hb`gaaf\
+  _beZcdYdcXecWfbVgaUh`Ti_RjZQkZPlYOmXNnWMoVLpVKqUMp\
+  TOpSQoRSoQUnPWnOYnN_mMamLclKelJgkIikHkkGmjFojEqiDs\
+  iCuhBwh9yjBxhDwgFvfHudJtc }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

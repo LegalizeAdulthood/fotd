@@ -1,0 +1,103 @@
+;     Date: Sat, 05 Nov 2005 10:17:01 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-11-05 (Julia Variation-9 [5])
+;       Id: <1.5.4.16.20051105101836.379f9bda@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 05, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A rather busy day on Friday left little time for fractaling, but 
+; I did manage to find one image that I consider worthwhile.  That 
+; image appears as today's FOTD.
+; 
+; To create the image, I returned to the JuliaBC formula.  The 
+; Julia set I found is related to the Z^(1.5)+C Mandeloid as it 
+; appears 23 levels up the logarithmic spiral.  The 'Seahorse 
+; Valley' effect indicates that the Julia set corresponds to a 
+; prominent valley area of the Mandeloid.
+; 
+; I studied the image for several minutes before coming to the 
+; conclusion that it is just another Julia set.  I named it "Julia 
+; Variation-9" as a continuation of the previous series, and rated 
+; it at a 5.  The 1-1/2 minute render time is fast enough that 
+; little time will have been wasted if the image disappoints its 
+; viewers.  The easiest way of all to view the image is to down-
+; load it from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where, if all goes well, it will be found posted.
+; 
+; Well, I have hinted as much in past discussions, but now it is 
+; certain.  Within a few months, how many I am not sure, (8 is a 
+; good guess), Fractal Central and its associated graphic design 
+; business will be moving from Baltimore, its present location, to 
+; a new location in central Pennsylvania.  More details will be 
+; known as the time grows closer.  Hopefully, the move will be 
+; accomplished with as few interruptions in the FOTD as possible.  
+; But until we are settled in the new F.C., things will be a bit 
+; hectic and the FOTD schedule might become a bit irregular.
+; 
+; The fractal cats might or might not move with us to the new 
+; Fractal Central.  Moving would be hard on them.  They are 15 
+; years old and quite settled in their present location.  Since 
+; my sister will be moving into the old F.C. when fractal lady 
+; and I move out, we very possibly may leave Thomas and Tippy to 
+; finish their lives in the only home they have ever known.  But 
+; this means we will find two new fractal cats to occupy the new 
+; Fractal Central, so stay tuned for further cat developments.
+; 
+; Partly cloudy skies, gentle winds and a high temperature of 68F 
+; 20C here at Fractal Central on Friday proved satisfactory for 
+; the fractal cats, who were in the yard from noon until 5pm, 
+; doing little but sleeping.  For me things were a little busier 
+; than expected, but by the end of the day everything that needed 
+; to be done was out of the way.  Today is starting the same, 
+; which will likely lead to the same results.  The next FOTD will 
+; appear in 24 hours.  Until then, take care, and keep looking up.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Julia_Variation-9 { ; time=0:01:33.32--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=0.237872/-0.157428/\
+  0.9363296 params=1.5/0/23/0/0.75/-0.083/0/0 float=y
+  maxiter=1250 inside=0 logmap=yes periodicity=10
+  colors=0000KK0LK0MK0NK0OK0PK0QK5RKASKFTKKUKPVKUWJZ\
+  XIcYHjZGs_GriIvsKtqJroIpmHokGmiFkhEifDhdCfbBd`AbZ9\
+  aY8UY7MY7FY67Y60Y62W74V76U78T8AS8CR8EQ9GP9IO9KNAMM\
+  AOLAQKBSJBTIBWLAYN9_P8aR7cT6eW5gY4i_3ka2mc1oe0pc5q\
+  bAqaFr_KsZPsYUtWZuVcuUhvSmwRrwQwvPwuPwtPwtPwsPwrPw\
+  qPwqPwjMrdJmZHhYGeXGbWF`VFYVEVUETTDQSDNRCLRCIQBFPB\
+  DOAANA7NA5P97R98S89U8AV7BX7CZ6D_9FaCGbFHdIIfLJgOKi\
+  RLjUMkXRl_Wlb_medmhhnkmnnqoqvotzUwv9zs8yq8xo8wm7vk\
+  7ui7tg6se6rd6qb5p`5oZ5nX4mV4lT4lS7kT9jTBiUDhUGgVIf\
+  VKeWMdWPcXRbXTaYVaY`VbfOflHjrAnx4rr5ol5mg5ja5hW5eR\
+  5cL5`F5ZA5XH6WN6VT6UZ6Td6Sj6RhAQfEQdIQbMQ`PQZTQYXQ\
+  W`QUdQSgQQkQOoQMsQLvQFmUAdY5Wa0Od7QZESULUPSVKZXFeZ\
+  Ak_5hY9fWDdUGaTK_ROYPRVNVTMZRKaOIeMGiKFlJEjIDiHDgG\
+  CfFCeEBcDAbDA`C9_B9ZA8X97W87U76T76SF8ZMAeLBdKCdJCc\
+  IDcHEbGEbFFaEFaDG`CH`BH_AI_9JZ8IZ7HY7GYAFXDEWGDWJC\
+  VMBVPAUS9TU8TH7ZF6YD5XB4W }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

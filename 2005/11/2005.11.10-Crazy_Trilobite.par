@@ -1,0 +1,101 @@
+;     Date: Thu, 10 Nov 2005 12:11:46 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-11-05 (Crazy Trilobite [7])
+;       Id: <1.5.4.16.20051110121325.29ff734c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 10, 2005 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; ;-)      ;-)      ;-)      ;-)      ;-)      ;-)
+; When I checked my e-mail box this morning, I found a letter 
+; telling me that I had been selected to be included in the next 
+; issue of Who's Who.  I have no idea what I have ever done that 
+; makes me worthy of such honor.  I didn't realize that fractals 
+; are so important.  I also wonder why the publishers need me to 
+; submit my biography.  They must have already known of my great 
+; fractals and my great graphic design ideas when they chose me 
+; for inclusion.  But why did they notify me by sending a junky, 
+; poorly-written e-mail letter in HTML format, padded by random 
+; nonsense text?  One would expect the notification of such an 
+; honor to arrive in a fancy snail-mail package or by a personal 
+; phone call.  The next thing I know, they'll want me to pay for 
+; the honor of inclusion, which would make it no honor at all.
+; ;-)      ;-)      ;-)      ;-)      ;-)      ;-)
+; 
+; While thinking of what to do about this, I'll turn to today's 
+; fractal, which is a Julia set of the Z^(1.5)+C Mandeloid as it 
+; appears 15 levels up the logarithmic spiral.  The Mandelbrot 
+; point of today's Julia image is located in a truncated valley of 
+; the associated M-set.
+; 
+; I named the image "Crazy Trilobite".  For some reason it reminds 
+; me of one of those long-extinct creatures that once crawled in 
+; the slime of primordial sea floors.
+; 
+; The rating of a 7 seems appropriate.  Yes, I realize that the 
+; image has only one layer, but when it comes to fractals, one 
+; layer and a skilled fractalist are all that is needed.
+; 
+; The render time of 4-1/2 minutes on my machine means that no one 
+; will be overly inconvenienced if they find the image not worth 
+; the effort.  And as always, the completed fractal is available 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Despite the clouds that hung around all day Wednesday here at 
+; Fractal Central, the rain never arrived and the temperature 
+; reached 64F 18C.  This was good enough for the fractal cats, who 
+; spent the afternoon out of sight in the holly thicket.  Today is 
+; starting with sun and clouds, but the winds are up, and the cats 
+; dislike high winds that hide the sound of danger.  We'll have to 
+; see how it goes.  For me, the day coming up looks average.  The 
+; next FOTD will appear in 24 hours.  Until then, continue taking 
+; care, and wonder why so much care is necessary.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Crazy_Trilobite { ; time=0:04:27.76--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1
+  center-mag=0.244131/0.0250522/1.041667
+  params=1.5/0/15/0/-0.2492/0.0617/0/0 float=y
+  maxiter=1500 inside=bof60 periodicity=10
+  colors=000j5Bg6Be6Ab7A`79Y89V98T98QA7OA7LB6IC6GK5D\
+  N5BP5FSBIVHLYNOaSReYUicXmh_plZtpYxrXyuXzzWueVudUub\
+  Uu`Tu_SuYmuWzuVmuTmuRzzQmvPmwNmxMSxLWqMZkMaeMd_M`a\
+  PYcRVeTSgVPiXMkZJm`PfdU`gZVkcPnhJqiMniPkiRhiUeiWbi\
+  Z_i`XicUieRihOijLimIioFirCitAfqLcnV`ldYinWgxXdwXbv\
+  X`uYZtYXsYVrYTqZRpZPoZNn_Lm_Jl_Hk_FjWLdSQZOVTK_NGd\
+  HCiCEgFFfHHdJIcMKbOL`QN_TOYVQXXRWZTV_VV_WU_YU_ZT_`\
+  T`aS`cS`eS`fR`hRaiQakQalPanPaoPaqO`tN_vM_mLUdLPWLJ\
+  NLEEL85L35P75TB5XF5`J5dN8eLqKnoMnmOojQohRofTpdVpaX\
+  p_ZqY_qWaqTcrRerPgrNhrdiSvj1qi2mh3ig4ef5ae6Ye7Ud8Q\
+  c9MbAIaBEaCGZDHXDJVDKTDLRDNODOMDPKDRIDSGDUDDVBDW9D\
+  Y7DZ5D_3DY5LW7TU9`SBhQDpPEwRCsTBoVAlX8hZ7d`6ab5Yd3\
+  Uf2Rh1Nj0Kg5JdAJaEI_JIXOHUSHRXGPaGMeFJjFGoEEsEFpFF\
+  nGGlHGjHHgIHeJIcKIaKJZLJXMKVNKTNMPLOLJQHIQHIQHJQHJ\
+  QIJQIJPIJPIJPJJPJJPJJPJJPJJPKJOKJOKJOKJOKJOLJOLJOL\
+  JOLJF`LNLJNMJNMJjGBlACm4C }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

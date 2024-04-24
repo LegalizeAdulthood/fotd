@@ -1,0 +1,85 @@
+;     Date: Fri, 11 Nov 2005 11:55:21 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-11-05 (A Julia Set for All-1 [6])
+;       Id: <1.5.4.16.20051111115701.29e7b6c0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 11, 2005 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is a Julia set of the southern branch of 
+; Seahorse Valley of the Z^(2.01)+C Mandeloid as it appears 17 
+; levels up the logarithmic spiral, where the Mandeloid has split 
+; apart and rotated about 15 degrees.  The image is a Julia set 
+; for all, and that is what I named it.  I added the '1' at the 
+; end of the name because there might be more such Julia sets.
+; 
+; A good part of the image consists of 'inside' stuff brought to 
+; life by the 'zmag' inside fill option, which fills this set with 
+; slightly organized chaos.  The end result is a Julia set that 
+; obviously is connected to Seahorse Valley, but is not quite what 
+; we expect a Seahorse Valley Julia set to look like.
+; 
+; A curious feature of the image is that its coloring changes as 
+; the maxiter is raised or lowered.
+; 
+; The rating of a 6 might be a bit overdone, but I rather like the 
+; image, so the rating will remain.  The render time of 10 odd 
+; minutes borders on slowness.  Luckily, rendering may be avoided 
+; by downloading the completed image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A chilly, blustery, 50F 10C day on Thursday here at Fractal Cen-
+; tral kept the fractal cats unhappy.  But a can of tuna came to 
+; the rescue in the evening.  Today is starting sunny but quite 
+; chilly, and there is still a breeze.  The cats will have to make 
+; do with less than ideal conditions.  My day will likely be close 
+; to average.  Until 24 hours from now when the next FOTD will 
+; appear, take care, and relief is on the way.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AJuliaSetForAll-1 { ; time=0:10:41.25--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 periodicity=10
+  center-mag=0/0/0.9861933/1/-22.5/3.88578058619e-016
+  params=2.01/0/17/0/-0.8075489172/0.039334604022/0/0
+  float=y maxiter=1000 inside=zmag
+  colors=00030630840A40C50E50G60I60J70L70M70O80P80R9\
+  0S90UA0VA0XA0ZD0`G0bJ0cM0dP0eS0eV4gYCh`KidSog_ujcu\
+  njuqcHTZBZUAcPAdKBdFCeCCeEDeFDfGEfIEfJFgKGgMGgNHhO\
+  HhQIhRIiSJiUKjVKjWLjYLkZMk_MkaNlbOlcOlePmfPmgQmhQl\
+  iRkjSjkTilUhmVgmWfnXeoYdpZcq_cq`braasb`tc_udZveYvf\
+  XwgWxhVyiUzjUzjTxhTwgTveTudStbSsaSr`SqZSpYRoWRnVRm\
+  TRlSRkRQjSQiUQhXQg_OebQfeSghUgkWhnYiq_itajwekzcjza\
+  jz_izZizXizVhzThzSgzQgzOgzMfzLfzJezHezFezEdzCezAfz\
+  8gz9hz7iz6jz5kz4lz3my1nx2ow2pv3qu3rt4ss4ts5ur5vr6w\
+  q6xq7yp7zp8zozzozzozznzznzzmzzmzzlzzlzzkzzkzzjzzjz\
+  zizzizzhzzhzzdzzhzzlzzpzztzzxzzqzzkzzezz_zzTzzNzzH\
+  zzBzzDzzFzzGzzIzzJzzLzzMzzOzzPzzRzzTzzUzzWzzXzzZzz\
+  _zzazzbzzdzzfzzgzzizzjzzlzzmzzo9zrBzpCznDzlEzjFziG\
+  zgHzeIzcJzaLz`MzZNzXOzVPzTQzSRzQSzOTzMUzKWzJXzHYzF\
+  ZzD_zB`zAaz8bz6cz4dz3fz6hz9jzClzFnzIozLqzOszRuzUwz\
+  Xyz_9zL8zJ7zH1zG7zFDzEIzD }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

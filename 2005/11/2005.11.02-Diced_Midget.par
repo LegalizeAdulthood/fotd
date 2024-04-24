@@ -1,0 +1,95 @@
+;     Date: Wed, 02 Nov 2005 08:01:37 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-11-05 (Diced Midget [5])
+;       Id: <1.5.4.16.20051102080310.2b17bea4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 02, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It looks like a very busy day coming up here at F.C., so today's 
+; discussion will be short, to the point, and perhaps a bit too 
+; intuitive.
+; 
+; For today's image I returned to the workhorse MandelbrotMix4 
+; formula, which has been almost totally ignored during the past 
+; month.
+; 
+; Exponents of Z between zero and one do not usually make 
+; fractals, but when the difference between two exponents in this 
+; range is magnified, as it is in today's formula, a fractal 
+; surprisingly results.  Today's image is based on the tiny 
+; difference between the square root of Z, which is Z^0.5, and 
+; Z^0.5001.  It reminds me of diced vegetables, so I named it 
+; "Diced Midget".  The wildly clashing colors might work well as 
+; party decorations, but they do not make a great fractal. As a 
+; result, I could rate today's image no higher than a 5.
+; 
+; The surprising thing about differences between exponents of Z in 
+; the range between 0 and 1 is that, like negative exponents, they 
+; produce fractals that are sensitive to changes in the bailout 
+; radius.  If the bailout (imag[p3]+100) of today's image is 
+; raised, the image soon breaks apart and evaporates.  But unlike 
+; the fractals that result from negative exponents, the empty 
+; 'inside' area that is left over from images such as today's has 
+; little of interest that might be revealed by an inside fill such 
+; as 'bof61'.
+; 
+; Hopefully, the preceding analysis is reasonably correct, with 
+; the rush that is expected, I wrote it without checking.  One 
+; thing certain however is that the image takes almost 29 minutes 
+; to render on my machine.  But this render time may be avoided by 
+; downloading the finished image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another very pleasant day on Tuesday here at Fractal Central 
+; left the cats satisfied.  They enjoted themselves in the holly 
+; patch until sunset, which is just after 5pm at this time of 
+; year.  My day was reasonably satisfactory.  Today is starting 
+; sunny and only slightly chilly.  Until the next FOTD, which will 
+; appear in 24 hours, take care, and look for light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Diced_Midget { ; time=0:28:51.14--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+5.91382457401014100/+2.748610007654852\
+  00/343217.3/1/-172.5/8.37328130443015795e-009
+  params=10/0.5/-10/0.5001/1150/25 float=y
+  maxiter=7500 inside=0 outside=summ periodicity=10
+  colors=000Q_ePUbOP`NKYIiYKZXLPWHW4IT9JQEKNILKNMHSa\
+  dVYZWVUWSPWPKW4SNANQGJTcL1B3DE9GHEIKJKNOMQTPTYRWbT\
+  YgV5fEChJJiOQkTXlYcnbjogpplkihfbeaWaXPZSIWQXjPUgOR\
+  eOPcNMaNK_MHYMgSMcTM_TMXUMTUMPVMMVMIWQW6PTAPRDOPGO\
+  NJNLNNJQMHTQA2PCAODHNEPtPHoNJkMLfLNbKPZIRUHTQGVAQL\
+  DNOFLQIJSKHUKh2Lb8LXEMRKMLQMQvOnvNbmMRdnVP_NTOycNs\
+  bNmaNg`Na_MWZMQYMKXW3BT6HR9MOCR2nC5iF7eHA`KCXMFSPH\
+  ORKJUNWuMTqMRmMOiMMfMJbMHZ2Yh6Ue9RcCOaGL_JIYUC_SDZ\
+  RDYQEYOEXNFWEghFcfG_dHXcITaJP_KMZLIXBT4DQ9FOEHMIJJ\
+  NLHSMcCMZGMUKMPOMKSYzeWscUlbSe`RZ_PSYNLXTRDPLNe2px\
+  l6ncDdWJVNQV1oFzOJbSE4qG7lI9hJBcLD_wEGjFMYFRWhxRUi\
+  vjhlbdcVaVNZ4pL7iNAcPDYRGRTJLVgKIaIMXHPRGT5`U8XVBT\
+  VEQVHMWKIWdoQ`hRYbSVXTSRUPLV8WqATmCRjEOgGMdIJaKHZl\
+  oScbUVRVolAieFcZJYSOSLS7UFARICPKENNGLPIJSKHUwWKrTM\
+  mRNhPPdNQ_LSVJTQHVlMUhLVdKV`JVXIWTHWPGWNJzMHoMGe_X\
+  RXUSVRTTOUQLVOIWUomSijRdg }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

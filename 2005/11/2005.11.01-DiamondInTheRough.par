@@ -1,0 +1,94 @@
+;     Date: Tue, 01 Nov 2005 10:16:16 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-11-05 (Diamond in the Rough [5)
+;       Id: <1.5.4.16.20051101101749.29ef2174@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 01, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a squared Mandelbrot midget.  Yes, I know 
+; that the Mandelbrot set results from squaring Z, but today's 
+; unlikely formula squares the entire Mandelbrot set.
+; 
+; More correctly, the formula scrunches and stretches the set.  
+; And it changes the entire set into a diamond shape, along with 
+; its midgets.  It wreaks total havoc with the normally placid 
+; iteration bands.
+; 
+; Today's image shows one of the midgets deep in East Valley of 
+; the large midget on the negative stem of the parent M-set, which 
+; itself has been changed into a diamond.  To add a bit of depth, 
+; I rendered the image with the outside set to 'tdis'.
+; 
+; As for the formula itself.  It was not written by me, and I have 
+; no idea what the original author was trying to do.  I named the 
+; image "Diamond in the Rough", and rated it at an average 5.  I 
+; could not rate it higher because too little effort was put into 
+; adding diamond-like sparkle.
+; 
+; The name is a bit misleading, as diamonds in the rough have an 
+; irregular shape.  They do not take on the typical diamond shape 
+; until they have been carefully cut by a master craftsman, which 
+; is one reason why they are so costly.
+; 
+; The fractal diamond's almost non-existent sparkle may be seen by 
+; running the attached parameter file and waiting a few minutes, 
+; or by downloading the finished GIF image from the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The sunny 73F 23C weather on Monday was perfectly perfect here 
+; at Fractal Central.  The cats were near perfectly happy.  I 
+; cannot claim absolute happiness for the cats because who knows 
+; what goes on in a cat's mind.  But with the work under control, 
+; my day was satisfactory.  Today is starting the same as yester-
+; day.  I expect good things.  Until tomorrow, when the next FOTD 
+; appears, take care.  The Halloween hauntings have ended; the 
+; saints have arrived.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+DiamondInTheRough { ; time=0:08:47.12--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=C4G passes=1 center-mag=-1.74996259251\
+  672100/0/7.855169e+008/0.7484 params=1/0.8 float=y
+  maxiter=16000 inside=0 outside=tdis
+  symmetry=xaxis periodicity=10
+  colors=000Lj`Ji_IhYHgWFfVEeTCdRBcPAbO8aM7`K6_J4ZH3\
+  YF2YE4XF6XG7WG9WHAVHCVIDVIFUJGUJITKKTLLSLNSMOSMQRN\
+  RRNTQOUQOWQPWPPXPQZORYORZNSYNSZNTYMT_MU`LUbLVcKWcL\
+  VbMUaNT_NSZORYPRWQQXQPYROYSNYTMYTMYULWVKWVJVWITXHS\
+  YHRYGQZFO_EN`DM`CKaCJbBIcAGc9Fd8Ee7Cf5De7Ed8FcAGbB\
+  HaCH`EI_FJZGKYILXJLXKMWMNVNOUOPTQPSRQRSRQUXmLVlKUk\
+  KTjKRiKQhJPgJOfJMeJLdJKcIIbIHaIG`IF`II_JK_JN_JP_KS\
+  _KU_KW_KZZL`ZLcZLeZMhZMjZMlZMAKS9JR9IR8IQ7HQ7GP6GP\
+  5FO5EO4EN3DN2EM3DN3CN3CN3BO3BO4AO4AP49P49P48Q58Q57\
+  Q57R56R56R65S65S64S64T63T63TA5UD7UG8UJAUMCUPDUSFVV\
+  GVYIV`KVcLVfNVgOViOVVTBUWETYHS_KScLRaMQ_NPYOOXPNVQ\
+  NTQMRRLQSKOTJMUIKVMEUIJVEOWATX3_V7XYBU_FSbJPdNNgRK\
+  iVHkZFnbCpfAsj7uo4yn5wm5ul6sl6qk7pj7ni8li8jh9hg9gf\
+  AefAceBadB_cCZcCXbDVaDT`ER`EQ_FOZFMYGKYGKYGJZJMZMP\
+  ZPRZSUZVW__Z_da_hc_mf_rh`vkmzzmyzmxzmwzhvwcutZtqXs\
+  pWrnUqlTpkSoiQngPmeNldMkb }
+
+frm:C4G {; p1 is (plus or minus) 1 or i 
+x=real(pixel), y=imag(pixel)*p1
+a=b=0:
+a1 = a^2-p1^2*b^2
+b1 = 2*a*b
+a=a1+x, b=b1+y
+z = sqrt(a^2 + b^2)
+z < 4 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

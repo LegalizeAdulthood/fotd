@@ -1,0 +1,105 @@
+;     Date: Sun, 13 Nov 2005 11:51:56 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-11-05 (A Julia Set for All-2 [5])
+;       Id: <1.5.4.16.20051113115336.2ae7c5a8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 12, 2005 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Quite a while back, I received an e-mail from a forgotten 
+; someone who asked me why I so often end my FOTD discussions with 
+; such silly questions.  Maybe it is because I am such a silly 
+; person.  After all, why would any sensible person devote as much 
+; time and energy as I do to such a fruitless endeavor?  But as 
+; for the questions, they are not supposed to be answered.  They 
+; are merely philosophical thoughts in the guise of questions.  
+; Today's closing question for example asks about Julia sets on 
+; the head of a pin.  It cannot possibly be answered because 
+; fractals are abstractions with no definite size.  Anyone who 
+; tried to answer it would soon find themselves thinking about the 
+; true size of a fractal and would realize that a fractal is not 
+; the same kind of thing as a speck of dust or a planet.
+; 
+; Today's image is a fractal.  This much is certain.  Yesterday's 
+; image was a Julia set of the south branch of Seahorse Valley of 
+; the Z^(2.01)+C Mandeloid as it appears 17 turns up the logarith-
+; mic spiral.  Today's image is a Julia set of the north branch of 
+; the same valley.  But don't assume it is a repeat.  The corres-
+; ponding Mandeloid has no X-axis symmetry, and this makes today's 
+; image quite different.
+; 
+; Yesterday's image consisted mostly of 'inside' stuff made active 
+; by the 'zmag' inside fill.  Today's image shows a Julia set that 
+; consists totally of 'outside' stuff, quite a bit different from 
+; both yesterday's image and what would be expected in a conven-
+; tional Julia set of Seahorse Valley of the familiar M-set.
+; 
+; I named the image "A Julia Set for All-2".  It is the second and 
+; maybe not the last in the series of similar Julia sets.  The 
+; rating of a 5 indicates that I consider the image to be of 
+; average quality.  The render time of 1-plus minutes assures that 
+; not too much time will be wasted if the image proves to be un-
+; satisfactory.
+; 
+; The finished product is available on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; from where it may conveniently be downloaded and the task of 
+; rendering completely eliminated.
+; 
+; The partly cloudy skies and 52F 11C temperatures here at Fractal 
+; Central on Friday did not keep the cats from enjoying their 
+; usual time in the yard.  The lack of wind made it easy for them 
+; to hear approaching danger.  Today is starting cold, but it is 
+; sunny and the wind is calm.  When it warms up this afternoon, 
+; the cats will have a good time.  My day looks peaceful also.  
+; Until the next FOTD appears in 24 hours, take care, and how many 
+; Julia sets could fit on the head of a pin?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AJuliaSetForAll-2 { ; time=0:01:16.95--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1
+  center-mag=0/0/0.9861933/1/-17.5/3.88578058619e-016
+  params=2.01/0/17/0/-0.7496/0.2947/0/0 float=y
+  maxiter=1000 inside=255 periodicity=10
+  colors=000A0PA0PA0PA0PA0PA0PA0PA0PA0O90N90N80O80O7\
+  0P70P60Q60Q50R50R80QB0QE0QH0PK0PM0PPLQWNVbP_hQdoSi\
+  uTnsTkrThqTepTboT_nTXmTUkTRjTOiTLhTIgTFfTCeTAWY_Mb\
+  ywQduScsTcqUboVbmWalXajYahZ`f_`d`_cb_acZ`dZ_eZZfYZ\
+  gY_hX`iXajWbkWckWdiUefTdcRc`QaYP_WNYTMUQLQOJOMINMH\
+  MOHMRHOVHTZHYbHcfHhjHnnHsrHxvHusIsqJpnKnlKkjLigMge\
+  NdcNb`O_ZPYWQVUQTSRRPSONTMLTJIUHGVFEVEGXEIYEKZDM`D\
+  OaDPbCRcCTeCVfBXgBYhB_jAakAclAen9go9hp9jq8ls8nt8pu\
+  8qvCrqGsmJshNtdRt`UuWYuSavOdvJhwFkwBltDlqFlnGlkIli\
+  JlfLlcMl`OlZPmWRmTTmQUmNWmLXmIZmF_mCamAbfDa`GaVI`O\
+  L`IO_CQ_DRYDSXETVEUUEVSFWRFXPGYOGZMG_LH`JHaIIbGIcF\
+  IdELcINcLPbPRbSTaVVaZX`aZ`d`_hb_kd_n`VoYQpUSmQUjNW\
+  gJYdF_aCaZ8cW4eT1gR8iSEjTLlTRmUYoVcpVdoUemSflRgjQh\
+  iOigNjfMfgLcgK`gJYgIVhHShGOhGLhFIiEFiDCiC9iB6iB8jD\
+  9jFAjHBjJCjLDjNFjPGjRHjTIkUJkWKkYMk_NkaOkcPkeQkgRk\
+  iSkjlJeoHdqFcsDbuCbpHcQLR }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
