@@ -1,0 +1,100 @@
+;     Date: Sun, 06 Apr 2014 23:11:57 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-04-14 (Cozy Quadrilateral [A-8,M-5])
+;       Id: <1.5.4.16.20140407001218.2be7d98e@earthlink.net>
+; ---------
+; 
+; FOTD -- April 06, 2014 (Rating A-8,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The formula behind today's image combines 2.475 negative parts 
+; of Z^(-1.05) with 0.275 negative part of Z^(-5.5), then adds 
+; (1/C) on each iteration to produce a parent fractal that 
+; consists of a hugely oversized near circular bay with two large 
+; buds on its west side and a large near-circular extra bay where 
+; its East Valley should be.  Today's scene is located in the 
+; action around this extra eastern bay.
+; 
+; The name "Cozy Quadrilateral" has little to do with the image 
+; except to point out the roughly four-sided semi-chaotic area 
+; surrounding the central minibrot, which lies nearly invisibly at 
+; the center.
+; 
+; The art rates an 8, helped by the slate gray features in the 
+; outer parts of the image.  The math rating of a 5 indicates that 
+; such scenes have been common in FOTD images for at least ten 
+; years.
+; 
+; The calculation time of 9-1/4 minutes is inexcusably slow, but 
+; relief from the resulting impatience may be found on the FOTD 
+; web sites.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Total sun prevailed all day here at Fractal Central, while the 
+; temperature reached a rather pleasant 55F 13C.  The fractal cats 
+; took full advantage of the sun, Nicholas on the shelf, Jasmine 
+; on the scratching post.  The humans, still pondering the world 
+; situation and our pseudo-freedom, passed the day preparing for 
+; the belated but inevitable blossoming of spring.
+; 
+; The next FOTD will likely be posted in 24 hours, but I am not a 
+; fortune teller, so this is no guarantee.  Until whenever, take 
+; care, and big brother knows what is best for us.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cozy_Quadrilateral { ; time=0:09:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-3.216611489264438/+0.5748460602506118/\
+  3.97213e+011/1/69/0 params=-2.475/-1.05/-0.275/\
+  -5.5/0/0/0/0 float=y maxiter=5000 inside=0
+  periodicity=6 mathtolerance=0.05/1
+  colors=000hfcfdbecadb`ba_a`Z`_YZZXYXWXWVVVUUUTTTSS\
+  SRQRQPQPOOOMNNLMMKLLIKKHMJGIIIMJHJJJMKLMMMONOPOQRQ\
+  RSRTUSVWUWYVY_W_aYacZbf_dgafkdgkhiomlornsvqsztuzww\
+  zwzzwzzwzzwzzrrzrrzmozmmzamzemzjmzkmzlmzmmlimmfmmc\
+  mm`nmYnmVonSonPpnLqnIrnFroCqo9qo6po3po0oo2on4no6mq\
+  8lsAkuCjwEixFhzHgzJfzLezNdzPczRczSbzUazWazY`z__za_\
+  zcZzdZzbYzaXz`Wz_WzZVvYUvXUrUTrTSmRSmQNhOQhOJ`LF_L\
+  GZH5TGESF0REBOD0PG7MB0NCA4A57CAFFBKHCPMDUUKZYLc_Lh\
+  cMmfMrhNvjNzmOzpOzsOzvOzuOzlHtgGobFiYEdTDZOBUKAOG9\
+  JC8D87846355555655855955A55C55D54F54G54H54J54K54M5\
+  4N54OA8PFCQKGRPKRUOSZSTcWUgZUfYTfYTb_W_`YWa_TcbPdd\
+  MefBSIBTJBUJAUKAVKAWLAXLAXLBWMCVNCUNDTODSPERPEQQFM\
+  RGIR0ES0AT00T00U00U00U00U00U00ULEmMDZMCmLDYKdzJDYJ\
+  EwIEYUUzGFXGFwFFXEUzDGXDGwDESDDmDCmDBmDAmD96D82F76\
+  H79J6CL6FN5IP5LR4OT4RV3UX3XZ2_`2bb1ec1hb3ga5f`7e_8\
+  d_AcZCbYEaXFaeRSfVVgZYhb` }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

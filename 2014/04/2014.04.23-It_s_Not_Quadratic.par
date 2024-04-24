@@ -1,0 +1,106 @@
+;     Date: Wed, 23 Apr 2014 19:14:31 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 23-04-14 (It's Not Quadratic [A-7,M-6])
+;       Id: <1.5.4.16.20140423191420.2ae76c16@earthlink.net>
+; ---------
+; 
+; FOTD -- April 23, 2014 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; >From a distance the little minibrot at the center of today's 
+; image may look quadratic, but it certainly is not.  It is of 
+; order 1.5 and lies in a parent fractal that resulted when I 
+; iterated the expression Z^(1.5)+C at a level 33 levels up the 
+; hyperladder with no function applied.  The name "It's Not 
+; Quadratic" confirms the apparent discrepancy.
+; 
+; This parent is shaped quite like the minibrot in the image, and 
+; is oriented so that the large period-2 bud points out to the 
+; south.  Today's scene is located in a sprawling chaotic spiral 
+; just inland from the southeast shore line of the parent's main 
+; bay.
+; 
+; I intentionally set the logmap about 25 levels too high.  Doing 
+; this created a flat background that could be given any color I 
+; wished.  For various reasons I chose solid black.
+; 
+; The art rates a 7, mostly because of the flat black background.  
+; The math rates a 6, since the math trick is so old that it is 
+; hardly a trick any longer.
+; 
+; The calculation time of 1-1/2 minutes is fast enough.  But visit 
+; the web sites for an even faster way to view the image.
+; 
+; The web sites are online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Lots of clouds with only a few breaks of sun spoiled the day 
+; here at Fractal Central.  The brisk north wind and temperature 
+; of only 54F 12C made things even worse.  The fractal cats 
+; endured the discomfort with only minor complaints.  The humans 
+; had no complaints at all -- we were too busy.
+; 
+; The next FOTD will be posted in about 24 hours.  Until then, 
+; take care, and let's avoid discussing religion, politics or 
+; philosophy for a few days.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+It's_Not_Quadratic { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.7796928496537461/-0.5595061592029913\
+  /3.314487e+008/1/112.5/0 params=1.5/0/33/0 float=y
+  maxiter=2400 inside=0 logmap=162 periodicity=6
+  colors=000000SafRWfPQfOKgMEgLGgKKgPPpUUxWZvXcuYhtZ\
+  ms_or`qqctphwpmznrzjjzgdoddgadeZdUmdUmdUmdKmdKmdKm\
+  dKmdKzdKzdKzdKzZKzUKzPCzQKzRKzUKzWKzZKz`KzcQzePzfQ\
+  zgRzgRzhSzhSmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmzcmz\
+  cmzcmmcmccmUcmKcmIcmLcjOcgRccTc_WcXZcTacPdcMfcIidE\
+  leBof7qg4kf8eeB_dEVdHTaKR_NPYPOWSMUUKRXIPZHNaFLdDJ\
+  fBGiAEk8Cn6Ap48s36u5At6Dt7Ht9KsAOsBRsDVsEYrFarHdrI\
+  hrJkqLoqMrqNuqe_ZwEHpHOiJUbL_WNeQPkTSjWVjYYi`_icbi\
+  eehhghkjhmmgppgsrguufxxfzzfzzazzWzzR4mMFmPQmS`mVjm\
+  YlmVnmTocQqcOscMtcJvcHwcFvcGucHtcHscIreJrkJllGflE`\
+  lCWlAZfC``EccGecIhcKjcMlcN8hxHhyKhhPcbUcXXcVZcTacR\
+  cePehNhjLjmJloHhoFdoE`oDYoC_nBanBczAezAizAjz9kz9lz\
+  8mz8nz8oz7pz7qz7rz6sz6tz5uzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

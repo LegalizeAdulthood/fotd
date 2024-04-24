@@ -1,0 +1,106 @@
+;     Date: Tue, 08 Apr 2014 18:33:47 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 07-04-14 (The Past Returns [A-6,M-5])
+;       Id: <1.5.4.16.20140408193407.3887a93e@earthlink.net>
+; ---------
+; 
+; FOTD -- April 08, 2014 (Rating A-6,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the Z^(3.05)+C Mandeloid as it 
+; appears at ground level of the hyperladder with no function 
+; applied.  The prominent minibrot at the center is a near exact 
+; copy of the parent fractal, which has the same orientation.  
+; Today's image is located in the blunt northern branch of the 
+; valley leading to the eastern bud.
+; 
+; I named the image "The Past Returns" because it is the kind of 
+; stuff I did long ago when I was just discovering fractals.  
+; (Strangely enough, I am still just discovering them even today!)
+; 
+; The art rating of a 6 and math rating of a 5 shows that the 
+; image is a rather routine one, though the fireball calculation 
+; time of 30 seconds will take a lot of sting out of the task.  
+; And as always, the web sites are ready to take all the sting 
+; from the calculation.
+; 
+; The image may be viewed on the FOTD web sites without the job of 
+; calculating it.  The web sites are at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Dark clouds and blustery winds spoiled the day here at Fractal 
+; Central.  A little sun did manage to break through in the 
+; afternoon, but it was too little and too late.  The temperature 
+; of 55F 13C would have been fine had it not been for the clouds 
+; and wind.  The fractal cats had a relatively quiet day, except 
+; for a friendly tussle they got into around lunch time.  The 
+; fractal humans had a normal day of wondering what has gone wrong 
+; with the world in the 21st Century.
+; 
+; The next FOTD will be posted in roughly 24 hours.  But this is 
+; not etched in stone, so do not be too disappointed if it does 
+; not appear.  Until whenever, take care, and the latest breaking 
+; news on the missing airliner is that there is nothing new to 
+; report.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Past_Returns { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.8100388496415922/-0.0180164699522101\
+  /8.299791e+012/1/77.5/0 params=3.05/0/0/0 float=y
+  maxiter=1600 inside=0 logmap=67
+  periodicity=6 mathtolerance=0.05/1
+  colors=000qEqrFpsGltHhuIdtJ`sKXrGTqBOp6Dp2Am67jABg\
+  EGdILaMQZUUWZZT`cQchNfmKjrInvIozHmzGkzFhrEemDbcJUk\
+  IUmHP`GKbFAdECfDFhCHjCJmBLpAOu9Qz8Sz7Uz7WvDYrJZmP_\
+  hV`Z`aSfbMlcGrdAmFIcDDbL9ST4S`0T_1UZ2VY3WX3XW4YV5Z\
+  U5_T6`S7aR8bQ8cP9dOAeOAfU5gW1hY6i_BjaFkcKlePmgThhY\
+  iiajjfkkkllommtnmxnmtmmplmlkmhjmdjm`imXhmTgmPwmLwm\
+  HwmIwmJwmJwmKwmKwmLwmLwmMwmMwmNwmNwmNwmNwmNwzNwzNw\
+  zNwzNmzNwmNwmNwmNwmNwmNwpNwsNwvNmsMwpMwmMmrzmzzmzz\
+  mzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzzzKzzLzzMzz\
+  OzzPzzQzzSzzTzzUzzVzzTzzSzzQzzPzzNzzMzzTzzTzzTzzTz\
+  zTzzPzzMzzJzzGzzCzz9zz6zz3zz7zzBzzEzzIzzMzzPzzTzzX\
+  zz_zzczzKzzKzzKzzKzzLzzKzzKzzKzzKzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,107 @@
+;     Date: Tue, 29 Apr 2014 17:42:33 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 29-04-14 (The Fourth Dimension [A-6,M-7])
+;       Id: <1.5.4.16.20140429174228.2a7710b0@earthlink.net>
+; ---------
+; 
+; FOTD -- April 29, 2014 (Rating A-6,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's scene in the East Valley area of the Z^2+C Julibrot was 
+; created by the 'ranges' feature of Fractint, a feature that I 
+; very rarely use.  It is such a rarely used feature that I am not 
+; even sure the more current Fractint-emulating programs have the 
+; ability to reproduce it.  As far as I know, the 'ranges' feature 
+; can be accessed only through a command-line entry.  The 'ranges' 
+; instructions, which are rather complicated, are available in the 
+; program documentation.
+; 
+; The image slices the Julibrot in an orientation halfway between 
+; the Elliptic and Rectangular.  The vaguely elephant-shaped open 
+; area in the foreground shows that we are roaming the East Valley 
+; area.  The brilliantly blue bars in the background show that 
+; regardless of where the points in the Mandelbrot set begin their 
+; journeys, if they do not escape first, they will eventually 
+; settle into the same orbits as points that begin at 0,0.  And if 
+; we look closely, we can actually see the dull red, low iteration 
+; foreground stuff gradually merging into the high iteration stuff 
+; making up the horizontal blue bars in the background.
+; 
+; There is no problem with the colors section of the parameter 
+; file.  Since the final 242 color registers are all solid black, 
+; I have combined them into a single register to save space.
+; 
+; I named the image "The Fourth Dimension".  After all, the 
+; Julibrot certainly does exist in four spatial dimensions.  The 
+; art earns a rating of an acceptable 6, while the math, which 
+; involves four dimensions, rates an improved 7.
+; 
+; The calculation time of 1-2/3 minutes is fast enough to keep 
+; impatience under control and slow enough to give time to watch 
+; the scene unfold on the screen.  But calculation is still a 
+; chore, and this chore may be avoided by checking the finished 
+; image on the web sites.
+; 
+; To avoid calculation, check the web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Clouds and rain made today a day to be forgotten here at Fractal 
+; Central.  The temperature of 48F +9C did nothing at all to help 
+; make the day more pleasant.  The fractal cats, who are now 
+; getting hard to tell apart, spent a little time sulking about 
+; the poor weather, but a lot of time working off their 
+; dissatisfaction tussling with each other.  The humans spent the 
+; day pondering the world's human problems.  The next FOTD will 
+; likely be posted in 24 hours.  Until then, take care, and one 
+; person can hardly worry about every over-hyped problem on earth.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheFourthDimension { ; time=0:01:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=slicejulibrot4 passes=t float=y
+  center-mag=+0.00204706073105023/+0.004429358557815\
+  21/109.0324/3.3256/-88.4965877662025093/32.6921823\
+  891347145 params=90/90/0/45/0.30025/-0.02526/0.765\
+  /-0.567/2/0 maxiter=18000 inside=0 periodicity=6
+  ranges=0/-1/425/500/600/800/1100/1500/2200/3300/60\
+  00/18000 sound=off colors=000C00XKKKmzPqzUuzZwzcwz\
+  hwzmzzzzzzzz000<242>000 }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

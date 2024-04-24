@@ -1,0 +1,101 @@
+;     Date: Fri, 18 Apr 2014 16:30:36 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-04-14 (Sandy Scenery [A-8,M-8])
+;       Id: <1.5.4.16.20140418163021.2a5f873c@earthlink.net>
+; ---------
+; 
+; FOTD -- April 18, 2014 (Rating A-8,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in a parent Mandelbrot set corrupted by 
+; Z^(0.9) energies.  In this case, the corruption extends all the 
+; way to the parent's surface, where it splits the main spike into 
+; fractal chaos.  Today's scene is located very close to the 
+; X-axis in some of this chaos just west of the split-apart large 
+; minibrot.
+; 
+; I named the image "Sandy Scenery" because of the well-defined 
+; area of near total chaos surrounding the minibrot lying at the 
+; center of the scene, well beyond the reach of Fractint .
+; 
+; I have rated both the art and math aspects at an 8.  I really 
+; did put extra effort into the coloring.  And the math is kind of 
+; a mystery.  It is far from obvious why corruption energies less 
+; than two have such a dramatic effect on even the surface of the 
+; parent M-set, and also why the minibrots of the corrupted parent 
+; remain quadratic and do not morph into lower-order ones.
+; 
+; The calculation time of 1-2/3 minutes is fast enough to prevent 
+; impatience or boredom from arising, but life can still be made 
+; simpler by avoiding calculation completely and checking the 
+; finished image on the web sites.
+; 
+; For maximum convenience, the image has already been calculated 
+; and posted to the FOTD web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Clouds prevailed all day here at Fractal Central, but they were 
+; thin enough to let a trace of sunlight through.  The fractal 
+; cats, who wanted more than just a trace, were spotted crouched 
+; in their cat sulk positions several times during the afternoon.  
+; The humans, who would have preferred a temperature higher than 
+; 54F 12C, took what they could get.
+; 
+; The next FOTD will likely not be posted until April 20.  Until 
+; the moment of bliss arrives, take care, and it's getting so 
+; confusing that a person can't tell the good aliens from the bad 
+; ones without a program.
+; 
+; 
+; Jim (not an alien) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sandy_Scenery { ; time=0:01:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip logmap=-176
+  center-mag=-1.754416325421651/+0.000014838350617/\
+  1.726933e+013/1/-15/0 params=0.9/100/0/0 float=y
+  maxiter=1200 periodicity=6 mathtolerance=0.05/1
+  colors=00050A50B50C50D50E50F50H50J70L90NB0PD0RF0TH\
+  0VJ0XL0ZN0`Q6cTCfWIiZOlaUocZqdcsfhuhmwjrzkvzzzzwlz\
+  wiqxgiwdbwcXvaVr`SmZPfYM_VLSLYJDKC6ABCAAIAANAATAAZ\
+  AAAAAAAAAAmRGjWGgaFcfF`lErqEpzCmuAhq8cm7ci6Ze5Ua4K\
+  X3EP49K4DF5HA5LA5PKFSKPVcZYch`gzVbzPczJczDcz7cz1cz\
+  2cz2cz2cz2cz6cz9cMDcNGcOJcQNcRQcSTcT_UYeUbkUgqPlwQ\
+  pd`cNjRKkOIlMFmJDmHAnE8oC5p93p77mHAjQDgZBbWAcU9cS8\
+  cQ7cN6cL5cJ4cHCcMKcRScW_c`gceocjwcoaceGzWHtXHoYHjZ\
+  HeZH`_HW`HR`LQ_PQ_SQZWPZ_PYbPYcSVcUSdWPdYMe_JeaGec\
+  EaeQZf`wVYtWUrXQoYNmZJk_Fh`Cfa8db5cpbdtbgegjRkmDom\
+  GpmIpmKqmNqmPrmRrmUsmWsmYtm`tmbumdumgvmivmkvljrkio\
+  jikihhhgdggaffZeeVdeScdObcLacH`bE_cBScILcPEcW7cb0c\
+  i3cf6cd8cbBc`EcYGcWJcUMcSOcPRcNUcLWcJXcLYcMZcN_cO`\
+  cPacQbcRbcSccUdcVecWfcXgcYhcZic_ic`hcagcbfcceccdcd\
+  dceccfbcfacg`ch`ci_ciZcjYckXclXcldc_lcNtcBqc9oc8lc\
+  6jc5hc4dcA`cFXcLTcQQcVMc` }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

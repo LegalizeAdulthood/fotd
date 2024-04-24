@@ -1,0 +1,106 @@
+;     Date: Sat, 05 Apr 2014 19:56:40 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-04-14 (The Infinite Beyond [A-7,M-6])
+;       Id: <1.5.4.16.20140405195658.0d774e4e@earthlink.net>
+; ---------
+; 
+; FOTD -- April 05, 2014 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I subtracted 2 parts of Z^(1.5) 
+; from 2 parts of Z^(2.5) and added C on each iteration.  This 
+; simple combination produces a parent fractal vaguely resembling 
+; a Mandelbrot set with its west half split apart, leaving two 
+; prominent period-2 buds.  The western shore line between these 
+; buds consists of all new stuff, with today's image lying in this 
+; new stuff, close to the valley leading to the northern period-2 
+; bud.
+; 
+; The terraced effect was created by the 'tdis' outside option.
+; 
+; The name "The Infinite Beyond" could be true of any fractal, 
+; since almost all fractals continue on forever, without limit.
+; 
+; The art rating of a 7 is a come-down from recent efforts, but 
+; still makes the image worth a look.
+; 
+; The main drawback is the admittedly slow calculation time of 9 
+; minutes.  A much easier way to see the image may be found on the 
+; web sites.
+; 
+; This easy life may be enjoyed by checking the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today here at Fractal Central began with clouds and blustery 
+; winds.  The clouds broke in the afternoon though the winds 
+; continued through the day, making the temperature of 43F +6C 
+; feel like anything but spring.  The fractal cats would have 
+; preferred more sun; the humans took what they could get.
+; 
+; The next FOTD will be posted soon.  Until whenever, take care, 
+; and the things that modern physicists are theorizing seem more 
+; incredible than the wildest claims of the old-time pseudoscien-
+; tific charlatans.  In fact, with all the quantum and multiverse 
+; stuff that can never be observed or tested, I sometimes wonder 
+; if the work of modern physicists can still be considered a 
+; legitimate aspect of the traditional scientific method.  Perhaps 
+; we need an entirely new discipline, which considers unobservable 
+; things (and why not spirits also) to be as real as the material 
+; we see around us.  Then we might join the discipline with 
+; traditional mysticism and name it something like mystiscience.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_InfiniteBeyond { ; time=0:09:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.297195839453691/+0.2155671346953684/\
+  1.140059e+010/1/55/0 params=2/2.5/-2/1.5/0/0/0/0
+  float=y maxiter=4000 inside=0 outside=tdis
+  periodicity=6 mathtolerance=0.05/1
+  colors=0000G00E02B0593978D5EH5JL5RP5XR5UR5SS5RS5OU\
+  5MU5LW5JW5HX5FX5EZ5BZ5A_59_58X56U55R54O54L53J62H81\
+  E91BB09E08G05I03K01N00Q00R0Ef3ZvDwzzqzznzzhzzdzzaz\
+  zXzzUzzPzzMzzJzzFzzDzzAzzBzzDzzEzzEzzFzzHzzHzzIzzJ\
+  xzJxzLvzMtzMtzRmzUhzXaz_XzcR4hN9lIEoEJs9Pw6Wz5ay5L\
+  w58u50s50l80dB0_G3UK9OOFJUMEZUAca9TS9KJ9BD85585085\
+  0B50E50I50L70OA0SF0WJ0_O0cT0fZ0lc0oi0so0uf0wZ0yR0z\
+  M0zF0z92z55z58z5Bz5E0DZ0FL0IA0K10N00Q00K00FD0AW0BX\
+  0BZ0D_0D_0Ea08WF5FF5FF59F5BF5CF5CK5FK5AF8BL53J50I5\
+  0I50I50I70I90ID2IF5II8IKBIOFIRIIUMIXRI`UI`UIZSIZSL\
+  WUMUUPTURRUSOWWNWXMWZKW_OZaUacZddchhdcjfZlhWoiRqkO\
+  smJwoHyqHzsHztHzvzwxzozzhzzlzzlzzlzllzulzzuzzzzzzz\
+  zzzzzzzzzz25D05D05D05D0Z00R00M0003U0cR0PP0CN08K08F\
+  0EK0DAERFGRLJRRMPXOXcTXjWWqZWyaczdczUhuMnqEsl7yf5z\
+  c5zU5oL5ZD5J5560500500500E00I00F10D50A908D0BI09M07\
+  R0AX08a07f0B00A00900K00K0 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

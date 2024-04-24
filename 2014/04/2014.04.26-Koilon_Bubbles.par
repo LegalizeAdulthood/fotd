@@ -1,0 +1,109 @@
+;     Date: Sat, 26 Apr 2014 08:19:45 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-04-14 (Koilon Bubbles [A-8,M-7])
+;       Id: <1.5.4.16.20140426081937.0d8f7e14@earthlink.net>
+; ---------
+; 
+; FOTD -- April 25, 2014 (Rating A-8,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that results when 0.01 
+; part of Z^(2) is subtracted from Z^(-2) on each iteration.  This 
+; parent is gargantuan in size, though the unlikely escape radius 
+; of today's image cuts off most of it.
+; 
+; This odd escape radius of 99.999 was carefully chosen to bring 
+; the scene of today's action as close as possible to the cutoff 
+; point, where the bubbles created by the 'fmod' outside option 
+; are as prominent as possible.
+; 
+; The name "Koilon Bubbles" describes the bubble-like objects in 
+; the image, and points back to the time when empty space was 
+; assumed to be filled with an invisible substance called aether, 
+; which transmitted light waves.  Some people, mostly occultists 
+; who called the aether 'koilon', also assumed that atoms were 
+; actually made of bubbles in this all-pervading substance that 
+; were held open by the creative power.  Curiously, now that dark 
+; energy has come on the scene, this idea does not seem quite as 
+; goofy as when it was seemingly disproved by the theory of 
+; relativity.
+; 
+; The art rating of an 8 is thoroughly earned, since I spent over 
+; an hour working up the custom coloring.  The math rating of a 7 
+; is earned because the un-truncated parent fractal extends 
+; apparently infinitely in both the outward and inward directions.
+; 
+; The calculation takes 1-1/2 minutes -- fast enough to keep 
+; boredom at bay.  And the web sites can avoid all calculation 
+; problems.
+; 
+; Save a little effort by viewing the finished image on any one of 
+; the FOTD web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Morning sun gave way to afternoon clouds and evening rain here 
+; at Fractal Central today.  The temperature of 64F 18C was very 
+; near normal.  The fractal cats were too busy tussling with each 
+; other to care very much about the outside conditions, though I 
+; did hear Jasmine chattering when a pigeon landed near the 
+; window.  The humans, who are becoming ever more disgusted with 
+; politics and the mass media, had an average day.  The next FOTD 
+; will be delayed until April 27, two days from now.  Until that 
+; time arrives, take care, and beware of manipulative media 
+; exaggerations.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Koilon_Bubbles { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-4.439109860299364/-5.965792592977377/\
+  2.5e+008/1/-42.5/0 params=1/-2/-0.01/2/0/-0.001/0/0
+  float=y maxiter=1000 inside=0 proximity=0.5
+  outside=fmod logmap=yes periodicity=6
+  colors=000zzzxyzwwzuuzsszrqzqozpmzokznizmgzkeziczg\
+  aze_zcYzaXz_WzYVzWUzVTzUSzTRxSQvQPqOOoMNnKMlILgGKe\
+  FKdDIaBHY9FX9FV7DT5BO3BM29K27I07F05D03B03905H27S39\
+  Z5Bc7Df9Fi9FiDIzFKzHMzIOzKQzKQzKQzKQzKTzKTzKTzKTzK\
+  VzKVxMVvMVqMXoMXnMXiMXgMYeMYaMY_MYYKX_KX_IXaIXaHXd\
+  HXdFXeFXeFXgDXgDXiBXiBXl9Xl9Xn9Xn7Xo7Xo5Xq5Xq3Xt3X\
+  t3Xt5Yq7Yo7Yn9YlB_iB_gD_gF_eF_dHaaIa_IaYKaXKaXMdVO\
+  dTOdQQdOTeMTeKVeKXeIXeHYgFYgD_gBagBag9di7ei5ei3gi2\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  0000000000000000000000000 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, esc=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
