@@ -1,0 +1,123 @@
+;     Date: Fri, 06 May 2011 22:17:14 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 07-05-11 (Gate to the Abyss [8.5])
+;       Id: <1.5.4.16.20110506221717.125781d2@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 07, 2011 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we take a return trip to perhaps my favorite of all 
+; fractal objects -- the rectangle in the Julia set of the East 
+; Valley of the large split-apart minibrot on the infinitely 
+; divided main spike of the Z^(2.003) Mandeloid.
+; 
+; This rectangle exists in its pure form only in the real(z) and 
+; imag(z) directions.  In the real(c) direction it quickly shrinks 
+; to a dot and totally vanishes.  In the imag(c) direction it 
+; falls apart at once, without bothering to shrink first.
+; 
+; But in some strange manner, it manages to also appear, in an 
+; extremely squashed form, in the Rectangular and Oblate planes, 
+; where it must be considerably stretched to unsquash it.  In 
+; today's image we see the rectangle at an orientation halfway 
+; between the Julia and the Rectangular, which makes the necessary 
+; stretching less extreme.  To see other rotations, vary the 
+; real(p2) parameter from zero, which will give the Rectangular 
+; view, to 90, which will return to the original Julia rectangle.  
+; The stretching will need to be adjusted along the way.
+; 
+; I named the image "Gate to the Abyss".  At this new angle, the 
+; rectangle actually does resemble a doorway to a vast unknown.  
+; As to what that unknown might be, I leave it to the viewer to 
+; determine.  To me, it is the fourth dimension.
+; 
+; Since I did put extra effort into the coloring, I rewarded 
+; myself with a half point bonus for the coloring, bringing the 
+; image's rating to a very respectful 8-1/2.
+; 
+; With a calculation time of 1-1/3 minutes, running the included 
+; parameter file will be a minor chore.
+; 
+; The pre-calculated image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Friday began with lots of sun here at Fractal Central.  A thin 
+; overcast arrived in the afternoon and filtered the sun, though 
+; it remained dry.  The temperature reached a high of 70F 21C, 
+; which pleased the fractal watch cats.  They manned their posts 
+; in the window, guarding against intruding strays.
+; 
+; The day of the humans was reasonable enough.  I spent the day 
+; scrounging up fractals, while FL passed the day recuperating 
+; from Thursday's garden work.  The next FOTD is due to be posted 
+; in 24 hours.  But sometimes Saturday brings a trip to a local 
+; antique emporium, so do not be concerned if the FOTD for May 08 
+; is late.  Until whenever, take care, and was it a fully rational 
+; scientist or a crackpot mystic who claimed that the world we 
+; observe around us is surrounded by other invisible worlds?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Gate_to_the_Abyss { ; time=0:01:23.65-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/-0.0087045\
+  7782794517/71.66298/43.054/180 params=90/0/45/90/\
+  -1.7435/0/0.00019/0.07388/2.003/0 float=y logmap=62
+  maxiter=60000 inside=0 symmetry=yaxis periodicity=6
+  colors=00040661982CA4FC6IE8LGAOICRKEUMGXOI_QKbSMeU\
+  OhWQkYSm_ToaUqcTseSugRuiRukQvmPvoOvqOvpStrWst_rvcq\
+  xhpzmozrpzvszzvzzzzzzzzzzzzzzvzzrzzmzzgzzdzyazxazw\
+  azw`zv`zu`zt_zt_zs_zr_zqZzqZzpZzoYznYznYzmYzlXzkXz\
+  kXzjWziWzhWzhWzcSzZOzUKzPGvKCrF8mB5hC8cDBZEEUFHPGK\
+  OGMRHPUISXJV_KYaK_dLbgMejNhmOkoOmmRkkTjiVhgXgfZed`\
+  dbbb`daZf_YhZgh_ph_dcTTZMHUF5P99SEDUJHXOLZTO`XN_YN\
+  ZYNYYNYYNXYNWZNWZNVZNUZNUZNTZMS_MS_MR_MQ_MQ_Q9HQ9G\
+  P9GP9GO9GOAFNAFNAFMAFMAELAELAEKADKADJADJADIBCIBCHB\
+  CHBCGBBGBBFBBFBBEBAEBADBADBACC9CC9BC9BC8AC8AC89C89\
+  C78C78C77C77D66D66D65D65D54D54D53D53D42D42D42D47U8\
+  CiCHyGGzFGzFGzFGzFGzFGzFFzFFzFFzEFzEFzEFzEFzEEzEEz\
+  EEzEEzDczDczDczDczDczDczDczDczCzzCzzCzzCzzCzzCzzCz\
+  zCzzBzzBzzBzzBzzBzzBzzBzzBzzBzzmzzmzzmzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

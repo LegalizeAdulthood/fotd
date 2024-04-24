@@ -1,0 +1,113 @@
+;     Date: Mon, 30 May 2011 09:00:07 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 30-05-11 (Uncharted Territory [7])
+;       Id: <1.5.4.16.20110530090010.151fe1fa@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 30, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we enter "Uncharted Territory", which is what I named the 
+; image.  Never before have I checked a fractal with an exponent 
+; as close to unity as 1.009, making today's image uncharted for 
+; sure.
+; 
+; The graph of Z^1.009 is virtually a straight line, so how is it 
+; possible that a fractal as rich and varied as today's could come 
+; about?  The answer is the multi-valued nature of the complex 
+; logarithm.
+; 
+; The complex log is multi-valued.  This means that it has many, 
+; in fact an infinity of values, and all of them are 'correct'.  
+; When applied to fractals with fractional exponents, these 
+; different values create different fractals, all of which are 
+; correct.  But curiously, when applied to exponents very close to 
+; unity, as is today's, these different values create some 
+; unexpectedly rich images, in effect turning a 'sow's ear' into a 
+; 'silk purse'.
+; 
+; Today's image lies in one of these 'silk-purse' fractals.  The 
+; parent fractal is an apparently featureless ellipse, but a close 
+; examination reveals a tiny bit of chaos on the southeast shore 
+; line.  Today's image lies in this chaos.
+; 
+; I used the built-in black-and-white color palette to create the 
+; 3-D effect.  Other palettes might have worked better, but an 
+; attack of terminal laziness prevented me from trying to find 
+; one.  This laziness held the rating to an everyday 7.
+; 
+; The finished image may be seen on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Typical midsummer weather made Sunday a typical midsummer day 
+; here at Fractal Central.  The fractal cats spent the day doing 
+; what cats do when the temperature reaches 88F 31C -- they 
+; stretched out and went to sleep.
+; 
+; The humans took it just as easy, though we did stay awake at 
+; least most of the time.  The next FOTD is due to be posted in 
+; 24 hours.  Until then, take care, and don't ask me what I think 
+; is wrong with the new world being brought about by the recent 
+; advances in technology.  I just might start to answer.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+UnchartedTerritory { ; time=0:12:09.74-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-0.132209132/-1.699446787/4304/1/97.5/0
+  params=1.009/0/4.75/1500 float=y maxiter=4200
+  colors=000fffgggggghhhhhhiiiiiijjjjjjkkkkkkllllllm\
+  mmmmmnnnnnnooooooppppppqqqqqqrrrrrrssssssttttttuuu\
+  uuuvvvvvvwwwwwwxxxxxxyyyyyyzzzyyyxxxxxxwwwwwwvvvvv\
+  vuuuuuuttttttssssssrrrrrrqqqqqqppppppoooooonnnnnnm\
+  mmmmmllllllkkkkkkjjjjjjiiiiiihhhhhhggggggffffffeee\
+  eeeddddddccccccbbbbbbaaaaaa``````______ZZZZZZYYYYY\
+  YXXXXXXWWWWWWVVVVVVVVVUUUUUUTTTTTTSSSSSSRRRRRRQQQQ\
+  QQPPPPPPOOOOOONNNNNNMMMMMMLLLLLLKKKKKKJJJJJJIIIIII\
+  HHHHHHGGGGGGFFFFFFEEEEEEDDDDDDCCCCCCBBBBBBAAAAAA99\
+  99998888887777776666665555554444443333332222221111\
+  11000000000000000111111222222333333444444555555666\
+  666777777888888999999AAAAAABBBBBBCCCCCCDDDDDDEEEEE\
+  EFFFFFFGGGGGGHHHHHHIIIIIIJJJJJJKKKKKKLLLLLLMMMMMMN\
+  NNNNNOOOOOOPPPPPPQQQQQQRRRRRRSSSSSSTTTTTTUUUUUUVVV\
+  VVVVVVWWWWWWXXXXXXYYYYYYZZZZZZ______``````aaaaaabb\
+  bbbbccccccddddddeeeeeefff }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

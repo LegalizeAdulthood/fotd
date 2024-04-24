@@ -1,0 +1,96 @@
+;     Date: Wed, 18 May 2011 22:21:35 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-05-11 (Twenty to the Clock [7])
+;       Id: <1.5.4.16.20110518222134.1067f2a6@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 19, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to the parent fractal that results when 
+; six parts of Z^(-2) are combined with ten parts of Z^(-10) on 
+; each iteration before (1/C) is added.  This parent fractal 
+; resembles a 3-leaf clover with a prominent bud on the edge of 
+; the eastern leaf.  Today's image is located on a minor filament 
+; extending inland from the shore of this bud.
+; 
+; In an effort to make something of the original nothing image, I 
+; half evaporated it, then rendered the result with the remaining 
+; outside parts set to 'mult' and the newly-exposed inside set to 
+; 'bof60'.  The result rates a 7.
+; 
+; I named the image "Twenty to the Clock", partly for fun and 
+; partly because of the twenty converging arms inside each element.
+; 
+; The image calculates in 2-1/3 minutes, but this time may be 
+; saved by viewing the finished image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version of the image is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The venerable original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Lots of threatening clouds hung around Fractal Central all day 
+; Wednesday, but once again little rain fell.  The temperature of 
+; 70F 21C was pleasant enough.  Only the lack of sun could be 
+; complained about.  The fractal cats passed the day wondering 
+; what life in the great forbidden outdoor world would be like.
+; 
+; I passed the day thinking about cleaning out the spare room, and 
+; ending up doing nothing.  FL spent the afternoon working in the 
+; garden, with me giving occasional moral support.  The next FOTD 
+; will be posted in 24 hours.  Until then, take care, and be of 
+; stout heart but lean body.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Twenty_to_theClock { ; time=0:02:20.01-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.10412374889474/-0.07981491857980604\
+  /1.116e+011/1/92.5/0 params=6/-2/10/-10/0/10000/0/0
+  float=y maxiter=1500 inside=bof60 outside=mult
+  colors=000mczqttptootkotfntbntZkqeholelsbjzcmvcosc\
+  qoctlcvhcxeczbfyciyclycnycqxdtxdwxdyxduohqfknZnjQq\
+  fHtc9wWOxPaxIoxJnoJmfJlY6DsFUmNigPefQbfR_fTXeUUeVR\
+  eSW`Q`WOeRMiMKnHIsCGw7PqGXkOdeWai2_d5`_7ZV9XQBTLDR\
+  GFMBHF7D000ILODRQ8YS3cU8dTDeSIfSUWXdMaoBfz1kw5lu9m\
+  lsg000vsgusgttgstgrugqugpvgowfnwfmxflxfkyfjyfizfiz\
+  fjvcjr`jnYkjVkgTkcQl_NlWKlTImPFmLCmH9mE7nH6oK6oM6p\
+  P6pS6qU6qX6r_6ra6sd6sg6ti6tl6uo6uq6lk8ceAW_BNUDEOF\
+  6IGBNEFRDKVCOZBTbAXf9aj8en7jr6nv5rz4rv6rr7ro8rkArh\
+  BrdCr`ErYFrUGrRHqQJpPLnNOmMQlLSkKUiIXhHZgG`fFbdDec\
+  CgbBiaAkYKnUUqQctMmwIwyRiu_WrgIogNjgRegWag_XgcTh`W\
+  iYZjV`jSckPflMhlJkmGmnDpnAso7up4xp2zk3xf4wa4vX5tT5\
+  sO6rJ6pE7oA7nBBdCFVDJLENBFQ2HR3IR4KS5LS6NT7OT8QT8R\
+  U9mmAUVzmcCXWDZWE_WEYmzXTJWSMVROUPRTOTSNWRMYQK`PJb\
+  OIeNHgMFjLElKDoJCqNFpQHpTKoWMoZPnaRndUmgWmbViYVeTV\
+  aOUYJUVEUR9TN4TJ0TGdfKbcK }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

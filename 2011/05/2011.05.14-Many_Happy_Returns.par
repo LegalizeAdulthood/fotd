@@ -1,0 +1,109 @@
+;     Date: Sat, 14 May 2011 22:07:24 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-05-11 (Many Happy Returns [6])
+;       Id: <1.5.4.16.20110514220726.12d7b1d2@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 15, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's discussion is brief because an antiquing trip did happen 
+; on Saturday.
+; 
+; The image turned up when I decided to see if any rectangles 
+; exist in the (-Z)^(2.003)+C Mandeloid.  I found no rectangles 
+; but I did find some interesting other stuff.  Today's image is a 
+; sample of that 'stuff'.
+; 
+; Most of the effect is due to the high-contrast color palette.  
+; It takes more than sharp colors to create a great fractal 
+; however, so I could rate the image no higher than a 6.
+; 
+; The name "Many Happy Returns" has nothing to do with the image.  
+; In fact, I have no idea why I chose it.  The words just kind of 
+; popped into my head when I shut off everything else.
+; 
+; The included parameter file calculates in one minute.  Those who 
+; do not calculate will find the finished image posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image is available in high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site with the entire library of past FOTD's is 
+; at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; My plans are to eventually post all the past images on my own 
+; web site, but judging from the way things are presently going, I 
+; may never finish the job.
+; 
+; Heavy clouds and a temperature of 63F 17C cast a pall over 
+; Fractal Central on Saturday.  The rain was barely enough to 
+; dampen the sidewalk, but it did dampen the spirits at the fair 
+; for the benefit of the local volunteer fire company.
+; 
+; The fractal cats, who were left alone all afternoon, had their 
+; spirits dampened also, and gave the humans a sound scolding when 
+; they returned.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and some claim that everything is a dream.  If 
+; this is so, then who or what is the dreamer?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Many_Happy_Returns { ; time=0:01:06.24-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 center-mag=-1.746803722\
+  297722/+0.00001106402990913/2.52e+007/1/-57.5/0
+  params=0/0/0/0/0/0/0/0/2.003/0 float=y maxiter=1500
+  inside=0 logmap=198 periodicity=6
+  colors=000HEWCAO87G438fGaWCSL8JA49ipk8rs1I60D40930\
+  411ch0Zb0UX0PS0KM0FG0AB055IcM9KBixhGXLAME5B7gSg_N_\
+  TITMEME9E747q25JqSC_I6I9j8hd7bZ6XT5SN4MH3GB2B5150r\
+  i0g_0XR0MI0B92bR1JDaOIVKFPGCJC9C866436jdWP6LG4A82O\
+  TLKOIHKFDGCeHKgEGiBCk88fABbBDZCFVDHQEKMFMIGOEHQiUF\
+  mj5tm8jgBk_ElZGkaIkdJjgLjjMimOipPhsRhvSbuVXtYSs`Ms\
+  cGrfBqi5pl0poOMvPSrQYnRbjShgTmcUs_UxXTmXTcXTUXTKXT\
+  AXQQcNejLtpMqqNnrOksOhsPetQbuQ_uSXtUVtWSsYQs_Nr`Lr\
+  8X3AZAC_HDaOFbVHdaIehKgoLhvQcvV_vZWvcRvgNvlJvpFvjD\
+  qeBm`9hW8dQ6`L4WG2SB1O75L48J1BHSCOrDUhAP_8KR6FI4A3\
+  10925`jcOVQCFDm3Kc2GU1CK18A041cM0QE0D7xv7pn6hg5a_4\
+  UT3MM2FE1770nholvM_gGOTBCE5sbmiWd`QXSJPIDG968ApC8g\
+  A6Z85Q63H4182GwmDneBeZ9YS6PL4HE287gY1h0k`0cU0cM0cF\
+  0m70muDmgJm`GmVDmPAmI8mC5m62mhz5_z4Rz3Iz29z1GzVAzK\
+  5zAtzRlzNezKZzGSzDLzAEz67z3zzwzzUzzszzkzzczzWzzOzz\
+  Gzz8zzhzzXzzMzzBzzszzkzzc }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

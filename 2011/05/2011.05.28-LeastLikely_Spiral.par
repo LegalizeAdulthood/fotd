@@ -1,0 +1,116 @@
+;     Date: Sat, 28 May 2011 19:53:52 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 29-05-11 (Least Likely Spiral [No Rating])
+;       Id: <1.5.4.16.20110528195355.13dfd1b2@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 29, 2011 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another super-quickie.  I got lazy.  Even the 
+; most ardent fractalists sometimes feel lazy when the weather is 
+; warm.
+; 
+; To produce today's image I started with yesterday's mallard duck 
+; and gave him his proper plumage by rendering the fractal with 
+; the inside set to 'zmag'.  (In my haste, I forgot to give the 
+; poor bird his plumage in yesterday's image.)
+; 
+; Apparently, I also forgot to give him a bill. (A duck would have 
+; a hard time dabbling for food without its bill.)  Today, feeling 
+; sorry for the bill-less bird, I went to the spot where the bill 
+; should have been attached, but nothing I tried came anywhere 
+; close to adding a workable duckbill.  Finally, in frustration, I 
+; checked a small area of debris in the vicinity.
+; 
+; After a brief search of the debris field, I found no bill, but 
+; the broken spiral that appears as today's image was enough for 
+; an FOTD.  There is not much I might say about the image, which 
+; is best left to quack for itself.
+; 
+; I gave the image no rating, though a rating of something like a 
+; 5-1/2 seems appropriate.  The name "Least Likely Spiral" 
+; reflects the disconnected nature of the spiral, which I assume 
+; is endless.
+; 
+; To see the image, set up and run the included parameter file.
+; 
+; The image is posted already calculated on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site is at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; A very pleasant day prevailed here at Fractal Central on 
+; Saturday, with lots of sun and a temperature of 82F 28C.  The 
+; humidity was rather high, but fractal cats do not worry about 
+; humidity, so the dynamic duo had a relaxed day, and even managed 
+; to avoid getting into trouble.  The humans had a reasonably 
+; pleasant day also.  I spent a good part of the time watching the 
+; clouds drift by, while FL busied herself working in the garden.
+; 
+; The next FOTD will be posted in 24 hours.  With the first 
+; holiday of summer coming up, the next fractal or two might be 
+; more quickies.  Until then, take care, and I finally worked out 
+; the answer to the perplexing measurement problem, but as soon as 
+; I finished, my answer became uncertain.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+LeastLikely_Spiral { ; time=0:22:40.23-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-0.485482025/+1.43064256028/198250/1/\
+  54.6/0 params=1.05/0/10.5/1500 float=y maxiter=3200
+  inside=zmag periodicity=6
+  colors=00012K22K32L42L52M62M73M73N83N93O93OA3PA4PA\
+  4PA4Q54B54D54E55G55H55I65K85LA5NC6OE6QE6RE6SF6UF6V\
+  F7XG7XG7ZH7_I7`J7bK8cL8eN8fP8gR8iT8jU8lW9mX9oY9pZ9\
+  qJ9cJ9cAIQ9GV8FZ8Db7Cf7Aj69n68rGKfQWV_fJq53lBBgHIb\
+  MQZSXUYcPbkKhrGmyJooMpePqWRrMHv1Gq8FlEEgLEbRDYXCTc\
+  BOiBKo9Tk7`g6hc4p_3xX7wZAw_Dw`HvbKvcNvdQvePsaOpZNm\
+  VMjSLgOKdLJaHI_EFbLDdSAfZ8hdFfWMeNSdERZDQTCPOBOIAO\
+  D9UKCZREcXHicJniMspOxvQaicFYpAZg5_Z0`Q4aM7bIAcFDdB\
+  Ge8Jf4Mf1o1Cj8FeEH`KKWQMRWPMaRHgUCmWqrPqoMqmJqjGqh\
+  EelBVp8Ks6Np9PnBRkDTiFVgIXdKZbM``O_YPzVPzSPzPQzMQz\
+  JQzHQzKOzNNzQLzTKzWJz`LzdNzhPzlRzpTztVzgdzWmzgQzdO\
+  zbNz_LzYKzVIzTHzRGzLMzGRz3PzT1zS6zRBzQGzPLzOQzNUzK\
+  WzHYzRTz`PzjKzsGzqHzoIznJzlKzkLziMzhNzXRzLVzAZzJcz\
+  RgzZlzfpzntzfmz_gzS`zLVzPZzTazXez`hzdlzhozlszovzs_\
+  zvDzqMzlVzhczclz_tzcbzfMzgPzhRziTzjVzhSzfPzdMzbJz`\
+  GzZDzXAzV7zW8zX8zY9zZ9z_G }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

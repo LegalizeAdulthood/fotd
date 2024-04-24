@@ -1,0 +1,116 @@
+;     Date: Tue, 24 May 2011 22:28:20 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-05-11 (Demystified Midget [6])
+;       Id: <1.5.4.16.20110524222827.146fd3b8@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 25, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's FOTD I have another go at the 'Minibrot for the Ages' 
+; that appeared as the FOTD for May 21.  Well, actually it's not 
+; the same minibrot.  The May 21 minibrot has an exponent of 1.08, 
+; while today's version has an exponent of 1.0745.
+; 
+; As the exponent is reduced, the prominent hook changes into an 
+; arch, and the entire minibrot moves toward the main bay of the 
+; parent fractal, where it is quickly swallowed up.  Today's image 
+; catches it as it plows through the fine grit on the shore line 
+; of its parent's main bay, shortly before it dives into the bay.
+; 
+; To get top detail, it was necessary to render today's image at a 
+; maxiter of 32,000, which increases the calculation time to an 
+; annoying 40 minutes.
+; 
+; The image was rendered with the outside set to 'fmod'.  This is 
+; a mistake, since I wanted to try the scene in the normal 
+; outside=iter manner.  But by the time I had realized the error, 
+; 40 minutes had passed, and the image was finished, and it even 
+; looked rather pleasing, so I let it go as FOTD for May 25.
+; 
+; The name "Demystified Midget" indicates that all those strange 
+; holes around the base of the hook of the original version are 
+; actually parts of the second half of the minibrot peeping 
+; through.  Today's image removes all doubt that half of the 
+; original minibrot is actually obscured from view.
+; 
+; The rating of a 6 is for artistic value.  The mathematical value 
+; is closer to a 9.
+; 
+; To view the scene, either run the included parameter file or 
+; view the finished image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high-def version will soon be posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds, and a summer like temperature of 81F 
+; 27C made Tuesday a near ideal day here at Fractal Central.  The 
+; fractal cats must have agreed, for they spent an unusual amount 
+; of time watching the outside world, which is a cat's TV.
+; 
+; The humans had an uneventful day.  This is always a good thing, 
+; and if tomorrow is just as good, the next FOTD will be posted in 
+; 24 hours.  Until then, take care, and never say never.  If 
+; things keep going as they are, one of these days we may find 
+; that one plus one suddenly equals three.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Demystified_Midget { ; time=0:40:43.14-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-0.20382948/+1.15808753/112/1/-105/0
+  params=1.0745/0/16/525 float=y maxiter=32000
+  inside=255 outside=fmod periodicity=6
+  colors=000QDgQDgQEgPEgPEgPEgPFfPFfPFfOFfOGfOGfOGfO\
+  GfOHfNHfNHfNHfNIfNIfNIfMIfMJfMJfMJfMJfMKfMKfLKfLKf\
+  LLfLLfLLfLLfKMeKMeKMeKMeKNeKNeJNeJNeJOeJOeJOeJOeIP\
+  eIPeIPeIPeIQeIQeIQeHQeHReHReHReHReHSeGSeGSeGSeGTdG\
+  TdGTdFTdFUdFUdFUdFUdFVdEVdEVdEVdEWdEWdEWdEWdDXdDXd\
+  DXdDXdDYdDYdCYdCYdCZdCZdCZdCZdB_cB_cB_cB_cB`cB`cA`\
+  cA`cAacAacAacAacAbc9bc9bc9bc9cc9cc9cc8cc8dc8dc8dc8\
+  dc8ec7ec7ec7ec7fb7fb7fb6fb6gb6gb6gb6gb6hb6hb5hb5hb\
+  5ib5ib5ib5ib4jb4jb4jb4jb4kb4kb3kb3kb3lb3lb3lb3lb4l\
+  c3hb2db2Xa1Pa1H`09K01K12K23K23K34K45L45M56N67O67P7\
+  8Q79R89S9AT9BUABTBCTBDTCDUDEUDEUEFVEGWFGXGHXGIYHHY\
+  IIZIJZJJYKJYKKYLJYLKYMKYNKYNLYOLYPLYPMYQMYQNYRNYSN\
+  XSOXTOXUOXUPXVPXWPXWQXXQXXQXYRXZQXZRX_SX`SW`TWaUWb\
+  UWbVWcWWcWWdXWeYWeYWfZWg_Wg_Wh`Wh`WiaViaViaViaVjaU\
+  jaUjaUjaUkaTkaTkaTkaTlaSlbSlbSlbSmbSmbRmbRmbRnbRnb\
+  QnbQnbQobQobPobPocPpcPzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

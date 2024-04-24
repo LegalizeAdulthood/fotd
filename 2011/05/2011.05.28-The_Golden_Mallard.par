@@ -1,0 +1,103 @@
+;     Date: Sat, 28 May 2011 08:57:35 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 28-05-11 (The Golden Mallard [5])
+;       Id: <1.5.4.16.20110528085737.1417e4fa@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 28, 2011 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to an unexpectedly busy day on Friday, today's image is a 
+; quick and simple one, and the discussion is just as simple.
+; 
+; The image is named "The Golden Mallard".  On the surface it does 
+; resemble a duck floating serenely on an invisible body of water. 
+; (A lake transform might have been helpful in creating the water 
+; effect.)
+; 
+; Actually, the image is the parent fractal that is created when 
+; the formula Z^(1.05)+C is iterated 10-1/2 levels up the complex 
+; logarithmic hyperspiral with the 'recip' function applied.  
+; (This function seems to work best with this formula, though I 
+; doubt that it is the most accurate.)
+; 
+; The calculation time of 41 seconds will pass quicker than a car 
+; at the Daytona Speedway.  But before this speed can be apprecia-
+; ted, the included parameter file must be set up and run.  The 
+; way to avoid this minor hassle is to view the finished image on 
+; the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site is at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds and a temperature of 84F 29C made Friday 
+; a pleasant but rather warm day here at Fractal Central.  The 
+; fractal cats spent the day taking it as easy as possible without 
+; giving up the activity that goes with asking for food.  FL spent 
+; some of the time in the garden, caring for a sick rose bush.  (I 
+; did not realize gardening was so emotional.)
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and the next time you think a deep thought, try to deter-
+; mine how much the thought weighs.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Golden_Mallard { ; time=0:00:41.30-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip
+  center-mag=-1.58412/-0.336258/0.4444593/1/-20/0
+  params=1.05/0/10.5/1500 float=y maxiter=3200
+  inside=0 logmap=37 symmetry=none periodicity=6
+  colors=00012K22K32L42L52M62M73M73N83N93O93OA3PA4PA\
+  4PA4QA4QA4RA4RA5SA5SA5SB5TC5TD5UD6UE6VE6VE6VF6WF6W\
+  F7XG7XG7YG7YG7YG7ZG8ZG8_G8_G8_G8`H8`H8aI9aI9bI9bI9\
+  bJ9cJ9cJAdKAdKAeKAeKAeKAfKBfKBgKBgLBhLBhLBhLCiLCiL\
+  CjLCjMCkMCkMDkMDlMDlMDmMDmNDnNEnNEnNEoNEoNEpNEpNEp\
+  OFoOFoPGoPGoQHoQHoRIoRIoSJoSJnTKnTKnULnULnVMnVMnWN\
+  nWNnXOmXOmYPmYPmZQmZQm_Rm_Rm`Sm`SmaTlaTlbUlbUlbUlc\
+  VlcVldWldWleXkeXkfYkfYkgZkgZkh_kh_ki`ki`kjajjajkbj\
+  kbjlcjlcjmdjmdjnejneiofiofipgipgiqhiqhiriiriiriiph\
+  gnhfmhekhdjgchgbfgaeg`cf_bfZ`fY_fX`gY`hZ`hZ`i_`j``\
+  ka`la`mb`nc`odbn_dmVelQfkRgjRhiRhiSihSjgSjgSkfTleT\
+  mdTmdUncUocUocUpcVpcVpcWpcWpcXpcXpcYpcYpcZpcZpc_Nm\
+  7Mm8Mm9LmALmBKmCKmDJmEJmFImGImHcmIcmJcmKcmLcmMcmOc\
+  mNcmNmmNmmNmmNmmNmmNmmNmmNmmNmzMmzMmzMmzMmzMmzMmzM\
+  mzMzzMzzMzzMzzLzzLzzLzzLzzLzzLzzLzzLzzLzzLzzKzzKzz\
+  KzzKzzKzzKzzKzzKzzKzzKzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

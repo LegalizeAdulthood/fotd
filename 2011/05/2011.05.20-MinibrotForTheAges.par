@@ -1,0 +1,121 @@
+;     Date: Fri, 20 May 2011 23:47:12 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 21-05-11 (Minibrot for the Ages [8])
+;       Id: <1.5.4.16.20110520234714.12afc1d2@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 21, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is titled "Minibrot for the Ages".  This is admit-
+; tedly an exaggeration, but the minibrot actually is the most 
+; impressive I have yet found in a Mandeloid with an exponent of Z 
+; less than sqrt(2).  In today's image the exponent is a lowly 
+; 1.08.
+; 
+; The parent fractal was calculated 16 levels up the complex-
+; logarithmic hyperladder with the 'recip' function applied.  
+; Using this function probably defeats the original purpose of the 
+; formula, which was to create an animation of the different 
+; fractals that can be created from the different values of the 
+; multi-valued complex logarithm.
+; 
+; This parent is shaped much like the minibrot in the image, 
+; though it lacks the prominent hook, and has a 'nose' on what 
+; would be the upper right side of its main bay.
+; 
+; Today's minibrot is very large.  In fact it is actually visible 
+; on the northeast shore line of its parent with only the slight-
+; est magnification.
+; 
+; The rating of an 8 might have been higher if I had devoted more 
+; effort to the coloring, which I admit is a bit haphazard.
+; 
+; The image calculates is an unremarkable 3 minutes.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site is at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Periods of sun interspersed with occasional thunder-showers made 
+; Friday an interesting day here at Fractal Central.  The tempera-
+; ture of 70F 14C was mild enough by winter standards, but rather 
+; chilly for late May in central Pennsylvania.  The fractal cats 
+; had a typical day, though I think a bit of bad feelings arose 
+; between them in the afternoon.
+; 
+; FL and I sometimes think of screening the back porch, adding 
+; shelves for the duo to leap onto, and making the entire porch 
+; into a catarium, where they can climb around and watch the 
+; world from their high, safe perches.  The fractal cats appear to 
+; be ready for it.
+; 
+; The humans had a frustrating day.  We got word that one of our 
+; biggest customers will no longer be using our design services.  
+; This will leave more time for work on fractals, but less money 
+; for other things.  Luckily, fractals are free and the supply of 
+; them is infinite.  The next fractal will be posted in 24 hours.  
+; Until then, take care, and don't waste your energy worrying 
+; about things that have no chance of happening.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+MinibrotForTheAges { ; time=0:03:00.39-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip
+  center-mag=+0.106891367/+1.163747143/147.5/1/\
+  -178.25/0 params=1.08/0/16/525 float=y
+  maxiter=12000 inside=0 logmap=158 periodicity=6
+  colors=000cKQaLPZMPWOOUPORRNOSNMTMJVMGWL6ZD9YGCYIE\
+  YLHZNK`PMaSPcUSdXUfZXh`_jcakedmhgojipljoijofjodkna\
+  kn_knXlmVlmSmlSmlRmlRlkQkjQiiQhhPfgPefXdeUcdSbcPbb\
+  N_YKYTIVOFSJDQEAG98A46mKzkFyj3ui5rh7ogDlWScLZUNdKP\
+  c4Rb9TaDVZIYWM_TRaQVcQXdPYePZfP`hQbkRdmSfoSgqRgsRg\
+  oTgkUegWccXb_Z`W_ZSaXObWKdUGeSAeS6eTDfRJgQPgPVhOai\
+  NgiMmjLskKykJubErV9nM4kE0gD5dDA`DFYDKUDPRCUNCZKCcG\
+  ChDCm93vACqALmAThAadAj_FyUDvVCtVArW9pW8nX6lX5jY2kX\
+  3jY3iY4hY4gY5fZ5eZ5dZ6cZ6b_7a_7`_3Ep5MjATdK__UfUcm\
+  OmzEctJUpOQkSMgXQbaUZeYUjTPlaQniQopFqqLpqQprWor`os\
+  enskntpmyzzvwztuzqszoqzlovjmpgkceiVbgR`eOYcLWaIY_6\
+  U_FR_ON_WK_dH_lJZiLYgNYeOXcQXaSW_UWYVVWXVUZUSXQP_U\
+  QaXRc_SebTgfTiiUklVmoWorWkoXhmYzkzbhz_fzzezThzQkzz\
+  nzKqzHtzzwz4zz7zzzzzBzzCzzzzzDzzDzzEzzEzz0zzEzzRzz\
+  czzqzzpzzszzrzzqzzpzzozznzzmzzlzzkzzjzzizzhzzgzzfz\
+  zezzezzgzzizzkzzlzzizzfzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,107 @@
+;     Date: Tue, 31 May 2011 22:39:41 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-06-11 (Rainy-Day Minibrot [No Rating])
+;       Id: <1.5.4.16.20110531223946.146fe3ba@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- June 01, 2011 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Rainy-Day Minibrot".  I gave it this 
+; name because the image was resurrected from my 'reserve' files 
+; -- older images that I hold in reserve to recall when laziness 
+; attacks as it did on Tuesday.
+; 
+; The image shows a minibrot of order 2.05 located near the 
+; negative X-axis of the parent fractal that results when the 
+; formula Z^2.05+C is iterated at a level of a measly 0.12 turn up 
+; the log spiral with the 'recip' function applied.  This parent 
+; is shaped almost exactly like the minibrot.
+; 
+; Since the image is an older one and I put almost no new coloring 
+; effort into it, I could give it no rating.  But if I had rated 
+; it, I would have given it a rating around a 5.5.
+; 
+; The calculation time is a very zippy 36 seconds.  Calculation 
+; may be avoided however by viewing the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site is at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Total heat and humidity prevailed here at Fractal central on 
+; Tuesday.  When the temperature reached a high of 95F 35C the 
+; fractal cats retired to the cool tile of the bathroom floor, 
+; where they spent the next several hours.
+; 
+; Meanwhile the humans took things easy in their own way.  FL 
+; checked to see that the garden was well watered, while I 
+; relaxed with a fractal.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and the current issue of 'Time' 
+; magazine has an article about the tendency of people to look at 
+; the bright side of bad events instead of the realistic side.  I 
+; have not yet had a chance to read the article, but it is proba-
+; bly irrelevant.  I am certainly not guilty of looking at the 
+; bright side of bad things.  (I'll have more to say about this in 
+; an upcoming FOTD.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Rainy-Day_Minibrot { ; time=0:00:36.64-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip
+  center-mag=-1.372754717265681/+0.02681174574841239\
+  /4.650326e+011/1/7.5/0 params=2.05/0/0.12/0 float=y
+  maxiter=1500 inside=0 logmap=67
+  periodicity=6 mathtolerance=0.05/1
+  colors=00080UC1UG2UK3UO4US7UWAU_DUcGSgJRzePzYOyRNs\
+  OLmLJhIHbFGYBES9CPEBRIAVP9ZZ8ea7ha5md3rg4zf4zd4d04\
+  d04e04f05f05g05g05h05i05i06h06c06Z06U06P06K07zU0zU\
+  0zU0zU0zU0zS0vQ0sO0pN0oMBoLCoKDoJEoIFoHGoGHoFIoDJo\
+  BKoCLoCMoCNoCOoCPoCQoDRoDSoDToDUoDVoDWoDWnGVnIUmKU\
+  mMTmPSlRSlTRlVRhVWdV_`VdXVhTVmPVqLVvIVzHVvGVrFVnEV\
+  jDVfCVbGSaKPaNN`RK`UH_YF_`CZd9Zg7Yk4Yn2Ym3Xm4Wm5Wl\
+  5Vl6Ul7Uk8Tk8Tk9SKgeKfcKebKd`Kc_KcZKbXKaWK`UK_TK_S\
+  KZQKYPKXNKWMKWLPXKTYJYZIa_Hf`GjaFnaFpcHqdJreLsfNtg\
+  OuiQvjSwkUxlWymXdg_LbbKcaJdaJeaIe`Hf`Hg`Gg_Fh_Fi_E\
+  iZEjZDkZCkYclYcmYcmXcnXcoXcoXcmWckWcmVcmVcmVcmUcmU\
+  cmTcmTcmTcmScmScmRcmRcmRcmQcmQcmQmzPmzPmzOmzOmzOjz\
+  NkzNmzMnzMpzMqzLszLtzLmzQmzUmzZzzbzzgzzkzzmzznzzoz\
+  zmzzlzzkzzjzzhzzgzzfzzezzdzzbzzazz`zz_zzZzzXzzWzzV\
+  zzUzzTzzRzzQzzPzzOzzNzzLzzKzzJzzIzzHzzKzzNzzQzzTzz\
+  VzzYzz`zzczzfzzhzzkzznzzq }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

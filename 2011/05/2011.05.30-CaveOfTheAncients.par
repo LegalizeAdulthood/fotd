@@ -1,0 +1,109 @@
+;     Date: Mon, 30 May 2011 19:41:13 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-05-11 (Cave of the Ancients [7])
+;       Id: <1.5.4.16.20110530194117.14cf1654@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- May 31, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I was surprised when yesterday's exponent of 1.009 actually 
+; produced a fractal; I was astounded when today's exponent of 
+; 1.0009 produced one also.
+; 
+; In this range, all parent fractals are roughly egg-shaped, so I 
+; searched for parents with slight irregularities on their edges.  
+; In today's case, the parent fractal created by calculating the 
+; formula 8.98 levels doen the complex log ladder with the 'recip' 
+; function applied showed such an irregular area.  When I zoomed 
+; into this area, I found today's scene.
+; 
+; To me at least, the image resembles a view from deep in a cave, 
+; looking out toward a brilliant sky.  When I switched on my 
+; thought processes, the name "Cave of the Ancients" soon came to 
+; mind.  This name sounds as though some deep mystical truth lies 
+; in the depths of the image.  Actually, nothing is implied but 
+; the near-mystical behavior of complex numbers.
+; 
+; The basic color palette is a repeat of the black-and-white one 
+; from yesterday's image, though in today's scene I did tweak the 
+; colors a bit.  The rating of an everyday 7 remains unchanged 
+; however.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original classic web site is at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Lots of sun and a temperature of 90F 32C brought a feeling of 
+; midsummer once again to Fractal Central on Monday.  The fractal 
+; cats shared the midsummer effect as they found cool places to 
+; stretch out and sleep.
+; 
+; FL spent most of the afternoon working in the garden, while I 
+; got involved in a book about relativity (of all things).  The 
+; next FOTD is due to be posted in 24 hours, but we suspect the 
+; day will be busy, so do not be surprised if it is late.  Until 
+; whenever, take care, search for a full-metal poet, and realize 
+; that he or she might hold the key to the salvation of the earth.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+CaveOfTheAncients { ; time=0:26:24.87-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip
+  center-mag=-2.93440272/-3.75580389/693/1/123.5/0
+  params=1.0009/0/-8.98/3500 float=y
+  maxiter=42000 inside=0 periodicity=0
+  colors=czz0000000000000000000000000000000000000000\
+  00000000000000000000000000000000001001002002003003\
+  00400400500500600601701712812823923934A34A45B45B56\
+  C56C67D67D78E78E89F89F9AG9AGABHABHBCIBCICDJCDJDEKD\
+  EKDEKEFLEFLFGMFGMGHNGHNHIOHIOIJPIJPJKQJKQKLRKLRLMS\
+  LMSMNTMNTNOUNOUOPVOPVPQWPQWQRXQRXRSYRSYNOUNOZTU_TU\
+  _UV`UV`VWaVWaWXbWXbXYcXYcYZdPP_QSWZ_e_`e_`e`ae`aea\
+  beabebcebcecdecdeQU`UW`efeefefgefgegheghecd`ghefge\
+  fgeefeWS`TUadeecdecdebcebceabeabe`ae`ae_`e_`eUV`RW\
+  `YZdYZdXYcXYcWXbWXbVWaVWaUV`UV`FDOTU_STZSTZRSYRSYQ\
+  RXQRXPQWPQWOPVOPVNOUNOUMNTMNTLMSLMSKLRKLRJKQJKQIJP\
+  IJPHIOHIOBAFBAJFGMFGMEFLEFLDEKDEKDEKCDJCDJBCIBCIAB\
+  HABH9AG9AG89F89F78E78E67D67D56C56C45B45B34A34A2392\
+  39128128017017006006005005004004003003002002001001\
+  00000000000000000000000000000000000000000000000000\
+  0000000000000000000000000 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
