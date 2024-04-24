@@ -1,0 +1,87 @@
+;     Date: Sun, 09 Nov 2008 23:35:27 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-11-08 (Mandel What is It [No Rating])
+;       Id: <1.5.4.16.20081109233621.0cff91f0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 10, 2008 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a minibrot on the eastern side of the north 
+; branch of Seahorse Valley of the Hyper-Mandelbrot set.
+; 
+; So far, so good.  We've seen many minibrots in Seahorse Valley.  
+; But today's minibrot is truly different.  It is not empty on its 
+; inside.  Instead of the expected blank interior, the minibrot is 
+; filled with a spidery network of very high iteration arms.
+; 
+; The image was created by the HyperMandelbrot formula, which is a 
+; generalization of the type=hypercomplex formula.  I am not sure 
+; if the arms inside the minibrot are real or if they are arti-
+; facts, since it seems quite unlikely that a value as tiny as the 
+; 10^-150 of the real(p3) parameter could make such a difference 
+; in the appearance of a minibrot.  But there it is in the image, 
+; and it behaves as though it is real.
+; 
+; I named the image "Mandel What is It" but gave it no rating.  
+; It's kind of hard to give a name to something I know nothing 
+; about.
+; 
+; The calculation time of 4-1/4 minutes will cause no pain.  The 
+; finished image is posted for instant viewing on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Brisk winds, dark gray clouds and a chilly temperature of 48F 9C 
+; made the outdoors unpleasant here at Fractal Central on Sunday.  
+; The fractal cats complained about the failure of their afternoon 
+; sun to appear.
+; 
+; My day was uneventful, which is how I wish more days would turn 
+; out.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and do it quickly.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Mandel_What_Is_It { ; time=0:04:15.44-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=HyperMandelbrot passes=1
+  center-mag=-0.748577741895/+0.06049221491/1466442/\
+  1/-57.5/0 params=0/0/-4.6/0/1e-150/0 float=y
+  maxiter=1500 inside=0 logmap=-464 periodicity=0
+  colors=000PcCPc9Pc8OY7FK66546C9PSwPUxVVs_WneXjjXep\
+  YauZXzZTraXkd`cfdXigPlkInoAqs3sv4ba4MH7RN6RV4Rb2Rj\
+  0QsLNseJteOoeTjeYeeb`egWfmRYhNOcIEZE4U9AQIGMRMH_SD\
+  hY8qUFrPNsLVtGbuCjv7rw2zx9iwGTuOCsMLfKVUHdGF_FDVDB\
+  QC9LA7G95B7265B7ML8cIDbEIaAO`6T_2ZZ9V_GQaNMcUHd7jm\
+  DkhIldOn_UoVZpRYjVXeZW`bVWfURjTMmjxYbn_WeaPWcINdHK\
+  eGHfFDhEAiD7jG8lJ9mMAnPBoSCpVDrYEs`FtcGufGvdJrcMoa\
+  Pl`RiZUfYXcW_`VaYTdVSgSRiPOgLMfIKeFIdCFb9Da6B`39_0\
+  D`1Ha1Lb1Pc1Td1Xe1_e2cf2gg2kh2oi2sj2vj2j_RZPoYQpXR\
+  pXSpWTpWUpVVpVWpUXpTYpTZpS_pS`pRapRapLhjGoeBv`FmVJ\
+  ePMXJQPDTH8SJBRKDQLGPMIONLNPNMQQMRSLSVKTXJV_IWaHXd\
+  GYfGZhL_cQ`ZV`U_aPdbKibFncAsd5xd0va5tZAsWEqTJpQNnN\
+  SmKWkH`jEdhBig8me5rd3vf8ohDijHblMXnQQpVKrZDtc7ug1p\
+  e7ldDhbJdaO`_UXZ_TYdPUZLQUHNPKmJKaEKQ9KK4GP8TPCeKG\
+  q0Kr6LzCLsHLoNLoTLoYLl_LhaMdcM`fNaiNblNdoNerNgzOcz\
+  PzzRzzTzzRzzOzzMzzJzzHzzE }
+
+frm:HyperMandelbrot {; periodicity must be turned off
+a=(p1),b=(0,0):
+q=sqr(a)-sqr(b)+pixel,
+b=(p2+2)*a*b+p3,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 

@@ -1,0 +1,100 @@
+;     Date: Mon, 24 Nov 2008 22:10:39 -0500
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 25-11-08 (Mandelbrot Mystery [7.25])
+; 
+;       Id: <1.5.4.16.20081124221149.2e3f15e0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 25, 2008 (Rating 7.25)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's FOTD image "Mandelbrot Mystery" because I'm not 
+; sure if it's a real fractal or some kind of artifact.  But 
+; whatever it is, the image lies in the Seahorse Valley area of 
+; its parent fractal, which is a Mandelbrot set with lots of extra 
+; detail around the edges of the main bay and buds.
+; 
+; The ridiculous real(p4) parameter of 10^(-45) seems far too 
+; small to produce such a change in a normal Seahorse Valley 
+; scene, but maybe that's the way the four-dimensional Hyper-
+; complex Mandelbrot set is actually shaped.  Changing this 
+; parameter to zero reduces the image to the expected Mandelbrot 
+; scene.
+; 
+; Much of the coloring effect was achieved by rendering the scene 
+; with the outside set to 'summ', though the normal 'iter' setting 
+; gives almost as good a result.
+; 
+; The rating of a 7-1/4 includes 1/4 point for the 5 minutes extra 
+; coloring time I put into the image.  And the calculation time of 
+; under 2 minutes is quite nominal.
+; 
+; As always, the finished image is posted for instant ecstasy on 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Increasing clouds in the morning led to a cloudy afternoon and a 
+; cold evening rain here at Fractal Central on Monday, with a cold 
+; temperature of 37F 3C.  The fractal cats were most disappointed 
+; with the lack of sun and got into a tussle when Cassie would not 
+; give up her spot on the scratching post by the warm radiator.  
+; After the spat, the duo sulked at each other for a half hour.
+; 
+; My day was quite busy, and from the look of things tomorrow will 
+; be the same.  But the next FOTD will be posted in 24 hours 
+; regardless.  Until then, take care, and solve the Mandel-Mystery.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Mandelbrot_Mystery { ; time=0:02:50.00-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=hypermandelbrot2 passes=1 float=y
+  center-mag=-0.749525773313297/+0.058824468328704/\
+  79121.91/1/85/0 params=0/0/0/0/0.32/0/1e-045/0
+  maxiter=3200 inside=0 outside=summ periodicity=0
+  colors=000kDrq9ur9vr8vz8wz8xz7xz7yz7yz8xz9wz9vuAuo\
+  AtkBsfCrcCq_Dp_DoXEnVFmSFlMGkBGjiHihIhgIgdnNapOZqP\
+  WsQTuRQvSNxTKyTJrXIk`HdcGYgGSkFLnEErD7vD1yF5wH9uJD\
+  tKHrMLpOPoPTmRXkT`jVdhWhfYle_pc`sbatcatdbtebufcufc\
+  ugdvhdvievjewjfwkfmlgcmgUngUncKj`KfYKbV7_W8ZX8ZY8Y\
+  Z8Y_8Y`9Xa9Xb9Xc9Wd9Wd9W`DQXHLTLGPPBLT6OR8QQASPCUO\
+  EXNGZMI`LKbKMdJOgIQiHSkGUmFWoEYmIXlLWjPViSUgWTfZSe\
+  aRceQbhP`lO_oNYsMXvLWyKYxN_mQ`cSbUVdKXe0_gwbiwdjwg\
+  lwinwlownmvokvpiuqhurzd0zm0zs0zzizzmzzz`qtbqqdpnep\
+  kgpiiofjocln`nnZonWqmTsmQtmOsjMrgKrdIqaGq_EiZLY_RV\
+  ZXOZbS`_WcY_fWcjTgmRkqPntNosQosTosWosZoszoszprzprz\
+  prmpzppzspzuqwsqsrqpqqlophlpbjoXhmTflOdjJciFbhCagD\
+  _gGZiHYjKXkLWhOWeOUcPSbPQdOOeONcNLgNJeNHgOFgOEhPLg\
+  RJfTHfVFeXEeYCfZAf_8g_7f_KgXXdRh`OeYNcVMaRL_OKYLJV\
+  HITEHRBGP8FN7IO6KO6NP5PP5RP4UQ4WQ3YQ2`R2bR1dR1gS0i\
+  S0kS6fWCbZIZaOUeUQh_MkeHo }
+
+frm:HyperMandelbrot2 {; periodicity must be turned off
+a=(p1),b=(p2):
+q=sqr(a)-sqr(b)+pixel,
+b=(p3+2)*a*b+p4,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
