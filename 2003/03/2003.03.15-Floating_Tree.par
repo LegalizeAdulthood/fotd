@@ -1,0 +1,97 @@
+;     Date: Sat, 15 Mar 2003 22:34:25 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-03-03 (Floating Tree [9])
+;       Id: <1.5.4.16.20030315223255.2b7ffaaa@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 15, 2003 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is one of my all-time best.  (IMO, of course)  
+; So I have rated it at a lofty 9, a rating achieved by very few 
+; previous images.  The image is actually a variation of an early 
+; FOTD image named Ice Tree, which will be included on the FOTD CD.
+; 
+; That earlier image has the tree firmly rooted in the ground, 
+; whereas today's variation shows it floating suspended in mid 
+; air.  The icy decoration from the earlier image is still coating 
+; the branches of the tree, and in addition, two ice-coated bushes 
+; appear at either side of the floating tree.
+; 
+; The image itself is a scene in the Z^1.5+C Julibrot, sliced in a 
+; direction rotated 4 degrees from the Julia direction toward the 
+; Elliptic direction.  Changing the exponent of Z a few hundredths 
+; in either direction causes curious variations in the character 
+; of the tree.
+; 
+; The coloring is entirely hand-done, and accounts for 99-percent 
+; of the image's worth.  An extra benefit is the short 2-minute 
+; render time of the parameter file.  Another good point is that 
+; the finished GIF image may be picked up from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather was sunny but quite chilly here at Fractal Central 
+; on Friday.  The morning low of 26F -3C and afternoon high of 41F 
+; 5C kept the dynamic duo, which is no longer quite as dynamic, 
+; confined to the sunny porch, which has been cleared of debris 
+; but is still roofless.  They watched with interest as the 
+; meanest tomcat in the neighborhood passed by, finally deciding 
+; that discretion is the better part of valor and letting the 
+; intruder pass in peace.  Today was sunny and milder, and the 
+; neighborhood bully did not appear.  The duo spent almost an 
+; hour roaming the yard.
+; 
+; I'm still quite busy, both with the FOTD-CD and more profitable 
+; work, but the fractals will continue coming at a weekly rate 
+; while the disk is in work.  Until next Saturday, take care, and 
+; treat fractals with respect.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Floating_Tree { ; time=0:02:26.76--SF5 on a p200
+  reset=1960 type=formula formulafile=icetree.frm
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  passes=1 center-mag=0.0597552/-1.60982e-015/4.5911\
+  12/0.6279/-90/3.88578058618804789e-016
+  params=90/86/1.5/0/-0.55/0/-0.2/0 float=y
+  maxiter=750 inside=253 logmap=yes periodicity=10
+  colors=000OezOezOezOezOezOezOezOezOezOezOezOezOezO\
+  ezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOez\
+  OezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOe\
+  zOezOezOezOezOezOezOezOezOezUAZU9XU8VU7TU6RU5PU4NU\
+  3LU2JU1HU0FU0EU0DU0CU0BU0AU09U08U07U07U07U07U07U0A\
+  U0FU0KU0PU0UU0ZU0cUKhUPm0Ur0ZwKczShzXmzZrzbwzgzzkz\
+  zzzzzzzzzzzzzzzzzzzOezOezOezOezOezOezOezOezOezOezO\
+  ezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOez\
+  OezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOe\
+  zOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezO\
+  ezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOez\
+  OezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOe\
+  zOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezO\
+  ezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOez\
+  OezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOezOe\
+  zOezOezOezOezOezUUcUUcUUc }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE==================================
+; 
