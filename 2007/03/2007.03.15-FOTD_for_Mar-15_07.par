@@ -1,0 +1,99 @@
+;     Date: Wed, 14 Mar 2007 23:04:23 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  15-03-07  (FOTD for Mar 15, 2007 [No Rating)
+; 
+;       Id: <1.5.4.16.20070314220749.2a3f7f20@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 15, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's harmless scene lies in the parent fractal that comes 
+; into being when the formula Z^(1.5)+C is calculated 85 levels up 
+; the complex logarithmic ladder.  At this height the formula 
+; creates an indescribable Mandeloid rotated 180 degrees.  Today's 
+; image is located in a disconnected filament just northwest of 
+; the main open area.
+; 
+; Since I spent less than 5 minutes finding the image and less 
+; than 10 minutes working on it, I could not give it a name or 
+; rating.  Basically, the image shows another of those fractured 
+; midgets that inhabit the fractals in the borderline area between 
+; Z+C and Z^2+C.
+; 
+; The calculation time of 3-1/2 minutes is fair enough for this 
+; image of everyday quality.  And to make things even more conven-
+; ient, the completed image is posted for viewing on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; An unusually warm day for the end of winter, with a high temper-
+; ature of 73F 23C, was marred by light showers in the afternoon.  
+; Meanwhile, the fractal cats finally decided there was nothing 
+; hiding in the kitchen cabinets, and spent the better part of the 
+; day sleeping.
+; 
+; I spent the better part of my day working.  The work is finally 
+; slowing down, but still is well above average.  The next FOTD 
+; will likely appear in 24 hours.  If not, it will appear in 48 
+; hours.  Until that glorious moment, take care, and be generous 
+; with your fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Mar-15_07 { ; time=0:03:31.13--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=-0.6398285138\
+  8294900/+1.17265143805666000/2.111333e+010/0
+  params=1.5/0/85/0 float=y maxiter=5000
+  inside=0 periodicity=10
+  colors=000PbERZPVVbT0AM0AG0A0z00z72zCCzIOzPXzVfz`q\
+  zhzzmzzszzuzvvzsxzmzzizzdzz`zzXzzVzzTzzRxzOvzMuzKs\
+  zIqzEozCmzAkz8izCkzEmzGozKozMqzOszPuzTuxVvvXxuZzsb\
+  zqdzofzohzmbumXkmRbmMTmGMmACm52m00m00m00o00q00s00s\
+  07u0Cv0Kv0Rx0Zz2fz5kz5sz7zz8zz8zsCzhGsXIiKM`8OR0RI\
+  0T80X50`00d00f00i00m02o07s0Av0Ez0Gz0Kz0Oz0Rz0Tz0bz\
+  dfzihxmkmsmbvqRzsIzsIzsKzsKzsKzb00820zkz0700800A00\
+  C00E20G82IGR8uGEb5IM0M5zzC0P0z00z00xK5x`0ub2sdEqdO\
+  ofZmhif`Vidhkhsokzqozsqzxkzzfzzbzzhzxkzuoxqsvmvuiz\
+  sfzqIzzbzquqOzR0z`0zh8zoPzvdzzuzzzzzzzxxmko`Zd0000\
+  00PMVRVXTT`VRdVPfXOiZMmhhuK0oZMomiozzvzzousioddiPZ\
+  2Z0h0`fATdKObTIbbA`m5eu0mz0Vv2RqCPkKMfTK``GViOZuIT\
+  sEPqAKo7Gm0Ak07i00h00f00h80hI2iR5iP8mZ7ih5ho2fx0bz\
+  0`z0Zz0XzAZqOZ```Mm`5zb0zb5zRKzOIzIIuEGkAGd7CXE8RM\
+  2KT0E`07h00o00s80vG0z`0zT0zO0zI0sC0i70`07R05M0AI0E\
+  G2KC7OAAT8EX5Ib2Gm0Ki0Mf0 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

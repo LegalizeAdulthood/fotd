@@ -1,0 +1,103 @@
+;     Date: Thu, 29 Mar 2007 22:32:52 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  30-03-07  (FOTD for March 30, 2007 [No Rating])
+; 
+;       Id: <1.5.4.16.20070329213632.2af7ac68@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 30, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is based on a formula that plays a game with the 
+; golden ratio.  I calculated the formula Z^(1.618)+C at a level 
+; 32 turns up the logarithmic ladder, and got a parent fractal 
+; that somewhat resembles a Mister Potato-Head.  There's not much 
+; more to be said about the near-shapeless blob.  But this blob 
+; has a good bit of debris scattered around its west side, and 
+; this debris holds midgets, one of which appears as the featured 
+; element in today's image.
+; 
+; Once again, my limited time permitted only a short trip to 
+; Fractal Land, so I could not name or rate today's image.  But I 
+; will say that it is a bit more interesting than the usual images 
+; found in the Mandeloids of an order between 1 and 2.
+; 
+; The render time of a brief 2-2/3 minutes will try the patience 
+; of no one, and it makes the task of running the included 
+; parameter file almost a breeze.  An even swifter way to see the 
+; image is to go to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view it there.
+; 
+; A cloudless sky and a temperature of 55F 13C made conditions 
+; near perfect here at Fractal Central on Thursday.  The fractal 
+; cats must have agreed, for they somehow managed to get through 
+; the entire day without getting into trouble.  With me, the rush 
+; is near its end, and more relaxing days are in sight.  With more 
+; time to devote to them, the fractals will be improving in the 
+; near future.  (This is assuming they are not already perfect.)
+; 
+; Regardless of the perfection or lack thereof, the next FOTD will 
+; appear here in 24 hours.  Until then, take care, and seek sub-
+; limeness in your fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Mar_30_07 { ; time=0:02:41.05--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2
+  center-mag=-0.35953404841607610/-0.056778379676581\
+  14/5.911021e+007/1/-65/1.55103769647335632e-007
+  params=1.618/0/32/0 float=y maxiter=1500
+  inside=0 logmap=106 periodicity=10
+  colors=000DT9GiDJdHN_LQVPTQSZUYcYciaineosiuqnv_X`R\
+  QRHKH8E7BJAENCHREJVGL`NNeTPk_RpeWma`kYdhUifQncMraJ\
+  aaZLamGRaBHQCMMDQJEUGFYDGb9Hf6Ij3In0OhAUcK_YUeTceV\
+  adW_dYYd_WdaTdbRddPdfNdgLf`FhV9iP4cO9YODSOHMOMGOQA\
+  OUG`YMmaRyeYvadsYjqUkoVlmWmlXnjYohZogZpe_qc`rbas`b\
+  tZctYcoOfjEif4leCfdJacRXbYSadN`eM_eLZfLYfKXgJWgJVh\
+  IUhHTiHSiGSiGRhKRgORgRRfVReZReaQb_P`ZOZXNXWMVULTTL\
+  QRKOQJMOIKNHILGGKGEJOBLW9Mb7Oj5Pr3Ry1SxBexKsrAasCc\
+  sEesFgtHitIktKmtLopJnlImhGleFkaDjYCjUAiR9hN7gJ6fG5\
+  fC5Z85S45K05D4AI8EMCJQFNVJSZNWbQ_fTYhWWiZUkaSldRmg\
+  PojNpmLrpJssItpMrnPplSnjVlhYkf`iddgbge`jdZmbXp`VsZ\
+  TvYRuVPtTOsRMrOKqMJqKHpIFoFEnDCmBBm9CjFChKDeQDcVDa\
+  _EZeEXjEVoRQgbM`nITzEMvGNsIOoKPlLQiNRePSbQT_SUWUVT\
+  WWQXXMZYJ`ZGa_H`aH_cIZdIZfJYhJXiKXkKWlKVnLVpLUqMTs\
+  MTuNSvNRxNRyTQqYQibQagPUlPMqPFkQIeQK_QMUQPOQRIQTCQ\
+  W6QY1Q_3O`5MaUgFNkBGo89s5 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

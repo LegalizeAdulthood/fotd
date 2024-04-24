@@ -1,0 +1,98 @@
+;     Date: Wed, 28 Mar 2007 22:42:19 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  29-03-07  (FOTD for March 29, 2007 [No Rating])
+; 
+;       Id: <1.5.4.16.20070328214559.2a375d94@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 29, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The formula behind today's image combines 5 negative parts of 
+; Z^(-1.1) with 0.1 negative part of Z^(-11.1) and adds (1/C), 
+; resulting in an oversized parent fractal consisting of 4 large 
+; bays and a very prominent 'fan', the whole thing surrounded by 
+; cut-off rings of various shapes and sizes.  Today's image lies 
+; in a field of debris just east of the 'fan'.
+; 
+; I gave the image no name or rating.  Due to the winding-down but 
+; still pressing rush, I gave the image too little time and effort 
+; to honor it with a name.  I might have rated it at a 4 or 5, but 
+; decided to let it go un-rated.
+; 
+; The calculation time of 3-1/2 minutes means that little time 
+; will have been wasted if the image disappoints.  And almost no 
+; time will have been wasted if the image is viewed on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; In a few days I will discuss the use of the MandelbrotMix4 
+; formula, paying special attention to the method I use to find 
+; good parameters to enter into it.  But to begin the discussion 
+; right now, I might re-phrase the question into something like, 
+; "how do I recognize a good parent fractal when I see one?"
+; 
+; A cooler but still mild day with a temperature of 59F 15C here 
+; at Fractal Central on Wednesday went un-appreciated by the 
+; fractal cats.  They were more interested in watching the local 
+; squirrels make more squirrels.  In my department the work is 
+; almost back to the normal amount.  One or two more days should 
+; just about do it.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and be of sound mind and body, but don't make 
+; too much noise while you're doing it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Mar_29_07 { ; time=0:03:32.45--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+7.81582291647887900/+0.263607712474751\
+  30/249.6664/1/25/1.13533467349657968e-010
+  params=-5/-1.1/-0.1/-11.1/0/0 float=y maxiter=750
+  inside=0 logmap=49 periodicity=10
+  colors=000WLuZJv`GyZIxYJxWLxVMxTNxSPxQQxPSxNTxMUxK\
+  VxJXxIUxHVuGUrFQoERlDMiCJfBHdAFa9CZ8AW78T65Q03N01L\
+  04IA6FA8CIA9SC6WE3_G1cL4hP7mT9rXCv`EzeHziKzmMzqPzu\
+  RztUztczzmzzzzzzzzmztcztUvtTqjPlaLgTIbKEZBBRI8JP6B\
+  W44z25z66zA7zE8zH8zL9zPAzSBvWCr_CmbDhcEccFZdFUdGPd\
+  HKeIFeIAfJ8fK9fL9gLAgMAhNBhNBhMCeMDbME`LEYLFVLGTKH\
+  QKHNzzLJJIzzFJKDzzAIM7zz5vz9rzCmzFhzIczLZzOHjRKfWM\
+  b_OZcRVgTRkVNoXJsVNqURpTUoSYmRalQdkPbjPajP`iP_iPZh\
+  PYhPXhPWgPVgPUfPTfPSePRePQeELwDMtDMqDNnDNkDOhDOeCP\
+  bCP_CQXCQUCRRCROCRLDSODSRETUETXFU_FUbGVeGVhHWkHWnJ\
+  XmLXmMXlOYlPYkRYkTZjUZjWZiX_iZ_h__ha`db`ac`YeaVfaR\
+  gaOhaLgeHghDPVV6Hl7Km8Nn9QoATpAWpBZqCarDdsEgtEjtFm\
+  uGpvHswHuwKvxNwyPxzSyzVzzXzz_zzbzzdzzgzzizzjzzjzzj\
+  zzjzzkzzkzzkzzkzzkzzhzzfzzczzazzZzzXzzUzzSzzPzzNzz\
+  LzzJzzHzzFzzDzzBzz9zz7zz5zz4zz9zzDzzHzzLzzPzzIzzGz\
+  zEzzCzzFzzIzzLzzOzzQzzTzz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

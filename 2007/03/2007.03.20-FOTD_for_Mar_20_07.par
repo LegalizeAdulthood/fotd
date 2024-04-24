@@ -1,0 +1,112 @@
+;     Date: Mon, 19 Mar 2007 23:04:10 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  20-03-07  (FOTD for Mar 20, 2007 [No Rating)
+; 
+;       Id: <1.5.4.16.20070319220740.29d729d6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 20, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image exists in the fractal that results when the 
+; formula Z^(2.003)+C is iterated 300 levels up the logarithmic 
+; ladder.  The parent fractal at first looks like a classic 
+; Mandelbrot set rotated 50 degrees, but closer examination 
+; reveals small but interesting changes along the negative X-axis, 
+; which cuts through the area of the period-5 radical on the south-
+; west shoreline of the main bay of the M-set.
+; 
+; BTW, this formula is the one that holds the curious Julia 
+; rectangle that I return to every so often.  If real(p2) is set 
+; to PI, which is the true ground level of the logarithmic ladder, 
+; the rectangle will appear in its proper place.
+; 
+; While yesterday's image showed an unusually smooth scene, the 
+; image for today shows an unusually busy scene.  The picture is 
+; so busy in fact that I gave it neither a name nor a rating.  The 
+; calculation time of just over 11 minutes could be shorter, but 
+; those who take the time to run the included parameter file will 
+; not be disappointed with the result.
+; 
+; Those who are as busy as I am may save the time by going to the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the image there.
+; 
+; Monday dawned clear but quite cold here at Fractal Central, with 
+; a temperature of 14F -10C.  Strong morning sun raised the temper-
+; ature to 41F 5C by noon, when clouds moved in and halted the 
+; rise.  Light snow set in at 3pm, but changed to rain by 5pm.  
+; The fractal cats were concerned with none of this.  They were 
+; more interested in chasing each other up and down the hallway.
+; 
+; My day was once again quite busy.  This busy-ness is getting to 
+; be the standard situation, which leads me to wonder if it's time 
+; to start thinking of slowing down.  If I do slow down, it will 
+; not be in the world of fractals.  I cannot slow down with the 
+; fractals.  My time is limited but fractals are infinite.  And no 
+; matter how many fractals I find, I will still have seen zero per-
+; cent of all that are possible.  The next fractal will appear in 
+; 24 hours.  Until then, take care, and if eternity is outside of 
+; time, will it be possible to see every possible fractal?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Mar_20_07 { ; time=0:11:13.67--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.76196900466103390/-0.000129467755220\
+  64/1.914783e+011/1/82.5/-0.016408177 params=2.003/\
+  0/300/0 float=y maxiter=2500 inside=255 logmap=302
+  periodicity=10 mathtolerance=0.05/1
+  colors=000F6VE4UE3UD1VE2UF3TF4SG5RH6RH7QI8PI9OJAOK\
+  BNKCMLDLMELMFKNGJNHIOIIPJHPKGQLFRKGQLFQLFQLFPLFPMF\
+  PMFOMFOMFONFONFNNFNNFNNFMOFMOFMOFMOFLPFLPFLPFKPFKQ\
+  FKQFKQFJQEJQEJREIREIREIREHSEHSEHSEHSEGTEGTEGTEFTEF\
+  TEFUEFUEEUEEUEEVEDVEDVEDVEDVEDVEMQGWLIdGJeILeJMeLN\
+  fMOfOPfPQgRRgSTgUUgVVhXWhYXh_Yi`Zib_icajebjfcjhdji\
+  ekkhklmknrlovlqzvwzwzzzzzzzzzzzltqkqqkmrjjrigricsh\
+  `sgYsgUtfRtgNvfOtfOsfPrfPqfQpfQofRnfRmfSlfSkfTjfTh\
+  fTgfUffUefVdfVcfWbfWafX`fX_fYZfYYfYWfZVfZUf_Tf_Sf`\
+  Rf`QfaPfaOfbNfbMfbKfcJfcIfdHfdGfeFfeEffDffCfgBfgAf\
+  g9bgCegFggIljKqhLvgLofMheMacNVbNO_NNYOMWOLTPKSPJRP\
+  IQQHPQHNRIMRKMSMMSOMNQMJSNETNFUNFVNFXLGZKI_JM`IO`H\
+  QaIVaJV`KV_LU_MUZMUZMTZMTZLTZLTZLSZLSZLSZLRZLRYMRX\
+  NRWORVPPUQOTPOSOOSNNSMNSLNSKMSKMRKMQKLPKLOKLNKKMKK\
+  LKIKKGIKEGICEGACE8AC68A468246024002000000000000000\
+  0000000000000000000000zzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

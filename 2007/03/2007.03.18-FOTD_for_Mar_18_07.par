@@ -1,0 +1,107 @@
+;     Date: Sat, 17 Mar 2007 23:38:32 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  18-03-07  (FOTD for Mar 18, 2007 [No Rating)
+; 
+;       Id: <1.5.4.16.20070317224201.2a37cc16@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 18, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is based on the formula Z^(sqrt(3))+C as it calcu-
+; lates at the minus-PI level of the infinite logarithmic ladder. 
+; The parent fractal created by this formula at this level closely 
+; resembles a very distorted Mandelbrot set standing on its head.
+; 
+; Today's image shows the environs of a midget located in the East 
+; Valley area of a larger midget close in on the main filament 
+; extending from the large period-2 bud of the parent fractal.  
+; Like the East-Valley midgets of the classic M-set, the midget in 
+; today's scene resembles the Julia sets of the area.
+; 
+; I gave the image, which I found almost without trying, no 
+; rating.  For a couple minutes I considered giving it a name, but 
+; then I decided to let it go un-named.  I put too little effort 
+; into the image to honor it with a clever name.
+; 
+; The render time of under 13 minutes will seem not nearly so long 
+; once the brilliant colors become visible.  And those who choose 
+; not to calculate the image may view the image on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Saturday started with an hour of shoveling snow here at Fractal 
+; Central, but the 8-inch (17cm) snow was fluffy and easy to push 
+; aside.  The rest of the day was mostly cloudy with the tempera-
+; ture hovering just around freezing.  The fractal cats were 
+; briefly interested in the unfamiliar appearance of the outside 
+; world, which to them is a big forbidden room they never get to 
+; enter.  Then they decided to get into a tussle and soon forgot 
+; the world outside.
+; 
+; After I finished with the snow, my day was about average.  The 
+; fractal I found is also about average.  What I need is a series 
+; of above-average fractals, but those critters are easier to hope 
+; for than to find.  The next in the long series of FOTD's will 
+; appear right here in 24 hours.  Until then, take care, and be 
+; lucky in your fractal search.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Mar_18_07 { ; time=0:12:53.95--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=-0.3169561227\
+  5006480/-1.45934807761541300/6.437555e+007/1/-45/\
+  -8.35019084463040073e-005 params=1.732/0/-3.141592\
+  65358979/0 float=y maxiter=1400 inside=0
+  logmap=395 periodicity=10
+  colors=0008008008008008208308408508608808928A48B68\
+  C86DA3FC0GE8HG8II8KK8KM8KO8KQ8KS8KU8KWDKYKK_PKaNGc\
+  IBeF8hHCeKHcLLbNP`PUZQYYTaVUdVWi`Zme_wkgzqmzwqzzzz\
+  zzwzzwwzwqwwkqueot`grVeqP_pKZoDVmCVoCVoBVmBVmAVl9S\
+  j9Oi8Lg8He6Fe6Gd5Hd4Ic4Kd3Ld3Me2Ng2Oh5Pi8QjBSkDTlG\
+  VoKYpM_rPatScwUeyYhz_jzalzYoz`qzerzkuzqyzqzzqzzqzz\
+  qzzqgl0bc0YV0TM2TG2U92U02V45V99VCCWHGaMKgPNmUQsYUy\
+  aYze`ziczmgzqiyogyleykdwicwhbweawd`wb_w`Zw_YuYWuWV\
+  uUUuTTwOZwKbwGgwBlw8qw3uw0zq2uk4qe6m`8iqAekCakDYeG\
+  U`IPVKMZGFeC8h90kF9iFGhDNkDVoDasIhqFdoCamFZkIVcLSb\
+  OO`LLbIIdMHgOGiQGkTFmWDjZDg`CcbBedBheGieKjeNkeSlgV\
+  miZokapm_qpYrqVsrTttQuuOwwMwxKyzHzzHzzIzyKzwLzuLzr\
+  LwoLmlLbiLYcLQ_LQVLPQLPMLOHLODLTALZ6Lb3Lh0Le3Oi5Si\
+  9ViBZcDVdHZdKWdN_jPbpSjq`sqhwqwzqzzqzzpwzoswoosmho\
+  meklcgkbbkP_jPVjUSgZWdc`bhd`miZrmWvqYzpYzpZzpZzpCz\
+  cAzq8zzVzkqzTmzWjzZgzaczc }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

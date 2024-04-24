@@ -1,0 +1,109 @@
+;     Date: Mon, 26 Mar 2007 22:47:33 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  27-03-07  (FOTD for March 27, 2007 [6])
+; 
+;       Id: <1.5.4.16.20070326215111.29efd608@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 27, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's parent fractal came about when I combined 0.1 part of 
+; Z^(10.5) with 1 part of Z^(1.05) and added straight C.  It 
+; reminds me of a Mandelbrot set with a clumsily trimmed peacock's 
+; tail.  The head of the set faces east-northeast, while the 
+; peacock tail extends out from the East Valley area toward the 
+; west-southwest.  Today's scene is located in the peacock tail.
+; 
+; I almost gave today's image a name.  But at the last minute I 
+; decided it had been given too little effort to be worth naming.  
+; The coloring is responsible for almost the entire effect of the 
+; image.  Since I did put a little extra effort into the coloring, 
+; I did give the image a rating.  I rated it at a 6.
+; 
+; The calculation time of 1-1/2 minutes is pleasingly brief.  The 
+; time required to view the image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is equally brief and even more convenient.
+; 
+; In a day or so, I will include an article I am writing, telling 
+; how I pick good parameters for the MandelbrotMix4 formula, which 
+; automatically initializes Z to a critical value of the expresion 
+; being iterated.  A critical value of a function is a point where 
+; the rate of change of the function is zero.  When an expression 
+; is iterated with Z initialized to a critical point, the result-
+; ing fractal is most likely to contain intact midget Mandelbrot 
+; sets.  The critical point of the formula of the classic Mandel-
+; brot set, Z^2+C, is zero, but this is not true for most formulas 
+; that contain more than one exponent of Z, such as those calcula-
+; ted by the MandelbrotMix4 formula.
+; 
+; Lots of clouds obscured the sun here at Fractal Central on 
+; Monday, but the temperature reached a very mild 59F 15C.  The 
+; fractal cats ignored the weather.  They were too busy chasing 
+; each other up and down the hallway.  Nicholas, the big clumsy 
+; one, got a bit out of control when he leaped onto a table and 
+; knocked over a lamp.  Luckily the lamp was not harmed and Nico 
+; escaped with only a warning.  Cassie, the small, delicate and 
+; very agile lady, watched all this with amusement.
+; 
+; My day was about average.  Unless something goes wrong, tomorrow 
+; will be the same.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and surround yourself with the fractal light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Mar_27_07 { ; time=0:01:28.05--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-0.28037047337586200/-0.033742345705927\
+  44/1.055854e+007/1/-123.5/-9.13899942181495284e-008
+  params=0.1/10.5/1/1.05/0/0 float=y maxiter=300
+  inside=0 logmap=45 periodicity=10
+  colors=000AAUAAKAAUAAKAAUAAKAAUAAKAAUAAKAAUAAKm00h\
+  09c0BZ00U00zzmzmLzzmzm0zzmzm0_imHU02D0DJ0PP2aW6na9\
+  zeBaeJDzR0e_0ee0Yl0Rr4LyyzzR9zc4zn0zRBr8OR0a2zy00Y\
+  00H0040000000zlpyizyizWz0Ou2FiH8_Y0Pn0Fz08zwz0rz0p\
+  zFlwUiniggyzezzczzcawcFgc0Wc0JP08B000600F00P00Y00c\
+  2Di9PpHcwPpz0Up09e02c00a20_90_Pzp0Hn00n00n00n00n02\
+  n09n0Fn0On0Un0Wi0Wg0Yc0Ya0YY0_W2_R2_P4WU6UY8Ra9PcB\
+  OgDLlFJpHHrJWnLilOyiPzgRzeLzcHzaDzaBzc9ze8ze6zg6zg\
+  FznPzu_zzizzuzzazuJze2zR4zP6zO8zL9zJBzHDzFFzFOzJUz\
+  L_zOUzYPzeJznFzy9zz6zz0zz0zz0zz4zrLzcazPUzJLzDDz86\
+  z20z00z90zO0zc0zr0zz0zzDzzRzweziuz_uzauzeuzguzluzn\
+  uzpuzuuzwuzyizn_zcPzWFzL8zD0z40z00z00z00z00z00z00z\
+  00z00z00z00z04z08z0Dz0Hz0Dz4Bz69z88zB4zD2zF0zJ0zL0\
+  zO0zR0zU0zW0zY0z_0za4zc6ze9zgDziHzlJznOzpRzrWzuYzw\
+  WzrUzpUzlRziRzePzcOz_OzYLzULzRYzJgzBrz4zz0yz0uz0pz\
+  0nz0iz0ez0az0_z0Wz0Rz0Oz0 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,104 @@
+;     Date: Sat, 10 Mar 2007 23:46:55 -0500
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  11-03-07  (Corrected FOTD for Mar-11-07)
+; 
+;       Id: <1.5.4.16.20070310235017.2b8757d8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 11, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; This version has the correct, souped up color palette for 
+; today's image.  I forgot to insert it in the first version. 
+; 
+; There was no FOTD for March 10 because I had no time to create 
+; one.  But today's FOTD, which resembles a fantastic undersea 
+; creature, should more than make up for the lapse. 
+; 
+; Today's image came about when I added 0.2 part of Z^2 to Z^(-2). 
+; This formula creates the outline of a Mandelbrot set, which is 
+; filled with debris, and this debris in turn is filled with 
+; smaller M-sets.  Today's image was found in the negative X-axis 
+; area of the large Mandelbrot outline.
+; 
+; I declined to name or rate the image, but its calculation time 
+; of under 3 minutes should make the job of running the included 
+; parameter file, if not a pleasure, at least not a chore.
+; 
+; Even more time may be saved by checking in at the FOTD web site 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the completed image there.
+; 
+; A rather chilly but otherwise pleasant partly sunny day with a 
+; high temperature of 46F 8C here at Fractal Central on Saturday 
+; went totally unappreciated by the fractal cats, who, in keeping 
+; with their fractal nature, appeared to be in several places at 
+; once.  The light rain that set in by evening was no problem.
+; 
+; Their big excitement came just before noon, when Cassie spotted 
+; an intruding cat walking down the sidewalk beside the house.  
+; Somehow, Nico knew at once that she had seen something, and he 
+; rushed to the window to see for himself.  But while nico was 
+; rushing, the intruder finished his business and went on his way.
+; 
+; My day was continued busy.  Tomorrow looks to be the same.  But 
+; unless something drastic comes up, the next FOTD will appear as 
+; scheduled in 24 hours.  Until then, take care, and wait for the 
+; light with abated breath.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Mar_11_07 { ; time=0:02:54.78--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident float=y
+  center-mag=-6.83588926891325800/+0.000007557359781\
+  42/9.98906e+010/1/25.34/0 params=1/-2/0.2/2/0/525
+  maxiter=1600 inside=0 outside=tdis periodicity=10
+  colors=000jvzLnzHyzDzz95z70z10z00n0mz00L0070000000\
+  000000000000000000000000000mz0mv0c00700N00a0B_t00P\
+  00R00U01W07W0DY0L_0Ra0Ya0cc0jf0rf0n_0mW5mPzzzzzz00\
+  z00fL59rF0tD0vD1yDDyDPzDazDnzDzzDzzNyzWjzcYznLzy9z\
+  zUzzczzmzzcvvUtP0rD0n30m00j00Y00N30DF01P00a00m00y0\
+  0j00a00W00P05J0BD0H70N10U00L00D0050000100900B03B0B\
+  B0HB0L10P00R00W00_00a00F00F00H00H00J00J00L00L00N00\
+  N00N00P00P00R00R00U00U00W00W10W10Y10Y30_30_50a50a5\
+  0c71c71c73aB5_D7YF7WH9UJBRLBPPDNRFLUFJWHHYJF_JDamB\
+  1zB0z70z50z30z10r0Pz00z0zj0zY0zJ0r7Bj0Ra0fU0vL0zF0\
+  m90R5070000900J000RzD0z90z79r3Pc1cU0vH0z73zFBzNJzU\
+  Rza_zhhzrrzyD1NJHfJHfJHfLFfLFfNDcNDcNBcPBcPBcR9aR9\
+  aR7aU7aU5_W5_W5_W3_Y3_Y1Y_1Y_0Y_0Ya0Ya0Wc0Wc0Wc0Wf\
+  0Uf0Uh0Uh0Uh0Uj0Rj0Rm0Rm0Rm0Rn0Pn0Pr0Pr0P0zR0zP0vP\
+  0nP0hP1aP7WPDPPJJPPDPU7P_1Pf0Pm0P0R01N05J09F0FB0J7\
+  0N50U11Y07a0Bh0Hm0LJYtNRn }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
