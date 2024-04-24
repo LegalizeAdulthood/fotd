@@ -1,0 +1,87 @@
+;     Date: Tue, 15 Jun 2004 11:45:29 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-06-04 (Recursive Rosebuds [7])
+;       Id: <1.5.4.16.20040615114928.2aafee9e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 15, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows what happens when 1.5 parts of Z^(-1.15) are 
+; combined with 1.5 parts of negative Z^(0.85) and (1/C) is added. 
+; The resulting parent fractal features a stretched-out main bay 
+; edged with the expected out-of-proportion buds.  Today's scene 
+; is located near the tip of a filament attached to a small bud on 
+; the southern shoreline of the main bay.
+; 
+; The scene was rendered with the outside set to 'tdis' rather 
+; than the standard 'iter'.  Doing this gives interest to the 
+; otherwise large areas of flat color.  The image is one of those 
+; rare ones that needed almost no color tweaking, which is a lucky 
+; break, considering how busy things are here at Fractal Central.
+; 
+; I named the image "Recursive Rosebuds".  I like the sound of the 
+; phrase, which is also a fitting description of the picture.  The 
+; rating of a 7 appears justified, and, combined with the render 
+; time of 6-1/2 minutes, gives an overall value of 106.
+; 
+; The most efficient way of viewing the image is to download it 
+; from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a high temperature of 88F 31C, Monday was a bit too warm 
+; for the dynamic duo.  But being very bright cats, they waited 
+; until late afternoon when it grew cooler before venturing into 
+; the yard.  After a pleasant evening, they came indoors at 
+; sunset, quite satisfied.  This morning it looks as though the 
+; day will be a repeat, though today there is a chance that rain 
+; will spoil their outing.  We'll see what happens.
+; 
+; For me, the work is what will happen.  And when the work is 
+; finished, it will be time for fractals.  Until next FOTD, take 
+; care, and don't take those fractals too seriously.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Recursive_Rosebuds { ; time=0:06:36.12--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.01210822479891212/-0.300373383209480\
+  30/4.494955e+010/1/142.5/0.00756951427375174291
+  params=-1.5/0.85/1.5/-1.15/0/0 float=y maxiter=1000
+  inside=0 outside=tdis periodicity=10
+  colors=000`dzabzb`zbZzcXzcVzdYzd`zdbzeezehyejwfmuf\
+  psfrqguogxmgzkhymhxohxphwrhvthvuhuwhuxhtzhszhszhrz\
+  hqzhqzhpzhpzelzbiz_ezXbyVZvSWsPSpMPmJLjHIgHMdHQbHU\
+  `HYZHaXHeVHiTHmRHqPHuNHxLKpOMhQOaTRUVTNYVF_X8aYB_Y\
+  EZZGYZJXZMW_OV_RT`TS`WR`ZQa`PacOaeNTLIK1DFCLBMS6W_\
+  2ef7`aCWXHRSMMNLKTKIYJGbIEgHClGAqF8vE6zD4zD3zE8zFC\
+  vFGnGLgiP_iTTHXMMNJRDGi3Ei2Dj1CpJzpKzpLzpMznNymNqk\
+  NhjO`hOSgOKfOCgKOhHZhDjiAui7zj6zk6yk6vl5rl5om5lm5i\
+  n4en4bm4_m3Wm3Tm3Qm3Nm6Pm8QmARmDSmFTlHUkKVkMWjOXiR\
+  YhTZhV_gY`f_aeabeccfeeggfhigikhjmijnkkpllrmmtnnvon\
+  wpjxqgxrdxsaxtXwsSvsNtsIrrDor9lr8ip8fn8cl7`k7Yi7Vg\
+  6Sf6Pd6Mb5Ja5G_5DY5AX77V99UACSCGREKQFNOHRNIULKYKMa\
+  JNdHPhGQkFPiGOgGOeGNcGNaHM`HLZHLXHKVIKTIJRIJQIKTKL\
+  VLLYMM_NNbONdPOgROiSPlTQnUQqVRsWRuXOn_LgaJ`cH`eE_f\
+  C_h6NW7PY8R_9Ta9VcAXeBZgB_h7ao3bu2dz2ez2cz7azC_zHY\
+  zMWzRUzXSzaQzfOzkMzpKzuIz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

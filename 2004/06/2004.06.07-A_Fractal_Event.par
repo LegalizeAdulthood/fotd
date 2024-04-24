@@ -1,0 +1,98 @@
+;     Date: Mon, 07 Jun 2004 10:21:34 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-06-04 (A Fractal Event [4])
+;       Id: <1.5.4.16.20040607102527.0d772142@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 07, 2004 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "A Fractal Event".  Every fractal is an 
+; event.  It is not a very great event however, because I could 
+; rate it at only a 4.  The image is actually a scene in the 
+; Z^2.01+C Mandeloid, 150 levels up the logarithmic spiral, 
+; rendered with the outside set to 'fmod' and the proximity set 
+; to 0.006.
+; 
+; At this level of the spiral, the M-set has rotated until the 
+; eastern shoreline of the large southern bud lies on the negative 
+; real axis.  Today's scene is located in the confusion near the 
+; big break.
+; 
+; I think it is the overly-brilliant Renoir-like coloring that 
+; holds down the rating.  Otherwise it is a rather unconventional 
+; image that somewhat reminds me of a planetary nebula surrounding 
+; an evaporating star.  The bits and pieces scattered throughout 
+; the scene could easily be taken as interstellar debris.
+; 
+; Strangely enough, the pattern around the midget appears 
+; perfectly symmetrical, even though the exponent of Z is 
+; fractional.  
+; 
+; The render time of 7 minutes and the rating of 4 combine to give 
+; an overall value of 56.  The job of rendering can be avoided by 
+; downloading the completed image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Though the sky remained cloudy all day Sunday here at Fractal 
+; Central, and the temperature never rose above 68F 20C, the cats 
+; managed nearly two hours in the yard, doing what aging cats do 
+; best -- sleeping in the brush.  They did perk up briefly when a 
+; mockingbird started scolding them, but the bird soon returned to 
+; its nest and the duo returned to sleep.  When the day ended, 
+; they came indoors without urging.  Today is starting partly 
+; cloudy and warmer.  It looks like a better day for the duo.
+; 
+; Today will be good enough for me if I can finish the day's work 
+; by sometime early this afternoon.  But to finish I must first 
+; start.  Until tomorrow's FOTD, take care, and see you then.
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Fractal_Event { ; time=0:07:12.38--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.67150446161930160/+0.039024030044104\
+  01/232355.9/1/-90/3.88578058618804789e-016
+  params=2.01/0/150/0 float=y maxiter=1500 inside=0
+  proximity=0.006 outside=fmod periodicity=10
+  colors=000FOtHLsJKrMGqOCpQ9oS8nU7nW7nY6n_5ma5mb4md\
+  3mf3mh2lj1ll1ln0lo0lo2ko3ko4jo6jo7jo8io9ioBioChoDh\
+  oEhoGgoHgoIgoKfoLfoMfoNeoPeoQeoRdoSdoUdoVcoWcoXcZZ\
+  RI_E1`23_45_67_89ZABZCDZDFZFGYHIYJKYLMXNOXOQXQSXST\
+  WUVWWXWYZWZ`V`bVbdVdeUfgUhiUikUkmTmoToqTqrTrqRqqQp\
+  qPoqOopNnpLmpKmpJloIkoHkoFjoEinDinChnBgnAgm9em9dm9\
+  cl8bl8al8`l7_k7Zk7Yk6Xj6Wj6Vj5Uj5Ti5Ri4Qi4Pj4Ok3Nl\
+  3Mm3Ln2Ko2Jp2Iq1Hr1Gs1Ft1Eu1Hv1Kw1Nx1Qy1Tz1Wz1Yz1`\
+  z1cz1fz1iz1lz1oz1qz3pz5oz7oz8nzAnzCmzEmzFlzHlzJkzL\
+  kzMjzOjzQizSizThzVhzXgzYgzT`zOVzJPzFJzADz57z11z34z\
+  47z5Az6Dz7Fz8Iz9LzAOzBRzCTzDWzEZzFazGdzHfzJezLdzNc\
+  zPbzRazT`zU_zWZzYYz_YzaXzcWzdVzfUzhTzjSzlRznQzoQzm\
+  RzkRzjRzhSzfSzeSzcSzaTz`TzZTzXUzWUzUUzTUzRVzPVzOVz\
+  MWzKWzJWzHWzFXzEXzCXzBXzGrzIqzKqzMpzOpzQpzSozUozWn\
+  zYnz_nz`mzbmzdmzflzhlzjkzlkznkzpjzrjzsjzqdzp_znVzm\
+  QznPznPzoOzoOzpOzpNzqNzqN }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,99 @@
+;     Date: Sun, 06 Jun 2004 10:16:36 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-06-04 (A Feathery Fractal [7.5])
+;       Id: <1.5.4.16.20040606102028.29af9278@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 06, 2004 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is different.  To start, it was created by 
+; raising Z to a complex power -- 1.3+0.08i.  Then I found that 
+; the hyperparent spreads out and dissipates as we go up the 
+; logarithmic spiral, but it condenses and becomes more interes-
+; ting at the negative levels of the spiral.
+; 
+; The parent fractal of today's image lies 16 levels down the 
+; spiral.  At the default magnitude it is a tiny shrunken thing, 
+; but when magnified it becomes a comet-like object, full of 
+; interesting places in need of exploration.  Today's scene lies 
+; in the chaos edging a valley on the southern shoreline of the 
+; comet head.
+; 
+; No special outside rendering methods were needed with today's 
+; scene.  The standard equal-iteration bands did everything.  
+; Admittedly, I did help a bit with the coloring, but I did less 
+; work than the first appearance would suggest.  The name, "A 
+; Feathery Fractal", captures the feeling of the image.
+; 
+; Undecided whether to rate the image a 7 or 8, I finally decided 
+; on a 7.5, which gives an overall value of 84.  This value can be 
+; raised if the task of rendering the image is eliminated by down-
+; loading the finished GIF file from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy rain all day here at Fractal Central on Saturday and an 
+; unusually cool temperature of 59F 15C kept the cicadas quiet and 
+; the cats indoors.  The cicadas clung motionless in the trees all 
+; day; the cats sulked in the window all day.  Sun and warmer 
+; temperatures will make the cicadas happy, but a sizable treat of 
+; tuna was needed to put the cats back in a good mood.  Today is 
+; starting cloudy.  The rain appears to have moved on.  All we 
+; need is sun.
+; 
+; I'm going to try to take it easy today.  If I succeed, I'll 
+; consider it quite an accomplishment.  Maybe I'll start writing 
+; that story I've been thinking about for at least three years.  
+; Maybe not.  Until tomorrow's FOTD, take care, and be prepared 
+; at least for an outburst of philosophy.  It has been building 
+; for several days and could break loose at any time.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Feathery_Fractal { ; time=0:08:55.58--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=+0.0\
+  0050914586947115/-0.00033084146774130/5188497/1/-2\
+  7.5/4.6970816125e-011 params=1.3/0.08/-16/0 float=y
+  maxiter=4500 inside=0 logmap=153 periodicity=10
+  colors=000TOLTLMTNNTPOSRQSTRSUSSVTSWURXVRYWRZXR_YQ\
+  a_Qb`QdaQebPgcPhdPjePkfPlgOjeNhcNfaMe`McZLaXK`WKZU\
+  JXSJVQIUPHSNHQLGPKGNIFLGFIFEHIDGKDFMCEOBFQBGSAGU9H\
+  W9IY8J_7Ka7Lc6Ne6Og8Rh9UhAXhB_hCbiDeiFhiGkiHnjIqjJ\
+  tjKwjLzjPzmUzoZzqczshzumzwsAUs5Ts7Ts8Sq9RoBRmCQkDP\
+  iFPgGOeHNeJNeKMeLLgMKiOKkPJlQImSInTHoUGpWGqXFrYEr_\
+  Es`DtaCubCmaEcaFc`Hd`Id_Ja_L_ZMXZNUYPRYQPXRMXTJWUH\
+  WVJTYKR_MPaNNcPObQPbQPbPQbPQbORbTRbQSbTSbVTbXTb_Ub\
+  aVbdVbfWbiWbkXbmXbnYbpYbqZbrZbm_`i__e`Za`XYaWTaVPb\
+  ULbSHcRDcQ6eQ9ePBhPDeOFeOHZNKUNMSMOOMQULSTLURKXQKZ\
+  PJ`NJbMIdLIfKIiQFlVDo`Bre9vl5tj7ri8ph9nfKleOjdRicU\
+  gaXe`_c_baZe_XhZWkXVnVUqTStRRwPQzOPzPSzPUzQWzRYzU_\
+  zXaz_czbeze_zhQzkSznUzqWztYzw_zzbzzdzzfzzhzzjzzlzz\
+  jzzhzzfzzdzzbzz`zzZzzXzzVzzTzzRzzPzzNzzLzzJzzHzzFz\
+  zEzzHzzKzzMzzPzzSzzUzzXzz_zzazzczzczzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzcz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,98 @@
+;     Date: Sat, 05 Jun 2004 10:43:04 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-06-04 (Curse of the Creature [7])
+;       Id: <1.5.4.16.20040605104657.0d2f73de@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 05, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To find today's image we ventured into the depths of the fractal 
+; that results when 0.2 parts of Z^(-8.25) are combined with one 
+; part of Z^(-1.65), and (1/C) is added.  Like so many fractals 
+; that are created by combining negative exponents of Z, this 
+; fractal is indescribable.  Like the familiar Mandelbrot set, it 
+; has bays and valleys, but the inner detail of these features is 
+; totally unlike anything found in the M-set.  Today's scene is 
+; located on the north edge of a valley on the positive real axis 
+; of the parent.
+; 
+; An unusual feature of the scene is that it is not there.  The 
+; scene has been 'evaporated' by raising the escape radius so high 
+; that all points are trapped.  The trapped points are not dead 
+; however.  They still have freedom to move around, and this 
+; motion has been made visible by the 'bof61' inside fill, which 
+; colors the points according to which iteration takes them 
+; closest to the origin.
+; 
+; The image so produced appears as today's FOTD, which earns its 
+; rating of a 7 quite honestly.  I have named it "Curse of the 
+; Creature" in recognition of those not-so-great old movies that 
+; they just don't seem able to make any longer.  There might be 
+; some kind of creature lurking somewhere in the image.  If I 
+; looked long enough, I'm sure I could find one.  But the image is 
+; good enough as it is.  We'll keep the creatures where they 
+; belong -- in the old movies.
+; 
+; The render time of just under 14 minutes combines with the 
+; rating of 7 to give an overall value of a neat 50.  And if the 
+; image is downloaded from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; the rendering will be eliminated and the value will rise.
+; 
+; A cloudy cool day here at Fractal Central on Friday turned into 
+; light rain in the evening, but the cat duo got in enough yard 
+; time before the rain began to keep them reasonably happy.  Only 
+; a little tuna was needed to make their day complete.  Today is 
+; starting with clouds, cool temperatures and rain.  Hopefully, it 
+; will turn dry in time for the cats to have their outdoor romp.
+; 
+; With me, the work is mostly caught up, and the next FOTD fractal 
+; will appear in approximately 24 hours.  Until then, take care, 
+; and be lucky.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+CurseOfTheCreature { ; time=0:13:57.77--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.37819276581849900/+0.001714053513647\
+  82/1.158226e+007/1/152.5/-1.09526888978292436e-005
+  params=1/-1.65/0.2/-8.25/0/1e+100 float=y
+  maxiter=1700 inside=bof61 periodicity=10
+  colors=000x99sEEnJIjNMeSQaWUX`YSeaOieJniFrmGonGmnG\
+  joGhoGepGcpG`qGZqGWrGUrGSrCVg8XX4ZM6TO8OQAJRCETE9V\
+  F4WUOKhg9feAecAdaAb`AaZB`XBZWBYUBXSBWQCUPCTNCSLCQK\
+  CPIDOGDNEDLDDKBDJ9EH8EG6EF4EE3EG5DI6DK8CM9COABQCBS\
+  DAUFAWG9YH9_J8aK8cL7eN7gO6iQ6kR5mS5oU4qV4sW4n_MidT\
+  ehZamdYqjWmfUjcTf_RcXQ`UPZTOYTOWTNVSMTSMSSLQSKPRKN\
+  RJMRIKQIJQHHQGGQGEPFDPEBPEAOD8OC7OC6O96J76EBAFEDGI\
+  HHLKIONJSRKVUKZYLa`MdcNhgOkjPnmPedWXWaONhFFnIIoLLo\
+  NOoQQoTToVWpYZp``pbcpefpghp9ckEaiI_gMYeQWdUUbYS`aQ\
+  _eOYiMWmLVnSUnZUneUnlUnsUnzUoxRowOpuLptJqsGqqDrpAr\
+  o8rp7rq7rr6rs6rt6ru5rv5rw4rx4rx4ow8mwCjvGhvJeuNcuR\
+  auUcrSeoQflOhiNjgLkdJmaHoZGpWErUCtRAuO9wL7yI5zG4vH\
+  8sHCpHGmIKiIOfIScJW`J_XJcUKgRKkOKoLKrKMiKN`KPSKQJK\
+  RBJUAIWAHYAG_AFaAEd9Df9Ch9Bj9Al9An9Gj9Lf9Qb9WZ9`V9\
+  eR9kN9pJ9uF9uIBuLCuOEuQFuTHuWIuYKu`LucNueOuhQukRum\
+  TupUusWjAJmAIo9Gq9Et9Cv9A }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

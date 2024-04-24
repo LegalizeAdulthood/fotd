@@ -1,0 +1,83 @@
+;     Date: Thu, 10 Jun 2004 11:47:19 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-06-04 (Perpetual Outcast [6])
+;       Id: <1.5.4.16.20040610115115.29973f9c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 10, 2004 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With the work falling behind again, and a potential new customer 
+; to impress, today's discussion will be very short.  The image 
+; continues the same complex-powers theme of the most recent 
+; FOTD's, the major difference being that today I have rendered 
+; the scene with the outside set to 'tdis'.  I named the image 
+; "Perpetual Outcast" on a whim.
+; 
+; The result is different enough for the image to be rated a 6.  
+; The short render time of 2 minutes raises the overall value to 
+; 276.  The overall value becomes meaningless when the completed 
+; image is downloaded from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With lots of hazy sun, humidity, and a temperature of 91F 37C, 
+; the Wednesday weather inclined the fractal cats to do nothing 
+; but lounge under the holly trees and enjoy life.  In the evening 
+; I treated them to a dish of tuna, though it really was not 
+; necessary.  Today is starting warm again, but rain is supposed 
+; to be on the way.  We'll see how the dynamic duo takes these 
+; conditions.
+; 
+; The work today is piled high, a clear sign to get busy.  Until 
+; next FOTD, which might not be until June 15, take care, and be 
+; patient.  The best is yet to come.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Perpetual_Outcast { ; time=0:02:10.23--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 center-mag=-2.3\
+  335844466742/+0.2407662638893/75905.47/1/-140/4.87\
+  057810749647047e-010 params=2/0.1/0/0 float=y
+  maxiter=1800 inside=0 outside=tdis periodicity=10
+  colors=000a_Y`aY`cY_fZ_hZZjZZlZYnZYpZXrZXtZVp`TmaR\
+  jcPfdOceM`gKYhIUjGRkFOlDLnBHo9Eq7Br68sMGt`NtoUtnRs\
+  mOsmLslIslFskCskAsbIgUQXMYMKXNJWOIVPHVQGURFTSETTDS\
+  UCRVBQWAQX9PY8OZ7O_vC0p96k7Bf5Ha3MYBLUJKRRKNZJKfJJ\
+  gMJgOJgQJgTJgVJgXJg_JgaJgcLebNdbPcbRabT`bV_bXYaZXa\
+  `WabUadTaeXai_elghikmfnsakoXglRahMXdHRaBMY6HU1CR5G\
+  U9KXCN_GRbKUeNYgRajVdmYhpakseovhpxgnugksggqgdofamf\
+  YkfVifRgeOeeLceHaeE_eBY`KhWSrURoSRlQQjOQgNPdLPbJP_\
+  HOXFOVENSCNPAMN8MK7MIBOKFQMISNMTPQVRTXSXYU__VcaXgb\
+  Zjd_nfaqgbxKxpQphWiaabUgVNpOFvH8zABzHmzNmzTmzZmzdm\
+  zjmzpmzomzomzomzomzoOhnOfnOenOcnObnOanRZmUXmWVlZTl\
+  `RkcPkeNkhKjkIjmGipEirChuAhw8htBiqEinHikKiiMifPjcS\
+  j`VjYYjW_jkY_zWPwXRuXSsXUqXVoXXmYYkY_iY`gYbeYccZea\
+  Zf_ZhYZiWZjZah`cgbefdhefjdhlcjnblqans`pu_rwZkt`drb\
+  YodSmfLkhEhj7fl1dm6`jAXgFTdJPaOLZSHWXDT`9Qd5Ne8LeB\
+  KeEJeGIfJHdPXcSYbUYbWYaYY }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

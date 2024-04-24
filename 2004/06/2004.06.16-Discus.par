@@ -1,0 +1,84 @@
+;     Date: Wed, 16 Jun 2004 16:08:10 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-06-04 (Discus [7])
+;       Id: <1.5.4.16.20040616161209.2fbf8aac@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 16, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Sorry for the lateness, but other things needed to be done.
+; 
+; The formula behind today's fractal combines various parts of 
+; negative Z^(1.1) and Z^(-0.9), then adds (1/C).  The resulting 
+; parent fractal is a reasonably pure Mandelbrot set, with 
+; numerous slices of fractal debris to the southwest.  Today's 
+; fractal scene is located in one of these slices.
+; 
+; It is rare to see such a near-perfect circle of elements 
+; surrounding a midget, unless one dives to an extreme magnitude.  
+; I have emphasized the circular elements of the scene and named 
+; the image "Discus".
+; 
+; The image is unusual enough to earn its rating of 7.  When the 
+; render time of 3-3/4 minutes is figured in, the overall value 
+; equals a very respectful 183.
+; 
+; As always, the completed GIF image is available on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another sunny and very warm (92F 33C) day kept the fractal cats 
+; inside until late in the afternoon.  The few drops of rain that 
+; fell in the early evening did not deter them from their 
+; enjoymemt.  They came inside at sunset fully satisfied.  Today 
+; is so far a repeat.
+; 
+; The work for me is still quite heavy.  If I hope to stay ahead, 
+; I had best get started.  Until next fractal, take care, and 
+; listen to the fractal murmur.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Discus { ; time=0:03:49.26--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.21897898384365270/-0.398175616577568\
+  90/9.754347e+010/1/-130/-0.000605764010912487882
+  params=-1.2/1.1/0.9/-1.2/0/0 float=y maxiter=375
+  inside=0 logmap=78 periodicity=10
+  colors=000VL0aGAfDKkBUm9cs7ew5fvCktIpTX72j7cmCfpHm\
+  rMrtRzzWwz_rxXmtUhsScpPZmNUkKUpIcwCmz7rz8mw9crAUmB\
+  KhBGdOJa`MZmPXzL_tIaoFciBfd8hZ5jU2lP9jUFhYLfbRdfYb\
+  kc`oiZtoYxpZzq_zsbzvezzfzzgzzjzzmzp`qlXrhTsdPt`LuX\
+  HvWEwYPl_UaaURcUGeV_g5ri6lk6fk7aj7Wi7Qh8Lg8Ff8AiAF\
+  lCKnDPeGUYJYQLbHOf9Rk1To9RjGQeOP`VOWaNRWSPQWNK_LEd\
+  J8hH3lG5mM7nR9oWBo`DpeFqjHqoInlJkiKifLfdMdaMaZNYWO\
+  _UPaRQcOReLRgJPiNOkQMmTLoWJqZIsbGueFwhDykCzn9zW7zE\
+  8zG9zI9zJAzLcz8bz9azA`zB_zBYzGWzKUzOSzSQzWPz_RzEOz\
+  HLzKIzNFzPCzS9zV6zX`zCbzFdzIfzLhzNezJczFazC_z8Yz5V\
+  zBSzHPzNMzTJzZGzdEz`CzXAzU8zQ6zM4zJ2zF0zC4zN8zYBzh\
+  JzkRzmZzofzqmzslznkzijzdiz`hzWgzRgzNhzMizLjzKkzJlz\
+  IgzRbzZZzfUznQzvLzpHzjDzd8zZ4zT0zOFzJUzEhz9wz5vzYv\
+  zyiz9izKizUizcizmizwlznnzepzYrzPtzHtzItzKszMszNszP\
+  szRszSrzUrzWrzXrzZrz_oz`lz`izafzaczb`zbYzcVzcSzcTz\
+  eUzfVzgVziWzjXzkXzmYznLzS }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

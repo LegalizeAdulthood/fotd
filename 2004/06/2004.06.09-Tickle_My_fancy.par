@@ -1,0 +1,99 @@
+;     Date: Wed, 09 Jun 2004 09:14:36 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-06-04 (Tickle My Fancy [5])
+;       Id: <1.5.4.16.20040609091830.29c7e012@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 09, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A heavier than usual pile of work before me means a shorter than 
+; usual discussion.
+; 
+; Today's image is a journey into the Mandeloid fractal that 
+; results when the formula Z^(2+0.2i)+C is iterated at the 
+; negative pi level of the logarithmic spiral.  The parent fractal 
+; is shaped almost exactly the same as the curiously distorted 
+; midget that highlights today's image.
+; 
+; The scene of today's image is located in the broad northern 
+; branch of the Seahorse Valley area of the parent.  Other areas 
+; of the parent hold equally strangely shaped midgets, some of 
+; which might appear in FOTD's to come in the near future.
+; 
+; As for the rating -- I could give the image nothing more than an 
+; average 5.  But the unusual shape of the midget and reasonably 
+; short render time of 6 minutes makes it worth the effort.  The 
+; overall value is a nominal 78.
+; 
+; I named the picture "Tickle My Fancy".  I actually was a bit 
+; tickled when I saw the shape of the midget.
+; 
+; And fractal fans will also be tickled when they see the couple 
+; minutes that can be saved by avoiding rendering and downloading 
+; the completed image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A sunny and very warm day on Tuesday, with a temperature of 
+; 84F 29C, was just what the cats needed.  They spent the entire 
+; afternoon exploring the holly thicket at the bottom of the yard, 
+; dodging the falling cicadas, which are starting to die off at an 
+; increasing rate.  When evening came, the duo were ready to come 
+; inside without complaint.  This morning is starting sunny and 
+; even warmer.  I expect a similar day.
+; 
+; In my corner, the work is waiting before me.  I always feel 
+; better when it is finished and behind me.  So it's time to get 
+; started.  Until next FOTD, take care, and see you when that 
+; glorious time arrives.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Tickle_My_fancy { ; time=0:06:23.49--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-4.07570601913123700/+2.189601450837599\
+  00/28201.47/1/80/-7.37824690233424008e-010
+  params=2/0.2/-3.14159265358979/1500 float=y
+  maxiter=1800 inside=0 logmap=95 periodicity=10
+  colors=000SLlQKkOJjMJiQRhUZgXefRZZLSRFLJ9EB374CF6L\
+  M8TTAa_CjfErmFdYJRJMD4PG9QIDRKIRMMSORTQVTS_UUcVWhV\
+  YlW_qXauXenehhnkbvl_umYunWunUuoSupQupOuqMurKurIusG\
+  utEutCurBrpBooBlmBjkBgjBdhBafB_eBXcBUbBSeHXhN`jTdm\
+  ZhpdmrjqupuwuysnuphrlboiXleRibLfZFcW9`YAZZAY_BW`BV\
+  aBUbCScCRdCQeDOfDNgDMfELfFKeGKeGJeHJdIIdJIdJHcKHcL\
+  GcLGdMKeNNfOQfPTgQXhR_iSbiSekJSlAEh9Jd9N`8RY8VU8ZQ\
+  7bM7fJ7jHEiGKhFQgIRhKRhMSiOSiQTjSTjQVfOWcNX`LZXJ_U\
+  I`RGaOEcKDdHBeEAfBCeDDeEEdGFdHGcJHcKIcLJbNKbOLaQMa\
+  RN`TO`UP`VS_VUYUXWTZUSaTSdRRfPQiNPkMPjLOiKOhJOhIOg\
+  HOfGOeFOeEOdDNa6KcCNbBNbANa9N`8N_7NCcJIcKOcLUcMmUK\
+  kKLjELiDLgCMfBMeAMd9Mb8Na7N`6NoJsmHnkGjiKfgPbeUZcU\
+  VaZRAcIJcKScMBckOcZacO`cN`cN`cN`cN`cN`cNacNccNecNg\
+  cNicNkcNmcmoaiq_esYau_YwaUycQzemzgoziqzkszmuzmwzmx\
+  zmyzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzzmzzmz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

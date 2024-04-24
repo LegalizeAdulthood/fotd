@@ -1,0 +1,95 @@
+;     Date: Tue, 01 Jun 2004 10:08:39 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-06-04 (Scene of Discovery [5])
+;       Id: <1.5.4.16.20040601101229.29b7c7de@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- June 01, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Believe it or not, today's image is a view of the chaos along 
+; the shoreline of what remains of Seahorse Valley of the 
+; Z^(2.01,0.03)+C Mandeloid.  For some reason known only to the 
+; higher authority, the buds have choked off and changed into 
+; distorted quadratic midgets, while curious new open areas have 
+; appeared, in the form of round holes connected by tooth-like 
+; spirals to infinity.
+; 
+; I have named the image "Scene of Discovery".  After all, it is 
+; at least a minor discovery.  The two circular areas in the left 
+; half of the image, along with the tooth-spiral connecting them, 
+; form one of the more unusual hole complexes I have found in the 
+; world of fractals.
+; 
+; Even with the maxiter of 15000, the edge of the valley, on the 
+; upper right, is not fully defined.  But the render time of 48 
+; minutes is already unreasonably long, so I decided to be 
+; satisfied with less than full definition.
+; 
+; Since I can see nothing really above average in the artistic 
+; aspect of the image, I have rated it at a 5.  The slow render 
+; time reduces the overall value to an unexceptional 10.  
+; Considering all this, the best way to view the scene is to let 
+; Paul render it and post it to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Clouds, cool temperatures in the 60'sF (around 18C), and 
+; occasional light rain kept the fractal cats indoors and the 
+; cicadas quiet here at Fractal Central on Monday.  The cats 
+; cheered up in the evening when they had their treat of tuna; the 
+; cicadas cheered up this morning when they saw the sun and warmer 
+; temperatures.
+; 
+; I'll cheer up when the latest pile of work is behind me.  Until 
+; next FOTD, take care, and don't be too busy to enjoy the fractal 
+; side of life.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Scene_of_Discovery { ; time=0:48:19.02--SF5 on a P200
+  reset=2003 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 logmap=24
+  center-mag=-0.7088779767/-0.2550825285/255.7718/1/\
+  25/-2.66779653923521209e-013 params=2.01/0.03/0/0
+  float=y maxiter=15000 inside=0 periodicity=10
+  colors=000QYUSYUTZUUZTW_TX_SY`S_`S`aRaaRcbQdbQebQg\
+  cPhcPidOkdOleOmeNofNpfMqgMsgMthLuhLvhMvhLsfKpdKmbJ\
+  m`ImZImXHmVHmSGmQFmOFmMEmKDmIDmGCmBDmECmHCmKBmNBmQ\
+  AmTAmW9mZ9ma8md8mg7mj7mm6mp6ms5mv5mx5mw6lv6ku6jt6j\
+  s7js7jr7jq7jp8jo8jn8jn8jm9jl9jk9jj9jiAjiAjhAjgAjfB\
+  jeBjdBjdBjcCjbCjaCj`Ci_Bj`Cj`Cj`Cj`Dk`Dk`Dk`Ek`Ek`\
+  ElaElaFlaFlaFmaGmaGmaGmaHmaHnbHnbHnbInbIobIobJobJo\
+  bJobJnaMn`Om_Qm_SlZVlYXkYZkX`jWbjVeiVgiUihTkhTmeWk\
+  bYi`_gYaeWddTfbRh`OjZLlXJoWGqUEsSBuQ9wPEuNJsMNqLSo\
+  KXmI`kHeiGjgFneEmeFmeGaZbbYbcXbcWadWadVaeUafTafT`g\
+  SahRbhQciPdiPejOfkNgkMhlMimLjmKknJlnJmoInpHopGpqGq\
+  rFrrEssDttEusDvrCwrBxqAyp9zp9zo8zn7zn6zm5zl4zm0zl4\
+  zl7zlBzlEzkIzkLzkOzkSzkVzjZzjazjezjhzmszkozjkzigzh\
+  czf_zeWzdSzcOzcGzbIzbKzaLzaNz`Oz`Qz_Rz_TzZVzZWzYYz\
+  YZzX`zXazWczWezVfzVhzUizUkzFpzNnzUlz`jzghznfzlgzkg\
+  zjgzigzhhzghzfhzehzdizciz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 
