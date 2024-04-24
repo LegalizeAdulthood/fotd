@@ -1,0 +1,105 @@
+;     Date: Tue, 15 Oct 2013 17:11:05 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-10-13 (Sly Trickery [A-7,M-6])
+;       Id: <1.5.4.16.20131015171225.2a4f61ec@earthlink.net>
+; ---------
+; 
+; FOTD -- October 15, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To create today's image I combined various reiterated portions 
+; of Z^2, Z^3, Z^4 and Z^5, and initialized Z to a critical point 
+; of -2.445...  The parent fractal that results is in two parts -- 
+; a Mandelbrot set rotated 180 degrees and an extra Mandeloid on 
+; the X-axis some distance east of the M-set.
+; 
+; At first glance, this Mandeloid does not appear critical, but 
+; a closer check will reveal that it is filled with perfect 
+; minibrots.  Today's image lies near the tip of one of the 
+; filaments extending from the eastern end of the main spike of 
+; the extra Mandeloid.
+; 
+; The name "Sly Trickery" is a comment on the rendering method, 
+; where instead of the usual outside=iter, I reset the outside to 
+; 'tdis', which creates the effect of terraces surrounding the 
+; central minibrot. 
+; 
+; This trickery took a full point from the art worth, dropping it 
+; to a 7.  The overall effect is not in the math, it is in the 
+; program.  The math aspect is worth only a 6.
+; 
+; The calculation time is a very fast 45 seconds, but the 
+; inconvenience of setting up and running the parameter file still 
+; exists.
+; 
+; A quick trip to one of the web sites will eliminate this chore 
+; and make life easier.  The web sites may be accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with fog, but when the fog cleared off around 9am, 
+; it led to a perfect day with total sun and a temperature of 70F 
+; 21C.  The fractal cat enjoyed the conditions fully, then retired 
+; to my favorite chair to spend the afternoon sleeping.  The 
+; humans passed the day as just one more in a near endless string 
+; of similar days.
+; 
+; The next FOTD will be posted in a number of hours.  Until the 
+; number is revealed, take care, and before you look to the light 
+; for enlightenment, be sure it is the right light.  Remember that 
+; the world is filled with wrong lights.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sly_Trickery { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotMix3a function=ident
+  center-mag=-1.752840469303519/+0.0457707436589533/\
+  3.507371e+009/1/-175/0 params=1/2/0.2/3/0.1/4/0.04\
+  /5/-2.445428353012/0 float=y maxiter=1500 inside=0
+  outside=tdis periodicity=6 mathtolerance=0.05/1
+  colors=000IUJLUJOVKRVLVWLYWM`XNcXNfYOiYPlYPdURYQTQ\
+  MUJIWBEY4AZBE_HH_NL_UO`_S`eV``ZYWbWSfTNjRInPErM9vK\
+  5yIFoSOeaMbbL_cJXdIUeGRfFPfJWYMbPPiGQjHQjIRkJRkJSl\
+  KSlLTmLTmMUmNUnNVnOVoPWoPWpQXpRXpRKV5IS6GP6EN7CK7A\
+  I88F86C94A9277000576DF8JN7PS7VY6`c5fh5ln4rt3wy3tp6\
+  qg9nZBkREhIGe9J91LH0bP0tSKuWUuZaub_v`Zv_XvYVwXUwVS\
+  wURwRVwOZwLawIjwFswzvwzzwzzwmzwczvZzuUztKzs4ur4tq4\
+  tp4to4sn4sm4rl4rk4rj4qi4qh4qg5nh5ki6ii6fj7dk7Xk7Pl\
+  8Im8Am93n95o9DoCKpEQpHRqJTqMUqOVrRXrTYsWZsY`s`atbb\
+  tedugeuifugesfdqecocbnbala`j`_hZZgYYeXXcWWaUV`TUZS\
+  TXRTWKQOEOH7LA1J37K5DL7JM9C4iC4kC4mB5oB5qB5sB5uGAu\
+  KFuPKuTPuYTuaYufbujguoluzpuziozfnzcmz`lvYkzWjza`zf\
+  SzlJzqAzv1zq6zmBziGzeLzaQzYUzTZzPczLhzHmzDrz9vzAtz\
+  BszBrzCqzDpzDnzEmzElzFkzGjzGhzHgzIfzIezJdzJczygzcv\
+  zavzZvzXvzVuzSuzQuzOuzLuzJuzHuzIqzJnzKkzLhzMdzNazN\
+  ZzOWzPSzQPzRMzSJzSGzTHzTI }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

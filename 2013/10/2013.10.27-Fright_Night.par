@@ -1,0 +1,109 @@
+;     Date: Sun, 27 Oct 2013 19:36:11 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 27-10-13 (Fright Night [A-8,M-6])
+;       Id: <1.5.4.16.20131027183741.2bcf9e9e@earthlink.net>
+; ---------
+; 
+; FOTD -- October 27, 2013 (Rating A-8,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that results when 3.5 
+; parts of Z^(-1.1) are combined with 0.5 part of Z^(-5.5) before 
+; (1/C) is added on each iteration.  The default screen view of 
+; this parent is little more than a field of unorganized blobs 
+; forming a hint of a valley, but two full outzooms reveals a 
+; fully formed but quite distorted Mandeloid, with a ring-lined 
+; filament extending southeast to where it joins a large ring.  
+; Today's scene, with its abundance of sharp bright spikes, lies 
+; near the point where this filament joins the large ring.
+; 
+; Since the season is one of fright, and sharp things such as 
+; daggers and axes are trendy at this time of year, when I saw the 
+; scary sharpness in the image, I named it "Fright Night".
+; 
+; With a modicum of coloring effort going into the image, its 
+; rating is worth an honorable 8.  The math worth remains a 6, 
+; since the MandAutoCritInZ formula has been doing its thing for 
+; over a decade, and has long since lost its math impact.
+; 
+; The calculation time of 4 minutes is slow, no denying it, but 
+; once again the web sites are on the job, with not only the 
+; original image but assorted variations as well.
+; 
+; The finished image is available on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; which may soon be re-designed with new and greater features.
+; 
+; The image with additional variations is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; and also at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and:
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today brought a mix of sun and clouds to Fractal Central, while 
+; the breeze from the northwest and temperature of 54F 12C added 
+; a proper end-of-October atmosphere to the scene.  The fractal 
+; cats, still interested in getting accustomed to each other, had 
+; little interest in the outside conditions.  The humans had a 
+; reasonably quiet day.
+; 
+; The next FOTD will likely be posted in about one day, but 
+; possibly two days.  Until next time, take care, and they can't 
+; put it on the news shows if it isn't true.  Or can they?...
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fright_Night { ; time=0:04:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+96.84710700506818/-56.0569704879051/\
+  3.965998e+009/1/-32.5/0 params=3.5/-1.1/0.5/-5.5/0\
+  /0/0/0 float=y maxiter=1500 inside=0 logmap=320
+  periodicity=0 mathtolerance=0.05/1
+  colors=00000M00M00M00N00N00P00P00R00R00S00S00U00U0\
+  0U00U00U00U00U00U30U30U30U30U40U40U40U60U60U60U90U\
+  90U90UB0UB0UB0UB0UC0UC0UC0UC0SA0R90P60N60M30K00I00\
+  G00E00B006003000000000zzzzzzzwztvyrqrmmmikieeecccR\
+  RRMMMGGGBBB444000000hzz_zzSymMomGcc9Sc0GU0IWBKY9GV\
+  6ES4CP3BN39K06G04C00B006003000000000000azvYoiPdX4R\
+  K0630hz0`z0Ut0Mi0EX04K0030pi0ld0h`0cY0_U0VP0RM0MG0\
+  GC0B6040000000_ltXhpUclR`hNXcKU_GPVCMR9GM4BG06B004\
+  000000ntyMRU0cs0bYoSzkPzgMwbIrYGlUCgP9`K6VE3P90I30\
+  B003000zN0zK0zG0vC0n90d40V00M00B00000Pi3Mc0I_0EU0B\
+  P06K03C0060000000zri`PKb00X00S00N00I00B00400000000\
+  zBgz6`z4Xz3Sz0Nz0Iz0Bz04z00z00zl9zh6zd4zPgr0lc0rU0\
+  wN0zE3z64z06z06z04z64zE4zM4zS4zYPzcPyk3vpcsvcozclz\
+  chzcdzcbzc`yr_orYgrXXrVMrU9rS0zR6zPEzNMzMSzK_zIdzG\
+  zzEzzCzzBzz9zz9zz9zz9zz9zz9zz9zz6zz6zz6zz6zz6zz6zz\
+  6zz4zz3zz0zz0zz0zz0zz0zz0 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

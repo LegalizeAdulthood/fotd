@@ -1,0 +1,100 @@
+;     Date: Wed, 23 Oct 2013 18:22:10 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 23-10-13 (Strange Goings-On [A-8,M-6])
+;       Id: <1.5.4.16.20131023182339.29ef2578@earthlink.net>
+; ---------
+; 
+; FOTD -- October 23, 2013 (Rating A-8,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image mixes together various portions of Z^2, Z^3, Z^4, 
+; and Z^5.  This combination produces a Julibrot with a major 
+; critical value of zero and a minor critical value of -2.499...  
+; The major critical value produces the parent fractal of today's 
+; image -- a Mandeloid with two large wings sprouting from its 
+; East Valley.  The minor critical value produces a small remote 
+; Mandelbrot set lying well west of the default screen, with 
+; little of interest in it.
+; 
+; Today's image consists of both inside and outside stuff.  The 
+; greenish outside stuff was rendered with the outside option set 
+; to 'tdis'.  The inside stuff is colored a lumpy purple, and was 
+; rendered with the inside set to 'fmod'.
+; 
+; I named the image "Strange Goings-On".  My reason was that all 
+; fractals certainly are strange.  Due to my extra coloring 
+; efforts, the art value rates a 9.  The math rating remains a 6.
+; 
+; The calculation time of 4 minutes is rather slow.  Checking the 
+; finished images on the web sites is recommended.
+; 
+; Different versions of the finished image are online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Lots of clouds with a chilly temperature of 48F +9C made today 
+; feel more like November than October here at Fractal Central.  
+; The fractal cats, who are still getting to know each other, gave 
+; no attention to the outside conditions.  The fractal humans did 
+; what needed to be done, while keeping an eye on the cats.
+; 
+; The next FOTD will be posted soon.  Check back in 24 hours to 
+; see if 'soon' means 'the next day'.  Until next time, take care, 
+; and 125 years ago we thought we had discovered all there was to 
+; be discovered in the field of physics.  What happened since then?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Strange_Goings-On { ; time=0:04:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotMix3a function=ident passes=1
+  center-mag=+0.432885627623874/-0.04345618858187475\
+  /1.324159e+010/1/115/-0 params=1/2/-0.67/3/0.5/4/\
+  0.25/5/0/0 float=y maxiter=1500 inside=fmod
+  proximity=0.3 outside=tdis logmap=yes symmetry=none
+  periodicity=6 mathtolerance=0.05/1
+  colors=000TIySKuSMqROmRQjQNiPKhPIgOFfODeNAdN8cMCbL\
+  FaKJ`JM`IQ_HTZGXYF_YGUSHPNHKIHECG97E62MB4TH6_R8f`A\
+  miCsqEyzUghPQSZ9C0AE0BA0CA0DzzEzzFzzFzzDzzBzzAzzzI\
+  zzIzzIzzHzzGzzGzzISzJqzKrzLszLszMtzNuzOvzOvzQrzRoz\
+  TlzUizVezXbzY_zZXz_Sz`NzaIzbDzb9zbIzbQzaSz`Tz`VzcW\
+  zcXzcWzcVzcVzcUzcUzcVzcWzcXzcdzckzcazcTzcUzcVzTVzV\
+  WzXXzZXz`_zbbzcdzegzgjzhlzjozkqzhkzffzc`zaWz_RzXLz\
+  VGzTBzMMzGXz9gz3rz7mzAhzDczGZzJUzMPzJSzHUhEXgCZeAa\
+  d7cb5fa3h`7e`Bc`Ea`I__MX_PV_TT_WRXXSChuAgyGbtLYpQT\
+  kWOg`Jb4Et4Cv4BwJKyMe_OzAPrJQkSRc_SXhTPq000EVb9Xe4\
+  Yg5ab6eZ7hU8lQ9oLAsHAvDBoHBhLBbOBWSBPWBJZBCbB6eAAc\
+  9Eb9HaPFfZDjhCnrIrzJzrGom9hc6aU5VI4OA3H9HD9UA9g69t\
+  3Dp6Gl8JhBMeDPaFSYIVUKYRMLOT8LZ8OY9QY9TXAWWAYWB`VB\
+  cUMfuKeqIemHei`GG_IBZK6mTBpT9sT7dVPtbWUbe3boC`nLZn\
+  UXnbVmkTmsSmmPlgNkaKkWIjQFjKDiFBiMGjSKkZOldSm_YhVb\
+  cRg_QbYQZWPVVPQTOMRPSXJU_ }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

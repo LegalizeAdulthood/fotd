@@ -1,0 +1,110 @@
+;     Date: Tue, 22 Oct 2013 15:17:58 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-10-13 (Totally Torus [A-7,M-6])
+;       Id: <1.5.4.16.20131022151926.2be7e500@earthlink.net>
+; ---------
+; 
+; FOTD -- October 22, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we return to the workhorse MandAutoCritInZ 
+; formula, which automatically initializes Z to a critical value 
+; of the iterated expression, thereby eliminating the need of 
+; tracking down critical values by hand, as is necessary with the 
+; MandelbrotMix3a formula.
+; 
+; Today's parent fractal came about when I mixed 3.3 negative 
+; parts of Z^(-1.3) with one negative part of Z^(-5.3) before 
+; adding (1/C) on each iteration.  This parent is a typical 
+; oversized double-negative fractal with three large, vertically 
+; stacked bays and a prominent, nearly circular, fractal fan 
+; extending east.  A very prominent minibrot lies just beyond this 
+; fan, connecting it to a large ring farther to the east.  Today's 
+; scene lies rather deep in the East Valley of this minibrot.
+; 
+; I named the image "Totally Torus" when I viewed it from a 
+; distance and the brilliant pinkish ring around the central 
+; minibrot impressed me as a torus.
+; 
+; Mostly because of the brilliance of this ring I rated the art 
+; aspect a 7.  The math aspect remains a 6.
+; 
+; The image is a relatively slow one, requiring almost six minutes 
+; to complete on one of today's super fireball machines.  The time 
+; will be notably longer on an older unit.  Viewing the image on 
+; one of the FOTD web sites will eliminate the delay.
+; 
+; Avoid frustration as well as the nuisance of calculation by 
+; checking the finished image and variations on the FOTD web sites 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Morning clouds gave way to sun later in the afternoon here at 
+; Fractal Central today.  The temperature reached a high of 59F 
+; 15C early in the afternoon, but began falling as the day 
+; progressed.  The old fractal cat spent the day being annoyed 
+; by the playful antics of the new fractal cat, who amused herself 
+; playing with the old cat's tail, while the fractal humans kept 
+; an eye on the action.
+; 
+; The next FOTD will appear when it is ready.  To find out when it 
+; will be ready, check back frequently.  Until this moment of 
+; fractal revelation arrives, take care, and don't arouse the 
+; wrath of God, who apparently shares the emotional weaknesses He 
+; condemns in His creations, such as anger.  And I have always 
+; wondered -- if God made the universe, where did God come from?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Totally_Torus { ; time=0:05:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+6.677912749065/-0.59652070897284/90070\
+  36/1/41/0 params=-3.3/-1.3/-1/-5.3/0/0/0/0 float=y
+  maxiter=2800 inside=0 logmap=-463 periodicity=6
+  colors=000KKcc3UROKD1AATZ6ac3PK5F85JIZZZXXZMMNLBBZ\
+  iFWKWg4tX3eM2SB1E3mm1AP6sr3LR3OV2IN1CF067Fo9Bb67Q4\
+  3D2f6YW4PL3HA18pQ2bJ1QD1D60q9LzzzF7jB5Z73OEFQLQRSa\
+  SYlThUisBzhAyZ9xP8wF8wqpzpu_pyA_g8KQ74962PP1GG088L\
+  rWzozzjqxVjuBkjAZV0CX2j9Ca46JdTVULNKEFA77Diy6NVsXx\
+  bh5JM2xSAhL7UE5F72vHHbBBJ55SgWzzz1zzhqqcnRZcFWKBDA\
+  7653IFF957qFRcAKR5DD06sD6S43on9b`6QN4D926JK4BD236_\
+  PK2PejaiNGNzN4jG3V92F21c`SKGE`qPOYGCE89R16U03U0RUr\
+  KUdDUR6ZDIcEDZA9Z74Z3VZ8FZ4JZKCZD6Z65Zz2ZVUZCMZ9FZ\
+  67Z3PZ`GZO8ZCYZuPZfHZT8ZEjZWVZLFZAfZwPhAGh68h3Ch56\
+  h94h63h41h2nhvPhT4ht2ha1hJVhwjhEVh9Kcz9cz7cz6czHcz\
+  SczzczzczoczSczVczIczeczqczTczmczhmzzmz3mzzmzVmzem\
+  znmzamzPmzCmzwmzUmzFmzymzimzVmzFzzvzzgzzTzzEzzLzzF\
+  zzAzz5zzmzzXzzGzzTzzJzz9zzKzzFzzAzz5zzfzzWzzLzzAzz\
+  SzzIzz9zzszzSzzvzzozzYzzHzzUzzFzzwzzUzzVzzFzzxzzUz\
+  zPzz1zz0zz0zzXzzMzzBzzSzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,107 @@
+;     Date: Thu, 10 Oct 2013 16:04:43 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-10-13 (The Worm has Turned [A-6,M-6])
+;       Id: <1.5.4.16.20131010160600.368763d2@earthlink.net>
+; ---------
+; 
+; FOTD -- October 10, 2013 (Rating A-6,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image I mixed straight Z with 0.5 part of Z^2, 
+; 0.333... part of Z^3 and 0.25 part of Z^4 and then set initial 
+; Z to -1, the critical point of the mixture.  (I entered the 
+; value as -0.999... because of a program glitch.)  The resulting 
+; Mandeloid resembles a Mandelbrot set with two large wings 
+; sprouting from the north and south sides of the East Valley, 
+; which is grossly enlarged but, at least on the surface, not very 
+; interesting.
+; 
+; Today's image does not lie in this area however.  It is located 
+; very deep, near a larger minibrot in a minor valley on the east 
+; shore line of an oddly shaped minibrot on a filament extending 
+; from the large period-3 bud on the northwest shore line of the 
+; main bay.  
+; 
+; The art and math aspects both rate a 6, which is a little above 
+; average but nothing to get excited about.  The colors clash too 
+; much and are too splotchy to rate anything higher, and the math 
+; is nothing new either.  I might have done better with the colors 
+; if I had not become preoccupied with four-dimensional stuff.
+; 
+; The name I gave to the image, "The Worm has Turned", had some 
+; meaning when I thought of it, but I have since lost track of 
+; whatever the meaning might have been.
+; 
+; The slow calculation time of 7-1/4 minutes may be avoided by 
+; checking the FOTD web sites.
+; 
+; The web sites may be accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A cloudy sky with a temperature of 59F 15C kept spirits under 
+; wraps here at Fractal Central today.  The fractal cat hid his 
+; depression under the chair cover; the fractal humans had too 
+; much other stuff to do to feel very depressed.
+; 
+; The next FOTD will be posted before long.  The discussion should 
+; include a bit about four-dimensional curiosities, especially the 
+; weird motion possible only in space of more than three 
+; dimensions known as double rotation.  Until then, take care, and 
+; this Saturday we will see what the wooly bear caterpillars have 
+; to say about the weather of the coming winter.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+TheWorm_Has_Turned { ; time=0:07:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotMix3a function=ident float=y
+  center-mag=-0.7389306041414476/+0.6651148962222097\
+  /3.193439e+013/1/132.5/0 params=1/1/0.5/2/0.333333\
+  33333333/3/0.25/4/-0.999999999999999/0 maxiter=2000
+  logmap=448 periodicity=6 mathtolerance=0.05/1
+  colors=00000300600A00D00H00L10O40R70V92XB3ZB5`B5cB\
+  5dB5fB5gB5gB5hB5jB5jB5gB5fB5eB5eB5dB5cB5bB5_B5YB5X\
+  B5VC5SD6QF7OG8LHAIKBGMDDOEBRF8TG6WJ3YL0_O0bQ2dS3cW\
+  6bY8``A_bCZdDYeGYfGXeHWdHV`HUWHTRHSMHRIHQDHO7HM25K\
+  05I03G02F02E00D00C00B00A00900800700600500400300200\
+  10000000000000000000010010010020020020032042042042\
+  0430430430000430F60O30M70LB0IF2HJ6FMADQDBTH9XL7`Q5\
+  cT3fX1j_0mc0pf0sj0wm0zr0zp0yn0yl0xk0wh0wfWjSImG4p3\
+  0s03s0Ds8NsHXsQesYnseppgrmjtjlvfnxcpzaqx`lv`gv`ctZ\
+  YsZTqZPpZKoYDnY8mY3kY0hX0fW3cV6`V7YTAWSCTSDQRGNQIK\
+  PLHPMDOPBMR8MSDKTIITMFTRETWBVZ8Vc6Vf5VeBPdIKcODcT8\
+  bZ3`d0ej0kn0ql0vj0vg0qe0kc0fa2bZ5bX7bVAbSCbQFbOHbM\
+  I`OL_OOZOQYOSXOTWOWUPYTP_SP`RPcQPeOPgNPhOMjQLkRJlS\
+  ImSGmTEnUDoWApX8qX7qW8oUAmTBlTDjSEgRFfRFdQGbOI`NJZ\
+  NKXMLWLMTLMSS`nXXk_VgcSdfP`iMYmKVpIRsEOvBKz8Gz6DtV\
+  YkppfflbXhYOeSM_MLVGLPZdb }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

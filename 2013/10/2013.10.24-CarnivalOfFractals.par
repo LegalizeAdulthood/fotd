@@ -1,0 +1,114 @@
+;     Date: Thu, 24 Oct 2013 17:25:25 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-10-13 (Carnival of Fractals [A-8,M-6])
+;       Id: <1.5.4.16.20131024172655.2bdff532@earthlink.net>
+; ---------
+; 
+; FOTD -- October 24, 2013 (Rating A-8,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal subtracts 0.2 part of Z^3 from Z^2 on each 
+; iteration before adding C.  The resulting Julibrot has two 
+; critical values, one at zero, the other at +3.333...  The two 
+; values create the same parent fractal -- close to normal 
+; Mandelbrot sets that are oriented at 180 degrees from each 
+; other.  Today's image lies in the parent fractal that results 
+; when Z is initialized at +3.333...
+; 
+; This parent is the Mandelbrot set rotated 180 degrees.  It has 
+; an interesting stem extending west from East Valley and another 
+; stem extending east from the main bud.  Today's scene lies near 
+; a larger minibrot on the eastern stem, which is along the 
+; positive X-axis and has characteristics of the negative stem of 
+; the M-set.
+; 
+; The name "Carnival of Fractals" came to me as I was wondering 
+; whether to tone down the colors.  I finally decided to leave the 
+; colors quite brilliant, which seems to work quite well.
+; 
+; The art rating of an 8 shows that the image is well worth the 
+; 1-3/4 minutes required to calculate it on one of today's 
+; fireball units that has not lost the ability to run DOS 
+; programs.  Those addicted to things like smart phones and apps 
+; are out of luck . . . I guess . . .  But don't worry, for the 
+; web sites are always ready to charge to the rescue and bring 
+; enlightenment.  The math rating of a 6 shows that nothing new is 
+; in the mathematical aspect of the image.
+; 
+; So achieve enlightenment, whatever that might be, by viewing 
+; different versions of the finished image on the web sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of clouds and sun, with more clouds than sun, prevailed 
+; here at Fractal Central today, while the temperature of 46F +8C 
+; kept the proper pre-Halloween chill in the air.  The fractal 
+; cats who are now just starting to accept each other, had little 
+; time to notice the weather.  The newcomer, who we have named 
+; Jasmine, (Jazzy for short), is now large enough to leap onto 
+; many of the old fractal cat's (Nico's) favorite spots.  Nico is 
+; not too happy with Jazzy taking over his napping chairs, but he 
+; does not seem too angry either.  The humans are mostly letting 
+; the dynamic duo work things out for themselves, ready of course 
+; to intervene if things threaten to get out of control.
+; 
+; The next FOTD will most likely be posted in about 24 hours.  
+; Until whenever, take care, and the United States, usually 
+; referred to as America, is not only the greatest country on 
+; earth, but it is always right.  And any country that fails to 
+; agree had better watch its step.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+CarnivalOfFractals { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+1.655267462218993/+0.00001248433946918\
+  /2.642538e+010/1/117.5/0 params=1/2/-0.2/3/0/0/0/0
+  float=y maxiter=1500 inside=0 logmap=-122
+  periodicity=6 mathtolerance=0.05/1
+  colors=000K0OJ0MI0KH0IG0GF0EE0BD08B05902600300000m\
+  rzT7fUFmUOeKGSA8EzKKe6PV4IL3CA16JVkmcmdzYgzzd0KK0K\
+  00K85AyXSt2RS1DpWyQGVzgpzzzzzQzCzhzzQ3Lc4GK2821iIe\
+  zDQz9Kd45nUE3jsN_aVIJFP50I30C20610iHoN8QakuPWaCGJ0\
+  SA0E5QjdJZUDNK6BAyxKTFEE77dUNUMHKFBA75ypHdZBKH5YCL\
+  M8EB47t1CtHvAUZ5FH2tW1eO1SG0E85q`3cR2RI1D9hs8sFk`A\
+  WI5GmyePVLIKXsiA`U6IF3J0AC06603C5E8pl6b_4QO2DCUUXF\
+  FGAtO6aG3J85aZ3SQ2JH1984SA2E5BtK7aD3J6A7mzzXzzGzzL\
+  zzEzz7zzvzzgzzTzzEzzdzzpzzQzzzzzVzz6zz4zz3zz2zz1zz\
+  VzzKzzAzzzzzjzzVzzFzzvzzTzzpzzZzzHzz`zzUzzUzzUzzUz\
+  zUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzczzczzczzczzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
