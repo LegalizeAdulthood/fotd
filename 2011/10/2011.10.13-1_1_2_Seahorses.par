@@ -1,0 +1,118 @@
+;     Date: Thu, 13 Oct 2011 22:40:16 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-10-11 (1-1/2 Seahorses [8])
+;       Id: <1.5.4.16.20111013224015.1197df80@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- October 13, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Believe it or not, today's image is a scene in the Seahorse 
+; Valley area of the (-Z)^(1.5)+C Mandeloid.  Actually, the scene 
+; is very close to a Julia set of the valley, being double-rotated 
+; only 0.4,0.4 degrees from the true Julia direction.  The wedge-
+; shaped feature almost filling the outer figure-8 shape is a 
+; grossly enlarged view of the Mandelbrot Seahorse Valley.
+; 
+; Iterating (-Z) rather than straight (Z) makes a great difference 
+; in the fractals with a fractional exponent of Z between 1 and 2. 
+; While positive (Z) results in tiny bean-shaped fractals, 
+; negative(Z) produces much larger fractals, with recognizable 
+; Seahorse Valleys and much more interesting surrounding semi-
+; chaos to explore.
+; 
+; I rendered the scene with the outside set to 'tdis'.  Some of 
+; the other outside options also produce interesting versions of 
+; the scene.
+; 
+; The name "1-1/2 Seahorses" refers to the exponent of Z, not to 
+; any sliced up seahorses that might be lying around.
+; 
+; The rating of an 8 includes a full point for the coloring.  This 
+; might be a bit excessive, but why not reward myself?  I must 
+; have put almost an hour into working out the colors.
+; 
+; The calculation time of 8-3/4 minutes is on the slow side.  Most 
+; of this time is caused by the large maxiter of 32767, which was 
+; the maxiter limit of early versions of Fractint, and which I 
+; still use as a standard setting.
+; 
+; But wait!  There is no need for the 8-minute delay.  Calculation 
+; may be avoided by viewing the image already calculated on the 
+; official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And by viewing the high-definition version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and intermittent showers continued here at Fractal 
+; Central on Thursday, while the temperature of 63F 17C was on 
+; the mild side for the season.  The fractal cats, being warm 
+; weather fans, enjoyed the conditions.  The humans spent the day 
+; doing routine things, which make for a peaceful day to live 
+; through but rather dull reporting.  The next FOTD is scheduled 
+; to be posted in 24 hours, and it might actually be ready.  Until 
+; next time, take care, and if we ever defeated the terrorists, 
+; who would we then blame our problems on.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+1-1/2_Seahorses { ; time=0:08:47.48-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=t inside=0
+  center-mag=-0.305312/0.00434276/1.123196
+  params=89.6/0/89.6/92/-0.742/0.05/0/0/1.5/0 float=y
+  maxiter=32767 outside=tdis logmap=3 periodicity=9
+  colors=000TL_SKYRJWQIUPHSOGQNFOMEMLDKKCIJBFIACH99G\
+  86F73D50C30700800900000000000000000000000000ZVKb`D\
+  fe6lx_iwaevcbvf_uhWtjTslQsoMrqJqsGpuDpwIqrMrmQshUt\
+  cYuZauUzMHvJMsGRpDWlA`i7ef4iY3`P2SG1J71BJ4DU6Fd9Ho\
+  BJzDLwJPtPTqVWn`_kfbhlffridojbmk`jl_hmYenWcoV`oTZp\
+  RWqPUrORsMPtKMuJKuLMsNNrPPqRQpTRoVTnXUmZWk`XjbYid_\
+  hf`ghbfjcekddlbelaem`em_emZejachcbfe`cg_aiY_kXXnWV\
+  pUTrTctRmvQzxPmqNcjMScKSXJTQHUJGRKJOKMLKPJKSGKVDLX\
+  AL_8Lb5Le2Lh0Lj1Mg1Md2Mb2M_2MX3MV3MS4NP4cc4cc5cc5c\
+  c6cc6cc6cc6cc6cc6cc6cc6cc6cf6cl6cr9cpBmoDmnGmlImkK\
+  mjNmhPmgRmfUmdWmcomYcmZ9mgwmuqmmkmfemzkmzgmzcmz4mz\
+  LmzcmzamzZmz_mz_mz`mzNmzSmzXmzemzcrzarzDrzSrzXrz9r\
+  zGrzNrzUrz0rzJrzDrzPrzcrzbrzarzmrzmrzmrzmrzmrzmrzm\
+  rzmrzmrzmrzmrzmwzmrzmrzmrzmrzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

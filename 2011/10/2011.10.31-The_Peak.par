@@ -1,0 +1,105 @@
+;     Date: Mon, 31 Oct 2011 17:13:26 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-10-11 (The peak [8])
+;       Id: <1.5.4.16.20111031161429.2bafb2a0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 31, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an anti-bifurcation scene in the parent fractal 
+; that results when quadratic and order-11 Mandeloids are combined 
+; in the FinDivBrot-2 formula.  On the surface this parent is an 
+; everyday Mandelbrot set with everyday quadratic features, but in 
+; its depths it acquires Z^11 characteristics, with 10-lobed 
+; minibrots and all the other order-11 stuff.
+; 
+; The scene is located just off the main spike of the parent 
+; M-set, a short distance beyond the large minibrot, in a small 
+; quadratic minibrot that has morphed about 4/5 of the way to an 
+; order-11 shape.
+; 
+; The name "The Peak" tells that the central point contains not a 
+; hidden minibrot, but comes to a flat peak of low iteration.  
+; Instead of period doubling as the peak is approached, the 
+; fractal pattern experiences period halving, which is why the 
+; scene is one of anti-bifurcation.
+; 
+; The rating of an 8 includes 2 full points for the coloring, 
+; which is most of what the image has going for it.  When rendered 
+; with a different palette, the entire effect of the image falls 
+; apart.
+; 
+; The calculation time of 45 seconds on a 2000mhz machine is a 
+; good guesstimate.
+; 
+; The finished image may be viewed on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image is available in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds brought an average autumn day to Fractal 
+; Central Today.  The temperature of 46F +8C was slightly chilly, 
+; but not enough to keep the fractal cats from their watch post on 
+; the shelf by the southwest window.  Except for some bickering 
+; about unimportant things, the humans had an uneventful day.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and rational skeptics know that ghosts exist only in the mind; 
+; those who have experienced ghosts know that they are real.  One 
+; of these certainties must be false, therefore, merely knowing 
+; that a fact is true does not make it actually true.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Peak { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivBrot-2 function=recip float=y
+  center-mag=-1.796068372208084/+0.00000000000489225\
+  /4.953129e+012/1.0003 params=11/1e+050/0/0 inside=0
+  maxiter=1500 periodicity=6 mathtolerance=0.05/1
+  colors=000n5Gk4Fh4Ee4Dc3C`3BY3AW3AT29Q28O27L26I15G\
+  15D14A13802501200nocklaij_ghZefXcdVabU__SYYQVWPTUN\
+  RSLPQKNNILLGJJFHHDEFBCDAAA8886665443221iXOcSLYOISK\
+  FNGCHC9B86543U6aM4SF3J719RpRPmPOkONhNMfMKcKJaJI_IH\
+  XHFVFESEDQDCOCBLB9J98G87E76C6494373242iOekNdlNcmNb\
+  nNbpMaqM`rM_sM_jMYaMWcOUdQTfSSgUQiWPjYOl_MmaLzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzyzzxzzwzzvzzuzz\
+  tzzszzrzzqzzpzzozzmzzkzzizzgzzezzczvarr_mmYehWTcUK\
+  ZSEUQCPMAKK9FI8AE65B5373131000hfzfczd_zaXzZWzWTzUQ\
+  zSMuPKoNJkKGfHEcFD_CCWA9T77L53J213WXbTWZPUULOPHJKC\
+  GF8DA79CCNVBLTAKR9IP9HN8GL7EK7DI6CG5AE49C48A369257\
+  24512301100000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  000000000000000000000000000000IL0FJ0DG0BD09A068045\
+  0220VH0TG0SF0RE0PE0OD0NC0LC0KB0JA0I90G90F80E70C70B\
+  60A5094074063052032021010 }
+
+frm:FinDivBrot-2   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16), b=imag(p1):
+z=(b)*(z*z*fn1(z^(a)+b))+c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

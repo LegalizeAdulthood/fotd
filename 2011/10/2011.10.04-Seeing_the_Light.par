@@ -1,0 +1,115 @@
+;     Date: Tue, 04 Oct 2011 19:25:06 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-10-11 (Seeing the Light [Rating 6])
+;       Id: <1.5.4.16.20111004192514.14dfd5e6@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- October 04, 2011 (6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A sudden rush descended on FC today, leaving little time for 
+; serious fractaling.  But the image I found in a hurry is worth 
+; at least a cursory look.
+; 
+; Today's image takes us to the valley around -1.399 on the 
+; negative X-axis of the Mandelbrot set.  This is the third valley 
+; beyond Scepter Valley.  But just to be different, we check the 
+; Rectangular aspect of the valley instead of the Mandelbrot 
+; aspect, and find today's scene.
+; 
+; I named the image "Seeing the Light".  The name was inspired by 
+; the brilliant white vertical stripe in the center of the image, 
+; which is made even more brilliant by the globules spread along 
+; it.
+; 
+; Having too little time to work on the coloring, I could give the 
+; image a rating no higher than a 6.  And its calculation time of 
+; almost 7 minutes is a bit much to ask for the privelige of 
+; viewing an image that rates a mediocre 6.  Luckily, the FOTD web 
+; site has come to the rescue.
+; 
+; The finshed image is posted on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; It is posted in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site is at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; After a light early-morning sprinkle, the sky brightened today 
+; here at Fractal Central.  The sun even made a few brief 
+; appearances, but it was hardly a sunny day.  The fractal cats 
+; took the temperature of 66F 19C in stride, giving more attention 
+; to the catnip frog that somehow got pulled out from under the 
+; book shelves than to the outside weather.
+; 
+; FL and I, never fully agreeing on politics, got into a lunch 
+; time discussion about the political views of the extreme left 
+; and right, with nothing at all being settled between us.  (These 
+; mildly heated discussions have been going on for many years, and 
+; nothing has been settled yet.)  One thing firmly settled however 
+; is that the next FOTD adventure into the 4th dimension will be 
+; posted in 24 hours, when I will begin discussing the six regular 
+; polytopes that are possible in four dimensions.  Until then, 
+; take care, and I know that my political views are correct, but 
+; why can't the rest of the world see it?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seeing_the_Light { ; time=0:06:52.55-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot2 passes=1 center-mag=+0/\
+  -0.02922557903896763/256.4055/4.7933 params=90/90/\
+  0/90/-1.399631247361716/0/0/0 float=y maxiter=75000
+  inside=255 logmap=87 symmetry=yaxis periodicity=6
+  colors=000HNcHNcHNbHNbHNbHNbHNaHNaHNaHNaHO`HO`HO`H\
+  O`HP_IP`IQ`IQaIRaJRbJSbJScJTcKTdKUdKUeKVeLVfLWfLWf\
+  LXgLXgMYhMYiMZjMZkN_lN_mN`nN`oOapOaqObrObsOctPcuPc\
+  vPcwPcwQdwQdzQdzQdzRezRezRezRezQfzRezRezRezRezRezR\
+  gzRgzRhzSgzShzShzShzShzShzShzShzThzThzThzThzThzTez\
+  TezTezUezUezUezUezUezUezUezXezWfzXhzYhzZhz_hz`hiah\
+  kbhochschwdhwdhwehweiwfiwfjwgjwgkwhkwhlwilwjmmkmml\
+  mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\
+  mmmmmmmmmhhmccmZZmUUmPRmKOkFNiANg5Me5Mc5Lc5Lc5Kc5K\
+  c5Ja6J`6I`6I`6H`6G`6Fa6Ea6Da6Cb69b7Ab79b78a77`76_7\
+  5Z74Y73X72W71V90UB0TD0SF0RH0XJ0VL0TM0RN5POANPFLQGJ\
+  SHHUHFVIDWIBWJ9WK1XL4YM6ZN8_OA`PCaSEbVGcYId`KecMff\
+  OgcaheYigUjiQkkMlmJmoFnqBos7pv3qw4rx4sy4tz4vz4xz4z\
+  z4zz4zz4zz4zz5zz5zz5zz5wz5wz5rz5rzArzFrzKrzPqzUqzX\
+  pz_pzbpzepzhozkoznozqoztozwmzzmzzmzznzzozzpzzqzzrz\
+  zszztzzuzzvzzwzzxzzyzzzzz }
+
+frm:SliceJulibrot2   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

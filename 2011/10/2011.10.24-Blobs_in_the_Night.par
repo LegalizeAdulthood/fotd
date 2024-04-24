@@ -1,0 +1,106 @@
+;     Date: Mon, 24 Oct 2011 19:40:26 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-10-11 (Blobs in the Night [7])
+;       Id: <1.5.4.16.20111024194124.2bafaf64@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- October 24, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that results when 
+; Z^(1.1) is subtracted from Z^(-5.5) and straight C is added.  
+; This parent consists of a Mandeloid rotated so that its normally 
+; west end points southeast.  Its main period-2 bud is quite 
+; large, while its East Valley is shrunken.  A large blob 
+; surrounded by fields of smaller blobs lies just beyond the east 
+; valley.  The image for today lies in one of these debris fields.
+; 
+; I named the image "Blobs in the Night", mostly because of the 
+; rather somber color scheme, which despite its brilliant 
+; highlights, still creates an impression of night.  I almost 
+; named it something like 'Bursting Bubbles', but decided not to 
+; when I found no bubbles that are actually bursting.
+; 
+; The rating of a 7 is adequate, but if I had put more effort into 
+; the colors, I might have raised it to an 8.
+; 
+; The 45-second calculation time will cause no distress.  This 
+; time is an estimate of the time the image would take to finish 
+; on the 2000mhz machine.  It took 2-1/2 minutes on the 200mhz 
+; unit.
+; 
+; The official FOTD web site, still under construction, may be 
+; accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The FOTD images are posted in high definition and sometimes 
+; anti-aliased at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site, now classic, may be found at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A few too many clouds and a few drops of rain spoiled the day 
+; here at Fractal Central.  The temperature of 59F 15C was a bit 
+; chilly for total comfort, but near average for the season.  The 
+; fractal cats spent the day on watch for an orange lop-eared 
+; tomcat that has recently appeared in the area and is showing 
+; signs of hanging around a while.
+; 
+; The humans spent the day doing what needed to be done, which 
+; kept us busy but would be very boring to report in detail.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and if the hardships of life are a learning experience as the 
+; local armchair philosopher says, when will we make use of the 
+; material world skills that we have struggled so hard to learn?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Blobs_in_the_Night { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=-0.056705950601755/-0.340265933261999/\
+  5.804852e+007/1/155/0 params=1/-5.5/-1/1.1/0/0/0/0
+  maxiter=700 inside=0 logmap=72 periodicity=6
+  colors=00000AALKK`UWjfcqzmzzhthbq`XnUVjXUg_TdaSbdP\
+  bdLbeHceHccHbaH`_HYXGSUFLREEND7IC1HD9GDHFDOEDWVDba\
+  DjgDqzAiq8aM5UR3MV4LU4LU5LU5KU6KU6KU7KU7JU8JU8JU8J\
+  U8`1Ca6FaAJbEMbIPcMTcQWdUZdYRZRJTLBNF3I94ID4II5IM5\
+  IQ7GN9EKACICAFD8DT8ah8yeBobDf`FYYIPVKGTM7WSEYXL`aS\
+  bfZekegplagiX_gRSdMJbGB_B3Y97X8AW7EW5HV4LV3OU2RU5d\
+  e8qqKr_WsIfs1jn2mj2pe2sa2gf7XkBLpFAtJIkGPcDXWAcO7k\
+  G4r82dJASTHFbO2lV3dN3XG3P83H1GLHSOWdRkpUzkYsgalcdf\
+  _h_VlTRoNNsGJvARq9Ym8di7ke6faDbZKZVRVSXQPcMLjIIqEF\
+  wJDpOCiTAcY9Xb8Qg6Kl5Dp47oHAoUDnfGnsJorJorJpqJpqJq\
+  pJqpJhiG_bDchEgnFktGnyG`qbNjxJayFUymMzmEzm6zmHnmSc\
+  maTmlIzv7zkGzaOzSXzIdz8lzEnzKozQqzWrzaszguzmvzswzl\
+  qzfkz`ezV_zPUzJOzDJzGNzIRzLVzNZzQbzSfzUgzWhzYizZjz\
+  `kzblzdmzemzcezbZzaRz`Kz_DzRKzJQzBWzFXzIXzLYzOYzRY\
+  zUZzXZz_ZzUTzPNzKHzFBzA5z50zCIzJ_zPpzYtzfwzWvzLuzB\
+  uzGrzLozQmzVjz_gzdeVibzn` }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,106 @@
+;     Date: Thu, 20 Oct 2011 20:38:50 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-10-11 (Fantasia in Blue [8])
+;       Id: <1.5.4.16.20111020203848.13cf5f3a@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- October 20, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we return to the warhorse formula, the MandAutoCritInZ, 
+; where we check the parent fractal created when 3 negative parts 
+; of Z^(neg(sqrt2)) are combined with 1.5 negative parts of 
+; Z^(2*(neg(sqrt2))) and (1/C) is added on every iteration.
+; 
+; This parent consists of two large bays, one on each side of the 
+; X-axis, with a large minibrot-filled field of debris scattered 
+; to the east.  Today's image lies in a smaller patch of chaos 
+; just south of a large bud on the east side of the large north 
+; bay.
+; 
+; Two tricks were involved in creating the effects in the image.  
+; To begin, I reduced the bailout radius to an unusually small 7, 
+; then I rendered the resulting image and its ballooning elements 
+; with the 'outside' set to 'tdis'.
+; 
+; The name "Fantasia in Blue" was inspired by the overall blue 
+; cast of the image, though I have toned the blue down a bit since 
+; naming the image.  The rating of an 8 is what I felt the image 
+; was worth at the time I rated it.  The calculation time of 3-1/2 
+; minutes is well within reason.
+; 
+; To avoid all calculation hassle, view the finished image on the 
+; official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And view it in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original, now classic, web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Saturday was ruled by heavy clouds here at Fractal Central, 
+; though the rain for the most part stayed to the west.  The 
+; fractal cats, who pay far less attention to the weather than the 
+; humans, ignored the temperature of 57F 14C and had a lazy day, 
+; taking turns sleeping on the new chair instead of fighting for 
+; it.
+; 
+; The humans, FL and I, had an uneventful day also.  With the 
+; graphic design work slowing down, more and more days are 
+; becoming uneventful.  The one thing not slowing down however is 
+; the FOTD, which I now have more time to work on.  The next FOTD 
+; will be posted in 24 hours.  Until then, take care, and if the 
+; climate changes, will the change be for the better or worse?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fantasia_in_Blue { ; time=0:03:37.29-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.300193586061464/+0.4252430675353652/\
+  2.728e+011 params=-3/-1.4142/-1.5/-2.8284/0/-93/0/0
+  float=y maxiter=1500 inside=0 outside=tdis
+  periodicity=6 mathtolerance=0.05/1
+  colors=000dD7iG5oJ2uM1uP0uS2uT4rW5qY7m`8kb9idBgfCd\
+  iEbjFalHdb9gQ2jG0_K9QPNFT_5Ym0`uCdiTiSjn9uq0ro0jn7\
+  blEajL_iT_g_ZfgXdoXcu_dkadbdfTffKigBjg1mi0oi0jf0fd\
+  4bcCZbNV`XS_fkHqu3uFfVCsbBzkCymEooFfqHYrIPsKGuK7u2\
+  T_0oH5uX9raEofIliNimSfqXjoaomfrkkwjqziuzguiLuP0uM2\
+  kJ5bH7TF90BI08O0ER0KY0Ta0`j0hp0mp0jp0ep2_n9VlGPgMK\
+  dMFbKCeIAgD7iN3iL3jI3kE3k13j03a03N03809u5DuEHuOMuX\
+  QufTsbPuaMu_QuZTuXWuW_uVcuTfuSiuQluOquNsuLwzczzczz\
+  mzzmzzqzzIzzLzzOzzSuuVqjXlZZgTacNd_HgVBjQ5mM0oJ0kN\
+  0jQ0iV0gY0db0bd0ai0_l0Zq0Ws0Vy0Tz0Sz0Qz0Ow4NlBL`IK\
+  QQKGXIJaIMdIPgHSkHVoHYrF`uFcuFduK_uOVoSQiWMbZHXbDQ\
+  f9Kj4Em38r32u30u30u30u30u30u30u30u30u30u30u30u30u3\
+  0r32k45gC7aK9WTBS`ELiFFrIBzK5zN1zO7zSCzVIzXNzZTzaZ\
+  zdbzfiziozkszmowojrqfnqairkuisiau_WsYTmWQgWNaVKWTH\
+  QTEKSBES9LVFSYLZ`SdcXjfbriiulouoskqfWqTEqF0q20q00s\
+  00w00z00z0C3HI3EN4CT7BZA8 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

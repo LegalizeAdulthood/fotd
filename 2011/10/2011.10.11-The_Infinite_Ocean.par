@@ -1,0 +1,114 @@
+;     Date: Tue, 11 Oct 2011 07:45:07 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-10-11 (The Infinite Ocean [6])
+;       Id: <1.5.4.16.20111011074511.1197c924@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- October 10, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The rating of a 6 that I gave to today's image might be a bit 
+; conservative.  The image trick is one I have often used before, 
+; and this repitition held down the rating a point or two.
+; 
+; The outer shape is a Julia set of East Valley of the 
+; Z^(1.4142)+C Mandeloid.  The chaotic stuff along the 'horizon' 
+; inside the Julia set is a grossly enlarged view of the north 
+; shore line of the East Valley, rotated so that its edge cuts 
+; straight and level across the scene.
+; 
+; The sickle-shaped stuff scattered about the lower part of the 
+; Julia set is made of the same stuff fractal trees are made of.  
+; In fact, only a small tweaking of the parameters will produce a 
+; fractal tree.
+; 
+; The name "The Infinite Ocean" means just what it implies.  The 
+; number of fractals is infinite, and the individual fractals are 
+; also infinite.  This produces a total of (infinity)*(infinity) 
+; possible fractals.  But do not be too overwhelmed.  Infinity 
+; multiplied by infinity is still infinity.  (Infinity must be 
+; raised to the power of infinity to produce a higher infinity.)
+; 
+; Today's image finishes on my 2000mhz machine in 13 minutes -- 
+; quite slow for an image with a rating of a 6.  Visiting the 
+; web site defeats this slowness however.
+; 
+; The official FOTD web site, now totally back up and running, may 
+; be accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The finished image is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original, now classic FOTD site is at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; The day began with fog here at Fractal Central.  The fog lifted 
+; by 10am, but the sun was filtered by a veil of higher clouds for 
+; the rest of the day.  The temperature of 75F 24C left nothing to 
+; be desired however.
+; 
+; The fractal cats were exhausted by yesterday's boisterousness, 
+; and spent most of the day sleeping.  The human beings, being 
+; human, did human things.  The next FOTD, an abstract thing, will 
+; be posted in 24 hours.  Until then, take care, and I really do 
+; enjoy the way this crazy world keeps getting crazier.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Infinite_Ocean { ; time=0:13:02.47-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t maxiter=100000
+  center-mag=-0.187793/0/0.8130081/1/-90/0 float=y
+  params=89.99/0/89.99/-78.25/0.13/0.00037/0/0/\
+  1.4142/0 inside=0 logmap=yes periodicity=10
+  colors=000D8JE9KFAMGBOHCQIDSJEUKFVLGWMHXNIYOJZPK_Q\
+  LaRMcRLdSLeSKfTJgTJgUKgUJgUJgVKgWLiXLkYMlZNmZQmZSl\
+  ZUj_YiY_hW`fTbeQddMebKgaGh`DhZAiY6kX2jY3kW3lU3lS3l\
+  Q3mP3nN3nL3nJ4nI4nG4nE4oC4oB4o94o74o54o43p83qC3qF3\
+  rJ3rN3sQ3sU3tY3t`3sd3rh3qk3oo3mr4jo4gm5ei5cf6ac6_a\
+  7Y_7WZ8UX8SU9QS9OPAMNAKKBIIBGFCEDCDBDCDEDEFEFGFGHG\
+  HIHIJIKKJLLKMMLNNMOONPPORQPSRQTRRUSSVTTWUUYVUZWU_X\
+  U`YUaZVb_Vd`WeaXfbXgcYhdZidZidZjcYkbYkaXl`XlaXmbWm\
+  cWmcWncVncVocUocUocUpcTpcTqcTqcSqcSrcRrcRscSscTsbU\
+  taUt`Uu_UuZUuYUvXUvWUwVUwUUxTUySUzRUzQZzPZzOZzNZzM\
+  ZzLZzKZzJZzIZzHZzGZzFZzEZzDZzCZzBZzAcz9cz8cz7cz6cz\
+  6cz6cz6cz6cz6cz6cz6cz6cz5cz5cz4cz4hz4hz3hz3hz3hz6h\
+  z8hzAhzAhzAhzAhzAhzAhzAhzAhzAhzAmzAmzAmzAmzAmzAmzA\
+  mzAmzAmzAmzAmzAmzAmzAmzAmzAmzArzArzArzArzArzArzArz\
+  ArzAwzAwzAwzAwzAwzAwzAwzAwzAwzAwzAwzAwzAwzAwzAwzAw\
+  zAwzAwzAwzAwzAwzAwzAwzAwz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

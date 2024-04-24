@@ -1,0 +1,108 @@
+;     Date: Wed, 12 Oct 2011 23:48:49 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 12-10-11 (Reckless Driving [No Rating])
+;       Id: <1.5.4.16.20111012234856.125fc7f4@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- October 12, 2011 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a blow-up of a tiny hole in the upper right 
+; part of the 'infinite ocean' image of October 10.  Out of 
+; curiosity I checked to see what the hole was about, and to my 
+; surprise found the fog shrouded midget car being driven quite 
+; recklessly by the driver whose head is clearly visible through 
+; the mist.  As soon as I saw the driver and his car, I knew the 
+; name of the image must be "Reckless Driving".
+; 
+; Actually the mini car is a Z^sqrt(2)+C minibrot that exists in 
+; its full form in the Mandelbrot aspect of the East Valley of the 
+; parent fractal, which resembles nothing quite as much as a 
+; kidney bean.  The holes in the fog obscuring the mis-shapen car 
+; and driver are basically Julia sets of what lies under them.
+; 
+; Since the entire image is kind of a joke, and the calculation 
+; time is a cumbersome 34-1/4 minutes, I gave it no rating.
+; 
+; The calculation may be avoided by viewing the finished image on 
+; the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high definition image is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site is at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Today's weather left much to be desired here at Fractal Central. 
+; Heavy clouds and occasional rain spoiled every outdoor activity, 
+; not that any were planned, while the temperature of 57F 14C kept 
+; the fractal cats in cold weather mode.
+; 
+; The local humans, FL and I, spent the day doing what needed to 
+; be done, and did it without powdermilk biscuits.  If all goes 
+; according to plan, the next FOTD will be posted in 24 hours.  If 
+; not, who knows?  Until whenever, take care, and if we took the 
+; money from the top one-percent of wealthiest people in the US 
+; and distributed it equally among the rest, how much would each 
+; person receive?  (Poverty cannot be significantly reduced by 
+; making the wealthy people poor.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Reckless_Driving { ; time=0:34:12.35-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.257646/\
+  0.768567/43.47637/1/-55/0 params=89.99/0/89.99/\
+  -78.25/0.13/0.00037/0/0/1.4142/0 passes=1 float=y
+  maxiter=100000 inside=0 logmap=248 periodicity=10
+  colors=000m8Jh9KcAMZBOUCQPDSMEUKFVLGWMHXNIYOJZPK_Q\
+  LaRMcRLdSLeSKfTJgTJgUKgUJgUJgVKgWLiXLkYMlZNmZQmZSl\
+  ZUj_YiY_hW`fTbeQddMebKgaGh`DhZAiY6kX2jY3kW3lU3lS3l\
+  Q3mP3nN3nL3nJ4nI4nG4nE4oC4oB4o94o74o54o43p83qC3qF3\
+  rJ3rN3sQ3sU3tY3t`3sd3rh3qk3oo3mr4jo4gm5ei5cf6ac6_a\
+  7Y_7WZ8UX8SU9QS9OPAMNAKKBIIBGFCEDCDBDCDEDEFEFGFGHG\
+  HIHIJIKKJLLKMMLNNMOONPPORQPSRQTRRUSSVTTWUUYVYZdb_X\
+  U`YUaZVb_Vd`WeaXfbXgzYKlZidZidZjcYkbYkaXlkXzaXmbWm\
+  cWmcWncVncVocUocUocUpcTpcTqcTqcSqcSrcRrcRscSscTsbU\
+  taUt`Uu_UuZUuYUvXUvWUwVUwUUxTUySUzRUzQZzPZzOZzNZzM\
+  ZzLZzKZzJZzIKmHKmGKmFKmEKmDKmCKmBKmAKm9Km8Km7Km6Km\
+  6Km6Km6Km6Km6Km6Km6Km6Km5Km5Km4Km4cz4cz3cz3cz3cz6c\
+  z8czAczAczAczAczAczAczAczAczAczczzczzczzczzczzczzc\
+  zzczzmzzmzzmzzmzzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
