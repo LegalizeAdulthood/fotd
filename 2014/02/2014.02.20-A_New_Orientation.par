@@ -1,0 +1,112 @@
+;     Date: Thu, 20 Feb 2014 17:29:48 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-02-14 (A New Orientation [A-5,M-7])
+;       Id: <1.5.4.16.20140220170813.2b07b2fc@earthlink.net>
+; ---------
+; 
+; FOTD -- February 20, 2014 (Rating A-5,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows the same scene and uses the same color 
+; palette as yesterday's image, yet it appears totally different.  
+; The reason is that today's image is sliced through the Julibrot 
+; at a different angle.  And while yesterday's image calculated in 
+; 10 seconds, today's takes 5-1/4 minutes to finish.  This time 
+; difference is a result of the high speed of the mandel formula 
+; hard-coded in Fractint.
+; 
+; As is usually the case with images sliced at such odd angles, I 
+; needed to stretch and skew the image to bring it to reasonable 
+; proportions.  I re-used the same color palette to keep track of 
+; the elements common to both images.
+; 
+; The artistic aspect rates only a 5.  The stretched and tortured 
+; features are really not all that attractive.  The math aspect 
+; however is worth a 7, up four points from yesterday's lowly 3.  
+; The four dimensional nature of the Julibrot plays a great part 
+; in the math rating of today's image.
+; 
+; The calculation time of 5-1/4 minutes is slow by any standards, 
+; but visiting the web sites will eliminate the calculation wait.
+; 
+; The finished image is or soon will be posted on the FOTD web 
+; sites at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of sun and clouds with a high temperature of 48F +9C made 
+; today feel like spring despite the huge piles of snow still 
+; lying around.  The fractal cats took advantage of the sun when 
+; it was shining, then got into a tussle that grew a bit too 
+; heated.  The fractal humans watched the olympic ice skating, but 
+; became only mildly disappointed when the U.S. (in the opinion of 
+; many, the greatest nation on earth), failed to win a medal.
+; 
+; Unless something unexpected happens, the next FOTD, which is 
+; already in the bag, will be posted in 24 hours .  Until next 
+; time, take care, and is there such a thing as a real illusion?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_New_Orientation { ; time=0:05:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.000000000\
+  00429617/+0.00000000000046497/1.427789e+012/\
+  0.02601/6.40410471357221045/70.6951562808555707
+  params=-105.18/-176.87/37.25/8.91/-1.7864399162298\
+  41/1.20723576e-007/-1.786439916229841/1.20723576e-\
+  007/2/0 float=y maxiter=6400 inside=0 logmap=-893
+  periodicity=0 mathtolerance=0.05/1
+  colors=00000C00C00D00D00E00F00G10H20I30J40K50L60M7\
+  0O81Q92SA3TB4UC5VE6WF7YG8_H9aICcNFeTHgZKicNmiQroTv\
+  tVzKHePIaUJYZKUcLRhLNmPJrUGvZCzc8zh5z0Dc6KP8DDA70C\
+  14G58K8BOCFRFJVIMZMQbPTeSWbOY`K_YHaWDcUAVP9NL8FH77\
+  D66A960C6AF5FI5KK5PN4UQ4ZT4cV5eY6g`7hb8je9lhAmjBom\
+  CrpCwrLzzHcxDUv9Kt5Cs8FqAHpCJnFLmHNlJQjMSiOUhQWfTY\
+  eV`cXbb_daaffchmejzbhm`ffZd`WbaU`aSZbPXcNVdLTdIReG\
+  PfENgCMgELeGLdIKcJKaLK`NJ_OJYQIXSIWTIUVHTXHSYHRVOS\
+  SVSQ`TNgTLmUItUGzUHxVHwVHuVItVIsVIqVJpVJnWJmWKlWKj\
+  WKiWLgWLfWLeWTc1WcBYcK_cTbcbdckfctgcthcsictjcukcvm\
+  cwncxocypczqczrczscztczuczvczwczxczzczzczzczzczzcz\
+  zczzczzczzczzczzczzczzczzczzczzczymzzmzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,114 @@
+;     Date: Sat, 15 Feb 2014 16:34:10 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-02-14 (Loch Mandy Monster [A-6,M-5])
+;       Id: <1.5.4.16.20140215161231.2bcf3fbc@earthlink.net>
+; ---------
+; 
+; FOTD -- February 15, 2014 (Rating A-6,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image was done in haste, and it shows in the erratic 
+; coloring, which holds the art rating to a 6.  The math trick is 
+; so old that I could rate it no higher than a 5.
+; 
+; The name "Loch Mandy Monster" came to mind when I noticed that 
+; the eight small open areas surrounding the central minibrot are 
+; shaped quite like the monsters that people sometimes claim to 
+; have seen swimming in Loch Ness as well as in other long thin 
+; lakes that were once arms of the open sea.  Being a sensible 
+; person when common sense is appropriate, I find it hard to 
+; believe that a breeding population of physical monsters could 
+; thrive and remain undetected in these lakes.  As for monsters 
+; from another dimension, I have no comment.
+; 
+; The oversized parent fractal resulted when I combined 4 parts 
+; of Z^(-1.5) with 1 part of Z^(-6) before adding (1/C) on each 
+; iteration.  This parent is shaped like a violin lying on its 
+; side.  Today's scene is located on a minor filament extending 
+; from a small bud on the shore line of a large critical bud at 
+; the east end of the parent fractal.
+; 
+; The calculation time of only 45 seconds will pass in a flash and 
+; a half.  Whether instant satisfaction is found when the flash 
+; subsides depends on the whim of the individual fractalist.  
+; Visiting the web sites will reduce any fractal disappointment.
+; 
+; So avoid great disappointment.  Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with snow here at Fractal Central.  By the time it 
+; ended just after noon about 6 new inches or 15cm had piled up.  
+; The fractal he-man leaped into action as soon as the snow ended, 
+; and within an hour the sidewalk was clear.  But the sidewalk now 
+; looks like a canyon, with shoulder high cliffs of snow and ice 
+; piled along both sides, totally covering FL's prize rose bushes.
+; 
+; But now there are few places left to pile the snow, and even 
+; worse, the coffee is running low.  Luckily, more coffee is 
+; available at the nearby convenience store, which never closes, 
+; but with heavy snow again expected on Monday, the only place to 
+; pile it will be on top of the present piles.  The fractal cats, 
+; never ones to worry themselves over human problems, were puzzled 
+; about the strange appearance of the outer world, but soon turned 
+; their attention to play and food.
+; 
+; The next FOTD will be posted in 24 hours, give or take a few.  
+; This is not a guarantee.  With nothing else to do however, it is 
+; reasonably assured.  Until then, take care, and would fractals 
+; still exist even if the so-called 'big bang' that supposedly 
+; created our universe had never happened?
+; 
+; 
+; Jim (Why ask a stupid question?) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Loch_Mandy_Monster { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=+1.808025176460789/+0.3512848505070288/\
+  3001146/1/141.25/0 params=4/-1.5/1/-6/0/0/0/0
+  maxiter=1350 inside=0 logmap=31 periodicity=6
+  colors=0005BL9Jn9FN9JOEJPGJkJJi5JV5J85DNJJiBJSBJWA\
+  Jk5JNWJbiJUmJLMJDzJCzzUzzUzzUzzzzzUzzzzzUzzzWVMSPP\
+  PJSLDVh8Yh6nh4U_3nZ08h0nz0IzJnZ7arBnZFar7nZ0azTnZ0\
+  aDYeGYfJYhM_iPfjQY_QYQZYEgY2lYHqYVuYhqYWnYKjY8gY0b\
+  q0Yr2Ts5Os7JtAEuDAuFhugavhWwiQwjJxkDyl7ymBtgEobHhX\
+  KhSOhNRhHUhCXh7YhRZhjhheqha_hfbhcehahh_jhYmhVpmTsm\
+  RumPnmLgmI`mFUmBNm8Gm57mmOmEemPvmZqmVmmShmOden_gnW\
+  hnRinNjnTbnYYnbWnpYzpTzpTzpTzqTzqTzqTzqTzqczqczqcz\
+  qczqczqczqczqczrczrczrczrczrczrczrczrczrmzrmzrmzqm\
+  zrmzrmzrmzrmzrmzrmzrmzrmzrmzrmzrmzsmzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

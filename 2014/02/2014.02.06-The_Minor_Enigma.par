@@ -1,0 +1,106 @@
+;     Date: Thu, 06 Feb 2014 16:34:05 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-02-14 (The Minor Enigma [A-7,M-6])
+;       Id: <1.5.4.16.20140206161218.2aaf3df4@earthlink.net>
+; ---------
+; 
+; FOTD -- February 06, 2014 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's FOTD we take a brief break from the world of 
+; HyperMandelbrot stuff and return to the world of double negative 
+; images.  The parent fractal of today's fractal combines Z^(-5.5) 
+; with 3 parts of Z^(-1.5).  This parent is little more than a 
+; near shapeless jumble of large bays oriented east-west and 
+; surrounded by a field of smaller disconnected satellite 
+; fractals.  Today's scene is located on the shore line of a large 
+; bud on the eastern edge of the easternmost large bay.
+; 
+; The name "The Minor Enigma" has little to do with the image.  In 
+; fact, it has little to do with anything, since it came to mind 
+; at lunch time, while I was watching the 'news'.
+; 
+; The art aspect rates a 7, and even this might be a bit too 
+; liberal.  The math could be rated no higher than a 6, since the 
+; math trick is over 10 years old.
+; 
+; It's a different story with the calculation time however.  The 
+; one minute it takes to finish the calculation on a SOTA machine 
+; can hardly be surpassed other than by checking one of the web 
+; sites.
+; 
+; Calculation may be avoided by viewing the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today dawned mostly clear and cold with a temperature of 9F -13C 
+; here at Fractal Central.  The sun prevailed through the rest of 
+; the day, raising the temperature to an afternoon high of 27F 
+; -3C.  The fractal cats enjoyed the sun, which despite the cold 
+; is getting higher and stronger every day.  The fractal humans 
+; had a bit of a problem digging out the fractal vehicle, but 
+; after a bit of work, freedom was achieved.
+; 
+; The next FOTD will be posted in 24 hours.  I would bet a week's 
+; income on it.  Until then, take care, and biologists tell us 
+; that we have brains.  I have no trouble with this.  But then 
+; they claim that our conscious selves are by-products of our 
+; brains, and this is where I get confused.  It appears to me that 
+; the biologists are claiming that our brains are creating the 
+; by-products that know they have brains creating by-products.  
+; This is circular reasoning if I ever heard it.  
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Minor_Enigma { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+1.796227165862817/-0.3708379226392214/\
+  4.632749e+010/1/67.5/0 params=1/-5.5/3/-1.5/0/0/0/0
+  float=y maxiter=1500 inside=0 logmap=93
+  symmetry=none periodicity=0 mathtolerance=0.05/1
+  colors=000K_UKdUKaZKfZKdcKicKghKmhKkmKpmKprQqrKtvV\
+  szXxz`tzgtzgtzkvzkvzozzozzrzzrzzzzzzzz0Av00rA0m2Eh\
+  02b0Dn0Fk0Mp0Tv0`z0gz0pz0iz0dz0Zz0Tx1Ov5KtAFpGAmM5\
+  kT1gZ0ed0db0b`0bZ0bX0`V0`V0`T0ZR0ZP0ZO0XO0XM0XK0VI\
+  0VG0VG0VK0`M0gP0mR0tV0zX0zT0zM0zF0zA0t50`00I002000\
+  00100600D00K00K00I00I00I00I00I00G00G00G00G00G00G10\
+  F10F20F20F40F40D40D50D50D60D60D80B80BA0BA0BB0BB0AB\
+  0AD0AD0AF0AF08G18G18I28I48K46K56M56M66O86e85eA5gA5\
+  gB5iD5iD4kF4kF4mG4mI4pI2pK2rK2rM2tO2tO1bZ1bZ1b`1db\
+  1db0ed0ee0ge0gg0ig0ii0kk0kk0mm0mm0pk0pg0pg0ri0ri0t\
+  k0tm0vm0vp0xp0xr0`g``gd`eg`ek`dp`dr`bvKzzKzzMzzMzz\
+  MzzMzzOzzOzzOzzOzzOzzPzzPzzPzzPzzzz0zz0zz0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zt0zv0zv0zx0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0Dz0Fz0Fz0Fz0Fz0Gz0Gz0Gz\
+  0Gz0Gz0Iz0Iz0Iz0Iz0Kz0Kz0 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

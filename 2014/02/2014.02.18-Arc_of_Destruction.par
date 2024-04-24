@@ -1,0 +1,99 @@
+;     Date: Tue, 18 Feb 2014 20:36:49 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-02-14 (Arc of Destruction [A-6,M-8])
+;       Id: <1.5.4.16.20140218201512.2b6f50b0@earthlink.net>
+; ---------
+; 
+; FOTD -- February 18, 2014 (Rating A-6,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is not nearly as threatening as its name implies.  
+; The "Arc of Destruction" is the arc of evaporation that is 
+; advancing from the southeast and has been caught in the process 
+; of devouring the central minibrot.  The position of the arc is 
+; determined by the value of the imag(p3) parameter, which sets 
+; the escape radius.  Increasing the value moves the arc to the 
+; left, devouring more of the minibrot; decreasing it moves the 
+; arc to the right, restoring some of the already devoured stuff.
+; 
+; The art aspect of the image is worth only an average 6.  The 
+; math aspect rates an excellent 8.  These arcs of evaporation are 
+; one of the more interesting fractal things I have yet stumbled 
+; upon.
+; 
+; Perhaps the best aspect of the image is its fireball calculation 
+; time of a mere 20 seconds.  The parameter file must first be set 
+; up however, but even this may be eliminated by checking the FOTD 
+; web sites.
+; 
+; So avoid un-needed stress.  The finished image is posted online 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with light snow.  By the time it ended around 
+; noon, a fresh 2 inches, 5cm, of snow covered the ground.  This 
+; amount is nothing, and was cleared away with a broom in 15 
+; minutes, while the fractal cats watched and supervised from 
+; their shelf in the window.  The fractal he-man complained of an 
+; ache in the back, while FL listened with sympathy.
+; 
+; The next FOTD will be posted in a matter of hours.  The big 
+; mystery is the exact number of hours.  Until whenever, take 
+; care, and how can you tell a conservative from a liberal?  
+; Conservatives prefer dogs, who obediently follow orders; 
+; liberals choose cats, who do what they please.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Arc_of_Destruction { ; time=0:00:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=3.66306/-3.20101/0.9066554/1/-161/0
+  params=-1/-6.6/-3/-1.6/0/1050000000/0/0 float=y
+  maxiter=1000 inside=255 logmap=9 periodicity=6
+  colors=000M8FK4DO7GS9IWBL_DNbFPePKgZGMcc0gz9bmHZ`P\
+  UOXQCaUBfYAj`9od8th7xk7sdBnZEiTHdNL_HOVBRR5UNEPKMK\
+  HVFEbABk58s1Fp5Mm9TjD_hGEXgIXiMXjQXlUXmYXnaXpeXqiX\
+  rkoYifXhZXgQWfIWe9Vd1Vg3Qi4Ll5Gn6Bq76s82jLLaYcTjuR\
+  PiP3ZJKUD`PJWOPSNUNM_JLdEKjAJo6JeTWWnhYeeZYc_Q``HZ\
+  a9Wb1UYCQUNNQYKMgHajKUkLNkLGkM9kM2kM6mPAnRDpUHqWLs\
+  ZOt`Lo_Ik_FfZCbZJXaQSdXNgcHjjCmq7pw2rw9jwFbwLVwRNw\
+  XGoVHhUH`SIURIQRHMRGIRFERFATC7U94V7BnYpqbmsUjtMhuE\
+  klLndSpXZsPeuHlx9sz1zqBthKn`UiSbcJlYBuTMsUWqUfoVpm\
+  VzkVpgXgcZY_`PWbFSd6Pe5Ud4Yc3bb3fa2k`1o_1s_3qa4ob6\
+  nd7le9kgAihBhiDkdFm_GpVIrQJuLLwGMyCLtGKpJJlMJhPGeO\
+  DbOB_O8XN5UN3SN8RRDRVIQZNQbSQfXPjaPnePrdQpdQndQldQ\
+  kdQidQgdQedQdYX_RcWLjREqN8wJHnPQeVZY_gPepGky8pnJjd\
+  Ue`ZgXciUhkQlmNqoJvqGzrQmm_ahhQcbPdYOdTNeOMeILeDKf\
+  8Jf3If4Ld5Nb6Pa6S_7UZ8WX8YWEXUJWSOVQUUOZTMcTKdULeU\
+  MfVNgVOhWPiWQjXRkXSODI000 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

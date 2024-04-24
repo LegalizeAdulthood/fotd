@@ -1,0 +1,105 @@
+;     Date: Thu, 13 Feb 2014 18:27:02 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-02-14 (X Marks the Minibrot [A-7,M-7])
+;       Id: <1.5.4.16.20140213180522.2b3f73aa@earthlink.net>
+; ---------
+; 
+; FOTD -- February 13, 2014 (Rating A-7,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image exists in the parent fractal that results when 
+; 10.5 parts of Z^(-1.1) are combined with 1.2 parts of Z^(-5.5) 
+; and (1/C) is added on each iteration.  This parent is a hugely 
+; oversized circular island with three large bays spaced evenly 
+; along its perimeter.  The surrounding ocean is infinite.  The 
+; image is located in a valley enclosing a small but curious 
+; double bud on the eastern shore line of the island.
+; 
+; The name "X Marks the Minibrot" refers to the chunky X-shaped 
+; element almost filling the frame.
+; 
+; The art rating of a 7 is average for a FOTD fractal.  I see a 
+; certain 'forced' effect in the deep violet background, which 
+; appears just a little too artificial to give the image an above 
+; average rating.
+; 
+; The math rating of a 7 is average for images created with the 
+; overworked MandAutoCritInZ formula.  This formula has probably 
+; been the most prolific of the FOTD formulas.
+; 
+; The calculation time of 4-1/4 minutes is slower than I would 
+; prefer.  I leave it to the individual fractal fan to set up and 
+; run the parameter file, and then decide if the result was worth 
+; the effort.  All risk of wasting time may be eliminated however 
+; by checking the web sites.
+; 
+; The image has been calculated and posted for instant viewing at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with a temperature of 16F -9C and light snow here 
+; at Fractal Central.  The snow turned heavy by 10am and continued 
+; until mid-afternoon, when it slacked off to a light misty snow.  
+; The temperature heached a high of exactly freezing, which would 
+; have been fair enough if there had been no snow.  The fractal 
+; cats were fascinated by the snow, and spent much time in the 
+; windows, wondering why everything had turned white.  The humans 
+; spent the day working and setting up for snow clearing.
+; 
+; The next FOTD will be posted in the near future, most likely 
+; tomorrow.  Until whenever, take care, and the more one thinks 
+; about the meaning of life, the less one knows.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+X_MarksTheMinibrot { ; time=0:04:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+3.233638461699/-1.500873564601/2418817\
+  /1/-142.5/0 params=10.5/-1.1/1.2/-5.5/0/1500/0/0
+  float=y maxiter=2100 periodicity=6 logmap=296
+  colors=00000A10A20A30A40A50A50A50A50B50C50D50E50F5\
+  0F50G60F60F60F70F70F70F80F80F80F90H90F90K90I90NA0O\
+  80R90S60S70Q60O50M40K30I20G10E00B0080050040030020c\
+  0Jt2Ls1Ns0Px3Qo6Ru9SmCTkEWgGYdI_`KbYMdUOfRQiNSkKUm\
+  GWoDXnEYnEZmFZmF_lG`lG`lGakHbkHbpIcjIduRdiN_waViXQ\
+  ziMifGwpBip6zzAkk5zq9mWDwlHoGKoZJhHIhHHaHGZHFWIESI\
+  DPICMIBJIBKJDLKFMKHNLJOLLPMNQMPQNRRNTSOVTOXUPZVP`W\
+  QbWQdSUaOY_KaXGeVCiTP9aSB`UC_XDZZEY`FXcGXeHWgIVjJU\
+  lKTRH7SF6SD5zJ4S93pG2S61kGAb7JgCSl8_cBVVDQXaZZyf_u\
+  d`rcanbbk`ch_ddZdaXeYWfVVgSThOSiLRiIQnLXkMaiNfgNkd\
+  Op8icAdTC`JJWGQSEWOBbJ9hF6oB4u72kH8bQDTZIKzmBrcImV\
+  OcYVY_`RbgLea8gmOhdNibZjpnknoflpajqXhqzfrNrszcsDqq\
+  zdoLemPolSfjWfh_gfcgefdaabYX_VSYRNVNITKDQG8OD4OW3O\
+  n2UjA_fIebPkZXpVckSafP`aMZYJYTGzODzJAzF7z7Vz0qzCcz\
+  Ocz_czEczGczIczKczMczOczQczRmzUmzXmz_mzamzdmzgmzim\
+  zczzYzzTzzNzzIzzCzz7zzFzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
