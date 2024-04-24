@@ -1,0 +1,105 @@
+;     Date: Mon, 12 Aug 2002 10:24:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-08-02 (The Richest Fractal [7])
+;       Id: <1.5.4.16.20020812102509.2a0759c0@pop.mindspring.com>
+; ---------
+; FOTD -- August 12, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image, which rates a 7, is named "The Richest 
+; Fractal".  Yes, I realize that the Mandelbrot set is in all 
+; likelihood the overall richest fractal, but in the M-set (and 
+; the Julia sets) it is not possible to illustrate much of the 
+; overall variety in a single image.
+; 
+; However, in today's image, which is a scene in a valley of the 
+; Z^1.555+C Mandelbrot fractal, much of the variety does appear in 
+; a single picture.  This is possible because the branch cuts have 
+; thoroughly scrambled the original fractal into an omelet of 
+; which today's image is a small sample.
+; 
+; As is almost always the case in my FOTD fractals, there is a 
+; midget at the center.  And there are midgets also lurking near 
+; the top and bottom of the image.  This abundance of midgets is 
+; quite unusual in this exponent range, and, combined with the 
+; overall variety, makes the image one of the richest of all time. 
+; The rating of 7 might be a bit liberal, but a liberal view makes 
+; one feel better, so a rating of 7 it is.
+; 
+; Enjoy the fractal scene!
+; 
+; The render time on my tired old P200 machine is 9 minutes.  On a 
+; state-of-the-art screamer it will be notably less, but not 
+; 1/10th the time.  Apparently, the screaming machines with 10 
+; times the cycles per second do less fractal calculation on each 
+; cycle.  The wait-to-see can be reduced even further by visiting 
+; the web site of Paul at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or of Scott at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; and downloading the completed GIF image from there.  But allow a 
+; few minutes for the image to be posted before visiting.
+; 
+; The fractal weather Sunday here at Fractal Central was typical 
+; summer fare, with hazy sunshine, a temperature of 93F 34C, and 
+; moderately high humidity.  The dynamic fractal duo passed the 
+; day alternating between the cool indoors and the rather 
+; uncomfortable (for humans) outdoors.
+; 
+; As for this human, he's about ready to pass the day changing the 
+; work to be done into work done.  The task will take about 6 
+; hours, so until next time, which will be on the 14th, take care, 
+; and keep searching.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+TheRichestFractal { ; time=0:09:15.03--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.66148150361188480/+0.368251074896650\
+  90/798.3305/1/107.5/2.71022093656370089e-012
+  params=1.555/0/-4.64/0 float=y maxiter=8000
+  inside=0 logmap=110 periodicity=10
+  colors=000wMUtLTqKToKSlJSjJRgIRdIQbHQ`DNaHQbLSbPUd\
+  SXeWZg_`ibckfeljgnmjoqlqunrxpstnsplsljshhsdgs`esXc\
+  tUatQ_tMZtIXtEVtATt6Ru2Rt3Qs3Pr3Or3Oq3Np3Mo4Lo4Ln4\
+  Km4JlGIoIDlKIiMMfOQcQVbSZcUadWeeYhf_kganhcqietjgwi\
+  fugdsfcqdboc`ma_k`Zh_XfYWdXVbVT`USZSRXRPVQOSONQNLO\
+  LKMKJKIHIHGGGFEKIKOKPRMUVPZZRdaTieWniYshGyl_xtwyps\
+  wmpujmtgjrdfpacoZ`mWYkTVjQRhNOfKLeHIcCDcEFbGGbHHbJ\
+  IaLKaMLaOM`QN`RP`TQ`VR_WS_YU__VZ`WZbXZdZYe_Yg`Ymc_\
+  haYc_WZYVUWTQUSLSQGQPBON7RM9UUAa`8leBhgDehFbiHZjJW\
+  kLTmNPnPMgRJeUFhTGqSGqRHrRHrQIsPItPJtOJtNKuNKuMLvL\
+  LvLMwKMwJNxHMzJNxKOwLPvMQuNQtORrPSqQTpRUoSUnTVmUWk\
+  VXjWXiXYhYZgZ_f_`d``caabbbacc`dc_edZeeZffZggYhgYih\
+  XjiXkjXlkWmlWnmVonVnoWonVonUonTonSonRpnRpnQpnPpnOp\
+  nNqnNqnMqnLqnKqnJrmJrmIrmHrmGrmFsmFsmEsmDsmCsmBtmB\
+  tmAtm9tm8tm7tm7sl9rlBqlDpkFpkHokJnjLmjNljPliRkiTji\
+  VihXhhZggahh`hi`hj`ik_il_ }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

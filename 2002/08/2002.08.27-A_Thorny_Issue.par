@@ -1,0 +1,105 @@
+;     Date: Wed, 28 Aug 2002 00:00:47 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-08-02 (A Thorny Issue [8])
+;       Id: <1.5.4.16.20020828000142.29bf5b02@pop.mindspring.com>
+; ---------
+; FOTD -- August 28, 2002 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image is closely related to the 
+; parent of the image of Aug 26th.  Negative portions of Z^(-2) 
+; and Z^(-3) are combined before (1/C) is added.  The resulting 
+; fractal consists of a large central bay with a non-critical 
+; cloverleaf-like island at the center.  This cloverleaf holds 
+; little of interest, but the western shore of the bay features a 
+; very prominent sub-bay, with critical buds and filaments.
+; 
+; The filaments are not the simple jagged lines of the M-set 
+; filaments, but are twisted into loops and rings that hold 
+; countless midgets.  Today's midget lies in a branch of a tiny 
+; ring near the tip of a filament.
+; 
+; Actually, the midget is not there at all, for the escape radius 
+; of a full googol has totally evaporated the outside material, 
+; leaving only a blank inside of trapped points.  But all is not 
+; lost.  The inside fill of bof61 has revealed the ghost of the 
+; midget that once was there but now has gone.
+; 
+; Curiously, the bof61 inside fill is the only fill that produces 
+; such a fine image.  I think the bof61 fill colors the inside 
+; points according to which iteration comes closest to the origin, 
+; but I'm not sure.  Regardless, the image rates an exceptional 8, 
+; which is the highest rating in several months.
+; 
+; The name I gave to the image, "A Thorny Issue", is totally 
+; whimsical.  The phrase simply came into my head as I studied the 
+; scene.  (I'll bet a psych-something or other could learn a lot 
+; about my secret unconscious life from the titles I sometimes 
+; half-consciously give to my FOTD's.)
+; 
+; The 3-minute render time of the parameter file is fair enough.  
+; A download of the finished image is even fairer.  The completed 
+; image may be found on Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and on Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather here at Fractal Central on Tuesday featured 
+; morning sunshine followed by increasingly thick afternoon clouds 
+; and a high temperature of 86F 30C.  The duo of fractal cats must 
+; have approved, for they spent several hours prowling in the 
+; holly thicket at the bottom of the back yard, cleverly avoiding 
+; the burdock burrs and thistles that, despite all attempts at 
+; eradication, still grow there.
+; 
+; And if I'm to avoid a late start in the morning, I must soon 
+; shut down the fractal shoppe and call it a night.  Until the 
+; next mind-boggling FOTD appears on Friday the 30th, take care, 
+; and be as happy as the fractal duo.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Thorny_Issue { ; time=0:03:39.15--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-6.779241253387853/+2.975306275944614/2\
+  .396909e+008/1/-87.5/-1.68222442726295718e-005
+  params=-0.5/-2/-0.1/-3/0/1e+100 float=y maxiter=295
+  inside=bof61 logmap=40 periodicity=10
+  colors=000hhzhhzhhzhhzlRrU_EPV9TRARRASKAPGATDAaPJi\
+  _Srj`zuiirVUpHM_XYlcirjuwpnrlhmhahdWc`QZXJUTDPP7LM\
+  I`wSbs`dojfksghreeqcbpa`o_YnYVmWTlVQkTNjRLiPIhNFgL\
+  DfJAeH7dG5cFAbEEaDJ`CN_BSZAWY9`Y8dX9eX9fXAgXAhXBiX\
+  BjXCkXClXDmXDnXEoXEpXFqXFqVy4Xw8ZvC`uFatJcsNerQgqU\
+  hpYjo`lndnmholkmihmgemebmc`maYmZVmXSmVQmTNmRKmOHmM\
+  FmKCmI9mG6mE4mG5mI6mK6mM7mO8mQ8mR9mTAmVAoXBqZzs`zu\
+  bzwczx`zxYzyVzySzyPzzSzzVzzSzzPzzNzzKzzHzzFzzCzz9z\
+  z7zzCzzGzzKzzPzzTzzXzz`zzezzizzmzzqzzhzz`zzTzzUzzV\
+  zzWzzWzzXzzYzzZzzZzz_zz`zzazzazzczzezzgzzizzezzazz\
+  YzzUzzRzzNzzJzzFzzCzz6zz1zzFzzSzzPzzNzzLzzOzzRzzTz\
+  zWzzYzz`zzbzzezzhzzjzzmzzozzrzztzzwzzyzzuzzrzzozzl\
+  zzizzfzzczz_zzXzzUzzRzzOzzLzzIzzFzzGzzGzzGzzHzzHzz\
+  HzzIzzIzzIzzIzzUzzUzzUzzVzzVzzVzzWzzWzzWzzWzzXzzXz\
+  zXzzYzzazzYzzYzzZzzZzzZzzZzz_zz_zz_zz`zz`zz`zz`zza\
+  zzazzazzbzzbzzbzzbzzczzcz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,94 @@
+;     Date: Tue, 20 Aug 2002 09:40:37 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-08-02 (Fractal Kernels [7])
+;       Id: <1.5.4.16.20020820094128.2dcf8366@pop.mindspring.com>
+; ---------
+; FOTD -- August 20, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image is corny.  This does not mean that it is 
+; trite and old-fashioned, it means that it is filled with corn 
+; kernels.  The corn in the image appears in neat rows, almost the 
+; way corn kernels grow on the corncob.  This corniness inspired 
+; the name "Fractal Kernels".
+; 
+; The effect of corn kernels is produced by iterating the formula 
+; Z^(-2)-0.01(Z^2)+(1/C), and doing the calculation with the 
+; bailout radius set to 99.999, (which is critical), and the 
+; outside set to < fmod >.
+; 
+; The small range of colors in the image was not intentional.  It 
+; exists because the image uses only a small part of the 256-color 
+; palette.
+; 
+; Unwilling to have yet another consecutive 6-rated FOTD, I rated 
+; today's image at a rather liberal 7.  Perhaps a 6-1/2 would have 
+; been more appropriate, but my rating scale does not have half-
+; step increments.
+; 
+; The 4-minute render time is acceptable, but downloading the 
+; completed GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; is more acceptable.
+; 
+; The fractal weather Monday here at Fractal Central was hot and 
+; humid enough to keep the fractal cat duo housebound.  The high 
+; temperature reached 97F 36C at 4pm, and as is usually the case 
+; these days, the promised cooling showers once again failed to 
+; appear.
+; 
+; One thing that had better appear however is the work that's due, 
+; and the only way to finish the work is to start it.  So without 
+; further fanfare, I'd best get started.  Until next time, on the 
+; 22nd, take care, and watch your bailout.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractal_Kernels { ; time=0:04:00.35--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-4.43910986029936400/-5.965792592977377\
+  00/1.175254e+008/1/-42.4999968823281691/-4.8222949\
+  2321933906e-006 params=1/-2/-0.01/2/0/-0.001
+  float=y maxiter=1000 inside=0 proximity=0.5
+  outside=fmod logmap=yes periodicity=10
+  colors=000vtzvtztszqrzqqzopznoznozlnzilzgkzeizegzd\
+  gzafz_dz_czYazXazV_zTZzTXzQVxOTvMTqMQoKOnIOlHMgFKe\
+  FKdDIaBHY9FX9FV7DT5BO3BM29K27I07F05D03B03905H27S39\
+  Z5Bc7Df9FiBHkDIzFKzHMzIOzKQzKQzKQzKQzKTzKTzKTzKTzK\
+  VzKVxMVvMVqMXoMXnMXiMXgMYeMYaMY_MYYKX_KX_IXaIXaHXd\
+  HXdFXeFXeFXgDXgDXiBXiBXl9Xl9Xn9Xn7Xo7Xo5Xq5Xq3Xt3X\
+  t3Xt5Yq7Yo7Yn9YlB_iB_gD_gF_eF_dHaaIa_IaYKaXKaXMdVO\
+  dTOdQQdOTeMTeKVeKXeIXeHYgFYgD_gBagBag9di7ei5ei3gi2\
+  il0il0ll0ll0nl0on0on0qn0tn0tn0vo0xo0xo0zo0zo0zv0zz\
+  0zz0zz0zz3zz7zzBzzDzzDzzFzvFzoHtiHndHgXIaQIXKKQDKK\
+  7MF2M90MH3KM9KTFKYMIdTIiYIoeHvlHzqHzzFzzFzzFzz7zz0\
+  zz0zz0nz0vz_zzazxdzxdzzatzaaz_Kz_5z_IqQVgIeX9tM2zB\
+  0z20z00zT3zO5zM7zK9zI9zHBxFDqDFlBFTIDBQB0X93_IDaTM\
+  d_VeidgqnizvlzzIzz0zz0zv0zzIzzVzzezzqzxzzqzqlziezd\
+  dviaIoqD_z7Kz37z7FzBMzFVvI_oMgiQodVx_YzOizDtz2zz0z\
+  z0zz0zz0zo3ze5zV9zKBzBxtz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,95 @@
+;     Date: Sat, 24 Aug 2002 09:29:49 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-08-02 (Sliced Melons [7])
+;       Id: <1.5.4.16.20020824093043.29e7ee10@pop.mindspring.com>
+; ---------
+; FOTD -- August 24, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Sliced Melons".  If the first three 
+; letters of the second word are reversed, the title becomes 
+; "Sliced Lemons".  But there is nothing sour about the image, 
+; which uses the < tdis > outside coloring option.  In fact, 
+; after careful consideration, I rated the image at a 7.
+; 
+; The parent fractal combines portions of Z^2 and Z^3.  The whole-
+; number exponents result in a fractal that has no branch-cut 
+; discontinuities when calculated with the outside set to display 
+; the standard equal-iteration bands, but the < tdis > outside-
+; coloring algorithm used in today's image introduces the disconti-
+; nuities that are visible in the image.
+; 
+; The parent fractal is a distorted Mandelbrot set rotated 180 
+; degrees, with lots of interesting activity on its negative (in 
+; this case, positive) stem.  East (in this case, West) valley of 
+; the parent fractal is also decorated with interesting spurious 
+; activity, though I did not explore this area.
+; 
+; With a render time of 6 minutes on my humble fractal machine, 
+; today's fractal is a bit slow, making a download of the 
+; completed image the marginally better choice.  The download is 
+; available on the W.W.W. at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Friday here at Fractal Central was overcast 
+; and very humid -- wet enough to swim in.  The temperature of 86F 
+; 30C was about average.  A few drops of rain fell in the after-
+; noon, which is too bad, since we're in a rather severe drought.  
+; The fractal cats finished their outdoor activity before the 
+; raindrops appeared, so, unlike the local farmers, they were not 
+; displeased.
+; 
+; With thunder-showers prowling the area this morning (Saturday), 
+; and some real rain hopefully soon to occur, I'd best wrap up 
+; this edition of the FOTD and see whether I can console the 
+; dynamic duo.  Until next FOTD on Monday the 26th, take care, and 
+; be serendipitous.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Sliced_Melons { ; time=0:06:12.34--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix2 function=ident passes=1
+  center-mag=+2.943452875421294/+0.00522078768874016\
+  /1.530056e+012/1.0002/177.5/0.00916304379004028585
+  params=1/2/-0.2/3/-0.25/0/0/0 float=y maxiter=1000
+  inside=0 outside=tdis symmetry=none periodicity=10
+  colors=000RmRUmUXnX`n`cocgofjpjnpmqqptqsrnpqknpiln\
+  fimdglaejZciX`hUZfSXePVdMSbKQaHO`FMZINYLOXOPWQPVTQ\
+  TWRSYRR`SQcTPeTNbSM_SLXSJVSISSHPSGMSEKRDHRCERBBR99\
+  R86R73R61R7GM8UH9gCAu7IkEQaKYSQdIWUOVKTUAZT0cS4fW7\
+  h_BkcEmgHojHniHngImfImdIlcJlaJk`Jk_Ml`Pl`Sm`UmaXna\
+  _naaobdobgobipclpcoqcqqdtrdwrdyrdldX`RPbVMcYKd`Iec\
+  GffEgiBhl9io7jr5ku3lx1jy2hy3fy3dy4by4`y5Zy5Yy6Wy6U\
+  y7Sy7Qy8cz8Zt9Qp9VjJV_TKKKcElg3uf8sfCreGpeKoeOmdTl\
+  dXjc`icdgchfdj`ekWflQgmLhoGipAjq5jr0kp3ln5ll7mj9mh\
+  BnfDndFobHp`KpZMqXOqVQrTSrRUsPWsNYpMZmLZjKZhK_eJ_b\
+  I__H_YH`VG`SF`QF`NDRKBHH98RKK_UWicgrmsolklldjlXglQ\
+  elJdgEccAb_6bW2_Y6YZAW_DTaHRbLPcOMeSKfWIgZFibDjfBk\
+  iAjj9ij8hj8gj7fj6ej6dk5ck4bk4ak3`k2_k2_k7blBdlGflK\
+  hmPjmTlmQciOWfLOcJG`KFZLEXMDVNCTPBRUAPZ9Oc8Mh7Km6I\
+  r5Gm4Eh3Cc2BZ1HU1MJ1SF1XB1b81g72d72a72Z62W62T62Q52\
+  N52L52I42F42C429326323321 }
+
+frm:MandelbrotMix2 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 
