@@ -1,0 +1,110 @@
+;     Date: Wed, 07 Sep 2011 20:59:33 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 07-09-11 (Emerald Anxiety [7])
+;       Id: <1.5.4.16.20110907205932.10f74b38@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 07, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the East Valley of the large minibrot on 
+; the main stem of its parent Mandeloid.  Nothing unusual in that. 
+; But in today's case, the Mandeloid is not the classic Mandelbrot 
+; set; it is the figure that results when the expression 
+; Z^(2.15)+C is iterated 9 levels up the hyperladder.
+; 
+; The parent fractal resembles a Mandelbrot set rotated so that 
+; its main spike faces northwest instead of west.  The southern 
+; lobe of its main bay is also grossly swollen, though this 
+; peculiarity has no significance in today's image.  The shape of 
+; the minibrot at the center of the image closely resembles the 
+; shape of its parent.
+; 
+; The pattern around the minibrot in the image gives the 
+; impression it lies close to the cut-off point of its parent.  
+; But such is not the case.  The scene actually lies quite close 
+; to a discontinuity.  These breaks sometimes act as cut-off 
+; points.
+; 
+; The rating of a 7 is FOTD average.  The name "Emerald Anxiety" 
+; refers to the emerald coloring of the scene.  The word 'anxiety' 
+; was added for artistic reasons.  The calculation time of just 
+; over 1-1/2 minutes is pleasantly brief.
+; 
+; The completely calculated image is posted on the official FOTD 
+; web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; It is posted in glorious high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The venerable original web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Heavy rain with embedded torrential thunder-storms prevailed all 
+; day today here at Fractal Central.  As of the 5pm post time, 
+; about 10 inches or 25cm of rain has fallen, and it is still 
+; coming.  The fractal cats wondered what all the water is about.  
+; The fractal sump pump is doing its job, but the floor is still 
+; covered with puddles.  The humans had a day of checking for new 
+; leaks, of which several appeared.  The next FOTD will be posted 
+; in 24 hours.  Until then, take care, and the local farmers 
+; prayed for rain during June and July, and now that the Deity has 
+; answered their prayers, they are praying for the rain to stop.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Emerald_Anxiety { ; time=0:01:37.44-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip
+  center-mag=-0.9395175176009618/+1.332146256656035/\
+  3.199834e+009/1/155/0 params=2.15/0/9/0 float=y
+  maxiter=5000 inside=0 periodicity=6
+  colors=000x5bV_eRV_NRVJMQFILBDF79A345RVgwkxmcmcWcU\
+  OUKGKA8AtDTlBPe9LZ8IS6EL4AE37713O`KCIAcoAXf8QY6KQ5\
+  DH3681K5_D3O61C0B8096075064043s2JqVHpwGeZDAAADDDFF\
+  FIIILLLPPPUUUZZZccchhhmmmrrrwwwzzzswlptfmqajnXgkRd\
+  hMbgHWSRQC_M`fIxmOrgUlbZfYd`TjVOoPJuJEzD9aPED`JATF\
+  1837MB5E7273alwPWcCGKe`clDlO6OfAxW7hL5UA2FAN55B2GN\
+  D8B6OgaK_VGTPCMJ8EC4766q35k24c23U12K11A0hUgbP`WLVP\
+  HPJCIC8C5462n_1PIxAEc69K344gR3XK2MD1B62wD1c80K4zSl\
+  rOejL_bHUVEONAIF7C736cFuQAaD5JeYlVP_LHOA8ClVgOFMyA\
+  ep8_g7UZ5OQ4IH2C816N0SB0EG__DUUBPP9KK6FF4AA255`wdI\
+  UK_ezV_wRVqMQjILdDFY9AS45QoR2ObwKWmGQcCJU8DK46AIiw\
+  1jM0ZG0NB0B5FgCAT85E4dLWRELD7AmBfz5LzlqzORzc`zaGzu\
+  5zT2zxCzk9z_7zO4zC2z1uz0kz0az0Tz0Jz09zqTzjPzcLzXIz\
+  REzKAzD7z63zEKznWzcPzUJzKCzA6U2oU1bU1Qc0DcUWcOPcIJ\
+  cCCm66`VRRNKzFDz76zTwzNkzH_UBOU5CUZhUUbUQXULSUHMUD\
+  GU8BU45UDoU9bU6QU3DUUCUF6 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

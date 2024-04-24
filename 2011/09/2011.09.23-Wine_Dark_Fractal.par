@@ -1,0 +1,110 @@
+;     Date: Fri, 23 Sep 2011 09:26:47 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-09-11 (Wine-Dark Fractal [6.5])
+;       Id: <1.5.4.16.20110923092647.13b7a9fa@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 22, 2011 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene that I originally passed by on the way 
+; to the 'Primed for Growth' image of 3 days ago, September 19.  I 
+; return to the area today because I originally saw in it some 
+; FOTD potential.  The image is located in one of the two East 
+; Valleys of a small Mandeloid just west of the main Mandeloid of 
+; the parent fractal.
+; 
+; I named today's image "Wine-Dark Fractal".  The background 
+; colors remind me of light passing through a bottle of red wine.  
+; The name also creates an ancient Greek atmosphere, and as we 
+; know, those classic Greeks were quite big on geometry.
+; 
+; The image itself has an overall dark, subdued appearance, with 
+; curved strips of brilliantly colored confetti standing out like 
+; fireworks in the night sky.
+; 
+; The rating of a 6-1/2 could be on the conservative side, but the 
+; fact that this is the second expedition into the same fractal 
+; area knocks a point off the rating.
+; 
+; The calculation time of just under 2 minutes will take the 
+; frustration out of the calculation task.
+; 
+; Enjoy the image without the need to calculate it by visiting the 
+; FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image is posted in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Overnight rain ended by daybreak today here at Fractal Central, 
+; leading to a cloudy, muggy day with a temperature of 79F 26C.  
+; All of this must have agreed with the fractal cats, who have no 
+; idea of their fractal nature and seemed unusually relaxed.
+; 
+; Being a human, (at least the last time I checked), I found the 
+; day a bit too routine and slightly boring, but that's how it 
+; seems to go in the second half of life.  FL found her excitement 
+; worrying about the economic situation.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and 100 years from 
+; now we'll be asking, 'where were you when the end came'?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Wine-Dark_Fractal { ; time=0:01:58.20-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-0.888013446870261/+0.1672559348360887/\
+  6.757468e+007/1/95/0 params=2.15/0/2/0 float=y
+  maxiter=3600 inside=0 periodicity=6
+  colors=000U09R08P08M08J07G07E07H0CK0HN0MQ0RT0WW0`Y\
+  0dw0MtgQqdUn`YkY`hUdeRhbNkiKzeGzaDzaFzaGzaHzaIzaJz\
+  aKzaLzaMzaNzZMzXLzVLzSKzQJzOJzLIzJIzHHzEGzCGzAFz7E\
+  z5Ez3Dw1DcAJYIOXQUWZZVfdUniTvnStkVriXpgZnd`lbbj`dh\
+  ZffWhdUjbSl`QnZNpXLrVJtTHvWMnZRgaW_d`TgeMjjEmo7ps0\
+  qrGqrVqri023Bon9ih8dc7_Z6VU5QP4KK3FF2AA155KLcIJ`HI\
+  YGGWEFTDEQCCOABL99I88G67D55A448225112YbNV_LTYKRVIP\
+  THNQFLOEJLCHJBEHACE8AC7895674442221Wf1GL0I8EF6BC59\
+  9476243126rs5lm4gg4ab3XX3RS2MM1GG1BB055cmvU`gKPTAC\
+  ETtqQnkNhfKb`HYWESRBML8HG5BA255tq1ol0jh0ec0a_0XV0S\
+  R0NM0F00K08O0HS0IV0HQ0GN0FK0DG0BD08A06604302000000\
+  czcL_VEOL7CA6sH5lF4fD4`B3V92O72I51C30619Ls8Im7Gg6E\
+  b5CX4AS38M26G14B025zZFtUDnPChKAb79X67Q56J34C23511y\
+  VEtSDpQClOBhMAdK9`I8XG7SE6OC5KA4G83C62841420knHabD\
+  SQAJH6983F3SD2PC2MA2J91G71E61B408305102CZeBVaASZ9P\
+  V8MS7JO6GL5DH4AE37A247123 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,97 @@
+;     Date: Thu, 01 Sep 2011 20:19:58 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-09-11 (Net of Convergence [6])
+;       Id: <1.5.4.16.20110901201959.13a75e02@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 01, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The month of August with its very deep Mandelbrot scenes has 
+; ended, and it produced some winners for sure.  The end of August 
+; does not mean we will never return to the very deep Mandelbrot 
+; fractals, but for a change we return today to the regular FOTD 
+; routine, and start with a scene in the parent fractal that 
+; results when 11 negative parts of Z^(-1.1) are combined with 2 
+; negative parts of Z^(-6) before (1/C) is added on every 
+; iteration.
+; 
+; The resulting image rates a 6, a notable come-down from the 8's 
+; and 9's that prevailed during part of August.  But what the 
+; heck?  Even a rating of a 6 is above average, and the 
+; calculation time of 5 minutes means that little time will have 
+; been wasted if the image elicits a yawn.
+; 
+; The name "Net of Convergence" refers to the basin of attraction 
+; surrounding the minibrot at the center of the image.  The moth-
+; eaten appearance of the features also reminds me of some type of 
+; spider web.
+; 
+; Calculation may be avoided by viewing the finished image on the 
+; official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; It may be viewed in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Morning clouds and showers gave way to lots of afternoon sun 
+; here at Fractal central today.  The temperature of 82F 28C was 
+; close to ideal.  The fractal cats were apparently exhausted 
+; after a very active day yesterday and spent most of the time 
+; sleeping.  The humans spent their time doing what needed to be 
+; done.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and what ever happened to the music of the spheres?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Net_of_Convergence { ; time=0:05:02.92-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.85803336723/-0.28049507163/238775.3/\
+  1/110/0 params=-11/-1.1/-2/-6/0/525/0/0 float=y
+  maxiter=3200 inside=0 logmap=390 periodicity=6
+  colors=00035C46B57A6997888D7996AA5BB2CC4DD5EE6FF8G\
+  G9HHAIICJIDKJELKGMLHMMINNKNOLOOMPPOPQPQRQQSSRTTSUU\
+  TVWUVXUWYVX_VY`WZaW_cX`dXZfQXhKVjKWiKWiKWiKWiKWiKW\
+  iKWiKWiKWiKWiKXhKXhKXhLXhLXhLXhLXhLXhLXhLXhLYgLYgL\
+  YgLYgLYgLYgMYgMYgMYgMYgMZfMZfMZfMZfMZfMZfMZfMZfMZf\
+  N_gMZfLYfKXeJWeIVdHUdGTdFScERcDQbCPbBOaANa9Ma8L`7K\
+  `6J_5I_5H_7GZ8GZ9GZAFZCFYDFYEFYFEYHEYIEXJEXKDXLDXN\
+  DXODWPCWQCWSCWTCWUBVVBVXBVYBVZAV_AU`AUbAUc9Ud9Ue9T\
+  g9Th8Ti8Tj8Tl8Sm7Sn7So7Sp7Sq9RqARqCRqDRqERqGRrHQrJ\
+  QrKQrLQrNQrOQrPQsRPsSPsUPsVPsWPsYPtZOt`OtaOtbOtdOt\
+  eOufPtfOtfOtfOsfNsfNsfNsfMrfMrfMrfLrfLqfLqfKqfKpfK\
+  pfJpfJpfJofIofIofIofInfHnfHnfHmfGmfGmfGmfFlfFlfFlf\
+  ElfEkfEkfUkfUjfUjfUjfUjfUifUifUimckmcjmcimchmchmcg\
+  mcfmcfwcewcdwcdwccwcbwcbwcawcmzmmzmmzmmzmmzmmzmmzm\
+  mzmmzzmzzmzzmzzmzzmzzmzzmzzzzmzzmzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,108 @@
+;     Date: Tue, 20 Sep 2011 20:47:30 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-09-11 (I am the Champion [8])
+;       Id: <1.5.4.16.20110920204737.13b76820@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 20, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has claimed to be the best of all time.  That's 
+; the impression I had when the name "I am the Champion" came to 
+; mind.
+; 
+; The rating of an 8 is well above average.  It's nearly of 
+; championship caliber, but then so is the team that loses the 
+; championship game.
+; 
+; The parent fractal came about when I subtracted 1.1 parts of 
+; (1/Z) from 1.1 parts of straight Z then added (1/C) on every 
+; iteration.  These parameters are pure whimsy; the resulting 
+; image is not.
+; 
+; The parameters produce a very distorted Mandelbrot set with its 
+; incredibly shrunken main bud and spike pointing south and its 
+; grossly overblown East Valley on the north side.  Today's scene 
+; is located in a minor sub-bud on the west shore line of the main 
+; bay.  (The distortion of the parent fractal may be increased or 
+; reduced by tweaking the parameters.)
+; 
+; To achieve the final effect, I used a very broad color palette 
+; on the outer parts of the image and a random palette on the 
+; inner parts.  The prominent minibrot at the center lacks total 
+; definition.  An increase in the maxiter will increase the 
+; definition of the minibrot but will also spoil the coloring.
+; 
+; The calculation time of 4-1/3 minutes is slightly slow, but at 
+; least in my opinion, the image is worth it.
+; 
+; Those who would rather avoid calculation may view the finished 
+; image on the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image is available in glorious high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Clouds and a few showers made today less than perfect here at 
+; Fractal Central, while the fractal cats said the temperature of 
+; 72F 22C was near perfect.  The humans had too many other things 
+; to concern themselves with than to worry about a few showers.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and there are only 458 days remaining until the world 
+; comes to an end.  (Maybe I'll start a doomsday countdown clock.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+I_am_the_Champion { ; time=0:04:21.78-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.4851545446762787/+1.193349813944747/\
+  2.2334e+010/1/-27.5/0 params=1.1/1/-1.1/-1/0/0/0/0
+  float=y maxiter=2400 inside=0
+  logmap=406 periodicity=6
+  colors=000Q4eR5dS6dT7dT8dU9dVAdWBdWCdXDdYEdZFdZFd_\
+  Gd`HdaIdaJdbKdcLddMddNdeOdfPdgQdfRcgQdhQdhQeiPejPe\
+  jPfkOfkOflOgmOgmNgnNhnNhoMhpMipMiqMjrLjrLjsLksKktK\
+  kuKluKlvJlvJmwJmxImxInyInyInzHmzHmzGlzGlzGkzFkzFjz\
+  FjzEizEizFmzEizDfzDczC`zBYzBVzASz9Oz9Lz8Iz7Fz7Cz69\
+  z56z53z64z75z86z97zA8zB9zCAzDBzECzFCzKXzF_zAbgRf`M\
+  _TITMDLE9E747ltccjXWaQOSKGJD896FHJBCE789344SJXMFQG\
+  BJB7D536JwfEhW9UL4FA0D_06Iqu4qMjcGZRBND5BhgtXXeMMS\
+  BBEi_INI9PsyLlqIeiFZaCSV9LN6EF377wCdsm_keUcZPWSKOL\
+  FGEA875gsmT`XEIGZggSZZLQQEHH788_JRI9DCiUAaP8UK6NF4\
+  FA275DD_66IEIguKyuIPbfzQSeDELsof`YSIHEnoFPQ7_WYURT\
+  uIzoKqcGcU9UK4_bKXYHRTFMOCGJABE7695A425x`xUIU7Fa6D\
+  X5BS49N37J25E139014LSvIOnFLgDH_AET7AM57E237bxsVkgN\
+  _XFOM7CBDuoBlg9d`7XT5OM3GE1879lH6WB3U5PUgKU_GUTCUM\
+  8UE4U79Ur7cj6cb5cV3mN2mF1m7czrczjczbczVmzNmzFmz7zz\
+  czzWzzOzzGzz8zzXzzSzzOzzK }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

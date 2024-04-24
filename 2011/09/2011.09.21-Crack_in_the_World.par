@@ -1,0 +1,112 @@
+;     Date: Wed, 21 Sep 2011 22:12:03 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 21-09-11 (Crack in the World [7])
+;       Id: <1.5.4.16.20110921221201.13b771f8@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 21, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Crack in the World", meaning the world 
+; of fractals.  The name points out that the scene is located very 
+; near the negative X-axis of its parent fractal, where everything 
+; is broken apart.  This parent was created when I calculated the 
+; expression Z^(2.01)+C at a level 11 turns up the logarithmic 
+; hyper-spiral with the 'floor' function applied.  (Actually, I 
+; think the 'floor' function gives the most accurate values of the 
+; multi-valued complex logarithm, but it would take a better 
+; mathematician than me to figure it all out.) 
+; 
+; The parent fractal is a distorted Mandelbrot set rotated about 
+; 15 degrees clockwise, so that the southern branch of Seahorse 
+; Valley intersects the negative X-axis.  Today's scene is located 
+; near this point of intersection.
+; 
+; With its inward-jutting low-iteration elements, the image 
+; appears as though it is very near the bailout cut-off point.  
+; Actually, it is very near the X-axis, which serves as a cut-off 
+; point in the image.
+; 
+; The rating of a 7 is perfectly average.
+; 
+; The calculation time of 5 minutes is a bit slower than I would 
+; have preferred, but still brief enough to make the calculation 
+; no more than a minor annoyance.
+; 
+; All the calculation problems may be avoided by viewing and 
+; hopefully enjoying the finished image on the official FOTD web 
+; site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And check the high-definition version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds kept an all-day damper on things here at Fractal 
+; Central today.  The temperature of 73F 23C was pleasant enough, 
+; at least for the fractal cats, who approved of the lack of rain 
+; as they enjoyed the outdoors from indoors.
+; 
+; My day was uneventful, which makes dull reading but a pleasant 
+; experience.  FL had a more active day with black-spot infested 
+; roses.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and be ever alert for charlatans.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Crack_in_the_World { ; time=0:05:02.53-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=floor
+  center-mag=-0.8068576369195436/+0.0000047645303079\
+  /2.951255e+008/1/-67.5/0 params=2.01/0/11/0 float=y
+  maxiter=7200 inside=0 periodicity=6
+  colors=000424CCzlwzzzzGK8R0OK0ID0C606vtgjhZZYQNMHB\
+  B899AG02EjjFbiFViGNhHFgH8gNBjTDmYFoRGmLHlFIj9Ji3AA\
+  DPdMTaWXZd`VndSwhPmbOdXOVRNMLNCFM3AM5KO7UP8ccAmmBw\
+  SBHuj5gm6ao6Xr6Rt6Mv6Hg4C745T38E14HXFERCBMA8G75B52\
+  52bGpJ8QWokRgdM`YITRDMK9ED476B49836524212mzT1zO1VJ\
+  1NE0F9074h6zX4jM3VB1FXTXOLOGEG878VzHKeBAL5alFS_BJO\
+  79C3gBP`9LV7HP6EI4AC37689ACFBAAJ9XFEQBHK7BD356nzPf\
+  qL_hHT_ELRAEI7793nZOaQIPHCC86UgZKTNAEBzPjeGVL8FDif\
+  6NL68G348Z5BU49P37K26F24A135016gQ4XJ3MD1B6rkST6gL4\
+  XE3M71BtQChK9YF7MA4B52Wb0RX0MR0IM0DG09B0450nzAYe6H\
+  L3Dxq8c_4KIpi`ZUOHFCoq2fh1Y_1QR1HI0890nyGgqEaiCVaA\
+  PV8JN6CF4672vS4lN3bI2TE2J91940sRE`I9I94K39H27F26C1\
+  5A14713502201KI1JwlCcW6KGcekZ_eUV_PQUEFIFFIAAC556o\
+  EzQ7VNyUJnPFdKBVF7KA3A50sJ0lG0eE0Zm0S90L70E4072efX\
+  XYQPPJGHD886`07R05I03901IrEFhBC_99R76I4392c3sX2iQ2\
+  `K1SD1I609OEQKBLG9HC7D848 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

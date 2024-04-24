@@ -1,0 +1,109 @@
+;     Date: Tue, 27 Sep 2011 20:19:11 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 27-09-11 (Jewel of the Deep [7])
+;       Id: <1.5.4.16.20110927201917.14bf81fc@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 27, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the parent fractal that results when 
+; the expression Z^(1.99)+C is iterated at ground level with the 
+; 'recip' function applied.  This parent resembles a Mandelbrot 
+; set rotated about 15 degrees CCW so that the negative X-axis 
+; cuts through the northwest shore line of the large period-2 bud. 
+; The image is located in the area of this intersection, where 
+; things always go a bit goofy.
+; 
+; I named the image "Jewel of the Deep" when the bright patches 
+; reminded me of something like pearls lying on the sea floor.  
+; Yes, I know pearls don't just lie on the sea floor, waiting to 
+; be picked up.  They are formed in oysters.
+; 
+; The rating of a 7 is getting to be a habit, but who can complain 
+; about an image a full 2 points above average.  The calculation 
+; time of 2-2/3 minutes is a fair price for an image with a rating 
+; of a 7.
+; 
+; For even more fairness, check the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; where the finished image is posted.
+; 
+; The high-definition version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; The day here at Fractal Central began with a mild thunder 
+; shower, followed by alternating sun and showers until 3pm, when 
+; a whopper of a storm moved in with crackling lightning and 
+; torrential rain.  The fractal sump pump did its job however.  
+; The temperature of 73F 23C was agreeable enough, at least for 
+; the fractal cats.  FL and I had a typical day of doing routine 
+; stuff, none of which is worth reporting.  
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and let's stop making apologies for God's behavior.  Let's 
+; stop preaching about His mysterious ways.  Let's hold our image 
+; of God to at least the imperfect standards of behavior we 
+; consider acceptable for ourselves.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Jewel_of_the_Deep { ; time=0:02:40.93-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-1.190908577788997/+0.00057523271973797\
+  /6.433262e+011/1/-113.5/0 params=1.99/0/0/0 float=y
+  maxiter=7200 inside=0 logmap=180 periodicity=6
+  mathtolerance=0.05/1
+  colors=00005C06C07C08C09C0AC0BC0CC0DC0ED0EE1EF2FG3\
+  FH4GI4HH5IH5KG5IF6GE6ED7CD7AC88B86A85AA4CC5DE5EG6G\
+  I6HK7IM6JO6LQ5MS5NU4PW4QY3RZ3SFKlIMkLNkOPjRQjUSjXT\
+  i_VicWihXhmZhrfgvmgzr0zv0zz0zz0zz0zz0SlQUiTVfVXcXY\
+  `_ZZa`WcaTfcQhdNjfKmgHohFqfGleGgdGbbGYaGT`GOZGJYGE\
+  XG9VG4UG0TG0YO1bW6gbBYj8Oq5Fx3LnCQdKWVS`L_eBgXCdOC\
+  bFC_7CYKGLXJ8hM0cJBZGPUDcPAqWHnbOliVipagvgezzIzuPz\
+  lWzdbzcazb`za_z`Zz_YzZXzYWzXVzWUzVTzUSzTRwSQwSPwYT\
+  wcXwi`wocwlbwjbwgbwebwcaw`awZawXaw_bwabmdbmfcmhcmk\
+  cmmdmpdmrdmtemwemyemzemygmxhmwimvjmukmtrmsrmrrmrrm\
+  qrmprmprmormormnrmmrmmrmlrmkrmkrmjrUzrWzrYzr_zrazr\
+  czrgzrizrjzrkzrkzrlzrlzrmzrmzrnzrnzrozrozrpzrpzrqz\
+  rqzrnzrmzrmzrmzrmzrmzrmzrmzrmzrzoXzpZzq`zrbzsdztfz\
+  uhzvjzwlzxnzxpzq_zjKzkIzlGzmFznDzoCzpAzq8zr7zs5zt4\
+  zu2zv0zw0zx0zy0zz0zz0zx1zu9zrHzpPzmXzjdzhlzgjzghzd\
+  NzVZzTazRczPfzNhzLkzKmzMj }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

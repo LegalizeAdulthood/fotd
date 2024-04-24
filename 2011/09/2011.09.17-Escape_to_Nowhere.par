@@ -1,0 +1,105 @@
+;     Date: Sat, 17 Sep 2011 22:55:29 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-09-11 (Escape to Nowhere [7.5])
+;       Id: <1.5.4.16.20110917225531.145f7be8@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 17, 2011 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the parent fractal that results when 
+; 1.5 negative parts of Z^(-5.1) are combined with 5.1 negative 
+; parts of Z^(-1.5) before (1/C) is added on every iteration.  
+; This parent is a fractal in the shape of a vertical string of 
+; three large bays, with a 'fan' extending east from the origin.  
+; Today's image is located in a small field of disconnected debris 
+; just south of the southernmost large bay.
+; 
+; Since the scene of the image is not connected to the main body 
+; of the parent fractal, the elements surrounding the central 
+; minibrot are also disconnected.  These disconnected shards do 
+; make a rather attractive scene however, raising the rating of 
+; the image to a respectable if not outstanding 7-1/2.
+; 
+; I named the image "Escape to Nowhere".  The name has a kind of 
+; ominous feeling to it that matches the rather somber blue 
+; background of the image.
+; 
+; The calculation time of a fireball fast 34 seconds assures that 
+; any disappointment after running the parameter file will be 
+; minor.
+; 
+; To avoid the possibility of even a minor disappointment, check 
+; the finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and avoid calculation altogether.
+; 
+; Check the high definition version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site mat be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds with a temperature around 64F 18C made 
+; today a rather pleasant one here at Fractal Central.  But the 
+; fractal cats are already becoming impatient for the heat to be 
+; turned on.  They will have to wait a bit longer however; the 
+; season is still summer.
+; 
+; The humans took a short antiquing trip during the afternoon, 
+; finding nothing of unusual interest.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and look alive.  
+; You'll have time enough to look dead.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Escape_to_Nowhere { ; time=0:00:34.50-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+0.07838913653024948/-1.538208956794496\
+  /9.44489e+011/1/172.5/0 params=-1.5/-5.1/-5.1/-1.5\
+  /0/0/0/0 float=y maxiter=1500 inside=0
+  periodicity=6 mathtolerance=0.05/1
+  colors=000BWGAUF9RE8OC7LB6J92225G84D73A52841520217\
+  Gn5Cc49U26K13AwHnnEfeC_Y9TP7LH4E827I1WG0TF0RE0PC0M\
+  B0KA0I90G70D60B509306204102v2Jq1Hl1Fg1Eb1CY1BT19O0\
+  7J06E0490340100Y00W00U00T00Q00Q00O00O00L00I00J00I0\
+  0H00F00E00C00B009008007005604002001GmlCcb9UT6KJ3A9\
+  VuLSzJPjHMeFJ_DGVBEQ9BL78F55A3251zi0oW0nS1cO0dL1SH\
+  0YE0HA0B70530c2zc1zc1zc1zc1zc1zU1zK1zD1UC1SB1QA0N9\
+  0L80J70G60E50B409307204102lBj_8ZO5NC2BmDDjCCgBBeAA\
+  bAA_99Y88V88S77Q66N66L55I44F44D33A22722511200JbsHZ\
+  mFVhDScCOZALU8HP6EK5AF37A135U81R70P60M60K50THmXHk_\
+  HjbHheHfhHdkHcjGaiG`hF_hFZgFYfEXeEWeEVdDUcDTcDSYFT\
+  SGTNHTHJUBKU6LU8PV9SVAVVCYVD`VEcVGgVHjVImVKpVLsVMv\
+  VNyVi9Jk7Rm6Zo4fq3nr2vq6wpAwpDwoHwoLwnOwnSwmVwlZwl\
+  bwkewkiwjmwjpwitwiwwyx0xt3xq5wn7wk9whCveEvbGv_IuXK\
+  uTNtQPtNRtKTsHVsEYsB_r8ar5cr2elCcfMaaV_WdYQnWLwVKt\
+  TJqSInQHlPGiNFfMEcLDaJCZI }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

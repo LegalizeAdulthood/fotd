@@ -1,0 +1,115 @@
+;     Date: Mon, 05 Sep 2011 20:21:34 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-09-11 (madhouse [7.5])
+;       Id: <1.5.4.16.20110905202139.14e7ede2@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 05, 2011 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; POSSIBLE NEW FORMULA ALERT!  I might not have previously posted 
+; the Mandel-V-Esc formula, which allows changing of the bailout 
+; radius.  I'm not sure.
+; 
+; Today's rather weird image involves a couple tricks.  The image 
+; itself is located in the East Valley of the large minibrot at 
+; -1.75 on the main spike of the Mandelbrot set.
+; 
+; The first trick is rendering the image with the 'outside' set to 
+; 'real'.  This adds the intricate detail to the scene.
+; 
+; The second trick is coloring the image with a random color 
+; palette, though I did do a bit of tweaking to tone down the 
+; randomness at least a bit.  This creates the frantic madhouse 
+; effect that inspired the name "Madhouse".
+; 
+; The third and greatest trick is setting the bailout radius to 
+; the point just before the image gets cut off and goes blank.  In 
+; today's case this point is 3.079.  To see what this does, 
+; calculate the image with the real(p3) parameter set to 4, or 
+; even better, set it to 100.
+; 
+; All these tricks add up to a rating of 7.5, not bad, but far 
+; from the super 9.5 images of last month.
+; 
+; The calculation time of one minute is unexpectedly brief.  Part 
+; of the briefness is due to the fact that the points are beyond 
+; the bailout radius almost as soon as they get started.  The large 
+; flat areas also increase speed by making the passes=guessing 
+; option more efficient.
+; 
+; View the finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; View the high-definition version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Over two inches, 5cm, of rain fell overnight Sunday here at 
+; Fractal Central, Monday remained cloudy, with occasional rain 
+; and a temperatre of 75F 24C.  The fractal cats, unconcerned with 
+; the weather and forecasts of much more rain to come, found their 
+; day's excitement by chasing each other in and out of the laundry 
+; basket.  The humans, never short of things to worry about, spent 
+; the day wondering what the future holds.
+; 
+; For better or worse, the next FOTD will be posted in 24 hours.  
+; Until then, take care, and even Bozo the Clown could run the 
+; world's fast-fading superpower better than the present loser and 
+; the losers lined up to replace him.  Why not elect Bozo.  At 
+; least we would go down laughing.
+; 
+; P.S.  The evil ______________ is/are responsible for the 
+; country's troubles.  (Fill in the blank with your favorite 
+; scapegoat or goats.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Madhouse { ; time=0:01:02.45-SF5 on P4-2000
+  reset=2004 type=formula formulafile=slices.frm
+  formulaname=Mandel-V-Esc center-mag=-1.74986747029\
+  1717/+0.00000006095707203/4.771027e+009/1/-130/0
+  params=0/0/0/0/3.079/0 float=y maxiter=2250
+  inside=0 outside=real periodicity=6
+  colors=0009jq6VH3F8hXdUMDFB6b3u02f01T`0EzleeWSVGU9\
+  DV46FjEFZABN77B3375xSmEIX99G4Cv5SP1zzz81AD58I86NC4\
+  SF3RI6QL8POAPQC5GJW8EZPtRcpJqmPhhV_d`S`TISL9KE0Cyc\
+  xcvGCh19X06M0OI63B0i0kY0_N0OB0CdKOKACAzSZK99We6LS3\
+  AEQFID79JZeCNS6BE84q63c42R21D7HVpqabcSQRJDD9vhW7fM\
+  5WG3LB1A5hn_MPI8gyISk9EODBx87c43KJhqEXc9MR4BD3pd2b\
+  U1QK0DAo8GY5AH25cC3K61QAkD5Og8LT5EE276lksSteLeSESE\
+  7Ec88Q55D22Rg4IT29E1eTqd1XR0MD0BQu1Jf0DT06E0lD7uim\
+  inbUYQFHD3Ob1CJ97NAEY57HE8PNGIVJCFC6SJQZKHMC8UR3KI\
+  2D91E8T_MOIJWCKQ6ADcGES97dLbhQdUORFCD2cn1SP54S22E3\
+  dv2Ug1KT0AEbZ1TQ0JH0980C8L64AMq_E_O7IC0W20G1OHBIC8\
+  C85642GtBCe88S54E2LHfFCWA8L54AR0TD0E9y1ocIbUDQK9DA\
+  4Tt3IXSCMI6B9kk7OO3dCRU9KK6DA360UCd0RxBebFxQAcD5K6\
+  RhcPzUIjKCVA6FD`QW_oWAGG58Dya8dP4KCZX`QORHGI889yYL\
+  dMEKB7ZTK7id5YU3NK1BAX6eM4SB2EKO5DG3681lT8ilANO51O\
+  N0CBTdoEKQgzZvdzgUmTKPEAz }
+
+frm:Mandel-V-Esc {; changeable bailout radius
+z=p1, c=pixel+p2:
+z=sqr(z)+c,
+|z| <= p3 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

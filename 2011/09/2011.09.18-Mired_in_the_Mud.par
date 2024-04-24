@@ -1,0 +1,111 @@
+;     Date: Sun, 18 Sep 2011 19:14:28 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-09-11 (Mired in the Mud [6])
+;       Id: <1.5.4.16.20110918191432.154779a0@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 18, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene unusually deep in the parent fractal 
+; that results when 0.5 negative parts of Z^(-3) are combined with 
+; 0.5 negative parts of Z^(+3) on every iteration before straight 
+; 'C' is added.  The magnitude of over 2*(10^14) is about as far 
+; as is possible to go without resorting to arbitrary precision 
+; math.
+; 
+; The parent fractal appears to be a Mandelbrot set rotated 180 
+; degrees and almost totally filled in.  Except for a scattering 
+; of tiny cracks, only four open areas remain -- a reasonably 
+; normal Mandelbrot set where the large period-2 bud would lie, 
+; two twisted M-sets where the two period-3 buds would lie, and 
+; where the East Valley area would lie, a Mandelbrot set that 
+; appears to have grown an extra large period-2 bud.  Today's 
+; scene lies deep in the valley that sets off this extra large bud.
+; 
+; To me, the image resembles nothing as much as a puddle of 
+; bubbling mud with a minibrot floating in the center.  The 
+; breakdown of math resolution is visible at the sharp-edged band 
+; edges, though it is not quite enough to spoil the scene.
+; 
+; I named the image "Mired in the Mud".  The overall coloring 
+; resembles the gray-green colors of the ground in the areas that 
+; were flooded here at Fractal Central.  It's surely not a very 
+; attractive color scheme, but I must draw it as I see it.
+; 
+; Such unpleasant colors hold the rating to a 6, which is actually 
+; below FOTD average.  But they say we must take the bad with the 
+; good, so why not take the 22 minutes required to run the 
+; parameter file.  On the fastest SOTA machines the image will 
+; probably finish in much less time.
+; 
+; Check the finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; without the need to calculate it.
+; 
+; The image is available in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Today came on with lots of sun here at Fractal Central, and 
+; except for a few puffy white decorator clouds, the sun reigned 
+; supreme all day.  The temperature of 70F 21C could hardly be 
+; improved upon.  The humans had an uneventful day, which is as 
+; much as can be hoped for.  The next FOTD, likely an improvement 
+; over today's, will be posted in 24 hours.  Until then, take 
+; care, and could we now be witnessing the start of the decline 
+; and fall of the American Empire?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Mired_in_the_Mud { ; time=0:22:22.51-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=+0.00000008953753835/+0.065245723747392\
+  53/2.363e+014/1/-71/0 params=-0.5/-3/-0.5/3/0/0/0/0
+  maxiter=25000 periodicity=6 mathtolerance=0.05/1
+  colors=000000V0VP0QK0LF0FA0A505KBDJACIABH9BG9AF8AF\
+  89E79D78C68B67A57A56955845744634533523422312211101\
+  000LSBHN9EI7AE5793341WTMURKeaQeaPdaNd`Ld`Kd_Ic_GcZ\
+  FcZDcZCbYEbXGbWHbVJbUKbTMbSNaRPaQRaPSaOUaNVaMXaLYY\
+  P_VTaSXcP_eMcgJgiGjkDnmAmo7ppFhlMeiUYf`VcgY`c`b`cc\
+  YbeV`fS_hOYiLWkIVlFTnCSoDTmEUlFUkGVjHViIWhJWgKXfLX\
+  eMYdNYcOZbPZaeOJvD1sC2pC2mC2jB3gB3dB3aA4ZA4WA4T95Q\
+  95N95K86H86E86C86GB9JDBNFEQIGUKJXML`POcRQgTTjWVnYY\
+  q__n`YkaWibVfcTddSaeQZfOXgNUhLSiKPjIMkGKlFHmDFnCCo\
+  A9p87q74r52r48Zf9YdAXbBWaBV_CUYDTXDTVESTFRSFQQGPPH\
+  ONHOLINKJMIJLGKKFLJDLJCJHBHFAFE9EC8CB7A96610875764\
+  543332111TMHNHDHDAB86543gCjdBgbAe`AbY9`W8YU8WR7TP6\
+  RN6OK5MI5JG4HD3EB3C929617414202TrAJ_69I37c46Z35U34\
+  P23K22F11A1050mWpiTleRhbPdZM`WKYSIUPGQLDMHBIE9FA6B\
+  747323vNirLfoKdlJaiI_fGXcFV`ETYDQVCORALO9JL8GI7EF6\
+  CC49937624312t1un0oi0jd0e }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

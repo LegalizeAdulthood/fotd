@@ -1,0 +1,116 @@
+;     Date: Sun, 04 Sep 2011 18:56:19 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-09-11 (Tangent to What? [6.5])
+;       Id: <1.5.4.16.20110904185623.1367f7c0@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 04, 2011 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Tangent to What?".  The name refers to 
+; the 'atan' outside fill that created the slightly unusual 
+; pattern surrounding the central minibrot.
+; 
+; The word 'slightly' explains the humble rating of a 6-1/2.  Had 
+; the scene been a bit more unusual, the rating might have been a 
+; point or two higher.
+; 
+; The image is a scene in the period-15 radical on the southwest 
+; shore line of the Z^(1.998)+C Mandeloid as it appears 3 levels 
+; up the hyperladder.  The parent fractal resembles an everyday 
+; Mandelbrot set rotated about 30 degrees CW, so that the negative 
+; X-axis passes through the south branch of Seahorse Valley.
+; 
+; In these almost-whole-number Mandeloids, most of the action lies 
+; along the negative X-axis.  But with the MandelbrotBC3 formula, 
+; Mandeloids may be rotated so that any desired part is 
+; intersected by the X-axis, giving the ability to subject any 
+; desired part of the almost-M-set to distortion.
+; 
+; The calculation time of just under 6 minutes is too long for 
+; comfort.  Once again, thank goodness for the web sites.
+; 
+; The official FOTD web site with the finished images may be 
+; accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high definition images are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original web site with 14-1/2 years' FOTD images is at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; The day began with fog here at Fractal Central.  At 9am a brief 
+; but lively thunder shower passed over, which was followed by a 
+; warm and unpleasantly muggy morning and a rather hot muggy early 
+; afternoon.  Another brief but heavy thunder shower passed over 
+; around 3pm, doing nothing but adding more humidity.  The high 
+; temperature of 86F 30C combined with a humidity around 90 
+; percent kept things feeling like the Pacific end of the Panama 
+; Canal, which BTW is farther east than the Atlantic end.
+; 
+; The fractal cats have never been to Panama, and never will be, 
+; but they know what to do in muggy weather.  They stretched out 
+; in the coolest place they could find.  The humans spent the day 
+; relaxing.  (The more we do it, the more we like it.)  The next 
+; FOTD will be posted in 24 hours.  Until then, take care, and who 
+; will be the one to get rich making shoes for bigfoot?  When we 
+; find one, it is sure to need some pretty big shoes.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Tangent_to_What? { ; time=0:05:53.28-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-0.760974178524143/+0.0000000293206752/\
+  8.129853e+010/1/22.5/0 params=1.998/0/3/0 float=y
+  maxiter=3500 inside=255 outside=atan periodicity=6
+  mathtolerance=0.05/1
+  colors=000dsidsgdsedscdsads_dsYdsWdsUdsSdrQdrOcrMc\
+  rKcqIbqHbqHbpIapIapJapJ`oJ`oK`oK_nK_nL_nLZnLZmMZmM\
+  YmMYlNYlNYlNXlOXkOXkPWkPWjPWjQVjQVjQViRUiRUiRUhSTh\
+  SThSThTSgTSgTSgURfURfVRfVQfVQeWQeWPeWPdXPdXOdXOdYO\
+  cYNcYNcZNbZNbZMb_Mb_Ma`La`La`L`aK`aK`aK`bJ_bJ_bJ_c\
+  IZcIZcIZdHZdHYdHYeGYeGXfGXfFXfFXgFWgEWgEWhEVhDVhDV\
+  iDViCUiCUjCUj8ViAUjBUjCUjDTjETkFTkGSkHSkISkKRlLRlM\
+  RlNQlOQlPQmQPmRPmSPmTOmVOnWOnXNnYNnZNn_Mo`MoaMobLo\
+  cLoeLpfKpgKphKpiJpjJqkJqlIqmIqnIqpHrqHrrHrsGrtGruG\
+  svFswFsxFszDryEsyFsyGsxHsxIsxJsxKswLtwMtwNtvOtvPtv\
+  QtvRtuStuTuuUuuVutWutXutYusZus_us`vsavrbvrcvrdvqev\
+  qfvqgvqhwpiwpjwpkwplwomwonwoownpxnqxnrxnsxmtxmuxmv\
+  xnwymvxmvxmvxmvwmvwmvwmvvmuvmuvmuugtcerccpcanc_lcY\
+  jcWhcUfcTdcSbcS`cR_cRZbQYaQX`PW_PVZPUYOTXOSWNRVNQU\
+  MPTMOSLNRLMQKLPKKOKJNJIMJHLIGKIFJHEIHDHGCGGBFFAEF9\
+  DF8AF8AF8AF8AF8AF9AF9AF9A }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

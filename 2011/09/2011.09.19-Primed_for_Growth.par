@@ -1,0 +1,112 @@
+;     Date: Mon, 19 Sep 2011 23:43:45 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-09-11 (Primed for Growth [7])
+;       Id: <1.5.4.16.20110919234350.14475d5a@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- September 19, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Primed for Growth".  Don't get excited 
+; however.  The name refers to the fractal, not the economy, which 
+; is stuck in the doldrums and will likely remain there for the 
+; foreseeable future.
+; 
+; Actually, the fractal has grown as far as is presently possible, 
+; so it can hardly be called 'primed for growth'.  In fact, the 
+; magnitude of the image is already a little beyond the limit of 
+; resolution.
+; 
+; The parent fractal came about when I iterated the expression 
+; Z^(2.15)+C at a level 2 turns up the complex-logarithmic 
+; hyperspiral with the 'recip' function applied.  This parent 
+; appears as a Mandeloid rotated so that its main spike points 
+; south.  The most notable feature however is a smaller totally 
+; cut-off Mandeloid just west of the main one.  Today's scene is 
+; located deep in the East Valley of this cut-off Mandeloid.
+; 
+; The rating of a 7 might be more wishful thinking that actual 
+; fractal worth.  We have seen many superior images in recent 
+; weeks.
+; 
+; The calculation time of 2 minutes is a real bargain, so why not 
+; run the included parameter file and enjoy the result.
+; 
+; Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and escape the task of running a parameter file.
+; 
+; See the high-definition version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The traditional FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Today brought a mixture of sun and clouds to Fractal Central.  
+; The temperature of 66F 19C was comfortable enough for the 
+; fractal cats, who spent an unusual amount of time watching for 
+; passing stray cats, none of which ever appeared.  The humans had 
+; a typical day, which means nothing out of the ordinary happened. 
+; The next FOTD will appear in 24 hours, and it most certainly 
+; will be an event worth noting.  Until then, take care, and if 
+; anyone can determine what's wrong with the world, please let me 
+; know.  My best guess is that there are too many people living on 
+; the planet.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Primed_for_Growth { ; time=0:02:09.57-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip logmap=346
+  center-mag=-0.8880134461033687/+0.1672559185329798\
+  /4.03156e+012/1/115/0 params=2.15/0/2/0 float=y
+  maxiter=1500 periodicity=6 mathtolerance=0.05/1
+  colors=000cccH1AK4AN7ARAAUDAYGA`JAdMAgPAkTAnXAr`Au\
+  dAwhFvjGvkGrkGmlHhmHcmHZgFUaDPWCKQAFK8AE75851345VH\
+  8bUBtfIfdPTcWFaa2`_8SZEJIJ_2OpPfPRdMTcJVbGXaEZ`B`_\
+  8bZ5dY3aX9_WFYVKWUQUTWSS`PNTNJLKADIA6KA4KA2wU0mb8d\
+  cGVdOMeVKeSIePGeMEeKLWIRNGYDEc4CeHDfTDgdDfhTelhdmw\
+  aHmZJdWUW`UAUUPNUbGUptUxmUsfUo_Uk0Ud8UhGUgNUg6neIt\
+  f2VFGjURjrBg2GlDLzNQxY_wkgYvAGkKciiivenrarnYvjdbt`\
+  joXrkR1lSHjTWiUkhe4EkR5bhP5giClhIqhOvgdS9WlsVppVsm\
+  Uwj4GKDWSMk_e3yaNsYfmV52UYNB7oLZk8`TEgXJm`Ptd5uLIx\
+  XhSnyOYqY`igbaqev7BnLKgZS`l_jEMX_9ukpnomgsk`witKsk\
+  ZoblkgzGczN`zUXz`WSwVio`hcZmdXqeVvfinceqdateYwfZju\
+  WrnTN7UXHUfQUpZ0NsIeyOppEnaMtdJLYPebYsTXuXWw`VydWs\
+  nVwjykwisouRtkbobnkipyestaupYxkDgHMqV7loDpmJskPwi2\
+  7W9LZGZaNldC`iHghLmhQtg0xdFyf1y9BzLLzX9iIGoRNu_XdX\
+  Wl`VsdCXDIfOOpYwqoJja52_`c4taakjcbre4F4HbOyjNSI7VX\
+  uLFYOVaRjdqyXiz`azdKKBKK6 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
