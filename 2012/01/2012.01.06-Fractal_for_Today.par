@@ -1,0 +1,100 @@
+;     Date: Fri, 06 Jan 2012 20:34:42 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-01-12 (Fractal for Today [5.5])
+;       Id: <1.5.4.16.20120106203555.2c57dd7a@earthlink.net>
+; ---------
+; 
+; FOTD -- January 05, 2012 (Rating 5.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image leaves much to be desired, but we should consider 
+; ourselves lucky that the FOTD is here at all.  The day's fractal 
+; search went badly, and other things that needed to be done piled 
+; up to cut short the fractal-searching time.  The result is an 
+; image that rates a 5-1/2, with 1/2 point due to the coloring.
+; 
+; The parent fractal is a result of mixing an infinitesimal part 
+; of Z^(-257) with Z^2 on each iteration before adding C.  The 
+; parent fractal is a stack of overlapping circular disks roughly 
+; arranged in the shape of a Mandelbrot set.  Today's scene is 
+; located in what would be the East Valley of the M-set.
+; 
+; The name "Fractal for Today" is basically no name at all.  It 
+; simply describes what is already obvious.
+; 
+; The calculation time of 2-1/2 minutes is good news.  It means 
+; that little time will have been wasted if the fractalist doing 
+; the calculation is disappointed.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The hi-def version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds, with a high temperature of 37F +3C made 
+; today a day so unexceptional that it is best forgotten, as it 
+; probably will be tomorrow.  The fractal cats forgot the day 
+; before it ended.  The humans never remembered it to start.
+; 
+; The next FOTD will be posted in 24 hours.  One thing near 
+; certain is that, with today's image so lacking, tomorrow's can 
+; only be better.  Until then, take care, and believers know that 
+; God exists, while Atheists know that God is only a superstition. 
+; To me this means that it is possible to be wrong even when one 
+; knows that he is right.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_for_Today { ; time=0:02:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.1463974715530423/-0.0000318078472393\
+  /4.811e+007/1/100/0 params=1e-025/-257/1/2/0/0/0/0
+  float=y maxiter=1500 inside=255 symmetry=none
+  periodicity=6 mathtolerance=0.05/1
+  colors=000000KzUIzTGzRFzQFzODzNBvL9tK9pI8mG6kF4fD4\
+  cB3`91X81U60Q40N30K10F00B00600300000000000Oq0Nn0Lm\
+  0Kk0Ii0If0Ge0Fb0D`0DZ0BX09U08T08Q06O04L01x00t00n00\
+  i00c00_00U00O00I00D006000000000zGUzDRuBOq9Ll8Kh6Gb\
+  4DX39T08N04I01B00400000000Ol1Lh0Ke0Ib0FZ0DW0BT08O0\
+  6L04I03F00900600300000000000Kv0Fm09c04U01L00900000\
+  h00e00c00b00`00Z00X00W00U00R00Q00O00N00K00I00G00F0\
+  0B009008006003001000000000000000000zzzimmILLzz_szU\
+  ktO`kIT_DKO68D0000FUi19IQOfONcNLbLK_KIZIGXGFUFDTDB\
+  QBBO99N88K66I64F43D31B108006003001000000000000000b\
+  q9_n8Zl6Wi6Uf4Rc4Q`3NZ1LW1IT0GQ0FN0BK09G06D0490160\
+  0300000000000000z`0vZ0sW0pU0lR0hO0eN0`K0XG0UF0QB0N\
+  90I60D3091040000000000zWDzTBzR9xO8tN8pL6lI4iG3eF3`\
+  B1X90T80O40K30G10B00600100000000q44k11c00X00Q00K00\
+  B00300000zFcx8Uh3KR098009TZ8QW6OT4LR4KO3IL1FK0DG09\
+  F08B068036013001000000zzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

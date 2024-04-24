@@ -1,0 +1,118 @@
+;     Date: Mon, 30 Jan 2012 15:25:30 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 28-01-12 (Hither and Yon [7.5])
+;       Id: <1.5.4.16.20120130152705.381fc298@earthlink.net>
+; ---------
+; 
+; FOTD -- January 28, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; ANOTHER NEW FORMULA!  THE 'SliceJulibrot6' FORMULA HAS BEEN 
+; RENAMED!
+; 
+; I have renamed the 'SliceJulibrot6' formula 'JulibrotMulti'.  I 
+; did this because it was pointed out that I previously wrote a 
+; formula named 'SliceJulibrot6'.  I never did much with that 
+; old formula, but it might still be floating around, so to avoid 
+; confusion I have renamed the new formula.
+; 
+; Today's image is an almost-Julia set of the eastern edge of the 
+; large minibrot on the main stem of its parent Mandelbrot set, 
+; which is infected with Z^5 energies in its depths.  I call it an 
+; 'almost' Julia set because it is double rotated 1-1/2,1-1/2 
+; degrees from the true Julia orientation.
+; 
+; In images this close to the Julia orientation, a small rotation 
+; makes a big difference.  The difference in today's image is the 
+; totally chaotic arrangement of filaments, which inspired the 
+; name "Hither and Yon", (come and go).  Another difference is the 
+; existence of the two small near-perfect Z^5 minibrots, a rarity 
+; this close to the Julia orientation.
+; 
+; The rating of a 7-1/2 implies that I felt some disappointment in 
+; the artistic aspect of the image, but also that it holds enough 
+; math interest to earn it FOTD status.
+; 
+; The calculation time of a hyperfast 8 seconds will leave no 
+; chance for impatience to raise its jittery head.
+; 
+; Another way to avoid impatience is to view the finished image on 
+; the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; or to view it in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day turned out unexpctedly pleasant here at Fractal Central, 
+; with ample sun and a temperature of 48F +9C.  The fractal cats 
+; spent most of the afternoon on their shelf in the southwest 
+; window, enjoying the sun.  A brief rain shower passed over late 
+; in the afternoon, but by then the pleasant day was in the bag.
+; 
+; The humans did what introverted humans do best -- thinking deep 
+; thoughts about nothing in particular.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and sometimes it is 
+; possible to think deeply without knowing what you are thinking 
+; about.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Hither_and_Yon { ; time=0:00:08.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti function=recip float=y
+  center-mag=-0.0830872/0/1.173709/1/-90/0 inside=0
+  params=5/6/88.5/0/88.5/0/-10.4/0/0/0 maxiter=1200
+  colors=0000000000000000000000100200300400500601712\
+  823A35C56E6AI8DMAFQCITEKWGNZIPaKSdPUgUXlZZqccvhhzm\
+  pzzuzzzpzmjzcgzVdzTbzS_vQXrPVmNShMPcKNeJKhHHkGFmOk\
+  4Pi5Pg6Qe7Qc8Qa9R`9RZARXBSVCSTDTSDTQETOFUMGUKHUJHK\
+  RBBY6G_7L`8Qb9VcAZeBcfChhDmiEqjEogHndKmbNl_QkYSiVV\
+  hTYgQ`fOceLecJhbGkaEn`Bq_9sXBqVDoSFmQGlNIjLKhIMfGN\
+  eDPcBRa8T_6UZ5W_5Y_5__4a`4c`4e`3fa3ha3ja2lb2nb2pb2\
+  qbIrYYrTVnUTkVRgWPdXN`XLYYJUZGR_EN`CK`AGa8Db69c46d\
+  23d35e47e49f5Bf6Dg6Fg7Hh8Jh8Kh9Ne9QbAT_AWXAZVBaSBd\
+  PCgMCjJClHGjKJiMMhOQfRTeTWdV_bYba_e`ah_cg_ajUWlPQo\
+  KKqFEtA8v52lBNbGgaIZ`KR`MJ_OB_Q3aVAc_HiriedOgiVina\
+  kshdBeeIgfOhgUih_jiekjklkqmOOad6yIJt`iqblpdnpfpohs\
+  ojunK9eZZjPrtTssWtr_uqbupfvoiwnfZHgbMheQihUikYjnbk\
+  qfltj7CdEKfLShS_iZgkeompQzoZwnftmoq4gRGkXRobashp5I\
+  BdKGgOLiSQlWUn_ZpccsghukfGLgMPhRTiXXia_jgcklglrkPI\
+  4`bSkNclVflahlijlplN5PWOY }
+
+frm:JulibrotMulti   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), aa=-(real(p1)-2),
+  bb=imag(p1)-0.0000000000000000001,
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=z*z*fn1(z^(aa)+bb)+c
+  |z|< 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

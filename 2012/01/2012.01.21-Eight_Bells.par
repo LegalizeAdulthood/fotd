@@ -1,0 +1,110 @@
+;     Date: Sat, 21 Jan 2012 19:35:06 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 21-01-12 (Eight Bells [7.5])
+;       Id: <1.5.4.16.20120121193632.2a17f38a@earthlink.net>
+; ---------
+; 
+; FOTD -- January 21, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's FOTD I have infected an oversized Mandelbrot set with 
+; some Z^8 stuff and checked its huge East Valley to see what the 
+; infection causes to happen there.
+; 
+; The first thing I discovered was that when order-8 minibrots mix 
+; with quadratic ones, things work out nice and symmetrically 
+; around the minibrots, with the powers-of-two series intact.
+; 
+; Today's image shows how neat and orderly things appear when 
+; all the numbers fall compactly into place.  (Reduce the real(p1) 
+; parameter to 7 and notice how quickly all that hard-earned 
+; symmetry vanishes.)
+; 
+; I named the image "Eight Bells", which on a ship happens six 
+; times a day.  I can give no logical reason for the name other 
+; than a recognition of the order-8 stuff that has corrupted but 
+; not diminished the large parent Mandelbrot set.
+; 
+; The rating of a 7-1/2 might have been higher if I had had more 
+; time to work on the coloring.  As it is, the colors are a bit 
+; flat, but not so flat as to be boring.
+; 
+; The calculation time of just under 2 minutes will pass fast once 
+; the detail starts to appear at the top of the frame.
+; 
+; But 2 minutes is still 2 minutes.  All tasks connected with 
+; setting up and running the included parameter file may be 
+; avoided however by viewing the finished image on the FOTD web 
+; site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; or by viewing it in high-definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site with all the images may be accessed 
+; at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Snow began falling here at Fractal central during the night, and 
+; by the time it ended in the late morning, about 7 inches, 18cm, 
+; had piled up.  Luckily, the snow was very fluffy and cleared 
+; away with almost no effort.  The fractal cats sent encouragement 
+; from the window as I finished the sidewakl-cleraing job in less 
+; than 20 minutes.  FL had the hot coffee waiting when I returned 
+; inside.  The weather for the rest of the day was cloudy with a 
+; temperature of 27F -3C.  The humans found a little relaxation at 
+; a local antique mall.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and when all else fails, try the fractal diet.  It's 
+; calorie-free and guaranteed to work.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Eight_Bells { ; time=0:01:50.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MultiExp function=recip
+  center-mag=+214.0933257928578/-3.065099419453629/\
+  5.548817e+008/1/15/0 params=8/800 float=y
+  maxiter=2250 inside=0 logmap=376 periodicity=6
+  colors=000A0KA0KA0KA0KA0KA1KB2LC3MD4NE5OF6PG7QH8RI\
+  9SJATJBSKCRKCPKDOKDNKEMKFKKFJLFJLGHLGGLGFLGDLGBKGA\
+  LGALG8MG9LH9MH9MI9MJ9MK9ML9MM9MN9MO9MQ9MR9MS9MT9MU\
+  9MV9MW9MX9MY9MZ9M_9Ma9Mc9Me9Mg9Mi9Mk9Mm9Mo9Mq9Mq9M\
+  q9NoCOlFOiIPeLQbOQ_QRWTSTWSQZTNaUJdUGfVDiW9lW6oX3r\
+  X0tV1qT2nR2kP3hO4eM4bK5_I5XH6UF7RD7OB8LA8IB9KCAMDB\
+  NECPFDRGESHFUIGWJHXKIZLJ`MKaNLcOMePNfQOhRPjSQkTRmU\
+  SnSRoRQoQPpPOpONqNMqMMqLLrKKrJJsHIsGHtFGtEGtDFuCEu\
+  BDvACv9Bw8Aw7Aw99uB9sC9qE9oF9mH9lI8jK8hM8fN8dP8cQ8\
+  aS7_T7YV7WW7VY7T_7R`7Pb6Nc6Le6Kf6Ih6Gj6Ek5Cm5Bn5Kp\
+  5Uq5cs5mt5zqHwoTrpSopSmpRkpRipQfpQdpPbqP`qOYqOWqNU\
+  qNSpMPpMNpLLpLJpKGpKEoJCoJAoJ8pI7pG5oE4nC3mA2n91nC\
+  2oE2oH2pJ2qM2pP2pT2oW2oZ2ob3nd3ng3mi3ml3mn3lq3ls3l\
+  u3hs7dpBaoFYqIUoMRnQNlUKjXLkVzeUzeSzfRzfQzgOzgNzhM\
+  ziKziJzjIzjGzkFzkEzlCzmBzmAznzznzzozzozzpzzpzznzzm\
+  zzkzzjzzizzgzzfzzdzzczzbz }
+
+frm:MultiExp   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+b=imag(p1)+0.00000000000000000001:
+z=z*z*fn1(z^(a)+b)+c
+|z| < 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

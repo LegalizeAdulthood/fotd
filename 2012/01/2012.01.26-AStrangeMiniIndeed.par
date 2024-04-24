@@ -1,0 +1,129 @@
+;     Date: Thu, 26 Jan 2012 14:40:51 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 26-01-12 (A Strange Mini Indeed [8?])
+;       Id: <1.5.4.16.20120126144222.2b573562@earthlink.net>
+; ---------
+; 
+; FOTD -- January 26, 2012 (Rating 8?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; NEW FORMULA!
+; 
+; Giving in to curiosity, I spent most of the day writing a new 
+; version of the SliceJulibrot formula, which applies the MultiExp 
+; expression to the four-dimensional Julibrots it draws.  The 
+; formula appears on the list today for the first time.
+; 
+; Getting the formula to work took up most of the day's fractal 
+; time, so the image I finally found is not much of an example of 
+; what the formula might be able to do.  Tomorrow's image should 
+; be better however.
+; 
+; I named the image "A Strange Mini Indeed".  Actually, it's not a 
+; minibrot, nor is it a Julia set.  It's a hybrid, sliced in the 
+; Oblate direction, determined by the imag(C) and real(Z) axes.  
+; Some directions in the image are Mandelbrot, others are Julia, 
+; most are somewhere in between.
+; 
+; The parent fractal is an oversized Mandelbrot set corrupted in 
+; its depths by order-7 energies.  Today's scene is located well 
+; off to the side of the east edge of the large minibrot on the 
+; main stem of the parent, in the real(Z) direction.
+; 
+; Some stretching and skewing was needed to eliminate the natural 
+; distortion of the image.  This distortion exists in nearly all 
+; the odd planes of the Julibrots, and can be only partially 
+; eliminated by stretching trickery such as I used in today's 
+; image.
+; 
+; The rating of an 8? is a guess, based on what the formula might 
+; have in it.  The mathematical interest is there, though the 
+; artistic worth of at least today's image leaves something to be 
+; desired.
+; 
+; The calculation time of a speedy 38 seconds means that little 
+; effort will have been wasted if the image lays an egg.
+; 
+; The task of setting up and calculating the parameter file may be 
+; eliminated by surfing to the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and viewing the finished image there.
+; 
+; And while you're at it, check the hi-def version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Morning clouds led to afternoon rain here at Fractal Central 
+; today.  The temperature of 39F +4C was mild enough to keep away 
+; all danger of ice.  The fractal cats, who wish they had the 
+; outdoor life of the old, now departed, fractal cats, would have 
+; preferred more sun.  The humans, FL and I, simply made it 
+; through another day, which sounds boring, but actually is not.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and everything looks richer in the fullness of four 
+; dimensions.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+AStrangeMiniIndeed { ; time=0:00:38.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot6 function=recip float=y
+  center-mag=-1.566172639248917/-0.00216596994206138\
+  /8873.693/0.4301/3.2405430019023771/0.0379459741\
+  650980814 params=7/10/0/0/90/0/-17.4550736/0/0/0
+  maxiter=1800 inside=255 logmap=34 periodicity=6
+  colors=00000G00I00K00M00O00Q00S10U30W50Y70_A0aC0cF\
+  0eG0dI0cK0bN0`P0ZS0YT5WWDUYKT`URbcPZmO`rMbxKcyJbxK\
+  axLaxL`xM_xN_xNZxOZwOYwPXwQXwQWwRWwRVwSUwTUvTTvUTv\
+  USvVRvWRvWQvXQvXRsVRqTRnRSlQSiOSgMSdKTbJT_HTYFTWES\
+  XGRYIRYJQZLQZMP_OO`QO`RNaTNaUMbWLcYLcZKd`KdaJecIfe\
+  IffHghHgiGhkFimFinEjpEjqDksCluCpvBjxBkyAcmATaACQ09\
+  E033012U01i01U01E01F_1F01Gc3Ha4mz5JY7KW8LU9MSBNQCO\
+  ODOMEPKDQJDRICRHCSGBTFBTEAUDAVCAVB9WA9X98X88Y77Z67\
+  Z57Y78Y99XB9XDAWFBWHBVJCVLDUNDUPEURETTFTVGSXGSZHR`\
+  IRbIQdJQfKPhKPjLPkLpz9oyAoyBoyCoyDoyEoyFoyGoyHoyIo\
+  yJoyKoyLoyMoyNoyOoyPoyQoyRoySoyToyUoyVoyWoyXoyzoyz\
+  oyzoyzoyzoyboybnwcmudlsekqfjogimhhkigijfhjefkddlcb\
+  mb`naZo`Xp_VqZTrYSrXRoWQlVPiUOfTNcSM`RLYQKVQKSPJPO\
+  IMQHJSGGUFDXEA_D7bC4eC1iE2mF2mG2mI2mJ2mK3mM3mN3mO3\
+  mP3mRmmSmmTmmVmmWmmXmmZmmYmzXzzWzzVzzVzzUzzTzzSzzR\
+  zzRzzQzzPzzOzzOzzWzzVzzUz }
+
+frm:SliceJulibrot6   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  aa=-(real(p1)-2), bb=imag(p1)-0.0000000000000000001,
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=z*z*fn1(z^(aa)+bb)+c
+  |z|< 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

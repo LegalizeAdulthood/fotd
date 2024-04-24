@@ -1,0 +1,115 @@
+;     Date: Mon, 30 Jan 2012 15:25:32 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 29-01-12 (Fractal nebula [8])
+;       Id: <1.5.4.16.20120130152707.381f277e@earthlink.net>
+; ---------
+; 
+; FOTD -- January 29, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent Mandeloid of today's image is an oversized Mandelbrot 
+; set infected in its depths by a Z^5 virus.  Today's image is an 
+; almost-Julia set of a bit of left-over debris in the center of 
+; the parent's main bay.
+; 
+; I call the image an 'almost' Julia set because the slice is 
+; double-rotated 0.2,0.2 degrees from the true Julia orientation.  
+; This slight departure from the true Julia direction preserves 
+; the irregular distribution seen in the Mandelbrot aspect of the 
+; left-over debris that fills the flattened oval outer shape.
+; 
+; The image reminds me of nothing quite as much as a view of a 
+; rich star field as seen through a wide-field telescope.  The 
+; name "Fractal Nebula" points to this similarity.
+; 
+; The rating of an 8 could be a bit liberal coming from a person 
+; like myself, who tends to the conservative side, even while 
+; supporting some rather progressive ideas.
+; 
+; The calculation time is a fast 25 seconds -- quite speedy enough 
+; to hold impatience at bay.
+; 
+; Show your total freedom from the task of calculation by 
+; downloading the finished image from the official FOTD web site 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Show your appreciation of fine art by viewing the high-
+; definition version at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And show your long-term commitment to fractals by visiting the 
+; original FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Another of those nondescript mixes of sun and clouds prevailed 
+; here at Fractal Central today, making life confusing for the 
+; fractal cats, who were undecided whether to take their afternoon 
+; naps on the window shelf or on the shelf by the heat.  The 
+; temperature of 41F +5C was a couple degrees above normal for 
+; what is supposed to be the coldest time of the winter.
+; 
+; Meanwhile, the resident humans had few decisions to make, and 
+; simply took things as they happened.  The next FOTD will 
+; hopefully be posted at its scheduled time.  Until then, take 
+; care, and work hard to make the world safe for reason.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Nebula { ; time=0:00:25.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=JulibrotMulti function=recip passes=1
+  center-mag=0/0/0.1386667 params=5/6/89.8/0/89.8/0/\
+  -0.703/0/0/0 float=y maxiter=450 inside=0 logmap=3
+  symmetry=xaxis periodicity=6
+  colors=00090I90G80E70C60A508506UUzUUUUUU7S16X65`B4\
+  eG3iL2mQ5kO8jNBiMDhLGgKJfJLdHOcGRbFTaEW`DZ_C`ZBV_I\
+  Q_PL`WF`bAai5ap7`m9`jA`gC`dD`bHYZLVWOSSSPPWMLZJIbG\
+  EfmBim7mm4pm1mm5km8hmBfmEdmHacK_cOXcRVcUTcXQc_OcbM\
+  `eL_cL_aK_`K_ZK_YJ_WJ_VIZTIZSIZQHZPHZNGZMGZKGZJJYR\
+  MXZPWfSWnUYjW_gYad_c`aeYcgVdiRfkOhmLjoHlqEnsBot8pp\
+  DqmHrjLrgPsdTtcXuc`ucdvchwclwcpqclkciecf`ccVm`PmXK\
+  mUEmR8mO3mLmczmczmczmczmczmczmczmczmczmczImLJmLLmL\
+  MmLNmLOmLLmOJmRGmUEmWBmZ9ma6md4mf9m`DmVZcC`cBacAcc\
+  Adc9fc8gc8ic7ic8jc7kc7lc7mc7nc7oc7pc7pm7qm6rm6sm6t\
+  m6um6vm6wm6wm6vm7vm7um8um8tm8tm9tm9sQ9sRArTArUAqWB\
+  qXBqZBp`CpaCocCodDnfDngDniEmjEmlElmFloFnqElpFkpGjp\
+  HipIhoJgoKfoLeoLdnMbnNanO`nP_mQZmRYmRXmSWlTVlUUlVS\
+  lWRkXQkXPkYOkZNj_Mj`LjaKjbGkeIjcJjbKiaLi`NiZOhYPhX\
+  QhWRgVTgTUgSVfRWfQXePZeN_eM`dLadKcdIdcHecGfcFgbEib\
+  CjaBkaAla9m`8o`6p`5q_4r_3 }
+
+frm:JulibrotMulti  {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p2*0.0055555555555556),
+  b=pi*imag(p2*0.0055555555555556),
+  g=pi*real(p3*0.0055555555555556),
+  d=pi*imag(p3*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), aa=-(real(p1)-2),
+  bb=imag(p1)-0.0000000000000000001,
+  c=p+flip(q)+p4, z=r+flip(s)+p5:
+  z=z*z*fn1(z^(aa)+bb)+c
+  |z|< 100000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
