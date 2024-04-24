@@ -1,0 +1,80 @@
+;     Date: Fri, 06 Jan 2006 00:21:42 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-01-06 (FOTD for 06-01-06 [NONE])
+;       Id: <1.5.4.16.20060106002400.29bf28e6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 06, 2006 (Rating NA)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Most of today's discussion appears in the philofractal version.  
+; The image is part of the fractal that results when 0.6 part of 
+; Z^2 is subtracted from 0.6 part of Z^(-2) and (1/C) is added.
+; 
+; The terraced effect came about when I rendered the scene with 
+; the outside set to 'tdis'.  I put almost no effort into the 
+; fractal, so I gave it no name and no rating.
+; 
+; The image renders using the passes=b option, which adds a bit of 
+; excitement to the rendering.  The render time of 1-1/2 minutes 
+; is quite brief, assuring that little time will have been wasted 
+; if the image proves not worth the effort.
+; 
+; Perhaps the best way of seeing the image is to download it from 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Despite current events, the fractal cats had a good day here at 
+; Old Fractal Central in the 50F 10C temperature on Thursday.  I 
+; enjoy seeing them happy -- it saves on tuna.  As for myself, I'm 
+; working myself into one of those moods that comes on whenever 
+; some big, well publicized calamity happens.  But I'll work out 
+; of it by posting my thoughts to the philofractal list.  The next 
+; FOTD will appear for better or worse in 24 hours.  Until then, 
+; take care, and sometimes I find it difficult to maintain my 
+; positive attitude.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_06-01-06 { ; time=0:01:39.75--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=b
+  center-mag=+0.29518114271096270/-0.275685110150650\
+  30/4672070/1/-97.5/1.79943609096566703e-007
+  params=-0.6/2/0.6/-2/0/0 float=y maxiter=280
+  inside=255 outside=tdis periodicity=10
+  colors=0002Tc2Vd2Xe2Zf2`g3Ze3Yd4Xc4Wb4Va5U`5T_6RY6\
+  QX6PW7OV7NU8MT8LS8KRBMSEOSHQSKSTNUTQWTTYUW_UZaU`cU\
+  _fXZh_YjbXleWnhVpkUrnWnoXjpYfpZbq`ZqaVrbRscNseJtfF\
+  tgBuh8ucAoZCiUEdPGZKITFKOAMI5OC1P78U9EZALcBRhCUjEW\
+  lGZnI`pKbrMetOgvQiwSgxUexVcxXaxY_x_Yx`WxaUycSydQyf\
+  OygMyiKyjIykLvhOseRpcUm`XjY_gWbdTeaQhZOkWLnUJiTNeS\
+  RaRVYQZUPbQOeTLXWIOYGFWHGUHGTHHRHHPHIOHIMHJKIJJIKH\
+  IKFILEILCIMBIMEKKHLJKMHNNGPPFSQDVRCYSB`T9bV8eW7hX5\
+  kY4mZ3iT5eN7bI9ZCBW7CMCKCHS2MZOV`hbbf`adZabX``V`ZT\
+  `XR_VP_TN_RLZPJZNHZLFYJDYHCYIAWJ9VK7UL6TM4RN5RP7RR\
+  9RTBRVDRWFRfURgURhURiURjURkURlURmURnURpUSpTSoSRnQR\
+  mPQlOPkMPjLOiKOhINgHMgGMfELeDLdCKcAJb9Ja8I`6I_5HZ3\
+  GY4IW5KV7MT8OR9QQBTOCVNEXLFZJG`IIcGJeEKgDMiBNkAPn8\
+  Qp6Rr5Tt3Uv1Wy8ZsGamOdfWh`ckUknOsrHprHmrHjqHgqHdpH\
+  `pHYoHVoGSoGPnGLnGImGFmGClG9lG5kFXr`xyvxvvwsuwouvl\
+  tvhtuesuastZr2L_2N`2Pa000 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,97 @@
+;     Date: Wed, 11 Jan 2006 00:36:13 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-01-06 (FOTD for 11-01-06 [NO RATING])
+;       Id: <1.5.4.16.20060111003835.2a0f9d60@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 11, 2006 (NO RATING)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's un-named and un-rated fractal image illustrates a midget 
+; that lies on the ridiculously long main stem of the Z^(1.3)+C 
+; Mandeloid as it appears 13 levels up the logarithmic spiral.  
+; The ridiculously long stem of the parent fractal is mirrored in 
+; the overly long stem of the midget in the image.
+; 
+; Since I put almost no effort into finding the image, and only 5 
+; minutes into smoothing the colors, giving it a rating or a name 
+; would hardly be fair.  True, the limited 256-color palette is 
+; unusually smooth on my old-style CRT monitor, but on the newer 
+; brighter LED monitor it is less impressive, making the image 
+; unworthy of either name or rating.  Actually, the irregular 
+; edges of the iteration bands are largely responsible for the 
+; unusually smooth color effect.
+; 
+; The included parameter file renders in just over 2 minutes on 
+; my 10-year-old 200-mhz fractal dedicated unit.  On the newer 
+; 2300-mhz machine, it finishes in just under 3/4 of one minute.
+; 
+; The render time can be totally eliminated by downloading the 
+; completed image from the FOTD web site, which may be accessed 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Tuesday was a pretty good day here at Old Fractal Central.  At 
+; 4pm we got the word from our agent that our offer on the New 
+; Fractal Central has been accepted and the contract papers are on 
+; the way for us to sign.  The move from Baltimore to Sunbury by 
+; April seems a pretty sure thing.  And considering what Baltimore 
+; has become, all I can say is 'good riddance'.
+; 
+; The weather on Tuesday here at OFC was partly sunny and mild 
+; with a temperature of 61F 16C.  This pleasantness kept the 
+; fractal cats outside and satisfied.  Only a minor serving of 
+; tuna was needed in the evening.  They actually seemed a bit 
+; bored with the tuna.  I think my sister overstuffed them with 
+; tuna while we were away.  The next FOTD probably, not certainly, 
+; will appear in 24 hours.  Until then, take care, and prevail.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_11-01-06 { ; time=0:02:08.42--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=b logmap=72
+  center-mag=-1.45288720892949/-8.43233416695308/3.4\
+  28101e+008/1/-157.5/4.863819991e-006 periodicity=10
+  params=1.3/0/13/525 float=y maxiter=2500 inside=255
+  colors=0000lb0kd0jf0ih0hj0gl0fn0ep2drDctKbvRaxY_za\
+  ZzhXznVzrSzrRzqPzpNznLzkLzhJzeGybEv_AsXCqZ7r_DtbFu\
+  eGxgKziNzkSzmWzo_vqdmsgdukVvoLxsCxv2zsAzoHzkPzgVzd\
+  bz`izXqzTvzPzzLzzHzzGzzLzzRzzVqz`gzdXziLzmCqeEbZEP\
+  REAJE0EECCHPALb8Pq6Tz4Xz4`z8dzAgzCkzGozHqzJuzNxzPz\
+  zRzzJssEig8ZX2PL0EA0400000000000000000000800H02P08\
+  Z0Ce0Ho0Lv0Rz2Vz0Xz0Zz0Zz0`z0bz0bx0dv0es0eq0go0ik0\
+  ii0kg0ke0om4s008b0He0Ri0`m0iqTT0G`02eJ0kb0600E00J0\
+  0PA0VJ0`T0eb0kkJzzuTAiXH``NPbTGeZ6id0ki0ookPPz4PxE\
+  VgL`RTeAbk0ki0iq`s0GqG0q`x06g0HRCRAPb0dkEz04z20zL0\
+  vd0zozz0ozCRzR0veiG0AZNz0vs0uTEu2Zu0ogz0zz6zmEzbJz\
+  PRzCZz0dz0kxi0zLHz0`xR84JGCCLJ4TR0ZZ0ee0km0Hz0Rz0`\
+  z0izzzzzzzozz`xzLvzLuzPszTzzXzz`zzdzzgzzkzzouzszzv\
+  vzzszzvzzuzzszzszzqzzzzzxzzvzzuzzuzzszzqzzLzzVzzbz\
+  zizzzzzzzzzzzzzzuzzJzzRzzZzzdzzkzz0zzzzzzzzzzzzzzx\
+  zzuzzizzzzzzzz0zz0zz0z000 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,87 @@
+;     Date: Mon, 16 Jan 2006 23:05:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-01-06 (NO RATING)
+;       Id: <1.5.4.16.20060116230739.29cfdace@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 17, 2006 (NO RATING)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For the next few months the FOTD will appear as frequently as 
+; possible, but on an irregular basis.  With the continuing 
+; graphic-design work and preparations for moving, things will be 
+; simply too hectic and unpredictable for a regular schedule.
+; 
+; Today's image is a scene on the negative real axis of the 
+; Z^2.0001+C Mandeloid as it appears 5000 lofty levels up the 
+; infinite complex logarithmic spiral.  At this height the Mandel 
+; figure is rotated around 37 degrees, so that a minor period-25 
+; radical located on the southwest shore of the main bay inter-
+; sects the negative X-axis.
+; 
+; The image earns no rating and no name.  I put far too little 
+; effort into it to consider rating it.  The render time of 25 
+; minutes is slow, but the completed GIF image is available for 
+; download on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The download will save much time.
+; 
+; Light winds but freezing temperatures kept the fractal cats 
+; confined to their window shelf here at Old Fractal Central on 
+; Monday, M.L.K.Jr. Day.  Despite the holiday, the work kept me 
+; confined to my desk.  The next FOTD will appear when I find the 
+; time.  I'll give a 67-percent chance that tomorrow will be the 
+; day.  Until next time, whenever that is, take care, and carry 
+; onward.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_17-01-06 { ; time=0:25:08.38--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.74665842566917000/-0.000008317070084\
+  55/7.082979e+007/1/-60/3.7404902352461411e-005
+  params=2.0001/0/5000/0 float=y maxiter=5000
+  inside=0 logmap=597 periodicity=10
+  colors=000c`Xc`Yc`Zc`_ca`caacabcaccadcaecbfcbgcbhc\
+  bicbjcckcclccmccnccocdpcdqcdrcdscdtceucdtcdsccsccr\
+  cbqcbqcbpcapcaoc`nc`nc_mc_la_l_ZkYZkXYjWYiVYiUXhTX\
+  hSWgRWfQVfPVeOVdNUdMUcLTcKTbJSaISaHS`FR_ER_DQZDQZD\
+  QYDPXDPXDOWDOWCNVCNUCNUCMTCMSCLSCLRCKRBKQBKPBJPBJO\
+  BINBINBIMBHMBHLAGKAGKAFJAFJAFIAEHAEHADG9DF9CF9CE9C\
+  E9BD9BC9AC9AB5569ABCFGFJLIOQLTVPX_SadVfiYjn`osbszc\
+  sxcswcsucstcsscsqcspcsncsmcsldsjdsidsgdsfdsedscdsb\
+  dsads_dsZesXesWesVesTesSesQesPesOesMesLfyFewHeuIes\
+  KeqLepMenOelPejReiSegTeeVecWebXe`ZeZ_dXacWbYUcXSeW\
+  QWVOhUN_OL_NJcMHmMGnMEpMCqeAse9te7un5wo3xz1zt2ys3y\
+  s4ym4yh5yb6zb7za7za8y`9y`9x_Ax_BxZCxZCxYDxUEUXEKXF\
+  KWGKWHKVHwVIwUJwUJwTKwTLwSMwSMwRNwQOvUOUPPvPQvORvO\
+  RvNSvNTvMTvMUvLVuLWuKWuKXuJYuJYuIZuI_uH`uH`uGatGbt\
+  FbtFctEdtEetDetDftCgtGfvCgt9gs5gt6gu6gv6gw6gx6gy6g\
+  z6gz6gzPhzOizOjzOkzOlzNmz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

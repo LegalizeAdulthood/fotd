@@ -1,0 +1,80 @@
+;     Date: Mon, 30 Jan 2006 22:58:41 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-01-06 (Rating 8)
+;       Id: <1.5.4.16.20060130230119.29bf32f0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 31, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image continues the series of Z^(1.3)+C Julia sets.  It 
+; is a Julia set of the Z^(1.3)+C Mandeloid as it appears 3 levels 
+; up the spiral.  At this level, the Mandeloid holds a very large 
+; midget off to the NW of the main bay.  Today's image is a Julia 
+; set of the main bay area of this large midget.
+; 
+; Since I did put a bit of extra effort into coloring the image, I 
+; gave it a rating of a lofty 8.  But I gave it no name.  Names 
+; must be earned.
+; 
+; Much of the effect of the image is due to the inside parts, 
+; which were rendered with the 'bof61' option.  The render time of 
+; just over 2 minutes should test the patience of no one.  And the 
+; image can always be enjoyed by visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Unsettled conditions here at Old Fractal Central on Sunday kept 
+; the fractal cats undecided.  They went out several times, but 
+; were soon faced with sprinkles of rain, which sent them scurry-
+; ing for shelter.  Monday was far better.  My days continue very 
+; busy.  The next FOTD, the first of the new month, will appear 
+; with a probability of 88 percent in 24 hours.  Until next time, 
+; take care, and don't ask how I determined the probability of 
+; the next FOTD appearing in 24 hours.  I don't know how I did it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_31-01-06 { ; time=0:02:08.25--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC center-mag=-0.00327762/0.00070\
+  084/11.91532 params=1.3/0/3/0/-0.74930081/0.377789\
+  6/0/0 float=y maxiter=1000 passes=1
+  inside=bof61 logmap=6 periodicity=10
+  colors=00000t00s00s00K00K00K00L00L00S00T00V00P00V0\
+  0b01e04Y16U47h78h9B_CCUFEjIHjKIbMKjQMjTOlRQiUSlbVl\
+  eWmcYmlamobmscovgoyoozjozlozmqyxqxmsvmstmssxtqotoo\
+  vmovlzvhxxgxxexzcxzbxz`xz_xzYzzzzzzzzzzzzzz1lz0hz0\
+  sz0ex0bt0`q0lm0Yj0Ve0Tb0gs0OW0MT0LQ0Tz0KM0KL1IL1Qe\
+  3HK3HI4FI04H6EH6EF7CF7CE7CC8BC8BB09B999B89B88078C7\
+  7E67E66C13E66F87HB9IEBKHELKFMMIOQKQTMSWOT_QVYOWWOY\
+  WM_VM_VM`TLbTLcSKeQKeQKgOIhOIjMHjMHlLHmKFoKFqIEqIE\
+  sHEtHCvFCxEBxEByCBzC9zB9zB9y9Cx9Ev9Ft9Hs8Ko8Lm8Ml8\
+  Oj7Sh7Te7Vc7Wb7Y`6`_6bW6cV6eT4hS4jQ4lM4mL4oK3sI3tH\
+  3vE3xC1zB1z91z81z84z71z60z40t30m10g00`10b10c11e17g\
+  3Ch3Hj3Ml3Tm3Ym6Vo7To8SqBQqCOsEMsHLtIKtKItMHvOFvQE\
+  xTCxVByW9yY8y`6zb4zc3zg1zh0zj0zm0zo0zq0zt0zv0zx0zz\
+  0zz0zz0zz0zz0zz0zy0vx0sv0ms1hTOQSKOSHMQELOBIO8HM4F\
+  L1EL0CK0BK09I0BH0CF0CE0EC0FB0F90H80I70I60K40L30L10\
+  M00O00O00Q00S00S0PY0cc0vY }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

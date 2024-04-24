@@ -1,0 +1,80 @@
+;     Date: Sun, 15 Jan 2006 02:17:22 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-01-06 (NO RATING)
+;       Id: <1.5.4.16.20060115021948.35a78cfe@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 15, 2006 (NO RATING)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A bit of unscheduled work kept me busier than expected on 
+; Saturday, and the task of planning for the big move further cut 
+; into the fractal time.  As a result, today's image was 
+; short-shrifted, and will remain forever nameless and unrated.
+; 
+; It pictures an unexceptional midget in the Z^(1.3)+C fractal as 
+; it appears 12 levels up the logarithmic spiral.  Like so many 
+; low order midgets, today's midget is surrounded by a highly 
+; fractured pattern giving the impression of an explosion.
+; 
+; The render time of just under 9 minutes is a bit long for an 
+; unrated image, but the wait can be eliminated by downloading 
+; the completed GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; High winds, temperatures in the 40's and occasional showers kept 
+; the fractal cats indoors on Saturday.  When night fell, the rain 
+; showers changed to flurries of snow, but by that time the cats 
+; were more interested in their tuna.  My day was unexpectedly 
+; busy with work and moving preparations, which means the next 
+; FOTD will not appear until Tuesday.  Until 48 hours from now, 
+; take care, and be at peace.
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_15-01-06 { ; time=0:08:48.43--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=-1.00791832785222900/-1.347192861781172\
+  00/1.245221e+008/1/-55/-1.03822602162e-006 inside=0
+  params=1.3/0/12/525 float=y maxiter=5000 logmap=250
+  colors=000K_ZFZMAZ9CXAEWAFUBHTBISCKQCLPDNODPMEQLEQ\
+  JFPIFNHGFFGLEHUDHQEGVFGPGGYHGXHGcIGYJGXKFXLFXLFXMF\
+  XNFXOFXOFUNESMDQLCOKBMKBKJAII9GH8EH8CG7AF68E56E5AH\
+  4DK4GN4JQ4NT3QW3TY3W`3Zc3bf2ni2hl2qw2xq2qo6inAglEe\
+  kHciLahP_fSYeWWc_UbcS`fQ_jOYnMXqKXrIXrGXrEXrCXsAXs\
+  8Xs6Xs7Vn8Ti8Rd9P_ANVAMRBKMCIHCGCDE7DD3JB6O99T8CY6\
+  Fb5Ig3Ll2Nj5Ti7Yh9bfCgeEldGqcIv`EZYBBUADR9FN9HK8JG\
+  8LD7NA7PMPEYf3cL6bMCaMHaMM`MR_MX_MaZMfYMkYMpaPleRh\
+  hTelVaoXZsZVv`SsZTqXUoWVlUWjSXhRYePZcO_aM`ZKaXJbVH\
+  cSFdQEeOCfMBfSFiXJlbNngQqmUsrYvw`xElNGhPIeRKaSMZUO\
+  WVPSXRPYTM_VI`XFbYCcZJfZPhZVkZ`molSkkTgkTckU_kUXkU\
+  VhYUeaTbdS_hRYkQVoPSrOPvNPyQQvTRsWSpZUmaWjdYgf_dia\
+  alcZoeWrgTuiQxkNzmLuoJqqHlsGhuEdwDbuGayI_zKZzNXzPW\
+  zRXzQXzQYzQYzPZzPZzP_zO_zO`zO`zO_zQZzRYzTXzUWzWVzX\
+  UzYTz_Sz`RzbQzcPzdRzaTzZVzWXzTZzR`zPbzOdzMfzKhzJjz\
+  HlzFnzEpzCrzAtz9vz7xz5zz4 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

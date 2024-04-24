@@ -1,0 +1,89 @@
+;     Date: Fri, 13 Jan 2006 01:01:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-01-06 (FOTD for 13-01-06 [6])
+;       Id: <1.5.4.16.20060113010335.376fb8f4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 13, 2006 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We're making a little progress.  Today's image might not have a 
+; name but it does have a rating.  After a modicum of pondering, I 
+; rated it at a 6, which is actually a bit above normal.
+; 
+; The parent fractal is a near-Mandelbrot set, created by subtract-
+; ing 100,000 parts of a rounded Z^(sqrt(2)) from 100000 parts of 
+; the full Z^(sqrt(2)).  This parent fractal differs the most from 
+; the true M-set in the area of the negative spike, which has 
+; split into fractal chaos.
+; 
+; I always wonder whether fractals based on such extreme input are 
+; true fractals or artifacts of mathematical imprecision.  But it 
+; really doesn't matter.  A fractal is a fractal regardless of the 
+; origin of the iterated numbers.
+; 
+; The passes=b is actually the fastest with this particular image, 
+; finishing in an impressive 4-1/4 minutes on my tired, worn-out 
+; old machine.  But the download from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is actually faster, especially for those with broadband connec-
+; tions.
+; 
+; The weather did a 180-degree turn here at the Old Fractal Cen-
+; tral on Thursday, when a gloomy, chilly, rainy day was replaced 
+; by sunny skies and a temperature of 66F 19C.  Needless to say, 
+; the cats were satisfied, but when Tippy went outside, he looked 
+; at me as if to say, "why didn't you do this yesterday?"
+; 
+; In my department, all the papers that we needed to fill out and 
+; sign to purchase the New Fractal Central have been filled out, 
+; signed and returned.  All that remains is to agree on the settle-
+; ment date, which, unless something unexpected happens, will be 
+; February 3.  The date of the next FOTD has already been agreed 
+; upon.  It will be January 14 -- 24 hours from now.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_13-01-06 { ; time=0:04:14.61--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=b
+  center-mag=-0.02640469166611007/+0.004068373541426\
+  33/4.450919e+008/1/-172.5/3.98367388552284263e-006
+  params=1/1.414213562373/-1/1.4142/100000/0 float=y
+  maxiter=1000 inside=255 logmap=83 periodicity=10
+  colors=000ovrotpmsokpniomfmmckiZfdUa_PXUKSPFNJAID5\
+  D87IC9NFBSIDXMGaPKfSPkWVpZ`uafzelzhrzkszntzouzovzo\
+  wzpSwpRtpQqqPnqOkqNhrMerLbrK_sJXsIUsIRsLUqOXoQZmTa\
+  lVcjYfh`igbjeemcgnbimdjkeljfmhgngipejqdkrcltbmuaov\
+  `px_qyZrzYsy_px`nxalwcjwdgveevgcuhauiZtkXtlVsmTsnR\
+  pmSnmTlmUimVgmWemXfjTfgQfdMgaJgZFgXCiaHjfMkjRmoWnt\
+  _oxdqzirznszrtzptzntwmtrktmithhtcftZdtZctZatZ`s`as\
+  bbrdcrfcrhcmjchlccncZpcVrcRtcSucTucTvcUvcVvcVwcWwc\
+  WxcXxcYxcYycZycZycazcdzagzXjzSlzOezNZvMSpLLkKFfKIc\
+  LKaMM_MOYNRWNTUOVSOXQP_OPaMQcKQeIRgGRbHUZIXUJ_QJbR\
+  IaSI`SI`TI_UH_UHZVHZVHYWGXXGXXGWYGWZFVZFV_FU_FUZIT\
+  YKTXNSWPSVSRUURTWRSZQR`QQcPPePOhONjONlORoNVrMZuLbx\
+  KfzJjzInzHrzGuzGszJqzLozNmzQkzSizUgzXezZcz`azc_zeY\
+  zgWzjUzlSznTzlUzjVziWzgXzfYzdZzb_za`z_`zZ_z`_zbZzd\
+  ZzfYzhYzjYzkXzmXzoWzqWzsVzuVzwVzxWzuWzsWzqWzoWzmWz\
+  kWzhWzfWzdWzbWz`WzZzzv000 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
