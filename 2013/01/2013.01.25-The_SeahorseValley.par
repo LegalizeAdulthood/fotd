@@ -1,0 +1,106 @@
+;     Date: Fri, 25 Jan 2013 18:04:52 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-01-13 (The Seahorse Valley [No Rating])
+;       Id: <1.5.4.16.20130125180312.34075cb2@earthlink.net>
+; ---------
+; 
+; FOTD -- January 25, 2013 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "The Seahorse Valley", and why not.  
+; That's what the image shows.  Yes, I know it looks nothing like 
+; Seahorse Valley, but it's not the familiar Mandelbrot or Julia 
+; views of the valley.  Its orientation is off in some remote 4-D 
+; orientation not too far from the Julia aspect of the valley.
+; 
+; The close-to-Julia nature is apparent in the outer shape of the 
+; figure.  The more interesting inside stuff exists because the 
+; angle of the slice has been rotated six degrees toward the 
+; Oblate orientation and one degree in another unimaginable 4-D 
+; direction.
+; 
+; I declined to rate the image, since Seahorse scenes are so 
+; common in FOTD history.  If the image had not been such a slow 
+; one, I might have rated it at a 7, but 15 minutes is quite a 
+; wait for an image to finish, especially when it lies out in a 
+; hyperspace no-man's land.  Those who view the image on one of 
+; the web sites will avoid the calculation wait and get quite a 
+; bargain.
+; 
+; The finished image is posted in its full glory at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and in even fuller glory at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The glorious back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The 24th brought a mix of sun, clouds and more cold weather to 
+; Fractal Central.  Today brought clouds and snow.  At post time 
+; about 1-1/2 in. or 4cm had fallen and the snow was still falling 
+; lightly.  The fractal cat spent the day watching the flakes come 
+; down and lying by the heat.  The humans spent the day getting 
+; the work finished and readying the snow shovel.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and why doesn't the other side see that it is wrong?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_SeahorseValley { ; time=0:15:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t
+  center-mag=0/0/1.037/1/-35/0
+  params=84/0/90/1/-0.75/-0.005/0/0/2/0 float=y
+  maxiter=32767 inside=0 logmap=yes periodicity=0
+  colors=000hKdhLehMfhNghOihQjhRkhTmhVnhWphYqh_rh_th\
+  auhavhcwhcwhcwhdwhdwhewhewhfwhfwhfwhfwhfwT22V68X9D\
+  ZDI_GNaKScNXdQacP`bP_bO_aOZaOY`NY`NX_NWZMWZMVYMVYL\
+  UXLTXLTWKSWKRVJRUJQUJQTIPTIOSIOSHNRHMRHMQGLPGLPGKO\
+  FJOFJNEINEHMEHLDGLDGKDFKCEJCEJCDIBCIBCHBBGABGAAF99\
+  F99E98E87D87B86B76A75B74A65A65A65C64874E70B61D71F6\
+  2F62G72G73H83I83K84L94N94OA5QA5RB5TB6UD6WD6XE7YF7Z\
+  E8_F8_G8_G9aH9cI9dJAeJAfKAgMBhOBiQBjSCmUCnXCo_DqaD\
+  pcDogCmmBmoBmqAmsAmq9mo1mm5ml9mkDmiGmeKmaOv_SwYRwW\
+  RwUQwSQzQPzPPzOPzOOzOOzPNzPNzPMzPMzQMzQLzQLzRKzRKz\
+  RKzSJzSJySIxSIwTHwTHwTHwUGwUGwUFwVFwVFwWEwXEwYDwZD\
+  w_CwaCwbCwcBwcBwcAwcAwcAwc9wc9wc9wc8wd8we8wf8wg7wh\
+  7wi7wj7wk6wl6wm6wn6wo7wp7wq8wr8ws8wt9wu9wvAwwAwxAw\
+  yBwzBwzBwzCwzCwzDwzDwzDwzEyzEzzEzzFzzFzzGzzGzzHzzH\
+  zzLzzPzzUzzZzzczzhzzmzzrzzvzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

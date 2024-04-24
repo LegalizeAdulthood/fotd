@@ -1,0 +1,104 @@
+;     Date: Thu, 17 Jan 2013 15:56:50 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-01-13 (High-Order Hijinks [Rating 6])
+;       Id: <1.5.4.16.20130117155503.2e47cb98@earthlink.net>
+; ---------
+; 
+; FOTD -- January 17, 2013 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD is one I found almost automatically in the brief 
+; periods of free time that somehow worked their way into an 
+; otherwise very busy day.  The rating of a 6 might be considered 
+; a gift, since I can see little of note in the image.
+; 
+; The image is a near-Julia scene in the easternmost East Valley 
+; of the Z^9+C Mandeloid.  (The parent Mandeloid has eight East 
+; Valleys.)  The name High-Order Hijinks" refers to the order-9 
+; Julibrot as well as the orientation of the slice, which lies 
+; only 0.00003,0.00003 degrees from the true Julia orientation.
+; 
+; The 'outside' parts of the image were colored by the 'imag' 
+; option, which adds somewhat more life than the flat straight 
+; 'iter' coloring.  The calculation time of 7 minutes is more than 
+; the image is worth.  I strongly recommend trying one of the FOTD 
+; web sites.
+; 
+; Be free of calculation inefficiency!  View the finished image 
+; online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And enjoy the hi-def versions at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Thousands of back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds with a temperature of 41F +5C made today 
+; bearable if not exactly pleasant here at Fractal Central.  The 
+; fractal cat was more interested with the unwanted cats prowling 
+; about than with the weather.  The humans had another average day 
+; -- pleasant to live through but boring to write about.
+; 
+; The next FOTD will be posted within a reasonable time.  Until 
+; whenever, take care, and always do good, but before doing it, be 
+; sure to find out exactly what defines good.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+High-Order_Hijinks { ; time=0:07:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 float=y
+  center-mag=0.13128/0.748246/8.950949/1/-87.5/0
+  params=89.99997/0/89.99997/0/0.67545/0/0/0/9/0
+  maxiter=5000 inside=0 outside=imag periodicity=12
+  colors=000nZqmYplXokWnjWmiVlhUkgUjgTifSheSgdRfcQeb\
+  QdaPc`Ob`Na_N`ZM_YLZXLZWKYVJXUJWUIVTHUSHTRGSQFRPEQ\
+  OEPNDONCNMCMLBLKAKJAJI9IH8HG6FH8HH9IHAJICKIDLIEMIG\
+  NJHOJIPJJQJLRKMSKNTKPUKQVLRWLSXLUYMVZMW_MY`MZaN_bN\
+  acNbdNceOdfOfgOghOhiPjjPkkPllPmmQnjQnhRnfRodSoaSo_\
+  TpYTpWUpTUpRVqPVqNWqKWrIXrGXrEYsBYs9Zs7_u4Zs5Zr5Zq\
+  6Zp6Zo7Zn7Zl7Zk8Zj8Zi9Zh9Zg9ZfAZdAZcBZbBZaBZ`CZ_CZ\
+  ZDZXDZWDZVEZUEZTFZSF`UBZRFYPIXNLWLOVJRUGUTEXSC_RAb\
+  Q8eQ1jP4iP6hP9hPBgPEfPGfPIeOLdONdOQcOScOUbOXaOZaNa\
+  `Nc_Ne_NhZNjYNmYNoXOqZNqXMqWLqVKqTJqSIqRHqPGqOFqNE\
+  qLDqKCsIDqJDpJDoJDnJDmJElJEkJEjKEiKEhKFgKFfKFdKFcK\
+  FbKFaLG`LG_LGZLGYLGXLHWLHVMHUMHTMHRMHQMIPMIOMINMIM\
+  NILNJKNJJNJINJHNJGNKDOJENJFNJFMJGMJGLJHLJILIIKIJKI\
+  JJIKJIKIILIIMIIMHHNHHNGHOGHPGHPFHQFHQEHREGRDGSDGTD\
+  GTCGUCGUBGVBHUCGVBGWBGWBGXBGYBGYAGZAF_AF_AQKKJFANH\
+  FQJJTLNWNSZPWaR_dTdgVhjXl }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

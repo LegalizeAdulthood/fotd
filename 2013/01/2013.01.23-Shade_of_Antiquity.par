@@ -1,0 +1,108 @@
+;     Date: Thu, 24 Jan 2013 00:43:15 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 23-01-13 (Shade of Antiquity [8])
+;       Id: <1.5.4.16.20130124004134.2ba7adfe@earthlink.net>
+; ---------
+; 
+; FOTD -- January 23, 2013 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's unusually colored image is a near-Julia scene in the 
+; Seahorse Valley area of the (-Z)^(2.5)+C Mandeloid.  To 
+; visualize the Julia set, mentally remove the highly colored 
+; inside stuff while retaining the outer shape, which is the Julia 
+; set.  To see the actual Julia set, change the real(p3) parameter 
+; to 0.
+; 
+; The thin open slit across the center of the image is a sideways 
+; view of the space between the two branches of Seahorse Valley.  
+; The angle of the slice is rotated 6 degrees from the Julia 
+; direction toward the Oblate direction.
+; 
+; The rating of an 8 is largely earned by the coloring, which was 
+; created effortlessly by the Fractint program.  My part was to 
+; tweak a few registers to make the colors blend more smoothly.
+; 
+; The calculation time of 3-1/2 minutes is a fair price to pay for 
+; the image.  (Most of the time is spent calculating the final two 
+; lines.)  But it is still a bother to set up and run the 
+; parameter file.  The web sites can eliminate any parameter-file 
+; set-up anxiety.
+; 
+; For immediate relief view the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And don't forget the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; or the back images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Some clouds, some sun, a little less wind and a still chilly 
+; temperature of 18F -8C made for another bone-chilling day here 
+; at Fractal Central today.  The fractal cat had an exciting day, 
+; surviving his regular trip to the doctor.  The humans had 
+; another in the endless string of passing days.
+; 
+; The next FOTD will most likely be posted in 24 hours.  Until 
+; whenever, take care, why can't we think four-dimensionally, when 
+; even an unconscious computer can do it.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Shade_of_Antiquity { ; time=0:03:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1
+  center-mag=-0.056338/0/0.91876 params=84/0/90/0/\
+  -0.760036618323/0/0/0/2.5/0 float=y maxiter=250000
+  inside=0 logmap=yes symmetry=xaxis periodicity=12
+  colors=000hKdhLehMfhNghOihQjhRkhTmhVnhWphYqh_rh_th\
+  auhavhcwhcwhcwhdwhdwhewhewhfwhfwhfwhfwhfwT22V68X9D\
+  ZDI_GNaKScNXdQacP`bP_bO_aOZaOY`NY`NX_NWZMWZMVYMVYL\
+  UXLTXLTWKSWKRVJRUJQUJQTIPTIOSIOSHNRHMRHMQGLPGLPGKO\
+  FJOFJNEINEHMEHLDGLDGKDFKCEJCEJCDIBCIBCHBBGABGAAF99\
+  F99E98E87D87D86C76B75B74A64A63962952851850851951B6\
+  2C62E72F73H83I83K84L94N94OA5QA5RB5TB6UB6WC6XC7ZD7_\
+  E8aF8bG8dH9eI9gJ9hKAjLAkMAmNBnOBpQBqSCsUCt`CvcDwcD\
+  xgDqjCmmBmoBmqAmsAmq9mo1mm5ml9mkDmiGmeKmaOv_SwYRwW\
+  RwUQwSQzQPzPPzOPzOOzOOzPNzPNzPMzPMzQMzQLzQLzRKzRKz\
+  RKzSJzSJySIxSIwTHwTHwTHwUGwUGwUFwVFwVFwWEwXEwYDwZD\
+  w_CwaCwbCwcBwcBwcAwcAwcAwc9wc9wc9wc8wd8we8wf8wg7wh\
+  7wi7wj7wk6wl6wm6wn6wo7wp7wq8wr8ws8wt9wu9wvAwwAwxAw\
+  yBwzBwzBwzCwzCwzDwzDwzDwzEyzEzzEzzFzzFzzGzzGzzHzzH\
+  zzLzzPzzUzzZzzczzhzzmzzrzzvzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

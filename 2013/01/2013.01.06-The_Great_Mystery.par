@@ -1,0 +1,106 @@
+;     Date: Sun, 06 Jan 2013 17:34:49 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-01-13 (The Great Mystery [7])
+;       Id: <1.5.4.16.20130106173253.2a6fb08c@earthlink.net>
+; ---------
+; 
+; FOTD -- January 05, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image rates only a 7.  Being simply another venture into 
+; the Z^(-4.01)+C Julia sets, it deserves no more.  But it is 
+; still a rather striking image, demonstrating the large variety 
+; of Julia sets in this area.
+; 
+; The name "The Great Mystery" refers not to the image, but to 
+; some other vague mystery only half perceived.  Perhaps, it's the 
+; old warhorse mystery about the meaning of life, which our 
+; over-revered science has so far been helpless to answer.  (It 
+; punts the question to religion, while implying that the beliefs 
+; of religion are only comforting illusions.)
+; 
+; The calculation time of one minute will pass in a flash, but 
+; when the image appears, it will neither answer the great mystery 
+; nor supply a comforting illusion, but it is guaranteed to be at 
+; least semi-real.
+; 
+; The pre-calculated image is really online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with the high-definition versions at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Lots of back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The string of typical early January days continued here at 
+; Fractal Central today, with variable amounts of clouds, breezy 
+; west winds, and a temperature of 37F +3C.  The fractal cat also 
+; had a typical day, taking advantage of the sun when it was out 
+; and taking to the heat when the sun disappeared.  The humans 
+; mostly took it easy.
+; 
+; The next FOTD will eagerly be posted when the time arrives.  
+; Until then, take care, and we should not propose knee-jerk 
+; solutions to our problems.  We should instead find effective and 
+; workable solutions that everyone will accept.  This is why the 
+; 99-percent movement went nowhere and the current push for more 
+; gun control is futile.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Great_Mystery { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/0.033113\
+  /1/45/0 params=90/0/90/0/-1.647906886818445/0/0/0/\
+  -4.01/0 float=y maxiter=3200 inside=0 periodicity=0
+  colors=000zzzzz0570450340220110QIWNGTLEQIDNGBKE9HB\
+  8E96B748435212_N8UJ6OF5IB4C72631ZG6TD5NA4H83B52521\
+  NHpIDeDAV96L43ASF2W7tT6oRczP5gM5cK4_I4WG3SD3OB2K9K\
+  m61q418204CdrA`m9Xh8Tc7QZ6MU5IP4EK3BF27A135X8BS79O\
+  68K56G45C34822411KpkHieFb_CXUAQO7JI5DC266alRXeNS_K\
+  NUGJODEIA9C6463DaKAUG7MC5F8274aRFXODTLBPIALF8GC6C9\
+  5zz0h00zczi4b`3VS2NI1F907Pj8Nf7Lb6J_6HW5FS4DP4BL39\
+  I37E25A1371130gSlcPg_McWKZSHVOFQKCMGAHC7D858424AUm\
+  8Qg7Na6KX5GR4DM3AG26B135K35I24H24G24E23D23C13A1291\
+  2812HA1D0140120G100zcIzIGrHFnEDg7CZ6AS59N47I36E249\
+  13401kRc_KUODKC6AwGcqE_lDWfBTaAPW8LR7IL5EG4AA27513\
+  XeCT`APW9MS8SsCWsCasBisBosAvzAzzAzhRzXftRvsYczfVqI\
+  cqRXqMRqOLqQEqS8qT2oV8nXEmZJl`PjbVid_hfeghkfjpcdn`\
+  _mYUkVPjSJhPEgM8eK3dG2Y9D4D2RA1K61D306Iu7Ei5AY47N2\
+  3B1pDXlCUiBSfAQb9O_8MX8KT7IQ6GN5EJ4CG4AD3892661430\
+  2GL1EJ0zV0Cb0BF0AE09C08B0 }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

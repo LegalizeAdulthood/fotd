@@ -1,0 +1,122 @@
+;     Date: Wed, 02 Jan 2013 15:56:01 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 02-01-13 (Wise Butterfly [8.5])
+;       Id: <1.5.4.16.20130102155400.2a1f98cc@earthlink.net>
+; ---------
+; 
+; FOTD -- January 02, 2013 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image continues the theme of yesterday's, with a shift 
+; upward to an exponent of (-6.01).  Since the image is so close 
+; to being a repeat, I could not give it an equally high rating, 
+; but the rating of 8-1/2 that I did give it is not to be sneezed 
+; at.
+; 
+; I named the image "Wise Butterflies".  I can give no logical 
+; reason for such a name.  It is simply a phrase that popped into 
+; my mind when I shut off my thinking for a few minutes as I 
+; studied the image.
+; 
+; The calculation time of 12 seconds seems unreal.  But that's the 
+; time it took for the image to finish on the now ancient 2000mhz 
+; unit.  It will take longer than this to set up and run the 
+; included parameter file.
+; 
+; Save the effort of setting up the parameter file by viewing the 
+; finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And check the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Thousands of back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds prevailed here at Fractal Central today, 
+; while the temperature of freezing made it feel quite seasonal.  
+; The fractal cat spent the afternoon on the shelf in the 
+; southwest window while the sun was out, and near the heat when 
+; the sun was obscured.  The semi-fractal humans had a back-to-
+; work day, which was notably un-exciting.
+; 
+; I hear that some people were disappointed when the world did not 
+; end on December 21.  As for myself, I could not have been 
+; disappointed, because I was virtually certain that nothing would 
+; happen on doomsday.  All predictions of doomsday through all of 
+; history have had one thing in common -- they have been wrong.  
+; And I saw no reason to expect the latest 'Mayan' doomsday to be 
+; any different.  IMO, our whole culture is the doomsday scene.
+; 
+; I am pretty much a skeptic about most of the strange and unusual 
+; things we are given on TV as likely fact.  This includes alien 
+; spacecraft visiting earth, alien abductions, bigfoots wandering 
+; our forests, lake and other monsters, Bermuda triangles, 
+; assorted conspiracy theories, and most other things that make no 
+; sense.  But this does not mean I am a totally boring rational 
+; thinker.  I do believe in ghosts and invisible 'spirit' worlds, 
+; which puts me right up there among the irrational kooks.
+; 
+; The next FOTD will be posted soon.  Until that earth-shattering 
+; moment arrives, take care, and don't give up all hope of 
+; doomsday destruction.  The media moguls ordaining the public 
+; mood will soon invent another looming doomsday for us to worry 
+; about.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Wise_Butterflies { ; time=0:00:12.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/0.1930311
+  params=90/0/90/0/-1.50078/0/0/0/-6.01/0 float=y
+  maxiter=1500 inside=0 symmetry=xaxis periodicity=6
+  colors=0000UZzhFKPCGKACF78A5452HGqFFmEEjDDfCCcBB`A\
+  AX99U88R77N66K55G44D33A226113Zz_zS00RzUozTPUXNS`MR\
+  cLPcKOcIMcHLcGJeFIgDGeCFcBDaAC_8AW79T67Q56N34K2300\
+  0zzevqezuCrsBmqBcoAUlAKj9Ah9Af8Ad8Ab8A_75Y74W64U64\
+  S53Q53N43L42J42H32F31D21A2181061040020832721721721\
+  721621621621621521521511511411411411411310cccz103z\
+  021z2002002001001001001000000000008HO5BG258LprJlnI\
+  hjGdfF`bDYZCUVAXhVWN7IJ6FF4BB377133Ws9L`6AI3J49F37\
+  B25713301`iRXdOT_LPWIMRGINDEIABD8795342NaqM_nLYlKX\
+  jJVhIUeHScGQaFP_ENXDMVCKTBJRAHO9FM8EK7CI6BF59D47B3\
+  692461340120e10a00Z00V00S00O00L00H00E00A00700300we\
+  0sb0p`0mZ0jX0gU0dS0`Q0YO0VM0SJ0PH0MF0ID0FB0C809606\
+  4032QpXyvrvsptqnrolpmjmkhkifigdgebec`b`Z`ZXZXVXVTV\
+  TRqNHnRIlUJjYKh`LedMcgNakO_nPciVgd`j`fnWlrRruNw1D5\
+  rLtoKqlJniIkgHhdGeaFcZE`XDYUCVRASO9PM8MJ7KG6HD5EB4\
+  B838525212lyUgsRcnP_iMWdK }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,108 @@
+;     Date: Tue, 01 Jan 2013 15:22:41 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 01-01-13 (New-Year Surprise [7.5])
+;       Id: <1.5.4.16.20130101152040.386f5ea6@earthlink.net>
+; ---------
+; 
+; FOTD -- January 01, 2013 (Rating 9.8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's stellar image, the first of the new year, continues the 
+; theme of the final two images of the past year.  The image is a 
+; Julia set of a point on the negative X-axis of the Z^(-4.01)+C 
+; Mandeloid.  The location is very near the limit of the negative 
+; point, which is broadened into a wedge.
+; 
+; Considering both the mathematical and artistic aspects, I rated 
+; the image at a super-stellar 9.8, one of the highest ratings of 
+; all time.
+; 
+; The parameter values are extremely critical.  The entire image 
+; is lost at the slightest change.
+; 
+; The name "New-Year Surprise" indicates my surprise when I 
+; discovered the appearance of the Julia sets of such negative 
+; areas.
+; 
+; The very brief calculation time of 40 seconds makes today's 
+; image one of the greatest calculation bargains in FOTD history.
+; 
+; Start the new year on the right foot by saving even this brief 
+; time.  View the finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And be sure to check the hi-def versions at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; All the FOTD back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A blanket of heavy clouds hung over Fractal Central all day 
+; today.  A few passing flurries of snow amounted to nothing, 
+; melting as soon as they fell, with a temperature of 36F +2C.  
+; The fractal cat and not-quite-as-fractal humans had a quiet day, 
+; which is the best way to start a new year.
+; 
+; The next FOTD will be posted in 24 hours if it is ready.  If it 
+; is not ready, it will be posted sometime later.  Until whenever, 
+; take care, and I'll make my predictions for the year 2013 in 365 
+; days.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+New-Year_Surprise { ; time=0:00:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=0/0/0.1128405 params=90/0/90/0/-1.64788\
+  477144322/0/0/0/-4.01/0 float=y maxiter=3200
+  inside=0 symmetry=xaxis periodicity=0
+  colors=000000zz0570450340220110QIWNGTLEQIDNGBKE9HB\
+  8E96B748435212_N8UJ6OF5IB4C72631ZG6TD5NA4H83B52521\
+  NHpIDeDAV96L43ASF2W7tT6oRczP5gM5cK4_I4WG3SD3OB2K92\
+  G61C418204CdrA`m9Xh8Tc7QZ6MU5IP4EK3BF27A135X8BS79O\
+  68K56G45C34822411KpkHieFb_CXUAQO7JI5DC266alRXeNS_K\
+  NUGJODEIA9C6463DaKAUG7MC5F8274aRFXODTLBPIALF8GC6C9\
+  5m00HeHzUzi4b`3VS2NI1F907Pj8Nf7Lb6J_6HW5FS4DP4BL39\
+  I37E25A1371130gSlcPg_McWKZSHVOFQKCMGAHC7D858424AUm\
+  8Qg7Na6KX5GR4DM3AG26B135K35I24H24G24E23D23C13A1291\
+  2812611501401200100sBInAGi9Fe8D`7CW6AS59N47I36E249\
+  13401kRc_KUODKC6AwGcqE_lDWfBTaAPW8LR7IL5EG4AA27513\
+  XeCT`APW9MS8SsCWsCasBisBosAvzAzzAzdRzQftCvsLczOVqI\
+  cqRXqMRqOLqQEqS8qT2oV8nXEmZJl`PjbVid_hfeghkfjpcdn`\
+  _mYUkVPjSJhPEgM8eK3dG2Y9D4D2RA1K61D306Iu7Ei5AY47N2\
+  3B1pDXlCUiBSfAQb9O_8MX8KT7IQ6GN5EJ4CG4AD3892661430\
+  2GL1EJ0DI0CG0BF0AE09C08B0 }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

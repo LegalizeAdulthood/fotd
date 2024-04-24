@@ -1,0 +1,122 @@
+;     Date: Sun, 06 Jan 2013 17:34:51 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-01-13 (Stuck Baghorn [7])
+;       Id: <1.5.4.16.20130106173255.2a6fd37c@earthlink.net>
+; ---------
+; 
+; FOTD -- January 06, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Stuck Baghorn".  The name has only a 
+; little to do with the actual image, which appears as a pentagon 
+; with rudimentary staghorns (velvet antlers) jutting from its 
+; edges.  But these baby antlers reminded me of an old Canadian 
+; funny-animals show starring a character named 'Buck Staghorn', 
+; who was always stuck in his camper out in some wilderness, 
+; observing the antics of the local wild animals and sending 
+; messages back to Beatrice at Staghorn Central.  And yes, 
+; Staghorn Central was the inspiration for Fractal Central, which 
+; is equally as real.
+; 
+; And as for today's image, it is only half real also, as are all 
+; fractals.  For a (minor) change, I have switched from the 
+; expression Z^(-4.01) to (-Z)^(-5.01).  Iterating negative Z 
+; instead of positive Z rotates the fractal so that one of the 
+; sharp points of the Mandeloid falls on the real positive X-axis 
+; rather than in complex territory, where, with two coordinates to 
+; adjust, searching for Julia sets is far more troublesome.  The 
+; SliceJulibrot5 formula might be a new one for the list.  I'm not 
+; sure.
+; 
+; The image itself rates a 7, at least IMO.  A bit more detail 
+; might have raised the rating to an 8, and I'm certain that 
+; better Julia images do exist in this area, but laziness has once 
+; again won out, and I made no effort to improve on the scene.  
+; (Tomorrow is another day however.)
+; 
+; The calculation time of a mere 10 seconds is no typo.  The image 
+; really does finish almost before it starts.  And in addition, 
+; the web sites are available to remove even the chore of running 
+; the parameter file.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with augmented variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Thousands of back images may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Clouds were plentiful here at Fractal Central today, but the 
+; lack of wind and temperature of 41F +5C kept things relatively 
+; pleasant for January.  With the temperature so far above 
+; freezing, the forecast of light snow this evening will probably 
+; prove to be a bust however.  The fractal cat passed most of the 
+; day stretched by the heat, except when he used up excess energy 
+; playing with his cat cubes.  The humans, (at least we were human 
+; the last time we checked), passed the day doing as little as 
+; possible.
+; 
+; The next FOTD will be posted before long.  Until then, take 
+; care, and what are fractals but a temporary break from pondering 
+; the deeper problems of life?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Stuck_Baghorn { ; time=0:00:10.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 center-mag=0.0670723/\
+  0.206427/0.2693157/1/18/0 params=90/0/90/0/\
+  1.528410596/0/0/0/-5.01/3550 float=y maxiter=1500
+  inside=0 periodicity=0 periodicity=0
+  colors=000FKYzA8GC8GE8GG8Ec8CG8Ac88z88hzmGC8Gz8GG8\
+  EG8CG8AGBBGCBGDBGFBGGBGGBFGBDGBCGBBGCBGDBGFBGGBFGB\
+  000CABBzBBzzBGDBcFBGGBFGBczcccUKUF00zz000000000000\
+  000000e0e00eeUAKe0eeL0eeeLLLLLzLzLLzzzLLzLz000zzz0\
+  00555888BcBEEEHHHKKKOOOhccWWW___ccchhhmmmssszzz00z\
+  G0zV0zj0zz0zz0jz0Vz0Gz00zG0zV0zj0zz0HFHVz0Gz00z00z\
+  G0zV0zj0zz0jz0VzmrzVVzbVzjVzrVzzVzzVrzVjzVbzVVzbVz\
+  jVzrVzzVrzVjzVbzVVzVVzbVzjVzrKKKVrzVjzVbzhhzlhzqhz\
+  uhzzhzzhuzzzzhlzhhzlhzqhzuhzzhuzhqzhlzhhzhhzlhzqhz\
+  uhzzhuzhqzhlz00S70SE0SL0SS0SS0LS0ES07S00S70SE0SL0S\
+  S0LS0ES07S00S00S70SE0SL0SS0LS0ES07SEESHESLESOESSES\
+  SEOSELSEHSEESHESLESOESSEOSELSEHSEESEESHESLESOESSEO\
+  SELSEHSKKSMKSOKSQKSSKSSKQSKOSKMSKKSMKSOKSQKSSKQSKO\
+  SKMSKKSKKSMKSOKSQKSSKQSKOSKMS00G40G80GC0GG0GG0CG08\
+  G04G00G40G80GC0GG0CG08G04G00G00G40G80GC0GG0CG08G04\
+  G88GA8GC8GE8GG8GG8EG8CG8A }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

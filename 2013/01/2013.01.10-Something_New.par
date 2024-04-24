@@ -1,0 +1,110 @@
+;     Date: Thu, 10 Jan 2013 18:14:55 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-01-13 (Something New [7])
+;       Id: <1.5.4.16.20130110181419.38576526@earthlink.net>
+; ---------
+; 
+; FOTD -- January 10, 2013 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the fractal that results when the formula 
+; Z^(1.5)+C is iterated 379.2424085207679 levels up the complex 
+; hyperladder with no function applied.  The odd number of levels 
+; indicates that the value was set at random by Fractint's evolver 
+; feature.  A very similar image could have been found with a far 
+; simpler value, though I lacked time to search for it.
+; 
+; Actually, the complex logarithm has an infinity of values, but 
+; this does not mean that an infinite variety of fractals is 
+; possible.  The fractals change in a circular manner as the value 
+; of 'k' in the complex log formula is changed, and soon begin 
+; repeating.
+; 
+; I named today's image "Something New".  I have never before seen 
+; features quite like the dark blue ones in today's image.  The 
+; filaments extending from them resemble those extending from 
+; everyday Mandelbrot buds.  And the filaments in the image have 
+; identical mini dark blue mini-features lying along them.
+; 
+; The rating of a 7 is average.  The artistic value is not that 
+; great, nor is the mathematical interest.  Extra coloring effort 
+; might have raised the rating a half point or so however.
+; 
+; The calculation takes 2-1/2 minutes to finish.  Significant time 
+; may be saved by viewing the finished image on one of the web 
+; sites.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; High definition variations are or soon will be online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Back images may be found at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Near total sun with a temperature of 45F +7C made today 
+; unusually pleasant for the time of year.  The fractal cat 
+; enjoyed the sun; the humans enjoyed getting the work finished.
+; 
+; The next FOTD will be posted in a day or two.  Until whenever, 
+; take care, and the surest sign of a dysfunctional group is when 
+; its members begin fighting among themselves instead of working 
+; together to solve their common problems.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Something_New { ; time=0:02:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident inside=0
+  center-mag=+1.52637522907494/+0.5716577695720915/\
+  1.263153e+009/1/-90/0 params=1.85/0/379.2424085207\
+  679/0 float=y maxiter=3600 logmap=381 periodicity=6
+  colors=000E7SF8TG9UHAVIBWJCXKDYLEZMF_NG`OHaPIbQJcR\
+  KdSMeVOeZQeaSfeVfiXflZgp`gvYbt`esbgrejpglojopkrolq\
+  nlqmlqllqklqklqjlqilqhmqgmqgmqfmqemqdmqcmqclwcmqcm\
+  kcnecn`cnVcoPcoJfrGdpFcoEanD`mCZlBYjAWi9Vh8Tg7Vf4S\
+  f6Re5Rd5Rc5Rb5Qa5Q`5Q`5Q_5QZ5PY5PX5PW5PV5Ya2PV5GO8\
+  WBG7HABJBFKCJLCNMDQNDUOEYPEaQFdRFhSGlTGpUHxJLuPJsV\
+  Hq`GofErlDvrBzz8vwAruBnsCkqEloFmlGnjHnhJofKpdLpbMo\
+  _IkZHhYGeXFbWF_VEXUDUTDRSCORBLQBIPAFO9CN9AQ89T78V6\
+  7Y56_45b34d23g12i06h6AgCDgIHfOKeTOeZRddVcjYcoV`kTY\
+  gRVcPT`NQXLNTJLQGIMEFICCEAAB877643420GWBES9CP8BM79\
+  J68G56C4493362131iBHeAFb9U_8UW7UT7UQ6UN5UJ4UG3UD3U\
+  92K61K30KKTKSEKFNKCJKAFc7Bc57c23cGMm8BmJYmHVzGTzFR\
+  zEPzDNzBLzAJz9Hz8Ez7Cz5Az48z36z24z12zIYzGUzEQzCMzA\
+  Iz8Fz6Bz47z23zKKzq`zlXzfTzaQzWMzRIzLEzGBzA7z53z1zz\
+  0qz0hz0_z0Rz0Iz09zGazEZzDWzCTzBQz9Nz8Kz7Hz6Ez4Bz38\
+  z25z12zVrzRlzOgzLazIXzFRz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

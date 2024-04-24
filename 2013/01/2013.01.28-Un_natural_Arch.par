@@ -1,0 +1,114 @@
+;     Date: Mon, 28 Jan 2013 16:07:07 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 28-01-13 (Un-natural Arch [8])
+;       Id: <1.5.4.16.20130128160530.38df13c4@earthlink.net>
+; ---------
+; 
+; FOTD -- January 28, 2013 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in Seahorse Valley.  It looks nothing 
+; at all like the Seahorse Valley scenes we are so familiar with 
+; because it is sliced in an odd direction -- rotated 30 degrees 
+; from the Julia toward the Rectangular orientation.
+; 
+; While viewing the image, (and hopefully enjoying it), the viewer 
+; might wonder where Seahorse Valley is located in the frame.  
+; Actually, the valley has gone nowhere.  The image is immersed in 
+; it.  Everything in the scene is a part of the valley.
+; 
+; The detail in the arch was supplied by the 'tdis' outside 
+; coloring option, which colors the points according to how far 
+; they travel before finally escaping.
+; 
+; I named the image "Un-natural Arch" because of the prominent 
+; arch that fills the frame.  It almost reminds me of a week or so 
+; I spent in Saint Louis quite a few years ago.
+; 
+; The rating of an 8 might be a bit excessive.  But then again, 
+; what is the penalty for padding a rating.
+; 
+; The calculation time of 4 minutes is slower than ideal, but the 
+; web sites are always available to make life more efficient.
+; 
+; So save that time.  Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and the high-definition renderings at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back FOTD's are available at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The day began with snow here at Fractal Central, but a rising 
+; temperature changed to snow to rain before noon.  Occasional 
+; rain continued the rest of the day, making a slushy mess of the 
+; area.  The fractal cat took one look out the window and decided 
+; to settle down by the heat.  The humans had enough inside stuff 
+; to finish to keep their minds off the outside weather.
+; 
+; The next FOTD will be posted in the very foreseeable future.  
+; Until whenever, take care, and why do they need exploding 
+; fireworks at music concerts?  Does today's music itself lack 
+; power, or have audiences become so desensitized that in addition 
+; to the amplified sound, they now need a light show to create 
+; total sensory overload?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Un-natural_Arch { ; time=0:04:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=t maxiter=3600
+  center-mag=0.0774812/-0.0170439/20.36076/1/-90/6.0\
+  8852815419518389 params=90/90/60/90/-0.753/0/0.5/0\
+  /2/0 float=y inside=0 outside=tdis periodicity=6
+  colors=000I3I_FWpQijSeeUa`WYVYUQ_QLaMFcIAeE5gA0i66\
+  e8Ca9HYBNUCTQDYMFcIGhEHfHGeKFdNFcQEaTE`WD_ZDZaCYdC\
+  DsKFrMHrNJqOLqPNpQPpRRoTToUVnVXnWZmX_mY0yDUsRwndm7\
+  zg9xaBvWDtQFrKHpFJnMKgTK`_KUeKOlKHsKAyP4sU7mZAgcCa\
+  fFWiIQnKPo8Qr7Qw6Qo5Ql5Qi4Qd3Q`3QX2QT1QP1MW1Ha1Di1\
+  Fo4Go7HiAJhCKgFLfINeKOeNPdQRcSSbVTaYV`_W_bXZeYZg_W\
+  iaUjcRlePmgMniKpkHqmFsoCtqAus7wu5xw3ysCwpLvmTtjasg\
+  iqdrpazo`vn`sn`pn`mm`jm`fm`cl``l`Yl`Vk`Rk`Ok`Lj`Ij\
+  `Fj`CjZEhXGgVIeTKdSMcQOaOQ`MS_KUYJWXHYVF_UDaTBcRAe\
+  Q8gP6iN4kM3lLWq`Wq`Xr`Xr`Yr`eEJeELeFMeGNeGPeHQdHRd\
+  ITdJUdJVdKXdKYdLZdM`cMacNbcNdcOecPfcPhcQidPlcQjcRi\
+  cShbTfbUebUdaVbaWaaX`aYZ`ZY`ZX`_V_`U_aT_bR_cQZcPZd\
+  NZeMYfLYgJYhIjeLYhHLkD9mABnBDoBEpBGpCIqCJrCLsDMsDO\
+  tDQuERvETvEVwFWxFYyFZyFYvIXsKXpMWmOVjQVgSUdUUaWTZY\
+  SW`STbRQdRNfQKhPHjPElOBnO8pCRJBSLBTMBUNBVOBWPBXQBY\
+  RBZSB_TB`UBaVBbWBcXBdYAeZ }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

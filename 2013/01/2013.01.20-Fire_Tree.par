@@ -1,0 +1,103 @@
+;     Date: Sun, 20 Jan 2013 21:03:55 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-01-13 (Fire Tree [Rating ?])
+;       Id: <1.5.4.16.20130120210210.21dfdabe@earthlink.net>
+; ---------
+; 
+; FOTD -- January 20, 2013 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Fractal trees are nothing new in the FOTD series, but I have 
+; never posted a tree with such simplicity as is seen in today's 
+; image.  The scene is a Julia set of the (-Z)^(1.618034)+C 
+; Julibrot.  The corresponding Mandelbrot point lies where the 
+; X-axis meets the western edge of the main bud of the Mandeloid.
+; 
+; The full Julia set resembles an 'infinity' symbol, a figure 
+; eight lying on its side, with an infinity of fractal trees 
+; along its edge.  The tree in today's image is the largest one, 
+; which lies on the X-axis on the east edge of the figure eight.  
+; The simplicity was created by lowering the maxiter to 112.  This 
+; cuts off the finer tree branches, leaving only the most basic 
+; tree shape.
+; 
+; The name "Fire Tree" refers to the color of the tree.  The 
+; calculation time of 15 seconds is due to the unusually small 
+; maxiter.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition renderings are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A sunny day with a temperature of 46F +8C was spoiled by a 
+; blustery wind here at Fractal Central today.  The fractal cat 
+; spent most of the time basking in the sun on his shelf, watching 
+; things blowing by in the wind.  The humans took it easy most of 
+; the day.
+; 
+; The next FOTD will be posted in a reasonable time.  Until then, 
+; take care, and don't wait for a second coming.  It isn't coming.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fire_Tree { ; time=0:00:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 center-mag=0.2398/0/15/\
+  0.922/90/0 params=90/0/90/0/-1.15/0/0/0/1.618034/0
+  float=y maxiter=112 inside=255
+  logmap=69 periodicity=6
+  colors=0000mzqNIqMFpMDpLAkK7lK5mzwnyvoxupwtqvsrurs\
+  tqtspsrirqbpqVopOnoHmlAki9jd8i_7hV6gQ5eK4dF3cA2b51\
+  a01`13_25Z37Y39X4BW5DW5FV6HU7JT8LS8NR9PQARQATYCPdD\
+  LkEHiiEkkFllFnnFooGqpGrrGtsHuuHwvHxwHwuLwtOvsRvrUu\
+  qXup_uoctnftmisllskosjrofnkbjg_gcWc_S_XPXUVYR_ZOd_\
+  Mi`JnaGsbExbJrdNmeRgfVbgZXhbSifNjdMgcLebKcaJ``IZZH\
+  XYGVXFSWEQVDOUDMXEK_EJbEIeEGhEFkEEgFGcFH`FIXGJTGKQ\
+  GLMHNJHOFHPBIQ8IR4IS1IT7ORCTQHZPMcORhNWnM`sLexK`rY\
+  WmjRhwPemOccNaULZKKXAJV1S`8`eFhkMqpTyuZtt`ptalsbhs\
+  cdrd_rfWqgSqhOpiKpjLkdLf_LaVLYQMTLMOGMJBMF6VR5cb4k\
+  m4ik8hiBggFfeIecMdaPc`TaZW`X__VbZTfYRiXPmWOpaNqfMq\
+  kMqpLruKrzKrwMltOfqQ`nSVlTPiVJfXDcZ7a_1bZ3cY5dY6eX\
+  8eW9fWBgVChVEhUFiTHjTIkSKkSLgRNdROaRPZQRWQSTQTQPUM\
+  PWJPXGOYDOZAO`7Na4Nb1Nc3S_5WW7`S9dPBiLDmHFrDGvAIr9\
+  Kn9Mj8Og8Pc8R_7TW7VT6XP6YL6_H5aE5cA4e64f34d53c73b9\
+  3aB3`D3_E3YG2XI2WK2VM20mz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

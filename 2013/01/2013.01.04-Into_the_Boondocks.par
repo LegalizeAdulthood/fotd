@@ -1,0 +1,117 @@
+;     Date: Fri, 04 Jan 2013 20:46:48 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 04-01-13 (The Sound barrier [7.5])
+;       Id: <1.5.4.16.20130104204449.29c76e06@earthlink.net>
+; ---------
+; 
+; FOTD -- January 04, 2013 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a variation of the 'New Year Surprise' image of 
+; January 1.  As JackOTZ has already discovered, the parameter 
+; values of that image are very critical.  (A tiny change makes a 
+; huge difference.)  To show how critical, I have changed the 
+; exponent of Z from (-4.01) to (-4.0100001) and decreased the 
+; escape radius from 9 to 2.8.  (I have also reduced the magnitude 
+; a bit and tweaked a few color registers, but these changes are 
+; insignificant.)
+; 
+; The tiny change in the exponent makes a huge change in the 
+; image, while the tighter bailout radius changes the central 
+; rounded square to a kind of rounded letter-X, while narrowing 
+; the width of the surrounding bands of chaos.  (Increasing the 
+; bailout causes the width of the bands to grow, until they 
+; finally fill the entire frame with chaos.)
+; 
+; As is often the case, the name -- "Into the Boondocks" -- has 
+; little relation to the image.  The rating of 7-1/2 might be a 
+; bit conservative, but I cannot give a super rating to a string 
+; of very similar images.  The calculation time of 30 seconds 
+; leaves no excuse for those who claim to lack the time to do the 
+; calculation, especially when the finished image is available on 
+; the web sites.
+; 
+; For instant viewing, check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And check the high-definition versions at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Partly cloudy skies with a temperature of 36F +2C, a breeze from 
+; the west, and a 5-inch 12cm pack of snow covering the ground 
+; made today here at Fractal Central totally typical for the start 
+; of January.  The fractal cat passed the afternoon on the shelf 
+; in the southwest window, wishing the sun would stop turning off 
+; and on so often.  The humans passed the day finishing the work.
+; 
+; The next variation on the theme will be posted when the neat 
+; come home, and around here they come home every day at sunset.  
+; Until then, take care, and I never cease to be amazed at the 
+; emotionally-based but ineffective solutions to major problems 
+; that sincere people keep inventing.  For example, to make the 
+; streets safer, why would any sensible person be against publish-
+; ing a list of those who have committed crimes with illegally 
+; obtained guns, yet be in favor of publishing a list of law-
+; abiding citizens who legally own guns?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Into_the_Boondocks { ; time=0:00:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 center-mag=0/0/\
+  0.08621576 params=90/0/90/0/-1.64788477144322/0/0/0\
+  /-4.0100001/-6.2 float=y maxiter=3200 inside=0
+  symmetry=xaxis periodicity=0
+  colors=000000zz0570450340220110QIWNGTLEQIDNGBKE9HB\
+  8E96B748435212_N8UJ6OF5IB4C72631ZG6TD5NA4H83B52521\
+  NHpIDeDAV96L43ASF2W7tT6oRczP5gM5cK4_I4WG3SD3OB2K92\
+  G61C418204CdrA`m9Xh8Tc7QZ6MU5IP4EK3BF27A135X8BS79O\
+  68K56G45C34822411KpkHieFb_CXUAQO7JI5DC266alRXeNS_K\
+  NUGJODEIA9C6463DaKAUG7MC5F8274aRFXODTLBPIALF8GC6C9\
+  5m00zzzzUzi4b`3VS2NI1F907Pj8Nf7Lb6J_6HW5FS4DP4BL39\
+  I37E25A1371130gSlcPg_McWKZSHVOFQKCMGAHC7D858424AUm\
+  8Qg7Na6KX5GR4DM3AG26B135K35I24H24G24E23D23C13A1291\
+  2812611501401200100sBInAGi9Fe8D`7CW6AS59N47I36E249\
+  13401kRc_KUODKC6AwGcqE_lDWfBTaAPW8LR7IL5EG4AA27513\
+  XeCT`APW9MS8SsCWsCasBisBosAvzAzzAzdRzQftCvsLczOVqI\
+  cqRXqMRqOLqQEqS8qT2oV8nXEmZJl`PjbVid_hfeghkfjpcdn`\
+  _mYUkVPjSJhPEgM8eK3dG2Y9D4D2RA1K61D306Iu7Ei5AY47N2\
+  3B1pDXlCUiBSfAQb9O_8MX8KT7IQ6GN5EJ4CG4AD3892661430\
+  2GL1EJ0DI0CG0BF0AE09C08B0 }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

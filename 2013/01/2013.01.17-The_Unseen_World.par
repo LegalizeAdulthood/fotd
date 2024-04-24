@@ -1,0 +1,111 @@
+;     Date: Thu, 17 Jan 2013 13:45:42 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-01-13 (The Unseen World [No Rating])
+;       Id: <1.5.4.16.20130117134355.376787ce@earthlink.net>
+; ---------
+; 
+; FOTD -- January 16, 2013 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is an almost-Julia set of the East Valley of the 
+; large minibrot on the northern main spike of the Mandeloid that 
+; results when the expression (-Z)^(2.5)+C is iterated.
+; 
+; The reddish stuff inside the large open hole is grossly enlarged 
+; Mandelbrot stuff.  The outer bluish stuff is Julia in nature.
+; 
+; I enjoy 'almost' Julia images because they are much more varied. 
+; In pure Julia images, every small hole is basically identical, 
+; while in the 'almost' images, no two holes are the same.
+; 
+; The name "The Unseen World" does not refer to the supposed abode 
+; of spirits.  It describes the high-iteration Mandelbrot stuff 
+; that lies hidden beneath the low-iteration surface Julia stuff.
+; 
+; I gave the image no rating, but if I were to rate it, I would 
+; have chosen something like 6-1/2.  When the calculation begins, 
+; it looks like the image will be finished in less than a minute, 
+; but things slow down considerably once the central open area is 
+; reached, and the calculation will drag on for about 5 minutes.
+; 
+; Save energy!  Save time!  View the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and see the high-definition versions at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; About 4-1/2 inches (12cm) of sloppy snow fell overnight here at 
+; Fractal Central, making for a very unpleasant day with heavy 
+; clouds.  The temperature of 34F +2C melted just enough snow to 
+; fill the gutters with water and make dry feet impossible.  The 
+; fractal cat, who always keeps his feet dry, had an active day of 
+; tearing up old newspapers.  The humans had an average day.
+; 
+; The next FOTD *will* be posted.  The best bet is to look for it 
+; in 24 hours.  Until whenever, take care, and why is the massacre 
+; of 26 people killed together by a single gun more outrageous 
+; than 1000 killed one-at-a-time by cheap hand guns every month?  
+; Would someone please explain the current politically correct way 
+; of thinking.  I'm a little befuddled by it.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Unseen_World { ; time=0:05:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=t periodicity=12
+  center-mag=0.202471/-0.225264/56/1/-57.5/0 float=y
+  params=89.898/0/89.898/45.5/-1.422159233/0.2244159\
+  71/0/0/2.5/0 maxiter=32767 inside=0 logmap=8
+  colors=00000H00L10O20S30V40Z50a60e71h82l93oA4sB5vC\
+  6wD7wF8wHAwJBwLDwNEwPGxRIxTJxWLxYMx_OxaPxcRyeTygUy\
+  iWykXymZyo_ymYxkWwjVvhTufSteQscPraNq`LpZKoXInWHmUF\
+  lTElVGkWIjXKiYMiZOh_Qg`SfaUfcWedYde_dfacgbbhdaifaj\
+  h`ljamhbkfciddgbee`fcZgaXg_XgZXg_Yg_Zg__g__g_`g_ag\
+  _bg`cg`dg`eg`fg`gf`hf`ifajfajfakfalfamfanfaofbpfbq\
+  fbrfbsfbtfbufhyebufYqfSmgNigHegCah6Yh0Vi1Uh2Th3Tg4\
+  Sg5Rf6Rf7Qe7Qe8Pe9OdApdBccCNcDMbDLbELbFKaGbaHQ`II`\
+  JI_JH_KQ_LKZMFZNFYOEYPIXQDXQCXRCWSBWTAVUAVV9UW9UW8\
+  UX7TY7TZ6S_6S`5Ra4Ra4Rb3Qc3Qd2Pe1Pf1Og0Og1Oh2Ph3Qh\
+  4Rh5Rh6Si7Ti8Ti9UiAViBViCWjDXjEYjFYjGZjH_kI_kJ`kKa\
+  kLakMbkNclOdlPdlQelRflSfmTgmUhmVhmWmmXmmYmmZmm_mm`\
+  mramrbmrcmrcmrcmrcmrcmrcmrcmrcmwczwczwczwczwczwczw\
+  czwczwczwczwczwczwczwczwczwczwczwczwczwczwczwczwcz\
+  wczwczwczwczxczyczzczzczzczzczzczzczzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzcz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

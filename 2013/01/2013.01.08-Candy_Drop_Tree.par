@@ -1,0 +1,104 @@
+;     Date: Tue, 08 Jan 2013 17:49:52 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-01-13 (Candy-Drop Tree [7.5])
+;       Id: <1.5.4.16.20130108174757.2d479d3a@earthlink.net>
+; ---------
+; 
+; FOTD -- January 08, 2013 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Those fractal trees must be everywhere.  As I was investigating 
+; the Julia sets of the (-Z)^(-1.5)+C Mandeloid, I stumbled upon 
+; today's fractal tree.  I named the image "Candy-Drop Tree" 
+; because the tree appears to me made of candy drops.
+; 
+; I am certain that fractal trees much more impressive than 
+; today's lie in the vicinity, but I had no time to do the 
+; necessary checking.
+; 
+; The rating of 7-1/2 indicates an average scene on which I put 
+; a modicum of coloring effort.
+; 
+; The calculation time of 6 minutes borders slowness, but once 
+; again the web sites charge to the rescue.
+; 
+; To totally avoid calculation problems, check the finished image 
+; at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and check the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Thousands of back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Morning clouds gave way to afternoon sunshine here at Fractal 
+; Central today.  The temperature of 41F +5C and light winds made 
+; the day quite harmless for the season.  The fractal cat also had 
+; a harmless day, which was enjoyable for him, but makes a rather 
+; boring report.  The humans got through the day with no major 
+; problems arising.
+; 
+; The next FOTD will be posted when conditions are right.  Until 
+; whenever, take care, and according to the news reports, doom is 
+; all around us.  So be ready to stamp it out as soon as it rears 
+; its ugly head.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Candy-Drop_Tree { ; time=0:06:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=t center-mag=0.3\
+  99377/0/6.9855/1/90/0 params=90/0/90/0/-1.92748937\
+  /0/0/0/-1.5/300 float=y maxiter=1900 inside=0
+  logmap=-100 periodicity=6
+  colors=000VPUSNQPMMMPNJSOGUPDXQA_R8aRMGONGONGOOGPO\
+  GPOGPPGQPGQQGQQFRRFRRFRSFSSFSSFSTFTTFThvvkyvcrpWkk\
+  PdfHY`9RW2KR2sC6qDApEDoFHmGKlHOkISiJVhJZgKaeLedMic\
+  NlaOp`Ps_PraQqcQpdQofQngQmiQljQklQjnRioRhqRgrRftRe\
+  uRdwRcxRXtMRqHLmDFj89g4JkJTnYbqlfnmilmljmphmsfmvdm\
+  q_nlWogSpbOqcTkdYeeb_ffUgkOhpIhtCViHIZM5PR8SQAVPCY\
+  OF`NHcMJfMMiLOlKQoJTrIVuHXwHVtLUqOTnRSkURhXQe_PcbT\
+  bdXbf`bhdbjhbllbnobokdnhfnehmbjm_llXnlUpl_qjdqiirh\
+  nrgsrfKMGfcqddpbep_foYgoWhoXimXjlYjkYkjYkiZlgZlfZm\
+  e_nd_nc`oa`o``p_apZaqYaqXcrZdr_es`gsahtbitdjuelufm\
+  vgnvhowjqwkrxlsxmtxnqwlnwjlwiiwggwfdwdawb_waXw_VwZ\
+  Zrbbmfeijidnl`rpWvsSyrUqqWiqXapZUp_NnYPlWRkUSiSUgQ\
+  WfOXdMZbK`aIabHibGpaJnaLm`Nk`Pj_Rh_TgZVfZXdYZcY`aX\
+  b`Xd_fhgolnERyHPwKNvNLuQKtSIsUFrSKqQUpOboMhnKcmInl\
+  GrlEolCilBhmAgmAem9dm8cn7an6`n5_n5Zn6Uj7Pf7Lc8Ka9K\
+  `AK_BJZCJYCJXDIWEIVaSaZQY }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

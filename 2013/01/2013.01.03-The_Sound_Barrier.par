@@ -1,0 +1,108 @@
+;     Date: Thu, 03 Jan 2013 17:20:32 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 03-01-13 (The Sound barrier [8])
+;       Id: <1.5.4.16.20130103171833.0d8f2694@earthlink.net>
+; ---------
+; 
+; FOTD -- January 03, 2013 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's Z^(-4)+C near-Julia image carries the current theme to 
+; the limits.  I have double-rotated the orientation of today's 
+; slice 0.000001,0.0000001 degree from the true Julia orientation, 
+; which totally destroys the 4-way symmetry of recent images.  But 
+; the resulting image is still notable enough to rate an 8.  (A 
+; tiny rotation sometimes makes a huge difference in Julia images.)
+; 
+; The colors are mostly carried over from yesterday's image, with 
+; only a few registers being tweaked.  The calculation time of 45 
+; seconds will pass fast, leaving little waste if the image lays 
+; an egg.  Here is where the web sites can make the viewing even 
+; easier.
+; 
+; View the finished image online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; and the back images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; After a very chilly morning low of +5F -15C, the brilliant sun 
+; raised the afternoon temperature to a comparatively pleasant 
+; freezing point.  The fractal cat spent the entire afternoon on 
+; the shelf in the southwest window, warming himself in the sun.  
+; The humans had a routine day getting the work under control.
+; 
+; The next FOTD will be posted when I get a round tuit.  Until 
+; whenever, take care, and I heard a teacher on the local radio 
+; the other day claim that the present day children think 
+; differently than yesterday's children.  I had to agree totally.  
+; Yesterday's children were not as helpless as today's lot.  They 
+; needed no computers to enable them to learn that 2+2=4, etc.  
+; They did it all in their heads.  And for entertainment they went 
+; out, played with their friends and sometimes hurt themselves.  
+; Then they came home and read books.
+; 
+; Our 'technologically advanced' culture sure is declining.  Let's 
+; solve the problem with more technology.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Sound_Barrier { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1 maxiter=3200
+  center-mag=6.14828/0/0.09570475 params=89.999999\
+  /0/89.9999999/0/-1.647884739957274/0/0/0/-4.01/0
+  float=y inside=0 symmetry=xaxis periodicity=0
+  colors=000hdrtPvsWczbVqIcqRXqMRqOLqQEqS8qT2oV8nXEm\
+  ZJl`PjbVid_hfeghkfjpcdn`_mYUkVPjSJhPEgM8eK3dG2Y9D4\
+  D2RA1K61D306Iu7Ei5AY47N23B1pDXlCUiBSfAQb9O_8MX8KT7\
+  IQ6GN5EJ4CG4AD38926614302GL1EJ0DI0CG0BF0AE09C08B00\
+  00zz0570450340220110QIWNGTLEQIDNGBKE9HB8E96B748435\
+  212_N8UJ6OF5IB4C72631ZG6TD5NA4H83B52521NHpIDeDAV96\
+  L4UzSF2W7tT6oRczP5gM5cK4_I4WG3SD3OB2K92G61C418204C\
+  drA`m9Xh8Tc7QZ6MU5IP4EK3BF27A135X8BS79O68K56G45C34\
+  822411KpkHieFb_CXUAQO7JI5DC266alRXeNS_KNUGJODEIA9C\
+  6463DaKAUG7MC5F8274aRFXODTLBPIALF8GC6C95m00HezzUzi\
+  4b`3VS2NI1F907Pj8Nf7Lb6J_6HW5FS4DP4BL39I37E25A1371\
+  130gSlcPg_McWKZSHVOFQKCMGAHC7D858424AUm8Qg7Na6KX5G\
+  R4DM3AG26B135K35I24H24G24E23D23C13A129128126115014\
+  01200100zBIsAGn9Fh8D`7CW6AS59N47I36E24913401kRc_KU\
+  ODKC6AwGcqE_lDWfBTaAPW8LR7IL5EG4AA27513XeCT`APW9MS\
+  8SsCWsCasBisBosAvzAzzAzdR }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

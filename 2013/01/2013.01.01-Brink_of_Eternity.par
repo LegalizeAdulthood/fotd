@@ -1,0 +1,104 @@
+;     Date: Tue, 01 Jan 2013 08:25:26 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 31-12-12 (Brink of Eternity [?])
+;       Id: <1.5.4.16.20130101082326.36af418c@earthlink.net>
+; ---------
+; 
+; FOTD -- December 31, 2012 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, the last of the year, is another view of the same 
+; Julia set that appeared in yesterday's image.  It shows how 
+; great a change in a Julia image can be made by such a small 
+; change in initial C.
+; 
+; The name "Brink of Eternity" has little relation to the image.  
+; It refers to the start of a new year, with all its potential for 
+; good or evil.  The question is which will prevail.  (My guess is 
+; for a mixture.)
+; 
+; I declined to give the image a rating, since it is a virtual 
+; repeat of yesterday's scene.
+; 
+; With a calculation time of 45 seconds, the image is thankfully a 
+; fast one.
+; 
+; End the year at leisure by checking today's finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Begin the new year by checking the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Enjoy ten new images every day by checking:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where the FOTD back images are online.
+; 
+; A mix of sun and clouds with a temperature of 34C +1C made today 
+; just about average here at Fractal Central.  The fractal cat 
+; spent most of the day lounging in the weakened sun coming in the 
+; southwest window.  The humans made it through the last day of 
+; the year without a major problem.
+; 
+; The next FOTD will be posted sometime next year.  To see exactly 
+; when, keep checking back here.  Until whenever, take care, and 
+; we need to pass a law defining who really are the good guys and 
+; the bad guys.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Brink_of_Eternity { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/0.3569139
+  params=90/0/90/0/-1.8889971/0/0/0/-2/150 float=y
+  maxiter=5000 inside=0 symmetry=xyaxis periodicity=0
+  colors=000zAmluPapTRlXGg`2fb5cc8acA_cDYcGWcIUcLRdY\
+  K9LFANIAPKBRMCTPCVRDXUDZWE`YEb`FdbGfeGhgHjjHllInnJ\
+  pqJrsKtvKvxLl_L00UgZnDptEpsEpsFpsFprFprGprGpqGpqHp\
+  qHppHppIppIpoJpoJpoJpnKpnKpnKpmLpmLpmNqiLpmKopJosz\
+  zuzzwzzzzzrzzpzznzzkzzi000zzezzbzz`zzZzzXzzUzzSzzQ\
+  zzOHELHEJHFHHFFIGBIHDKIFMJH0LUQNdTLdWJdd5_YHdfz`00\
+  ZcHeOPKYTR_VTbXVdZXg`Zib`kdbnfdphfsjhuljwmkumismhq\
+  mfomemmdkmbimagm_emZcmYamW_mVYmTWmSSqRVmRXjRZfRacR\
+  c_RefU00PzdzrFSrESsCRsBRsAQt8Qt7Pt6Pu4Ou3Ov0Pu2Ot3\
+  Os5Or6Nq7Np9NoAMnBMmDMlELkGLjHLiIKhKKgLKfMJeOJdPJc\
+  RIbSIaTI`VH_WHaXDZXHXXLVXPSXTQXXOX`LXdJXhHXlFXpOLh\
+  V8cXA`YCY_EV`GSaIPcKMdMJdMGeNHeOHeOHfo000XUKc3TU5T\
+  W8TXATZDT_FTaITbKTdNTfPTgSTiUTjXTlZTmaTocTqfTrhTti\
+  TuiTwiTwjTxjVvkXulZtm`sRbrMdqHfpCho7in8ij9hfBzz00K\
+  DhWEgSFgOHgKIfGJfCKf8Lf5Fk7Ap99lF9iL9fR9cX8_b8Xh8U\
+  n8Rt8OyBSuEWqHZmKbiMefPib }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

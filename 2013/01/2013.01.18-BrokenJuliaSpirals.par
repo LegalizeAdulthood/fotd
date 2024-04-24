@@ -1,0 +1,115 @@
+;     Date: Fri, 18 Jan 2013 18:16:19 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-01-13 (High-Order Hijinks [Rating 6])
+;       Id: <1.5.4.16.20130118181432.38bfdb98@earthlink.net>
+; ---------
+; 
+; FOTD --  January 18, 2013(Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another 'almost' Julia set.  The parent 
+; Julibrot was created by iterating the expression 
+; (-Z)^(1.618034)+C.  The area of the image lies deep in the west 
+; branch of the valley enclosing the large bud on the northeast 
+; shore line of the main bay of the associated Mandeloid.
+; 
+; The image very clearly illustrates the hairline spirals that lie 
+; in the Julia sets of the areas just inside Mandelbrot valleys.  
+; The name "Broken Julia Spirals" refers to the spirals on the top 
+; side of the grossly enlarged Mandelbrot valley fragment cutting 
+; diagonally across the inside of the open area in the image.
+; 
+; These spirals are broken because of the limited resolution of 
+; the image, which causes many pixels to totally miss the very 
+; narrow body of the spirals and print it as an open area.  This 
+; breakup can be eliminated by the process of anti-aliasing, which 
+; calculates the image at a higher resolution, slightly blurs the 
+; result then shrinks it down.  Unfortunately, the process can be 
+; quite time consuming.
+; 
+; The rating of a 7 is FOTD average.  If such images had not been 
+; posted so frequently lately, I might have rated the scene as 
+; high as an 8.
+; 
+; The calculation time of 7 minutes is a bit excessive.  To save 
+; time, I recommend checking one of the FOTD web sites.
+; 
+; The finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A sample of what anti-aliasing can do for hairline spirals is 
+; posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today brought lots of sun to Fractal Central, but the 
+; temperature never rose above 30C -1C.  The fractal cat basked in 
+; the sun all afternoon, having the best day so far this winter.  
+; The humans passed the very bright day getting organized.
+; 
+; The next FOTD will not be posted before January 20, since I'm 
+; going back to Old Fractal Central tomorrow to finish a few 
+; things that need to be done.  Until whenever, take care, and 
+; since everyone claims to do what is right, why does so much 
+; wrong exist in the world?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+BrokenJuliaSpirals { ; time=0:07:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1 periodicity=6
+  center-mag=0.10596/0.159292/0.8912656/1/46.75/0
+  params=89.8/0/89.8/0/0.3125/0.5702/0/0/1.618034/0
+  float=y maxiter=5000 inside=0 logmap=yes
+  colors=000B36701812923A33B34C44D55E66F66G77G87H98I\
+  98JA9KBALCAMCBNDBOECNFBOECOECPECPEDQEDQEDREEREEREE\
+  SEFSEFTEGTEHUEISEJQGKOILMKMKMNIOOGQPFSQEURDWSCXTBY\
+  TCbWDgZElaGjcHieIggJfiLdkMcmNaoO`pSYkWWg_UccR_gPWk\
+  NSqKNoLOmMOlNOjOPiPPgQPfRPdSQcTQaUQ`VQZVRYWRWXRVYR\
+  TZSS_SQ`SPaSNbTMcTKdTJdTLcVNbWPaXR`ZT`_V_`XZbZYc`Y\
+  dbXfdWgfVhhUjjUklTlnSnpRorRptQrvPsxOtyOuwNsuNrsNpq\
+  NooNnmNlkNkiMigMheMgdMebMd`McZMaXL`VLZTLYRLXPLYNLZ\
+  LK_JK`HKaFKaDKbDKbDKbEKcGKdHKeIJeKIeLHeMIeOJePJeRK\
+  eSKeTLeVMeWMeXNeZNe_Ob`O``OeUViNamGhq9ou7rw2vyCtqM\
+  riVpadnUloHmmMnlQnjUoiYphapfeqeiphoqdmralrZjsWisSg\
+  tPfuMduJcvFavC`w9Zz4Xw6Yt7Yr9YoAYlBYjDYgEYdFYbHY_I\
+  YYJYZLWZMV_OT_PS`QR`SP`TOaUNaWLbXKbYJb_Hc`GcaFdcDd\
+  dCfd9deBbeCaeD_eEZfFXfGWfHUfITfJRgLPgMOgNMgOLhPJhQ\
+  IhRGhSGjSFhTFfTFeUFcUEbVE`VEZVEYWEWWDVXDTXDSYDQYDO\
+  YCNZCLZCK_CK`CKaCKbCKcCKc }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
