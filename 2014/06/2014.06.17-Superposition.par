@@ -1,0 +1,103 @@
+;     Date: Tue, 17 Jun 2014 17:39:45 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 17-05-14 (Superposition [A-8,M-8])
+;       Id: <1.5.4.16.20140617105556.309f68d8@earthlink.net>
+; ---------
+; 
+; FOTD -- June 17, 2014 (Rating A-8,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Superposition".  This name has nothing 
+; to do with the even more mysterious quantum world.  It is a 
+; simple overlaying of the Mandelbrot and Julia aspects of 
+; Seahorse Valley, calculated without using multiple layers.
+; 
+; The two bright beige spikes intruding from the north and south 
+; edges of the frame are part of the Mandelbrot aspect of the 
+; valley.  The small bluish figure centered between the points of 
+; the spikes is a somewhat distorted version of the Julia set of 
+; Seahorse Valley.  This is the first fractal I have found that 
+; shows both 'seahorse' aspects in their proper places with so 
+; little distortion.
+; 
+; The art and math ratings of 8 seem about right, at least to me.  
+; The calculation time of 1 minute will pass in a semi-flash.  The 
+; flash may be eliminated by checking the finished image on one of 
+; the web sites.
+; 
+; So be happy.  Save time by checking the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Lots of sun and humidity made the temperature of 90F 32C feel 
+; like midsummer here at Fractal Central today.  Storm clouds were 
+; on the horizon most of the day, but none came close enough to 
+; bring cooling breezes.  The fractal cats celebrated the 
+; conditions that make cats happy by stretching out on the coolest 
+; places they could find.  The next FOTD will be posted in a 
+; reasonable time.  Until then, take care, and where is a media 
+; news outlet without an agenda?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Superposition { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivJulibrot-2 function=recip
+  passes=1 center-mag=-0.0410392/0/0.4436728
+  params=88/0/88/0/-0.75/0/0/0/-10/1000000
+  float=y maxiter=1500 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=6
+  colors=000zzzmmmcecUZUKUKAGE5AC34B02A00C03F26I49K6\
+  AP8BU9CW8CX7DY7E_6Fa5Fc5Ge4Hh3Ij3Il4Lj5Oi5Qh6Tf7Ve\
+  7Yd8`h9bm9erAgvBjzBmvCorDrmDthCocBkZBfVAbRAYR9UR8P\
+  Q8LQ7GQ7CQBDREDRHDSKDSODSRETUETXET`EUcEUfFViFVmFVp\
+  FWsFWvFWtEYrE_pD`nDblCdjCeiBggBieAjcAla9m_9oZ8qX8r\
+  V7tT7vR6wP6yO6zMBvLFrKJoJNkHRhGVdFZaEbYDfVFgUHgTJg\
+  SLgRNgROgQQgPSgOUgOWhNYhMZhL`hKbhKdhJfhIhhHihHjgIj\
+  gIjfIkfJkeJkeJldKldKlcKmcKmbLmbLnbLnaMnaMo`Mo`Mo_N\
+  p_NpZNpZOqYOqYOqYOoXPmWPlVPjUPiTPgSPeSQdRQbQQaPQ_O\
+  QZNQXNRVMRULRSKRRJRPIROIRPHSPGTQFTQFUREURDVSCVSCWS\
+  BXTAXT9YU9YU8ZV7ZV6_V6`W5`W4aX3aX3bY2bY1cY1cZ3`_4Z\
+  _5X`6Va8Ta9RbAPcBNcCLdEIeFGeGEfHCgJAgK8hL6iM4iN2aQ\
+  FVTRWUSWUTXUUXUVYUVYUWZUXZUY_UZ_UZ`U_`U``VaaVbaVbb\
+  VcbVdcVecVfdVfdVgeVheVieVidWhdXhdYhdYhdZgc_gc_gc`g\
+  cafcbfcbfbcfbdebdebeebfebfecdccbbc`acZ`cX_cVZcTYcR\
+  XcQVcOUcMTcKSY`JXbJWcKVeL }
+
+frm:FinDivJulibrot-2   {; draws slices of FinDivBrot-2 Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,111 @@
+;     Date: Sun, 22 Jun 2014 12:21:10 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 21-06-14 (Fractal Yuletime [A-6,M-8])
+;       Id: <1.5.4.16.20140622122223.2b8f6f20@earthlink.net>
+; ---------
+; 
+; FOTD -- June 21, 2014 (Rating A-6,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It has been two days since the last FOTD was posted, but have no 
+; concern.  This delay is not a sign of another looming FOTD 
+; drought.  There is simply a lot of catching up yet to do here at 
+; FC.
+; 
+; Today's image is part of a near-Julia set lying in the Julibrot 
+; that results when a Mandelbrot set is strongly corrupted even on 
+; its surface by Z^(2.5)+C energies.
+; 
+; I have added to the interest by rendering the scene with the 
+; inside set to 'fmod', thereby creating the circular features.
+; 
+; The name "Fractal Yuletime" refers to the pinkish triangular 
+; shape at the center, which rather resembles a Christmas tree.
+; 
+; The art rating of a 6 shows that I consider the artistic worth 
+; merely average.  The math rating of an 8 indicates that I 
+; consider the math aspect more interesting than the artistic 
+; aspect.
+; 
+; The calculation time of 1-1/2 minutes will cause little 
+; impatience, and the little impatience it does cause may be 
+; eliminated by viewing the image on the web sites.
+; 
+; Avoid calculation by checking the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Clouds and rain kept things suppressed here at Fractal Central 
+; two days ago, but yesterday and today brought nothing but sunny 
+; skies and a temperature of 79F 26C.  The fractal cats, who are 
+; now almost impossible to tell apart, celebrated the fine 
+; conditions by getting into a heated tussle.  The humans, who are 
+; becoming ever more wrapped up in world events, passed the day 
+; admiring the fractal garden.
+; 
+; The next FOTD will be posted in a day or maybe two.  Until then, 
+; take care, and it's about time to dig into the huge backlog of 
+; e-mail here at FC.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Yuletime { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinDivJulibrot-2 function=recip float=y
+  passes=1 center-mag=2.05261/0/28.15386/1/90/0
+  params=89/0/89/0/-1.315/0/0/0/2.5/1 maxiter=1800
+  inside=fmod proximity=0.015 periodicity=6
+  colors=000wzzwwtttnqshorcmq`kpZko_ln`lm`mlamkbnjcn\
+  jcoidohepgfpfgqegqdhrcirbjsaks`kt_lt_muYnuWntUmtSl\
+  tQlsOksMjsKjsNirQhrThrWgrZgqafqdeqgeqjdpmcpncpobrp\
+  cppbopbmpalpajp`ip`gp_fp_epZcpZbpY`pY_pXYpXXpWWpWU\
+  pVTpVRpUQpUOpTNpTMpSKpSJpRHpRGpQEpQDpPDqOCpPCoQCnQ\
+  CmRClRBkSBjSBiTBhTBgUAfUAeVAdVAcWAcWCdYDd_EeaFecHf\
+  eIffJghKgjMhlNhnOipPiqOjoNjmNjlMjjLjiLjgKjfKjdJjcI\
+  jaIj`HjZHjYGjWFjVFkTEkSDkQDkPCkNCkMBkKAkJAkH9kG9kE\
+  8kD7kB7kA6k84i56k78m8Ao9CqAEsBGuCIwDKyELzFMwGNtHOq\
+  IPoIQlJRiKSgKTdLUaMVZNWXNXUOYRPYPPZOQZOQZORZORZOSZ\
+  OSZOT_OT_OU_OU_OV_OV_OW_OW_OX`NX`NY`NY`NZ`NZ`N_`N_\
+  `N`aN`aNaaNaaNbaNbaNcaNcfLeaNcXPaTR_OTYKUXKVYKWZKX\
+  ZKY_KY_KZ`K_`K`aKaaKabKbbKccKdcKddKeeKfeKgfKhfKhgK\
+  igKjhKkhKliKliKmjKnjKokKokLnjMmjNmjNljOljPkjQjjQjj\
+  RijSijThjTgjUgjVfjWfjWejXdjYdjZcjZcj_bj`ajaaja`jzz\
+  UzzWzzZzz`zzbzz_zzYzzVzzT }
+
+frm:FinDivJulibrot-2   {; draws slices of FinDivBrot-2 Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(bb)*(z*z*fn1(z^(aa)+bb))+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; https://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
