@@ -1,0 +1,105 @@
+;     Date: Wed, 15 Apr 2009 23:35:15 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 16-04-09 (Split Fractality [8.5])
+; 
+;       Id: <1.5.4.16.20090415233549.2a674b68@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 16, 2009 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came about when I added 0.5 part of Z^(-12.6) to 5 
+; parts of Z^(-1.26) and added (1/C) to create a fractal consist-
+; ing of a disembodied filament with a ring at its end, surrounded 
+; by a cloud of other smaller rings.  Today's scene is located in 
+; an even smaller ring in one of these smaller rings.
+; 
+; The scene is semi-evaporated, with the circumference of the evap-
+; orated area bisecting the image from upper left to lower right 
+; and cutting exactly through the center minibrot.  The extremely 
+; critical imag(p3) parameter defines the escape radius and there-
+; fore the position of the evaporation circumference.
+; 
+; The upper right half of the image, which is partially evapora-
+; ted, consists of a mixture of outside and inside stuff, with the 
+; inside stuff made visible by the 'zmag' fill, while the lower 
+; left half is all outside stuff rendered in the usual 'equal-iter-
+; ation-band' manner.  The difference is quite apparent.
+; 
+; I named the image "Split Fractality", which sounds a bit like 
+; 'split personality'.  Then I rated it at an 8.5, which includes 
+; 1/4 point for the mathematical interest and 1/4 point for the 
+; coloring.
+; 
+; The calculation time of 2-1/2 minutes is about average.  The 
+; image may be seen faster by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and meditating on the finished product.
+; 
+; Wednesday began with heavy rain here at Fractal Central, but by 
+; noon the rain ended and by 3pm the sun appeared, giving the 
+; fractal cats just enough time in the sun on their shelf to keep 
+; them happy.  The temperature of 45F 7C did not worry them.
+; 
+; My day was average.  The taxes were out of the way weeks ago, so 
+; we had no last minute tax surprises.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and how can you be 
+; sure that no invisible fractal is lurking in that corner over 
+; there?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Split_Fractality   { ; time=0:02:32.32-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+7.379862680725198/+0.3887433179391824/\
+  6.696877e+007/1/-115/0 params=5/-1.26/0.5/-12.6/0/\
+  1.9405265505e+021/0/0 float=y maxiter=750
+  inside=zmag periodicity=10
+  colors=000egbMaM2W56MKACYBjVAmz8`h7Wo6RvHWjS`ZaeO`\
+  `M_XK_SIZOGZJEYFCYAAX68X27Z69_ABaECbIEjMFjQHtUJhXK\
+  i`MjdNlhPmlRosStwUzzVozZnvbmueluijtlitphssgswfsz`l\
+  wWetR_qMTnHNlFQkESjCViBXh9Zg8ag6cf5ee3hd2jc1lc8jaE\
+  i`KhZQgYWfWaeVgdTmcSsbQyaPx`Ow`Ow_Ov_OvZOuZOuYOtYO\
+  sXOsXOrWOrWOqVOqVOuNOsRQrUSqXUp`WncXmfZlj`kmbjpcfl\
+  XbiQZeJVbCTeDRgEPjFNlGLnHToS`obhpmppwlquhrtdrs`srY\
+  tpUtoQunMvmIvlFwjBxi7xh3yg0yf5tc9p`DlYIhVMdSQ`PVXM\
+  ZTJbPGfLEWUGLbIAkK0tMAsQKrUUqXcp`mpcio`fnZcmX`lVYk\
+  TVjQSiOPhMMgKJfIGeGFbJF`LEZNEXPEURDSTDQVDOXCLZCJ`B\
+  HbBFdBCfAAhA8jA6lneejbdg`ddZd`WdYUcVScRPcONcLLcSJg\
+  YHkdFokDsqBvnGulLtiQsgVrd_qbdqeZmhUjkPgnKcqF`sAYn8\
+  Vi7Td5Q_4OV2LQ1JM0H4RhDMgMHfUDePFZLHTGJNCKHFbSItbO\
+  veUwg_yidzkXrbPjUHbL9VD9XF0u70x70zT0zo0zz0xz0vz0mz\
+  1iz3cz3_z4Tz6vz6Jy7Fx7Ax6Fr4Jm4vi3Sd3X`1`X0000iO0l\
+  P7gLDcQuJFrOJoSNmWRj_VgcZ }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,98 @@
+;     Date: Thu, 16 Apr 2009 19:46:33 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 17-04-09 (Peak of Destruction [8])
+; 
+;       Id: <1.5.4.16.20090416194708.2c27cf7e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 17, 2009 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in the fractal that results when the 
+; formula Z^(1.3)+C is calculated at a level of 1 minus PI on the 
+; logarithmic hyper-ladder.  A jagged minibrot lies at the center 
+; of the image, though it is rather obscured in the glare of a 
+; fractal nuclear explosion.
+; 
+; I named the image "Peak of Destruction", which is kind of what 
+; it looks like.  The rating of an 8 includes a mighty 2 points 
+; for the coloring.  Without the special coloring effects, the 
+; image is rather boring and worth no more than a 6.
+; 
+; I used the passes=b option because I like to see it working.  
+; The outside=tdis option is necessary for the explosive effect.
+; 
+; The calculation wait of 1-1/4 quick minutes may be avoided by 
+; viewing the already-calculated image on the FOTD web site at.
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Total sun and a temperature of 66F 19C here at Fractal Central 
+; on Thursday gave the fractal cats their best day so far this 
+; spring.  If my day had not been so busy, it might have been my 
+; best day of the spring also.  FL had a very good but rather 
+; hard day starting her garden work for the season.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and look for the ultimate fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Peak_of_Destrution { ; time=0:01:16.04-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 function=floor passes=b
+  center-mag=-1.919725495606011/+1.976500603464784/\
+  3.008302e+011/1/-97.5/0 params=1.3/0/-2.1415926535\
+  8979/0 float=y maxiter=2000 inside=255 outside=tdis
+  logmap=117 periodicity=10
+  colors=000zzzzzzzzzbJkgVflebjadiYehUffQgeNhdJjbFka\
+  Bl`7m_4nV9mQEmLImGNlBRl6Wl2_lBajKciTeg`ffihdrjczkb\
+  ymZxoWwqSvsPuuLuwIqsHmoGilFehEadDYaCUYCQUBMRAIN9EJ\
+  8AG76C6296485585685875975A75C65D65E65G55H55I55MA6P\
+  E6TJ6WN6_S7bW7f`7id7mi8pm8tr8wv8tsAqpBomCljDjgEgdG\
+  daHb_I_XJYUKVRMSONQLONIPLGQJEOIDMHCKGBJFAHE9FD8EB6\
+  CA5A948837725613502_SY`PZaNZcLZdJ_eG_gE_hC`iA`j8`i\
+  7ai7bh7ch7cg6dg6ef6ef6ff6ge5ge5hd5id5jc4jc4kc4lb4l\
+  b4ma3na3n`3o`3p`3p_6o_8n_AmZCmZFlZHkZJkYLjYOiYQiYS\
+  hXUgXWgXZfW`eWbeWddWgcVicVkbVmaVoaSlZPjWMgUJeRGbPD\
+  `MAYJ7WH4TE2RC3QD4PD4OD5ND6ND6MD7LD7KD8JD9JD9IDAHD\
+  AGDBGDCFDCEDDDDDCDECDFBDFADG9DG9DJACLACNABQABSAAUA\
+  AXAAZA9`A9cA8eA8gA8iFDkKHmPLoUPqUKsUUuYWwYXxcYyXZz\
+  c_zf`zgazhbziczjdzkezlfymgynhzoizpjzqkzrlzsmztmzum\
+  zvmzwmzxmzymzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzmzz\
+  mzzmzzmzzmzzmzzmzzmzzmzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,95 @@
+;     Date: Sun, 05 Apr 2009 13:14:15 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-04-09 (The Great Mandelbrot Set [N.A.])
+;       Id: <1.5.4.16.20090405131441.2bcfeb56@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 05, 2009 (Rating N.A.)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a slightly redone FOTD from the past.  (I leave 
+; it to the viewer to find the original version.)  It's all I had 
+; time for after FL and I spent most of the day Saturday exploring 
+; an antique emporium near Chambersburg, PA.  (The trip was not 
+; wasted.  FL found an old carpet that she insisted we simply had 
+; to have.)
+; 
+; Today's image shows "The Great Mandelbrot Set", floating in the 
+; sky above a world it has just created but to which it has not 
+; yet added the details.  (Any resemblance to the assumed Deity of 
+; our universe is purely intentional.)  The proportions of the 
+; Great Mandelbrot Set are slightly different than those we are 
+; used to, but there can be no mistaking that it is a Mandelbrot 
+; set.
+; 
+; The nascent universe and its creator were created by subtracting 
+; some Z^(0.45) from about twice as much Z^(0.98) and adding 
+; straight C.  Since basically the same image is being posted for 
+; the second time, I could give it no rating, but even so, I think 
+; it's a bit more striking than average.
+; 
+; The calculation time will cause no impatience.  At a godlike 
+; speed of 25 seconds, it will finish before boredom even thinks 
+; of arising.  Those with over-challenged computers may view the 
+; image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Gusty winds, thick clouds and a temperature of 48F 9C took all 
+; the fun out of life here at Fractal Central on Saturday.  At 
+; least, that's what the fractal cats told us when we returned 
+; from the antiquing expedition around 9pm.  A quick treat of tuna 
+; cheered the cat duo, though I had to go into my archives to find 
+; today's fast FOTD.
+; 
+; The next FOTD is due in a mere 8 hours.  But whether the FOTD 
+; actually appears on schedule is a matter of chance.  Until next 
+; time, take care, and seek union with the great fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Great_Mand-Set { ; time=0:00:25.91-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basic.frm
+  formulaname=MandAutoCritInZ function=ident passes=t
+  center-mag=+0.01248328825047417/0/557.041/1/-90/0
+  params=0.98/0.76/-0.23/0.45/1.00087/0/0/0 float=y
+  maxiter=95 inside=bof61 logmap=yes periodicity=10
+  colors=0000000000000000000000000000000000000000000\
+  00000zzgzHbzzXzQSzzNzZHzbCzzIzWNzzTzPZzLdzzjzFozzu\
+  z8zrCxnGwiKueOtaSrYWpT_oPcmQdjRegSfdTgbTh_UiXVjUWk\
+  RWbOWE_XFaYGcZHe_Ig`JiaKkbLmcModNqeOrfPrgQrhQqiSoi\
+  UihUhbUgcUhcUecUdcUccUbcUacU`cU_cUZcUYcUXcWWdYVg_c\
+  jacnccqectgcwiczkczmczmczmczmczmcmUwmKwmRwmUwmUwmU\
+  wmUwmUwmUwmUwmUwmUwmUwmUwmUwmUwmUwmUwmUwmUwAjZHhVO\
+  gSVeOk0IhAJfLKcVLFmpLkhRh`XfTRDSxmkrjdlhYffRbmqah`\
+  P9DWPHduQMExSNjXWYGgyxOKlXLJ0cQEXWSRYi3Zh8_fC`eHY4\
+  7_HC`THORLTWLY`Lc_LbaLacLpgnDT6JWAQZEWaIPOvUUiY_X2\
+  KsBPjKVaT_T18DKPHORfSMkWTbZZUPQ9SUCWYFZaIjVrnWiiZ`\
+  eaTxLjpSahZTUTvp_MkaLfcLL2kPCdUMYYWRlATfQPHEHSSJkM\
+  dhR_fWVc`QFzDLtFRoHXiJYFaZMY_ST`ZPRequxRnqPgjNbyqa\
+  n`3YCagNafMaeL4QVGVRR_OkwAcS9m5wgNchd7VEiXLcZSX`ZR\
+  W_UY`SZbP`cNkPRQFUWSPbJYbPVaURa_ODinRlqVifZfWFPvNV\
+  iV_XFhSLgQRfOXeM_OCWIASC8 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

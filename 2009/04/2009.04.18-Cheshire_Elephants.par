@@ -1,0 +1,104 @@
+;     Date: Fri, 17 Apr 2009 21:48:01 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 18-04-09 (Cheshire Elephants [6])
+; 
+;       Id: <1.5.4.16.20090417214837.2bc7f900@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 18, 2009 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Those familiar with the Alice in Wonderland stories know that 
+; one of the abilities of the Cheshire Cat is to show its smile 
+; without showing the rest of itself.  I named today's image 
+; "Cheshire Elephants" because it shows elephant trunks without 
+; the rest of the elephants.
+; 
+; The parent fractal is the Z^(1.5)+C Mandeloid as it appears 
+; 1.64159265 levels down the logarithmic hyperspiral.  (The number 
+; is 1.5 minus PI)  Today's scene is located in the East Valley of 
+; the parent, an unusually well defined East Valley for a 
+; Mandeloid of such a low order.
+; 
+; I rated the image at a not-too-impressive 6.  After all, how 
+; impressive can a couple disembodied elephant trunks sitting over 
+; some half-squashed buds be?
+; 
+; The calculation time of 110 seconds is not at all bad.  Viewing 
+; the finished on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is even better.
+; 
+; Friday was the best day so far this spring here at Fractal 
+; Central in central Pennsylvania, with total sunshine and a 
+; temperature of 72F 22C.  The fractal cats made the most of 
+; things.  In fact, they made too much of things when they got 
+; into a tussle over their catnip rat.  I guess we'll have to get 
+; a second catnip rat to keep them both happy at the same time.
+; 
+; My day was average enough to keep everyone but the cats happy.  
+; And if all goes well, tomorrow will be another average day and 
+; the FOTD will be posted on schedule in 24 hours.  Until then, 
+; take care, and where does one's lap go when he stands up?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cheshire_Elephants { ; time=0:01:50.06-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basic.frm
+  formulaname=MandelbrotBC3 passes=b function=floor
+  center-mag=+0.166550673876/-0.00577360745223/\
+  1014.208/1/30/0 params=1.5/0/-1.64159265/0 float=y
+  maxiter=6400 inside=255 logmap=33 periodicity=10
+  colors=000aZV__WY`XWaYUbZSc_Qd`OeaMfbKgcIhd9ie0jf2\
+  kg4jh6ie8fbAc_B`XDYUFVRHSOJPLKMIMJFOHCQF9S46T03W55\
+  Z96aD7dH8gLAiPBlTCoXDr`FudGxhHzlIvlJrlJnlJklJglJcl\
+  J`lJXlJTlKQlKMlKIlKFlKBlK7lK4lKFnPPpUZrYgobclc_edU\
+  `bSZ_R_YZ_UgdQohMlcHiZDfU9dQ5aPD_OKYORYMOYLMYKKYJI\
+  YIGYHEYGCWJCTMCROCPRCMUCKWBHZBFaBDcBAfB8iB6kBBjDFi\
+  EJhFOgGSfIWeJ`eKddLhcNmbOqaPu`Qy`RtZPoXNkVLfUJbSIY\
+  QGTPEPNCKLAGK9FJCFJEFJGFJJFJLFJNEIQEISEIUEIXEIZEI`\
+  OHmJNoFSqAYs6bt5ds5er4fq4gp4io3jn3km3lm4il4gk5dj5b\
+  i5`h6Yg6Wf6Ue7Rd7Pc7Nb8Ka8I`8G_AHeCIjEJpGKuILzPIeW\
+  FMbD2`EAZEHXEPVEWTEcREjPErOEyNHxMKxMMwLPwLSwKUvKXv\
+  JZuJauIduIftHitHmtImqJmnJmkKmhKmeLmbLm_MmXNmUNmROm\
+  OOmLPmIPmFRmGSmGTmHUmHWmIXmIYmJzmJzmOzmSznWzo`zpdz\
+  rhzsmzuqzvuzxyzz9zzEzzIzzNzzRzzWzz_zzazzbzzdzzezzf\
+  zzhzzizzkzzlzzmzzozzpzzqzznzzkzzhzzfzzczz`zzZzz_zz\
+  _zz_zz_zzpzzpzzozzozznR0K }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

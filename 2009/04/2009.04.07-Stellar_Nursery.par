@@ -1,0 +1,99 @@
+;     Date: Mon, 06 Apr 2009 21:21:09 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 07-04-09 (Stellar Nursery [8])
+; 
+;       Id: <1.5.4.16.20090406212136.2be77108@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 07, 2009 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For the curious, the 'Great Mandelbrot Set' image of April 5, 
+; 2009 originally appeared in a slightly different form as the 
+; FOTD for September 5, 1999, when it was named "Mandelbrot 
+; Vision".  Paul Lee almost had it tracked down.
+; 
+; Today's image is another slightly modified old one, this one 
+; from March 12, 1999, when it was named "Edge-On Galaxy".  I'm 
+; re-using old images because of a heavy work load which leaves 
+; too little free time for a proper fractal search.  I tweaked the 
+; colors a bit and turned the image almost upside-down, but the 
+; overall effect of stars scattered among streaks of interstellar 
+; dust is much the same.  In keeping with the same theme, I named 
+; today's image "Stellar Nursery".
+; 
+; The rating of an 8 is perhaps a bit high for a re-used fractal, 
+; but I think it is worth the rating, especially since I had not 
+; yet started rating the images when I posted the first version.
+; 
+; The calculation time of 35 seconds means no one will waste much 
+; time doing the calculation.  And as always, the finished image 
+; is or soon will be posted for immediate and total gratification 
+; on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy clouds and occasional rain made the fractal cats unhappy 
+; on Monday here at Fractal Central.  With a lack of sun, the 
+; near-normal temperature of 55F 13C gave no comfort.
+; 
+; My day was near average.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and it will all work out, re-
+; gardless of what 'it' may be.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Stellar_Nursery    { ; time=0:00:35.07-SF5 on P4-2000
+  reset=1960 type=formula formulafile=basic.frm
+  formulaname=multimin-XZ-YW-new passes=1
+  center-mag=+0.06912407603522651/+0.000287532042665\
+  15/203.8073/0.04155/0.206674009974176315/64.560649\
+  9155611289 params=90/-10/3.5/0/0.03907/-0.28621/\
+  0.8042/0 float=y maxiter=1200 bailout=25 inside=255
+  logmap=16 periodicity=10
+  colors=000`KWZKVZKUYJTWISUHRSGQRFQPEPODOMCNLBMJBLI\
+  BKHBJFAJDAJAAI7CI5CI2CG0CG0CG0CE0CE0CD0CE0CE0CE0CG\
+  0CG0CG0CI0CI0CI0CJ0CJ0CJ0CJ0CL0CL0CL0CL0CN0CN0CN1D\
+  O1EO1FO1GO2HQ2HQ2HQ4HR4IR4IR6IT6IT6JT6KT8LV8MV8NV9\
+  NX9MX9MX9MXBMYBMYBMYDM_DM_DM_DM_EKaEKaEKaGKbGKbGKb\
+  IKdIKdIKdIKdJKfJKfJKfLKgLKgLKgLKgNKiNKiNKiOKkOKkOK\
+  kOKnQKqQKtQKwRKzRKzRKzTKzTKzTKzTKzVKwVKuVKsXKsXKsX\
+  KsYKtYKtYKtYKt_Kw_Kw_KwYOt_Kw_JxaHzaFzaCzbBzbBzaBz\
+  aBzbBzbBzbBzdBzdBzdBzdBzdBzfCzfCzfDzfDzfDzgFzgFzgF\
+  zgHziHziJziJziJziKzkKzkMzkMzkOzkOzlPzlPzlPzlRxnRxn\
+  RxnTxnTxnUxpUxpUxpWwpWwpYwpYwqZwqZwqZws`ws`ts`tsat\
+  sattcttcttettetteswgswgswhswhsxhsxjsxjsxlqxlqzlqzm\
+  qzmqzoqzoqzoqzqpzqpzrpzrpzrpztpztpzvpzvnzwnzwpzwrz\
+  ytzyvzzxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:multimin-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=(-z)^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
