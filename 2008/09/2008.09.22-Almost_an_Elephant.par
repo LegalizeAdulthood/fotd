@@ -1,0 +1,110 @@
+;     Date: Sun, 21 Sep 2008 17:51:29 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 22-09-08 (Almost an Elephant [?.5])
+; 
+;       Id: <1.5.4.16.20080921175246.2b1784da@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 22, 2008 (Rating ?.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the pseudo-East Valley of the parent 
+; fractal that results when the formula Z^(1.9)+C is iterated 66 
+; levels up the logarithmic ladder with no function applied.  (I'm 
+; not sure how the various functions make the mathematics any more 
+; accurate, but they sure do add to the variety of fractals.)  I 
+; could not decide on a rating for today's image, so I finally let 
+; it go with a question mark plus 1/2 point for the effort I put 
+; into smoothing the palette of only 256 colors.
+; 
+; Sometimes I look at the FOTD fractals I create and feel like I'm 
+; living in the past.  I'm still enthusiastic about the type of 
+; fractals that were being created in the late 1980's.  Then I 
+; feel like a total anachronism, a lone scientist in a makeshift 
+; laboratory, with wires clumsily hooked up to batteries, search-
+; ing for the most efficient filament to put in an incandescent 
+; light bulb, while the rest of the world has moved on to far more 
+; efficient light-emitting-diodes.
+; 
+; But what the heck -- finding fractals uses so little energy that 
+; it may actually help us out of the latest what's-up crisis.
+; 
+; I named today's image "Almost an Elephant" because it is located 
+; in the trunk of an East-Valley elephant that is only 90-percent 
+; there.  The calculation time of 1-3/4 minutes is brief by any 
+; standard.  And the trip to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; to view the completed image is ultimate convenience.
+; 
+; Sunday here at Fractal Central began with fog, but with a strong 
+; sun, the fog cleared off by 10:00am, leading to a most pleasant 
+; day, with tons of sun and a perfect temperature of 77F 25C.  The 
+; fractal cats were distracted for a few minutes by the crows that 
+; gathered in the yard to finish off a bag of cheesy corn curls, 
+; then the duo settled for a nap on their shelf in the sun.
+; 
+; My day was average, which is all that need be said.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and be 
+; fractally frugal with our limited resources.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Almost_an_Elephant { ; time=0:01:44.40-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.0534895390843374/+0.239156045629176/\
+  1.700906e+007/1/52.5/0 params=1.9/0/66/0 float=y
+  maxiter=1800 inside=0 logmap=125 periodicity=10
+  colors=000ugstgrsgqrgpqgoogomgokgoifoffndenaenZenX\
+  dnUdnSdnQelPekNfjMfiLghJggIgfHheFhdEicDibBjaAj`9j_\
+  Bk`DlaFmbGncIodKodLmcOkbRh`TeYWbWZ_U`XRcUPfRMhOKkL\
+  InGFqDDs9As68p36m68i9AeCBcFD_IEWMGSOHORGKUGIYFH`FL\
+  dFOgESkEVoEZrDauDdvDetEeqEenEekEehFeeFebFe_FeXGeUG\
+  eRGeOGeLHeIHeFHeCHdFLdHPcKTcMXbO`bRdaThaVl`Yp`_t`a\
+  xPTsELnGNmHOlIQkKRjLTjMUiNWhPXgQZfR_fSaeUbdVdcWebX\
+  fbi3p06sGOiSGcTLbUQaVVaW_`ZWCYYHX_MXaRWcWzf6teCoeH\
+  jeMedR`dWbCnaGl`Kj_NhZRgYVeXYcWaa1EG8KLEPPKVTQ_Xfv\
+  PnwSiqOdkK`fGanZavpPYaDAOEITEPXEW`EceEjiEqmExqTqmf\
+  jitcfUgP4k8CjEJiKRhQYgWdfabe`ae``e`Zd`Yd`UabXd`VcQ\
+  WdTWdWWdZCI`MU`ioxgmtekqcjmahj_gfY`cIWHKXKMYMOZPP_\
+  RR`UTaWVbZYeYXhZXkZXn_Xq_Wt_Ww`Wz`YzIXzMXzQWzUWzYz\
+  z6zzAzzEzzIzzMzzQzzUzzYzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

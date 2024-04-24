@@ -1,0 +1,105 @@
+;     Date: Thu, 11 Sep 2008 18:38:08 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 12-09-08 (The Low One Dances [7])
+; 
+;       Id: <1.5.4.16.20080911183916.2a971624@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 12, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "The Low One Dances" for both mathematical 
+; and poetic reasons.  To begin, the exponent of Z in today's 
+; formula is 1.067, certainly on the low side, and hardly an 
+; exponent expected to produce an interesting fractal.  And the 
+; torpedo-shaped minibrot in today's image certainly has every 
+; reason to be dancing in triumph.
+; 
+; The parent fractal is shaped somewhat like a letter 'A' lying on 
+; its right side, with today's tiny minibrot located near the egde 
+; of a debris field, some distance southwest of the main open area.
+; 
+; The rating of a 7 indicates a typical FOTD of average quality.  
+; Due to the very large maxiter of 150,000, the calculation time 
+; is a rather slow 16 minutes, leaving it to the individual 
+; fractalist to decide whether to run the included parameter file 
+; or go to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and see the completed image there.
+; 
+; Typical late-summer weather prevailed here at Fractal Central 
+; on Thursday.  The thin clouds and temperature of 72F 22C were 
+; typical of this time of year.  The fractal cats were more 
+; concerned with squirrels gathering nuts in the yard than the 
+; central Pennsylvania weather.
+; 
+; In my department things progressed smoothly.  FL's flowers have 
+; pretty much recovered from the beating they took in the storm on 
+; Tuesday morning.  If all goes well, and I see no reason why it 
+; should not, the next FOTD will be posted in 24 hours, give or 
+; take a few.  Until that enlightening moment arrives, take care, 
+; and the answers to all questions are written in the fractals.  
+; All we need is someone to decipher the fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Low_One_Dances { ; time=0:16:34.92-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=t
+  center-mag=-7.525986636550791/-3.471416076886081/\
+  4.64746e+010/1/52.5/0 params=1.067/0/0/1500 float=y
+  maxiter=150000 inside=255 logmap=424
+  periodicity=10 mathtolerance=0.05/1
+  colors=000PPEQQFSRFTRGVSGWSHYTHZUI`UIaVJcVJdWKeXKf\
+  XLgYLhZLiYNjXPkWRlWSmVUnUWnUXoTZpS`qRbrRcsQetPgtPh\
+  rLlqHopDroAujBmeBf`B_WBTRBMMBFIB8ME9QHAUKBYNCaQDeT\
+  EiWFmZGqaHudIxgJteIpcIlaIi`IeZIaXHYWHVUHRSHNRHJPGG\
+  NGCMG9ZH8KG4IGtIBhHCYHDNHECHFGRzFQyFQwFQvEQuEPtEPs\
+  DPrDPqDPpCOoCOnCOmBOlBNkBNjANiANhANg9Nf9Oe9Pd8Qc8R\
+  b8Qa7Q`7Q_7QZ6PY6OX6OW5NV5NU5MT4LS4LR4LQ3KP3JO3JN2\
+  JM2JL2HK1HJ1HI1HHnvrgpmakhWfcQaZJWUDRP7MKBB8AC9AC9\
+  AChUC99Ch9DhUDAUDh8DhUDhUDBUEB7EB7EZ6EZ6EZ6EZUFD5F\
+  Z5FZUFD4FE4FZ4GE3GZUGE3GZ3GF2GZ2HF2HG1HG1HH1HHmmJm\
+  nKmoKmpKmqKmrKmsPmtUmuZmvcmwhmxmmymmzmmzmczmUzmUzm\
+  czmczmczmczmczmczmhzmmzmmzmrzrvzvzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzcmw }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

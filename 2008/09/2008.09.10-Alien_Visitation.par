@@ -1,0 +1,114 @@
+;     Date: Tue, 09 Sep 2008 17:25:22 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 10-09-08 (Alien Visitation [7])
+; 
+;       Id: <1.5.4.16.20080909172629.2ae79580@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 10, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Curiously enough, the parent fractal of today's image, which has 
+; perfect XY-axis symmetry, rather resembles a flying saucer 
+; bearing alien visitors from outer space.  This explains why I 
+; named the image "Alien Visitation".
+; 
+; I have no idea why the parent fractal should have this symmetry 
+; at the unlikely height of 71 floors up the logarithmic ladder, 
+; and then only when no function is applied.  But I suspect that, 
+; like the 'cosxx' function of Fractint, using no function with 
+; the MandelbrotBC3 formula creates a serendipitous mistake.  I 
+; also suspect that the fractals that result with this formula 
+; appear in a circular repeating series rather than an infinite 
+; line of always-new images.
+; 
+; Today's scene is located very near the X-axis at the eastern 
+; edge of the main bay of its parent.  Due to the Y-axis symmetry, 
+; a similar scene exists at the western edge of the bay.
+; 
+; Most of the action in today's image consists of the 'fmod' 
+; inside fill.  The rating of a 7 is conservative enough to be 
+; honest and liberal enough to be interesting.
+; 
+; The calculation time of 7 minutes is a bit on the slow side, 
+; but fast enough so that no one will have an attack of acute 
+; impatience.  The finished image will be, or may already be, 
+; posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Tuesday started with a bang here at Fractal Central as a very 
+; strong thunder-storm moved in, with flooding rain, crashing 
+; thunder and roaring wind.  The fractal cats weathered the storm 
+; under the bed; FL weathered the storm in the rear window, 
+; watching the flowers in her garden being flattened.  I weathered 
+; the storm in the front window, enjoying the show.  The rest of 
+; the day featured cloudy skies and a threat of more rain, which 
+; never developed, and a temperature of 75F 19C.
+; 
+; With the big rush job just about wrapped up, things are return-
+; ing to normal here at F.C.  Though I had little time to write 
+; today's fractal discussion, the discussion for tomorrow's FOTD 
+; should be more elaborate.  That next FOTD will be posted in 24 
+; hours.  Until then, take care, and I'm undecided whether to vote 
+; for a 'rock' star or a beauty queen.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Alien_Visitation   { ; time=0:07:02.02-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+1.112397863899667/+0.005607924256098/\
+  6713.695/1/46.5/0 params=1.6666666666667/0/71/0
+  float=y maxiter=1000 inside=fmod periodicity=10
+  colors=000aM`bPZbSXcWVcZUdaSdeQehOekNXRXP7eQ8dQ8dQ\
+  8dQ9dQ9dQ9dQAdQAdQAdQAdMBaIB_EBYBBW7BU3BS0BQ6HTCMV\
+  IRXOWZU`c_fhekmkqrqwvzzzqwvlqrgkmbfhYaeTYcOTbJOaEJ\
+  `9E_5AZN0SJ7TGETDLTARU7YU4dU1jUqJFpKEoKDnKCnKBmKBl\
+  KAkK9kK8jK7iK7hK6hK5gK4fK3fK3HhwIfuIdtIbsI`rIZqIXp\
+  IVnITmIRlIPkINjILiIJhHGbHDXHBRH8LH5FN3KP6NR8PRASRD\
+  UQGWPJYOM_NPaMScLVeLYgK`iJckIfmHioGlqFosFqtFruFrvF\
+  rxFszFsvFsrFsmFthFtcFtZFtUNpQVmO_kVahXaeZab_a_a`Xb\
+  `Ud`Re`Og`MhZNfXOeVPdUPcSQaQR`OS_NSZLTXJUWHVVGVUEW\
+  SCXRAYQ9YPFSrEUqDWpCYoB_nAam9clAGD9HE9HE9HE9HE9HF9\
+  HF9HF9IF9IF9IG9IG9IG9IG9IG9JH9JH9JH9JH9JH9JI9JI9KI\
+  9KI9KI9KJ9KJ9KJ9KJ9LJ9LK9LK9LK9LK9LK9LL9ML9ML9ML9M\
+  LejGbj9_j2_c6_YA_RE_LI_EM_8Q_2TW6TS9TODTKGTHJTMOQR\
+  TOVYM_UTdQ_iMfnImrFtlJqfNn`QkVUhPXeJ`bEc`JYWNTRRNN\
+  WII_CDc79gD9kJ9nO9rU9v_9yd9x`MxYYwViwSu_TsDUqj8GXN\
+  NJaU5p_7lY8iWAeVKrzGhpCdp }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

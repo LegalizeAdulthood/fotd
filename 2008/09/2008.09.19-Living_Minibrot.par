@@ -1,0 +1,97 @@
+;     Date: Thu, 18 Sep 2008 16:40:02 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 19-09-08 (Living Minibrot [7])
+; 
+;       Id: <1.5.4.16.20080918164116.2b577d28@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 19, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A quick glance at today's parameter file will reveal a 
+; 'biomorph' entry.  I'm not sure what this feature was originally 
+; intended to do.  My guess is that the idea came from an old, now 
+; forgotten article in 'Scientific American' magazine, which 
+; showed how life likely develops along fractal patterns.
+; 
+; The parent fractal almost isn't.  Instead of appearing as a 
+; screen filled with interesting intricacies, it is little more 
+; than an almost impossible to find dot far off to the southwest 
+; of the opening screen, which is a disappointing blank.  But in 
+; this dot lies a tiny Mandelbrot set surrounded by far tinier 
+; dots with far tinier M-sets at their centers.  Today's image is 
+; one of these miniscule sub-Mandelbrot sets.
+; 
+; The 'biomorph' feature supplies the cusps that fill the image.  
+; The name "Living Minibrot" implies that earth life might have 
+; developed along fractal patterns.  The rating of a 7 seems about 
+; right for a moderately impressive image that calculates in a 
+; F.T.L. 32 seconds.  The image, as always, is or soon will be 
+; posted for instant viewing on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Thursday began foggy here at Fractal Central, but the sun soon 
+; broke through, leading to a near-perfect day with blue skies, 
+; light winds and a temperature of 72F 22C.  The fractal cats were 
+; more interested in the cats prowling around outside.
+; 
+; My day is best described as rather good.  The work went well and 
+; the fractal of the day is at least acceptable.  The next fractal 
+; of the day (or is it the fractal of tomorrow?) will be posted in 
+; 24 hours.  Until then, take care, and keep your cool.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Living_Minibrot    { ; time=0:00:32.17-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-34.95007187798075/-26.2115596616193/\
+  6.3263e+008/1/96.75/0 params=0.001/12/12/2/0/0/0/0
+  float=y maxiter=500 inside=255 logmap=19
+  biomorph=51 periodicity=10
+  colors=000GBYB4KUMOWUUZ`_`gecnlA22z_Iz8ztKloXhiidj\
+  hckfagUyOXDLfDOKBMG8KD6H93ZNMgOVzPzzQlLRNFVXAZf4cq\
+  UIHRCMa6Re0WRVESbGXLDcJDjHDqEELYPGh`ZOOgPZqQjEfmCZ\
+  ploRIVC9bA0k8YPBTUFXaH_hJcpMQNPRMaSMmTLzMcGHtJUXRY\
+  fdaqr_KJiHPsEVROFTQHVSJYKFfHHoEJxALH_G7lJqC1Va8_p2\
+  VHSe3wOJBMF9KA7XKNcGYjChr8sKLIEJN8HS2FXQnaBxAUIFYC\
+  Ha7Jf1LIKT9Gh0CxVIJ`CQf6Xl0cSbjYC9f14QPJQSQRVXvIN_\
+  VMibVsjdfEGw5KLxRvsEOTFLZIIdKFjNTc0oy9UMOZKZbIigGu\
+  SOBVP9YQ7MKNIGYEDh99sOKHMHLKEPIBUMWIHeOCoU5b3F_O3l\
+  _W2f_QUcoJRCXS0pVOJ`QPeSVkUaLC9F14RUDTaDVhDXpEYMIe\
+  KNmJSvHYfSVwXmLODFPC9QC3RBmLNTPOWSZZVibYu`dRlwdQSJ\
+  QYPQcVQi`NROKVZHZiNWIKeOHoUDy_XXJdfQlpXPHAOA7M33ab\
+  WmroMQLHUUDXa8`jRMOTKZVIiXGtZHLhBUJPWBRoUTEY_FafGf\
+  mHVVG_cJdkMjtPOJALE7JA4G51U`RZoeLINGDYB8g63rQU8Pa2\
+  aWCmeBHdAaUBma8o9HLL`GIxDAEOYOMhZKtjcYCrhA`PTkShwV\
+  xiwpcOY3`TWX`gOFyQILHNszz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,107 @@
+;     Date: Sat, 20 Sep 2008 23:13:54 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 21-09-08 (Divided We Prevail [8.5])
+; 
+;       Id: <1.5.4.16.20080920231511.2b47030a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 21, 2008 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I somehow got involved in another 'antiquing' expedition on 
+; Saturday, this one to a tiny town named Richfield.  And I must 
+; reluctantly admit that I am actually starting to enjoy these 
+; weekly trips to examine the stuff someone else no longer wanted. 
+; We got back to FC by 5pm, which left barely enough time to do 
+; the FOTD.  As for that FOTD, it turned out surprisingly good.
+; 
+; The parent fractal is the Mandeloid that appears when the 
+; formula Z^(1.9)+C is iterated 22 levels up the logarithmic 
+; ladder when no function is applied.
+; 
+; Today's scene is located in a wedge-like valley leading to a 
+; large bud, where the fractal is divided to an unusual degree.  
+; Due to the fortuitous coloring, the image is one of the better 
+; ones I have yet found in the exponent range between 1 and 2.
+; 
+; The rating of 8.5 includes the 1/2 point for my coloring effort. 
+; The name "Divided We Prevail" hints at the discontinuities that 
+; fill the frame and actually create the patterns.
+; 
+; The calculation time of 2-1/2 minutes is about what would be 
+; expected for such an image.  This is about the same time that is 
+; required to surf over to the FOTD web site and view the finished 
+; image there.  The web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Thick cirrus clouds occasionally dimmed the sun here at Fractal 
+; Central on Saturday, but the temperature of 73F 23C was as 
+; perfect as could be hoped for.  The fractal cats must have 
+; agreed, for while we were out, they spent the afternoon in the 
+; window, wishing they could go out with us.
+; 
+; My day was spent doing my duty, which isn't all that bad.  The 
+; next FOTD will be posted in 24 hours or so.  Until then, take 
+; care, and don't let the fourth dimension abstractions leave you 
+; all abstracted.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Divided_We_Prevail { ; time=0:02:24.41-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.547729219193736/-0.6087350590135784/\
+  228263.9 params=1.9/0/22/0 float=y maxiter=2400
+  inside=0 logmap=267 periodicity=10
+  colors=000C6HC7HC8HD9HDAIDBJDCKHDKLCKPBJT9IW8H_7Fc\
+  5Eg4Ck3An28rILuXYrX`oXcmXejXhhXkeXmcXp`XsZXub`vffv\
+  jjvnrwwwwzzzwwwurstrqtrptrnsqlsqksqirqgrqfqpdqpbqp\
+  app_ppYppXllWihVfdUc`T`XSYTRVPQSLPPHOMDNJ9MHBLGDLF\
+  ELEGLDHKCJKAKK9MK8NJ7PJ6QJ5SJ4TJ6SL8SMASNCSPESQGSR\
+  ISSKSUMSVOSWQSYSSZUS_WS`UT_ST_QU_OUZMVZKVZIWYGWYEW\
+  YCXXASX8UX6cW4mW2cW0ZW4TM7NDNJTbFgiEjpDmwDpsMnpVml\
+  clilkfujcrk`plZnlWlmTjmRhnOfnMdoJapG_pEYqBWq8Ur6Sr\
+  3Qs1Os9RpHTmPWjXYgd`dlbasdZUkK4r5QqCkpIiqKhqMgrNer\
+  PdrQcsSbsT`sV_tWZtYYtZKqR7oK9nLBnMDnOFmPGmQImRKlSU\
+  lUUlVckWckXckYmkZmlYmlYzlKzmKzmKmeYznXznXcnXdoXeoX\
+  foXgmZhl_ij`jickghkfmkerkcvkbzk`zl_zmZzjazgczeezcg\
+  zbivbgscfpcdmccjcagc`dcZacYZcXWcVTcUQcSNcRKcPHcOEc\
+  NBcMAcM9cM9hL8hL7mL7mK6rK6vK5zJ4zJ4zJ3zK2zP2zU1zZ1\
+  zc0zc0zc0zc0zc0zc0zc4zc8zcCzcGzcJzcLzcMzcOzcPzcRzc\
+  zzczzczzczzczzczzczzczzcz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

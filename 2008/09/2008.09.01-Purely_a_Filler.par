@@ -1,0 +1,87 @@
+;     Date: Mon, 01 Sep 2008 23:07:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 02-09-08 (Purely a Filler [3])
+;       Id: <1.5.4.16.20080901230817.2b1f92f4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 02, 2008 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Rarely do I post a FOTD fractal that rates as low as a 3, but 
+; today I have done it.  My sister stopped in unexpectedly Monday 
+; afternoon, and I spent the rest of the day talking with her.  
+; But when FOTD post time came I was caught with no fractal ready.
+; 
+; In a near panic  ;-)  I hastily entered two numbers into the 
+; DivideJulibrot formula and used the first thing that appeared.  
+; The image consists totally of inside stuff made visible by the 
+; 'fmod' inside fill.
+; 
+; The interesting part of the image lies in the holes, which 
+; surprisingly have a unifying theme.  Even though they are of 
+; different sizes, most of them vaguely resemble the letter Z.
+; 
+; I named the image "Purely a Filler", which is what it is.  The 
+; image can be seen by running the included parameter file or by 
+; going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the finished image there.
+; 
+; The weather was perfect and the fractal cats were happy on 
+; Monday.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and try not to get into too much of a rush.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Purely_a_Filler { ; time=0:03:16.85-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1 maxiter=1500
+  center-mag=-1.84216/1.27087/11.85244/1/-1.5/0
+  params=0/0/0/0/0/0/0/0/0.333/3.333 float=y
+  inside=fmod proximity=1.25 periodicity=10
+  colors=0000Sb6S`ES_MSZUSXaSWgRYhSWhSViSUiSSiSRjSQj\
+  SOkSNmTMoTLqTJsTIuTHwTFxTEzTDzUCzUAzU9zU8zU6zU5zU4\
+  qC6pL4pU3pb1pk0ps0no3lk7kgBicFg_JfWMdSQbOUaKY_Ga_C\
+  fZDdZEcYFbYGaYH`XI_XJZXKYWLXWMWWNUVOTVPSVQRURQUSPU\
+  TOTUNTVMRWNSVMTVLUUKVUJWUIXTHXTHYTGZSF_SE`SDaRCaRC\
+  bQBcQAdQ9eP8fP7fP7gO6hO5iO4jN3kN2lM0kN2kO4kP6kQ8kQ\
+  AjRCjSEjTGjTIjUKiVMiWOiWQiXSiYUhZWhZYh__h`ahacgaeg\
+  bggcigdkgdmhenhenienieoieojeojfpkfpkfpkfqlfqlfqmgr\
+  mgrmgrngsngsngsjdkfadbZYZXRVUJRRCNO5JL0KM0KM0KM2KN\
+  4KN6KN8KNAKOCKOEKOGKPIKPKKPMKPOKQQKQSKQUJPWKQVLQUM\
+  RTNRSOSRPSQQTPRTOSUNSUNTVMUVLVWKWWJXXIYXHZYG_YF`ZE\
+  d`Db_E`ZEZYFXXFWXFUWGSVGQUHOTHNTHLSIJRIHQJFPJEPJCO\
+  KANK8ML6LL5LL8KWBKfDKqCLpCLoBMnBMmAMlANk9Nk9Nj8Oi8\
+  Oh7Og7Pf6Pf6Pe5Qd5Qc4Qb4Ra3R`3R`2S_2SZ1SY1TX0TW0RY\
+  0TW2UV5WU7XT9ZSC_RDd_Dd_Dc_Db_Db_Ea_E`_E__E__EZ_EY\
+  _EX_EX_EW_EV_EU_EU_ET_ES_ }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 

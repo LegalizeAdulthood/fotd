@@ -1,0 +1,109 @@
+;     Date: Mon, 01 Sep 2008 16:34:32 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 01-09-08 (Land of Loopiness [7])
+; 
+;       Id: <1.5.4.16.20080901163533.2aff1c70@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 01, 2008 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal lies in the same area of the same parent as the 
+; images of the past 2 days.  And like those two images, it con-
+; sists of an intricate network of filaments.  The cubic minibrot 
+; at the center of today's image is well beyond resolution, though 
+; the mixture of quadratic and cubic effects surrounding it is 
+; apparent.
+; 
+; I named the image "Land of Loopiness" because so many of the 
+; filaments form closed loops.  Then I rated it at a 7.  The 
+; calculation time of 1-1/3 minutes is brief enough to keep every-
+; one happy.  And of course, the finished image is or soon will be 
+; posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Sunday morning, when FL asked if I felt like going to visit a 
+; new antique emporium that just opened about 75 miles away, I 
+; reluctantly said yes.  This is why the FOTD for September 1 is 
+; so late.  I guess I can't see what is so fascinating with the 
+; 'junque' other people have the sense to throw away, but it makes 
+; FL happy if I am there with her, looking bored, so I just can't 
+; say no to her.  Luckily, or unluckily, we found nothing worth 
+; picking up.
+; 
+; With maximum sunshine, low humidity, and a temperature of 82F 
+; 28C, Sunday was a near perfect day here at Fractal Central.  The 
+; fractal cats celebrated the fine weather as well as the apparent 
+; departure of the manx cat by giving themselves a thorough 
+; grooming.  (And that's no tall tail!)  Like some ovens, cats are 
+; self-cleaning.
+; 
+; My day was fair enough, despite somehow being drawn into the 
+; antiquing expedition.  The next FOTD, with a new theme, will be 
+; posted within 8 hours.  Until then, take care, and the question 
+; is not, "why is there something instead of nothing", it is "why 
+; is it impossible for absolutely nothing to exist".
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Land_of_Loopiness  { ; time=0:01:22.56-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=DivideJulibrot passes=1 periodicity=10
+  center-mag=-3.94470157911456/+0.00001549964882567/\
+  8.2e+012/1 params=0/0/0/0/0/0/0/0/3/3 maxiter=1800
+  float=y inside=0 logmap=154 mathtolerance=0.05/1
+  colors=0007VN8WO9XPBYQCZRD`TEaUFbVHcWIdXJeYKfZLg_N\
+  iaOjbPkcQldRmeTnfUogVqiWrjXskZtl_um`vnawobxpZskWog\
+  TkcQg_NcWJZRGVNDRJANF5GA6IB7JB7KC8LC8MC9ND9ODAQEBR\
+  EBSECTFCUFDVGDWGEXGFZHF_HG`IGaIHbIHcJIdJIeJPbMW_Ob\
+  zR`z_ezWizTzzPzzMzzJzzHzzGzzEzzDzzBzzAzz8zz7zz5XQ4\
+  VT2TV1SW4SW6SW9SWBSWERWGRWJRWLRXORXQRXTQXVQXYQX_QX\
+  bQXdPZeQXfRVfRTgSSgTQhTOhUNiVLiVJjWHjXGkXEkYClVDqX\
+  CnYBl_Bi`AgaAdc9bd8_f8Yg7Vh7Tj6Qk5Om5Ln4Jo4Gq3Er2B\
+  t29u16v14r57o89lCBiFDeIFbMH_PJXSLUWNQZPNaRKeTHhVDm\
+  WEkXFjXGiXHhXIgXJfXKeXKdXLcXMbYNaYO`YP_YQZYQYYRXYS\
+  WYTVYUUYVTZWSZWRZXQZYPZZOZ_NZ`MZaLZT2QYBVaKZeTbxjw\
+  i`fVRQJDAHH9FK9DO9BR9AU98Y86`84d82g81j83iB4iE6iH7h\
+  K8hNAhQBhTDgWEgZFgaHgdIfgKfjLfmMfpJfsHfuKgsMhrOiqR\
+  jpTkoVlnQmeLnYGoPCpHBqGBrGBrGBsGBtGBtGBuGBvGBvGBwG\
+  BxGBxGByGBzGBzGHxNNvUSt`Yrgbpngojlofqncvn_znXqiShd\
+  N__JRVEIQAPMEWJHbGLiCOp9S }
+
+frm:DivideJulibrot   {; draws 4-D slices of DivideBrot Julibrots
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  aa=-(real(p5)-2), bb=(imag(p5)+0.00000000000000000000001),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=sqr(z)/(z^(aa)+bb)+c
+  |z|< 1000000 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

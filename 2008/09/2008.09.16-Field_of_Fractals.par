@@ -1,0 +1,103 @@
+;     Date: Mon, 15 Sep 2008 18:25:44 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 16-09-08 (Field of Fractals [5.5])
+; 
+;       Id: <1.5.4.16.20080915182656.2aef5730@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 16, 2008 (Rating 5.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image is a routine Mandelbrot set 
+; that has been rotated about 180 degrees.  But this M-set is 
+; anything but routine.  To start, its formula is Z^(2.001)+C, and 
+; to finish, it has been calculated at a level 1.6 turns up the 
+; logarithmic hyper-ladder.
+; 
+; Mandeloid fractals with fractional exponents of Z are usually 
+; intricately divided along the negative X-axis.  In today's 
+; parent, the East Valley lies near the negative X-axis, so the 
+; East Valley area is where all the dividing takes place.
+; 
+; The result is an image that bears no resemblance whatever to 
+; what one would expect in a scene from East Valley.  In fact, the 
+; image bears no resemblance to anything in the classic M-set.  It 
+; is something entirely new, almost like a fantastic flower garden.
+; 
+; I named the image "Field of Fractals" and rated it a 5.5.  I'm 
+; not totally satisfied with the coloring, so I couldn't rate it 
+; any higher.
+; 
+; The calculation time of the included parameter file is 4-2/3 
+; minutes, which is within reason.  The image may also be seen and 
+; hopefully enjoyed on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; After a breezy Sunday night, Monday was near perfect here at 
+; Fractal Central.  The mostly sunny skies and temperature of 81F 
+; 27C were just what the doctor ordered.  Extra treats were just 
+; what the fractal cats ordered, and they gave us no peace until 
+; we delivered the goods.  Otherwise, my day was uneventful.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and if the ultimate reality lies within, where does within lie?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Field_of_Fractals  { ; time=0:04:39.87-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.2908010563418544/+0.001787407398163/\
+  2.0987e+007/1/-46.25/0 params=2.001/0/1.6/0 float=y
+  maxiter=4200 inside=0 logmap=350 periodicity=10
+  colors=000QccQcbRbaRa`R`_R`ZR_YRZXRZXSYWSXVSWUSWTS\
+  VSSURSUQTTPTSOTRNTRMTQLTPKTPJUOIUNHUMGUMFULEUKDTJC\
+  UKDULDUMDUNEUOEUPEUQEURFUSFUTFUUFUVGUWGUXGUYGUZHU_\
+  HU_HU`HUaIUbIUcIUdIUeJUfJUgJUhJUiKUjKUkKUlKUmLUnLU\
+  oLTrKUpLUoLUmLUlLUjLUiMUgMUfMUdMUcMUaMU`NUZNUYNUWN\
+  UVNUTNUSOUQOUPOUNOUMOUKOZJPdHPjGPoEPrDPoBQkCPgDPeD\
+  OcEObEOaFN`GN_GNZHMYHMXIMWJLVJLUKLTKKSLKRMKQMJONJM\
+  NJKOIIPIGPIEQHCQHARH9SG8SG7TG6TF5UF3TE5UF6VF7WF8WF\
+  9XFAYGBZGCZGD_GE`GFaHGaHHbHIcHJdHKdHLeIMfINfIPgIQh\
+  IRiJSiJTjJUkJVlJWlJXmKYnKZoK_oK`pKaqLbrLcrLdsLetLb\
+  yUdwcevmfttgszhqzipzjnzkmzlkzmjznhvogrpemqdhwbcxf`\
+  ydZzc_za`z`azZbwYcvVdtRetRftRgvQgrQhsQitQiuPjvPkwP\
+  kxPlyOmyOmyOnyPoxQoxRpxSqxTqxUrxVsxWsxXtxYuxZux_vx\
+  `wxawxbxxcyydzxeywfyvgyvizukztmztmzsmzrmzrmzqmzpmz\
+  pmzomznmznmzmmzlmzlmzkmzjmzjmzimzhmzhmzgmzfmzfmzem\
+  zdmzdmzPmzQmzQmzQmzQmzQmz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

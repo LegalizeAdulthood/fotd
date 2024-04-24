@@ -1,0 +1,100 @@
+;     Date: Tue, 02 Sep 2008 19:15:28 -0400
+; 
+;       To: fractint@mailman.xmission.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 03-09-08 (Original Symmetry [4])
+; 
+;       Id: <1.5.4.16.20080902191629.2a3f2a42@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- September 03, 2008 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; A fractal with a rating of a 4 leaves much to be desired, but 
+; it's still better than the 3-rated image that passed for 
+; yesterday's FOTD.  The parent fractal was created by the formula 
+; Z^(1.666667)+C as it appears at ground level of the logarithmic 
+; ladder when no function is applied.
+; 
+; The most notable thing about the parent is its origin symmetry 
+; -- a most unusual thing to appear in a Mandeloid.  Even more 
+; interesting is the fact that many of its minibrots have a 
+; similar symmetry.  Today's image shows one of these almost-
+; symmetrical minibrots.
+; 
+; I named the image "Original Symmetry" because of this symmetry.  
+; The rather average calculation time of 3-1/4 minutes should 
+; cause little discomfort.  But if a problem should arise, the 
+; completed GIF image is or soon will be available on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The third consecutive perfect day passed uneventfully here at 
+; Fractal Central on Tuesday.  The temperature of 86F 30C was a 
+; bit on the warm side, but the unusually dry air kept it quite 
+; comfortable.  The fractal cats, who might have seen the last of 
+; the manx, spent most of the day chasing each other up and down 
+; the hallway and getting into various other trouble.
+; 
+; My day was appropriately busy with non-fractal things.  The next 
+; FOTD will appear in 24 hours.  Until then take care, and if 
+; elected president, I will give everything to everybody.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Original_Symmetry  { ; time=0:03:14.60-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.193684837028058/+0.6447822429058375/\
+  7293.786/1/90/0 params=1.6666667/0/0/0 float=y
+  maxiter=3600 inside=0 periodicity=10
+  colors=000R`dSZcUWbWUaYR`_P_`NZfdhkvrlwolwllwilwgl\
+  wdlwamxZmxXmxUmxRmxOmxMV8NTDLSIJRNHQSGOXENaCMfALk9\
+  KfEJaJJXOISSIOXHJaGEeG9jF4oF0sK6jPBaUHTYMKWPMVSNUV\
+  OSYPR`QQcRPeSNhUMkVLnWJqXItYHwZGy_LhXQSUVBRXFQYIPZ\
+  LP_PO`SNaVNcZMdaLedLfhKgkJhnJilMikPijSiiUihXig_ieb\
+  iddicgibjiami`oeXeaUWZQMVNCSK3_KLeIFlG8rE2KigG`ZCT\
+  Q8LH5D9AJ9FO9JU9OZ9Tc9Xi9an9es9ci8a`7_S6YI5W94U03r\
+  OpkLidIbYFXRCQK9JD6D636okLgdI`YFTRCMK9ED6763xNKkIG\
+  _DCO98C44uuLkkHaaETTAJJ7993uCpf9bT6QE3D`eyTXlMP`EG\
+  O78CaMAUH8MD6F847426KA3A5_9vV7nR6gM5_I4TD3M92E417n\
+  _zn0RP0DHoMEgIC`F9TC7M94E6273J30F20C20910610300FpD\
+  DiBBb99X87Q65J43D3161BiIwTWUEGMVlHObDIT8CJ469DOiAK\
+  a8GU6CN48F2471nE0eB0Y90P70H408266yZ4cN2QB1DI2qE1fA\
+  1W70L30ADonAdc7VU5KK2AAxfihWYULNFABJuaCaP6JCNyvIlj\
+  D`Z9ON4CB60g50_40T30M20E107yfEp_CgUAZO8QI6HC4862Lz\
+  9O3FKdPGojImiJjhLhgNefPce }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
