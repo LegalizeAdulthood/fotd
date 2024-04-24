@@ -1,0 +1,115 @@
+;     Date: Mon, 10 Dec 2012 08:49:27 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 09-12-12 (Broken Hyperspiral [5])
+;       Id: <1.5.4.16.20121210084707.29973cda@earthlink.net>
+; ---------
+; 
+; FOTD -- December 09, 2012 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image of a strange spiral is located in the Scepter 
+; Valley area of the Z^2+C Julibrot.  It is sliced in a direction 
+; halfway between the Oblate and the Rectangular, and has been 
+; stretched and skewed to a rather large extent to bring it to a 
+; recognizable shape.
+; 
+; The name "Broken Hyperspiral" refers to the infinitely divided 
+; nature of the features in the image.  This unlimited division, 
+; known as 'Cantor Dust', is typical of the Julia sets of points 
+; outside the Mandelbrot set, but as today's image shows, it also 
+; exists in the odd planes and angles.
+; 
+; The image consists totally of points, with no two points being 
+; connected.  A zoom into one of the sub-spirals will reveal a 
+; never-ending chain of similar broken spirals, and this series 
+; continues all the way to infinity, which is not an end point or 
+; a very large number, but an abstract idea that can never be 
+; reached.
+; 
+; The rating of a 5 is pretty pathetic by FOTD standards, but it's 
+; all I could give the image, which has little more than a bit of 
+; pop-math interest going for it.  More effort on the coloring 
+; might have raised the rating a point or two.
+; 
+; The calculation time of 1-3/4 minutes is about average, but 
+; perhaps a bit slow for an image with so little reward.  The 
+; situation is resolved on the web sites.
+; 
+; The completed image is posted for instant viewing at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with high-definition variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Clouds ruled the sky today here at Fractal Central, while the 
+; temperature of 45F +7C kept things feeling seasonal.  The 
+; forecasted rain held off until sunset however.  Both the cats 
+; and humans had a typical uninteresting day.
+; 
+; The next FOTD will be posted when it is ready.  Until whenever, 
+; take care, and if humans ever populate the galaxy, how will they 
+; agree on a universal galactic time?  (IMO, we will never 
+; populate anything but planet earth, so there is no problem.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Broken_Hyperspiral { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=+0.03264445237728411/+0.172536526663781\
+  00/8438.382/0.1402/79.9353442340639617/73.17794208\
+  35490413 params=45/90/0/90/-1.25/0/0/0/2/0 float=y
+  maxiter=2200 inside=255 logmap=-126 periodicity=6
+  colors=000knUknUloUloTmpTmpSmqSmqRmrRmrRmsQmsQmtPm\
+  tPmuOmuOmuNmvMmvLkvKiwKhwJfwIdxHcxGaxG_yFZyEXyDVzC\
+  ayIcyMeyQgyUiyYky`mydoyhqylpykoyjmygjxdhxafxZcwWaw\
+  T_vQXuN`sT_qSZoRYmQWkQViPUgOTdNSbMQ`MPYLOWKNUJMRIK\
+  PIJMHIKGHIFGFEEDEGBDI8CK6BM3AO8HQ7MS6RU5WW4`Y3eZ2j\
+  Z4kZ6kZ8kZAkZCk_EkaGlbIncKodMqfOseQsdSrcUqbWq`Xp_Y\
+  oZYoYYnWZmVZmUZlTZkSZkQ_jP_iO_iN_hL`gK`gJ`fI`eH`eF\
+  adEacDacCabAba9ba8b`7b_5cZAbaBcaDdaEdaGeaHfaJgaKga\
+  MhaNiaOiaQjaRkaTlaUl`Wm`Xn`Zo`_o``p`bq`cq`er`fs`ht\
+  `it`ku`lv`nw_nw_mw`mw`lwalwakwbjwbjwczzczzdzzdzzez\
+  zezzfzzfzzgzzgzzhzzhzzizzizzjzzjzzkzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

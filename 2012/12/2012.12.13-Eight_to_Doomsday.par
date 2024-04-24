@@ -1,0 +1,99 @@
+;     Date: Thu, 13 Dec 2012 20:22:02 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-12-12 (Eight to Doomsday [No Rating])
+;       Id: <1.5.4.16.20121213201945.2b4f4ac2@earthlink.net>
+; ---------
+; 
+; FOTD -- December 13, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's pre-doomsday fractal is a close-up of the edge of the 
+; curious rectangle that appeared in yesterday's image.  The slow 
+; top part of the scene is the inside of the rectangle, the much 
+; faster bottom part consists of outside stuff.
+; 
+; To me, the image appears as little more than a vast wasteland, 
+; perhaps the way our earth will appear the day after doom.
+; 
+; The calculation starts out slow, but as the scan moves down the 
+; screen, the calculation speeds up condiderably.  The total time 
+; of 3-3/4 minutes is slower than I would prefer, but still fast 
+; enough to allow time to prepare for the end.  The name "Eight to 
+; Doomsday" indicates that the remaining days are dwindling fast.
+; 
+; The finished image may be viewed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Total sun and a temperature of 43F +6C made today near ideal for 
+; the middle of December here at Fractal Central.  The cats and 
+; humans had an uneventful day of preparing for the holiday 
+; season.  The next FOTD will be posted in 24 hours, but beware, 
+; the day of doom is steadily approaching.  Until then, take care, 
+; and where will you be when time runs out?  Or perhaps a better 
+; question is where will I be.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Eight_to_Doomsday { ; time=0:03:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=-0.001145394/-0.003838487/2218/1/7.5/0
+  params=90/90/90/90/-1.74358/7.09952e-005/0.00011/\
+  0.07389/2.003/0 float=y maxiter=3600
+  inside=0 logmap=50 periodicity=6
+  colors=000BRQBRPAQOAQN9PM9PL9OK8OJ8NI7NH7MG7MF6LE6\
+  LD5KD5KC4JB4JA4I93I83H72H62G52G41F31F20E10E0MzzJzz\
+  HwzFqwDlmBgd8bW6UP4NI2I5OMKIKFCIA6G51ex0cu0bs0ap0`\
+  n0_l0Zi0Yg0Xe0Wb0V`0UZ0TW0SU0QS0PP0ON0NL0MI0LG0KE0\
+  JB0I9wtzusxsrvqqtpproopnnolmmjllikjhjhhhghgehfdceb\
+  cdacc_cbYc`Xc_VcZUcYScXQcWPcVNcTMcSKcRJcQHcPFcOEcN\
+  CcLBcK9cJ7cI6cH4cG3cF1WZYTXVQVSOTPLSMIQJGOHDMEALB8\
+  J85H52F2UEzUEzUEzUEzUEzUEzUEzUEzUEzUEzUEzbEz`Ez_Ez\
+  ZEzYEzWEzVEzUEzTEzREzQEzPEzNEzMEzLEzKEzIVzHUzGSzFR\
+  zDQzCPzBOzANz8Mz7Kz6Jz5Iz3Hz2Gz1FzUEzUEzUEzUEzUEzU\
+  EzUEzUEzUEzUEzUEzUEzfEzeEzdEzbEzaEz`gz_gzZgzXmzWgz\
+  VgzUgzTgzRfzQezPdzObzMazL`zKZzJYzIXzGWzFUzETzDSzCQ\
+  zAPz9Oz8Nz7Lz6Kz4Jz3Hz2Gz1FzjYvhXtgWreWpdVnbUlaUj_\
+  TiZTgXSeWRcURaTQ_RPZQPXOOVNOTMNzKMzJMzHLzGKzEKzDJz\
+  BJzqnzqnzpmzpmzpmzpmzpmzpmzolzolzolzolzolzolznkznk\
+  znkznkznkznkznkzVazCSz0Gz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

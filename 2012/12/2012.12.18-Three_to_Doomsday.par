@@ -1,0 +1,111 @@
+;     Date: Tue, 18 Dec 2012 14:51:41 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-12-12 (Three to Doomsday [No Rating])
+;       Id: <1.5.4.16.20121218144928.2c178320@earthlink.net>
+; ---------
+; 
+; FOTD -- December 18, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal features another glance at the Z^(2.003)+C 
+; rectangle.  This time I have adorned it with a lively blue-and-
+; gold color scheme, and sliced it at an angle rotated -1,-1,-1,+1 
+; degrees from the true Julia orientation.
+; 
+; Actually, the image is one of the better apparitions of the 
+; rectangle.  Unfortunately, if the predicted doom actually 
+; arrives in three days, this could be the final apparition.
+; 
+; The name "Three to Doomsday" indicates that the end is near 
+; enough for knees to begin knocking in terror.
+; 
+; But the calculation time of 1-1/3 minutes will squander little 
+; of the brief remaining time.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; and all the back images at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and showers of rain put a damper on outdoor 
+; activities here at Fractal Central today.  The temperature of 
+; 48F +9C was mild for the season however, and kept the unpleasant-
+; ness at a minimum.  The cats, always pleasant, slept through 
+; most of the day.  A full-day's sleep might seem boring to humans 
+; but it is quite normal for cats.  The humans continued to watch 
+; the TV news and continued to wonder why no one even recognizes 
+; the underlying cause of gun violence.
+; 
+; The next FOTD, (due to doomsday, possibly the third to last), 
+; will be posted in 24 hours.  Until then, take care, and some say 
+; the solution to gun violence is to enact sweeping legislation to 
+; protect us from such violence.  Perhaps we must ban the private 
+; possession of all guns.  (I actually heard it.)  Of course, if 
+; such legislation were ever passed, the result in rural areas 
+; such as Central Pennsylvania would be to turn the farmers, who 
+; would not give up their guns, into criminals.  And if anyone 
+; then tried to enforce the gun ban, the result would be civil war.
+; (I heard this also.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Three_to_Doomsday { ; time=0:01:20.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/100
+  params=89/89/89/91/-1.7435/0/0.000175/0.073883/\
+  2.003/0 float=y maxiter=10000 inside=0
+  logmap=55 periodicity=6
+  colors=00022M22M22L22L22K22K22J22J12I12I12H12H12G1\
+  2G11F11F11E11E11D11D11C41011C11B11B11A11A119019018\
+  018007007006006005005004004003003002002001001000Lc\
+  nKbmKbmKalKalKakJ`kJ`jJ`jJ_iJ_iIZhIZhIZgIYgIYfHYfH\
+  XeHXeHWeHWdGWdGVcGVcGVbGUbFUaFUaFT`FT`FS_ES_ESZERZ\
+  ERYERYEQYDQXDPXDPWDPWDOVCOVCOUCNUCNTCMTBMSBMSBLRBL\
+  RBLQAKQAKPAKPAJPAJO9IO9IN9IN9HM9HM8HL8GL8GK8FK8FJ7\
+  FJ7EI7EI7EH7DH7DH6CG6CG6CF6BF6BE5BE5AD5AD5AC59C49B\
+  48B48A48A479379378368368357257256246245045134134A2\
+  3KA3UK2cU2mc1zm1zm0zm0xp7un6sl6qj6nh5zm5zm5zm5zm4z\
+  m4zm4zm4zm3zm3zm3zm3zm2zm2zm2zm2zm1zm1zm1zm1zm0zm0\
+  zm0zm3zm2zm2zm2zm2zm2zm2zm2zm2zm2zc2zc2zc2zc2zc2zc\
+  2zc2zc2zc2zc2zcbzcdzcfzchzcjzckzcjzcizcizchzchzcgz\
+  cgzcfzcmzcmzcmzcmzcmzcmzcmzcmzczzczzczzczzczzczzcz\
+  zUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzU\
+  zzUzzUzzUzzUzzUzzUzzUzzUz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

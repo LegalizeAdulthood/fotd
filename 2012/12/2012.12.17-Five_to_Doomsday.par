@@ -1,0 +1,86 @@
+;     Date: Mon, 17 Dec 2012 08:31:04 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-12-12 (Five to Doomsday [No Rating])
+;       Id: <1.5.4.16.20121217082850.2b5798be@earthlink.net>
+; ---------
+; 
+; FOTD -- December 16, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a result of mixing 0.01 part of Z^(-2) with 
+; Z^(2) and adding straight Z on each iteration.  The parent 
+; fractal is a moth-eaten Mandelbrot set filled with debris.  This 
+; debris is filled with smaller distorted M-sets and lots of 
+; mandel fragments.  Today's image with its minibrot at the center 
+; is located in the East Valley area of what remains of the large 
+; minibrot on the main-stem of the moth-eaten parent.
+; 
+; The name "Five to Doomsday" indicates that time is growing 
+; short.  The calculation time of one short minute will waste 
+; little of the precious remaining time.
+; 
+; Save time.  Check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The hi-def variations are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; and the back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Heavy clouds and a temperature of 48F +9C made today a day to be 
+; soon forgotten.  The fractal cats forgot it before it began, 
+; while the humans had a rather busy day.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and the problem with 
+; our society is that it has programmed itself into a dead end.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Five_to_Doomsday { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-1.554435017013601/+0.0000055252962729/\
+  9470414/1/-115/0 params=1/2/0.01/-2/0/0/0/0 float=y
+  maxiter=1400 inside=0 logmap=61 periodicity=6
+  colors=000HbuK`qMZmNViNReONaOJYPFTPBOP7JUBHZEGbIEg\
+  LDkPBpSAtV9sbNrj_qrlroksljsjitgitehubgu`gppiC64H9C\
+  LBJPDRTFYXHd`JldLshNzcRsZVmVZgQb`MfVHjPDmJfoNbhVZa\
+  bVWjRPrOJzPPvPUsPZpPcmPiiPnfPscPx`_mTibLsTD3Qy5Uz7\
+  Yz9azBezDizFmzGqzHkxHfwIauIXtIRsJMqJHpJCoLGgNJ`PNT\
+  QQMSQKUQIVQGXQFZQD_QBaQ9bQ8RD2QB6PA9O9CN8FM7ISAOXC\
+  TbEZgGcmIirKnwMsRH9MSJHbTCmb7wlCumHtmMrmRqmWpn`nne\
+  mnilnZa`PSNFIArf0ka4dX7YSBSOELJHEEL79O15RuVCp_GkcK\
+  fgOakSXoWTsZSh8QeGObOM`VKYbIWiOPTUJDJ_H8oKSbLkQLWN\
+  XHLgOKdUJb_J_eIYkIVqHTwHRxGSxFTyEUyDVyDVqBXi9Zb8`V\
+  6bN4dG3eF7bFA_FEYFHVELSEOQESNEVLHZPJbTLeXNi`PldRph\
+  TslcoZnkLxg8mZBcRETIHJAK92MKFPUSSccUb_VaXWaUW`RX`O\
+  X_LY_IYXPZVV_Ta`RgaPnbNtcLzdSkhZYkeJol5rnBloGfqL`r\
+  QWsWQu`KveEwj9xa7yT5zK3zC1Y`96yGCuFIrFOoEUlE_iDefD\
+  kcCq`CSiA3q9Id7XS5_VBbXGdZMg`RibXldanffibcd_a_X_VU\
+  YQRWO63D822925DA8HIBLPEPX }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

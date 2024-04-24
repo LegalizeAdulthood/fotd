@@ -1,0 +1,109 @@
+;     Date: Wed, 05 Dec 2012 19:26:27 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-12-12 (Star Light Star Bright [7])
+;       Id: <1.5.4.16.20121205192403.2a9715e0@earthlink.net>
+; ---------
+; 
+; FOTD -- December 05, 2012 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The string of perfectly average 7-rated images continues today, 
+; with a scene in the parent fractal that results when the formula 
+; Z^(2.05)+C is iterated 11 levels down the hyperladder with no 
+; function applied.  This parent resembles a distorted Mandelbrot 
+; set rotated so that its west end faces east.  A mysterious 
+; axeman appears to have taken a slice out of its main bud.  
+; Today's scene is located where the axe appears to have sliced 
+; through Seahorse Valley.
+; 
+; The name "Star Light Star Bright" refers to the star-shaped 
+; pattern of elements surrounding the central minibrot.  It is 
+; also the first line of a well-known children's poem.
+; 
+; The rating of a 7 is a fair appraisement of the image, which 
+; takes a mere 1-3/4 minutes to finish on one of today's speed 
+; demons.  And as always, all the hassle of setting up and running 
+; the parameter file may be avoided by checking the FOTD web sites.
+; 
+; The finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Variations are available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Thousands of back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds with a brisk northwest wind and a 
+; temperature of 48F +9C made today seem more seasonal here at 
+; Fractal Central.  The fractal cats would have preferred more sun 
+; and less clouds, or at least steadier sun.  The humans made it 
+; through the day with ease.  Preparing the next FOTD will mean 
+; less ease however, and if all goes well, it will be posted in a 
+; day or so.
+; 
+; Until whenever, take care, and the confirmation of Bell's 
+; Theorem (that there can be no hidden variables in quantum 
+; mechanics and information must get around faster than the 
+; velocity of light) is the only time in the history of science 
+; when a brilliant theorist made a prediction, brilliant 
+; experimentalists pushed the boundaries of their art to test it, 
+; the theory was resoundingly confirmed, and every rational 
+; thinker was miserable.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+StarLiteStarBright { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.735201305568/+0.032356486996/2.2e+07\
+  /1/40/0 params=2.05/0/-11/0 float=y maxiter=2000
+  inside=0 logmap=221 periodicity=6
+  colors=000FAKC8G96C6483245cT4WN3OH2GB185EtwBhk8Y_5\
+  MO2BCZunSicLYUENK7BA9hV6UK3FA3GV2CN18F047iGtWGwQDm\
+  LAcG8UA5K52AE4b9CN2BH5LO7UV9caBlhDuoGnjJgeM``PUWRO\
+  RiGZbDUWBPB3FQ9KJ6FD4A625NL9HF6BA45526f75`64W53Q43\
+  L32G21A1050nXBgS9aO8VK6PG5JC4C82641ydwdRcKDKtw2jm1\
+  ac1SU1JK09A0zd7zZ6hU5zP4cK3zF2hA1c50qR_TNVPKRLGMHD\
+  ICAD869434XatSWkNRcILWEGO9AG458BPRp3Mh2I`2FU1CM19F\
+  06703aIoPCYC6Hbw5Wm4Qc3JU2DK16A0xbLmWHcQEUJAKD7A63\
+  1qE0cA0R70D3pfsbWeQLSDAExAIWpkPeaJVSCLJ6A9xYSmSNcM\
+  IUHEKB9A54JUpFPgCKZ9FQ6AH3584Gi3Ec3CY2AS28N16H14B0\
+  252Zw1Nc0BKs3Oe2IS1CE06fjHLN8hbU3Ku2Hl2Ed1BX18O05G\
+  028sgSeYdVPULHKA8ABrr7__3IIihfLtQGhKCYF8MA4B5HrfEk\
+  `CdWAYQ8RL6KGUDAU65UllU8jU6bU5VUANUKFUK7UKscKecKSc\
+  KEcYhcU`cUUcUMcUFmU7mU5mU2miOzbczWczQczJczDcz6czCm\
+  zAmz8mz6mz4mz2mz0zzbzzJzzFzzCzzAzz8zz6zz4zz2zz5zz4\
+  zz3zz2zz2zz1zz0zzGzzEzzCz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

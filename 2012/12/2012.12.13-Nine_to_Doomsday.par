@@ -1,0 +1,103 @@
+;     Date: Thu, 13 Dec 2012 20:22:00 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 12-12-12 (Nine to Doomsday [No Rating])
+;       Id: <1.5.4.16.20121213201943.2b4f5eea@earthlink.net>
+; ---------
+; 
+; FOTD -- December 12, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows the mysterious rectangle in the Julia sets 
+; corresponding to the fractured Seahorse Valley of the 
+; Z^(2.003)+C Mandelbrot set.  To add excitement to the scene, I 
+; have offset the slice ever so slightly in the imag(c) direction. 
+; This slight aberration fills the rectangle with debris, breaks 
+; up the surrounding features and also rotates the rectangle a few 
+; degrees.
+; 
+; Since no one will be around to check ratings after the world 
+; ends next Friday, I gave the image no rating.  The name "Nine to 
+; Doomsday" needs no explanation.  The big day is but nine days 
+; off.  The image calculation time of 1-2/3 minutes is blessedly 
+; fast.  After all, with the remaining time so limited, we don't 
+; want to waste a single second.
+; 
+; So hurry!  Before the end arrives, check the finished image on 
+; the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And don't forget the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of sun and a temperature of 41F +5C made today a typical 
+; average December day here at Fractal Central.  Both the cats and 
+; humans did average things, mostly preparing for the holidays.  
+; We all want to be ready if doomsday fails to arrive as foretold.
+; 
+; If the end does not arrive early, the next FOTD will be posted 
+; in a reasonable amount of time.  Until then, take care, and no 
+; one will be more surprised than me if the world really does end 
+; in nine days.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Nine_to_Doomsday { ; time=0:01:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 passes=1
+  center-mag=-0.00016692749087116/-0.000445372303409\
+  87/110.94 params=90/90/90/90/-1.74358/7.09952e-005\
+  /0.00011/0.07389/2.003/0 float=y maxiter=3600
+  inside=0 logmap=50 periodicity=6
+  colors=000BDQBDPACOACN9BM9BL9AK8AJ89I79H78G78F67E6\
+  7D56D56C45B45A449348337236225224113112001000MozJlz\
+  HizFcwDZmBUd8PW6GP49I245O8KI6FC4A6251Sx0Qu0Ps0Op0N\
+  n0Ml0Li0Kg0Je0Ib0H`0GZ0FW0EU0CS0BP0AN09L08I07G06E0\
+  5B049037024012SdtRbrQapP`oO_mOZlNYjMXhLVgLUeKTdJSb\
+  IRaHQ_HPYGNXFMVELUEKSDJQCIPBHNAFMAEK9DJ8CH7BF7AE69\
+  C57B469357346234123011WLYTJVQHSOFPLEMICJGAHD8EA7B8\
+  58535212pUznUzmUzlUzjUziUzhUzgUzeUzdUzcUzbZz`Yz_Xz\
+  ZWzYUzWTzVSzURzTQzRPzQOzPMzNLzMKzLJzKIzIHzHGzGEzFD\
+  zDCzCBzBAzA9z88z76z65z54z33z22z11zUUzsUzrUzqUzpUzn\
+  UzmUzlUzkUzjUzhUzgUzfUzeUzdUzbUzaUz`Uz_UzZUzX_zWUz\
+  VUzUUzTUzRTzQSzPRzOPzMOzLNzKLzJKzIJzGIzFGzEFzDEzCC\
+  zABz9Az89z77z66z45z33z22z11zjKvhJtgIreIpdHnbGlaGj_\
+  FiZFgXEeWDcUDaTC_RBZQBXOAVNATM9zK8zJ8zH7zG6zE6zD5z\
+  B5zq`zq`zp_zp_zp_zp_zp_zp_zoZzoZzoZzoZzoZzoZznYznY\
+  znYznYznYznYznYzVOzCEz02z }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

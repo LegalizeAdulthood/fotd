@@ -1,0 +1,104 @@
+;     Date: Wed, 19 Dec 2012 16:27:30 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-12-12 (Two to Doomsday [No Rating])
+;       Id: <1.5.4.16.20121219162517.2b0f4fba@earthlink.net>
+; ---------
+; 
+; FOTD -- December 19, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; What we are witnessing in today's image is the death of the cur-
+; ious rectangle.  No longer anywhere near perfect, the former 
+; quadrilateral has been twisted into a bent wet noodle.  I began 
+; the destruction by altering the parameters, thereby changing 
+; both the orientation and location of the slice.  The destruction 
+; will continue in the next two FOTD's, and then, who knows or 
+; cares what?  The day of doom will be upon us, when the fate of 
+; an abstract fractal rectangle will have less significance than 
+; an ant trapped on a stick in the middle of the Pacific Ocean.
+; 
+; But despite the hopelessness, the image is still worth a quick 
+; look.  It calculates in only one minute, about as much time as 
+; is required to check the finished image on the web sites.
+; 
+; The image is posted to the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with high definition variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The FOTD back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Mostly cloudy skies and a temperature of 45F +7C made today 
+; totally unremarkable.  The fractal cat had an unremarkable day 
+; also.  The humans' day was a bit more animated as we watched the 
+; midday news reports, frustrated that the current determination 
+; to see something done about the gun situation will soon fade 
+; away as people 'get over' their outrage.  Despite my recent 
+; comments, both FL and I feel there are far too many guns in our 
+; culture, which is violent enough as it is; but like nearly 
+; everyone else, we haven't the slightest idea what to do about it.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and let's get people who act different off the streets and 
+; into therapy.  (Hey, wait a minute!  That would include myself!)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Two_to_Doomsday { ; time=0:01:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/100
+  params=91.8376/90.7176/87.4531/89.1331/-1.7435/\
+  -0.0001/0.000175/0.073883/2.003/0 float=y
+  maxiter=8000 inside=0 logmap=55 periodicity=6
+  colors=00022M22M22L22L22K22K22J22J12I12I12H12H12G1\
+  2G11F11F11E11E11D11D11C41011C11B11B11A11A119019018\
+  018007007006006005005004004003003002002001001000Lc\
+  nKbmKbmKalKalKakJ`kJ`jJ`jJ_iJ_iIZhIZhIZgIYgIYfHYfH\
+  XeHXeHWeHWdGWdGVcGVcGVbGUbFUaFUaFT`FT`FS_ES_ESZERZ\
+  ERYERYEQYDQXDPXDPWDPWDOVCOVCOUCNUCNTCMTBMSBMSBLRBL\
+  RBLQAKQAKPAKPAJPAJO9IO9IN9IN9HM9HM8HL8GL8GK8FK8FJ7\
+  FJ7EI7EI7EH7DH7DH6CG6CG6CF6BF6BE5BE5AD5AD5AC59C49B\
+  48B48A48A479379378368368357257256246245045134134A2\
+  3KA3UK2cU2mc1zm1zm0zm0xp7un6sl6qj6nh5zm5zm5zm5zm4z\
+  m4zm4zm4zm3zm3zm3zm3zm2zm2zm2zm2zm1zm1zm1zm1zm0zm0\
+  zm0zm3zm2zm2zm2zm2zm2zm2zm2zm2zm2zc2zc2zc2zc2zc2zc\
+  2zc2zc2zc2zc2zcbzcdzcfzchzcjzckzcjzcizcizchzchzcgz\
+  cgzcfzcmzcmzcmzcmzcmzcmzcmzcmzczzczzczzczzczzczzcz\
+  zUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzU\
+  zzUzzUzzUzzUzzUzzUzzUzzUz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

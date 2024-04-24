@@ -1,0 +1,104 @@
+;     Date: Sun, 02 Dec 2012 18:42:27 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 02-12-12 (On the Odd Side [6])
+;       Id: <1.5.4.16.20121202184001.2a1f00fa@earthlink.net>
+; ---------
+; 
+; FOTD -- December 02, 2012 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's quickie image shows an under-resolved minibrot in the 
+; parent fractal that comes about when 8 parts of Z^(-0.1) are 
+; combined with 0.8 part of straight Z before (1/C) is added on 
+; each iteration.
+; 
+; This parent appears as a small lima bean.  When enlarged, this 
+; lima bean becomes an oval-shaped open area with a smooth 
+; perimeter except on the eastern edge, where a small stretch of 
+; mandel buds lies.  Today's image lies in this small area of 
+; mandel stuff.
+; 
+; Perhaps the most striking feature in the scene is the wildly 
+; discontinuous iteration bands, which in places appear as angular 
+; patches rather than the expected smoothly curved bands.
+; 
+; A higher maxiter would have fully resolved the central minibrot, 
+; but would also have changed the colors.  The rating of an 
+; everyday 6 indicates that I find nothing exceptional in the 
+; image or its colors.
+; 
+; The name "On the Odd Side" has little to do with the image 
+; except to express my feelings toward it.
+; 
+; The calculation time of 9 minutes is more than the image is 
+; worth.  Save time by visiting the FOTD web sites.
+; 
+; Avoid calculation by viewing the finished image online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And check the hi-def variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Increasing clouds through the day led to light rain beginning 
+; around sunset.  The temperature of 50F 10C felt pretty much 
+; normal for the start of December.  The fractal cats, Nico and 
+; Callie, passed the day doing what cats do best.  The humans 
+; passed the day doing nothing.  The next FOTD will be posted in 
+; the proper time.  Until whenever, take care, and mystics tell 
+; us it's impossible for the puny human mind to grasp what's going 
+; on up there, while quantum theorists tell us it's impossible for 
+; the puny human mind to grasp what's going on down there.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+On_the_Odd_Side { ; time=0:09:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-0.1223958572564503/-0.0168408862844925\
+  /2.2e+09/1/70/0 params=8/-0.1/0.8/1/0/0/0/0 float=y
+  maxiter=2750 inside=0 logmap=678 periodicity=6
+  colors=000E9PFAQGBRHCSIDTJEUKFVLGWMHXNIYOJZNK_ML`M\
+  MaLNbKMcKKdJIeIGeIEfHDgGBhG9hF7iE5jE4jH8kKBkNElQHl\
+  SKmVNmYQn`UncXoe_ohbpkepnhqpkqlimigjffgbdd_baXaZU_\
+  WQYTNXQKVNHUKJVJLVJNVIPWIRWHTWHVXGXXGZXF`XFbVIdULe\
+  SOgRQhPTjOWkMYmL`oKcpIerHhsFkuEmvCpxBsyAumLqbVnSdk\
+  HnhFmeEmbCm_BmYAmV8lS7lP6lN4lK3lH2lF6hJAdND`RHXVLT\
+  YOPaSLeWHiZDl_Em_Fm_Gm_Hm_Im_Jm`Kn`Ln`Mn`Nn`On`Pn`\
+  QnbUhcYcdaYeeTghNhlIipCjt7kw2gv4cu5_u6Wt7St8Os9KrA\
+  GrBCqC8qD4pE1pF2mH2jI2hJ3eK3bL3`M4YN4VP4TQ5QR5NS5L\
+  T6IU6FV6DW9GVBJUELUGOTJQTLTSOVSQYRT`QVbQYeP_gPbjOd\
+  lOchNbdMb`LaXKaTKcSOdSReSUgSXhR_iRbkRelRhmQkoQnpQq\
+  qQteD`V1IquZjqedmkYirSexOYkLQZHIMEA9ECAEDBEECEGDEH\
+  EEIEEJFELGEMHENIEOIDLGDJFCGECECCCBB9AB78A47A26A058\
+  05704603503402301201100dXI`UGXRETODQLBMI9IF8EC6B94\
+  763331tmmrkkqjjpiinhhmgglffjddicchbbfaae``d__bYYaX\
+  X`WWZVVYUUXTTVRRUQQTPPROO }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

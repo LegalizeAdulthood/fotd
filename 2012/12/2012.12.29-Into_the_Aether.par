@@ -1,0 +1,109 @@
+;     Date: Sat, 29 Dec 2012 09:20:58 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 28-12-12 (Into the Aether [8])
+;       Id: <1.5.4.16.20121229091854.2f0f3370@earthlink.net>
+; ---------
+; 
+; FOTD -- December 28, 2012 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's parent fractal came from the formula (-Z)^(2.003)+C 
+; rather than (+Z)^(2.003)+C.  This negative Z parent resembles 
+; the more familiar positive Z, though it has no rectangles just 
+; east of the main minibrot, and the East Valley has split apart.  
+; Today's scene lies along the infinitely divided main stem, just 
+; east of a smaller minibrot that lies well east of the large 
+; minibrot.
+; 
+; The name "Into the Aether" refers to that hypothetical all-
+; pervading stuff that was once assumed to be the medium that 
+; transmits electromagnetic radiation.  Nowadays we know that 
+; abstract waves of probablilty do the vibrating, though it's 
+; fun to think that the aether actually exists, interpenetrating 
+; the objects around us.  (And who knows?  Maybe something similar 
+; [a neutrino field] actually does interpenetrate our space.)
+; 
+; The image rates an 8, which makes it the highest rated FOTD in 
+; quite some time.  The parameter file finishes in 2 minutes on 
+; most SOTA units, which makes it about average.  And the web 
+; sites are always available to make life easier.
+; 
+; Get smart.  View the image on the official FOTD web site without 
+; the need of calculating it.
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And check the augmented variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Clouds prevailed here at FC today, though the lack of sun and 
+; resulting chill was mitigated by the lack of wind and relatively 
+; mild temperature of 34F +1C.  The fractal cat passed the day in 
+; the southwest window, watching the world go by.  The fractal 
+; humans passed the day closing out the old year and preparing for 
+; another year.
+; 
+; The next FOTD image will be posted in the proper time.  Until 
+; whenever, take care, and the first step in solving a problem is 
+; to see that everyone agrees on what the problem is.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Into_the_Aether { ; time=0:06:37.05 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 center-mag=-1.621649157\
+  158942/+0.00000020374490837/6.614526e+010/1/-155/0
+  params=0/0/0/0/0/0/0/0/2.003/0 float=y maxiter=3200
+  inside=0 logmap=392 periodicity=6
+  colors=00030441653865A77C89E9BGADICFKEHMGJOILQKNSM\
+  PUORWQTYSV`UXcWZfZaiaeldiohmtmqwpuzozzmwwjsthqqfon\
+  dmjdmhcmfcmdclbXgYQbTJYOCTJ6PFATHEWJL_KQbMUfNZiPcl\
+  RinSoqUssVwvXzxYnuZlr_jo`hmafjadgbbec`bdZ_eXYeWYeW\
+  YdWYdWZcVZbVZbVZaVZ`UZ`UZ_UZZUZZTZYTZXTZXTZWRVdSWc\
+  SWcSWcSWbCWNE`MGdMHiLJnLKrLInOHkQGgTFdVD`YCY_BUaAR\
+  d9Nf7Ki6Gk5Dn49p36r6Do9KmCRjFYhIdeLkcOr`QxZRtURqPS\
+  nKSkFShAJPEA6H9AJ9DL8GN8JP7MR7PS6SU6VW6ZY5a_5d`4gb\
+  4jdzufnphYsi6ig8_fAQeCGdE6cK9dPCeUFeZIfdKfiNgnQgsT\
+  hxVhrOelHcfBaeDZdEXcFVbGSaHQ`IO_JLZKJYLHXMEWNCVOAU\
+  P7TQ5SR3RS1TV3UX5V_6Xa8Yd9ZfB`iDakEbnGdpHesJfuKbjH\
+  Z_FVPCSEAUDBWDBYCC_CCaCCcBDdBDfBDnAEjAEzAEn9Fp9Fq9\
+  FpHNoOVaI_PCdC6iL7dT8_`9WiARqBMyCIrQNlbSjaRhcRfcQd\
+  cQbmPamP_mPYmOWmOUmNSmNRmNcmJozFmzGkzHjzIhzzgzzezz\
+  czz`zzZzzWzzUzzSzzPzzNzzLzzIzzGzzEzzBzz9zz7zz8zz8z\
+  z9zzAzzBzzCzzDzzEzzFzzFzz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

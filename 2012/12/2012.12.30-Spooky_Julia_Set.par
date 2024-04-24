@@ -1,0 +1,120 @@
+;     Date: Sun, 30 Dec 2012 17:53:10 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 30-12-12 (Spooky Julia Set [7.5])
+;       Id: <1.5.4.16.20121230175106.2e6775e8@earthlink.net>
+; ---------
+; 
+; FOTD -- December 30, 2012 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is another venture into the apparently boring 
+; (-Z)^(2)+C Julibrot.  This time it is a Julia set of the tip of 
+; the sharp Mandelbrot valley pointing directly west.
+; 
+; The image is extremely sensitive to changes in some parameters, 
+; especially the real parameters.  Some changes create surprising 
+; variations; others fail miserably.  Change any of them at your 
+; own risk, but don't say I failed to warn you if a blank screen 
+; appears.
+; 
+; The Julia set in today's scene is shaped surprisingly like the 
+; Julia set of Seahorse Valley of the Mandelbrot set.  This is 
+; likely a coincidence, though who am I to try to outguess the 
+; numbers?  The name "Spooky Julia Set" refers to this strange 
+; similarity.
+; 
+; The rating of a 7-1/2 includes a half-point bonus for the 
+; coloring.  The adjacent color bands are in no order, but are 
+; scattered wildly all over the palette, making coloring quite 
+; difficult.
+; 
+; The calculation time of 40 seconds will pass rapidly.  Setting 
+; the symmetry to xyaxis will cut this time by 2/3, but will 
+; distort the images with no symmetry that result from changing 
+; the parameters.
+; 
+; The image is so fast that it will take more time to go to the 
+; official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and view the finished image there.  But going to the web site 
+; will avoid the problem of setting up and running the included 
+; parameter file.
+; 
+; Augmented variations in hi-def are online at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The back images from as long ago as 1997 are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Yesterday's snow ended at nightfall after dropping a fresh 6 
+; inches or 15cm on Fractal Central.  Today was cloudy with a few 
+; minor flurries blowing in from the lakes.  The temperature of 
+; 34F +1C was just about normal.  Fractal cat Nicholas spent the 
+; day chasing his catnip ball and asking for food.  My greatest 
+; task was clearing the fractal sidewalk; FL kept busy supplying 
+; the hot coffee.
+; 
+; The next FOTD will be posted in a reasonable time.  Until 
+; whenever, take care, and I wonder why happiness in life now 
+; comes from purchasing the latest trendy gadgets.  Maybe when 
+; we're pushing buttons, we don't have time to think about the 
+; horrors lurking just beneath the surface of our decaying culture.
+; 
+; 
+; Jim (always the optimist) Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Spooky_Julia_Set { ; time=0:00:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=0/0/0.3909394
+  params=90/0/90/0/-1.889/0/0/0/-2/5 float=y
+  maxiter=5000 inside=0 periodicity=0
+  colors=0000AmYK9LFANIAPKBRMCTPCVRDXUDZWE`YEb`FdbGf\
+  eGhgHjjHllInnJpqJrsKtvKvxLwzLluPapTRlXGg`2fb5cc8ac\
+  A_cDYcGWcIUcLRd00UQNdTLdWJdd5_YHdRTiKdnDptEpsEpsFp\
+  sFprFprGprGpqGpqHpqHppHppIppIpoJpoJpoJpnKpnKpnKpmL\
+  pmLpmNqiLpmKopJoszzuzzwzzzzzrzzpzznzzkzzizzgzzezzb\
+  zz`zzZzzXzzUzzSzzQzzOHELHEJHFHHFFIGBIHDKIFMJH0LU00\
+  ZEHeOPKYTR_VTbXVdZXg`Zib`kdbnfdphfsjhuljwmkumismhq\
+  mfomemmdkmbimagm_emZcmYamW_mVYmTWmSSqRVmRXjRZfRacR\
+  c_ReXR00PjQRlMRoJRqFRsCRv8Rx5Rz2Rx3Sw4Sv5Su6Ss7Sr8\
+  Sq8Sp9SnASmBSlCSkDSiEShESgFSfGSdHScISbJSaJSYIQVHOR\
+  GMOFLNENMEOLEPKEQJESIETHDUGDVFDXEDYDDZCD_BCaACb9Cc\
+  8Cd7Cf6Cg5Bh4Bi3Bk2Bl1Bm0Bn0Ej0Hf0Kb0QZ00XKKc3TU5T\
+  W8TXATZDT_FTaITbKTdNTfPTgSTiUTjXTlZTmaTocTqfTrhTti\
+  TuiTwiTwjTxjVvkXulZtm`sRbrMdqHfpCho7in8ij9hfBhb00K\
+  DhWEgSFgOHgKIfGJfCKf8Lf5Fk7Ap99lF9iL9fR9cX8_b8Xh8U\
+  n8Rt8OyBSuEWqHZmKbiMefPib }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

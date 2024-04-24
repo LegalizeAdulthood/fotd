@@ -1,0 +1,107 @@
+;     Date: Sat, 22 Dec 2012 18:36:37 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 20-12-12 (One to Doomsday [No Rating])
+;       Id: <1.5.4.16.20121222183427.2b5f4e56@earthlink.net>
+; ---------
+; 
+; FOTD -- December 20, 2012 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It's the day before the end of days here at Fractal Central, and 
+; nothing has happened so far.  Our poor strange curious little 
+; rectangle has not been so lucky however.  Very little of it is 
+; left in today's image.  What *is* left appears as the mostly 
+; obscured yellow stuff near the center of the frame.
+; 
+; Tomorrow will be the actual day of doom -- time to close the 
+; rectangular book.  The rectangle will be gone and the remains 
+; won't make much of an image, but it's kind of hard to make a 
+; good picture of something that is not there.
+; 
+; So say goodbye to the rectangle as you are saying goodbye to the 
+; rest of the world.
+; 
+; With so little time left, the very brief 45-second calculation 
+; will seem to finish almost instantly.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; Hi-def variations are at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Back images are at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Clouds arrived just before sunrise here at Fractal Central today 
+; and thickened throughout the day, while the temperature hovered 
+; around 43F +6C.  The approaching rain arrived at sunset.  The 
+; fractal cat had a peaceful day; the humans' day was not quite as 
+; peaceful.
+; 
+; Unless the end arrives sooner than expected, the next FOTD will 
+; be posted in 24 hours.  If the predicted end fails to arrive (as 
+; I expect it will) the next FOTD after tomorrow's will be posted 
+; on December 27, one week from today, after a hiatus of 5 days.  
+; Until whenever, take care, and once again, we have met the enemy 
+; and found they is us.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+One_to_Doomsday { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=+0.001928538\
+  67501304/+0.00075156576200417/107.7586/1.3369/0/\
+  -38.6598082540901018 params=99/98/79/82/-1.7435/\
+  -0.0008/0.000175/0.073883/2.003/0 float=y
+  maxiter=8000 inside=0 logmap=55 periodicity=6
+  colors=00022M22M22L22L22K22K22J22J12I12I12H12H12G1\
+  2G11F11F11E11E11D11D11C41011C11B11B11A11A119019018\
+  018007007006006005005004004003003002002001001000Lc\
+  nKbmKbmKalKalKakJ`kJ`jJ`jJ_iJ_iIZhIZhIZgIYgIYfHYfH\
+  XeHXeHWeHWdGWdGVcGVcGVbGUbFUaFUaFT`FT`FS_ES_ESZERZ\
+  ERYERYEQYDQXDPXDPWDPWDOVCOVCOUCNUCNTCMTBMSBMSBLRBL\
+  RBLQAKQAKPAKPAJPAJO9IO9IN9IN9HM9HM8HL8GL8GK8FK8FJ7\
+  FJ7EI7EI7EH7DH7DH6CG6CG6CF6BF6BE5BE5AD5AD5AC59C49B\
+  48B48A48A479379378368368357257256246245045134134A2\
+  3KA3UK2cU2mc1zm1zm0zm0xp7un6sl6qj6nh5zm5zm5zm5zm4z\
+  m4zm4zm4zm3zm3zm3zm3zm2zm2zm2zm2zm1zm1zm1zm1zm0zm0\
+  zm0zm3zm2zm2zm2zm2zm2zm2zm2zm2zm2zc2zc2zc2zc2zc2zc\
+  2zc2zc2zc2zc2zcbzcdzcfzchzcjzckzcjzcizcizchzchzcgz\
+  cgzcfzcmzcmzcmzcmzcmzcmzcmzcmzczzczzczzczzczzczzcz\
+  zUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzU\
+  zzUzzUzzUzzUzzUzzUzzUzzUz }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
