@@ -1,0 +1,101 @@
+;     Date: Thu, 21 Nov 2002 08:20:17 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-11-02 (FMOD Fun [6])
+;       Id: <1.5.4.16.20021121082219.39070e9c@pop.mindspring.com>
+; ---------
+; FOTD -- November 21, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; An earlier start today will hopefully avoid yesterday's log jam 
+; here at F.C.
+; 
+; For today's image we return to the claw of yesterday's FOTD and 
+; concentrate on the area near the origin.  When entered into the 
+; M-Mix4 formula, the claw parameters draw a default screen with 
+; an obvious though somewhat-distorted Mandeloid just north of 
+; center and a nascent Mandeloid tucked in on the lower left 
+; border.  Today's scene lies in a small area of irregularity on 
+; the east shoreline of the main bay of this half-developed 
+; Mandeloid.
+; 
+; When rendered in the outside=iter mode, today's scene has little 
+; to recommend it, and rates no more than a 3, but with the 
+; outside set to fmod and the proximity set to 1, an entirely new 
+; image appears, and the rating jumps to a 6.  The image is also 
+; helped by the bit of extra effort that went into the coloring.  
+; Smooth gradients do not come easily with only 256 colors to work 
+; with.
+; 
+; A couple weeks ago, there was an FOTD image named "FMOD 
+; Fantasy".  Today's image is named simply "FMOD Fun".  It's an 
+; apt name.  Fractals, after all, are fun.  They're fun to sit and 
+; admire, and even more fun to work with.
+; 
+; Today's image is all the more fun because of its relatively 
+; short render time.  Less than 3 minutes are required for the 
+; magic to work that turns the attached parameter file into a 
+; finished image.  Those who don't believe in magic can see the 
+; image by downloading it from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; And if fractals are not magic, I would like to know what is.
+; 
+; With lots of sun, light breezes, and a temperature of 59F 15C, 
+; the weather was ideal for cats and man here at Fractal Central 
+; on Wednesday.  Needless to say, the cats were happy.  The man 
+; was busy.
+; 
+; Today is starting cloudy, with rain on the way.  The cats will 
+; not be happy about this.  The man will finish his work earlier 
+; and relax.  Until next time, which will arrive in 24 hours, 
+; take care, and don't be hamstrung by the need to be scientifi-
+; cally correct.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+FMOD_Fun { ; time=0:02:45.38--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.96230332970846410/-1.290909040274715\
+  00/94787.94/1/-7.5/2.44942280416826641e-008
+  params=0.18/-1.5/-0.93/1.8/0/0 float=y maxiter=1200
+  inside=0 proximity=1 outside=fmod logmap=yes
+  periodicity=10 colors=000zzzwvxrswmqwhovcmuZkwUiuP\
+  gsKeqFcoEamG_kHYiJWgKUfISdLQbMO`OMZOKYOEXc0YcQSaPX\
+  aO`cOdfNhhPlhNldMj`LgXKeTJcPI`LHZGFYHGXHGXHGXIGWIG\
+  WIHWJHVJHVJHVKHUKIUKIULITLITLITLITMJSMJSMJSNJRNJRN\
+  KROKQOKQOKQPKPPLPPLPQLOQLOQLOPMMQLOQKPQKQQJRQJSQIT\
+  RHURHVRGXRGYRFZRF_SE`SDaSDbSCcSCeSBfTAgTAhT9iT9jT8\
+  kV9nT8lS8jR8hQ8fP8dN8bM8aL8_K8YJ8WH8UG8SF7RE7PD7NB\
+  7LA7J97H87G77E57C47A3782761755G98ID8KBBMGEOLHQPJSU\
+  MUZPWbSSgTNlUOkVPjVQiWRiXShXTgYUfZVfZWe_Xd_Yd`Zca_\
+  ba`abaacb`cc_ddZeeZefYfgXhgYfhXdgWcfWaeV`eVZdUYcUW\
+  bTVbTTaSS`SQ_RP_RNZQMYQKXPJXPLWOMWONVOOVNPUNQUNUVM\
+  RUNOTOLTPISQGRQDRRAQS7PT5PTARSESSIUSMVSQXSUYSYZSXY\
+  RXYQXXPWWPWVOWUNVTMVSMVRLUQKUPJUPJTNKTMKTKKTJKTIKS\
+  GKSFKSDKSCKSBKUCMVDNXEOYFQ_GR`HSaHTcIVdJWfKXgLZiM_\
+  jN`kNagQ_dTYaWXZZVVaUSdSPgRMjPImOFpMCsL9vJ6yI8pP9g\
+  VAZ`CRgDImE9s9NW9QZ8Ua7Xe6`h6ck5go4jr3nu }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

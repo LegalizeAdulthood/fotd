@@ -1,0 +1,105 @@
+;     Date: Sun, 03 Nov 2002 09:09:25 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-11-02 (Pink and Blue [6])
+;       Id: <1.5.4.16.20021103091111.0daf15d8@pop.mindspring.com>
+; ---------
+; FOTD -- November 03, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image was supposed to rate at least a 7.  Unfortunately, 
+; the ability to find great fractals is like artistic inspiration 
+; -- it is not always there when needed.  Try as I may, I could 
+; find nothing of reasonable worth with the M-Mix4 formula.  As a 
+; last resort, I turned to the MandelbrotBC1 formula and drew the 
+; default Mandeloid created by the very simple formula Z^1.75+C.
+; 
+; This parent Mandeloid resembles the classic M-set rotated about 
+; 120 degrees cw, with the large period-2 bud sitting peacefully 
+; on the northwest shoreline of the main bay.  Today's scene is 
+; located in the southwest branch of the Seahorse Valley of the 
+; parent.  It contains nothing that has not been seen before, and 
+; has been rated at a very liberal 6.
+; 
+; The BC in the formula name stands for 'branch cuts', three of 
+; which appear prominently in the image.  These discontinuities 
+; must always appear in Mandeloids drawn with fractional powers of 
+; Z.  The BC formula can move the cuts around by changing the 
+; real(p2) parameter, but they will always be there.
+; 
+; I named the image "Pink and Blue" because of the large amount of 
+; pink and blue it contains.  I consider the render time of 18 
+; minutes a bit excessive for such a routine image.  Patient 
+; fractalists will run the parameter file; others, with equal 
+; patience but less spare time, will download the finished GIF 
+; image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Saturday brought sun and chilly winds here to Fractal Central.  
+; The dynamic duo enjoy sun, but the sun was blocked by the 
+; evergreen holly trees at the bottom of the yard, which left only 
+; the winds and temperature of 50F 10C.  The duo does not like 
+; chilly winds, and as a result, they were testy all day.  It took 
+; a treat of tuna followed by a turkey treat to flip them into 
+; wash-up mode and restore their good moods.
+; 
+; It's now a sunny but chilly Sunday morning.  The cats have not 
+; yet asked to go out.  I have but a tiny bit of work to do before 
+; I can get down to the serious business of relaxing and 
+; fractaling.  The result of the fractaling will appear as 
+; tomorrow's FOTD.  Until then, take care, and beware of hit-and-
+; run fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Pink_and_Blue { ; time=0:18:16.97--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=recip passes=1
+  center-mag=-0.42832022342724060/+0.619134772836765\
+  10/1.791656e+009/1/42.5/1.40016650506738505e-005
+  params=1.75/0/0/0 float=y maxiter=3000
+  inside=0 logmap=450 periodicity=10
+  colors=000RrUTpVVnWXlXZjY`hZcf_ed`gbai`bkZcmZdo_en\
+  cfnignqhnyhU0e_0ca5jb9gcDddIaeMYfQVgUShZPibMjfIkkF\
+  loCms9ksFirKgrNeqQcqTapW_pZYocWohUngSpeQndQpbRr`Sq\
+  _TqYUrXRqZPp_No`LnaJmbHlcEkeCjfAig8hh6gi4fj2fk3eh4\
+  de4db5c_6cX6bV7bS8aP8aM9`J9_HCZGEYFGXFDW0MVFNUDPTD\
+  SRCUOCWKBYIB`HAbFAdD9fC95SH6PE6MB6J96G66E49D6CC8EC\
+  AHBCJAEMAFO9HR8JT8LW7NY7OT8UO9ZJAdFAiY_XXXYWUYVSZV\
+  PZUNZTK_TI_SF_RC`QA`Q7`P5aO2aO0aP3bP5cP7cP9dPBdPDe\
+  PFfPHfPJgPLgPNhPPiPRiPTjPVjMXfJZcG`_DbXAdT7fQ4hM1j\
+  JDkRPlZSmcVmcYmc`mccmcdmccmZZnUUpPPrKKt2Lq8LoDLlIM\
+  jNMhSMeXNcaN`fNZkNXpMUnMSmMPvMNaMKiLIhLFhLDiLAjL9k\
+  PAlTAmUAnUAoUApUAqU8rO6sH4tA2u31v65r99oCDlEGiHKfKO\
+  cMS`PVYSZVUbSXfP_iMamJdqGguDixAbyDWyFPzIRzKUzMXzR_\
+  zVbzZezchzgkzknzgqzdtzawzZzzWzzSzzPzzMzzJzzGzzDzz9\
+  zzkzzfzzbzzYzzTzzOzzKzzFzzAzz5zz1zz2zz2zz2zz2zz2zz\
+  2zz2zz2zz2zz2zz2zz2zz2zzT }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

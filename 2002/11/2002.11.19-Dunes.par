@@ -1,0 +1,89 @@
+;     Date: Tue, 19 Nov 2002 09:05:02 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-11-02 (Dunes [5])
+;       Id: <1.5.4.16.20021119090702.0d979e6e@pop.mindspring.com>
+; ---------
+; FOTD -- November 19, 2002 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; An unexpected rush job has arrived, the customer has already 
+; called once, and is waiting impatiently, so I'll have to make 
+; today's discussion a short one.
+; 
+; I found today's scene near a larger midget in the Z^(sqrt(2))+C 
+; Mandeloid, located 23.78 levels up the logarithmic spiral.  The 
+; image vaguely resembles a sea of sand dunes with a mis-shapen 
+; midget at the center, perhaps located on the well-known 
+; fictional planet known as "Dune".  I gave the picture the 
+; simplest name possible -- "Dunes".
+; 
+; Being found and colored almost automatically, I could not rate 
+; the image above average, so I gave it the highest possible below-
+; average rating -- a 4.
+; 
+; The render time of almost 19 minutes is slow for such a mediocre 
+; image.  The best way to see the scene is to download it from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The pleasant autumn weather gave the fractal cats a pleasant 
+; afternoon Monday.  The temperature of 46F 8C was chilly, but the 
+; duo managed to find enough sun to keep them comfortable despite 
+; a moderate breeze.
+; 
+; I'll be comfortable when I finish this work, so until next time, 
+; which will arrive in 24 hours, take care, and make no fractal 
+; mistakes.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Dunes { ; time=0:18:51.52--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=recip passes=1
+  center-mag=-1.10193383668258500/+1.115688662390884\
+  00/397152/1/130/2.10770308151086994e-009
+  params=1.414213562373/0/23.78/0 float=y maxiter=16\
+  000 inside=0 logmap=-480 periodicity=10
+  colors=000rjUrjUrjUrjUrjUrjUsjUsjUsjUsiUsiUtiTshSq\
+  hRphQohPmfOkdOibOg`OeZOcXNbWNaUN`SN_QNYOMXMMWKMVJM\
+  UHMTFLSDLRBLQ9LP7LO6LSAJWEH_IFbMDfPCjTAmX8q`6ud4xg\
+  3wf6ve8vdAucCubFtaHs`Js_Lr_OrZQqYSpXUpWXoVZoU`nTbn\
+  TdmVflXhkZjj_lianhcpgdrfftehvdiwZgrUfmPeiKddFc_AbW\
+  D`YGZZJY_LW`OUaRTbTRcWPdZOfaMgcKhfJiiHjkFknElqCmsB\
+  niOl``jRmhIygJvfJteJrdJpcJmbJkaJi`Jg_JeZJbYJ`XJZWJ\
+  XVJVVMUXOTZQS`SSbURdWQfYQh_PjbOldOnfNphMrjMtlLvnKx\
+  pKyoJvoJsnJqnJnmJlmJilJglJdkJbkJ_jJYjJViJTiJQhJOhJ\
+  LgJJgJGgJEfLHeMKdONcPQcRTbSWaUZ`Va`Xd_YgZ_jY`mYapW\
+  cnUdmSelRfkPgjNiiMjhKkgIleHmdFocDpbCqaAr`8s_7tZ8s_\
+  9s_Ar_Br_Cr_Dq`Eq`Fq`Gp`Hp`Ip`JoaKoaLoaMnaNnaNnaQl\
+  cSkdUjfXigZhh`gjbfkeelgdnicolbpnarp`sr_teclUhdImX6\
+  mPCmSImVNiXTe_YbaccdhZfnUisPkrRjqSjqTipUioWhoXhnYg\
+  nZgm_glaflbfkcekdejfdigdihdhichjcglbfmbfnaeoaepafo\
+  `go`go`ho_ho_io_io_io_io_ }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE==================================
+; 
+; 

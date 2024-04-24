@@ -1,0 +1,96 @@
+;     Date: Wed, 13 Nov 2002 07:11:54 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-11-02 (Scattered Fractals [6])
+;       Id: <1.5.4.16.20021113071348.0e0f4666@pop.mindspring.com>
+; ---------
+; FOTD -- November 13, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With its dull, earthy brown shapes floating before a glowing, 
+; celestial blue background, today's fractal has a pronounced 3-D 
+; effect.  It could be a glimpse of heaven as seen from one of the 
+; lower regions, presuming that heaven has blue skies, that is.  
+; But it is not.  It is a fractal created by combining portions of 
+; Z^(-1.77) and Z^(-8.8).
+; 
+; The ridiculous escape radius of 10^100 signals that the image is 
+; an evaporated one consisting entirely of trapped inside points.  
+; The picture consists of spirits of dead outside material made 
+; visible by a non-flat inside fill, in this case the < bof61 > 
+; fill.  I believe this fill colors the inside points according to 
+; which iteration comes closest to the origin.
+; 
+; I have named the image "Scattered Fractals".  I gave it this 
+; name when I heard the phrase 'scattered showers' on the weather 
+; report on the F.C. radio.  It is a true name because, as is the 
+; case with most all images, an infinity of smaller fractals is 
+; scattered throughout the scene.
+; 
+; The rating of 6 might be a bit optimistic for an image with so 
+; many dark somber colors in the foreground, but the blue in the 
+; background speaks of better things beyond, and justifies the 
+; slightly above average rating.
+; 
+; The render time of 6 minutes is a bit slow, but regardless of 
+; the render time, the completed GIF image can be downloaded in a 
+; minute or so from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; With the temperature at 50F 10C, the rain fell all day Tuesday 
+; here at Fractal Central, and the cats complained all afternoon, 
+; running from one door to another, searching futilely for the 
+; door that led to a sunny warm day.  They never found the sun, 
+; and had to settle for treats of tuna and turkey.
+; 
+; Today is starting cloudy and brisk.  I've got cats to keep happy 
+; and work to finish.  Until next time, take care, and enjoy your 
+; fractals while you have them.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Scattered_Fractals { ; time=0:06:32.66--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.86541769754600720/-0.996176800703903\
+  50/1.399805e+010/1/-140/0.000802467486569133359
+  params=-7.34/-1.77/-1.56/-8.8/0/1e+100 float=y
+  maxiter=400 inside=bof61 outside=tdis periodicity=9
+  colors=000SLdPOgNQjPZmHVpEYsB_v9ayDbvGbtJcrMcpPcnS\
+  dlPZmYeh`efcedffbif`lfZicWfaUc_S`XQYVZVTMSQKQOINMF\
+  KJDHHBEF9BC78A5O83QL10006G58L6UQ8AU9gZBDcDFhEGmGmq\
+  HwmINiJQeKTaLVZMYVNcROmNPwJQzGRwMPmSOcXMYbLVhJTmIV\
+  lJXkJZjK`iKbhKdgLffLheLf`KdXJcTIaPH`LGZHFXDEW9DU5C\
+  T1BS7ERCGRHIQMKPRMPWPO`RNeTNjVMoXMtZTkQZbHdV8aUCZU\
+  GWTKTTOQSSNSWLSZIRbFRfCQj9Qn6Pr3Pv1Py5Ey84yB8uECqH\
+  GnKKjMOgPScSV`VZXYbT_fQbjMenJhrFjuCItMiYJgWGeUEcTC\
+  aRA`Q8ZO6XN4VL2UK0RN9OQHLSPIVXGXdKWaOV_SUXWTV_SScR\
+  QgQNkPLoOIrNGnPMkQRgSWdT`aUeYWjVXoSYtQfjPn`OvRNtON\
+  rMNpJNnHNmENkCNi9Ng7Nf5`_NmUdiRffPgbNh_LiWIjTGkPEl\
+  MCmI9nF7oB5p83q51r94pD7nHAlLDkPFiTIgXLf`OddQbhTalW\
+  _pZYs`Xtb_udavfcvhfwjhxljxnmypozrqzsswriuq_sqRqpHo\
+  p8WiBCbEFaCHaBK`AM`8P_7R_6UZ4WZ3YZ2aV3dS3hO3kL3nI3\
+  rE3uB3x83q68k5De4I_2NU1SO0WP8UPFTPMRPTQP_PPfNPmMPt\
+  LRrNSpOUnQVlRXjTYhUYGZVJa }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

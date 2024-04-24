@@ -1,0 +1,108 @@
+;     Date: Mon, 04 Nov 2002 09:40:10 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 04-11-02 (FMOD Fantasy [8])
+;       Id: <1.5.4.16.20021104094157.0dd729ae@pop.mindspring.com>
+; ---------
+; FOTD -- November 04, 2002 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's highly-rated image "FMOD Fantasy".  I gave it 
+; the name because the scene is an evaporated all-inside one that 
+; consists entirely of < fmod > inside fill.  Without the fill, 
+; the scene would be a total blank.
+; 
+; I do not know exactly how the < fmod > fill works.  I assume it 
+; measures some distance, but however it works, it works quite 
+; well with today's screen-full of trapped points.  (The < bof61 > 
+; fill also produces a fractal rather than a blank screen, though 
+; the image produced by the < fmod > fill is by far the better.
+; 
+; The parent fractal, which adds Z^(-0.25) to Z^(0.25), can hardly 
+; be called a fractal, for it also consists entirely of trapped 
+; inside points.  With the < fmod > fill applied to it, the parent 
+; consists of a large crescent with the horns pointing east, the 
+; edges of the crescent lined with buds.  Today's scene is located 
+; in the valley area of one of the second-order buds.
+; 
+; When coloring the image, I used a little more care than usual.  
+; It shows in the result.  One of the reasons I consider my FOTD 
+; images to be mathematical curiosities rather than works of art 
+; is that I so often lack the time to find and refine the best 
+; color palette for the images.  I cannot consider something on 
+; which I do less than my best to be a work of art.
+; 
+; But as mathematical curiosities, some FOTD images are truly 
+; unique.  This is not surprising, since fractals themselves are 
+; unique.  They come from nowhere, exist for a few brief moments, 
+; and unless recorded, return to whence they came.  
+; 
+; Though the appearance of today's image departs from that of my 
+; typical images, I rated it at an exceptional 8.  The parameter 
+; file takes 14 minutes to run on my tired old machine.  The GIF 
+; file of the completed image takes only a minute to download from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Running the parameter file is more fun; downloading the image is 
+; more convenient.
+; 
+; The near ideal weather here at Fractal Central on Sunday 
+; resulted in reasonably happy cats.  They approved of the few 
+; patches of sunlight that filtered through the holly trees, and 
+; they approved of the light winds.  They would have preferred the 
+; temperature to have been a few degrees higher than 52F 11C, but 
+; they held their complaints to a minimum.  Their moods remained 
+; adequate well beyond their evening meal time.
+; 
+; Today's weather will be similar, though with a few more clouds.  
+; The cats' day will likely be similar also.  Until tomorrow, when 
+; the next glorious FOTD will appear, take care and be mod but not 
+; fmod.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+FMOD_Fantasy { ; time=0:14:01.30--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.50885461141383900/+0.003097982086237\
+  17/2179214/1/-155/5.94581836543817133e-009
+  params=1/0.25/1/-0.25/0/0 float=y maxiter=1800
+  inside=fmod proximity=0.011 periodicity=10
+  colors=000iLJjMKkIGlFDmC9n96o32p53q63r74s84t95uA5v\
+  C6wD6xE6yF7zG7zH8zI8zK9zL9zM9zNAzOAzPBzRBzSCzTCzUD\
+  zVDzWDzXEzZEz_Fz`FzaGzbGzcGzeHzfHzgIzhIzhJziJyjKxj\
+  JwkJvjJukItkIsjIrkIrkHrkHqjHqjHpjGpjGojGojGojFnjFn\
+  jFmjFmiEliEliEliEkiDkiDjiDjiCiiCiiChhChhBhhBghBghB\
+  fhAfhAehAehAeh9dg9dg9cg9cg8bg8bg8bg8ag7ag7`g7`f6_f\
+  6_f6Zf6Zf5Zf5Yf5Yf5Xf4Xf4We4We4We3Ve3Ve3Ue3Ud2Td2T\
+  d2Ud1Td2Td2Sd2Sd2Sb2Rc2Rc3Rb3Qb3Qb3Qa3Pa3P`3O`4O`4\
+  O_4N_4NZ4NZ4MZ4MY5MY5LX5LX5KX5KW5KW6JV6JVUJVUIUUIU\
+  UITUHTUHTUGSUGSUGRUFRUFRUFQUEQUEPUEPUDPUDOUCOUCNUC\
+  NUBNUBMUBMUALUALUALU9KU9KU8JU8JU8JU7IU7IU7HU6HU6HU\
+  6GU5GU5FU4FU4FU4EU3EU3DU3DU2DU2CU2CU1BU1BU1BU2AU2A\
+  U3AU3AU4AU4AU5AU5AU69U69U79U79U89U89U99U99UA8UA8UA\
+  8UB8UB8UC8UC8UD8UD7UE7UE7UF7UF7UG7UG7UH7UH6UI6UI6U\
+  RsmRsmStmStmTtmTtmUtmUumVumVumWumWumWumQtmIwmLwmNw\
+  mQwmSwmUwmXwmZwm`wmcwmewm }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

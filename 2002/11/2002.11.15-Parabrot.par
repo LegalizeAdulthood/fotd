@@ -1,0 +1,104 @@
+;     Date: Fri, 15 Nov 2002 10:02:43 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-11-02 (Parabrot [7])
+;       Id: <1.5.4.16.20021115100440.0dcf3508@pop.mindspring.com>
+; ---------
+; FOTD -- November 15, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I have named today's image "Parabrot" because in my opinion it 
+; lies just a little beyond the normal fractal scene.  (Whether my 
+; opinion agrees with the opinions of others is another story.)  
+; The parent was found by the Fractint evolver feature, which IMO 
+; is one of the program's best features.  The parent was created 
+; by combining portions of two different negative powers of Z, in 
+; this case, Z^(-1.6) and Z^(-3.6), then adding (1/C).
+; 
+; This parent is an indescribable thing consisting of many bays 
+; filled with islands, with a large irregular ring extending to 
+; the east and north.  Today's scene is located in a spiral at the 
+; southern origin of this ring, near the point where the ring 
+; vanishes into the center of a Mandeloid valley.
+; 
+; The image itself is one of unusual smoothness, though this 
+; smoothness cannot be fully displayed with a palette of only 256 
+; colors.  The color bands are not arranged consecutively.  The 
+; iteration count alternates back and forth in a curious manner, 
+; which might be natural or might be an artifact of the math 
+; routine.
+; 
+; The rating of a 7 could be a bit overblown, but the image is at 
+; least a little above average.  The render time of a little less 
+; than 15 minutes can be avoided by downloading the finished image 
+; from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather Thursday turned out to be very pleasant, with lots 
+; of sun and a temperature of 61F 16C.  Accordingly, the cats were 
+; so pleased that they finished the day with a purr.
+; 
+; And I finished the article in "Skeptical Inquirer" magazine.  I 
+; found it to be rather routine, containing little new debunking 
+; material.  Basically, it re-stated the obvious fact that before 
+; the existence of PSI can be assumed from experimental results, 
+; all the other things that might possibly have caused the small 
+; discrepancy from chance should be eliminated.  Since it is 
+; impossible to totally eliminate all the other things that could 
+; possibly influence the outcome of such PSI experiments, the 
+; world-view of the 'hard skeptics' is still safe, and they will 
+; not need to admit the possibility of the existence of the 
+; paranormal.
+; 
+; As for me, I am now forced to admit the existence of the work on 
+; the shelf, which must shortly be finished.  It's time to get 
+; busy, so until next FOTD, take care, and be cautious with feral 
+; fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Parabrot { ; time=0:14:53.86--SF5 on a P233
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.83502905555210550/-0.706221113715004\
+  60/1320266/1/27.5/-1.92615405431029174e-008
+  params=-8.98/-1.6/-10.83/-3.6/0/0 float=y
+  maxiter=1700 inside=0 logmap=285 periodicity=10
+  colors=000cCzcCzcCzYCzG2yJ3xM4wP5vS6vV7uY8t`9sc9sf\
+  AriBqlCpoDorEnuFmxGlzGkyFjyEiyDhyCgyBfyAey9dy8cy7b\
+  y6ay5`y4_y3Zy2Yz1Xy0WrYVnZUfcTZcTXdaIahLdgOcgQegTe\
+  fVgfYgf_iebheejegjdjldlldoncqnctocvocooeipgcphYpjR\
+  qlLqmFqo9qpBphDodFnUGkWGiQGgOHdMHbRH`IHZGIWEQXCISA\
+  SW9MM8VW8UG8_V7a97eS7h37fQ6d96eQ5`F5bS4XL4YV3TQ3SY\
+  2PW2N`1La1Kb1Mb4Ob6Pa9RaBS`EU`GV_JX_LZZO_ZQaYTbYVd\
+  XYeX__aYUeXPiWJnVEpU8rT3uSJtkHrnIpnInnIknIhnIenJdn\
+  JcnJbnJanJ`nK_nKZnKYnKXnKWnJUgJTaISVIRPKQNMPLOOKQN\
+  ISMGULFWKDYJB_IAaH8cG6eF5gE3iD1jC0gF3dH5aJ7ZL9WNBT\
+  PDQRFOTILVKIXMFZOC`Q9bS6dU4fW8aQCYKGTFKP9NL4QM5TM5\
+  WN5ZN5`N5cO5fO6iP6kP6nP6qQ6tQ6vQ6pUDkYJe`Q`dWWhbQk\
+  hLooGruMnoSjiXfdbbZhZTmVOsRIxODwNEvNFvNGuNHuNItNJt\
+  NKsNLrMMrMNqMOqMPpMQpMRoMSoMSQWe1ai2`l2Wf3S`3UV4WP\
+  4YJ6_L7aN8cP9eRAgSBiUCkWEmYFo_Gq`HsbItdJufKvgMwdNx\
+  bOy_PzYQzWRzTSzRTzOUzMtzP }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

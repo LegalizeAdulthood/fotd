@@ -1,0 +1,100 @@
+;     Date: Tue, 12 Nov 2002 08:07:29 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-11-02 (Solar Wind [7])
+;       Id: <1.5.4.16.20021112080923.29d7d0b2@pop.mindspring.com>
+; ---------
+; FOTD -- November 12, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's fractal I colored the outside with the < real > 
+; option.  In today's image I color the inside with the 
+; < epsiloncross > option.  This option assigns colors to trapped 
+; points if they come within a certain 'proximity' distance of the 
+; X or Y axes.  As far as I can remember, this is the first time I 
+; have used this option in an FOTD image.  In today's image, the 
+; option creates the dark parabolic shapes in the foreground.  The 
+; brilliantly colored arms consist of normal outside material.
+; 
+; The parent fractal, which is created by combining portions of 
+; Z^(-1.85) and Z^(-5.5), was found with Fractint's evolver 
+; feature.  It consists of an indescribable mass of various shaped 
+; bays surrounded by equally indescribable outside material.  A 
+; ring of non-critical debris lies off the screen in the far 
+; distant southeast suburbs, but this ring does not figure in 
+; today's image, which is located in a valley at the tip of a 
+; filament extending from a bud in a small critical area at the 
+; northern end of the main body of bays.
+; 
+; After studying today's image a few minutes, I was reminded of 
+; the solar corona.  The name "Solar Wind" soon followed.  The 
+; problem of rating the image was to decide between a 6 or a 7.  
+; In the end, I decided to flatter myself with a rating of 7.
+; 
+; The render time of 11 minutes can be avoided by downloading the 
+; completed image from one of the FOTD web sites.  Paul's site is 
+; at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Scott's site can be found at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Monday morning brought heavy thunder-storms to F.C., but the 
+; rain ended by noon, leading to a warm breezy afternoon that, by 
+; 3:30pm, dried the grass just enough for the dynamic duo to have 
+; a brief romp in the yard.  The temperature of 70F 21C made up 
+; for any left-over dampness.
+; 
+; This morning is once again starting rainy.  It remains to be 
+; seen how well the fractal duo will handle the fresh dampness.  
+; As for me, I've got some work to handle.  And the best way to 
+; handle the work is to do it.  When the work is behind me, I'll 
+; start the search for tomorrow's fractal.  Until next FOTD, take 
+; care, and bomb the enemy with fractals -- they are a lot less 
+; damaging.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Solar_Wind { ; time=0:11:11.63--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.88504964147477720/-0.010818060826707\
+  56/2895828/1/70/1.64751498554771558e-009 params=6.\
+  78/-1.85/6.035/-5.5/0/0 float=y maxiter=1200
+  inside=epsiloncross proximity=0.006 logmap=140
+  periodicity=10
+  colors=0000008UcAVdDWeGZgI_hK`jNclPdkR`gUVjWUj`UY`\
+  UU`UQ`UU`UY`W`YadVfgRlkOqoNsqLvr0zp2zm5yk7wh9ugCre\
+  EpcHmaJj_LgYOeWPcUR`RUZQWWOZTL`QKcOIeLGgJEjHClE9l8\
+  9mC8oE8pH8qK8rN8sP8sR7uV7vY7w_7xa7ye7yg6zj6zl6zp6z\
+  r6zu6zw6zqAylEwgIucLrYPpTTmOWkJ_hDcf8fd3ja0mc0oc0o\
+  d1pd1pd1pe2qe2qf2rf3rf3rg3sg5sh5uh5uh6uj6vj6vk7wk7\
+  wk7wg7sd7p`7lY7hU7eQ7aU6_W5YZ3V`3Tc2Qe1Oh1Nk0Km0Ip\
+  0Gr0Du0Ax08w09w0Av0Cv0Du0Eu0Eu0Gs0Hs1Ir1Jr2Jr2Kq3L\
+  q3Np5Op5Pp6Po6Qo7Rm7Tm8Up3Wm8UkDTjIRgNQeROdWNa`L`e\
+  KZjIWoHVsGTxERzDPyCOwANu9Ls8Kq7Jo6Im5Hk3Gh2Eg2Hh5J\
+  h7Kj9NjCPjEQkHTkJUkLTgNReORaOQ_PPYPPUQORQOORNLRLJT\
+  LGUKDUK9VJ7VI5WI1WH0YH0YJ0UK3QL7NOAKPEHQIDTLAUP7VT\
+  3WW1UY5TY7QYAPYDNZGLZJJZLIZPHZRE_UD_YA__9_c7`e6`g3\
+  `k2`m1`p3al5cj6df7ed8ea9fZCgWDhTEjQGjOHkKIlIJmELoC\
+  No9Op6Pq3Qr0Rs0Ts0Ul7UeJVZV_6Gc6Ge6Gc8I`9JZCLYDNVE\
+  OTHQQIRPJTNLVKNWJOYDLVER` }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

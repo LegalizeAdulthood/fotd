@@ -1,0 +1,90 @@
+;     Date: Fri, 01 Nov 2002 09:13:05 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-11-02 (Chromatic Jubilee [6])
+;       Id: <1.5.4.16.20021101091451.29c7bc32@pop.mindspring.com>
+; ---------
+; FOTD -- November 01, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The iterated expression that created today's fractal takes 
+; Z^(-2), subtracts Z^(-3) from it, then adds (1/C).  This 
+; operation creates a fractal which is little more than a hole 
+; with scattered debris in it.  But a small critical area exists 
+; at the east edge of the hole, where a tiny main stem extends 
+; east a short distance.  Today's image is located on a side 
+; branch out near the tip of the stem.
+; 
+; The name "Chromatic Jubilee" came to me when I realized that 
+; the image works best with one of the Fractint random color 
+; palettes.  I also noticed that the bands are arranged so that 
+; every other iteration is displayed, rather than every consecu-
+; tive iteration. I have no idea why this is so; it likely has 
+; something to do with the negative exponents.
+; 
+; The rating of 6 seems fair enough.  The render time of 4 minutes 
+; can be reduced to under 2 minutes by running the parameter file 
+; with the passes set to <g>.  And finally, the completed GIF is 
+; available at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather Thursday here at F.C. was cloudy and chilly, but 
+; dry, with a temperature of 47F 8C.  The cats did manage about 
+; 1/2 hour outdoors, but this was not enough to satisfy their 
+; desire for adventure, so a treat of tuna was necessary to 
+; restore their good spirits.
+; 
+; For me, it's the start of another day, maybe a good day, maybe 
+; bad.  I won't know which until the day ends, when it will be too 
+; late to do anything about it.  But regardless, I'll return 
+; tomorrow with another FOTD and maybe some trivial banter.  Until 
+; then, take much care, and where is Ned Kelly when we need him?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Chromatic_Jubilee { ; time=0:01:48.09--SF5 on a p200
+                     ;  Version 2002 Patchlevel 4
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.67831761687801200/+0.000001564569161\
+  15/3.755805e+011/1/140.002401385466698/-0.00433737\
+  845033256575 params=1/-2/-1/-3/0/0 float=y
+  maxiter=400 inside=0 logmap=84 periodicity=10
+  colors=000DNQ6DDQPUYGZH8HjU`ZMRNFIB793m02X01G0E4n7\
+  2PN0SDEC000444wUJgICJ96zmJcECK76qmyRPVrctdUuRKSDAE\
+  NTGBE8iD2YxLPhFHUA8F5zN5bF3J71aztLpEAQ7qdYcUPRKHDA\
+  8QzkEmk9XW4GGAKuzza36JVRgFDMapKJQA1LJsm4`X2IG1FjK3\
+  QUg9mPmPI`ICPC6C6jHAZC7N85B42UrCpB9Z76H33fcJUO4MI3\
+  FC2761ZJVQENH9F847kEu_AfO7TC3EcneKPL_NvuBMa7EJ37OG\
+  zzKmeDXL6GgwRXhKMUDBF6rec_SQIED5oc2QKC6Hv`5gR3TI2E\
+  91Q0qD0RdMGGMo8BQeqw3xA2h71U50F21fL0WF0LA0A5avDJT6\
+  SpcEQKd69K34IGJDCE9894441i40N2qW4MEjE9V74FWcMV4qN3\
+  cF2R71DO5UG3K81ASk5EO2bmOJPC21c10Q00DLI9FL6AO45R2B\
+  US7XI3_9Dbr8e_4hIek1enQVqJLtDAw6jzyzzdzzKzzfzzWzzL\
+  zzAzz0zzTzzizzUzzFzz0zz0zz0zzszzSzzCzz9zz6zz3zzSzz\
+  Izz9zzFzzBzz7zz3zz5zz3zz2zz1zzBzzUzznzzYzzHzz4zz3z\
+  z2zz1zzRzzKzzDzz6zzazz3zz2zz1zz0zzCzz8zz4zzNzzyzzT\
+  zzRzzIzz9zzxzzyzzyzzzzzzzzizzUzzbzzjzzVzz0zzFzz0zz\
+  0zznzzazzPzzCzzGzz8zzozzb }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 
