@@ -1,0 +1,104 @@
+;     Date: Tue, 15 May 2007 22:22:20 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  16-05-07  (Sanctified Station [6.5])
+; 
+;       Id: <1.5.4.16.20070515222645.29bf5090@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 16, 2007 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With today's fractal we return to the well-used MandelbrotBC2 
+; formula and examine the Z^(1.618)+C Mandeloid as it appears 74 
+; levels down the logarithmic ladder.  At this level it resembles 
+; a Mandelbrot set with its main bud facing southeast and its East 
+; Valley flattened out and filled with chaos.  Today's image is 
+; located in some of the farther-out debris in the area of what 
+; passes for East Valley.
+; 
+; The name of the image has nothing to do with a blessed railroad 
+; station.  When I shut off my mind in search of a name, the 
+; phrase "Sanctified Station" popped into my head.  So this is 
+; what I named it.
+; 
+; When struggling for a rating I was undecided between 6 and 7.  I 
+; resolved the conflict by giving the image a rating of a 6-1/2.  
+; If the central midget were a bit more prominent, the rating 
+; would have been a 7.
+; 
+; The calculation time of 2-1/3 minutes is true on the ancient 
+; workhorse P200 computer.  The more S.O.T.A. P4-2000 unit would 
+; finish calculation in about 30 seconds.
+; 
+; But calculation time will be no problem for those who visit the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image is posted for instant and easy viewing.
+; 
+; Wednesday proved to be unusually warm here at Fractal Central.  
+; The hot sun and temperature of 88F 31C kept the fractal cats 
+; away from the sunnier windows.  My day was busier than average, 
+; but not excessively so.  The next FOTD will appear in 24 hours.  
+; Until then, take care, but stop taking care long enough to enjoy 
+; the Fractal of the Day.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sanctified_Station { ; time=0:02:23.08--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-0.8449604577846213/+1.512609951022948/\
+  1.830674e+007/1/22.5/3.0546204665693466e-006
+  params=1.618/0/-74/0 float=y maxiter=12000
+  inside=0 periodicity=10
+  colors=000IGNHELGDKECIDBGCAFA9D98B86A6585464352231\
+  111wf0qa0kY0eU0_P0UL0OH0IC0C8064xL_tJYqIWnHUkGSgFQ\
+  dEOaDMZCKWBIS9HP8FM7DJ6BG59C47935623311iz``ljWfdSa\
+  _OWVKRQGLKCGF8AA455nhzkevhcse`obZl_WhYUeVRaSPZPMVM\
+  KSJHOHFLECHBAE87A557223_`bUUWOOQIIJCCD666l_9Oz4KGX\
+  IFVHETGDRFCPEBNDAMC9KB8IA8G87EzXJzVKzUKzTLzRMzQMzS\
+  NzUNzWOzYPz_PzaQzcQzeOzg1pENmDLiCKfBIcAH_9FX8EU8DQ\
+  7BN6AK58G47D35A246123012mm1hh1cc1ZZ1UU1PP0KK0FF0AA\
+  05538i26_14R13I019R3KM2GI2DD1A916403Wq9Un8Tl8Sj7Qh\
+  7Pe7Oc6Ma6L_6KX5IV5HT4GR4EO4DM3CK3AI39F28D26B15914\
+  61240120lxbgrZclVZgSVaOQXLMRHHMEDGA8B7453rVumSohPj\
+  cMeZJ_UGVPEQKBLF8FA5A5258hn6Xa4MP2BChLEeKDcJCaIC_H\
+  BYGAWFAUE9RD8PC8NB7LA6J96H85F74C64A53842632421210r\
+  mmniikffgccd```YYYVVUSSRPPOLLKIIHFFDCCA99666333TBL\
+  RAJP9IO9HM8GK7FJ7EH6CG6BE5AC49B4893783562441331210\
+  1Y9gSOZQMXPLVOKUMJSLIQKHP }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,86 @@
+;     Date: Mon, 21 May 2007 21:42:52 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-05-07 (Willy Wallies [7])
+;       Id: <1.5.4.16.20070521214722.2b9f69b4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 22, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's semi-glorious fractal image was created by combining 5 
+; negative parts of Z^(-1.5) with 1/2 negative part of Z^(-6.5) 
+; and adding (1/C).  The parent fractal consists of 4 main bays 
+; with a scattering of isolated rings to the north of the main 
+; fractal.  Today's scene lies in one of the smaller rings.
+; 
+; As is obvious from the one-googol value of the imag(p3) 
+; parameter, the image is an evaporated one brought to life by the 
+; bof61 inside fill.  I named it "Willy Wallies", a nonsense 
+; phrase for a non-sensical reason.  The rating of a 7 means that 
+; at least in my opinion, the image is a bit above the FOTD 
+; average.  And I can justify the rating because of the extra 15 
+; minutes I spent working the colors.
+; 
+; The calculation time of the image on the fireball P4-2000 is 33 
+; seconds.  On the P200 it finishes in 2-2/3 minutes.  Of course, 
+; the calculation time may be ignored by going to the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the image there.
+; 
+; A near-perfect sunshiny day with a temperature of 70F 21C here 
+; at Fractal Central on Monday made the fractal cats wish they 
+; could get outside to enjoy the conditions along with the lucky 
+; squirrels and people.  Unfortunately for their feelings, it 
+; appears they will be indoor cats for the rest of their lives.
+; 
+; My day was busy enough to keep me occupied, but not so busy as 
+; to preclude a trip to fractal land.  The next FOTD fractal image 
+; will appear in 24 hours.  Until then, take care, and dine out 
+; with a fractal.  They eat very little.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Willy-Wallies { ; time=0:00:33.41-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=+1.62778255764460900/+2.877258062006794\
+  00/7.169358e+010/1/20.0025100081782341/0.000116997\
+  977210396564 params=-5/-1.5/-0.5/-6.5/0/1e+100/0/0
+  float=y maxiter=1200 inside=bof61 periodicity=10
+  colors=000DOTDOUCNVCNVCNWBMXBMXBMYBMYKOcTPiaQnjRtr\
+  SynRxjQwgPvcOu`NtXMtULsQKrNJqJIpGHpJGoMFoOEoRDoTCo\
+  WCoYBo`Aob9oe8og8oi9nj9mkAllAknBjoBjpBiqChsCgtDfuD\
+  evDelQTcbHVo5Sj6Qe7O`7MM8KS8INPVC9I3Nm9AC0Sc9B000X\
+  8CC8CztWpzzqpgjo_cbSXmKQpCzk5Se8Z`AYWAXRAWMAVHZUCA\
+  SI9RN9PT9OY9Mb9Lh9Jm9rz9dW8eQ7eL7eG6zBmf65f15dFJbT\
+  X`fj_sxbqydoygmyilykzznhzpfzrezvjcyoHqkKjgNcdQX`TP\
+  XWIUZBQa4NcOTRfZFyc3XnM5xcTgSpSHjRNdRSZQXTQaNQfHPk\
+  BPp5PudyqarrZksWdsTYtQRuNKuKRpIYlGdgEkcCq_FbUIOPL9\
+  KHHIDOG9WE5bCBfHGiLLmPRpUWtY`wabqbckbefcf`chVdiQdk\
+  KelFebMhUTkLZnCeq3ksAhpGenNbkT_iZXfeUdkRaqO_gUeZZk\
+  QcpR_lRXiRTfSQbSM_SJXSGUTHWTIXTJZTJ_UKaULbUMdUMeYI\
+  daEddAdh6dk3dj8bjC`jHZjLXjPVjUTjYRjaQc1h_9cXGZTOUQ\
+  VPMbKJiFFqACx6HhGLTQPEZDJP1OGfrGdfKbWNaLQTFHVJMWNQ\
+  YRUZUZ`YbaafbdjXelRfmMfnGgoBgpBhpBiqBjrBjrBksBlsBm\
+  tBnuBouBpvBpvAqqArm9si9se }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

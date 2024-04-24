@@ -1,0 +1,97 @@
+;     Date: Sun, 06 May 2007 23:53:49 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-05-07 (Iteration Quest [7])
+;       Id: <1.5.4.16.20070506235806.2aef7650@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 07, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's bright, lacy image lies in the parent fractal that 
+; appears when the formula Z^sqrt(2)+C is iterated 52 levels up 
+; the topless and bottomless complex logarithmic ladder.  This 
+; parent reminds me of a distorted Mandelbrot set with its west 
+; side facing southeast.
+; 
+; Despite its odd shape, the open area at the center is a true 
+; midget, though there is certainly very little of a quadratic 
+; nature about it. 
+; 
+; Today's image is located in the northeast branch of what might 
+; be called Seahorse Valley, since it cuts off a very prominent 
+; period-2 bud.  When I saw the image I rated at a 7 almost 
+; immediately.  I have no logical explanation to offer for the 
+; name I gave the image -- "Iteration Quest".  It sounds kind of 
+; interesting though, and might attract a few viewers.
+; 
+; And speaking of attracting viewers, when I checked the FOTD web 
+; site today, I couldn't help but notice all the nameless images I 
+; have been posting for the past several months.  Without names, 
+; these images are not going to attract many viewers.  So from now 
+; on, regardless of how much or how little effort I put into the 
+; FOTD fractals, I will give every one both a name and a rating.
+; 
+; Today's image takes over 41 minutes to calculate on my P200 
+; machine.  (There is no more P133 machine; it gave up the 
+; iteration last Thursday.)  The 41-minute wait may be avoided by 
+; visiting the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the completed image there.
+; 
+; Lots of sun and an only slightly cooler temperature of 66F 19C 
+; made Sunday a day to remember here at Fractal Central.  The 
+; fractal cats may not remember the weather, but they will 
+; remember the dove that landed right outside their window.
+; 
+; My day was unusually pleasant.  Too bad every day can't be the 
+; same.  The next FOTD will appear in 24 hours.  Until then, take 
+; care, and don't dare turn a Klein bottle inside-out.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Iteration_Quest { ; time=0:41:26.86--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 float=y
+  center-mag=+0.64378755423122760/-0.059667482551642\
+  40/8813122 params=1.4142/0/52/0 maxiter=16000
+  inside=0 logmap=879 periodicity=10
+  colors=000jzzizzhzzgzzfzzeyzdyzcxzaxzZwzWwzTvzQvzN\
+  uzKtzIszGrzErzCrz9rz8rz6rz4rz2rz0rz0rz000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000040020000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000000000\
+  00000000000000000000000000000000000000000000040090\
+  0G00K00R00W00b00j00o00w00z00z02m08Y0EK0K80R00Y00d0\
+  0j02o04m04m04m06m06m06m08m08m08m09m09m09m0Cm0Cm0Cm\
+  0Em0Em0Em0Ej0Cg09U00G00400G0EU0Gg0Ij4Nm4Nm6Nm6Pm8P\
+  m9Pj9RjCRjCRj8Uj0Uj0Uj00E00000E0Yj8YjUYjr_jz_jz_jz\
+  bjzbjzbjzdjzdjzdjzgjzgjzgjzjjzjjzjjzmjzmjzmjrmjgmj\
+  gomgoodrrdruduwbuzbwzbwzbzz_zz_zz_zzYzzYzzYzzWzzWz\
+  zWzzYzzWzzWzzWzzWzzWzzWzzUzzUzzUzzUzzUzzUzzRzzRzzR\
+  zzRzzRzzRzzPzzPzzPzzPzzPzzRzzPzzPzzPzzPzzPzzNzzNzz\
+  NzzNzzNzzNzzKzzKzzKzzKzzKzzKzzIzzKzzNzzPzzRzzUzzWz\
+  zYzz_zz_zz_zzbzzbzzdzzdzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

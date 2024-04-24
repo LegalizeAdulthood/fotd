@@ -1,0 +1,82 @@
+;     Date: Wed, 30 May 2007 22:43:25 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-05-07 (Still Searching [5])
+;       Id: <1.5.4.16.20070530224804.2b77a06c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 31, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I never give up searching for a great midget in a Mandeloid 
+; fractal with an exponent of Z between 1 and 2.  The search 
+; continues in today's image, which lies in the Z^(1.5)+C 
+; Mandeloid as it appears 55 levels down the logarithmic ladder.
+; 
+; The midget at the center is a bit too gaudy for a rating higher 
+; than a 5.  I named the image "Still Searching" because I am 
+; still searching for that elusive spectacular scene in a Mandel-
+; oid of the order 1.n.  I will continue searching indefinitely, 
+; for I will not fail until I stop searching.
+; 
+; Today's image calculates in 7 minutes on the fast machine.  On 
+; the slow machine it would take around 1/2 hour to finish.  So 
+; why not forget the burdensome task of calculation and view the 
+; finished image on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Another perfect day went un-appreciated here at Fractal Central 
+; on Wednesday.  There have simply been too many perfect days 
+; during the past month.  At least today's fractal has enough 
+; imperfections to avoid boredom.
+; 
+; Speaking of fractals, the next one, the first for the month of 
+; June, will appear in 24 hours.  Until then, take care, and who 
+; knows where fractals end.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Still_Searching { ; time=0:07:15.84-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+1.3286863688/-0.1670845328/25321.04
+  params=1.5/0/-55/0 float=y maxiter=10000
+  inside=0 logmap=350 periodicity=10
+  colors=000MUSMgSMgRMfRMfRLeRLdQLcQLbQLaPK`PK_PKZOK\
+  YOKWOJVNJUNJTNJSMJRMIQMIPLINLILLIJKHHKHFKHDJHCJF9I\
+  HBJJCJKDKMEKOGLPHLRKMTLMUNNWONYQOZRO`UPbVPcWPeXQgY\
+  QhZRj`RlaSmbSocTqdTreUtgUvhVwiVyjWykWynXylWyjWyhWy\
+  fWydVycVxaVx_VwYVvWUvUUuTUuRUtPTsNTsLTrJTrITqGSpES\
+  pCSoASo9SnARnARnARmARmAQmAQmBQlBQlBPlBPlBPkBPkCOkC\
+  OkCOjCOjCNjCNjCNiDNiDNiDMhDMhDMhDMhELgELgELgELgEKf\
+  EKfFKfFKfFJeFJeFJeFJeFJdHKdJLcLMcNNbPObQPaSQaUR`WS\
+  `YT__U_`VZbWZdXYfYbhZlj_vkFykFqkFlkFgkFbkaYkaTkbOk\
+  bJkbFkcDkcCkcEibFguHmuIduKbuLaZM_ZOYYPXXRVXSUWUSVV\
+  QVoUUqNTrLTtKSuIRtGSvHRqHRyIRuIRlIRiJRjJRkJQxKQnKQ\
+  oKQqLQrLQsLSuMUvMWwMYyN_yNayNcyOeyOgyOiyNkyNmyNoyN\
+  qyNsyNuyNuyNuyNuyNuyNvyMwyMxyNyyPzyRzyTzyVzyXzyZzy\
+  `zybzydzyfzyhzxjzwjzvjzujzujztjzsjzrjzqjzpjzojzojz\
+  njzmjzljzkjzjjzijzijzhjzgjzfjzejzdjzcjzcjzbjzajz`j\
+  z_jzZjzYjzYjzZjzZjzZjzZjz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

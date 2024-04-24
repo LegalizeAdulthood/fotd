@@ -1,0 +1,90 @@
+;     Date: Fri, 11 May 2007 21:54:00 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-05-07 (Apparition Root [6])
+;       Id: <1.5.4.16.20070511215820.2d375d7a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 12, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is found rather deep in a valley on the southwest 
+; shoreline of the S-shaped main bay of the parent fractal that 
+; results when the formula Z^sqrt(2)+C is iterated 130 levels up 
+; the logarithmic ladder.
+; 
+; The image is unusually rich for one found in a fractal created 
+; by an exponent of Z between 1 and 2.  Usually fractals in this 
+; range hold far fewer spirals and much less intricate detail.  
+; 
+; Except for the brilliant blue inside fill, the image was 
+; rendered in the traditional equal-iteration-bands manner.  All 
+; the excitement is due to the fractal itself and not to any human 
+; manipulation.
+; 
+; I named the image "Apparition Root" for no obvious reason.  Then 
+; I rated it at a 6, which seems about right.  The calculation 
+; time of 14 odd minutes may be avoided by visiting the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the image there.
+; 
+; Friday began with dense fog here at Fractal Central, but by 9am 
+; the sun had done its work, and the rest of the day was perfect, 
+; with sunny skies, gentle winds and a temperature of 81F 27C.  
+; The fractal cats passed a good part of the day sitting in the 
+; window, watching the world go by.  The rest of the time they 
+; spent chasing each other up and down the hallway.
+; 
+; My day was busier than normal, but not extremely so.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and be at 
+; one with fun.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Apparition_Root { ; time=0:14:22.66-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=-1.26354287579943400/-0.456797947395005\
+  10/7.112779e+008/1/-75/3.7304841097131336e-005
+  params=1.4142/0/130/0 float=y maxiter=14500
+  inside=255 logmap=1110 periodicity=10
+  colors=000F_PGrOIpNJmMKkLMhJNeIPcHQ`GRZFT_HU`JVaLW\
+  bNXcPYcRZdT_eV`fXagZbg`chbdidecefdgaihhjjijjj`ff_f\
+  nVklfgkdfibehXeePdeTddVdbTdaRc`QcZJcYOcXNbRMbQKbSI\
+  bRGaQEaOCaNAaMA`KA`JA`HA`GAZFAZDAYCAXBAU9AT8AR6AQ5\
+  AO49O28O17O06O17N17N27O28O38P38P49O49P59Q59Q6AR6AS\
+  7AQ7BP8BO8BN9BM9CMACKACKBDJBDICDHCDHDCIECIFCIGCIHC\
+  IICJJCJKCJLCJMCJNCJOCKPCKQCKRCKSCKTCLUCLVCLWCLXCLX\
+  CLWEMVFNVGOUHPUJPTKQTLRSMSRNTRPTQQUQRVPSWPUWOVXOWY\
+  NXZMY_M__L``LaaKbbPdbUecZfdcgechfcjfckgmmhzrizwiwr\
+  eCmaBhY9bV8_R7XN5UK4RG3OC2L9HTKV_Uhfcvmmli`cfPVbDM\
+  _1NZ2OZ2PZ2PZ3QZ3RZ3SZ4SZ4TZ4UZ4VZ5VZ5WZ5XZ6XZ6YZ6\
+  ZZ7cZ7hZ7mZ7rZ8sZ8tZ8uZ9vZ9wZ9zZAw_AuaAscAqeBogCmi\
+  CkkDikEglEemFcmGanG_nHYlHXkIWhJVgJUgKUhLThLSiMRjMQ\
+  jNPkOOkOOlPNmQMmQLnRKnSJoSIpTHpTHqUGqVFrVErWDsXCtX\
+  BtYAuYAuZ9v_8w_7w`6xa5xa4yb4ybMtZNsYNrYNqYNpYOoYOn\
+  YOmYOlYPkYPjYHrQFuRDxRpzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

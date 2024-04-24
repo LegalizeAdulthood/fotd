@@ -1,0 +1,81 @@
+;     Date: Sun, 20 May 2007 23:34:08 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-05-07 (Beneath the Shadow [6])
+;       Id: <1.5.4.16.20070520233836.2b8f67de@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 21, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To generate today's parent fractal I combined some negative 
+; Z^(-0.95) with about 1/5 as much negative Z^(-6.1) and added 
+; (1/C).  This parent fractal is an oversized thing consisting of 
+; a large area of chaos with one large and somewhat distorted 
+; Mandelbrot set.  An even larger open area extends from the East 
+; Valley of the Mandeloid.  Today's image is located where this 
+; large open area merges into the Mandeloid.
+; 
+; I named the image "Beneath the Shadow" because I like the sound 
+; of the words.  I rated it at a 6 because I think it's just a bit 
+; above average.  The calculation time of 3-1/4 minutes is true on 
+; the fireball P4-2000 machine.  On the old P200 machine the image 
+; would take over 20 minutes to finish.
+; 
+; Relief for any remaining frustration may be found at the FOTD 
+; web site, where the image will momentarily be posted for instant 
+; gratification.  The FOTD web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A partly cloudy day with a temperature of 70F 21C here at 
+; Fractal Central on Sunday made conditions near perfect for 
+; outdoor activity.  But the fractal cats' activity is limited to 
+; the indoors, so they could not appreciate the good weather.  My 
+; day was kept active with yard work.
+; 
+; The next in the seemingly unending series of FOTD fractals will 
+; appear in 24 hours.  Until then, take care, and know that every-
+; thing from atoms to the universe is ultimately an abstraction.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Beneath_the_Shadow { ; time=0:03:16.03-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=-7.244795676089/-2.026205433111/8.2041\
+  2e+007 params=-5.5/-0.95/-1/-6.1/-0.8/0/0/0 float=y
+  maxiter=2700 inside=0 periodicity=10
+  colors=000lZRnbXqfbsjhvnntmpzvyuosvnqtjmrfipbenZbl\
+  X_kWYjVWiUUgTSfSPeRNUJ5dQLbOJaNH`ME_LCYKAXJ8WI6ZOG\
+  YNFYMEYMDXLCXLBXKAWK9WJ8WJ7VI6VI5VH4rHblHUfHL`HCay\
+  I_pFZgCXZ9WQ6xnvsoonheiaXdVN_ODQA2RB3RB3RC3SC3SD3S\
+  D3TE3TE4TF4UF4UG4UG4VH4VH4LWOPRHSMA7seJ_Ney8du7cr7\
+  bn7ak6`g6_d6_`5ZY5YU5XR4WN4VK41jt4go7djAaeC_`FXWIU\
+  SLRNNPIQMDTJ8GL3JK4MJ4PI4SH4wqWtnTrkRphPneNkbLi_Jg\
+  YGeVEbSC`PAZM8XJ6cJbbI_aIYaIW`IU`IS_IP_INZILYHJYHH\
+  XHEXHCWHAWH8VH6jNxhMrfLleLfcKabKW`JQZILYIFWH9zVzxU\
+  vvTrtSnrRkpQgnPclO`jOXhNTfMQdLMbKI`JFZIBXH7yU2iN3y\
+  QPcAqZETUdZVSiVbJMSg2`d6V_AWVDTRHRMLOHOMDSJ8_`BZZA\
+  ZX9YW9YU8XS8XR7XP6WN6WM5VK5VI4sy3lm4fb4`S4azc_nVYc\
+  MWSDHEGIFFJFEKFDLFDMFCNGBOGAOGAPG9XfjUenVejSclTdiR\
+  bkRchQajQagR`cR``SYYSZUSWRTXOYUbRUeKQg4Ph8MfCKdGIb\
+  KG`OEZSCXRAWR9WR8WR8WR7WR7WQ6VQ6VQ5VQ5VQ4VQ4VS7SU9\
+  PWCMYEK_GHaJEcLBdN9gRFiVL }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

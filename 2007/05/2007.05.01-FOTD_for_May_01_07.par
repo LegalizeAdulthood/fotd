@@ -1,0 +1,107 @@
+;     Date: Mon, 30 Apr 2007 21:21:10 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 01-05-07 (FOTD for May 01, 07 [No Rating)
+; 
+;       Id: <1.5.4.16.20070430212205.3e8f4acc@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 01, 2007 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that results when the 
+; formula Z^(sqrt(2))+C is iterated 77 levels down the logarithmic 
+; ladder.  At this profound depth, the formula creates a Mandeloid 
+; with its west end facing northeast and the east half of its main 
+; bay cut off.  Today's scene is located far out on a prominent 
+; filament extending out NE from the large period-2 main bud.
+; 
+; Since I spent most of the day enjoying the weather and doing 
+; little else, I could not name or rate today's image.  But it is 
+; still a rather pleasant one to view, as long as one does not 
+; spend too much time thinking about it.
+; 
+; The render time of 6-3/4 minutes is true on my ancient P133, a 
+; machine so old it would be best studied by an archaeologist.  A 
+; much more efficient way of viewing the image is to visit the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it is posted for instant if not hedonistic enjoyment.
+; 
+; It was a beautiful spring day here at Old Fractal Central, from 
+; where the FOTD was posted for 9 years and where the old fractal 
+; cats, Thomas and Tippy, are still thriving.  Clear blue skies, 
+; gentle breezes and a temperature of 82F 28C made things near 
+; perfect.  I will be here until this Friday, while my sister, who 
+; moved here when I left, is visiting friends in Wisconsin.  The 
+; old fractal cats spent the morning wondering why they see so 
+; little of me nowadays.  Then they went out to the holly thicket, 
+; where they lurked all afternoon.  They fully appreciated their 
+; evening treat of tuna.
+; 
+; I will be pretty much unoccupied this week here at old FC, while 
+; Fractal Lady tends to business back at New FC  This will give me 
+; lots of time to do nothing but find fractals, but I just might 
+; waste a good part of that spare time doing nothing.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and sing a 
+; song of fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_May-01_07 { ; time=0:06:45.29--SF5 on a P133
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+1.35766777822103800/+1.460013324630978\
+  00/3.206177e+010/1/120/-8.14812788009558475e-005
+  params=1.4142/0/-77/0 float=y maxiter=6000
+  inside=0 logmap=113 periodicity=10
+  colors=000zd0zf0xf0ug0og0ji0gi0PK003fz8ZqBQKEJPJBQ\
+  P3HO09M07H330G08U02f09a0GX0MU0SP0ZK0dHmz0gu0oZExCW\
+  z0jz7lzKnzZnzlozzqzzqzzqjxqXoqHgq2_q0Uq0Zo0bo0gn0l\
+  n0ql0vl5fZMSKaE8B500000838HCHSMSaWajbPinEiy3iz5jz7\
+  iz8gz9gzBfzCdzEdzJWuNMnSEgX5aa0Xd0bg0gj0ll0qg0ud5v\
+  aCyZJzUPzQXzNbzKiz2NZ020PzE00W72_PNdfigQsaCzW0zP0z\
+  J0zK0zM0zN2zP7zQ9zQEvKJoGNiBSd7XZ2aS0fM0jH0nN0qU3u\
+  _9xfHzlNzsWzyauzfiziZzlMzqBzu0zx3xo5ni8bb9UXCJQE9K\
+  G0EP7BXC8dH5SQ7GZ73g80o80x80v70v7Bu7Ku7Us7ds7nq7xq\
+  7B0v70q3Gl0Xg0nb0z_5zfGzjSzobzuozyzzzzzzzzzzzzzzvz\
+  zszznzzjzzfzzbzzWxsNuiGybNzXUzQ_zMflNbNP_0QX5Ua9Wd\
+  GZiK_lPaoWdu_fxdgzalyZoxXuvUxuSzsUooUflWXjWNgWEdX5\
+  bX0_X0ZQ0_M0_H7_BC_7J_2P_9UCGZ0G_0Gb0Gd0Gf0Gi0Gj0G\
+  l00szl5lo7ds8Zv9Sy9MzBGzC9zE3zE0zB0u82l55f27iBGjKN\
+  nUWobbffSXiHNl7g0qa0dW9UQNHKa7z00s70iH0ZS0Pb0zz0xz\
+  0qz0jz0dz0Zx0Su0Mq0zb0zd0 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

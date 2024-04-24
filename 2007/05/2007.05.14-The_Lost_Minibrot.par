@@ -1,0 +1,105 @@
+;     Date: Mon, 14 May 2007 23:02:55 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-05-07 (The Lost Minibrot [5])
+;       Id: <1.5.4.16.20070514230718.38e7d316@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 15, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's image I resurrected the original Mandelbrot branch 
+; cut formula, MandelbrotBC1.  This version actually is more 
+; versatile than the MandelbrotBC2 formula that I use quite often. 
+; Instead of having the 'floor' function hard coded, like the 
+; second version of the formula, BC1 lets the user choose any 
+; function.  This ability can be quite useful, since most of the 
+; available functions make unique and quite interesting fractals.
+; 
+; In today's image we examine the Z^(1.09)+C Mandeloid as it 
+; appears 10.6 levels up the log ladder when the 'sin' function is 
+; applied and the escape radius is raised to 1600.  At this level 
+; the parent fractal resembles a distorted Mandelbrot set rotated 
+; 180 degrees.  Except for the large period-2 bud, this set is 
+; without buds, but the shoreline of the main bay is edged with 
+; interesting chaos.  Today's image lies in the East Valley area 
+; of its parent, which is actually on the west side of the main 
+; bay.
+; 
+; Believe it or not, there actually is a midget far down at the 
+; center of the image.  But waste no effort trying to reach it.  
+; The midget lies far beyond the breakdown point.  Because the 
+; midget will never be seen, I named the image "The Lost 
+; Minibrot".  Then I rated it at a 5.  Some interesting debris is 
+; floating through the image, and some curious debris patterns are 
+; starting to emerge, but there is too much chaos and too little 
+; order for a higher rating.
+; 
+; The calculation time of over 17 minutes on the P4-2000 would 
+; be over an hour on the old P200 unit.  To save time, I have sent 
+; the finished image on ahead to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it is posted for quick enjoyment.
+; 
+; Monday began clear, with a very cold temperature of 30F -1C here 
+; at Fractal Central.  And yes, if there had been any pumpkins in 
+; the field, they would have had frost on them.  But by the time 
+; clouds arrived in mid morning, the strong May sun had warmed the 
+; air to 66F 19C, where the temperature stayed all afternoon.  The 
+; fractal cats were exceptionally active for most of the day.
+; 
+; My day was a bit busier than usual, resulting in a fractal that 
+; is a bit less worthy than usual.  Better things will happen 
+; tomorrow however, so until the next FOTD appears in 24 hours, 
+; take care, and be careful what you iterate.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Lost_Minibrot { ; time=0:17:22.32-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC1 function=sin passes=1
+  center-mag=-1.35514864109703900/-0.138026541520764\
+  20/2.473146e+012/1/-90/3.8857806e-016 params=1.09/\
+  0/19.6/1500 float=y maxiter=3600 inside=255
+  logmap=1740 periodicity=10 mathtolerance=0.05/1
+  colors=000Kedmzdmzdmydcxdjsdjvdhu_csVZqQUoLPmGLkBL\
+  h6Ld5La5LZ5LW5MT5MQ5MN5MK5MG5ME5NC5NA5N85N65N45N25\
+  L15K05J05I05G05F05E05D05C05A0590580570560540530520\
+  510500500510731943A64C75E87FA8HB9JDBKECMFDOHFPIGRK\
+  HTLJUMKWOLYPNZRO`SPbTQcMVZG_VAcRP_AGd66i50o50m50l5\
+  0k50j50i50h50g50e50d50c50b50a50`50_50Y50X61W61V71U\
+  71T81S82Q92PA2OA2NB3MB3LC3KC3ID4HD4GE4FE4EF5DF5CG5\
+  AG59H68H67I66I65J05Q64JD3DK27Q05R15S25T35T45U55V67\
+  W78W89X9AYABZBDZCE_DF`EGaFHaGIbHKcILdJMdKNeLOfLQgM\
+  RgNShOTiPUjQWjRXkSYlTZmU_mV`nWboXcpYdpZeq_fr`hsais\
+  bjtckudludmnehhfcbf_WgVQgRKhMDhQ7iV0h_1id6iiBjmGjq\
+  MjqRkqWkq_oq`kq`hquhquaquoqulqcSqcZqcZqdZqdUqeUqeU\
+  qfUqfUqgUqfUqeUqdUqcUqbUqaUq`Uq_ZqZZqYZqXZqWZqWZqV\
+  ZqUZqTZqScqRhqQmqPrqOrqNrqMrqLrqKrqKrqJrqIrqHrqGrq\
+  FrqErqDrqCrqBrqArq9rq8rq8sqBqqDrqFrqHrqJrqMrqOrqQr\
+  qSrqcrqcrqdrqdrqdrqdrqerq }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,97 @@
+;     Date: Thu, 10 May 2007 22:15:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-05-07 (Toward the Light [6])
+;       Id: <1.5.4.16.20070510222002.0d7f5d1e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 11, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image reminds me of a NDE or near-death experience.  I 
+; named it "Toward the Light".  All the standard NDE stuff is 
+; there, including the narrow doorway at the end of the brightly-
+; lit tunnel and the celestial clouds, filled with nebulae of 
+; stars.  I leave it to the viewer to decide whether paradise lies 
+; beyond that distant doorway at the end of the tunnel, or the 
+; whole thing is an illusion of an oxygen-starved brain.
+; 
+; One thing for certain is that today's image rates a 6.  I 
+; briefly considered rating it at a 7, but on second thought 
+; decided on a 6.  The tunnel effect is not quite strong enough 
+; to earn a rating of 7.
+; 
+; Actually, the little midget near the center is an exact copy of 
+; its parent fractal, which is a large northwest-southeast- 
+; oriented, flat oval-shaped bay with a field of fractal chaos 
+; extending some distance to the northwest.  But today's image is 
+; located off to the side, in some suburban debris on the north-
+; east side of the large oval main bay.
+; 
+; The calculation time of 55 seconds is true on the P4-2000 unit, 
+; but even on the P200 the time would be no more than 5 minutes.  
+; The P4-2000 has 10 times the clock speed of the old P200, but 
+; calculates fractals only 5 times as fast.
+; 
+; All this confusion about time may be avoided by visiting the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing the image there.
+; 
+; Thursday started fair enough here at Fractal Central, with lots 
+; of sun and a temperature in the 70's F, low 20's C, but clouds 
+; moved in just after noon, and a thunder-shower arrived at 4pm.  
+; All of this went un-noticed by the fractal cats, who spent most 
+; of the day sleeping like they were already over 15 years old.
+; 
+; My day was notably average.  The next FOTD will appear in 24 
+; hours.  Until then, take care, and search for those elusive 
+; alternate universes.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Toward_the_Light { ; time=0:00:55.70-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 center-mag=+1.1894422532\
+  06258/+4.118993571150736/8.056414e+007/1/-100/8.45\
+  041294705306534e-005 params=1.11/0/11/3500 float=y
+  maxiter=2700 inside=0 logmap=153 periodicity=10
+  colors=00000FeQMufQVPO48N89QB9TEAVHAYF4WOBbRCeUCgQ\
+  AfL8fH6fC4f82f40f73dA5jC7lFAnHCpKErMHtPJvRLwOKvLJn\
+  IJuFItCIt9Hs7Hs8Kp8Nm8Qj9Th9We9ZbAa_AdYAgVBjSBmPBp\
+  NCsKCvHUfFcxItwKzzztuOmtQcsSUrUWqWZpY`l_cnaemc_ofU\
+  qiOrlItoCvr7wtBvsFzzJtrNsrRrqVqqYpqaopenpimomlozzz\
+  ujnxinyhpzhrzhtzhvzhwzfnzdfzbYz`QzWOzSNzOMzJKzFJzB\
+  IzO4zN8zNCyNGxNKwMOuMSsMWqM_oPYmRWkTUiVSgYQe_PcaNa\
+  cL_fJYhHXjGVlEToCRqAPs8Ot7MuALvCKwEJxHIyJzzLzzOzzQ\
+  zzSzzVzzXzzZzz`zzMzzLzzLzzLzzLzzLzzLzzLzzLzzUzzWzz\
+  Yzz_zz`zzbzzdzzezzgzzizzjzzizzhzzjzzazzazzbzzbzzUz\
+  zLzzDzzEzzFzzFzzGzzGzzHzzHzzAzz4zzRjzSyzTuzLrzEszB\
+  tz8uz5uz3jz9`zERzJWzL_zMdzNhzOmzPqzQazZbzRbzKbzDWz\
+  LQzTJz`DzhJzYOzOUzDZz3VzARzHOzNNzSMzWLz_KzdJzhIzlH\
+  zpAzo4zoFzpQzq_zrjzstztnzphzlczhYzeSzaNzYHzUCzRBzU\
+  AzX9z_9zbQzW_zbhzhqznnzgkzaizWfzPdzJazDEzAHz7Kz5Nz\
+  3Qz1Xz5cz8izBKzBMzDNzFOzH }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

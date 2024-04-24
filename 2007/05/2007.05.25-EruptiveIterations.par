@@ -1,0 +1,91 @@
+;     Date: Fri, 25 May 2007 22:25:09 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-05-07 (Eruptive Iterations [?])
+;       Id: <1.5.4.16.20070525222943.2b9f8d8a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 26, 2007 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Try as I may, I could not decide how to rate today's image, 
+; which is a scene in the Hyper-Mandelbrot set.  I also am 
+; confused as to exactly what this formula does.  Sometimes I 
+; suspect that it draws two overlapping Mandelbrot sets, but then 
+; it comes up with something that does not exist in the familiar 
+; Mandelbrot set.
+; 
+; For example, consider the parent fractal of today's image.  It 
+; is obviously closely related to the Mandelbrot set, but it could 
+; never be a result of two overlapping M-sets.  To start, it has 
+; two East Valleys.  This could be a result of two identical but 
+; slightly separated M-sets, but it has two quadratic midgets 
+; where the large period-3 north and south buds should be, and its 
+; Seahorse Valley is something entirely new.
+; 
+; I named today's image "Eruptive Iterations", since it could be 
+; taken as an erupting volcano without too much difficulty.  But 
+; the most notable feature of the image is its fantastic array of 
+; spider-like filaments.  It does indeed remind me of the images 
+; produced by the type=spider formula.
+; 
+; The calculation time of 14 minutes on a P2000 machine is a bit 
+; slow.  But relief for slowness may easily be obtained on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is posted, ready for viewing.
+; 
+; The weather here at Fractal Central got a bit too perfect on 
+; Friday, when the humidity moved in and the temperature reached 
+; 88F 31C.  But heat doesn't worry cats too much, so the fractal 
+; cats had a pleasant day despite the heat.  And a cooling 
+; thunder-shower arrived as night fell.
+; 
+; My day was rather busy, and tomorrow will likely be the same.  
+; I'll try to post the FOTD on schedule, but there is no 
+; guarantee.  Until next time, take care, and the more we discover 
+; in these fractals, the less we know.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+EruptiveIterations { ; time=0:14:08.82-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=HyperMandelbrot passes=1
+  center-mag=+0.28954559806994660/0/2010.667/1/90/\
+  3.885780586188e-016 params=0/0/0.3/0/0.01/0 float=y
+  maxiter=5000 inside=255 logmap=90 periodicity=0
+  colors=000ejJdkIdkIckIckIckIbkIbkIalHalH`lH`lH`lH_\
+  lH_lHZmGZmGZmGYmGYmGXmGXmGWnFWnFWnFVnFVnFUnFUnFToE\
+  ToEToESoESoERoERoERoESnDSnDTnDTnDUmDUmDVmDVmDWmDWl\
+  DXlDXlDXlDYlDYkCZkCZkC_kC_kC`jC`jCajCajCajCbiCbiCc\
+  iCciCdiCdhBehBehBfhBfhBggBggBggBhgBhgBifBifBjfBjfB\
+  kfBkeAleAleAleAmeAmdAndAndAodAodApcApcAqcAqcArdBqc\
+  AqcAqbAqbAqaAqaAq`Aq`Aq_Aq_AqZAqZAqYAqYAqXAqXAqX9q\
+  W9qW9qV9qV9qU9qU9qT9qT9qS9qS9qR9qR9qQ9qQ9qP9qP8qP8\
+  qO8qO8qN8qN8qM8qM8qL8qL8qK8qK8qJ8qJ8qI8qI8qI7qH7qH\
+  7qG7qG7qF7qF7qE7qE7qD7qD7qC7qC7qB7qB7qA7qA6qA6q96q\
+  96q86q86q76q76q66q66q56q56q46q46q36q36q36o47n48m59\
+  l5Aj6Ai6Bh7Cg7De8Ed8Ec9Fb9GaAH_AIZBIYBJXCKVCLUDMTD\
+  MSENREOPFPOFQNGQMGRKHSJHTIIUHIUFJVEJWDKXCKYBLY9LZ8\
+  M_7M`6Na4Na3Ob2Oc1Pd0Pd1Qe2Re3Re4Se4Tf5Tf6Uf7Vf7Vg\
+  8Wg9XgAXgAYgBZhCZhD_hD`hE`iFaiGbiGbiHciIdjJdjJejKe\
+  jLfkMgkMgkNhkOikPilPjlhhr }
+
+frm:HyperMandelbrot {; periodicity must be turned off
+a=(p1),b=(0,0):
+q=sqr(a)-sqr(b)+pixel,
+b=(p2+2)*a*b+p3,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
