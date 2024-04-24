@@ -1,0 +1,106 @@
+;     Date: Wed, 24 Aug 2011 23:15:24 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-08-11 (Two-Headed Monster [6])
+;       Id: <1.5.4.16.20110824231549.1157a68a@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- August 24, 2011 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent Mandeloid that results when the 
+; expression Z^(2.25)+C is iterated 1.2 turns up the complex 
+; logarithmic hyperspiral with the 'recip' function applied.  This 
+; parent appears as a reasonably complete Mandelbrot set rotated 
+; 180 degrees, with 2 East Valleys and 2 fractalized main spikes, 
+; each graced with 2 large minibrots.  The image is located in a 
+; knot on a minor filament extending from the southern large 
+; minibrot.
+; 
+; The rating of a 6 is held down because I seem to remember a 
+; recent FOTD image that closely resembles today's, at least in 
+; the coloring.  But even if this is true, fractals are still 
+; fractals, and today's image must be infinitely different from 
+; its earlier relative.
+; 
+; The name "Two-Headed Monster" refers to the minibrot at the 
+; center of the image, which, even though it is not fully 
+; resolved, closely resembles the shape of its parent.
+; 
+; The calculation time of 1-1/2 minutes is quite fast by fractal 
+; standards.  In fact, more time is likely to be spent setting up 
+; today's parameter file than in running it.
+; 
+; The image may be viewed without calculation however on the FOTD 
+; web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; It is also available in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And the original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; A mix of sun and clouds with a high temperature of 84F 29C and a 
+; nice breeze made things pretty comfortable here at Fractal 
+; Central today.  The fractal cats, who survived the big quake 
+; yesterday, spent the day in meditation.  The humans meditated 
+; about finding time to meditate.  The next FOTD will be posted in 
+; 24 hours.  Until then, take care, and fractals might be all in 
+; the mind of a Boltzmann brain.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Two-Headed_Monster { ; time=0:01:25.02-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip inside=0
+  center-mag=+1.5450423432411/-0.209605690560271/\
+  6.688685e+012/1/35/0 params=2.25/0/1.2/0 float=y
+  maxiter=1500 logmap=166 mathtolerance=0.05/1
+  colors=00040Z30X30V30T30R30P20N20L20K20I20G10E10C1\
+  0A1081461753984AA5BC6CE8DG9EJAFLBGNDHPEJRFKUGLWIMY\
+  JN_KOaLPcOOeRNfSMgULhWKjYJk_JlaImcHneGpgFqiErkDsmD\
+  xkCviBtgBqeAncAkbAhaBecCbeD_hEXjHUkMRkRPoWNq`LteJu\
+  iHwmFzmDwjIqeMlcQeUUbJY_GaXEeUCdPAcK5bF0aA0`50_00Z\
+  GzzzkzCzzzlzErzzgzGmzzbzI_hJYhKVhLShHQgDLg9Gf58Z11\
+  Z70cD0hK0iR0iX5iZBi_DiaFicHidJifLigMiiOkjPmkQonRpr\
+  SrtTtwUvzVwdQiSMWFcI3h48m8CrBGrEKzIPzLTzOXXR`_VdbY\
+  ie`mgdqjgumjyomwljvjgthesebrc`paYo_WmXTlVRkTOiRMhO\
+  JfMHeKEdICcJIcJNbKSbKXbLaaLfaMk`Mp`Nu`NzdLxgKwjJvm\
+  IupHtsGsvFryEqxDpxCpxBpxBpxApx9px9pxApwCpwEpwGpwIp\
+  wKpwMpwOpwQpuSksUgqWcoYZm_VkaRicNgmIemEcmAbm6dmBem\
+  FgmJhmNimRkrWlr_mrcorgprkqronrmlzljzkhzjfzidzhbzgz\
+  zfzzezzdzzczzbzz_zzYzzWzzUzzSzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzDzzDzzDzzEzzEzzEzzFzzFz\
+  zFzzDzzCzzAzz9zz8zz6zz5zz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,115 @@
+;     Date: Sat, 13 Aug 2011 18:45:32 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-08-11 (Half a Spider [7])
+;       Id: <1.5.4.16.20110813184544.136f2a14@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- August 13, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The theme of August is fractals from deep in the Mandelbrot set. 
+; Today's image is not from the Mandelbrot set however.  It is 
+; from the fractal that results when Z^(2.25)+C is iterated 1/2 
+; level up the complex logarithmic hyperladder, (actually more of 
+; a hyperspiral).  I had to depart from the theme of the month for 
+; one day to get caught up.  The very deep images are quite slow, 
+; and I have been falling behind.
+; 
+; The parent fractal appears as a distorted M-set rotated so that 
+; its distorted main period-2 bud lies on the north side of the 
+; main bay.  There is a small valley on the east side of this bud, 
+; with today's image lying in that valley.
+; 
+; I named the image "Half a Spider".  Spiders have eight legs, but 
+; there are only four spidery legs radiating from the central 
+; minibrot in the image.  Since four is one-half of eight, the 
+; name is quite appropriate.  (The circular disk closer in around 
+; the minibrot holds nine legs however.)
+; 
+; The rating of a 7 places the image just about at the center of 
+; FOTD ratings.  The calculation time of under 1-1/2 minutes 
+; assures that no precious time will have been wasted if the eager 
+; fractalist is disappointed with the image.
+; 
+; For even more assurance, the finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image is available in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; Threatening clouds moved in here at Fractal Central on Saturday 
+; morning, and a heavy thunder-shower arrived at 3pm, putting a 
+; finish to any outdoor activities.  The fractal cats' outdoor 
+; activities are limited to gazing out the windows anyway, so they 
+; had no problem with their outdoor activities.  If the day had 
+; been dry, the temperature of 79F 26C would have been pleasant.
+; 
+; The humans, with no outdoor activities planned, had a typical 
+; day indoors.  The next FOTD should be posted in 24 hours, which 
+; is the typical interval.  Until then, take care, and be a 
+; rational skeptic who doubts that physical aliens are visiting 
+; earth in flying saucers.  Such visits are impossible.  Due to 
+; the cosmic speed limit of light, (186,000mps), there is no way 
+; for physical aliens to get here.  If you must believe in some-
+; thing irrational, believe in ghosts.  They are very disturbing 
+; to skeptical rationalists, but at least they are not impossible.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Half_a_Spider { ; time=0:01:25.03-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip passes=1
+  center-mag=-0.1522280397550513/+0.9940388789985681\
+  /7.345366e+010/1/32.5/0 params=2.25/0/0.5/0 float=y
+  maxiter=1800 inside=0 logmap=141
+  periodicity=6 mathtolerance=0.05/1
+  colors=0000Xy0Wt0Uo0Sj0Qe0Na0KX0HS0EN0BJ08E059024f\
+  LC`IAWF9QD7LA6G74A53521I9yG8rE7lC6fA5`94V73O52I31C\
+  106lsBgm9bg8Yb7TX6OS5JM4EG39B2451K_Rpzikudfpb`hWT_\
+  QMRJEID796pUQjQNdNKZKHTGENDBHA8B65532IscEgWAXO7MG3\
+  B84T73Q63O63M52K52I42G42E31C31A2182061041020r_PnXN\
+  kVLgTKdRI`OHYMFUKERICOFAKD9HB7D96A64643321CzzBuuAq\
+  q9mm8ii8ee7``6XX5TT4PP4LL3GG2CC188044DnNBiLAeJ9aH8\
+  YF7TD6PB5L94H73C5283141GTjEPdCM_AJV8GQ7CK59F36A135\
+  IDYC8M64BqKlmIhiHefGbbEZ_DWWCTSAQP9ML8JI6GE5DA4972\
+  6313CRt6DSMI_JGWHESFCPDALB9I87E65A437213qRWlOTgMQb\
+  JNYHKTEHOCEJ9BE78945422mnUijSfgQccO_`MXYKUUIcRGcNE\
+  cKCmHAmD8mA6m64m32m2Am16m03mULmRImOGmLEmICmKAmU8mU\
+  6mU4mU2zUbzUZzUVzcRzcNzcJzcFzcBzc7zc3zmbzmYzmTzmOz\
+  mJzmEzm9zm4zmYzzgzzhzzhzzhzzhzzhzzhzzhzzhzzhzzhzzh\
+  zzhzzhzzhzzhzzhzzbzzXzzRzzLzzFzz9zz8zz7zz7zz6zz5zz\
+  5zz4zz3zz3zz5zz2zz1zz1zz0 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

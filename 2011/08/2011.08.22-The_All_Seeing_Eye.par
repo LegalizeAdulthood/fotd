@@ -1,0 +1,113 @@
+;     Date: Mon, 22 Aug 2011 22:11:44 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-08-11 (The All-Seeing Eye [8])
+;       Id: <1.5.4.16.20110822221206.1497a506@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- August 22, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "The All-Seeing Eye".  But there is 
+; nothing all-seeing about it.  The image is simply a picture of a 
+; minibrot in the parent fractal that results when the formula 
+; Z^(2.2)+C is iterated 2.2 levels up the logarithmic hyperladder 
+; with the probably erroneous reciprocal function applied.
+; 
+; This parent is another of those rotated and scrambled Mandeloids 
+; that appears to be suffering from the effects of the second law 
+; of thermodynamics.  Its entropy is starting to increase, and 
+; this increase will continue until nothing but a screen filled 
+; with infinitely divided, flat gray fractal sand remains.  (It's 
+; too bad that entropy so rarely decreases.  If it did, fractals 
+; would spontaneously appear out of nowhere.)
+; 
+; The scene of today's action is located in a branch of what 
+; appears to be a degenerate Seahorse Valley.  I say it appears to 
+; be a Seahorse Valley because even though it encloses a period-2 
+; bud, in its depths it looks nothing at all like the valley we 
+; know so well.
+; 
+; The terraced effect was achieved by rendering the scene with the 
+; 'tdis' option in effect, which colors the points according to 
+; how far they have traveled when they finally escape.
+; 
+; The rating of an 8 is deserved, since I did put at least a 
+; little extra effort into the coloring.  The calculation time of 
+; 2-3/4 minutes is true when the image is rendered with the passes 
+; set to 'b'.  With this particular image, passes=b is the fastest.
+; 
+; The image may be viewed without the inconvenience of setting up 
+; and running a parameter file by visiting the FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The image is available in high definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The 14-1/2-year-old original FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; The weather today was ideal here at Fractal Central, with 
+; kodachrome blue skies decorated with cottonpuff cumulus clouds 
+; and a temperature of 77F 25C.  The fractal cats, who are of very 
+; low entropy, spent the day playing with their catnip toys and 
+; sleeping.  The humans, of equally low entropy, spent the day 
+; doing things that are more human, such as work.  The next FOTD 
+; will be posted in 24 hours.  Until then, take care, and would 
+; all the Boltzmann brains please raise their hands.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_All-Seeing_Eye { ; time=0:02:48.90-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=mandelbrotbc3 function=recip passes=b
+  center-mag=-0.0263040944212104/-0.7577543124938957\
+  /2.16623e+012 params=2.2/0/2.2/0 float=y inside=255
+  maxiter=1600 outside=tdis mathtolerance=0.05/1
+  colors=000lTzjNzjJzgOzfUzf_zhgzgjzcmz`qzXvzVzzTzzV\
+  zzXwz_szbozdlzgjziizhczfZzh_zi_zj`zk`zl`zmbznbzobz\
+  pczqczqczsdztdzudztgzsizrjzqlzqnzpozopzlnzimzfmzcm\
+  z`mzZmzWmzUmzTizSfzRczR`zTczVgzXkz_nzbszdvzgzzjzzl\
+  zzgzzdvz`qzZmzWizTczR_zNWzMRzKNzILzGIzGGzGKzGQzGWz\
+  HdzHmzKlzNkzSkzWlz`lzfmzlozrrzsqzuozxnzzlzzlzqepla\
+  jfZe_V_VSVQPQMMMGGGCCC999777777454152CCCJJJTTThhhy\
+  yyzzzzzzzxvzvozvjzwdzw`zxWzySzzNzzKzhIyVHqHDm9AV47\
+  Y6Ba8FdALhDQlFRlHSlIVjK`lPioUpnXkl`mgab__VVVV_aZEv\
+  oFwiHycIz_zzdzzXxzQrzLivIbmFWfCQY9KS7GM5BF37A13500\
+  203524954C85GC5KGBPLIVSQ_YYdhgjtppzsvzjqzapwUlkNeg\
+  NcWLdVLYRKQNJJLJCJFTDDS9CP6BN4AM2BN4BN5BN7CN9DNCFN\
+  FFNGFMFEKEEmEDmEEmEEmEDmDCmCDmDcczcczdczdczdczecze\
+  czeczfczfczfczgczgczgczgczcjz`fz_czZ`zWYzVVzTTzQPz\
+  OMzNKzLIzJGzIFzTKzcSzp`zzlzwfzr`znXziTzcOz_MzVIzQG\
+  zNFzWHzfKzdLzdMzcMzbMzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

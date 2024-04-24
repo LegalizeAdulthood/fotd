@@ -1,0 +1,117 @@
+;     Date: Fri, 19 Aug 2011 22:07:35 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-08-11 (Blues in the Basin [9])
+;       Id: <1.5.4.16.20110819220754.12bfa1f2@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- August 19, 2011 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Though today's image departs from the 'deep scenes' theme of the 
+; month, it is well worth the departure.  The rating of a 9 is no 
+; mistake.  The underlying image is worth only a 7, but I awarded 
+; myself a full 2 points for the coloring, which gives the image 
+; most of its impact.
+; 
+; The parent fractal is the Mandeloid that results when the 
+; expression Z^(2.2)+C is calculated 2 levels up the hyperladder 
+; with the 'recip' function applied.  This parent is one of the 
+; most torn up I have yet stumbled upon.  I'll not try to describe 
+; it in words, though it may easily be viewed by resetting the 
+; logmap to zero and backing out of today's image.
+; 
+; Today's scene is located in a jagged clump of debris on the west 
+; side of what I assume is the main bay.  The minibrot at the 
+; center of the image closely resembles its parent fractal.  The 
+; most impressive feature of the image is the coloring of the 
+; central disk and the five broad arms radiating from this disk.
+; 
+; The name "Blues in the Basin" refers to the bluish tinge I 
+; applied to the central disk and five radiating arms.  And for a 
+; change, the program supplied only a small part of this coloring.
+; 
+; The calculation time of a zippy 18 seconds will seem reasonable 
+; to even the most impatient fractalist.
+; 
+; As always, the completely calculated image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition is available at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; And the classic FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; A typical mid-august day prevailed here at Fractal Central 
+; today, with hazy skies, a high temperature of 86F 30C and 
+; humidity within reason.  All this lasted until mid-afternoon, 
+; when a thunder-shower moved in and dropped the temperature to 
+; 68F 20C.  The rest of the day was cloudy and more like autumn 
+; than summer.  The fractal cats showed little concern with the 
+; outside conditions.  They were more concerned with a line 
+; gauge, (printer's ruler that measures picas), that we laid on 
+; the table.
+; 
+; The humans, in a very human manner, passed the day doing what 
+; needed to be done, though now that our biggest customer has 
+; gone elsewhere, this is sometimes too little to keep us busy.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and does having faith in something always mean it is 
+; true?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Blues_in_the_Basin { ; time=0:00:18.73-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip float=y
+  center-mag=-0.6449570164524272/-0.0409793368502258\
+  /4.7e+012/1/72.5/0 params=2.2/0/2/0 periodicity=6
+  maxiter=750 inside=0 logmap=49 mathtolerance=0.05/1
+  colors=000402603804A05C06E07G08I09K0FN0IP0JR0HU0JX\
+  0J_0Hc0Fg1Ek2Co3Br6Bt5BwACzKDzUDzZEzUFzUGzUHzUHzUI\
+  zUJzcKzczzmzzmzzmzzzzzzzzzzmoOmlNmjNmhNmfNMcMMaMN_\
+  MNYMNULNULOULOZLOcKOZKOZKPZKPZJPZJPZJPZJbbUcaUcaUc\
+  hUchUdhUdhUdhUdhUehTfhSfhSghRghRctWcpVcpVcpVcpVdqV\
+  dqVdqUdqUerUerUerUerUeszfszfszfszftzftzgtzgtzgtzgu\
+  zguzhuzhuzhvzhvzhvzivziwziwziwziwzjxzjxzjxzzxzzxzz\
+  wzzvzzvzzuzzuzztzztzzszzszzrzzrzzqzzqzzpzkpzkzzkzz\
+  kzzkzzkzzkzzkzzkzzkzzkzzkzzkzzkzzkzzkzzzgzzgzzfzzf\
+  zzezzezzdzzdzzczzbzzbzzazzazz`zz`zz_zzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzlzzlzzlzzlzzlzz\
+  lzzlzzlzzlzzlzzlzzlzzlzzrzzpzzozzmzzlzzkzzizzhzzgz\
+  zezzdzzczzazz`zzZzzYzzXzzVzzUzzTzzUzzUzzUzzVzzVzzV\
+  zzVzzVzzWzzWzzWzzWzzWzzXzzXzzXhzXhzXhzYizYizYizYiz\
+  ZjzZjzZjzZjzZkz_kz_kz_kz_kz_lz`lz`lz`lz`mz`mzamzam\
+  zanzanzanzbnzbozbozbozboz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

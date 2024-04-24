@@ -1,0 +1,108 @@
+;     Date: Wed, 17 Aug 2011 08:03:25 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 16-08-11 (A Midget in a Spot [8])
+;       Id: <1.5.4.16.20110817080341.137fb228@pop.earthlink.net>
+; ---------
+; 
+; FOTD -- August 16, 2011 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image again departs from the August theme of images very 
+; deep in the Mandelbrot set.  The departure was necessary to give 
+; me a chance to find another worthy image.  These deep images are 
+; very slow and sometimes I simply have no chance to find one.
+; 
+; But today's image is nothing to sneeze at.  It's a scene in the 
+; parent fractal that results when the expression, (it's really 
+; not a formula), Z^(2.2)+C is calculated 22 levels up the complex 
+; logarithmic hyperladder.  This parent fractal resembles a Mandel-
+; brot set rotated about 200 degrees CW, with two East Valleys on 
+; the west side of its main bay.  Today's image is located in one 
+; of the last islands in an archipelago of debris extending from 
+; the center of the southern valley.
+; 
+; The name "A Midget in a Spot" has little meaning beyond the 
+; sound of the words.  The rating of an 8 is what I thought the 
+; image is worth at the time I rated it.  The calculation time of 
+; 33 seconds is thankfully brief, about the same time required to 
+; view the finished image on the web site.
+; 
+; The official FOTD web site, with the finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; A high definition version of the image may be viewed at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The venerable classic FOTD web site may be accessed at:
+; 
+;       <http://www.Nahee.com/FOTD/>
+; 
+; The day began with a light rain shower here at Fractal Central, 
+; but by midday the clouds parted, leading to a mostly sunny 
+; afternoon with a temperature of 82F 28C.  The fractal cats spent 
+; an unusually long time in the window, which means they approved 
+; of the more pleasant conditions.
+; 
+; The humans spent the day doing little out of the ordinary, 
+; though 'ordinary' implies enough work to keep us busy.  The next 
+; FOTD will be posted in 24 hours.  If all goes according to plan, 
+; it will be a great one.  Until then, take care, and if you can't 
+; believe what religion teaches, turn to science; if you don't 
+; like what science has found, turn back to religion.  If you wish 
+; to find the real truth, welcome to the group.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Midget_in_a_Spot { ; time=0:00:33.18-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=recip
+  center-mag=-0.3441515092977831/-0.0530208699951345\
+  /1.967296e+007/1/54/0 params=2.2/0/22/0 float=y
+  maxiter=1800 inside=0 logmap=74 periodicity=6
+  colors=000A0UA0TA0SA0RA0QA0PA0OA0NA0MA0LA0KA0JA0IA\
+  0HA0GA0FA0EA0DA1CA2BA3AB34G96LF7QL8VR9_XBdbCihDlmE\
+  VizQfxMcxH`wDYv8Vu4Su0Pt4MsBLrMJqLKpSKoUUhicaqmWzv\
+  PzzJmvRcrZOmfGhn9cv7Zr6Un5Pk4Kg3Fd3Dk3Bq9DoFFnKHlQ\
+  JkWLi`NhfPfkQejJbiC_h5XVE`IMdZP_nSVlUYjV_iXagYce_f\
+  d`hbbjaclbicbnVbtMbyEZrHVkKReMNZPJTRFMUBGWFFXIEYLD\
+  YOCZRB_UA_TBYSBXRCVQCUPDSODRNEPMEOLBKJ8H7PbBIUFCMq\
+  RVeKPUDJrz6eg9UPCO7oM6gL6_K6TJ6Lj8Ee7E`7Em7Em6Em6E\
+  mxmmqhmjdmc_mXWmQRmJNmCImgBm`CmVCmPDmIDmCEm8SmxOmq\
+  MmjLmcKmXJmQHmJGmCFmRSmOQmLOmJMmGLmDJmBHm8Fm2Wm3Rm\
+  4Nm5Im5xm6nm6em6Wm6NmqLmjKmcJmXImQHzJGzCFzxmzngzea\
+  zXWzOQzFKzl1zXZzTWzPTzLQzHNzDKz9HzmIzmHzmHzmGzmGzm\
+  FzmFzmEzmzzmizmUzmozmhzmbzmXzmQmzKmzRmzOmzLmzJmzGm\
+  zmmzMmzJmzGmzWmzSmzOmzLmzHnz8YzBSz8PzANzBKzDFzmGza\
+  dzTWzZNzdFzjMzfTzc_z`fzYmzVtzS3zTIzNXzIkzCzz7VzOqz\
+  9hzA_zCRzDbzZWzSPzLYzZnz` }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
