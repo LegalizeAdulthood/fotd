@@ -1,0 +1,93 @@
+;     Date: Tue, 10 Sep 2002 09:54:27 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 10-09-02 (Not at all Deep [6])
+;       Id: <1.5.4.16.20020910095533.2c7fb8f0@pop.mindspring.com>
+; ---------
+; FOTD -- September 10, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; At first glance, today's image gives the impression of a scene 
+; lying deep in the range of arbitrary precision math.  But the 
+; impression is not accurate.  A glance at the parameter file will 
+; reveal a magnitude of only 5x10^5, and arbitrary precision math 
+; doesn't even work with 'type=formula' fractals.
+; 
+; The effect of great magnitude is created partly by the nature of 
+; the image itself and partly because the parent fractal, which 
+; resembles a lacework doughnut, is grossly enlarged.  The large 
+; size of the parent fractal means that the scene in effect 
+; actually lies somewhat deeper than the magnitude indicates.  The 
+; name I gave the image, "Not at all Deep", was inspired by this 
+; illusory impression of great magnitude.
+; 
+; The midget at the center of today's image lies in the remote 
+; suburbs of a larger midget located in the northern part of the 
+; bloated doughnut area of the parent fractal.  The formula, which 
+; combines iterated portions of Z^(-2) and (1/Z), is quite simple, 
+; but as I have often stated, in the world of fractals, simple 
+; formulae sometimes create incredible images.
+; 
+; The rating of 6 appears about right for this image, which 
+; impresses me as being just the slightest bit above average.  
+; And as always, the 7-minute render time can be avoided by 
+; downloading the completed GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Monday here at Fractal Central was once 
+; again perfect, with a temperature of 88F 31C and all other 
+; things that go with weather perfection.  The intrepid house 
+; cats, Thomas and Tippy, behaved perfectly as they passed the 
+; afternoon in their lounge chairs on the porch, wishing only that 
+; it had been a few degrees less warm.
+; 
+; I'll be perfectly happy only when I finish some work that now 
+; lies in semi-disarray on the shelf beside me.  So until next 
+; FOTD on Sep 12, take care, and see you then.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Not_at_all_Deep { ; time=0:07:32.09--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+126.9237024889527/+137.1000969757893/5\
+  30479.5/1/62.5/6.90942504423530668e-006 params=1/\
+  -2/0.3/-1/98/525 float=y maxiter=900
+  inside=0 logmap=156 periodicity=10
+  colors=000UhfRjePleMneJpeHreEteCue5x24v64t93rC3pG2\
+  nJ2lM2jQ1hT1fW0d_0bb0`eCYXOVP_SHjQ9`XARcBIjCJfDJcE\
+  J`FJYGJUHJRIJOJJLKJHLJEMJBNJ8OJ5PS8M`BKiDIrGGzIEzP\
+  GzVHz`IzfJzlKzrLuqJppIkoGgnFbmDYlCTkBPj9Ki8Fh6Ag56\
+  g47f58e69d6Ac7Bb8Ca8D`9E_9FZAGYBHXBIWCJVDKUDLTEMTE\
+  ORJPQNQORRNWTL_UKcVIhWHlXGpVJlULhTOeSQaRTYQVVPYRO_\
+  NNaKO`MP_OQZQRYSSXUTXWUWYVV_WUaXTcYTeXTfWUgWUgYXdZ\
+  _a_aZadWbgUciRelOfoLgqJUcRGRZ3Ee4Hd4Kc5Mb5Pb6Ra6U`\
+  7W_7Z_8aZ8cY9fX9hXAkWAmVBpUBrUDoYEmaGjdHhhJelKcoM`\
+  sNZvQWtTUrWRqZPoaMndKlgIkfKgeMddNacPZbQWaSS`UP_VMZ\
+  XJYYG_ZEa_Cc`Aea8gb6ic4kd3kc8kbCkaHk`Lk_QkZUkYZkXb\
+  kWgkVkkVohPlfKjdFgbAe`5cZD_XLWVTSU`OShKQpGPxCOtGOp\
+  KOmOOiSOfVObZObbOcfOdjOemXftRgiLV_FcQGteKrgNqhQpiU\
+  njXmk_lmcjnfioihplgqhehec`aaTZhLWiDUjFTkHSlJQmLPoM\
+  OqONsQLuSKwUJyVIzXGzZFz`EzbDzcaznRzmHzmJzWKzELzGMz\
+  INzKOzMPzOQzQRzSSzUTzWUzY }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

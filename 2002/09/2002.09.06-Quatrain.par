@@ -1,0 +1,104 @@
+;     Date: Fri, 06 Sep 2002 10:42:42 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-09-02 (Quatrain [6])
+;       Id: <1.5.4.16.20020906104345.0d77be2a@pop.mindspring.com>
+; ---------
+; FOTD -- September 06, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Before posting my FOTD's, I always check the attached parameter 
+; files to see that they work.  Almost without exception the files 
+; run as they should.  However, when posting the most recent FOTD, 
+; the one for Sep. 4, I neglected for some reason to check the 
+; parameter file before clicking the send button.  This oversight 
+; gave Murphy's law the chance it needed to work its mischief.  
+; When I finally did check the file later in the day, I found that 
+; a backslash was missing from the end of a broken line, causing 
+; an error message to appear when the file was run.  My apologies 
+; for any inconvenience.
+; 
+; Today's attached parameter file most definitely will run.  The 
+; image it will draw will take 7 minutes to complete, and hope-
+; fully will be worth the time spent.  The image that will appear 
+; lies in the fractal that results when -1.1 parts of Z are com-
+; bined with -1.1 parts of Z^20 before adding C.  This parent 
+; fractal is actually a classic Mandelbrot set caught in the act 
+; of morphing into the Z^20 Mandeloid.  Today's scene lies in a 
+; curving valley at the mouth of a small bay on the east edge of 
+; the distorted M-set.
+; 
+; I named the image "Quatrain", though I can't say why.  A 
+; quatrain is a four-line stanza of a poem.  Maybe I noticed the 
+; nearly square olive-green feature around the obligatory central 
+; midget.  Regardless, it's a striking image, which looks as good 
+; from a distance as it does up close.  Not wanting to appear 
+; boastful, I rated it a 6, which is above average, though not by 
+; much.
+; 
+; The trip back out of the parent fractal is interesting also.  
+; Those with a little time to spare might wish to change the 
+; logmap to 0, the passes to G and make the journey at thumbnail 
+; size.
+; 
+; As always, the completed GIF file of the image will soon be 
+; available on the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Thursday here at Fractal Central was perfect 
+; beyond description, so I won't try to describe the indescribable 
+; other than to say that the temperature of 83F 28C pleased the 
+; cats so much that their sour dispositions turned cheerful after 
+; a couple hours in the yard.
+; 
+; As for me, I've got a couple hours of work ahead of me, and my 
+; disposition won't improve until the work is behind me.  The 
+; solution . . . get the work started.  Until next time on Sunday 
+; the 8th, take care, and double check your figures.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Quatrain { ; time=0:07:30.39--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+1.57055877097165100/+0.538927007893349\
+  20/4.321429e+007/1/15/3.82882488214608685e-007
+  params=-1.1/20/-1.1/1/0/0 float=y maxiter=1500
+  inside=0 logmap=132 periodicity=10
+  colors=000nOEqPBtR8vS5uV9pZDlaHgdKcgOZjSVlVQiUMfTH\
+  dTDaS8ZR4XR4UPTMlKOrBPx9Mw7Iw5Fw3Bw18w05w02wtnSoiP\
+  jeNeaLaYIXTGSPENMBJO9EQ79S4AU2SYDQWCPUBNSAMQAKP9JN\
+  8HL8GJ7EH6DG6BE5AC48A47835724522311100Pe0IV0CL06Aj\
+  KTdHPZFLTCINAEH7AB57523G09D07B06905603402201qLTRG7\
+  PF6`iWakWcgYedZfa_hZ`iWakTbmPdnMepJfqGgsDhtAi100q9\
+  fn9dk8bh8_e7Yb7W`6TY6RV5PS5NP4KM4IJ3GH3DE2BB298165\
+  14202I3pG2kE2fD2aB1X91S81O61J40E309104ij7fg6de6ab5\
+  _`5XY5VW4TT4QR4OO3LM3JJ2GH2EE2CC1991771440220xttuq\
+  qroopllmjjjggheeebbb```YYYWWVTTTRRQOONMMLJJIHHFEED\
+  CCA99777544222n0Yk0Wi0Uf0Td0Ra0P_0OY0MV0LT0JQ0HO0G\
+  L0EJ0CH0BE09C08906704403201V5bT4`c4Zc4Xc4Vc3Tc3Re3\
+  Qg3Oi2Mi2Ki2Ii2Gi1Ei1Di1Bi19q07z05z03z01xR1zD0zKUz\
+  YZzZHhcNNhLMmKLrJKvIIzHHzGGzEFzDDzCCzBBzAAz98z87z6\
+  6z55z43z32z21z12zX1zT1zP1zM1zI0zE0zB0z70z3xzjkz`_z\
+  SOzICz95zcEzTKzQQzNWzKbzH }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

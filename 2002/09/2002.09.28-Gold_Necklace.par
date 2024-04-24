@@ -1,0 +1,98 @@
+;     Date: Sat, 28 Sep 2002 09:48:03 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-09-02 (Gold Necklace [6])
+;       Id: <1.5.4.16.20020928094922.390f8956@pop.mindspring.com>
+; ---------
+; FOTD -- September 28, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The formula of today's image takes 0.2 parts of Z^(-3.16227766), 
+; which is the square root of 10, and adds it to three times as 
+; much Z^(-0.316227766), which is 1/10th of the first number and 
+; also its reciprocal.  The resulting fractal is a bloated, 
+; vaguely Mandel-shaped thing with a double valley on the west 
+; side and a smoothly curved shoreline on the east side.  Two full 
+; out-zooms are needed to see the entire fractal.  The only real 
+; area of interest is the vicinity of the double valley, and 
+; today's image is located a short distance inland from the 
+; southern shoreline of this valley.
+; 
+; I named the image "Gold Necklace", mostly because I could think 
+; of nothing better.  The name is not totally frivolous however, 
+; because the effect of the intricate gold filaments against a 
+; dull blue background does vaguely suggest a gold chain.
+; 
+; In my opinion, the image rates a 6, which is not great, but 
+; keeps my (IMO) long string of above-average images intact.  And 
+; the render time of 5 minutes is just within the bounds of 
+; reason.  An even faster way of seeing the image is to go to 
+; Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; and download the completed GIF image from there.
+; 
+; The weather here at Fractal Central on Friday was variable.  The 
+; day started chilly and foggy, but in the early afternoon the fog 
+; lifted, the clouds broke, and the temperature rose into the low 
+; 80'sF, or around 28C.  Unfortunately, the extreme humidity made 
+; for rather oppressive conditions.  Not enjoying humidity, and 
+; being especially adverse to wet grass, the fractal cats spent 
+; the afternoon in their porch chairs, avoiding the condensation 
+; on the still-cold concrete floor.  In the evening, a short but 
+; intense shower passed over, which ended the day with a bang and 
+; sent the cats scurrying indoors.
+; 
+; And I had better scurry if I want to put the little bit of work 
+; now on my desk behind me.  But never fear, for though I leave 
+; now, I shall return in two days, on the 30th, with a new and 
+; hopefully improved FOTD image.  Until then, take care, and be of 
+; stout mind but lean heart.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Gold_Necklace { ; time=0:05:16.65--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-8.102041504459706/-9.097268236615008/1\
+  251382/1/-115/1.95877052341086877e-005 params=0.2\
+  /-3.16227766/0.6/-0.316227766/0/525 float=y
+  maxiter=1250 inside=0 logmap=100 periodicity=10
+  colors=00046F00F00D00F00F00F00F01F03F14G36H47I79J9\
+  AKACLCDMDFNFGOGIPIJQJLRMMSOOTPPUQQTSSSTTQVVOXXMYXK\
+  YYNaaGfdGjiGolGspGxsGzxGzzGzxFzvFzuFzsDzrDyoDymDxl\
+  CvjCviCufCsdArcAraAp`AoY9oX9mV9lT7lS7jP7iO7gM6gL6f\
+  J6dG6dF4cD4aC4fM0cG0aA4_6AY0FX0JY0G_4F`9DaCCaGAcL7\
+  dO6fS4gX3eZ0dZ0g_1iX6lVAmTFpQLrPPuOTxLYyJazGgzFlzD\
+  pzAuz9yz3zz7zzCzzFzzJyzMxzQvyVuvYsuasrdrpipmmolpmi\
+  ulgxjdzifzfdzgcziazj`zl_zlYzmYzoXypVyrTxrSvsQvuPuv\
+  PsxOsxMryLpzJpzIozIozFjvCfpAaj7Yd6T_3QT0MM0IG0DA09\
+  404001000000100430960DA0GD0LG0PJ0SM0XO0`P0_Q1_S4_T\
+  7_VA_XD_XG_YJ__M_`P_aS_cV_dY_d`_fc_gf_ii_jl_lo_mr_\
+  ovamu_muXmsTmsTmsTmrTmrTorTppTrpXso_umavldxjgyijzg\
+  mzfpzdszcvzayz`zz_zzYzzXzzVzzTzzTzzTzzTzzTzzTzzTzz\
+  TzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTz\
+  zTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzT\
+  zzTzzTzzTzzTzzTzzTzzTzzTz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

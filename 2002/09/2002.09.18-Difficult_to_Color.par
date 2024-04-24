@@ -1,0 +1,90 @@
+;     Date: Wed, 18 Sep 2002 10:38:17 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-09-02 (Difficult to Color [5])
+;       Id: <1.5.4.16.20020918103929.2ba7ca10@pop.mindspring.com>
+; ---------
+; FOTD -- September 18, 2002 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image came on with much fanfare.  When I saw it in thumb-
+; nail size, I expected another 8-rater.  But when the time came 
+; to apply the color, things did not go as planned.  Try as I 
+; might, I could not get the colors to go onto the image smoothly. 
+; The reason is that the iteration count of the bands jumps around 
+; haphazardly, making smooth coloring almost impossible.  In the 
+; end, I decided to let nature take its course and let the image 
+; appear in its natural form.  To remind myself of the coloring 
+; problems, I named the image "Difficult to Color".
+; 
+; The formula behind the image takes plain Z and adds 12 times as 
+; much 1/Z to it before adding 1/C.  The resulting figure is a 
+; large fan-shaped bay edged by many tiny round mandel-shaped 
+; bays.  Today's image is located in one of the arms of a many-
+; pointed star associated with one of these small bays.
+; 
+; The render time on my machine of 1/100 second short of one full 
+; hour is excessive for such a mediocre image, which I can rate no 
+; higher than a 5, but as always, relief is at hand at the FOTD 
+; web sites in the form of the completed image, which will soon be 
+; ready for download.  The two FOTD web sites are located at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather here at Fractal Central on Tuesday was so close to 
+; perfect that the minor shortcomings can be ignored.  The cats 
+; were happy, and that's all that really matters.  For humans who 
+; might be curious, the temperature reached 82F 28C under partly 
+; sunny (or was it partly cloudy) skies.
+; 
+; Another day has now begun -- one that promises to be a near 
+; repeat of yesterday.  If all goes well, the cats will be happy 
+; again, and if the work goes well, I'll be happy.  Until next 
+; time, which will arrive on Saturday the 20th, take care, and be 
+; liberally conservative with your fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Difficult_to_Color { ; time=0:59:59.99--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.45800919027048830/+0.420562881994095\
+  90/1.168692e+008/1/72.5/-8.86262575897078797e-008
+  params=1/1/12/-1/0/0 float=y maxiter=9000
+  inside=0 logmap=1360 periodicity=10
+  colors=000RNeSOfTPgUQhVRiVSjVTkVUlVVmVWnVXoVYpVZqW\
+  _rW`sUZqTYoSXmSWkSViSUgTSeTRcTQcTPcTOcTNcTLcSKcRJc\
+  QIcPHcPFcOEcNDeMCgLBiKAkJ8mI7mH6mG5lF4lF3lG6iH9gHC\
+  eIFcJIaJLZKOXLRVLUTMXRN_PNbMOeKPhIPkGQnEOo9QpCSqFU\
+  qIWrKYrN_sQasSctVetYgu`iubkvemvhowjqwmrwptxtrvsjkr\
+  zqvnkpnnoopootnotmnslmrklrjlqjkpijphioghnfgmegmefl\
+  dekcdkbcjabi`cjadkabi`_g_YeZVdXTbWQ`VOZULYSJWRGUQE\
+  SPAQNCRODSOESOFTPGTPHUPIUPKVQLVQMWQNXROXRPYRQYRSZS\
+  TZSU_SV_SW`TXaTYaT_bU`bUacUbcUcdVddVeeVgfXfeWfeVfd\
+  VfdUfcUfdTfdTeeSeeSefReeReeQedQedPdcPdcOdbOdbNdaNd\
+  aMd`Mc`Lc_Lc_KcZKcZJcYJcYIbXHbXHbWGbWGbVFbVFbUEaUE\
+  aSDaSDaQCaQCaPBaOB`NA_NAZM9YK9XJ8YJ8XI7VI7UH6TH6SG\
+  5VG5_F4dF4cG5cH5ZI6YJ6YK7YL7XM7XN8XO8WP9WQ9WR9VSAV\
+  TAVTBVUBUVCUWCUXCVYDWZDX_EY`EZaE_bF`cFadGbeGcfFdgG\
+  ehHfiHgjIhkJilJjmKknKloLmpMnqMorNpsBqt6ru9svBtwEux\
+  GvyJwzLxzOyzQzzTzzVzzYzz_ }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

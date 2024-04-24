@@ -1,0 +1,79 @@
+;     Date: Thu, 12 Sep 2002 10:28:24 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-09-02 (A Somber Minibrot [7])
+;       Id: <1.5.4.16.20020912102932.2b57f6c4@pop.mindspring.com>
+; ---------
+; FOTD -- September 12, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's discussion will be brief.  When one is in as sour a mood 
+; as I am, it's better to remain silent than to speak out and risk 
+; offending.
+; 
+; Today's fractal is another of my evaporated ones.  I colored it 
+; with a palette of dark blues and indigo, and named it "A Somber 
+; Minibrot".  The rating of 7 might be a bit over-optimistic, but 
+; who cares.  The outzoom will reveal a horseshoe crab floating in 
+; a lagoon -- but what the heck.  The render time of 15 minutes is 
+; tiresome, but the download from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; is far more reasonable.
+; 
+; The weather here at F.C. on Wednesday was sunny and pleasant 
+; enough, with a temperature of 81F 27C, but the high winds from a 
+; hurricane just off the coast made things too hectic for the 
+; fractal cats, who took a brief glance outdoors and promptly 
+; retired testily to their sofa beds.
+; 
+; Now, there's work to be done, so before I get myself into any 
+; more trouble, take care, and keep your cool.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Somber_Minibrot { ; time=0:15:45.75--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+3.97716686787938/+0.408927981791538/3.\
+  114496e+007/1/12.5000011564625524/-9.1327179283368\
+  0873e-006 params=1/-1/0.1/-2/9/1e+100 float=y
+  maxiter=350 inside=bof61 periodicity=10
+  colors=000xQQIJD2O26L48J69G8BE9DBB000G6EI4EJ2GL0IN\
+  0JO0LQ0NR0OT0QV0QI9V4X_0sb0pf0ng0ki0ik0gl0dp0bq0as\
+  0YzL`z1VxBQXLN4OIBEEGDBL98R62X40a10g00l00q00n20l60\
+  i92gD6fG8bJBaNE_QIXTLVXNR_QQbTOfXLi_JlaIkfLiiNilQg\
+  pRftVfxXdzYbzabzbazf_zg_zixzRzzBzzOzp_zaksOwpTxlXx\
+  k_xgdxdgzbkz_pzYszVwzRzzQzzNzzLzzRzzYzxbxwitwnqttl\
+  sziszdqzapzYpzXnzXnzVlzVlzVlzTkzTkzTkzRizRizQgxQgw\
+  QgtOfsOfsOfxN_zNTzLOzJIzIBzI6zYBznEzzJzzNzzLzpLz_L\
+  zLLz6LzBJzGJzJJzOJzTJzXJzaJwfJsiJpnJlsJiwJfzJbzJ_z\
+  JbzLfzNizNkzOnzQqzQtzRwzTzzTzzVzzXQd6Tb8Va8kgNzn_z\
+  slzpgznbzk_ziVzfQzdNzYLwTLnOLdJJXEJN9JE4Jb0Iz0GTL4\
+  0k00n00q00t20x40z80z91xB1sB1nD1iD1dD1_E1VE1RE0OEzz\
+  zzzzixzRfg8NL0404NBIbNVsYbzRizLqzExz90xD6q9Bk8Gd6N\
+  Y2RR1XL0dd0kx0qz0zz4zxIznVzdgzVtzRtzOtsLtgItXEtLBt\
+  98t06t29x8DzBGzGJzLNzOQzTTzXVzL_z9dz0iq0nk1qgDtfOx\
+  d_zbkzawz_zzYVz9bpEigIqYN }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,97 @@
+;     Date: Tue, 24 Sep 2002 10:27:53 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-09-02 (The Emerald City [7])
+;       Id: <1.5.4.16.20020924102909.0db7117e@pop.mindspring.com>
+; ---------
+; FOTD -- September 24, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "The Emerald City".  The name has nothing 
+; to do with the name of the city in the land of Oz, where the 
+; wizard dwells.  The image contains nothing even vaguely 
+; resembling buildings.  The name simply reflects a feeling that 
+; the image produced while I was studying it, searching for a name.
+; 
+; At first glance, the image appears to have been rendered with 
+; some exotic coloring algorithm, but it was actually rendered 
+; with the default equal-iteration-bands method.  As in nearly all 
+; my FOTD fractals, the fancy coloring is created by the nature of 
+; the iterated formula, which in today's case adds portions of 
+; Z^(-1.1) and Z^(1.1) to (1/C).
+; 
+; The resulting parent fractal does not quite fit onto the default 
+; screen, but an outzoom reveals a fractal rocket flying east.  
+; Today's image lies in the chaos at the north edge of the 
+; rocket's fins, in an area that is highly sensitive to changes in 
+; the bailout radius, which is determined by adding 100 to the 
+; imag(p3) parameter.
+; 
+; I have rated the image at a 7.  I can do this honestly, since 
+; the overall effect is above the average.  The render time of 7 
+; minutes can be bypassed by downloading the completed GIF image 
+; from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The Monday weather here at Fractal Central took on a more 
+; autumnal mood, with partly cloudy skies, brisk northerly 
+; breezes, and a temperature of 75F 24C.  The fractal duo, Thomas 
+; and Tippy, must have agreed, for they passed the entire 
+; afternoon exploring the yard, every inch of which has been 
+; explored many times before.  The only problem arose when Thomas 
+; came hopping to the door with a thorn in his right forefoot.  A 
+; single pull of the tweezers removed the thorn and relieved his 
+; not-very-serious distress.
+; 
+; My distress will be relieved when the day's work is finished and 
+; my desk is clear.  That moment however is several hours away, 
+; and some intense effort will be required to achieve the goal.  
+; Until next time, which will arrive on Thursday the 26th, take 
+; care, and is it rational to believe in extra-sensory fractals?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+The_Emerald_City { ; time=0:00:00.00--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.813599976005038/+1.08444716716314/16\
+  37126/1/-97.5/-2.42503677833072473e-008 params=0.7\
+  /-1.1/0.77/1.1/0/40 float=y maxiter=750 inside=0
+  logmap=63 symmetry=none periodicity=10
+  colors=000YNCzPAzP8zTAzVCvXCsZEo`GkbGedHbeJZgJVkLR\
+  mNNoNHqPEsRAuR6vT2xV0zV0vZ0sb0od2mg2ii2em2dq4`s4Xv\
+  4Vx4Rz6Nz6Lz6Hz6Ez8Cz88z84z82z20z00z00z00z00z00z66\
+  zGGsRPi`Z`igRsqHooGmmGikGgiGegEbgE`eEZdEVbET`CRZCN\
+  ZCLXCJVAGTAERACPA8PA6N84L80J80H80H80N60T40Z20`00b0\
+  0d00e04g0Ai0Gk0Lk0Tm0Zo0dq0is0ou0uv0zx0zx0zz0xz0uz\
+  0qz0mz0iz0ez0bz0Zz4Vz6Rz8NzCJzEGzHCzJ8zN4zP0zT0zV0\
+  zZ0z`0zb0zi0qo0bv0Nz08z00z20z44x6Aq8GiALbCRVEXLGbE\
+  Hg6Jm0Ls0Nx0Nz0Gz08zA0zR0ze0zd0zd0zd0vd2ud2sd4ob6m\
+  b6kb8ibAebAdbCb`EZ`EX`GV`HT`HP`JNZLLZLHZNGZPEZPCZR\
+  HVTLRVPNVTJXXGZ`CZd8`g4bk2do0ds0ev0gz0gz0iz0kz0kz0\
+  oz0qz0uz0vz0xz6zzCzzHzzPzzVzz`zzezzdzzdzzdzzbzzbzz\
+  bzz`zz`zz`zzZzzZzzZzzXzzXzzXzzVzzVzzVzzTzzTzzTzzRz\
+  zRzzRzzNzzLzzJzzHzzGzzEvzCszAoz8kz6gz4dz0`z0Xz0Tz0\
+  Pz0Lz0Hz0Ez0Az06z02z06z08z0Cz0Ez0Hz0Jz0Nz0Pz0Tz0Vz\
+  0Zz0`z0Pz0zzNzzLzzJzzGzzE }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

@@ -1,0 +1,102 @@
+;     Date: Sun, 22 Sep 2002 10:06:21 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-09-02 (Autumnal Equinox [6])
+;       Id: <1.5.4.16.20020922100736.2b5fdc34@pop.mindspring.com>
+; ---------
+; FOTD -- September 22, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The autumnal equinox is almost here, heralding the season of 
+; blue skies, colorful falling leaves, and acorns.  The mystery 
+; is why the leaves, which are so enjoyable while they are on the 
+; trees, become so unenjoyable once they fall to the ground and 
+; have to be raked up and disposed of.  The answer to that mystery 
+; may never be known, but the fact that eight colorful oak leaves 
+; appear in today's FOTD image cannot be denied.
+; 
+; The formula that produced the leaves subtracts 1.3 parts of 
+; Z^0.9 from 1.3 parts of 1/Z, then adds 1/C, resulting in a scene 
+; on the verge of evaporation.  Indeed, if the value of the 
+; imag(p3) parameter, which sets the bailout radius, is increased, 
+; the image soon breaks into scattered fractal debris, and then 
+; goes totally blank, changing into an evaporated all-inside image 
+; that can be seen only by using an inside fill something like 
+; bof61.  Curiously, if imag(p3) is decreased, the image also goes 
+; blank, though in this case the image consists of flat outside 
+; material.
+; 
+; The parent fractal of today's image consists of a very distorted 
+; Mandeloid with an open eye, perhaps the all-seeing eye of 
+; you-know-what, lying just to the right.  The scene itself lies 
+; in a valley that is not really a valley, which separates the 
+; Mandeloid from the eye.
+; 
+; I originally intended to rate today's image a 7, but upon 
+; re-viewing it after a restful night, I decided a 6 would be more 
+; appropriate.  I named the image "Autumnal Equinox", and why not? 
+; The equinox is but a few hours away, and at least in the 
+; northern hemisphere, the leaves are starting to turn colors.
+; 
+; The 20-minute render time drags, but as always, the completed 
+; GIF image is or soon will be available on the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather Saturday was partly cloudy and humid, with a 
+; temperature of 88F 31C.  Showers threatened in the afternoon, 
+; but never moved in.  The fractal cats, being intrepid, ignored 
+; the threat of rain, and had a pleasant afternoon in the yard, 
+; doing little but sitting and thinking.
+; 
+; As for me, it's Sunday morning and all is well.  If I simply 
+; relax and let nature have its way, things could remain well all 
+; day.  The next FOTD will appear on Tuesday the 24th.  Until 
+; then, take care, and don't lose your way in the valley of the 
+; lost fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Autumnal_Equinox { ; time=0:20:20.72--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.07306512309502931/-0.035159792779246\
+  05/9.071547e+007/1/5/-2.20061751078637347e-007
+  params=-1/0.9/1/-1/0.3/100 float=y maxiter=2500
+  inside=0 logmap=363 periodicity=10
+  colors=000nAIpA9rA1oD7lGCiJIfLNcOS`RYYTbVWhSZmQ`rT\
+  asVbsXct_dtaetcfuefuhgujhvlivojvqkwslwulwsltqlrolo\
+  mlmkljilhhlfflcdlablZ`lXZlUYlSWlQUlNSlLQlIOlGNlELi\
+  DKgDJdDIbDH_CGYCFVCETCDQCBOBALB9JB8GB7EB6BA59A46A3\
+  4A22A35D48F5BH6DJ7GL8JN9LPAORBRTCTVDWXEZ_F`aGccHfe\
+  IhgJkiKnkLpmMsoNvqOxsLolIfeFYZCPS9GL68ECBFHDGMFGRH\
+  HWKI`MIeOJjQKoSKnUJnVJnWInXImZHm_Hm`GmaGmbFldFleEl\
+  fElgElhDkjDkkCklCkmBknBjpAjqAjr9js9jt9hoEfjIeeMcaQ\
+  bXU`SY_NaYJeXEiV9mU5qV7mW8jW9gXAdXCaYDZYEVZFSZHP_I\
+  M_JJ`KG`LDZMFYMHXNIWNKVOLTONSPORPQQQRPQTOQUMRWLRYK\
+  SZJS`ITaGTcFUdEUfDVgCViBVjAWiAYhAZh9`g9af9bfFYdKTc\
+  QOaKJKXIbZIc_IdaIeZIaaIefIhhIiiHjkHkmHlnHmpHnrHosH\
+  puHqvHruGpuGnuGmtGktGjtGhsGgsGesGcrGbrG`rG_rGYqGXq\
+  GVqGTpGSpGQpGPoGNoGMoGKoGJkOFgVBcU7_UZYUcXUhVUmUSt\
+  SNwRJzQFzSEzUDzVCzXCzYBz_Az`Azb9zc8ze7zf7zh6zi5zk5\
+  zl4zn3zo2zq2zr1zg9zi9zlAz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

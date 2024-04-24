@@ -1,0 +1,103 @@
+;     Date: Sun, 08 Sep 2002 10:31:54 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 08-09-02 (Bluebrot [6])
+;       Id: <1.5.4.16.20020908103259.2b97acc2@pop.mindspring.com>
+; ---------
+; FOTD -- September 08, 2002 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Blue and orange -- my old high-school colors -- that's the color 
+; scheme of today's image, which adds just a bit of Z^3 to Z 
+; before adding C.  It's not that I'm trying to regain some of 
+; that long-gone school spirit; it's that these particular colors 
+; make the most of a routine image of just another midget.
+; 
+; The exact amount of Z and Z^3 is determined by the real(p3) 
+; parameter, and is extremely critical.  The formula, like many 
+; formulae created by M-Mix4, actually behaves as though the 
+; real(p3) parameter brought the formula near an asypmtotic point, 
+; where the fractal undergoes a sudden drastic change.
+; 
+; The name "Bluebrot" was not named after my high-school football 
+; team, which was called the "Engineers", and usually whipped the 
+; starch out of their rival team down the road, which went by the 
+; name of the "Knights".  The image's name is simply the shortest 
+; and most appropriate descriptive name I could come up with after 
+; a few minutes pondering the image.
+; 
+; I wish I could rate the image something above a boringly average 
+; 5, but honesty prevails here at Fractal Central, and I always 
+; give the images a rating that reflects my degree of satisfaction 
+; or dis-satisfaction.
+; 
+; If the parameter file ran in a minute or two, the rating might 
+; have been higher.  As it is, the 36-minute render time is a bit 
+; much for such a mediocre image . . . except for the curious, 
+; that is.  But relief in the form of the completed GIF image is 
+; at hand.  The image will soon be available on the two FOTD web 
+; sites found at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather Saturday here at Fractal Central was perfect, with 
+; not a cloud in the sky and a cat-pleasing temperature of 84F 
+; 29C.  The cats in question were appropriately pleased.  Tippy, 
+; the long-tailed tabby, actually thanked me for the wonderful day 
+; he had spent in the yard.  Thomas, the overweight yellow-orange, 
+; said nothing, assuming that I already knew he was thankful.
+; 
+; As for myself, it's once again Sunday, and I'll be pleased if I 
+; can get through the day without doing any serious work.  But 
+; regardless, I'll still have a pleasant day.  Until next FOTD on 
+; Sep 10, take care, and don't let a blue fractal give you a case 
+; of the blues.
+; 
+; P.S. -- And don't forget that soon-to-appear FOTD CD!
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Bluebrot { ; time=0:36:11.98--SF5 on a P233
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.25621249906585860/+6.284024255056992\
+  00/2.779084e+008/1/-112.5/-3.06632516054589077e-005
+  params=1/1/0.03/3/-0.003/0 float=y maxiter=6000
+  inside=0 logmap=698 periodicity=10
+  colors=000K0RM0UO0ZQ0cS0hU8mSIrSSwSazSizSszSzzSzzS\
+  zzSzzSzzIzz8sk0YL0B0000000000000100600B00G00L00P00\
+  U00_00d00i00n00s00p00n03n3DkINkYYfaUdfUakU_pUYuUUz\
+  SSzSPzSNzSLzSIzSfzSzzPzz3zz0xz0sz0nz0iz0dz0_z8UzIP\
+  zSLz_GziBzs6zp3sf0a_0_30_0Pz0sz0uz0uz0uz0uz0uz0uz0\
+  uz3xzBxzIxzNxzUxz_xzfxzkszipzinzfkzfizdfzddzaazafz\
+  YizSkzNnsIpiDs_8uP3d83P03L08G1DD3GD1DD1DD1DSz0Pz0N\
+  z0Lz0Ix0Nz0Sz0Yz0az3fzGkzSpzduzpzzzzzzzzzzzzz_zx8z\
+  u6zu3xs1ps1kp0dp0Yn0Sn0Lk0Dk08d0DY0GP0IL0LD0N60P00\
+  U00Y00_00a00d00f00a08_DLUSYSfiNuuLzzIPzsNxpNuzLskL\
+  niIifIfdIaaG__GUYDSUDNSBLPBGNBDLBDLDBLDBIDBID0zD0z\
+  D0zD0zD0zD0zD0zD0zD0zD0uD0sD0pD0kD0iD0fD08D0dD0_D0\
+  YD0UD0PD0ND0LD0GD0DD0BzfUzdSzaSzaSz_PzYPzYPzUNzSNz\
+  SNzPLzNLzNLxLIsIIpIInGGiDGfDGaBDYDLSGSNI_ILfDNn8Pu\
+  3Sz0Uz0Yz0_z0_z0_z0Yz0Yz0Yz0Yz0Uz0Uz0Uz0Uz0Sz0Sz0S\
+  z0Sz0Pz0Pz0Pz0PzDSzGPzINz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

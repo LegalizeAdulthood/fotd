@@ -1,0 +1,101 @@
+;     Date: Tue, 01 Oct 2002 00:38:43 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-10-02 (Midget in a railyard [7])
+;       Id: <1.5.4.16.20021001004004.2b67fe4a@pop.mindspring.com>
+; ---------
+; FOTD -- October 01, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal impresses me as a picture of a midget in the 
+; middle of a railway switching yard, surrounded by a maze of 
+; railroad tracks.  I had little choice but to name the image 
+; "Midget in a Railyard".
+; 
+; The formula behind the image is Z^2.001+2Z+C, a formula that 
+; draws virtually the same fractal as Z^2.001+C.  But virtually is 
+; not the same as exactly, and there are small differences between 
+; the fractals drawn by the two formulae.
+; 
+; When Z is added to Z^2 in a formula, the resulting fractal is a 
+; classic Mandelbrot set that has shifted its position but not 
+; changed its shape.  But when Z is added to any other power of Z 
+; except 1, the resulting fractal changes shape as well as shifts 
+; its position.  When the exponent is close to 2, as with the 
+; Z^2.001 of today's image, the change is small, but it is there.
+; 
+; At first glance, the fractal created by the simple formula 
+; Z^2.001+C appears to be a normal M-set, but a closer examination 
+; of the negative stem will reveal that the stem has split into an 
+; infinitely divided series of filaments resembling curving 
+; railroad tracks.  These track-like filaments are strung with 
+; midgets.  In today's image, I have added 2Z to the simple 
+; Z^2.001, which further splits the filaments and works even more 
+; madness in the area of the negative stem.  Today's midget lies 
+; on one of these track-like filaments.
+; 
+; With a render time of 19 minutes, the parameter file of today's 
+; image is rather slow.  Turbo speed can be found at the following 
+; web sites, where the completed image will soon be posted if it 
+; is not already waiting.
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Monday here at Fractal Central was once 
+; again near ideal.  Warm sun and a temperature of 75F 24C lured 
+; the fractal cats once again into the yard, where they explored 
+; for an hour before retiring to their favorite chairs to enjoy 
+; the sun on the porch.
+; 
+; As for me, now that I'm again on a daily FOTD schedule, I'll be 
+; writing mostly in the evening hours.  Since it's now evening and 
+; the day's work is finished, I'll commence the shut-down of the 
+; fractal shoppe, turn out the lights, call it a night, and watch 
+; the end of the Ravens' football game.  (We're winning!)  Until 
+; tomorrow around this same time, take care, and never lose your 
+; sense of wonder.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+MidgetInA_Railyard { ; time=0:19:04.04--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.74390411923717100/-0.007465126522865\
+  71/8.121706e+009/1/-90/3.88578058618804789e-016
+  params=1/2.001/2/1/0/0 float=y maxiter=2600
+  inside=0 logmap=421 periodicity=10
+  colors=000uayoavjaudar`apVamPajLaiFafAad4aa0a`1__3\
+  YY4VY6TX7SX9PVAOVCMTDJSFISGGQIDQJCPJAPLFOMIOOLOPOM\
+  PQMQTMSXMT_LTaLVfLXiJYlJ_oJ_sJ`xIazIczIczIazMazP`u\
+  T`oX_i__cc_`fYXiYSmXOpXJsVMxVTzX`zcguigmogfsg_xgSz\
+  gLzgDzg6zgFzg3zg6zg9xgCugFpgImgLlgOlgQjgTigYf``dTc\
+  aMf`FiY7lX0oT0pS0rP0sO0uM1rM4pM7oLAmLDlLIjLLjJOlJQ\
+  mJToJXpLVmLTjLTiLTfLTcMTaMTYMTTMTQMTMMTIOTFOTAOT6O\
+  T3OT0OT0MT0MT4LT7LTCJVFJXJIYOI_QGaVGcYGdaFffFiiDjm\
+  DlpCmuCpyArzAszAuzGizMYzSMzYAza0zc3zd6zd9zfAzgDzgG\
+  ziJyiLyjOxlQvlTvmVuoYso`spcrpdriuXazAcz7cz6cz4cz3c\
+  z1cz0cx0cv0cs0co0cl0ci0gf9lcQoagl_fjXdiXcgVafVadT`\
+  aT_`SY_SYYQXXPVVPTSOSQOSPMQOMPMLOLLOOIPPGPSFPTDPXC\
+  PYAQ`9Qa7Qd6Qf4Qg3Qj0Sl0So0Sr0Su0Sx0Tz0Tz0Tz0Tz0Tz\
+  0Tz0Yz0az0fz0jz0oz0sz0xz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz1zzIzz9zz1zz1zz1zz1\
+  zz1zz1zz9zzFzzLzzSzzYzzcz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 
