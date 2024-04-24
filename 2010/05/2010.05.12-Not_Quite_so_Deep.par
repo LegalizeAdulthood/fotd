@@ -1,0 +1,102 @@
+;     Date: Wed, 12 May 2010 22:31:32 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-05-10 (Not Quite so Deep [8.5])
+;       Id: <1.5.4.16.20100512223231.2bb7915a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 13, 2010 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us from the East Valleys of large minibrots 
+; into totally uncharted territory.  The parent fractal of the new 
+; world came about when I combined Z^(-3) with 2 parts of Z^(-1.2) 
+; and added (1/C).  This parent fractal is indescribable, but it 
+; basically consists of an over-sized figure-eight and a smaller 
+; Mandeloid with no East Valley.  The whole works is surrounded on 
+; its south side by an even larger sinuous loop.  Today's scene is 
+; located somewhere between the figure eight and the Mandeloid.
+; 
+; At first glance, the image resembles a very deep one, with a 
+; magnitude somewhere around 10^25.  Actually, the magnitude is 
+; only 10^10, which means no arbitrary math is needed.  (Actually, 
+; arbitrary math is not available with type=formula fractals.)  
+; This deceptive appearance explains the name "Not Quite so Deep".
+; 
+; Most of the image's worth is a result of the coloring, which is 
+; why I rewarded myself with an extra half-point added to the 
+; already high rating of an 8.
+; 
+; The parameter file runs in a very reasonable 1-3/4 minutes, at 
+; least on my fractal-dedicated 2000mhz unit.  On the old but 
+; still cooking P5-200mhz unit the image takes over 9 minutes to 
+; finish.
+; 
+; But all concern about running time may be avoided by viewing the 
+; completed image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where immediate gratification is the rule rather than the 
+; exception.
+; 
+; The weather was dry, but the heavy clouds kept things suppressed 
+; here at Fractal Central on Wednesday.  Strangely enough, the sky 
+; completely cleared for an hour just after noon, then, after an 
+; hour of bright warm sun, the clouds returned as quickly as they 
+; had cleared away.  The temperature reached 64F 18C while the sun 
+; was shining, the rest of the time it hung around 57F 14C.  The 
+; fractal cats were rather sulky most all day, keeping themselves 
+; occupied by actively ignoring each other.
+; 
+; My day was fair enough.  Tomorrow will probably be the same.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and stand in awe of your world image.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Not_Quite_so_Deep { ; time=0:01:44.32-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+3.010986478661356/+0.0682987406306285/\
+  1.616741e+010/1/-107.5/0 params=1/-3/2/-1.2/0/0/0/0
+  float=y maxiter=1500 inside=0 logmap=185
+  colors=00000D00F00H00J00Q00H00_00XQ0RX0OO0dX0ecccc\
+  cc009000zR8zR8000000Xz7Oz92Eh5FbczzzzS000EGGyzsF`z\
+  4`y7Wn9SdCOVEKLzm1NY4LS6IA9CDV000EFL000zJzzIzRHOM_\
+  oKTaISOTcHMVELTr7dk9beAe`BhWbtVzzVzzzzzVziQz`LxTGx\
+  KBxC6nGBeKFWNJNRNDVR4YRM_QbaMscIjeOagUUiZLkdDliUbz\
+  Hkz4sz9ozElzIizNezRbzW_p_XpheiqnbywWreTkOQe7O`EPXK\
+  PSQQOWQJaRFgRE`YDVcCPzBJzADz9Hz9LzFRzMYVTcP_jI_eK_\
+  _M_UOZPQZJSZDUY7WVCZSHbPMfLSj`o8VfCPXHJNLDDQIDONDM\
+  SDKXDHaDFfDDkEAlDGnBNp9Tr7_t5ev3ln7mfBoYFpQJrINs9S\
+  uFYhLcVSjHPmELzAJpAGzADpAAzA7pA4zB4nB5zB5jB6zB7gB7\
+  zB8cB9zCxnuozqejlWhgNfcDdZ3aUNZ1LS1IL1FE0HI8JMGMQO\
+  OVWRZcTbkWgtP_`HXHCUU6Ug0UuKUkHWgD`c9cZ5cV1cQ3cz6c\
+  BCczJcBQczXcAbZziUzpPzxQ9rNzmKChcEccGZcITcKVcLXcMZ\
+  cNacODkQEnLFqGTtsQwkOzdMzXKzQzzIzzMzzKzzJzzHzzGzzF\
+  zzDzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,94 @@
+;     Date: Mon, 17 May 2010 23:40:06 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-05-10 (Digging in the Dirt [8.5])
+;       Id: <1.5.4.16.20100517234109.2ab79aec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 18, 2010 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image came about when 4 parts of 
+; Z^(-1.75) were combined with Z^(-4) and (1/C) was added.  This 
+; parent fractal consists of a large central 3-lobed bay, much 
+; resembling a clover, with a string of smaller disconnected ring-
+; like features extending to the northeast.  Today's scene is 
+; located in one of the smaller elements in this disconnected 
+; string.
+; 
+; The entire effect of the image was created by half evaporating 
+; the original scene, then rendering the remaining 'outside' parts 
+; with the 'tdis' option.  The newly opened 'inside' parts were 
+; then brought to life with the 'bof61' option.  And let us not 
+; forget the part my coloring added to the overall effect.
+; 
+; Add all this trickery together and the rating works out to an 
+; 8.5.  The name "Digging in the Dirt" has no meaning.  It simply 
+; popped into my over-stressed head when I saw the image.
+; 
+; The calculation time of under 18 seconds will cause no grief.  
+; Even less grief will be felt at the FOTD web site, where the 
+; finished image is posted for instant and total gratification.  
+; The web site may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Clouds moved in early here at Fractal Central on Monday.  The 
+; rest of the day was cloudy with a temperature of 66F 19C.  Rain 
+; was hinted at, but never arrived.  The fractal cats occupied 
+; themselves getting into trouble in the maze of book shelves in 
+; the hallway.
+; 
+; In my department, things were average, whatever the word average 
+; means when applied to a particular day.  And if nothing out of 
+; the ordinary happens, tomorrow will be a repeat.  The next FOTD 
+; will be posted in 24 hours.  Until then, take care, and what is 
+; the meaning of a search for meaning?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Digging_in_theDirt { ; time=0:00:17.90-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip float=y
+  center-mag=+2.74893763512/+1.28555993412/1188566/1\
+  /22.5/0 periodicity=10 params=4/-1.75/1/-4/0/20000\
+  /0/0 maxiter=8000 inside=bof61 outside=tdis
+  colors=000750vwjghZTUNEFBcNpQFZD7Hz9we6cL3K3Mu1BTb\
+  ptTbeJQS9DElZog3I_2FT2CM19E16703zm89K8vY0cczyRzUPz\
+  yjzvLzuJztHzuGzuGzvGzvGzwGzwGzxGzxGztHzqHzmHzjHzfH\
+  zcHpZFkUEgPCcKB_GAWC7O85Gzz0Xl6Qb4JT3DJ2691YJ7LH3D\
+  NLDRIBOF9KC6F94A6253T5EJ39914bI6TD4J93941a54LWEAG7\
+  8WU7SQ6OM5KI4GF3CB2871436d55Z44U33P33K22F11A1050LJ\
+  KFEFA9A545Bs5BrI8gE6XA4M72B3s1bk0Xc0RW0MKJKKJK805Y\
+  `JMrzTmzRjtL`hGSYAIM59Bz00nMMcGGWBB000_e7UZ5OS4IL3\
+  000000zzUunXfgS9_N1TJ1ME0E9074000YZJHH9zzzOzqIWmCL\
+  I6A9GCgA8T54EfQzYKYPFPHAH85824F13C12A1280160140026\
+  Oz5Kz4HZ3DS2AL16E037S47O36L35H24E23A127113006Rr5Nk\
+  4Kd3GY3DR2AK16D036cnFXeCQYAKP7DH5682WS3OL2GE1870vv\
+  aKWfETftVmlXgeZaZ`WRbQKdKDfE6h88fAAdCBbED`GFZIGXKI\
+  VMJTNO4VL3RI3NF2JC2F91B617303xQYUDH71I309OC0YmlRcb\
+  KUTDKJ6A9QutYuOSkKMaGHTCBJ8594KSnAEP9Ib6CQ36DyNElI\
+  B`D8O95C42gX3_R2TM2MG1EB1 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

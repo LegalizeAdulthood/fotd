@@ -1,0 +1,100 @@
+;     Date: Tue, 18 May 2010 22:48:32 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-05-10 (Microistic Disorder [?])
+;       Id: <1.5.4.16.20100518224935.2af7a636@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 19, 2010 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is not rated because it is merely a study in 
+; coloring fractals.  The basic B-W color palette is a part of the 
+; Fractint program, and may be accessed by striking <ctrl-F1> 
+; while in coloring mode.  In today's image I added a few pale 
+; extra colors to give a bit of sparkle.  Take away the pale col-
+; ing and the image is a true graphic.  Actually, this particular 
+; color palette brings out the underlying forms of the fractal 
+; quite well.  A bit of color tweaking will reveal the basic diffi-
+; culty of coloring the fractal.
+; 
+; The iterated line of the parent fractal subtracts 4 parts of 
+; Z^(-5) from 2 parts of Z^(-3) then adds (1/C).  This parent is 
+; nothing more than an empty circle with a brilliant white spot in 
+; the center and six irregular islands of debris scattered around 
+; the perimeter.  Today's scene is located in the easternmost 
+; debris island.
+; 
+; With no idea how to accurately rate a fractal study, I left the 
+; rating a question.  The name "Microistic Disorder" does not 
+; refer to some vague medical affliction characterized by an obses-
+; sion with fractals.  Like so many of my FOTD names, it has no 
+; meaning at all, other than the way it sounds.
+; 
+; Unfortunately, the image is a slow one, which takes 13-1/2 
+; minutes to run even on a fireball 2000mhz machine primed for 
+; fractal generation.  The solution to this minor problem is to 
+; surf out to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and in ultimate comfort enjoy the finished image posted there.
+; 
+; Light but steady rain set in at midnight Monday here at Fractal 
+; Central and continued through the day on Tuesday, while the 
+; temperature hovered around an un-springlike 50F 10C.  The 
+; fractal cats were happy with the temperature, since it was 70F 
+; 21C inside FC the entire time, and there was no indoor rain.
+; 
+; My day was busy but productive.  If only every day could be the 
+; same...  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and look for the bright side, but don't be surprised 
+; if you get slugged by the dark side instead.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+MicroisticDisorder { ; time=0:13:28.18-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+0.993714689388549/+0.1300117885242976/\
+  4e+009/1/-51.5/0 params=2/-3/-4/-5/0/0/0/0 float=y
+  maxiter=10500 inside=0 outside=tdis periodicity=10
+  colors=000zzzJIKJIKKJKKJKLKKLKKMLKMLKNMKNMKONKONKP\
+  OKPOKQPNQPNRQORQOSRPSRPTSQTSQUTRUTRVUSVUSWVTWVTXWU\
+  XWUYXVYXVZYWZYW_ZX_ZX`_Y`_Y`_Ya`Za`Zba_ba_cb`cb`dc\
+  adcaedbedbfecfecgfdgfdhgehgeihfihfjigjigkjhkjhlkil\
+  kimljmljnmknmkonlpnlqomromspntpnuqovqowrpxrpysqzsq\
+  ztrztrzuszuszvtzvtzwuzwuzxvzxvzywzywzzxzzxzzyzutzu\
+  uzuuzuuzuuzuuzuuzuuzuuzuuzuuzuuzuuzutzutzuszzxzywz\
+  ywzxvzxvzwuzwuzvtzvtzuszusztrztrzsqzsqzrpyrpxqowqo\
+  vpnukntomsomrnlqnlpmkomknljmljlkilkikjhkjhjigjigih\
+  fihfhgehgegfdgbdfecfecedbedbdcadcacb`cb`ba_ba_a`Za\
+  `Z`_Y`_Y`_Y_ZX_ZXZYWZXWYXVYXVXWUXWU`VTWVT_USVUSZTR\
+  UTRYSQTSQSRPSRPRQORQOQPNQPNXPMPOMYNLONLXMKNMK`LKML\
+  KLKK_KKKJKUJKJIKYIKIHKXHKZGKHGKSKUTPKUEKKEUUDKUDUK\
+  CKUCUUBUUBKUAUKAUU9KK9UK8UK8KK7UK7KK6UT6KKPKK5KK5U\
+  K5KK6UK6KK7UK7KK8UK8KK9UK9KKAUKAKKBUKBKKCUKCKKDUKP\
+  KKEUKEKKFUKFKKGUKGKKHUKHK }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

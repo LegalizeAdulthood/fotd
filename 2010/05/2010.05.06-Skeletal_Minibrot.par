@@ -1,0 +1,94 @@
+;     Date: Thu, 06 May 2010 22:56:28 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-05-10 (Skeletal Minibrot [6])
+;       Id: <1.5.4.16.20100506225839.2aef482e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 07, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is the same scene as yesterday's, with the slight 
+; difference that it was rendered with the inside set to the color 
+; number zero instead of 'bof61'.
+; 
+; As a result, all the parts of yesterday's image that were made 
+; of 'inside' stuff have gone totally black, leaving a scattering 
+; of dots, which become the outline of a Mandelbrot set when seen 
+; from a distance.  This explains the name, "Skeletal Minibrot".
+; 
+; Though yesterday's image rated a full 8, today's image is a 
+; virtual repeat, and therefore rates no more than a 6.  I don't 
+; particularly like repeats, but sometimes they do happen.
+; 
+; The calculation time is a zippy 19 seconds, almost exactly the 
+; same as yesterday's.
+; 
+; The trip to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where the finished image is posted, may not save any time, but 
+; it will avoid all the hassle that goes with setting up and run-
+; ning the included parameter file.
+; 
+; Thursday was a perfect day weatherwise, at least here at Fractal 
+; Central, where we had total sun and a temperature of 75F 24C.  
+; The fractal cats must have agreed, for when we gave them their 
+; morning exercise with their favorite toy, a toy bird on a string 
+; attached to a stick, they started leaping like year-old kittens. 
+; Cassie finally caught the bird in mid air and 'killed' it.  My 
+; day was fair enough despite a minor flap during lunch with FL, 
+; who still feels my attitude toward the world is too negative.
+; 
+; The next FOTD, a very deep and slow one, will be posted in 24 
+; hours.  Until then, take care, and anger solves nothing, but 
+; sometimes it sure feels right.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Skeletal_Minibrot { ; time=0:00:19.29-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-4.668/0/5.694761 params=-0.0035/-6/\
+  -0.014/-5/0/0/0/0 float=y maxiter=1125 inside=0
+  logmap=5 symmetry=xaxis periodicity=6
+  colors=000BD57FA5GF2HK8KMCMPIPSMRVRUYWW`_Xg`Yi_Zf_\
+  _h``eaagbbicckddmeeoffqhgsjhulivnjwpkxrlytmzvnzyoz\
+  zpzzpzzpzzpzzpzzpzzpzzqzzqzzqzzqzzqzzqzzqzzpzzozzo\
+  zzzKzzJzzIzzHzzGzzFzzEzzDzzCzzBzzzzzzzzzzzzzzz2zz2\
+  zz2zz2zz1zz1zz1zz1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

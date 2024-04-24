@@ -1,0 +1,100 @@
+;     Date: Fri, 28 May 2010 22:15:53 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-05-10 (Two-for-One Sale [7])
+;       Id: <1.5.4.16.20100528221705.2ba7eae4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 29, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image gives us two for the price of one.  The upper half 
+; is partly evaporated, the lower half is not.  The line of demar-
+; cation runs right through the center of the image.
+; 
+; The 'inside' parts of the upper half have been colored by ren-
+; dering the image with the inside set to the color 255, which in 
+; today's palette is a brilliant blue-green.  The lower half is 
+; all outside stuff rendered in the usual equal-iteration manner.
+; 
+; The imag(p3) parameter controls the location of the edge of 
+; evaporation, but its value is quite critical.  Change it at your 
+; own risk.
+; 
+; Most of the image's value lies in its mathematical aspect, 
+; though the artistic merit adds to the worth, for a final rating 
+; of a 7.
+; 
+; The name "Two-for-One Sale" refers to the contrasting images on 
+; the two halves of the screen.
+; 
+; The parent fractal is little more than an amorphous oversized 
+; hole with a filament curling up and around to its west.  A 
+; rather large minibrot lies on this filament.  Today's image lies 
+; in the interior of the East Valley of this minibrot.
+; 
+; The calculation time of a mere 37 seconds is cheap enough, but 
+; the trip to see the finished image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; will eliminate all possible calculating problems, such as an 
+; over-qualified SOTA computer that can surf the WWW in a few 
+; seconds but cannot run a DOS program.
+; 
+; Clouds and humidity ruled the weather here at Fractal Central 
+; on Friday, with occasional light showers to add variety.  The 
+; temperature of 77F 25C felt much higher due to the humidity.  
+; The fractal cats, apparently unaffected by high humidity, were 
+; comfortable.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and be of noble heart.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Two-for-One_Sale { ; time=0:00:37.13-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip
+  center-mag=-6.445544478503554/+0.3276897461769029/\
+  970000/1/93/0 params=-0.9/-0.9/-0.15/-9.9/0/2435\
+  73570000000.0/0/0 float=y maxiter=12000 inside=255
+  colors=000eaTdcXde`hf_kg_nhZqiZleahaccYe_VgVRiRNlM\
+  JnIGpDCr98t55v98sDApGDnKFkOHhRKfVMcZO`aRZeTWiVTlYR\
+  p_OsaMmYSgVYbScXOhSLnMItHFyLDuOCqRAmU9jX8f_6bb5Ze4\
+  Wh2Sk1On0Ll2Mj3Nh5Of6Pd7Qb9RaAS_BTYDUWEVUFWSHXQIYP\
+  JYq1Kp6LpBMoFMoKNnPNnTOnYPmbPmfQlkQlpRltRgeZcSe_El\
+  FXtIVpKUlMTiOReRQbTPZVOWXMSZLOaKLcIHeHEgGAiF7gEBeE\
+  EdDIbDL`CO_CSYBVXBZVAaTAdS9hQ9kP9nUEiZJecOagSYdQWb\
+  OU_MSYLQVJOTHMQFKOEITKGJAEG8CE7BNEEHEGIKIKKKLNMMQO\
+  NTQPXSQ_URbWSeYUh_VkaZnccqehrfmrhrrmvrrzsvzszzszzu\
+  vzwrzzmzzhzzgzzfzzezzczybzxavx`ry_myZht_co`ZkaUfbP\
+  acMYdJTeGOfDKgAFh7Ai56j6Ai6Ah6Ag6Ag6Ff6Ke6Pe6Ud6Zc\
+  6cb6hb6ma6r`6v`mz`zl`vkbczzmkekhfjchiZihUkgPleKncF\
+  oaAp_AkZAgZAcYA_YAVYARXANXAJYAEYVAZT6_S2YR3VR3SR3P\
+  R3MR3JR3GR3DR3AR37R3AS4CT4EU4GV4IW5KX5MY5OY5QZ6S_6\
+  U`6Wa6Yb7_c7ad7cd7de9deBdeCeeEefFefHffJffKfgMggNgg\
+  PggQjN5iQ9hSzgVHgXLfZPczz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

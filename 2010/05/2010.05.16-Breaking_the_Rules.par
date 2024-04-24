@@ -1,0 +1,86 @@
+;     Date: Sun, 16 May 2010 22:35:56 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 17-05-10 (Breaking the Rules [5])
+;       Id: <1.5.4.16.20100516223658.2adf88d6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 17, 2010 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To create today's unexceptional, 5-rated image I subtracted 0.6 
+; part of Z^5 from Z^3 and added straight C.  The image is located 
+; on the positive X-axis of the parent fractal, which is far 
+; easier to see than to describe.
+; 
+; The name "Breaking the Rules" refers to the lack of any kind of 
+; 2,4,8... symmetry in the elements surrounding the obviously 
+; quadratic minibrot at the center.  Quadratic minibrots are not 
+; always found by searching for 2-way symmetry.
+; 
+; The calculation time of the image is a surprisingly brief 38 
+; seconds, which is about half the time needed to view the image 
+; on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; but viewing the already finished image avoids the hassle of 
+; setting up and running the included parameter file.
+; 
+; The Sunday weather here at Fractal central was a repeat of 
+; Saturday's, minus the morning cat fight in the yard.  The sky 
+; was partly cloudy, while the temperature reached a high of 70F 
+; 21C.  The fractal cats were far more relaxed with no shouting 
+; tomcats squared off outside.
+; 
+; The next in the apparently endless string of FOTD's will be 
+; posted in 24 hours.  Until then, take care, and one day there 
+; will be a final FOTD, but not for some considerable time, I 
+; presume.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Breaking_the_Rules { ; time=0:00:38.28-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident inside=0
+  center-mag=+1.081611773/0/4800/1/90/0 logmap=36
+  params=1/3/-0.6/5/0/0/0/0 float=y maxiter=750
+  colors=000demcfmbgmahm`im_jmZkmYlmXmmWnmVomOpmIqmB\
+  rmCsmDtmLumTvm`wmhxnpyoxzpzzzzzzzzzzzzznnmUUmUJmU8\
+  mUDhW8cTDZRHUOMWNQYMU_MSaLRcKPeIOgFMiDLkBJm9Ii7OX5\
+  YK3c72hG8cODZWNUcSPkXLjVHjWDkWAnU6qS3tQ0wO0zQ0zS9z\
+  TAmVBjXCjYDj_Ej`FjbGkdIkeJkgKkgQkhLkjMklNkmOkoP5D4\
+  8G6BI7DL8GNAIQBLSCNUEQXFSZGVaHXcJ_eKahLdjNfmOioPiS\
+  qhUohVngWmgXkgYjf_if`geafebeeccdebdfadg_hhZc_YbaWb\
+  bVbcUadSaoR2nBCpELqHUsKboNHo_JpZKpZLpYMpYNqYPqXQqX\
+  RqWSrWTrWVrVWrVXrVYsUZsU`sTasTbtTctSdtSftRguRhuRiu\
+  QjuQ3tx5sv7st9ssBsqDspFrnHrmJrmLrmNrmPmmRlmTlmVlmX\
+  lmZlm`lmbkmdkmfkmhkmjkmRmmSlmSlmTlmUlmWlmYlm_lmalm\
+  clmelmglmimmkmmmnmonmqomtomwpmxpmzqzzqzzqzzqzzpzzp\
+  zzpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzuzzuzzuzzuzzuzzuzz\
+  uzzuzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

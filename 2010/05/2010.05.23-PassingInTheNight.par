@@ -1,0 +1,115 @@
+;     Date: Sun, 23 May 2010 22:36:56 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-05-10 (Passing in the Night [6.5])
+;       Id: <1.5.4.16.20100523223803.2b3fe0f2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 24, 2010 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For some strange reason, today's image reminds me of two ships 
+; passing peacefully in the night, which explains the name 
+; "Passing in the Night".  But the image does not show two ships 
+; passing; it shows two almost-Julia sets arranged in a symmetri-
+; cal pattern around an imaginary point.
+; 
+; The image is located in the Seahorse Valley complex of the large 
+; minibrot on the main spike of the Mandelbrot set.  The orienta-
+; tion is double-rotated 0.005,0.005 degrees from the true Julia 
+; direction.  As is true of many near-Julia sets, this tiny rota-
+; tion makes a world of difference in the appearance of the inside 
+; parts of the parent fractal.
+; 
+; The twin almost-Julia-set theme of today's image is repeated 
+; without change at ever smaller scales at the centers of the 
+; Julia sets in the image, apparently all the way to infinity, 
+; which is the way things usually go in the world of fractals. 
+; 
+; The basic image rates a 6.  The extra half-point that brings the 
+; rating to 6.5 is a reward for the effort I put into coloring the 
+; scene in an effort to make the almost-Julia sets resemble real 
+; three-dimensional objects.
+; 
+; The calculation time of 5 minutes is true on the 2000mhz unit.  
+; Surprisingly, on the 200mhz unit the same image finishes in well 
+; under 9 minutes, which is only 1.8 times the running time of the 
+; supposedly 10 times faster unit.  Even more surprising, with 
+; type=mandel fractals the 10-times-faster machine runs almost 20 
+; times as fast.
+; 
+; But why not forget this timing confusion by visiting the FOTD 
+; web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; and viewing the finishedimage there.
+; 
+; Clouds and occasional light showers of rain marred Sunday here 
+; at Fractal Central, though the temperature of 75F 24C could 
+; hardly have been improved upon.  The fractal cats showed their 
+; dis-satisfaction when they got into a spat to decide who would 
+; spend the afternoon on the ottoman foot-stool.  Cassie won the 
+; minor dispute with a loud hiss and a hit to Nicholas' head.  
+; Nicholas then sulked for an hour or so.
+; 
+; My day was about average; most likely Monday will be the same.  
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and everything that happens above the quantum level has a 
+; probable cause, but does it have a reason?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+PassingInTheNight { ; time=0:05:08.10-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=+0.000680161\
+  02056917/+0.00100690867803902/1095589/1/-2.5/0
+  params=89.995/0/89.995/90/-1.768531/0.0002/0/0/2/0
+  float=y maxiter=32767 inside=255 periodicity=0
+  colors=000Ok5Ok5Nk5Pl5Um5Zn5co5hp5mq5rr5vz4zz3zz2z\
+  z2vz4rz6my7hw9cuBZsCUqEPpGKoHInJKmLLlMNkOPjQQiRShT\
+  TgURfSQfRPeQOePNdOMdMLcLKcKJbJIbIHbGGaFFaEE`DD`CC_\
+  AB_9AZ89Z78Z69`CAbIBcOCeUDg_EhdIccM_cPWcNYdM_dLaeK\
+  beIdfHffGggFigDkhCmhBniApi8rj7sj6uk5wk4xk6wl8vlAum\
+  BtmDsmFrnGqnIpnKooLnoNmpPlpQkpSjqUiqVhqXgrZfr_frag\
+  nbhjdigejcgk`hlXjmUkmQmnNnoJppGqqCsr9ts5us2tp3sm3s\
+  k3rh3qf4qc4pa4oZ4oX5nU5mR5mP5lM6kK6kH6jF6iC7iA7h77\
+  H6RJ7TL8VN9XPA_RBbTCeVDhXElZFo`GrbHucIxdJzdKzeLzeM\
+  zeNzfOzfPzgQzgRzgSzeTzcUzbXz`Zz_azYczXeuVhuTjtSmtQ\
+  otPqsNrsMssItoFukBvg8wd4r`1mX0hUBcTDZSFVRHSRJQQLOP\
+  NMPQKOSJNUINeMMjTLrVLwYKz`JzcJzdIzcHzaHz_GzYFzWFzU\
+  GvSHqQInOJkMKhKKfILeGMcEKbCF`DAZEAYFAWGAVHATIASJAQ\
+  KAOKALKAJKAHKAJKALKANKAPLFRMGTNGROHPPINQJMRKLSKKTL\
+  JUMIVNHWOGXOGYNGXNHWMHVLIULIUKJUKJUJJUJKUIKUHLUHLU\
+  GMWGMYFM_FQaDUcBXeA`g8ci7 }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

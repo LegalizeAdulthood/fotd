@@ -1,0 +1,110 @@
+;     Date: Fri, 21 May 2010 23:57:03 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-05-10 (Lost in Hyperspace [6])
+;       Id: <1.5.4.16.20100521235810.2a1fb0d8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 22, 2010 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a scene in an abstract four-dimensional object 
+; known as the Z^2+C Julibrot.  It is not a scene in the Mandel-
+; brot set, nor in one of the perturbed M-sets.  Neither is it 
+; a part of any Julia set.  True, it resembles a Julia set of the 
+; East Valleys of minibrots, but only one single line of it is 
+; part of any Julia set.
+; 
+; Actually, today's image is a hybrid.  In one direction it has 
+; Mandelbrot characteristics; in the perpendicular direction it 
+; has Julia characteristics.  It lies in the orientation I have 
+; named the Rectangular, which is defined by the imag(z) and 
+; imag(c) axes.
+; 
+; The image, which has been generously stretched and skewed, lies 
+; in the East Valley complex of the large minibrot on the main 
+; spike of the M-set, a short distance in the plus-imag(z) direc-
+; tion from the M-set itself.
+; 
+; The rating of a 6 is about what the image is worth, (IMO).  The 
+; name "Lost in Hyperspace" might be the title of a sci-fi series, 
+; but it actually describes the location of today's scene.
+; 
+; The calculation time of 1-5/6 minutes is brief by any standards. 
+; Equally brief is the time required to surf out to the FOTD web 
+; site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where the finished image may be viewed in relaxed comfort.
+; 
+; A hazy sun and temperature of 86F 30C made everyone happy here 
+; at Fractal Central on Friday.  The fractal cats were especially 
+; happy, though they still kept a watchful eye out for any stray 
+; cats that might have wandered into the yard.  The activity 
+; around a hawk's nest in a nearby tree also attracted their 
+; attention.
+; 
+; My day, and FL's day as well, were satisfactory.  There is a 
+; 90-percent chance the next FOTD will be posted in 24 hours, 
+; which means there is a 10-percent chance it will be late.  Until 
+; whenever, take care, and if you want to know the meaning of 
+; existence, check your fractals.  The answer might lie hidden 
+; there.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Lost_in_Hyperspace { ; time=0:01:50.17-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=+0.000000105\
+  71810928/-0.09620033683075102/1.169683e+009/0.2073\
+  /94.7415060222973153/84.1664349416200679 params=90\
+  /90/0/90/-1.749996/0/0/0/2/0 float=y maxiter=3300
+  inside=0 periodicity=6 mathtolerance=0.05/1
+  colors=000DNUFMPGKLIIHKHDQF9XD5bC1iG2pK2qO2nS2kM3g\
+  73d63a53b44d34f24g24h29h2Di2Hi2Mj2Qj2Uk2Yk2bl2fl2j\
+  n0ll2nk4mj5li7jh9igAhfCfeEedFdcHcbJaaK``M__OYZPXYR\
+  WXTUWUTVWSOzXUXRVYQWZPX_OY`NZaMZaL_bK`cJadIbeHcfGc\
+  fFdgEehDfiCgjBhkAhk9il8jm7kn6lo5mp4mp45KAFRIOYPYdW\
+  islfkbdcTbXJ`P9ZI0`J2aK4bL5cM7dN9eOAfPCgQDhRFiSHkT\
+  IlUKmVMnWNoXPpYQqZSr_Us`VtaXxdZubYsaXp`WnZVlYUiXTg\
+  WSeURbTQ`SPZROXTMWVLVXKTZJS`IRbHQdGOfFNhEMjDKlCJnB\
+  IpAHr9Ft8Kv7Px6Uy5Zw8cuBhtEmrGrpJvoMzmOzlRzjUzhWzg\
+  Zzeazcczbfz`iv_krblmdnhgoccNUcVUcaUciShQTmUTrYTvaU\
+  zeUziUzmHzpJzpKzpLzpNzpOzpP`pRcpSepTgpNWHOXKOYNPZP\
+  P_SQ`UQaXRbZRcaShdSmfTriTvkUznk4hi9igEjeIkcNlaSm_W\
+  nY`oWepZFaXNeWViVbm9ZoKdp`1CNFJQQVS_e9XkBYlCZlD_lF\
+  `mGamHamJbnKcnLdnNeoOeoPfoRgpShpTip_wvZvuZuuZuuYtt\
+  YstYstYrtXrsXqsXpsXpsWorWorWnrWmrVmqVlqVlqVkqUjpUj\
+  pUipdSd`Yh5Wm7Ui8SeARaCPY }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

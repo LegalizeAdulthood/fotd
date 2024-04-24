@@ -1,0 +1,101 @@
+;     Date: Tue, 25 May 2010 22:34:56 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 26-05-10 (More Fractal Stuff [5.5])
+;       Id: <1.5.4.16.20100525223605.2b7fe014@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 26, 2010 (Rating 5.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a screen full of fractal stuff.  When I saw 
+; the stuff, I named the image "More Fractal Stuff".  The scene 
+; lies in the parent fractal that results when the formula 
+; Z^(1.025)+C is calculated 27 levels up the complex logarithmic 
+; hyper-spiral.
+; 
+; This parent fractal resembles a stone arrowhead with the tip 
+; facing NNW.  Today's image is located in debris on the western 
+; edge of the large and only open bay.
+; 
+; The incredible thing about the image is that an expression so 
+; close to being linear can result in such detail when iterated a 
+; few thousand times.  At first glance the scene looks totally 
+; chaotic, but a second look reveals tiny repeating patterns all 
+; through the frame.
+; 
+; Unfortunately, there is no center of attention in the image, and 
+; this lack of a unifying theme costs a full rating point.  The 
+; bit of extra work I put into the coloring raised the rating a 
+; half-point above an everyday 5, but do not expect the thrill of 
+; a lifetime when the image first appears.
+; 
+; The calculation time of 6-2/3 minutes is slower than the result 
+; is worth, so I advise surfing out to see the finished image on 
+; the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Summer arrived here at Fractal Central on Tuesday, with hot sun 
+; all day and a temperature of 86F 30C.  The fractal cats of FC 
+; stretched out on the carpet and looked very happy.  My day was 
+; reasonable, which is well within reason.  The next FOTD will be 
+; posted in 24 hours.  Until then, take care, and maybe I should 
+; follow the media, which tells us what we should worry about, and 
+; be more concerned about global warming and less concerned about 
+; cell-phone radiation.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+More_Fractal_Stuff { ; time=0:06:39.91-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.7913597645032089/-3.065371046706491/\
+  5.402604e+010/1/-125/0 params=1.025/0/27/5000
+  float=y maxiter=3600 inside=255 logmap=418
+  periodicity=6 mathtolerance=0.05/1
+  colors=000RJPRKQRLRSMRSMSSNSTOTTPTSQUTRUUSUVSUWTVX\
+  UWYVXZWY_XZ`Y_aZ`b_ac`acabcaccbdccecdfcegcfhdgmehr\
+  fivgjzgkzkkzmmzppzsszvvzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zhsugrugrtfqtfpteptdotdoscnscnsbmsblsalrakr`kr_jr_\
+  jrZiqZhqYhqYgqXgqXfpWfpVepVdpUdpUcoTcoTboSaoRaoR`n\
+  Q`nQ_oP_oPZoOYoOYoNXoMXpMWpLWpLVqKUqKUqJTrJTrISsHS\
+  sHRsGQtGQtFPtFPtEOuDPuEOuEOuENvFNvFMvFMvFLvGLwGKwG\
+  KwGJwHJxHIxHIxIHxIHyIGyIGyJFyJFzJEzJEzKDzKDzKCzMDz\
+  LCzKCzKCzJBzJBzIBzIAzHAzHAzGAzG9zF9zF9zE8zE8zD8zD8\
+  zC7zB7zB7mA6mA6m96m95m85m85m75m74m64m64c53c53c43c3\
+  2c43c43c54c54U65X65Y66Z76Z77_87_88`88a98a99bA9bAAc\
+  AAdBBdBBeCCeCCfCDgDDgDEhEEhEEiEFjFFjFGkGGkGHlGHmHI\
+  mHInIJnIJoIJoJLnJNmJPlKRkKTkKVjLXiLZhL`gMbgMdfMfeN\
+  hdNjcNkcOjbOjbPjbPjbQibQibRibRibSibShbThbThbUhbUgb\
+  VgbVgbWgaWgaXfaXfaYfaYfaZeaZea_ea_ea`ea`daadaadabd\
+  adc`bda`db_dc_F__G_ZHZYIZ }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
