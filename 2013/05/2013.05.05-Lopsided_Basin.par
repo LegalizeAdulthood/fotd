@@ -1,0 +1,112 @@
+;     Date: Sun, 05 May 2013 23:59:38 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 05-05-13 (Lopsided Basin [8])
+;       Id: <1.5.4.16.20130505235925.2ab7caee@earthlink.net>
+; ---------
+; 
+; FOTD -- May 05, 2013 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that results when the 
+; simple formula Z^(1.75)+C is iterated 9 levels up the multi-
+; dimensional complex-logarithmic hyperspiral.  This fractal 
+; consists of a large main bay split along the X-axis, with a 
+; prominent disconnected smaller Mandeloid lying some distance to 
+; the southeast.  Today's scene lies in a valley in this smaller 
+; Mandeloid.
+; 
+; The name "Lopsided Basin" refers to the unbalanced nature of the 
+; basin surrounding the central minibrot, where the iteration 
+; count and therefore the appearance of the fractal elements on 
+; the left and right sides are vastly different.
+; 
+; The rating of an 8 includes a bonus for the coloring effort, 
+; though I'm not saying how much of the rating includes the bonus.
+; 
+; The calculation time of 1-2/3 minutes will pass fast enough to 
+; keep boredom in the realm of remote possibilities.  Boredom may 
+; be done away with altogether by viewing the image on one of the 
+; FOTD web sites.
+; 
+; Accept the obvious.  Fractals are great!  For rational proof, 
+; check the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and if further proof is needed, check the high-definition 
+; renderings at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The ultimate in proof may be found at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where thousands of similar fractals are posted.
+; 
+; Cloudless skies prevailed all day on the 4th and 5th here at 
+; Fractal Central, with a temperature of 72F 22C both days and 
+; gentle breezes.  The fractal cat saw the sun outside and 
+; wondered why it failed to reach his shelf.  The humans spent the 
+; 4th working and the 5th relaxing.
+; 
+; The next FOTD will be posted soon enough to prevent withdrawal 
+; and with enough delay to prevent fractal overload.  Until 
+; whenever, take care, and to me it seems as though we're so 
+; obsessed with political correctness that we have no way to even 
+; recognize the causes of our problems much less to accept the 
+; causes and rationally discuss possible solutions.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Lopsided_Basin { ; time=0:01:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+1.266621276199444/-0.148359824796705/\
+  2.008047e+007/1/75/0 params=1.75/0/9/0 float=y
+  maxiter=1800 inside=0 logmap=238 periodicity=6
+  colors=00050B60970780B90EA0HB1LC2OD3RE4VF5YG6`I7cK\
+  8fMBhNEiNHjOKlONmPQnPToSXjU_fWbaYfY_iUalUcpUesUgvU\
+  isUkqZlocnmhommqmrrmvtmzumzvmzvmzvmzwmzwmzwmztkzqi\
+  zngzkeziczgbzeazd`zc_zbZzaYv`Xr_WmZVhYUcXSZWQ_VO`U\
+  NZSMXQMWONUMNTKORITQGQGFR6FRDFSAFS2JO3ML4QH5SE6UA7\
+  S78P39M0ALC8RO7S_6IRB9LG0IL7MEDY8Jh2Kc6L_9MWCMSFSO\
+  GYKGcGHhDHXPEL`C9kA5p51t0PpLlleEU0Dc5DcACcFCcKCbPJ\
+  eLPhIWkFamCgp9ns6tv3zw0zx1zy1zz2zz2AzHAzWAzj9zm8zo\
+  Qzjgzeyzaqz_izYzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzyzzxzzwzzvzzuzztzzszvriuohwjgwifw\
+  hcwh`rdYm`VmaSmcPmcMmcJmZDmZ7mZ2mZLmUbhQtZRfVSUQTG\
+  MP3RK`TF_UA_W6ZX6ZZ6Z_7Ya7Yb7YZDaVIeRNiNTmJYqFbtKX\
+  jPSaPHOOCEcBAh61i88jAFkBMlDTmF_nGfoImpJtiLpbNlWPiP\
+  ReISbL_hOfnQmsSMSUOUWQWYSY_TZaV`cXbeZzg_zi`zkazmbz\
+  mbzmczmdzmezmezmfzmfzmfzmgzrgzrgzrhzrhzrhzrizrizri\
+  zrjzrjzrjzrkzrkzrkzrlzrlz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

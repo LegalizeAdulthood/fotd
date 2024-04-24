@@ -1,0 +1,105 @@
+;     Date: Wed, 15 May 2013 17:43:22 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 15-05-13 (Crystal Cities [M-4,A-6])
+;       Id: <1.5.4.16.20130515174319.0d8767d4@earthlink.net>
+; ---------
+; 
+; FOTD -- May 15, 2013 (Rating M-4,A-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we take a brief break from hyperland and check 
+; the parent fractal that results when the formula Z^(1.37)+C is 
+; iterated 1.37 levels up the hyperladder with no function 
+; applied.  This parent appears as a shapeless main bay with an 
+; equally large and shapeless period-2 bud attached to the 
+; northwest side.  Today's image is located in a twisting filament 
+; just inland of the eastern shore line of the parent's main bay.
+; 
+; I named the image "Crystal Cities" for no apparent reason.
+; 
+; The math interest rates a rather boring 4, the artistic worth, a 
+; not much better 6.
+; 
+; The calculation time of a mere 45 seconds will remove some of the 
+; disappointment if the image lays an egg.
+; 
+; The finished image should be posted on the official web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; but the host site has been having problems and has been hard to 
+; access lately.  It might be down.  If it is down, check the 
+; hi-def version of the image at Hal's site at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Hopefully, his site is up to date:
+; 
+; Regardless, the back images are online at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A rather pleasant day passed virtually un-noticed today here at 
+; Fractal Central, with ample sun and a temperature of 75F 24C.  
+; The fractal cat enjoyed the few beams of sunlight that managed 
+; to sneak into F.C.  (We get little inside sunlight during the 
+; high-sun-angle time of year.)  The humans made the best of 
+; things.
+; 
+; The next FOTD will be posted in a matter of hours.  How many 
+; hours is yet to be determined.  Until whenever, take care, and 
+; get hot under the collar about climate-change-global-warming.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Crystal_Cities { ; time=0:00:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.80267755/+0.71031711/117.094/1/65/0
+  params=1.37/0/1.37/0 float=y maxiter=16000 inside=0
+  outside=tdis logmap=28 periodicity=6
+  colors=000zJnzEozAsz6uz2wy6ys9zlCzfCz7CcUCcOCcJCcD\
+  Cc9CcKCcRCY`CHdC4_C1OA0E20500000200605A0AE0GJ0MP0R\
+  U0Y_0cd0li0so0yq0wq0wq1wq5wqAwqEwqLwqPwsUus`usfusn\
+  ussuszuszuszuUgfRidOn`Lo_HsWEwTCyR9zO6zM4zJ1zH2zG4\
+  yG5uG6oG6lE7fE9bEAYEAUE7YG6`G5dH2gH1lJ0oJ0sL0wL0zM\
+  0zM0yL1sL4nL7gLCbLEYLJTJMOJRJJWEJ_AJd6Jg4JlADoH9sP\
+  5wY1zf0zo0zw0uy0lz0bz0Uz0Mz0Ez07z0Az0Dy0Eu0Hq0Ln0M\
+  l0Pg2Td5U`6YY9`WCbTDfPGiMJlJLoHOsERuCTy9Wz6_z`GzdG\
+  zfGzgGziGzlGznGzoGzqGzsGzuGzzHzwGzuEzsEzqDznDzlCyi\
+  CwgAwd9ub9s`7sb7qd6of6og5ng4lg4lg2ig2gq1lq0gq1fq2b\
+  q4`q4_q5Wq6Uz6Tz7Pz9Oz9MzAJzCHzCGzDDzECzGAzG7zH6zJ\
+  5zJ2zL1zM0zM0zO0zP0zT0zR0zP0zO2zM6zLAzLEzJHzHMzGRz\
+  EWzE`zDfzClzAqz9wzAuz9uz7uz7uz6sz5sz5sz4sz2qz2qz1q\
+  z0qz0oz0oz0oz0oz0nz0nz0nz0nz0lz0lz0lz0iz0lz0lz0nz0\
+  nz0oz0oz0qz0qz0sz0sz0uz0uz0uz0qz0oz0nz1lz6izAgzGlz\
+  MzzHzzHzzHzzHzzHzzGzzGzzG }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

@@ -1,0 +1,99 @@
+;     Date: Wed, 01 May 2013 23:44:13 -0400
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 30-04-13 (Deep Green [8.5])
+;       Id: <1.5.4.16.20130501234357.2be7c70e@earthlink.net>
+; ---------
+; 
+; FOTD -- April 30, 2012 (Rating 8.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's 8.5 rated image lies in the parent fractal that results 
+; when 0.2 part of Z^2 is combined with 15 parts of Z^(-1.5).  
+; This parent appears as an oversized but skeletal Mandelbrot set 
+; with a well-defined much smaller M-set in the area of its East 
+; Valley and two minibrots symmetrical to the X-axis in the area 
+; of its main spike.  Today's scene lies in the intricate debris 
+; between these two minibrots.
+; 
+; I named the image "Deep Green" because of the vivid green ring 
+; surrounding the central minibrot.  The rating of 8-1/2 includes 
+; a sizable and perhaps too liberal bonus for my coloring.  The 
+; calculation time of 1-3/4 minutes borders on slowness, making 
+; the web sites a good calculation alternative.
+; 
+; Find this calculation relief on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and classy variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; Hordes of back images are posted at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Lots of clouds hung overhead here at Fractal Central today, and 
+; a few flurries of drizzle drifted down now and then, but the sun 
+; also broke through several times, and the temperature of 66F 19C 
+; was so close to average that it left no grounds for complaint.  
+; The fractal cat took it all in stride, satisfying himself when 
+; he evicted me from my favorite chair and took it over with a 
+; satisfied smirk on his face.  The humans meanwhile checked the 
+; latest news, seeing nothing new, of course.
+; 
+; The next FOTD will be posted when I get a round tuit.  Until I 
+; can find a tuit shop, take care, and there is a question I want 
+; a clear answer to.  It is, 'why are we here on earth?'  (Answers 
+; such as 'to get to heaven' 'to propagate the species' 'it's a 
+; lucky accident' or 'it's up to each of us to decide' are 
+; rational enough but not really satisfactory.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Deep_Green { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-13.76762576559253/+0.00003824191632297\
+  /8.95286e+011/1/88.25/0 params=0.2/2/15/-1.5/0/800\
+  /0/0 float=y maxiter=1600 inside=0 logmap=126
+  periodicity=6 mathtolerance=0.05/1
+  colors=000zKzzKzyPzyRszXzzUxz_qz`xzZzzWzsUzxRzsPzq\
+  OzoMznLzlKzhJzkLqfMueOjePedQKdRfcT3cU09TV8MO6II5DB\
+  0850320800A20D00L00V20f30T42Q55I69D66A848924A02A5F\
+  FFKGJOIORIRVJP_KOcKLfLKjLRiGZhDdf9ke4sd0yc0neIdh`V\
+  itUdiT_ZRPOUaPVUPY`QZaQ_dQaeRchRdiRdaPdVMdOLdGJdAI\
+  cIJcPKcVLcaMchOdkOinGlo9pp2tq0np0ip2co5Zo9TnDOnFJh\
+  EEcE9YD4TDEYEOaFYeGfjIonJZqOIuT2xW6pVAiVEaVIWVMPUQ\
+  IUUAUY4U`RIdl5xT0qW0l_0fc0af0Wj2Rn2Lq3Gt3LuBQvJUvR\
+  ZxZcyffynkzvozzxffzPKzTPuWTpZWka_fecchfWcdPZaIU_BQ\
+  YMZ_Yf`hocqvdkjVeZM_MDUA4O00R94VJBZTJaaRekZiuekzl`\
+  qpRdtGRx6FzEAvL6sT3oZ0ka5neAohFqkKsnPuqUvtZxi`yZhz\
+  OjzLizJnzGrzErzBpz9kz6kzBnzFkzJnzMpzQszUpzYqzRqzcs\
+  zcszctzctzcuzcuzcvzevzmxzmxzmyzmyzmzzmzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
