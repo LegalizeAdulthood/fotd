@@ -1,0 +1,106 @@
+;     Date: Wed, 22 Dec 2004 11:59:23 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-12-04 (Super Something [7])
+;       Id: <1.5.4.16.20041222120118.0d57799c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 22, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's fractal we take a trip to the Z^(2.02)+C fractal.  We 
+; check it 20 levels up the logarithmic hyper-spiral.  (Actually 
+; the scene lies 16.858... levels up the spiral.  The level 
+; 3.14159... or 'pi' is better considered ground level.)  The 
+; formula is very close to that of the Mandelbrot set, and the 
+; fractal it produces is very similar.  But there are significant 
+; differences.  To start, the entire set appears rotated 30 
+; degrees.  The greatest change however has taken place at the 
+; north branch of Seahorse Valley, which has broadened into a 
+; plateau with a spire at its inner edge.  Today's scene lies on 
+; the main-bay side of this spire.
+; 
+; The midget I found there rates a lofty 7.  I have never before 
+; seen a midget with such intricate decoration surrounding it 
+; unless it was produced by one of the fancy features of the 
+; program, which I feel are somewhat artificial.  By contrast, 
+; today's scene, which was rendered with the outside set to the 
+; standard 'iter', shows what is 'actually there'.  I named the 
+; image "Super Something", leaving it to the viewer to decide what 
+; that 'something' is.
+; 
+; Since the exponent of Z is fractional, discontinuities must 
+; exist in the image, and indeed they are there.  But with an 
+; exponent so close to integer value, the breaks are minor, and 
+; at first glance may go un-noticed.
+; 
+; The rating of a 7 leaps to an overall worth of a rather 
+; disappointing 47 when the render time of almost 15 minutes is 
+; figured in.  But the rendering may be eliminated entirely by 
+; downloading the finished image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a peak temperature of 39F 3C, Tuesday was hardly balmy here 
+; at Fractal Central.  But the dynamic cats, who had been confined 
+; indoors for almost two days, were willing to ignore the minor 
+; chill to enjoy an outing in the great outdoors of the holly 
+; thicket, where they passed the afternoon pretending they were 
+; stalking birds.  Only a minor treat of tuna was needed to end 
+; their day on an up note.  This morning is starting sunny and 
+; warmer, but rain is scheduled to move in before nightfall.  
+; I see a hint of trouble for the fractal duo.
+; 
+; For me, the pile of real work waiting to be done is minor.  This 
+; should assure another fine fractal in 24 hours, and maybe 
+; another outburst of philosophy.  Until then, take care, and 
+; remember that, regardless of how much we learn, we will never 
+; know more than an infinitesimal part of all there is to know.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Super_Something { ; time=0:14:48.75--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=-0.61120335469249380/+0.436965672671546\
+  70/6345769/1/-92.5/1.01919733624944e-008 logmap=215
+  params=2.02/0/20/0 float=y maxiter=4200 inside=0
+  colors=000W2RUE_SQhQaqPiyOhwNguMfsLeqKdoJcmIbkHaiG\
+  `gF_eEZcDYaCX_BWYAVW9UU8TS7SQ6RO5QM4PK3OI2NG1ME0LC\
+  0KA0J80I60H40G25F0AE5EDAFCFGBKHAPI9UJ8WK7XgV9eUBcU\
+  CaUE`UFZUGXUIWUJUUKSUMRUNPUPNUQMURKUTIUUHUVHQRIMNI\
+  JKIFGIBCI78I45L58N6AP6DR7FT8HV8KX9MZAP`ARbBTdCWfCY\
+  hD`jEblEdnFgpGirGksLgsQcsV_s_WsdStiOtnKtsGtxCtz9sz\
+  8sy8sw8su8ss8sr8sp8sm8sk8si8sg8se8sc8sa8sZ8sX8sV8s\
+  U8tQDtNHtKLuHQuEUuBYLoUNmVPkWRiXSgXUeYWcZXaZZ__`Y`\
+  aW`cUaeSbfRb_XdTaeMffFkg8ph2ui8vgEveKwdQwbWx`ax_gy\
+  YmyWryVsvTstStqQtoPumOujMvhLveJwcIwaHsUJpMKmELj7Mf\
+  6Oc6P`6RY6SV5US5VP5XM5YJ5_G4`D4bA4c74e44f88eBBdEEc\
+  IHbLKbONaSQ`VU_YXZa_ZdbYgeXkhWnkVqcVic_bccWchPclIc\
+  qBcuCctDctEctFctGctHctIctIctJctKctLctMctNctOctOctP\
+  ctQctRctSctTctUctUctZcnbcifcckcZocTscOccYbcWbcVacU\
+  acT`cS`cR`cQjcDlcGmcIncLocNpcQqcSrcQrcOrcNrcLrcJgc\
+  CfcEdcGccHbcJ`cL_cMYcOXcQ }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

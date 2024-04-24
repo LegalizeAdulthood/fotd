@@ -1,0 +1,117 @@
+;     Date: Mon, 20 Dec 2004 09:06:15 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-12-04 (Fractal Flight [5])
+;       Id: <1.5.4.16.20041220090808.29d757b6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 20, 2004 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's fractal we break out the MandelbrotBC2 formula, 
+; which takes advantage of the multi-valued nature of the complex 
+; 'log' function, and gets an infinity of fractals from formulas 
+; that would seem limited to only one.
+; 
+; The additional fractals are especially interesting when the 
+; exponent of Z is set to a value between 1 and 2.  Today's image 
+; uses a value of 1.1 -- a value in the lower part of that range, 
+; where the images explode in size as we travel up the logarithmic 
+; spiral and the changes are the greatest.
+; 
+; The parent fractal is an oversized thing resembling a dead bird 
+; lying on its back, with its pointed bill facing upward.  Today's 
+; scene is located in the valley that forms the lower edge of the 
+; bird's bill.  Not wanting to make allusions to a dead bird in 
+; the name of the image, I decided to name it "Fractal Flight".
+; 
+; The question of whether fractals can fly is moot.  Fractals are 
+; abstractions, and abstractions can do anything we wish them to,
+; though usually they do nothing.
+;   
+; In today's image I saw a flight of fractal somethings taking off 
+; into a blue sky and vanishing beyond the upper left corner of 
+; the frame.  Perhaps they have been frightened by approaching 
+; danger.  (It is hard to imagine how a fractal could come to harm 
+; however.)
+; 
+; The 'objects' (if that's what they are) share a curious similar-
+; ity.  In some ways they are alike; in other ways, each has a 
+; character of its own.  Even the larger groups of objects share 
+; this partial similarity.  The image is a true fractal.  In it, 
+; the same pattern is repeated again and again at the deeper 
+; levels.  Of course, the deeper we explore, the slower the calcu-
+; lation becomes.
+; 
+; With nothing really exceptional to raise its rating, the scene 
+; could be rated no higher than an average 5.  Its render time of 
+; almost 23 minutes gives it an overall worth of only 22.  It is 
+; still an interesting image to see however, and well worth the 
+; small effort of downloading it from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Heavy clouds, a chilly temperature of 36F 2C, and a cold rain 
+; kept the duo indoors for the entire day on Sunday.  Their moods 
+; were surprisingly good considering their confinement.  As night 
+; fell, the rain changed to snow, which soon froze solid, making 
+; for tricky walking and worse driving.  When the duo saw the bad 
+; conditions, they actually seemed glad to be indoors, where a 
+; generous serving of tuna was available to assure their content-
+; ment.  This morning is starting sunny, but with a temperature of 
+; only +7F -14C and a wind of 20mph 30kph, I doubt that the duo 
+; will want to go outside.
+; 
+; The work is still heavy in my department, but I hope to squeeze 
+; in a fractal or two before the day ends.  The best of what I 
+; find will appear as tomorrow's FOTD.  Until then, take care, and 
+; keep your cool when the snow falls.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Fractal_Flight { ; time=0:22:55.83--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.77134655541610010/+0.189518755374709\
+  60/3732.587/1/-12.5/-1.07880579469643578e-011
+  params=1.1/0/23.8/0 float=y maxiter=3000
+  inside=255 logmap=304 periodicity=10
+  colors=000HHUJIULJTNKSPLRSMRVOQXPPZQO`RNbSNdTMfULh\
+  VKjWKlXJoYIrZHs_Fr_Hp_Jn_Kl_Mi_Og_Pd_Rb_SZ_UX_WV_X\
+  T_ZQ_`O_aM_cK_dL`eL`eM`eM`fN`fN`fN`gOagOagPahPahPa\
+  hQahQaiRaiRbiRbjSbjSbjTbkTbkUbkUblUclVclVclWcmWcmW\
+  cmXcnXcnYdnYdoYdoZdoZdp_dp_dp_dp_dp`ep`fp`gq`gqahq\
+  aiqajrajrakrblrbmsbmsbnsboscpscptcqtcrtdstdsudtudu\
+  udvuevvewvexveyveyvfurfqofmmfmmgmmgmmgmmgmmhmmhmmh\
+  mmhmmhmmgmmfmmfmmemmemmdmmdmmcmmbmmbmmammamm`mm`mm\
+  _mmZmmZmmYmmYmmXmmXomWqmWrmXqmYqmZqmZqm_qm`pm`pmap\
+  mbpmbpmcomdomeomeomfomgnmgnmhnminminmjmmkmmlmmlmmm\
+  mmnlmnlmolmplmplmokmnkmnkmmkmmkmlkmlkmkkmkkojkpikq\
+  ikrhkshktgjugjvfjzfjxejydjzdjzcjzckzblzbmzanzaoz`p\
+  z`qz_rzZszZtzNuzNuzNuzOuzOuzOuzOuzPuzPuzPuzQuzQuzQ\
+  uzRuzRuzRuzSwzRvzRuzRtzRszRszQrzQqzQpzQpzQozPnzPmz\
+  PmzPmzPmzOmzOmzQmzOmzLmzJmzHmzFmzDmzAmz8mz6mz4mz2m\
+  z0mz3mz5mz7mz9mzBmzDmzFmz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

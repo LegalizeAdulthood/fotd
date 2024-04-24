@@ -1,0 +1,85 @@
+;     Date: Mon, 13 Dec 2004 11:57:29 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-12-04 (The Expected Thing [4])
+;       Id: <1.5.4.16.20041213115916.29c7d144@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 13, 2004 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'm a bit behind in the real work today, so the discussion will 
+; be short.  Today's image shows what happens to a sub-midget on a 
+; filament of the large midget at -1.75,0 of the M-set when the 
+; real(p3) parameter is changed very slightly from 0,0.  The 
+; result is two midgets that are seen partially overlapping -- 
+; just what would be expected, which is why I named the image "The 
+; Expected Thing".  The fiery red colors have no special signifi-
+; cance.  The color palette is simply the one that I happened to 
+; find first.
+; 
+; The 'expected thing' is worth a rating of no more than 4, but 
+; the render time of just over 2 minutes raises the overall worth 
+; to a respectable 167.  The image may be seen by running the 
+; attached parameter file or by downloading it from the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy skies and chill, 48F 9C, winds kept the cats snug 
+; indoors for all but a brief 20 minutes here at Fractal Central 
+; on Sunday.  They seemed to understand that I was not respons-
+; ible, and were in surprisingly good moods.  I gave them extra 
+; tuna as a reward.  Today is starting sunny, but the chill winds 
+; are still blowing, and even colder air is on the way.  The cats' 
+; moods will once again be tested.
+; 
+; For me, the work is rather heavy, but well within the range of 
+; being finished in time for tomorrow's fractal, which will likely 
+; be a return to the MandelbrotMix4 formula, one that I have not 
+; used in over 2 months.  Until then, take care, and conspire with 
+; fractals, but don't get caught doing it.  A fractal is hard to 
+; keep in jail.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Expected_Thing { ; time=0:02:23.46--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=HyperMandelbrot passes=1
+  center-mag=-1.74896259724174100/+0.013770090116703\
+  98/1.034694e+010/1/-67.5/5.275598745684007e-005
+  params=0/0/0/0/10e-012/0 float=y maxiter=1200
+  inside=0 logmap=133 periodicity=0
+  colors=000j04h05g05e06c07b07`08Z09Y09W0AU0BT0BR0CP\
+  0DO0DM0EK0FG0GJ0FM0FP0FS0FU0EX0E_0Eb1Ed2Dg3Dj4Dm5D\
+  o6Cr5Cu4Cx3Cz2CxBDvKEtTEraFpjGonFnqForGopGonHomHok\
+  IoiIohIofJodJobKoaKo_LoYLoXLoVMoTMoRNoQNoOOoMOoLOm\
+  NPlPPkQPjSPiUPhVPgXPfZPe_PdaPcbPbdPafP`gP_iPZkPYlP\
+  XnPWpPVqPUsPXtCVuJTtPRsWPraNqgLpnJotPrpWppInzJowKo\
+  uLpsMpqMpnNqlOqjPqhQrfQrcRsaSs_TsYUtWUtTVtRWuPXuN_\
+  yJXuLVrNTnPRkROhTMcVKZXMUYIPZBKUCFTDATECTEDTFFTGGT\
+  HHTHJTIKTJMSKNSKPSLQSMRSNTSNUSOWSPXSPYSWQ_aIfgAnm3\
+  uk4si5qg5oe6mc7ka7i_8gY9eW9cUAaSB_QBZOCXMDVKDTIERG\
+  FPEFNCGLAHJ8HH6IF4JD3JC4IE4IG5II5IK6IM6HO6HP7HR7HT\
+  8HV8GX9GZ9G`9GaAGcAFeBFgBFiCFkCFm6Fq8GpAHoCInEJmGK\
+  mILlJMkLNjNOjPPiRQhTRgSSjTThUUgUVfVWdWXcWYbXZ`Y__Y\
+  `ZZaX_bWTcUXdV_eVbfWfgWihXliXpjYskYklremoanr`oo`pl\
+  _qj_rgZseZtbZu`YvYYwWXxTXyRWzOWzMWzJVzHVzEUzCUz9Tz\
+  7Tz4Qz1Tz2Wz3Zz3az4dz5lz3 }
+
+frm:HyperMandelbrot {; periodicity must be turned off
+a=(p1),b=(0,0):
+q=sqr(a)-sqr(b)+pixel,
+b=(p2+2)*a*b+p3,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

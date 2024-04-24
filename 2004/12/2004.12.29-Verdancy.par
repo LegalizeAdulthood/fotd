@@ -1,0 +1,102 @@
+;     Date: Wed, 29 Dec 2004 12:18:51 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-12-04 (Verdancy [4])
+;       Id: <1.5.4.16.20041229122051.0d578f00@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 29, 2004 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To find today's image I checked the Z^(1.98)+C Mandeloid 3.1 
+; levels up the logarithmic spiral.  The parent fractal is a 
+; distorted Mandelbrot set with numerous splits along the negative 
+; real axis.  Today's scene is located in a distorted valley of a 
+; large bud on the northwest shoreline of the main bay.
+; 
+; For some reason now forgotten, I named the extremely busy image 
+; "Verdancy".  The name is not really deserved, as the image has 
+; little resemblance to a lush forest.  In fact, it is such a 
+; mish-mash of assorted and not-always-harmonious colors that I 
+; could rate it at only a 4.  The not-exactly-fast render time of 
+; over 17 minutes raises this to a humble 23.  But all is not 
+; lost, for the image has been pre-rendered and posted on the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; from where it may safely be downloaded.
+; 
+; <The philosophical part of this discussion has been omitted from 
+; the Fractint version, but it appears in the philofractal version.>
+; 
+; Tuesday was chilly here at Fractal Central, but not as chilly as 
+; Monday had been.  The high temperature of 36F 2C was just warm 
+; enough for the fractal duo to venture off the porch and spend 
+; over an hour checking the holly thicket.  When they found 
+; nothing out of order, they returned inside to enjoy their treat 
+; of tuna.  Today is starting notably milder.  It should be a fine 
+; day for the duo.
+; 
+; I continue to be asked if and when pictures of the dynamic duo 
+; of fractal cats will be posted.  The problem is that my 25-year-
+; old Pentax SLR film camera has stopped working and I have not 
+; found an opportunity, nor a good-enough reason, to purchase and 
+; learn to operate one of the 'new-fangled' electronic cameras.  
+; But one of these days I will do so, and the cats' pictures will 
+; be available for all the world to see.
+; 
+; For me it looks like work for most of the day, then a trip 
+; to the land of fractals, where I will linger awhile to ponder 
+; deep philosophical things not necessarily designed to make 
+; people feel good.  The image I find there will appear as 
+; tomorrow's FOTD.  The thoughts will appear in the philofractal 
+; discussion.  Until then, take care, and never stop searching.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Verdancy { ; time=0:17:23.70--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=-0.49203911917759770/+0.522166115275836\
+  80/2411091/1/-67.5/-2.1590601288757e-007 logmap=360
+  params=1.98/0/3.1/0 float=y maxiter=3500 inside=0
+  colors=000K5BU5AT6AT69T79T79S88T88U98U97UA7VA6WB6X\
+  B6YC5ZC5_A2ZC5ZD7ZF9ZGCYIEYJGYLJYMLXONXPPXRSXSUWUW\
+  WVZWX`WYbWZdY_cZ_b``aaaacb`eb_fcZhdYjeXkeWmfWogVph\
+  UrhTtiSujRwkQxkQvhRteRrcRq`SoYSmWSkTSjQThOTfLTeIUc\
+  GUaDU_AUZ8VX5VV2VU0V`GNfVGlj8ry1sv3st4sr5sp7tn8tl9\
+  tjAthCtfDudEubGu`HuZIuXJvULvSMuQNtOPtMQsKRrISqGSpE\
+  PpCOoAPn8Pm6Ql4Rj5Ti6Uh7Ug8Vg9WhARcAV`BIbC_eD_eE`e\
+  FajGfeFbaE_YEXVDUSCRPCOMBLJAIHAGF9DD8A771D89G9FKAL\
+  NARRBXUCbXChYEgYFfZGeZIeZJd_Kc_Mc_Nb`Oa`Qa`R`aS_aU\
+  _aVZbWYbYYcZXc_WcaWdbVdcUdeUefTegSeiSfjRfkQflQdRFc\
+  65b76b87b98aA9aBAaBB`CC`DD`ED`FE_GF_GGkHHZIIZJJZKK\
+  _4LZKKYZJYmIWlKVlLUkMTkNSjORjPQwQPpROhSNhTLhVKgWJg\
+  XIfYHfZGe_Fe`EdaDdbCdcDbbEabF`aF_aGZ`HY`HX_IW_JVZJ\
+  UZKTYLSYLRXMQXNPWNOWONVPMVSOUVQUYSU`UUcWUfYUi_UlaU\
+  ocUreUugUwhUxiUyjUzkUzlUzmUznUzoUzpUzqUzrUzsUztUzu\
+  UzvUzwUzxUzyUzzUzzUzzUzzU }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

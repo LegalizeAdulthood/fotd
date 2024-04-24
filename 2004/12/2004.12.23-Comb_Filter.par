@@ -1,0 +1,103 @@
+;     Date: Thu, 23 Dec 2004 11:52:10 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-12-04 (Comb Filter [7])
+;       Id: <1.5.4.16.20041223115405.29d75974@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 23, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It's that time of year again, and I find myself with so much 
+; work and so many things to do that I will have no spare time for 
+; the FOTD for the next 3 or 4 days.  The bad news is that there 
+; will be no FOTD until December 27th or 28th.  The good news is 
+; that the FOTD will return at that time in its full glory, for 
+; another year, or twenty-five years, of stunning fractal images 
+; from nowhere.
+; 
+; With today's image, I stayed with the Z^(2.02)+C fractal, but 
+; examined it 154 turns up the hyper-spiral, where the figure is 
+; rotated 180 degrees, so that East Valley now lies on the nega-
+; tive X-axis, where the most interesting discontinuities are 
+; located.
+; 
+; The inner details of this area are like nothing in the classic 
+; M-set.  They vaguely resemble the elephant-like shapes that 
+; might be expected there, but are far more broken and chaotic.  
+; The midget in today's image is a typical example of the dis-
+; order that exists in this part of the infinite-dimensional 
+; land of fractals.
+; 
+; I have named the image "Comb Filter" because some of the ele-
+; ments resemble coarse-toothed combs.  (I am in no way an elec-
+; tronics technician.)  The rating of a 7 seems fair, considering 
+; the unusual nature of the image, which needed no program trick-
+; ery.  The render time of just under 5 minutes raises the overall 
+; worth to a rather impressive 143.
+; 
+; The most convenient way to see the image is to download it from 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; An absolutely gorgeous day on Wednesday here at Fractal Central 
+; resulted in angelic cats.  The warm sun, light breezes, and 
+; temperature of 61F 16F were just what the duo needed to ease 
+; their disappointment over the recent cold spell.  No tuna was 
+; necessary to make them happy in the evening.  Today is starting 
+; mild but rainy.  I hope the duo doesn't have too big a let-down.
+; 
+; For me, it's finish the work then get ready for the holiday 
+; craziness.  As I said earlier, the next FOTD will appear in 5 
+; days on December 28, (maybe the 27th if things go well).  Until 
+; then, take care, and may Santa leave a real fractal, not just a 
+; picture of one, in your stocking.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Comb_Filter { ; time=0:04:53.58--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1 periodicity=10
+  center-mag=-0.26350487612601/+0.02105654396608012/\
+  1347270/1/-57.5/-2.69338237129934654e-009 logmap=79
+  params=2.02/0/154/0 float=y maxiter=1200 inside=0
+  colors=000H0RI0SI0UI0VK0WK0YL0_L0`M0cM0dM0eP0hP0jS\
+  0kS0nW0oU0qS0rR0sP0uO0rM0oK0nI0kH0hF0gE0dC0a90L70K\
+  60L40K21L11L01M04P06S07V0AY0C_0Ea0Fd0Ig0Kj0Lk0On0P\
+  q0Rs0Su0Vs4Wr9YqF_oKanOclSdkYejagjejhkkgokeskdxlcz\
+  nazn`zh_ze_zcYz_YyWYy_WxWWxUWwRWwMVuIVsEVn9Um4Ui0U\
+  n0Un0Wo0Yt0`w1ax1dw2ev4gt6js7kq7no9onAqkCsjEuhExeF\
+  ydHzcIz`Kz_KzYLzVMzUOzSOzUPzVRzVRzWSzWSzYUzYUz_Vz_\
+  Vz`Wz`WzaYzc_zc_zd`zd`zeazeazgczgczhdzhdzjezjezedz\
+  cdz_dsWdlUdePc`McUKcMFcFCc76`09c1Cd2Fe2Ig4Kj6Mk6Pl\
+  7Sn9Uq9WrA_sAauCdwEeyEhzFkzHnzHozIrzKuzKxzLzzHyzLs\
+  zOnzShzVcz_YzaSzeMzhHzlAzo4zs0zz0zw0zr0wn0rj0ne0ja\
+  1eY1aU1YP2UL2PH2LE7OFCSIHVKLYMPaOUdPYgSakUenWjqYnu\
+  `rxauzcqy`nxYjwVguUcsR`rOWqMUqKPrHMuFIxCFz9Az77z42\
+  z10z04z27z6Az9EzCHzFKzHMzKPzMUzPWzS_zUazWdz_gzajzd\
+  lzeSz0Uz0Uz0hz4hzzgzzezzezzUzzIzz6zy0zw`zazzIzzgIz\
+  IEzFAzC7z94z61z20z00z00z0 }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

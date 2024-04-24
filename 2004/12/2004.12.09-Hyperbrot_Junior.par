@@ -1,0 +1,94 @@
+;     Date: Thu, 09 Dec 2004 12:20:48 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-12-04 (Hyperbrot Junior [7])
+;       Id: <1.5.4.16.20041209122232.0d875c4c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 09, 2004 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'm in a bit of a rush this morning, stuck with an unexpected 
+; large job and a customer who needs it sooner than immediately.  
+; So today's discussion is brief and late.
+; 
+; Today, we continue studying the 'HyperMandelbrot' formula, which 
+; draws slices of the Mandelbrot figure created by 4-part hypercom-
+; plex numbers.  In Mandel-type fractals, the distortions of the 
+; midgets often mirrors that of the parent fractal.  While explor-
+; ing the HyperMandelbrot fractal yesterday, I wondered if the cor-
+; responding distortions were true of this fractal also.  I found 
+; that it is partly true.  The midget in today's image does not 
+; show the appearance of its parent, the parent is a perfect 
+; Mandelbrot set, but it does show what will happen to the parent 
+; fractal when the parameter values are farther removed from zero.
+; 
+; The midget's plight also makes a rather striking image, aided in 
+; a large degree by manipulation of the colors on my part.  The de-
+; tail on the inside of the midget is not inside stuff made visible 
+; by an active inside fill.  It is true high-iteration outside 
+; stuff, and can be zoomed in on like any other 'outside' feature.
+; 
+; I named the little midget "Junior", and the image, "Hyperbrot 
+; Junior."  The rating of 7 means I consider the image to be above 
+; average.  The render time of 8 minutes gives the picture an 
+; overall worth of 86 -- not bad for a picture of a typical midget 
+; lying in Seahorse Valley.
+; 
+; All this may be seen by running the included parameter file, or 
+; by downloading the finished GIF image from:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The Wednesday weather was absolutely perfect here at Fractal 
+; Central, with warm sun, moderating winds, and a temperature of 
+; 61F 16C.  Needless to say, the cats were ecstatic.  In fact, it 
+; took a surprise serving of tuna to lure them back inside when 
+; the sun went down.  But this morning is starting cloudy, with a 
+; forecast of rain.  Things do not look good for the dynamic duo.
+; 
+; For me it's more of the usual.  The next fractal will appear in 
+; 24 hours.  Until that hallowed moment arrives, take care, and be 
+; at ease.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Hyperbrot_Junior { ; time=0:08:08.18--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=HyperMandelbrot passes=1 inside=0
+  center-mag=-0.7486564238863157/+0.084463614911547\
+  23/3.10774e+007/1/177/0 params=0/0/0.0125/0/1e-015\
+  /0 float=y maxiter=10000 logmap=300 periodicity=0
+  colors=000iPFlXMpdSslZqmdonghhjbblWXoPRrJLtCFw69yA\
+  EwEIuINtKMrMLqOKoQJnSIlUHkWGi_FgaEecDcdCceBceAcdDc\
+  cGccJcaNc_QdYSgWVkUYnS`rQcuOfsNiqTkoYmmZmk_mi_mgYm\
+  eWmcUmaSm_QmYOmWMlULkSKjQOhPSgSVfVZdZbcafadi`gm_jq\
+  YmsXpuVpsVppUnlTlhSieRgaQeYPbUP`QOZNNWJMUFLSBKP7KN\
+  AMMDOLGQKJSKMUKPWKSYKV_KWaKYcK_dKaeKcdKecKfaKi_KlZ\
+  KoXKqWKmUKjSKgQKcOK`MKYLJXOIWRIVUHUXHT_HSbGReGQhGP\
+  kFOnFNqFMtELwELwEMvIMtLMqONnSNlVNiYNf`OcdO`gOZjOWm\
+  PTqPQtPNwPLzQKwSJrVImWHhYGccKZkNUoQPsUKxXFzXAsX8lU\
+  CeRFZOISLLMIOGFRADUCESDFRFFSGGSHGTJHULHUPIVSIWVJWZ\
+  JWaKWcKWcIX`HXZGXWEWUDVRCVPAUO9TM8TM7TK6RI5PG4NE3M\
+  C2LA1K80J60I40G20E00C00A00800600400000000000000000\
+  0000000000000QuSPsRNqQMnPLlOJjNIhMHeLFcKEcJDcICcHN\
+  cJYcKfnLzzMyyKvwIrtGnqFkoDhlBej9gg8id9kaAmZCoWEqTG\
+  sQIuNKwKMxHOyEQyBSy9UyAWyBYyC_yDbzEezFhzGkzHnzIqzJ\
+  tzKwzKzyJzxJzwIzwIzvIzuHz }
+
+frm:HyperMandelbrot {; periodicity must be turned off
+a=(p1),b=(0,0):
+q=sqr(a)-sqr(b)+pixel,
+b=(p2+2)*a*b+p3,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

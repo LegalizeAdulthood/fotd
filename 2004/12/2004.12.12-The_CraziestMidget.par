@@ -1,0 +1,105 @@
+;     Date: Sun, 12 Dec 2004 10:07:01 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-12-04 (The Craziest Midget [8])
+;       Id: <1.5.4.16.20041212100848.29afb80e@pop.mindspring.com>
+; ---------
+; d
+; FOTD -- December 12, 2004 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The HyperMandelbrot formula continues to amaze me.
+; 
+; Todays image shows the same midget that appeared in the FOTD for 
+; December 9, the 'Hyperbrot Junior' fractal.  Or perhaps I should 
+; say it shows the area where the 'junior' once existed.  The mid-
+; get itself has basically vanished, leaving behind only a tangle 
+; of twisting tendrils.  I named these leftovers "The Craziest 
+; Midget" because they show the craziest thing to happen to a 
+; midget that I have ever come upon.
+; 
+; To begin the craziness, check your assumption that there are 16 
+; partially overlapping tendrils leading toward the remains of the 
+; midget.  Count them and you will find only 14.  (I have no idea 
+; what happened to the other two, but most likely the 14 tendrils 
+; are a reflection of a period-14 iteration cycle.)
+; 
+; To continue the craziness, look at what once was a perfect 
+; minibrot midget.  I admit that we are not seeing it sliced in a 
+; critical plane, but who ever saw a non-critical midget fill with 
+; tendrils and change into almost a delicate flower.  Midgets 
+; simply erode away in an irregular and not particularly attrac-
+; tive manner when we slice them farther from the critical plane.  
+; But then, this is a 'hyper' Mandelbrot set.
+; 
+; The image changes dramatically as the real(p2) parameter is 
+; slightly changed.  And the remains of the midget also hold their 
+; position on the screen, making the scene a good candidate for a 
+; short animation.  
+; 
+; I used no fancy program features to create the image, only the 
+; standard equal-iteration bands with the inside set to black.  
+; The rating of an 8 reflects my surprise at seeing what happened 
+; to the midget as well as my opinion of the artistic merit of the 
+; image.  When the 15-minute render time is taken into considera-
+; tion, the overall worth registers a nominal 52.  To see the 
+; curious midget, run the included parameter file or download the 
+; image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The rain ended at noon here at Fractal Central on Saturday, but 
+; the clouds hung on for most of the afternoon, and the tempera-
+; ture reached only 52F 11C.  When the wind arose, the fractal 
+; cats decided that they had had enough, and hurried back inside 
+; to get warm and enjoy their tuna.  This morning is starting 
+; partly cloudy and chilly. The cats will likely find some fault 
+; with the day.
+; 
+; For me the day looks slow, which is how I am learning to like 
+; it.  Lots of spare time means lots of time for fractals, the 
+; next of which will appear right here in only 24 hours.  Until 
+; then, tale care, and watch the fractals grow.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_CraziestMidget { ; time=0:15:28.91--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=HyperMandelbrot
+  center-mag=-0.74865642436084960/+0.084463614790886\
+  82/4.364803e+007/1/177/1.89370992914605907e-008
+  params=0/0/0.105/0/1e-015/0 float=y maxiter=10000
+  inside=0 logmap=300 periodicity=0
+  colors=000JP8JR7KS7JT3KU7LVALWDMYGN_KN`NObQ8bJOcTc\
+  dacdjSmkUllWkoYjq_itxQ0wR0vS0uT0tU0sV0rW3qX6pY9oZM\
+  n_Om`RlaSkbTjbUiaVfaWd`Xc_YbZZaY_`Y`_YaZYbYYcXYdWY\
+  eUXgRWjPVmNUoQUnSUmVUlXUk_WjaZjbakcdkdgldjlemmfpmg\
+  tnfwmexldwkcwjbviauh`vg_wlZwgYwbXwZWvaVudUtgUsjXrm\
+  aqpgprmormnpmmnmljmkbhjZciIOZK9OLKRNVUPbVTdXQeZOg_\
+  MhaKicHkdFlfDmfCmgBeeAYc9Oc5Qa8S_BUZEWXHYVKZUKZUNh\
+  1jh3gh5eh6cb8aXA_UDaPKYDNZIQUNTQSWLUZFXZHSNINJKIEL\
+  D9N40K95PEAUIFZNJcSOiWTo`Yud`zb_x`_t_WoYUiWTaVK_WH\
+  WYETkJRwKQzfPWQPXTOYWNZZN_aM`dLagLbjKcnJdrJdsJduJd\
+  vJhwJmwKrwLvxMzzNzzOzzPzzQzzQzyRzzczzSzzTzzUzzVzzW\
+  zzWzzXzzYzzZzz_zz`zzazzazzbzzczzdnZeoYfoYgoXhpWhpW\
+  ipVjqUkqUlrTmrSnrRnsRosQpsPqtPrtOsuNtuMtuMuvLvvKwv\
+  KxwJywIzlxQmwRmvSmuTmtUnsUnrVnqWnpXooYonYomZom_pl`\
+  pkapjapibphcqgdqfdqeeqdfrcgrbhrbhrais`js_ksZlsYltX\
+  mtWntVotUotTpuSquSruRsuQs }
+
+frm:HyperMandelbrot {; periodicity must be turned off
+a=(p1),b=(0,0):
+q=sqr(a)-sqr(b)+pixel,
+b=(p2+2)*a*b+p3,
+a=q,
+|a|+|b| <= 100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
