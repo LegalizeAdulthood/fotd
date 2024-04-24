@@ -1,0 +1,119 @@
+;     Date: Mon, 19 Dec 2011 22:08:03 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-12-11 (Blobsville [7.5])
+;       Id: <1.5.4.16.20111219220948.2b9f900e@earthlink.net>
+; ---------
+; 
+; FOTD -- December 19, 2011 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Blobsville".  The name refers to the 
+; blob-like things filling the frame.  I have a kind of soft spot 
+; for blobs.  Back in my impressionable years, one of my favorite 
+; movies was 'The Blob', a low-budget production that was filmed 
+; in a small Pennsylvania town not too far from here, and actually 
+; managed to rise above its low-budget status.
+; 
+; The original blob was an oozing hunk of gelatin from somewhere 
+; in outer space that terrorized the town's teenagers until they 
+; finally convinced the local police that their town was actually 
+; being invaded by a puddle of raspberry jello.  The disgusting 
+; creature was finally quick frozen by CO2 fire extinguishers as 
+; it terrorized the local diner, and dropped onto the arctic ice 
+; cap, where it presumably will stay until global warming melts 
+; the ice and it returns to life to terrorize towns like Barrow 
+; Alaska.
+; 
+; Today's image will create no terror, though its rating of only 
+; 7-1/2 might bring disappointment.  The generating expression 
+; combines Z^(-0.01) with 0.01 part of Z^(101) then adds (C) on 
+; each iteration.  This unlikely combination creates a parent 
+; fractal that at first glance appears to be the expected circle 
+; of radius one with 100 tiny bays along its perimeter.  A closer 
+; look however reveals some strange happenings around the edges.
+; 
+; Today's scene lies in an unexpected valley inside the tiny bay 
+; along the X-axis at the eastern edge of the parent circle.  
+; (Other bays might have similar scenes.  I haven't checked.)
+; 
+; The image is a mixture of inside and outside parts, which are 
+; difficult to tell apart.  The outside parts were rendered with a 
+; setting of 'tdis'; the inside parts, with a setting of 'fmod' 
+; and a proximity of 0.3.
+; 
+; The calculation time of 1-1/2 minutes will be no problem.
+; 
+; But to totally avoid the inconvenience of calculation, check the 
+; finished image on the official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; To revel in the glories of high resolution, check at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site, with every FOTD image and discussion 
+; since April 1997, may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Today turned out notably average here at Fractal Central, with 
+; morning sunshine, afternoon clouds and a temperature that rose 
+; from 25F -4C at sunrise to an afternoon high of 45F +7C.  The 
+; fractal cats complained that the sun vanished just as it was 
+; about to fall on their sun shelf in the southwest window.
+; 
+; FL and I, the local humans, (though FL sometimes says I'm 
+; inhuman), spent the day wrapping up the serious work and 
+; preparing for the big day this coming Sunday.  The next FOTD 
+; will appear in 24 hours.  Until then, take care, and judging 
+; from the number of people who know of Santa Claus and the number 
+; who know of me, which of us has the greater reality?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Blobsville { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident float=y
+  center-mag=+0.03616934295/+0.03205863666/179572/1/\
+  175/0 params=1/-0.01/0.01/101/0/0/0/0 periodicity=6
+  maxiter=1500 inside=fmod proximity=0.3 outside=tdis
+  colors=000iWW_bVS_ONiMKtNDzKBvM9oL7hL6bL5YM3OJ3KM4\
+  HP131HA1PE3WNDbTMha_pjnutzuztdkc8kGDJZALdANjBQpCTt\
+  CUtCXtCUtDShGRYJPMIOHKNFKLBKK9KJ5KI3NNAQRFSVLU_RXb\
+  WZdYbhaflebhaag`ag`adWa`QaZNUXHNVCIY9E_6Ad57g88iC8\
+  lDPVOuTnraqljpdkoUkmKqmCztCzrCvqOkp`gtjbtrRtuImrPp\
+  eVbW`USaQPbOOdOKdNUEabIXuQ_0306M76E76M76M76M75K65K\
+  65K65K65K65KI5KS6JR6JW6JL6JM6J76J76J76I76I76I76I76\
+  I76I76I75G65G75G75G77G77G76F66F66F66F66F66F66F66D6\
+  6D66D66D66D66D66D65C56C56C56C56C56C56C55B45B45B46C\
+  56C56C56C56C56C56C56C56C56C56B56B56B56B56B57C67C67\
+  B67B67B67B67B67B67B67967967967967967968A8898898898\
+  898898898898888888888888888888888805804B04B03D02F0\
+  1G00H00I00J00K00L01L01M01M01M11M11M11M11M12M12M12M\
+  12M12M12M12M12M12N12N12O12O12P13P13Q13Q13R13R13S13\
+  S13T13T14U14U14V14V15W16W16X16X17Y17Y17Z18Z18_28_2\
+  9`29`29a2Aa2Ab1Ab2Bc2Bc2B }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

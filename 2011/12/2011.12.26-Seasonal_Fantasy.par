@@ -1,0 +1,120 @@
+;     Date: Mon, 26 Dec 2011 17:46:30 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 26-12-11 (Seasonal Fantasy [7])
+;       Id: <1.5.4.16.20111226174821.3897acd8@earthlink.net>
+; ---------
+; 
+; FOTD -- December 26, 2011 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The Christmas activity here at FC yesterday left me with too 
+; little time to create a proper FOTD.  But today, we're back up 
+; and running with a remarkable scene in the 4-dimensional Z^2+C 
+; Julibrot.
+; 
+; The scene is located in the Scepter Valley area at an angle 
+; oriented halfway between the Mandelbrot and Oblate planes.  (The 
+; Mandelbrot orientation is determined by the real(c) and imag(c) 
+; axes; the Oblate, by the imag(c) and real(z) axes.)
+; 
+; At first glance, the image bears little resemblance to either a 
+; Mandelbrot scene or a Julia scene.  This is because it is a 
+; hybrid scene, half Julia and half Mandelbrot.
+; 
+; Much of the unexpected appearance was created by the outside 
+; fill of 'bof61', which is responsible for most of the smoothly 
+; colored areas.
+; 
+; The original name I gave to the image was 'Christmas Fantasy'.  
+; I changed it to "Seasonal Fantasy" to avoid offending the 
+; secular community.
+; 
+; The calculation time of 2 minutes is a fair price for the image.
+; 
+; To avoid the calculation, check the finished image on the 
+; official FOTD web site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; And be sure to check the image in the full splendor of high-
+; definition at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original classic FOTD web site with all the FOTD images and 
+; discussions since April 1997, and also pictures of the fractal 
+; cats as well as the fractalist himself, may be accessed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The weather today was uneventful and rather pleasant for late 
+; December, with partly cloudy skies and a temperature of 45F +7C. 
+; As for the fractal cats, after a day of getting into trouble 
+; with the tree and the wrappings, they had no energy to worry 
+; about the outside weather.  They took it easy most all day.  
+; Their big excitement came when an orange tomcat we have named 
+; Marmalade passed by, marking the territory as he went.
+; 
+; The humans spent the day recovering from the day before.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and in the seventh grade, when I asked Sister Mary Thomas why 
+; heaven is invisible, she replied that if we could see heaven, 
+; there would be no need for faith.  When I tried to say more, she 
+; told me to sit down and shut up.  Her reply made no sense to me 
+; then.  Today, after a half century, it makes even less sense.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Seasonal_Fantasy { ; time=0:02:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot4 center-mag=-0.742221/0/\
+  16.848/1/-90/0 params=0/0/45/0/-0.75/0/-0.503/0/2/0
+  passes=t float=y maxiter=1000 inside=bof61
+  logmap=37 periodicity=0
+  colors=00030S0E_0E_0E_32R0E_1E_2E_33Q4G_5G_6GY34P8\
+  KY9KY8KY35N6OY6PY5QY35M7Xi5We5Wb15L4SY3QW2PR25L1LO\
+  1JL1HK05K0GK0FK0EK05K0DK0CK0BK05K09K08K08K04K06K06\
+  K05K03J04I03H02G02F02E02D02C02B02A02B02C02702E0250\
+  2402301201101001001201401602803A04C05E15G05I05K16N\
+  48Q27T59W6AY8E_BHbDJbGMeIPgLTiNWkR_nWcqXerajwdnzel\
+  zktzqyzvzzizzszzszzqzzqzzpwzpwznwznwznwznwzjtqjtqj\
+  tqhtphtogqngqmeqkeqkeqkeqkbohbohbog`of`oe_le_ldZlc\
+  ZlbZlbZlaWi_Wi_Wi_UiYUiXUgXUgWSgUSgUSgUSgTPeRPeQPe\
+  QOePOePMbOMbOLbLLbLLbLLeKLbLLbLK_LJ_KIYKIYLHYKGWKG\
+  WKETIETJERJCRJCRJCPIAPJAOIAOJ8LI8LI8LI6KH6KI6II5II\
+  5IK5IK5IL5HL5HL4HO4HO5HP4GP4GP4GR3GR4GT4GT3ET3FW3F\
+  W3EY3EY3DY2E_2D_3Db2Db2Cb2De2Ce2Cg2Bg1Cg2Ci2Bi2Bl2\
+  Al2Al29o29o08q18o19o29o2Al2Al3Bl4Dl4Di5Ei6Fi7Gi8Hg\
+  9IgKIgKJeKKeKMeUOeUMbUPbUPbcRacQ_cSYcTWcVUcVSmWQmZ\
+  OmcMmhKzmIzrGzvEzzCzzAzz8 }
+
+frm:SliceJulibrot4   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a), esc=imag(p5)+9
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(real(p5))+c
+  |z|< esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

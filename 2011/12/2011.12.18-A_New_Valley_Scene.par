@@ -1,0 +1,100 @@
+;     Date: Sun, 18 Dec 2011 20:18:49 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-12-11 (A New Valley Scene [6.5])
+;       Id: <1.5.4.16.20111218202033.2baf851a@earthlink.net>
+; ---------
+; 
+; FOTD -- December 18, 2011 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a quickie I found in a hurry to get the FOTD 
+; caught up to date.  The parent fractal was created by 
+; subtracting 2 parts of Z^2 from Z^(33) and adding straight (C) 
+; on each iteration.
+; 
+; This parent appears as the outline of a circle centered around 
+; 1.8, with a reasonably intact Mandeloid at its east edge and 
+; what resembles a fragment of a main spike at its west edge.  
+; Today's scene lies in a valley in an open hole on this spike 
+; fragment.
+; 
+; Since I have never before seen this exact type of valley, I 
+; named the image "A New Valley Scene".  I have seen many similar 
+; valleys however, and this holds the rating to a modest 6-1/2, 
+; one-half point of which is due to the coloring.
+; 
+; The calculation time of 3-2/3 minutes is a bit dragging.  But 
+; once again, the FOTD web sites ride to the rescue.
+; 
+; The image may be viewed without the job of setting up and 
+; running the parameter file by visiting the official FOTD web 
+; site at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; where the image has already been calculated and is posted for 
+; instant happiness.
+; 
+; The high-definition version is waiting to be enjoyed at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The original FOTD web site may be accessed and enjoyed at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A chilly day with a mix of sun and clouds, and a temperature of 
+; 34F +1C, added nothing to the comfort rating here at Fractal 
+; Central today.  The fractal cats spent the day debating which of 
+; them owns which piece of furniture.  The humans, FL and I, did 
+; little but try to enjoy the season, which is often easier said 
+; than done.  The next FOTD will be posted in 24 hours.  Until 
+; then, take care, and be tolerant of intolerance.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_New_Valley_Scene { ; time=0:03:40.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.925873608733/+0.00335978546/\
+  1.95e+007/1/120/0 params=1/33/-2/2/0/0/0/0 float=y
+  maxiter=2500 inside=bof61 logmap=146 periodicity=6
+  colors=000VRR00000000000400900D01I04M07R1AV3D_4Hc6\
+  Kg7Mk9OpAPtCRwDSzFTzHVzIWzKYzL_zM`zOazPczRdzSfzTgz\
+  VizVjzVkzVmzTnzUpzWqzWqzYqwbrwasweuweuwgvwiwzixziy\
+  zizzizzgzzezzczzazz_zwYzwZzwUzwSywQxwPwwPvwTuwRtwS\
+  pwSpwSnwRowPmtOkqMgnLckK`iIWfHT_FMVDKWCFMBDIB8FA59\
+  A07903800900A00B00C00D00E00F00H10J31L43N64P74S96VA\
+  7YC9`D9cFAcHCdIDfKDfLFgMHiMIiMIgLMgKPfISfIVfH_dFad\
+  FddDgcCkcCnaAqa9ta9x`7z`6z`6za9zaAzaDxaFvaHtaKqaLn\
+  aOkaPjaRgaTdaVaaY_a_Ya`VacSadPafOWkRRqTLwWFz_9za7z\
+  `6v_4p_3jY1dW0_W0TV0OT0KT0IS1HR4FP7FOADMDCLHAKKAIL\
+  9IO7HR7FT6DW4C_3Aa39e17i06l06o3Ar4Fr6Ks7Os9StAWtC`\
+  vDdwHixImzKqzLvzMzzOzzPzzRzzSzzTzzVzzVwzWsxYpw_kw_\
+  iv`ftaasc_qcVpdSnfOmgLmgInfKnfLpfMpfMqfOqfPsfRsfRt\
+  dStdTvdVvdVwdWwdYxd_xd_qgVjiSdjOYkLSmHLnDFpADnCDmD\
+  DkFDjHDjIDiIDgKDfLDdMDdODcPCaPC`RC`SC_TCYVCWWCVWCV\
+  YCT_CS`CRaCRa9S`7S_9TYATW }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

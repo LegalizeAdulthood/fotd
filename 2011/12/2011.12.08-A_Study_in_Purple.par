@@ -1,0 +1,105 @@
+;     Date: Thu, 08 Dec 2011 17:04:38 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-12-11 (A Study in Purple [7.5])
+;       Id: <1.5.4.16.20111208170614.29f743e4@earthlink.net>
+; ---------
+; 
+; FOTD -- December 08, 2011 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is the next to last in the parent fractal that 
+; results when 5 parts of Z^(0.7) are subtracted from 5 parts of 
+; Z^(0.5) and straight C is added.  The scene of today's action 
+; lies in the west branch of the valley leading to the large bud 
+; on the north side of the grossly enlarged, violin-shaped main 
+; bud of the parent fractal.
+; 
+; The generating expression is actually the same one that created 
+; the previous few days' images, though I simplified things a bit 
+; by changing real(p3) in the formula to zero and real(p1) and 
+; real(p2) to 5.
+; 
+; The image is unusual in the amount of detail filling the 
+; otherwise commonplace elements surrounding the center minibrot.
+; 
+; Since the violin theme is beginning to wear a bit thin, I could 
+; rate today's image no higher than a 7.5, which, perhaps a bit 
+; liberally, includes a half-point bonus for the coloring.
+; 
+; The name "A Study in Purple" was inspired, if it can be called 
+; inspiration, by the purple elements in the image.
+; 
+; The calculation time of 4-1/2 minutes borders on slowness.  But 
+; the web sites once again ride to the rescue.
+; 
+; The finished image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; The high-definition version is at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+; The classic FOTD web site is at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; After an inch or so of wet snow overnight, today dawned sunny 
+; but chilly.  The sun continued all day, mixed at times with a 
+; few clouds, while the temperature settled at a not-too-bad 41F 
+; +5C.  The fractal cats spent the day taking it easy and asking 
+; for food, while FL spent the day in the never-ending task of 
+; re-arranging furniture.  I simply spent the day.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and I wonder who is really behind the scene, running the 
+; world.  I hear that the Annunaki from Sirius C might really be 
+; running things.  (Or are they from Proxima Centauri?)
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Study_in_Purple { ; time=0:04:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+6.33259572703/+2.052379292519/4.8e+007\
+  /1/-162.5/0 params=5/0.5/-5/0.7/0/300/0/0 float=y
+  maxiter=2300 inside=255 logmap=325 periodicity=6
+  colors=000f0zd0t_0oW0kT0eP0_K0WG0QD0K80G40A0040000\
+  00e0tX0iP0ZG0N6KB0M00Zd0JN0N56aN4WJ2QE0MB0O60R40U0\
+  0Q00_0Za8Th5Ng2Hm0Bm05m00m0Umm2zz0zz0zz0xz0tw0ps0m\
+  o0Tk0ef0Db00U00U00U0AU00U08K00K00K00K00F00F00F00FT\
+  0lQ0iP0fN0dM0aJ0ZH0WG0TE0SB0PA0M80JzzzA48C05934802\
+  73040060020010000z00v00q00o00k00h00d00a00X00U0UQ0U\
+  M0cJ0cEdmB0m6zmzzzzzq0zz0wfhqzdmt_ipXdkT_eQWaMSWJM\
+  QEHMBDG68A4250000000052040040020020000000000000000\
+  000000000000000000000000000000000000000000W4zT2zS2\
+  zQ0wP0tM0qK0mJ0kH0hG0dD0aB0XA0U80S60N40K20H00D00A0\
+  05002000000000dSKaPHZNGWKETJDQHBNEAMD8JB6G85D62A40\
+  620500200000000000000e8UP0G6020qX0lT0hQ0bN0ZJ0TG0P\
+  D0J80E5082040000000GbU6MG052U0zS0U0hP0dM0_J0WG0SD0\
+  NA0J60E50A205U00U00U00UB0UA0U80U60U60U50U40U40U20U\
+  00U00K00K00K00K00K00K00K00K00000000000000000000000\
+  0000000000000000000000zzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
