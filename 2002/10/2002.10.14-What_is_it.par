@@ -1,0 +1,107 @@
+;     Date: Mon, 14 Oct 2002 10:49:28 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-10-02 (What is it? [6])
+;       Id: <1.5.4.16.20021014105059.2a0fba36@pop.mindspring.com>
+; ---------
+; FOTD -- October 14, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image has been named "What is it?".
+; 
+; That is a question.
+; 
+; The answer is that today's image is a picture of the midget I 
+; spoke of yesterday, which lies just beyond the southeast border 
+; of yesterday's "Coronal Globules" image.  Curiously enough, 
+; since I have rotated the view 180 degrees, yesterday's scene now 
+; lies not northwest but southeast of today's.
+; 
+; The midget in today's image is one of the more chaotic I have 
+; come upon in my travels through the world of fractals.  It is 
+; quite difficult to find any definite theme that runs throughout 
+; the scene.  Some areas consist of fractal material so finely 
+; ground that it resembles sand.  Other areas consist of 
+; relatively simple spirals.  But the coloring shows that a broad 
+; overall pattern does exist around the midget, and that this 
+; broad pattern consists of the usual 2,4,8... series of elements.
+; 
+; One of the powers of Z in the generating formula is -0.05, which 
+; defines a value so close to unity that it might be expected to 
+; have little effect on the finished fractal.  But the maxiter of 
+; today's image is 6000, which gives plenty of iterations in which 
+; that tiny departure from unity can build up to a significant 
+; change in the overall appearance of the image.
+; 
+; Today's image might rate closer to a 5 than a 6.  The image is a 
+; bit too disorganized to be above average, and it also lacks a 
+; theme.  But when rating it, I decided to do myself a favor.  I'm 
+; harsh enough on my fractals as it is.
+; 
+; The attached parameter file requires 38 minutes of rendering 
+; time on my aging P200 machine.  I wonder if it would render in 
+; 1/10th the time on a state-of-the-art P4-2000mhz machine.
+; 
+; Somehow I doubt it.
+; 
+; Those with little to do might run the parameter file, but most 
+; will choose to download the completed image from Paul's web site 
+; at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Sunday continued cloudy, with a temperature 
+; of 66F 19C, but it did not rain and the grass was dry, and as a 
+; result, the dynamic cats had enough quality time in the yard to 
+; keep them happy.
+; 
+; I now find the work accumulating -- a clear signal to get busy.  
+; So until tomorrow, take care, and the search for the last 
+; fractal could be a long one.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+What_is_it { ; time=0:37:52.55--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=mandelbrotmix4 function=recip passes=1
+  center-mag=+3.206663019352063/+3.038945988679095/3\
+  080341/1/50/8.66889070978704712e-007 params=5/\
+  -0.05/0.5/-11/-0.8623/10000000 float=y maxiter=6000
+  inside=0 periodicity=10
+  colors=000MDPNEOOENPEMQEKREJSEITEGUEFVEEWFCXEDYEEZ\
+  EF_DG`DHaDIbCIcCJdCKeBLfBMgBNhBNiDRjEUkFXlG_mIcnJf\
+  mKipLllLppMopNnlOnpPmpQmpRloSloTkoUkoVjoWjoXinXinY\
+  hnZhn_gn`gnafmbfmcemdemedmfdmgcmgclfeldglcilbki_lf\
+  YlcWm`UmYSmVQnSOnPMoMKoJIoKHnLHnMGnNGnOFnPFnQEnREn\
+  SDnTDnUCnVCnWBnXBnYAnYAnZ9m_9m`8ma8mb7mc7md6me6mf5\
+  mg5mh4mi4mj3mk3ml2ml2mm4lm6km7jm9inAhnCgnEfnFeoHdo\
+  IcoKboMaoN`pP_pQZpSYpUXqVWqXVqYUq_Tq`Tr_Sr_Rr_Qr_P\
+  r_OrZNrZMrZLrZKrZKsYJsYIsYHsYGsYFsXEsXDsXCtXBtXBvW\
+  AvW9wW8wW7xW6xV5yV4yV3yV2xV2rW4lV5fU6aT8XS9SRAORBP\
+  SAQTARUASU9TV9UW9VX8WY8X_8Y_7Za7_b7`c7ad6bf6cg6dg5\
+  eh5fi5gi4hj4ik4jk3kl3lm3mm3lk2lj2li2lh2lg2lf2le2lc\
+  1lb1la1l`1l_1lZ1lY1lX1lV0lU0lT0lS0lR0lQ0lP0lO0kQ2j\
+  R4jS5iU7hV9hWAgXCfZDf_Fe`HdbIdcKcdLbeNbgPahQ`iS`jT\
+  akRakPblOblMcmKcmJcnHdnFdoEeoCfpAgp9hq7iq5jr4kr2lr\
+  1mp0nq0or0ps0qt0ru0sv0tw0 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

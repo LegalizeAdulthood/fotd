@@ -1,0 +1,102 @@
+;     Date: Thu, 31 Oct 2002 10:51:32 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 31-10-02 (Surreal Reflection [?])
+;       Id: <1.5.4.16.20021031105318.2acfd3fe@pop.mindspring.com>
+; ---------
+; FOTD -- October 31, 2002 (Rating ?)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; It's Halloween day here at Fractal Central, the day when we 
+; pretend that ghosts and ghoulies are real and hope that they are 
+; not.  In recognition of the day, I have found a fractal so 
+; different from my usual unending string of midgets that I can't 
+; rate it.  The situation is downright spooky.
+; 
+; The generating expression combines some Z^(-7.7) with ten times 
+; as much Z^(-0.77), then adds (1/C).  With an escape radius of 
+; one-googol, the resulting image is a blank black screen 
+; consisting totally of trapped inside points.  Anything that 
+; might have once been there has evaporated.
+; 
+; But all hope is not yet lost, for the blackness is filled with 
+; invisible dynamics that can be made visible with the various 
+; inside fills.  The <epscr> fill creates an impressive and 
+; intricate pattern, but for today's image I chose the <bof60> 
+; fill, which tends to draw circles and glowing auras around 
+; objects.
+; 
+; The result of my efforts is a surreal image in which an 
+; indescribable object is suspended over a glassy surface, with 
+; the object's distorted reflection visible in the glassy surface. 
+; I named the image "Surreal Reflection" as a simple description 
+; of the scene.
+; 
+; I leave the rating of the image to the viewer.  Those who enjoy 
+; such pictures will rate it higher than a 5; those who do not 
+; will rate it lower.  But all will agree that the render time of 
+; 54 minutes is excessive.  This delay in seeing the image can be 
+; avoided by downloading the pre-rendered image from Paul's web 
+; site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; where the GIF image will soon be posted.
+; 
+; The weather Wednesday was totally miserable, with clouds, a 
+; steady cold rain, and a chilling wind.  Even if it had been dry 
+; outside, the temperature of 36F 2C was far too cold for the 
+; cats' delicate ears and whiskers.  They passed the day indoors, 
+; watching raindrops trickle down the windows and asking for food.
+; 
+; Today is still cloudy and cold, but at least it's dry.  That's a 
+; small improvement.  The far bigger improvement will come when 
+; the work is finished.  But before I can finish, I must start, so 
+; until tomorrow, when the first FOTD of November will appear, 
+; take care, and pause to ponder the impossible.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Surreal_Reflection { ; time=0:54:37:18--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=0.8965/0.11586/0.5226667/1/37.1/-1.2337\
+  35336114705e-014 params=-0.4/-7.7/-4/-0.77/6/1e+100
+  float=y maxiter=1200 inside=bof60 periodicity=0
+  colors=000idCidCieCieCifCifCifCieBieBieAieAieAjfAk\
+  hAmjBnkBomCqoCrpDsrDtsDfU2fV3fV3gV4gV4gV4gV5hW5hW6\
+  hW6hW6iW7iW7iX7jX8jX8jX9jX9kX9kYAkYAkYBlYBlYBlZClZ\
+  CmZCmZDmZDnZEn_En_En_Fo_Fo_Go_Go`Gp`Hp`Hp`Ip`Iq`Iq\
+  aJqaJraJraKraKrbLsbLsbLsbMheRhdRgcRfcRfbReaRd`Rd_R\
+  c_RcZRbYRaXRaWR`WR_VR_URZTR_TQZSRZSRZSRZSSZSSZSSZS\
+  TZSTZSTZSTZSUYSUYSUYSVYSVYSVYSWYSWYSWYSWYSXYSXXSXX\
+  SYXSYXSYXSZXSZXSZXSZXS_XS_XS_XS`WS`WS`WSaWSaWSaWSa\
+  WSbWSbWSbWScWScVScVSdVSdVSdVSdVSeVSeVSeVSfVSfVSfVS\
+  gUSgUSgUSgUShUShUShUSiUSiUSiUSjUSjTSjTSjTSkTSkTSkT\
+  SlTSlTSlTSmTSmTSnUQqURpVRoSSoSSn5N65N64M64M63L63L6\
+  2K62K62K64L75L86M97MA9NBANCBODCOEEPFFPGGQHHQIJRJKR\
+  KLSLMSMNTMPTNQUORUPSVQUVRVWSWWTXXUZXW_YY`Y_aZac`de\
+  cfgeiihjkjmmllnnWnnVnnVnnUnmUmmTmmTmmTmmSmlSmlRmlR\
+  mlQmlQlkPlkPlkOlkOlkNljNljMljMljMkjLkiLkiKkiKj_Cj`\
+  Cj`Cj`CjaCjaCibCibCicCicC }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

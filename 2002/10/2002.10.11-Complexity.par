@@ -1,0 +1,102 @@
+;     Date: Fri, 11 Oct 2002 09:32:27 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 11-10-02 (Complexity [6])
+;       Id: <1.5.4.16.20021011093355.0d972abc@pop.mindspring.com>
+; ---------
+; FOTD -- October 11, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD image is named "Complexity" not because it was 
+; created with complex numbers, but rather because it is a very 
+; complex image.  Much of the complexity has been achieved by 
+; rendering the scene with the outside set to <atan> and the 
+; inside set to <bof61>.  These settings are a departure from my 
+; usual equal-iteration bands on the outside and a blank black on 
+; the inside.
+; 
+; The parent fractal takes 0.0145 part of Z^(11) and adds 1.6095 
+; parts of (1/Z) to it before adding (1/C).  The resulting fractal 
+; appears as a somewhat distorted M-set rotated 180 degrees.  
+; Today's scene is located in some unlikely chaos on a filament of 
+; a bud in the East Valley area of the parent, which in today's 
+; case is located on the west side of the main bay.
+; 
+; In addition to the unusual inside and outside fills in today's 
+; image, the bailout also plays a part in the final appearance.  I 
+; have set the bailout radius to 2.076, which is just above the 
+; point where the scene goes totally blank.  Unlike fractals with 
+; negative exponents of Z, fractals with positive exponents do not 
+; evaporate when the bailout is increased.  They do change however 
+; as the bailout is reduced to near the cutoff point, though to a 
+; lesser degree.  To see the unchanged version, reset the imag(p3) 
+; parameter to zero and recalculate the image.
+; 
+; I was about to toss aside today's image with a rating of an 
+; average 5, but then I stepped back from the screen and noticed 
+; that, from a distance, the image looks surprisingly good.  I 
+; finally settled on a rating of 6.
+; 
+; The render time of 8 minutes from the parameter file is a bit 
+; slow.  The better way to see the image is to download it in 
+; completed form from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The weather Thursday here at the Fractal Central was simply 
+; terrible.  It rained steadily from dawn until midnight, with a 
+; temperature around 61F 16C.  This kept the cats confined to the 
+; indoors and resulted in them being quite unhappy through most of 
+; the day.  In the evening, I gave them a treat of turkey, which 
+; lightened their moods -- at least a bit.
+; 
+; For a change, I have very little to do today, except search for 
+; fractals.  Since it's still raining, that's probably what I'll 
+; do.  Until tomorrow, take care, and keep your spirits up -- if 
+; you can find them that is.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Complexity { ; time=0:08:23.83--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-4.08329576353486200/-0.003627969335169\
+  24/8.843233e+008/1/12.5/-2.37093926224313245e-005
+  params=1/11/111/-1/-0.985/-97.924 float=y
+  maxiter=1200 inside=bof61 outside=atan periodicity=9
+  colors=0007AA8AB9ABAABBABCACDACEACFACGACHADIADJADK\
+  ADLAEMAENAEOAEPAFQAFRAFSAFRBESCFSDFSEFSFFTGGTHGTIG\
+  TJGUKHULHUMHUNHVOIVPIVPIVQIWRJWRJWRJWRJXSKXSKXSKXS\
+  KYTLYTLYTLYTLZUMZUMZUMZUM_VN_VN_VNZUM_VN_VN`VO`VOa\
+  VOaVPbVPbVPcVQcVQdVQdVReVReVRfVSfVSpVSgVThVThVTiVU\
+  iWUjXUjYVjZVi_Vh`VgaVgaWhbXhcYicYidZid_je_jf`jfakg\
+  akgbkhcliclidmjdmjzmkfnlfnlgnmhomhonioojpojppkuuzp\
+  pklkshgZdbT`YMXUGTP9NK0OL2PL3QL4RL5SL6TL7UL8ULAVLB\
+  WLCXMDYMEZMF_MG_MH`MJaMKbMLcMMdMNeNOfNPfNRgNShNTiN\
+  UjNVkNWlNXnKWmMXlNYkPYjQZiSZhT_gV_fW`eY`dZac`ababa\
+  cbadc`fc_gdZidYjeXleWmfVofUpgTrgSshRuhQviVvcSwfQwi\
+  OwkMxnKxqJytIxsIxsIxrIxrHxqHxqHxqHxpGxpGxoGxoGxoFx\
+  nFxnFxmFxmExmExlExlExkExkDxkDxjDxjDxiCxiCxiCxhCxhB\
+  xgBxgBxgBxfAxfAxeAxeAxe9xd9xd9xc9xc8yd9xc9xc9xb9xb\
+  AxbAwaAwaAw`Aw`Bw`Bw_Bv_BvZBvZCvZCvYCuYCuXDuXDuXDu\
+  WDuWDtVEtVEtV3B94CA5CA6DA }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

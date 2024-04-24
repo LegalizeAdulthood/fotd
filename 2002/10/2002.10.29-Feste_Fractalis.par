@@ -1,0 +1,92 @@
+;     Date: Tue, 29 Oct 2002 10:30:25 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 29-10-02 (Feste Fractalis [5])
+;       Id: <1.5.4.16.20021029103207.39179f10@pop.mindspring.com>
+; ---------
+; FOTD -- October 29, 2002 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's routine image gives the impression of a gala festival, 
+; with brightly colored balloons and streamers hanging everywhere. 
+; I named it "Feste Fractalis", which, if it actually is a phrase 
+; in some foreign language, is purely accidental.
+; 
+; The work of fractal building was accomplished by taking 0.8 
+; parts of Z^(-1.5) and subtracting from it 0.8 parts of Z^(+1.5). 
+; Then (1/C) was added.  The resulting fractal consists of a large 
+; mass of chaos with a skewed Mandeloid near its center, the whole 
+; area surrounded by satellite Mandeloids.  Today's scene is 
+; located in the Seahorse Valley area of one of these smaller 
+; figures.  The small Mandeloid that holds today's scene appears 
+; to be on the verge of vanishing beyond an escape radius, even 
+; though other Mandeloids exist farther from the origin.
+; 
+; With an unexpected pile of work coming in, I had too little time 
+; to search for the best coloring, and had to settle for the pal-
+; ette in the image.  I am sure that better coloring is possible 
+; for this image, which is why I rated it at a run-of-the-mill 5.
+; 
+; The 3-minute render time is acceptable; the download of the 
+; completed image is more acceptable.  The download will soon be 
+; available on the WWW at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Monday was rather foul here at Fractal 
+; Central, as heavy clouds, a chilly temperature of 50F 10C, and 
+; occasional light rain kept the dynamic cats indoors most all 
+; day.  As expected, their moods suffered, and a treat of tuna was 
+; necessary to restore their good spirits.
+; 
+; This morning it's cloudy again, and rain is threatening.  It 
+; will be another bad day for the duo.  For me, it will be a 
+; passable day, though not until I finish the things that need to 
+; be done.  That's it for now.  Until next time, take care, and 
+; long live fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Feste_Fractalis { ; time=0:03:08.72--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.34804633476406880/+0.558693945664914\
+  30/83300.01/1/177.5/-6.90685425519532714e-011
+  params=0.8/-1.5/-0.8/1.5/0/0 float=y maxiter=500
+  inside=0 logmap=59 periodicity=10
+  colors=000v0awHScRLL_EMKNM4VK8UICUHFTFJTDNSCQSAUR9\
+  XRCNKFDDI47KA9MFBOLDQQESVGU`I3C92852528B1EG1KM1QR1\
+  WW1aa0gf0ml0sq0xm0coCKhOci_qjLpkMolMnlNmmNlmOknOjn\
+  PioPhoQgpQfpReqRdqScrSbrSjtTrvUzwUyoVxhVwaVwUVvNVu\
+  GVu9VsCWqFXpIYnLZmO_kR`jTahWbgZceadddebgfaigdffgdf\
+  jafm_fpYesVevTexReqNejKecGeXDeQAePCbPE`OGZOIXNKVNM\
+  TMORMQPMSNLULLWJKYHK_FJaDJcBJe99aB0ZD4`C8aBCbAGc9K\
+  d8Oe7Sg6Wh5_i4cj3gk2jl2hl5fl7el9clBalD`lFZlHXlJWlL\
+  UjMThMSfNRdNQbOP`OOZONXPMVPLTQKRQJPQHRSFSUKTWMUYOV\
+  _QXaSYcUZeW_gY`i_ZgaXfcVdeTcgRaiP`kNZmMYmKXmIVmGUm\
+  ESmCRmAPm8Om7NmAMmCMmEMmGLmILmKLmMKmOKmQKmSJmUJmWJ\
+  mYJmXLmWMmVNmUOmTQmSRmRSmQTmPVmOWmNXmMYmMZmLXmLWmK\
+  VmKTmJSmJRmIPmIOmKNmUMc_PccRccSccSccSdcSecSfcSgcSh\
+  cSicSjbSkaSl`SmWXoR`qMetIiwCbz6Wz1Pz3Oz4Nz6Nz7Mz9M\
+  zALzCLzDKzFJzGJzIIzJIzLHzMHzOGzPGzSHzVIzYJz`KzHNzF\
+  PzDQzCSzATz8Vz6Wz5Yz3Zz1` }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 

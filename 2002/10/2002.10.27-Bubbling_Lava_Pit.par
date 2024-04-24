@@ -1,0 +1,102 @@
+;     Date: Sun, 27 Oct 2002 09:38:39 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-10-02 (Bubbling Lava Pit [6])
+;       Id: <1.5.4.16.20021027094021.0db72e5e@pop.mindspring.com>
+; ---------
+; FOTD -- October 27, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In fantastic adventure games, where intrepid armchair explorers 
+; venture into computerized worlds of danger, lava pits are 
+; sometimes found.  These pits of boiling, bubbling molten rock 
+; are just one of the many hazards that block the way to the 
+; ultimate goal.  If stumbled into, these pits can be fatal to the 
+; adventurer . . . that is unless he has in his possession a magic 
+; charm of some sort that can enable him to survive things that 
+; would ordinarily mean instant death and a trip back to the 
+; beginning of the game or level.
+; 
+; I mention computer adventure games because today's image reminds 
+; me of a lava pit, with bridges of fractal debris spanning the 
+; chasm beneath.  I promptly named it "Bubbling Lava Pit".  No one 
+; has yet fallen into the pit, though many have come close.  
+; Hopefully, this pit will claim no victims in the future.
+; 
+; The formula behind the image is based on the golden ratio, where 
+; <a> is to <b> as <a+b> is to <c>.  In today's case, I took the 
+; negative value and subtracted from it half as much of the 
+; negative of its squared value, which simply adds the number one 
+; to the original value.  The result of this trick is a Mandeloid 
+; that resembles two partially coalesced Mandelbrot sets.  The 
+; East Valley area of this figure is relatively undistorted, and 
+; that is where I found today's scene.
+; 
+; When searching for a rating, I looked at yesterday's image and 
+; compared it with today's.  An honest comparison led me to a 
+; rating of 6, which is still above average but only slightly.  
+; The render time of around 4 minutes is in line with the worth of 
+; the finished result.  And as always, the finished image is 
+; available on the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Heavy rain fell during the pre-dawn hours Saturday here at 
+; Fractal Central, but by mid-morning the clouds departed and the 
+; temperature soon rose to 66F 19C.  By afternoon, the grass was 
+; dry, which gave the dynamic duo the chance they needed to catch 
+; up on lost outdoor time.  The extra time outdoors made them so 
+; happy that they almost forgot to ask for food when they returned 
+; inside.
+; 
+; It's now Sunday morning.  We made it through Saturday with no 
+; unexpected disasters and a minimum of work.  Hopefully, today 
+; will be a repeat.  Until next time, take care, and then have a 
+; little fun.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Bubbling_Lava_Pit { ; time=0:04:41.27--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+5.53827492985745600/-0.008649815721493\
+  01/90565.23/1/30/3.72648166421796212e-008
+  params=1/-1.618034/-0.5/-2.618034/0/0 float=y
+  maxiter=600 inside=0 logmap=60 periodicity=10
+  colors=000uTNvRJwPGxNCyL9yK6vI7tH7rG7pF7nD7lC7jB7h\
+  A7e88c78a68_58Y38W28U18S08U1Cc2Fm3Iw3Lz4Oz5Rz6Uy6X\
+  x7`w8cv9fu9itAlsBapCemDUlEViF5fGWcHVbJUaLUaOT`QS_S\
+  SZURZXQYZQX`PWbOWeOVgNUiMUkMWmLYoK_pJarIcsIeuHgvGi\
+  xFkyFakPSYZJKhVXnehtjarnVprOnvHlzAjxDivGhtJgrLfpOe\
+  oRemTdkWciZbg`afcadf`bh_`kZZnYYpYRrTLsOFtJ9uFDuGHu\
+  HLuHPuISuJWuJ_uKcuKfuLjuMnuMruNuuN`mfYjgVhhTfhQciN\
+  ajL_jIYkFVlDTlARm7On5Mn2Ko0Iok8ngCldFk`JiYMhVPgUQe\
+  URcTSaTS_STYSUWRVURVSQWQQXOQXNVYO_ZPc_Qh`RmaSqbTvc\
+  UzdVyaXx_YwYZvV`uTatRbsOcsMerKfqHgpFhoDjnAkm8lm6mt\
+  5qmC`gJLGIiDJlBJnDLoFNoHOpJQpLRqNTqOUqHecBpQDnTFlV\
+  HkXJiZLh`NfcPeeQcgSaiU`kWZnYYp_WraVtcTvdSxZOvTKtNG\
+  rHDqB9o55m02l44e86ZC8SGALJBFKFFLJFMNFNRFOVFPZFQbFR\
+  fFSkFSlFQmEPoDOqCNsBMuALw9Ky8Jz7Iz6Hz5Gz4Fz3Ez2Dz1\
+  Cz0Bz0IzGPzVVziPz_KzROzOSzMWzJ_zHczEgzCkz9oz7kz6gz\
+  6cz6_z5Wz5Sz5Oz4Kz4Gz4szN }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
+; 
