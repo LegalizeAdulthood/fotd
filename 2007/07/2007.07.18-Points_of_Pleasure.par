@@ -1,0 +1,107 @@
+;     Date: Tue, 17 Jul 2007 21:59:02 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  18-07-07  (Points of Pleasure [8])
+; 
+;       Id: <1.5.4.16.20070717220424.2127d858@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 18, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image was found in the same parent fractal that held 
+; yesterday's image -- the fractal created by combining Z^(1.5) 
+; with half as much Z^(3).  But today, instead of examining the 
+; shoreline near the negative X-axis, we check the center of the 
+; valley on the positive X-axis.
+; 
+; We find there a string of interesting fractal objects.  But we 
+; must go quite deep into one of these before we stumble upon 
+; today's image.  We go so deep in fact that it was necessary to 
+; include the mathtolerance entry in the parameter file to assure 
+; that the image calculates at the correct magnitude.
+; 
+; And once we have found our scene, we notice that, though the 
+; equal iteration bands give a rather good image, the outside=tdis 
+; setting does an even better job.
+; 
+; After all this finding and rendering effort, I was satisfied 
+; enough with the image to name it "Points of Pleasure" and rate 
+; it at an 8.  The calculation time of 3-2/3 minutes on the new 
+; P2000 machine would be stretched to around 15 minutes on the old 
+; P200 unit.
+; 
+; But the time required to view the completed GIF image on the 
+; FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is always the same.  When one gets there, the viewing is almost 
+; instant.
+; 
+; Most everyone agrees that the high temperature of 90F 32C here 
+; at Fractal Central on Tuesday was too warm to be considered 
+; ideal.  And the humidity helped none at all.  The fractal cats, 
+; unconcerned with the outside conditions, spent the day trying to 
+; get into trouble but finding little.
+; 
+; My day was spent working and trying to stop the fractal cats 
+; from sitting on the work.  Cats have a habit of doing this for 
+; no apparent reason other than simply to annoy their owners.  The 
+; next FOTD will appear in 24 hours.  Until then, take care, and 
+; how many times can the number one be subtracted from the number 
+; twenty-five?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Points_of_Pleasure { ; time=0:03:41.90-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.17536958522584230/+0.000039467196395\
+  35/6.59468e+011/1/-120/0 params=1/1.5/0.5/3/0/0/0/0
+  float=y maxiter=2000 inside=0 outside=tdis
+  periodicity=10 mathtolerance=0.05/1
+  colors=000kuEeuF_vHUvIOvJIwLCwMVWd6wN8pPAiQCbREWTG\
+  PUIIVI4TJBWJHZKNaKTdLZgLdjLjlDefLdbBdaTdZidXzdVjEW\
+  eGVaHVYIUUJUQKTMLTIMSJ82ENSFMLGLEH`WGK8PR4XX1ZU3_R\
+  5aO6bL8dIAeFBgCDhAEjDBlF9nI7pK5wQ2qM3lJ3fG3aD4WA4R\
+  74M44ZHAkUFybOxeKwhHvkDumAtp6ss3ru0hh0_X0cjEgwSftR\
+  eqRdnQclQbiPafPpkE`dPUaPLYZEXfDUhCRjBOlALn9Ip0Kp8G\
+  qGDrNAsSFoWJl_OhcSehXbl`ZpeWtiTqhSohRmgQjgPhfOffNX\
+  eSdfNlgJtgFpcQl__gQniXikbdmh_ibafYccTe`OgPJ1NE8G8C\
+  M9JRAQXBWaBbgChlDoqDunUdkjOfhNb`MRULKOKDIJ6DJGJOQP\
+  S_VWi`_sXvrfczuFqpMikSafYTadLXjDSp5OvIRlVTcgWUzYLl\
+  RIaLGRFDI9BEAKABK0EK6CKBBKHAKM9PV8Sc7QmUOzUPzPNm5M\
+  c6KT6JO7HB2FJ7GRCHYHIecJlcJecJ_cJULJNKJHIJBGJ0EG5F\
+  JAGLEGOJHQNHSTJTZLTcMTiOUoQztRzoPzjNzeMzaKYXJZSH_M\
+  IdOG_PEVQCRRAMS8IZg6eV9gD7kJBnPzqVzkUzt_Lp`QlaVib_\
+  eccbdhZemJXpWfqgprszsnroijkebg`WdWO`SGXN8TJ1QG0SE0\
+  UB0W90Y60_40`9AYEKVJUSOcP }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

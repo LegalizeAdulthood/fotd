@@ -1,0 +1,101 @@
+;     Date: Mon, 30 Jul 2007 22:46:02 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 31-07-07 (The Parent Fractal [Not Rated])
+; 
+;       Id: <1.5.4.16.20070730225136.2ba7b68c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 31, 2007 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; We end the month of July with one of those mysterious parent 
+; fractals I so often mention but so rarely show.  But this parent 
+; is so unique that I just could not let it fade into the shadows 
+; of lost fractals.  It is so unique in fact that I intend to use 
+; it as the source of the next few days' images.  And yes, it is 
+; the parent of yesterday's 'Endless Loop' image.  Even more 
+; surprising, I reused the color palette of yesterday's image.
+; 
+; The formula that created this parent combines 2.5 parts of 
+; Z^(-1.05) with 0.35 part of Z^(-5.05) and adds (1/C).  Since it 
+; is an image which came about with no exploring, I could not 
+; fairly give it a rating.
+; 
+; The name I gave the image -- "The parent Fractal" -- is a simple 
+; description.  The calculation time of 40 seconds is brief enough 
+; to make the most impatient fractalist happy.  But the most 
+; convenient way to see the image is still to visit the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view it there.
+; 
+; One final note -- today's image is not the last we will see of 
+; this parent fractal.
+; 
+; Hazy, hot and humid (86F 30C) was the weather story here at 
+; Fractal Central on Monday.  Thunder-showers were in the general 
+; area most of the day, but none ever came close enough to cool 
+; things down.  The fractal cats kept cool by ignoring the heat.  
+; I kept cool by being too busy to notice it.  And the air condi-
+; tioning helped keep me cool also.
+; 
+; The next FOTD will appear in 24 hours.  At least it is supposed 
+; to.  Only time will tell if it actually appears.  Until next 
+; time, take care, and how many 3-D spheres could fit in a 4-D 
+; hypersphere of the same diameter?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Parent_Fractal { ; time=0:00:40.82-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=t
+  center-mag=131.174/240.484/0.003475104/1/-47.5/\
+  3.88578059e-016 params=2.5/-1.05/0.35/-5.05/0/0/0/0
+  float=y maxiter=3600 inside=0 periodicity=10
+  colors=000CUdEUcGUaIV`KVZLVYNWXPWVRXUTXSVXRXYPYYO_\
+  YNaZLcZKeZIg_Hi_Fk`En`Dn`Bq_Ara8uY7vb5wX4yb3uW5u_6\
+  sV8qX9oUBmVClTDjSFhQGfQIcNJbNLYLM_LNUJXWIQRH`SFTQE\
+  bODWNCfPEYQFfRH_TIgUKaVLlXNmYOrZQz`PzaTzbTzdWzeWzf\
+  ZzhZziazjazldzmdzngzpgzqjzrjztmzumzvpzxnzyszwpzxqs\
+  vnotkjsifqfbocYnaUlZPjWLiUHjWIjXIjYJjZJj_Kj`KjbLjc\
+  LjdMjeMjfNjgNjhOkjOkkPklPkmQknQkoRkpRkrSksSktTkuTk\
+  vUkwUkxUEdaFb`Ga`G``H__HZ_IY_IXZJWZKVZKUYLTYLSYMRX\
+  MQXNPXOOWONWPMWPLVQKVQJVRIUSHUSGUTFTTETUDTUCTVDSVD\
+  RVEQVEPVEOVFNVFMWGLWGKWGJWHIWHHWIGWIFWIE_JHbJKfJMi\
+  JPlJRmJSmITnIUoHVoHWpGXqGYqGYpIXpJXpLXpMWoNWoPWoQW\
+  o`VobVncVneVnfUngUmiUzjUzkTzmTznTzpTzqSlrSltSkkSkl\
+  Rkzmkzmkzmezm`jOWgMRdLMaJHZICWHBXIBXIBXJBXJAXKAXKA\
+  XLAXLAYM9ZM9_N9`N9aO9bO8cP8dP8eQAfQFgRKhRPiSUjSZkT\
+  clThmUmnUroVvpVzqWzrWzsXztXzuYzvYzwZzxZzy_zz_zz`zz\
+  `zzazzGzzHzzHzzWzzizzgzzf }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

@@ -1,0 +1,103 @@
+;     Date: Thu, 05 Jul 2007 01:26:06 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  05-07-07  (A Fractal Basin [5])
+; 
+;       Id: <1.5.4.16.20070705013118.2b47a484@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 05, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due mostly to my laziness, the FOTD image is 2 hours late.  But 
+; it's no problem.  The FOTD for July 06 will appear on schedule 
+; in around 22 hours.
+; 
+; The parent fractal of today's image is an un-spectacular thing 
+; that results when an unlikely but very critical amount of Z^4, 
+; (that amount is 0.4699315), is subtracted from Z^3.  This parent 
+; appears as a Mandelbrot set rotated 180 degrees, with a huge 
+; open triangular-shaped area beyond East, or in this case, West 
+; Valley.  Today's scene is located in some extra decorations that 
+; lie on the main (in this case the positive) stem of the parent.
+; 
+; The trip back out to the parent fractal is quite interesting, 
+; but with an image maxiter of 15000, it is rather slow.
+; 
+; I rated the image at a 5 and named it "A Fractal Basin", which 
+; was the only thing I could think of at the time.  The image 
+; calculates in under 6 minutes on the fast P2000 machine.  It 
+; would take around 1/2 hour on the worn-out P200 machine.  The 
+; fastest and easiest way to see the image is to pay a visit to 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view it there.  But before visiting the site, give Paul a 
+; bit of time to calculate and post it.
+; 
+; The weather here at Fractal Central on Wednesday left much to be 
+; desired.  The clouds hung heavy all day, while occasional 
+; showers of rain wet the pavement and dampened the local fire-
+; works displays scheduled for this evening.  The temperature of 
+; 73F 23C was not quite warm enough for comfortable summer outdoor 
+; activities, and last and perhaps least, the continuing random 
+; firecracker explosions kept the fractal cats skittish.
+; 
+; All this made for a less-than-ideal holiday, but fractals never 
+; take a holiday, and the next one will be along in a brief 22 
+; hours.  Until then, take care, and when things are going wrong, 
+; cheer up with an infinite fractal.  They give endless fun.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Fractal_Basin    { ; time=0:05:50.55-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+1.27508427101656600/0/3207997/1/90/\
+  -1.23373533611e-014 params=1/3/-0.4699315/4/0/0/0/0
+  float=y maxiter=15000 inside=0 periodicity=10
+  colors=000_IVaJWbJXcJYdK_eK`gLahLbiMcjMdkMemNfnNgo\
+  OhpOipMlqOjqPhqQfrRdrScrTasU_sWYsXXtYVtZTt_Ru`QuaO\
+  ucMvdKveJvfHwgFwhDwiCwkFxmHxoKxqMysPyuRzwUzxWzrRzm\
+  NN`LP_KQZKRYKSXKUWKVVKWUKXTKYSK_RJ`QJaPJbOJdNJeMJf\
+  LJgKJhJJP4RR5RU5RW5RY6R_6Rb6Rd7Rf7Rj3Si5Rh7Rh8RgAQ\
+  gBQfDQfEPeGPi7KgCNeHPcMRaRT_VWY_YWd_c`BebCgdEifFkh\
+  HmjIolKqnLhPakYVngPppJlnNhlRekVaiZZhaRgZSeXTdVUcTV\
+  aQW`OX_MYYKZXI_WGXVFUUFSTFPSFMRFKQFHPEEOECNEgYmW`m\
+  Kcm9fmBhcDiVFjLGkCIiBJgBKeBLdAMbAN`AOZAQY9RW9SU9TS\
+  9UR8VP8WN8XM8ZNA`NCbODdOFfPGhPIjQJkQLmQNoROqRQsSRu\
+  STwTUyTWzTXwUUtVSqWQnXNkXLhYJeZGb_E__CX`9Ua7Rb5Pb3\
+  R`4TZ5UX6WW6XU7ZS8_R8ZQAZQCYQEYQGYQIXPKXPMWPOWPQWP\
+  RUSSUUSZWScYSh_TmaTmcTmeTmgUmiUmkUnmUooVpqVqsVruVR\
+  Kc7KcAKcDKcJKAKK9Lm8Mm7Nm6Om5Pm4Qm3Rm2Rm3Rf4Re5Rc6\
+  Rb7R`8R_9RYARXBRVCRUDRSERRFRPGROHRMIRLJRJKRILRGMPE\
+  LRFNSFOTGPUGQWHRXHSYHTZIU }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

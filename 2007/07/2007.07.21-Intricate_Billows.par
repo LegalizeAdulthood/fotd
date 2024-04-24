@@ -1,0 +1,94 @@
+;     Date: Fri, 20 Jul 2007 23:34:06 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  21-07-07  (Intricate Billows [7])
+; 
+;       Id: <1.5.4.16.20070720233931.2b3715b4@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 21, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The formula behind today's image combines 4 negative parts of 
+; Z^(-1.3) with 0.6 negative part of Z^(-6.6) before adding (1/C). 
+; This combination produces a parent fractal that consists of four 
+; large north-south oriented bays, a prominent fan, and filaments 
+; that terminate in rings.
+; 
+; Today's image was rendered with the default 'equal iteration 
+; bands' in effect.  The only special effect is a color palette 
+; with very narrow bands.  The scene is located in a valley of a 
+; double Mandeloid lying near the east edge of the fan.  I named 
+; the image "Intricate Billows" because I couldn't think of any-
+; thing better.
+; 
+; The rating of a 7 shows that I am pleased with the results of 
+; the day's efforts.  The calculation time of just over 3 minutes 
+; on a P2000 shows that the image is a relatively fast one.
+; 
+; As has been true for 10 years, the finished image is posted for 
+; instant and total enjoyment on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The Friday high temperature of 77F 25C was great, but a few too 
+; many midday clouds kept it from being absolutely perfect here at 
+; Fractal Central.  The fractal cats enjoyed the near-perfect 
+; weather from inside.  My day was about average, which gave me a 
+; couple hours to enjoy things.  The next FOTD will appear in 24 
+; hours, so until then, take care, seek truth, and be sure you 
+; know the truth when you find it.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Intricate_Billows  { ; time=0:03:07.96-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+3.94315695690715300/+0.001849876854336\
+  72/1.057157e+008/1/70/5.06303060240909097e-007
+  params=-4/-1.3/-0.6/-6.6/0/0/0/0 float=y
+  maxiter=2250 inside=0 logmap=280 periodicity=10
+  colors=000cMKcNKcOKcPKcQKcRKcSKcTK`UFXVAWWGWSMVOSV\
+  KYUGcUDiNCcGBY9AS29M17J16G15D14B038025y0R012EsZBiT\
+  9`N7SH4IB295dzjZrdUjZPbTKVNFNHAFB575EtjCldAeZ8ZT7S\
+  N5LH3EB175ODRKAMG8IC6D849424QSfMO`JLWGHQDEL9AG67A3\
+  35nwQckKU_FKOAAC5En`rmYkfTd`PYVLRPHKICDC8664qo7SHw\
+  OEnKCeG9YC7P84H428tSdkOZcKTWGNOCHG8B845NY4`W3GO2DJ\
+  29E1691340zZFzPCcKAUF7KA5A52I2UF1PC1K91F60A305aN5U\
+  I4MD3F92741vX8nS7gO6_K5TG4MC3E827414Ai38a26U25N13F\
+  017BvN5TBa`keaWVSOLJGA98JEKGCHDAEA8B868545222zZ2mS\
+  1`L1PE0C70ps4Z`2HI1dmWU`OKPGAC8T1oN0dH0VB0K50ATtuN\
+  hiHYYBMN5BBuIqT9RkcqaWfSOWJGL98AgIofhzWAVL7KA3A6fE\
+  4WA3L71A3rNGhJD_FARB8I75932b`XJIGDXiARa8MU6GN4BF25\
+  72gt1Xe1MS0BE6ab4ST3JJ199MNdIJYEFRBBK77D336aLYPEMC\
+  7BwCVU6FFoKCfGAYD7QA5H6283`PPICCCqi9zY6zN3zBqz1zz0\
+  zz0zz0zz0zz0zzzzzzzzzzzzzzz0zz0zzFzzAzz5zzFzz1zz0z\
+  z0zz0zz0zz0zz0zz0zzDzz8zz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

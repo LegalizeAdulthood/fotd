@@ -1,0 +1,104 @@
+;     Date: Sun, 01 Jul 2007 00:46:50 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  01-07-07  (This Way Out [Not Rated])
+; 
+;       Id: <1.5.4.16.20070701005158.2c0f5bc0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 01, 2007 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The weather on Saturday turned out so beautiful that we decided 
+; to take a day off to enjoy the central Pennsylvania countryside. 
+; This explains the lateness of the first FOTD for July '07.  And 
+; speaking of the FOTD, it's a scene showing a midget in the 
+; fractal that results when the formula Z^(1.1)+C is iterated 11 
+; levels up the complex logarithmic hyperspiral.
+; 
+; The explosion-like features around the little midget have been 
+; seen many times before, but the midget itself, with its arrow-
+; head shape, is kind of a rarity.  This is why I chose it to be 
+; today's FOTD.
+; 
+; Unfortunately, a fractal that is found so quickly can hardly be 
+; given a fair rating, so I gave today's image no official rating. 
+; I did name it "This Way Out" however, when I noticed the resem-
+; blance to a directional arrow.
+; 
+; The calculation time of 9-1/2 minutes on the P2000 computer is 
+; not too outrageous, and the completed image can always be seen 
+; instantly on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Absolutely perfect weather prevailed all day Saturday here at 
+; Fractal Central.  The high temperature was 79F 26C, the sky was 
+; blue and decorated with puffy cumulus clouds, which cast their 
+; shadows on the surrounding hills.  The humidity was low, and the 
+; wind was gentle.  But the fractal cats were out of sorts, due to 
+; too little attention.  With another perfect day due on Sunday, 
+; they will probably be out of sorts again.
+; 
+; My day was actually quite enjoyable.  Tomorrow will likely be a 
+; repeat.  The next FOTD is due in about 22 hours, but I would not 
+; be surprised if it is late again.  Until then, take care, and if 
+; the world is an illusion, is the illusion real?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+This_Way_out       { ; time=0:09:26.29-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2
+  center-mag=+0.67928797718223780/+1.367001809932602\
+  00/2.719357e+008/1/-55/3.97147505216619012e-005
+  params=1.1/0/11/525 float=y maxiter=36000 inside=0
+  logmap=516 periodicity=10
+  colors=000HbkIYjIUiJPhJKfKGeKBdK7cJKoJWzNTuRRpUPlY\
+  NgaLbdIZhGUlEPoCLsAGy7Bv8Ct8Dr8Ep8Fn8Gl8Hj8Ih9Jf9K\
+  d9Lb9L`9MZ9NX9OVAPTAQRARPASNATLAUJAVG9THAVHBXHBYHC\
+  _HDaHDbHEdIFeIFgIGiIHjIHlIInIJoJJqJKrJLtJLvJMwJNyJ\
+  NzKMyLMxMMwNMvOMuPMtQMsRMrSMqTMpUMoVMnVKqVMnVNkVPh\
+  VQeVSbVT`VVYVWVVYSVZPV`MVaKVcHVdEVfBVg8Vh6XcCZ_I_W\
+  OaSUcN_dJefFkgBqfAoeAndAmc9lb9ka9j`9i_8gZ8fY8eX8dW\
+  7cV7bU7aT7`S6ZR6YQ6XP6WO5VN5UM5TG4TL5SP5ST6RX6R`7R\
+  d7Qh8Qi9Xl8Qo7Jr7Du66x60wB2vG4vL5uQ7uV8t_AwaAtcBqd\
+  CoeDlgEjhFgiGejHblI`mJYnKWoLTqMRrNOsOMtPNrUOpYOnaP\
+  lfPjjQhnOftQgrRgpTgoUgmVhkXhjYhhZhf`ieaicbiadi`ejZ\
+  fjXhjWijUjkSlkRmkPuxInkOh_TaNZJElWBch9Vt7NqIQnSTlb\
+  WilZexZgy`hzaizcjzdkzflzgmzhOzPQzRRzTTzUUzWWzYXzZZ\
+  z`_zbazcbzedzgezhgzjhzljzmkzomzqnzrczoTzlIzi7zg8zh\
+  8zh9zi9zi9ziAzjAzjBzjBzkBzkCzkCzlDzlDzlDzmEzmEzmFz\
+  nFznFznGzoGzoFzqGzoGznCzm }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

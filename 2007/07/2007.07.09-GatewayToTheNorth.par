@@ -1,0 +1,102 @@
+;     Date: Mon, 09 Jul 2007 00:40:54 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  09-07-07  (Gateway to the North [5])
+; 
+;       Id: <1.5.4.16.20070709004609.2ba79e80@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 09, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yes, the FOTD is a little late again today.  I decided to take 
+; it easy on my day off.  But a fractal was found, and here it is, 
+; better late than never in all its semi glory.
+; 
+; I named the image "Gateway to the North".  Actually, that's what 
+; it is.  In today's image we have a side view (from above) of the 
+; valley of the large north period-3 bud of the Mandelbrot set.  I 
+; found little in the image that I could consider above average, 
+; so I rated it at an average 5.
+; 
+; The image is not a perturbed Mandelbrot set, nor is it a Julia 
+; set.  It is an oblique slice of the 4-dimensional Julibrot 
+; figure.  The actual orientation, as shown by the imag(p1) para-
+; meter, is about 1/3 of the way from the Parabolic orientation 
+; toward the Elliptic.
+; 
+; A good bit of stretching in the vertical direction was necessary 
+; to give the image reasonable proportions.  Almost all of the 
+; 3-minute calculation time is spent calculating the few lines in 
+; the center that consist of 'inside' stuff, where the calculation 
+; almost comes to a halt.  This slowness is due to the extreme 
+; maxiter of 350,000.
+; 
+; As always, the image is or soon will be posted on the FOTD web 
+; site for instant viewing.  The FOTD web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The weather was a bit too warm to be absolutely perfect here at 
+; Fractal Central on Sunday.  But it came pretty close to perfec-
+; tion.  Much sun and a temperature of 93F 34C made water sports 
+; the activity of choice.  For the fractal cats, the activity of 
+; choice was sleeping and eating.
+; 
+; My day was notably lazy, which I hope does not show too much in 
+; the fractal.  The next FOTD will appear in 24 hours.  Until 
+; then, take care, and ease that stress with a fractal.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+GatewayToTheNorth  { ; time=0:03:09.88-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=multirot-XZ-YW-new passes=1
+  center-mag=0/0/4.65/0.3987 params=0/32/2/0/0/0/\
+  -0.12499/0.649525 float=y maxiter=350000 inside=0
+  logmap=4 symmetry=yaxis periodicity=10
+  colors=000iOKhPLgQMfRNeSOdTPcUQbVRaWSaWT`XU_XVZYXY\
+  ZYYZZX__W_`V`aUacUadTbeSbfRcgTdlRchPaeO_bMY_KWXJUU\
+  HSQFQNEOKCMHAKEAJ99IB9ID9IE9IG9IH9HJ9HL9HM9HO9HP9G\
+  R9GT9GU9GW9GX9GZ9F`9Fa9Fc9Fd9Ff9Eh9Ei9Ek9El9En9EoI\
+  QrQatYmvexxduxdsxdpxdnxdlxcixcgxcexcbxc`xbZxbWxbUx\
+  bSxbPxaNxaLxaIxaGxaEx`Bx`9x`7x`4x`2x`0xZ5wX9wWEvUI\
+  vTNvRRuQVuO_uMctLctJctIcsGasF_sUYhUYZUYMUYPUYRUYTU\
+  YVUYXUYZUY`UYbUVdUSfUOhULjTHlREnOBpM7rJ4tG0wH1vI1v\
+  J1vJ1uK2uL2uL2uM2tN2tN3tO3sP3sP3sQ4sR4rR4rS4rT4qU5\
+  qU5qV5qW5pW6pa6pb6ob6oc6oi7oi7nj7nk7nq8op7no7mn7lm\
+  7kl7jk7jj7ii6hh6gg6ff6ee6ed6dc6cb6ba5a`5`_5`Z5_Y5Z\
+  X5YW5XW5XV6YV6YU6YU6ZT6ZT6ZS6_S6_R7_Q7`P7`O7`N7aM7\
+  aL7aK7bJ8bI8bH8cG8cF8cE8dD8dC8dDBbDEaDG_DJZDMXDOWD\
+  RUEUTEWREZQEaOEcNEfLEhKFiLGiLIiMKiMMiMOjNQjNSjNUjO\
+  WjOYkO_kPakPckPhkQmlQrlQvlRzlRzlRzlQzlPzlOzlOzlNzl\
+  MzlLzlLzlKzlJzlIzlIzlHzlG }
+
+frm:multirot-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=z^(p2)+c,
+|z| <= 36 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

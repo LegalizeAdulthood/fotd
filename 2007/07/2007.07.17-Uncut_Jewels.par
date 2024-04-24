@@ -1,0 +1,101 @@
+;     Date: Mon, 16 Jul 2007 21:34:56 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  17-07-07  (Uncut Jewels [7])
+; 
+;       Id: <1.5.4.16.20070716214017.2b87d2e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 17, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's fractal formula we combine 1 part of Z^(1.5) with 1/2 
+; part of Z^3 and add straight C.  This formula produces a parent 
+; fractal that consists of two symmetrical and partially merged 
+; Mandelbrot sets facing north and south.  Today's image is 
+; located on the western shoreline near the X-axis, where the two 
+; sets merge, and a small but curious kind of bud is located.
+; 
+; The parent of today's image is symmetrical around the X-axis, 
+; but it is a very critical type of symmetry.  If the exponents of 
+; Z are changed from 1.5 and 3, the symmetry vanishes at once.  If 
+; Z^3 is changed to Z^2.5, and all else kept the same, the 
+; resulting parent fractal is one of the most unusual I have yet 
+; encountered.
+; 
+; I named today's image "Uncut Jewels".  The four faceted elements 
+; remind me of diamonds in the rough.  I rated it at a 7, which 
+; might be a bit high, but it's really a rather pleasing fractal.
+; 
+; The included parameter file runs in 31 seconds on my fast 
+; fractal computer.  The old P200 would take about 3 minutes to 
+; finish the job.  As always, the best way to see the finished 
+; image is to go online to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view it instantly there.
+; 
+; With a temperature of 86F 30C, Monday was a bit too warm to be 
+; considered perfect.  But I doubt that anyone noticed the 
+; deficiency.  The cats kept themselves occupied chasing each 
+; other, hiding, and suddenly pouncing.  My day was suitably busy. 
+; If all goes well, tomorrow will be the same.
+; 
+; The next FOTD will appear in 24 hours.  Until then, take care, 
+; and if a farmer has seven daughters and each daughter has a 
+; brother, how many children does the farmer have?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Uncut_Jewels       { ; time=0:00:31.04-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=-0.26485847107386810/-0.037316662862560\
+  15/1.227384e+009/1/97.5/-7.40612221022743378e-005
+  params=1/1.5/0.5/3/0/0/0/0 float=y maxiter=750
+  inside=0 logmap=64 periodicity=10
+  colors=000666999DDDGGGJJJNNNQQQZZZiiilllnnn0rp0tr0\
+  uz0uz3lwBelGZlJblNglQllUrlOpXOlIOiGOjGOlENlEUj9Zi5\
+  eg2j`0pQ0j90b00m89nTSp_VrdVtlhuruzzzzzzNG6B8600600\
+  6808S08N08E08809O0BeBJwNUzZbzjlzwuzz0zz0zzzzz0zz0z\
+  rSzUOz6LzcU0z`0zX0zW0zU0zQ0zO0zN0zJ0zG5zD9z9Gz6Lz3\
+  Qz2Sz0Uz0Wz0Xz0Xz0Zz0`z2`zDbzQbzbcznczzXyjSyXNwJGw\
+  5Bu06u0WzwZyu`rtbircbrgWpiNnjGll9lbQuSezIwz8zzIzzS\
+  zz`ztjzjtzcuziuzlwznwppycryUtzItz8uz0wz0yz0yu0zp0z\
+  j0zc0zZ3zU9zNEzIJzDOz6Uz2`z0ez0jz0pz0uzNG0OL0QQ0QU\
+  0SZ0Ub0Ug0Wj0Xp0Xt0Zy0Zz0Sz0Lz0Ez08z02z00z20z50z65\
+  n0OS0i60z00z00z00z03z0Bz0Lz0Uz3bz5jz6tz3jz0cz0Xz0Q\
+  z0Jz0Dz06z00z00z60zD0zJ0zQ0zX0zc0zj0zr0zy0zz0zz0zz\
+  2zz3zz3zzDzzLzzUzzbzzlzzuzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzbzzDzz0zz0zz0zz0zz0zz0zz2zz5zz8zzBzzEzzIzzL\
+  zzOzzSzzWzzQzzNzzJzzEzzBzz8zz5zz0zz0zz0zz0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

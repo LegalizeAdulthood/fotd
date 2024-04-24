@@ -1,0 +1,103 @@
+;     Date: Wed, 11 Jul 2007 23:19:35 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  12-07-07  (Zexpe All The Way [5])
+; 
+;       Id: <1.5.4.16.20070711232452.2b9fafb6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 12, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's fractal we return to the Zexpe fractal so named by 
+; Lee Skinner.  We explore it as it appears at a height of epsilon 
+; (2.718...) levels up the log ladder.  At this slight height the 
+; parent fractal resembles a twisted cubic Mandelbrot set with an 
+; unusually intricate large bud where the western valley should 
+; be.  Today's image is located in the east valley of a larger 
+; midget on a filament extending from the intricate large bud.
+; 
+; I named the image "Zexpe All The Way", which is a reasonably 
+; accurate description of it.  I rated it at an average 5 because 
+; the image is the second Zexpe fractal to appear in the past few 
+; days, and repeats never bring fractal satisfaction.
+; 
+; The parameter file is lightning fast.  It finishes in only 23 
+; seconds on the recently retired but still quite functional P2000 
+; which I am reconfiguring to run Fractint as efficiently as 
+; possible.
+; 
+; An equally convenient way of viewing the image is to go to the 
+; FOTD web site and view it there.  The web site may be accessed 
+; at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; With a temperature of 86F 30C and cloudy skies, the heat was not 
+; too bad here at Fractal Central on Wednesday, but the humidity 
+; was sky high, which made it as oppressive as the past couple 
+; days.  The fractal cats ignored the heat but kept watch for the 
+; chipmunk or maybe two that have been scampering around the yard 
+; for several days now.
+; 
+; My day was decidedly busy.  Thursday will be the same.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and don't 
+; get lost in fractal complexity.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Zexpe_All_The_Way  { ; time=0:00:23.23-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 periodicity=10
+  center-mag=-1.22969648826291200/+0.345960913903965\
+  50/13434.19/1/-70/-4.92854923539454148e-011
+  params=2.71828182845905/0/2.71828182845905/0
+  float=y maxiter=1600 inside=0 logmap=32
+  colors=000eFUfGVgHWhIXiJYjKZkL_lM`mNanOcoPepQgqRir\
+  SksTmtUpuVsvWvwXxxYzy_z0HCCMKNRRZWZi`eVQWGGMA6DKBE\
+  UFFcKGhOHmTIrXJvaKzeLzhJscIrYHcNGAIOUDWKHaJLgRPlZT\
+  rfXwf5lMJMPHQRFTUDWWBZZ9a`7dc5ge4je3ke2me1nVShKrbJ\
+  naJkaIhaId`Ia`HZ`HW`GS_GP_GM_FJ_FFZECZE9ZE6ZJ5VO4S\
+  T4PY3Mb2Jg2Gd6LaAQZEUWIZTMcQQgNUlKYqIau9Sj1I_n24k9\
+  5hG6eM6bT7__8Xe8UaBSZEQWGOTJMPLKMOIJQGGTEDVOEYYE_g\
+  EaqEczEeuJdqNdmRciWce_bLr``cbXhaTlaPp`k73bOFUdQqZN\
+  kbQffS`iUWmXQqZNBeMIdMPcMVbLabLgaLn`5V08_7BcDDgJGl\
+  PJpVNMZMP_MS_MV_MX_M__Mb_Ld`Lg`Lj`Ll`Lo`Lr`UnPToQS\
+  oUSpZRpcRphQqmQqrPqvOrzOrzNszNszMszMtzLuzevzawzZxz\
+  VyzSzzOzzkzzhzzfzzczzazzZzzXzzUzzzzczzbzzazzIzzMzz\
+  PzzSzzVzzYzzYzzZzzZzz_zz_zz`zz`zzyzzrzzlzzfzzvzzqz\
+  zmzzhzzdzzczzbzzbzzbzzazzazzazzazz`zz`zz`zzyzzlzzn\
+  zzmzz8zzBzzEzzHzzKzzNzzQzzRzzRzzRzzRzzSzzSzzSzzSzz\
+  Xzz`zzczzczzczzczzczzczzc }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

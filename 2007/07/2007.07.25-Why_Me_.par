@@ -1,0 +1,109 @@
+;     Date: Tue, 24 Jul 2007 22:50:27 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD 25-07-07 (Why Me? [6])
+; 
+;       Id: <1.5.4.16.20070724225554.2acf2a6c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 25, 2007 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's image we return to the same parent fractal that held 
+; yesterday's image.  This fractal resulted when I mistakenly sub-
+; tracted Z^(1.68) from Z^(1.4142) instead of subtracting the 
+; Z^(1.618), Golden Ratio which I had originally intended.
+; 
+; This parent fractal is a very large near-Mandelbrot set, with a 
+; messed up Elephant Valley and a runt-like main positive stem.  
+; In yesterday's image we examined the inner detail of Elephant 
+; Valley; in today's image we examine the detail of the abortive 
+; main stem.
+; 
+; What we find there is an area reminiscent of the railyard effect 
+; found in the negative X-axis area of fractals such as the one 
+; created by the formula Z^(2.003)+C.  And as along that fractal's 
+; negative X-axis, today's parent fractal is chock full of midgets 
+; along its positive X-axis.  Today's image shows one of these.
+; 
+; I named the image "Why Me?".  I gave it this name when I consid-
+; ered the vanishingly small chance that this particular fractal 
+; would ever see the light of day.  I rated it at a 6 because to 
+; me it seems just a tiny bit above FOTD average.  If I had put 
+; more effort into the coloring, I might have raised the image to 
+; a rating of a 7, but I fear the rating of a modest 6 will remain 
+; forever fixed.
+; 
+; One thing that will not remain forever fixed however is the 
+; calculation time.  As computers get ever faster, the calculation 
+; time will shrink from its present 1-1/3 minutes on a P2000, and 
+; no one can say how brief that time may eventually come to be.  
+; But the fastest and easiest way to see the image today is to 
+; forget calculating it and view it on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Tuesday turned out average in all respects here at Fractal 
+; Central.  The weather was neither unusually good nor bad, the 
+; work was neither unusually heavy nor light, the fractal cats 
+; were their typical selves, and the day's fractal is neither good 
+; nor bad.  It is a routine slightly above average.
+; 
+; I'll try again tomorrow to find a truly great image.  Of course 
+; there is no guarantee of success.  I don't find most of the FOTD 
+; fractals.  They find me.  Until 24 hours have passed, take care, 
+; and don't take a fractal sitting down.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Why_Me?            { ; time=0:01:22.39-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=ident
+  center-mag=+5.893397025006797/+0.00381731276127494\
+  /3.196234e+008/1/-162.5/0 params=-1/1.68/1/1.4142/\
+  0/0/0/0 float=y maxiter=2500 inside=0
+  logmap=172 periodicity=10
+  colors=000IAfH0eG0dF0cE0bD0aC0`B0_A0Z90Y80X70W60V5\
+  0U40S30Q20O10M00K00I00G00E00C00A008006004002003000\
+  zravnZqjXlgUgcSb_PYXNTTKPPHMKFJFCFAAB570052r42m62h\
+  82cA2ZCFUPSZaccznhzxkcnkada_VRXLHVV4_UCXTKUSSRe4If\
+  5Qm6Xz7dz8kz9rzHlzOfrVaiaWihRioLivGksLlpPmmTojXpg`\
+  qddrahnXgkTfhPfeLebHe_DdX9dUGcRMbPSbMYaJc`Hi`ReS_b\
+  Jh_AqX1edGVkVKsi9zxBkfDXPEW7PSF_`NjiVtqasn_rlYqiXp\
+  gVoeTnbSm`QmZPc_KU_FL_An_dj_bf_ab_`Z__W_ZZ`b`afcaj\
+  ebnhcrjcuddsZerTfqNgoHhnBim5il4hg4hb4hY3gT3gO3gK9e\
+  MEcNKaPP_QUYRYQP`INZKUYL_XMeVOkUPqTQwTRvTSvTTuTUuT\
+  VtTWtTXsTYsUVmVTmVQmWOmXLmXJm`JrdJvgJzkJznJzmOzmSz\
+  mXzm`vmdrmimmmhmqcorZqs`rtatucuvdzw0zx0zy0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zzdzzaz\
+  z_zzRzzIzz9zz0zz9zzHzzPzzXzzdzzlzzizzfzzdzzazzZzzX\
+  zzUzzSzzZzzdzzfzzhzzjzzkzzmzzozzpzzgzz_zzRzzJzzAzz\
+  2zz6zzAzzDzzHzzLzzOzzMzzK }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

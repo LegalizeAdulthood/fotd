@@ -1,0 +1,92 @@
+;     Date: Mon, 02 Jul 2007 21:47:02 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  03-07-07  (Serendipitous Atom [7])
+; 
+;       Id: <1.5.4.16.20070702215212.2d5f31d2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 03, 2007 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image was brought about by a formula that subtracts 0.12 
+; part of Z^(-10) from 1.075 parts of (1/Z), then adds (1/C).  The 
+; parent fractal is a grossly oversized hourglass-shaped Mandeloid 
+; with a prominent East Valley but no negative stem.  Several 
+; outzooms are needed to fit the whole fractal onto the screen.
+; 
+; Today's scene is located in a minor valley near the point where 
+; the main negative stem should be attached.  I named the image 
+; "Serendipitous Atom" and rated it at a 7.  I think B. Mandelbrot 
+; called the midgets 'atoms'.
+; 
+; On the fast P2000 machine, the image takes a little over 6 
+; minutes to run.  It would take about 1/2 hour on the slow P200 
+; unit.  The completely-rendered image is available for instant 
+; viewing on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; The absolutely perfect days here at Fractal Central are growing 
+; frustrating, especially when one is too busy to enjoy them.  The 
+; fractal cats agree, and showed their displeasure by getting into 
+; a spat over who got to lie on the large scratching post.
+; 
+; My day was acceptable; tomorrow will likely be acceptable also.  
+; The following day will be a holiday.  The next FOTD will appear 
+; in 24 hours.  Until then, take care, and though fractals have a 
+; beginning, they are without end.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Serendipitous_Atom { ; time=0:06:16.42-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+0.79730874098083380/+2.231117699749411\
+  00/6.734321e+010/1/-135/-0.001136
+  params=1.075/-1/-0.12/-10/0/0/0/0 float=y
+  maxiter=3600 inside=0 logmap=521 periodicity=10
+  colors=000LaWLaVLbTLbSLcRLcPLdOLdNLeLLeKLfJLfHLgGL\
+  gFMaINWKOQMPKOQERR8TS3VS3XR3VQ3UP3TO5SN7RM9QLCOKEN\
+  JGMIILHKKHMJGPHESGCVEAYD9_C8ZD7YE6XF5WF8XGAYHCZIE_\
+  IH`JJaKLbKNcLPdMSeMUfNWfOYgP`hPbiQdjRfkRhlSkmTmnTo\
+  oUqpVspVtk_ugcucgv_kvWowSswOwuMqtKksIerG_qEVpFToGS\
+  oHRnIQnJPmKOlLNlLMkMLkNKjOJiPHiQGhRFhREgSDzdCfUBzV\
+  AeW9pX8dX7aV9_UBYSDWREUPGSOIPMJNLLLJNJIOHGQFFSCDTA\
+  CV8AX69Y47_26a05b17c29c3Bd4Dd5Fd5He6Je7Le8Nf9PfARf\
+  ASgBKgCWgDOhE_hFXhFciGeiHgiIijJkjJljKkiKjiKiiKihKh\
+  hKghKfgKfgKegKdfKcfKcfKbfKaeK`eK`eK_dKZdKYdKqcKdcK\
+  WcKWcJYbJ_aJU`IK_IUZIcYHiXHkWHmVHzUJzVLzVmzjPkWRjW\
+  TjWViWWUXYUX_gXafXcfYeUY0KPiUYjcZlbZnbZpaZr`_t`_v_\
+  _wi_uYZsWYqUYoSZmRckPhiNmgLreJwcIwaGw_EwYCwWBw`Fwe\
+  IwjMwmPurSswTqwTowTmwUkwUiwUgjWeiYch_afa_ecYdeWbgU\
+  aiS`kTZmUYoVXqVVsWUuXTwYSxYRzZQzZQzZPz_Oz_Oz_Nz_Mz\
+  `Mz`Lz`Kz`KzaJzaVzDQzOLzY }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

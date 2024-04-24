@@ -1,0 +1,106 @@
+;     Date: Thu, 05 Jul 2007 22:22:52 -0400
+; 
+;       To: fractint@mailman.xmission.com
+;       cc: philofractal@lists.fractalus.com
+; 
+;     From: Jim Muth <jamth@mindspring.com>
+; Reply-To: Fractint and General Fractals Discussion
+; 	  <fractint@mailman.xmission.com>
+; 
+;  Subject: [Fractint] FOTD  06-07-07  (Just Peachy [5])
+; 
+;       Id: <1.5.4.16.20070705222805.2bc7b11a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 06, 2007 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal formula takes 3 parts of Z^(-1.5) and adds 0.9 
+; part of Z^(-4.5) before adding (1/C) to produce a parent fractal 
+; that vaguely resembles a Mandelbrot set rotated 180 degrees.
+; 
+; Perhaps the most unusual thing about this parent fractal is that 
+; like so many fractals with 2 negative exponents of Z, it has a 
+; 'fan', but the fan opens out toward the west rather than the 
+; east.
+; 
+; For a half hour I searched this backwards fan for a sign of 
+; midgets before I concluded that it has none.  I then turned to 
+; the much more promising area at the east side of the parent 
+; fractal, where after a brief search I found the midget that lies 
+; at the center of today's image.
+; 
+; I rather like the peach color surrounding the midget.  This is 
+; why I named the image "Just Peachy".  I rated it at a 5, which 
+; is FOTD average.
+; 
+; The image's parameter file takes 1-1/2 minutes to calculate on 
+; the speedy P2000 computer.  It would take about 9 minutes on the 
+; slower P200, which as it nears 11 years of age is still running 
+; Fractint.
+; 
+; The best way to view the image is to forget all this parameter 
+; file stuff and go to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the already-calculated image is posted for instant and 
+; total gratification.
+; 
+; Heavy clouds and occasional rain marred the Thursday weather 
+; here at Fractal Central.  The fractal cats were more concerned 
+; in catching a fly that had gotten inside than they were in the 
+; outside conditions.
+; 
+; My day was rather busy, but still under control.  The next FOTD 
+; is due in 24 hours.  Unless something unforeseen comes up, it 
+; will appear as scheduled.  Until then, take care, and if the 
+; world is an illusion, are fractals also illusory?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Just_Peachy        { ; time=0:01:34.09-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+1.473661593883163/+0.4775981387907711/\
+  1.267474e+008/1/35/-2.83189545778606e-006
+  params=3/-1.5/0.9/-4.5/0/0/0/0 float=y
+  maxiter=1500 inside=0 logmap=148 periodicity=10
+  colors=0006AA9AACAAFAAIAALAALAAQAAQAAUAAVAAYAAZABa\
+  BCcCDfEGiFJmGLnKKnNKnQKnUKnXKn_JnbJnfJniJnlJuuCnoJ\
+  gjQ`dXU_cOViPWfPUcQS`QQYQOXQMWQK2QI3TJ4WO5ZT6aY7gh\
+  4db7aXAZRDXMFUGIRALP5NMBMJHMGNMDTLAZL7dL4iK5jLgkMz\
+  kNzlOzmPzmQznzznzzozzpzzpzzqWzrXzrYzsZzzZzs_zl`Nf`\
+  Q_aTTaWNbZGba9cc3cb6`b8ZaAXaCU`ES`GQ_IN_KLZMJZOGYQ\
+  EYSCYP9ZM7ZJ5_F2ZHCYFKXDRXBZW9eV6mXBfYEg_Gh`JjbLkc\
+  OldRmfTogWpiYqj`rlctj`rk`rkarlarlarmbrmbrncrncrocr\
+  odrpdrqesnfqkhnz6nz9nzDozGoyJpyMqyQqyTryWryZsxbts`\
+  rnZphXncVlYSjTQhNOfIMdCJbIOdIRcHUcHWbHZaGaaGd`Gf_F\
+  i_FlZEoYFnXHmVJlTKkRMjPOiNQhLRgJTfHVeFXdDYcB_b9aa7\
+  c`5h7GfFMdNTbV_ePSfSRgUPhXOjZNkaLlcKmfJnhHpkGqmFrp\
+  DsrCuuAspDsnFrkHriJqfLqdMpbOp_QqYSrVUsTVtRXuOZvM`w\
+  JbxO`yUZzZXzdVzcUzaTz_SzZQzXPzVOzUNzSLzQKzPJzNIzLG\
+  zKFzIEzGDzEBzGBzIAzL9zN8zP8zS7zU6zW5zZ4zX6zY8zZ9z_\
+  Bz`CzaEzbFzcHzdJzeKzfMzaS }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
