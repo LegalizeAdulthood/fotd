@@ -1,0 +1,79 @@
+;     Date: Mon, 27 Nov 2006 23:30:52 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 28-11-06 (FOTD for Nov 28 '06 [No Rating])
+;       Id: <1.5.4.16.20061127233242.29d70f6c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- Nov 28, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows just a little of what happens when 0.2 parts 
+; of Z^(7.7) are mixed with 1.4 parts of Z^(0.77) and C is added.  
+; The parent fractal appears as a Mandeloid with an East Valley 
+; divided into several arms.  Today's scene is located in this 
+; East Valley area.
+; 
+; To add to the interest I calculated the image with the inside 
+; set to 'zmag', an option I use very little.  In my opinion, the 
+; result does not quite earn a name or rating, but it is still a 
+; rather interesting image to see.
+; 
+; The calculation time of over 14 minutes on my machine is too 
+; slow for such a nondescript result.  But the finished image is 
+; posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it may be viewed at leisure.
+; 
+; Hazy sunshine and a temperature of 54F 12C made the outdoors 
+; reasonably pleasant.  Lots of food and an inside temperature of 
+; 70F 21C kept the fractal cats happy.  Lots of work, plus a bum 
+; ankle that is coming along all too slowly, made my day marginal. 
+; But tomorrow promises to be far more relaxing, allowing more 
+; time for the FOTD.  Until then, take care, and be at one with 
+; everything.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_Nov_28_06 { ; time=0:14:23.43--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.36448661072948350/-0.059593400669110\
+  53/3.53679e+012/1/-100/-0.0142 params=0.2/7.7/1.4/\
+  0.77/0/0 float=y maxiter=1500 inside=zmag
+  logmap=209 periodicity=10 mathtolerance=0.05/1
+  colors=000UU`VUaVUcUUbTUaSU`QUZNUXKVVGVTEWSDXRCVRA\
+  TQ8RQ5QO2OM7OSCLXHIaJFfL7kN0pP5pNApLFnJEkHEgFDcDD_\
+  BDW9HU7LT6PS6TR6XQ6`P6dNDhMNlLXpKftJpwIsuKstLsrMsq\
+  NpoOpnQplRpkSpiTphUpfWkeXgcYjbZla_jcahecfgedigbkh`\
+  mjZolXqnVroUnkTjgSfcRb_QZWPVSPSOOOKNKGMGCLC8K84J40\
+  J10L42M76OAAPDERGISJMTIKTHJUGHUFGVEFVDDWCCWBBXA9X9\
+  8`25X87TD8QJAMOBJUDFZEBdG8iH4oJ1tK3tI4tH6tF7tE8tCA\
+  tBBt9Dt8Et6Ft5Ht3It2Kt0Lt0Mt0Op4Qm9SiEUfJWbOY_T_WY\
+  dQa`TbYWbVYbS`cPccMecJhcFkdCmd9pd6se3ue0xe0zq0zk0z\
+  e0z_0zU0zP0uQ2qR4mR6iS8eTAaTCYUETVGPVILWKHXMDXO9YQ\
+  5ZS1ZU2YW3YY3X_4X`4Xb5Wd5Wf6Vh6Vi7Vk7Um8Uo8Tq9Tr9T\
+  oDSmGRkKQhNPfROdUNaXM_`LYcKVgJTjIRmIUnHWoGZpF`qEdr\
+  BbsDatE`uF_vGZwHXxJWyKVzLUzMTzNQzJOzGLzCJz9Gz5Hz6I\
+  z6Iz6Jz7Jz7zz7Lz8Lz8Mz8Mz9Nz9cz0Nz9TzAbzDZzBWzASz8\
+  Pz7Lz5Iz4Fz3Gz6Gz9GzCGzFGzIGzLGzOHzRHzUHzXHz_HzbHz\
+  eHzhHzk7zm0zp0zo0zo0zo0zo }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

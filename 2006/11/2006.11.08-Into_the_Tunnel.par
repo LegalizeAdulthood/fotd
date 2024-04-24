@@ -1,0 +1,88 @@
+;     Date: Thu, 09 Nov 2006 00:48:50 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-11-06 (Into the Tunnel [No Rating])
+;       Id: <1.5.4.16.20061109005029.29bf0c02@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 09, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's curious image is of a midget in the Z^(1.1)+C Mandeloid 
+; as it appears 111 levels up the logarithmic ladder.  Midgets are 
+; hard to find in Mandeloids of such a low order, but the 'fmod' 
+; outside option is a lot of help.
+; 
+; I named today's image "Into the Tunnel".  The tunnel might well 
+; be the one a fractalist enters as he leaves this world.  Since 
+; there is supposed to be a bright light at the end of this type 
+; of tunnel, I colored the central midget a bright white.
+; 
+; I gave the image no rating.  I found too little time to give the 
+; coloring the attention it deserves.  As a result, there is a 
+; kind of muddiness that detracts from the effect of light at the 
+; end of the tunnel.
+; 
+; The render time of 6-1/2 minutes is within reason, but still a 
+; bit slow for the more casual fractalist.  The fastest way to see 
+; the tunnel is to go to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the image there.
+; 
+; Morning rain gave way to afternoon clouds here at Fractal 
+; Central on Wednesday, while the temperature hovered around 52F 
+; 11C.  The fractal cats had nothing to say about the conditions.  
+; With me, the work was still quite heavy, but I managed to find 
+; time for today's image.  And my bum leg is showing the first 
+; hints of improvement, so there may indeed be light at the end of 
+; the tunnel.  The next FOTD will appear in 24 hours.  Until then, 
+; take care, and walk serenely.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Into_the_Tunnel { ; time=0:06:30.24--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotBC2 passes=1
+  center-mag=+0.08221084534881777/-2.303366298743350\
+  00/6.603212e+007/1/-157.5/1.62107878681760909e-006
+  params=1.1/0/111/0 float=y maxiter=2500 inside=255
+  logmap=178 periodicity=10
+  colors=000ZT2XS3VQ4TP5SO6QM7OL8MJ9LI9JHAHFBFECEDDC\
+  BEAAF88G77H56I34J13K02K1BJ1JJXSIbbIilHpvHzlFqcDfVB\
+  WN9XF7c85iK3oc1iK4cA7Z0AT0CO0FI0ID0KHaFImPJXZKUhLS\
+  rLUuMUqNKmOchPFcPDZQEUQFPQFRQGTQGVQHXQHZRI`RIbRUcR\
+  JfRKhRKjRLlRLmMOzHFzCSg7be2Wc0Yb3SZ7MVBHRFBNJ5JN0F\
+  N0DN0CM0FL2IK3KJ5NJ7QI8SHAVGCYGCaGD_GEZGFXGGWGHUGI\
+  TGJRGKQGLOGLNGMLGNKSMDMHHGCLA7O42S00V30T71RB3QF4OJ\
+  6MN8LR9JUBIYDGaEEeGDiIBmJ9qL8uN6xO5rFGm7Rh0`piukfm\
+  fdeabYY_QTYIOWAKU2NR1QP0TM0WK0ZH0`F0cD0fA0i80l50o3\
+  0q10o30n50m70l90kB0iG1gL2eQ4dV5cT4cR4cQ4cR4cS4cT4c\
+  U4cV4cW4cX4cY4cZ4b_4b`4ba4bb4bc4bc4bK4bM4bO4bQ4bS4\
+  bU4cU5cU5cU6cU6cU7dW7dZ8da8dd8dg9zj9zmAzpAzpBzpBzp\
+  BzpAzp9zp9zp8zp7zp7zp6zp5zp5zp4zpAzpFzpKzpPzpUzpZz\
+  pczphzpmzprzpwzpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzpz\
+  zpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzpzzp\
+  zzpzzpzzpzzpzzpzzpzzpzzzz }
+
+frm:MandelbrotBC2   { ; by several Fractint users
+  e=p1, a=imag(p2)+100, p=real(p2)+PI
+  q=2*PI*floor(p/(2*PI)), r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 

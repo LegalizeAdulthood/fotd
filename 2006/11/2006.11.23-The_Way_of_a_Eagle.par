@@ -1,0 +1,90 @@
+;     Date: Thu, 23 Nov 2006 21:20:24 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-11-06 (The Way of an Eagle [7])
+;       Id: <1.5.4.16.20061123212213.36ff7892@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 24, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's fractal "The Way of an Eagle".  Don't ask why I 
+; gave it this name, I have no idea.  It's a rather poetic name 
+; however, which seems to fit the image quite well.
+; 
+; The generating formula mixes Z^(1.5) with 10 parts of Z^(0.1).  
+; The parent fractal is a distorted Mandelbrot set that looks like 
+; it was calculated with an escape radius so small that part of 
+; the M-set is cut off.  Today's scene is located on the southern 
+; shoreline of East Valley of this M-set.
+; 
+; The curvilinear effect was achieved by rendering the scene with 
+; the outside set to 'tdis'.  Most of the other outside options 
+; make fractals that are also attractive.
+; 
+; I pondered the situation for several minutes before deciding to 
+; rate the image at a 7.  Though I found the image in under 5 
+; minutes, it is unique enough to earn such a rating.
+; 
+; The 11-minute render time of the included parameter file is 
+; slightly slow, but the image is worth the effort.  And it may 
+; be viewed even faster by going to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image is posted in completed form.
+; 
+; A cold wet day with a temperature of 41F 5C here at Fractal 
+; Central on Thursday spoiled most of the planned Thanksgiving Day 
+; outdoor activities.  But the fractal cats do not celebrate 
+; Thanksgiving, nor do they take part in outdoor activities, so 
+; they had a rather pleasant day getting into mischief.  Nicholas 
+; found a feather somewhere and played with it most of the 
+; afternoon.  Cassie spent the afternoon curled by a radiator.
+; 
+; My day was slow, but the fractals were fast.  The next fractal 
+; will appear in 24 hours.  Until then, take care, and you may 
+; already be a fractal winner.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Way_of_a_Eagle { ; time=0:11:09.76--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident inside=0
+  center-mag=-9.15122167716869900/-1.255451391879592\
+  00/1.055706e+012/0.9998/-30/0.0686725115329216429
+  params=1/1.5/10/0.1/0/0 float=y maxiter=1400
+  outside=tdis periodicity=10 mathtolerance=0.05/1
+  colors=000JgM_jGl09z0zzAyxOgr`Q0XClzYfXSjdJssddXzi\
+  dazzOzzJuuFvvDssCppA_oVcmPfmLjmFmzgmyQFrzQppaoVl`z\
+  mdzmgimjSyzVvzdszXrxPorIOJs0zpJyV0zjCvYVrMM0zXGudY\
+  YdIzgQziYjlfSayzdvzgsiK0S003MC6OP7QV90CA9IALOA00`I\
+  JT073AM6zz9vy6gu7ap90GgDSXXjLzogaia0zzp0zFO`F07pJ9\
+  z40uS6pzxozjov_mrMp0voCfmVQx6zrSf0zFMsCzI1zT4vc7Vz\
+  T_17fQ9x0z0fzM0xT3j`J_g_Mj0zl7vlMfm`QzA9xVAV0A`AAd\
+  OAi`Az1z09QAJMOTI`cDF7D0soArdOpV`oL00pFCaXVO0oz3mz\
+  Jmj_mSofSy0puGapYOG0QPCMYPIfaDOGO`YG_sTdpMioGI04Q9\
+  6YM7f`9Cgf0dYJiPalIvpAzs3lmMJgd0cv7x1Ju4Tr6`mDco97\
+  XSCCzYdzfi`vozsmlpmTJrTs0apJOm0FmADmVCoVCmdAIapM3g\
+  00zA4pOJa`_O00xSzz_zvfuYz0iuLSr_FofCmv0ms1mp660zSI\
+  fALiLS`V_SdfJgz`XQza_jgfSFLT3v0Js1_p600LLLF0zfYYza\
+  asffdjjPM0z`Of91PzrmS6zYIscSdicPzx0sr69pzjzzlvymr_\
+  dy3is7Q7z_Mlf`Tz0z0aGPgD0oQ0163F7JQ9_aAXffdjQsrGpp\
+  DooCSgAcjA100IC3YV70a_4dS }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,90 @@
+;     Date: Tue, 21 Nov 2006 22:11:02 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-11-06 (Inside Pac-Man [8])
+;       Id: <1.5.4.16.20061121221248.37d757ec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 22, 2006 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's curiously different fractal rates an honest 8.  It 
+; resulted when I combined Z^100 with 40 parts of Z^(0.1) before 
+; adding C, to produce a tiny Mandelbrot set.  The name "Inside 
+; Pac-Man" came about when I saw this parent fractal.  Anyone 
+; familiar with old computer games will recognize the familiar 
+; Pac-Man shapes, which unfortunately lie far west of the opening 
+; screen, at -39 on the X-axis.
+; 
+; The tiny Mandelbrot set of the parent fractal is surrounded by 
+; clouds of fractal debris.  Today's scene is located in a bit of 
+; this debris.  The sinuous effect is in the nature of the area, 
+; though I emphasized it by calculating the image with the outside 
+; set to 'summ'.  The other outside options give varying results 
+; with today's image, with the 'fmod' option being perhaps the 
+; most promising.
+; 
+; The calculation time of only 14 seconds can hardly be believed, 
+; but with the passes set to 'b', it is the accurate time.  It 
+; will take several times this long to go to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and download the finished image from there.  But for those with 
+; over-qualified computers, it may be the only way to see inside 
+; the Pac-Man.
+; 
+; The sun shone brilliantly here at Fractal Central on Tuesday, 
+; though the temperature remained at a chilly 39F 4C.  The sun 
+; must have brought out the wickedness in the fractal cats, for 
+; they managed one bit of trouble after another.  The turning 
+; point came when they got into a tussle and knocked a lamp off 
+; the table.  The lamp was unharmed, but the mischievous duo was 
+; soundly scolded, (for all the good it did).
+; 
+; My day was routine in almost all aspects.  The next FOTD will 
+; appear almost by magic in 24 hours.  Until then, take care, and 
+; watch for signs of things to come.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Inside_Pac-Man { ; time=0:00:14.25--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=b
+  center-mag=-38.86965611987176000/-0.08838917917545\
+  225/2307370/1/-140/1.40555401738143293e-005
+  params=1/100/40/0.1/0/0 float=y maxiter=300
+  inside=255 outside=summ periodicity=10
+  colors=0000000CT0JqzmsbdzGXzTzsGzz4izVGzHJz0Jz0Kj0\
+  gszb0oi0zE8zkNzz`z0dz0eJzz8gz0bzz0z`8zVu0HiN4Zm0uH\
+  0ib0Zuzz0kuATiXAZsizgXzqJux6dzzv0beX00G00`08uXz0Cq\
+  PzzHzv00Vo0Tv0Rz0Pzub0PV`zdzuZzPTz0gJ0ZkRk8A`eX4zC\
+  GzC0z44z0Gz00000ZNH0CLH2Nkz00q20XAPCHo0Vz0Tz0Rzzzz\
+  `JuLLz6NzL2oCAx2Hz0Az0Hzzd`zZ0sVJNRkRqHAbk`8vPEzEH\
+  z2Lz2L0P00u2zd8zPEz8Jz0E00HJ0Lks0zN2z04H0AX0Gk0Lz0\
+  zuNz`zzzgqzRgzAZz0m00dG0Xi0Ro0Px0Pz02408N0Ed0Jvmz2\
+  Lqd0AT0Ee0Hq0Lz00000806V0Gq04z0Az0Ez0Hz0LzHRe4Pv8z\
+  02oH0bk0A80EP0He0Lv0Vz0Tz0Rz8iG2b`0VuzzCTsgTzzV08L\
+  4PCCe2Jvz0R`zzz0Js0ZZ2kEEzHz64gezL0zLzuNzPPzzZzdVz\
+  GRzZH4ELdETz2Rz0Vzo8zVEzCJzHezz0zzJbeNuz00s0JZ0bEC\
+  u0d80u00iE0Zi8q64iP0be0VvA0040008P0Hozb0Czz`gAL`X6\
+  Vsdi0GZ`z0oz8veEzHJz00b0Eu0dd0Zq0Tzgzi00602z08z0Ez\
+  0JzuRTZPiEPxmzzZzzLoz6bzqq40zz0oz0bz00z00z0TC0RT0R\
+  g0Pxq40NGZzzbxzkbsuGdz000 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

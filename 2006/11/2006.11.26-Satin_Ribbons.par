@@ -1,0 +1,91 @@
+;     Date: Sun, 26 Nov 2006 23:29:45 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-11-06 (Satin Ribbons [7])
+;       Id: <1.5.4.16.20061126233135.29ef96b0@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 27, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is found in the parent fractal that results when 
+; one part of Z^101 is mixed with 100 parts of Z^(0.01) and C is 
+; added.  This parent fractal is located far out of the usual 
+; range, at -99 on the negative X-axis.  It is little more than a 
+; series of vague circles with an active area with a tiny Mandel-
+; oid on the east side.  This Mandeloid is rotated 180 degrees and 
+; distorted in an indescribable way, but despite its distortion, 
+; it holds many areas of interest.
+; 
+; Today's scene is located in a nest of ribbon-like shafts that 
+; converge on the East Valley of the Mandeloid, which actually 
+; lies on the west side of the main bay.  Seeing the potential 
+; for ribbons in the initial fractal, I attempted to create a 
+; color palette that would highten the impression of festive decor-
+; ations.  It was successful enough to rate the result at a 7.
+; 
+; The name "Satin Ribbons" is self-explanatory.  The midget at the 
+; center lies just beyond the limit of resolution, which is so 
+; close to the actual magnitude of the image that it was necessary 
+; to add the 'mathtolerance' entry to the parameter file to assure 
+; that the image calculates at the correct magnitude.
+; 
+; And let's face it, the 16-minutes required to calculate the 
+; image is a bit much for today's active fractalist to swallow.  
+; Luckily, relief it at hand on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image has been calculated and posted for all fractal 
+; fans to see and enjoy without delay.
+; 
+; Hazy skies and a mild temperature of 50F 10C made things rather 
+; pleasant outdoors here at Fractal Central on Sunday.  The 
+; fractal cats made things rather pleasant indoors when they 
+; managed to get through the day without getting into mischief.  
+; My day was about as pleasant as could be expected.  The next 
+; FOTD, which will appear in 24 hours, will hopefully be equally 
+; pleasant.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Satin_Ribbons { ; time=0:16:02.96--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-98.99768716313547000/-0.00195092620905\
+  970/3.573522e+010/1/31.4/-0.00267053341109015768
+  params=1/101/100/0.01/0/0 float=y maxiter=4500
+  inside=0 periodicity=10 mathtolerance=0.05/1
+  colors=000OUnQVjSXfUYbX_ZZ`V`bRbcNdeJffFppbloZinWf\
+  mTclQ`kNemLaoKYjKVeKR`KNWK5TBDSGKRKSQPTNEZQTcRedSf\
+  dSgdShdSidSjdSkdQmdSkeTigUgiVekKcm4ao9_qDYnHWlLUiP\
+  ShTUiUVjVWkWXlXXmYUkZRi_OeaN`cRWdWSfRShWSd_S_cSWhS\
+  RlUMrTNqSNpROoQOnPPmOPlNQkMQkLRjKRiJShISgHTfGTeJYs\
+  HVlFTeEQZCOSAML9JE7H76F0AD2EC4IB6MA8Q9AU8CY6Ea5Ge4\
+  Ii3Km2Mq1Ok3Kf4G`5CW68P31R75SB9UFDVJHXMLYQP_USaYWd\
+  a_fdchhgjqzkrxlrvmqumprnonomkplgqjdqg`qeYqcUqcRqbN\
+  qaKq`Gq_DqZ9qY2qY6qZAq_Eq`IqaKpbLpcMpdMpdNpeOpfOpg\
+  PphQoiSojUokWolYom_poappcqreqsgtuivvkuvssvprunqtlp\
+  sjoqhnpfmodlnakm_jkYijWhiUghSggRifQkdUmaYpZatWewTi\
+  uQkrNhkKccFZWAUO6PG5KG5JG5H95FB8HCBIDEJEGKGJLHMMIO\
+  NJRPKUQMXRNZSOaTPdUPhXQfVQeWRcYRb_QcaPdcOeeNegMfiM\
+  fkMfmMgkMgiLggLgeLhcLhaLh_KhYKiWKiUKiS5lQDjOKiNRgM\
+  YfLddKjgIkeJkcJkaKk_KkYLkXLkVMkTMlRMlPNlONlMOlKOlI\
+  PlGPpGNlFPhFQeFSRUlJQwMSr }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

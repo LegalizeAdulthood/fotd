@@ -1,0 +1,84 @@
+;     Date: Sat, 04 Nov 2006 18:33:21 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-11-06 (Casually Speaking [No Rating])
+;       Id: <1.5.4.16.20061104183456.29d74cca@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 05, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; My leg may be colored with the browns, purples and blacks of a 
+; muddy piece of abstract art, but unlike today's image, there is 
+; no Mandelbrot set hidden in the center.
+; 
+; Today's sinuous fractal lies in the parent fractal that results 
+; when a little Z^(-1.1) is subtracted from some Z^(1.1) and (1/C) 
+; is added.  The sinuous effect was achieved by rendering the 
+; image with the outside set to 'real'.
+; 
+; I named the image "Casually Speaking" for no apparent reason.  I 
+; gave it far too little effort to be worth a rating.  The brief 
+; render time of 3-1/2 minutes will try the patience of no one, 
+; especially when the finished image is viewed on the FOTD web 
+; site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Partly cloudy skies and a temperature of 39F 4C made things 
+; pleasant enough outdoors here at Fractal Central on Saturday.  
+; But indoors the air was filled with occasional 'thumps' as I 
+; hobbled from room to room on my walker.  The fractal cats don't 
+; quite know what to make of the device, and usually stay well out 
+; of my way.  But when I settle into my easy chair and put the 
+; walker aside for a while, they are soon there to check things 
+; out.  I hear that such injuries take up to 8 weeks to heal in 
+; vigorous young people, and I have not been one of them for quite 
+; a while.  Well, all I can do for now is keep nursing my bum foot 
+; and leg, and keep thumping around.  Unless another bout of the 
+; blues comes on, and I start feeling sorry for myself, the next 
+; FOTD will appear in 24 hours.  Until then, take care, and hop 
+; with the bunnies.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Casually_Speaking { ; time=0:03:27.23--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.27993151966180820/+10.54215200099042\
+  000/6934.824/1/100/-4.69954908322023357e-011
+  params=-0.1/-1.1/1.1/1.1/0/0 float=y maxiter=1400
+  inside=0 outside=real periodicity=10
+  colors=000_w4Vp8RiCNcGJXJFRNBKR7EU2ty9ouFkrLgnRckY\
+  ZhcVdiRaoNZqKYrHYsEXtBXlHadMeXRiPWmH`q9euUormxplWT\
+  l46j34h33f32d31h70lA0pD0mWxhUhcTTAoJJgHR_FtuDlkDea\
+  DBY_NVO01h78`GFTQMLYUXZTQZSJbMh0YRGVK8cKusBukCrZCZ\
+  KDM23RB7`KAP0MJeJRZGjwTflNbaI2LVDOPOQJbHuaKi`NZ_QO\
+  UaOUc`XYP5QaKRPRoQRk6VaAZH0hUJcPGljwhobeiWccQ`YJkP\
+  98I4HM7QPALwdadompUiiPecLaYHRltUeeXZRoHsiLdcPRrpzm\
+  imhcacYPpVlkUcgTVbSMQMPOYDUVDJq5Nj7Rd9VYB_ltZaZ16o\
+  kv2gn5df8aZB44UKGLLs7Pl9SeAWZCiQUfRPcRL`SHZuvZkfZa\
+  S4bJFZHPVFbkbafW`aQ_XJ0pAg7yMEpQIfTLXWPNMvlRk`VaPV\
+  zVkBEfHDbNDS6qUCfWHXYNNKNbOPWSQQWRJgSHdSFaSEJc0N`4\
+  RY7VVAlq3YQ8ZRB7YtNoL0KOHOIbag`XSdKhjgGIHqFPoBWm7c\
+  k4ji6c`7XS8RJ9KAAE29DF9DS9DdAIQANBCP9ER7GT5IV3JX2G\
+  V7DTBARG8PK5NO2LT0JX0I`nO7oREpTKqVQrYWs_atagqQ_nES\
+  l2Kl8RlEYlKclQjlVpiTpfRpdPpaNpZLpXKp`IqdGrhErlCsoA\
+  seDnXGjOIfFLa6OY0QUAaLNlC }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

@@ -1,0 +1,92 @@
+;     Date: Thu, 30 Nov 2006 22:42:10 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-12-06 (Craters of the Moon [No Rating])
+;       Id: <1.5.4.16.20061130224403.37673194@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 01, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's very fast image reminds me of the craters of the moon.  
+; And this is what I named it.  I guess lunar craters are not 
+; worth much because after careful consideration I decided not to 
+; give it a rating.
+; 
+; The parent fractal came about when I combined 10 parts of 
+; Z^(-0.3) with Z^3.4 and added (1/C).  This parent fractal 
+; appears as a small Mandelbrot set surrounded by a field of 
+; disconnected satellite areas of chaos.  Today's image is located 
+; in a remote satellite far to the northeast of the central M-set.
+; 
+; The ring-like effect that reminds me of craters was created by 
+; calculating the image with the outside set to 'tdis'.  I believe 
+; this option measures the total distance the points travel before 
+; they escape.  The other outside options give images that are too 
+; chaotic.
+; 
+; The image is a very fast one, taking only 1 minute on my tired 
+; old machine.  It will go even faster on the SOTA units that are 
+; able to run Fractint and also display the DOS VESA video modes.  
+; Those who do not render may see the image by going to the FOTD 
+; web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and viewing it there.
+; 
+; Thick clouds and a mild temperature of 61F 16C prevailed here at 
+; Fractal Central on Thursday.  The fractal cats made the most of 
+; the situation by trashing another newspaper.  They were quite 
+; hungry when the time for a treat arrived.
+; 
+; My day was a little busier than yesterday, but still on the slow 
+; side.  The idle times verged on boredom.  I am getting impatient 
+; with the slowness of the recovery from the injury of 7 weeks 
+; ago.  But luckily, it is not possible to get excessively bored 
+; in a world filled with fractals.  The next FOTD will appear in 
+; 24 hours.  Until then, take care, and look up.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Craters_of_theMoon { ; time=0:01:01.96--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=-0.09604425985233628/+0.005889632479975\
+  37/2.00283e+012/1/95.0966371678279785/-0.087088540\
+  2672808562 params=1/3.4/10/-0.3/0/0 float=y
+  maxiter=350 inside=0 outside=tdis logmap=24
+  periodicity=10 mathtolerance=0.05/1
+  colors=000fVIcclcbmcanc`nc_oc_oa`l`ai_bfZbcYc`XdYW\
+  dV`__dVciPhmKmqFq_TeIeV0bK2gU4dc6ZmXcgWFraLnfRkLBQ\
+  PBOTBMXCK`CIdCHjOFoZEuiCztBpq9go7Yl6Pj4Fg26e1Bd8Gc\
+  FLbMQbSVaZ_`ed_lh_reTjcNbaHWcLVePVgTViXVk`VmdVohVk\
+  fxngrqgmthgvo6vmCvlHvkNvjSviYJwubokq9frEesIesNdtRd\
+  uWcu_cvdbtrPupRuoTumVvlXvjZvi`Y5oaAmdFkgKjjPhmUfpZ\
+  esccW2WaBYfKZlS`q`a2z5VqMTwEZtJdqOjnTpkYpvYrsZsp_t\
+  m`ujadXsgZpj`mmbjpdgsfdcXFfZIh_LkaOmbRodUreXtg_qFk\
+  tUfBMy6qwKnqXllijgFz9LwDQuHWsL`qOfnSklWqj_Hk9SjHai\
+  OlhWlkbnjbpibribthbi3jlChoKfqTet`c3wp45s6q3BhmHhkN\
+  hjThhZhgdhfjhdphc9DaMLbYTbj`b6F6FKCOPHXUNeZSncYFWO\
+  MYRS_TYaVdcXjeZpg`LnQTlT`kWgjYoi`vgRvhTvhVvhXvhYvh\
+  _vha5`vJbqWdlifgEd`Qea`fakgbfWCTHNYLQaPSeTUjXXn`Zr\
+  d`4eyV6sZCpbInfNkjTinYfrcdaDJdIMgNPjRSmWVp_Ysd`rfv\
+  sgrtgotgluhhvheg6`oQaDUAKXFRZJX`NcbRidVpfZqFrrKosP\
+  ltUjuZgvcdgQRkVUo_Xsd_cTF }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

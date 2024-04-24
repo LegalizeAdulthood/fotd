@@ -1,0 +1,101 @@
+;     Date: Wed, 29 Nov 2006 22:33:07 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-11-06 (Avocado Eruption [9])
+;       Id: <1.5.4.16.20061129223500.29af73ce@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 30, 2006 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is unusual enough to earn a rating of a 9.  This 
+; is one of the few times a FOTD image has garnered such a high 
+; rating.  The image is a scene in the fractal that results when 
+; various negative portions of Z^(-1.5) and Z^(-5.5) are combined 
+; and (1/C) is added.
+; 
+; This parent fractal is a sprawling Mandeloid thing with four 
+; near-equal main bays.  Today's scene is located rather deep in 
+; one of the many valleys separating the bays.
+; 
+; To do something out of the ordinary, I first found a midget, 
+; then I 'evaporated' the scene by raising the escape radius to 
+; 10^100, which created a totally blank black screen.  I then 
+; brought the blank screen back to life by rendering it with the 
+; 'bof60' inside fill.  The active fill resurrected the ghost of 
+; the dead midget and surrounded it with bubbles of the most 
+; unusual shape.
+; 
+; The almost totally green color palette seems to work quite well 
+; with today's scene.  I added only a few reddish highlights to 
+; the high points of the bubbles.  The green colors inspired the 
+; name "Avocado Eruption".  After a bit of consideration, I 
+; decided that the image is striking enough to deserve a rating of 
+; an exceptional 9.
+; 
+; One bad point of the image is its slowness.  It takes over 1-1/4 
+; hours to calculate on my 200mhz machine, and will take close to 
+; 20 minutes even on the hottest fireball machines.  But salvation 
+; is at hand on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the image is posted for instant viewing.
+; 
+; Gray dreary clouds accompanied by drizzle and a temperature of 
+; 54F 12C kept a lid on the merriment here at Fractal Central on 
+; Wednesday.  But the fractal cats do not depend on the weather to 
+; bring them happiness.  They create their own high spirits.  They 
+; kept themselves busy most all day by pulling the morning paper 
+; from the table, scattering and wrecking it, then shredding the 
+; remains.  By the time their evening treat was served, they were 
+; thoroughly worn out, covered in confetti, and ready to eat.
+; 
+; My day was on the slow side, and with my bad ankle still 
+; mending, I had the spare time needed to create today's unusual 
+; image.  Tomorrow will likely be another slow day, which will 
+; likely result in another pretty good FOTD.  Until then, take 
+; care, and things are never so good that they can't get better.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Avocado_Eruption { ; time=1:22:08.31--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.24471762375546880/-1.285924304667155\
+  00/26144.71/1/-165/8.35072481303322789e-009
+  params=-5/-1.5/-1/-5.5/0/1e+100 float=y
+  maxiter=1800 inside=bof60 periodicity=10
+  colors=000zuqyukwujvueuuWtuTsuQruNpuKnuFluAiu5ht4g\
+  s4fr4eq4dp4co4bn4`m4Zl5Yk6Xj7Wi8Vh9UgATfBSeCRdDQcE\
+  PbFOaEN`DM_DLZCKYCJXBIWBHVAHU9HT9IS8IR8JQ7JP7KO6KN\
+  6LM6MH6NF6NU6OX6P`6Qc6Qg6Rj6Sn6Sq6Up9VpBWoDXoGYoI_\
+  nK`nNamPbmRcmTelWflYgk_hkbikdkjfljimiknimoiophprfp\
+  seqtdrucrvbswaty`tz_uzZvzYvzXwzWwvYqnZkf_eZa_RbUJc\
+  ONbRRbUUbWYbZ`aadacgafkaioakr`nv`qy`sz`vz`xzYuzWrz\
+  TpxRmvOktMhsKfrJerIerIerHdrGdrGdrFcrFcrEcrDbrDbqCb\
+  qCbqBaqAaqAaq9`q9`q8`q7_q7_q6_q6_p7ao8bn9cmAdmBelC\
+  fkDgjEhjFiiGkhHlgImfJnfKoeLpdMqcNrcNs`IhZDYW8NU4CW\
+  5BY6B_7Aa8Ac89d99fA8hB8jB7lC7nD6oE6qF5sF5uG4wH4yI3\
+  zI3uL9pOFkRLfURaXWX_aSbgNemIgrKfsLesMdsNcsObtPatQ`\
+  tR_tSZuTYuUYuWXuXWuYVvZUv_Tv`SvaRwbQwcPwdOweOwdSmc\
+  Wdc_WbcNbgEZfHVfJSeMOeOLeQMePMePMePMePMePNePNeONeO\
+  NeONeOOeOOeOOeOOeNOeNPeNPeNPeNPeNPeNRfOTfOVfOXgOYg\
+  OZgOYgOZgPZgPZfKYd7Xc5Wc3 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

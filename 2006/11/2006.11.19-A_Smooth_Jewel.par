@@ -1,0 +1,87 @@
+;     Date: Sun, 19 Nov 2006 21:15:41 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 20-11-06 (A Smooth Jewel [No Rating])
+;       Id: <1.5.4.16.20061119211727.2ae77452@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 20, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's smooth fractal image was created by combining Z^3 and 
+; Z^0.3, then adding C.  The resulting parent fractal resembles a 
+; distorted quadratic Mandeloid, twisted in such a way as to give 
+; a hint of the cubic Mandeloid.  Today's scene is located rather 
+; deep in the lopsided East Valley of the parent fractal.  It lies 
+; near the coast on the southern shoreline of the valley.
+; 
+; The central midget sparkles in the darkness like a jewel in a 
+; shaft of sunlight.  I promptly named the image "A Smooth Jewel". 
+; The smoothness of the surrounding spiral elements also helped 
+; inspire the name.  Unsure of the impression the image might have 
+; on others, I gave it no rating, but if it had been rated, the 
+; rating would have been something like a 6.
+; 
+; The render time of 16-1/2 minutes may be cut to 12 minutes by 
+; calculating the image with the passes set to 'g' instead of 't'. 
+; But when this is done, one or two minor and unimportant bits of 
+; detail are passed over.
+; 
+; The most efficient way to view the jewel-like image is to visit 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the completed image is posted for immediate viewing.
+; 
+; Continued cloudy and chilly weather here at Fractal Central on 
+; Sunday was of no concern to the fractal cats, who were in unusu-
+; ally playful moods.  They passed most of the day chasing each 
+; other through every nook and cranny of Fractal Central.  My day 
+; was acceptable, which, in my hogtied state, leaves much to be 
+; desired.  The next FOTD will be posted in 24 hours.  Until then, 
+; take care, and instead of flying with the eagles, swim with the 
+; fish for a change.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Smooth_Jewel { ; time=0:16:26.13--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=t
+  center-mag=-0.40884925510473860/-0.009631247060122\
+  02/4.221664e+009/1/-125/-0.000295436381156116701
+  params=1/3/1/0.3/0/0 float=y maxiter=3000 inside=0
+  logmap=389 periodicity=10
+  colors=000E6MF7QJBUNFXQI_UMbYPe`ThdWkh_nkbqjVtjNvj\
+  FxiHphJihKbgMWgNPcQT`TWXW_UZbQaeNciJflGioCls9ov6oy\
+  7kw8ev9_uAUtBOsBJrDOlESfFW`G_WIdQJhKKlELn9QkEUhJYe\
+  NaaSeZXiV`mSeqOjvJouLnuNnuPnuRmuTmuVmuXmuYlu_lualu\
+  cluekugkuikujkuhlugluflueludlucmubmuamu_muZmuYnuXn\
+  uWnuVnuUnuTnrVmpXlnZkl_jjaihchfdhdfgbhf`jeZkdXmcXl\
+  bYkbYjRZiGZhEZfHZdKZbN__Q_XT_UW`RZ`Pa`NcaKcaIcbEca\
+  GcaHc`Ic`Jc_Kc_LcZMc_McZMcYLcYKcYKcYKcYKc`KbcKWfOO\
+  iRHlU9mV0kX2iX4dY6_X8VWAQWCLVEGUGBTI6SK1SM9UPHWRPX\
+  UWZWc_Zka`scerbbqb_pbYobVnaTmaQlaOkaLj`Ii`Gh`Dg`Bf\
+  _8e_6d_3ea0c_1bY2`W3_U4ZS5XQ6WO7VM8TK9SIAQGBPECOCD\
+  MAEL8FI5FK7GL8HM9HNAIOBJPCJQDKSELTFLUGMVHNWINXJOYK\
+  PZLP`KLaIHcHDdG9gMOiSajTcjTdjTekTgkUhkUizUkzUlzVmz\
+  VozVpzVqzVqzVrzPjzIbz8WzCVzGVjzVhzVgzVezUczUbzU`zU\
+  _zUzzVzzVzzVzzVzzVzzWzzWzzWzzWzzWzzXzzXzzXzzXzzXzz\
+  Zzz_zz`zzazzbzzKzzbzzZzzW }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

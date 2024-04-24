@@ -1,0 +1,96 @@
+;     Date: Sat, 11 Nov 2006 22:21:54 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-11-06 (Beyond the Limits [No Rating])
+;       Id: <1.5.4.16.20061111222334.0d67a804@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 12, 2006 (No Rating)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Beyond the Limits".  I gave it this name 
+; because with its magnitude of almost 4*10^13 it goes beyond the 
+; usual limits of conventional double-precision math.
+; 
+; The parent fractal came about when I mixed Z^2.2 with Z^4.8 and 
+; added C.  There is a midget at the center of the image, but it 
+; lies far beyond the limit of resolution.  We can only imagine 
+; what it must look like.
+; 
+; The mathtolerance entry in the parameter file was necessary to 
+; assure that the file calculates at the correct magnitude.  The 
+; flat background came about when I raised the logmap to a value 
+; far greater than necessary.
+; 
+; As for rating the image, I didn't bother.  I doubt that I'll 
+; resume the FOTD image ratings until I'm back on my feet and 
+; feeling my old self again, which I suspect will be 2 or 3 weeks 
+; yet.
+; 
+; With its render time of 25 minutes, running the included parame-
+; ter file is not the most efficient way of viewing the image.  
+; The most efficient way is to visit the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and view the finished image posted there.
+; 
+; Another near perfect day here at Fractal Central on Saturday 
+; (lots of sun and a temperature of 70F 21C) went un-noticed by 
+; the fractal cats, who continued to amuse themselves exploring 
+; the new row of bookshelves in the hallway.  They had so much fun 
+; chasing each other over the shelves and behind the books that 
+; they had to be called twice for their evening treats.
+; 
+; My day was frustrating.  On most days I have a positive attitude 
+; about my incapacitation, but today I wanted to do so much and 
+; was able to do so little that the frustration got the better of 
+; me and I slipped into a funk.  But the fractals were still there 
+; when I needed a diversion.  They are going nowhere.
+; 
+; The next FOTD will appear in 24 hours or so.  Until then, take 
+; care, and there will be light for those who seek.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Beyond_the_Limits { ; time=0:25:06.94--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=t
+  center-mag=+0.43622676158194220/+0.605949061492471\
+  00/3.800472e+013/0.9998/-7.63657221548883847/0.181\
+  713337643773454 params=1/2.2/1/4.8/0/0 float=y
+  maxiter=5000 inside=0 logmap=1072
+  periodicity=10 mathtolerance=0.05/1
+  colors=000RPUcM8bHB`BE_6HZ1JEYLFWPGUSHSVIQYJOaKMdL\
+  KgMIjNGmKIoHKqMMrQOrUQsYSsbUtfWtjYunZunZunZunZunZu\
+  k`piakgcfedaceXagS_hNYjIWkDUl9YjHahPefXiddmblqatmK\
+  `j2Hi6RiA`iEjhFifGheHgdIfbJeaKd`LdZKcXKcVKbUKbSKaQ\
+  JaPJ`NJ`LJ`KJ_II_GIZFIZDIYBIYAIY8HU7GR6FN5EK3DH2CD\
+  1BA0B7DC6QD5aD4nE3zE3pH8gKDYMIPPNFSS6UXHQSSMObIKcJ\
+  OdKSdLWeMZeNbfOfgPigQmhRqhRtiQujQukPvlPvmPvnOwoOwp\
+  OwqNxrNxsMytMyuMyvLzwLzxLzwNvvOsuPpuRmtSjsTfrVcrW`\
+  qXYpZVo_Ro`OnbLmcIldFleCmdFmcHmcJmbLmaOmaQn`Sn`Un_\
+  XnZZnZ`nYbnYdoXepVfqThrSisQjtOkuNlvWzwJtxIpyGqzErz\
+  DsqNkiWce`XadQZiJVmCSq5PiBNZGLVMJORHHWMKZQM`UPbYRe\
+  aUgmZtUUcdVjcVjrlcpkenjhlijjhmffreftggshhriirkiqlj\
+  qmkpnkpploqmnrnntnmuomvplwplqkilgfgbcbZ`YVYYU_ZUbZ\
+  TdZSf_Si_RkC7NOH`ZI5_LHUUUkTXkRUhUQfXMd_IbbF`eBZh7\
+  Xk4PgCHcJ9_Q2WXSMWpDWlCUiCSfBQcBP`ANYALVAKW9IW8HW7\
+  GW7FW6DW5CW5BW4AW38W37000 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

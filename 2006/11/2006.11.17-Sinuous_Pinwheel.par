@@ -1,0 +1,89 @@
+;     Date: Fri, 17 Nov 2006 22:08:00 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-11-06 (Sinuous Pinwheel [8])
+;       Id: <1.5.4.16.20061117220943.2def0184@pop.mindspring.com>
+; ---------
+; 
+; FOTD --  (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Who would ever guess that an exponent of Z so close to unity as 
+; 0.003 could make such a great difference in the appearance of 
+; the finished fractal?  When the effect is multiplied 100 times 
+; however, the result is significant.
+; 
+; The most obvious change is that the parent fractal is shifted 
+; far out to -100 on the X-axis, and must be tracked down in its 
+; hiding place.  Once the elusive little thing is found, we see a 
+; rather distorted Mandelbrot set, rotated 45 degrees, with much 
+; extra chaos on its partially obscured southern side.  Today's 
+; scene lies in this southern chaos.
+; 
+; After a bit of consideration, I gave today's image a rating of 
+; an 8.  I think it is quite a pleasant image, even if not the 
+; most striking of all time.  The patches of smooth color were 
+; achieved by setting the inside to 'fmod' with a proximity factor 
+; of 0.045.  The outside was rendered with the standard 'iter'.
+; 
+; I named the image "Sinuous Pinwheel" because I rather enjoy the 
+; sinuous curves that I have intentionally colored in brilliant 
+; hues.  The 5-1/2 minute render time is well within reason for an 
+; image that rates an 8.  And as always, the finished image is 
+; posted, ready for viewing, on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Fairly normal weather prevailed here at Fractal Central on 
+; Friday, with partly cloudy skies and a temperature of 50F 10C.  
+; The fractal cats passed the day in the normal manner -- seeing 
+; how much trouble they could get into and waiting for their 
+; evening treats to be served.
+; 
+; Except for my slowly mending ankle which still greatly curtails 
+; my physical activity, my day was close to average.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and how 
+; can we find the answer when we don't even know the question?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sinuous_Pinwheel { ; time=0:05:27.36--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-100.04837879302560000/-0.3513619668016\
+  5800/6.564136e+009/1/67.5/0.00249588730994233093
+  params=1/2.5/100/0.003/0/0 float=y maxiter=750
+  inside=fmod proximity=0.045 periodicity=10
+  colors=0008cJ9dHAfEAhCBj9Bk7Dh6Ee5Fb4H_4IX3JU2KR2O\
+  N9SJGVFNZBUa7`dKYfWWhgUjsSkpTlmTmjUngUodUpaVqZVqWV\
+  l_XhcYdgZ`k_XoaTsbPwcLzdOxbRv`UtZWrXZpVanTcmSVoPNp\
+  NMpSMpWMp_VifbbljXrSZjA`cKSQTKDUNEVQFWTGXWHYZIZaJ_\
+  cKXdGVeDTfARf7OgDLgIIgNGgTDgYAgb8ggLMjQOfUPcYQ`bRY\
+  fSVjTS_9jgDroGziGtcGnZGhTGbNGXIGRCGL7GFADNDAVG7bMD\
+  bSJcYOccUdi_doeeujelcfdXfWRgOKgGEgOTqVfzZcrbakfZdj\
+  XYnURrSKvPDpoMUcKjmIgUGdkE`aNzmKSJdN9mzzuK4nL7fLAZ\
+  mzVhvWctWarW_pWYmX_kXbhXdeXZbVXZUVWSTTRQRPNQOLgTvz\
+  XGzVzUU0zzRTKSSMTRNUPPVORXNTYLVZKW_JY`H_aGabFccEde\
+  I_gLViORkSMmVIoYDqa9sd4tg0pi2mk4il6fn7bo9_qBXrCPl9\
+  If7A`43W29_AFbHLeORiWXlbboigrphskhsgiscisZjsVjtRkt\
+  NktIltEltAlt6iuAguEduIbuM`vQYvUWvYUvaRvePwiNwmKwqI\
+  wuGwxFwrEKmDKjCKgBKdBIaDBZF5WH6TJ7QL8NN9MPALRBKTCN\
+  VCQXDTZEW`FZbG`dHbfIdhJfjJggKedLcaLaZM_WMYUNWRNUOO\
+  TLPRIPP2fTHnJVu96YR7_O8aM }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
