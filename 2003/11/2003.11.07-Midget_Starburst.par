@@ -1,0 +1,98 @@
+;     Date: Fri, 07 Nov 2003 09:51:28 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 07-11-03 (Midget Starburst [8])
+;       Id: <1.5.4.16.20031107095244.29979644@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- November 07, 2003 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, which combines portions of Z^(-0.75) and Z^(-7), 
+; is an 'evaporated' one.  The escape radius has been increased to 
+; such an extreme value (one-googol) that basically all the points 
+; have been trapped.  The trapped points do interesting things in 
+; their trapped state however, and these things form the basis of 
+; today's image.
+; 
+; The image consists entirely of 'bof61' inside fill, which colors 
+; the trapped points according to which iteration comes closest to 
+; the origin.  In today's scene, this fill is by far the best of 
+; the inside fill options.  It works so well, in fact, that I 
+; rated the resulting image at an 'exceptional' 8.
+; 
+; In its unevaporated state, the parent fractal consists of an 
+; oversized Mandeloid with a twisting fractal trail extending far 
+; to the northeast.  Today's scene is located just beyond a 
+; crossroads on a filament extending from a sub-bud of the main 
+; bud of the parent.
+; 
+; After a bit of consideration, I decided to name the image 
+; "Midget Starburst"  I see no real reason for the name other than 
+; the fact that it sounds good.
+; 
+; The render time of 9 minutes on my old worn-out 80586 machine is 
+; within the realm of reason.  But the minute or so required to 
+; download the completed GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; is even more reasonable.
+; 
+; Weather conditions have deteriorated greatly here at Fractal 
+; Central over the past two days.  Steady rain all day Thursday 
+; kept the aging fractal cats confined to the indoors, where they 
+; passed the day on their window shelves, waiting futilely for the 
+; sun to appear.  The temperature of 63F 17C was mild enough, but 
+; fractal cats do not like wet ears.
+; 
+; Today is starting cloudy and a bit cooler.  If it stays dry, the 
+; dynamic duo might get in some quality outdoor time.  My day will 
+; be good enough, especially if the work is finished by early 
+; afternoon.  But to finish, I must first start.  Until next time, 
+; take care, and see you soon.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Midget_Starburst { ; time=0:09:22.92--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+4.4291003385551/-0.6013162185079/2.309\
+  104e+009/1/-67.5/0 params=1.2/-0.75/1/-7/0/1e+100
+  float=y maxiter=1500 inside=bof61 periodicity=10
+  colors=000QdOOdNOfLOfJOgJOgIOiGOiEOkDOkBOl9Ol8Ol8Q\
+  n9QnBQnDQpDQpERpGRqGRqIRqJRqJTsLTsNTsOTtOTtQVtRVwR\
+  VwTVwVVwVTxVTxXTxYTxYRz_Rz_RzaRzaQTLO04N04N14N24N4\
+  4N64N64N84N94NB4ND4ND4NE4NG4NI4NJ4NJ4NL4NN4NO4NQ4N\
+  Q4NR4NT4NV4NX4NX4NY4N_4Na4Nb4Nb4Nd4Nf4Ng4Ni4Ni4Nk4\
+  Nl4Nn4Np4Oq2Np4Np4Lp4Lp4Jp4Jp4Jp4Ip4Ip4Gp4Gn4En4En\
+  4En4Dn6Dn6Bn6Bn6Bn69n69n68l68l66l66l66l64l64l62l82\
+  l82l81l81k80k80k80k80k80k80k80k80k80k80k80g60f60d6\
+  1b62a64_64Y66X68V69T6BR6DQ6DO6EL4GJ4II4JG4LE4ND4NB\
+  4O94Q84R64T44V24V14_8DhRLgJTrXapXgzfpxgxzwzzzzzwzz\
+  pzzlzzizzdzxazwYztVztRzsNxqJwpGtnDsl8qk4pi1ng0lk0n\
+  g0ld0ka2iY6gVBfREdOJbLNaIR_EVYB_X8bV4gT1kR0pQ0sO0x\
+  N4zLDzLLzNTzNazNizNqzNzzNzxNzxNzxOzwOzwOztOztOzsOz\
+  sOzqOzqOzqQzpQzpQznQqnQilQalQVkQYkR_kRaiRbiRdgRfgR\
+  gfRifRkfRlbVlaXlYYlX_lValRdlQflNglLilJknGnnEpnBqn9\
+  sn8tn4xQ_XQaVQaVQbTQbRQdQ }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 
