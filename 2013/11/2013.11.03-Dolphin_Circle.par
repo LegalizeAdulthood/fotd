@@ -1,0 +1,109 @@
+;     Date: Sun, 03 Nov 2013 19:32:53 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 03-11-13 (Dolphin Circle [A-6,M-5])
+;       Id: <1.5.4.16.20131103193430.2b57a4f4@earthlink.net>
+; ---------
+; 
+; FOTD -- November 03, 2013 (Rating A-6,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image shows a minibrot in the parent fractal that 
+; results when Z^(1.75) is iterated 2 levels up the hyperladder 
+; with no function applied.  This parent rather resembles a 
+; termite half rolled onto its back, with its head facing 
+; northwest and a large but isolated minibrot lying just southeast 
+; of its tail.  Today's scene lies a short distance to the 
+; northwest of this isolated minibrot.
+; 
+; The name "Dolphin Circle" refers to the brilliant elements 
+; arcing around the northeastern perimeter of the central 
+; minibrot, which struck me as dolphins with their flukes spread.
+; 
+; Since the image was found quickly and I put little effort into 
+; the coloring, I could rate the art no higher than a 6.  The math 
+; worth remains a 5.
+; 
+; The calculation time of 1-1/2 minutes is fast enough for all but 
+; the most impatient fractalists, who may choose to view the 
+; finished image on the web sites.  
+; 
+; The pre-rendered image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and variations are posted at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Near total sun prevailed here at Fractal Central today, but the 
+; temperature of 48F +9C kept a chill in the air.  The fractal 
+; cats took it easy most all day, Nico in the sun on his shelf, 
+; Jasmine nursing the leg she sprained when she took too great a 
+; leap from a high place.  The humans meanwhile passed the day 
+; getting the house moderately ready for a winter that the experts 
+; say will be on the mild side.  Hopefully the experts are right.
+; 
+; The next FOTD will be posted in the appropriate time.  Until 
+; whenever that might be, take care, and it's impossible for 
+; aliens to be visiting earth from another star system.  The 
+; distances are too great and the speed of light is an absolute 
+; limit to travel through space.  Unfortunately, the aliens have 
+; not heard the bad news.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Dolphin_Circle { ; time=0:01:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+1.09970158016/-0.558234463344/1571291
+  params=1.75/0/2/0 float=y maxiter=3500 inside=0
+  logmap=95 periodicity=6 mathtolerance=0.05/1
+  colors=000SVUVD4`VLmncfka_h`TeZMbYMSRIWUF_XCc_Cyz9\
+  fa6PS44K37I3AG3CE3FC3HA3F80J06HF9HOCEWFCdH8nIAlIBk\
+  I0iD0h83PE0dIHeMMeQReTWeX`e`eedjeit`hqcgoehphmzzfn\
+  jO_WQYXRWXTUYOIYUTY8NfXid_cYcYSUSLKPFUG8ZKJUB2_I3G\
+  J3MP3RU3W_3`d3kr3zz6zn3lkCngKpcTr_`zSisXhlageffZke\
+  SpdLucFzbHtcmncmhcmbcmXcmRcmLcm8kmzzmcWmcUmcOXXIfb\
+  Coh6dgBVgGKfLHbeDdYAfQ2bQ5eM7gJ9jF9k8BlCDmFFnIHoLJ\
+  pPLqSNrVOySPvVPsYQp_QnbRkeRhgSejSclT`3zpAymHrmUmmg\
+  kmejmdhmcgmaem`dm_cmZam``maZmbYmdWmeVmf6mjImhUmgem\
+  exxhpxdhx`axXmzTmzPmzLmzHhmMhmQhmVhmZMmcPmZGmcJmdL\
+  mdUmdcfemgeuYczudzgezolzmhzlemkbmjZmmWmtcmmYmmTmmO\
+  mmJmmEmmPmmamm_mmYmmfmmWmmLmm3mmBmmJmmRmmZmmfmmnmm\
+  vmmZzzBzzCzzDzzEzzFzzGzzHzzIzmGmqCmmJmmZmmUmmPmmLm\
+  mGmmCmmDmm4mmDmmLmmTmm`mmgmmhmzhmzhmzhmzhmzhmzfmzh\
+  mzimzjmzkmzlmzkmzmmznmzomzqezrezseztdzqdzndzkazocz\
+  ldzifzggzdhzajz_kzXlzVUzU }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

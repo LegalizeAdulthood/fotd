@@ -1,0 +1,109 @@
+;     Date: Sun, 10 Nov 2013 17:26:30 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 10-11-13 (Anti-Credulity [A-8.5,M-5])
+;       Id: <1.5.4.16.20131110172602.2c17d64c@earthlink.net>
+; ---------
+; 
+; FOTD -- November 10, 2013 (Rating A-8.5,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image combines Z^3 with 0.333 parts of Z^5 before adding 
+; straight C on each iteration.  This expression produces a parent 
+; fractal that begins as the main bay of a Mandelbrot set that has 
+; been rotated 90 degrees so that its normally west end faces 
+; north.  I say it begins as an M-set because only the main bay is 
+; close to appearing normal.
+; 
+; This main bay, at the southern extremity of the parent, is 
+; reasonably normal, but starting with the main period-2 bud, the 
+; fractal loses its M-set characteristics and an ever larger 
+; series of bays takes over, becoming ever stranger the farther 
+; north we go.  Today's scene lies at the entrance to a minor cove 
+; on the northeast shore line of the farthest north bay, which is 
+; the largest and strangest of all.
+; 
+; The image is most notable for its coloring, which is almost 
+; totally of my own design and earns me, (at least IMO), a bonus 
+; of 1.5 points, raising the total rating to a quite honorable 
+; 8.5  The math however is a straightforward combination of two 
+; simple exponents of Z, which holds its rating to an average 5.
+; 
+; The name "Anti-Credulity" is a synonym for skepticism.  It is 
+; what I would have felt if someone had told me of fractals in the 
+; 1960's, when I was very much alive, cranky and complaining about 
+; the world's situation.  And now that I'm a septuagenarian, with 
+; all the implied benefits, I have become even crankier.
+; 
+; Fortunately, the calculation time of only 1-1/4 minutes will 
+; keep my grouchiness from spreading, and if a bit of it does 
+; leak out, the web sites will make quick work of it.
+; 
+; To promote anti-grouchiness, the image has already been 
+; calculated and posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Mostly cloudy, blustery but not too chilly conditions prevailed 
+; here at Fractal Central most all day, with a temperature of 52F 
+; 11C.  The fractal cats had an active day, chasing each other up 
+; and down the hallway until Nico grew bored and told Jasmine to 
+; slow down.  The humans, meanwhile, had an average day.
+; 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and the most dependable sign of the truth of an offensive 
+; opinion is when it becomes politically incorrect to speak it in 
+; public.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Anti-Credulity { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=t
+  center-mag=+0.4507420885190281/+0.3803351141657886/\
+  1.52e+008/1/-15/0 params=1/3/0.333/5/0/0/0/0 float=y
+  maxiter=1500 inside=0 logmap=78 periodicity=6
+  colors=00009R08Q07O06M05K04H03E02B018005ezzZrzShzL\
+  ZmEPc7KUz45v34s34p34l33i23f23b23_22X22U12R12O11K11\
+  H11E01A00700300wk9sh8oe7kb7h_6TfmXdn`boe`piZpmXqrV\
+  rvTszRsr3ktFcuQWvaOwlHtiGrgFoeEmcEjaDh_CeYC440cWB`\
+  UAZS9WQ9UO8RM7PK7MI6KG5HE4FC4CA3A82762541220TPlECO\
+  mRKiPIeNHbLFZJEWHCSFBPDALB8H97E75A54732311ltmOSPXn\
+  dVkaTh_ReYQcWO`UMYSKWPJTNHQLFOJDLHCIFAGC8DA6c85c63\
+  c41c23cS2cI1c9iHzgGweFtcEqaEo_DlYCiWBfUBdcAac9Zc8W\
+  c8Uc7Rc6Om5Lm5Jm4Gm3Dm2Am28m15m02cTAcQ9cN8cL7cI6cF\
+  5mD4mA3m72m51m20UZHUXGUWFUUEUTEURDUQCcOCcNBcLAcK9c\
+  I9cH8cG7cE7cD6cB5cA4m84m73m52m42m21cU0UU2ZU1cU1hU1\
+  mU1rc1wc0zc0zc0zc0zc0zcAzc5zcHzcGrmFmmEhmDbmC`zCYz\
+  BWzATz9Rz8Oz8Mz7Jz6Hz5Ez4Cz49z37z24z12z0dzS`zPYzNU\
+  zLRzINzGKzEHzBDz9Az76z43z2CzF9zB6z73z3_zuUzlPzdKzX\
+  FzOAzG5z8dzIbzH`zGZzFXzEVzDTzDRzCQzBOzAMz9Kz9Iz8Gz\
+  7Ez6Dz5Bz49z47z35z23z11z0 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

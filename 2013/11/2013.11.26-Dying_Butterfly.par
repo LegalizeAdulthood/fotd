@@ -1,0 +1,121 @@
+;     Date: Tue, 26 Nov 2013 16:58:32 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 26-11-13 (Dying Butterfly [A-9,M-8])
+;       Id: <1.5.4.16.20131126165821.2d071624@earthlink.net>
+; ---------
+; 
+; FOTD -- November 26, 2013 (Rating A-9,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In yesterday's discussion I said that the day's fractal was 
+; filled with hard to find minibrots.  But difficulty is no 
+; put-off for me when it comes to finding fractals.  Using the 
+; 'fmod' method, I found a minibrot on the first inzoom.  Today's 
+; image shows that minibrot.  In the upcoming FOTD's I will show 
+; several more minibrots that are equally unlikely.
+; 
+; The minibrot lies in the large field of debris extending 
+; southwest from the tooth-shaped open area of yesterday's 
+; fractal.  The fuzziness is partly due to the inherent fuzzy 
+; nature of the minibrot itself and partly due to a curious 
+; breakdown of resolution in the area immediately surrounding the 
+; minibrot.  Those using fractal programs with better resolution 
+; might be able to clear away part or perhaps all of the fuzziness.
+; 
+; In my opinion, the art rating of a 9 is justified.  And due to 
+; the unexpected complexity of the minibrot, the math rating of an 
+; 8 is also justified.
+; 
+; The name "Dying Butterfly" describes the first thing I saw in 
+; the image.
+; 
+; The calculation time of 4 minutes is on the slow side.  But the 
+; web sites are always there to speed things up to instantly.
+; 
+; The finished image is posted online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with various variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Today was unpleasant from dawn to dusk here at Fractal Central.  
+; The day began with light snow, which piled up about 3cm before 
+; changing to rain in the afternoon, while the temperature slowly 
+; rose from 30F -1C to 34F +1C.  The fractal cats took a few peeks 
+; at the slush outside but spent most of the day sleeping and 
+; playing.  The new fractal cat Jasmine, (we call her Jazzy), is 
+; developing into quite an athletic little feline, leaping a meter 
+; (3 feet) into the air after her dragonfly toy.  The old fractal 
+; cat Nicholas, (we call him Nico), wonders where she gets all her 
+; energy.  The fractal people spent the day watching the ice come 
+; and go.
+; 
+; The next FOTD will be posted in the proper time.  Since I have 
+; no idea what time might be proper, I can give no exact time.  
+; Until whenever the proper time arrives, take care, and no one is 
+; perfect.  People should expect only lies and disappointment from 
+; the politicians they choose to be leaders.  So to avoid future 
+; disappointment, expect nothing, as I did 5 years ago.  A nega-
+; tive attitude might be unpleasant, but it is all too often 
+; correct.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Dying_Butterfly { ; time=0:04:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-6.362700179650554/-2.356504276722922/\
+  1.2e+011/1/45/0 params=1.09/0/0/525 float=y
+  maxiter=16384 inside=0 logmap=373
+  periodicity=6 mathtolerance=0.05/1
+  colors=000KchKchKchKaiKaiKaiK`kK`kK`kK`kK_lK_lK_lK\
+  YnKYnKYnKYnKXoKXoKXoKWqKWqKWqKWqKWqH_kFbdLX_D_T5VO\
+  0YJ1ZL2_O4XQ5XT8_U9fXAZ_C_aDddFceHahJ_kKYnNYrLXoKW\
+  lJUkIThHSgFQdEPcDO`CN_BLXALW9LT8LS6LP5KO4JL3IK2HI1\
+  GH1FE0ED0DB0BA0A809608A18C48E67H97JC6NE5PI3SK2UN1X\
+  Q1`T1cW1e_1ha0ke0oh0rk0uo0xr0zu0zs1zs1zr2zr3zr4zq5\
+  zq6zq9zoAzoBzoCznDzdEynFybIylJylKvkLskNqiOniPkiQhh\
+  TehUchW`gXYgYWg_Te`Qe`Oe`Ng`Lh`Ki`Jk`Il`HocFocDqXA\
+  qN8qW4oW3pW2of6nZAlVDkWHhWLebPccT`iXYk`WkeUliWnnYo\
+  r`ovcrnesghuakv`nx`qy_sz_vzCyzFzzIzzIzzIzzIzzIzzIz\
+  zOzzOzzOzzOzz`zz`zz`zz`zz`zz`zz`zz`zznzznzznzznzzn\
+  zznzznzznzznzznzznzznzznzznzznzznzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

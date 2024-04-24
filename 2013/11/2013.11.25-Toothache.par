@@ -1,0 +1,116 @@
+;     Date: Mon, 25 Nov 2013 18:01:02 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 25-11-13 (Toothache [A-7,M-8])
+;       Id: <1.5.4.16.20131125180051.2a2f1674@earthlink.net>
+; ---------
+; 
+; FOTD -- November 25, 2013 (Rating A-7,M-8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is the parent fractal that results when the 
+; expression Z^(1.09+C is iterated at ground level of the 
+; hyperladder with no function applied.  I rarely use parent 
+; fractals as FOTD's, but today's parent struck me as having 
+; enough bite to earn the honor of being declared FOTD for 
+; 25-11-13.  The reason for the name "Toothache" is now obvious.
+; 
+; As the exponent of Z is decreased toward unity, the resulting 
+; parent fractals tend ever closer to a circle.  But this tendency 
+; can be avoided for a while by calculating the fractal as it 
+; appears on one of the remote levels of the hyperladder.  In 
+; today's image however, we need no remote level.  The fractal is 
+; interesting enough right at the ground level, where we find a 
+; Mandeloid that resembles nothing as much as a newly extracted 
+; tooth.
+; 
+; Despite surface appearances, the image is filled with well 
+; hidden and quite hard to find smaller minibrots.  I will present 
+; a few of these in future FOTD's, though do not expect any 
+; paradoxical images to magically appear.
+; 
+; The art rating of the image is a reasonably respectable 7.  The 
+; math rating is a very respectable 8, mostly due to the 
+; unexpected richness of the outer filaments of the fractal.
+; 
+; The calculation will cause no problems.  The image will finish 
+; in less than one minute on most units, at least those that do 
+; not panic at the sight of a DOS prompt.  Panicky units can be 
+; spared the panic by checking the finished image on the FOTD web 
+; sites.
+; 
+; The finished image is online at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with grand themes and symphonic variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; After a morning low of 16F -9C the temperature rose to a not 
+; very warm afternoon peak of 34F +1C.  Helped by hazy sun, it 
+; felt almost comfortable after the biting winds of yesterday.  
+; The fractal cats agreed, as did the fractal humans.
+; 
+; The next FOTD will be posted when both it and I are ready.  
+; Until that marvelous moment arrives, take care, and how could 
+; one communicate the directions of left and right to an alien 
+; imprisoned in a ship in outer space, with no knowledge of the 
+; outside universe?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Toothache { ; time=0:00:55.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-3.94562/-2.28956/0.2032885/1/-45/0
+  params=1.09/0/0/525 float=y maxiter=13000
+  inside=0 logmap=7 periodicity=6
+  colors=00000E00I00M00Q10U20Y30`40g50i60m70q80q90sA\
+  0rC0qE0oG1nI2mK3kL4jM5iN6gO7fP8eQ9cRAbS9aTBZUCWVEU\
+  WFRaHPmIMzJKzLHrMEzOCrP9zR7rS4zT2rW4mY6m`8mbAmeCmg\
+  EzzGzzIzzKzzMzzOzzQzzOzzNzzMzzLzzJzzIzzHzzGzzEzzDz\
+  jCziBzh9zg8zf7ze6zjKznYzrkzvyzJXzKZzL_zLazMbzNdmUe\
+  mOgmUhmUjmQkmUmmUnmUomUpmUpmUpmUqmUqmUqmUqmUmccicc\
+  fccbcc_ccWccTccPccMccIccFccBcc8cc4cc1cc4cc6Im8ImAI\
+  mCImFImHImJImLImNImQImSImUImWImYIm_ZmXomUmzWlzXjzY\
+  izZgz`fzaezbczcbze`zf_zgZzhXzgVzgTzgRzgPzzNzzLzzJz\
+  zHzzFzzDzzBzzZzzZzzZzzZzzZzzZzzZzzZzzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczz\
+  czzczzczzczzczzczzczzczzczzczzczzmzzmzzmzzmzzmzzmz\
+  zmzzmzzmzzmzzmzzmzzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

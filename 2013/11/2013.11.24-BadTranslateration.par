@@ -1,0 +1,113 @@
+;     Date: Sun, 24 Nov 2013 19:20:56 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 24-11-13 (Bad Translateration [A-6,M-5])
+;       Id: <1.5.4.16.20131124192045.38bf1ef6@earthlink.net>
+; ---------
+; 
+; FOTD -- November 24, 2013 (Rating A-6,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that results when the 
+; expression Z^(1.85)+C is iterated 0.5094505 part of one level up 
+; the hyperladder.  I picked this odd height because it produces a 
+; fractal that almost has X-axis symmetry, not that it makes much 
+; difference in the resulting fractal.  (Since the symmetry is 
+; illusional, X-axis symmetry, which appears right, will not work 
+; with today's particular parameters.)
+; 
+; This parent fractal resembles a Mandelbrot set with its west 
+; half cut off and its East Valley split into two halves.  Today's 
+; scene lies on the north shoreline of the northern East Valley.
+; 
+; The name "Bad Translateration" might refer to some abstruse 
+; point of advanced matrix math, with deep philosophical 
+; ramifications involving reality.  Actually, it means nothing.
+; 
+; The nearly shapeless minibrot at the center bears little 
+; resemblance to any kind of M-set, while the overall pattern is 
+; far too haphazard, with no central theme.  As a result, the art 
+; value is an unimpressive 6, while the math stuff, which has 
+; often been seen before, rates no higher than a humdrum 5.
+; 
+; To make things worse, the calculation time of over 5 minutes 
+; will lead to impatience in those so prone.  My solution to the 
+; problem is to rush to the web sites.
+; 
+; View the finished image on the web sites without the chore of 
+; doing the calculation.  The sites may be accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The mostly sunny skies here at Fractal Central today were 
+; spoiled by a temperature of 23F -5C and a biting northwest wind. 
+; The fractal cats spent the day being glad they were inside.  The 
+; fractal humans spent the day doing the things humans do indoors 
+; on a cold Sunday afternoon.
+; 
+; The next FOTD will be posted in probably 24 hours.  Until 
+; whenever, take care, and we should feel sorry for the liberal 
+; environmentalists, who care about both the environment and the 
+; underprivileged.  I have rarely seen anyone in such a dilemma.  
+; They say the world must cut its carbon emissions, and at the 
+; same time help the emerging nations achieve a better standard of 
+; living.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+BadTranslateration { ; time=0:05:30.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.20097930259243/+0.12797587283477/3.8\
+  5526e+010/1/-50/0 params=1.85/0/0.5094505/0 float=y
+  maxiter=6400 inside=0 logmap=736 periodicity=6
+  colors=00000D00L00M60N51O42P00R34R35S26T26U16V16W0\
+  6X06Y77ZE7_K7_R7`_7ac7ai7cbDWWJRPPLIVGB_BAWF9SJ9ON\
+  8LR7HV7DZD9bH6fIAZHCPKCHR6IU5JX5K_4Lb4MeOKgfIvyGrz\
+  FozFkzFhzFX4LX4PY4UY4ZZ4cZ4gzzzzzzzzwzzmzzKvzArzAm\
+  t9hn8ce8ZX7UP7PJ6KE6FC6G09A8CDCFHFILILOMOSPQWST_dZ\
+  RdTJeMBfG3fA4gI4hP5hX5ic5ijTOXU3KUAKcBKZ2KU0KK0KA0\
+  K0N0KW_UWWcZZkaaoedshgvkizhfzmcScDEp9Bh69`37U0DQ9J\
+  MIOIQUEZ_Agd6oCpIEiNGbRHXVJQZLJbMDfO6IP0VHiWJ`bLSh\
+  MJnSKdXKWaKNYISVHWSG_PFcMEgJDkGCoTKqeSsr_tjVqDdKHb\
+  JL`IOzIzfzVVGzTGzfFzkEzaEzVDNYpPZpR`pTaqWcqYeq_nza\
+  hrcirfZriPrlErn4rg5ja5cW5WQ6PK6HE6A863C85GA7KC9NEA\
+  LKGKQLJVRI`WGfaFkfEqlDvqGsoIpnKmmeO0dT8dXFc`NceUbi\
+  ajbTheXfh`dkdjmhJmhGmbCmX9mR5mL2mG5mC7m89w4FwFKwPP\
+  w_UwibwhZwhlpkpqnsrqxststwvuyzvVzwSzxPzyLzzIzzFzzB\
+  zz8zzKzzKzzKzzKzzKzzKzzKzzKzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

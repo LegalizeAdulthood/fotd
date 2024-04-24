@@ -1,0 +1,113 @@
+;     Date: Mon, 18 Nov 2013 16:08:32 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 18-11-13 (Awesome Chaos [A-7,M-6])
+;       Id: <1.5.4.16.20131118160212.2a072702@earthlink.net>
+; ---------
+; 
+; FOTD -- November 18, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The chaos in today's image is awesome.  (I think that's the 
+; currently trendy word to describe something that is very 
+; impressive.)  The name "Awesome Chaos" is therefore fully 
+; justified.
+; 
+; The image came about when I calculated the expression Z^(2.0075) 
+; at a level 17.2 steps up the complex logarithmic hyperladder, 
+; which would probably prove to be closer to a hyperspiral if we 
+; could comprehend higher dimensions.  All this hyper stuff exists 
+; because the complex log function is multi-valued, which means 
+; there are an infinity of fractals that can result from an 
+; expression as simple as Z^(2.5).
+; 
+; The parent fractal appears as a Mandelbrot set rotated 180 
+; degrees so that the main spike points out to the east along the 
+; positive X-axis.  Strange things are happening in this area, but 
+; in today's image we check the East Valley, which lies on the 
+; western negative X-axis and is broadened into a small wedge.  
+; Today's scene lies near the southern edge of the wedge blade, in 
+; an area where the chaos is near its maximum.
+; 
+; The chaos here is in the form of herringbone arcs and crescents, 
+; several of which appear in today's image.  The total chaos is so 
+; extreme that it actually detracts from the overall artistic 
+; effect, and holds the art rating to a 7.  The math rating 
+; remains at a 6.  Nothing new appears in the fractal math.
+; 
+; The calculation time of 3-1/4 minutes borders on slowness, so 
+; why take a chance.  Check the finished image on the web sites.
+; 
+; Be thrifty, save time by viewing the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Lots of sun, a brisk breeze and a temperature of 57F 14C made 
+; for a rather pleasant autumn day here at Fractal Central.  The 
+; new fractal cat Jasmine leaped onto the rim of the tub then 
+; lost her grip and slipped in,  She spent a couple hours drying 
+; off.  The old fractal cat Nicholas wondered how any cat could be 
+; so clumsy.  The humans watched the action with amusement.
+; 
+; The next FOTD will be posted in a not-too-long period of time.  
+; Until whenever, take care, and can something considered awesome 
+; also be considered groovy?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Awesome_Chaos { ; time=0:03:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.253095984594/-0.006795518592/8276542\
+  /1/-57.5/0 params=2.0075/0/17.2/0 float=y
+  maxiter=2750 inside=0 logmap=280 periodicity=6
+  colors=000DaVEbSJdQLdNNfJOgErCzmBrjAlfCfaI_YPWVTTS\
+  VMRaH000922C22G33N74UE6_M7fS9lYArdCCfyAMl7QaCURKaL\
+  56PzzzzzzzzzzzwwzqsyilubfpV_nPUjGztPzrNzrNzqMwpLro\
+  HnmHgjFdjF`iDXiDSgAezzcxz`ttZplXodVlXRiMzzzzzzzzzz\
+  zzyyytusmrjgoa`lUUiKehZpfwqPzoDznCzlCzjCziCzhCzfCz\
+  dCzcCzaCz_CvXBrVAmQ9hL8cF7ZA6UH7ZO8cT9h_JleUjjcjon\
+  ournzwlzxqzxvzyyzeSzPCoSA_V7L_79fAAlEBaPWWYhRjzJwz\
+  CzZEb3G62D7AA9LADY8Fi9JtBLBBuCCrJHoQMlWPi`TffYdlcg\
+  nZgoUhpPipKirEktBltBloHijTgfbeffffpgczfvCzvUzwnzzz\
+  zzzzzzzzzzzzzzzzzzzxzvtznozejrWenPaiFXa7Wg9Ti9RtBM\
+  uIGoR6UW9JiBgt9gi9f_FgTPiKNgLSzhUzeUzcUzaQfVrzXUuR\
+  SpNRnKQjFVktUioThjTgfRVaTg_TgYTgUSTRQgLozzzpzznzzn\
+  zznzzmzzfzzozzuzzoztnzntzmrzot_nofmnellelkeqqqqqqq\
+  qqzzzzzzyyzyyzyyzyyzyyzyyzyyzzyzzyzzyzzyzzyzzyzzyz\
+  zvRzuPzzNzzMzzJzzIzzGzzWzzSzzRzzPzzNzzMzzJzzIzzGzz\
+  UzzUzzUzzUzzUzzUzzUzzUzzU }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

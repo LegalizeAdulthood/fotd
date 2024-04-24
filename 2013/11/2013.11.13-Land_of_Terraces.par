@@ -1,0 +1,104 @@
+;     Date: Wed, 13 Nov 2013 19:09:58 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 13-11-13 (Land of Terraces [A-7.5,M-5])
+;       Id: <1.5.4.16.20131113190932.0d070492@earthlink.net>
+; ---------
+; 
+; FOTD -- November 13, 2013 (Rating A-7.5,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in the parent fractal that is generated when 
+; straight Z is combined with sqrt(0.5) parts of Z^(4.01) before 
+; straight C is added on each iteration.  This parent resembles a 
+; Mandelbtot set rotated so that its west side faces southeast.  
+; Its normally solid East Valley, now on its northwest side, is 
+; cleaved into two prominent 'wings' by a large intruding valley.  
+; Today's scene lies on the edge of this large valley, which 
+; separates the two 'wings'.
+; 
+; The name "Land of Terraces" describes what I imagine I see in 
+; the image.  Others could easily see things entirely different.
+; 
+; In an effort to make something of a lackluster image, I rendered 
+; the scene with the outside set to 'tdis' and the inside set to 
+; 'fmod'.  The result raises the art value to an amply adequate 
+; 7.5, while the math value remains at a bearable 5.  With only 
+; slight variations, I borrowed the parameters from an image 
+; recently sent to me by Sebastien.
+; 
+; The calculation time of 4 minutes is a bit slow, all the more 
+; reason to seek the web sites for relief.
+; 
+; Check the finished images at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Partly sunny but quite chilly temperatures prevailed here at 
+; Fractal Central today.  The high of 37F +3C was more typical of 
+; mid-December than mid-November.  The older fractal cat enjoyed 
+; the sun when it was shining, while the younger fractal cat, who 
+; does not yet realize that she is a fractal cat, was fascinated 
+; by the passing scene outside.  During the cat action the fractal 
+; humans had an uneventful day.  I know that this report is dull.  
+; Those who want to read about relationships with more interesting 
+; interaction should pick up a romance novel.
+; 
+; The next FOTD will be posted in the proper time, which will most 
+; likely be sometime tomorrow evening, U.S. Eastern Standard Time. 
+; Until then, take care, and thank goodness!  I was worried that I 
+; might be a sasquatch!
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Land_of_Terraces { ; time=0:04:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.0185648126917398/+0.0374303039712042\
+  /1.3e+009/1/-7.5/0 params=1/1/0.707106/4.01/0/0/0/0
+  float=y maxiter=1500 inside=fmod
+  proximity=0.001 outside=tdis
+  colors=0004ZT4cS3gS2lRGB8EMGELHFKIFJIFIJGGKGVAHj0I\
+  HSKIRMJQOLPQMOSOMUPLWQKYSJ_TIbVG`SGZOGXKGUGGPDEK9C\
+  F5A31A33A45558A6AD7KG7UI8cIUmJhzJBzKDvKGmJzcIMZIPZ\
+  HRYGz_GX`F_bEzdDyUfuUfpTfkTffSfaRfXRfSQfNQfIPfDOgD\
+  ShEWjF_lGcnHgpIkrKhnNejPbfS_bRcaQh_OlYNqXMuVKzTZjR\
+  nVPkVNhWLdXJaTJYPJVLJRHJNDKLDOJESGEXEF`BGe7jFFkMOl\
+  UXm`enhnopfalYOhPAdRGcUMaXS_ZYYacWdjUehSffQhcNiaLj\
+  _JlXGnaJqgMtmPwsShfXTUaDGfYqO`qScpWfo_ioclngomkslo\
+  ekpSiqEhr0ftMOqg5ne8jcCeaG`ZKWXORVSMSWHPXMMYRJ_WH`\
+  ZCacHahMbmOcrQdvSezUfzVgzWhzXizYjz000VczQczcczcczc\
+  czcczcczYczSczLczEcz7czDczLczUczaczcczcczcczcczccz\
+  cczcczcczcczcczcczVczLcz000cczWczRczLczFcz9cz3czDc\
+  zOczZczcczcczcczcczcczcczSczMczNczPczRczSczUczWczY\
+  czbczcczOcz2cz7czCczHczMczRczQczSczVczYcz`czbczccz\
+  cczcczcczcczcczcczcczcczcczcczcczRczIczMczQczUczYc\
+  zbczcczUczIcz6cz6cz5cz5cz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

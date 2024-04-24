@@ -1,0 +1,106 @@
+;     Date: Thu, 07 Nov 2013 18:03:34 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 07-11-13 (East Side Story [A-7,M-6])
+;       Id: <1.5.4.16.20131107180514.2b3f5b6e@earthlink.net>
+; ---------
+; 
+; FOTD -- November 07, 2013 (Rating A-7,M-6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image is the same one that gave us 
+; yesterday's image, though today, instead of checking the west 
+; end of the parent, which is its East Valley, we check the east 
+; end, where the main spike lies.  The chaos in this area is more 
+; chaotic than on the west side of the parent.  It is so bad in 
+; fact that it creates a muddy effect that holds the artistic 
+; worth down to an unexceptional 7.  The math worth drops to a 6, 
+; since today's math trick is the same as yesterday's.
+; 
+; The name "East Side Story" implies no tragic love story.  It 
+; simply points to the location of the image in its parent fractal.
+; 
+; The calculation time of 1-1/4 minutes will pass so quickly that 
+; it will hardly be noticed.  Satisfaction that is even faster may 
+; be found on the web sites.
+; 
+; Check the finished image and the variations on the web at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with rain here at Fractal Central, but the rain 
+; ended by noon, leading to a cloudy afternoon with a brisk north 
+; wind and a falling temperature, which had reached 48F +9C by 
+; post time.  The new fractal cat spent the afternoon at the 
+; doctor's office, getting her check-up and shots.  She passed 
+; with flying colors, except for an infection of ear mites, which 
+; we are treating.  The old fractal cat spent the afternoon 
+; enjoying the peaceful break from the new kitten.
+; 
+; The next FOTD will be posted in the near future.  The near 
+; future usually means tomorrow.  One can never be sure of these 
+; things however, so no promise is given.  Until whenever, take 
+; care, and according to science, the evidence of our senses is 
+; the most reliable form of verification.  Science also tells that 
+; our senses are sometimes subject to illusion.  But science does 
+; not tell how to reliably separate the real sensory input from 
+; the illusory.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+East_Side_Story { ; time=0:01:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+1.397025538668458/+0.029933323568185/\
+  1.4495e+008/1/-28.75/0 params=2.01/0/1.5/0 float=y
+  maxiter=1800 inside=0 logmap=155 periodicity=6
+  colors=00000200300400500600700800900A00B10C20D21E4\
+  2F03G42H42I32J21K21S10b40mFAzE8vD7rC6mB6hA6c96Z85U\
+  75P54K43F22A115K00K00K00K00K00K00K00K00K00K00K00K0\
+  0A00A00A000000000006MH6QJ5VL4_N3dP3jR2oTArVKvXUzcc\
+  zUmzcszmzzzzzzT_q78E67E67E56D67E68E68F79F7AG7AG8BH\
+  8BH8CI8DI9DJ9EJ9EKAFKAGKAGLBHLBIMBIMBJNCJNCKOCLODL\
+  PDMPDMQENQEOQEOREPRFPSFQSFRTGRTGSUGTUHTVHUVHUWHVWI\
+  WWIWXIXXJXYJYYJZZKZZK__K__K``La`LaaLbaMcaMcbMdbNdc\
+  NecNfdNfdOgeOgeOhfPifPigPjgJmmMkjPjgRidUhaWgZZeWad\
+  TccQfbNhaKk_HnZEpYBsX8tS2uU3uV4uW5uX6uY6uZ7v_8va9v\
+  b9vcAvdBveCwfCwgDwhEwjFwkGwlGxmHxnIxocxpcxrcxzmzzm\
+  zzzzzzzzzzcmzcczcUzcKzZFzZFzZFzZFzZczZczZczZczZczc\
+  czcczcczcczcczcczcczcczcczcczcczcKzcNzcRzcUzcXzcIz\
+  cIzcIzcIzhHzhHzhHzhGzhGzhGzhGzmFzmFzmFzmFzmEzmEzmE\
+  zmEzrDzrDzrDzrDzrCzrCzrCzrCzzBzzBzzBzzBzzAzzAzzAzz\
+  Azz9zz9zz9zz6zz7zz8zz9zz9 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

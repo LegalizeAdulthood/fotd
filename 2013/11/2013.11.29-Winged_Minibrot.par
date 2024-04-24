@@ -1,0 +1,107 @@
+;     Date: Fri, 29 Nov 2013 16:12:05 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 29-11-13 (Winged Minibrot [A-7,M-7])
+;       Id: <1.5.4.16.20131129161157.2e4fcdcc@earthlink.net>
+; ---------
+; 
+; FOTD -- November 29, 2013 (Rating A-7,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's venture into the realm of ultra-low exponents takes us 
+; down to the world of Z^(1.07071)+C, where we check no farther 
+; than ground level of the hyperladder as it appears with no 
+; function applied.  0.7071 is the square root of 0.5, though this 
+; is of no significance in the appearance of today's fractal.
+; 
+; The parent fractal resembles an unbalanced boomerang, with 
+; today's image located in the western part of the chaos between 
+; the two arms.  There actually is a minibrot at the center of the 
+; chaos filling the screen, which justifies the name, though it is 
+; too small to show up at today's magnitude.  This unseen minibrot 
+; is shaped like a torpedo and surrounded by patches of chaos of 
+; the most chaotic kind.
+; 
+; The name "Winged Minibrot" came about when the two large amber 
+; elements in the upper part of the frame reminded me of a pair of 
+; wings.  The art and math aspects both rate a 7, meaning they are 
+; worth a look, but nothing that might win a prize.
+; 
+; The calculation time of 1-3/4 minutes seems a fair price for the 
+; image, though the FOTD web sites can make the price much more 
+; fair.
+; 
+; In all fairness, the finished image may be accessed at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Clouds and cold temperatures made today feel like a day from 
+; midwinter here at Fractal Central, with a high temperature of 
+; 34F +1C that was barely far enough above freezing to make the 
+; ice damp.  The fractal cats spent the afternoon sleeping and 
+; playing, while the fractal humans spent the day recovering from 
+; Thanksgiving.
+; 
+; The next FOTD will be delayed until at least December 1st.  
+; Until whenever, take care, and we must seek out the latest 
+; trendy electronic gadgets that we simply must have for 
+; Christmas.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Winged_Minibrot { ; time=0:01:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-7.3593914824083/-1.9453641284373/2.906\
+  568e+007/1/171.250 params=1.07071/0/0/525 float=y
+  maxiter=4000 inside=0 logmap=194 periodicity=6
+  colors=000zbDz`CzbCwZBtaBqWBrYAnTAjOAiT9iQ9cP8hK8f\
+  J7cH7bF600051665B79G7DL8HQ8LV9P_9SdPQOQVMQ_LQdJQiI\
+  QnGUsFcwEhrGmnHrjIvfJzaLzYMzUNzQOzLQzHRzDSz9Tz5Uz6\
+  Sf6Rd6Pa6O_6NX6LV6KS6JQ6HN6GL6FP5GT5HX5I`5Jc5Jg5Kk\
+  5Lo5Mr5Mp9LoCKnFJlIIkLHjOGhSFgVEfYDd`CccBbfAai9VkG\
+  PmMIoSCqYUe_kVagUWdTQaTLZSFWSAYTCZTE_TGaTIbTKcTMeT\
+  OfUPgURiUTjUVkUXmUZnU`oUapV_qVYrWWsWUsXStXQuYOvYMv\
+  ZKwZIx_Gy_Ey_DeVTNQgRNhVKhYIiaFieCihAjl7jo5jl9hjCf\
+  hFdfIbdL`aO__RYYUWWXUU_SSbRVZSYWS_TSbQSeNSgKSjHSmE\
+  SoBSpH_pNgpToQljShiUdhW`gZWf`SebOddKdVNoMPyLRxKTwJ\
+  VvIXuHZtG`sFbrFdrEfqDhpCjoBlnAnm9pl9ql8km8en8_n8Uo\
+  7Po7Jp7Dp77q72qLP4JLBIHIHDPF9WE5bD1iFEbGRWHcQK`PMY\
+  POVPRTPTQPVNPXLP_IPaFPcCPfAPh7Pj4Pl2P1_L4ZK7YJAYJD\
+  XIGWHJWHMVGPVGSUFVTEYTE`SDcRCfRCiQBkQBfO9bM8YK7UI5\
+  PG4LE3KD4JD4ID4IC5HC5GC5GC5IF9JICLKFMNIOPLPSORVRSX\
+  UU_XVa_XdbYge_ih`lkannKeW }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

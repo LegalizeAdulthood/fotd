@@ -1,0 +1,107 @@
+;     Date: Fri, 22 Nov 2013 19:52:27 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 21-11-13 (Corrected Version of FOTD for Nov. 21 
+; 	  [A-7, M-5])
+;       Id: <1.5.4.16.20131122195213.2c6711ec@earthlink.net>
+; ---------
+; 
+; FOTD -- November 21, 2013 (Rating A-7,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To find today's image we checked the parent fractal that results 
+; when the expression Z^(1.9)+C is iterated only one step up the 
+; hyperladder with no function applied.  This parent consists of a 
+; reasonably recognizable Mandeloid rotated so that east faces 
+; south and twisted so that the main bud faces northwest.  A very 
+; obvious but disconnected minibrot lies just southeast of the 
+; main bay.  Today's scene lies a short distance north of this 
+; minibrot.
+; 
+; I named the image "Random Searching", which describes the 
+; technique I used to dredge up today's scene.  The minibrot at 
+; the center resembles the parent fractal rather closely, though I 
+; did not check to see if that disconnected minibrot exists nearby.
+; 
+; The art rating of a 7 indicates that I am less than fully 
+; satisfied with today's image.  The math rating of a 5 shows that 
+; nothing new exists in the math aspect.
+; 
+; The calculation time of a little over 2 minutes will pass 
+; quickly enough.  Those who like their fractals at turbo speed 
+; can check the web sites.
+; 
+; The finished image is available on the following web sites:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The clouds that ruled the roost today kept things suppressed.  
+; The temperature, which began at 21F -6C and rose only to 43F +6C 
+; merely added to the chill.  The fractal cats spent the day 
+; sleeping and playing.  When ten-year-old Nico grew tired of play 
+; and eight-week-old Jasmine wanted to continue, we had to put her 
+; in the spare room to give Nico a break from the action.
+; 
+; The next FOTD will be posted in a reasonable time, until then, 
+; take care and when one person's common sense contradicts another 
+; person's common sense, they cannot both be right . . . or can 
+; they? . . .
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Random_Searching { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+0.718487803007509/-0.01658645125406608\
+  /1.659661e+007/1/150/0 params=1.9/0/1/0 float=y
+  maxiter=2500 inside=0 logmap=238 periodicity=6
+  colors=00000821942A63B84CA5DRBETCFVDGPE9RFCVFJZFEX\
+  FJRFIVFKcFHkFEaHBfI8jJ5nJ3pQArWHtaNvgUxm_ulXskVpjT\
+  niRlhcmh`mgZmfXmeVmdTmdQmcOmbMmaKm`Im`GmbImcKmdMmf\
+  OZgB`hDciFekHglJjmLlnNnpPqqRsrTusUrqTpyTznTzlTzjSz\
+  cTzeSzfRzhQziPzy9zz9zzAzzAzzBzqBjjRjkRjlRknPloNll7\
+  mm5no3Tj2`VSplbnhRhnFco3`m5Yk7Vi9TgBQRDNQFKOHINJFK\
+  L2CN0FO3EL18J8DHBCEDBCGDAIH7GG5NG3LI4JK5HM5FO6DQ7L\
+  R7JT8HV9FX9DZAB`B9aBdbJgbHicFldCneAqf8sf6TaPWdUZgZ\
+  ajcdmhgpmisrktsmttottqturtujkpcckXWfPNaIFXB7Scun7C\
+  QO`ZcxgboObg5Ye7Ud8QcAMbBH`DD_E9ZG5YHGJVR5gXOcaf`f\
+  yYbqUZiRVaNSVKONGKFDH8AMC9QG9VJ9ZN9bR8gU8kY8o`8hd6\
+  bg5Xn4cp3mz2cz1cz0czngeQb_XYVbcQhcUzcUzmUzmUzmUzzU\
+  WzUMzTazRivQprPwuUzmZzhZzhZzhZzcazchzchzchzmhzmhzm\
+  hzmbemefmhgmknmntmqqmtnmwlmzimzfmzdmzbmz`mz_mzYmzX\
+  mz_zzbzzfzzjzznzzrzzvzzyzzszzmzzhzzbzzYzzPzzHzz9zz\
+  DzzHzzLzzPzzXzzczzDzzMzzK }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

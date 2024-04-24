@@ -1,0 +1,99 @@
+;     Date: Tue, 19 Nov 2013 20:23:41 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 19-11-13 (Over-Stimulation [A-6,M-5])
+;       Id: <1.5.4.16.20131119201722.2a47a2fc@earthlink.net>
+; ---------
+; 
+; FOTD -- November 19, 2013 (Rating A-6,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image combines 3.4 negative parts of Z^(-1.4) with 0.85 
+; negative part of Z^(-5.4) on each iteration.  The parent fractal 
+; is a typical double negative thing with the usual north-south 
+; chain of large bays and a large 'fan' pointing east from the 
+; origin.  A cloud of cut-off fractal rings surrounds the whole 
+; thing.  Today's image lies on the eastern rim of the 'fan'.
+; 
+; The over-rich effect of the image was achieved by rendering the 
+; scene with the outside set to 'tdis', which divides the elements 
+; into extremely narrow bands.
+; 
+; The name "Over-Stimulation" refers to the super-abundance and 
+; super-richness of the colors in the image.  This overkill holds 
+; the art rating to a mediocre 6.  The math has been doing its 
+; thing for over 10 years, so I could rate it no higher than an 
+; unimpressive 5.
+; 
+; The calculation time of 3-3/4 minutes borders on slowness, but 
+; the web sites will greatly reduce the wait for satisfaction.
+; 
+; The finished images are posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A mix of sun and clouds with a temperature of 43F +6C made today 
+; a typical November day here at Fractal Central.  The fractal 
+; cats, who are getting along quite well, paid little attention to 
+; the outside weather, looking instead for more food.  The fractal 
+; humans, who sometimes deny their fractal nature, had another 
+; near normal day.
+; 
+; The next FOTD will be posted, most likely but not certainly, in 
+; 24 hours.  Until the time it actually is posted, take care, and 
+; scientific truth occasionally changes, while religious doctrine 
+; almost never changes.  Which is more likely to be true?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Over-Stimulation { ; time=0:03:45.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=+3.877183342573586/+0.9093269278525011/\
+  3.464122e+009/1/-29.25/0 params=-3.4/-1.4/-0.85/\
+  -5.4/0/0/0/0 float=y maxiter=5000 inside=0
+  outside=tdis periodicity=6 mathtolerance=0.05/1
+  colors=000CCaCCaCCaCCaCCaAAO66U1663G35P57Z7AlABvBA\
+  qAAlA9h98c87ZC6UM7RZAQTCPaCLaCHaCEaCLaCTaJXaSekekk\
+  KqfPkzPfzUkzUpzZpzZpzckzbjzftz`muSipJdkC_fCXaCTaCP\
+  aCLaCHaCHaCEaCEaCEaCCaBDYTThlhbzwSzzEzzCzzC0000000\
+  00000000G33U66lAAzCCzCCzCCzCCzdJzUSzzSzUSzzSzUSzUS\
+  zzSzUSzzSzzSzUSzzSzzSzUEzzSzz`zUkzztzzzzUzzzzzzzzc\
+  zzzz0zzzczzcz0yzzczzcz0yzzczCvzCvzCzzCzzOzzzmzzczz\
+  mzzUzkzzXpzJdzBevAml8mc7mZ6mU7mR9hPAqNCzLCzHCzECzC\
+  CzCCzCCzCCzCCzCCzCCzCCzHCzhOoz_XzkCzvCzzCzzJzzCzzX\
+  JzaOzeSziXzm`zq`ztezxkzzpzztzztxkzkCzOezCzcCzECzCC\
+  zCCzCCzCCzCCzCAqC6UB2BB33G44KCLz55P000000000000000\
+  00000000000000002000000002000000000000000000000000\
+  0000000000000200B22K44U6BlAMzC_zCkzCvzCzzCzzCzzCzz\
+  CzzCzzCzzCzzCzzCzzCzzCzzCnzC_zCLzLCzXCzcCzzCzzEzzX\
+  zmtzmzzmzzmzzmzzmzzmzzmzzmzzzzzXzzCzzCzzEzvOzt`zqj\
+  vhhhiv`dzJ_zCXzCPzC611611 }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

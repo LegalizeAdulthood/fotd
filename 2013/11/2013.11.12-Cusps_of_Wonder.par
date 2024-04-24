@@ -1,0 +1,110 @@
+;     Date: Tue, 12 Nov 2013 20:06:46 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 12-11-13 (Cusps of Wonder [A-8,M-5.5])
+;       Id: <1.5.4.16.20131112200619.2b0fd96e@earthlink.net>
+; ---------
+; 
+; FOTD -- November 12, 2013 (Rating A-8,M-5.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us back to the East Valley of the parent 
+; Mandelbrot fractal that results when Z^(2.01) is calculated 1.5 
+; levels up the hyperladder with no function applied.  (We very 
+; recently checked this same valley.)  Since the parent is rotated 
+; about 90 degrees, its East Valley, which is shaped like a wedge, 
+; is on the west side.  Today's image lies at the inner extremity 
+; of the chaos shooting inward from this wedge.
+; 
+; The name "Cusps of Wonder" refers to the eight cusps surrounding 
+; the central minibrot.  The artistic rating of an 8 indicates 
+; that I am rather satisfied with the gloomy atmosphere of the 
+; image.  The math rating of 5.5 shows that there is little new 
+; stuff in the math.
+; 
+; The calculation time of 2 minutes seems appropriate for the 
+; scene.  faster satisfaction may be enjoyed by checking the web 
+; sites however.
+; 
+; For complete satisfaction check the finished image at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; and the variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; The day began with a temperature of 31F -0.5C and light snow, 
+; which piled up to an inch (2.5cm) by the time it ended at 7am.  
+; But by late morning the sky had cleared and by noon the sun had 
+; cleared away the snow.  The fractal cats, who are showing signs 
+; of becoming the best of friends, watched the snowflakes in the 
+; early morning, then took it easy in the afternoon.  One fractal 
+; human was glad the snow went away by itself; the other shrugged 
+; it off.
+; 
+; The next FOTD will be posted who knows when.  The best bet is 24 
+; hours from now, so until whenever, take care, and the globe is 
+; growing warmer, there is no doubt of that.  The question is how 
+; much warming is due to man's activities.  My guess is about 
+; 5-percent, but some zealous environmental activists claim that 
+; we are responsible for 99-percent of the warming.  (If this is 
+; true, then I'm a sasquatch.)
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Cusps_of_Wonder { ; time=0:02:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=-0.2657826335419736/-0.0005086399793624\
+  /1.455326e+012/1/-85/0 params=2.01/0/1.5/0 float=y
+  maxiter=1500 inside=0 logmap=208
+  periodicity=6 mathtolerance=0.05/1
+  colors=000AFNAFMAFLAFKAFKAFKAFKAFKAFKAFKAFKAFKAFKA\
+  FKAFKAFKAFKAFKAFKAGKAHJAGIAFHAEGACEA9C50077B9CGBGL\
+  EKQFQVFMWGP_LNiRKnSHsTFxUGuVJsWMpXPnYSlZVi_Yg`YeaY\
+  faXg`Wh_Vi_UiUSdPQ`KLXF3TJ4RM5QQ6PnpZejXYcVP`UUXUW\
+  WOXWQUYBR`CPbDScGUcIWcLYcN`dPbdSddUxbNybSybXzbazbf\
+  r6oZPwWMrTJmQGhNEdKB_H8VE5QB3MLHCVV3ZaAbgHenNvjByo\
+  7vf8tZ8qQ8oI8mA8nhSpjPqkMrlKsmHuoEvpCwq9xr7tsAqtDn\
+  uFkvIhwKgpLfiMebM_KVVQVQWWLaWGgWFUYFH_F4aLEhROnWXt\
+  YZqZ`n_bk`chaeebgbci_djYhiLki8gjBcjE_kHWkJSlMOlPKm\
+  SGmUOfNV`GbV9iP2ZHWO9xNCwMEwLHvKJvJMuJOuSWr`bpiinr\
+  plzwjkqVYpGcu1mv7mzDcwJUrPUnVWi`Yjf_jkWi5Tg7Qf9NdB\
+  KcCHaEE`GC_HMTOWMVdFaaBW_8RY5LdWNcPNbIOaBOaJRaQUaX\
+  XaW_aUbaVemWhkXliYpgZse_ucarhcbmfNrh8wk8so8ps8mw8j\
+  zFgzLdzSazYmzOmzFmz6mzDmzJmzQmzWmzbmzhmzomzumzWmz7\
+  fzWfzaWzfLzjSzlZznezplzqmzmnzjozgozdpzaqzZqzWrzSsz\
+  PtzMxzIizUlz_kzUjzPgzSezU }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

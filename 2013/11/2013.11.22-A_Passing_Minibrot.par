@@ -1,0 +1,106 @@
+;     Date: Fri, 22 Nov 2013 19:52:29 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 22-11-13 (A Passing Minibrot [A-6,M-5])
+;       Id: <1.5.4.16.20131122195215.2c6727de@earthlink.net>
+; ---------
+; 
+; FOTD -- November 22, 2013 (Rating A-6,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image lies in one of the two East Valleys of the parent 
+; fractal that is generated when the expression Z^(1.85)+C is 
+; iterated 0.5094505 levels up the complex hyperladder.  The level 
+; is set to such a critical value because at this particular level 
+; the parent appears to have X-axis symmetry.  The appearance of 
+; symmetry is false however.  It exists only on the surface.
+; 
+; The art value of the image, with its overbearing minibrot, rates 
+; only a 6, and the math rates only an average 5.  All is not lost 
+; however, for the minibrot is surrounded by smaller detached 
+; minibrots just waiting to be explored.  I will check some of 
+; these smaller minibrots in the next few FOTD's.
+; 
+; The name "A Passing Minibrot" refers to the way I found the 
+; minibrot.  At first I passed right by it, but then I returned to 
+; have a second look.  After a few minutes I saw enough there to 
+; make it today's FOTD.
+; 
+; The calculation time of 2-1/4 minutes will pass fast enough, 
+; though it may still be a bit too slow for such a mediocre image. 
+; Mediocrity can be avoided however by checking the FOTD web sites.
+; 
+; The calculated image is posted at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Thick clouds and occasional light showers held spirits to a low 
+; level here at Fractal Central.  The temperature of 50F 10C was 
+; mild enough, but was wasted by the clouds.  The fractal cats 
+; seemed cranky this afternoon, possibly due to the weather.  The 
+; humans had a very average Friday.
+; 
+; The next FOTD will be posted in two days, on November 24.  Until 
+; then, take care, and pay no attention to those who say we are 
+; becoming too dependent on technology and are even becoming 
+; addicted to it.  Even higher technology will solve all our 
+; problems and put the doomsday prophets in their proper places.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Passing_Minibrot { ; time=0:02:15.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=+0.2005901796/+0.1279569602/21526.13/1/\
+  27.5/0 params=1.85/0/0.5094505/0 float=y
+  maxiter=6400 inside=0 logmap=84 periodicity=6
+  colors=000LIWKMVJRTIVSH_QGcPFgNElMDpKCtJBoIAkIAgI9\
+  cH8ZH8VH7RG6NG6IF5ED4AC46B36E36H26K26N16M16Q06U06Y\
+  77ZE7_K7_R7`X7`c7ai7abDWWJRPPLIVGB_BAWF9SJ9ON8LR7H\
+  V7DZ69b66ffl`VSRK7HR6IY5Jd5Kk4Lq4MsOKufIvyGrzFozFk\
+  zFhzFX4LX4PY4UY4ZZ4cZ4g_4l_4q`4v`4zOY_BzAAs99l98e8\
+  7Z86S75L74E6376216659A8CDCFHFILILOMOSPQWSTZWWbZZfa\
+  aiedmhgpkiqhfqfcrc`raZr_WsXTsVQtSOtQLdqHhnDll9pj5s\
+  h2tc5t_8tVBuRDuMGuIJuELfRHScDEp9Bh69`37U0DQ9JMIOIQ\
+  UEZ_Agd6oCpIEiNGbRHXVJQZLJbMDfO6jP0nHiWJ`bLShMJnSK\
+  dXKWaKNYISVHWSG_PFcMEgJDkGCoTKqeSsr_tjVqDdKHbJL`IO\
+  ZISXHVVGZTGaRFePEiNElLDpLCsMCwNBzOBuPAtQAsR9rS9rT9\
+  pU8oV8nW7mX7mY7mZ6m_6m`6ma6mb5mc5cc5fc5jc4mc4pc4sc\
+  4qc7oc9ncBlcEkcGicIgcLfcNdcPccSamU_mWZmZXm`WnbYoYZ\
+  pT`qParKbsGetEguCivBkw9nx8py6qz5rz3sz2tz5uzUvzUwzU\
+  xzUyzczzczzczzczzmzzmzzmzzmzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

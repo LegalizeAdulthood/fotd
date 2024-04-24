@@ -1,0 +1,108 @@
+;     Date: Fri, 08 Nov 2013 15:10:33 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 08-11-13 (Sirene Train [A-7,M-5])
+;       Id: <1.5.4.16.20131108151215.2b1f660a@earthlink.net>
+; ---------
+; 
+; FOTD -- November 08, 2013 (Rating A-7,M-5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; In today's image we return to the same parent fractal that gave 
+; us the two most recent images, where we check the area of the 
+; main stem around the large minibrot, which has split into 
+; fractal chaos.  The chaos in this area is quite pronounced yet 
+; filled with smaller minibrots surrounded by a reasonable degree 
+; of order.  Today's image shows the surroundings of one of these 
+; minibrots.
+; 
+; The name "Sirene Train" has little connection with the image, 
+; but it does invoke a mythological feeling, much like the 
+; not-quite-real feeling associated with fractals.  I added the 
+; extra 'e' at the end of 'siren' to increase the impression of 
+; fantasy.
+; 
+; The artistic worth of a 7 is merely average, while the math 
+; worth of a 5 suffers because of overuse.
+; 
+; The calculation time of 2 minutes will pass quickly enough, but 
+; there is still the inconvenience of doing the calculation.
+; 
+; Enjoy the image without the inconvenience of calculating it by 
+; checking the finished product at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; Chilly, blustery conditions prevailed here at Fractal Central 
+; today, with dark lumpy clouds racing across the sky and a 
+; temperature around 46F +8C.  The fractal cats, who are becoming 
+; more used to each other every day but still have to learn to 
+; share the window shelf, spent the day taking turns watching the 
+; outside world go by.  The fractal humans kept themselves busy 
+; enough doing human things.
+; 
+; The next FOTD will probably not appear until Nov 10, so until 
+; then, take care, and how much land would we need to cover with 
+; environmentally-destructive solar panels and bird-killing wind 
+; generators to supply the total energy demand of the emerging 
+; world?
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Sirene_Train { ; time=0:02:00.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident passes=1
+  center-mag=+1.736223455281264/+0.03863814240540929\
+  /1.584101e+012/1/90/0 params=2.01/0/1.5/0 float=y
+  maxiter=1800 inside=0 logmap=230
+  periodicity=6 mathtolerance=0.05/1
+  colors=000KEZ9AjBEi7Eo4Gj6Hb8AQ32893DF4HL5LR6PX7Tb\
+  8Xh9`p3bm9dkEfhKhfPjdUla_n_dpFrzYirucqp`jkYdfWYaTS\
+  XQL`NBSOFEICJOJNTQRYXWcc_hjcmqgrxalnXfeR`WMVNGPDBK\
+  47`E3pOJjIYdD`kBcqAgiKjbU4c34U25G2AO2DMAKQHRXOZcWe\
+  jblqizzznszojafcVaYNYRGUL9RIEOGJLEOJCTG9YD7bA5g83l\
+  I5iS7f`8cjA`sBZhOeY_lNlsDxyEpwEhuE`sFTqFLoFDnKQhPb\
+  cTnZUhbVbfWXj__lcanfcojeqmgrlilljgkkaklXjmRjnMlnLn\
+  nJqnHsnGunEwnDplJjjOdhTZgYTebNcgHblJ`eL_ZNZSPYLRXE\
+  bSXmNn`YYOhHBs1Eu6HvBKxGNyLPzPRxSSwUUvXVuZWtaYscZr\
+  f_qhZliZhjYdjY`kXXlXTlWPmWLmUHlSEkRAkP7jO4jVDiaMhh\
+  VhocgukgkgibckT_mKWoBSpEXhHa`KfUNjMQoFTt7Vx0JzSPwK\
+  VtC`q5apCbpJboPcoWdobdnhenoenuZksSirLfqEdp7ao0_nDU\
+  hPPb`JXlERx9LpNDh`5haChaJhaQhaXhachajhaqjejlhdnlYo\
+  oSqsLsvFty9qsGomMmgSjaYhWcfQi_VdT__NcWGhR9mM3qI5sE\
+  7uB8v7Ax4By1Dw5Ev9GtDHsGJqKKpOLoRWd_eVhoLpic8njAsq\
+  CxwDuxGsxI1X52U42R43P33M3 }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

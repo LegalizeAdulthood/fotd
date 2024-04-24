@@ -1,0 +1,117 @@
+;     Date: Wed, 06 Nov 2013 18:04:49 -0500
+;     From: Jim Muth <jimmuth@earthlink.net>
+;  Subject: [Fractint] FOTD 06-11-13 (The Shadow Arises [A-8.5,M-7])
+;       Id: <1.5.4.16.20131106180629.385f7f82@earthlink.net>
+; ---------
+; 
+; FOTD -- November 06, 2013 (Rating A-8.5,M-7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's stellar but slightly ominous image lies in the East 
+; Valley of the parent fractal that comes about when the 
+; expression Z^(2.01)+C is iterated 1.5 levels up the complex 
+; logarithmic hyperladder with no function applied.  At this 
+; not-very-impressive height the parent resembles a Mandelbrot set 
+; rotated almost 180 degrees so that East Valley falls close to 
+; the negative X-axis, and its beat-up main bud and main spike lie 
+; near the positive X-axis.
+; 
+; In today's parent, East Valley has been broadened into a wedge, 
+; with fractal debris scattered along the sharp northern edge of 
+; this wedge.  Today's image lies in this debris.  I'll check the 
+; beat-up main bud and spike in a future FOTD.
+; 
+; Strangely, there is very little in the image to reveal that it 
+; lies in an East Valley.  Instead, we see finely-divided arcs and 
+; crescents surrounding the central minibrot.  I rated the art 
+; worth at a superior 8.5, mostly because of my coloring, most of 
+; which was created randomly by the Fractint program.  I rated the 
+; math interest at a 7, which might be a bit liberal for a math 
+; trick ten years old.
+; 
+; The name "The Shadow Arises" does not imply the return of that 
+; old radio character who could make himself invisible.  It refers 
+; to the unusually shadowy appearance of the dark green elements 
+; surrounding the minibrot.
+; 
+; The calculation time of 1-1/5 minutes is reasonably fast, but a 
+; trip to one of the web sites will make the brief wait even 
+; briefer.
+; 
+; The finished image is available at:
+; 
+;       <http://www.crosscanpuzzles.com/Archives.html>
+; 
+; with clever variations at:
+; 
+; <http://www.emarketingiseasy.com/TESTS/FOTD/jim_muths_fotd.html>
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+;   <http://user.xmission.com/~legalize/fractals/fotd/about.html>
+; 
+; A little sun, lots of clouds and a high temperature of 61F 16C 
+; brought rather pleasant conditions to Fractal Central today.  
+; The fractal cats had a quiet day except for the time Jasmine 
+; sneaked up on Nico and took a swipe at his tail.  In return, he 
+; took a harmless swipe at her to warn her away.  The fractal 
+; humans had a near average day.
+; 
+; The next FOTD will be posted within a certain time.  To find out 
+; how certain, check back at regular intervals.  Until whenever, 
+; take care, and if it can be scientifically demonstrated to be a 
+; fact, it might even be true.
+; 
+; 
+; Jim Muth
+; jimmuth@earthlink.net
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_Shadow_Arises { ; time=0:01:12.00 SF5 at 2000MHZ
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandelbrotBC3 function=ident
+  center-mag=-0.261378641122/-0.001444041117/\
+  1.593933e+007/1/161/0 params=2.01/0/1.5/0 float=y
+  maxiter=1500 inside=0 logmap=165 periodicity=6
+  colors=00045H5Gg65_70f85Y95RA5TB5VC5XD5ZE5`F5bG5dH\
+  5fH3hL7eP7cT7`X7Z`6Vc6Sg6Ok6Lo5Hs5EA5zA5wA6t98qBAn\
+  DClFEjHGhJIfKKdHIkHMpQTpSVrUYrVZzXZzZZz`ZzbZzd_ze`\
+  zgawibrkcmmdhnecogZpiUqkPrmKsoFtqAus5vu2KG2LE1IA1F\
+  61C30900700801931642752573B83BA4CB4CE5DH5DK6EN6FQ7\
+  FS7GT8GV8HX9HZ9I`AIbAJdBJeBMbHO_NQXTSUZURd2AGSPaRO\
+  _PMzOLzMKULISJHQIGO03923303610000E08C0BG1584463241\
+  12_WUWSRSPOPMLLJIIGFECCA99766333UGyMCiF8V74FKnzIkz\
+  HhzGezFbzE_zCXzBUvARr9Om8Lh7Ic5FZ4CU39P26K13FD8gC7\
+  dB7bA6`A6Y95W85U85R74P64N63K53I42G42D32B2192161040\
+  02JFXHDUGCREBPDAMB9KA8H86F75C54A437225112YQnWOkUNh\
+  SLeQKbOI_MHYKFVIESHDPFBMDAJB8H97E75B548325112prJmo\
+  IjlHhjGegFcdE`bDZ_CWYBUVARS9PQ9MN8KK7HI6FF5CD4AA37\
+  72551220zwYztWzqUznTzkRshPmeOzmMzmLzmJzmHzmGzhEzcC\
+  zcBzc9zc8zZ6zU4zP3zK1zFIzAGzAFz9Ez9Dz8Cz7Bz6Az69z5\
+  7z46z35z34z23z12zqLzqKzqK }
+
+frm:MandelbrotBC3   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)+PI-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
