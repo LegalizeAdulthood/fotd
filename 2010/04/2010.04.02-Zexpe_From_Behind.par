@@ -1,0 +1,95 @@
+;     Date: Fri, 02 Apr 2010 22:13:27 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-04-10 (Zexpe From Behind [7])
+;       Id: <1.5.4.16.20100402211512.2a4f5e5e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 03, 2010 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image takes us to the minus Zexpe fractal.  This is not 
+; the (+Z)^(-e)+C fractal, but the (-Z)^(+e)+C fractal.  The minus 
+; before the iterated Z makes a big difference.  The resulting 
+; parent fractal is totally changed, since the (-Z)^3+C Mandeloid, 
+; which is close to the minus Zexpe fractal, is rotated 90 degrees.
+; 
+; Today's image lies in one of the two East Valleys of the parent, 
+; rather deep in a star that terminates the filament of one of the 
+; 1.5-elephant radicals.
+; 
+; I rated the image at a 7 because that's what I think it is worth.
+; 
+; The name "Zexpe From Behind" indicates that we are approaching 
+; iterated Z from the opposite direction.
+; 
+; The calculation time of 12-3/4 minutes is admittedly slow, so 
+; why not listen to a song or two while the computer does all the 
+; calculating work.
+; 
+; For instant gratification, the finished image is available on 
+; the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; The weather here at Fractal Central on Friday was superb, with 
+; cloudless skies, a temperature of 81F 27C, intelligent conversa-
+; tion and contented cats.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and neither a believer nor a 
+; disbeliever be.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Zexpe_From_Behind { ; time=0:12:45.28-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=SliceJulibrot5 passes=1 logmap=1752
+  center-mag=+0.09128980939558221/+0.355637462249730\
+  6/4.365632e+010/1/-25/0 params=0/0/0/0/0/0/0/0/\
+  2.71828182845905/0 float=y maxiter=8000 inside=0
+  colors=000JKHMLCONDQPESRFUTGWVHYXI_ZJa`KcbLedMgfNi\
+  hOkjPmlQnnRahhQczOdxMdvKdtIdrHdpFdnDelBejAeh8ef6ed\
+  4eb1cj3e`5gS7iJ7l69kABjDCiGEhJGgMHfPJeSLdVMcYOb`Qa\
+  cT_eR`fQagPbgNchMchLdiJejIfjHgkHglGgkF``FURENGEG6G\
+  I8HJAIKCKMELNFMOHOQJPRLQSMSUOTVQUWSWVRVXTUYUT_VT`W\
+  SbXRcYQeZPg`Qf_ReZRdYScXSbWTaVU`UU_TVZSVYRWXQWWQWW\
+  QYVO_VN`VMbVLdVKeVIgVHhVGjVFlVEmVCoVBqVArV9tV8uV7p\
+  YEl_LgbScdZ_feVilRksNmyPhuRdqS`mUXiVTeXPaZLY_NUaPQ\
+  bRMcTI`VEYXHVZKS`9PcMMcZMakMblMcmOcqPdnPekQfhQgeRh\
+  bRi_SjXSjUUkRZlOcmLhnImoFrpCvpAzqDzqGvqIrqLmqOhqQc\
+  qTZoWUmYPl`KkcFjeBihAhj9gl9fm8eo8dp7cr7as6_u6Yv4Ww\
+  6UwESnLQfSOZZMRZEHcJJeMKiPMjSNlWOnZQpaRqdSreQqdRqd\
+  SqcTpcUzBCzQFzXFfBEVCDJDCcDcczfcsjclmceqcZt`cpZhmW\
+  ljUqgSudLviFvn9vs3vw3sl3qb3oScmImnHzoGzpGzqFzrEzsE\
+  ztGzuHzvJzwKzxLzyNzzOzzPzz3mzzmzzmzzmzzmzzmzzmzzmz\
+  zmzzmzzmzzmzzmzzmzzmzzmzz }
+
+frm:SliceJulibrot5   {; draws all slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=(-z)^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

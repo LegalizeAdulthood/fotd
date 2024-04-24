@@ -1,0 +1,97 @@
+;     Date: Sun, 04 Apr 2010 22:09:22 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-04-10 (Resurrection Scene [9.5])
+;       Id: <1.5.4.16.20100404221107.2a27340a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 05, 2010 (Rating 9.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's rather somber image rates an extraordinary 9.5.  I might 
+; have rated it at a 10 if I had done more work on it.  As it is, 
+; most of the colors are not mine, but were created randomly by 
+; the Fractint program in glorious 256-color GIF format.  I did 
+; tweak the colors just enough however to earn a half-point bonus.
+; 
+; The parent fractal was created by subtracting straight Z from 
+; Z^2.5 and adding straight C.  This parent resembles a Mandelbrot 
+; set with three buds instead of only one bud on its west side.  
+; Today's scene is located on the south edge of the valley separat-
+; ing the north bud from the center bud.
+; 
+; When I first checked this area, I almost gave up.  I saw no 
+; chance at all of finding minibrots or anything else very interes-
+; ting there, but by rendering the area with the outside set to 
+; 'fmod' I did find a minibrot, and as today's image shows, quite 
+; a good one at that.
+; 
+; The area is so full of discontinuities that instead of breaking 
+; up the image, the discontinuities help create the image.  The 
+; name "Resurrection Scene" was inspired not only by what is sup-
+; posed to have happened on the first Easter, but by the image, 
+; which has become so broken up that it has returned to life in 
+; even better form.
+; 
+; The calculation time of 2-1/2 minutes is far more reasonable 
+; than the times of some recent FOTD images.  But as always, the 
+; finished image is posted on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where it may be viewed instantly and without effort.
+; 
+; Full sun and a temperature of 73F 23C made Easter Sunday a day 
+; to be remembered here at Fractal Central.  The fractal cats 
+; enjoyed most of it, but would have been a bit happier with an 
+; extra treat or two of tuna.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and mysteries abound on this day, 
+; the greatest of which is, "what species of rabbit lays eggs?"
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Resurrection_Scene { ; time=0:02:36.70-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.1607468385993725/+0.1293682960522352\
+  /6788710/1/55/0 params=1/2.5/-1/1/0/0/0/0 float=y
+  maxiter=1200 inside=0 logmap=154 periodicity=6
+  colors=000D7PE8PF9OGAOHBNICNJDMKEMLFLMGLNHKOIKPJJQ\
+  KIRLHSMGTNGUOFVPEWQDXRCYSCZUB_WA`Y9a_8ba8cc7de6egQ\
+  feQccP`aPX_OUYORWNOUNKSMHQMEOLBML8KLHISPHZXFedElbD\
+  i`Dg_CeYCcXBaVB_TAYSAWQ9UP9SN8QL8OK7MI7KG6FH7II8LI\
+  9OJARKBUKCWLDZLEaMFdNGgNHiOIlPJoPKrQLuSGyQLwOPvMTu\
+  KYsIarGeqEipCnnArz8vz6zzAszEmzIgzMazQWuUQwYKyKEzKG\
+  vKIsKKoKMlQOhNQeLSaJUZGWVEYS6YQC_PH`OMaNRcMWdL`eKe\
+  fJjhIoiHtjGykGfr_yyrx`tsaonbkjcgedc`e__dVXeWVeWTeX\
+  ReXPeYNeYLeYJeZHeZFe_De_Be`9e`4db7e`AfZCfzDdzDbzD`\
+  zDZzEXzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzGECMIIRLOWPU`\
+  S_eVejZkoaqtdvlGchIddJdaKeYLeVMeRNfOPfKQgHRgDSgATh\
+  6Uh3Vh8XiDYjH_kM`lQbmVcn_eocfphhqliqgfkcdf_baV`XRY\
+  SNWNIUIEUD8U7AU8BU8CU8DU8EU8FU8GU8HU8IU8JU8KU8LU8M\
+  U8NU8zU8zUAzUBzUDzUEzUDzUCzUBcZAbc9ac8ac7`h6_m5Zr4\
+  Zv3zz2zz1zz0zz3zz6zz9zzBzzErzHuzJIz0WzFizUvzhmzfez\
+  dXzbPz`GzZ8zX0zW0zV0zU0zT }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

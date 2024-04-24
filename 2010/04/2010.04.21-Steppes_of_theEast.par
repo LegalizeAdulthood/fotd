@@ -1,0 +1,109 @@
+;     Date: Wed, 21 Apr 2010 23:29:03 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-04-10 (Steppes of the East [6.5])
+;       Id: <1.5.4.16.20100421233103.2b4fa834@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 22, 2010 (Rating 6.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's iterated expression subtracts 1/4 part of (1/Z) from 3/4
+; part of Z^3 then adds straight C.  The parent fractal consists 
+; of a group of large irregular but connected bays with some areas 
+; critical and some not.  Like so many fractals produced by the 
+; MandAutoCritInZ formula, this fractal is impossible to adequate-
+; ly describe in words.
+; 
+; In this type of fractal, an orbit check is often the best way to 
+; see what kind of minibrots will be found in a given region.  
+; Today's scene lies on the shore line of a bay sprouting eastward 
+; from what appears to be the East Valley of a kind of Mandelbrot 
+; main cardoid. In the closest part of this bay the periodicity 
+; is 3; in the middle it is chaotic, while in the farthest part it 
+; is 8.  Today's scene is located near the point where the periodi-
+; city shifts from 3 to chaos.
+; 
+; The greenish parts of the image consist of 'inside' stuff made 
+; visible by the 'fmod' inside fill.  The mathtolerance entry was 
+; needed because the extreme magnitude of the image could cause 
+; the scene to calculate at a lesser magnitude, producing a wrong 
+; image.  The terraced appearance was achieved by setting the 
+; 'outside' to 'tdis'.
+; 
+; The rating of 6-1/2 shows my indecision.  If I had worked a bit 
+; harder on the coloring, I might have been able to raise the 
+; rating to at least a 7.
+; 
+; The name "Steppes of the East" invokes feelings of the Gobi 
+; desert, though I can see no logical connection between that part 
+; of the world and today's fractal.
+; 
+; The calculation time of just under 2 minutes is not too slow.  
+; Neither is the trip to see the finished image on the FOTD web 
+; site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; A near-perfect day prevailed here at Fractal Central on Wednes-
+; day.  The hazy sunshine, gentle winds and temperature of 68F 20C 
+; made it feel almost like a day in June.  But June turned to 
+; April at 6pm, when a gusty shower moved in from the west and the 
+; temperature dropped to 55F 13C.
+; 
+; The fractal cats found a bit of excitement when Nicholas caught 
+; sight of a crow hopping around in the yard and Cassie came 
+; running to see what Nico was chattering at.  The rest of the 
+; time the duo spent sleeping, chasing one another up and down the 
+; hallway and asking for food.  The next FOTD, maybe better or 
+; maybe not, will be posted in 24 hours.  Until then, take care, 
+; and be a fool.  Being a fool is more fun.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Steppes_of_theEast { ; time=0:01:57.76-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=+0.9225736401877659/-0.1695063536240019\
+  /1.96e+013/1/-152.5/0 params=0.75/3/-0.25/-1.0/0/0\
+  /0/0 float=y maxiter=1500 inside=fmod outside=tdis
+  proximity=0.5 periodicity=6 mathtolerance=0.05/1
+  colors=000MW_SSXYOVcKSiGQoDOW65bPyfMxjKxnHxrFxvDxv\
+  Ptv`qvlmvxjisiYniMiiAeiEhaHjVKmONoHQqAVjF_cKcYOhRT\
+  mKYqEav7fx1jr2di2ZZ3TY3NS4UR4SKAPKFOK0KK08JU7MZ6zz\
+  DzmMzmVzmczPzzmzzVzzmIzWzzmzpWzpXzzXzqXzkTzfPz`LzW\
+  IkQEkLAjG7jTMbVJYWHTYFPZDK`BFa9Bc76d52`tURYbHCkCI_\
+  8OP4UE0Z36_2C`2H`1Na1Sa0Yb0bb0v`8uc6tf4si2rk0ta7uS\
+  DvIKw8QURzUUzUXzU_zUbzUezUhzUkzUnzUqzUtzUwzUzzOKQQ\
+  KQSKQUKPWKPYKP_KPaKScKUeMXfOZgQahTclVfpYht_kwamnej\
+  eigYme_nc`nabn_cnYenXfnVgnTioRjoPloOmoMooKpoIqoHpX\
+  XpFknMcmTXl_PjfIimAht3iq4in4il5ji5jg5jd6ZHLZMPZSUZ\
+  XYYbaYhfYmjYsnYxrLeNOcLRbJU`IX_GZYFaXDdVBgUAjS8lR7\
+  jP9hNBgLCeKEdIGbGHaFJ_DKYBMXAOV8PU6RS5TR3UP1WO0XR2\
+  WU4WX5W_7Wb9VeAVhCV30g93cE5`K7YP9VUBS_DPdFMiHJmLGp\
+  ODsSAvV7kS7aQ7SN7IL78J79I6AH6BH5BG5CF4DF4DE3EE3FD2\
+  FC2GC1HB1HB1IE4IH7IKAINDIQGITJIWMIYOGTOEOOzzOKzGzz\
+  8NgCz_GzzJz_OKWiF_fAcdG_a }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

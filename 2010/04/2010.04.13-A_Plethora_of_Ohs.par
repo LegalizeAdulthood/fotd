@@ -1,0 +1,98 @@
+;     Date: Tue, 13 Apr 2010 22:28:44 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-04-10 (A Plethora of Ohs [8])
+;       Id: <1.5.4.16.20100413223037.38ef5146@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 14, 2010 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I put near an hour of effort into trying to make something of 
+; yesterday's image, and I achieved nothing.  In today's case, a 
+; single strike of the <enter> key told the program to supply the 
+; coloring.  Fractint did an admirable job.  All I had to do was a 
+; bit of tweaking.
+; 
+; The parent fractal, and of course the image itself, came about 
+; when I combined 7 negative parts of Z^(-1.1) with one negative 
+; part of Z^(-6.2) and added (1/C) on each iteration.  This parent 
+; is a tremendously over-sized thing.  Only a tiny part of it fits 
+; on the default opening screen, which has a magnitude of 0.67.  
+; Today's image is located inside a huge terminal ring far to the 
+; south-southwest of the opening screen.
+; 
+; The rating of an 8 means I consider the image good enough to be 
+; worth 8 points.  The name "A Plethora of Ohs" does not imply 
+; gasps of surprise at the sight of the finished image.  It refers 
+; to the countless bright O-shaped circles scattered throughout 
+; the scene.  (Actually a plethora means too much of a good thing.)
+; 
+; The calculation time of 1-3/4 minutes is brief enough to bring 
+; impatience to no one but the most impatient.  Total satisfaction 
+; for even these few may be found on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; where the image is or soon will be posted for instant and total 
+; satisfaction.
+; 
+; Lots of clouds were overhead here at Fractal Central on Tuesday, 
+; though the expected rain slipped by to the south.  The tempera-
+; ture of 55F 13C was a bit too chilly for the fractal cats, who 
+; actually never worry about outdoor conditions, because they never 
+; have the chance to venture outside in the first place.
+; 
+; My day was moderately busy; Wednesday should be the same.  The 
+; next FOTD will be posted in 24 hours.  Until then, take care, 
+; and I have thousands of photographs of fractals, but I have yet 
+; to see a single real fractal being photographed.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Plethora_of_Ohs { ; time=0:01:44.04-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-132.269361791939/-60.73661716766502/\
+  1.53313e+009/1/-86/0 params=-7/-1.1/-1/-6.2/0/0/0/0
+  float=y maxiter=1000 inside=0 logmap=63
+  periodicity=0 mathtolerance=0.05/1
+  colors=000AAAAABMAAAACLAAAAELAAAAGKAAFAIKBAFCLJDAH\
+  EOJFAJGPIHOIHUIIZIIUHIUHIUHIUHIUGIUGIUGIUGIUFIUFJU\
+  FJGzJcmJGAJFzJczJEzJEzJcwJDzJzCKmCKCCKCCKBBKBBKBBK\
+  AzcAzcAzc9zc9zz9zzzzzzzzAzzAzzAzzAzzAzzAzzAzzBzzBz\
+  zczzBzzczzBzzczzBzzczzBzzczzCzzczzCzzczzCzzczzCzzz\
+  zjCzzzziDzzzzhEzzzzgFzzzzfGzzzzeHzzzzdIzzzzcJzbKzz\
+  KzaLzzLzaLzzMz`MzzNz_NzzOzZOzzPzzPzXQzzQzWRzzRzzSz\
+  zSzzTzzTzzUzzUzzUzzVzzVzzWzzWzzXzzXzzazzYzzYzzZzzZ\
+  zz_zz_zz`zz`zzazzazzHzzLzzOzzSzzVzzZzzDzzEzzFzzFzz\
+  GzzHzzHzzIzzJzzJzzKzzLzzLzzMzzMzzNzzOzzOzzPzzQzzQz\
+  zRzzSzzSzzTzzUzzUzzVzzVzzWzzXzzXzzYzzZzzZzz_zz`zz`\
+  zzazzbzzazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

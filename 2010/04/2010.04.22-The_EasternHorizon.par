@@ -1,0 +1,99 @@
+;     Date: Thu, 22 Apr 2010 22:48:35 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-04-10 (The Eastern Horizon [8])
+;       Id: <1.5.4.16.20100422225035.2b5fad14@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 23, 2010 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image earns an 8 because of its unusually brilliant 
+; colors.  Take away the colors and it's just another fractal with 
+; an "East Valley" appearance.
+; 
+; The parent fractal is an error.  Instead of resetting the 
+; function to 'reciprocal' I let it stay at 'cosine' and came up 
+; with what might be the start of an entirely new family of 
+; fractals.  (I would never have made the error if the program 
+; would accept the entry 'recip' written directly in the iterated 
+; section instead of a more awkward 'fn1', which refers back to 
+; the initialization section.)
+; 
+; The resulting parent fractal appears as a rough Mandelbrot-set 
+; shape rotated 180 degrees, with all kinds of extra stuff 
+; stretched along the positive X-axis.  Today's scene is located 
+; very near the X-axis, just east of the easternmost block of 
+; 'stuff'.
+; 
+; The magnitude is once again quite large, which makes the 
+; mathtolerance entry necessary.  The name "The Eastern Horizon" 
+; is something that popped to mind when I tried to think of a 
+; name.
+; 
+; The calculation time of 4 minutes is satisfactory for an image 
+; that rates an 8.  Also satisfactory is the trip to view the 
+; completely calculated image on the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; Despite ominous clouds at times, Thursday proved to be quite a 
+; pleasant day here at Fractal Central, with a temperature of 70F 
+; 21C and ample sun between the billowing cumulus clouds.  The 
+; fractal cats ignored the outside weather and enjoyed the inside 
+; conditions, which included a treat of tuna and cheddar, and a 
+; romp up and down the hallway.
+; 
+; My day was good enough, but could have been better if I had not 
+; volunteered to satisfy an irate customer who claimed we had not 
+; followed her instructions.  The next FOTD will be posted in 24 
+; hours.  Until then, take care, and if you want it done right, do 
+; it yourself.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+The_EasternHorizon { ; time=0:04:03.07-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=FinalDivideBrot function=cos float=y
+  center-mag=+1.771974192428845/+0.0000000994273418/\
+  2.61846e+012/1/-76.8/0 params=0/1/0/0 periodicity=6
+  maxiter=2750 inside=0 logmap=400 mathtolerance=0/1
+  colors=000O6KPAIQEJRGHSHNTKSUNZUReUWlQcschzckzgrzo\
+  vzzzzzzzzzzEmzHczJUzMKzOAzQ4zWOhafh`bf_ZeZVdYScXOb\
+  dKafG`iD_mKWrUSzbPzhCzn0zmAzcKmUUcScUQ7KVFE_NBdU8i\
+  a5mhGjcQgZ_dUaaVbZVcWWeTWfQXgOXbTTYXPU`LPdHKhDGl9B\
+  p57t1Dh2IY3OM4TB5Y06QEPIRgBcyAfzAiz9lz9oz9qzIgjQaW\
+  ZWGfQ1PZ38g5BcAD`FGYKIVPKSTRmHemStmbqi`nf_kbYi_XfW\
+  VtPknMujRqfVnc_j_cgXhcTl`QpYBnUBoWBoYIpUOqQUrNRmPO\
+  mRMmTQKRTKQzhOzlNzpLztKzwJifVjRehU`fWXdYTb`O`bK_dG\
+  X`IUXKSTMPQOMMQKISHEUFBVJKZMUaPcdSmgWzjZzmazpdzsiz\
+  smzsqzs8mwBcpEUiHSbKYWNcPQhJPeLPbNO`POYQOVSNTUNQWN\
+  OXTVSZaNdhJzoEzwmzdSqOiuKNyH1W_92qG4rc6sc8tcAumCvm\
+  EwmGxmMpzRimWaK`VMe0NgYOh0PjfQklRfbWbT`j`YqhVxpSok\
+  Wgg_ZccR_fPZvU_zZUzcUzhUzcdzrhzvmzzrzzvzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzezzfzzgzzhzzizzkzzmzzoz\
+  znzzkzzhzzezzbzz_zzXzzUzz }
+
+frm:FinalDivideBrot   { ; Jim Muth
+z=(0,0), c=pixel, a=-(real(p1)-2),
+esc=(real(p2)+16),
+b=imag(p1)+0.00000000000000000001:
+z=(-b)*(z*z*fn1(z^(a)+b))-c
+|z| < esc }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 

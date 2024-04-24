@@ -1,0 +1,100 @@
+;     Date: Mon, 26 Apr 2010 23:14:52 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-04-10 (A Hazy Serenity [7.5])
+;       Id: <1.5.4.16.20100426231657.2b67c7e2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 27, 2010 (Rating 7.5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is one of the bluest of all time.  Since blue is a 
+; serene color and I seem to see a bit of haziness surrounding the 
+; brilliant center of the image, I named it "A Hazy Serenity".
+; 
+; The parent fractal was created when I subtracted Z^(1.7) from 
+; Z^(0.3) and added straight C.  This parent appears as a 
+; distorted Mandelbrot set rotated 180 degrees.  It has no main 
+; spike pointing east but this lack is made up for by an 
+; unexpected area of chaos where its East Valley should be, which 
+; is on the west side of its main bay.  Today's scene is located 
+; in a patch of this chaos on the southwest shore line of the main 
+; bay.
+; 
+; The minibrot at the center is not rotated to the 'normal' 
+; orientation, with East Valley on the right side, as are most of 
+; the minibrots in the FOTD's.  I got lazy.  But the minibrot is 
+; so tiny that its wrong orientation is hardly noticeable.  In 
+; addition, the minibrot is somewhat beyond full resolution.
+; 
+; The rating of a 7-1/2 includes a 1/2 point bonus for the 
+; coloring, which I worked on for almost 30 minutes.  The 
+; calculation time of just under 3 minutes is a cheap price to 
+; pay for the image.  The trip to the FOTD web site at:
+; 
+;        <http://www.Nahee.com/FOTD/>
+; 
+; to see the image already completed, costs even less, 
+; 
+; Heavy clouds, occasional rain and a temperature of only 54F 12C 
+; made Monday an unpleasant day here at Fractal Central.  The 
+; fractal cats were too busy getting into indside trouble to 
+; notice the outside conditions.  Cassie somehow wrapped herself 
+; in a blanket and was unable to get the blanket untangled when 
+; she wanted to get out.  If we had not heard her calling for 
+; help, she might have been stuck there for hours.
+; 
+; For me the day was average, and what could make a duller story 
+; than that.  For FL the day was busy, but I gave moral support.  
+; The next FOTD will appear in 24 hours, almost by magic.  Until 
+; then, take care, and look onward toward the vastnesses of the 
+; world of fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+A_Hazy_Serenity { ; time=0:02:56.79-SF5 on P4-2000
+  reset=2004 type=formula formulafile=basicer.frm
+  formulaname=MandAutoCritInZ function=ident passes=1
+  center-mag=-0.5865278768076774/-0.4425192247142974\
+  /3e+012/1/-152.5/0 params=1/0.3/-1/1.7/0/0/0/0
+  float=y maxiter=1000 inside=0 logmap=226
+  periodicity=6 mathtolerance=0.05/1
+  colors=000I4MI5PJ6SJ7VJ8YJ8`J9cJAgJBjJBmJCqJDtJDwD\
+  1xH7yKHzNMzQQzTVzW_zZezajzdpzguzKblLZmMWnNTnOQoPNo\
+  QKpRHpSEqSBqPGlMKgJObGSYKWTU_OccJmgEzn9zzzzzzzzzzz\
+  zXmUVzUUkVTzVRjVQzWPiWNzXMgXLzXPhUSzRVjOYzM`kJczGf\
+  mDimBj`LzOVzHOzAHz4Bz7CzACzCCzFCzHDzKDzMDzPDvREsUE\
+  sWEsZEs`EocFkeFggFdiG`kGXnGUpHQrHMtHJvHKuzLtzzsKMr\
+  zNqzzpMzzzzzzzzzzzPzzQzzzzzzzzzzzzzzzzzzzzzWuGVtLU\
+  sQTrUSqZRpcQohPnmOmrOlvRjlThbVgUYeK_cAab1Za4W`6T`9\
+  Q_BN_EKZGHZJEYLBYO8XQ6XS5WQ5WO5VN5VL5UK5UI5TH5TF5S\
+  E5SC5SBBVFGYIL`LQcPVfS_iVdkYemVfnSfpPgqMhsJhtGWrSJ\
+  qbPr`UrZZrXcsVhsTmsRSSI709GB8PK7XT6zzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzUczTczSczQczPczOc\
+  zNczLczKczJczIczGczFczEczDczEczFzzGzzGzzHzzIzzJzzJ\
+  zzNzzOzzOzzPzzPzzQzzQzzRzzRzzSzzSzzSzzTzzUzzUzzLzz\
+  DzzjzzgzzezzczzazzBzzCzzDzzDzzEzzEzzEzzEzzFzzFzzFz\
+  zFzzGzzGzzGzzGzzHzzHzzHzz }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
+; 
