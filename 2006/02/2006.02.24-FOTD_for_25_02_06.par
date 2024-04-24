@@ -1,0 +1,89 @@
+;     Date: Sat, 25 Feb 2006 00:06:11 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-02-06 (Un-Named, Un-Rated)
+;       Id: <1.5.4.16.20060225000906.298f67f8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 25, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Due to the continuing task of preparing to move, there will be 
+; no FOTD for February 26 or 27.  The next FOTD will appear on 
+; February 28.
+; 
+; Today's image is a view in the Oblate direction of the curious 
+; rectangle located at Z coordinates 0.00019+0.07388i in the 
+; C=(-1.7435) Julia set of the Z^(2.003)+C Mandeloid.
+; 
+; As is immediately obvious, the rectangle, which is at the center 
+; of the image, remains a rectangle in this new direction, even 
+; though a good bit of stretching and skewing was necessary to make 
+; a proper rectangle of it.
+; 
+; I guess I could have given the image a name and rating, but it 
+; is the kind of fractal that, for those with ears to hear, speaks 
+; for itself and needs no words or numbers.
+; 
+; The render time of 5 minutes is not too bad.  Downloading the 
+; completed GIF image from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; is even simpler.
+; 
+; Too much wind and a temperature of 39F 4C kept the fractal cats 
+; safely inside here at Old Fractal Central on Friday.  The work 
+; kept me equally subdued.  Due to the continuing rush, the next 
+; FOTD will be delayed until February 28.  Until then, take care, 
+; and look for light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_25-02-06 { ; time=0:05:09.84--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=SliceJulibrot4 passes=1 float=y
+  center-mag=0/0/893.2701/0.01972/0/76.61098734387907
+  params=0/90/90/90/-1.7435/0/0.00019/0.07388/2.003/0
+  maxiter=5000 inside=0 logmap=45 periodicity=10
+  colors=000C1GD4KE7OFASGDWHG_IJcJMgKPjLSmMVoNYqO`sP\
+  cuQfwRiuRmtSpsTtrVxqTwrSvrQvrPurOtsMtsLssKssIrsHqt\
+  GqtEptDptCouAnu9nu8mu6mu5lv4kv2kv1jv0jv1kt1ks1kq1k\
+  p1kn2km2kk2lj2lh2lg2le3ld3lb3la3m_3mZ3mX4mW4mU4mT4\
+  mR4nQ4nO5nN5nL5nK5nI5nH6oH5nG5mF4mE4lD4lD3kC3kB3jA\
+  2i92i92h81h71g60i71g62f62d63c63a54`54Z55Y55W56V46T\
+  47S47Q48P48N39M39K3AJ3AI39J59J69J89K99KA9KC9LD9LE9\
+  LG9LH9MI9MK9ML9NM9NO8NP8NR8OS8OT8OV8PW8PX8PZ8P_8Q`\
+  8Qb8Qc8Rd8Rf8Rg3Qi8RhCRgHRfLReQRdURcZRbbRagR`kR_pR\
+  ZuS_tRYsQWsQUrPSrPQqOOpNMpNKoMIoMGnLElK9nLDoLGpLKq\
+  LPrLUsLZtLcuLhvLmwLrxLvyLzzLvxRrvWmvcLt`MsYNrWNqTO\
+  pQPoOPnLQmJQlGRkDSjBSi8Th6Ti7Si7Ri7Ri7Qj7Qj7Pj7Pj7\
+  Oj7Ok7Nk7Nk7Mk7Mk7Ll7Ll7Kl7Kl7Jn5Hl7Jk9KiBMhDNfFOe\
+  HQcJRbLT`NU_PVYRXXTYWVZXU_YU_ZT__T_`T_aS_bS_cR`dR`\
+  eR`fQ`gQ`hP`iP`jQciP`hOYgNVgNSfMPeLMdKJdKGcJDbIAaH\
+  7_G1aH4bI7cJAdKCeLFgMIhNK }
+
+frm:SliceJulibrot4   {; draws most slices of Julibrot
+  pix=pixel, u=real(pix), v=imag(pix),
+  a=pi*real(p1*0.0055555555555556),
+  b=pi*imag(p1*0.0055555555555556),
+  g=pi*real(p2*0.0055555555555556),
+  d=pi*imag(p2*0.0055555555555556),
+  ca=cos(a), cb=cos(b), sb=sin(b), cg=cos(g),
+  sg=sin(g), cd=cos(d), sd=sin(d),
+  p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd),
+  r=u*sg+v*ca*sb*cg, s=v*sin(a),
+  c=p+flip(q)+p3, z=r+flip(s)+p4:
+  z=z^(p5)+c
+  |z|<=9 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

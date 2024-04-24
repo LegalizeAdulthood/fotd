@@ -1,0 +1,91 @@
+;     Date: Wed, 01 Mar 2006 01:04:02 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-03-06 (SCA [7])
+;       Id: <1.5.4.16.20060301010700.38d76c40@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- March 01, 2006 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; You know things are bad when you get the remnants of an e-mail 
+; 'phishing' scam from the philofractal list.  Believe it or not, 
+; this is what I received a day or so ago.  At least the sender 
+; did not try to convince me that I had won a fractal lottery that 
+; I had never entered.
+; 
+; I named today's image "SCA".  I leave it to the fractalist to 
+; decide what the letters stand for.  Two possible things are 
+; 'small craft advisory' and 'sickle-cell anemia', neither of 
+; which has much to do with fractals.
+; 
+; What *does* have something to do with fractals is the formula 
+; Z^(1.5)+C as it appears 555 levels up the endless logarithmic 
+; ladder.  The Mandeloid at this level is little more than a 
+; roughly circular bay, with few buds that might add interest, but 
+; its Julia sets are far more interesting.
+; 
+; Today's image is the Julia set of an inconspicuous valley of the 
+; Mandeloid.  It is a rather unique image, shaped something like a 
+; comma turned sideways, which is why I decided to give it a kind 
+; of name and a rating of 7.
+; 
+; The calculation time of under 3 minutes will make running the 
+; included parameter file an easy task.  Those who do not or can 
+; not run Fractint parameter files may see the image by downloading 
+; it from the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A slightly milder temperature of 41F 5C and a partly cloudy sky 
+; here at Old Fractal Central on Tuesday were not quite enough to 
+; please the fractal cats, who were outside only a few minutes 
+; before coming in to ask for extra tuna.  My days continue incred-
+; ibly busy, but not so busy as to preclude fractals.  The next 
+; FOTD will appear in 24 hours.  Until then, take care, and the 
+; world may exist only in the mind, but if so, where is the mind?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+SCA { ; time=0:02:42.14--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=1 center-mag=0.144306/\
+  -0.216718/1.289431/1/-137.5/-6.32272012524027e-014
+  params=1.5/0/555/0/0.0068/0.1961/0/0 float=y
+  maxiter=350 inside=255 logmap=yes periodicity=10
+  colors=0009AICCJFEKIGLJIMLKNNMOPOPRQQTSRVUSXWTZYU`\
+  _VbaWecTgdRlfQofQrhOuiOwkNylNznLwoLxqKysKztIzvIzxH\
+  zyHzzGzzGzyEzxDzvBztAzq9zo7xn6tl4qk7nkAkkDikGhkIfk\
+  LdkOckRakV`kYZk`Yic`ifciihilkionisqivviyyizzizzizz\
+  lzznvzqqzslzvhzxczzZzzVzzQzzLzzHzzDzzGzzIzxKzsNznQ\
+  ziRzdVz`WzWZzRazNczIfzEhzAkz6nz1oz0sz0tz1szAqzHozQ\
+  nzYnxflvoksxiozhnzhkzdizcfz`dzZcxY`tVZqTYnRVkOThNQ\
+  dKOaINYHKVEIRDHOBEL9DI7AG49D27A1870A40C10E40G60I92\
+  KB4MD7OF9QHBSJDULEWNHYPI_RLaTNcVQeXRgZSi`TkaUdhVZl\
+  TTtQNzOmzLmzKHzGLoDQcAVQ7ZE4c41o00h00a01W04Q26K69D\
+  AB7DD1GG0II0KK0LK0NL0ON0OO0QQ0QQ0RR0RT0TV0TW0VW0WY\
+  0WZ0Y`0Ya0Za0Zc0`d0`f0ah0ah0do9fvKdxHYzELzD1zG2zH4\
+  zI6zK7zL9zNAzOBxQDvREtTEsWGqYHoZIn`KkaLicNhdOffQdh\
+  RciRafVZdYYc`W`cVZfTYiRVlQToNRsLOvKNyILzHIzGHzEGzD\
+  KzKNzQRvWVqaYlh`odcsahvZlxWqzAvzAzz0zz0zzUzzczzmzz\
+  mzs7ol4hd2cZ0dW0dT0dQ0YYY }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 

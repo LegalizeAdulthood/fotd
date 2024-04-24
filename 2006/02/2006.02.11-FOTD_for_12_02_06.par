@@ -1,0 +1,68 @@
+;     Date: Sat, 11 Feb 2006 22:57:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-02-06 (No Name, No Rating)
+;       Id: <1.5.4.16.20060211225959.2cc7828c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 12, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image illustrates several of those overlapping midgets 
+; that I find so interesting.  But these overlapping fractals are 
+; natural.  They are not layers created artificially by the 
+; program.  And BTW, it *is* possible for Fractint to create 
+; fractals consisting of two layers, though I have never used 
+; this feature.
+; 
+; The image was created by adding (1/Z) to half as much Z^(1.3), 
+; then adding C.  I gave the image no name and no rating.  I could 
+; find nothing in it worth a name or a rating.  The render time of 
+; 1-1/4 hours on my ancient fractal machine will be reduced to 
+; well under one hour on the newer units, but this is still quite 
+; slow for such an unimpressive image, so to make things more 
+; convenient, I have sent the finished image on ahead to Paul at 
+; the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where it is available for instant viewing.
+; 
+; Cloudy chilly weather in the morning and light wet snow in the 
+; afternoon kept the fractal cats indoors all day Saturday.  The 
+; snow grew heavier as night fell, so I doubt they will have much 
+; quality outdoor time for several days.  My day was kept quite 
+; busy with odds and ends.  If all goes well, the next FOTD will 
+; appear in all its unglory in 24 hours.  Until that unglorious 
+; moment arrives, take care, and look for light.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_12-02-06 { ; time=1:14:18.63--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.88591873573364850/-0.056354097741100\
+  40/511.7917/1/-142.5/-1.0555584184501754e-012
+  params=1/-1/0.5/1.3/0/0 float=y maxiter=16000
+  inside=0 logmap=188 symmetry=none periodicity=10
+  colors=000UK0000<7>000<4>000zz0<4>zz0zz0zz0000z00\
+  <10>z00<4>z00zz0<4>zz0zz0000<82>000<4>00000z<32>0\
+  0z<4>00z<14>0Uz<3>0az1cz2ez3gz4iz<3>BqzDszFuzHwzJ\
+  yz<15>nzzpzzrzz<3>zzzwzzxzzyzz<22>zzz }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

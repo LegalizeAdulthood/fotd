@@ -1,0 +1,89 @@
+;     Date: Tue, 21 Feb 2006 00:12:33 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-02-06 (Un-Named, Un-Rated)
+;       Id: <1.5.4.16.20060221001526.38d7cc0a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 21, 2006 (Un-Rated, Un-Named)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'm back . . . on schedule of course, and all is well.  The 
+; great and not so great fractals keep coming.  In fact I can't 
+; shut them off.
+; 
+; Today's image was created by taking just plain Z and mixing in 
+; the tiniest bit of Z^(-99) before adding C.  The parent fractal 
+; resembles a bulls-eye ready to be eclipsed by a flat disk.  The 
+; actual fractal image for today is located near the center of the 
+; bulls-eye, and near the eclipsing disk.
+; 
+; As has so often been the case recently, I gave the image neither 
+; name nor rating.  These are subjective things, and I gave them 
+; too little effort to assign meaningful names or numbers to them. 
+; But the render time is quite objective.  It is a bit over 17 
+; minutes on my worn out old machine, which BTW might soon be put 
+; out to pasture and replaced by a faster unit.
+; 
+; Seventeen minutes is more than 1/3,000,000 of a person's entire 
+; lifetime, so to save the lives of fractal fans, the completed 
+; image has been posted to the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; from where it may quickly be downloaded, thereby saving and 
+; perhaps lengthening the lives of fractal fans everywhere.
+; 
+; The coldest weather of the season moved into Fractal Central 
+; over the weekend, keeping the fractal cats well confined.  The 
+; Sunday temperature of +8F -12C was far too chilly for delicate 
+; cats, and even for most hardy people.  The not-so-dynamic duo 
+; spent most of their time watching the birds huddled around the 
+; chimney pot of the house next door, trying to steal a bit of 
+; heat.  With so much work to be done, I had no trouble keeping 
+; busy.  The next FOTD will appear in 24 hours -- unless something 
+; unexpected arises, that is.  Until then, take care, and things 
+; will be better, but no one knows when.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_21-02-06 { ; time=0:17:08.21--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.00643755004756566/+0.012614483291117\
+  52/747629/1/45/6.3380860282347129e-010
+  params=1/1/0.001/-99/0/0 float=y maxiter=1500
+  inside=0 logmap=46 periodicity=10
+  colors=000PX0PS0PP0PK0PK0PK0PK0PK0PK0PK4PKCPPKPUUP\
+  bbPgjKmuKuzPzzZzzhzzrzzzzmzzmzwmzmmz_czPUzCKr2Aj0C\
+  b0Cw02z00z00z00z00zA0zP0ze0zw2zz4zz7zz0zz0zz0zz0zz\
+  0uz0rz0pz0mz0jz0gz0eu0br0_m0Xg0Ue0Sj0Pm0Pr0Nu0Kz0K\
+  z0Iz0Fz0Fz0Iz0Kw0Kr0Nj0Ne0PX0PS0SK0SF0g0Uw0zu0zr0z\
+  r0zp0zp0zm0zm0zj0zg0zg0ze0ze0zb0zb0z_0z_0zP0zF7p4I\
+  b0PP0_C0g00r00z00w00w00w00u00u20u70uC0rI0rN0rS0rX0\
+  pb0pg0pm0pp0rj0rg0ub0u_0uU0wS0wN0wK0zF0zC2z74z44z0\
+  7z0Az0Az0Xr0re0zU0zI0z70z40z20z00z00z00z00z00z00z0\
+  0z00z72zICzPPz__zgjzrwzzzzzzzzzzzzzzzzrzzjuz_jzSbz\
+  KUzCNz2Cz04z00z00z00z00z04z0Fz0Sz4bzAmwFzrNzpSzj_z\
+  eezbjzSrzKzzCzz4zwzzzzzzzzz7z02z00m00U40CC00K00S00\
+  X00S07P0SN0pI0zF0zC4r7NF4e02m0Iu0Uz7ezIrzSzzbzzmzz\
+  wzzzzzzzzzzzwzzuzrpugmjXjXKgKAeC0_20X00U00S00P00S0\
+  0U00X00_00b00e00g00j40mA0pF0rI0pA0p40p00p00p00p00p\
+  02p07p0Ap0Cp0Cp0Cm0Cm0Cm0 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 

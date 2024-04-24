@@ -1,0 +1,69 @@
+;     Date: Tue, 14 Feb 2006 00:06:02 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 14-02-06 (No Name, No Rating)
+;       Id: <1.5.4.16.20060214000852.39174818@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 14, 2006 (Not Rated)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, with its striking 7-pointed stars, is a Julia 
+; set of the Z^(1.05)+C Mandeloid as it appears 100 levels up the 
+; spiral ramp.  I gave it neither name nor rating.  The best 
+; point of today's FOTD might be its extremely brief render time, 
+; which was achieved by rendering it with 'passes=b'.
+; 
+; The image has been posted on the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; A sunny cold day with deep snow kept the fractal cats snug 
+; indoors on Monday.  There was enough work to keep me busy also. 
+; The next FOTD will be posted in 24 hours.  Until then, take 
+; care, and beware of stray Julia sets.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+FOTD_for_14-02-06 { ; time=0:00:45.09--SF5 on a P200
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=JuliaBC passes=b
+  center-mag=0.272078/0.421181/0.6642625
+  params=1.05/0/100/3500/-0.27/0.38/0/0 float=y
+  maxiter=1500 inside=255 logmap=31 periodicity=10
+  colors=0000kk0jk0ik0hk0gkzzzywzwuuurnrpgpnanlVljOj\
+  gJgeDeb6c`0aZ0_W0XU0VQ0QJ0SQ0SW0S`0Qb0Sd0Vc0Xa0__0\
+  aV0aS0cQ0eO0gJ0rH0zF0z_0zD080FF0BO08V26_64cB2gH0lM\
+  0pQ0uV0za0w_0n_0e_4__BQXHHXO8XV2Xa0Vg0Vn0Vu0zz0Vz0\
+  0a00B00H00O00S00_00c00j00n00u00z00z00z02z04z06z0Bz\
+  0Fz0Hz0Mz0Qz0Sz0Xz0az0cz0gz0lz0nz0rzAuzKyzUzzczzcz\
+  zhzzhzzmzzmzzrzzwzzauz_nzXgzVczSXzQQzOJzMDzJ8zH2zF\
+  0wD0w20zD0zM0zV0ze0zn0zw0zz0zz0zz0zy0zw0zu0zr0zp2z\
+  n4zl8zjDzgHzeMzcQzaVzXVzaXzcXzgXzjXznXzpXzuXzwXzzX\
+  zzXzzXzzXzzXzzXzzXzz0zy0zu0zr0zn0zl4zg8zeDzaHz_JzJ\
+  cu6ue0zO0zQ0zQ0zS0yS0wV0rV0nX0jX0e_0c_0_a0Va0Qc0Mc\
+  0Jc0O_0SV0VQ0_M0aH0eD6gBHl6Sp2cr6nwSyynzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzwzznzwgzu_zrQznJzlBzj4ze0zc0za0z_0yS0nM8cFQSBg\
+  H4y60z00zueBpeDjeFegJ_gMVgOQjSJjVFjX8la4lc0yj0leM_\
+  agMXz8Sz02z0Fz0Qz0a8DgB8c }
+
+frm:JuliaBC   { ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 }
+
+; END PARAMETER FILE=========================================
+; 
+; 
