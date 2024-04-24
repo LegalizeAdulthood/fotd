@@ -1,0 +1,91 @@
+;     Date: Sat, 19 Jul 2003 09:17:18 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 19-07-03 (A Rusted Minibrot [6])
+;       Id: <1.5.4.16.20030719091722.29c74758@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 19, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, which is found in the fractal created when 2 
+; negative parts of Z^(0.75) are combined with 2 negative parts of 
+; Z^(-0.75), appears a bit rusty to me.  I named it "A Rusted 
+; Minibrot" because of the eight rust-colored lobes surrounding 
+; the central midget.
+; 
+; The parent fractal is a three-bayed thing with X-axis symmetry.  
+; Like most fractals whose formulae contain negative powers of Z, 
+; today's image is very sensitive to changes in the bailout 
+; radius.  As the bailout is raised, the scene soon 'evaporates', 
+; leaving a blank black screen consisting of 'inside' areas.  
+; Several of the inside fills create an image on this blank 
+; screen, but none equals the level of today's image, which was 
+; rendered and colored in the old-fashioned 'normal' way.
+; 
+; If I had given the coloring a bit more effort, today's image 
+; might have rated a 7.  As it is, a 6 is the best rating I could 
+; give.  The image is worth a look, though it's nothing that 
+; hasn't been seen before.
+; 
+; The 8-minute render time is a bit slow, but the wait can be 
+; avoided by downloading the finished image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Light rain that began early in the afternoon spoiled the fractal 
+; cats' day and left them in bad moods.  They sat on the porch for 
+; an hour or so, watching the rain and wishing the grass were dry. 
+; Then they came indoors to demand their consolation treats.  Tuna 
+; did the trick.
+; 
+; Today is starting cloudy and cooler, but dry.  If things go as 
+; they should, the duo will have a much better day.  For me it 
+; will be a pleasant enough day -- if I can avoid any serious work 
+; that is.  Until next FOTD, take care, and see you in 24 hours.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+A_Rusted_Minibrot { ; time=0:08:21.97--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.17148324655015210/+0.052765428789762\
+  48/7.24257e+008/1/-17.5/4.85213927717970117e-006
+  params=-2/0.75/-2/-0.75/0/0 float=y maxiter=1000
+  inside=0 logmap=164 periodicity=10
+  colors=000UDlVCmWCnWCpXBqYBrZBs_Au`AvaAwaAx_9vY9uW\
+  8sU8rS7pQ7oP6mN6lL5jJ5iH4hF4fD3eC3cA2b82`61_41Y20X\
+  10W53U85SC7QA9OJBMADLQFJAHHXJFhLDcNBgPAgQCgQEhRGhR\
+  IiSKiSMiSOjTPjTRkUTkUVkUXlVZlV`mWbmWcnXenXgnXioYko\
+  YmpZopZqpZplXokWtdVk`UpYSgUReQQcMP`IOZFMXBLV7KT3JR\
+  0IP3KN6MM9OLCPJFRIITHLVFOWERYDU_BXaA_b9bm7ez6hz5kz\
+  3nw2qw1sw0rw3rw6qu8quBpsDpsGopIopLnnNnnQnlSmkVmkYl\
+  k_lkbkkdkjgjjijjlijnijqijshithhthgthgthftgetgetgdt\
+  gctgcti_ojWkkTgmPcnL_oIVpERrANs7Jt3Fu0Bs2Dr3Fq4Gp6\
+  In7Km8LlANkBPjCQiDSiEUiFViGXiGYiH_iI`iJbiJciKeiLfi\
+  MhiMifOfdPcbQ``RYZSVXTSVUPTVNQXKOYHMZEK_BI`8Ga5Eb2\
+  Cc0GZ4JV7MQAPMDTHGWDJZ8Ma4Pd0Se3Rf5Rg7Qg9QhCPiEPiG\
+  OjIOkLNkNNlPMmRMmULnWLoYKo_KqVMrPOsOPtQRvSTwUUxWWy\
+  YXz_VzaUzcSzeRzgPziOzjNzkLzlKzmIzmHzmFzmEzmDzmBzmA\
+  zm8zm7zm6zm7zm8zm9zmAzmBzmCzmCzmDzmEzmFzmGzmHzmHzm\
+  FzmEzmDzmCzmBzm9zm8zm7zm6 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

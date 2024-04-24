@@ -1,0 +1,101 @@
+;     Date: Tue, 01 Jul 2003 10:02:59 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 01-07-03 (Fractal of Light [6])
+;       Id: <1.5.4.16.20030701100251.0d6729f6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 01, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today we begin the seventh month, yet the exact mid-point of the 
+; year does not arrive until noon tomorrow.  In honor of these 
+; un-astounding facts, I have created a fractal.  I named the 
+; fractal "Fractal of Light".  When I gave the image this name 
+; last evening, I did so for a definite reason.  This morning, 
+; that reason appears much less persuasive, but the name has 
+; already been given, and it will remain.
+; 
+; The parent fractal was created with the MandelbrotMix3a formula, 
+; which mixes together four different powers of Z, but requires 
+; that the critical points be calculated by hand.  In today's 
+; case, Z^2, 1/Z, Z^3 and Z^4 were combined, and Z was initialized 
+; to 3.5059....
+; 
+; The parent fractal, which has X-axis symmetry, is a Mandeloid 
+; rotated 180 degrees, with a large triangular area of chaos 
+; beyond its East (or in this case, its West) Valley.  The East 
+; Valley itself is split in half, with a very skeletal line of 
+; disconnected elements strung down its open center.  Today's 
+; scene is located near the edge of one of the smaller elements 
+; in this string.
+; 
+; Because of the skeletal nature of the entire East Valley area, 
+; today's image consists mostly of inside areas that have been 
+; made visible and given detail by the 'fmod' inside-fill option.  
+; I have rated the image at a 6, which is the most common FOTD 
+; rating.
+; 
+; Because it must calculate 4 different powers of Z at every 
+; iteration, the M-Mix3a formula is rather slow.  Today's image 
+; takes a full 11 minutes to render on my machine.  The wait can 
+; be avoided by downloading the completed GIF image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; With a temperature of 91F 33C and lots of sun, Monday was 
+; another good cat day here at Fractal Central.  Showers prowled 
+; the area in the evening, but none made it to Fractal Central.  
+; The intrepid duo passed the afternoon sleeping on the porch and 
+; sitting in the shade under the holly trees.
+; 
+; Today promises to be a slightly cooler repeat.  This is good, 
+; because old cats become quite settled in their ways, and prefer 
+; good days.  So until next FOTD, take care, and keep a good 
+; fractal thing going.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Fractal_of_Light { ; time=0:11:04.76--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix3a function=ident passes=1
+  center-mag=+1.224869498561344/-0.000190723153669/1\
+  997855/1/-5/-8.58104708817e-009 float=y params=0.2\
+  /2/-1/-1/0.1/3/-0.03/4/3.50592829665/0 maxiter=1200
+  inside=fmod proximity=0.5 periodicity=10
+  colors=000WgbVebVcbVacU`cUZcUXcUWcXUa_S_bQZeOXhMVj\
+  KUdPSZURUZQOcPIhODmN7rM2wL6uNAsPEqRIoSMmUQkWUiXYgZ\
+  ae`ecaiacm_eqYfSLm28sBAkJBdRDXZEQfGInHBtT_ydwpdqgd\
+  l_dgRdaIdXAdS9oL8yECtDFpCIlBLhAOd9R_8UW7XS6_O5bK4e\
+  G4bH8`ICZIFXJJUJNSKQQLUOLYLM`JMdHNhFNk8di2ug5pd7ja\
+  9eZBaXEYUGVRISOKPMNOPPRSSUUUXXX__Zbaaedchgfkihnlko\
+  omqqprtrsutuvvwwxxxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzz_Ef_EhZDiZCkZBlYBnYAoY9qY9r_Ep`InaNlbRkcVi\
+  e_gfcfghdhlbipaeibabbYXbcQbZJcUDcP6cG0cL6eQCgVIi_O\
+  kdUli_nnepskrxpsvqruqrsqqrrqprporpmsolsojsnitngtmf\
+  tmdulculauk`ukcqbfmUiiLhhMggNgfOffOeePedQdcRdcRcbT\
+  caUbaVb`Wb`Ya_Za__aZ``Ya`Yc`Xd_Xe_Wf_WgYXgXXgWYgUY\
+  gTZgSZgRZgVacYd_`fXciTglQjnMmqJptFsvCqtForHmpJloLj\
+  mNhkQgiSehUcfWbdY`b`ZabY_dWYfUWhTVjWPeYKa_EXa9TaBS\
+  aCSaDRaERaGQaHQaIPaJPaKP73R73T73V73X73Z73`73a85`96\
+  `A7_B8_C9ZDAZXmaWlaWjbWhb }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,86 @@
+;     Date: Tue, 15 Jul 2003 10:29:30 EDT
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 15-07-03 (Time to Sine Off [7])
+;       Id: <169.217b8a31.2c4569ca@aol.com>
+; ---------
+; 
+; FOTD -- July 15, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's discussion will be short.  I have to finish the work 
+; that backed up while the telephone was not working and customers 
+; who tried to call were getting busy signals.
+; 
+; To create today's image, 1.1 parts of Z^(-1.15) were subtracted 
+; from 1.1 parts of Z, then (1/C) was added, and the whole thing 
+; was iterated 42,000 times.  The 'tdis' coloring option was then 
+; applied to the image and the result given the name "Time to Sine 
+; Off".  I suppose the sinuously curving features inspired the 
+; name.
+; 
+; The image has such fine detail in the normally flat areas that 
+; moire patterns are actually starting to appear.  The whole thing 
+; has a deep wine-colored effect that rates a 7.  The high maxiter 
+; slows the image to 26 minutes, but this wait can be bypassed by 
+; downloading the finished image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The forecasted rain never materialized here at Fractal Central 
+; on Monday, and as a result, the fractal duo had another pleasant 
+; day in the yard.  Had Thomas not gotten cranky when Tippy gave 
+; him too energetic a face washing, their day would have been 
+; perfect.  The blue sky, cottonpuff clouds, and temperature of 
+; 82F 28C as measured on the Fractal Central digital thermometer 
+; were certainly perfect.
+; 
+; Today is promising to be another beauty.  This is good, for I 
+; like happy cats.  But within the next few hours I must finish 
+; the backed-up work, so my enjoyment must wait.  Until the next 
+; FOTD appears in 24 hours, take care, and avoid fractal mistakes.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Time_to_Sine-Off { ; time=0:26:55.46--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.1358088165403816/+1.702865705423715/\
+  1.432292e+008/1/-25/1.0182567826005906e-006
+  params=-1/-1.15/1/1/0.1/0 float=y maxiter=42000
+  inside=0 outside=tdis periodicity=10
+  colors=000NRaONdPJgPFiJPaEZU8hM3rFDkJNeNX_RfUVpOZy\
+  IbvJcsKdpLemLfjMggNhdOiaOjZPkWQlTRmQRnNSoKTpHUqFUq\
+  JSoMQmPPkSNiVMgYKe`JdbKecLeeMffMfhNgiOgjPhlPhmQioR\
+  ipSjuSqjQddOXXMQRKJJICCG5GFAJFBNEEQEHUDJXDM`CPcCSg\
+  BViBXeDVaFUZHSUJRQLPRIOOMNKQLHTKEWIA`H7iF4oE1wD4mH\
+  6fL8VPBPTDLXFH`HEdIEeKEfLFfMFgNFhPGwQGwRGwSHwUHkVH\
+  lWIlXImYImaQhdYdhe`zlXzkXzkXzjWwiWriVmhVhhVggUgfUf\
+  fTfeTfeTefUefUegUegUdhVdhVdiVdiVcjWcjWckWckWblXblX\
+  blXbmXamYanYanYaoY`oZ`pZ`pZ`qZ_q__r__r__r_Zs`Zs`Zt\
+  `Zt`YuaYuaYvaYvaXwbXwbXxbXxbXxbQuWKrPEpI8mB2k56gB9\
+  cGC`LGXRJUWMQ`QNfTJkWGpXHoXIoXInYJnYKmYKmZLlZMlZMk\
+  _Nk_Oj_Oj_Pi`Qi`Qh`RhaSgaSgaTgbUfbUfbVecWecWdcXdQe\
+  ATeEWfIZgMagQdhUghXeiWdiWciWbiWajW_jWZjWYjWXkWWkWU\
+  kVTkVSlVRlVQlVOlVNmVMmVLmVKmVNkYQj`ThcVgfYei`dlbco\
+  canc_ndYmdXmeVmeTlfRlfQkfOkgMkgKjhJjhHiiFiiDiiChjA\
+  hj8gk6gk5gl3fO_VLbTMZWNVZ }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================

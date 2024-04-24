@@ -1,0 +1,93 @@
+;     Date: Sat, 05 Jul 2003 10:42:33 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 05-07-03 (Olde-Tyme Minibrot [6])
+;       Id: <1.5.4.16.20030705104229.29af7826@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 05, 2003 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD reminds me of the kind of Fractint image that was 
+; popular around 10 years ago, when the second edition of "Fractal 
+; Creations" was published.  I named it "Olde-Tyme Minibrot" 
+; accordingly.  And yes, I realize that 10 years ago is hardly 
+; ancient history, but in this era where books are outdated before 
+; they hit the bookstands, and operating systems come and go like 
+; day and night, it is far enough in the past to be called 
+; "Olde-Tyme".
+; 
+; The parent fractal is an oversized thing with X-axis symmetry, 
+; created by subtracting 11 parts of Z^(-2.3) from 11 parts of 
+; Z^(-1.7) and adding (1/C).  Today's scene is located in a valley 
+; of a lopsided bud lying quite close to the origin.
+; 
+; The olde-tyme look was achieved by coloring the outside parts of 
+; the image with the 'atan' option.  The standard 'iter' coloring 
+; results in an image with flat areas of color that are too large 
+; to be interesting.
+; 
+; When the time came to rate the image, I decided on a 6, which is 
+; the average of the images good enough to make a FOTD.  The 
+; 7-minute render time is short enough to be practical, and even 
+; that short wait can be avoided by downloading the finished GIF 
+; image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Friday was sunny and hot here at Fractal Central, with a 
+; temperature of 91F 33C.  Thunder-storms threatened in the late 
+; afternoon, but passed off quickly, permitting the fireworks to 
+; go off as scheduled.  The dynamic duo had a pleasant afternoon 
+; in the yard, though they got a bit skittish when the fireworks 
+; noise started.
+; 
+; Independence Day has now passed.  It's another hot day, and all 
+; else is well.  Until next FOTD, take care, and the past always 
+; seems better than today.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Olde-Tyme_Minibrot { ; time=0:07:16.77--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.07173085565404393/-0.394457304834334\
+  30/111092.7/1/132.5/1.62781177426296608e-010
+  params=-11/-2.3/11/-1.7/0/0 float=y maxiter=1800
+  inside=0 outside=atan periodicity=10
+  colors=000UaoVboWboWcpXdpYdpZepZeq_fq`gq`gqahrbhrc\
+  ircjrdjsekseksflsgmthmthntintjoujpukpulqvmrvmrvnsv\
+  oswotwpuwquwrvxrvxswxtxxtxyuyyvyywzywzzxzzyzzzzzzz\
+  zyzzwzzuzzszzqzzozzmyzkyziyzgxzexzcwzawz_wzYvzWvzU\
+  wzSuzQuzOuzMuzLtzKtyKtyJsyJtxIsxIsxHswHswHrwGrvGrv\
+  FqvFqvEquEpuDpuDptDotCotCosBnsBnsAnrAmr9mr9mr9lq8l\
+  q8lq7lp7kp6kp6ko5ko5jo5jo6jn7jn8im9imAilBilChkDgkE\
+  fjFejGdiGbiHahI`hJ_gKZgLYfMXfNWeOVePUdQTdQRcRQcSPb\
+  TObUNaVMaWL`XK`YJ_ZI__HZaF``G__GZZHZYHYXHXWIXVIWUI\
+  VTJVSJURJUQKTPKSOLSNLRMLQLMQKMPJMOINOHNNFMMHNNINOJ\
+  OOKOPMPPNPQOQQPQRRRRSRSTSTUSTVTUXTUYUVZUV_VWaVWbWX\
+  cWXdWYeXZgXZhY_iY_jZ`lZ`m_an_ao`bp`cracsadtbdubewc\
+  excfydfzdgzdgzcfycfxcfwbevbevbeuadtadsadr`cr`cq`cp\
+  `bo_bn_bm_amZalZakZ`jY`iY`iY_hY_gZ_f_Ze`ZdaNcbNbcN\
+  bdMaeMafM`gMahI`iK`jM_kN_lPZkRZjSYiUYiWXhXXgZXf`Wf\
+  aWecVdeVcfUchUbjTakT`mT`n }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

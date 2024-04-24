@@ -1,0 +1,103 @@
+;     Date: Wed, 30 Jul 2003 09:18:00 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-07-03 (Deep-Sea Scene [7])
+;       Id: <1.5.4.16.20030730091810.0d671f20@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 30, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today might be the first time I have ever used the 
+; 'epsiloncross' inside fill in a FOTD fractal.  This fill colors 
+; the points according to how close they come to the X and Y axes 
+; in their orbits.  For some reason, this inside fill spreads into 
+; the outside areas as the proximity is raised.  It has done this 
+; in today's image, where it has produced the fish-bone effect 
+; that inspired the name.
+; 
+; The parent fractal was produced by taking plain Z and adding 
+; 1/20 part of Z^10 to it, then adding C.  This parent resembles a 
+; M-set rotated 200 degrees, with a convergence of 9 valleys where 
+; its single East Valley should be.  Today's scene is located in 
+; the fourth valley counting clockwise.
+; 
+; While studying the image in search of a name, I at first could 
+; think of nothing.  Then something in the picture reminded me of 
+; an underwater scene, and the 'epsiloncross' features started to 
+; look like fish skeletons.  I named the image "Deep-Sea Scene" 
+; though it more closely resembles things that might be seen in 
+; shallow water.
+; 
+; The rating of 7 is perhaps a bit high, but this is one of the 
+; few times, if not the only time I have used the 'epsiloncross' 
+; inside fill in a FOTD image, and that fact alone makes the image 
+; unique, or at least nearly so.
+; 
+; The render time of 3 minutes is un-irritatingly short -- a real 
+; bargain for the time spent.  Downloading the completed GIF image 
+; from one of the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; is equally efficient, assuming that the internet is not having 
+; one of its occasional bad days.
+; 
+; Tuesday featured perfect weather and perfect cats here at 
+; Fractal Central.  The blue skies were decorated with only a few 
+; angel-hair cirrus and cottonpuff cumulus clouds.  The winds were 
+; light from the north, and the temperature reached only 81F 27C, 
+; at a time of year when near 90F 32C is normal.  The cats spent 
+; several hours in the yard, meditating on whatever topic cats 
+; meditate on.
+; 
+; Today's weather should be perfect once again.  I expect the cats 
+; will be perfect also.  Expect no surprises (other than the 
+; fractal) when the next FOTD appears in 24 hours.  Until then, 
+; take care, and seek tranquility.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Deep-Sea_Scene { ; time=0:03:09.11--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.14224236936/-0.01022168581/35770.29/\
+  1/-22.5/-2.3535721982437e-011 params=1/1/0.05/10/0\
+  /0 float=y maxiter=500 inside=epsiloncross
+  proximity=0.0225 logmap=39 periodicity=10
+  colors=000K03zSCzNLsHUpMakJfgGo`DsYAvW8wTByQSzNXzK\
+  QzHNsEQhBUV8_PMjS_yVZqUZiUZaTZYTZWSZYSYWRYSRYSQYRP\
+  YRPXQOXQOXPNXPNXOMXOMZPP`QSbRUdSXmTZhUajVclWfnXhpY\
+  krYmF`3EV3CP2BJ2FM3IP4MR5PU6SW7WZ8Za9bcAefBhhC_l8R\
+  o5Jr2Kn8KkDLgILdNL`SMYYMUbNRgNNzNKqMJoLJmKIkJIiIHg\
+  HHeGGcFGaEF_DFYCEWBEUADS9DQ9DOCGLFJJILHLOFORDRTBUW\
+  9WY7OdEHjL9qS2wZ3n_4f`5Z`6Ra6Ja6M`6P`6R`6U_6W_6Z_6\
+  `_6cZ6eZ6hZ6jZ6mY6oY6rY6tYAsWErUHqTLpROpPSoOVnMZmK\
+  amJXqVSueOxpGp_HqcIrfJsiJtlKupLvsMwvc4hKc1La5M`8N_\
+  BOYEPXHQWKRVNSTRTSUURXVQ_WObXNeYMhYLk_Qk`Vka_kbdkd\
+  ikenkfskgxkeyidzgczebzdazb`z`_zZZzYYzWXzUWzSVzRUzP\
+  TzNSzMWzSZzXazaRzJGz1NzCUzM`zWgzenzotzyuzvuzsuzpvz\
+  mvzkvzhwzewzbwz`xzYxzVxzSxzQizWWz`IzeMzdPzcTzbWza_\
+  z`bz_czddzidzmezrezvjzonziszbwzXvzYuzYtzYszZszZrzZ\
+  qzZpz_oz_oz_nz`mz`lz`lz`mzYnzWnzTozRpzOpzMqzJrzHrz\
+  EszCtz9KzSIzNGzJEzF000Az7 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

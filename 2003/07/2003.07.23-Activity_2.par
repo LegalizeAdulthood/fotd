@@ -1,0 +1,93 @@
+;     Date: Wed, 23 Jul 2003 08:56:19 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 23-07-03 (Activity-2 [7])
+;       Id: <1.5.4.16.20030723085626.29c7a858@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 23, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's FOTD takes us to a world very similar to the world of 
+; yesterday's image.  This explains the name "Activity-2".  The 
+; parent fractal is another distorted Mandel-thing with a single 
+; large bay and a multitude of tiny budlets.  Today's scene is 
+; located in the filament of a star connected to a high-order 
+; budlet on the northeastern shore of the large bay.
+; 
+; The generating formula subtracts 1.2 parts of (1/Z) from Z^(1.2) 
+; and adds (1/C).  Once again I rendered the image with the 
+; outside set to the 'atan' option.  In fractals as in movies, the 
+; sequel is rarely as good as the original, so today's image rates 
+; only a 7, which is still a fine rating, but not quite up to 
+; yesterday's rating of 8.
+; 
+; The render time I wrote for today's image is a rough average.  
+; For some reason, the image never seems to render at the same 
+; speed twice.  The time has been as short as 6:50 and as long as 
+; 8:30.  But the exact time required for rendering is unimportant, 
+; for the completed image may be downloaded from one of the FOTD 
+; web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; A light shower fell just after noon on Tuesday here at Fractal 
+; Central.  It left the grass just wet enough to spoil the fractal 
+; cats' outing in the yard.  When the rain was not falling, the 
+; sky was partly cloudy.  The temperature of 88F 31C felt more 
+; like 98 (37) due to the high humidity.  A heavy thunder-shower 
+; moved in after dark, but by then it made no difference.  The 
+; cats' day had already been spoiled.
+; 
+; Today is forecast to be a repeat.  No problem however.  The 
+; cupboard is filled with tuna.  But my work shelf is still quite 
+; empty.  In the unlikely event that this empty-shelf syndrome 
+; continues, it could develop into a problem that tuna cannot 
+; solve.  In any case, I'll return in 24 hours with the next 
+; fractal.  Until then, take care, but don't forget to have fun.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Activity-2 { ; time=0:07:30.00--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.70588265541529430/+0.874913710082279\
+  70/7.816022e+010/1/72.5/-0.000115336616405538328
+  params=1/1.2/-1.2/-1/0/0 float=y maxiter=1200
+  inside=0 outside=atan periodicity=10
+  colors=000zmnzmmzmkzmjzmhzmgzmezkdyibygaye_ycZxaXx\
+  _WxYUxWTySRyOQyKOyHNyFLyDKyCIyAHy8Fy7Ex8Fw8Fv8Fv8G\
+  u8Gt8Gt9Hs9Hr9Hq9Iq9Ip9IoAJoAJnAJmAKmAKlAKkBLjBLjB\
+  LiBMhBMhBMgCNfCNfCNeCOdCOcCOcDPbDPaDPaDQ`DQ_DQZERZ\
+  ERYERXESXESWESVFTVFTUFTTFUSFUSFURGVQGVQGVPGWOGWPFV\
+  OGWOHXOIXOIYOJYOKZOL_OL_NM`NN`NNaNOaNPbNQcNQcNRdNS\
+  eMSgMTiMUkMVmMVoMWqMXrMYsLYtL_uLavLcwLexLgyLizLjzL\
+  kzKlzKmzKnzKozKpzKqyKrxKswNtvMuuLwtKusJsrIqqHopGmo\
+  FknEimDglDekCcjBaiA_h9Yg8Wf7Ue6Sd5Qc4Ob3Ma1K`3Ia4G\
+  a6Eb7Cb9CcADcCEdDFdFG0000IH0000LJ0000NL0PM0000SO0T\
+  PiVQiWQjYRjZSk`TkaUkcVldWleXmgYmhZnwZzw_zm`onaopbp\
+  qcpsdqteqvfrwgrxgrwhqwhqwhpvhpvhovhoviouinuinuimui\
+  mtimtjltjltjksjksjksjjskjrkirkirkhrkhqkhqlgqlgplfp\
+  lfplfpleomeomdomdomdnmcnmcnnbnnbmnamnamnamn`lo`lo_\
+  lo_lo_koZkoZkpYjpYjpYjpXjpXipWiqWiqViqVhqVhqUhqUhr\
+  TgrTgrTgrSgrSfrRfsRfsRfsQ }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

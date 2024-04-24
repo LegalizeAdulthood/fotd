@@ -1,0 +1,95 @@
+;     Date: Wed, 16 Jul 2003 09:01:24 -0400
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-07-03 (Mandeloid Spectacle [8])
+;       Id: <1.5.4.16.20030716090126.0d3fe4ec@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- July 16, 2003 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; hi ya remember me mpdkwsjfzxks . . . Could a FOTD possibly be 
+; spam?  No, but I just set a new record of over 100 spams in one 
+; download.  One of these days I'll change my e-mail address, but 
+; not quite yet.  (We'll let it reach 150.)
+; 
+; Today's image is one of the more unusual ones in my vast 
+; collection of fractal images.  Yet it has been created with 
+; nothing more exotic than the classic equal-iteration-bands 
+; method of rendering and coloring.  I named the picture 
+; "Mandeloid Spectacle" on a whim, and rated it at an 8.  The 
+; rating seems justified for such an unusual image, filled as it 
+; is with luminous bits and pieces, which are actually basins 
+; containing smaller midgets.
+; 
+; The generating formula subtracts 1.1 parts of Z^1.1 from 1.1 
+; parts of Z^(-0.9), then adds (1/C).  The parent fractal created 
+; by this formula consists of a well-defined Mandeloid, with a 
+; fragment of a second Mandeloid to the west and south.  Today's 
+; scene is located in the rudimentary East Valley of the Mandeloid 
+; fragment.
+; 
+; The 15-minute render time is in the range where it starts to get 
+; boresome.  But 13 of those 15 minutes can be saved if the 
+; completed image is downloaded from one of the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Both the fractal weather and the fractal cats were near perfect 
+; Tuesday here at Fractal Central.  The weather featured blue 
+; skies, cotton-puff clouds, and a temperature of 84F 29C; the 
+; cats featured perfect behavior and a restful day in the yard and 
+; on the porch.  Today is forecast to be warmer with a chance of 
+; rain.  The cats' future behavior is totally unpredictable.
+; 
+; My future behavior, at least for the rest of the morning, will 
+; feature an intensive effort to clear away the few remnants of 
+; the work backlog.  The next FOTD will appear in 24 or so hours.  
+; Until then, take care, and fractal images often speak louder 
+; than fractal words.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+MandeloidSpectacle { ; time=0:15:05.22--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.21128088887154150/+0.116698332335055\
+  00/1.029713e+011/1/-80/0.00201398738065277499
+  params=1.1/-0.9/-1.1/1.1/0/0 float=y maxiter=1600
+  inside=0 logmap=317 periodicity=10
+  colors=000600800A00C04E04G04H06J06L06N06P06R06T4CV\
+  AGXGLZLP`RVdXZebdgggkmkmsqqxuszzuzzxzzzzzzzzzzzzvx\
+  ziozVev08zHXzVxzXuzZsz`qzbozdmzekzgizigzkezmdzobzq\
+  `zsZzuXzvVzuLzvTzxZzxdzziuzomzvgzz`zzVzzRzzPzzNzzN\
+  zzLzzLzzJzzJzzHzzGzzGzzEzzEzzCzzCzzAzz0zgAzzEZzG6v\
+  C0qH0kL0eP0`T0VX0Pb0Je0Ei08m02u00q00o00m00k00g00e0\
+  0d00b00Z02X02V02T02P04N04L04E00J04N06R0AX0C`0Ed0Hi\
+  0Jm0Nq0Pq0Nu0Rv4VxEZzNbzTezzizzmzzqzzuzzzzzxzzuzzq\
+  zzmzzizzezzbxzZvzVuzRqxNovJmuGksCiq8bz0gq4kbGoNRs8\
+  bv0mz0xz0vx0uv0uu0ss0sq0qo0qm0ok0oi0mg0me0qd0sb6v`\
+  Cx`HzZNzXTzVZzTdzTizZbzdVziPzoHuuCqz4kz0ez0gz0gz0i\
+  z0iz0kz0kz0mz2mz2oz2oz2zz4zz4zzczt4cu6ct8czAzzCzuE\
+  zoGziHzdJzbLzZLz`LzbLzdNzgNmiN`kP`mP`qLZoP`oR`oVbo\
+  Xbo`dmbdmeemgemigmmgkoiksikukkzkkzmkzmdzkXzkRzkkzz\
+  izzgzzezzdzxbzu`zqZzmXziVzeTzbRzZPzTNzPLzLJzHHzEGz\
+  AEz6Cz2Az08z06z00z06z0Gz0 }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE==================================
+; 

@@ -1,0 +1,105 @@
+;     Date: Sun, 6 Jul 2003 08:51:33 EDT
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 06-07-03 (Chicken Scratches [7])
+;       Id: <1ed.ca969fa.2c397555@aol.com>
+; ---------
+; 
+; FOTD -- July 06, 2003 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; For today's FOTD we take a trip to the barnyard to see the 
+; "Chicken Scratches" in the dirt there.  Well, what else could I 
+; name such a scratchy image?  The expression behind the scratchi-
+; ness combines various portions of Z, (1/Z), Z^2, and Z^2.1.  The 
+; whole works is iterated by the MandelbrotMix3a formula, which 
+; works like the MandelbrotMix4 formula, except that it combines 4 
+; different powers of Z instead of 2, and the critical points must 
+; be calculated somehow by the user and entered as real(p5).  
+; I use the graphical method of calculation.
+; 
+; The parent fractal appears as an oversized M-set rotated 180 
+; degrees, so that east is west.  This figure is quite normal 
+; appearing in its overall shape, but in its filaments, craziness 
+; appears.  The filaments start out from their buds in a normal 
+; enough manner, but halfway to their ends, they split in two.  
+; This splitting is most obvious in the period-2 filament, which 
+; starts out pointing directly east along the positive X-axis, but 
+; before it reaches the large midget, splits in two.  Today's 
+; image is located near the point where the splitting takes place.
+; 
+; The -0.25*(Z^2.1) part of today's formula is the main driving 
+; force behind the image.  The main feature of the image is the 
+; 'scratches' that surround the midget.  Such scratches are a 
+; common feature along the 'main stem' area of Mandeloids of 
+; orders such as 2.1.
+; 
+; When coloring the image, I added the purplish aura around the 
+; midget to intentionally give the whole image a kind of coronal 
+; discharge effect.  The rest of the colors were intensified in a 
+; separate program.  The intensification is included in the 
+; attached parameter file, which runs in 3-1/2 minutes on my tired 
+; machine, faster on newer models.
+; 
+; Another way to see the chicken scratches is to download the 
+; finished image from one of the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; though by the time the finished image has downloaded and brought 
+; into the Fractint program, around 3-1/2 minutes will have passed.
+; 
+; Saturday was sunny and hot here at Fractal Central.  Luckily for 
+; the cat duo the rain bypassed this area, giving them a lazy 
+; afternoon in the yard.  The temperature of 93F 34C insured that 
+; their afternoon would be lazy.
+; 
+; Today is starting in a similar manner.  If the rain stays away, 
+; the duo will have another pleasant day.  As for me, I'm ready to 
+; pass the day doing as little real work as possible.  Until next 
+; fractal, take care, and see you in 24 hours.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE================================
+
+Chicken_Scratches { ; time=0:03:30.64--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
+  formulaname=MandelbrotMix3a function=ident passes=1
+  center-mag=+16.3204451061389/-0.011735917608758/44\
+  979.7/1/137.5/-3.38639630226289512e-010 params=1/1\
+  /-1/-1/0.25/2/-0.25/2.1/7.26855686921/3500 float=y
+  maxiter=300 inside=0 logmap=34 periodicity=10
+  colors=000000000000000000000000000400A0OG0SL4XRAaV\
+  Jh_NodPtjRzNd0Zq0sz0zv0us4boGRkP2gZ4di8`s8XzHZzNZz\
+  X`xb`xi`xsbvzbvzduzduzduz`vzXvzTvsPvkLvdHxXExPAxH6\
+  xA2xC0xE0sG0mH0iJ2dL2ZN2VP2PR4JT4GV4AX46Z80`A0bC0d\
+  E0eG0g00i00k00m00o20q80sE0uH0vN0xT0zZ0zd0zi0zm0ze2\
+  zZ4zR6zJ8zCAz4Cz0Ez0Gz0Hz0Hz0Gz0Ez2EzCCzLCzVAzdAzm\
+  8zv8zz6zz6zz8zzAzxCzuEzoEziGzdHz`JzVLzPLzJNzGPzARz\
+  4Tz0TzARzHPzRPzZNzgNzoLzvLzzGzzAzzCzzCzzEzzEzzEzzC\
+  zzAzz8zz6zz4zz2zz0zz0zz0zz0zz0zz0zz2zzCzzJzzTzz`zz\
+  izzqzzszzuzzuzzvzzvzzxzzxzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzxzzvzzuzzszzqzzozzmzzkzzizzgzzezzezzmzzv\
+  zzzzzzzzzzzzzzvzzszzmzzizzdzz`zzVzzRzzLzzHzzCzz8zz\
+  AzzAzzCzzCzzCzzEzzEzzGzzGzzGzzCzzAzz8zz4zz2zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz4zzG\
+  zzPzz`zzizzuzzzzzzzzzzzzzzszzmzzezz`zzTzzNzzGzzAzz\
+  EzzGzzJzzLzzPzz8zz6zz4zz2 }
+
+frm:MandelbrotMix3a {; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l }
+
+; END PARAMETER FILE==================================
