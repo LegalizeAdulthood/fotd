@@ -1,0 +1,106 @@
+;     Date: Sun, 23 Dec 2007 18:42:12 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-12-07 (Dried-Out But Good [8])
+;       Id: <1.5.4.16.20071223184420.2b77ded6@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 24, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Our two-day diversion into the depths of the Mandelbrot set ends 
+; today, as we return to the parent fractal for December, a very 
+; rich fractal indeed.
+; 
+; I named today's rather unusual image "Dried-Out But Good".  The 
+; name reflects the evaporated state of the image.  Images with 
+; negative exponents of Z will evaporate whenever the imag(p3) 
+; parameter is set to an extremely large number, such as the one-
+; googol in today's parameter file.  With such a distant escape 
+; radius, every point is trapped, resulting in a screen full of 
+; inside stuff.
+; 
+; Though the outside stuff evaporates and vanishes when the value 
+; of the escape radius is increased, the inside stuff that takes 
+; its place retains a memory of the outside stuff it replaces.  
+; This is where Fractint's various inside fills become very 
+; useful.  The active inside fills, such as bof61, can bring out 
+; the hidden detail in the remnant inside stuff.
+; 
+; This is exactly what has happened today.  Before I applied the 
+; bof61 inside fill, I was faced with a most disappointing blank 
+; black screen.  But this fill made the ghost of the vanished 
+; image reveal itself to the world.
+; 
+; The scene is located inside a ring in the extreme western 
+; exoburbs of the parent fractal for December.  The rating of an 8 
+; includes a whole point for the coloring, which I put almost an 
+; hour into, and which makes the entire scene.
+; 
+; The calculation time of today's image, just over 2-1/2 minutes, 
+; is a vast improvement over the hours-long time of yesterday's 
+; very deep Mandelbrot scene.  And as always, relief is at hand on 
+; the internet at the FOTD web site at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; where the finished image is or soon will be posted for instant 
+; gratification.
+; 
+; Heavy clouds and heavy showers, along with a temperature of 61F 
+; 16C, made Sunday here at Fractal Central unusually warm but fit 
+; for neither man nor beast.  The fractal cats, being neither men 
+; nor beasts, but cats, whatever cats are, showed not the slight-
+; est concern.
+; 
+; I kept occupied most of Sunday making the final preparations for 
+; the holidays.  And there was also one tiny job to wrap up.  The 
+; next FOTD will appear in 24 hours.  Until then, take care, and 
+; if absolute time doesn't exist, as relativity implies, what is 
+; it that appears to pass between one day and the next?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Dried-Out_But_Good { ; time=0:02:39.26-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-294.475271301/+33.1264441037/118788/1/\
+  177.5/0 params=-2.475/-1.05/-0.275/-5.5/0/1e+100/0\
+  /0 float=y maxiter=1600 inside=bof61 periodicity=10
+  colors=000chEccCUZ9UY7KR4KO2AM05I00I00H00F00H10H20\
+  I41I51E727925A45C47E57F79H7AI9EK9FLAIMAKOCMPCOSERV\
+  ESYFVaFVdCXgAYe9Zd7Zc4``2aV1aP0cL0dK0eK0eI0gH0hF0h\
+  F0gH0gI0dK0eK0dL00M0cO1cO2cP4aR5aS7`S9`UAZVCZXEZXI\
+  `ZMa`RacUcdYdgadheekhgllgophptiswitzkwzlxzlzzkzxiz\
+  shzogziezedz`czXazR`zM`zMazMczMdzMezMgzMhzMizMkzMl\
+  zMnzMozMpzMrzMszMtzMvzMvzOwzPwzPwzRwzRwzSwvUwsUwpV\
+  wlVwiXweXwcYw`ZwXZwU`wR`wMawKawHXsASo4Mk0Ig0Ed0Fc0\
+  Hc0Ia0Ka4La7L`AM`FO0IPZLRZPRZSSYVUYZVXaXXdYXhYVkZV\
+  n`VraUtcUwcUzYVlSXZMYLIZ7KYALYCMYEOYHPYIRYKSYMUYOV\
+  YPXYRYYUZYV`YXaYZcY`dYaeYccZa```YaZVcYSiZRpZOw`Mz`\
+  KzaIzaKz`KzZKzYKzYKzXKzVKzVLxULvSLsSLrRLoPLnOLkOLh\
+  MMgLMdLMcKM`IMYIMXHgz`dz`cz`az``z`PvLFc4C`29Y15X04\
+  U01R00P00M00L05PIISaFXdEZgCahAdkFglKioPlpUosZstcvv\
+  cxxhzzhzzmzzizzrzzizzmzzezzZzzUzzezz9vxCswFptInsLk\
+  pOhoRdnUakXaicXgkUenRdmXh }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint

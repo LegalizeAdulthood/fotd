@@ -1,0 +1,91 @@
+;     Date: Fri, 14 Dec 2007 21:51:38 -0500
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-12-07 (Going-Going-Gone [8])
+;       Id: <1.5.4.16.20071214215338.2be7a9f2@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- December 15, 2007 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is named "Going-Going-Gone".  I gave it this name 
+; when I watched the inside-outside first version slowly evaporate 
+; as I raised the bailout radius from 100 to 1-googol.  The rating 
+; of an 8 indicates that I was quite satisfied with the evaporated 
+; version.  The first version would have rated only a measly 6.
+; 
+; The scene is located in an 'elephant trunk' deep on the southern 
+; branch of East Valley of the December parent fractal.  I call it 
+; the southern branch because this East Valley consists of two sep-
+; arate branches, much like Seahorse Valley of the Mandelbrot set.
+; 
+; Since the scene is evaporated, it consists entirely of inside 
+; stuff made visible by the bof61 inside fill.  This fill is what 
+; creates the textured detail throughout the image.
+; 
+; The calculation time of 5 minutes is exact to the 1/100th of a 
+; second.  This time is not as fast as I would like, but still 
+; fast enough to make running the parameter file only a minor 
+; chore.
+; 
+; A faster way to see the image is to stop in at the FOTD web 
+; site, where the finished image is or soon will be posted.  The 
+; web site may be accessed at:
+; 
+;        <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Friday turned out cloudy but rather mild here at Fractal 
+; Central, with a temperature of 41F 5C melting much of the icy 
+; slop that fell on Thursday.  The fractal cats spent the day 
+; trying to stay out of trouble.
+; 
+; My day was average, which is nearly as good as a day can be.  
+; The next FOTD will be posted in about 24 hours.  Until then, 
+; take care, and some of my ideas are crazy, that much is certain. 
+; But I wonder if they are crazy enough to answer the questions.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START PARAMETER FILE=======================================
+
+Going-Going-Gone { ; time=0:05:00.00-SF5 on P4-2000
+  reset=2004 type=formula formulafile=allinone.frm
+  formulaname=MandAutoCritInZ function=recip passes=1
+  center-mag=-1.2439905615/-30.5803099973/9227.23/1/\
+  81.5/0 params=-2.475/-1.05/-0.275/-5.5/0/1e+100/0/0
+  float=y maxiter=7500 inside=bof61 periodicity=10
+  colors=000HvvHpmHihHliHXWHheHNKHaaHDBHWWHC9HQQJHDL\
+  KKPMGTOHYQIaTKgWNl_PqaQxeSzhVzhWzhVyeTucSq`RmYRiWQ\
+  dTPaQOZPOYNNTKMTLNNHKTKOPKNQLQRclSMRTQSTPTUTWWTXWW\
+  YYW_Z_a__c`cdacebfhchidikfllgmohopirrkssluvmvvovvS\
+  5RT6TU8VWBXWDYYF`ZHa_Kc`OeaRfcTidXkf`mgdohhpikskou\
+  lsvmvvh8`j6_j5`j5ai5Yj5Xj5Uk7RuBOuDNvGHuKBwN7wQ5yT\
+  5sW5rY5pa5md5kf5gk5cm5ap5Zu5Wv5Tv5TlCS`MRPXQGiQ8vS\
+  9sTBpUCmWDlWEiZGf_He`HcbK`cKYdMXgOVhPSiQRgOSfNTdKV\
+  cKVbHWaHX`FY_EYZD_YB`WBaW9aU8cTcmT6eS5eR6fQ7fQ7hP7\
+  hO8iO9iN9kN9kNBlLBlLBmLCmLCmH7eH5YH5XJ6WL7VP8TS9SU\
+  BSaHXhQap_exikzsoH5XcOecPfdQhdShdTifVkfXkgYlovvL5K\
+  I5HH5EH5BH59H5BH5BI5CL7DO7DS9EWBF`BGdDHiEHoGHtHIyI\
+  KzKKzMKzKOzKRzKVxKYuKaqKeoKilKmiKrgKvhQphWlhafiici\
+  pYivVdkK`_DWP7TH5RH5qPhNK7pQhKKBoRiHNHmSkHOMlTlHQS\
+  kWmWXBkYokf5k`pmhCkcroiOiesqlaghutmrdkvoovbmvfpv`p\
+  v_rvUsvTsvPuvNuvKvvHvvJsr }
+
+frm:MandAutoCritInZ {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l }
+
+; END PARAMETER FILE=========================================
+; 
+; 
+; _______________________________________________
+; Fractint mailing list
+; Fractint@mailman.xmission.com
+; http://mailman.xmission.com/cgi-bin/mailman/listinfo/fractint
