@@ -1,0 +1,38 @@
+MonumentToNothing  { ; Classic FOTD, 06-Jul-01 Rating (7)
+                     ; time=0:26:47.66--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.6528807149373907/+1.259183430170431/\
+  286.6663/1/-49.999 params=1.009/0/120/2400 float=y
+  maxiter=1800 inside=255 logmap=645 periodicity=10
+  colors=000WUzWUzXUzYUz_Uz`UzaUzcUzbUzbUzaUzaUz`Uz`\
+  Uz`Uz_Uz_UzZUzZUzYUzYUzYUzaUzdUzgUzjUzmUzpUzsUzxUz\
+  vUztUzsUzqUzoUznUzlUzkUziUzgUzfUzdUzcUzaUz_UzZUzXU\
+  zWUzUUzSUzRUzPUzFUzKUzOUzSUzWUz_UzcUzgUzkUzqUzpUzo\
+  UznUznUzmUzlUzkUzkUzjUziUziUzhUzgUzfUzfUzeUzdUzfUz\
+  eUzdUzcUzbUzaUzaUz`Uz_UzZUzYUzYUzXUzWUzVUzUUzUUzTU\
+  zSUzRUzQUzQUzPUzOUzNUzMUzMUzNUzOUzPUzPUzQUzRUzSUzS\
+  UzTUzUUzUUzVUzWUzXUzXUzYUzZUz_Uz_Uz`UzaUzaUzbUzcUz\
+  dUzdUzeUzfUziUzfUzcUz`UzZUzWUzTUzQUzOUzLUzIUzFUz8U\
+  zDUzIUzNUzRUzWUz`UzeUziUznUzsUzWUziUzwUzvUzuUztUzt\
+  UzsUzrUzqUzqUzpUzoUzoUznUzmUzlUzlUzkUzjUziUziUzhUz\
+  gUztUymUxgUwaUvVUuPZtKcsKhrUmqcmpmrompohnnclmZklUi\
+  lPgkJejJdiJbhJ`hJZgIYfIWeIUeISdIRcIPbINaILaIK`II_I\
+  GZIEZIDYIBXI9WI7WI5WI2VI0VI0VI0UI0UI0TI0TI0SI0SI0R\
+  I0RI0QI0QI0PI0PI0OI0OI0NI0NI0MI0MI0LI0LI0KG0KH0KI0\
+  KI0KJ0KJ0KK0KK0KL0KM0KL0K
+  }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

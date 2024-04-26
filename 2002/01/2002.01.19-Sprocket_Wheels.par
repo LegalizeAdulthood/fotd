@@ -1,0 +1,34 @@
+Sprocket_Wheels { ; FOTD -- January 19, 2002 (Rating 5)
+ ; time=0:14:00.96--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-3.63291217628191100/+0.247687182167382\
+  00/54195.8/1/-157.5/-1.54603705879163833e-008
+  params=1/-9.9/12/-0.99/1/525 float=y maxiter=1800
+  inside=fmod proximity=1 outside=tdis
+  colors=000ARiAPiAOj9Mk9Lk8Jl8Im8Hm7In7Jn6Kn6Ln5Mn5\
+  Nn5NnFQoOSoYVpfXpp_qyaqw_nuZlsXjqWgoUemTckSajQZhPX\
+  fNVdMTbLQ`JOZIMYGJWFHUEFSCDQBAO98M86L74KB7JE9IHBHK\
+  DGNGGQIFUKEXMD_PCbRBeTBhVCfUDdSEcRFaQG_OHYNIXLJVKK\
+  TILRHMQGNOEOMDPKBQJARH8SF7SE6UF7WG7YH7_I7aI7cJ7000\
+  000000jM7lN7nO7pP7rQ7sQ7tR8tR8tR9tR9tR9uSAuSAuSBuS\
+  BuSBuSCvTCvTDvTDvTDvTEvTEwUFwUFwUFwUGwUGwUGuWJtXLs\
+  ZNq_Qp`SobUmcXldZkf`igchiegjgekjdmlcnnaoq`qs_ruZsw\
+  YqwXpwXnwWmwWlwVjwViwUhwTfwVazV`zV_zTZzTYzSXzQWzQV\
+  yPUyPTxPSxPRwPQwMPwMOtMOrMNpMNnMNlMMjMMhMMfMLcMLaM\
+  K_MKYMKWMJUMJSMJQPLSSMUVOWYPY`R_cSafUchVdgWcfWbeXa\
+  dX`cX_bYZaYY`YX_ZWZZVY_UX_TW_SV`RU`QT`PUaQVaRWaSXb\
+  TYbTZbU_cV`cWacWbdXcdYddZeeZfe_ge`hfaifajfbkgclgdl\
+  gdkdejafiZghXhgUifRjeOkdMlcJmbGnaDo`Bp_8qZ5rY2sX0t\
+  Z1q_1o`2ma2jb3hc3fd4ce4af5_g5Xh6Vi6Tj7Qk7Ol8Mm8Jn9\
+  Ho9FpACqAArA8qCBpEDBUgBSh
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

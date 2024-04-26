@@ -1,0 +1,35 @@
+Blizzard_Minibrot { ; FOTD -- November 09, 2001 (Rating 9)
+ ; time=0:10:40.38--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.00004242352864996/-0.234211743626533\
+  70/3.643567e+010/1/-27.5006985870952505/0.00049043\
+  9805108038029 params=-1.047364116336558/1/2.250216\
+  986602374/-1/0/300 float=y
+  maxiter=1200 inside=0 logmap=213
+  colors=000A0HA0IA0JA0KA1LA2MA3NA4OA5PA6QA7RA8SA9TA\
+  AUABVACWACXACYADZAD_AD`AEaAEaAEbAFc9Fd7Fd9HeAJfCKg\
+  DMgFOhGPiIRjJTjLUkMWlOYmPZmR`nSaoUcpVepXfqYhr_js`k\
+  sbmtcouepvfrvhtwiuxkwylxyfuw`suVqsQoqKmoEkm8ik3gj5\
+  fg6fe8ec9eaAdZCdXDdVEcTGcRHbOIbMKaKLaIMaGIYFEUFBRE\
+  7NE3JD0GD4HN8IXCJeGKoIKzJLxJLwKLuKMtLMsLMqMNpMNoMN\
+  mNNlNOjOOiOOhPPfPPeQPdQQbQQaRQ_RQZSRYSRWTRVTSUUSSU\
+  SRUSQVRRWQRWPRXORYNRYMRZMR_LR_KS`JSaISaHSbHSbGScFS\
+  dESdDTeCThCTkBTnATq9Tt8Tw7Tz5Sz7Tz9UwAVtCWqDXoFYlH\
+  YiIZfK_cL`cNacPbcQccScZTdUVePXfKYgF_hAbg5`h3_h3Zi3\
+  Yi3Wj3Vj3Uk3Tk3Rl3Ql3Pm3Om3Nn3Ln3Ko3Jo3Ip3Gp3Fq3Eq\
+  3Er3Gr3Is3Ks3Mt2Ov3Qt3Ss3Tr3Uq3Vp4Wn4Xm4Yl4Zk4Zj5Z\
+  h5Zg5Zf5Ze5Zd1_b5`c8acBbcEccHdcKecNfcQgcUhcXic_jcb\
+  kcelchmckocnqcqsasu_uwawxcyzeszgmzigzkazmWznRzoSzp\
+  TzqUzrVzsVztWzuXzvYzwYzxZzv_zz`zz`zzazzbzzczzhzzcz\
+  z_zzWzzSzzOzzKzzGzzXzzZzz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,39 @@
+Low-Grade_Material { ; FOTD -- January 01, 2002 (Rating 1)
+ ; time=0:26:26.53--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-3.27137269073678200/+4.797305890890286\
+  00/294.239/1/-130/2.40488184921616721e-012 float=y
+  params=1.009/0/965/525 maxiter=7500 inside=255
+  logmap=509 colors=000mrrkpqioqgnpemocloajn_imZhlYg\
+  lXfkWdjVcjUbiTahSbjR`hQ_fPYeOXcNWaMU`LTZKSXJQWIPUH\
+  OSGMRGLPFKNFIMEHKEGIDEHDDFCCDCACB9AB89A7AA7BA7C97C\
+  97D97E97E87F87G86G76H76I76I76J66K66K66L56M55M55N55\
+  O45O45P45Q35Q35R35S35S47R49R5BQ5DQ6FQ6HP6JP7LO7NO8\
+  PO8RN9TN9VN9XMAZMA`LBbLBdMCfOChQCjSDlUDnWEpYEr_Et`\
+  FpaFmbIjcPgdUheZifejglkhslizmjwnhtngrofoodmpcjpbhq\
+  aeq_cqZ`rYZrXWsVUsURtTPtSMtQKuPHuOFvNCvLAwK7wJ4zH5\
+  wI6tI7rJ8oJ9mJAjKBhKCeLDcLE`LFYMGWMHTNIRNJONKMOLJO\
+  MHPNEPMBQNCPNCONCNNCMMDLMDKLDJKDIJEHIEGIEF8EEFFDFF\
+  CFFBGFAGG9GG8GG7GG6IH5JH4KH3LH2MH1MI6NJAOJFPKJQKOQ\
+  LUQMZQMdQNiQNnPPpPQrPRsPSuOTvOUvOWwOXwOYxNZyN_zN`z\
+  NbzNczMdzMezMfzMgzMizLjzLkzLlzLmzLnzKmzJlzJlzIkzIj\
+  zHjzHizGizFhzFgzEgzEfzDezDezCdzBdzBczAbzAbz9az9azB\
+  `zD`zF_zH_zJZzLZzNYzOYzQXzSXzUWzWWzYVz_VzaUzbUzdTz\
+  fTzhSzjSzlRznRzpQzqQzpRzoRzoRznRznRz
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

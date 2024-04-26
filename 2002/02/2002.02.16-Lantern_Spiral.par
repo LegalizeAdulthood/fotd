@@ -1,0 +1,35 @@
+Lantern_Spiral { ; FOTD -- February 16, 2002 (Rating 8)
+ ; time=0:03:14.16--SF5 on a P200
+  reset=1960 type=formula 
+  formulaname=NewtonTest27 passes=1 center-mag=-1.11\
+  79/-0.409735/3.174717/1/-90/-1.23373533611470521e-\
+  014 params=2/2.4/2/2/1/1e-015 float=y maxiter=90
+  bailout=100 inside=period logmap=yes symmetry=xaxis
+  periodicity=10 colors=000TTdPQ_JPVFMPdzjVxaLcTpT6f\
+  OAVIFLCJ96OS4Pi3Qz1Sz1TzYMrzFPcO0DXCM`PXdcdjpoozxs\
+  zf`zQIz90s94j99aAFTALLAPCAVLAPTAJaADi96r90z90vI0rQ\
+  0o_4jf7foAaxD0Q03F1DG0MG0XI0dI0oJ0xJ0sD0o9Dj3Qf0cc\
+  0pT0mL4mC9l3Dl4Fr6Fu6Gx7Gy7Gz4Fx3Dp14g03`01T00P06M\
+  3AL7GLM71xc6_TDpXgCrT_3_MCSXzxzxzsjrXY`P_400DLzGd0\
+  4V6ALDGzF1jI9SJFQz3IgCgz0Xv0Lc9zIzfJfza0sX3XQCYCsM\
+  GaxL0_L4Y00P70IFAlFXaGTTIQJJOa1Ar09SzFOyGJjIFYJ0Vz\
+  1Sv4Pi7MXVz_OmTG_PzXLcQLszzcrmP`_zzxszmdmcP_TiL0ya\
+  6gXCQQGVzvDozCfuC_iASX4J07L09L9GC0DF6CID7Co9Fg9G_A\
+  JSd0vX3lfaAolOdgFTc7J_07V0zzzz0izI_z_PzpFF_`jdISVJ\
+  O30L70GC6DGDzorz0go7_VFSOziJx`FcSsz3zzJmzL`oLO_LA9\
+  TADQAIOxz_fpTQ`PpsragfOXVylrgafQTV17P4AO6FM9ILzzDx\
+  zGgmIQ_JM70IC0DGAOc3zz0xm0__9zzzdpizzzzxz1iI4`J7SL\
+  zzFlpIT`JzjxmajTTYDD0uvcdiXPXQz0rl4fTDVlzi_u`MaSMz\
+  cjz9YvDMcIz00u44dAAPGGyTslQj_PaMMTXz3LmC
+}
+
+frm:NewtonTest27 {
+; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=(pixel):
+zx=(z^b)-a
+zy=(c*z)^d
+z=z-(k*zx/zy),
+|zx| >= f
+}

@@ -1,0 +1,40 @@
+Fractal_Bagel { ; FOTD -- October 15, 2001 (Rating 5)
+ ; time=0:34:17.78--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=recip passes=1
+  center-mag=-1.08717603028377500/+1.205061829294592\
+  00/1.889778e+011/1/42.4995365922868444/-0.00193853\
+  530842458266 params=1.44225/0/0/0 float=y
+  maxiter=45000 inside=0
+  colors=000ebHfcFgcEhdDieCjfBkfAlg9mh8ni7oi6nj7nj8n\
+  j9njAnjBmjCmjDmjEmjFmjGmjHlkIlkJlkKlkLlkMlkNkkOkkP\
+  kkQkkRkkSkkTjlUjlVjlWjlXjlYjlZil_il`ilailbilcgpjil\
+  dji_lfVmcPo`KpYFqVAbFDO0GQ1HR2HS3IT4IU5JV6JW7KX8KZ\
+  9K_AL`BLaCMbCMcDNdENeFOgGOhHOiIPjJPkKQlLQmMRnNRmIT\
+  oNRpSQrXPsaNufMvkLxpJyuIzyHywIxvIwtIvsIuqItpJsoJsm\
+  JrlJqjJpiKogKnfKmeKlcKlbLk`Lj_LiZLhXLgWMfUMeTMeRMd\
+  QMbPN`NNZMNXKNVJNVJMTINSIORIOQHPQHPQHQQGQQGRQGRRFS\
+  SFTTFTUEUVEUWEVWEVVDWWDWWDXWCXXCYXCZXBZYB_YB_XA`XA\
+  `XAaXAaX9bX9bX9cX8dW8dW8eW7eW7fW7fW6gW6gW6hY4gW6hV\
+  7iU9jSAjRBkQDlPEmNFmMHnLIoKKpILpHMqGOrFPsDQsCStBTu\
+  AUuCRtEPsGNrIKqKIpMGoODoNEnNFnNGnNGnNHnNImNImNJmNK\
+  mNKmMLlMMlMMlMNlMOlMOkMPkMQkMQkMRkLSjLSjLTjLUjLUjL\
+  ViLWiLWiLXiLYiKYhKZhK_hK_hK`hKagKagKbgKcgLdhKcgJcf\
+  IbeHbdGbcGabFaaEa`D`_C`ZB`YB_XA_W9_V8ZU7ZT6ZS6YR5Y\
+  Q4YP3XO2XN2XMa_Lb`Kc`JdaI
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

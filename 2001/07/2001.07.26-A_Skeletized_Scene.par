@@ -1,0 +1,33 @@
+A_Skeletized_Scene { ; Classic FOTD, 26-Jul-01 Rating (5)
+                     ; time=0:29:49.15--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-3.517795082582847/-0.172268355153175/5\
+  .450818e+011/1/-154.935/-0.116 params=1/2/0.2/3/0/0
+  float=y maxiter=3000 inside=0
+  proximity=0.047 outside=fmod periodicity=10
+  colors=000DITDITCISCISCISBIRBIRBIRAIQAIQAIQ9JP9JP9\
+  JP8JO8JO8JO7JN7JN7JN6JM6JM5HN6JM6KM6LM6NL6OL6PL6RL\
+  6SK6TK6VK6WK7XJ7YJ7_J7`J7aI7cI7dI7eI7gH7hH7iH7jHAk\
+  GCkGEkFHlFJlELlEOmDQmDSmCVnCXnBZnBaoAcoAeo9hp9jp8l\
+  p8qq9np8lp8ip7gp7ep7bp6`o6Yo6Wo5Uo5Ro5Po4Mo4Kn4In3\
+  Fn3Dn3An28n24m16n28n29o2Bo2Dp2Ep2Gp2Iq2Jq2Lr3Mr3Or\
+  3Qs3Rs3Tt3Vt3Wt3Yu3Zu4`v4bv4cv4ew4gw4hx4jx4kx4jr5i\
+  m6hh7gc8fY8eT9dOAcJBfC6bEB_FGWGLTHQQIVRJWSJWSJWTJW\
+  TJWUJWVJWVJWWJWWJWXJWXJWYJWZJWZJW_JW_JW`JWaJWaJWbJ\
+  WbJWcJWcJW`NZYQaVUdTXgQ`jNcmLgpIjsFnvDqxCrvCrtCrsB\
+  rqBroBrnArlArjAri9rg9re9rd8rb8r`8r_8rY7rW7rV7rT6rR\
+  6rQ6rO5rM5rL5rJ4rH4rG4rE0qC4rD7rEArEErFHsFKsGNsGRs\
+  HUsHXtI_tIctJftJitKluKpuLsuLvuMyuMvtPstSptUmtXjtZg\
+  tadtdbsf_siXskUsnRsqOssLsvIszJsxJpwJlvJiuJetJbsJ_r\
+  JWqKTpKPoKMnKJmKFlKCkK8jK5iK2hI4eG5cF7`D8ZB9WABUAC\
+  RADPAAHAAKAAMAAPAARAAUAAT
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

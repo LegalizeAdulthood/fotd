@@ -1,0 +1,34 @@
+Gold_Chrysanthemum { ; FOTD -- December 07, 2001 (Rating 6)
+ ; time=0:03:18.50--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.47904926844684050/+2.689928561895989\
+  00/7.255801e+011/1/45.0104028392414861/-0.01121875\
+  11152195482 params=1/-12.5/10/-1.25/0/525 float=y
+  maxiter=550 inside=0 logmap=63
+  colors=00087aA8`BBZDDYEGWGHVHKTILRKOQLQONTNOVLQYKR\
+  ZITaHRcEReBVg8Yj7`l5co4dp2gt1ju0mx0pz0rz0uz0xz0zz0\
+  zz0zz0zz0wz0rz1oz5jzAezEazIZzLVzQQzVLzZIzcEzgAzl5z\
+  p2zt7wrBtpGppKmoOjmRgmWdl`aldZjiWilTipQguNezKezHdz\
+  EdzGezHizIlzIoxKrwOuuTxmYzeazZezRezKezDdz5cw4ar4`o\
+  4`l2Zi2Ye2Wa2VZ1TW1RT1QQ1QN4NR7LW8I`BHdDEiGDmHArK8\
+  wL7zNEtOKlQQdRYYTcQViIWpBYw4Zz0Zz0OzVGzzNzzTzzZwzd\
+  uzjuzpuzmuzjuzguzeuzcuz`uzYuxWuxTuwQuuNutLutIurGup\
+  EupDurBurAur8ut7ut5ut4uu2uu2uu7utBurEurIupLupQuoTu\
+  mYum`uldulgujluiouitugwugzuizuizuizuizuizuizumpuri\
+  uu`uzRuzKuzLuzNuwOurOumQugRucRuZTuVVuOVuKWuGYuBYu7\
+  IuV4up0uz0uz7uzGuzOuxNuwNuwLuuLuuKuuKutKutIutIurHu\
+  rHurGupGupGupEulDugBucBuZAuV8wQ8zL7zH5zD5z84z42z02\
+  z0Iz0Zz0oz0xz8zzKzzVazc2zj1zl0zm0zo0zo0zp0zr0zt0zt\
+  0zu0zw0zx0zx0zz0zz0zz0zz0zx0zt4zoAzjEzgKzcQzZVzV`z\
+  QdzNjzIpzEDzrHztLztOztTzt
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

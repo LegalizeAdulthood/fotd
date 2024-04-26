@@ -1,0 +1,38 @@
+ObjectAroundMidget { ; Classic FOTD, 27-Apr-01 Rating (5)
+                     ; time=0:43:53.22--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1 center-mag=-0.15\
+  578257934389980/+1.535940899307265/4.223478e+008/1\
+  /12.5 params=1.414213562373/0/0/0 float=y
+  maxiter=6000 inside=0 logmap=-1150 periodicity=10
+  colors=000SaZOfUHiRDnM8qJ2vE0yB0x80rZ0mU0hP0cM1`H4\
+  YE8ZADd6Hi2Mp0Pt0Op0Ml0Ki0Jf0Ha0GZ0EW0DS0BP0MfOXvn\
+  RkiK`dEP`AEX44S00O00K00J00H00G00E04D08B1DA2G82K74P\
+  66U46X47`G8aR8ccAdnBfzBhzD`zDSqEKhEEZG7PG0GG07K0EO\
+  4KRARUEXXKc`PicWpf`vdkzcvzazz`zzXzzWzzSzzRzzOzzMxz\
+  KuxHqvGnsDkqBhnAflRWhhKdnAhu0ky0nx0ix0fx4ax7ZxBUxG\
+  RxKMxOJxSExXBx`8vXDvUGvRKuPOuMSuJWsG`sEcsBhq8kq6pq\
+  4sp1xp0zp0zp0zzK`zOZzRZzUXzXXz`WzcWxfUviUslUppSnsS\
+  kvRhyRfzPczPazPazUZzSXzRWzPSzORzMPzMOzKKzJJyHHyGGy\
+  GRlJ``MiOPsBSz0Wz0Zp6hWMpBcx0uz0qz0py0nx2mu4msAmnG\
+  mkMmhRmdXmacmXhmUnmRumOymKcmnJmzMmzOmzPmzSmzUmzWmz\
+  Zmz`mzamzdnzfqzhuzixz0zD0zE4zGBzHJzHRzJZzKfzMnzMqz\
+  PuzSxzUzzXzzZzzazzcXz0az0dz0hz0kz0nz0qz0uz0xz0sz0n\
+  z0iz0dz0az0Xz0Sz0Oz0Jz0Gz0Bz07z02z00z01zG1zX2zn2zz\
+  1zv0zl0zc0zW0zM0zD0z40z00z06z2Bz6Hz8OzBUzEazHhzKnz\
+  OuzRzzUzzX7z0Bz4hziczfZza
+  }
+
+frm:MandelbrotBC   { ; Formula by Andrew Coppin etal
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

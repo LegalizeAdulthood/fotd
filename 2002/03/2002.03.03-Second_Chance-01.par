@@ -1,0 +1,34 @@
+Second_Chance-01 { ; FOTD -- March 03, 2002 (Rating 6)
+ ; time=0:23:24.22--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=mandelbrotmix7 passes=1 center-mag=+5.\
+  743342365806605/-3.40178543411641/195266.6/1/-147.5
+  params=10/0.5/-10/0.5001/1150/0 float=y
+  maxiter=2800 bailout=25 inside=0 logmap=412
+  colors=000O4KVBl00KgOTmUJs_9fXoccb`iQYoDWu1Xt3Xs5X\
+  r7Yq8YqAYpCYoDZnFZmHZmJ_lK_kM_jO_jPYlRXnSWpTUrVTtW\
+  SvXR0KRwYN0KJwaFwbBwd7we3wg0wh2pb4jX5dS7YM8SHAMBBG\
+  6KO8TWA`cB`aWbYVdTVfPVfRWfSWfUWfVXfXXfYX00Kf`Y00Kf\
+  cY00KkzFjuEiqEhlEghEfdEe_EdWEcSE_YHWWESUCOS9KR7QX9\
+  VaB_fDdlFiqHnvIkuKiuMgtOetQcsSasU00KYrY00KUqaS0KQp\
+  eOpgMmdLkbKi`JgZIeXHcVGaTF_REXPDVNCTLBRJAPH9NF8LD7\
+  JBAGHDDNGASJ7YM4cO2hV1e`1bg0_m0Xs0Vt9QuILvRGw_Bxe9\
+  xj7xo5tq9prDmsGitKeuObvRctScsScrTcqTdoUdnUdmVdlVej\
+  VeiWehWegXfeXfdYfcYfbYlTOrJEx95u94r94o94l94i94f94c\
+  94`94Y94V94S94P94M94J94IDAIHGILMHPSHSYHWcG_iGcoGft\
+  FgpEgmEhiDhfCmzCi_BjWAjfAkP9kM8tI8lF7mB6m86m5Ci4He\
+  4Ma3RY3WU3`R2eN2jJ2oF1tB1y81yLAyYJtWSpV`lUihTrdSzf\
+  PvhMsiJokGllEhnBeo8aq5Zr3Wp7VoBUnFTmJSlMRkQQjUPhYO\
+  gaNfdMehLdlKcpJbsIarGarEarCarA`s8`t6`u4`v2`w1Zx4Xy\
+  7VzATzDRzFPzIMz4Jz2Hz0LzU
+
+}
+
+frm:MandelbrotMix7 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| <= l
+}

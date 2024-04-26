@@ -1,0 +1,36 @@
+Fractal_Rambling { ; FOTD -- February 03, 2002 (Rating 3)
+ ; time=0:03:10.76--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  passes=1 center-mag=+0.00432118469495858/+0.011272\
+  95220093/716.4877/1/-77.5/7.6716411001598317e-014
+  params=88.14258247627185/88.46143986327708/2.003/0\
+  /0.00019/0.07388/-1.7435/0.00015 float=y
+  maxiter=1200 inside=bof61 logmap=49 periodicity=0
+  colors=000GzzDzzDzzAzzAzz7zz7zz4zz4zz2zz2zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zy\
+  0zx0zw0zv0yu0xt0ws0vr0uq0tp0so0rn0qm0pl0ok0nj0mi0l\
+  h0ig0if0fe0fd0cc0cb0`a2Y`2Y_2VZ4VY4SX4SW7PV7PU7MSA\
+  JQAJOAGMAGKDDIDDGDAEGACG7AG48J46J24J22M00M00M00J00\
+  M00M00M00M00P00P00P00P20S20S20S20S40V40V40V40V70Y7\
+  0Y70Y70YA0YA0`A0`A0`D0`D0cD0cD0cG0cG0fG0fG0fJ0fJ0i\
+  J0iJ0iM0iM0lM0lM0lP0lP0lP0pP0pS0pS0pS0sS0sV0sV0sV0\
+  vV0vY0vY0vY0yY0y`0y`0y`0zY0z`0y`0sc0pc0iJ0cK0YM0VN\
+  0PO0JP0DQ0AR04S00T00U00V00W00X00Y00Z00_01`02a03b04\
+  c05e06g07i08k09m0Ao0Bq0Cs0Du0Ew0Fy0Gz0Hz0Iz0JzzKzz\
+  LzzMzzNzzOzzPzzQzzRzzSzzTzzUm0Vs0Wu0Xz2Yz2Zzz_zz`z\
+  zazzbzzczzdzAezAqrDgzDzrDizGjzGkzJmzJozJqzMszMuzMw\
+  zJxzJzzvzzvzzvzzvzzvzzvzzvzzvzzyyzyyzyvzyvzyszyszy\
+  pzypzzlzzlzzizzizzfzzfzzczzczz`zz`zzYzzYzzVzzVzzSz\
+  zSzzPzzPzzMzzMzzJzzJzzGzz
+
+}
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36  }

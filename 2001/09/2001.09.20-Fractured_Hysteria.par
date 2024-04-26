@@ -1,0 +1,32 @@
+Fractured_Hysteria { ; Classic FOTD, 20-Sep-01 Rating (5)
+                     ; time=0:05:00.02--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.34466694538467100/+0.160880109814676\
+  90/1.15108e+013/1/180 params=100/6/1/2/0/0 float=y
+  maxiter=700 inside=0 logmap=96 mathtolerance=/1
+  colors=000AAyAAzAAxAAuAArAAnBAiDBdJCXP7OT1D_04d00i\
+  00s03x6LzFazO_zXYzdXukTssSrzQdoOT`LIOIFTJC_J9dL6jL\
+  3pM0vM0zM0sQ0jT0cX0V_0Ma0FdCGYMIQXJLgLDrM7zc0zP0iC\
+  DG0V00l01oCDpOQs_hzTYpOVmIQiCOf6La0G_0DV0AS9LXTV_S\
+  QVQOQQLMfcQuuVzzYmYaS0f3_36X1zPApJJzDQzAYz9cz6jy4p\
+  v3vi6oY9gMA`9DT0GM0IG0QC7_7Jg3Tp0dy0oz0gr0`a0TM0M6\
+  0_70j73v96z97y3Dr0Ji0Pa0V_0OY3GXA9TJ1SS0Q_0LV3GSGC\
+  PT7Mg3Ju0Gz0g`0z40zF0y90l40`00O00C00J00Q70YF0cM0jT\
+  0r`0xg0sX0oL0j91f0Fi9QjJcmToocYVPGCA0006XIAzaCzcDz\
+  dFzfGzgIyiJxjLvlMulLvlJylIzjGzjGzj7yl0um0po0jo7grT\
+  gu`gjgg`ogQvgGzg6rgJggVYggOgsDgzGguJgjMgaOgSQgITg9\
+  Xg0Yg0Vg0Tg9QgJPgSTgDYg0`g0ag0cg7dgJdgTfgcggoigyig\
+  z`gySgoLgfJgcIg`GgYFgVDgSCgPAgMAjL7mQ4pV1s_0vc0yg0\
+  zl0zpVz6QzFOzOlzDzz3zzDzzOzzYzzgzzrzzzyzsrzljzcczX\
+  XzOPzGJz9FzCAzD6zG1zI0zL0zM0zO0zT0z_6zdCzjIzpOzvSz\
+  zlzzmzzmzzmzzmzz_zzQzzzzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

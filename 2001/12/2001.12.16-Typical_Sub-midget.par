@@ -1,0 +1,39 @@
+Typical_Sub-midget { ; FOTD -- December 16, 2001 (Rating 6)
+ ; time=0:10:36.36--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.80131730206810180/+3.261171920365556\
+  00/2.549835e+007/1/67.5/9.95332073081001134e-008
+  params=1.23/0/0/0 float=y maxiter=125000 inside=0
+  logmap=247 colors=000J00K00L00M00N00O00P00Q00R00S0\
+  0T00U00V00W00X00Y00Z00_00`00a00b20c30d43e53e63f73f\
+  83g93gA3gB3hC3hD3iE3iF3jG3jH3jI3kJ3kK3lL3lM3lN3mO3\
+  mP3nQ3nR3oS3oT3oU3pV3pW3qX3qY3rZ1qY3pY5pX7oX9oXBnW\
+  DmWEmWGlVIlVKkVMjUOjUQiURiTThTVgTXgSZfS`bI_dN`fSah\
+  Wbj`cledaxygpnmidsfQrdTrbVr`XrZZrY`rWbrUerSgrRirPk\
+  rNmrLowLwrKqnJkjIefI_bHUZGOVGJSKMQOOOSRMWTK_VHcYFg\
+  _DkbBodAvi9tg9sf8re8qd8pc7oa7n`6m_6kZ6jY5iW5hV5gU4\
+  fT4eS3dQ3cP3aO2`N2_M1ZK1YJ1XI0WH0VG0UF1WI1XK1YM1ZO\
+  2_R2`T2bV2cX3d_3ea3fc3ge8dfDafIZfNWfSTfXRgaOgfLgkI\
+  gpFgvCitDgrDfqDdoDcnDalD`jDZiDYgDXfDVdDUbDSaDR_DPZ\
+  DOXDNVDLUDKSDIRDHPDFNDEMDCKDBJDAHD8FD7ED5CD4BD29D1\
+  9D09D08D0EF3KG5QI7VJA`LCfMEnMDlNFkNGjNIiNJhNKgNMfO\
+  NeOOdOQcORbOTaOU`PV_PXZPYYPZXP`WPaWRaVPbVOcVMdVLeV\
+  JfVIgVGhVFiVDjVCkVAlT5nV9mXClZFl`IkaMjcPjeSigVhhWh\
+  iXhjMckNbkNbkNbkNbc3Wh2_f3Yd3Xb4W`4V
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

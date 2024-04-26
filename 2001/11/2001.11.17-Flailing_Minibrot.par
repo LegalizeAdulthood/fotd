@@ -1,0 +1,34 @@
+Flailing_Minibrot { ; FOTD -- November 17, 2001 (Rating 6)
+ ; time=0:09:47.48--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.76177605658088100/-1.131756089534229\
+  00/1411253/1/37.5000000071471788/-1.36623868468577\
+  214e-009 params=12/-1.2/1.2/-12/0/300 float=y
+  maxiter=1800 inside=0 logmap=166
+  colors=000a04V00Q00L00E009004002002002002202602B42\
+  E82JD2NG2QJ2VO2_R2bX2g_2ib9lYElVJoROpOTrLYsGbuDiw9\
+  nw6sx2xv0zyKzyUzzczzmzzmzwcqtcisUaoURlKJhKBen2bw0_\
+  z0Xz0Uz2RzBOxJLsRInVFiYCda9_d6Vg3Qk0Rn0Tq0Vt0Xx0Yz\
+  0_z0_z0az0bz0dz0fz0gz0gz0dz1azLYzVVzgRznVzlYql_gkb\
+  didaigYgkTflQfpNdqJbtEbxBaz8_z4_zdNazB9zJ2sR0ts8tz\
+  Jaz9Iz00z00w41pI2iV4bg6Xt8Qz9JzEIzJGzOEzTEzYDtbBpg\
+  BkdGlbLnaOnYTpXXqVaqRdsQisOltLqwJtwIzxGzxDzzBzz8xz\
+  6xz4wz1tz0tz0sz0qz0qz0pz0nz0nz0gz6azEXzOQzXLxfEtp8\
+  qx2nz0kz0iz2azEVxONs_Glk9gt1az0Xz0zzYzzVzzTztQznOz\
+  gLz_JzTGzNEzEBz89z16z04z01z00w9B_bLEzVOzTYzRfzQpzO\
+  zzNzzLzzQzzVzz_zzbzzgzzlxzpwzttxztwzppzlkzifzdazaX\
+  zYRzVQzQRzNTzJVzGXzBYz8_z4az1bz8dzEfzLgqQiiXl_bpQi\
+  sGnw8Nzb0zz6zzIztTzpbzinzdzz_zzVzzazzgwzlqzslzzizz\
+  QzYLzXIzVEzVBzT8zR4zR1zQ0zO0zO0zN0zL0zL0zL0zL0zI0z\
+  G0zD0zB0z80z60z2qzGkzDfz8
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

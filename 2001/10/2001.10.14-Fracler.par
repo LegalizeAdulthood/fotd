@@ -1,0 +1,34 @@
+Fracler { ; FOTD -- October 14, 2001 (Rating 8)
+ ; time=0:12:53.13--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-1.039444410280139/+0.71916981442691810\
+  /5.739517e+007/1/-137.499999948393366/1.5697518258\
+  1675643e-007 params=-1.4/-1.17/1.4/0.87/0/5 float=y
+  maxiter=2500 inside=0 logmap=253 periodicity=25
+  colors=000Q0WS0UT0SU0PV0NW0KY0J_0Na1Qc2Ud4Ye5ah6di\
+  8hj9kmAonBsoCvmEtkFsjGriIphJogKmeLkcLjbNi1EO5GP8IP\
+  AJQEKQGLQJNSNOSVPTSQTUPTUOJTNJGL9KL8NO8PR6TT6VW5YZ\
+  5aa4cd4eg2ii2kk1no1rr0tt0vv0tn5sgAp_FoTKmLPkEUj6ZP\
+  Ld2V6TV6pQVpTVpUWpUGpU0sP0tL0vI0wK0yN0zP0zS0zU0zV0\
+  zY0za0zZ0zW0zU0zS0yP0vN0uK0sI0pF0oC0mA0kB0iC0hC0dB\
+  0aA0Y90U80Q60N50J40F20B10800400000211542852A84C94F\
+  B5IC5KF6NG6PJ8SK8UN9WO9ZQA_SAaQ8aQ5bQ2bQ1cQ0cQ0cQ0\
+  eP0gO2hN5iL9jKCkJFmIJnGLpFPrETsCVtBZuAbv9dw8hy6jv9\
+  htBgsCdpFcnIamJ_jLYhOWgPUdSTbUQaVPaVOaVOV_YPeeSaeU\
+  YeVTeYPe_KdbGdcBde8dh2di0db2YW5SQ8LKBEEE88G11J0NVA\
+  egPyscvrburasparp_ppZnoZmoYkoYUSmB4zNAzWGyeLwoSvyY\
+  uzbttchecYScLEcAehZzmuzksujrojojinehk_hjVghQigKkdF\
+  ncApa4s_0uY0wW5zYGzYSzZbzZmz_wz_zz_zzbyzcuzdrzenzg\
+  ozcpz_pzWrzTrzPQzZ0zhzzCyzFpzIhzK_zNTzOKzQBzT2zV0z\
+  W4zLCzAKz0LzELzSLzcOzaPzZ
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

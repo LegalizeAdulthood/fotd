@@ -1,0 +1,39 @@
+Galactic_BlackHole { ; FOTD -- December 15, 2001 (Rating 6)
+ ; time=0:09:53.74--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.09144967526444459/+0.448034057458217\
+  10/9.454119e+008/1/77.5/9.17393089480689206e-008
+  params=1.72/0/-2/0 float=y maxiter=3600 inside=0
+  logmap=294 colors=00000500500500500500500500500500\
+  50050050050050050050050050050050050050050050050060\
+  0600700700800800900911A11A22B22B33C33C44D44D55E55E\
+  66F66F77G77G88H88H99I99IAAJAAJBBKBBKCCLCCLDDMDDMEE\
+  NEENFFOFFOGGPGGPHHQHHQIIRIIRJJSJJSKKTKKTLLULLUMMVM\
+  MVNNWNNWOOXOOXPPYPPYQQZQQZRR_RR_RR_SS`SS`TTaTTaUUb\
+  UUbVVcVVcWWdWWdXXeXXeYYfYYfZZgZZg__h__h``i``iaajaa\
+  jbbkbbkcclcclddmddmeeneenffoffoggpggphhqhhqiiriirj\
+  jsjjskktkktllullummvmmvnnwnnwooxooxppyppyqqzqqzrrz\
+  rrzsszsszttzttzuuzuuzvvzuuzttzttzsszsszrrzrrzqqzqq\
+  zppyppyooxooxnnwnnwmmvmmvllullukktkktjjsjjsiiriirh\
+  hqhhqggpggpffoffoeeneenddmddmcclcclbbkbblaalaan``m\
+  ``n__n`_oaZobZpc_pd_qe_qf_rgarhcsiesjgtkitliumivnk\
+  womxpoyqqzrrzsszttzuuzvvzvvzvvzvvzvvzvvzvvzvvzvvzv\
+  vzvvzvvzvvzvvzvvzvvzvvzvvzvvzvvzvvzvvzvvzvvzvvzvvz\
+  vvzvvzvvzvvzvvzvvzvvzvvzvvzvvzvvzvvz
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

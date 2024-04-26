@@ -1,0 +1,34 @@
+Sea_What           { ; Classic FOTD, 11-Jul-01 Rating (4)
+                     ; time=0:07:41.65--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=multirot-XZ-YW-new passes=1
+  center-mag=+0.00000327661430389/-0.000000049069920\
+  32/1.729035e+007/0.003293/-179.142/88.744
+  params=183/92/2/0/-0.749695276287/0.032780202799\
+  /-0.749695276287/0.032780202799 float=y
+  maxiter=12000 inside=0 periodicity=10
+  colors=000ICEJEFKFGLGHMHINIJOJKPKLQLMRMNSNOTOPUPQV\
+  QRWRSXSTXTUYUVZVW_WX`XYaYZbZ_c_`d``eaafbbgcchddiee\
+  jffkggkhhliimjjnkkollpmmqnnroospptqqurrvsswttxuuyv\
+  vzwwzxwxvuvutttrssqqqpopnmomlnljljhkifjheifcheafd_\
+  ebZdaXc_VaZT`YS_WQZVOYUMWSLVRJUQHTOFRNEQMCPKAOJ9NI\
+  BOKDOLFOMHPNJPOKPPMQROQSQQTSQUURVVRWXRYZSZ`S_bS`dS\
+  aeTbgTdiTekUfmUgoUhpUikVlgVnbVqZVsXWrWXrUXrTYqSYqQ\
+  ZqPZqO_pM`pL`pKapIaoHboGboEcoDdnCdnAen9en8fm6fm5gm\
+  4gm5fl6fl7el7ek8ek9dkAdjAcjBcjCciCbiDbiEbiFahFahG`\
+  hH`gH`gI_gJ_fKZfKZfLZeMYeMYeNYeOXdPXdPWdQWcRWcRVcS\
+  VbTUbUUbUUaVTaWTaWTaUS`TR`SQ`RP_QP_PO_NN_MMZLLZKLZ\
+  JKZIJYGIYFHYEHYDGXCFXBEXAEXBDWCDVDDVECUFCTGCTHCSIB\
+  RIBRJBQKAQLAPMAONAOO9NP9MQ9MQ8LR8LS8KT8JU7JV7IW7HX\
+  7HX6GY6GZ6F_5E`5Ea5Db5Cc4Cd4Bd4Be3Af39g39h38i27j27\
+  k26k26j37j47j47j57j67j67i78i88i88i98iA8iA8hB8hC9hC\
+  9hD9hE9hE9gF9gG9gGAgHAgIA
+  }
+
+frm:multirot-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=z^(p2)+c,
+|z| <= 36  }

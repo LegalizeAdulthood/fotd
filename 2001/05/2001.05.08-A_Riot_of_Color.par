@@ -1,0 +1,33 @@
+A_Riot_of_Color    { ; Classic FOTD, 08-May-01 Rating (6)
+                     ; time=0:20:14.20--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-5.96142116875996600/+0.100053880965341\
+  40/1.539293e+009/1/7.499/-0.001
+  params=2/-2.2/2/-1.1/0/300 float=y maxiter=2500
+  inside=0 logmap=403 periodicity=10
+  colors=000XRUVQRUQNSOJRNHOMDNK8MJ6KI2JH0IH0JO2JV8J\
+  bEKiKKqQKwXIzcKzaNy_OsZRnYUiXVcVY_SZVRaQQcKOeFNgAM\
+  i6Kk8OmBRnEUoHXqJZrMasOcuRfwUjyXmzZozarzcuzfwzizzk\
+  zz0fw3sf2zZ3zR4zR6zR7zS8ySAvSAuSBrUDqUEoUFmUHkUHjQ\
+  EiMDgJBfFAeD7e86c64b23a00c02a23Z44X86UB6RE7OI8MKAJ\
+  NBHS8DQBFNEIMHKJJNHMQFOSDRVAUY8X_6Zb3ae2cg0fj0fk0g\
+  k0gk2ek3ck4ak7ak8Zk6ZiAYkDXnFVoJUrMSsORvSQwVOzYNzZ\
+  OwZQuZRrZRnZSkZUiZUeZVbZX_ZXXZYUZZRbYNZZOXZOU_OR_O\
+  OaQMaQJbQHbQEcQIeNKeKNeJQeHUeEXeDZeAae8Ke24f08f0Dg\
+  0Hg0Ki0Oi0Sj0Xj0_k0ck0gm0km0on0sq0ws0zv0zy0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0z30z00z00z00s00o00k00i00f40\
+  c70aA0ZE0XH0UK0RN0OQ0MS0KV0JY0I_0Hb0Fe0Eg0Bj0Am08o\
+  07r06u04w03y07v0As2Dq6FnBIkHKiKNfQQcUSaZVZcYXg_Umb\
+  RreOvgMzjJzjMzjOzjRzjUzjVzjYzj_zjbzjezjfzmYzoQzoJz\
+  qDzq6zr0zr0zs0zs0zu0zu3zv7zwAzyEzzHzzKzzQzzNzzKzzI\
+  zzFzzDzzAzz7zz4zz3zz2zz0z
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

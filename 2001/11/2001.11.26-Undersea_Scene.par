@@ -1,0 +1,34 @@
+Undersea_Scene { ; FOTD -- November 26, 2001 (Rating 7)
+ ; time=0:06:12.61--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.68598926801688290/-0.057715522608849\
+  34/2395119/1/10.0000000022212028/-2.13714152624833\
+  176e-009 params=-60/-1.3/-120/-3.1/0/800 float=y
+  maxiter=1250 inside=0 logmap=121
+  colors=000rQ0nO0iN0eM0aK0YJ0UI0OH0KF0HE0DD08D0BH0D\
+  J0EN0FQ0HS0IX0KZ0Mb2Ne2Og3Qk3Rn4Sq4Rm7Ri8QeAQaBQYD\
+  OUEOQFOMHNIINEJNAKKEOJIRHMUFQXDUZBYa8ac7ef4ii3mk0q\
+  n0uq0ys0zv0zy0zz0zy0zw0zu0zs0zr0zo0zn0xm0vj0ti0rg0\
+  re0oc0nb0ma0la0k_2l_4lZ6lZ8mYAnYDoXEqXFsXEsYDuZBvZ\
+  Av_8ua7ua6sb4sc4scArfEriIqkMqnQqqUosYovaoyenzinzgo\
+  zfqzerzcsybsucrqermfrngqqiqrjqsmovnowonzqnzrnzukzw\
+  iwzfuzcrzaozaozaqzbrzcszeuzevzfyygzyizwizwjzvkzumy\
+  snvrosqqqoronsqousqvuquwrsysrzsqzuozvnzOcQYcaeaknZ\
+  wsazubzuczuezuezufzugzvgzvizvjzvjzvkzvmzsszsszsszs\
+  szsszsszsszsszsszykzzizwfvucorbio_ekYaiXYfUUcROaQK\
+  YNHVKDSJ8QH4NE0KD0MF0NH3OJ6QK8QNBROESRFUSHVVIVXJXZ\
+  KY_MZbNZcOYeQYeRXfSXfUXfVVgXVgYUiZUi_UiaSjbSjcRkeR\
+  kfRkgSmiUmjUmkUmmVnnVnoVnqXnrXosXosYosYosYqsZqsZqs\
+  Zqs_rs_rs_rsarsassasscsscssessessfssfssgssgssissis\
+  sjssjssksskssmssmssnssnss
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

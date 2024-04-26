@@ -1,0 +1,38 @@
+Fritzleland_Midget { ; Classic FOTD, 13-May-01 Rating (5)
+                     ; time=0:11:10.09--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=mandelbrotbc1 function=floor passes=b
+  center-mag=+0.73593566678892110/-0.183549714634885\
+  30/9.894864e+008 params=1.5/0/-81219/0 float=y
+  maxiter=7200 inside=255 logmap=382 periodicity=10
+  colors=000H0gJ0eL0dL0`N0ZN0XP0VR0TR0RT0PT0LT0NX0N`\
+  0Pb0Pe0Ri0Rm0To4Ts8VvCVzGXzJXzNZzRZzV`zZ`zbbzebzib\
+  zkdzkdzkdzmdzmdzmdzodzodzodzzdyzdxvdvtdtqdrndpkdnh\
+  dledjb`h_XfXVdURbRN`OLZLHVGGRACN68J06G02C00E00G04H\
+  08H0CJ0GL0JN0LN0PP0TR0XT2`T4dV4gX6iZ6mZ8q`AubAxdCz\
+  oEzdCzVCvJCoACg0C`0CT0CL0GP0HR0LT0NV0PX0TZ0V`0Zd0`\
+  e0bg0ei0gk2im4mo6os8suAuvCvxEzzGzzHzzGzzEzzCzzAxz8\
+  vz6vz4uz4sz2qz0oz0oz0mz0kz0iz0gz0ez0ez0dz0bz0`z0Zz\
+  0`z0Zz0Zz0Xz0Xz0Vz0Vz0Tx0Tx0gx4cv6cz8_zCUzERsGQsJL\
+  qLJqLHvNJqPJmPJiRLeTLbTLZVNVVNUXNZZPcZPh`Pm`RrbRwd\
+  Ywdhze`weRmeTcbTUZTKVTARVGNVNJVVEVbAVi6Xo2Xv0Xz0Xz\
+  0Tz0Xz0`z0bz0ez0gz0kz2mz4qz6uz8vzAzxCzvEzuGzsHzqAz\
+  kJzqXzvimzv`zzPzzTzzXzuZzqbzmezggzdkzZozVqzRuzLxzH\
+  zzCzz8zz4zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz\
+  2zz6zz8zzAzzCzzEzzGzzGzzHzzHzzJzzJzzLzzLzzNzzNzzPz\
+  zPzzRzzRzzTzzTzzGzzGzz000
+  }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

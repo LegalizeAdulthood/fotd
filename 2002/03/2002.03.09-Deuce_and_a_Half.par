@@ -1,0 +1,39 @@
+Deuce_and_a_Half { ; FOTD -- March 09, 2002 (Rating 5)
+ ; time=0:04:03:43--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=ident passes=1
+  center-mag=-0.3177745098902/+0.2111443950606/1.143\
+  881e+009/1/-175/-2.1575952070460036e-006 params=2.\
+  5/0/31.8/0 float=y maxiter=1000 inside=0 logmap=94
+  colors=00010A20A30A40A50A61A72A83A94AA5AB6AC7AD8AE\
+  9BFACEBCECBDDBDEACEABEABO9AQ9AS89U89W78Y78_7DaBHcE\
+  LeHQgKUiOYkRbmUfoXjq`ptcuwfzziBBLCDMGFNJHOMIPPKQSM\
+  RVNSYOT`OUcPVfQWiQXlRYpSZsS_wT`zT`zUYxVWwWUrXRmXPh\
+  YNcZKZ_IU_GQ`EP`CO`AOa8Na6Ma4Ma2QY7UUCXQH`NMdJRgFW\
+  kB`n8ej8fg8gc8g`8hX8hU8iQ8iN8jJ8jG8kC8k98l68l9BiCE\
+  gFGeHJbKL`NOZQRWSTUVWSYYP``NbbLYXPTRSOLVJFYEA`KG_Q\
+  LZVRY`WYf`XkfWqkVvpVsnXqmZnl`lkbijdgifhhghghhfiiej\
+  idjickjbljbmjank`nk_okZplYqlXrlXrmWnmVjnUfnTbnT_na\
+  XniVnrSnzQiuSeqTalUYhVTdXP_YLWZHS_KQ`NOaQMbTKbWIcZ\
+  GdaEddCegAfi8fj8hj8ik8jk8kl8ll8nm8om8pm8qn8rnAtoCu\
+  oEvpGwpIxpKymLxkMwiNvgOudPtbQs`RrZSqWTpUUoSVnQWoNX\
+  pLYqJZrH_sM`tRauWbv`cwedxfeygfzhgzhhziizjjzjkzklzl\
+  mzmmzmmznmzomzomzGmzemzgmzhmzimzjmzlmzmmznmzomzqmz\
+  rmzsmztmzvmzwmzxmzymzxmzwmzwmzvmzumzumztmzsmzsmzrm\
+  zrmzomzlmzimzfmzdmzamzImz
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

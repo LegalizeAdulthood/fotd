@@ -1,0 +1,40 @@
+Star-Bright { ; FOTD -- November 28, 2001 (Rating 6)
+ ; time=0:02:41.10--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=b
+  center-mag=-0.28596811956181420/+0.922308674592901\
+  20/24144.07/1/122.5/1.17557144574398365e-011
+  params=1.8/0/-11.5/0 float=y maxiter=3600
+  inside=255 logmap=63
+  colors=00079A89A99AA9AB9AC9AD9AE9AF9AG9AH9BIACJADK\
+  AELAGMAFNAEOADPACQABRAARA9PCCNEFMFIKHLJIOHKRGLUENX\
+  CP_BQb9Se8Th6Vk5Wn3Yq2ZsUUtZ8wYAtXBrWCpVEnUFlTGjSI\
+  gRJeQKcPLaON_NOYMPVLRTKSRJTPIUNHWLGXIFYGE_ED`CCaAC\
+  b8DcBDcEEcHEdKEdNFdQFeSGeVGeYGf`HfcHffFijHfhIcfKae\
+  LZcMWbOU`PR_ROYSMXTJVZGUcEShBRm8Pr6OwHGzR9zSBzTCwU\
+  DrVFlWGkWHiXJhYKfZLe_Nc`Ob`P`aR_bSYcTXdVVeWUeXSaWQ\
+  ZVOWVNTULQUJNTHKTGHSEESCBRA6PB8RB9TBBVBCWCEYCF_CG`\
+  CIbDJdDLfDMgDOiEPkEQlESnETpFVrFWsFYuFZwF_xDXvBVt6Q\
+  tATsEWrIZqMapQcpSbmUbjWbhXbeZbc`b`bbZcbWebUgbRiaOj\
+  aMlaJnaHpcEqeCsg9ui7wk4xm2uo5rq8osBluEiwHgyKczNezQ\
+  gzTizWkz`mzYozWqzTszRuzPwzMxzKyzHzzFzzAzzDzzFzzHzz\
+  JzzLzzNzzOzzQzzRzzTzzUzzWzzXzzYzz_zz`zzbzzczzezzfz\
+  zgzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzf\
+  zzfzzfzzdzzczzbzzazz_zzZzzYzzXzzVzzUzzTzzSzzQzzRzz\
+  Wzz`zzgzzezzdzzczzbzzazzz
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

@@ -1,0 +1,36 @@
+The-Fly { ; FOTD -- January 25, 2002 (Rating 6)
+ ; time=0:00:53.60--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=multirot-XY-ZW-VE function=flip/ident
+  center-mag=0/0/1.449372e+013/0.1452/-60.8632988255\
+  442058/-75.7841297145378263 params=0/90/2/0/-1.999\
+  99911758755/0/-1.99999911758755/0/2.001/0 float=y
+  maxiter=5000 inside=255 outside=tdis passes=b
+  mathtolerance=/1 colors=000ddYFYY8TQ2QL5SM7TOAVPCW\
+  QDYSGZTI`VJaVPZhTYvYWzeSrnOcwJOgzVgzLgjAgV0gF0hO0h\
+  W4hdChmIGoSCzQOzaDezGmzIrzJxzOonSgTWZ7ZS0WT0TT8QVL\
+  OVVLWeIWoFYzCYz4dz0jz0qz0wz0mz5ctFTkOLaWATd0Jm0Ae0\
+  7Z74G8GLM0qp0va0zS8zGIz5Q0MS2VP7aMDhJIoGOwDSzCcmOn\
+  WZmFcz0zz5roDqeLoWSnMZmWVadSQVTZMTeaovozzgztZndScP\
+  JS8CI0IM1MP8STGWWPa`WeccwojFj7G`AGQDIIFI7IJ0LJ0MI0\
+  WI0eI0nI0xI0zL0wM2nO8ePGWQMOSTFTZ5Qd8PhCOmFLqIJvLI\
+  zOGzPFvWFmaFdhFYnDPvDGzD7zD0zA8z8Gz5Pz4Wz2cxCawLav\
+  Tava`tj`rq`rmTmjOggIadCYa5SZ0MW0GT0CW0AZ0Aa0Ad2Ag5\
+  AjAAmDAoGA5TaZMWzGQqTQgeQYqQOzQFzQCzW8va5kg2cm0Tr0\
+  Jx0Az4IvCPmLVeSaY`hPgnInGgYO4QJILFTDAd75o01z00z0Az\
+  1Mr5Yh8h`DtQGzGJz7FzACzC7vF4oG0hJ0cL0WO0QP0TF0V51W\
+  04Y0QW8jVVzTotZkjdg`hcdkYgmSknMnoGqrAvt4xv0zw0qj5g\
+  YJYLVO7gD0rI7oLJmPVjSggWrdZzaazZdzWgxVjoTmhSo`QrSP\
+  vLOrTLoaJmjIkrGteAzT4zG0zL4zO8vSFqVJmYO000
+}
+
+frm:multirot-XY-ZW-VE {
+; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= sqr(p5)
+}

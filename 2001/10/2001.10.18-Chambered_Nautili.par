@@ -1,0 +1,34 @@
+Chambered_Nautili { ; FOTD -- October 18, 2001 (Rating 8)
+ ; time=0:06:45.46--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.35143906289108950/+0.988561362993019\
+  80/132835.6/1/47.5000000010857306/-2.9587169658729\
+  0955e-009 params=-1/-1.1/-11/-11/0/0 float=y
+  maxiter=2500 inside=fmod proximity=1.5 outside=fmod
+  colors=000dSUdRTePReOQeNPeMOeLNfKLfJKfIJfHIfGHgEFg\
+  DEgCDgBCgABh99h88h77h66j24i45h55g66f86e97dA7cC8bD8\
+  aE9`G9`HA_IAZKBYLBXMCWNCVPDUQDTRESTESUERVFQXFPYGOZ\
+  GN`HMaHLbIKcIJeJIfJIgKHiKGjLFkLEmMDnMCoNBqNArO9sOA\
+  vM9uN9tO9sO8sP8rP8qQ8pR7pR7oS7nS6nT6mU6lU6kV5kV5jW\
+  5iX4iX4hY4gY4fZ3f_3e_3d`2gc3d`4bZ5`W6ZU7XR7VP8TM9R\
+  KAOIBMFBKDCIADG8EE5FC3FA1HB3IB5JC7KC8LCAMDCNDDODFP\
+  EHQEIREKSFMTFNUFPVGRWGTXGUYHWZHY_HZ`I`aIbbIccJedJg\
+  eJhfKjgKljLohKmgKlfKkeKidJhcJgbJeaJd`Ic_IaZI`YI_XH\
+  YWHXUHWTHUSGTRGSQGQPGPOFONFMMFLLFKKEIJEHIEGHEFJIIK\
+  KKLNNMQPOTRPWUQZWRaYTc`UebVgdWigYki`mkconfqphsrasr\
+  aqp`oo`mm_kl000000000Ycf000X_cXYaWW`000VSYVQWUOV00\
+  0TKS000SGPSENP2NR7MSCMUHMVMMXRLYWL_`L`eLbjKcoKetKf\
+  xKgxMixPjxSkxUmxXnxZoxaqxdrxfsxzuxzvxzwxzxxzyuzyrz\
+  yozylzyjzygjydiyagyZfyXdyUcyRayO`yM_kHcZDfM9j95mA8\
+  lAAlBDkBFkBHjcWZdVXdUWdTV
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

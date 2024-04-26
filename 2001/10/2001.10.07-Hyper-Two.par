@@ -1,0 +1,40 @@
+Hyper-Two { ; FOTD -- October 07, 2001 (Rating 5)
+ ; time=0:03:21.69--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.26165001846746670/+0.849300872259936\
+  60/2.095812e+008/1/-114.999999882607526/-2.1637172\
+  242794378e-007 params=2.05/0/10/0 float=y
+  maxiter=1200 inside=0 logmap=92 sound=off
+  colors=000wXutWtrWtoVtmVsjUshUsWQiKM`LQcMTfNXhO_kP\
+  bnQfpRisRluP_kONaLIPJEDQFJWGOaHUgIZhOUhTPhZKicFiiA\
+  in5is1gf8eUFcHMa5SiLXq_`xndvhctccsZcqUcoPcnKcYNWHQ\
+  O0SH9UMIWRRYWZ__5CTDINLOITUD`_8cRAgICj9Em0Gl1Dk2Aj\
+  37i44i52l7Ro9omCjlEfkHbjJYiMUhOQgQMbLTYH_UDfP9mL5s\
+  1dcAbbJabS_a_ZahX`qW`yV`rWYkXVdYSYZQR_NK`KEaIMWEUQ\
+  BWRGXRLYRPZRU_RZ`RbaRgbRkeSegT`iUWlVQnWLpXGrXBqaGp\
+  eLoiQnnVmr_mvdip_ekVbfRZaMVXHSSD`JFiAHr2JcAOPHSBOW\
+  DPSEPOFPKGQGHQCIQ9qcxhWr`OmSHhK9cC2ZN9cXFhgMmqSqnP\
+  kkMfhJ`eGWbDQ`ALUpAZiJbbSgW`kPipIrtBzyecqf`jgYbhVW\
+  iSPjPLiMHiJDhGAhE8lF6pG4tHHvKTxNdyQVnJLdDCV7LO5TH4\
+  aA3i32zykovWdtGbUbiUgpUlwUqmUrdUsVUtMUuNUoOUjPVdQW\
+  _RXUSYPQ_VOa_NcdLeiJgnIisMkoQmkUogXqc`s_duWhwSkyOn\
+  zSqzVszZvzaxzd_zdCzdIzYNzSTzMYzGbzAXzHSzONzVHzaCzh\
+  7zoCzjGzfLzaPzYTzUYzPazLezHbzE`zCZz9Xz7Vz4Tz2QzFNz\
+  RKzcIzoLzfOzYKzRhzpmzrrzt
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

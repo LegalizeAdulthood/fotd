@@ -1,0 +1,32 @@
+Something-Berries  { ; Classic FOTD, 24-Sep-01 Rating (5)
+                     ; time=0:10:01.54--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.50065188510701600/+0.357694228187471\
+  10/323066.5/1/57.499 params=4/-1.45/2/-14.5/0/800
+  float=y maxiter=2400 inside=0 logmap=109
+  colors=0005bt6dt6fu8gv9hv9ixBkxBlyCmyDozDpzErzEszG\
+  tzGvzIrzLozMlzPizRgzTdzWazXZz_XzaUzcSzfPzgNzjKzmHz\
+  nFzqCzrCztDztGzuKzuNzuPzvTzvVzvYyxayxdxxgvykvymuyp\
+  tzttzwrzzvzzruynnwkhvgatcXt`RsXLrTGpQ9oM4mI0t90mG8\
+  hLHaQQXW_S`aTYcUWdVVfXRgYPhZNkZLm`InaHobEqdCrfBtg8\
+  vg5xh4yi1zk0zl0zm0zm0xo0qp0jr1dr4Ys6Rt9LvCGvE9wH3y\
+  J0zI0yL0tN0pQ0lR1hV3dX3`Y4X`5Tc3On5Pd8QXBSNDTGGU6I\
+  V0JX0JU0JS5JPCJNIJKPJHWJFaJCh0h90h81h83h64i65i56i4\
+  8k49k3Bk1Ck1Dl0El0Gl0Hm0Im0Jm0Pi0Lm0Ip3Gt9DwEBzL8z\
+  R5zX3zc0zj0zt0zo0zk0zh0zd0za0vY0rW0mR0iP0fL0aI0YE0\
+  UC0Q80N50I10G00I04L18N3CP4GQ4JT5NU6RX8WY8_`9caBgdC\
+  hh9kfCmbEn`HoYIqVLtTNuQQvORxLVyIXzG_zH`zIczKdzLfzN\
+  gzOhzPjzQkzQmzSnzSozTqzTrzUtzUuzVvzVxzXyzXzzYzzYzz\
+  ZzzZzz`zz`zzazzazzbzzbzzbzzdzzdzzdzzfzzfzzfzzgzzgz\
+  zgzzhzzhzzhzzizzizzizzlzzlzzmzzmzzozzozzpzzpzzpzzp\
+  zzpzzpzzpzzpzzpzzpzzpzzpz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,38 @@
+The_Violet_Flame { ; FOTD -- January 02, 2002 (Rating 3)
+ ; time=0:16:04.44--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-1.19336408751704900/+0.404860208006386\
+  40/1.398672e+007/1/15/-2.53604046138167227e-007
+  params=1.414213562373/0/-30/0 float=y maxiter=6000
+  inside=0 logmap=464 colors=000AJUAITAGSAFRAEQADOAC\
+  MABKAAI98G96GC4KF5OI6RL7VO8YR8aU9eXAh_BlbCoeDshDvj\
+  IrlMomQloViqZfrbctf`vkYwoVysSzwPyvSyvVyvYyu_yubyue\
+  yuhytjytmytpytrtnupixojrnklmlfmlalmWknQknLikNhhPge\
+  RecSd`UcYWaWX`TZ_Q`YOaXLcWIeVGfMKfNLcOLaPLZQLXRLVS\
+  LSTLQUMNVMLWMJXMGYMEZMB_M9`M7dQFhUMlYUpa`tehwhovil\
+  ujitjgskdrkaql_plXomUnmSllQjlOhkNfkLekKcjIajH_iFZi\
+  EXiCVhBTh9Sh8YaBbWDgPFlJIqCKv6MtLWsZeqlopzyorqnjim\
+  balVVkNNjFFi78_DCRIGINK9SO0XR1WP1WN2VL2VJ3UI3UG4TE\
+  4TC5SA5S9BR8HQ7MP6SO5XO4bN3gM2mL1rL1eI3TG4GE54C6K_\
+  JZwVWoTTgRR_QOTOMLNJDLH6KK8NN9PQBSTCUWEWZFZaH`dIbg\
+  KejLglMidNcXNYPOTHON9OIAQMASPAUSAWWBYZB_aBaeBchBek\
+  EbhG`eIYbKW_MTXORUQORSMOUJLWHIYFGPKCHO88S40W1BiULv\
+  uQsqVtr_usdvtiwumwvewwYwxQwyIwzAwz9wz8wz8wz7wz6wz6\
+  wzPwzTwzXwz_wzIwz1wzxwzwwzvwzuwztwzswzLwzPwzSwzVwz\
+  Ywz`wzcwzgwzjwzmwzpwzswzvwz0wz1wz2wz2wz3wz3wz
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

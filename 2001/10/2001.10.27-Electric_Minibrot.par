@@ -1,0 +1,35 @@
+Electric_Minibrot { ; FOTD -- October 27, 2001 (Rating 9)
+ ; time=0:13:13.13--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.396786690594519/+1.241589333886222/3\
+  .216269e+011/1/107.489681409293439/0.0032344174442\
+  0335797 params=-1.05/1/-0.000315/-1/0/0 float=y
+  maxiter=1200 inside=0 logmap=245 mathtolerance=/1
+  symmetry=none periodicity=0
+  colors=000zzz5VG8UHBSJDRKGPMJONLMOOLQRJRTITWGUZFW`\
+  DXcCYfA_h9`k7bn6cp5dm4bk4ai4`g4Ze4Yc3Xa3V_3UY3TW3R\
+  T2QR2PP2NN2ML2LJ1JH1IF1HD1FB0E90DB2ED4EE6FG8FH9FJC\
+  GLBGMEHOFHPGHRGGSHFTHEVHDWICXIBZKB_KA`L9aL8cM7dM6e\
+  M5gN5hN4iN3kN2lN1mN0nN0oM1pM1pM2qM2qM3rM3sL3sK4tJ4\
+  tI5uH5uH5tJ8tLBtNEsPHsRJsSMsUPrWSrYUr_Xqa_qbbqdeqf\
+  jphopjtplzpmzmhzjcwgZrdUmbTh_WcXZZVbUSfPPjINnGKrFH\
+  vFFvFHsLJnQKiVMe_O_dPViRSnSQsVTpXVn_Yla_jdahfbficd\
+  kebnf`phZsiXujVokQikMckIYkDSk9Nk5hlfnibtf_ycXwaWu`\
+  Wt_WrZWqYWoWWnVWlUWkTWiSWhRWfPWeOWcNWbMW`LW_KWaPTb\
+  TRcXOd`MedKfhHglFhpCitAjx8iu9irAioBhlChiDhfEhdFgaG\
+  gZHgWIfTJfQKfNLfLMeINeFOeCPd9Qd6Rd3Sd1Te6ReAQfEPfJ\
+  OgNNgRMhWLh_KicJigIjhPjiWkjbkkillpllwkfojahiWahUVg\
+  UOfUHeUAdU3eU5fT7gW9gYAh_CiaEicGjeHkgJkhLliNmjOnkQ\
+  nlSomUpnVpoXqpZrq`rrassastasuatvatwatxarybqzcpzdoz\
+  enzemzflzgkzhKzVGzQBzM6zI
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,38 @@
+Fractured_Fractal  { ; Classic FOTD, 18-Apr-01 Rating (6)
+                     ; time=0:20:05.34--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=+1.35355495637857600/-0.015397043802760\
+  70/475604.2/1/-52.499 params=2.05/0/56/0 float=y
+  maxiter=5000 inside=0 logmap=295 periodicity=10
+  colors=000olLQfJPdJPcIOaIM`GL_GJYFIXFIVDGTDFSCDQCC\
+  PAAOAAM99L97J76I74G63F64D33D63D73DA3DC3DF1DG1DJ1DL\
+  1DO1DP1DS0DT0DX0DY0D`0Da0Dd0Df0Di0Dj0Dm0Do0Dr0Ds0D\
+  v0Dx0Dz0Fz0Dz0Dy0Cx0Cu0As0Ap09o09l09i07g07d06c06`0\
+  4_04X04V03S03P01O01L00J00G00F00C009007004003000000\
+  0000000000000000100410630960A70D90GC0ID0LF0MG0PJ0S\
+  L0TM0XP0YQ0`S0cV1dX1gY1i_1lY1mV1oT7rQFsOMvMTxJ`zId\
+  zFizDmzArz9vz6vz4vz7rz9ozAvzCzzDzzFzzGzxIzvJzuMzsO\
+  zrPvpQyoSzlTzjVziXzgYzf`zdavccoadg_f`YgXXiYVj_Tl`S\
+  oaQpcOrdMsfLugJviIxjGylFzjFzlDzlCylAvmAslArlCplCol\
+  DmlDllFjjGijIgjJfjLdjMcjOajPajQajSaiQaiPagOagMagJa\
+  fIafGadFadDadAcc9cc7ca6ca3ca1c`0c`0c_0c_0c_0cY0cY0\
+  cX0dY0c_0c_0c`0ca0aa0ac0ac0ad0af0`f0`g0`g0`i0_j0_j\
+  0_l0_l0_m0Yo0Yo0Yp0Yp0Yr0Xs0as0fu0jv0ov0sx1xx1zy1z\
+  z3zz3zz3zz3zz4zz4zz4zz6zz6zz6zz7zz7zz7zz7zz7zz9zzA\
+  zzAzzCzzDzzDzzFzzFzzGzzIz
+  }
+
+frm:MandelbrotBC   { ; Formula by Andrew Coppin etal
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

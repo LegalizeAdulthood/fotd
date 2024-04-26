@@ -1,0 +1,33 @@
+Fractal_Shortfall  { ; Classic FOTD, 10-Jun-01 Rating (6)
+                     ; time=0:36:18.07--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-60.81552655003062/-416.9838484676321/8\
+  .371123e+007/1/94.999 params=-1/-1.3/-0.02/-13/0/0
+  float=y maxiter=6400 inside=atan
+  outside=tdis periodicity=10
+  colors=0001zW0od0_n0Lx0Ko0Ih0Hb0GX2ER4EL2HG2KB2N6L\
+  XBggEzsIokObbTRWYGOb6Hh0Bn06s0Kh6Y_GoRRzITnUUYdWKo\
+  RGhNDbK9XG7RC4L91H0v07q2KlDYgQoohzxzXQz40zC0zK0vT0\
+  q`0lk0hb1eW1bO2`H2YB2W54U04R04Q07L59IBCEHECOI9WL6b\
+  O4kR1lU7nWDoXKq_Rs`Ytbevdlq_kzXkgTkbQkYLkUIkQEkNCk\
+  0UrLlWG`QBRL7HH29D01900600200806E5GL9RTEb_KogQzo2g\
+  0C_6LTKXLYgEos8zqX`oxCqt7sq2zz0tl0tk0zX4zLIzBYzCbz\
+  DgvDlsEqqEvb8qR4nE0h50e00b00Y40U70RQObRK_RGXRCUR8R\
+  T5OT1LT0IT0H_0Qg5Yo9gxEqzIzzGttEnqCglB`h8Wd7Q`5KX4\
+  GU1BQ06N01I00G00C00900I70RN0_e0hz2dv4_s5Wq5Rn6Ol6L\
+  oWNqRNqOOqLOqHQqE0z12z5Dv80zz0zo4zdBxUItK00g02Y5HR\
+  EYI00v00q10n20k51g65d89`9DYCIWDNTGRQHXNK`KLgHOlEt0\
+  0h95YU84n8LsnNqkNqgNqdNq`OqYOqWOqTOqQQqNQqKQqHQqE5\
+  B57E68H69L7CO7DT8EW8HY9Ib9KeBNkBOnC78X9DUBHTDLQEQO\
+  GULIYKKbHNgGOlD02k07e2Bb5E_7KX9OUCTQEXNHbKKgHNlEWX\
+  2CO4DR5ET6GW6HX7H_7I`8Kd8
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

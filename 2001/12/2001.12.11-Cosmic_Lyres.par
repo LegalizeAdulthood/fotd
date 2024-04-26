@@ -1,0 +1,34 @@
+Cosmic_Lyres { ; FOTD -- December 11, 2001 (Rating 3)
+ ; time=0:15:36.15--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.81134231972411620/-0.993186498565719\
+  90/2864498/1/92.4999998551264611/-1.02795145250078\
+  601e-007 params=-10/-1.3/-1/-13/0/525 float=y
+  maxiter=2400 inside=0 logmap=209
+  colors=000SOcSOcSPcSPdSPdSQdRQeRReRReRRfRSfRSfRSgR\
+  TgRTgRUgRUhRUhRVhRViRViRWiRWjRXjRXjRXkRYkRYkRYlRZl\
+  RZlPYpRZlT_iV`eX`bZaZ`bWbbTdcPfdMheIjeFlfBng8ph4og\
+  5of5nf5ne6me6md6ld7lc7kc7kb7jb8ja8ia8i`9h`9h_9hZ9g\
+  ZAgYAfYAfXBeXBeWBdWBdVCcVCcUCbUDbTDaTDaSD`SE`RE`QE\
+  _QF_PFZPFZOFYOGYNGXNGXMHWMHWLHVLHVKIUKIUJITJJTIJTH\
+  JSHJSGKRGKRFKQFLQELPELPDLODMOCMNCMNBNMBNMANL8MMANM\
+  CNMDOMFONGONIPNKPNLPONQOOQOQQORROTRPVRPWSPYSPZSQ`T\
+  QaTQcTQeURfURhURiVRkVSlURlVRlVRlWQlWQlWQlXQlXPlXPl\
+  YPlYOlYOlZOkZOjZNi_Nh_Ng_Mf`Me`MdaMcaLbaLbbLbbKbbK\
+  bcKbcKbcJbdJbdJbdIbeIbeIbeIbfHbfHbfHbgGbgGbhGchGdh\
+  FeiFfiFgiEgjEgjEgjEgkDgkDgkDglCglCllClmClmBlnBlnBl\
+  nAloAloAloAlp9lp9lp9lq8lq8lq8lr8lr7lr7ls7ls6kr7ls8\
+  ls9ls9lsAlsBlsBlsCmsDmsEmsEmsFmsGmsGmsHntIntJntJnt\
+  KntLntLntMotNotOotOotPotQotQotRpuSpuTpuTpuUpuVpuVp\
+  uWquXquYquYquZqu_qu_qu`rv
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,34 @@
+Five_Fractal_Tori { ; FOTD -- November 10, 2001 (Rating 4)
+ ; time=0:26:31.91--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.22508187533713500/+0.931552296611574\
+  30/1.545399e+012/1/107.501146331564328/-0.01282785\
+  66080743811 params=-5.4/-6.5/3.6/-2.1/0/300 float=y
+  maxiter=3600 inside=0
+  colors=000zfQxfQvfQtdSrdSpdSpdUndUlbWjbWhbWfbYdbYb\
+  `Y``_``_Y`aX`aVZaTZcRZcPZcNZeLXeLXgJXgHXgGXiEViCVi\
+  AVk8Vk8UkAUiCUiCUiEUiGUiGUiHUiHUiJUiLUiLUiNUiNUiPU\
+  gRVgRXgTXgVZgV`gX`gXbgYdg`dg`ggbhgbigdjefkeflehmej\
+  nejoelpelqenrepsepteruervetwctxcvycvzcvzcxzaxzaxza\
+  zzazzazz_zz_zz_zz_zz_zzYzzYzzYzzYzzYzzWzzWzzWzzWzz\
+  WzzUzzUzzUzzUzzUzzSzzSzzSzzSzzSzzQzzQzzQzzQzzQzzQz\
+  zOzzOzzMzxMzvMztKzrKzpKvnHtnHrlHnjGlhGjfGfdEdbEb`E\
+  YZCXXCVXCRVAPTANQAJP8HN8GL8CJ6AH68H68J88LA8LA8NC8N\
+  C8PE8PE8QG8QG8TH8TH8VK8VK8XM8XM8ZO8ZO8`Q8`Q8bS8bS8\
+  dU8dU8fW8fW8hY8hY8j_8j_8ha8ha8ha8fc8fc8fc8dc8de8de\
+  8be8be8bg8`g8`g8`i8Zi8Zi8Zi8Xk8Xk8Xk8Vk8Vm8VmATmAT\
+  oCToCQoEQoEQqGPqGPqHPqHNqJNqJNqLLqLLqNLqNJqPJqPJqR\
+  HqRHqTHqTFqVFqVFqXHoXHgXJ_YJQYLHYLAYN2`N0`P0`P0`P0\
+  bT0bX0d`0dd0fh0fj0hn0hr0jv0jz4lz8lzCnzEnzHpzMpzQpz\
+  SrzUrzUtzUtzUtzUvzUvzUvzW
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

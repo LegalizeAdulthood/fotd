@@ -1,0 +1,35 @@
+A_Boring_Lesson { ; FOTD -- February 28, 2002 (Rating 2)
+ ; time=0:50:49.74--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix3 function=ident passes=1
+  center-mag=+1.564290873945641/+2.097972456507608/2\
+  .125008e+007/1/177.5/-7.57875697517812474e-006
+  params=0.01/4/-0.2/2/2/-1/-2/-3/1.4306355202818/0
+  float=y maxiter=1500 inside=0 logmap=188
+  colors=030qUtsUttUsuSsvSsxSsyVtzXtzYtzatzbtzdtzfuz\
+  huziuzluznuzouzqvzqvzrvzrvzsxzsxztxztxzvxzvyzwyzwy\
+  zxyyxyyyzxyzxzzvzzuzzuzztzztzzszzqzzqzzpzzpzznzzsz\
+  znzzlzyizufyqcwm`tiYreVo`SlXPiSMfNIdIEaCGbEIbEKbGK\
+  bGMbINbIPbKPbKRbKSbMSbMTbNVbNXbPXbPYbR_bR_bR`bSbbS\
+  cbTcbTebVfbVedTfbVhbXhbXibYib_jb_jb`la`labmacmacna\
+  enaepafq_hq_hs_is_it_jt_lu_luYmvYmvYnxYpxYpyYqxauy\
+  YqzXnzVlzUizQezPbzN_zLXzHSzGPzDMz9AzBIzBNzBSxBYtBb\
+  pBfjBlfBpbBtYByTBzR3zPBzPHzPPzPUyP_vPdtPhqPnmPrjPw\
+  hPzePzbPz_MzVPzXRzXSzXTzYVzYXzYYz__y_bw_ct_es`fq`h\
+  n`ilbjiblhbnebpbcqacsYctVeuUevQeyNfxPexPexPexQexQe\
+  vQevQevSevSevSeuUeuUeuUeuVeuXeuYet_etaetbetdeteesf\
+  eshesieskesleqnemozsqzlrzeszYtzRvzIwz8xz0yz4zz8zzC\
+  zzGzzKzzMzzPzzSzyVzvYzt`zqbznezlhzijzfmzcpz`qzYtzV\
+  vzSyzPzzMzz0zzIqzYezlPzzSzyTzyVzyXzxYzx_zx`zxbzvcz\
+  vezvfzvizujzulzumzunztpzt
+
+}
+
+frm:MandelbrotMix3 {
+; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l
+}

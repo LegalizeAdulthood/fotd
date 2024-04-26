@@ -1,0 +1,34 @@
+Ionization { ; FOTD -- January 07, 2002 (Rating 7)
+ ; time=0:26:28.93--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-3.53815673130760900/+8.947496943410712\
+  00/873151.1/1/115.000001629676419/-2.2939380037931\
+  2784e-006 params=5/-1/0.05/-15/0/525 float=y
+  maxiter=2400 inside=0 logmap=393 periodicity=10
+  colors=000KA3KA3KA3KA3KA3KA3KA3KA3KA0KA0KA0KA0IB0J\
+  C3ID7ICDKCKLAONATN9_O9cQ7iR7nR6rS6xT4zT4zS1zR0zQ0z\
+  O0zN0zN0y_0kj1Yu6Lq7Il7Hj7Ff7Dc7C_7AW79S97Q96L94I9\
+  3D91A906903904I04Q06W06d07k07r0Iq0Ro4_n9gnFolKxkQz\
+  kTziVzgVzfWzcWzaYz`Yz__zW_zV`zT`zRazQazOczNczLazLa\
+  yL`uL`oL_jL_fL_aO_YS`TV`QY`La`Hd`Cg`7j`6l_6nY6oW6q\
+  V6rV6tT6uS4xR4yQ4zQ4zO4zN4zL4zK4zKFzOQzS_zViy_rxao\
+  rYlnTkjQifLf`HdWCaS7`O3aNAaLHcKOcITcH`dHfdFldDrfCy\
+  fAzfAziKvkSin`VqiHrq1ou6nyAkzFjzKgzOfzSTxNHgI3RD09\
+  90AA0CC0DC0FD0HD0IF0KF0LH0NH3RF7TFCWDH`DLcDQfCTjCY\
+  lAaoAftAjv9ny9rz7vz7yz7uzCqzHlxLiuQdqTanYYjaTgfQcj\
+  L`nIWrDTv9Qz4Nz0Iz0Iz6IzDIzNIzTIzaIziIy`ItTIoNIkDI\
+  g6Ic0I_AIoNIzOIzQKzQLzRNzROySQxSRxTSvVTuVVtWWtWYrY\
+  _qY`qYarYcrYdtYftYguYiucjuilunoutruquvnxxkyxizyfzy\
+  czz`zzYzzVzz_zxczufzqjznlzjqzguzcxz`zzWzzTzzQzzNzz\
+  IrzDiz9`z4Rz0Hz07z09z09z4
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

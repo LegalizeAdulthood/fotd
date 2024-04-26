@@ -1,0 +1,34 @@
+Totally_Unexpected { ; FOTD -- March 31, 2002 (Rating 7)
+ ; time=0:34:27.62--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=mandelbrotmix4 function=ident passes=1
+  center-mag=-12.28736645188386000/+4.17419235654376\
+  100/2.132333e+007/1/107.500992798218562/1.59569265\
+  622064305e-005 params=-1/1/10/0.1/0/-50 float=y
+  maxiter=4200 inside=0 logmap=-633 periodicity=10
+  colors=030XE0YE3_E5`E8aECcEDdEHfEIgEMhEPiEQkETlEUm\
+  GXnH_nE`nAcn7dmA`mEXlHUlLQlOMmRImUDnX8n_5oa0rc0n`0\
+  l_0iY0gX0dV0aU0_R0XQ3WO3UM5TL5SJ6A06PE6OC8MA8K8AI7\
+  AH4AF8FFAKFEPFETFEXFE`FEdFEfDEgDEhDEiDEkDElDEmDEnD\
+  EoIEoMEoPEoSEzUEzXEz_EzaLzdRzgXzkazmfzolzrqztqzvrz\
+  yszzszzuzzuzxzqvzdzzSzzPvwOrmMtmKxmIzmHzmFzmSzm`zm\
+  iymrxvzvzzvzzrzzozzmzzizzgzzdxzauzYrzWpzTlzQjzMfzI\
+  czF`zCYz6Uz3Rz0Oz0Lz0Oz0Qz0Tz3Uz3Vz5Yz6_z8az8czAdy\
+  CfxDhxFkvHlvKmvOptQqsTrsWuvYwz`yzczzfzzhzzkzzmzzoz\
+  zrzztzzvzxyzvzzszzqzynzylzyizxgzxdzwazw_zwXzvWzv_z\
+  uczugzukzsnzsrzsvzryzrzzrzzrzzqzzqzzrzzszzuzzvzzwz\
+  zxzzyzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzvzzozzizzczzXzzQzz6zz8zzAzzCzzDzxFzvH\
+  zsIzoKzmMzkOzhPzfQzcSz`TzYUzWTzUTzTTzSSzSSzQSzPSzP\
+  QzOQzMQzKPzKPzIPzHPzHOzFOzDOzCMzCMzAMz8Mz8PzDSzHTz\
+  KvzIvzFvzCtz8tz5sz0rz0rz0
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

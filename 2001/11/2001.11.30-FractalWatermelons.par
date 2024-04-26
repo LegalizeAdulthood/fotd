@@ -1,0 +1,40 @@
+FractalWatermelons { ; FOTD -- November 30, 2001 (Rating 5)
+ ; time=0:05:41.30--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.76131218871775200/-0.107523473417372\
+  70/51471.42/1/-62.5/-2.52404971923247956e-011
+  params=1.7/0/23.5/0 float=y maxiter=12000 inside=0
+  logmap=129 symmetry=none periodicity=10
+  colors=000VHAXIAZJAcKAhLAmMArNAwOAzP8cg0Xz0Wf0WO0W\
+  60W00HIM4lq3go2eo1bo1_o0Wo0So0Po0Mo0Ko0Go0Do0Ao08o\
+  04o06g06b28X48R98LB9GtUzqSzlRzgPzcOz_MzWLyRJxMGvLE\
+  sK5qI4pH0nG0jE0hD0gB0gA5h9Ag8Fi4Ke3P`1RY0SU0UP0WM0\
+  XI0YE0_B0YE1XG6XHBWIHWKMULSUMYSPcSRiRSoRUuPWzPXzOY\
+  zO_zSbzXcz`ezefzgizlkzqlzumzxozukwrgqqclm`fkY`iUWf\
+  RReOPbRO`SM_UMYWLWXKUYIS_IR`HOcGMfELhEKfDHbBGZAEZA\
+  DZ8BZ6BZ3AZ2AZ09Z09Z08Z08Z06Z06Z04Z04Z06Z08Z39Z9AZ\
+  EBZKDcPEnUGt_HueIwkKxqLzwMzzOzzPzzPzzLutHzkDz`AzS6\
+  zK2zB0z6SztwzzozKgzS`z`UziMzrGzmIziLzeOzbRzYUzUXzP\
+  _zMbzIezEgzAkz8lzBkzGkzKkzOizRizWiz_gzcgzggzkfzofz\
+  tfzxezzezzezzbzx`zu_zrYzoXzlWzgUzeSzbRz_PzXOzUMzXL\
+  zYKz_Kz`IzcHzeHzfGzgGzkEzlDzmDzoBzqBzmAzk9zg8ze6zb\
+  4z_4zX3zU2zR1zO0zL0zR8zXEzYGz_Gz`Gz`HzbHzcHzcIzeIz\
+  fIzfKzgKziKziKzcGz_DzUAzP6zK3zE0zG1zG2zG4zH6zH9zHA\
+  zHBzIEzIGzIIzKKzKMzKOzY1z
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

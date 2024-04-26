@@ -1,0 +1,38 @@
+Fractal_Limeade    { ; Classic FOTD, 17-Jul-01 Rating (6)
+                     ; time=0:08:49.54--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=b
+  center-mag=+0.74278632205274600/-0.079548597538634\
+  95/1.830877e+007/1/105 params=1.75/0/-36/0 float=y
+  maxiter=1450 inside=255 logmap=368 periodicity=10
+  colors=000_6WuVSsTSpRSnPSkMSiKSfIRdGRaDR_BRX9RV7RV\
+  5TX6U_6Wb7Yf7_i8al8dp9fs9hvAjyAlwGhuMesRaqXZobVmgS\
+  kmOjrLhqOfpRdoUbnX`mZZlaXkdVjgXjkUiiRhhPggMfeJedHd\
+  cEcbBb`9a_Hc7G`6GZ6FW5ET5DQ4CN4CL3BI3AF29C2891871C\
+  C4FG7IL9LPCOUERYHVbKYfM`kPcoRftUhwWYuNNrECo6Gf8KYA\
+  OQCSHEV9GYCJ`ELbHNeJPhLRjOTmQVpSXrVZuX`wZbu_`s`Zqa\
+  XobVmcTldSjeQhfOfgMdhKbhIahH_fIYcIX`IVYIUVISSIRPJP\
+  MJOJJMGJLDJJAJI8JJCNJFQKITKLWKOZLRbLUeLXhM_kMbnMeq\
+  ShkYkfcnabn`bn`geekXikXjkXjkXjkXkkXkkXkhZje_jcai`b\
+  iYdiWehTghQhhOjgLkgGmhJlgLkgOkfQjfSjfOihLiiIikEhlB\
+  hn8hoCgpGgpKgqOfqRdrVbrZ`sbZsf_ti`tmauqbuucvxdvvZi\
+  tUXmDTfEP_FMTGIMHEFIB8J7mbKk`KhZLeXLcVL_XKWYJSWIO`\
+  HKfGGqFCjE8kD4lC0mC2XP4cmKXmZ4kYLOXa1Vb5Uc8TdBSeER\
+  fHQgLPhONiRMjULkXKl`JmcInfHoiGolImdJkXLiPMgHNfAac8\
+  bZ8cV8cQ8cM8dH8eD8fF7gG6iI6kJ5mK4oM4qN3sO3uP3wQ6yR\
+  AzSDzSFzTHzTJzUMzUOzVQ000
+  }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

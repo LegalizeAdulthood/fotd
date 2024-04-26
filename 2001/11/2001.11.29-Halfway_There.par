@@ -1,0 +1,40 @@
+Halfway_There { ; FOTD -- November 29, 2001 (Rating 4)
+ ; time=0:02:02.43--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.55118197607336360/-1.173134423206903\
+  00/12973.46/1/-82.5/-6.89031540157536426e-011
+  params=1.75/0/-44.5/0 float=y
+  maxiter=3600 inside=0 logmap=47
+  colors=000VANXALZAJ`AIbAGdAEeACe9BcFF_KJVPNRUQMZUI\
+  cYDha9mdIlhRkl_kohjsriwxizsdwn_rfWk_RfUMaOIXHDSB8N\
+  54I78M8BPAFSBIVCMZEPaFTdGWgFZfE`eEbeDddDfcCicCkbBm\
+  aBoaAq`Ar`En_IkZMhYQdXTaWXZV`VUdSTgPScSX`V`YXdV_hS\
+  blPbpMctJcxOjdSpLWv2Su4Pt6Ms7Jr9GqADpCAoD7nF4nGDkJ\
+  LhLUeNagPjiRrkTzmVyoZxtbwsfvujuwntwrswvrwzowymrxkm\
+  wahrTcnKjiBreApcAob9na9l_8kZ8jY7hW7gV6fU6eTY`MxWGu\
+  XFrXFpYEmYEkZEhZDe_Dc_C``CZ`CWaBTaBRbAObAMbAK`GJZL\
+  IXQHVVFU_ESdDQiCOnBNsDOpFPmHPjIQgKQdMRbOS_PSXRTUTT\
+  RVUOWUMUWNTXOSZPQ_PPaQObRNcRTbVYaZb`bh`em_irZmwcpt\
+  hnrmlpmkmmikmgimffmddmcbma_m_YmZWmXUmWSmVRmUQnTPoS\
+  OpRNqQMrPKsPJtOIuNHvMGwLFxKEyJDzJGzKIzKKzKMzKOzKRz\
+  LTzLVzLXzLZzLazMczMezMgzMizMkzQmzTnzWpzZqzaszetzhv\
+  zkwznyzqzztxzuvzutzvrzvpzvnzwmzwkzwizxgzxezxczyazy\
+  `zySzvJztBzrGzoLzlPzjUzgYzdbzbfz_kzXozVtzSxzQ4zO7z\
+  S9zWBzZEzbGzeIziKzlNzpPzs
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

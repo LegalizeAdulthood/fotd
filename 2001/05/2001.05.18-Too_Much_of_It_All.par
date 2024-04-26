@@ -1,0 +1,33 @@
+Too_Much_of_It_All { ; Classic FOTD, 18-May-01 Rating (4)
+                     ; time=3:05:48.77--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.0154933047329414/-0.0137267362945872\
+  /6.480949e+008/1/10 params=1/0.7/-1/-0.7/-4.5/5000
+  float=y maxiter=36000 inside=0
+  logmap=-2263 periodicity=10
+  colors=000c0zc0zc0zc0zc0zc1zZ3zZ6zZ7zU9zUAwUDrUFmU\
+  GhUJdULgUMjUOmUQpPSrKTuFXxAYz0_z0`z0_z0Yy0Xx0Vu0Tr\
+  0Sp0Qm0Pj0Oi0Of0Mc0La0J_0IX0GV0FS0DP0CO0AL0000CL4C\
+  L9CMFCMJCOOCOTCPYCPaDPgDQlDQpDSvDSzDTzDTzDTzJPzOLz\
+  SGzYCza7zf3zl0zp0zu0zy0zu0zr6ugGpTQjF`f0jd0md7pVFd\
+  XTfYggYvi_zi`zj`zlazlczmczodzodzpfzrgzrgzsizujzujz\
+  vlzxmzxmzzozzozzlzzjzzgvzfrzdmzaiz`dzY`zXXzVSzSOzQ\
+  JzPFzMGzLGzJGzIIzFIzDIzCJzAJz7Jz6Jz4Lz3Lz0Lz0Mz0Mz\
+  0Mz0MzFAzF0zF0zF0zF0zF0zF0zF0zF0zF0zF0zF0zF0zF0zF1\
+  zF3zF3zF4zD4z96z67z37z09z09z0Dz0Gz0Lz0Oz0Qz0Xz0az0\
+  gv1mo1sg1y`jxTauMVrFMo9Fv47z03z10z30z40z60z70z60z4\
+  0z40z31z34z17z1Az0Dz0Gz0Jz0Mz0Pz0Sz0Vz0Yz0`z0cz0fz\
+  0iz0lz0mz0jz0iz0gz0fz1cz4az6`z9_zCYzFVzITzLSzMQzPO\
+  zSMzVLzYJz`IzaDz_AzY7zX4zV1zT0zS0zQ0zS1zT4zT7zVAzX\
+  DzXFzYIz_Lz_Oz`QzaTzaXzcYzd`zdczffzgizglziozjpzjjz\
+  gdzf_zcTzaCz9Dz9FzAFzAGzA
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

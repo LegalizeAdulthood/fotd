@@ -1,0 +1,39 @@
+Blueberries        { ; Classic FOTD, 12-Apr-01 Rating (5)
+                     ; time=0:23:16.75--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-1.04105767849226400/-1.142969742678717\
+  00/1.290666e+007/1/90 params=1.414213562373/0/100/0
+  float=y maxiter=2800 inside=0
+  logmap=569 periodicity=10
+  colors=000GU0GU0ET0CQ0AO08M06K04I02G00D00D00B00900\
+  60050020020000000000000000000000000000000000000000\
+  0000000200200400400400600620640840860A80A80AA0CC0C\
+  E0CE0EG0EH0GH2GJ2GL2HL4HN4HP6JR6JR8LT8LVALVANXCNZC\
+  NZEP`EPbEPbCRdCRdATdATd8Vd8Vd6Vd6Xd4Xd4Ze2Ze2Ze0`e\
+  0`e0be0be0be0de0de0eg0eg0gg0gg0gg0ig0ig0kg0kg0kg0m\
+  i0mi0oi0oi0oi0qi0qi0si0si0uk0si0sg0qg0qe0oe0od0ob0\
+  mb0m`4k`6kZAiZCiXGiVHgVLgTNeTReRTeRXdP`dNbbNebLg`L\
+  k`Jm`HqZHsZGvXGxXEzVEzVCzVAzTAzT8zR8zR6zN4zR6zV8zX\
+  8z`AzbAzeCzgCzkEzmEzqGzsGzvHxxHvzJuzJszLszLozNmzNk\
+  zNizNgvNeuPdsPbqP`mPZkPXiPVgRTdRRbRP`RNZRNZTLXRJXR\
+  JXPHVPGYNG`NEcNEfLCiLAfJAcJ8_J6WI6SJ4PK4ML2JM0GN0D\
+  O0AP0AQ0AR0AS0AT0AU0AV0AW0CX0EY0GZ0G_0E`0Ga0Gb0Gc0\
+  Gd0He0Hf0Hg0Hh0Ji0Jj0Jk2Jl2Lm4Ln6Lo8Lp8NqANrCNsENt\
+  EPuGPvHPwJPxJRyLRzNRzPRzPTzRTzTTzVTzVVzXVzZVz`Vz`V\
+  zbTzdTzdTzeTzeTzgTzgRziRz
+  }
+
+frm:MandelbrotBC   { ; Formula by Andrew Coppin etal
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

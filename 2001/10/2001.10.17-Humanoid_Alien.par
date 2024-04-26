@@ -1,0 +1,33 @@
+Humanoid_Alien { ; FOTD -- October 17, 2001 (Rating 4)
+ ; time=0:00:24.80--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=multirot-XZ-YW-new passes=1
+  center-mag=-1.11022e-016/-0.14425/1.910397/0.3912
+  params=-45/90/2/0/0/0/0.25/0.5 float=y maxiter=2500
+  inside=255 logmap=5 symmetry=yaxis
+  colors=000PQ1PR6MSAJTFGUJ9WN2YRXT4bMEhFNn8Xt1e021E\
+  BISJZeRojo2F8_80RQ6XgCbxIh7LJLIUZFclCm4sMOcZfPkM8j\
+  e9qkVlrKrBnI2U3MNMeGdC8vYwIgfWpQiCqqPfs`WtmLvBW6`L\
+  XfLZmHgsDoaW9iOQqHfsGitGGvERwDaxBlYUadPgkKlrFrLSDW\
+  NPeJ`oElEz5UhOiReLi1ZYLlMdH6RT7_c8gn9oNP1XLGfHVpDi\
+  P`VgNiG8Rb9gu2iw5nx8sKucZShu9zwAxygLliSsSgnMbqJhtG\
+  mwDrvOXwJexEnLU8ZNQlGf96AR8Rh9gxf5yQXBf339vXAwULbZ\
+  umgeqpQtdYdoMnHCJWBXjAjQyaagimRpavCKWN7GWZDi0MqYQL\
+  3T4NMNfGeYRMkIdboqhdsnVttKv3DjXBqS6I`7Th8bq9mEd1aP\
+  VmDgsBo1kHMZWeMihECqC_Q83a9MmAd9C0RBKhAcIN1cGVZDKg\
+  CYpBjpg5sZJuRXwIjCam`OrfeD3GaXDlZ6qJuJhy1mlGq_VuNi\
+  Yr7pYyuMxUWwbbVnOiSC2cBMnAd1sqHgsWXtjLvK786PODOUaH\
+  hS9``AfhAlqArnBArARvAgKr390NInncUsHC4WBNjAedmOJNNd\
+  GeOEYfCjF9ZbAkfSYMveEz6QlKa_XmNjEpny5xSfuhI1kFPrCf\
+  2DCMCSeBg6V78KpMHrZFtlCv6zC60k8VQMPZZKflFovcyxPxF`\
+  ARUNbNZnGk5jzYSxQT4AXN00R
+
+}
+
+frm:multirot-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=z^(p2)+c,
+|z| <= 36  }

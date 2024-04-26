@@ -1,0 +1,32 @@
+Near_Escape { ; FOTD -- January 23, 2002 (Rating 6)
+ ; time=0:09:46.91--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotVE passes=1 center-mag=-0.74\
+  585681784166100/+0.11537642028318990/1.955035e+007\
+  /1/-62.5/2.27705782472609197e-007 params=0/0/0/0/1\
+  .0777/0 float=y maxiter=5000 bailout=2 inside=0
+  outside=fmod colors=000NHlPFnRDpSBpTCqTDqTEqTFqTGq\
+  UGqUHrUIrUJrUKrVLrVLrVMrVNsVOsWPsWQsWQsWRsWSsXTtXU\
+  tXVtXVtXWtYXtYYtYZuY_uY_uZ`uZauZbuZcuZdv_dv_ev_fv_\
+  gv_hv_hvZguYfuXeuWduWcuVbtUatT`tS_tSZtRYsQXsPWsOVs\
+  OVsNUrMTrLSrKRrKQrJPqIOqHNqGMqGLqFKpEJpDIpCHpCHpDK\
+  oDNoDQnDTnDWmDZmDalDdlDgkDjkCkjCkjCljCljCljCmjBmjB\
+  mjBnjBnjBnjBojAojAojAoiAoiAoiAoi9oi9oi9oi9oi9oi9oi\
+  9oi8oi8oi8oi8oi8oh8oh7oh7oh7oh7oh7oh7oh6oh6oh6oh6o\
+  h6oh6oh6oh7og8og8of9lf9ifAfeBbeB_dCXdCTdDQcENcEJbF\
+  GbGCaFDbFDbFEcFEcFFdFFdFGeFGeFHfEHfEIgEIgEIgEJhEJh\
+  EKiEKiELjDLjDMkDMkDNlDNlDNlDOmDOmDPnCPnCQoCQoCRpCR\
+  pCSqCSqCSqCTrBTrBUsBUsBVtBVtBWuBWuBXvBXvCZwBXvAWuA\
+  Vt9Us9Tr8Sq8Rq7Pp6Oo6Nn5Mm5Ll4Kk3Il4Jk5Kk6Lk6Mj7Nj\
+  8Oj9Oj9PiAQiBRiBShCThDThEUhEVgFWgGXgGYfHZfIZfJ_fJ`\
+  eKaeLbeLcdMcdNddOedOfcPgcQhcQibRibSjbTkbTlaUmaVnaV\
+  naWn`Xn_YnZciuFTeCTb9T`CRbEPdGNfILhLJj
+}
+
+frm:MandelbrotVE {; Jim M.  (variable escape radius)
+; Jim Muth  real(c),imag(c)
+z=p1, c=pixel+p2,
+b=sqr(real(p3)):
+z=sqr(z)+c,
+|z| <= b
+}

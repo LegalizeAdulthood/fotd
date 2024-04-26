@@ -1,0 +1,39 @@
+Almost_a_Minibrot { ; FOTD -- November 27, 2001 (Rating 7)
+ ; time=0:06:47.27--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.556651401596578/-0.020121851241034/2\
+  813591/1/20/-1.46463775899108306e-008 params=1.9/0\
+  /-34.54/0 float=y maxiter=1800 inside=0 logmap=176
+  colors=000C00900700A00D00B00J40L70OA1WF4cI6XL7YPA`\
+  QCcTDfYGiaIjdJmiMplOsoPvsSxvTzyVzzYzz_zz`zzYzxXzrV\
+  zlSzgQzaPzXMzQLzOMzMJzLIzJFyIDvGAsF9pD6mC4lC1iA0f9\
+  0c70`60Y40V30S10Q10S70TFAVFFXFFYFF_FF_7D`9CaACcCAc\
+  DAdF9fG9gI7gJ7iL6jL6iQ4lR4mT3wS3pS1zW0z`0zX0uY0z`0\
+  uY0lX7dTGXSPOPYJQiGOfFMcDLaCI_AGY9FV7DS4AQ39O17M06\
+  J03G01F00C00A03F06K39P6DU9GZCJcAJhDMmGOrJPwMQzPSzS\
+  VvVXtYYr`_mc`hfccidclfcogcriculcxmczoczpczrczsczpa\
+  zmazjaxiaufarcapaam_`jX`gT`dS`aP`_M`YL`_Pa`Sc`VdaY\
+  fcagcdidgjdjlfomgrogupixrjzsjzulzvlzvmzrmzooylouip\
+  pfpmcri_rdXsaTsYQuTOuQLvMIvIDxFAxA7y64y31z00z00p30\
+  gA4_I9QODGQI7SM0UQ0WT0YS0_S0aS0cQ0eQ1gQ3iQ4jP6kP1l\
+  P0mP0oP0q00s00u01w06w0Aw0Fw0Jw1Ox1Py3Qz3Sz4Tz4Vz6X\
+  z6Yz7_z3`z7azAczFdzIfzMgzPizSjzTlzTmzTozTpzTrzTszT\
+  uzTvzTxzTyzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzzTzz\
+  TzzTzzTzzTzzTzzTzzTzzTzzT
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

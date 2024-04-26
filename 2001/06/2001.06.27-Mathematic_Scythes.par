@@ -1,0 +1,32 @@
+Mathematic_Scythes { ; Classic FOTD, 27-Jun-01 Rating (6)
+                     ; time=0:05:28.34--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-19.25482682013031000/-0.26917358759950\
+  070/6407.871/1/52.5 params=1/-1/-1/300/0/0 float=y
+  maxiter=4000 inside=0 logmap=91 periodicity=10
+  colors=0007ma7mb6nc6nd6oe5pf5pg5qh5qi6oh7mg7kf8ie9\
+  he9fdAdcBbbB`aC_aDY`DW_EUZFSYFRYGQUGQRHQOHQKIPHIPE\
+  JPAJP7JP4NR5QT6TU7WW8_X9bZAe`BhaClcDodErfFugFqeImc\
+  LiaOe_RaYUYWXUU_QSbVQYZPUbNQfMMjLHnJDrI9vH5uG5tG5s\
+  G5rG5qF5qF5pF5oF5nE5mE5mE5lE5kD5jD5iD5iD5dG9_IDVKH\
+  QMLLOPHQTLSVOUWSWYVYZZ_`aaaecchedVWkINr5EyBAlG7`L4\
+  PQ1DR3GS5JT7LT9OUBQVDTWFVWGYXI_YKbZMdZOg_Qi`Sl`Tn9\
+  1wB2pD2jF2cH3YJ3RL3LM3FJBMGJTDQZAYe8dkC`gGXcKT_OPW\
+  SLSWHOZELXJHVODTTARY6Qa3QXBQSIQNQQIXQEcVGbZHabIagK\
+  `kL_oM_mTSkZKieChk4_m7SnAJoCBpF3qH7rNArTDrZGrcKsiN\
+  soQsuTszWrwYru_qsaqqcqoeplgpjiohkofmodonaqn_smYumW\
+  wmUulTtlSskRrkQpkPojOnjNmiMkiLjiKihJhiIgjHdkGalFZm\
+  EWnDToCQpBNqAKr9Hs8Et7Cu7EvDGwJIxOKyUMz_OzdQzjBzcC\
+  zdDzeEzeFzfFzfGzgHzgIzh_zqezpkznqzlwzkmzBsz_yzwZzu\
+  9zsQziez`uzSmzXez`ZzdRziJzmCzqDzoEznFzlGzkHzjIzjIz\
+  iCzECz9Cz4BzCAzK9zS8zZ7z`
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

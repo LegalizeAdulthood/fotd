@@ -1,0 +1,33 @@
+Fractal_Feathers   { ; Classic FOTD, 02-Jun-01 Rating (8)
+                     ; time=0:24:50.13--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+5.32964478731053700/+0.155415801184001\
+  90/2.561639e+007/1/135 params=1/1.333/-1/1.618/0/0
+  float=y maxiter=3200 inside=0
+  logmap=460 periodicity=10
+  colors=0000D60D60E60E60F60F60G60G41H41H41I41I41J41\
+  J41K41L31M31N31O31P31Q31R30S01T11U31V61W73XA3YC3ZF\
+  3_G4`J4`L4aO4bP6cS6dT6eX6fY7g_7ha7ic7jf9kg9lj9ml9n\
+  oAopApsAquArxCsyCuzCvzCvzAxzAxzAxzAxzAxzAxzAxz9xz9\
+  xz9xz9xz9xz9xz9xz7xz7xz7xz7xz7xz7xz7xz6xz6xz6xz6xz\
+  6xz6xz6xz4xz4xz4xz4xz4xz4xz4xz4xz7vzAuzCuzFszIsxJr\
+  uMrrPpoQpmTojVogYmd`maal_dlXgjTijQliPmiMpgJsgGufDx\
+  fAzd7zd4zc1zc0za0za0za0z`0z`0z`0z`0y_0x_0x_0v_0vY0\
+  uY0uY0sX0rX0rX0pX0pV0oU0oT0mS0lR0lQ0jP0jO0iN0iM0gL\
+  0fK0fJ0dI0dH0cG0cF0aE0`E0`E0_E0_E0YE0YF0XG0YI0XK0V\
+  K0TK1SJ1QJ3PJ4OI4QI6VI7aG9jG9sFAzFCzDCzDDvDFoCFgCG\
+  TAIM9JF6JD3L90M30M10O00P00P00Q00S00T00T00V00X00Y00\
+  a00f00j00o00s40xA0zG0zM0zQ0zS0zS0zS0zS0zT0zT0zT0zT\
+  0zT0zV0zV0zV0zV0z_0zd0zj0zp0zv0zv0zv0zv0zv0zv0zv0z\
+  v0zv0zv0zv0zv0zv0zv0zv0zv0zv0zv0zv0zv0zv0zv0zv0zv0\
+  zv0zv0zv0zv0zv0zv0zv0zv0z
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

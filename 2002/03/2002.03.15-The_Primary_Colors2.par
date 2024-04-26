@@ -1,0 +1,33 @@
+The_Primary_Colors2 { ; FOTD -- March 15, 2002 (Rating 5)
+ ; time=0:28:49.26--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.25269922649259500/+2.527784825830010\
+  00/5.850469e+009/1/-85.0001951243039429/-0.0030271\
+  9353218186549 params=0.0002/6/6/-1/0/0 float=y
+  maxiter=3800 inside=0 logmap=536 periodicity=10
+  colors=00070u70o10i00b00Q00K00K00K00K00f40X90NG0KK\
+  0KQ0KX0Kb0Kg0Ko0Ku1Kz3Kz4Kz6Nz7Pz9Qz9Sz9Uz9Wz9Xz9Z\
+  z9ZzB`zBbyBdwBfuBgsBiqBikHkgPkdWm`bmXgoUooQwqNzqJz\
+  sGzsQzi`sbkgWwXPsWNoWKkWKgWJdWH`WHXWGUWEQbENZCJXBG\
+  WBCW99W76W73W60W40W40W30W10W10W00W00X30X40X70X90XC\
+  0XE0XG0XJ0XK0XP0XQ0XU0XW0ZX0Z`0Zb0Xf0Wg0Uk0Sm0Qo0K\
+  s0Ku0Jy0Hz0Hz3Gz4Hz7Jz9JzBKzEJzGGzHEzKCzN9yQ0oS0gU\
+  0gX0gZ0g`0id0if0og0uk0zm0zq0zs4zuCzyJzzJzzJzzHzzHz\
+  zHzzGzzGzzEzzEzzCzzCwzBszBoz9kz9iz9fz7bz7Zz6Wz6Uz4\
+  Qz4Nz3Jz3Gz3Ez1Bz17z04z01z00z00z00z00zK0yC0s30u60d\
+  90wC0yG0zJ0zN0zQ0zU0za0z`0zd0zg0zk0zm0zl0zm0zd0zZ0\
+  bS0ZP0UH0PC0K70N90PC0QC0SG0UJ0WP0XS0ZW0`Z0b`0db0ff\
+  0gg0ik0km0mo0os0qu0sw0uz1wz3yz3zz4zz6zz6wz7sz9ozBi\
+  zCfzEbzEZzGUzHQzJNzKJzKEzNBzP7zQ3zS0zU0zU0zW0zX0zZ\
+  0z`0z`0zX0zU0zQ0zP0zK0zH0zE0zC0z9bz0KzWHzQGzNEzJCz\
+  EBzB7z76z34z03z01z00z00z0
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

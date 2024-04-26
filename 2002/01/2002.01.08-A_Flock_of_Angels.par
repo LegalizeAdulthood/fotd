@@ -1,0 +1,33 @@
+A_Flock_of_Angels { ; FOTD -- January 08, 2002 (Rating 8)
+ ; time=0:00:48.50--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=b
+  center-mag=-0.45330361401900880/-0.006615693644764\
+  32/106904/1/-142.5/1.17362855545088962e-010 float=y
+  params=1/3.1/1/5.9/0/0 maxiter=1200 inside=255
+  logmap=26 colors=00000I40M64Q68UDCYJGaPKeVOi`SmfWq\
+  l_urczxgzzmQxgMrcJm_GgTCcP9YL6TF1OA0J60`7Dp9Vz9jzG\
+  gzOfzVdx`avg`uo_ruXpzVozTmzSiz9fv0`i7XXPQJfM6xI0zL\
+  0zO0zP0zS1zT3xX4uY6r`7oa9lg4im1fs0cy0`z0Yz0Xz0Yy0Y\
+  u0Yo0_j0_f0_a0`X0`S0`O1aJ3aD4a96c47c09c09c09d07d07\
+  f06f06f04g04g03i03i01j01j01j03i04i06i06i07g09g09g0\
+  Ag0Ag1Cf3Df4Df6Ff7Gd9GdAIdAJdCLcDLcFMcGOcIOaJPaLQa\
+  LSaMS`OT`PV`QV`SX_TY_TY_V__X`_YaY_aY`cYadYcdXcfXdg\
+  XfiXgiVijVjlVllVmmTmoTopTppTrrSssSusSvuSxvQxxQyxQz\
+  yQzzPzzPzzPzzPwwPttPqqPnnPkkPhhPeePccPddPdfPffPggP\
+  ggPiiPiiPjjPllPllPmmPomPooPpoPrpPrpPsrPusPusPvuPvu\
+  PxvPyvPyxPzyPzyPzzPrzPmzPmzPhzOcwQZtTUqWPnZKlaLlaM\
+  maOm`Pm`Po`Qo`So_Tp_Vp_Xp_YrYYrY_rY`rYasXcsXdsXfuX\
+  fuXguVivVjvVlvVmxToxToxTpxTrySsySuySvzSxzQxzQyzQzz\
+  QzzPzzPzzPzzPzzPzzPzzPzzPzzPzzPzzPzzPzzPzzPzzPzzPz\
+  zPzzPzzPzzPzzPzzPzzPzzPzzPzzPzzP000
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

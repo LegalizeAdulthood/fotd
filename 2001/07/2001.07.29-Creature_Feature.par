@@ -1,0 +1,38 @@
+Creature_Feature   { ; Classic FOTD, 29-Jul-01 Rating (7)
+                     ; time=0:02:42.30--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.56270101574334630/+0.915160418848623\
+  90/160.9974/1/-155 params=1.414213462373/0/75.3/800
+  float=y maxiter=3600 inside=0 logmap=47
+  colors=00006R06R07S18T29U3AV4BW5CX6DY7EZ8F_9G`AHaB\
+  IbCJcDIdEIeFHfGGgHGhIJiJMiKPiJSjIVjHYjG`jFbkEekDhk\
+  CkkBnlAql9tl9vlBwkCwkDwkFwkGwjHxjJxjKxjLxiNxiOyiPy\
+  iRyhSyhTyhUyhPlaK`VFOOACHIAEQ8C_69g47q24w02r14n25i\
+  37f48c5A_6BX7DT8EQ9GNAHJBJGCKDCLHEKKFKOGJRHJVJIYKI\
+  aLHdMHhNGnQGrSFvUFyWEzYEyXDwVCuUCsSBqRBoPAlO9iO9gN\
+  8eN8cM7aL6_L6YK5WK5UJ4SI3QI3OH2MH2_OLlVcyav5kGAgFE\
+  cFJ_ENWESSEWOD`KDdGCiCCm9Cn8Dn8Dn7Eo7Eo6Fo6Fp6Fp5G\
+  p5Gq4Hq4Hq3Ir3Ir3Ir2Js2Js1Ks1Kt0Lt0Lt0Ln2Rh3Xb4bU5\
+  UI7A39ABDAJHARLBSMASMATM9TN9UN8UN8VO7VO7VO7WP6WP6X\
+  P5XQ5YQ4YQ4YQ4`UEbYNd`Wfdehhnjkwkgtlcqm_onXloTjoPg\
+  pLdqIbrE_sAYtBVtCTsDWrEYrF_qGaqHcrI`rJYrKVrLSrMPrN\
+  MrOJtPGwQDzRPzS_zTjzUuzVrzWpzXmzYkzZhz_fz`czaazbZz\
+  cXzcUzcSzcPzcNzdLzeMzfMzgNzhNziOzjOzkOzlPzmPznQzoQ\
+  zpQzqNzrKzsHztEzwBzv8zw6zxAzzDzzGzzJzzMzzPzzSzzWzz\
+  Zzzazzdzzgzzqzzpzzpzzozzo
+  }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

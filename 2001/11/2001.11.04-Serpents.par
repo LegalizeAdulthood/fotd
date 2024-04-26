@@ -1,0 +1,35 @@
+Serpents { ; FOTD -- November 04, 2001 (Rating 7)
+ ; time=0:12:54.00--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-1.62649121081121200/-0.002084293563031\
+  75/1.819965e+008/1/-45.0000022040314676/-3.7329433\
+  9848229129e-005 params=3/-1.4/-7.6/-14/0/300
+  float=y maxiter=5000 inside=0 logmap=136
+  periodicity=10
+  colors=000PzCPzKPzTRz`RziRzrTzzTzzTzzYzz`zzdzxgzpm\
+  zipzbtzWxzPzzIzzCzy6zy0wz4tz9qzCnzHkzKhzPezTbxP_mM\
+  XdIUVFSKCQCAOH9MK7KN6IR4GV2EY0Cb0Af09i09m0Ap0At0An\
+  0Ai0Ad6C`4D_4FY4HV2IT2KR2MN0NM0PK0RH0TF0VD0WA0Y90Y\
+  70VMAR`MPn_MzkKzxMzymzzmzzmzzRzzTxzVtzWrzYnzYkz_gz\
+  `dzb`zdYzdWz`_z_cvWhnVlfRq_PuTRoWRj_RfbR`fRWiRTmRN\
+  pRKrTHvTCyT9zT6zT0zT0zT0zT0zW0z_0z`0rd0if0`i0Tm2Kn\
+  4Cr64t70wI2mV6cd9UY4KT04N0CH0KC0T70`20VPDNkmVgt`dy\
+  g`zmWzpZzzcdzcYzcRzcTzcVmcWmckmczmcvmcrmcmicibcfVc\
+  `NcYFbb9_i2Vp0Rx0Mx0Ix0Fx0Cx09x06x02x00x05x0Ax0Fx0\
+  Kx0Px0Ux4ZxMcfmcftcdzc_zhVzhPzhMzcPzTTzPWzP_zPbzPf\
+  zPizPmzPpxPtrPxmPzgPz`PzWPzRPzMPzHPzCPzIPzNPzVPz_P\
+  zdPzkPzpPzxPzzPzzPzxPznPzdPzWPzMPzDPz4Pz0Pz0Pz0Pz0\
+  Pz0Pz0Pz0Pz0Pz6PzAPzDPzIPzNPzTPzWPz`PzfPziPz7PzCPz\
+  FPzIPzNPzRPzVPzYPzbPzfPziPzmPzrPzvPzyPzzPzzPzrPzfP\
+  zVPzHPz6Pz0Pz0PzMPzNPzNPz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

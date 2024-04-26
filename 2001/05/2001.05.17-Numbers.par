@@ -1,0 +1,33 @@
+Numbers    { ; Classic FOTD, 17-May-01 Rating (N/A)
+             ; image by Lee Skinner - time=0:28:10.54
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=t
+  center-mag=+0.0178871706298102/-0.010051504509756/\
+  2.678973e+007/1/135 params=1/0.7/-1/-0.7/-4.5/5000
+  float=y maxiter=5000 inside=0
+  logmap=415 periodicity=10
+  colors=000zR7zS7zU7zV7zW6zY6zZ6z_6z`5zb5zc5ye4yf5y\
+  g5yg6yh6yi7yj7yk8yl8yl9ym9ynAyoBypCyqDyrDyrEysEysJ\
+  ytPytUytZytdytiyuoyutzvzxvzvuytuyruypuxmtxktwitwgt\
+  wesvcsvasv_suYsuWrtUrtRqsQpsPosPorOnrOnrNmrMmqMlqL\
+  lqLkpKkpJjpJjpIioIioHhoGgnGgnFfnEfnEemDemDdmCdlBcl\
+  BclAblAbk9ak9`k8`k7_k7_j6Zj5Yi5Yf6Yb6Y_7YW7YS8XP8X\
+  L9XH9XEAXABW6AY68_67a65c54f32h20k00j01h12g13e23c34\
+  b35`46_47Y58X58V69U6AS7CS7ER7GR7IQ7KP7MO7OO7QN7SM7\
+  UL8VL8WL9WL9XL9YL9ZL9_L9`LAaLAbKBcMDdOFeQIfSKgUNhW\
+  PiYRkZUl`WmbYnd`ofbpheqjgrlisnktpnurpvtswvukrpZmkN\
+  ifAda8d_6cX4cV2bS0aP7bOFdNNfLVgKbiIjjGrlFznDzmEzkF\
+  zjGzhHzgIzeJzdKzbLzaMz_NzZOzXPzWRzUSzTTzRUzQVzOWzN\
+  XzLYzKZzI_zH`zFazEbzCczBdz9ez8fz6gz5hz3jz3lz2oz2rz\
+  EtzQuzawzmxzzztwuntogqjandVkZOhTIeNBbHDcHFcHHdHJdG\
+  LeGNeGPfGRfGTgGVgGXhFZhF`iFbiFdjFfjFhkEjkEllEnlEpm\
+  DrmDtnDvnDxoDzpCznBzlAzj8
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

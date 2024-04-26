@@ -1,0 +1,32 @@
+Illusion           { ; Classic FOTD, 29-May-01 Rating (7)
+                     ; time=0:20:35.66--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.216239661366119/-0.3872080491445197/\
+  2.74939e+008/1/-157.5 params=-3/3/-15/7/0/0 float=y
+  maxiter=2500 inside=0 logmap=386 periodicity=10
+  colors=000E9cG6cG2cG0cH0cH0bH0aJ0_J0YJ0WH0UG0SE0QC\
+  0OC0MB0NA0O70P62Q64T47U3BV2CW0GX0JY0NY0RY0UY0WY0Ua\
+  3Ub7SfBShESjJRnNRpSPtWPv_PydNzhNznKzrKzvKztEzt7yr3\
+  rr0lr0fp0ap0Wp0Rr0Pr0Pt0Nt0Nv2Kv6KyCJyHJzNHzUHz_Gz\
+  dGzlEzrEzyCzzCzzKzzSzz_zzhzzpzzyzzzzzzzztzzpztjznf\
+  zhazbYy_StUNrPJpJEnEBj96h43f00d00h30l70pE0rJ0vR0zW\
+  0zb0zh0zp0zv0zz0zz0zz0zz0zz0zz0zz0zy0zt2zr4zp9znCz\
+  l9zj7zh4zf3zd0zb0za0z_0zY0zW0zU0zS0zR0zP0zJ0zG0zC0\
+  zB0z70z40z20z00z00z00z00z00z00z00z00z03z0Kz9dz6bz4\
+  az3_z2_z0Yz0Wz0Uz0Uz0Sz0Rz0Rz0Pz0Nz0Kz0Ky0Jr0Hl0Hh\
+  0Jd0Ja0JY6JUCKRJKNSKJ_KGfKRh6jj0zj0zh0zf0zf0zd0zd0\
+  zb0zb0za0ta0j_0a_0SY0NY0JW0GW0EU0BU07S04S02R20R29W\
+  7JaCUdJdjPpnUjpWdrY_t_UvaPybJzbRlhYaldRrlGvt4zz0zz\
+  0zz0zz0zy0zn0vd0pW0jN3dE6_JEUPNSUUaYbjblthtznzzrzz\
+  fzzYzzPzzGzz6zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz2zz3zzCzzCzzEzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

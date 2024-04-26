@@ -1,0 +1,34 @@
+TheWineDarkBasin { ; FOTD -- November 21, 2001 (Rating 7)
+ ; time=0:07:29.89--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=b
+  center-mag=+4.56646300247574600/+76.52412363434266\
+  000/1.188253e+009/1/-175/-9.23344662596276011e-005
+  params=-60/-1.3/-120/-3.1/0/800 float=y
+  maxiter=1250 inside=255 logmap=246 periodicity=20
+  colors=000ERJEIJFSKGMLHTMIQNJVOKUPLXQMYPN_OOaMPcKQ\
+  eIRgHSiNTmTUoZWqcYsi_uoawucwzYquTkpOekJ_fEUa9SYHTR\
+  PYLWcFci9_n3Wq6Hz92zBA39939C39F2AH2AJ2AL2AN2AP2AS2\
+  BU2BW2BY2B_2Ba2Bc2Be3Ef4Gg4Jh5Li5Oj6Ql6Tm7Vn7Yo8_p\
+  8bq9dr9fo8dl8cj8bg8ad7`b7__7ZY7YV6WS6VQ6UN6TK5SI5R\
+  F5QD5PG9NICMLGLNJJQNISQHVUFXXE_`DacBdgAfj9in7kq6mt\
+  5fkO_cebdgedhhdjkeknemqenteopbnm`mjZmgXldVkaTkYQjV\
+  OjSMiPKhMIhJGgGEgJIfMMeOQdRUcTXcW`bYda`h`bk`eo_gsZ\
+  jwYlzYpjVtVSwGPrNNmUMh`KcgJZmIefFk_CqU9mTDiSGfRKbQ\
+  N_PQWOUTNXPM`MLcIKfFJjBIm8Hq4Gt1Gw3Ft4Fq6Fn7Fl9FiA\
+  EfCEcDEaEEZGEWHDTJDRKDOMDLNDIODGQEJSFLUGNWHPXHSZIU\
+  `JWbKYcK`eLbgMdiNfjNhkLflKemJdnHcnGboFapD`qC_rBZrA\
+  YkL`dVcYdeRnhQxjSv`UtSWrIYp9_o0am5clAejEgiJihNkfSm\
+  eWoc`qbdsaiu_mwZrxYvzZzzZzzZzzZzz_zz_zz_zz_zz_zz_z\
+  z_zz_zz_zzXzzUzzSzzPzzNzzKzzIzzQzzYzz`zzbzzezzgzzj\
+  zzlzznzzkzzizzgzzdzzbz000
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

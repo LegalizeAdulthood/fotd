@@ -1,0 +1,34 @@
+ThreadsOf_Infinity { ; FOTD -- October 25, 2001 (Rating 6)
+ ; time=0:13:19.83--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.00007793807533362/+0.112392194825511\
+  90/5.776346e+008/1/22.5000000881690916/-2.05411887\
+  214956845e-007 params=10/-1/-1/1/0/0 float=y
+  maxiter=1200 inside=0 logmap=178
+  colors=0000JdTWYegThfMldHpcAsc5ig6`j6VgCOdHIbMC`Q5\
+  ZV0W`0Te0Si0Vf1Xd2_a9``FbZLbYQcXXdVadUhfTmgSsgSh_U\
+  YTXONZDG`CGXCGUCGQCGNCGJCGHCGDCGACG6CG3CG0CG0BL0BR\
+  0BW0B`0Bf0Bk0Bp0Bv0By0By0By0Dy0Gx0Is1Ll6OfCQ`HTVMW\
+  OSYJX`Caa7eeChhGikKjmOlpSmtWpw_qxcrxgtxkuxjttjtojt\
+  ijtdjt_jtVjtPhrKhrFhr9hr4hr0hr0hr0fp2dn6clB`jD_hHZ\
+  fLXePVbTTaWSZ_PYcOVgNUiLTkNQlNNlOMmOJmPIoPFoREpRCp\
+  SAqS8qT6sT3uV2xV0xX0x_3xW9xPDwOIsNMpKSpJVpH`oGdoFi\
+  oEmhCeaCYXBQQBIK9AF92880280B70I73Q7AY7Id7Pl7Xt7bx7\
+  jx7qxClxGfxKbxOYxTUxXPx`LxdFxhCxcFwZIsTLmONiJQdET`\
+  BVWEYSG`PJbMLeKOhMRjPTmSWpW_rX`rYbu_cu`duafucgudhj\
+  ejagkShlIimNkoJlpHmqEosApt8qv5sw1tw0wv0xv0xt0xt0xq\
+  0up1qm3ml6ij9ehCafEYdHVbJQ`MO_PQ_ST_UW_XY_Z__aa_dd\
+  _fg_ih_lk_nm_qp_tq_ulZuhZud_u``uXbuScuSduSfuSguShu\
+  TjuVkuWluXmuYou_pu`quasuctudvudvudvudvudvudvudvudv\
+  udvudvudvuevugvuhvuivukvu
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

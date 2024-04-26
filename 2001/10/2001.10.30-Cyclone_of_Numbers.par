@@ -1,0 +1,34 @@
+Cyclone_of_Numbers { ; FOTD -- October 30, 2001 (Rating 8)
+ ; time=0:26:40.37--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.94163953656643470/+0.130898140289193\
+  70/6.093502e+009/1/-25.0000100100820291/0.00017467\
+  5444399419177 params=-0.40736/0.6/0.573185/2.3/0/0
+  float=y maxiter=3000 inside=0 logmap=560
+  colors=000zXfzXmzXsoduVluAsv0zvTzczzMzyMvuMrpMolMj\
+  gMfaMcYM_TMVPMSLMOFMJAMG6MC1M70M40M60L70J90IA0GC0F\
+  D0DF0DG0CI0AJ19L17M36O36PLCQTIQZOUfTcn_mocmlVceOUZ\
+  FGV7DO09A047004003000000000000C04Q19c6DrAIzCJzCLzC\
+  LzDMzDOyDOxDPvFQvFQuFSsFTrGTrGVpGXoGXoL_fP`_TcSXdL\
+  `gCdi4il0lm0fo0ap1Yp6TrCPsILsMGuSCvY7va3xg0xl1rm4m\
+  o7ip9crC_sFVuGQvDYjAc`9jQ6pF3x41z04z06x07v0As0Cr0D\
+  o0Fm0Ij0Jg0Lf0Oc0Pa0Q_0SY0PY7OYDLYJJYPIYVFYaDYgAYm\
+  9Ys7YyC_zG_zL`zP`zTazYazaazfczjczodzsdzxdzs`zpYzmT\
+  ziQzfOzcJz_GyXCxT9vP6uM1sJ0rG0pL0lO0iQ1fT3cX4`_6Ya\
+  9VdASgCPjDMmFJpGGsIDuMAvP9xS7yX4z_3za1zd0zi0zl0zo0\
+  zr0zp0zo3zm7zlCzjIyiMygQxfVvd`ucdsair`mr_rg`mYaiRh\
+  jKhm9ipCgM3lM0pM0uMGmFT69TCITGPV_JWcRXgVMgb0gl4gvK\
+  gzVgzifzpgzxizrjvllgamzcozdpvfrpJs_OuaQvdVxgYyjazm\
+  dzp9zsDzvIzyMzzQzzVzz_zzczzzzzzzzyzzvzzszzpzzmzzjz\
+  zzzzzzzyzzszzvzzxzzzzzzzz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

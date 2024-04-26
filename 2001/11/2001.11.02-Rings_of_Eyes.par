@@ -1,0 +1,34 @@
+Rings_of_Eyes { ; FOTD -- November 02, 2001 (Rating 6)
+ ; time-0:01:59.35--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+3.02679230177303500/+1.548410426318964\
+  00/9.55623e+009/1/142.499289389010016/0.0012044708\
+  9570314969 params=2/-1.5/0.2/-15/0/300 float=y
+  maxiter=400 inside=0 logmap=26 periodicity=10
+  colors=000AIKAKKAMKAOKAQKASIBUACW2FY3Hd3Kk3Mr3Yd8i\
+  RDuEImBJe8KY6LQ3MJ1NI6RHAUGEYFI`EMdDQgekHilJmlLqmM\
+  umOymPsnRmnTgoVboWXoYRp_LpaGobGmOEmHDmACn3Ek8GiCIf\
+  GKdKMaOO_SPYWLguShlYiccjVikMokDFqfGmiGjkHfnHcpI_sI\
+  XuIUwE_nAde7iX3kO0mF7mJDmMJmQQmTWmXam_gmbim_lmXfmp\
+  hmlimhjmdlm`pmRXmSEmSHmUJmWMmYOm_Qm`OmdNmgLmkKmnIm\
+  rHmuMmnRmgWm`_mUdmNimGnm9rm2mmAimHemOamVYmaUnhQooU\
+  pbYqQarEWsNQtWKudBvO2w88xCEyGKzKQzOWzSazWgz_mzcvzy\
+  sztqzpozkmzgkzbizZgzVlzymzpnzhoz_pzSqzJrzBbzANzALz\
+  MKzYJziIztUzURzQOzMLzIIzEGzA_zpazqbzrdzseztfzuhzvi\
+  zwjzwpzUvz6YzB9zFEzJJzNOzRTzVYzZbzbgzflzihzddz``zW\
+  XzSTzNPzJLzEIzAMzGQzLUzQYzWaz`ezeizjczcYzXSzRMzKGz\
+  DAz7FzCJzHNzMSzRWzW_z`czeKzVOzTRzSUzRYzP`zOczNazL_\
+  zJYzHWzFUzDSzBQzARzCSzESzGTzITzKUzMUzNYzOazQoz4mz3\
+  kz2iz1jzCkzNlzYmzhnzsozlpzeqz_rzTszNozQkzTgzWczYZz\
+  VUzTPzQLzOGzLBzJ6zG2zEAzs
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

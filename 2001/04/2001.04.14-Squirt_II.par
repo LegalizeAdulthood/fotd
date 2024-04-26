@@ -1,0 +1,39 @@
+Squirt_II          { ; Classic FOTD, 14-Apr-01 Rating (5)
+                     ; time=0:24:48.96--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-0.72227094168292330/+0.175944088697707\
+  90/1.898783e+007/1/-15 params=1.414213562373/0/33/0
+  float=y maxiter=4200 inside=0
+  logmap=630 periodicity=10
+  colors=000huIdsI`nGXjGUfFQbFM`EIXEESC9OC5KB3IB5K98\
+  M89N8CO7EQ5GR5IS4KU3MX3OY1QZ0S`0Va0Xb0Zd0`e0bh0di0\
+  fj0hl0jm0ln0np0pq0lm0hi8deI`bRXZ`SViORsKOzOSwRXqV`\
+  mYdh`hddlZfnVjsQmwMpzGtzCwz7yz3wz5uz7tz8szBqzCnyEm\
+  xGlwIjtJisMhqNenOdmRbjSaiU`hXYeYXdZVbaU`bSZdRYeSXd\
+  SVbSUbSSaSRaSQ`SO`SNZSMZSKYSJYSIXSGXSFVSEVSCUSBUS9\
+  SS8SS7RS5RS4QS3QS1OS0OS0NS0NS0MS0MS0KS0KS0JS0IS0GR\
+  0GR0FR0ER0CR0BR09Q09Q08Q07Q05Q04Q03O03O01O00O00O00\
+  O00O00R00S01U03V35X57Y89ZBB`EEaGFdJIeMKfOMhROiUQjX\
+  SlZUmaXndYqf`sibtldunfwqhytjzwlzynzzpzymzwjztizqfz\
+  nezlbziazfZzdYzaVzZSzXRzUOzRNzOKyMJuJGtGFtECtB9s88\
+  s55s34q01q00q00q00n00m00l00j00h00f00e00d11a31`41Z5\
+  3Y75X78U8BS9ERBGQCJNEMMFOKFRJGUGIXFJZEKaCMdBMf9Ni9\
+  Nl9Nn8Nq8Nt8Nw7Ny7Oz7Qz7Rz5Sz5Uz5Vz4Xz4Yz4Zz3`z3az\
+  3bz3dz1ez1fz1fz0fz0fz0fz0fz0fz0fz0fz0fz1fz3fz4fz5f\
+  z4fz4fz3fz3fz3fz3fz3fz3fz
+  }
+
+frm:MandelbrotBC   { ; Formula by Andrew Coppin etal
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

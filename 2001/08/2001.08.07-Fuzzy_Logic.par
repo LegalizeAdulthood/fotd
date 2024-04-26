@@ -1,0 +1,32 @@
+Fuzzy_Logic        { ; Classic FOTD, 07-Aug-01 Rating (5)
+                     ; time=0:02:16.55--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.64836359885020600/+1.546402454929795\
+  00/3685.29/1/-27.499 params=8/-1.23/0.8/-12.3/0/800
+  float=y maxiter=300 inside=0 logmap=34
+  colors=00000Y00Y00U20Q20P30K30G40C40A5065036006007\
+  00700B00FQ0HS0LV0NY0R_0Ub0Yf0_h0ck0fn0jp0ls2pv3sx3\
+  rs4ro5rk6rg6pc7p_8pV8pRAoNBoKBoGCoCDo8Dg8I_8MS8QL8\
+  UF8YK6UO5RU3OY2Mb0Kg0Gk0Dp0Bv08z06l8WaOvdRpgUkkWfn\
+  Zap_YlZYjYYgYYdWYaWYZVYWVYUUYQSYNSYLRYIRYFQYCQYAOY\
+  7OYBO_DOaHObKOdMOfQOgSOjVOkZOlaOodOpgOrjOtnOvpOwsO\
+  xdNzSNzGNz4Nz0Nz0Rz2Uv6WpAZkFafKcaNfWSjQYlLboGfrBk\
+  t6pw2tz0vs0wn0xh0zc0zZ0zU0zO0zK0zF0zA0zC0zF0wH0tK0\
+  rM0oO0lR0kS0hV0fY0c_2ab2Zd2Wg2Vh2Rf3Nd3Kb4Ha4Dc5Af\
+  56h64k62n40p20s00v00x00z00z00z00z22z55zA8zDCzHGzMK\
+  zQNzUQzYOzQOzHNzANz2Nz0Kz3GzADzHAzO6zY4zd0zl0zt0zl\
+  0zd0zY0zQ0zI0zB0z40z00z02z26z4Az6Fz8KzAOzCSzFYzHbz\
+  KfzLfzgfzzkzwozpszjwzczzZwz_tzarzbnzckzchzdfzfbzg_\
+  zhYzhVzjRzkOzlMznKznMzhOzcRzZUzVVzQYzL_zHbzCdz7fz4\
+  gz5hz6jz6kz7lz8nz8ozApzAozBnzClzDkzFjzGhzHhzIgzKfz\
+  LdzM0zR0zY0zc0zb0za0z_0zZ
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

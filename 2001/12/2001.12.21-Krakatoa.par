@@ -1,0 +1,39 @@
+Krakatoa { ; FOTD -- December 21, 2001 (Rating 5)
+ ; time=0:08:49.98--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-5.59395897219679400/+8.262575269499850\
+  00/6787487/1/32.5/4.9630024465119327e-008 params=1\
+  .19/0/5.4/525 float=y maxiter=18000 inside=255
+  logmap=192 colors=000hFEgGGfHIeIKcJMbKOaLQ`MS_NUZO\
+  WYPYXP_ZR``TaaUbcWceXdfZdh_eiafkbgmdhnfipgiqijsjku\
+  llvmmxonypnsihncchYYcSTZMOTGIOADJ48P56U55Z54U65P76\
+  K86K97KA7KA8aB8ZC9XD9UEARFBPFBMGCKHCHIDFJDCKEAKECL\
+  CELBGL9IL8JL7LM5NM4PM2RM1SM0TR8UVFVZMVcTWg_XkfXomY\
+  moZlqZjr_it`gv`fwZdsYcoWakV`gUZcSY_RWWQVSOTONSKMRH\
+  LQGKPGJOGINFHMFGLFFKFEJEDJECIEBHDAGD9FD8ED7DC6CC5B\
+  C5BC6DD6FD7GE7IE8JF8LF8NF9OG9QGARHATHBUIBWIBYICZJC\
+  `JDaKDcKDdKCbNB`QA_T9YV8XY7V`7Ub8PT9LKAHBAD2FJKJOa\
+  IQbIRcHSdHTdHUeGVfGWgGXgFYhFZiF_jEajEbkEclDdmDemDf\
+  nCgoChpCipBjqBkrBlrLhqVdqTemRfiPfeNgaLgYJhUHhQFiMD\
+  iIBjEAjAAkCAkEAlFAlHAmIAmKAnLAnNAoOAoQAoRApTApVAqW\
+  AqYArZAr`AsaCscEtdGtfItgKteMtcOtaQt_StZUtXWvVYwT_x\
+  RayQczOezMgzKizJkzFmzBoz7qz4sz8uzCwzGyzKzzOzzSzzVz\
+  zSzzPzzNzzKzzHzzFzzCzz9zz7zz8zz8zz8zz8zz8zz8zz8zz8\
+  zz8zz8zz8zz8zz6zz6zz6zz6zz6zz8zzAzr0
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

@@ -1,0 +1,32 @@
+Baubles            { ; Classic FOTD, 26-Apr-01 Rating (6)
+                     ; time=0:05:53.56--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=456.568/-70.8747/1.353355/1/132.499
+  params=1/-11.5/4/-1.15/0/300 float=y maxiter=1200
+  inside=0 logmap=55 periodicity=0
+  colors=00020K30N60S80V90YA0bD0eE0kG0oH0tN6vSCwYHyb\
+  NzgUzmYzrbzwgzzkzymzzvzztzptyerwVrtKppAoo0kk0jj0gg\
+  2ce8bcD``H__NYYUXV_XUeVSjUPpSNwQMzPJzNHzNGzPMzPQzP\
+  XzP`zPgwPkvPprSkpVhoYem`bjc_heXghUekQboN`rK_tHYwEV\
+  zCUz9Sz6Qz3Pz2Pv0Po0Pj0Nc0NY0NS0NN0QMPNQUMVXK_`Jcc\
+  HhhGmkErpDwtCzyAzz9zz8zzEzzKzzSzzYvzcrzkmzrhzzczz_\
+  zzXzz`zzewzjozogzt_zwSzzKzzDzz6zz0zz0zz0yz0pz0gz0_\
+  z0Qz0Jz0Az03z00z00z00z00z00z00z00z20z50z80z90zH0zP\
+  5wXAreGomMjvQgzY_weUpmMjvGczA_tGXkMUcSQXYNPcKHjJKg\
+  GNcEQbCU_AXX9_V6`S5cQ2gN0jK0mJ0pG0rE0tD0vC0vA0w90w\
+  80y60y50z30z20z00z00w02r06o0Aj0Ge0Kb0PY0VV0_Q2cM2j\
+  J2oE2tA2z82z32z02zEHvUXchkNyz8zz0zz0zz0zz2zz5zz8zz\
+  AwzDvzGrzJpzMmzPkzSUzbDzm0zy0zz8zcXzAwz0kz0bz0Sz0J\
+  z0Hz8HzHGzUGzcDz`Az_8zY6zXAzUEzQHzPMzMQzJUzHYzEbzC\
+  ezAjz8oz5rz3wz0zz0vz5rzAozGjzMgzSczXezUgzSgzPhzNhz\
+  KjzJjzHkzEmzDmzAoz9oz6pz5
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

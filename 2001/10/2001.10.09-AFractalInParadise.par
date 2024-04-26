@@ -1,0 +1,34 @@
+AFractalInParadise { ; FOTD -- October 09, 2001 (Rating 9)
+ ; time=0:12:23.20--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.50122497628874820/+0.027870570081222\
+  95/947845/1/-155.000000005278793/1.086948586692670\
+  91e-009 params=-1/-1/-1/1/-0.012/2 float=y
+  maxiter=900 inside=0 logmap=260
+  colors=000rK0lTTlTTlTSlTQlTQmXSoYSp`TraTsdVufVugXv\
+  jXxlYyoYzp_zs_zu`zvaxubsucoucjscfscascYrcTrcPrcLpc\
+  GpcCpcFmcIl`LiYOgVPdSScPV`MY_J`WLaVMaRGaRCUS6ZM1YN\
+  0YK0YK0dR1fUGgdVijijtxjzzfszamx_irVclQ_fOU`JQVFLPC\
+  GJ7CD4771C60F40J30O30S10Y00a00f00j00o00c74cIDcSMca\
+  TcjQUdPc_MQTL_OIiIGrCDz6Cz0Gz6LrCOiGS_MVQS_IXa7af0\
+  gi0lm0cp6VsDMvMDyT4z`0sX0lS0dO0`P0YQ0VQ0SS0OS0LT0I\
+  T1FV3AX47X64Y61Y70_90_A0`C0`C0XA0T90Q70M63J46G39C1\
+  A90D60G10J00M00P00S00T00JQ49zGAzICzICyIDxIFvIFuIGs\
+  IGrIIpIJoIJmILlILjIMTLOCOP0QQ0SQ0SQ3SQ6SQ7SQASQDSQ\
+  GSQJSQLSQOSQQSQTSQVSODaM0jQ4cVCYYJQaQLfYFid7ml1pr0\
+  dAF_C`VCuY9s`6rc4pf1og0mj0lm0jp0ir0il6_fJQ`YGVj7Qx\
+  0Tv1Vv4Yv7_v9`vCcvFdvIfvJivMjvPlvQdrM_mJTiFOgCIg7C\
+  g46g00g04iA7jMClYFmjJovMpzSryXspaugfv``yaXzaQzcMzc\
+  GzdCzd6zf1zf0zfGzYYzPozGzz9vzIlzQaz_dzXgzVmzipzfoz\
+  dozcozaozaoz`mz_mzYmzYmzX
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

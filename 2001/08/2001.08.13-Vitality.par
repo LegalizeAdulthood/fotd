@@ -1,0 +1,32 @@
+Vitality           { ; Classic FOTD, 13-Aug-01 Rating (8.5)
+                     ; time=0:02:13.97--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.02922892649398737/-0.022688490365579\
+  9/2.024055e+012/1/-125 params=-1.05/1/1.05/-2/0/600
+  float=y maxiter=1200 inside=0 outside=atan
+  colors=200ZzxSzxNzxIzxCzx7zx2zx2zx2zx2wx7qxFlxNgxW\
+  bxcYukTptOmzJiwGsrExmDxjBxk8xm6xo4xs1wy0nt0cg12_02\
+  S0200200200300600A2RamzxcqsUakPLc24XkTxhNxgIseDpc8\
+  kb1f`0cZ0ZX0WzhUzmQzrPzwN`OxbNxcLxeLxgJxhIxjIxkGxm\
+  EwoEupDsrBrrBpmGrjJreNrbQrZTrUXrR_rMbrIfrFirAlr7pr\
+  3sr2su2tw2wx2wxcIsZOuUVuPawMgxHnxCtx9zxAxwAwsAtpCs\
+  mCqiCpfCncElZEkWEiSFgPFfLFdIFbFHgAIl6Kp3Mt2Nx2Pz2R\
+  z2Sz2Uz2Wz2Sz2Rn2P_2NL2M62I22H12F08E0GC0P90Z70f50p\
+  30x20xA0xH0xN0xW0xb0xh0xp0xw0xz0xz0xz0xz0xz0xz0xz0\
+  xz0xz0xz1xz2xz4xz6xz8xz9xzBxzGxzLxzOxzTxzXxzaxzdwz\
+  iszlrzqpztnzidp_XbONNEFA46MX2Xw2Zs2Zp2`n6`kDbiIbfP\
+  cdWca`e_feXkgVrgRxhQxhNxhLxkJxoJxrJxuIxyIxzIuzGrzG\
+  nzGkzGizIhzJfzLduNcpOamQahR`cTZZVXUXWPYUMYUodNziGz\
+  nLpqQctWewZgxahxdhzhjzkkznmzrmzuozxpzxrzxrzxtzxuzx\
+  uzxjzxZzxNzuCzn2zh2za2zc5zcCzdIzdRzfXzfczfjzhrzhyz\
+  izzizzizzmzzntzrozsjzwczx
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

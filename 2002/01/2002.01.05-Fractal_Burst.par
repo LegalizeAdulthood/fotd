@@ -1,0 +1,33 @@
+Fractal_Burst { ; FOTD -- January 05, 2002 (Rating 5)
+ ; time=0:03:18.28--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+23.7128849777565/+26.99522223844535/1.\
+  200758e+008/1/-159.999981173185887/-1.539999451616\
+  31402e-005 params=1/-4/-0.3/-8/0/525 float=y
+  maxiter=1200 inside=0 logmap=63 periodicity=0
+  colors=0002ez0nz0mz2sz7szIzzFkqEUZraugVjYO_NIQ0zBB\
+  yzDksD_fDOUiMHYIHNFHEH0DF0DE4DDBzP0o23X7AZ30R73JAA\
+  YguQYfJNUAzkBkaDURswIegHRSH3kN8UJwzSc0zzzHmsHaeHOR\
+  HbboQQYz_0aO47vuAZ_gFDSEFz74bABawESgFKSH6KzzbikUZU\
+  KQ20IzzVorRbcNQQJH0kF0cE2XD7O4JagsyAqjN0X0w04_6Sjj\
+  NZ_INQvr0fc3RQAaMQOHKmqjVXVozYboRQXM0zU0nO6VKszNem\
+  K08I0cB0z4JzDauJsnQMAkJ3eH0_cMRziJbnYQZ_DJaDHUsOfD\
+  ENzz7omAbaDQOFXeus6oe8cRBS7zo8ofAbYBQOz0oo3fb6YQAO\
+  3Ka0gk4SXz0XXyUHcI0zzzz0jk3UUAYDzSDqNDeIDS2zy4sm7e\
+  bARRVAfOBYIDOAiyB_mBSbDKRjq4af8UXBKMEwzI_fHzbRqXOc\
+  QMQJJj2z0kK3UIzzsfb_z0M0zF3bHOHzKFoIEcFDS0XQ3MK6fz\
+  8ZsAZfBcUmhU_mOOrKfwzZzsRzfJzU_z0zz0zz8zz_zzfzzYzz\
+  OzzozzYzzAzzDzzFzzzzznzzbzzRzz0zz0zz0zz8zz3zzAzzDz\
+  zFzzgzz_zzUzzNzzIzzHzzHzzSzz0zz6zzBzz0zzVzzRzzNzzJ\
+  zzzzz7zzBzzEzz2zzzzzjzzVzzuzzfzzUzz0zzezzXzzOzzvzz\
+  gzzUzz0zz2zz7zzDzz_zzUzzN
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

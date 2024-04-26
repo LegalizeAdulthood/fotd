@@ -1,0 +1,33 @@
+Spiralesque        { ; Classic FOTD, 07-May-01 Rating (4)
+                     ; time=0:09:10.69--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+1.936911287737238/+7.881112847818978/7\
+  .861229e+008/1/-147.5 params=-1.5/1.2/1.5/1.3/0/800
+  float=y maxiter=900 inside=0
+  logmap=174 periodicity=10
+  colors=000P00mmPmmHmmJmkLmiLmgNkeNedP`bPV`RNZTHXTC\
+  VV6TV0RX0PX00K0AK0GN6ACH42T00d00iA0mNHq``ukoxtzzzz\
+  xwzuuzqqzkixgbsdVk`NeeRkiVomXss`vvbzzezzizzkzzozzq\
+  zzuzzvzzxzzzzzzzuzzmzzezzZzzPzzHzzAzz2zz0zz0zz0zz0\
+  zz0zz2zz8zzGzzNxzVuz`oxgkvoguvdqz`ozXkzTizPgzLkzHm\
+  uGqkCsbAsV6pL2mC0m20m00m00m00m00m04m0Ao0Hq0Ns4VoAb\
+  kEgeJobNuZTzVXzPbzLezHizEgzLezTdz`bzg`xoZsvXmzVgzV\
+  bzX`zXZzXXzXVzXVzXTzXRzZPzZNzZNzZLzZJzZHzZGzZGzgCz\
+  qAzz6zz4zz0zs0zk0vd0uX0qR0oJ0kC0i40e00d00b00V20N80\
+  GE8AJH2PP0VZ0`e0Pb0G`H6ZZC``G`bJbdNbeRbgVdiZdkbdmg\
+  eokeqogssguvgvzixzizzizzeuzdqx`muZiqVeoTbkPZgNVeJR\
+  bHNZEJXCGVALV8PT8VT6ZR4dR4gR2mP0qP0vN0zN0zL0zL0zL0\
+  zP0zT6zXCz`HzdNxeTsiZomdkqikuouvszkvz`xzPzzLvzHuzG\
+  szCqz8oz6mz2kz0kz0kz0kz0kz0kz6kzEkzLkzTmz`ozgqzosz\
+  suzuvzvxzxzuzzmzzezzZzzRzzJzzCzz4zz0zz0zz0zz0zz0zz\
+  4zzCuzJqzRmzXgzddzkZzsVzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

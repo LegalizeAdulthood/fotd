@@ -1,0 +1,34 @@
+Head_of_Zardoz     { ; Classic FOTD, 30-Jun-01 Rating (4)
+                     ; time=0:04:00.58--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=multirot-XZ-YW-new passes=1
+  center-mag=-0.00000000262628144/-0.000000000366346\
+  96/1.493935e+009/0.02482/-8.307/87.302 params=91/1\
+  74/2/0/-0.7692602987818452/0.1095599458160586/-0.7\
+  692602987818452/0.1095599458160586 float=y
+  maxiter=2000 inside=0 logmap=389 periodicity=10
+  colors=000VzeYzfZzf_zfazfczfezffzfgzfizgkzgmzgnzgo\
+  zgqzgszguzgvziwziyzizzizzizzizzizzizzjzzkzzmzznzzo\
+  zzqzzrzzrzzszyuzwvzvwzuyzszzrzzrzzqzzozznzzmzzkzzj\
+  zzjzvizrgyogskfnifieecbeZZcUXcOSbJQbEMa8J_3FY0DW0F\
+  T0IP2LM6OIAR0EU0HX0J_0Kb0Nf0Oj0Rm0Sp2Vs3Xv4Zx4_v6a\
+  s6am7bh8cc0aZ0bU0cP0gK0eF0bA4_AAYEEVIISMMQRRNVVKZZ\
+  IbbH_eIZfJYiKXjMVmMUnNRqOQrQOuQNvRMySKzUIzRJzUKyVK\
+  uYMrZNo_NkbOicQefQbgR_iSXkSUmUQoVNqVKrXHuYEvYAyZ7z\
+  _4z_0za0za0zc0ze3yf6ugAqiEmjHikKemOaoRYqVUrZQsaMue\
+  IviEwkAyo6zs0zr2yq7yoBwnHvmMvkQujVzkbujZqiXkiSggQc\
+  fMZfJVeFQeDMc8Ib6Db28a04a0D_0K_0SZ0ZZ0fY0nY0vX0w_0\
+  yc6ujJrrXnyimzpkzvkzukvskrrkmqjinjcmhZkfPjcKffNihR\
+  jgUkfZnfdoekqcqsbwubtvcosejrfeqg`ogXniSmhOkgKjgJie\
+  IgdHigHjkFknHmoInqJotKqvMrwNswOuyQvzRwzSyzUzzVzzXz\
+  zYzzZzz_zyazybzyczyezyfzwfzwfzwfzwfzwfzvfzvfzvfzvf\
+  zvfzvfzvfzvfzvfzvfzvfzvfz
+  }
+
+frm:multirot-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=z^(p2)+c,
+|z| <= 36  }

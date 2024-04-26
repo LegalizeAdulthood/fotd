@@ -1,0 +1,33 @@
+Domain_of_Numbers { ; FOTD -- January 26, 2002 (Rating 5)
+ ; time=0:16:53.16--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.21134959886444100/-0.057343241946476\
+  36/1.883642e+010/1/-99.9938442053906584/-0.0099007\
+  0871181482348 params=1/-1.7/0.1/-17/0/0 float=y
+  maxiter=1800 inside=0 logmap=279
+  colors=000fevbfwYizUkzQnzMqzIrzHnzFjzEfyDbvB_sAXr8\
+  So7Om6Kk4Ii3Ef2Ae06b03a68ZDEYJJVQOUXURaZQgcNniMunJ\
+  zsIzwHzwVzwizwwzwzzwzzwrzwizw_zyRzzJzwJuuJqsJkqJfn\
+  JbmJYjJSgJOfJJcJFbJHZIJXILUINRHQPHSNHUMHXJFZFF`BFc\
+  6Ec3Ed0Ec0Ee0Dg0Bi0Al08m07o06r04u03w02z00z00z00z47\
+  uEFoOOjYXegc_qmVzuQzzYzoezcmwSusHzo4zk0zf0zb0vZ0qV\
+  0mR0iN0eJ0_F0XB0S70N30J00F00B00F00J40NB0RI2VO4ZV7a\
+  _AZacXazUYzSVzQRyOOvMMsKIrIFoHDmE8jD6gB3fAKVAaKArA\
+  Az0Dz0Fq2Hi2J_3MS4NJ4QB6S27U07S0DR6IQBMOHRNMVMR_KX\
+  eJaiIfnHkrKiqNgqQfqScqVbqYaq_ZqbYqeXqbYsaZu__vZ_wX\
+  ayVbzUbzSczQezOezNfzMgzKgzNfzQezScwUbsXaoZ_k_ZgbYc\
+  eX_fVXiUSkSOmSMBcOJgQRmRZgRfSSnQUvOUoRYiS_bUcXXfQY\
+  jJZmE_oKamRajYaicafjacqabwa_zaYzaXzcYzeYzfYziZzjZz\
+  kZzmZzo_zq_zr_zs_zkXzeUzeRzfOzgKziIzjFzkDznAzq7zs4\
+  zv2zy0zz0zz7zzIzzSzzbzzkzzZzzMzzOzzQzzSzzUzzVzzYzz\
+  Zzzazzbzzczzfzzozzrzzszzu
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

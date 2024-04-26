@@ -1,0 +1,34 @@
+Julibrot_Monster { ; FOTD -- January 11, 2002 (Rating 5)
+ ; time=0:09:17.61--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=multirot-XZ-YW-new passes=1
+  center-mag=+0.00000000128389097/-0.000000000542546\
+  13/1.435616e+008/0.9341/-179.455993649140652/-68.7\
+  194309865828359 params=158/-62/2/0/-1.120224512675\
+  5/-0.2638790266846/-1.1202245126755/-0.26387902668\
+  46 float=y maxiter=12000 inside=0 logmap=911
+  colors=000UlUUmUUmUUnUUnUUoUUoUUpUUpUUqUUqUUrUUrUU\
+  sVUsWQtXNuZJv`EvaGvbHvcIvdJudKueLtfMtgNsgPrhQriRqj\
+  SqjTpkUplVomUooWomXnkYmjZlh_kf`jeahcbfacd`dbZf`Xg_\
+  WkYUjYUhXTfWTdVTcUTaUT_TTYSTXRTVQTTQTRPSQOSONSMMSK\
+  MSJKRHIQFGPDEOBCNCAMDALDAKEAKEAKFAKGAKGAKHAKHAKIAK\
+  IAKJAKKAKKAKLALLAKMAKN9JN9JO8IO8IP7HN2IP7HQCHRGHSL\
+  GTQGUUGVZGWcFXgFYlFZpFYnGXmHWlIWkJVjKUiLUgMTfMSeNS\
+  dORcPQbQQ`RP_SOZSOYTNXUMWVMUWLTXKSYKRYJQZIP_HO`HMa\
+  GLbFKcFJdEIdDHeDFfCEgBDhBCiABj9Aj98k87l76m75n64o53\
+  p52p75n97mB9kDCjFEhGGgIIeKLdMNcOPaQR`RUZTWYVYWX_VZ\
+  bU`dSafRchPekOgmMioLisLjqKkpKlnJmmJnkInjIohHpgHqeG\
+  rdGrbFsaFt_EuZEvXDvWDwUCxTCyRBzQBzPByOCxODwOEwOFvO\
+  GuOHuOItOKsOMsOOrOQqNSqNUpNWoNYoN_nN`mOamPblQckRdk\
+  SejTfiUghVhhWigXjfYkfZle_md`ndaocbpbcqbcracs`ct`cu\
+  _cvZcwZcwYcwXcwXcwVcwUcwTcwScwRcwQcwOcwNcwMcwLcwKc\
+  wKcwKcwKcwKcwKcwKcwKcwKcw
+}
+
+frm:multirot-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=z^(p2)+c,
+|z| <= 36  }

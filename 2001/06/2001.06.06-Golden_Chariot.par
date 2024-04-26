@@ -1,0 +1,33 @@
+Golden_Chariot     { ; Classic FOTD, 06-Jun-01 Rating (8)
+                     ; time=0:03:30.04--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+7.63095735774279/-41.9285774906314/3.1\
+  96408e+008/1/162.5 params=-0.6/-1.3/-0.006/-3/0/800
+  float=y maxiter=380 inside=0
+  logmap=65 periodicity=10
+  colors=000045D45I45N45Q49V6GYCLbHSgMYkRdpVks`pxevz\
+  jzzozztzztzztzzpzwpmpjviepdZiYPb0PYlXTseOwjJzmEzr9\
+  zw5zw5zw5zw5zw9trEloLbkQffWgcai`gkVllSsnPx_NzLMz6K\
+  z0Kz2FzEAzQ5za4zT4zL4zD4z45z05z2Az8DzDIzIMzLPzXUng\
+  XEkZLlZQpZVqZ_tZdwZix`pz`uz`yz`zz`zz`zzezzjzzoxzrq\
+  zwlzwgzwbxw_fwWOwT6wQ0wO0wQ0rQ0cS0ZS0YT1XV4`W8eWBh\
+  YEk_Io_LtaOwbRwdVwdYwfawgdwgfwkgwliwniwpkwqlwunwvn\
+  sxpoyqkzqgzpczp_zpXznUznUynUylUylUylUxkUxkUxkUxiUv\
+  iZvicvghvgmufqufuufuufwudwsdwsdwsbwsbwqbwqawqawqaw\
+  p_wp_wp_wpYwnYwnYwnXwnXwlXwlVwlVwlVwkTwkTwkTwkRwiR\
+  wiRwiQwiQwgQwgOwgOwgOwfNwfNwfNwfLwdLwdLwgJwiJwkJwl\
+  IwnIwpIwqGwsGwu_wvYwuYwu_wuawucwsewsgusiuskuqmuqow\
+  qqwqswpuwpwwpwwpwwnwwnwwnywnzwlzwlzwlzwlzwkzwkzwkz\
+  wkzwkzwizwizwizwizwgzwgzwgzwgzwfzwfzwfzwfzwdzwdzwd\
+  zwdzwbzwbzwbzwbzwazwazwazwazwkzwizwizwixwixwixwixw\
+  iwwiwwiwwitwitwitwitwiR45
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

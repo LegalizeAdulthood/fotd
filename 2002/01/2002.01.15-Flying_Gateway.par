@@ -1,0 +1,33 @@
+Flying_Gateway { ; FOTD -- January 15, 2002 (Rating 4)
+ ; time=0:00:49.98--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=multirot-XZ-YW-new center-mag=-0.00000\
+  003212632880/+0.0/4874132/0.714/-90/0
+  params=90/0/2/0/-1.99909561/0/-1.99909561/0
+  float=y maxiter=5000 inside=0 logmap=31 passes=t
+  colors=000ZUoYToXTnWTnVTmUTmTTlSTlRTkQTkPTjOTjNTiM\
+  SiLRhKQgJPfJOeINdIMcHLbHKaGJ`GI_FHZFGYEFXEEWDEVDCU\
+  CATF6QFDPAKQ4SP0ZO0dV0l`0rf0sc0s`0uY0uV0vS0vP0xM0x\
+  J0yG0yD0zA0z70z40z3Cv0Yr0sl0zg0za0zX0zS0zM0zI3zJ4z\
+  L6zM7zO9zOAzPCzQDzSFyTGxTGsVLoVOjXQfXTaXYYY`TYcPYf\
+  L_jG_mC`p7`s3`x0az0az0az0Pz0Cz0Az09z07z06z04z13z31\
+  z41zdCVzL0zJ0yI0rG0jG4cF7XDCPDGICLAAP3AS4IO6OL7VI9\
+  `DAgACm7Cs4Io7Ol9TiC_fDdcGj`IoYJjVLgSMcPO`MOYJPTGQ\
+  QDQMASJ7TG4TC1V90X60XJ0OV0GL69Q39X09a090zA6j9IT9VC\
+  9z0Or0GzDzzAzz7ux6lu3dp0Xm0Pi0Gu9fr6`o3Vm1Pj0Jg0DJ\
+  D0P91T43Y16a07aOjcG`d9Sf1IxPmmjLjYIiLFg7CdYJfSIfOG\
+  fIFfDDf9CGYL0XF7c7Oi0co0su0um0vf0v_3xS7yLDyDIz6Oz0\
+  SuAVpJXlSYf`_ai`Yradsdlsgssjzvmzzpzzszzouzjjzf`zaQ\
+  zYGzVPz_Xzcczgjzjdzg_zfTzcOzaIz_CzYJzXPzXVzV`zVgzV\
+  mzTszTyzTzzYzzazzfzzjzzozzszzzzzzzzzzzzzzzzzzzzziz\
+  iIzO0z1czVczMczDzz4zzGzzG
+
+}
+
+frm:multirot-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=z^(p2)+c,
+|z| <= 36  }

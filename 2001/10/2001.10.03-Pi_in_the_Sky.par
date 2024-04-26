@@ -1,0 +1,40 @@
+Pi_in_the_Sky { ; FOTD -- October 03, 2001 (Rating 5)
+ ; time=0:17:28.25--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.89071956777594660/+0.395577680067524\
+  30/1.086197e+012/1/45.000916072899642/-0.007023192\
+  99345871562 params=3.14159265358979/0/189/0
+  float=y maxiter=3600 inside=0 logmap=518
+  colors=000jCZlFXmHUoKSqNQrPNtSLvVJwXGy_EzaCw_BuYBs\
+  WBqUAoSAmQAjO9hM9fK9dI8bG8`E8ZD8XG7VI7TK7RM7PO7NQ7\
+  LS7JU7HW7FY7D_7Ba79c77e75g74i75kD6lI7mO8nT9oZApcBq\
+  iBrnEkhGdcIZZKSTMLOOFJPJMQMOQPQRSTRVVSYXS`ZTdaTgcU\
+  jeUmgVpjVslWvnWypVxoUwoUwnTvnSumSumRtlQslQskPrkOqj\
+  OqjNpiOoiQoiSglU`nWTqYMs_Eva7xc0ze1yg1xi1wk1wl1vm1\
+  un1to1tp1sq1rr1qs1qt2su3tv4uw5vx6wy7xz8yg2Mh7LhBKh\
+  GKhKJiPIiTIiYHiaHfbIdbIbcI`cIYcIWdIUdISdITaMTZQTWU\
+  TTYUQaUNeUKiUHmTGnSGoRGpQGqPGrOGsNGtMGuLGvKGwKGxJF\
+  wJFwIEwIEwIEvHDvHDvHDvGBpG9jG7dG5ZG3UI5VK6VL8WN9WO\
+  AWQCXRDXTEXVGYWHYYIYZKZ`LZaMZdLbfKehJhjIklHnoKeqNY\
+  tQPvSHPhZVk_`n_fq_lt`rw`xy`wtZwpYvkXvgVubUuWTtSRtR\
+  QsSPsTNrUMrVLqWMpXNoYOnZPn_Qm`RlaSkbTkcUjeVigWhiXh\
+  kYom_vo`wqPysDzu1ww2ux2ry2pz3mz3kz3iz4fz4dz4az5_z5\
+  Yz5Zz9_zD`zHazLbzPczTdzXez`fzdgzhgzkeziczhbzf`ze_z\
+  cYzbXz`Vz_TzZSzXSzL`zUhza
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

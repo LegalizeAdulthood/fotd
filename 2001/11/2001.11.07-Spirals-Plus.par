@@ -1,0 +1,34 @@
+Spirals-Plus { ; FOTD -- November 07, 2001 (Rating 6)
+ ; time=0:22:09.43--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.83589834987121000/+2.077266207005391\
+  00/368561/1/92.4999998848566776/2.3926493596115872\
+  e-007 params=-0.961824/0.95/0.775032/3.357/0/300
+  float=y maxiter=2400 inside=0 logmap=340
+  colors=000M4HM4HO4FQ4FQ4FS4DV4DV4DX2B_2B_2Ba2Bc28c\
+  29e5CgAFgFIjKLlPOlURmZUmcXmh_mmbireewhazkYznUzqQzt\
+  OzwKzzGzzCzzAzz5zz0zz0zz0zz0yz2wz4uz6sz8qzBoyDmwFk\
+  uHirJgpMenOclQajS_gVYeXWc_UaaS_cQXeOVhMSkKQmIOnGMn\
+  EOnCMn0Jn0Hn0Hn0Fn0Dn0Dn0Bn08n08l06l24l44l82lB0lD0\
+  lH0lJ0lM0lO0jS0jV0jX0ja0jc0je0jj0jl0jn0jp0gu0gw0gy\
+  0gz0gz0gz0gz0gz0gz0gz0gz0ez0ez0cz0cz0cz0az0az0az0_\
+  z0_z0_y0Xw0Xw0Xu0Vr0Vp0Vp2Sn4Sl6Qj8QgBQgDOeFOcHOaJ\
+  MaMM_OMXQJVSJVVJSXHQ_HOaHOcBXV6cO2lH0rB0z40z00z00z\
+  00z00z04z0_z2Xz4Vz4Sz6Qz6Qz8Oz8MzBJzBHzDHyDFwFDuFB\
+  pH8nH8lJ6jJ4eM2cM0aO0_O0VQ0SQ0QS0OS0OS0QV2SV6VV8XX\
+  D_XHaXJc_Oc_Se_Vga_jaclaencjpcnpcprduucywbzyczzbzz\
+  azz`zzbzzbzzczzdzygyyhwyiuyjrykrwnpwnnwnlwnjwngupe\
+  upcupaup_up_rrXrrVrrSrrQrrOpuMpuJpuHpuHpuJnwJnyJnz\
+  JnzJnzJnzJnzJnzJnzJnzJnzJnzMnzMnzMnzMnzMnzMnzMnzMn\
+  zMnzMnzMnzMnzMnzJlzHjzFgz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

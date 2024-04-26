@@ -1,0 +1,38 @@
+The_Primary_Colors1 { ; FOTD -- February 02, 2002 (Rating 6)
+ ; time=0:15:14.28--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.26445764184686160/-0.003322320467831\
+  68/1.109666e+011/1/-42.5037/0.00146395122998561888
+  params=2.003/0/1029/0 float=y maxiter=6000 inside=0
+  logmap=298 colors=000XOjZRjaSibRidUgfUgiXfjbfmidom\
+  drtbtzbvzbtrZtfUrOPqIMr6Ir0Ds0At3Cv9DxFDzFFzKFyJLu\
+  MPpOWmS_ZZdSdjOloIrvCyz8zzCtzFjzIayLSwOIoR9hU0bX0W\
+  U0NR8TOGZLOcIWKFdLClF9vA6z6cz11w80nD0XJ0LP09W08_09\
+  X09U1AR3AO4CL6CI4FD4IA4J64M34O0CGFI9UO1iU0y_0zZ0zX\
+  0zX0zW0zU0wU1tS4qS6mR9jPCgPDdOGbOI_MLXLOULPRJSOJUL\
+  IXIG_FGaCFd9Ff8CZS9Rm8JzLJzXCyR0tC0o00S00U00U00U00\
+  W00W00W00W00X00X00X00Z00Z00Z00Z13X1AX3IW3PW4RU4RU6\
+  RS6RS8RR8RR9RUARXARZCRaCRbDRfDRiFRjFRmGRoIRrIRvJRw\
+  JRzLRzLRzMRzMRzORwOOtMLqKInIFkGChE9fC6fA4f82i60l40\
+  o40r40v40y30z30z30z30z30z30z30z40z40z40z43z46z48z6\
+  Az6Cz6Fz6Iz6Jz6Mz8Oz8Rz8Uz8Wz8Zz8_z9Zz9Xz9Xz9Wz9Uz\
+  AUzASzARzARzARzCRzCRzCRzCRzCRzDRzDRzDRzDRzDRzDRzGR\
+  zIRzJRzLRzORzPRzRRzSRzURzWRzWRzWRzWRzWRzWRzWRzWRzW\
+  RzWRzWRzURzURzURzSRzSRzSRzSRzRRzRRzRRzPRzPRzPRzPRz\
+  ORzORzORzMRzIRzJRzLRzORzPRzRRzSRzWRz
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

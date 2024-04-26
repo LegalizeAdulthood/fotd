@@ -1,0 +1,34 @@
+Maltese_Minibrot { ; FOTD -- October 22, 2001 (Rating 7)
+ ; time=0:08:27.96--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.42231500123432000/-0.005507167133372\
+  09/4.257051e+008/1/-15.0000041368634047/-6.0119504\
+  0066809794e-005 params=0.01/-1.5/1/2/0/0 float=y
+  maxiter=1200 inside=0 logmap=150
+  colors=000F90CB08C05E03E00F00F00G00E00E33C75CB9BFC\
+  9JF8NI7RM4VO3ZR1bU0fY0j`0nb0sd0ud0ub4ua8u`Cu`GuZKu\
+  YOuXSuXXuVauUeuSiuRmuRquQuuVzu`zufzuYzjQw`GnQFfFCZ\
+  4BS0CV0EX4FY8G`CIaGJbKKdOMfSNhXOi`QldRmhSnlUppVstX\
+  txYuzYtzaizdYwfKsi8mj0lj0hj0em3dn5bp9bsCatG`uJYuNX\
+  uQUwURwXOw`NxbKxfIyiFymEypBzt8zw5zy4wx8sxBnxFlxIhw\
+  MdwOawSYwVUuZRuaNueJuhIsqGujFweFx`EyVEzQCzKCzFBz9B\
+  z4Gz0Nz0Vz0bz1jz4qz8lzBfzF`zIVzMRzOOzSNzVMzZMzbNze\
+  OziOzlQzpRwsRpwSiyUbzUdzVjzZmzbjzfezj`znUzqNzbhtQz\
+  dRzbRzaRzaRy`Ry`RxZRxZSwYSwYSuXSuXStVStVSsUSsUUqXV\
+  qYXpZYp`Zpa`ndanebmfdmhemifllhlmijnjjpjjqqhuweyzdz\
+  zbzzayzayy`xyZwyZwyYuxYuxXtxVswVswUqwSpwSpuRnuRnuQ\
+  mtOltOltNjtNjqMlpMlnMmmMmjKniKnhKnfKpeKpbJqaJq`JqZ\
+  JsYJsVItUItSIuRIuQIuNGwMGwKGxJGxIGxKQzMYzNezQnzRwz\
+  SzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUzzUz\
+  zUzzUzzUzzUzzUzzUzzUzzUzz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

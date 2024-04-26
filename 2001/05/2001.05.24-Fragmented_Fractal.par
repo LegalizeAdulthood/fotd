@@ -1,0 +1,39 @@
+Fragmented_Fractal { ; Classic FOTD, 24-May-01 Rating (5)
+                     ; time=0:16:46.62--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.17750380430011240/+0.265756365793003\
+  70/2.139322e+007/1/-130 params=2.289428485/0/-29/0
+  float=y maxiter=5000 inside=0
+  logmap=320 periodicity=10
+  colors=00000P00P00N00N00L00L00L00J00J00H00H00J00H0\
+  0H00G00G00E00E00E02C04C04A06A0882A84C84C66E68G48H4\
+  AJ2CJ2CL2EN0GP0GR0HR0JT0JV0LX0NZ0NZ0P`0Rb0Rd0Te0Ve\
+  0Vg0Xi0Zk0Zm0`m0bo0bq0ds0eu0eu0gv0ix0iz0kz0mz0mz0o\
+  z0qz0qz0sz0uz0uz0vz0vz0sz0qz0oz0kz0iz0gz0dz0bz0`z0\
+  Zx0Vv0Tu0Rs0Nq0Lo0Jo0Hm0Ek0Ci0Ag06e04d02b00b00`00Z\
+  00X00V00T00R00P00R00R00R00R00R00R20R20R40R60R60T82\
+  TA4TA6TC8TEATECTGETHGTJHTJHVLJVNLVNNVPPVRRVRTVTVVV\
+  XVVZVXZXZ`XZbX`dXbeXdgXdiXekXgmXgoXioZkqZksZmuZovZ\
+  oxZqzZszZszZuzZvzZvzVxzTxvRxuNxsLzoJzmHziEzgCzeAzb\
+  8z`4zZ2zV0zT0zP0zN0zL0zH0zG0zC0zA0z80z40z20z00z20z\
+  20z20z20z40z40z40z40z40z60z60z60z60zA0zE0zH0zL0zP0\
+  zT0zV0xX0xZ0x`0xb0xd0ve0vg0vi0vk0vk0uk0uk0uk0uk0uk\
+  0sk0sm0sm0so0so0qq0qq0qs0qs0qu0ou0ov0ov0ox2ox2mz2m\
+  z4mz4mz4mz6kz6kz6kz8kz8kz8izAizAizAizAiz8kz8kz8kz8\
+  mz8mz8mz8oz8oz8oz8qz8qz8q
+  }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

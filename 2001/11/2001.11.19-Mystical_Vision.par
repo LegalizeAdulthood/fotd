@@ -1,0 +1,34 @@
+Mystical_Vision { ; FOTD -- November 19, 2001 (Rating 6)
+ ; time=0:02:15.94--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.41128955306025280/+0.000665120494983\
+  14/6.366646e+007/1/-137.5/1.2417994603303173e-006
+  params=-0.4/-2.6/-0.8/2.4/-0.3/525 float=y
+  maxiter=300 inside=0 logmap=40
+  colors=0004isBjrIkqPlqVmpanohooopnupnolkiihdeeZbbU\
+  __KYZBUY2SYCOULKRUJNbHKjCMr8Nz3Or3Ll3Id3GY3DT3AN38\
+  I35D33KGMRTdYew`ctcaqe_nhYljWimUfoTdkUahUZdVXaVUYW\
+  RVWPRXMOXKcbLsKSp1ZUHN7XCIYDTZDc_El`EfaEaQXFEoRBAL\
+  G8GL6AQ55V30Z25U59Q7DMAHICLEFPAHQFOQJVROaRShRWoXPf\
+  aIYfBQUFK_HNdIQiKSnLVsNYxO_xRbxTexVhxXkx_nxaqxKtxK\
+  wzKrzKnzKrzKuzKuzKuzMuzOvzQwzSxzUyzWzzYzz_zzazzczz\
+  czzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzcz\
+  zczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczz\
+  czzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzcz\
+  zczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczz\
+  czzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzcz\
+  zczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzczzc\
+  zzczzczzczzczzczzczzczzcz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

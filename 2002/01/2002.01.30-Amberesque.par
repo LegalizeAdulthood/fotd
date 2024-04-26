@@ -1,0 +1,34 @@
+Amberesque { ; FOTD -- January 30, 2002 (Rating 7)
+ ; time=0:19:43.37--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.145031902005977/-0.7876003678468075/\
+  1.780103e+009/1/85.0016096880694505/-0.00103403611\
+  634762804 params=1.5/-1.5/0.15/-15/0/525
+  float=y maxiter=2400 inside=0 logmap=450
+  colors=00000A40C60C80CA0CC0CE0CG0CH0CJ0CL2CN4CP6CT\
+  6EV8EXAEZCE`EEbGEdHEeJEgLEiNEkPEmREqRGsTGuVGvXGxZG\
+  z`GzbGzdGzeGzgGzhGziGzhGzgJzeLzcPzaRv_TuYXqWZoU`kS\
+  dgQeeOibNkZMmXLqTKsVJsTIuRHuRGvPFvNEvNDxLCxJBzJAzH\
+  9zGAzGCzEGzCHzCJzALz8Pz8Rz6Tz4Vz4Xz2`z0bz0dz0ez0iz\
+  0kz0mz0oz0sz0uz0vz0xz0zz0zz0zz0zz0zz0zz0zz0zz0xx2u\
+  s6smAqgEmbHkXLgRPeLTbGX`AX`2`Z4bX6dX6eV8iV8kTAmRAo\
+  RCqPCuPEvNExOGzQGzSHzUHzWJzUJzSLzQLzONzMNxKPsJPkLR\
+  dLRXNTRLTHLVCJV4JX0HX0HZ0GZ0G`0E`0C`0C`0Eb0Ed0Ee0G\
+  e0Gg0Gi0Hi0Hk0Hm0Jm0Jo0Jq0Ls0Ls0Lu0Nv2Nv2Nx4Rz6Rz8\
+  TzAVzCXzCXzE`zG`zHdzJgzLmzLmzNmzNmzPozPozRozRszRoz\
+  TkzTizVgzVezVbzXbzXZzZVzZRzZPz`Lz`HzbGzbEzbCzdBzdA\
+  zeBzeCzgDzgEzgFziGziHzkIzkJzkKzmLzmMzoNzoOzoPzqQzq\
+  RzsSzsTzuUzvVzxWzzXzzYzzZzz_zz`zzaxzbuzcszeozgkzii\
+  zkezmbzoZzqXzsTzuPzwNzy0zz0zz2zz2zz2zz4zz4zz6zz6zz\
+  6zz8zz8zzAzzAzzAzzCzzCzzA
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

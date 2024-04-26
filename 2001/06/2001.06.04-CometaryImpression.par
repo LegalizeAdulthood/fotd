@@ -1,0 +1,33 @@
+CometaryImpression { ; Classic FOTD, 04-Jun-01 Rating (8)
+                     ; time=0:13:25.10--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-6.312863840603067/-8.071658728774926/1\
+  80586.5/1/147.5 params=-2/-1.1/-0.0002/-11/0/300
+  float=y maxiter=1500 inside=0
+  logmap=261 periodicity=10
+  colors=000002000000000000000000zzz000zzc000zzI20Lm\
+  cP52UcUW97`99cCCgEEkGGmGIrILtLNyLPzWZrgekrkczrWzm`\
+  zkczggzejz`mzZozUtzSvzNzzLzzGzzEzz9zz7zz2zz0zz0zz0\
+  zz0zz0zz0zz0zt0zm0ze5zZ9zPGzINz9Uz2Zz0Pz0Gz07v00m0\
+  0g02c05W07S09L0CG2E97G5CL5GP5LU5PZ5Uc5Wg5`k5eo5jt5\
+  my5zz7oz5`z2Lv25t00o00o00m00m00k00k00k00j00j20j20g\
+  20g20e50e50e50c70c70c70`70`90Z90Z90ZC0WC0WC0ZE0WC0\
+  U90S90P70P52N55L27I09G0EG0GE0IC0L90P90S70U50W20Z00\
+  c00e00g00j00k00g00e00c00`00Z00W00S00P00N00L00I00G0\
+  0000E00U00g27v2Cz5Iz5Nz5SzLLt`E`o7Ez00z00z00z00z00\
+  z00z00z00z00z00z02z07z09y0Et0Gr0Lo0Nk0Sj0Ue0Zc0`Z0\
+  eW0cP0gU0kZ0m`0re0vg7ykEzmIzrPztWzyczzjzzozztzzvzz\
+  vzzyzyyzvzvvzttzorzkozgmzcmzZkzUjzSgzNezIezEcz9`z5\
+  Zz0Wz0Pz0Wz7czGgzPmzZtzgyzozzvzzyzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\
+  zzzzzzzzzzzzzzzzzzzzzzzzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

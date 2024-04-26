@@ -1,0 +1,34 @@
+Half-Half-shells { ; FOTD -- December 05, 2001 (Rating 8)
+ ; time=0:31:25.81--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-2.53776950877348200/-0.014009024142595\
+  28/12424.62/1/-67.5/-8.6408921684544282e-011
+  params=1.636/-0.401/0.547/1.337/0/0 float=y
+  maxiter=30000 inside=0 logmap=269
+  colors=000POfPOfQPgRQhSRiTSjUTkVUlWVmXWnYXoZYp_Zq`\
+  _ra`scatebugcvidwkexlfyngzoizpkzrnztoztpzoozkozgnv\
+  cnp_llXlfSkaPkYQiXSiXSiXTiXTiVViVXiVXiVYiVYiT_iT`i\
+  T`iTaiTagScgScgSdgSfgSfgQggQggQigQkgQkgPlgPlgPngPn\
+  gPpgPrfHtf7wg4xg4wi3wi3wk3wk3vl1vn1vn1to0to0tp0tp0\
+  rr0rt0rt0pv0pv0pw0pw0ox0oz0oz0nz0nz0nz0oz0nz0nz0nw\
+  0nt0np0nn0nk1ng3nd3na4n_6lX7iT7gQ9fNAdKCcHCaED`CE_\
+  9GY6GX3HV0JT0KS0KQEJPKKNSKSTMXVM_XMcYNg_Nl`PoaPtcP\
+  xdQzfQzgQzfPzdPzdPzcNzcNzaNxaMx`Mw`Mw_KvYKvYKtXJrX\
+  JrVJpVHpTHoTHnSGnSGlQGlPEkPEkNEiNDgMDgMDfKCfKCdJCf\
+  HCdJCcJCaKC`KC_MCYMCYMCXNCVNCTPCSPCQQCPQCPQCNSDMSG\
+  PTJSTMVVPYVS`VVcXYfX`iYclYfo_ir_lv_ov`rv`vvaxvazvc\
+  zvczvczvdzvdzvfzvfzvfzvfzvfzvfzvfzvfzvfzvfzvfzvfzv\
+  fzwfzxfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfz\
+  zfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzfzzf\
+  zzfzzfzzfzzfzzfzzfzzfzzfz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,34 @@
+HyperMandelMadness { ; FOTD -- December 20, 2001 (Rating 5)
+ ; time=0:00:12.14--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=HyperMandelbrot center-mag=-0.546672/1\
+  .33227e-015/0.9318636 params=0/0/0.5/0/0.008/0
+  float=y maxiter=480 inside=0
+  logmap=yes periodicity=0
+  colors=000KAcKAbKAaKA`KA_KAZJAYIAXHAWGAVFAUEATDASC\
+  ARBAQAAP9AO8AN7BM6AL6AK000AQlBSlCTlDVlEWlFYlGZlG`l\
+  HblIclJelKflLhlMilNklNllR`lVPmZDmb1ma4na6n`8n`Ao`C\
+  o_Eo_Go_IpZKpZMpZOpYRqYTqXVqXXrXZrW`rWbrWdsVfsVhsV\
+  jsShpPgmMfjJegGdeDcbAb_7aX4`U2_S3aQ4cO4eM5gK6iI6kG\
+  7mF8oD8qB9s9Au7Aw5By3Bz2Ew5Gu7Is9KpBMnDOlFRiITgKVe\
+  MXcOZ`Q`ZScXVeUXgSZiQ`kObmLdpJgrHitEkvCmxAom8qcSoP\
+  RpUQpPPpKOpFNpKMpGLpIKpKJpMIpOHpQGpSFpUEpWDpYCp_Bp\
+  aBpcEneGlgIjiKhkMfmOdoQbqT`sVZuXXwZVy`TzbRzdPzfNzg\
+  PzgQzhSzhTziVziWzjYzjZzk`zkazlczldzgbzcaz__zWZzRYz\
+  NWzJVzFUzKRzPOzTLzYJzaGzfDzjBzfDzcEz`FzYGzVHzSJzPK\
+  zMLzJMzGNzFRzFUzEYzE`zDdzDgzDjzFhzHgzJfzLezNdzOczQ\
+  bzSazU`zW_zXZzZ_z`_zb_zd_zf_zh_zj_zk_zm`zo`zq`zs`z\
+  u`zw`zy`zz`zz_zz_zzZzzZzzWzzTzzQzzNzzKzzHzzEzzBzz8\
+  zz5zz2zz0zzBzzLzzVzzdzzbzz`zzZzzXzzVzzUzzSzzQzzOzz\
+  MzzLzzFzzPzzQzzRzzSzzTzzU
+
+}
+
+frm:HyperMandelbrot {
+; periodicity must be turned off
+a=(p1),b=(0,0):
+q=sqr(a)-sqr(b)+pixel,
+b=(p2+2)*a*b+p3,
+a=q,
+|a|+|b| <= 100
+}

@@ -1,0 +1,39 @@
+Holy_Moley         { ; Classic FOTD, 28-May-01 Rating (7)
+                     ; time=0:24:55.62--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.35475931415572680/-0.018444369957113\
+  51/278173.3/1/155 params=1.414213562373/0/29/0
+  float=y maxiter=6000 inside=atan outside=tdis
+  logmap=yes periodicity=10
+  colors=000e00e00e00g11jC6mMCmUHpeMrpSrxYzppzgzzbzz\
+  UzzPzzSzzSzzSzzUzzUzzUzzYzzYzzYzu_zp_zj_zebz_bzUbz\
+  PbzMUzMMzKEzK6zH0zH0zE0zE0zC0zC0z90z66z4Sz1mz0zp0z\
+  b0zS4zPCzMKzKSzK_rHgeEpUExHCz69z09z00z00z00r90gb0Y\
+  z6MzEUzHbzKjzKrzMzxPzrPzmSzgSzbPz_PzYMzUMxSKrPKmMH\
+  jHHeEE_CEU9CS6CM49H19E09C1C91E91H61K41M41P11S11U01\
+  Y04_04b04e04g04j04m04p04r04u06p16m96jE6eM6bU6_b9Yg\
+  9Sp9Px9Mz9Hz9EzCCzC9zC4zC1zC0zC0zH4zKCzPKzSSzY_r_e\
+  gem_guPmzEpz4uz0xz0zz0zz0zz0zz0zz0zz0zz0zz0xz0uz1p\
+  z9mzJ0K00H01K06K0CP0HS0MU0SU0Y_0bb0gg0mj4pmCurKzuS\
+  zzbzzjzzrzzzzzzzzzzzxzzrzzpzzjzxezu_zrYzpSzmMzgHze\
+  Ezb9z_4zU0zS0zP0zM0zK0zE0zC0z90z60z40z60z90zC0zE0x\
+  H4rHCjKHeMP_PUSSbMSgHUp9Yu4_z0bz0ez0ez0gz0jz0mz0pz\
+  0pz0mz0mz0mz0mz0jz0jr6jjEjbKjYSgPYgHeg9mg1rg0ze0ze\
+  0ze0ze0ze0zU0zM6pEMb4_S0mE0z40z90zE0zK4zPCzUKz_Sze\
+  _zjgzppzuxzxzx_zb00b00b00
+  }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

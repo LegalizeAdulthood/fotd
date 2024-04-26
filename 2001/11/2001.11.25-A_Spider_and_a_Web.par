@@ -1,0 +1,34 @@
+A_Spider_and_a_Web { ; FOTD -- November 25, 2001 (Rating 5)
+ ; time=0:00:58.65--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=b
+  center-mag=+11.08677453289806/+10.44004619354802/3\
+  4698.16/1/-132.5/7.51154181910518304e-009
+  params=1.3/2/-0.26/3/0/0 float=y maxiter=3200
+  inside=255 outside=tdis periodicity=20
+  colors=000BT`4UZ8RbBPeENhHLlKJoNHrXKmfMhoOcpPepQgq\
+  RiqSkrTmrTolSqfSr`RsVRuPQvKQwLOxMNxNMxOKyPJyQIyRHy\
+  VNmZTbaYRecGhh5mlProhjhdbbaVXYNRVFLR7FO6GS6HW6I_6J\
+  c5Kg5Lk5Mo5MsALfFLVKKIPK6MA3K00N45Q8ATCEWGJZKO`OSd\
+  RagTkjVuo_btdKxh1x`2xU2xN2xF3x83x13o54g94ZD5RH5JK5\
+  GM5EN5JCTX9bj7laVWTqFRpCPoANn8Lm6Kl4Rf6Xa7cX9iRApM\
+  CvHDhJKVLRHNY3PdQeiOfWMgIKh4WlGfoRqrafigW`mLSrVRic\
+  QalQUeSY_UaUWeNYiH_mBaq5btCfiJjZPnPWrEav4wnUpgaiai\
+  bVqWPy`TxdXxi`xmdxnepofiogbphWpiPqjIqjBrf9rc8r_6rX\
+  5rT4rQ2rM1rJ0mL1iM2eN3`P4XQ5TR6PS6MQCJOIHMNEKTCJYA\
+  IW8IU6IS5IQ3IO1IM0IL7HJDHIJHHPHGVHF`HEnUsmVrkWrjXq\
+  iZph_pg`ofaoebndcncembflagl_hkZikYjjXkjWmiVnhUohTp\
+  gSqgRrfQsfOqeMpeKndImdGkdEjcChcAgb8eb6dbDgZJjVPmRV\
+  oO`rKfuGlxCrz9nyEjyJfxObxT_xXWwaSwfOvkKvpHvt4LCFsp\
+  EqlDohCmdBk`AiX9gU7dQ6bM5`I4ZE3XA2V6ul1sk2rk2qj2oj\
+  2ni2mi2kh2jh2ig2gg2QQf000
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

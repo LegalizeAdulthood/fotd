@@ -1,0 +1,39 @@
+Pi_in_the_Sky      { ; Classic FOTD, 19-Apr-01 Rating (6)
+                     ; time=0:04:37.66--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-0.9197872859930445/-0.1300422309794571\
+  /5.421884e+007/1/-25 params=3.14159265358979/0/32/0
+  float=y maxiter=2400 inside=0
+  logmap=103 periodicity=10
+  colors=000zszzszztzzuzzvyzwvzxszyqzynyzkyziszfnyej\
+  sceob_j_XeZRaYNXXIQSDKQ8EN37K03J2DO3KS4UY6aa8geAog\
+  BvkDznHwjKsfOocSj_XfX_bUcYQgUMjQJaSISVHKXHIZFH_FFa\
+  EEbEDeDBfD8gD7iB6kB4mA3nA2oA8q8Fq7Kr7Rr6Xr6Yn7Yj8Z\
+  fAZbA_ZB_VDaRDaNEbJFbHFfJHiMImOJoRJsSKvVMzYMz_NzbO\
+  zcOziUwmZqqckuifyn_zsVzyQzzayjmmSybBwbDvbEubHsbIrb\
+  JqbM72u60w60yD0zI3zN7zSBzZFzcJziNznRzsUzuYwuaqueju\
+  icukZsg_sc_s__rXarUarQaqMbqIbqFboBco7co3co0ccBXUMO\
+  JXI8fA0o36n4Dn6Jm6Qm7Xm7So6Qq4Ns3Ju2Hv0Ey0Bz07z04z\
+  02z00z00z02v03q04k36f47a78X8ARBBMDDHFEBHF6JH0KI0NI\
+  0OH0NH0MH0KH0JF3IF6HF8FFBEEEDEHBEJAEM8DO7DR6DU4DX4\
+  DY0vZ2r_0oa0mb0ic0fe0cf0_g0Yi0Vj0Rk0Om0Mn0Io0Fq00r\
+  z0sw0us0vn0wj2ye3za4zX4zS6zN7zJ8zEAzABz4Dz00zv0zk2\
+  za4zR7zHAz6vzMqzJmzHgzEczBZz8rz0vz0yz0zz0vz0qz6kzB\
+  fzIbzNYzSSzZNzcJziEzo8zu3zz0zz4zzAzzFzyJzwOzuUzsYz\
+  qbzogzmmzkqzivzgzzezzzzzz
+  }
+
+frm:MandelbrotBC   { ; Formula by Andrew Coppin etal
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

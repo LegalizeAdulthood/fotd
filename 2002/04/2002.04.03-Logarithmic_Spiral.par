@@ -1,0 +1,40 @@
+Logarithmic_Spiral { ; FOTD -- April 03, 2002 (Rating 5)
+ ; time=1:00:01.10--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.41397782356481880/+0.885364077781793\
+  80/6.328408e+010/1/130.000071851788562/-0.00018653\
+  2972593252133 params=1.4142/0/13/0 float=y
+  maxiter=16000 inside=0 logmap=-1750 periodicity=10
+  colors=0CCxCOwCOwCOvHOtPMtXMrhMpmMoeKoXKmPKkHKkCJj\
+  CJhCJfCJfCHeCHcCHcCHbCF`CFZCFZCFYCDWCDWCDUCDSCCRCC\
+  RCCPCCNCCNCCMCCKCCICCICCHCCFCCFCCDCCCCCACCACC9CC7C\
+  C5CC7CC9CCACCACCCCCDCCDCDFCDHCFHCHICJKCJKCKMCMNCMN\
+  COPCPRCRRCRSCSUCUWCWWCWYCXZCZZCZ`C`bCabCccCceCeeCf\
+  fChhChhCjjClkCmkCmmCooCqoCqpCrrCttCutCuvCwwCywCzxC\
+  zxCzxCzxCzxCzxCzxCzxCzxCzxCzxCzxCzxCzxCzxCzxCzxCzx\
+  CzxCzxCzxHzxKzxPzxSzxWzw`zvczthztlzrozptzowzmzzkzz\
+  kzzmzzmyzouzouzouypuupuqpumrujruetuatuXtuUvuPvuMvu\
+  JmuOeuRZuWRtZKrcCqf5ol0mo0la0jr0hz7fz5hz5jz5lz5lz5\
+  mz4oz4qz4qz4rz4tz4tz2uz2wz2yz2yz2zz2zz0zz0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zy0zy0zw0zw0zu0zu0z\
+  t0zt0zt0zq0zo4zl5zj9zhAzeDzcFzaIzZKzXNzWPzSSzRUzOY\
+  zMZzKbzHczFfzDhzCkzCmzCfzCbzCZzCYzDWzDWzFUzFUzHSzH\
+  RzHRzJPzJPzKNzKNzMMzMKzMKzOIzOIzPHzPHzRFzRDzRDzSCz\
+  SCzUAzUAzW9zW7zW7zX5zX5zZ
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

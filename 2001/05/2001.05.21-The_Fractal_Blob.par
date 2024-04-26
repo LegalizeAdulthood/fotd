@@ -1,0 +1,38 @@
+The_Fractal_Blob   { ; Classic FOTD, 21-May-01 Rating (7)
+                     ; time=0:28:52.22--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.64630333319106740/-0.393163495225974\
+  80/7814360/1/125 params=2.236068/0/0/0 float=y
+  maxiter=4500 inside=0 logmap=-755 periodicity=10
+  colors=00037F37H37J37M37O37R37U37X39Z3Aa3Bc3DH3EH3\
+  FM4HM2FN0EN0BN0AO09O07M07O09R0AU0AX0BZ0Da0Dc0Ef0Fi\
+  0Fk0Hn0Iq0Is0Kv0Ly0Oz0Lz0Kw0Iu0Hr0Eo0Dm0Bj0Eg0Ie0M\
+  f0Qg0Ui0Yj0ak0em2in3mo4pq6rr7us8uu4uuAuuSwzFzz0zz3\
+  zzBzzJzzPwzZuzftzmmzkfzkazkayk`wk`ukZskYqkYokXmkXk\
+  kVikUgkUekTckTakR_kQYkQXkPUkPSkOQkMOkMMkLKkLIkKHkI\
+  EkIDkHAkH8kF6iE4gE2eD0cD0aB0`A0cB0eB0iB0kD0mD0nD0n\
+  E2oE3oE3oF4qF6qF7qH7rH8rHAsIBsIBsIDuKEuKFuKFvLHvLI\
+  wLJwMKwMKyMMyONzOOzOOzPQzPRzPSzQSzQUzQVzRXzRXzRYzT\
+  ZzT_zRbzT_zTZzTYzTXwUVvUSuURrUQqUOnVNmVMjVNiVOgVQe\
+  XRcXSaXU_XVYYXXYYVYZSY_RYaOZbNZcKZeJZfH`gI`iI`jI`k\
+  I`mI`nI`oI`qI`rI`sJ`uJ`vJ`wJ`yJ`zJ`zJ`zJ`zJ`zK`zK`\
+  zK`zK`zK`zK`zK`zK`zK`zM`zM`zM`zM`zM`zM`zM`zM`zM`zN\
+  `zN`zN`zN`zN`zN`zN`zN`zN`zM`zN`zO`zQ`zR`zS`zU`zV`z\
+  X`zY`zZ`z_`za`zb`zc`ze`zf`zg`zi`zi`zj`zk`zm`zn`zn`\
+  zo`zq`zr`zs`zu`zv`zw`zy`z
+  }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

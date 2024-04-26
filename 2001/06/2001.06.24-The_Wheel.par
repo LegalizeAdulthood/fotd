@@ -1,0 +1,33 @@
+The_Wheel          { ; Classic FOTD, 24-Jun-01 Rating (6)
+                     ; time=0:56:22.09--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-14.27546797101664000/-10.1681352980652\
+  0000/5.003527e+011/1/-98.994/1 mathtolerance=/1
+  params=-0.6/-1.3/-0.006/-3/0/800 float=y
+  maxiter=6000 inside=0 logmap=1000 periodicity=10
+  colors=000OOFMMFKKFJIFHGFFEGECGCAGA8G96G74G52G41G9\
+  DGDOGHZGPXGWWGcUGjTGrRGyQGrVHl_HfcH_hHUmHOqHLmHJjH\
+  HgHFcHD`HBYH9VHCWIEXIGYJJYJLZJN_KQ_KS`KUaLXaLZbM`c\
+  MccMedNgeNjeNlfOngOpgOkiTfkXam`XndWkaVi_VgYUdWTbUT\
+  `SSZPSWNRULQSJQPHPNFPLCOJANG8NE6MC4MA2PHAROHTVOV`V\
+  XgaZnh`toWkhScaOWVKOOGGHC8BDACEBCECCFDCFFDGGDGHDHI\
+  DIJDILEJMEJNEKOEKPEMQCOQBPRARR8SS7US6WT4XT3ZU2_U1a\
+  S5bQ8cPCdNFeLJfKMgIQhHTiFWjD_kCblAfm9in7mo5pp4tq2w\
+  r1zp2xo3vn3tm4rl4qj5oi5mh6kg6jf7he7fc8db9ba9a`A__A\
+  YYBWXBVWCTVCRUDPTDOWENZEM`FMcFLeGKhGKkHJmHIpIIrIHu\
+  JGwJGwIFvHDvGBvGAvF8uE7uD5uC4uB2uB1tD2sF2sH2rJ2qL2\
+  qN2pP3pR3oV3nZ3na3md3me3o`3qU3pR8oMDnGHmFMlERkEVjD\
+  _iCdhChgBmfAreAvgEpiHkkKflNanRXpUSrXNs_InYJjWJfVKb\
+  TKZSLVQLRPMNNMJMMMLKOKJRKHTJGWJEYID_ICaJEcKGeKIgLJ\
+  iMLkMNmNPoOQqOSsPUuPVwQXyRZzR`zSazTczCSzDTzFTzHTzI\
+  UzKUzMUzNVzPVzRVzUFzSFzQF
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

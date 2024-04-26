@@ -1,0 +1,38 @@
+One_in_a_Googol { ; FOTD -- December 13, 2001 (Rating 7)
+ ; time=0:20:27.53--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.74496964423013400/+0.715599540402516\
+  60/911697.9/1/132.5/1.03316887684057335e-008
+  params=-10/-1.3/-1/-13/0/525 float=y
+  maxiter=5000 inside=0 logmap=306
+  center-mag=+1.74496964423013400/+0.715599540402516\
+  60/911697.9/1/132.499999999591125/1.37599577704206\
+  055e-008 params=-10/-1.3/-1/-13/0/525 float=y
+  maxiter=5000 inside=0 logmap=306 sound=off
+  colors=0000zP0zV0zZ2zc5zi6zn8zt8zv9zxBzyCxyEzzGuzH\
+  zzJrzKzzMuzOzzPwzSzzUyzVxzXvzZtx_txVtrSvjOqeKsZEqU\
+  HoVJnXMnZOn_SpaUpcXpeZrgarictjetjixljynnzppzrtztvz\
+  vyzxzzyzzzzzzzzzzzzzyzxvyrpxllvgitaerV_rPXpKUnGPlB\
+  Kj6Hi2Eg0Bg0Ei2Hi5Ki6Oi9SiBViCZiGaiHeiKiiMjiPniSri\
+  UviXyiZziaziczigziizinzljziizegzaezZczV_zUZzPXzMVz\
+  JUzGPzEOzBMz8Kz5Jz2Gz0Ez0Cz0Bz09z08z0Cz0Hz0Mx0Sr0X\
+  j0aX0gZ0lO0rK0sE0z90v00z00w00z00z06z0Cx4Jr5Pl8XgBc\
+  aCjXGrSHyMKtHMnCPi8Sc4VZ0XV4_P6aK9cGCgBGi6Jl4Mn0Pr\
+  0Ut0Xx0_y0cz0ax0_v0_t0Zp0Xn0Xl0Vi0Ug0Ue0Ua0j_0wZ0m\
+  V0VU0SU0MS0GP09O05M00K00J00H00G00H00J00K50MB0OJ0PP\
+  0PZ0Se0Un2Vv5Xz6Zz8Zz9VzBUzBSvCOlEMgEKaGHXHGUHEPJB\
+  KJBHKCEME9MG6OH4PJ0PK0SM0UO0UP0VS0VU0XV0XX0XZ5Z_EZ\
+  aOZcX_eg_graiz_jz_nxZntZppXrlXtjVvgVxcUy_VzXZzUazS\
+  ezOizKlzHpzEtzBxz9zz6zz4zz0zz0zz0zz0zz0zz0zz0zz0zz\
+  0zz0zzGzzGzzGzzBzzGzzKzzK
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

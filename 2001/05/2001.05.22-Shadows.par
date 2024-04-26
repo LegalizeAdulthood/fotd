@@ -1,0 +1,32 @@
+Shadows            { ; Classic FOTD, 22-May-01 Rating (6)
+                     ; time=0:32:13.22--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-257.25336905442320000/-240.09578313226\
+  730000/17019.59/1/10 params=1/1/1/3/0/0 float=y
+  maxiter=5000 inside=0 periodicity=10
+  colors=000xzCvzBqz9nz8jz6gz5cz3`w2Yv1Tt0Rq0Mp0Jn0F\
+  m0Cj08h05g02f08a0CZ0HX0LT0PR0TO0YL0cI0gF0kC0p90t60\
+  x30z10z00x20q60hB1aF3VJ5MO6FS96XB0`C0cE1XI8RMFJRME\
+  VT6Z`1cg0fd0cc0``0YZ0VX0SV0PS0MR0JO0HM0EL0CJ0CJ1CI\
+  5BI8BHIBFK9FN9EQ9ES9BRB9PB6OC3LE1JF0IH0HH1LI5OI8RI\
+  CTIHYIJ`IOcISfIVhIZkIcnIfqIjtImvIjwLhvMftOdsPaqS`p\
+  TZnVXmXVkZSj`RhaPgc9FP00C309C08L25V63cC1kH0vL0zS0x\
+  R0vQ0tP0rO0pN0mM0iL0pS0mS0hS0fS0cS0`S0XS0TS0RS0OS0\
+  PV0PX0PY0RZ0R`0Rc0Sd0Sf0Sg0Th0Tk0Tm0Vn0Vp0Vq0Mv0Fz\
+  08z06z05w65tH3pR2m`2jj1ft0cz0`zETzSMzfFzt8wz2tz5qz\
+  6nx9kwBhtEfqFcpH`mJYjLVgOSfPPcSM`TJZVHYYJY`LYcMYdO\
+  XgPXjRXkSXnTVqVVsXVvYVxZTz`TzaTzcTzdIwn8nwEjsJfpOc\
+  mTZjZXgcSdhOanLZsHXxETz9Rz6Oz8Ms9Lj9LcBJVBJOCIFEH8\
+  EH0FF0FF0LM1PS3TY8YcCahFfnJjtMnzPpwSqvVstYts`vpcwn\
+  fxmhzkkzhnzgqzftzdwzazz`zzZzzYzzVzzSzxRxvOwsLvnJtk\
+  HshEqfCpc9n`6mY3kV1jS1hP1
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

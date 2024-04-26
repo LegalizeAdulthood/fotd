@@ -1,0 +1,32 @@
+A_Ghostly_Spectre  { ; Classic FOTD, 30-Apr-01 Rating (4)
+                     ; time=0:15:00.01--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.584484530091595/+1.150509782717139/7\
+  774320/1/132.5 params=1/-2.1/-1/-1.9/1/300 float=y
+  maxiter=1800 inside=0 logmap=205 periodicity=10
+  colors=000i_zg_zg_zfYzfYzdYzdYzbWzbWzbWzaWzaVz_Vz_\
+  VzYVzYTzXTzXTzSRzVTzVTzXTzXVzXVzYVzYVz_Wz_Wz_WzaWz\
+  aYzbYzbYzbYzd_zd_zf_zf_zf`zg`zg`zi`zibzibzkbzkbzlc\
+  zlczlczncznfznfzpfzphzqhzqhzqhzsizsizuizuizukzwkzw\
+  kzxkzxnzxnzznzzozzpzzpzzqzzqzzszztzztzztzzwzzwzzwz\
+  zxzzyzzzzzzzzzzzzzzxzzxzzvzzuzztzzszzpzzpzzpzzpzzn\
+  zxnzxnzwnxumwumwsmusmsqksqkqpjpshsqfqpdpnbplank`ni\
+  _lgZlfYkdXkbWiaVi_UgYTgXSfVRfSQdRPbPObONaMMaKL_JK_\
+  JJYHIYFHXEGXCFVAEV8DS7CS6BR4AP29P18O07O07M07M07K07\
+  K07J07J07H07H07F07H07F07F07F07F07E07E07E05E07C07C0\
+  7C07C17C47A68A68A7BA8B8AD8CE8EE8FF7FF7HC7JE7KE7MG6\
+  OG6PH6RK6RL4SO4VQ4XR4YU1_V1aY1b_1b`1db0fb0gc0if0kf\
+  0lh0lh0ni0pk0qk0sm0um0wn0xp0xp0zr0zr0zs0zu0zu0zw0z\
+  w0zx0zx0zx0zx0zx0zx0zx0zz0zz1zz1zz4zz4zz6zz6zz7zz7\
+  zz8zz8zzAzzAzzAzzAzzAzzAzzAzzAzzAzzAzzAzzAzzAzzAzz\
+  AzzAzzAzzAzzAzzAzzAzzAzzA
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

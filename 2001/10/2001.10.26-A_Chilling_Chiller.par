@@ -1,0 +1,40 @@
+A_Chilling_Chiller { ; FOTD -- October 26, 2001 (Rating 6)
+ ; time=0:34:43.34--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.47311802838614140/+0.585934696010908\
+  20/1.223377e+010/1/-122.5000875222524/0.0002730490\
+  83844949247 params=2.1/0/0/0 float=y maxiter=10000
+  inside=0 logmap=790 periodicity=25
+  colors=000TawRcwPewNgvLiwJlwHowJlzLjeNhcOdaQaZSZXU\
+  VUVSSXPPZLM`IKaFHcBEe8Cg59h27i5Aj7Dk9GlBJlDMmFOnHR\
+  oJUoLXpN_qPbrRdrTgsVjtXmuZpu`rr_rp_rn_rl_rj_rh_rf_\
+  rd_rb_r`_rZ_rX_rV_rT_rR_rP_rN_rL_rJ_rH_rF_rLUoQOmV\
+  Ij_Chd6fc8gc9gbAhbBhbCiaDiaEjaFj`Gk`Hk_Il_Jl_KmZLm\
+  ZMnZNnXMmWLlULkTKkRJjQJiOIhNIhLHgKGfIGeHFeGEdEEcDD\
+  bBDbACa8B`7B_5A_49Z29Y18X08XCFQOLJ_SCkY5gW4dU4aT4Z\
+  R4WP3TO3QM3NL3MO5MR7MU9LWBLZDLaFKcHKfJKiLKkNJhMIfL\
+  IdKHbJG`IGYHFWGEUFESEDQDDOCCLBBJABH9AF89D79A688576\
+  474362260155A49I3EQ3IZ2Nf1Rn1Vv4`t7er9jqCooFtmZzlL\
+  tbPmUNhTLcSKZRIYQHYPFYOEZNCZMAZL9_K7_J6_I4`H3`G1`F\
+  0`E4bI7cLBeOEfRHhULiYOk`SlcVnfYoiapldpngqqkrtnswqs\
+  yoqxmoxkmwikwgjwehwcfwadw_cwYcwWcwUcwScwQcwOcwMcwK\
+  cwIcwGcwIcwJcwLcwMcwNcwPcwQcwScwTcwUcwPcwKcwFcwAcw\
+  5cw0cw1cw2cw3cw4cw4cw5cw6cw7cw8cw8cw9cwAcwBcwCcwCc\
+  wDcwEcwFcwGcwGcwHcwXcwVcw
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

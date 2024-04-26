@@ -1,0 +1,33 @@
+Spectacle { ; FOTD -- October 01, 2001 (Rating 4)
+ ; time=0:15:34.61--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.22164249176614300/+0.300496616260909\
+  60/5.076234e+007/1/-95 params=6/-1.6/0.6/-16/0/300
+  float=y maxiter=3600 inside=0 logmap=243
+  colors=000FkzFmzKhzFmzB`z4Qz0Dw00p00i00b00Z00V40S9\
+  0OF0KK0HQ0DT09Z04d00i00g00e00e00d04b07b09`0BZ0FZ0H\
+  X0IV0KV0OT0QS0SS0VQ0XO0ZO0`M0dK0eK0gI0iH0mH0nF0pH0\
+  vF0tF0rF0pF0pF0nF4mF9kDDkDHiDKgDQeDTeDXdD`b0Zk7beD\
+  dbKeZQiTXkQbmMgpHnrDtt9zw2zy0zz0zz0zz0zw0zv0zt0yp2\
+  vn4rm7ni7kg9geBebDb`FZZHVVISTKQSKSTQTVTTXZVZbX`gX`\
+  kZbpZdt`ewbgzbgzdizekzemzgnzdzzevzgnzigzi`zkTzmMzm\
+  Fzn7zp0zz0zp0zr0zk0zi2ze7udBp`FkZIfXMfTQfSTkOVpMZu\
+  IbzHeyFiyBmw9pvKttUwrczpmznwzkwzmwznwzpwzrrzrmzthz\
+  vczwczyczyczzczzUzzKzz7zz7zz9yz9yzBm0BmzzwmDwzDwzF\
+  wzFvzHhzHvzDzzHvzIpzMmzOgzSbzTZzXTzZQzbKzdFzgBzi4z\
+  k0zrTywrZzz7yzBwzFtyIrrMnmOmgSi`VgVZdQbbIdZDgXDkTF\
+  nSHrQItSKvSMwSOwSQySSzSTzSVzTXzTZzT`zTbzTdzTezTgzV\
+  izVkzVmzVnzVpzVrzVtzXvzXwzXyzXzzXzzXzzXzzTzzXzzZzz\
+  `zzdzzezzgzzizzmzznzzpzzrzzvzzwzzyzzzzzzzzzzzzzzzz\
+  zzzyzzwzzwtzzXzz9zzFzzIzz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

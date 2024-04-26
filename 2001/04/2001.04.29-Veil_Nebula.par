@@ -1,0 +1,38 @@
+Veil_Nebula        { ; Classic FOTD, 29-Apr-01 Rating (6)
+                     ; time=0:02:12.54--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1 float=y
+  center-mag=1.78204/0.00403291/4113.286/1/-99.999
+  params=2.003/0/1040.877965636158/0 maxiter=1500
+  inside=0 logmap=33 periodicity=10
+  colors=000J0EL0EN0HP0KR0NU0QW0TY0W_0Zb0ad0df0gf0jh\
+  0mh1pk5sk8unCwnHznJzpNzpRzsWzs_zudzuhzwnzwszwuzupz\
+  skzphzndzkbwhYsfWndRhbPd_L_YJWYFPWCLU8HR7CP38N15L0\
+  1J00H00F00C00C00A00A00A10A70AC0AJ3AP5AW8AbCAhHApJA\
+  wNAzRAzUNzdYznhzzuzzzzzzwzzwzzuzzuzzuzzszzswzsuwps\
+  wpnwpkunhunfunbsk_skYskWphUphPphNnfLnfJnfHhdAfb7db\
+  3b_0__0WY0UY0RW0PW0NU0LU0PP0RL0UJ0WF0YC0_80b70d30f\
+  10h00k00p00s00u00w00z00z00z00z00z00z00z00z00z00z00\
+  z00z00z00w00u30s73sC8pHCnNHkRNhYRfYWdYbbYf_Yk_YpdY\
+  hfYdhYYkYUnYNpYJsYCuY8wY3zY0zY0zY0zY0zY0zY0zY0zY0z\
+  Y0zY0kY0WY0FY01Y00Y00Y00Y05Y0AY0HY0WYCkNRzCfz3wz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz\
+  0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0z
+  }
+
+frm:MandelbrotBC   { ; Formula by Andrew Coppin etal
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

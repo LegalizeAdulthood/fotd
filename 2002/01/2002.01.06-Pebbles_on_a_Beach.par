@@ -1,0 +1,34 @@
+Pebbles_on_a_Beach { ; FOTD -- January 06, 2002 (Rating 6)
+ ; time=0:02:52.13--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.38724524422219000/+0.109032917927422\
+  10/2.807474e+011/1/-164.999214267169691/0.00166722\
+  678750666486 params=3/-1.9/3/-7.7/0/0 float=y
+  maxiter=1800 inside=0 outside=tdis
+  colors=000xSjuTjjpOfjSafXX`_SXcOSgJMlFIpACu67y13z0\
+  9v0Fp0Lj0Qd0X_0aT0gO0mI0sC0y60z00z00z00z00z00y00v0\
+  0s10p10m30j40g40d60a60_70Y70_70`74a7Ac7Gd7Mf7Sg7Xi\
+  7aj7gl7mm7so7yp7zr7zs7c5Kc5Kc5KTmsYomaoiVTQP77J00T\
+  43cMIlcXvujzzyzzsvrmwmmo_alPXgFQd6Mc5KT0DP0AS1DVAG\
+  YJJ`SLc`O_YPTVQPSTmcmFMY9J_4G`0Dc0Ad06g0S00S00S00Q\
+  10Q60Q91PC3PF4OJ6OM7OP9MSAMXCM_DLaFLdIJiGLiFOgDPgC\
+  SfATf9Xd6Yd4`c3ac1da0fa0i`0l_0j_1g_6d_9c_C``GY`JX`\
+  MT`QQaQS`SV_TYYT`VVcTXfSYiQYlO_oM`rLauIuz_zzr0Gz0I\
+  z0Lz1Mz6PzCQzGTzLVzPYzT_z_azcczgfzlgzrjzpluoo`rmau\
+  lcxjdzigzgizfjzdlzaoy`rlYuYXyLTz6QzCSzIVzOYxV`u`ar\
+  fdolglsjgojjilmdlp_msVmvPoyLozFpz9rzFszLurQviXxaay\
+  TgzLmzDsz4yz0xx3umCrcLoTTlL`iAif0rc0zzg0zi0zl0zo0z\
+  r0zs0zv0zy0zz0yz0yz0yz3yxCxuLxrVxpcvmlvjuvgzudzydf\
+  zc9Xi70p41o97lFDiLJfPPcVV``_YddVjjSppPuvMzzJzzGzzF\
+  zzDzxAzu9zp6yzJozLozOmzPl
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

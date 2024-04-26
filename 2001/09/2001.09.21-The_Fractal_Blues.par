@@ -1,0 +1,32 @@
+The_Fractal_Blues  { ; Classic FOTD, 21-Sep-01 Rating (7)
+                     ; time=0:03:52.17--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-2.53602432454074400/+0.172721338499729\
+  20/6505050/1/-125 params=1/4/2/3/0/0 float=y
+  maxiter=1200 inside=0 outside=tdis
+  colors=0000iy0du0Xs0Qo0Lm0Fi29g42d40b60Z80X90S90QF\
+  0NJ0JP0FS0BX68bB4eH0kP0oV0s`0ye0zm0zs0zy0zz0zs0si0\
+  gZ0XP0LD894F00N00S00X00`20d60gB0kF2mL6qP8uSByZFzbH\
+  zgLzkPzqQzuVzyXzzz0zz0zz0ww0mo6cgBUbJKVQAPZ0Hd09kz\
+  UzzUzzUzzUzzUzzUzzUz0Dm0Hi0Ne0Qb0VZ0`V0dQ0gN0kJ0eF\
+  0`D0V90Q80L40F20900600H00S00d00o00k00g20d80`D4XJ8S\
+  PBQV6`J0i80q00z00z00z09u0Lo0Xg0eb0qX0zP0zJ0zD0ZNN0\
+  Vz0Zz0bz6ezDizLkzSoz`szgwzoyzmszkmziguibogXieSddNZ\
+  dHSbBN`6HZ0BZ08`44bB0dJ0eP0gX0gd0ik0kq0my0oz0oz0bz\
+  0Qz4DzL2zb0zq0zm0zk0zg0ye0sb0k`2eX4ZV4SS9PVDLVHJXN\
+  FXQBZV9Z`6Zd2`g0`m0bq0bu0bw0Xw2Sy8NyBJzHFzN9zQ6zX2\
+  zb0zg0zk0zq0zw0zz0zu0zo0zi0yd0wZ0uS0sN4sH8qBBo6Fm0\
+  Jk0Ni0Qg0Ve0Ze0bX0LN64FL0NQ0SV4Z`BedJkgQqmZwqezumz\
+  zuzzzzzzzzzzzszzkzzdzzXzzPzzFzz8zz0zz0zz0zz0iqqemi\
+  didbeX`dQZ`JVXDSV6QQ0PN0NL0PV0Qb0Si0Vq2Xy6Zz9`zD`z\
+  HXzFSzDPzBLy9Hs8Fo80uz0oz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

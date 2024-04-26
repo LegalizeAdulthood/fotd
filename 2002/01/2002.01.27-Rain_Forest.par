@@ -1,0 +1,33 @@
+Rain_Forest { ; FOTD -- January 27, 2002 (Rating 8)
+ ; time=0:03:20.37--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-5.5481262467536/+3.312387502648676/294\
+  6853/1/130/-1.70502704253949755e-007 params=0.2/-1\
+  2/2/-1.2/0/1e+080 float=y maxiter=3600 inside=bof61
+  colors=000J0yH0yO6zVFzaOzhYzofzvpzzyzyryxlrufisabp\
+  XVoROlLGkGAKP7N06B05A06A06A07A0780882883A8PA77B78B\
+  7BC7CC7ECEJKKORRUZYYedbnkhurnzyrzuNSr00zzmzzmyuyvl\
+  yrexnYvkRvfJubCs`6sNaSAz3Az36u13f01U00G00500N00d00\
+  e70eJ0fVGkaFnaCpbBrdAud7xe6ye5zf3zf7zbAzZCzVFzRJzN\
+  LzJOzFRzBVz7Yz3`z0bz0ez0Uz0Hv07s0Ap0Co0Fn1Hl5Kk7Ni\
+  APhESfGVeJYdLZ`KZYK`UK`RK`NJaKJaGJaEJ700810A50AA0B\
+  E0CH0CN0ER0FX0F`0Gd0Hi0Hn0Js0Kx0Kz0Hp3GfAFXHENORJV\
+  PKRPKOPKLPLJPLGPLEONBON8ON6OO3OO1OO0PS0RV0SZ0Ua0Vd\
+  0Pe2Lf5Gh7CiA7kC3lF0nHEbNRSSdHXr7az0ez2dz6byBbvFau\
+  K`rO`oUZnYYkbYifXflVdpVbvU`zSZzSVzUSzUOzULyUJxUFvU\
+  CuUAsU6rU3pU1pU7bZERbJFfP3kV0oY0kZ3f`AdaF`bLYdRUeX\
+  PfbNhhJioGkuClzAkuBkoCkkEkeFk`GkXHkRJkLKkHLkCNk7Ok\
+  3Oh0Jf0EZ0RR0bJ0oB0z80z61z57z2Ez0Kz0Rz0Yz0dz8azN`u\
+  aZnpYfzXaLSvKXdJ`NHd6Hh0J`0JS0JK5KCAK5FK0KJBSJP`RU\
+  bYXde`flbhufkzilylrxnxK0x
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

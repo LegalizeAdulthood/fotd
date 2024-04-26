@@ -1,0 +1,34 @@
+Midget_Distortion { ; FOTD -- October 19, 2001 (Rating 6)
+ ; time=0:01:57.20--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=multirot-XZ-YW-new passes=1
+  center-mag=+0.00000113718053904/-0.000000033119188\
+  92/5169577/0.115/-180/-88.3303584561142259
+  params=45/45/2/0/-1.749615506433/0/-1.749615507433\
+  /0 float=y maxiter=2400 inside=0 logmap=205
+  colors=000ACWADYAE_AFaAGdBHgCIjDJmEKpYQuzzznmzlazj\
+  PzhDzf1zi8tlFnnMhqTcs_YvfSxmNplUhl`akgUknNkuLmkJoa\
+  HpSPkQWfPbaOiXNpSMEOrMWtTcv`kxgry`jpVbgDABPVZINQCF\
+  H678zeljV_VLOFACtswlloeehZZ`SSULLMEEF777GPZCKS9FL6\
+  AE357DAmA8c76U5KX2U7zoP8QKz__sNVeHNSBFE57OrUJgOEXI\
+  9MC4B6r0eh0Z_0SR0LI0E9079zL7mG5`C3P81C4C8wA6n85e64\
+  Y53P32H118WdfSZ`OUWKPQGKLCFG8AA455ZAkkWzOGVugaaTPJ\
+  EC6bC4T93J6193KL_FFRAAI559uYKmTHfPF_LCTHALC7E85742\
+  h55_44R33I22z1zE5E727sVk`KWIAGFjXDdSBZO9TK7NG5HC3B\
+  8154cGHXDEQABK88D55622wZZhQQUHHF88xYTcMJKB90r`0hU0\
+  _O0RI0IC096TxaNkUH_MBOF5C7bVxJFUj4bV2QF1DZbbTWWNQQ\
+  HNJBOD5P65Q`3RO1SCKTXAUL8VG6WC4X82Y4X_Kta5kc4ce3Wg\
+  2Oi2Gk18m0Do6Bq59s47u35w23y11z0PzKLzHHzEEzBAz87z53\
+  z2QzGMzDIzBEz9Bz67z43z28zh6z_4zR3zI1z9sz`SzI6zC5zA\
+  4z83z62z41z2nzJezFYzCPz9Hz68z3JzuKzuKzuNzpQzkTzfVz\
+  aYzX`zSczNezIazQZzXWzcWzc
+
+}
+
+frm:multirot-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=z^(p2)+c,
+|z| <= 36  }

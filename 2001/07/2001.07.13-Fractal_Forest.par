@@ -1,0 +1,35 @@
+Fractal_Forest     { ; Classic FOTD, 13-Jul-01 Rating (7)
+                     ; time=0:02:54.55--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=SliceJB-new-min passes=1 center-mag=0.\
+  224291/2.56739e-016/12.49983/1.0776/90 params=0.51\
+  /0.5/0.5/0.5/1.618034/0/-1.153365/0/0/0 float=y
+  maxiter=1800 inside=0 logmap=5 periodicity=0
+  colors=000FFQFFQFFPFFPFFPFFOFDOFDOFDMFDMFDLFDLFDLF\
+  DJFDJFDIFDIFCIFCGFCGFCGFCFFCFFCDFCDFCDFCCFCCFAAFAA\
+  FAAFA9FA9FA9DA7DA7DA6DA6DA6D94D94D93D93D93D91D91D9\
+  1D90D90D90D70D70D70D70D70D70D70D70D70D70D70D60D60D\
+  60D60D60D60D60D60D60D60D60D60F70G90IA0JA0JC0LD0MF0\
+  OF0PG0PI0QI0SJ0TL0TM0VM0XO0YP0_P0_Q0`S0aT0cT0cV0dX\
+  0fX0gY0i_0i`0j`0la0mc0ld0mc0mc0mc0mc0mc1mc1mc3mc3m\
+  c4oc4oc6oc6oa7oa7oa9oa9oaAoaApaCpaCpaDpaDpaFpaGp`H\
+  p`Ip`Jr`Kr`Lr`Mr`Nr`Or`Pr`Qr`Rr`Sr`Ts_Us_Vs_Ws_Xs_\
+  Ys_Zs__s_`s_au_bu_cu_duYeuYfuYguYhuYiuYjvYkvYlvYmv\
+  YnvYovYpvXqvXrvXsxXtxXuxXvxXwxXxxXyxXzxXzxXzzYzyXz\
+  xXzvXzuXzsXzrXzpXzoXzmXzlXzjXziXzgXzfXzdXzcVzaVz`V\
+  z_VzYVzXVzVVzTVzQVzPVzOVzMVzLVzJVzIVzGTzFTzDTzCTzA\
+  Tz9Tz7Tz6Tz4Tz3Tz1Tz0Tz0Tz0Tz0Tz0Uz0Uz0Vz0Vz0Wz0Wz\
+  0Xz0Xz0Yz1Yz1Zz3Zz3_z4_z4`z6`z6az7az9bzAbzAczCczDc\
+  zDczFczGczGczIczJczLczLcz
+  }
+
+frm:SliceJB-new-min {; by John R. H. Goering, July 1999
+  pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+  b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+  cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+  sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+  s=v*sin(a), c=p+flip(q)+(p4), z=r+flip(s)+(p5):
+  z=(-z)^(p3)+c
+  |z|<=100
+  }

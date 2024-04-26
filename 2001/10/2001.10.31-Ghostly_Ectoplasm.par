@@ -1,0 +1,34 @@
+Ghostly_Ectoplasm { ; FOTD -- October 31, 2001 (Rating 5)
+ ; time=0:38:00.02--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-5.19188447461177000/+3.029106015312977\
+  00/60876.14/1/-150.000000001924178/1.7286827455609\
+  2771e-009 params=1.4/-2.5/-0.2/0.648/0/-40 float=y
+  maxiter=6000 inside=0 logmap=628
+  colors=000YACXACXBDWCEWCFVDFUEGUFHTFITGJSHJSHKRILR\
+  JMQJNQKNPLOPLPOMQNNQNORMOSMPTLQULQUKRVKSWJSXJTYIUY\
+  IUZHV_GW`GX`FXaFYbEZcEZdD_dD`eC`fCagBbhBbhAci9dj9e\
+  k8ek8fl7gm7gn6ho6io5ip5jq4kr2jq4kr6kr7lr9lrAmrCmrD\
+  nrFnsHosIosKpsLpsNqsOqsQrsSrtTstVstWttYttZut`ut_uv\
+  `uuautautbusbuscurcurduqeuqeupfupfuogungunhumiumiu\
+  ljuljukkukkujlujmuimuhnuhnugougoufpufquequerudruds\
+  ucsucrtdrtdrtdrtdrtdqtdqtdqtdqtdqtdqtdptdztdptepte\
+  ptezteoteoteotezteotenzenteztentenzfmtfmtfmtfmtfmt\
+  fmtfljflsflsflsflsflsfksfksgksgkqgkogjmgjkgjigjggj\
+  egjYgicgihgimgimhiohhshhshhshhshhshhshgshgshgshgsh\
+  gshkrmihjgshfsfdscbsaas__tYYtVXtTVtRUtPStMQuKPuINu\
+  GLuDKuBMu9Ow6Qw7Sw7Uw8Ww8Yw8_w9ax9cxAexAgxAiyBkyBm\
+  yCoyCqzCszDuzDwzDyzEzzEzzFzzFzzFzzGzzGzzHzzHzzHzzI\
+  zzIzzJzzJzzJzzKzzKzzKzzLzzLzzMzzMzzMzzNzzNzzOzzOzz\
+  4zz5zz6zz7zz8zz8zz9zzAzzB
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

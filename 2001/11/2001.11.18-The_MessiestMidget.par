@@ -1,0 +1,33 @@
+The_MessiestMidget { ; FOTD -- November 18, 2001 (Rating 3)
+ ; time=1:39:39.02--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.82202605022642/+0.0000010967042/1.29\
+  9401e+008/1/180 params=0.5/-0.38/2.24/4.87/-1.1/525
+  float=y maxiter=3600 inside=zmag
+  colors=0006Ij6Gj5Ej5Cj4Aj48i36i34i22i21i33g34f35d3\
+  7c38b39`3B_4CZ4DX4FW4GV4HT4JS4KQ5LP5NO5OM5PL5RK5SI\
+  5TH5UG8WFAYEC_DFaDHcCJeBMgAOiAQk9Tm8Vo7Xq7_s6au5cw\
+  5_sBWoGTkMPgRMcXI_aFWfEYdEZcE_bE``Eb_EcZDdYDeWDfVD\
+  hUDiSDjRCkQCmPCnNCoMCpLCqKEpLGoMInMKmNMlOOkOQjPRjQ\
+  TiQVhRXgSZfS`eTbdUdcUecVgbWiaWk`Xm_YoZYqYZrYZoTUmO\
+  QkKLiFHgBDbBEZBFUBGQBHLBIHBIJELKGNLIPMKRONTPPVQRXR\
+  TZSV`UYbV_dWafXchYejXciWbiV`iV_iUZiTXiSWiSViRTiQSi\
+  QRiPPhOOhNMhNLhMKhLIhKHhKGhJEhIDhIChLFdOI`QLXTOUVR\
+  QYTM`WIbZFeaBgd7jg3li0F_QOdVXh_dldmpiutnsqlrokpmjo\
+  kinihlgfkeeibdh`cgZbeX`dV_bTZaRY`PX_QY_QZ_Q__R`ZRa\
+  ZRbZScZScZSdYTeYTfYTgYThXUiXUjXUjXVkXVlWVmWWnWWoWW\
+  pWWqXXoIGTBJHAH0AFD000AFDAHJALJANJAPJARKATKAVKAXKA\
+  ZKA_JBaIBcHBeGCgFChEDjDDlCEnBEpAFq9Fs8Gu7Gw6Gx6bf8\
+  xP9wTBvXDv`EudGuhHtlJtpKstMsxNquOprPooQmlRliSkfTic\
+  Uh`UgYVeVWdSXARe9Og8Mi7Kk
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

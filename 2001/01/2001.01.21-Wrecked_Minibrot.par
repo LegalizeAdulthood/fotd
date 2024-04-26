@@ -1,0 +1,34 @@
+Wrecked_Minibrot { ; FOTD -- January 21, 2001 (Rating 7)
+ ; time=0:16:20.75--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=multirot-XZ-YW-new passes=1
+  center-mag=-0.00000000001065986/+0.000000000009055\
+  70/2.142352e+009/0.1329/1.677567084144715/-51.3292\
+  285621142739 params=90/90/2/0/-0.7472989351046004/\
+  -0.1032079261637744/-0.7472989351046004/-0.1032079\
+  26163774 float=y maxiter=15000 inside=0 logmap=1856
+  colors=00063C91FD1JG1OJ0QM0VQ0_T0aX0f_0jc0mf0ri0vk\
+  0yj0ui0pi1lg4ig6df7`fAXdCTcDPcGLaIGaJD`M9`O4_P0_Q0\
+  `S0aS1cT4cT6dV7fVAgXCgXDiXGjYIlYLl_Mm_Oo`Qp`Sp`Tif\
+  QclOXrLQvISxLTxMVyOVyQXySYzTYzX_zY`z_`zaazcczdczgd\
+  zifzjfzlczi`zg_xdXvcVs`Sr_QpXOmVLlSJiQGgOFdMCcJAaI\
+  7dQ4g_1jg0mo0px0sz0vz0pz7lzFgsMcmT_f`V`gTToTOvTGvT\
+  AvT9vT9vT7vT7vT6vT6vT4vT4vT3vT3vT1vT1vT1vT0vT0vT0s\
+  _0of0jm0fu0az0Yz0imCsT_z9vzFpxJluOgrTaoYYmaTjgOglJ\
+  dpFav9_z4Yz0Xz0Xz0Yz6YzI_zV_yf`xs`vzSrrLmdDiT6dG0a\
+  40c60c60d70d70f70f90g90g90iA0iA0jA0jC0lC0lC4m9Co7I\
+  p6Pr4Xr3as1iu0pv0vv0xr0xm0xi0xd0x`0xX0xS0vO0uJ0sF0\
+  rA0p60r93uADvCOzDYzFzzGzzIyzIozIfxIYuITrIPoJJlJFiJ\
+  AfJ4cJ0`J0YJ0XI0VJ0TL0SM0QO0PP0PQ0OS0MT0LV0JX0IY0I\
+  _07`70aP0cf0dd0fd0gc4ic7jaClaGm`Jo`Op_Qr_Ps`Ou`Mva\
+  LxaJyaIzcGzcFzdDzdAzcDzdFzfIzgJzgMziOzjQzlSzlVzmXz\
+  o_zp_zu`zpazmczjdzf0z33z7
+}
+
+frm:multirot-XZ-YW-new {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
+z=z^(p2)+c,
+|z| <= 36  }

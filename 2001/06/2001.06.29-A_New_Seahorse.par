@@ -1,0 +1,35 @@
+A_New_Seahorse     { ; Classic FOTD, 29-Jun-01 Rating (7)
+                     ; time=0:03:42.07--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=multirot-XY-ZW-new function=flip/ident
+  passes=1 center-mag=+0.00000000006028511/-0.000000\
+  00000678208/1.223635e+009/0.2406/6.418/71.294
+  params=0/90/2/0/-0.7692602987818452/0.109559945816\
+  0586/-0.7692602987818452/0.1095599458160586 float=y
+  maxiter=2000 inside=0 logmap=388 periodicity=10
+  colors=000VzeYzfZzf_zfazfczfezffzfgzfizgkzgmzgnzgo\
+  zgqzgszguzgvziwziyzizzizzizzizzizzizzjzzkzzmzznzzo\
+  zzqzzrzzrzzszyuzwvzvwzuyzszzrzzrzzqzzozznzzmzzkzzj\
+  zzjzvizrgyogskfnifieecbeZZcUXcOSbJQbEMa8J_3FY0DW0E\
+  T0EO2FL6F7AH0EH0HM0JR0KX0Na0Of0Rk0Sq2Vv3Xz4Zz4_s6a\
+  m6af7b_8cU0aN0bH0c00g00e00b44_AAYEEVIISMMQRRNVVKZZ\
+  IbbH_eIZfJYiKXjMVmMUnNRqOQrQOuQNvRMySKzUIzRJzUKyVK\
+  uYMrZNo_NkbOicQefQbgR_iSXkSUmUQoVNqVKrXHuYEvYAyZ7z\
+  _4z_0za0za0zc0ze3yf6ugAqiEmjHikKemOaoRYqVUrZQsaMue\
+  IviEwkAyo6zs0zr2yq7yoBwnHvmMvkQujVzkbujZqiXkiSggQc\
+  fMZfJVeFQeDMc8Ib6Db28a04a0D_0K_0SZ0ZZ0fY0nY0vX0w_0\
+  yc6ujJrrXnyimzpkzvkzukvskrrkmqjinjcmhZkfPjcKffNihR\
+  jgUkfZnfdoekqcqsbwubtvcosejrfeqg`ogXniSmhOkgKjgJie\
+  IgdHigHjkFknHmoInqJotKqvMrwNswOuyQvzRwzSyzUzzVzzXz\
+  zYzzZzz_zyazybzyczyezyfzwfzwfzwfzwfzwfzvfzvfzvfzvf\
+  zvfzvfzvfzvfzvfzvfzvfzvfz
+  }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36  }

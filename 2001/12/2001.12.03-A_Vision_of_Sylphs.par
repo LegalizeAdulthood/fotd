@@ -1,0 +1,40 @@
+A_Vision_of_Sylphs { ; FOTD -- December 03, 2001 (Rating 3)
+ ; time=0:43:47.53--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.41721734187317930/+0.615018610809023\
+  00/31759.23/1/130/4.21363777203254131e-011
+  params=1.55/0/-97/0 float=y
+  maxiter=10000 inside=0 logmap=575
+  colors=000NLKLKLILNHLOENQDNR9NQBQRDRTETVGVWHWYIYZK\
+  Z`L`aOacQadRafTahVaiWakYalZanacoccqdcsfcthcvicxkcy\
+  lczoczqczscztczvczxczyczzazzczzdzzfzzfzzhzziyzivzk\
+  tylqyloynlyokyohyqdyscyt`ytZxvWxxVxxRxyOxzNxzKxzIx\
+  zGyzDxzExzExzGxzGvzGvzHvyHvyHvxItxItvKtvKttKttLssL\
+  ssLsqNsqNsoOqoOqnOqnQqlQonRqlQqkQskQsiQsiQthQthQtf\
+  QvdQvdQxcQxcQxaQyaQy`Qy`QzZQzYQzYQzWQzWQzVQzVQzTQz\
+  RQzRQzQQzQQzOQzOQzNQzLRzNQzOOzQOzRNzTLxTLvVKsWIqYI\
+  oZHl`Gk`GhaEfcDddDafB`hAYf9ZhAZhA`iA`iA`kAakBalBcl\
+  BcnBcnBdoDdoDdqDfqDfsDhsEhtEhtEivEivEkxGkxGkyGlyGl\
+  zGqzAlzGivKfoQckVZd`W`dTViQQoLItIBzGIzEQzDYzBdzAlz\
+  Atz9tz7tz6tz6tz4tz2tz2tz1tz0tz0tz0tz0tz0tz0tz0tz0t\
+  z0tz0tz0tz0tz0tz0tz0tz0tz0tz0tz0tz0tz0tz0tz0tz0sz1\
+  qz2oz4oz6nz6nz7nz7nz7lz9lz9lzAlzAkzAkzBkzBkzDkzDiz\
+  DizEizEizEhzGhzGhzHhzHhzHfzIfzIfzKfzKdzKdzLdzLdzId\
+  zLdzLdzLdzLdzLdzLdzLdzLdz
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

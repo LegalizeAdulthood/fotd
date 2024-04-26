@@ -1,0 +1,40 @@
+FirstFractalFlight { ; FOTD -- November 14, 2001 (Rating 5)
+ ; time=0:33:48.45--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.49923547537758030/-0.605274302365574\
+  00/69.28278/1/-50/-1.01391117723892421e-013
+  params=1.09/0/-232/10000000 float=y maxiter=40000
+  inside=0 logmap=115 periodicity=10
+  colors=000LQbKSbKU_JV`IW`IX_HYZGZZG_YF`YFaXEbWDcWD\
+  dVCdUBeUBfTAgSAhS9iR8iQ8jQ7kP6lO6mO5nN5nN8oOAoPDpP\
+  FpQHpRKqRMqSOqTRrTTrUVrVYsV_sWasWZi`X_eVQjTHoVJjYL\
+  f`NbcOZhQVmSRpTNoSMlSMiRLfRLcRKbQKaQJ`QJ`PI_PIZPIZ\
+  OHYOHXOGXNGWNFVNFVMEUMETMETLDSLDRLCRKCQKBQJBPJAOJA\
+  OI9NI9MI9MH8LH8KH7KG7JG6IG6IF5HF5GF5GE4FE4EE3ED3DD\
+  2CD2CC1BC1BC1AH2AM2AR39W39`49d48i58n58s67x67z77z7A\
+  zBDyFFuJIrMKnQNjUPfYRb`SadUahValXaoYas_aw`az`ay_ay\
+  _ay_`y_`y_`y__x__x__x_Zx_Zx_Zx_Yx_Yw_Yw_Xw_Xw_Xw_W\
+  w_Vv_Vv_Uv_UvaSvaSvaRvaRuaPuaPuaPuaPubOubOtbOtbOtb\
+  NtbNtbNtbNtcMscMscLscLsdKsdKsdJseJtfItfItfItgIthIt\
+  hIthItiItjItjItjItkJtlJtlJulJumKunKunKunKunKupJupJ\
+  upJupJuqIuqIuqIuqIvrIvrIvrIvrIvsIvsIvsIvsIvtIwtIwt\
+  IwtIwuIxuIxuIxuIxvIyvIyvIyvIywIzwIzwIzwIzxIzxIzxIz\
+  xIzyIzyIzyIzyIzzIzzIzzIzzIzzIzzIzzIzzIzzIzzIzzIzzI\
+  zzIzzIzzIzzIzzIzzIzzIzzIz
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

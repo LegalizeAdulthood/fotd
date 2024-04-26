@@ -1,0 +1,38 @@
+DecorativeMinibrot { ; Classic FOTD, 01-May-01 Rating (6)
+                     ; time=0:01:52.60--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=mandelbrotbc1 function=floor passes=1
+  center-mag=-0.73763/0.15494/2498.371/1/-124.999
+  params=1.732050807569/0/28.4/0 float=y maxiter=1000
+  inside=0 logmap=36 periodicity=10
+  colors=000mA9jBPnCHqDHtFDwGAzH5zH2zM4zS5zW7za8zeAz\
+  jMzp_zzmzzzbsfFPO0D70ID1PK4YP8cWClaGrhIwmMriPmeUha\
+  WcZ__VbVQfQOiMKmHGpDCuAAw45z12z00z11z42z83zC4zG4zK\
+  5zO7zS8zW8y_AycByhCylClSPaAaQ0mS0pU2rU7sVCuWHvWMwY\
+  SyZYzZazeVmjO_pIMpMLpPKpUKpWIp_HpbHQYP2SW1WS0ZO0bL\
+  0eH0hD0lB0o70s40v10y00z00z00z0ovzpszrryrpwsouumsul\
+  rvjpwhmwflyejzcizbfzaez_czZbzYazW_yVZwVYvUWuSVuSUs\
+  QSrPQpOPoOOmMMlLLlLLhKMcKOaIPYIQUHSQHUMGVKGWGFYCFZ\
+  AD_5Da2Cb0Cc0Be0Be0If0Pf0Wh1ch3ji4ri7sf8ueAvcCvbDw\
+  aFyZGzYIzWKzVLzUMzSVzKbzDiz5rz0yz0wv3vsDupOulZsiir\
+  furczsczscyucvucsvcpvcmwcjwchyceycbzc_zcYzcVzcUwcZ\
+  sccpchycfzcfzc_zeUzfMzhHyiKsjMmlO0m02o04p27r3Bs4Du\
+  5Hv8KwAMyBQzCUzFYzG_zHbzIZzFWzBSz8Pz4Lz1Iz0Fz0Cz0A\
+  z0Dz2HzGKzUFzLAzD4z57zB8zFBzICzMFzOHzPKzPMzQPzQSzS\
+  VzSYzU_zUbzVezVhzWizWjzUjzQlzPlzMmzLmzImzHozGpzFpz\
+  DlzFWzHWzHVzIVzIVzKUzKbzY
+  }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

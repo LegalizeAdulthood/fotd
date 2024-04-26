@@ -1,0 +1,34 @@
+The_Lima_Beans { ; FOTD -- November 22, 2001 (Rating 7)
+ ; time=0:04:37.54--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=mandelbrotmix4 function=recip passes=b
+  center-mag=-828.687713606/-1696.177811432/46.53046\
+  /1/-80/9.89826970387852612e-012 params=-60/-1.3/\
+  -120/-3.1/0/800 float=y maxiter=1250 inside=255
+  logmap=129 symmetry=none periodicity=20
+  colors=000RGPSHOTINUJMVKLWLKXMJYNIZOH_PG`QFaRGbSGc\
+  THdUHeTHgSIhRIjQIlPJmOJoNJpMKrLKsKKrPMqUOqZQpcSpgU\
+  olWoqYnv_nzaepXYfSQXNHNI9DD13856D89HBBLEEPHGTKJXNL\
+  aQOeTQiWTmZVqaYud_ycYrbXlaWfaU_`TU_SO_RI`QG`QF`PE`\
+  PDKNcRPhXRmcTqiVvoWzkXyhYyeZyb_y_`yXayUbyRbyUdwWev\
+  Ygt_hsajqdkpfmnhnmjpklqjoshqtgsveuwdwybyzaqwZjuWbs\
+  UWqROoPHmMAkKDjMGiOIiPLhRNgSQgUTfWVeXYeZ_d_bcaeccg\
+  bdjaflagkbekcckcakd_kdYkeWkeVkfTkfRkgPkgNkhLkhKleL\
+  mcLnaMo_MoYMpWNqUNrSOsQOsOOtMPuKPvIQwGQwEQtHSqJUoM\
+  WlOYiR_gTadWcbYd__fXbhVdjSglPinNlpKnrIpsJjMMkOOkQR\
+  kRTkTWkVYkW_kYbk_dk`gkbikdlkenkgpkhojjniknilmhmlgo\
+  lgpkfqkfrjgnihjhhfgibfiZejWdjSckObkKalGalDddIfXNhQ\
+  ReTQcVQ`XPZZPWaOUcOSeNPgNNjMKlMInLGpLHrJHsHItFIuDJ\
+  vBJw9Kx7Ky5Lz8MzBMzDNzGNzIOzLOzNPzQPzSQzVQzXRz_Rza\
+  SzdSzfLzTEzG7z38z79zAAzDBzGCzJDzNEzQFzTGzWHzZIzaKz\
+  `Mz_OzZQzZRzYNzaMzdKzg000
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

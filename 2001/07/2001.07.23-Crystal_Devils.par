@@ -1,0 +1,33 @@
+Crystal_Devils     { ; Classic FOTD, 23-Jul-01 Rating (7)
+                     ; time=0:05:38.12--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.026683029720186/-0.41544346140642/2.\
+  748383e+008/1/-177.499 params=-1/1.1/1/-0.7/0/800
+  float=y maxiter=1200 inside=0 proximity=0.0645
+  outside=fmod symmetry=none periodicity=10
+  colors=000zhJzhEzh8zoGztLrzTkzZdzPXzIRzAVrNXkZ`dib\
+  XtfPzhIzdPzbVz`bzZhzXmzZkxZkrZimZihZib`hX`hR`hL`fG\
+  `fA`f6idNqbbx`rz`zP0PL0TJ8VGEZEL`ATd8Zf6fh1mk0rm0z\
+  q0zr0zv0zx0zz0zrCzmPzf`x`kqTxkNzdGzZAzd6zi3zo1zt0v\
+  x0rz0mz0iz0fz0bz0`z060I80LA0PC0RE0XE0`G0dG0hI0kI0q\
+  J0tJ0xL0zL1zN1zN1zP3zP3zP3zELz1bz0qv3rqGtkTvfdx`oz\
+  VzzPzzJzzEzvAdo6Gf10Z00`08b0Gd0Lf0Th0`i0fi0dm0dq1d\
+  r8bvGbxLbzRbzX`zd`zi`zo`ztdzofzihzdiz`kzVozPqzLrzG\
+  tzAvz6zz0zz0zz0zz0zz0zz0zz0xz0rz0oz6izEdzLZzTVx`Px\
+  hJvoEtvAtz3rz0qz0qz3izCdxJXiRRX`JJhE3o60v00o30h80`\
+  CCVGNNJZGNi8Rt1Tz8VzEVxIVtNVqRVmXXi`XffXbiXZoXVrXR\
+  qZVo`XobZmdbmfdkhfkihiikikmhmohoqfqtfrvdtxdtzftxht\
+  xhtxitxktxktvmtvmtvotvqtvqttrttttttttvttvttkxfbzRR\
+  zCIz0VzCfzP`zRXzRTzRPzTLzTIxTExTAxV6vV1vV0vX0tX0tX\
+  0tX0q`0md0if0fi0bk0Zo0Vq0Rt0Nv0Js0Ip0Gm0Ej0Cg0Ad08\
+  a16`33Y61V80SA0P30M30Jf1G
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

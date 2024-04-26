@@ -1,0 +1,39 @@
+Fractal_Flinders { ; FOTD -- October 12, 2001 (Rating 6)
+ ; time=0:16:31.13--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.51849225088358700/-0.546491304449809\
+  /24561.24 params=1.5874/0/6/0 float=y
+  maxiter=36000 inside=0 logmap=254
+  colors=000_Q0`R0`S0_R0ZQ0WP0VN0UN0SM0QL0PK0NI0MH0L\
+  H0KG0i_lfDidHkdKkdNlcQlcUmcWmc_nbbnbepbhpbkp`cb`WQ\
+  _PC_I0PD5F8C35I05NQbmNZgMWbKUWIQRHNMFLGDHAAE49C089\
+  07D07F05K05M24Q44S53W83Z92bA2dD0hF0kH0nI0qL0uM0wN4\
+  qSAkYHebM_gSUlZPqdIviDzlEwmEvpEtqErtEpuEnwElyEkzEh\
+  zEgzEfyH`tIYnKUkMQfNM`PIWRFSSANU7IW3DX09Z09Z08Z0CZ\
+  0HQ0KQ0MR0PR0RS0UU0WU0ZV0bW0fW2lW2rW3KVELVGLVIMVKN\
+  VMNVOPUQQUSRUURUWSUYUS_USaVScWSeYSgYSiZRk_Rm_Rm`Rm\
+  bRmbRmcQmdQmfQmfQmgQmhPmhPmiPmkPmlPmlPmmNmnNnnNopN\
+  pqNqqNrrMstMtuMuuMvvMwwLwwLwyLwzLwzLwzLwzKwzKwzKwz\
+  KwzKwzKwzLwzLwzMwzMwzNwzNwyPwwPxwPyvQzuQztRztRzrSz\
+  qSzpUzpUznUzmVzlVzlWzkWziXzhXzhXzgZzfZzd_zd_zc`zb`\
+  z`bz`bz_bzZczYczYdzWdzVezUezUezUdzUdzUczUczUczUbzU\
+  bzUbzU`zU`zU`zU_zU_zUZzUZzUZzUXzUXzUXzUWzUWzUWzUVz\
+  UVzUUzUUzUUzUSzUSzUSzURzURzURzUQzUQzUPzUPzUPzUNzUN\
+  zUNzUMzUMzUMzUMzUMzUMzUMz
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

@@ -1,0 +1,32 @@
+Quantum_Hysteria   { ; Classic FOTD, 19-Jun-01 Rating (8)
+                     ; time=0:26:56.29--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.18005066951765600/-0.181874553498594\
+  20/1282.051 params=-1/-1.25/1.25/1/-1.8/1e+150
+  float=y maxiter=600 inside=bof60 periodicity=0
+  colors=000zzzyyzxxzwwzvvzuuzttzsszrrzqqzppzpoypnxp\
+  mwplvpkuojtnismhrlgqkfojemidkhcigbgfaed_caX_YTWUPS\
+  PKPKGHGBNC9TD6ZC6`D6bD6dF5fF5hG5jH3lH3nH3pJ3rJ3tL1\
+  vJ3xH6zG9wFCvDFsCHrAKo9Nm7Pl6Si5Vh3Ye2`d1ba0e`0fZ6\
+  ZSDRLKKGSC9Z53e000zOLR7l00k00i00h00f20e50d70dC0bF0\
+  aH0`K0ZN0YP0YS0XX1VZ1Ua2Sd2Rf3Pi3Pm5Op5Ns6Lv6Ky7Jz\
+  7Kz5Jz7Hz9HyCGvDGsGFpHDmJDkLChNCePAbR9`S9YV7XX7UZ6\
+  R`5Oa5Ld3Je3Gh2Di1Ak17m05o02r00s00z00t20p52l93hD6d\
+  G7`KAXOCSRFOVGKzm0mY6YHGL0NJ0OH2PG6RFARDFSCJU9NV7R\
+  V6VX5ZY3bZ9VL5XJ2eZ0zm0to1mo6foAaoFVoKOpOJpUCpY5pZ\
+  1sa0pd0oe0mh0lk0il0ho0fr0es0bv0ay0`z0fz0Zv0Sr0Lm0D\
+  i06e00b00d00e10f32h75iC9kFClJFmLHoPLpUOrXRs`UtdYvf\
+  `wkbymezrizvlzyozzrzztzzrwwpttopplmmkkiifefdbeaZdz\
+  lKldUZXbKOlezp6Gv9JsCKrDNpGOmJPlKSkNUiPVfRYeUZdX`b\
+  Yb``dZbeYdhXfiUikSkmRmoPppNrsLttKzzKHzKGzLAzHFzLJz\
+  ONzRRzVVzYZz`bzdfzfkziozm
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

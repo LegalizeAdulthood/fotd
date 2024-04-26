@@ -1,0 +1,33 @@
+The_Parent_Fractal { ; FOTD -- November 24, 2001 (Rating 4)
+ ; time=0:12:23.04--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=8.52651e-014/-9.9476e-014/0.009186404/1\
+  /180 params=1/-0.85/1/-1.85/-7.264/525 float=y
+  maxiter=12000 inside=0 logmap=yes periodicity=15
+  colors=000CEOCEOCDPCDPCDQCCQCCRCBRCBSCBSCAzCApCAsC\
+  9nC9nC9jC8iC8dC8ar7Xo7Xm2Zk5Yh7Xe9WcBV`DUZFUMHTOJS\
+  QLRUNQTPPPRPXTOZVN`YMb_LdaKfcKheJigIkiHmkGomFqoFsq\
+  EusDwuCywBzyBxwCwuCvtDurDtqEroEqnFplFokGniGlhGkfHj\
+  eHicIhbIf`Je_JdYKcXKbVL`UL_SLZRMYPMXONVMNULOTJOSIP\
+  RGPODOPEPQFPRFPRGQSHQTHQTIRUIRVJRWKRWKSXLSYMSYMTZN\
+  T_NT_OT`PUaPUbQUbQVcRVdSVdSWeTWfUWgUWgVXhVXiWXiXYj\
+  XYkYYkYYkYYg_TbaOZcJUeEMg7Qf9TeBWdDZcEacGdbKgaPj`U\
+  j`Zj_ciZhhYmhYmhXmhXmhXmhXmhXmjXhiXcjX`iX`iXaiXbiX\
+  chWdhWegWffWgeWhdWhbWiaWj`Wk_WlZWmYWnWVoVVpUVpTVqS\
+  VrRVsPVtOVuNVvMVwLVxKVyLWzMWzMXzNXzNYzOYzOYzPZzQZz\
+  Q_zR_zR_zS`zS`zTazTazUbzVbzVbzWczWczXdzXdzYdzZezZe\
+  z_fz_fz`gz`gzagzahzbhzcizcizdizdjzejzekzfkzelzfmzf\
+  mzfmzfmzfmzfmzfmzfmzfmzfmzfmzfmzgmzhmzimzjmzkmzlmz\
+  mmznmzomzpmzqmzrmzsmztmzumzvmzwmzxmzymzzmzzmzzmzzm\
+  zzmzzmzzmzzmzzmzzmzzmzzmz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

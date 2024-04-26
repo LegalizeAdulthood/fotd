@@ -1,0 +1,38 @@
+Chrysanthemums     { ; Classic FOTD, 09-Jun-01 Rating (4)
+                     ; time=0:25:47.03--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=-0.010176721962093/-0.348637919700844/2\
+  682929/1/57.499 params=1.741101127/0/11/0 float=y
+  maxiter=10000 inside=0 logmap=-686 periodicity=10
+  colors=000FA0HD0IE0IF0JI0KJ0MK0MM0SK2ZJ2eI3kH3qF3n\
+  J8kMDiOHfSKcVOaYUZaYXcaUfeRjiOmnMorJsvHvzEyzFvzFsz\
+  HqyHnvHkuIjsIgqIeoJbnJ_kJZjKXiKUfMReMOcMMaNK_RIZNF\
+  XO0POAUO8SZKUiXVsgXzrYzn_zkazibzfczcezafzZgzXizUjz\
+  RkzOmzMnzGozYqzcrzmszmuzhvzcwzZyzUzzPvzKsyFoyAmwDi\
+  wFfvIcvK_uNYuQUsSRsVOrYKr_IqbEqeBog8oj4nm2no0mr0mu\
+  0nr0oo0om0qj3rg6re8sbBuaEuZHvXJwUMwROyORzMUzKXvMVr\
+  NVoNVkOVgOVeQVaQVZRVVSVRSVOUVKUVHVVEVVAXV7XVBYSFZR\
+  J_QNaORbNVbMZcKbeJffIjgHniFriEvjDzkBzmAzn8zn7oc3VV\
+  0AK00B00I07O0FV0N_0Vf0bm3jr4ry7zz8zzAzz7zz4zz2zz0z\
+  z0zz0zz0zy0zu0zr0yn0vk0ug0re0qa0nZ0mV0jS0iO0gM0ZaE\
+  RqUJzgKzeMzcMzbNyaNw_OvZOuYQrXQqVRoURnSSmRSkQUjOUi\
+  NSeJSaHSZESVARS7RO4RM0RI0RF0UI0XK4YMA_OEbRIcSNfVRi\
+  YVjZ_macocgqemsgqvjuwkzznzzozzqzzrzzswzusyvoywmyyi\
+  yzfwzbwzZwzXwzSvzOvzMvzIvzFwzIwzKwzNwzOwzRwzUwzVwz\
+  Ywz_wzbwzcwzfyziyzjyzmyzo
+  }
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

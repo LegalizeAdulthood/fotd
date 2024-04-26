@@ -1,0 +1,40 @@
+Mandelbrot_Billows { ; FOTD -- December 02, 2001 (Rating 5)
+ ; time=0:25:21.65--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.29929135794286550/-1.244993106283451\
+  00/1039074/1/-142.5/2.06540170383240351e-009
+  params=1.6/0/131/0 float=y
+  maxiter=10000 inside=0 logmap=-655
+  colors=000725825A47B58D7AE8BDADBBEADG8EH7GI5HK4HK2\
+  HK1IK0IK0II0II0KI0KI0KI0KH0LH0LH0LH0LH0LH0NI0OK0OK\
+  0QL0RL0RN1TN4VO7VO8WQBYREYRHZTI`TL`VOaVQcWTcWWdYYd\
+  YdcVjaTraRx`QzZOzZNzorzlpzioxgmudlrcjo`imZgjWegVdd\
+  RcaQaZN`YLZVIYRHWOEVLDTIARH8QGBOGENEHNEKLENKDQKDTI\
+  DWHBZHBaGBcGAeEAiD8lD8oB8rA7uA7x87z75z75z55z5Gz4Qz\
+  2Zz1iz0rz0pz0oz0oz0mz0lz0lz0jz0iz0iz0gz0ez0ez0dz0c\
+  z0cz0az0`z0`z0Zz0Zz0`z0`z2`z7`zB`zGazKazOazTazYaza\
+  czeczjczocztczwczwczwaztazpazm`zj`zg`zdZzaZzZZzWYz\
+  TYzQYzNYzKHzl1zzDzzNzzYzugzorzjtzguzduzawzZwzWxzTx\
+  zQzzNzzKzzHzzGzzDzzAzz7zz4zz1zz0zz0zz0zz0zz0zz0zz0\
+  zz0xz0uz0rz0pz0mz0jz0iz0ez0cz1`z2Zz2Wz4Tz5Rz5Oz7Lz\
+  8Kz8HzAEzBDzBNzGWzIdzNmzQlzRjzTjzTizVgzWgzWezYezZd\
+  zZcz`czaazaazc`zdZzdZzeYzgYzgazdezajzZmzWrzTwzQzzN\
+  zzLzzOzzRzzVzzYzzZzzazzdzzgzzizzlzzozzrzztzzwzzzzz\
+  zzzzzzzzzwzzrzzo2zt4zo5zl
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}

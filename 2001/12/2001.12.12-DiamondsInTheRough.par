@@ -1,0 +1,34 @@
+DiamondsInTheRough { ; FOTD -- December 12, 2001 (Rating 7)
+ ; time=0:51:46.97--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=b
+  center-mag=+2.07502710059632100/-0.000386966632234\
+  39/7344966/1/-125/1.68879299031199359e-007
+  params=-10/-1.3/-1/-13/0/525 float=y
+  maxiter=8400 inside=255 logmap=769
+  colors=000A3HA4IA5JA6KA7LA8MA9NAAODBPGCRJDUMEWOFZR\
+  GaUHcXIf_JhbKkdKnaOoZRpXUrUYtSavPexPhyUftZeocdkhdf\
+  mcbrcYwcVzcRzcOzYPmTPcRSUQVOPYOO_PNbQMeRKhRJjSImTH\
+  pUGsUFuVJqWNmXRiXVeYZaZbYZeU`dSadRbdQcdOedNfdMgdKh\
+  dJjdIkdGldFmdEodCpdBqdArd9qcCqcFqcHpcKpcNpcPobSobU\
+  obXnb_nbanbdnbfa_XQXNEVDGTEISFJQGLPHNOIOMJQLKRKKSK\
+  KTKKUKKVKKWKKXKKYKKZKK_KI`JHaIGbHEbGDcFCcEBbHDbKFb\
+  MHaPJaRLaUN`WO`ZQ``S_cU_eW_hY_jZXk`VlbTmcRnePofMoh\
+  KpiIqkGrlEsnCsoGtlJtjMthPtfSucVuaYu_`uYcvVfvTivRlv\
+  PojLqZHsNEuBAw07wAEwKKwUQwcWwmazzgzpgnigibgeXgaRgZ\
+  UhWXhUZiRaiOdjMfjJikHkkIjiIjhJigJifJieKhdKhcLgbLga\
+  Lg`Mf_MfZMfYLeVLeTKdRKdOJcMJcKIbHIbFHaDHaAG`8G`6G`\
+  4MW4RR4WM4aI4fD4k84p44o8AoBGoEMnHSnLYnOcmRimUomXtY\
+  beJcSKdOKeKLfHLgDMh9Mi6PjASkEVlIYmM`nQcoUfpYiqalre\
+  msiotmquhsvcuwZwxUyyPzzKzzFzzAzz5zzBzzHzzNzzSzzYzz\
+  czzizznzzmzzmzzmzzmzzT000
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

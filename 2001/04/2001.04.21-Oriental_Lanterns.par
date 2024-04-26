@@ -1,0 +1,33 @@
+Oriental_Lanterns  { ; Classic FOTD, 21-Apr-01 Rating (7)
+                     ; time=0:04:20.78--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.381370015722773/+0.65420816277382/6.\
+  862245e+007/1/112.5 params=1.25/-20/15/-1.23/0/800
+  float=y maxiter=1300 inside=0
+  logmap=54 periodicity=10
+  colors=00010010010010010S100100100100100100C0EH0SE\
+  0e90g40j10m00p04r0Cu0Mx0Uz0ez0mz0xz0zz0zz0zz0pz0bz\
+  4SzEHzM4zY0zg0zr0zz0zz0zu0ze0u00190K00100000000000\
+  0000000600E40PP0Y_0ej0mu0up0zm0zj0ze0zb4z_CzYKz_Hz\
+  _Ez_Cz_9z_6z_4z_1z_0z_0z_0z_0z_0z_0z_0rb0gb0_b1Pe6\
+  EeC6eH0eM0gS0gY0gb0gg0jj0mm0pp0pr0rr0uu0xx0xz0zz0z\
+  z0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz6pgSbMjP4zC0z00z10z\
+  40z60z90zC0zE0zH0zK0zM0xP0uS0rU0pY0m_0jb0ge0eg0bj0\
+  _m0Yp0Ur0Su0Px0Px0Uz0_z0bz1gz9mzHpzMuzUzzbzzjzzrzz\
+  zzzzzzzzzzzzzzzzzzzzzzzrzzrzzrzzrrxrjpr_jrSerU_rYU\
+  r_PrbKreErg9rj4rm0rp0rr0ru0ru0rm0re0r_0rS0rM0rE0u9\
+  0z10z00mS0ju0jz0mz0mz0pz0pz0rz4rz9uzEuzKuzPxzUxz_z\
+  zezzjzzpzzuzzzzzzzzzzzzzzzzzzzxzzxzzzzuzzuzzxzzzzz\
+  zzxzzuzzpzzjzzgzzbzz_zzgzzmzzrzuzzbzzMzz4zz0zz0zz0\
+  zz0zz0zz0rz9jzMbz_UzmUzpYzpYzrYzu_zu_zx_zxbzzbzzez\
+  zezzgzzjzzmzzpzzrzzrzzrzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

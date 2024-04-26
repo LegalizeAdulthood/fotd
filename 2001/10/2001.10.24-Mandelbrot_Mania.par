@@ -1,0 +1,34 @@
+Mandelbrot_Mania { ; FOTD -- October 24, 2001 (Rating 6)
+ ; time=0:45:23.09--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.07345537336418037/+0.042097568866235\
+  17/3.724103e+007/1/-115.000000007003862/5.70113192\
+  766008581e-009 params=1.3/-1.1/-1.3/0.9/0/50
+  float=y maxiter=6000 inside=0 logmap=745
+  colors=000WffVjmVjkVjjUjiUjhUkfTkeTkdTkbSkaSk`Sk_R\
+  lYRlXQlWQjUQhTPfSPdRTbSU`TUZUVXVWVWXTXYRYYP_ZN`_La\
+  `JbaJcaJdbJecKfdKgdKheMifOigQihSjiUjjWjkYjkZkl`kmb\
+  kndkoflphlqjlrmmqklpiloglnekmcklbkk`kjZjiXjhVjhUjg\
+  SifQieOidMhcKhbJhaHh`Fg_DgZBgY8hZAgZBfZDf_Ee_GdXHb\
+  `Jc`Kb`MbaNaaP``PaaQ`aQ`aR_aR_aS_aSZaTZaTZbTYbUYbU\
+  XbVXbVXbWWbWWbWWcXVcXVcYUcYUcZUcZTc_Tc_Td_Sd`Sd`Rd\
+  aRdaRabQZUQWbQTbQQ`INZALXCIVDJTEJRFKPGLNIMFJMGKNHL\
+  OIMPJOPKPQLQRMRSNSSOUTPVUQWVRXVRYXQWYPVYOUXNTWNRWM\
+  QVLPXKOPFNZJL`IKaHJcGIdGGUFFZEEhDDiDChFE`HFbJHfLIf\
+  NJePLaRMeTOfVPfXQgZSg`ThbVhdWifXihZjj_ilainbhpchre\
+  gtfetdgsgiqjkllmgoobrpXsqYtjZob_jW_eO``HaW9bR2aL2b\
+  M3cN4cN5dO6dO7eP8fQ9fQAgRBgRCiSDjSElTFnUGoUHqVIrVJ\
+  tWKvXLwXMwYNvYOwZOw_OuZ2tS2rT3rU4rV5qV6qW7qX8oY9oY\
+  AnZBn_CmbDmgEllFlqGlvHlzIlzJlzKlzLkzMkzNkzOkzPkzQk\
+  zRjzSjzTjzUjzVjzWjzXizWjz
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

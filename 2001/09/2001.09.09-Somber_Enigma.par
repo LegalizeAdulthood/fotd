@@ -1,0 +1,32 @@
+Somber_Enigma      { ; Classic FOTD, 09-Sep-01 Rating (7)
+                     ; time=0:06:27.83--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.22714761567061600/+0.126765846837644\
+  70/7.989414e+008/1/4.999 params=1/-1/10/-10/0/0
+  float=y maxiter=1200 inside=0 logmap=128
+  colors=00007B07B07C07D07E07F07G07H08H08I08I08J08J0\
+  8K08K07L07L06M06M05N05N04O04O03P03P15Q27R39R4BT5DS\
+  6FU7HT8IV5LT2LW5OW7OY9S_CRaEVcGWeI`fLbgNehPgiRhjSi\
+  kUjlWkmYln_moanpcoqeprgqsirtksumtvouwqvxswyuyzwzzz\
+  zzyyyxxwwwuvvsuuqtuosumrukrrirogrqertdrwfqyhqvewtb\
+  zr_wpXrnUmkRhiOcfLacI_`FYXCWU9UR6RO3RL1QL5PK8QMCSP\
+  FTRJVTMUVQUWTTWWSX_RXbQXfPYiOYmNYpNYsMUrMRqMOqLLpL\
+  IpLFoLCoF``9xNAwLBvJBuICtGCsFDrDEqCEqAFp9Fo7Gn6Hm4\
+  Hl3Ik1Ik0Hl4Hl7HmAGmDGmHGnKFnNFoQFoUEoXEp_EpbEpeGi\
+  aHbYJXUKQRMKNNDJO7GP9JQAMRCOSDRTFUUGWVIZWJaXLcYMcZ\
+  Oc_Pc`RcaScaTcaScaXZa`UadPahK_lFWpBStAPx9ccp_cjXcd\
+  TcZQcTMcNJcHFcBCd6HeCMfHQgNVhS_iYcjbbk`alZamY`nW`o\
+  V_pT_qS_rUasVctWeuYgvZiw_kx`mydozhqzctz_wzVzzRzzMz\
+  zIzzDzz9zz8zz8zzCzzGzzKzzOzzSzzWzz_zzbzz`zzZzzazzc\
+  zzezzhzzjzzlzzizzfzzdzzbzz`zzZzzXzzWzzRzzJzzGzzDzz\
+  GzzIzzKzzMzzOzzQzzSzzUzzW
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,34 @@
+Old_Lace { ; FOTD -- December 18, 2001 (Rating 6)
+ ; time=0:16:55.74--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.47095225017754700/-0.000290787801752\
+  98/82093.39/1/-142.499999992056587/-8.026038100100\
+  71861e-008 params=-1/-14.44/-10/-1.444/0/525
+  float=y maxiter=4200 inside=0 logmap=273
+  colors=0000CO1DP4FQ7GSAITDJXGLYJM_MO`PPaSQcVSdYTf_\
+  Vi`XjcYmd_of`riasjcvldxofzpgzrizujzvlzxmzvjzvizugz\
+  udzuczsaxs`vsYurXrrVprTopQlpPjpOioMfoJdoIcmG`mF_mC\
+  YlAVl9Tl7SlAXlD`mGdmJioMmoProSvpVzpYzp`zsXzuTzvPzx\
+  MzyIzzFzzCzz7yz4yz0xz0vz0vz0uz0uz0vz0xz0yz3zz6zzAz\
+  zDzzIzzMzzPzzTzzXzy`zyczxfzxizvjvvmoupiurcroaolali\
+  ajgagd`da`c```Y`YV_XT_TQ_QO_PMYMJYJGYIFYLIXMJVOLVP\
+  MTSOSTQSVSQXTQ_VP`XOa_Oc`MfaLgcLidJjfJsgYzilzjzzjz\
+  zizugzjgz`fzQfzGdz7dzDfuIgpMglQigVja_jYclTgmPlmLpo\
+  FupAyp6zr1zr0yl6rgFjaMaYVVScOOjJGcG9XD3QDG_DSgDcpD\
+  oyJirPclVYf`S`fMVjIPlJQmJSmJSoJTpJVpLVrLXsLYsLYuL_\
+  vM`vM`xMayMcyMcvP`uS_sVXrYVp`SocQmfOlgMz0Ay07x04v0\
+  1u00s00r00p00o00o00JO70rQ0sP0uO4vOAxMGyLMzLSzJYzIc\
+  zIizGozFuzFzzDzzDxzJrzPlzTdz__zdTziMzoGzuAzyzzMzzS\
+  zzYyzaxzgvzmszrrzxpzzGzzVzzazxizupzszzmzzizzfyzcuz\
+  `ozYjzVfzTazSyzmvzluzlrzj
+
+}
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

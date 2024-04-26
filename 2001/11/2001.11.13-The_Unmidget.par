@@ -1,0 +1,39 @@
+The_Unmidget { ; FOTD -- November 13, 2001 (Rating 5)
+ ; time=0:14:59.02--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.500405232383985/-0.561425172652767/6\
+  746.955/1/-92.5/1.5597828584290596e-011 params=1.5\
+  874/0/-2/0 float=y maxiter=8200 inside=0 logmap=150
+  colors=060hK2jK1nWttXtuXtuLts9wr6tp6ro6on6km6hl7dk\
+  9ajCZfFVcGR`KNYLLUOGRRDOTALW6HZ2E_0Bb08c0Fe0Nf7ShF\
+  _iMdiRkkZrleumluosuotrmt`ltHmtIlsIlsIlsIksIksKkqKi\
+  qKiqKiqKhqLhpLhpLfpLfpLfpNeoNeoNeoNcoNcoOcmObmObmO\
+  bmO`mQ`lQ_lQZlQYlQXlQWlOVkOUiOVhNWfNXeNYdNZbL_aL`_\
+  LaZKbYKcWKdWKfVIhTIjRIlQHnPHpNHrMHtLFvJFxIFzGIyDFw\
+  GDtJBpL8mN5hQ0eP3cR8aVD_WI_ZNZaRXbXWe`WhdUijTlnRor\
+  RpuQsuOtuOtuNsuLpuKlqKinJejGbgGZcFW`DRXDPUCLQAIO9G\
+  NAFNAFNAFNAFNAFNCDNCDNCDNCDNCDNDCNDCNDCNDCNDCNDCLF\
+  ALFALFALFALFALG9LG9LG9LG9LNmLQmLQmLJ7LJ7LJ7BJ0LJ7U\
+  DFaAMf7ek6ur6yu6zu6zr6yn6xh6wh6vg6uf9qdGkcJdcKkaLq\
+  `Lq_NtYNtYOtXOtWQtUQtSRtSRtRTtQTtOUtNUtNUtLUtKWtIW\
+  tHWtHWtFWtFWtEXtEZtE_tD`tDbtBctBctBctAetAet8et8ft8\
+  ft7ft7ht5ht5ht5ht3it3it2it2it2it0it0it0it3it5it7it\
+  8itBitDitEitFitIitKitLitNitQitRitSitUitXitYit_it`i\
+  taitcitcitditfitfitgithit
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
+}
