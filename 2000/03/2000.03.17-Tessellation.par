@@ -1,0 +1,32 @@
+Tessellation       { ; Fractal of the day, 17-03-00 Rating (5)
+                     ; time=0:27:37.94 SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.88092865427356670/+0.45111991659496370\
+  /1.784373e+008/1/-102.5 params=1/0.6/2.4/-1.9/0/-92
+  float=y maxiter=6400 bailout=25 inside=0 logmap=505
+  symmetry=none periodicity=10
+  colors=000x9zt8xr6tq4rn2ol1lk0ig0gf0dd0aa0Y<3>T0NR0L\
+  V2GWLBYb8_n2Wt1az0Ii0Tv0Pq0Kl0Gd0<2>2L00F00800910980\
+  BF1BL2DR4DY6Fd6Fk9GgBIdDIbFK_GLWILVKNRLNQNPN<2>RRFTR\
+  DVT9WV6YV4_W1aW0bY0d_0f_0ga0nb0<3>WW0RV0NT0KR0FQ09P0\
+  0Q06P0BN0GL0LL0QK0VI0aG2fG4kF8oD9tBDz89yBFyDIxFNxGQv\
+  IVvKYtLbxPg<3>kIagG_fG_<2>WBVT9TRLTP8R<2>F2N0VRD2NPD\
+  I_LDkV8vd2zo0zl0zi2rf4lb8d_BYWDRTGKQKDNL4KP0GR09V0FT\
+  0IT2NT9QTFVTLYRQbRWfRbiRgnRnqQrvQyyQzzQzzQzzRzzQzzQz\
+  zQzxQztQzoQzlQzgQzdQz_QzVQzRQzNQyKQyFQzBQz6Qz0Lz2QvF\
+  VkQdVbz2ar4ao6a_8_Y9_YD_WF_VGYTIYRKYRLYQPWPQWNRWN<2>\
+  WVIaVGdVGgTFqTDzTBzTBzWDzYFzaGzbIkfIbgKVkLLlNKoPGqPD\
+  rQBvR8xT4zV2zV0zW0zY0z_0za0za0zb0zb0zd0zd0zf0zf0zY0z\
+  f0zn2zv4zz8zz9zzBzzFzzGzz<2>NzzPzzQzzRzzVzzWzzYzz_zz\
+  _zy_zx<2>_zq_zo_zn_zl_zi_zg_zf<6>_zRzzzzzzyzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,21 @@
+The_Emerald_Sea    { ; Fractal of the day, 03-09-99
+                     ; t=0:05:09.84 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.997841369596827/+0.05421259481935617/\
+  416693/1/-60 params=1/2/-0.01/-100/-0.6/0 float=y
+  maxiter=1800 bailout=25 inside=0 logmap=105
+  symmetry=none periodicity=10
+  colors=00055C<24>MOGNMH<27>8o7<7>lGUqCXy4`<18>_ZJZ_\
+  JY`K<19>QmUQnUSqT<15>9KW<2>EjhCso<27>koKloJlsG<15>s\
+  RUsQUrRT<20>YiB_iC<9>HiB<8>QiBRj1<4>XkQYkY<14>lmFmm\
+  EmmDmmC<4>mm6<5>mmImmKmmK
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

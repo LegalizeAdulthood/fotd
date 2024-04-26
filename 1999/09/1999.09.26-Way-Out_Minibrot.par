@@ -1,0 +1,26 @@
+Way-Out_Minibrot   { ; Fractal of the day, 26-09-99
+                     ; t=0:00:07.96 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=multesc4-XY-ZW function=flip/ident
+  center-mag=-0.00000000000071985/+0.000000000000041\
+  29/4.598406e+011/0.06428/106.755/-86.687
+  params=1.15/98.71/-1.999999117587294/0/-1.99999911\
+  7587294/0 float=y maxiter=1200 bailout=25 inside=0
+  logmap=36 symmetry=none periodicity=10
+  colors=000PC7QN8SY91DO<8>HVGvXe<2>nCS<4>g8G<4>CNQ\
+  <7>IYW<7>SfCm5Q<4>ZXEWbCVwU<2>TkFbLM<10>TfBlMj<7>s\
+  hh<3>es_buYYqX<7>0MT<7>K`GVgDMbEPdDRfBC6Z<2>PZGOW0\
+  <3>Se8umC<2>_hAjhYagMyMx<3>ZcKDTp<6>RfF7ME<8>ReApg\
+  B<5>WgAsLCjTBa`AEdJ<3>QgBk22OadQcUSeKYO1<13>TfA`4V\
+  <13>TeBpzt<7>ViFVgQ<11>TgBdRH<8>UfADgn<12>SgC7yF\
+  <7>RiAe3T<9>UdBN15
+  }
+
+frm:multesc4-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| < 4  }

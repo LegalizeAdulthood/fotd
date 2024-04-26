@@ -1,0 +1,22 @@
+Loopy              { ; Fractal of the day, 11-11-99
+                     ; time=0:25:48.02 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=OblateMiN passes=1
+  center-mag=0.0109968/-0.160279/10.68563/1.26/-148.50\
+  2/-15.854 params=1.009/0/1.4/0/2.805/0 float=y
+  maxiter=36000 bailout=25 inside=0 logmap=363
+  symmetry=none periodicity=10
+  colors=000EWPEWPEWPEXG<11>E`JE`JE`JEaJEaKEaKDbKCbK<3\
+  >8cE7dD5dB<60>AnYBnYBnY<2>Bn_Bn_Bl_Bm`Bk`Bl`BmaBna9n\
+  c<8>Ei_EiZFiZ<3>HfXHeXIdW<5>LXULWTMUT<3>OQROPRPOQ<2>\
+  MLPLKOKJMJIL<2>IFIIEHJDIKEJLEK<3>PGRQGSRGT<3>ZIX`IXa\
+  IY<6>eLdeLdfLe<14>gMugMvgMwgMxgMy<31>gMzgMzgMz<25>jU\
+  zjUzkVz<5>kVz
+  }
+
+frm:OblateMiN {; Jim Muth
+b=p1, z=real(pixel)+p2,
+c=flip(imag(pixel))+p3:
+z=(-z)^(b)+c,
+|z| <= 16
+}

@@ -1,0 +1,27 @@
+Old-FashionFractal { ; Fractal of the day, 14-09-99
+                     ; t=0:03:03.26 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.03732520578498094/-0.7831399056052196\
+  /44333.91/1/-44.999 params=1/3/1/1/0/0 float=y
+  maxiter=1500 bailout=25 inside=0 logmap=46
+  symmetry=none periodicity=10
+  colors=000ZZO_WN`_Ma`L<5>i_Rj_Sk_T<2>oZWpZXqXZrUbrR\
+  fpOjnLni8r<3>cYvbdwajwkm_toC<3>bb7Y_6UX4<3>CL0<4>WG\
+  F_FIbEK<6>NQBLSAIU8<3>A_4<6>_Y2cY2gY2<3>uY2<3>tF`tB\
+  ht6qt2y<3>X7FS84g5Xv3yjqT<3>VmZRl_NkaJjbFic<8>VmJXm\
+  GZnE<2>co7do5emB<3>fgVff_gddgcigbn<5>jkVklRknO<2>mr\
+  EmsBltG<3>hvWhv_gwc<3>dxsDh9<3>cb2<3>Q_DMZGJYIFXLCX\
+  N<6>AZZAZ_9Za<3>9Zg8Yh8Yi<6>5Up5Uq4Tr<3>3Sv<3>ELzHK\
+  zJIz<3>UCzXBzZ9z<2>f5zSHzDSzfYzVhzKsz<9>SnzTmzTmz\
+  <3>Wkz<2>Nmz<3>RjzSjzTizUizVhzVhz<3>QczOazPbz<5>Pdz\
+  QezQez<3>Qgz2LzDMzWJzXMzYQz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

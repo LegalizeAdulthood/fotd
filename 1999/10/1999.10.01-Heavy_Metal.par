@@ -1,0 +1,22 @@
+Heavy_Metal        { ; Fractal of the day, 01-10-99
+                     ; t=0:09:33.56 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.02062672311926329/+0.6887619909169976\
+  /2.662328e+009/1/-7.5 params=-1/1/1/-1/-2.4/0 float=y
+   maxiter=1500 bailout=25 inside=0
+  logmap=212 symmetry=none periodicity=10
+  colors=000Q_9<2>QRAQOAONG<3>JMaIMfJOg<12>Pht<11>sOyv\
+  MywLwtJtnHpgFl<7>21F4JH5`I<6>st7<6>4LW<3>v52<8>hEWgF\
+  ZdJ`<11>Aur<11>YKRZHPaON<4>lrE<7>utn<7>sHSsDQpES<9>O\
+  Eb<8>wo4<10>7Qe<8>l4T`8P<13>GuH<7>8Cw<10>WzA<11>2F4\
+  <7>uzqYoeBdUZ1t<7>RVw<15>OB2ElD<3>MdE
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

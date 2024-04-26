@@ -1,0 +1,27 @@
+ThunderboltsOfThor { ; Fractal of the day, 19-03-00 Rating (4)
+                     ; time=0:02:54.11 SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+3.05899802453143400/-0.14535138357059070\
+  /1.249535e+012/0.9999/172.501/-0.01
+  params=1/1.4142/-1/2/0/0 float=y maxiter=1000
+  inside=0 logmap=54 symmetry=none periodicity=10
+  colors=00080L60P55R<3>1Hi<5>OZZSaXWdV<2>fmPjoNprLwuJ\
+  zxHzxGwxF<3>ioF_mFWkFSiF<2>WhJXhKYjL<3>aoPbqQcrRdsSe\
+  vUfuVgwW<3>kx_ly`mya<2>pzd<3>`jkXflTbnQ_o<3>9pX5tS1x\
+  O<2>2lPKhP<3>cTQhPQmLQ<3>m6Q<3>m8Km8Jm9I<3>mADpAC<3>\
+  MUeEZm7bt<3>DWxFVyGTz<4>NMzOKzQJz<3>VDz5lz<3>4Yz4Uz4\
+  Rz<2>4Gz<2>tEz<13>bhzakz_mzZozYqz<2>Tvz<17>owzpwzqwz\
+  <3>vwz<15>VwzTwzRwz<3>Lwz<7>Zwz_wzawz<3>gwzmwzswz<2>\
+  ywz<9>UwzQwzNwz<3>Bwz<4>Gwz<3>JwzDwz7wz<3>8wz8wz8wz<\
+  2>9wzCwz<2>9wz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

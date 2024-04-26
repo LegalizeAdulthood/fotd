@@ -1,0 +1,23 @@
+The_Lost_Rosette   { ; Fractal of the day, 06-01-00
+                     ; time=1:53:52.12 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+5.55235713027287100/+15.5451508344121000\
+  0/376326.2/1/67.5 params=100/-0.9/-100/-0.899/-40/0
+  float=y maxiter=15000 bailout=25 inside=0 logmap=1435
+  symmetry=none periodicity=10
+  colors=000AKO<7>AKCAKBAK9<2>AK5AK38B2<7>ZZYbaaede<3>\
+  rptZoY<12>FfhDfiCei<3>6cl<16>aHFbGDdFB<3>kA4<18>N8BM\
+  8CL8C<3>G8D<2>_vb<19>tlrulsvks<3>zjv<3>UXyMUyNVw<19>\
+  RWcRWbSWa<3>SWY<3>iZPm_Mr_Kv`Iz`GvN9s93<11>O3FL3GI2H\
+  <3>81K<25>O1OP1OP1O<2>R1OR1OQ8P<3>Q_P<4>dVGgVEjUC<2>\
+  sR7uR6vUA<5>vgYviavke<3>vtt<4>snYsmUpGQ
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

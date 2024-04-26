@@ -1,0 +1,29 @@
+High_Midnight      { ; Fractal of the day, 10-07-99
+                     ; 0:14:25.13
+  reset=1960 type=formula 
+  formulaname=multirot16-XY-ZW function=ident/flip
+  passes=1 center-mag=+0.30003119379338970/+0.783\
+  78551171727250/3.882413e+013/0.9995/180
+  params=0/0/0/0/0/0 float=y maxiter=25000 bailout=25
+  inside=0 logmap=850 symmetry=none periodicity=10
+  colors=000f90d90d90b90b93`93Z93Z93Y95Y95W95U95U97S\
+  97S97Q97P97P99N99L99L99J9BJ9BH9BF9BF9DD9DD9DB9D99F\
+  99F79F59F59H39H39H09H09J09J09J09J09L<2>09L09L0BN0B\
+  N0BN0DN0DN0DP0DP0FP0FP0FP0FQ0HQ0HQ0HQ0HQ0JS0JS0JS0\
+  JS0LS0LU0LU0LU0NU0NU0NW0NW0PW0PW0PW0PW0QY0QY0QY0SY\
+  0SY0SZ0SZ0UZ0UZ0UZ0U`0W`0W`0W`0W`0Yb<2>0Yb0Zb0Zd0Z\
+  d0Zd0`d0`d0`f0`f0bf0bf0bf0dh0bf0bf0bf0`f0`f0`f0Zf\
+  <4>0Yf0Yf0Wf0Wf0Wf0Uf0Uf0Uf0Sf0Sf0Sf0Sf0Qf<3>0Pf0P\
+  f0Nf0Nf0Nf0Lf0Lf0Lf0Lf0Jf0Jf0Jf0Hf0Hf0Hf0Ff0Ff0Ff0\
+  Ff0Dd0Dd0Dd0Bd0Bd0Bd09d09d09d07d07d07d07d05d05d05\
+  d03d03d03d00d<23>00d00d00f00d<53>00d
+  }
+
+frm:multirot16-XY-ZW {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(sqr(sqr(sqr(z))))+c,
+|z| <= 36  }

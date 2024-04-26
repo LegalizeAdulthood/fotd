@@ -1,0 +1,24 @@
+NewViewOfOldFigure { ; Fractal of the day, 08-07-99
+                     ; 0:00:06.53 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=flip/ident
+  passes=1 center-mag=0.391236/0.921391/0.4952381
+  params=90/30/-0.924634/0.32762/-0.75/0 float=y
+  maxiter=1250 bailout=25 inside=0 logmap=yes
+  symmetry=none periodicity=10
+  colors=000KA7RBEOCBVDISEFZFMVGJaHQZINeJUbKRiLYfMV\
+  mNaiNToP`lQRoRXnSPpTTpVNrWPrXLsYMtZKt_IvaG<3>xe8x\
+  f7vbB<9>l7g<2>azsmMfcsq<4>kQks90rB4<4>mJcs82<21>l\
+  KiHe0Jd0<20>kKhaqr<2>jSl8p0Bn1<15>jLhIrL<17>kLiJw\
+  d<5>hPjuiW<22>lLj61p<21>kKjdPs<8>lKjAJdNKf_KhsN0\
+  <20>lKhU3X<7>jJiJR3<8>`MU
+  }
+
+frm:multirot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

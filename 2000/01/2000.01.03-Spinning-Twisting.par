@@ -1,0 +1,27 @@
+Spinning-Twisting  { ; Fractal of the day, 03-01-00
+                     ; time=0:20:52.30 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.98612884271879700/+2.69685233983904500\
+  /5.028579e+009/1/-145 params=-0.01/2.5/10/-0.7071/0/0
+  float=y maxiter=12000 bailout=25 inside=0 logmap=245
+  symmetry=none periodicity=10
+  colors=000T0UT0TV1UX2Z<3>d6jf7lh8n<2>nBt<3>gKkeMidKf\
+  bRd<2>YXZXKXVaU<3>PiMNkKUnHcpFmrDmtBrv9rx7mvC<3>XoU<\
+  3>kgkUfooRSoB5r9K<2>r5mm7wm8wm9wKUwKUwLUwLKwMcw1UwMU\
+  weEmyEkxFgwFgJZX<3>7ni4rl1vo<5>SZZWVX_RUdNRkJOlFMqBJ\
+  uAGyFE<3>zZMzcOzcPz5R<8>z5gz5hz5j<3>z5q<9>pdUohRnkP<\
+  3>kyG<3>jlNjiPjfRshX<3>KRECNzBczBPzBQBmQBmRBmSCBTCBT\
+  CBwCBzCBmCBWzBXzBYzBYDmZDz_Em`EB`E<2>BbE<3>iiJrrKzwL\
+  wrKuiK<7>d`Jb_J_ZI<2>UWISVIPVKQUIR_HSeGQiE<3>VlFWlFX\
+  mF<8>euGfvGgxGhyGizGjzGkzG<11>mzWnzXnzY<2>nzanzbpzf<\
+  4>jzSizQgzN<3>czBez5<8>Gz`EzcBzg<3>0zt5zs9zr
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

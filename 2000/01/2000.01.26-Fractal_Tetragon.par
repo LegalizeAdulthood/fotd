@@ -1,0 +1,26 @@
+Fractal_Tetragon   { ; Fractal of the day, 26-01-00
+                     ; time=0:06:46.22 SF5 on a P200
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.70480792579755/-0.01018641669925502/15\
+  94105/1/-147.499 params=1/2.499/-1/2.501/100/0
+  float=y maxiter=1750 bailout=25 inside=0 logmap=93
+  symmetry=xaxis periodicity=0
+  colors=0008Jk<4>3Jk<3>G_iJciMhh<3>Yxg<6>SWjRSjQOj<3>\
+  N8k<4>JGVIHSHJP<2>FNFFOCFOC<9>GHBGGBGFB<3>GCBa8hi9fm\
+  9ep9dm9cl9bnFYpKToKT<3>lcSkhSjmSjrSisR<8>bvQawPawP<2\
+  >ZxPZxP_vO<12>aYMaWMbUM<3>bNMJeY<3>NUWORWPOW<3>celgj\
+  pjnt<8>hprhprhpr<2>hprhprjqn<3>pqbrrZsrW<3>yrK<3>1kT\
+  <3>LsRQuQUwQJta9rl<5>Nk`PiZRhX<3>_dP<3>jJImDGo8F<3>f\
+  4Wc3_a2c_1gY0k<3>lC_oFXsIUvKS<8>neGmgEmjD<2>jq9is8it\
+  7fuZ<3>jyQkzOlzM<3>ozDpzBqz9rz7rz5<3>Dz`3zh7ze<3>NzV\
+  RzTVzQZzNbzL<3>RzZOzbLzeJzh<9>9zj
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

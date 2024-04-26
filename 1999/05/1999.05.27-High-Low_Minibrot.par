@@ -1,0 +1,23 @@
+High-Low_Minibrot  { ; Fractal of the day, 27-05-99
+                     ; 0:06:45.19, p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-8.55448229817247/+2.785714381099186/675\
+  590.2/1/39.999 params=100/0.01/0.01/100/-0.988/0
+  float=y maxiter=2000 bailout=25
+  inside=0 logmap=135 symmetry=none periodicity=10
+  colors=000HAi<2>MAmOAnPBoRCq<3>XGu<2>LVqIWocanggmhl\
+  nmjlmljejhcifcge_ecXcaDb_<11>NIFOGDPED<18>FK1<6>ZNe\
+  aNkeKr<12>Gqc<21>lXfmWfnWfoVgoUh<16>vDqvCry9q<6>dMv\
+  <2>fJPgIEfG2<21>sHMtHNvIL<10>eBZdA_bA`aAa<3>WEfUFgU\
+  GgTHh<3>HLlEMmBNm8Om6Pm<8>3Yd3Zc3_a3`_<3>2dS2eG<4>1\
+  jK<4>MpeQqiTrn<6>YyjZzj_zi`zi<6>dzf<7>wzO<9>pzM
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

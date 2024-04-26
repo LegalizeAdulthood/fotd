@@ -1,0 +1,23 @@
+Coral_Reef         { ; Fractal of the day, 03-10-99
+                     ; time=0:39:50.91 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.46151020629591630/-0.2715498016590325\
+  0/1.439496e+009/1/57.5 params=-0.3/3/1/-2/-0.4/0
+  float=y maxiter=9000 bailout=25 inside=0 logmap=634
+  symmetry=none periodicity=10
+  colors=000MZr<4>HUmGTlFSk<15>VDSWCRXBQ<2>_8M`8L_7N<\
+  19>S5gS5hR5i<2>Q5lQ5mO7p<3>IByOLnTUc<3>KYkIZmF_o<3>\
+  7cw<18>BepBeoCeo<2>CenCenBdl<17>2YL2YJ1XI<3>0WC<9>L\
+  `8N`7Pa7<2>Vb6Xb6Yd9<2>_iI_jLafM<3>gTQhPQjMR<3>o8U<\
+  18>GLRELRCMR<3>5OR<7>NGiPFlREn<2>XBuZBwZBw<6>cBxcBy\
+  dBydByeBy<3>iEzjFzkGzlHzmIzmJz<38>mKz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

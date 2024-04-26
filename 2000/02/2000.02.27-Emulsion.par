@@ -1,0 +1,23 @@
+Emulsion           { ; Fractal of the day, 27-02-00 Rating (4)
+                     ; time=0:04:43.30 SF5 on a P200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=MandelPMnew passes=1
+  center-mag=-7.40285102940337700/-0.32273404088181770\
+  /177.6565/1/-62.5 params=2.39/0.7/0/0/0/0
+  float=y maxiter=3000 bailout=25 inside=0
+  symmetry=xaxis periodicity=10
+  colors=000g_W<45>jjsjjsjjt<2>kkukkvkmv<2>kpxkrxkqyzt\
+  ykozwpzjlyrmxhjwokwgivjhuegu<38>DDVCCUCCT<2>99R99RAA\
+  S<22>SDTTETUET<2>WETXETWDS<35>aJWaJWaKW<3>aKWdNYdNYb\
+  KX<12>cMYdNYdNY<3>dNYA9G5AH<20>OHQPHRQIR<3>UJTeWOeWO\
+  <14>g_W
+  }
+
+frm:MandelPMnew {; Jim Muth
+z=p2+10^(-100),
+c=pixel+(p3)
+a=real(p1)+1, b=imag(p1):
+z=a*((-z)^b+z^b)+c,
+|z| <= 250
+}

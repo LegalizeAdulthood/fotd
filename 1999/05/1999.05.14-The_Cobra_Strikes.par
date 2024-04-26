@@ -1,0 +1,19 @@
+The_Cobra_Strikes  { ; Fractal of the day, 14-05-99
+                     ; 0:08:08.29, p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt06 passes=1 center-mag=27.4397\
+  /0/0.01885867 params=-0.0574/-0.2341/5.1216/-4.2192\
+  /3.0159/2.4913 float=y maxiter=340 bailout=25
+  inside=bof60 logmap=yes symmetry=none periodicity=0
+  colors=000aDH<34>u8`y5c<27>WQENOH<9>vY3<22>jNjjNkkP\
+  j<25>ptYpuYotZ<58>YQ_`Sa<34>49P38P26Q<11>3DN3EN3EN4\
+  EM4DL3DK2CJ0CI<9>078
+  }
+
+frm:MandNewt06 {; Jim Muth
+z=c=(pixel*p1):
+a=z^3+(c-p2)*z-c
+b=p3*z^2+c-1
+z=z-1*a/b
+.000000000000000000000000000001 <= |a|
+}

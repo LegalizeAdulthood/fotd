@@ -1,0 +1,32 @@
+GatewayToSomewhere { ; Fractal of the day, 02-11-99
+                     ; time=0:04:02.22 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=multmin1234XY-ZW function=ident/flip
+  passes=1
+  center-mag=1.31486/-8.88178e-016/0.2405581/1.3363/90
+  params=45/45/0/0/1/0 float=y maxiter=3000
+  bailout=25 inside=255 logmap=yes symmetry=xaxis
+  periodicity=10
+  colors=000AA8AA8C4AE2EGCC<3>OFF<2>U8F_5Fe2Fj0FqNGxiH\
+  <2>s7LlLKmYKzkKzxKzoRmfXcYcKPiIHo<3>dDZjCVpBRuAN<2>I\
+  KpMJcQISTR1<2>7N5<3>YIGdHJjGMqFPwER<3>eIdaJgdKf<3>nL\
+  bpMasMbuMc<3>MOgEbh7piG`jOMk<3>dro<2>47rNIseTt<3>qFx\
+  tCyw9zy6z<2>RVz<2>rBzaOzM_ztJzBOzV_znjz<2>JizLoz<2>H\
+  Cz<2>kUz<3>JPz<3>VLz<3>zvz<2>qPzXczCqzyNzsqznfz<3>I2\
+  z<3>D2z8Cz4MzBWzIdz<2>fWzhLziBzj1z<2>jmz<2>LYzWNzfCz\
+  dPz<2>PQzgTz8Mz<2>wWz8AzMEzDEz67zrQz_HzI8ztpzSQz0nz0\
+  PzCEz89z44zyrzVRzUtz<2>7EzHHzoLzHAzB6z53zd8zv5zTiz<2\
+  >7BzbXzliz3yz1Vz5pz2QzMqz1XzIkzCWz6Gzd9z<2>A2z_bz<2>\
+  99zjsz<2>BEzJHz<2>44zS8zajzJNzmbz<2>C9zBCz56zV5z<2>7\
+  1zJRzCIz69ztizSNzfzzt2z<2>E0zX3zG1z9Sz<2>27zmrz
+  }
+
+frm:multmin1234XY-ZW {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=(-z)^1.234+c,
+|z| <= 36  }

@@ -1,0 +1,25 @@
+Thomas_the_Tomcat  { ; Fractal of the day, 21-08-99
+                     ; t=0:01:57.04 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=defnewt6
+  center-mag=1.05613/4.44089e-016/1.201662/1.2958/-90
+  params=1.665272988067263/0.4876857814264351/-0.53679\
+  00631733146/1.300729392376476/2.21774956511124/9.999\
+  999999999999e-030 float=y maxiter=95 bailout=25
+  inside=bof60 logmap=yes symmetry=xaxis periodicity=10
+  colors=000qaG<4>qR4<12>xfc<12>a_2<14>AOZ<14>tth<7>xJ\
+  Rh6G<13>VU0<12>LOPLOQMRO<9>Ps9<4>lhj<12>Vss<14>RETbQ\
+  Fma1<9>kirddiY_aSVUNQWILX<15>939<2>QDq<10>9fR<6>jWZ\
+  <2>xZO<4>5I`<6>hnX<8>8nf<11>y`B<6>c`a<2>WYaUXaPknKyz\
+  <4>76X9A_BDaqfLqdI
+  }
+
+frm:defnewt6   {; Another Newton Failure
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=(pixel*a):
+z1=z^b-1
+z2=c*z*z
+z=z-(d*z1/z2)^k,
+|z1| >= f
+}

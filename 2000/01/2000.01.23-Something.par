@@ -1,0 +1,24 @@
+Something          { ; Fractal of the day, 23-01-00
+                     ; time=0:09:14.86, SF5 on a P200
+  reset=2000 type=formula 
+  formulaname=Mystic2 function=acos passes=1
+  center-mag=-1.16573e-015/8.88178e-016/1.693745/1/-10\
+  2.5 params=2.407/-3.318/-3.004/0.497/-1.096/-0.124
+  float=y maxiter=180 bailout=25 inside=bof60
+  symmetry=none periodicity=0
+  colors=000ZbQ<3>VEDU8A_EAeGAkIAwKAsI9nG8gE8eC7a67Y66\
+  V55T55N44K44<3>QGISILVLP<3>XWaYZeZahZck<3>`Ym`Wm`Vn<\
+  3>bPpcNqcMqdKrdJr<3>cKtcKucKu<3>cLycLz`MhXMUXM9<31>R\
+  WMRXMQXN<3>QYOVVB<36>QYMQYNQYN<3>QYOdyW<16>UeQTdQTbP\
+  <3>QZOswO<32>VaOU`OT`O<3>QYOwtk<8>cgYaeX_dV<3>SZPW_Y\
+  <3>TZTSYRRYQQYPBSu<11>HVgIVfIVe<3>KWacm_bq_bu_`nW_hT
+  }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100
+}

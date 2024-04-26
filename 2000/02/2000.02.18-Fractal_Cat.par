@@ -1,0 +1,28 @@
+Fractal_Cat        { ; Fractal of the day, 18-02-00 Rating (?)
+                     ; time=0:03:28.38 SF5 on a P200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=Mystic2 function=cos passes=t
+  center-mag=-0.154483/1.22125e-015/3.538071/1.1211/90
+  params=0.96/-2.3/0.1/0.85/2.33/-2.5 float=y
+  maxiter=95 bailout=25 inside=bof61 logmap=yes
+  symmetry=xaxis periodicity=10
+  colors=000644054UKc777989cmcDAE<9>WI_YJb_Kd<3>gOmmMs\
+  <3>VUeQWbMYZH_W6eK<2>QRhXHn<3>WasWftWkuWpvhottnr<3>b\
+  lcYl_UlWSoU<3>MeQKZPJ`OHZNGWMEULCUM<8>EHGEFGFEF<3>F8\
+  DC0C<3>NQFQXFSbGmdGmoHmpH<3>mfFmdEmaEm_DmYDW_C<3>URA\
+  UOATM9<2>SF8RC7SD8<13>WGFWGFWGG<2>XHHXHIWFG<10>cUYcW\
+  _dX`<2>f`efafecfdfedie_sn<2>_xnUuC<3>X`7YV6ZQ5_L4_G3\
+  <12>eiWekYfm_<3>gvg<5>jjdjhckfc<2>l`al_akY`<14>iDSiC\
+  RiAR<2>i6Pi5PgBR<3>cZWbdXajY<5>OggMfiKfj<2>DdoBdpAan\
+  <11>4DT4BR39P<2>23J21I46K6BL8GN
+  }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100
+}

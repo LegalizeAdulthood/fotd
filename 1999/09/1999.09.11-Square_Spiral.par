@@ -1,0 +1,36 @@
+Square_Spiral      { ; Fractal of the day, 11-09-99
+                     ; t=0:02:02.87 on a p233, SF5
+  reset=1960 type=formula 
+  formulaname=mult2-003-XY-ZWa function=ident/flip
+  passes=1 center-mag=-0.00064979012255337/+0.0004036\
+  7125011136/8643.069/1/-170
+  params=90.1/88.7/0.00019/0.07566/-1.74308/8e-005
+  float=y maxiter=600 bailout=25 inside=255
+  logmap=91 symmetry=none periodicity=10
+  colors=000EQUBQW9QX8SZ<2>0Sc0Ue<2>0Uj000<2>000003608\
+  B2EI5JN8OU9WZD`eGejJlrLrwOwzSzzWzzXz<5>zNzzLyzJw<2>z\
+  ErzDpzEnzEnzElzGlyGjuGjpIjlIiiIieJgbJgZJeWJeQLeNLcJL\
+  cGNbDNb9N`5O`2O`0OZ0QZ0QX0QX0QX0UU0WQ0XO5ZL8`IDcGIeD\
+  Ng9Si8Wj5`n2ep0jr0pt0ww0tu0<4>jt0it0gr0er0cr0br0`p0Z\
+  p0Xp0Wp0Un0Sn0Qn0On0Nl0Ll0Jl0Il0Gj0<5>6i05i03g02g00g\
+  00g00e00e00e00e00c0<5>0b00b00`00`02`08`0G`0N`0W`0<2>\
+  r`0zW0y`0re0jj0cp2Wu6Oz9IzE5zGBzIIzIOuJWnJbgLiZLpSNw\
+  LNzDOz6Oz0Oz5Uz8XzB`zEczJgzNjzQnzUtyXwwbz<3>ppzrnzrl\
+  zrjzriztgztgzteytcuubtu`ru`puZluXjwWiwUewUcwSbyQ`yOX\
+  yNWyNUzLSzJOzINzGLzGJ<3>LQcBSi2Wn0Xt0Zy0Ww0Sw0Ou3Lu5\
+  Jw6Iu6It8Ir8Gp9Gn9Gl9EjBEiBEgDDeDDcEDbEB`EBZGBXG9WI9\
+  UI9SI9SGBQGBOGBOGBNGBNGBLGBLGBJGDJGDIGDIGDGGDGGDEGDE\
+  GDDGEDGEBUNJQOLOONLOOJOQGQS
+  }
+
+frm:mult2-003-XY-ZWa { ; "a" suffix added to differentiate from
+                   ; slightly different version previously posted
+                   ; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^2.003005+c,
+|z| <= 36  }

@@ -1,0 +1,26 @@
+FractalAppleSeason { ; Fractal of the day, 16-10-99
+                     ; time=0:09:33.42 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=multmin1-5-XY-ZW function=flip/ident
+  passes=1 center-mag=+0.00022034428794988/-0.002755\
+  74112734859/77.80464 params=94.74/-88.62/0.5730713\
+  7/1.22092982/0.57307137/1.22092982 float=y
+  maxiter=15000 bailout=25 inside=0 logmap=17
+  symmetry=none periodicity=10
+  colors=000MBIPBIRCLTDOVETYFYbHbeJhhLm<2>rUmlPXnO3l\
+  N6jL9hLC<18>BtyQntUhoZeqSbr1ayJXw<4>UV_<2>`VbbVccU\
+  ddUeeUffUfgSe<3>kRalO_mJYnIW<13>xFixFjwHkwMkwQk<6>\
+  vcmvdmvgnvhn<4>uqouspusputpuup<14>lNy<10>AfJ<11>`R\
+  _<17>Acy<10>XVuZVu`Ws<22>ybD<10>6sD9rG<12>asi<2>Rs\
+  2<9>SsmEsB<4>EsM<10>KsK<2>Ksl<4>_sH
+  }
+
+frm:multmin1-5-XY-ZW {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=(-z)^1.5+c,
+|z| <= 36  }

@@ -1,0 +1,27 @@
+Fractal_Landscape  { ; Fractal of the day, 14-03-00 Rating (7)
+                     ; time=0:07:57.92 SF5 on a p200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.64776480072053690/+0.00455049699312394\
+  /1117246/1/-87.499 params=10/-1.4142/-0.1/1.4142/0/0
+  float=y maxiter=1400 bailout=25 inside=0 logmap=132
+  symmetry=none periodicity=10
+  colors=000N8FK8FM8FQ8FQ8EW8EU8E`8EN9EcAEdBEfCCeFEfIG\
+  fLIiRFfNJdJNbFRZDT<6>iCWkCWmCX<3>sCYu9_<12>obModLnfK\
+  <3>moG<3>TZ9OU8JQ6<2>3D1<14>IF8JF8KF8<3>OFAME9<5>`GC\
+  bHDeHD<2>lIFnIFnKHnMJ<3>fYZd`bg`b<3>pZarZ`tY`vY`zX_<\
+  8>i`cg`cfad<3>ZbefYo<2>IlN<3>KmPLmPLmQMmQMmQ<2>orBzw\
+  6rmCzmIgaN<3>MEiH8nK9o<8>fEohFokGo<3>uIozCywIotOfqUY\
+  lYSnZP<3>v3F<7>mL_lNakPd<2>hWkgYnhZs<14>N_LM_IL_G<3>\
+  F_7D`1<5>FfKFgNGhQGiTGjWGkZ<3>JoeJpgKqh<3>MuoNvv<3>L\
+  z`LzWLzR<2>KzBFz4<4>azB<3>TzC
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

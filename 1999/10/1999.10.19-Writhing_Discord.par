@@ -1,0 +1,23 @@
+Writhing_Discord   { ; Fractal of the day, 19-10-99
+                     ; time=0:04:12.22 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-4.758712652981907/+0.0103072515121435/16\
+  72274/1/-9.999 params=0.1/-0.1/10/10/45/0 float=y
+  maxiter=1600 bailout=25 inside=0
+  logmap=84 symmetry=xaxis periodicity=10
+  colors=000dGYcAXeHZgH`<8>ssr<13>b3q<7>QH9PI4LL8<5>2a\
+  S<7>2M42L14N2<8>M`6<10>bH_dFbeEdfDf<7>g5v<10>FSP<3>f\
+  Yq<5>fTkY6u<14>8zX<2>LpYPmYSlYUjZYgZadZKk7ClIMmLWgSb\
+  f2<13>eaVeaXfbY<3>gfaSRq<6>d``25s<5>`YamZU<13>elZGmN\
+  <8>cvYvwemwabwrdwhzwdPwV<4>cwZAwsQwhkwS<3>fwYhwS<3>e\
+  wYywE<8>gwXTw1<11>dwXMwW<6>YwYWwH<5>bwT
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

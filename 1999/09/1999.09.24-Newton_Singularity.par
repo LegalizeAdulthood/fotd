@@ -1,0 +1,28 @@
+Newton Singularity { ; Fractal of the day, 24-09-99
+                     ; t=0:01:21.45 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=CrazyNewton passes=1
+  center-mag=-0.249957/-4.44089e-016/0.5442177/1/-90
+  params=-1.7948/2.00998/0.7099/-1.2985/-2.3491/1.931\
+  78 float=y maxiter=250 bailout=25 inside=bof60
+  logmap=yes symmetry=none periodicity=10
+  colors=000000K2A<4>H28H28100G18<9>A15915914<3>703wc\
+  3<3>wc2wc1wc1<3>s`0r_H<49>531421310210100<7>0000000\
+  00<3>000KXW<3>P_GQ_DNYK<3>CTh9Rn6Qt4Pz<3>3Ij3Hf3Fb3\
+  EZ<3>PaGUgBZm6cs20fO<3>QncWpgark<3>iyZ<3>niboecpbc<\
+  2>eAP<3>leUmlVk`OiPHhEA<3>t8Ww6ay5f<3>nKckObiRbfVad\
+  Ya<3>Y_NW`JV`GTaCSa9<3>prk<3>bdm_amdXl<3>vDk<2>sAns\
+  9nq6pp4qo2r<3>tARuBKpDN<2>aJWQOy<3>e4eh0`PWl<3>IVkG\
+  UkFUkDUkCUk<2>bOz<2>97w<3>ugC<3>TpdMrkFtr8vyQ3D<7>L\
+  2B
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

@@ -1,0 +1,23 @@
+Rectangular_Object { ; Fractal of the day, 18-10-99
+                     ; time=0:01:29.86 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=multirot-XZ-YW passes=1
+  center-mag=-0.2358378013254017/+0.00264359268502594/\
+  208.0812/0.7885/-20.117/-16.375
+  params=90/90/0.003/0/-1.76853085485/0 float=y
+  maxiter=36000 bailout=25 inside=253 logmap=12
+  symmetry=none periodicity=10
+  colors=000UIk<6>POo<13>zj`<7>xXG<14>pqiprjnof<5>eYMc\
+  VJ`SF<2>UK5<4>MQMKRPHSS<4>5Xg<14>`9E<11>zRw<5>dhiagg\
+  RafJbeAdl5gs<10>uZX<8>`Ib<11>ddk<8>EYu<4>ibRocLxbB\
+  <12>ThtThtThuThu<8>QjiQjhPjgPjfPjePjd<27>Hn6kkK<21>\
+  In58m8<11>Em6Ymh<3>Vmj
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

@@ -1,0 +1,23 @@
+TheGreenManDances  { ; Fractal of the day, 12-07-99
+                     ; 0:00:47.73 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=mult2-003-XY-ZW function=ident/flip
+  center-mag=2.77556e-017/-0.0120611/10.93333
+  params=90/90/0.000182/0.07455/-1.743345/0 float=y
+  maxiter=1200 bailout=25 inside=0 logmap=yes
+  symmetry=none periodicity=10
+  colors=000UChVBb<19>MLlMLmJLo<7>fLfiLemJf<19>co8cq6d\
+  u6<16>PL3<9>ModIoMFo4<13>KaRK`TK_ULZV<17>OYZOYZQZX\
+  <15>7Jr6Is5Hv<19>5Z_5_Z4ZZ<19>BgQBgQCiR<18>ADJ<13>7_\
+  wN`Wba5<7>lfu<23>EoD<3>NjQ
+  }
+
+frm:mult2-003-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^2.003+c,
+|z| <= 36  }

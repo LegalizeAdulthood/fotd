@@ -1,0 +1,25 @@
+Get_Your_Bearings  { ; Fractal of the day, 26-07-99
+                     ; t=0:03:39.98 on p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=t
+  center-mag=+7.885684004944859/+6.740215950790947/\
+  1921.326/1/97.5 params=1/2/81.5/-100/-0.95/10000
+  float=y maxiter=2500 bailout=25
+  inside=0 logmap=44 symmetry=none periodicity=10
+  colors=000TCaTCaUDbVGhWJmWMr<8>eSd<4>KitGmwCoy<14>\
+  TD8<2>ha3<12>IBL<4>u`m<3>IrbGTZF4V<7>tHSFAh<3>G9eE\
+  VnCpv<3>2wf<6>tfR<2>DJy<3>ZFIHES0D`<2>jwU<2>xmj<2>\
+  bk4Cel<2>6Mcc4uKwf<7>YQR<5>AiJ7lI5iP<2>1`h<2>dBp\
+  <3>nta<6>BOo<6>0_r<2>xgs4rdAjnGbw<5>sw9<5>SKJ<4>y9\
+  W<4>Kx8<2>mAa<6>TPsRRuNTi<2>CZA<2>cszLWy28x<2>jmNl\
+  mCmm1<3>FfZNNKV46<3>BTX_ID<7>ENmbMYzMJsVXlbi<5>S82\
+  <6>BZp<2>MVP<2>GWJ8f75f72f7000000000
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

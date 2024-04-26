@@ -1,0 +1,20 @@
+Coronal_Eruption   { ; Fractal of the day, 26-11-99
+                     ; time=0:24:27.97 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.01989415228636439/+0.00059659441124786\
+  /727073.2/1/-155 params=1/-100/100/1/-0.99/0
+  float=y maxiter=3600 inside=0 logmap=90
+  colors=000EBF<29>KLRKMRLMS<2>LNTLNTLMT<27>HA`HA`HA`\
+  <3>H8aE5_<80>kgrlhrlhr<2>mjsnjsnkq<3>pmipmgooeppcpq\
+  cprcpsc<2>vvcxwczzcyycwwcsucprcppcpnc<2>qhrqgwqgw\
+  <3>qeyqezqez<3>qczqczqczqczqcz<3>nczmczmcz<47>mcz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

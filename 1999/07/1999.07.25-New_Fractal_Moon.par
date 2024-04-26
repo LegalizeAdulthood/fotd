@@ -1,0 +1,18 @@
+New_Fractal_Moon   { ; Fractal of the day, 25-07-99
+                     ; t=0:00:33.71 on p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=t
+  center-mag=-74.2478/-16.7252/0.009334958/1/-49.999
+  params=0.3/2/2/-3/0/0 float=y maxiter=250
+  bailout=25 inside=253 logmap=yes symmetry=none
+  periodicity=10 colors=000rdZ<115>khPkhPlhO<75>hhY\
+  hhYffX<27>EFNDENDEM<24>DEHAIQEHSKKS
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

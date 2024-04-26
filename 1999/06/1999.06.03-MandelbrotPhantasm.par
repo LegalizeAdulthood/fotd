@@ -1,0 +1,23 @@
+MandelbrotPhantasm { ; Fractal of the day, 03-06-99
+                     ; 0:13:09.25 on p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.00002694082922285/0/470.5044/1/-37.5
+  params=-500/-500/-1.1/-1/0/0 float=y maxiter=7200
+  bailout=25 inside=0 logmap=6 symmetry=none
+  periodicity=10 colors=000UD8cD7<2>cE7UF7aF7aF7aG7\
+  UG7_G7_H7_H7UH7YI7YI7YI7SJ7WJ7WJ7WK7SK7_K7_L7_L6S\
+  L6aM6aM6aM6SN6cN6cN6cO6WO6eO6eP6eP6WP6gQ6gQ6gQ6WR\
+  6iR6iR6iS6WS6kR5kS6kS6_S6mS6mS7mS7_S7oS7oS7oS8_S8\
+  mS8lS8lS9_S9kS9kS9jS9cSAjSAiSAiSAcSBhSBhSBgSBcTBf\
+  TCfTCfTCcTCeTC<43>OUMOUMPSK<36>FkkFkkGkj<84>pk`pk\
+  `nja<3>mna
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

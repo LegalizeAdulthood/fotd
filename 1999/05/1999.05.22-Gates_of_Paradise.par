@@ -1,0 +1,19 @@
+Gates_of_Paradise  { ; Fractal of the day, 22-05-99
+                     ; 0:04:43.42, p233, 640x480
+  reset=1960 type=formula 
+  formulaname=HyperSquare passes=1
+  center-mag=-0.150772/8.32667e-017/42.63814/0.4578/-90
+  params=0/0/10/0/1e-010/0 float=y maxiter=2500
+  bailout=25 inside=255 logmap=46 symmetry=xaxis
+  periodicity=0 colors=000G0GH0GH1D<12>OEWOEYPFZPF`QGa\
+  <7>UKmULoVLpVLr<7>WNrWNrWNrWOrXOrXOr<98>gnrhosgnr\
+  <108>Rjprzz cyclerange=1/254
+  }
+
+frm:HyperSquare {; Jim Muth
+a=(p1),b=(0,0):
+q=sqr(a)-sqr(b)+pixel
+b=p2*a*b+p3
+a=q,
+|a|+|b| <= 100
+}

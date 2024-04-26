@@ -1,0 +1,20 @@
+Fractal_with_Torus { ; Fractal of the day, 15-04-99
+                     ; 2hr on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.570944824212554/+0.02683272732772121\
+  /2.932184e+010/1/102.499 params=333/0.3/3/32/-1.002/0
+  float=y maxiter=4200 bailout=25 inside=0 logmap=355
+  symmetry=none periodicity=10
+  colors=000HNyHNy<11>dZuf_ufZt<16>rVwrVwqUv<61>q3D\
+  qICqPCqRBqSAsT9qUA<6>jHBiGBhDCgBCf9Ce4C<38>0FK\
+  <23>5Z9<25>SdbSdcSec<48>drS
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

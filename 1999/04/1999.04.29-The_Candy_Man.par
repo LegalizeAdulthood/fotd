@@ -1,0 +1,24 @@
+The_Candy_Man      { ; Fractal of the day, 29-04-99
+                     ; 13min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot03-XY-ZW function=ident/flip
+  passes=1 center-mag=+0.00000009537070586/-0.00000003\
+  117764085/365017/1/-67.5 params=45/45/0.498809139/0.\
+  082767897/0.498809139/0.082767897 float=y
+  maxiter=7200 bailout=3 inside=0 logmap=258
+  symmetry=none periodicity=10
+  colors=000JIh<2>IHfCHe<17>CF`DE_CF`<29>CfsCgwCix7jx9\
+  ix<15>Y_T<2>VZNUYLUXJUXHUWFUWDUVBUVA<9>UO6UN8UO9WOEW\
+  OIWOLZPOZOQZNScMUcLWcKYcK`eKchKf<16>kKTkKSkLSkMR<10>\
+  lXIlYImYHmYG<4>qYCrYBsW6<2>vYBwZCw_Dw_F<23>wojwplvqm\
+  uqntrpssqrtu<20>koejndkndlnc<44>mmc
+  }
+
+frm:multirot03-XY-ZW {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z*z*z+c,
+|z| <= 36  }

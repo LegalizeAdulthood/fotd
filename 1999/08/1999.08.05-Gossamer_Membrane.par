@@ -1,0 +1,20 @@
+Gossamer_Membrane  { ; Fractal of the day, 05-08-99
+                     ; t=0:05:13.57 on p233, 640x480
+  reset=1960 type=formula 
+  formulaname=OblateMiN passes=t
+  center-mag=0.686584/0.474782/5.464481/3.1646/0/-26.547
+  params=1.5/0/0/0/0.63/0 float=y maxiter=2000
+  bailout=16 inside=0
+  logmap=20 symmetry=none periodicity=10
+  colors=000ws4ws4<10>aXD_VEXTEUQF<5>CEKACK9DL<15>5Q_5R\
+  `4Qh5R`2RR<12>iZv<17>y6P<5>cgLy5V`mL<17>vBW<5>SQ8PQ0\
+  <11>Aee9fi9fo<14>3gH<12>SlZUl_Un_<19>aNoaMp`Jo<18>mgv\
+  <11>odo<13>AOu4Ov<14>nCpv9u<6>UUPSYM<7>EPECOD9LABND
+  }
+
+frm:OblateMiN {; Jim Muth
+b=p1, z=real(pixel)+p2,
+c=flip(imag(pixel))+p3:
+z=(-z)^(b)+c,
+|z| <= 16
+}

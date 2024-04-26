@@ -1,0 +1,27 @@
+ThePortrait_isGone { ; Fractal of the day, 21-05-99
+                     ; 0:00;24.22, p233, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW
+  center-mag=-0.00000096272991645/+0.00002215977426318\
+  /1797.793/0.236/-65.265/-70.14
+  params=56.6/36.5/1.26617946/0/-1.749/0 float=y
+  maxiter=6000 bailout=25 inside=0
+  logmap=19 symmetry=none periodicity=10
+  colors=000O7PO8RO9O<8>NH7<12>moZor`qsbssdrq`<8>j08<4>\
+  RoJ<2>eogikoaigUa_MUSEQLNNILLGJIFHCDfLCTGCbRPVLKNGGUG\
+  AEZFFXEF`EF_D<2>GbCsciecYTcNocm<5>LcHXc4mUU<10>mPUmPZ\
+  <2>mPZmUm<6>m_mm`mm`mm`m<5>mcmmcmmcmmcmmcm<10>mcmIcz_\
+  cz<4>Jczacz<2>Lczzcz<5>Mcz_cz<6>IczYczPcz5cz<4>Fczgcz\
+  <4>KczWczvcz<2>RczuczgczUcz3cz<5>FczQcz<3>Iczscz<5>Lc\
+  zjcz<3>Mcz0cz<3>Dczxczkcz`czQczYcz<5>IczAcz<6>Gczmcza\
+  cz<2>LcznczbczRcz8cz<5>Fcz9cz<2>FczQcz<3>Icz1cz<2>8cz\
+  Xcz<2>Pcz
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

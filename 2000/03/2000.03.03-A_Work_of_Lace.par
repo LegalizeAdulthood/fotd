@@ -1,0 +1,24 @@
+A_Work_of_Lace     { ; Fractal of the day, 03-03-00 Rating (5)
+                     ; time=0:01:21.02 SF5 on a P200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.71089911843303690/+0.70377407190488450\
+  /42499.88/1/130 params=1/5/0.001/-2/0/0 float=y
+  maxiter=750 bailout=25 inside=0 logmap=11
+  symmetry=none periodicity=10
+  colors=000TUw<5>JeyHgyFiy<3>9qz<3>ImmKhjM_g<3>UPWWMT\
+  YJQ<2>cBHe9If8I<3>b6Pa6R`6T<3>Y5Z<7>XOSXRRXTQXWQXYP<\
+  3>_fM<18>rRJsQJtPIuPIvOI<5>wJHwIHwHG<3>wEG<8>wcMweMw\
+  hN<2>wqPwsPwtU<3>wxjwynvzm<14>gzmfzmezm<2>bzmbzm`zk<\
+  16>FzKEzIDzG<3>7zA2z06z8<3>1z15zS<27>1z50z40z4<3>0z0\
+  wzt<26>CzBAzA8z8<3>1z18zR<20>0z2
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

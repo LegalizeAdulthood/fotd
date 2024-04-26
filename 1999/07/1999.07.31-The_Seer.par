@@ -1,0 +1,21 @@
+The_Seer           { ; Fractal of the day, 31-07-99
+                     ; t=0:03:12.18 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-1.57421/-1.59314/0.9479202/1/-137.5
+  params=1/-1/-1/-1.01/200/0 float=y maxiter=1200
+  bailout=25 inside=0 logmap=3 symmetry=xaxis
+  periodicity=10 colors=000c8Z<8>yeRh`OSWLAUK<21>N4DN\
+  3DQ4E<14>w6G<9>V13vCAT12<3>Po9<3>VMf<19>R4UT1X<9>GO\
+  9FQ7BU3<9>cIKfHMgEM<22>vmX<5>ohbnja<17>nBmnAmm9l\
+  <22>l2V<13>gum<3>NWy<3>jXiqTh<10>XzM<9>PgHSdC\
+  <10>5pz6ox7nv8mw8mwAmw<3>Amw
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

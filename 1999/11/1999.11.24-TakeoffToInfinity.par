@@ -1,0 +1,27 @@
+TakeoffToInfinity  { ; Fractal of the day, 24-11-99
+                     ; time=0:03:38.49 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-18.01719370781133000/-1.2434678047049360\
+  0/1600985/1/112.5 params=0.1/2/-1/-2/0/1000 float=y
+  maxiter=1400 bailout=25 inside=0
+  logmap=61 symmetry=none periodicity=10
+  colors=000zUIzUHwQGtMF<3>hEAeC9bA7_86X65U44R43O66L79\
+  K9C<3>MENMFPPPXSUmVXtX`wYbzZcr_an`Zk<3>cQddObdMaK0K<\
+  3>V8NXAO_CO<3>hJNjLNlNN<3>tUN<2>B1PB9HBHKBPU<2>QYwV`\
+  z_cwcfmeccf`a<4>mOLnMIoJF<3>t92<7>lIFkJHjKJiLKhMMhNN\
+  <9>LejIglGin<3>7pw<3>RJvWBvQDv<3>2Jv<2>FeqJlpMhj<3>V\
+  VRXSM_OHaLCcI7<7>_SNZTPZVR<2>XYXXZZUUV<3>LEHJAEHEK<3\
+  >9Tf7Xl5`r3cw<3>SY`ZWVdVQjTKpSF<2>`jaSmPKpD<3>GVC<9>\
+  FkEFmFFoF<3>FuFGrH<3>HvPHwRHwT<3>Iw_JwaJwcJweJwf<3>m\
+  wZiwfewmOwj6wf<3>IwgLwhOwhRwhTwh<3>lwlpwmlwk<5>RwcOw\
+  bKwa<3>6wXRwKjw8<2>awJBwU<3>4wK<4>zwK
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

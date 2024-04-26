@@ -1,0 +1,25 @@
+The_Mothras_Attack { ; Fractal of the day, 18-11-99
+                     ; time=0:39:12.44 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.17730153692711920/-0.19278617862452760\
+  /2.20292e+009/1/-90 params=1/1/-0.4/-1/0/0
+  float=y maxiter=3600 bailout=25 inside=0
+  logmap=550 symmetry=none periodicity=10
+  colors=000hS_<8>pOjqNlrNm<2>uLqvLrvLrvLs<3>iWYeZSb`N\
+  _cHYf9<12>MYaLXcKXe<3>GUn8Nw<3>O_i<2>HkqFotDuw<3>Dis\
+  DgrDdqDapDZoDXo<21>9GP8FO8FM<2>8CJ8CIABJ<18>U4LV4MW3\
+  M<2>Z2M_2Mb1N<12>LDFKEEJFE<3>EIC<10>ZCD`CDbBE<2>hAEj\
+  AElBE<3>tJEwLEyNEzOCxNE<2>nHIkFKiILgNN<3>ZZTXaUVQWSS\
+  XQYZO`_MaaJdbHndFqeDsgAvh<3>1zo2yn2xm<3>4qi4oh5mg5kf\
+  5if<3>7db7ca8a`8`_9_Z9ZY9YY9YY<17>h`TjaTlaT<3>taSv`R\
+  v_Rz_R<10>zTOzSOzSO<3>zPNzSY
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,33 @@
+Cyclogenesis       { ; Fractal of the day, 20-01-00
+                     ; time=0:41:22.64, SF5 on a p200
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.23418923607130600/+0.42864036781657180\
+  /1.288888e+011/1/90
+  params=2.71828182845905/3.14159265358979/1.414213562\
+  38/0.70710706/0/0 float=y maxiter=6000 bailout=25
+  inside=0 logmap=-614 symmetry=none periodicity=10
+  colors=000E0eE0e<3>L0mN0oP0qR0s<2>X6xZ8z`AzZCxVEuNGm\
+  HHdAJX2LN0NG0P60P00T20V40X80ZA0bC0dG0eH0gJ2iN6mP8oTA\
+  qVCsXEu`HxbJzdLzgNziPzmTzoVzqXzuZzv`zxezsizmqogxkbzg\
+  ZzbTz`NzVHzPCzJ8X8kZ6z<2>Z6zZ6z`6z`6z`4z`4z`4z`4zb4z\
+  b4vb4Ab4Ab2Ab2ed2gd2id2id2kd2md2mb6q`8sZAuXEvVGxTHzR\
+  JzPNzNPzLRzJTzHXz<2>CbzGdzJezNgzPixTkuXmq`okbqgesdiu\
+  `mvVoxRszNvzHzzEzzAzz4zz0zz0zz0zzHzzezzdzzdzzbzzbzz`\
+  zz`zzZzzZzzXzzXxzVvzVuzTuzTqzNmzJkzGgzCdz8bz4Zz0Vz0T\
+  z0Pz0Nz0Lz0Lz0Lz0Jz0Jz0Jz0Hz0Hz0Hz0Gz2Gz4Gz6Gz6Hz6Jz\
+  4Lz4Nz2Pz2Rz0Tz0Vz0Xz0`z0PzAVzAzz6zz0<4>zz0zz0zz0zz0\
+  zz2zz6vzAuzCqzGozHkzLizPezRdzV`zZZz`VzdTzeZz`bzVezRi\
+  zLmzHszCvz6zz2zz0zz0zz0xz4uz8qzEmzHgzNdzR`zX<2>PziRz\
+  kRzkRzkRzmRzmRzmRzmTzoTzoTzoTzoTzqTzqTzqTzqVzsVzsVzu\
+  <3>VzvVzvVzxVzxVzz<3>VzzVzzTzzTzzRzzRzzRzzPzzPzz0zX0\
+  zZ0zb4ze
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

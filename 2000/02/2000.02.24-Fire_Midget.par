@@ -1,0 +1,26 @@
+Fire_Midget        { ; Fractal of the day, 24-02-00 Rating (6)
+                     ; time=0:04:36.44 SF5 on a p200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.41919593992542350/+10.6775648515464000\
+  0/6276.255/1/-85 params=1/0.5/-1/0.78/2/250 float=y
+  maxiter=750 bailout=25 inside=0 logmap=78
+  symmetry=none periodicity=10
+  colors=000K0`K0cL0c<3>P0hQ0iM6fQ9f<3>KHTIJQHLMFNJEPG\
+  _`DukBzkDqdFsaGnZIwVKjSLlPNgMP<2>aCU`9VXBY<3>JIiGZ`<\
+  3>7`G5aB3b61b1<3>ixu<3>TZlPTiLNg<2>94a<2>aSC<3>lKJoI\
+  KrGMtFN<7>SNTOOULPV<3>7SX<15>ggRihQkiQ<3>tmP<3>TWSMR\
+  TFNT<14>58T47T36T<2>13T12T24V<5>6Ee7Fg8Hi<3>AOpaXE<1\
+  1>TDPSCQSAR<2>P5UP4UN8S<7>CaEBeC9iA<2>5t54w45v7<14>K\
+  ghLfkMem<2>PbuPbwR`t<4>_RfaPcbNa<3>iGR<15>bjibljank<\
+  3>`uo<8>GjKDiHBgD<3>2c03a4MtT<3>8v`
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

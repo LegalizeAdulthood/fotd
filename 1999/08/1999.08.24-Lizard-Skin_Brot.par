@@ -1,0 +1,22 @@
+Lizard-Skin_Brot   { ; Fractal of the day, 24-08-99
+                     ; t=0:00:15.87 -- 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-6.108278832059497/0/4879001
+  params=0.2/2/0.0001/-100/0/0 float=y maxiter=500
+  bailout=25 inside=0 logmap=11 symmetry=xaxis
+  periodicity=10 colors=000z`NxcK<4>xNLlNH`KEPEADB7284\
+  <18>YZ1_`1`a1ab1bc1cc1<8>lcFmcGmcImcJ<10>mc_mc`mcam\
+  cbmcc<15>mcn<9>mc0<2>mcM<19>mcSmcSmcTmcU<18>mcfmcfm\
+  ce<20>mcZmcZmcZmcZmcYmcY<18>mcQmcQmcQmcQmcQmcQmcQ\
+  <13>mcn<6>mc0<17>mc8mc8mcA<16>mcWmcXmcYmcZmc_mc_mcc\
+  <3>mcQ
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,24 @@
+Just_Because       { ; Fractal of the day, 15-12-99
+                     ; time=0:02:55.54 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-7.95345819971506700/-1.46791346361402900\
+  /2.743307e+007/1/122.5 params=2/0.2/-1/-2/3/-80
+  float=y maxiter=1400 bailout=25 inside=0
+  logmap=39 symmetry=none periodicity=10
+  colors=000cwccucZpZUlUPgPMcO<3>IMLHHKGDJF8IE4I<5>T7H\
+  V8HY8H<3>fAH<2>SAY<4>`BbaCbcCc<3>iCf<5>jUljXmj_n<3>j\
+  krjmlqjgrhXsiV<8>OlIKlHHlF<3>3mARm8_m8hm9<3>TmIOmLKm\
+  N<2>8mU<3>VmK_mIemGjmE<10>jm_<4>jmi<3>bmZ`mWZmTXmQVm\
+  O<5>WmNWmNYmMWmN<3>XmMXmMYmM<3>amMbmMcmMdmU<16>umRvm\
+  RwmRxmRymR<29>zmMzmMzmM<3>zmMzmNzmM<34>zmMzmMzmMzmMz\
+  mMzmMzmL<18>zmK
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

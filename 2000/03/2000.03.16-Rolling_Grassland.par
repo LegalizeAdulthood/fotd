@@ -1,0 +1,23 @@
+Rolling_Grassland  { ; Fractal of the day, 16-03-00 Rating (6)
+                     ; time=0:08:26.40 SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=RectangularN passes=1
+  center-mag=-0.00255084527186440/+0.00001503202402791\
+  /178233/0.001255/0.148/89.811
+  params=1.1/0/0/0/0.041627863/-0.002064849 float=y
+  maxiter=10000 bailout=25 inside=0
+  logmap=136 symmetry=none periodicity=10
+  colors=000Noz<2>PozQozRoySox<12>`ow`owaow<3>dowdptep\
+  w<13>oqwpqwprw<3>srwtrr<3>sqZsqUrqPrqKrqG<50>em5em5e\
+  m4<3>dm4cl5ck5<6>_g5_f5Zf5<3>Xc5_c5cb5<3>c`6cc6ca6cZ\
+  6<3>cX6cW6cV6<3>ST6PS6NR7MQ7KQ7<3>KQ7KQ7KQ7KQ7IM7<18\
+  >8A88A8798<2>678678789<68>`SV
+  }
+
+frm:RectangularN {; Jim Muth
+b=p1, z=flip(real(pixel))+p2,
+c=flip(imag(pixel))+p3:
+z=z^(b)+c,
+|z| <= 16
+}

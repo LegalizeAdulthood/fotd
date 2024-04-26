@@ -1,0 +1,23 @@
+The_Unholy_Trinity { ; Fractal of the day, 16-05-99
+                     ; 0:00:09.50, p233, 640x480
+  reset=1960 type=formula 
+  formulaname=multesc4-XY-ZW function=ident/flip
+  passes=1 center-mag=-0.00000000012449749/0/2.1381\
+  95e+009/0.6993 params=3/26/-1.999985881148034/0\
+  /-1.999985881148034/0 float=y maxiter=1500
+  bailout=25 inside=0 logmap=30 symmetry=xaxis
+  periodicity=10 colors=000_Om<4>_Mm_Lm_LlZKk<7>RGW\
+  QGUPFTOFSNER<3>zq3<10>r2G<8>15K<13>vLL<14>blp<12>\
+  SsESsBTtC<13>TxQTxRUwT<14>dxs<15>nyk<11>OzGMzELzF\
+  <9>KzMFzcBzu<6>1zv<2>4zp5zo6zo<12>Jzm<6>uza<12>2z\
+  J<7>Hz4Iz3Mz6<10>zzX<9>Hz0<15>8z0Cz1
+  }
+
+frm:multesc4-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| < 4  }

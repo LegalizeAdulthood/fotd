@@ -1,0 +1,27 @@
+Minibrot_Nursery   { ; Fractal of the day, 16-01-00
+                     ; time=0:02:35.33, SF5 on p200
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.387528889499869/+0.1144520299681295/4.\
+  960929e+012/1/-160.003/0.004 params=0.1/12.5/1/1/0/0
+  float=y maxiter=1400 bailout=25 inside=0 logmap=46
+  symmetry=none periodicity=10
+  colors=000C6KHBKEAKCAKzwKCTbBAJKAPQAVZGbgGnsUyshhomV\
+  krIhw5cm7_d8VXA<3>DDG98Hmv_<3>qD`q2`gCMZM8IJE2GJ<3>_\
+  JdgJiiGd<3>q5L<3>vJcwMhxQlyTqzWu<3>PWdFW`6WX<3>PLFTI\
+  AYF6aD2<3>SZ5Qd6Oi7Mn7<3>6Ic2AkAAi<3>cAdjAcj8a<3>j1V\
+  j0UZGZOVc<3>LURKUNJUKIUHIUE<3>MP`NOfONlPMq<2>J0F<3>V\
+  l7Xx5ch6jT6pE6<3>WJK<3>bDOdCPeBQ<3>l6U<3>j3Uj2Ui2Ui1\
+  Ui1U<2>N7qM6kM5zM4zSbf<2>SkcSnbUod<4>_rmasobsp<3>guw\
+  UezGQz2Bz<2>6Gz<2>3ez<5>3Uz<4>3KzYTz<3>GgzCjzFkz<3>R\
+  ozTpzWqz<3>fuz<3>nozpnzrmzslz1uz<9>7Oz8Lz8Iz<3>A5zHC\
+  zOJz<9>SgzTizTlz<3>Uuz<3>JgzGczD`zBYzFWzIUzJnz<3>Abz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

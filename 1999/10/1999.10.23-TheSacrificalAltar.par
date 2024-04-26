@@ -1,0 +1,28 @@
+TheSacrificalAltar { ; Fractal of the day, 23-10-99
+                     ; time=0:01:57.49 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=multmin1-5-XY-ZW function=ident/flip
+  passes=1
+  center-mag=0.0214125/2.22045e-016/0.7201178/1/90
+  params=55/60/0/0/0.95/0 float=y maxiter=1500
+  bailout=25 inside=0 logmap=3 symmetry=none
+  periodicity=10
+  colors=000J6U<3>A02<5>XFN`IQdKU<3>sUf<16>bMeaMe`Le<\
+  3>YKeaNjeQogStiUy<3>ZNyWLyTJyRIy<9>cTqeUpfVo<3>kZlp\
+  Yp<5>WhVSjRPlO<3>Bs98tAAnB<3>HTUJNZLHc<2>Q1rP4vO7z<\
+  7>GSzFVzEYz<3>Agz<7>RNzTKzVIz<2>`Azb7zf3zd5zkIzrVzx\
+  Yzxfz<11>LozIpzFqz<3>2sz<16>`XzbVzdUz<3>mOz<14>fRzf\
+  SzeSz<3>dSzcRzbQz<7>VJzUIzTHz<2>QEzPDzM5z<3>V`zXhzZ\
+  pz`wz<13>cNzcLzcIz<3>c8z<3>fKzfMzgPzgSzhVzhVziTziPz\
+  jKz<3>lKzVGzTEzSCz<2>L7z
+  }
+
+frm:multmin1-5-XY-ZW {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=(-z)^1.5+c,
+|z| <= 36  }

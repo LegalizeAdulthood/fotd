@@ -1,0 +1,25 @@
+What_is_Wrong      { ; Fractal of the day, 14-01-00
+                     ; time=0:05:28.78, SF5 on a p200
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+2.09756323075028500/+0.00001748165762026\
+  /446531/1/9.999 params=-0.4/2.5/1/1/0/0 float=y
+  maxiter=1500 bailout=25 inside=0 logmap=96
+  symmetry=none periodicity=10
+  colors=000565<7>C4CD4DE3D<2>H3GI2HH2IH2JH2J<10>IFUIG\
+  VIIW<2>ILZIM_INZIMZGLW<2>DCMC9GB77<6>L`KNdMOiN<3>TyU\
+  <8>EqaCpaAob<3>4le7kfIjfMjf<3>VgfXffZfe<7>n`Yp`Xr_W<\
+  2>xYTzYSz_Qz`OzaQ<2>qdSneSkfUhgSehR<5>YnHXoFWpE<2>Ts\
+  9St8RsB<13>NlkNlmNkp<2>MjxMjzNiv<6>Pi_PiWPiT<2>QiJQi\
+  GRgH<9>ZTI_SI`QIaPIbNIbMI<17>kMfkMhlMi<2>mMmmMnlLl<3\
+  >iIpiIqhJr<3>fNveOwdPxdQycRz<4>`_z`az_cz<3>ZkzZmzYoz\
+  YqzYszXuzXvz<15>WwzWwzWwz<2>WwzWwzYwz<8>gwz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

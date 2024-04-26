@@ -1,0 +1,22 @@
+Heart_Land         { ; Fractal of the day, 13-05-99
+                     ; 0:02:46.31, p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt05 function=atanh passes=1
+  center-mag=-0.111051/0.0507666/1.268047/1/-15
+  params=0.9141/3.2639/-3.3039/-1.0621/-0.3534/3.0686
+  float=y maxiter=180 bailout=25 inside=bof60
+  logmap=yes symmetry=none periodicity=10
+  colors=000msJ<12>OfFNeFNdF<14>KQAKPAIO3HJ0fwv<4>awq\
+  `wq_wpZwpYwo<6>RwlQwlPvlOul<32>uYltZmvYl<17>dYhcYhb\
+  YgaYf`Xh_Xg<33>4X_<8>gTbkTbpTbtTbzUdyTcwTb<4>jR_hRZ\
+  gQYdQWcOT<3>XLIWLFUJESJDRIDPHCPF8YLQ<9>SIJeHI<16>WB\
+  7VB6UC6<29>i66jA7kA8lA9<10>mAA
+  }
+
+frm:MandNewt05 {; Jim Muth
+z=c=fn1(pixel):
+a=z^2+(c-p1)*z-c
+b=p2*z^2+c-1
+z=z-1*a/b
+p3 <= |a|
+}

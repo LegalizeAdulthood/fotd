@@ -1,0 +1,32 @@
+Ringlets           { ; Fractal of the day, 15-11-99
+                     ; time=0:16:06.44 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=multmin1-5-XY-ZW
+  function=ident/flip passes=1
+  center-mag=+0.58135432197209850/+0.33297464716445930\
+  /18794.36/1/54.999 params=0/0/0/0/0/0 float=y
+  maxiter=14000 bailout=25 inside=0 logmap=273
+  symmetry=none periodicity=10
+  colors=000J48L15L02M00O00P00R00R00T00<3>U00U00U00U00\
+  U10W20W40W51W82W94ZA4_C5aF6cG8dI9gJ9iMAkOClPDnRDpUFp\
+  WGpXIpZJraJrcLrdMreOriPskPslRsnTsrUssWuuWuwXszZrz_pz\
+  apzanzc<2>izeOzc5z_0zX0xU0wR<3>0iF0eC0c90_60X40Z1<7>\
+  0_00_00a0<2>0a00a00c0<4>0d00d00d0<3>0e10e20e20e20e40\
+  g42i49i5Gk5Ok5Tn6Wn6Xp6Zp6_r8as8cu8cu9cu9cs9cuAcsAcs\
+  AcrCcrCcrCcrDcpDcpDcnFcpF<3>cpGWrFLpGGlIDiICeJAcJ9_L\
+  9XLAUMCRLFOLGLJIIJJ9I<3>D4CC2A929C1AG0CL0DO1GR2LW4OZ\
+  5R<2>e9_e8cg8eg8gi8ii8kk8lk8nl8pl8rn8sn8sp8sp8sr8sr8\
+  ss6s<3>s6ss6ss6s<2>s6ss6ss6us6ws6xs6zs5zs5z<2>i5ze5z\
+  c5z_6z_5z_5z_5za5z<11>a4za4za4z<2>a4za4z_5z<16>Z5zZ5\
+  zZ5z<2>Z6zZ6zX6zX6zZ8z<7>Z9z
+  }
+
+frm:multmin1-5-XY-ZW {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=(-z)^1.5+c,
+|z| <= 36  }

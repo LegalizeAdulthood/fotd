@@ -1,0 +1,34 @@
+Peek-a-Bud         { ; Fractal of the day, 15-06-99
+                     ; 0:33:42.19 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  passes=1 center-mag=+0.06076957975389354/-0.0798587\
+  9425340398/2070.261/1/44.999 params=88.086/88.2647\
+  /-0.15635/1.0321/-0.15635/1.0321 float=y
+  maxiter=150000 bailout=25 inside=0 logmap=23
+  symmetry=none periodicity=10
+  colors=000D00z00z00D00z00D00x40D00tB0D02qG6D08pNBD0\
+  ElRID0JkYND0QgbRD1VdiYD2Ydk_D4_bk_D6_bk_D8_ak_D9__k\
+  aDBa_kaDDaYkaDEaXkaDGaXkbDIbVkbDJbTkbDNbRkbDQbRkdDT\
+  dQkdDVdOkdDXdOkdDYdNkfD_fLkfDafLkfDbfJkfDdfLidDfdLg\
+  dEgbNgbJfbOfbOdaOdaOdaQbaQb_Qa_Ra_Ra_R_YR_YTYYTYXTY\
+  XVXXVXXVVVVVVXVVXTVXTTYRTYRTYRTYQR_QR_OR_OQaOQaOQaO\
+  QaOObOObOObOOdONdONdONdONbOQaOR_OVYOXXQYVRaTTbRVfQX\
+  gOXiNXkLXlLXpJXsJXwJXz<5>IXzITzIRzJQzJQzLQzLQzLQzNQ\
+  zNQzNOzOOwOOsOOpQOlQOiROgRNfRNdTNbTNaTN_VNYVNXTLTVN\
+  VVNVVNX<2>VNYVNYXN_XN_XOa<2>XObXObYOdYOdYOfYOfYQfYQ\
+  gYQg_Qi_Qi_Qi_Qk_Qk_Ql_RlaRnaRnaRnaRpaRpaRqaRq_QpaR\
+  qaRqaTqbTqbTsbVsdVsdVsdXsdXtfYtfYtfYtg_tg_wg_wgawia\
+  wibwibxkbxkdxkdxkdxlfzlfzlgzngzngznizpizpizpkz<2>ql\
+  zqlzsnzsnzsnzspztpztqztqzwqzwszwszxtzzwzzwzzxzzxzzz\
+  z<12>zzz
+  }
+
+frm:multirot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

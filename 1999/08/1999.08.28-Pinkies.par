@@ -1,0 +1,24 @@
+Pinkies            { ; Fractal of the day, 28-08-99
+                     ; t=0:02:00.29 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.9827764408796809/+0.06352540437359515\
+  /1.115166e+011/1/130 params=1/101/1/51/6.5/0 float=y
+  maxiter=1500 bailout=25 inside=0
+  logmap=40 symmetry=xaxis periodicity=10
+  colors=000A9A<4>BDAHKB<4>fnw<5>kAGfUDgKAgB8<3>WJN\
+  <5>BhA<2>Xi8<3>fUghQoiOp<6>pGrjNneTk<2>nWKpWBuS8zO6\
+  XdU3tp<3>4dp<3>z1i<5>amL<5>YmSYmTWmU<10>8mYZrfxwn\
+  <3>WTGw7M<6>zd9zh8yWGxJOw6V<11>b08J2Q04g<12>OUQ<13>\
+  LSr<5>xsQ<12>IpJFpJCmO<3>1bg<3>lKF<11>9xL<5>yZ7<11>\
+  PQu<14>nFP<8>U6C<4>VJ8RIV<2>2PQ<4>Qdg\
+  ShVUlIVp6<5>rmK
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

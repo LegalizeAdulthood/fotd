@@ -1,0 +1,31 @@
+Nest_of_Crescents  { ; Fractal of the day, 04-06-99
+                     ; 0:07:53.58 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.00111153109680284/-0.00160009982749204\
+  /1.512323e+009/1/-22.499 params=-500/-500/-1.1/-1/0/0
+  float=y maxiter=7200 bailout=25 inside=0 logmap=129
+  symmetry=none periodicity=10
+  colors=000`00`00Z00X00L00L00G06G08A0H40S00Q00R00X00X\
+  <4>00e00g20g60i80kA0mE0oG0qH0sN0o<5>iCTdJZZRbVZgPekL\
+  koGmqCms6os2ou0ou0qv0qx0sx0sz0sz0zz0zz0zz0zxCzxTzxiz\
+  xxuxsqsmmoikidge`e`VbXR`RLXNGTHCRE6N82L40H00G00J00L0\
+  0P00R00T00X00Z00`00d00e00g00k00m00o04m08k0Ck0Gi0Hg0L\
+  g0Pe0Td0Vd0PdALdJHdTCdd8dm4dv0dz0dz0dz0Zz0Tz0Nu<3>00\
+  G0060000000000642GE6RN8`XCieGuoJzxLzzLzuLziLu`LoPLiE\
+  Ld4LZ0LT0AvTCsXCoZEk`EgbEdd6mb0ub0z`0z`0zZ0zZ0zTAqPR\
+  ZLgHHu0Es0Ao0CRJE0bG0gH0kR0e`C`iPVq`PzkJzvEzuCzuCzsC\
+  zsCzqHzqLzqRuoVmoZdodXogNmkGmq6mu0mx0zq0zi0zm0zq0zu6\
+  zxHzzTzzdzzovzzszzozzkzzizzgzu<3>ZzPXzGTz8Rz0Pz0Nz0P\
+  z0Rz0Rz2Tz8VzEVzJXzPZzVZz``zebzkbzqgzkkzgozbuzZxzTzz\
+  PzzJzzGzzAzz6zz0zz0zz0zz0<2>zz6vz8qzAmzCgzEbzGXzHTzJ\
+  NzLHzNCzP8zR6zZ4zd2zi0zo0zu0zz0zz6zz<5>zzz<2>zzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

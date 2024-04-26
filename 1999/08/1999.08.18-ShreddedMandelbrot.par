@@ -1,0 +1,23 @@
+ShreddedMandelbrot { ; Fractal of the day, 18-08-99
+                     ; t=0:17:14.00 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=ShadMinRot-XY-ZW function=ident/flip
+  passes=1 center-mag=-1.19041243072469900/+0.38291246\
+  939111760/1134933 params=-45/45/1.06/0/0/0 float=y
+  maxiter=6000 bailout=25 inside=0
+  logmap=718 symmetry=none periodicity=10
+  colors=000CPc<2>CSbCSbEQ`<24>c10<21>yVXzXZyWY<26>iLE\
+  iLEiMD<13>iN4iN3jO1<19>XLdXLeWMf<13>IQhIQhHPg<24>H7Z\
+  G6YH7Z<8>KGgKHgLKi<9>NhuNkvOoy<11>H_aHZcGYdVuK<8>psb\
+  rsdvve<26>A3r<13>7CW
+  }
+
+frm:ShadMinRot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994, p=p2, k=p3,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+k,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+k:
+z=(-z)^p+c,
+|z| <= 36  }

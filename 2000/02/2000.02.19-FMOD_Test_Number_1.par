@@ -1,0 +1,31 @@
+FMOD_Test_Number_1 { ; Fractal of the day, 19-02-00 Rating (3)
+                     ; time=0:23:06:20 SF5 on a P200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-421.878100629715/+0.15506294434948980/11\
+  827.48/1/-34.999 params=1/0.09/1/-0.09/210/5000
+  float=y maxiter=1200 bailout=25 inside=fmod
+  proximity=0.65 logmap=yes periodicity=10
+  colors=0000ns0ls0ls0kq0kq0kq0ip0ip0gp0gn0gn0fn0fl0dl\
+  0dl0dk0bk0bk0ai0ai0ai0_g0_g0Yg0Yf0Yf0Xf0Xd0Vd0Vd0Vb0\
+  Tb0Tb0Ra0Ra0Ra0Q_0Q_0O_0OY0OY0NY0NX0LX0LX0LV0JV0JV0I\
+  T0IT0IT0GR0GR0ER0EQ0EQ0DQ0DO0BO0BO0BN09N09N08L08L08L\
+  06J06J04J04I04I02I02G01G01G01E00E00E00D10E<3>82L92NB\
+  4ND4OE6QG6RI6TJ8VL8XN9XO9YQB_RBaTDbVDdXDfYEf_EgaGibG\
+  kdIlfIngJniJpkJqlLsnLtpNwqNxsOxtOzwQzxQzzQzzRzzRzzTz\
+  zTzzVzzVzzXzzXzzXzzVz<3>zVzzVzzTz<3>zTzzTzxTzwRztRz<\
+  8>fQzdQzbQzaQz_Oz<3>TOzROzQNzQNzONz<2>NNzNNzLLzLLzLL\
+  zJLzJLzILzILzIJzGJzGJzGJzEJz<2>DIzDIzBIzBIxBIx9Ix9Gx\
+  9Gx8Gx8Gw6Gw6Gw6Gw4Ew4Ew4Et2Et<3>1Dt0Ds0Ds<2>0Ds0Et0\
+  Ds<5>0Ds0Ds0Ds<2>0Ds0Ds0Bs<5>0Bs0Bs0Bs<2>0Bs0Bs09s0D\
+  t0Dt0Dt0Dw<2>0Dx0Dx0Dz<11>0Dz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

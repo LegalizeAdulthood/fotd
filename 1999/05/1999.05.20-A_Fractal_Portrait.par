@@ -1,0 +1,21 @@
+A_Fractal_Portrait { ; Fractal of the day, 20-05-99
+                     ; 0:02:53.73, p233, 640x480
+  reset=1960 type=formula 
+  formulaname=Oblate passes=1
+  center-mag=+1.266179458315282/0/2185.249/0.6032/-90
+  params=0/0/-1.749/0 float=y maxiter=6000 bailout=25
+  inside=0 logmap=20 symmetry=xaxis periodicity=10
+  colors=000UM7UM8<13>GAF<2>DHH<13>glMinMkoMlnN<6>oZ\
+  TpXUpWVqUW<5>nJ`nIamGbmFclEd<2>mDf<4>mMdmOdmQdmRcm\
+  SclSc<3>hWbhWbgXagXagXa<16>dZXdZXcYW<27>EYG<5>MSWN\
+  RUPQPQPKROKSNKRLK<2>RKMRKNQLOQKPQKQ<2>QKJPKKPKK<3>\
+  NHLMGLMHL<20>ChQ<14>cxTbyU<5>YzVXzVYzW<4>bz`czaczb\
+  czc<9>czlczmczmczm<34>czm
+  }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

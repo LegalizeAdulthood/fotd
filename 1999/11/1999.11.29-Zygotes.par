@@ -1,0 +1,24 @@
+Zygotes            { ; Fractal of the day, 29-11-99
+                     ; time=0:10:36.42 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.56339014084309950/+0.59499911023467880\
+  /328.1081 params=1/1/1/-1/-0.1/0 float=y maxiter=1200
+  bailout=25 inside=bof60 logmap=yes
+  symmetry=none periodicity=10
+  colors=000mrD<3>ow6PuzKrzEpzCnzBmz<4>FcoFamG_k<3>JSc\
+  KAQ<4>KAQ<3>KAQQZMR`NTcNcUOXgPYiP<2>WlO<3>or8tt4yu0<\
+  13>dr0cr0aq0<3>Xq0<3>KRTGK`DEgA7n71ux1W<11>kZPjaOicO\
+  <2>flMenMflN<12>jO_kM`kKa<2>lEdlDekHg<5>iZphaqhds<2>\
+  gmwgpxeov<9>PliOkgMkf<2>HjbGjaGjb<6>JjdKjdKjd<3>MjeR\
+  jiMjf<5>PjgPjhPjh<3>RjiLlh<19>QjiQjiQji<3>RjidBM<39>\
+  TefSffSgg<2>RihRjiPOv<6>QTskoGlpE
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

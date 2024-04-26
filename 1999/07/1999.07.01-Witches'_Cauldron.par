@@ -1,0 +1,24 @@
+Witches'_Cauldron  { ; Fractal of the day, 01-07-99
+                     ; 0:04:00.40 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=-2.25147429298224000/-0.6928231354272376\
+  0/128560.1/1/47.499 params=-1.5/-10/0.4/2/0/0 float=y
+  maxiter=1800 bailout=25 inside=0
+  logmap=99 symmetry=none periodicity=10
+  colors=000020<5>071582AI5FM7<3>ZkHdnKjrMouQmuO<9>AW9\
+  <11>BqGCvF<12>9EI<7>SnHVwC<8>OMm<2>VeNakEls2rq6zp9zo\
+  CznFsmIkkLhjOeiRdhU<4>hbhhakg`j<10>XTcZTeWTcTWUQZK\
+  <3>YY8ZX8_Y6TY5MY4EX0<14>Zg_Yi`_ga<4>VEPU8MV2H<5>K3U\
+  I3WF4`<10>_3EY07<7>rNiuQnvRpwSr<12>vJuxIuzGzvHusIupJ\
+  vmKxiLz<6>OSzLTzGUz<13>Zgz_hz_iz`jz_kzYlz<12>MyzLzzK\
+  zzJzzHzzFzzBzz<13>azzczzczz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

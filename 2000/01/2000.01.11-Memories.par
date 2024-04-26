@@ -1,0 +1,28 @@
+Memories           { ; Fractal of the day, 11-01-00
+                     ; time=0:01:44.80 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.50898713231029800/-2.23909609663967200\
+  /426.6895/1/-72.499 params=-2/-2/1/0.9/0/11 float=y
+  maxiter=500 bailout=25 inside=0 outside=atan logmap=6
+  symmetry=none periodicity=10
+  colors=000ej`<3>diadiadiabia<5>aha`ha`hb`fb<2>_fb_fb\
+  Yfb<3>XebXeb_eeYedXdbVbaVdaUb`Tb_Ta_R`YQ`XQ_XO_VNYUL\
+  XTLXTJVRHUQHUQGTOERNERNCQLAQJ9OH9NH6NG5LE5JE2JC0HA0G\
+  A0G90E60C00E50E60E9<3>0EG0EH0EL0EN0EO2EQ<2>2EU5EV5EY\
+  <3>6Eb6Ed6Ee9Ef9Eh9Gj<2>AGnAGoCGpCGqCGrCGtEGvEGwEGxE\
+  GyGGz<5>HGzHGzJGz<3>JHzJHzJJzJJzJJzJLzJLzJNz<3>JOzJO\
+  zJQz<2>JRzJRzJTz<5>JVzJVzJXz<2>JYzJYzJ_z<7>JbzJbzJbz\
+  Jdz<4>JfzJfzJfzJhz<9>JlzJlzJlzJnz<12>JszJszJszJtzJtz\
+  Jvz<8>JyzJyzJzz<4>JzzJzzJzz<3>JzzsrX<8>ppYppYppY<2>o\
+  oYnoYno_no_no_lo_<3>kn_kn_kn_jl_<3>il`il`ik`hk`hk`hk\
+  `fk`<2>fj`
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

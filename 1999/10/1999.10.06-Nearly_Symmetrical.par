@@ -1,0 +1,28 @@
+Nearly_Symmetrical { ; Fractal of the day, 06-10-99
+                     ; time=0:04:24.00 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=multirot-XZ-YW passes=1
+  center-mag=-0.13405166828134080/+0.004569752847568\
+  19/5311.397/0.7724/24.127/28.611
+  params=90/81.5/0/0/-1.747/0 float=y maxiter=12500
+  bailout=25 inside=0 logmap=22
+  symmetry=yaxis periodicity=10
+  colors=0004A41A2<6>E`TGdXIh`<2>NskPwoQxrPvoPsleoie\
+  lfeic<2>g`VhZSiYQ<3>mUMnTLoSKoRK<6>dFfcEiaCl<3>X6x\
+  LVw9sw<4>4`Z4XV3TQ<2>0IB0F71H9<6>8TG9VHAXI<2>DaLDb\
+  MC_P<3>BRXBPZAN`ALbAJd<3>WNMaOHfPCkQ8<4>hENgBPg9S<\
+  3>e0b<3>Q4PM5MI6JE7G<5>CYcCbgCfk<3>BxzLvE<3>EpLCnN\
+  BmP9kR8jS<9>WUPYSP_QP<3>hKO_VHReA<3>daFg`Gj_HmZI<3\
+  >`KXXH_UDc<2>L3m<3>ipK`YVTFdTAUT6K<3>i9`mAeqAiuBmy\
+  BqyI`yPLrWYkai<6>bmfaoe`qe<3>Xwd<3>juQmuNpuJsuG<3>\
+  JmcAkh8fi6bj<6>DmXEnVFpT<2>ItNIuLLhENW7MW4<4>EiJCl\
+  LBoO<3>5yZ<3>RUWXMWaEVf6V<11>7A6
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

@@ -1,0 +1,32 @@
+A_Mini-Oblate_Set  { ; Fractal of the day, 23-04-99
+                     ; 18min on a 486-100, 640x480
+                     ;  Version 1961 Patchlevel 40
+  reset=1961 type=formula 
+  formulaname=O-varesc passes=1 center-mag=-0.0000014\
+  7774641789/+0.00000004773388647/8.34089e+008/2.3471\
+  /-127.918/51.497 params=-0.74017557723/0.1573493009\
+  4/-0.74017557723/0.15734930094/3/0 float=y
+  maxiter=18000 bailout=25 inside=0 logmap=326
+  symmetry=none periodicity=10
+  colors=000M4m<7>TBtU7uV4vX2wY6x_7y<2>dDzeFweItgKriL\
+  mjNjkPgmQdoQbmQakPajLaiI_gD_e9_d6Yb2Ya0Y_0XY0XX0XX0\
+  XVGUNMQIRPDXL7aK2gG0jD0jF2iF6gF7dFBbFF_FIYGKVGNUGQQ\
+  GUNGVLGYIGaGIdDIeBIi7Ik6Io2Ik0Np0ItDFyNBzY7zi4zs0zr\
+  0zp2zp6zo7zmBzmDzkF<2>ziNziPzgQzeUzeVydYyd_wbbwadva\
+  ev_itYjtYmsXotYrsXp<3>rQorPopNopLmpKmoImoImoGkmFkmD\
+  kmBjk9j<4>j0ip2mj0id0dY0_S0XN0SG0N90K20F00900000600\
+  B00F00K02N04S07X0B_0Dd0Gg0Kk2Lp2Ps4Sw4UzBSrISjPQaUQ\
+  U_PKePBsB0jP2baIVmXNyjFzwNzvUtv_mvgev<2>zIvz9vz0vz0\
+  vz0t<9>z0tz0tz2tz2ty4tw4tv0tw4ty7tzBtzDtzGtzKtzLtzP\
+  tzStzNszUtzYtwbvrgvkkwepw_tyUyyNzzKzzIzz<6>6zp4zo2z\
+  m0zk0zj0zi0yg0ye0wd0wb0yd0wa<5>0vN0vL0vK0tG0tF2tB2t\
+  94s66s46s07s0Bw07s06p02k00i00d00a00X00U00Q00U00V09X\
+  D9XF9XF9XGBVIBVIBVK
+  }
+
+frm:O-varesc {; Jim Muth  real(z),imag(c)
+a=sqr(p3), z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| < a
+}

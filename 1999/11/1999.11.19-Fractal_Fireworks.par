@@ -1,0 +1,28 @@
+Fractal_Fireworks  { ; Fractal of the day, 19-11-99
+                     ; time=0:03:04.92 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-9.97907577469923300/-0.00120298432616290\
+  /1.209627e+007/1/169.999 params=1/250/1/0.1/10/100
+  float=y maxiter=1800 bailout=25 inside=0 logmap=52
+  symmetry=none periodicity=10
+  colors=000AAK<5>AAK<3>AAKABKACKADKAEKRLK`TPe_IqgBzn5\
+  qlCckJ<3>JfhEenG`e<3>KJ6j1brIPzcBwVGpSLiPQ<2>lHc<3>m\
+  Afm8gm7gm5hm4h<3>QMHKQAEU4<3>IMJJKNKIRLGVMEY<3>sNmhZ\
+  L<3>HfFAhENUC_GBk2A<3>MBUGDYCOR<2>1q8<3>CAn<3>aWShaN\
+  nfHtkC<2>5bQ<3>lE7w83qBAlDGfFNaHT<3>RVLPZJMaHKdG<3>O\
+  nRPpUPrW<3>ObMOZKOWI<3>_RDbQBePAhO9kN8<3>ONv<3>PXwPZ\
+  wP_w<7>MgjLhhLig<2>KlbKmaLnZ<3>MrR<3>VvbXwdZwg<3>gwr\
+  iwukwxmwzwwB<5>ZwRUwUQwX<3>Awf<3>gwFpw8xw1rwUlwv<2>r\
+  wR<6>TwXPwYMwZIw_Ew`Bw`6w`2w`9wOHwE4w1<2>DwA6wbBwP7w\
+  lCwUpwmYwVewd<2>MwJMwSHwy<2>GwOgwH<2>NwDTwVhwHUwE0wx\
+  <2>CwOGwdGwQ5wW9wPDwIIwhLwjdwt
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

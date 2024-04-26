@@ -1,0 +1,22 @@
+CubicParametrSpace { ; Fractal of the day, 22-08-99
+                     ; t=0:00:39.44 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot03-XY-ZW function=flip/ident
+  center-mag=-4.44089e-016/0.115216/0.9363296
+  params=89.92/90/0/0/-0.39/-0.00016 float=y
+  maxiter=15000 bailout=25
+  inside=0 logmap=yes symmetry=none periodicity=10
+  colors=000T5J<9>Lkb<6>G9J<8>xgw<13>v3A<14>2_I<9>mos\
+  <7>WNkaDd<2>W7h<12>DIQ<2>fCj<13>kKN<8>VDG<14>ZN3<4>\
+  0LD<12>IAu<5>A1zHAzNKzTKzZKz5Kz8KzAKzKKzTKz<7>dKzeK\
+  zeKz<2>gKzgKzgKzgKzhKz<7>iKziKzjKzkKzlKz<60>mKz
+  }
+
+frm:multirot03-XY-ZW {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z*z*z+c,
+|z| <= 36  }

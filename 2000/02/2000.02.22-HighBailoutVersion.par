@@ -1,0 +1,24 @@
+HighBailoutVersion { ; Fractal of the day, 22-02-00 (2/2) Rating (6)
+                     ; time=1:44:02.76 SF5 on a P200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.08377063270569564/+0.01669842167415934\
+  /1.892595e+009/1/-35 params=-1/1/-1/-1/0.15/1e+250
+  float=y maxiter=12000 bailout=25 inside=0 logmap=2308
+  symmetry=xaxis periodicity=10
+  colors=000PFAPFA<9>_PA`QAaRA<2>dUAdVBcWD<4>a`M`aO`bP\
+  <2>ZeVZfXZf``f_afadfdffghgg<2>phrrhsshv<2>tdxobvjZuf\
+  WsaTr<3>OLqKJpHHp<3>39o<17>PFVQFUSFT<2>VGQWGPWFQ<15>\
+  WF`WF`WFa<3>WFc<4>iTgkVgnYh<3>xgj<3>_mPUnJOoE<3>9ME5\
+  FE28E<16>`BKbBKdBK<2>jBLlBLlBM<5>nCPnDPnDQ<10>qGUrGV\
+  rGV<22>yMpyMqzNr<3>zMvzMwzMxzMy<49>zKz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,24 @@
+A_Fractal_Rasberry { ; Fractal of the day, 18-04-99
+                     ; 17min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-4.174184679302001/-0.05901345569113804/\
+  39290.77/1/-92.499 params=1/5/5/0.1/0/0 float=y
+  maxiter=1200 bailout=25 inside=0
+  logmap=33 symmetry=none periodicity=10
+  colors=000F8RF8R<7>NGnXQke_inegs`dxSax2Z<6>Xv4<4>b91\
+  <3>Q6IP6MU5QZ5Uc6Th7SmTRrUQzSPrRQmKRgAS<3>FAV<3>0AY\
+  <10>aauYYmUUeQRZ<8>5AZ<5>MXB<3>Tv2<9>fNk8um<9>jfv<2>\
+  TYaN_VHaOBcH6cA<10>hcKk`LoZMrUNv4Oy3O<9>ggg<12>ddhdd\
+  hbfg<11>Qxa<10>lXOoHHp2BmFPcSb6dpTYjnRd<10>ISj<9>Pal\
+  <2>KRd<3>DDw<3>70wT3v<13>uyt0z1<15>3zMEzTPz_SzqSzq\
+  <3>Uzd
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

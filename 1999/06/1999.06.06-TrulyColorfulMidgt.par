@@ -1,0 +1,27 @@
+TrulyColorfulMidgt { ; Fractal of the day, 06-06-99
+                     ; 0:04:08.21 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.06625703493117337/-3.415685178699772\
+  /1.725944e+009/1/57.5 params=0.9/0.9/-0.9/-0.9/1/100
+  float=y maxiter=1600 bailout=25
+  inside=0 logmap=97 symmetry=none periodicity=10
+  colors=000IG6<2>KI8LJ9KKAHLEBMJ6NNFORNQVVRYbRakSdtT\
+  hzQkyQd<2>vIMuIFtN9sS3<4>PpDJuFDxHNuF`pDhkCkfBnaAq_\
+  9<2>z`7w_DtZIqYOlXTgVZHTc<2>gInpFrxDu<5>kPRiQMdNN\
+  <6>B7N<6>gEm<5>e`v<2>kkk<3>Oj1<4>DF2<4>W5Z_3dc3kf3q\
+  cZeacVbgabfgb`mbUsbOy<3>icxjgxkmS<2>cWY`Y_Z_aW_cUad\
+  rcRkePdgNYiL<4>0iBSiTrii<5>oiHniUnieMi7<4>7il<2>9iC\
+  Ri6gi0fig`ibcie<5>udtncqgbo<4>Bgd<2>HjT<3>En5<3>NrH\
+  PsKRsNTsQ<3>GsZ<7>hst<3>lsi<5>nsBRsF3sJ<4>ess<6>Ysd\
+  <7>Zsw<2>os1<5>usELsR<4>osb<3>esB5ss<7>Nsv<2>\
+  psK_sFZsQ
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

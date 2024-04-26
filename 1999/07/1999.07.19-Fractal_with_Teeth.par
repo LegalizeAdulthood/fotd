@@ -1,0 +1,18 @@
+Fractal_with_Teeth { ; Fractal of the day, 19-07-99
+                     ; 1:04:06.55 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=Oblate passes=t
+  center-mag=-0.08271724569640033/0/1314.677/0.2517\
+  /-58.369/79.911 params=0/-0.75/-0.75/0 float=y
+  maxiter=72000 bailout=25 inside=0 logmap=97
+  symmetry=origin periodicity=10
+  colors=0005Eo<26>Ivg<28>iHPiGPhHQ<58>UabUabVbc<47>\
+  N`QN`QL`SM`RN`Q<20>dBEb6G<25>wp1<34>yXH
+  }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

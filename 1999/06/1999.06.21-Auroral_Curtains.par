@@ -1,0 +1,22 @@
+Auroral_Curtains   { ; Fractal of the day, 21-06-99
+                     ; 0:01:04.42 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=ShadowRot-XZ-YW passes=1
+  center-mag=0/0/374.5318
+  params=-7.8/-173.1/2.0025/0/-1.50053574/0.00850264
+  float=y maxiter=1500 bailout=25 inside=0 logmap=23
+  symmetry=none periodicity=10
+  colors=000mMNsMJ<9>K8FG3A<3>KJTHMU<31>pWz<20>U4yT\
+  3yR0z<24>aYcaZb``c<23>bUTbUTcTU<12>fJXfIXhGW<22>Q\
+  ZgEgl<4>fMalI_rDZ<28>iNDkMA<20>GcrFctC`mAZf7X_\
+  0US<19>fZbpWh<3>aaXaXVgTR
+  }
+
+frm:ShadowRot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+p=p2, k=p3,
+z=f*real(pixel)+k, c=e*imag(pixel)+k:
+z=z^p+c,
+|z| <= 36  }

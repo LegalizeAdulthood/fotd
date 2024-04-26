@@ -1,0 +1,24 @@
+Cogwheel_With_Brot { ; Fractal of the day, 07-11-99
+                     ; time=0:00:57.00 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident
+  passes=t center-mag=9.6502/0.219389/0.08885544
+  params=-1e-097/100/-100/1/-0.9898/0 float=y
+  maxiter=6000 bailout=25 inside=0 logmap=yes
+  symmetry=none periodicity=10 sound=off
+  colors=00000Z00ZzQUtdN<3>tlUtnWtoXlqZeo_YtaRubKuc<2>\
+  AVQ<3>TZgX_ka`oe`s<2>XTx<2>nRY<3>`KeYIgVHh<3>T9TT7PT\
+  6M<3>OY2<2>YF4kBcm7moEo<3>Dew4kxBgy<3>`SygOymKy<3>o5\
+  y<3>sFytIyuKyuMy<2>Pcy<3>SizTkzUlzVnzVoz<3>6Qz<3>_Nz\
+  fNzmMztMz<4>W`zRczNezSazbZzhazmbzm_z<3>nGznBzn6z<3>n\
+  4zn3zn3z<3>n1zmjz<8>gezgdzfdz<3>dbz11zdaz<65>33z33z2\
+  2z<3>00z50z<27>10z10z10z<3>00zg7ze0zp8zzFz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,24 @@
+Starlight          { ; Fractal of the day, 01-06-99
+                     ; 0:07:35.77 on p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-31.84716719596252/+0.301366904424139/\
+  1415796 params=333/333/1/1/0.05/0 float=y
+  maxiter=1500 bailout=25 inside=0
+  logmap=180 symmetry=none periodicity=10
+  colors=0003AK<4>4AK4AK2AK<13>NAKPAKQBKSCKTDLVEMUF\
+  NWFO<3>cUQaSP<2>kdSohTrnUutVzzVwuYvp`ugb<8>l6y<9>\
+  _Rh`Vf<3>TOgSMgQLf<7>B8ZA6Y84Y63Y41Y30Z<7>DHmEKnF\
+  Op<6>NhwOkwNhvNfvNdvMauMYuMYuLVt<16>HDo<10>7UX6WV\
+  3TX<4>IlIeDTKoF<4>UqZWqbWpg<9>nrTprSprSqrR<3>WRN\
+  <9>Nva<7>lmV<6>pdXqbYqcY<3>tcZtcZucX<10>ucLvcJvdI\
+  veH<8>vn7<3>brH<6>SyLQzLOzLNzM<5>EzO<7>SzP3zt3zu
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

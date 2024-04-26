@@ -1,0 +1,31 @@
+Sour Grapes        { ; Fractal of the day, 15-05-99
+                     ; 0:01:47:44, p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.53542030874894320/+0.06245771759360381\
+  /144442/1/-177.5 params=0.2/0.2/-22/-11/-3/0 float=y
+  maxiter=1200 bailout=25 inside=0
+  logmap=24 symmetry=none periodicity=10
+  colors=000lWnirwdrzcnzbkw`ft`cpZ`kXWhWScWPZUKWKHRCDO\
+  0HH0JA0K30M00O00U0D`0SX3Pb6biAZcDWbHShKPhOMhPJfSGfWC\
+  ZZ8db5dd3df5fc5``5iX6iW6kS6lP8lO8nK8pH8pGAqCAr8At5Ct\
+  3Cu0Cw0Dw0Dy0Dz0Dz0Hu0Kr0Op0Rl1Uh6XdA`bDcZHfUMiRPlOS\
+  pKWrG`uCcy8fz5iz0n<2>z0w<3>z0nz0kz0iz1fz3dz5bz6`z8Xz\
+  AWzCSzDRzGOzHMzJJzKHzMDzOCzP8<2>zU3zW1zX1zZ5z`6zbAzc\
+  CzdGyfHthKqiMnkPilRfnUbpWZqZUr`RtcOudPwlPynXzi`zdqzZ\
+  kzUdzP`zJUzDOz8Jz1Cz05z00z08z8HzUPznWzzUzzSztRznRzhP\
+  zbOzWOzPMzJKzCKz5Rz3Wz1bz0fz0kz0qz0uz0zz0<6>yz1uz3tz\
+  5qz6pz8lzAkzCpzKrzRwzXzzd<2>zzwzzyzzywzz<5>WzzRzzMzz\
+  HzzDzzCzy8zu6zr3zp1zl<6>0zR0zO0zM0zK0zJ1zH3zG6zDAzCD\
+  zAHz8Jz6Uz1dz0pz0zz0zz0zz0uz1pzAhzKbzSWz`Zzb`zbbzbcz\
+  bfzchzcizckzcnzdpzdqzdrzduzf<2>zzfuzirzlpzplzrhzudzy\
+  bzzZzzWzzMzuDzk5zbCzcHzdMzfczKZzKSzWOzd
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

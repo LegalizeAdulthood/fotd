@@ -1,0 +1,26 @@
+Encroaching_Doom   { ; Fractal of the day, 21-03-00 Rating (7)
+                     ; time=0:05:23.88 SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-9.088203354797765/-0.00219457644305659/5\
+  .499789e+008/1/-162.5 params=100/100.5/0.1/0.1/100/0
+  float=y maxiter=1300 bailout=25 inside=0 logmap=87
+  symmetry=none periodicity=10
+  colors=000LAS<3>OAVPAWQAX<3>UD`VEaWFbXGcYHd<4>OKiMKj\
+  KLk<3>CNo<3>ZAB<3>aV6a_5be4<2>dt1dv0as4<3>TZHRUKOOOM\
+  JRKEU<12>C7nB6pB6q<3>94w<11>f8ti9tl9s<3>wAs<3>mlakuY\
+  gp`<3>T`iPXkLTn<2>AHt<8>4Sr3Tr2Ur<3>0Yr<10>WmgYnf`pe\
+  <3>kub<12>aji`ij_ij<2>YflYfl_ej<7>h`Yi`Wj_U<3>nYO<3>\
+  NbULcWMcXNcY<3>RcUTcTTcSUcS<2>XYVYWWZWX<2>aWZaW_bW`b\
+  WacWb<3>eWeeWffWg<2>gWjhWjhVm<2>kSslRumSwnTy<3>rUpsU\
+  ntUluUivUg<9>wUNwUKwUI<3>wUA<20>wUz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

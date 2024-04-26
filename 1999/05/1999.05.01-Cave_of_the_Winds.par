@@ -1,0 +1,21 @@
+Cave_of_the_Winds  { ; Fractal of the day, 01-05-99
+                     ; 10min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt09 passes=1
+  center-mag=1.9899/44.7918/0.09454522/1/112.5
+  params=-1.050523/-3.727729/1.644841/1.811899/-0.9\
+  64431/-1.047105 float=y maxiter=120 bailout=25
+  inside=bof60 logmap=yes symmetry=none
+  periodicity=10 colors=000BEH<9>16I06I18K<38>Zuz\
+  <30>iQziPzkOzlNz<4>rYzs_zr`z<2>rbzrczqczqczqdzq\
+  ezqez<4>phzpizoizoizojzofz<5>nlzmmznnz<6>ntsntm\
+  <29>onjupl<8>7cX1aY<14>Fg8Df5<38>ymx<29>Xr`CFH
+  }
+
+frm:MandNewt09 {; Jim Muth
+z=c=pixel:
+a=z^3+(c-1)*z-c
+b=p1*z^p2+c-1
+z=z-1*a/b
+p3 <= |a|
+}

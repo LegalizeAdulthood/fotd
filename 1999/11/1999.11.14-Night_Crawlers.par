@@ -1,0 +1,25 @@
+Night_Crawlers     { ; Fractal of the day, 14-11-99
+                     ; time=0:09:49.69 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.73422079896673750/-0.05567224001924078\
+  /2.221351e+010/1/-67.5 params=0.3/3/-0.1/-11/0/0
+  float=y maxiter=3500 bailout=25 inside=0 logmap=160
+  symmetry=none periodicity=10
+  colors=000IIR<2>DIT<6>TLeVMgYMh<3>eNo<2>kQimRgoUeqZc\
+  ucaxh_xcZwZX<3>sFhr7d<2>pATlBPgAW<2>P7t<3>GGtDItBKt9\
+  Mt7Ot<6>IcVKeSLgO<3>RoA<14>l`Bm_BoZB<3>tVB<13>c`bb`d\
+  `af<2>YblXbnYan<14>_Vn`Un`Un<3>`Sn<6>H_NE`JBaF<3>0e0\
+  <17>Cs8Dt8Et8<3>GwAGwAGwA<3>GwA<3>WwB_wBcwBgwCkwC<3>\
+  swDuwEwwExwEywF<5>zwHzwHzwH<7>zwNzwOzwO<3>zwR<2>zwNz\
+  wMzwI<3>zw2zwj<4>zwWzwUzwR<3>zwG<11>zwazwczwezwgzwi\
+  <2>zwkzwlzwlzwl<4>zwnzwnzwp
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

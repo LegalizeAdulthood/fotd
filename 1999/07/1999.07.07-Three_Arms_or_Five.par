@@ -1,0 +1,26 @@
+Three_Arms_or_Five { ; Fractal of the day, 07-07-99
+                     ; 0:02:49.94
+  reset=1960 type=formula 
+  formulaname=multirot05-XZ-YW
+  center-mag=-0.00000000000519522/-0.00000000000093178\
+  /4.062229e+011/0.4272/168.648/-88.799
+  params=-26.421/163.15/0.3553089574873854/0.685339380\
+  8366987/0.3553089574873854/0.6853393808366987 float=y
+  maxiter=12500 bailout=25 inside=0
+  logmap=209 symmetry=none periodicity=10
+  colors=000KAK<3>KANKAOKCPFFQ<2>UOJURHVVFVYFV`D<7>R_N\
+  DlE0m55qC<2>IXX<3>JVnHUt<14>ZaRVcJ_aQc`Wh_aoYd<5>`_r\
+  Z_tYYr<10>VCeVAdV9eL8fB7gCAhDCjEFm<2>HMmIOhJQc<4>YJG\
+  <6>rAav8h<6>pFHw52<4>QnwRmz<5>TjzTjzRlz<2>Lrz<17>pjz\
+  <5>t4z`uz<14>yhz<8>RjzCczKuzNjzJjwFjrBjmWxh<2>OsU<4>\
+  AkUyFU<2>TZUIdLMZR<5>BgM9iL9C2<10>8hKSJl<19>8iMbxZWF\
+  x<7>AgP8vJ<10>8pK
+  }
+
+frm:multirot05-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=z*(sqr(sqr(z)))+c,
+|z| <= 36  }

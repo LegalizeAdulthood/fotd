@@ -1,0 +1,26 @@
+Poinsettia         { ; Fractal of the day, 16-12-99
+                     ; time=0:19:20.32 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-1.59232686594490900/-0.17742728388304660\
+  /2.840454e+008/1/-19.999 params=1/1/1/-1/0.1/0
+  float=y maxiter=14000 bailout=25 inside=0
+  logmap=346 symmetry=xaxis periodicity=10
+  colors=000AGJAGGAJEAMCFP5<2>UYKZ`PacUcfZhicmlg<3>qlg\
+  qlgrlg<2>tlgfgnTbu8`zFZzLXy<2>bRqgSr<3>iJfjHcjF`<2>k\
+  9TbN`U`hInn<3>RktTkuVjv<2>`iz<3>N_cKYYGWS<3>3N6<9>GJ\
+  DHJEIJF<2>MIHNIHQGLTFPZAU<3>QQTOTTLXS<2>FhSDkTDkSClN\
+  DkL<3>GODHCBIC9J67J15<5>bDTeEXhG`<2>rMluOpyQv<8>pLbo\
+  L`nKZ<2>jJTiJRhKQ<2>bKN`K5ZKKXKP<3>KKPAAF005PZXPcRPh\
+  LNmAPnGRlLT`QU_Z<3>`WZbUZdKZeUzYc`Rl7<7>XnJYnLZnM<3>\
+  anSepR<4>jo_koaloc<2>onhpniqnh<3>unhvmhwmh<3>wmiwmiw\
+  mj<3>wmnwmowmpwmq<41>wmrwmrwmr<3>wmrwmL
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

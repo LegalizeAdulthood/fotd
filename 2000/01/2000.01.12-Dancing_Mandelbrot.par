@@ -1,0 +1,24 @@
+Dancing_Mandelbrot { ; Fractal of the day, 12-01-00
+                     ; time=0:03:13.16 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=SliceJB passes=t
+  center-mag=-0.449174/-0.139865/7.839261/3.5684/-146.\
+  645/17.882 params=0.39/0.39/0.39/0.39/-0.75/0
+  float=y maxiter=32767 bailout=25 inside=13
+  logmap=25 symmetry=none periodicity=10
+  ranges=0/-1/135/140/150/165/195/235/290/390/565/1600\
+  /32767
+  colors=000GA0KPUZNc<2>gXlj`omer<2>vuxzwzZKm000<240>0\
+  00
+  }
+
+frm:SliceJB {; by John R. H. Goering, July 1999
+  pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+  b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+  cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+  sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+  s=v*sin(a), c=p+flip(q)+p3, z=r+flip(s):
+  z=z*z+c
+  |z|<=9
+  }

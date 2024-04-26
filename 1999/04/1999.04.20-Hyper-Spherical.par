@@ -1,0 +1,22 @@
+Hyper-Spherical    { ; Fractal of the day, 20-04-99
+                     ; 68min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt12 passes=1
+  center-mag=+0.789705601237999/-0.02843030167377993/4\
+  77729.2/1/30 params=-4.3808/-0.5139/-1.2595/1.0881/\
+  -0.81/2.519 float=y maxiter=250 bailout=25
+  inside=bof60 logmap=yes symmetry=xaxis periodicity=0
+  colors=000yxYyxY<16>gfHfeGecFdaE<2>ZWCYUCWTBVRBTPA\
+  <11>A3596899A6656666660008WT8WT8WT8WT<10>7yq<16>xPy\
+  <4>k8L<18>OP3<36>xWp<12>foJ<6>rtQstRrqS<22>\
+  Y2SY0SZ1R<28>r6K<12>IDC<19>YcdZdc_dcwTg<2>wQg
+  }
+
+frm:MandNewt12 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-1)*(z-b)
+j=c*z^d+g
+z=z-e*h/(f*j),
+.0000000000000000000000000000005 <= |h|
+}

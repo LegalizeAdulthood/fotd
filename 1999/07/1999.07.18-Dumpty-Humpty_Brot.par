@@ -1,0 +1,24 @@
+Dumpty-Humpty_Brot { ; Fractal of the day, 18-07-99
+                     ; 0:04:13.70 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=1 center-mag=-0.5\
+  832328442390365/-0.00477406678805058/355.6244/0.1034
+  params=2.5/22/0/0/-0.75/0.06 float=y maxiter=7500
+  bailout=25 inside=0 logmap=61 symmetry=yaxis
+  periodicity=10 colors=00007L<11>07C07C08D08DG8D08DI\
+  8D08DJ9D09DL9D09DM9D09EO9E0AEQAE0AERAE0AETAE0AEUBE0\
+  BEWBE0BFYBF0BFZCF0CF`CF0CFbCF0CFcCF0DFeDF0DGfDG0DGh\
+  DG0DGjEG0EGkEG0EGmEG0EGoDH0EGnFG0GFnGF0HFnIEAJEmJEA\
+  KDmLDKMDmMCKNClOCKPBlPBUQBlRAUSAlSAUT9kU9XV8kV8_W8k\
+  X7bY7jY7eZ6j_6<2>da5cb5cb4<3>Wa3U`3S`4<2>MY5KY5KY5\
+  <2>KY6KZ6M_6<8>cg9<21>XhFXhFYiE<34>JfZ<11>qed<2>zQe\
+  <3>z5e<13>zJL<16>zo`<10>zKUz8V<12>z7M
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

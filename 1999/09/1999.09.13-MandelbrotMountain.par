@@ -1,0 +1,19 @@
+MandelbrotMountain { ; Fractal of the day, 13-09-99
+                     ; t=0:01:35.57 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=MandNewt04 passes=1
+  center-mag=0.850434/-2.84329/0.4095238/1/137.5
+  params=1/2/1/0/1/0 float=y maxiter=1200 bailout=25
+  inside=0 logmap=yes symmetry=none periodicity=10
+  colors=000LIF<21>dQIdQIfRH<14>vV2wV1vW2<38>S`VS`V\
+  R_U<32>JL6yw9<8>ra9<44>PjGPjGQiH<33>dUjdUkcVl<5>Z\
+  WrZXv<2>WXyWYzVYzUYz<32>6ez
+  }
+
+frm:MandNewt04 {; Jim Muth
+z=c=pixel:
+a=z^3+(c-1)*z-c
+b=p1*z^2+c-1
+z=z-p2*a/b
+p3 <= |a|
+}

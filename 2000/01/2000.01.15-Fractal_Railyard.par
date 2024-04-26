@@ -1,0 +1,31 @@
+Fractal_Railyard   { ; Fractal of the day, 15-01-00
+                     ; time=0:16:15.72, SF5 on p200
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.63524521216890230/+0.00000002556797498\
+  /1.095162e+009/1/90 params=1/1/-2.44949/2.44949/0/0
+  float=y maxiter=2500 bailout=25 inside=0 logmap=340
+  symmetry=none periodicity=10
+  colors=000hz2dz4az7Yu9VqAPkDMhFIbHF_KCUM9ON7KP7FR7FR\
+  5DR5DR5DT5CT4CT4CV4AV4AV2AW2CW2IW1FY1IY1H_1H_0H_0Fa0\
+  Fa0Fa0Fb0Db0Db0Dd0Cd0Cd0Cf0Af0Ah0Ah09h09j09j09j07k07\
+  k07k05m05m05m04o04o04q04q02q02s02s01s01u01u00u00w00w\
+  00w00u00s00q00q00o00m00m00k00j00j00h00f00d00d00b10a1\
+  0a20_40Y40Y50W50V70T90T90RA0PA0PC0NC0MD0MF0KF0IH0HH0\
+  HI0FK0DK0DM0CM0AN0AN09P07R05R05T04T02V02W01W00Y00Y00\
+  _00Y00_00<3>_00_00_00a00<10>b00b00b00b00d00<3>d20d20\
+  d20d40f40<2>f50f50f70f70h70h90<3>hA1hA1hC7jCD<2>jDYj\
+  DdjFkjFsjHzkKzkNzkNz<2>kDzkAw<3>k9wk9wm7wm7mk7dj5Wh5\
+  Nf5Hd5Id7If9KfAKhCMhDMkFNkHPmIPmKRoMRoNToPToRVoTVoVW\
+  oWWoYYq__qa_qbaqdaqfbqhbqjdqkdqmfqofqqhqshsujswkswks\
+  wmswmswoswoswqswqsysszsszuqzwszuszuuzsuzsuzs_z4az4az\
+  4bz2dz2fz2fz1hz1jz1kz0kz0mz0oz0qz0qz0kz1
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

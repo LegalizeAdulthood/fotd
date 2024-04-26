@@ -1,0 +1,21 @@
+Vertigo            { ; Fractal of the day, 30-06-99
+                     ; 0:05:11.81 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=flip/ident
+  passes=1 center-mag=+0.30987769287049860/+1.56411063\
+  065427400/90.21064/1/-25 params=80/80/-0.75/0/-0.75/0
+  float=y maxiter=32767 bailout=25 inside=253
+  logmap=5 symmetry=none periodicity=10
+  ranges=0/-1/600/605/615/630/650/700/800/950/1200/25\
+  00/32767 colors=000K00cPU`RY`UZ<2>bbacef`ikZopZvuZz\
+  z000<238>000YWm000000
+  }
+
+frm:multirot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

@@ -1,0 +1,23 @@
+StarryNightFractal { ; Fractal of the day, 22-04-99
+                     ; 18min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt11 passes=1
+  center-mag=1.23337/1.77636e-015/0.2606516/1/90
+  params=1/-1/1/-1/1/-1 float=y maxiter=250 bailout=25
+  inside=253 logmap=27 symmetry=xaxis periodicity=0
+  colors=0009CG<2>G3E<4>jGbpIgyKn<9>aKT_KRZJK<6>TKpWG\
+  v<9>Aqb8u`4yY<11>KzfLzgLzo<4>PzF<11>_zPYzR<8>nzC<5>\
+  6zz<15>4zv<3>0z7<13>tza<6>PzePzf6zA<6>Nzcpz3<20>Uz`\
+  yzU<3>xzY<2>wz8mzHdzP<7>rza`zlKzv<6>VzH<7>DzO<5>_zo\
+  <7>5zW<5>gzq<7>MzHazPqzX<6>rz6<5>Qzi<6>Pzj6zT6zP6zL\
+  3zI6zHLSnPzPSzP
+  }
+
+frm:MandNewt11 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-b)*z-f
+j=c*z^d+g
+z=z-e*h/j,
+.0000000000000000000000000000005 <= |h|
+}

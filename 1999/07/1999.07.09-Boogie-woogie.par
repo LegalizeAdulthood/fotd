@@ -1,0 +1,26 @@
+Boogie-woogie      { ; Fractal of the day, 09-07-99
+                     ; 0:01:27.44 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.04143557140397893/-0.19552553476653\
+  730/5.602156e+009/1/-55
+  params=1.414/0.7071/-1.618/-2.718/-2.4/0 float=y
+  maxiter=600 bailout=25 inside=0 logmap=23
+  symmetry=none periodicity=10
+  colors=000inBck3<2>MY6HT7BN85H90F9<3>93HB0IG5P<4>\
+  cRrgVxjZt<5>vtX<6>aL6eCLh3Z<7>XVabWZgXWWnN<5>EUM\
+  <6>KV8KV7J`8If9HkA<5>8xd<2>_aq<6>hoT<2>KYf<4>ed\
+  yZWaTOF<6>Dj9<5>hEC<6>0gTApY<7>dpW<3>Rp`WpQ`pGZpO\
+  YqV<2>pqt<6>SrUPrRNrQ<4>GsO<3>psS<4>StV<3>Otp<2>E\
+  uc_uF<3>su9suK<6>qvQOv3<6>AwLZwXwxh<7>Xyf<7>zz\
+  Kuzcpzv<3>7zy<4>Xzlazjezh<5>zzYszLlz8<3>Gz9<5>GzA\
+  VzCizD<5>6zM<2>Tz9<7>JzeIzfHzfWzMbzSpzK
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

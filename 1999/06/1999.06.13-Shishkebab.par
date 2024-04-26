@@ -1,0 +1,27 @@
+Shishkebab         { ; Fractal of the day, 13-06-99
+                     ; 0:03:27.89 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.04945289287372558/-2.706754626284372\
+  /3892.51/1/82.5 params=1/-1/-1/1/0/0 float=y
+  maxiter=1800 bailout=25 inside=0 logmap=25
+  symmetry=yaxis periodicity=10
+  colors=000P7K<3>N9KN9KLALLALKCL<2>JDLIELHGNHGNGHNGH\
+  NEINEINDJODIOCIOCHOAHO<2>9IP8IP8KP7JP7LP6KP6MP7LQ8N\
+  R9NRAOT<3>GQVHQVHRWITWJVYKWYLZZ<2>P`_Qa`Qa`RcaTcaUd\
+  c<3>Zfe_fe_gf`gfahgchgdjhejhfkj<2>hlkelhcmf`odYpcVq\
+  `TqZPqY<5>9qL<7>AqJ<2>LqKPqKRmLVqLZuLaxLdzLczKczJaz\
+  J<3>`zG_zG_zE<2>YyDYyCYyAWyA<6>Tx6Tx5Rx5Rx3<4>Pw0Ow\
+  0Ow0Ow0Nw0Nw0Lw0Lw0Lx0<3>Qz0Rz0Tz1Uz2Vz3Wz5<5>cz9dz\
+  AezCfzD<5>dzEdzEdzG<3>czGczGazH<18>YzKYzKWzK<18>TzL\
+  TzLRzL<19>OzLOzLPzQ<2>RzdRzhTzmTzrUzwUzzkzxzzvyzp\
+  <3>mzUuzWzzYvzR<2>kzD
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

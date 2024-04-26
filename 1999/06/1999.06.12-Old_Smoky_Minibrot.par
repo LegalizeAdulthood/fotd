@@ -1,0 +1,20 @@
+Old_Smoky_Minibrot { ; Fractal of the day, 12-06-99
+                     ; 0:23:27.17 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.04231421859122748/-0.00000216890969876\
+  /1.710484e+010/1/-139.999 params=1/1/100/-100/0/0
+  float=y maxiter=3600 bailout=25 inside=0 logmap=383
+  symmetry=xaxis periodicity=10
+  colors=000pnA<18>OIAMGALFAKEB<49>H4qH4qI5p<54>zmL\
+  <36>05B<12>`Q6<56>LjxLjyLjyLjy<4>KmzKmzKmzKmzKmz\
+  <5>Kmz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

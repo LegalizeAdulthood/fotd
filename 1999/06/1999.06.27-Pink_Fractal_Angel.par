@@ -1,0 +1,23 @@
+Pink_Fractal_Angel { ; Fractal of the day, 27-06-99
+                     ; 0:01:33.62 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=IfElse03 function=asin/recip passes=1
+  center-mag=1.12297/-0.420418/0.2672144/1/-35
+  params=-1/-2/0/0/-0.3/0 float=y maxiter=500
+  bailout=25 inside=255 logmap=yes symmetry=none
+  periodicity=10 colors=000z`r<6>sCls9ltDm<13>uzt<4>\
+  GR1<8>D`NDaPATR<2>34W<5>eSK<8>gE`gDafG`<11>dmQdoQe\
+  nP<12>ieLieLjcO<6>jXc<10>2Rn<3>X_hKfm7mr<15>LksQQr\
+  V5r<8>Jbe<8>F2_<4>S7nU8pZNac`Nhn9<12>x5Z<4>FZH<11>\
+  RvR<13>BiS<12>p`Cs`Bu_8<14>daXW8T<14>eu8ex7hc4kK2m\
+  00jldrfkMFU
+  }
+
+frm:IfElse03 {; Jim Muth
+z=y=pixel, a=real(p1), b=imag(p1),
+c=p2+(p3*pixel), w=0:
+IF(w), z=fn1(real(y))+fn2(imag(y)), w=0
+ELSE, z=(y*a), w=w+1, ENDIF
+z=z^b+c, y=z,
+|z| <= 100 
+}

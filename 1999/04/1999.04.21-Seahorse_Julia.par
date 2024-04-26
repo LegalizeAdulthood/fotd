@@ -1,0 +1,26 @@
+Seahorse_Julia     { ; Fractal of the day, 21-04-99
+                     ; 40min on a 486-100, 640x480
+                     ;  Version 1961 Patchlevel 40
+  reset=1961 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  passes=t center-mag=-4.44089e-016/3.33067e-016/0.8\
+  503401 params=89.9/89.9/0/0/-0.7527476/0.03817296
+  float=y maxiter=100000 bailout=25 inside=0 logmap=2
+  symmetry=none periodicity=10
+  colors=000OAAaShaShMAA`SgKAA_SfKAAZSeKFAYSdKIAXScK\
+  KAWSbKMAXTcKOAZUdKQA`WdOSCaXeSUEcYfWWGeZf_YKg_gc_O\
+  hahgaSjbikbWlcild_mdjnecoekpfgqglrgkrhl<5>wkn<22>8\
+  XE<2>FV9KV8SU9UU9_U9ZUAbUAeUA<2>bUBaTCZTCWTC<13>IS\
+  HHSHFSIDRIARI7RJ0RJ<23>0PR0PR2OS<25>_Jm`Jn`Io<28>d\
+  UWdUWdVX<13>e_jf_kf`lfam<3>femffmggmhhm<3>llmmmmnm\
+  momm<9>ymmzmmzmmzmm<17>zmm
+  }
+
+frm:multirot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

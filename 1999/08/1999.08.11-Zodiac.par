@@ -1,0 +1,21 @@
+Zodiac             { ; Fractal of the day, 11-08-99
+                     ; t=0:13:12.57 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+1.664072112263802/+0.3928892632790632/2.\
+  145788e+007/1/-5 params=0.01/100/-100/1/-0.9897/0
+  float=y maxiter=12000 bailout=25
+  inside=0 logmap=267 symmetry=none periodicity=10
+  colors=000DGNCHKBIK<6>6IS6IT7IU<10>CHdCHeDHeDHe<16>K\
+  Fa<5>mkw<28>6Fg<10>`Ztm`u<3>zgyzkzzgrwfkrecmeX<6>EaN\
+  <13>SW4<18>2ju<8>oajn`io_hp_hqZg<3>ubevcewcdwcc<13>w\
+  cXwcWwcWwcW<78>wcU
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

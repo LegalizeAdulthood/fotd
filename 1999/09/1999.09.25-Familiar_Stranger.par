@@ -1,0 +1,32 @@
+Familiar_Stranger  { ; Fractal of the day, 25-09-99
+                     ; t=0:00:03.48 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=multirot-XY-ZW function=flip/ident
+  center-mag=1.24838/2.66454e-015/0.6328843/1/90
+  params=90/12/0/0/-2/0 float=y maxiter=400
+  bailout=100 inside=255 logmap=yes symmetry=none
+  periodicity=10
+  colors=000A0K<4>A0KE0J<2>RRlZZXhnyciwZdvpAWeNhwsmml\
+  pcesLrQQhexHD<2>aWjLowqZC<2>__j5sizwoooqdgsRlzTew2X\
+  m<2>O_s0Jj<2>OWsTYRUZaV_kDnbMflipM<2>YcldcI_aa7UfJX\
+  nCkc<2>RbqBP1<2>QYgpbS<2>__njFxzsgolldeqbLC_QSXVfX`\
+  _W_juiLleYCTS7RE2Q0Ac4Hc8EcIBWR8i_5vh<3>OoJ<3>tS9j5\
+  bpEOuM9slz<3>fDDSWJDmPVY`kJl<2>4loXQpBhqIerPbt4KB_k\
+  52D6HPWs99<2>`UiC8nJIqPRsKf1OcKSabYUpXWrWYtsYUfZgS9\
+  U<2>VUnWe7VbXHmjMhnRcr1AMRM3<2>UXhYjjXfnWbrLYWcNCjb\
+  l45bq9ciIiaRoCpFMg`v36hKWuXeiYIaZaJ5LPLcJRe<2>SYqso\
+  s<2>`cudPD_V_Tjr<2>VauqU1eXUe6Ita`<2>`_p20c<2>ORq7L\
+  e<2>PXqjDeEcr<2>R`u3yfDpkMgp1rl<2>OcsC6Yiridkm_eq81\
+  EGDTOPgp6Cc93`IMYRck2qeEs_PtKBXOKeSSmwYEmZTc_g2cmHa\
+  qjXv1Wg<2>OZrmZ`<2>Z_pe1c7mNJfdoVfdYnjnBbfZrOi8jL<2\
+  >QalLP0xX4UUc
+  }
+
+frm:multirot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

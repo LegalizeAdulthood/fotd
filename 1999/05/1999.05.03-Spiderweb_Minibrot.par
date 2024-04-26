@@ -1,0 +1,23 @@
+Spiderweb_Minibrot { ; Fractal of the day, 03-05-99
+                     ; 6min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.17225820462867290/0/6.553424e+008
+  params=1.5/2.5/3.5/-4.5/-0.87/0 float=y maxiter=1800
+  bailout=25 inside=0 logmap=41 symmetry=xaxis
+  periodicity=10 colors=000UFGUBAZ75c30hA4mG7<2>tYHvcK\
+  wiNxmQnkLeeHXbDO`9VcN`h_YrTVzNXuOYlP_fQ`YQbUR<2>fUTY\
+  cSQeSVjU_XWdUYmU_rTTxSNvRHuPBtO5<5>ZIIYHKbGSfDZjIenN\
+  l<4>BSw<2>UMg_KbfIYmGTmEOmCJmGO<3>CWg<7>6dxPauf_r\
+  <12>yoH<8>sxPCyR<14>Tz4<12>hzK<2>KzKCzF5zA<4>8zk<8>F\
+  zk<2>UzE<12>bzTbzUazU_zUZzU<5>`zZ`zb<18>`zZ`zc\
+  <22>`zZXzp<7>`z`kzzezlezf<11>`zZuzj<11>jzc
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

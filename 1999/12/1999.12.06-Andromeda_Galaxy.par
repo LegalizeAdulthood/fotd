@@ -1,0 +1,34 @@
+Andromeda_Galaxy   { ; Fractal of the day, 06-12-99
+                     ; time=0:06:09.26 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=SliceJB2003-PT passes=1
+  center-mag=0/+0.00003755044247788/574.8078
+  params=0.47545/0.50112/0.52415/0.4834/-1.7434/0
+  float=y maxiter=400 bailout=25 inside=bof61
+  logmap=yes symmetry=none periodicity=10
+  colors=000zkJ<2>zkJzkJzmJ<3>zmJzmJzmJzmJzmJzmL<9>zmL\
+  zmLzmL<3>zmLziNzgPzdRzbTz`TzXVzVXzRZzPZzN`zJbxHdvGdu\
+  CeqAgo6im4kk2kg0me0od0qb0qZ0sX0uV0vV0xT0vR0vR0uP0uN0\
+  sN0sL0qJ0qJ2oH4oH6mGAmECkEGkCHiAJiANg8Pg6Re6Ve4Xd4Zd\
+  2bb0db0g`0i`0kZAoZJqXTsXbvVkxVuzXzzVzzVzxVvxVqvVovVm\
+  vVkuViuTgsTesTdqTbqT`qTZoTXoTVmRTmRRmRPkRNkRJiRGiRCg\
+  R8gP4gP0eP0eP0dP0dP0bP0bP0bN0`N0`N0ZN0ZN0ZN0XN0XN0VL\
+  0VL0TL0TL0TL0RL0RL0PL0PJ0PJ0NJ0NJ0LJ0LJ0JJ0JJ0JH0HH0\
+  HH0GH0GH0EH0EH0EH0CG0CG0AG0AG0AG08G08G06G06E04E04E04\
+  E02E02E00E00E00G00E00E02E02E24E24E46E46E68E68E8AE8AC\
+  ACCACCCECCECCGCEGCEHCGHCGJCHJCHLAJLAJNALNALPANPANRAP\
+  RAPTARTARVARVAPTCPTCPTCPTEPTEPTEPTG<3>PTHPTHPTJPTJPT\
+  JPTLPTLPTLPTLPTNPTNPTNPTPNRPNRPNRRNRRNRTNRVNRXNRXNR`\
+  NR`NRbNRbNReNReNRgNRiNRkNRkNRoNRoNRqNRsNRuLPu<2>RPu
+  }
+
+frm:SliceJB2003-PT {; from John R.H.Goering's formula
+pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+s=v*sin(a), c=p+flip(q)+p3, z=r+flip(s)+(.000216,.074279):
+z=z^2.003+c
+|z|<=9
+}

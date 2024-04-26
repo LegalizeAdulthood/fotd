@@ -1,0 +1,21 @@
+Fractal_Fairyland  { ; Fractal of the day, 31-08-99
+                     ; t=0:13:02.47 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-8.918175441151764/+3.426893762755114/12\
+  6.3055/1/-169.999 params=0.8998/1/64/-1/0/10000
+  float=y maxiter=5000 bailout=25 inside=bof61
+  logmap=yes symmetry=none periodicity=10
+  colors=000yIhyIh<8>X0v<7>U7mU7lS8l<12>9Jl8Jl9Nm<11>\
+  Jwq0SF<4>LkV<18>2J0<22>VMP<7>OD3OC1LF2<4>8S2<4>EKHO\
+  XQ<8>rkaoPnl3z<15>jF`mda<10>hRihQiiRh<21>nYh<3>OlZ\
+  <9>qua<20>aGyaEzbHx<12>mlj<15>NPROPP<2>1r9<3>fV9dWA
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

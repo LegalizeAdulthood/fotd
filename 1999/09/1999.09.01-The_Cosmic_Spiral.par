@@ -1,0 +1,22 @@
+The_Cosmic_Spiral  { ; Fractal of the day, 01-09-99
+                     ; t=0:12:31.33 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt04
+  passes=1 center-mag=17.0932/-16.2643/0.004749907
+  params=-3.3333/-2.3498/0.1908/-0.5703/1.6286/1.2902
+  float=y maxiter=400 bailout=25 inside=bof60
+  logmap=yes symmetry=none periodicity=10
+  colors=000c5F<7>I12A02G12<2>X1Mb1Ti0`<18>Q7WP7WO7WN\
+  8VM8UL8S<5>FALEBKDBKCBJBCJ<5>5EN4EO2DO3EQ4ER<35>aRW\
+  aRWbSXbSXbSX<42>pTXpTXqTWqUV<2>rUSrURsVQsWP<16>zlOz\
+  mOzlO<2>yiOxhOwgPvfQ<7>qZYqYZpXZpWZ<12>jJ`iI`iI`hI`\
+  <39>Q2eP2fP2fO2fO2g<6>L2i
+  }
+
+frm:MandNewt04 {; Jim Muth
+z=c=pixel:
+a=z^3+(c-1)*z-c
+b=p1*z^2+c-1
+z=z-p2*a/b
+p3 <= |a|
+}

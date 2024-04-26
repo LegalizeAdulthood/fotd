@@ -1,0 +1,32 @@
+Elephant_Ring      { ; Fractal of the day, 02-05-99
+                     ; 30min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.99109139950804970/-0.31944810475337320\
+  /4.690581e+011/1/72.643/-0.193
+  params=111/11/1111/1/-0.998/0 float=y maxiter=1800
+  bailout=25 inside=0 logmap=115 symmetry=none
+  periodicity=10 colors=000E0kE0k<3>L0sN0uP2vR4xT6z<4>\
+  bGzZHzVHzRHzNJzJJzHLzELzANz6Nz2Nz0Pz0Px0Rx0Rv0Tv0Tu0\
+  Tuzmozpozlkzgizdgz`dzYbxX`uVXqPVoLTkJPgGNeCLbAHZ6GX4\
+  EbGRgPbkZmqixvszzzzvzzszzoxzkxzgvzdvz`vzZuzVuvRsuNsq\
+  JsoGqmCqi8og6oe2mb0m`0mX0kV0kT0iP0iN0iL0`R0TV0LZ0Cd4\
+  4gA0kE0oH0kL0i<2>XCb`H`bLZePXiVVmZRqbPugNxkLzoJvVesC\
+  zo0zm0zi0zg0zd0z`0zZ2zV4zT6zP8zNAzJAzGCzEEzAGz8Hz4Jz\
+  2Jz4Hz6Gz8EzAEzCCxEAvG8uH8qJ6oL4mN2kP2iR0gT0eT0dV0`\
+  <4>d0Re0Pg0L<4>q0Cs0As08x00zE0zV0zk0zm0zm0zo0xo0uq0q\
+  q0ms0is0eu0bu0Zv0Vv0Rx0Nx0Jz0Gz0Cz28z44z40z60z60z80z\
+  80zA0zA0zG0zJ4zNCzRJzXRz`Xzddzgkzmszqzzuzzxzzzzzz<2>\
+  zzuvzuszsqzqmzoizmezmdzk`ziXzgVzgXziZzkZzm`zm`zobzqb\
+  zsdzsdzuezvezxgzxgzzizzizzkzzmzzmzzozzozzqzzqzzszzsz\
+  zuzzuzzvzzvzzxzzxzzzzzzzz<3>kzzgzzezzbzzZzzVzzRzxPzu\
+  LzsHzoEzmAzi6zgkzg
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

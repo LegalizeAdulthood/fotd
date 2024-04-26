@@ -1,0 +1,24 @@
+Son_of_Jungle      { ; Fractal of the day, 26-02-00 Rating (6)
+                     ; time=0:12:52.22 SF5 on a P200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=2.93612/4.52786/68.64536/1/-169.999
+  params=1/0.55/-1/0.65/8/0 float=y maxiter=15000
+  bailout=25 inside=0 logmap=65 symmetry=xaxis
+  periodicity=10
+  colors=000hDj<6>bIgaJg`Jg_KfZLfZLf<17>ShRRiQRjP<3>Po\
+  MUnLZpKYpJhqIcqHhqGZmGZmHLiHLeIKaI<3>IFKH9LH4L<29>IM\
+  MINMINM<28>TdTUdTUeU<2>VfUVfVWeW<25>odqodrpdsqdtrdu<\
+  5>newnewmfwlfwlfxkfx<15>`hy`iy_iy<3>XiyWhyXiy<13>diz\
+  dizejz<3>gjzdkz<3>flzglzglzhlzhmzimz<27>RmzRmzQmz<3>\
+  Nmzlmz<2>imz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

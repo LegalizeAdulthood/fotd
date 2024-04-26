@@ -1,0 +1,23 @@
+Lente_Loco         { ; Fractal of the day, 04-02-00
+                     ; time=0:22:35.30 SF5 on a p200
+                     ;  Version 2000 Patchlevel 6
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+17.07411975465249/+28.9178069806534600/4\
+  05929.1/1/-90 params=2/2/0.03/3/-0.993/100000 float=y
+  maxiter=6000 bailout=25 inside=0 logmap=213
+  symmetry=none periodicity=10
+  colors=0009DG9DI<4>OINRJP<3>bQTeSUhUVkWXmXY<4>sWctWd\
+  uWe<3>yWi<3>e`Y`aVWbS<3>DfG<33>5BC5AC59C<3>45C02D<10\
+  >aV8dX7h_7<2>rf5ui5yj3<34>nofnognoh<2>mokmollmi<6>ha\
+  Ph`MgZJ<2>fUAeS7dS2<20>sDQtCSuBT<2>w9Wx9XyAZxB_xC`yD\
+  azEb<17>zWczXczYc<5>zaczaczbc<42>zcc
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,25 @@
+Tornado            { ; Fractal of the day, 12-12-99
+                     ; time=0:16:38.42 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.56169508372191080/+0.00454436303922446\
+  /4319926/1/-67.499 params=1/100/-0.01/-1/30/0
+  float=y maxiter=1800 bailout=25 inside=253
+  logmap=186 symmetry=none periodicity=10
+  colors=000IAK<8>GAKGAKGAK<4>FAMFBMFBM<15>CJRCKSCKSCL\
+  SCLTAMT<3>GPUHQVIRV<4>OVRQVQRWO<11>edAfe9gf8<3>lh4<1\
+  4>UQ9TP9SO9QMAPLA<4>JKBIKCHKC<2>DKDCKD9JC<4>BIDCIDCH\
+  E<14>IHGIHGJHG<5>LJHMJHMJHMJHNKINKI<5>PLJQMJQMJRNJRN\
+  J<15>XTMYUMYUM<3>`WNaXNbYN<3>faNgcOheO<3>lmOmiPleOkb\
+  O<3>gZOfYOeXO<5>_MNZKNYIN<2>VCMUAMTAMSAMRAM<4>MAGLAF\
+  KAE<3>GAAFAAEAA<3>AAAAAAAAA<21>AAAAAAAAA<3>AAA00KAAA\
+  AAA
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

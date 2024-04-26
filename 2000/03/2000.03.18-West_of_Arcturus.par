@@ -1,0 +1,25 @@
+West_of_Arcturus   { ; Fractal of the day, 18-03-00 Rating (5)
+                     ; time=0:37:21.18 SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.07417/0.131702/641.7884/1/-17.499
+  params=0.476/1/1.302/-1/0/0 float=y maxiter=8000
+  inside=bof60 logmap=yes symmetry=xaxis periodicity=10
+  colors=000A8G<25>A8G<4>A8GGFg<3>HGfB8GHGfA8GHGfA8GJI\
+  eJIeKJeA8GLzzA8GMLdA8GNMdA8GONcA8GPOcA8GQPbA8GRQbA8G\
+  SRbA8GTSazzzUTa<3>WV`zz`XW`<8>a`Za`ZbaY<2>cbYdcYfbZ<\
+  17>XhRXhQWhQ<2>ViOUiOVjN<3>WkMXkLXkL<2>ZlJ<2>kmI<2>j\
+  nHmnGmoGmoFmoz<3>mpzmqzmqzmqzmrz<3>mqzmqC<2>JpC<5>Lo\
+  CLoCMoC<3>NnCznC<3>zmCzmCzmz<3>zlzzlzzlz<2>zkzUzz<8>\
+  XzzXzzYzz<3>Zzz_hD<7>bfDbfDbfDcfDcfD<10>leNmeOneP<3>\
+  qeT<3>iMJgHHeCFb6C<26>hLP
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

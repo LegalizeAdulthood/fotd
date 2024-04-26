@@ -1,0 +1,24 @@
+The_Blob           { ; Fractal of the day, 15-08-99
+                     ; t=0:00:50.47 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  center-mag=-0.00000000000020895/+0.00000000000035369\
+  /2.596138e+011/1.4247/-120.573/9.736 params=174.5955\
+  /35.197/-1.245802909879098/0.3309769412773159/-1.245\
+  802909879098/0.3309769412773159 float=y maxiter=1200
+  bailout=25 inside=0 logmap=130 symmetry=none
+  periodicity=10 colors=000nAa<6>pWOpZNoaP<6>lobptf\
+  <12>3NT<5>E_9<2>eLJnGMzAQ<16>DT9<15>zfa<16>D89A67535\
+  <20>tK6<12>RB2PB2OA4<12>N9SM9ZM9eM9j<2>M9tN6wM9tMCqM\
+  FmMHhMKcMN`MQXMSU<5>LhLLkKLoH<17>LQkLPmMNm<12>JZp<5>\
+  `Cjd2o<3>YTTW_NUgH<8>aXI<17>btVbuWcuW<11>ouNpuequc
+  }
+
+frm:multirot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

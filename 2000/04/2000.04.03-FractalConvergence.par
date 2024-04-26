@@ -1,0 +1,28 @@
+FractalConvergence { ; Fractal of the day, 03-04-00 Rating (5)
+                     ; time=0:06:14.40, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.0606150317/0.0484140988/2441454/1/110
+  params=1/0.8/1/2.6/0/0 float=y maxiter=3600
+  inside=0 logmap=80 symmetry=none periodicity=10
+  colors=0004G90F1<3>KR6PU7TW8<3>eiLhmOkpRnsUqcVuRW<3>\
+  aegXhjSlmOkk_YijGBu_9a1RlBZwLe<3>Rf`Jk_BpZqKZ<4>fcFg\
+  eHigJNZT<3>fRh<2>iMYjWVtaSnOT_FUHDV8BW<4>SnjWulNCe<3\
+  >hUSnYPsaMxeJ<3>sph<3>rDqr3sk7r<3>KNnERmMOo<3>qGw<3>\
+  D4a31X22Z<3>16b17c8GVEPNLYERf6<3>egaigilgq7RXPZYfeY<\
+  2>5ls<3>`07<2>8vohdvdbX`a8<2>1Xv<2>ASPNNO_JO<3>q9ju6\
+  py4uYSr6npNmecmW<2>ey4YvPQth<2>UVEaZahax<3>k17<3>UUi\
+  Q`rXTm<2>o7_<3>eAdcAeWMlOXsHgzJhuLiq<3>GmuFmvEmwDmw<\
+  3>CmpCmoImq<3>emukmvjmt<3>fmmemkemj<3>_mWZmSXmPWmLVm\
+  I<3>jmNnmPrmQvmRzmS`mKCmDVmY<3>bmq<2>smc<3>amaXmaTma\
+  Pma<3>am`dm_gm_jm_mm_<2>XmYRmYKmfLmg<2>8mI
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

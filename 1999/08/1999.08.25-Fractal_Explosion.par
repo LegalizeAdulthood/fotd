@@ -1,0 +1,22 @@
+Fractal_Explosion  { ; Fractal of the day, 25-08-99
+                     ; t=0:09:44.58 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt11 passes=1
+  center-mag=-1.25322/-1.33227e-015/0.6647052/1/-90
+  params=-1.214/-1.207/0.495/0.018/0.246/1.438 float=y
+  maxiter=500 bailout=25 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=0
+  colors=000YAW<15>BB7<13>MI7KA7<8>KA7KA7KB7LC7NF7PH7\
+  RH7TH7<12>gE7hE7hE7<44>y0Vy0Vx2T<21>we5wg4xk1<6>rTE\
+  <2>RaLIdN7iO<30>p6fw2e<7>INmDQn7Rp<43>jrBjrBisChsCg\
+  sC<3>fvSfwWfw_fwc<2>fwo<8>fwo
+  }
+
+frm:MandNewt11 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-b)*z-f
+j=c*z^d+g
+z=z-e*h/j,
+.0000000000000000000000000000005 <= |h|
+}

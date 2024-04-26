@@ -1,0 +1,25 @@
+Superstring_Theory { ; Fractal of the day, 28-05-99
+                     ; 0:01:48.26 on p233, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1173.042184372388/+0.1630652789236627\
+  /137.457 params=1/2/100000/0.0001/-0.99/1000000
+  float=y maxiter=1600 bailout=25 inside=0 
+  logmap=28 symmetry=none periodicity=10
+  colors=000K94<17>CPmCQpDQs<22>3mm<6>FtiHthIugKugM\
+  vfNvfPweQwe<2>XykZyl`znczoezo<2>kzq<2>izlizkhzjhz\
+  igzi<6>dzfhzidzh`zeXzcTz`<2>IzM<4>RzPTzQUzRVzR<3>\
+  ZzT<9>hzCiz5<2>lzMmzRmzWmzamzfmzu<2>mzU<6>mzpmzsm\
+  zy<9>mzdnzbpz`qzZrzXszV<14>lznlzoizn<12>7zbAzD4zb\
+  <3>czN<2>ezEfzBiz8fz9Yz1<3>vzY<4>szT<7>SzDHzG<2>c\
+  z5<6>YzkXzqVzz<10>mzVDzs<11>czhezhizilziDzirzT\
+  <4>Lz1
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

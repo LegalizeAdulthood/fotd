@@ -1,0 +1,26 @@
+Fractal_Waterfall  { ; Fractal of the day, 26-06-99
+                     ; 0:01:27.08 on a p233, 640x480
+  reset=1960 type=formula 
+  formulaname=ShadMinRot-XY-ZW function=ident/flip
+  passes=1 center-mag=-0.00000230910138429/+0.00000\
+  003421661750/152909.8/1.2184/93.047/-0.997
+  params=158/-40/3.5/0/0.83022149703/0.01156243638
+  float=y maxiter=1800 bailout=25 inside=0 logmap=34
+  symmetry=none periodicity=10
+  colors=000A67<12>p_imdiijm`nrWsuYvp<8>mjA<10>fK`f\
+  IbcK_<5>SUKQVIPXH<13>GrG<13>Z`j<10>SuLSwIRzGRzE\
+  <3>QzQQzTOzLMzDLz6<3>uz4<9>QzjNznLzk<4>DzZ<15>sz\
+  d<3>Kzz<10>qzh<9>tzLczC<13>7zX<4>1z2<2>ezS<11>EzW\
+  <6>uzG<4>7z2<7>9ze9ziCzf<12>az9<8>0zgvzT<5>szeszg\
+  pzi<2>izlGz7Bz56z4
+  }
+
+frm:ShadMinRot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994, p=p2, k=p3,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+k,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+k:
+z=(-z)^p+c,
+|z| <= 36  }

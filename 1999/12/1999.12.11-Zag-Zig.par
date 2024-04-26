@@ -1,0 +1,34 @@
+Zag-Zig            { ; Fractal of the day, 11-12-99
+                     ; time=0:04:03.16 on a p200, SF5
+  reset=2000 type=formula 
+  formulaname=SliceJB2003-PT passes=t
+  center-mag=-0.00020160492963811/-0.00197142425838346\
+  /143.1296/1/2.5
+  params=0.51412/-0.00717/0.51384/0.51184/-1.7434/0
+  float=y maxiter=1200 bailout=25 inside=253
+  logmap=63 symmetry=none periodicity=10
+  colors=00000C00C<8>00T00V00X<2>00b00d00d00d00d00d00b\
+  00b00`00Z00X02V<3>0HN0LL0PJ<3>0dC4gA<3>Rv2Xz0bz0<3>x\
+  z0zz0xz0<3>bz0Xz0Rz0Lz0Gz0Av04u00q00o00k20g40e40b60Z\
+  80X80TA0RA0NC0JE0HE0EG0CG0AE08A068024000<3>000000000\
+  <2>0000002004204406808A0AC0AG0CH0EL0EN0GP0HT0JV0JX0L\
+  `0Nb0Ne0Pg0Ri0Tm0To0Vs0Xo0Xi0Zd0`Z0`T0dT0gT0kT0mT6qT\
+  EuTNvTVzTbzTkzTszTz<4>zTzuTziTzXTzLLzA8zECzHGzJJzNLz\
+  RPzTTzXXzZZxbbueeqggmkkimoeqsbuuZvxVzzRzzNzzLzxLzvLz\
+  uLxsLxqLxoLxmJxkJvgJ<2>vbJv`JuZH<2>uTHuRHsNH<2>sHGsG\
+  GqEGqCGqAGq8Go88q6Gs4Lu2Tu0Zv0ex0kx0sz0xz0zz0zz0zx0z\
+  v4zu6zsAxqEvoHsmJqmNokRkiTi<2>ddbbe``iXZmVZoTVkRTgRP\
+  eRNbRJZPHXPETPCPP8NP6JN2HN0EN0AN08N04L00L00L00L00J00\
+  L00L00L00L00N<2>00N00N00P<3>00P00P00P<3>00PKFQ00P00P
+  }
+
+frm:SliceJB2003-PT {; from John R.H.Goering's formula
+pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+s=v*sin(a), c=p+flip(q)+p3, z=r+flip(s)+(.000216,.074279):
+z=z^2.003+c
+|z|<=9
+}

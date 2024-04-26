@@ -1,0 +1,19 @@
+Branch_Cuts        { ; Fractal of the day, 09-04-00 Rating (3)
+                     ; time=0:36:35.34, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MultValLog2 passes=1
+  center-mag=-1.15934761779311800/-0.06686366463112242\
+  /4458813 params=0/0/-2.5/0/-2.5/0 float=y
+  maxiter=12000 bailout=25 inside=0 logmap=328
+  symmetry=none periodicity=10
+  colors=000bJHlWL<8>nTCnSBnSA<2>oR7oR6pS5<37>i8Ki8Ki7\
+  Ki7Li6L<72>PsnPtnPuo<2>OwpOwpNuo<3>LpojlUcUoXcoJko<3\
+  2>37k26k25k<2>01k00k11j<66>LTK
+  }
+
+frm:MultValLog2 {; Jim Muth
+z=p1+(1e-100), c=pixel:
+z=(p2*(z^z))^(p3*(1/z))+c,
+|z| <= 100
+}

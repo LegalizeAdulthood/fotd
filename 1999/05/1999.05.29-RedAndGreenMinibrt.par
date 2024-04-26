@@ -1,0 +1,23 @@
+RedAndGreenMinibrt { ; Fractal of the day, 29-05-99
+                     ; 0:03:55.25
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-1.447433970141008/+0.06017521252662337/7\
+  79614.1/1/-57.5 params=1/0.96/1/-0.96/0/0 float=y
+  maxiter=2000 bailout=25 inside=0 logmap=75
+  symmetry=none periodicity=10
+  colors=000Q5`S5`<4>aAop8Ip5I<2>gUGR46ajFZrFXzF<12>AJ\
+  7<3>h8G<6>vhz<6>Lru<10>KJF3rP<7>qDN<3>Wtz<3>FAg<4>lh\
+  s<4>LYJ<9>`8v<6>GUW<4>JIJJGHIHK<12>HKpHKrJNo<13>XrGY\
+  tEXqHWnKWlM<8>ono<2>9Dk<11>Z`g<7>oRnqQnrNo<5>x7ux5uw\
+  At<9>nurnyrlzo<8>XzW<2>ezA<6>CzV<5>tzk<11>2zb<10>HzM\
+  <9>zzsvzr
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

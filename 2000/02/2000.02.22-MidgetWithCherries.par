@@ -1,0 +1,24 @@
+MidgetWithCherries { ; Fractal of the day, 22-02-00 (1/2) Rating (6)
+                     ; time=0:14:53.68  SF5 on a P200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.08377063270569564/+0.01669842167415934\
+  /1.892595e+009/1/-35 params=-1/1/-1/-1/0.15/100
+  float=y maxiter=12000 bailout=25 inside=0
+  logmap=283 symmetry=xaxis periodicity=10
+  colors=000PFAPFA<9>_PA`QAaRA<2>dUAdVBcWD<5>`aO`bP_cR\
+  <2>ZfXZgY`f_aea<3>kglmhophrritshv<2>tdx<2>fWsaTrZRr<\
+  3>KJpHHpDFp<2>39o<17>PFVQFUSFT<2>VGQWGPWFQ<15>WF`WF`\
+  WFa<3>WFc<4>iTgkVgnYh<3>xgj<3>_mPUnJOoE<3>9ME5FE28E<\
+  16>`BKbBKdBK<2>jBLlBLlBM<5>nCPnDPnDQ<10>qGUrGVrGV<22\
+  >yMpyMqzNr<3>zMvzMwzMxzMy<49>zKz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

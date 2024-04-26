@@ -1,0 +1,27 @@
+Yeggs              { ; Fractal of the day, 28-09-99
+                     ; t=0:02:39.74 on a p233, SF5
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+5.27969226465459200/-0.1418271678870715\
+  0/2939990/1/-159.999 params=-1/-1/-0.5/1/2/0
+  float=y maxiter=1600 bailout=25 inside=0
+  logmap=48 symmetry=none periodicity=10
+  colors=000wlDwlE<3>o`FmYFkVFiSMgPS<3>keWkiWdbQ<3>GF\
+  6A917GD4IP2KR3NT4QV5TW8WX<3>I_`K`aMabObcQc`SdYUeVXh\
+  S<3>dlGfmDhnAjn7<4>WcTTaYQ_a<3>ESr<4>SXtVXuYYu<3>g`\
+  v<6>cRZbQVbPS<3>`KFRQCIWAHZBG`C<5>Kc7Kd7Ld6<3>Nf3<3\
+  >RZCSXETVH<2>WPNKcaOghRko<3>JGjH8iF0h<7>XWYZ_X`cV<3\
+  >isQkvSmrU<4>hrUgrU<2>drh`moXiq<3>HSvDNwAJx<4>XBy`9\
+  ze8z<3>v2z<3>PYbGeX8lR<9>4dk4cm4co<3>3`w6Zx8Yy<3>GU\
+  zJSzLRz<3>TNz<6>KEzJDzHBz<2>E8zD7zEMzE_zEmz<7>djzhi\
+  zkiz<3>xhz<8>sTzsRzrPz<2>qKzqJzoOz<3>hczfhzelz<2>`x\
+  z<6>fwz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

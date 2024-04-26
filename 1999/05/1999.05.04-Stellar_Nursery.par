@@ -1,0 +1,32 @@
+Stellar_Nursery    { ; Fractal of the day, 04-05-99
+                     ; 4-1/2min at 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.09294912167762445/+0.00143386807667\
+  271/1.009587e+007/1/180 params=100/1/1/100/-0.99/0
+  float=y maxiter=1500 bailout=25 inside=0 logmap=90
+  symmetry=none periodicity=10
+  colors=000ADa0Cj2AmC9mA8om6qz0or8rgJtUUvFew5ry0zz\
+  0zz1zy5ywAvvFrtFtzJotMlmPggUdaXaW__PbYL60AC8QGG_L\
+  PdddIgqI8_CDYIIXOMWUQU_WTeaIge8gl0gq0gj0a<2>U0JP0\
+  DJ08800F03L06Q09X0Cd2Fj5Iq9Lv3MwCOoJPgQQ_YTTeULmW\
+  FvXJrUOoTTlPXhOWoJ_gMd_OhTPlLQqDTv6Uy0Wo6XeDYYLYP\
+  T_I__9ga0tb2ma3ga6ba8XaAQaCMaFGaD6gGCa<2>OPJQWDT_\
+  8Wd2Wg0Xh0Xh1Xj5Qo1Xj8aOFe2MgAThJY<3>otwtzzqzzowv\
+  lqojlhhebe_XdUQjUMbPL<2>JCGD8F83D21D9W0Ga0Y0gbC_e\
+  _ThyLazJWzJOzI<2>2zD0zC0zC0z92z88z6Dz3Jz2Pz1<4>vz\
+  0zz0<2>yy0ht0Uo0Fj11e30a60Y9<2>0QI0OL2LO5IQ6GU9DX\
+  AA_<3>L1lD0rM0oW1l<2>w8bz8d<2>z9YwAWrCUoDTlFQhGOe\
+  IMaJLYLIWMGTOFLPFPQDTTCWUAYWAbX9eY8h_8la6ob5td3we\
+  3zg2zh1zj3zl1zm0to0lq0<2>Uv0gw0vy0Yzhzz0_zT3zzAzz\
+  IztOzlWzdbzXhzQdzU_zXWz_QzbOze<2>Azo6zr3ztzzGwzJ\
+  <3>qzWvz_ozYhzYbzYPzMYzYGzjAzr5zy
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

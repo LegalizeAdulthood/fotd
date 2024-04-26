@@ -1,0 +1,28 @@
+The_Duke_of_Earl   { ; Fractal of the day, 12-03-00 Rating (5)
+                     ; time=0:02:36:34 SF5 on a P200
+                     ;  Version 2000 Patchlevel 8
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=+0.12123691840599490/-0.14894804299248570\
+  /2.826772e+013/0.9997/-100.002/0.017
+  params=1/1.25/-1/-1.75/-2/0 float=y maxiter=1200
+  bailout=25 inside=0 logmap=90 symmetry=none
+  periodicity=10
+  colors=000D73<2>442Gkj<3>6IH3A9OS2LP2IO2FL2CH2<3>472\
+  252kOQ<3>ODEIABC88655GsH<8>7Q86M75J6<3>162sp6<8>WV4T\
+  T4RQ3<3>GH3`R5`R5`Q4<3>VQKTQOSQS<2>OQb<3>GlRErODwM<4\
+  >BsOBrOBrO<2>ApPAoPAmP<3>9gQ<3>FdNHZN<3>N_LO_KQ`K<3>\
+  V`IXUNYTRZMW_H_`Cc<3>ZVZYZYYcXYhV<3>WwRWzQ`wV<3>tkjy\
+  in7oiNxd<9>CzYBzYAzX<3>6zVIsLUqBnuh<3>byb_z`Xz_<3>Lz\
+  UIzSFzRDzQ<2>`z7<4>jzW<3>rzo<3>pzZozVozRozNpzKpzH<3>\
+  kzCjzBizAhz9<3>9z_1ze2zd<11>CzWDzVDzU<2>GzSGzSFzQ<3>\
+  CzMBzKBzJAzI2z49zH<5>5zA5z94z7<3>1z3wz9<13>Gz3
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

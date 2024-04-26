@@ -1,0 +1,25 @@
+Ylem               { ; Fractal of the day, 13-02-00 Rating (5)
+                     ; time=0:12:48.68 SF5 on a P200
+                     ;  Version 2000 Patchlevel 6
+  reset=2000 type=formula 
+  formulaname=MandNewt12 passes=1 center-mag=+0.403429\
+  68397223660/+0.51589266229361830/1809.284/1/135
+  params=-1.1716/2.7928/-0.4553/-0.7357/1.1101/2.4508
+  float=y maxiter=250 bailout=25 inside=bof60
+  logmap=yes symmetry=xaxis periodicity=0
+  colors=000SSX<3>OMQNKPLJMJIL<2>HEHGDFFADE9CD7A000zfz\
+  cUmUKcKAY<3>KAYYVI<6>HRNFQOCQO<3>3OR<22>QMZRMZSMZ<3>\
+  WM`XMaYMa<3>_Mc_Md_Md_Me`Me<34>cMocMocMp<3>cMpcMpcMp\
+  cMpUnm<17>NgWMfVMfULeTLeSLeR<2>EbPBaOA_P<6>9`L9`L9`K\
+  <3>9aIHuNFuODuO9vN<18>XrPYrP_rP<2>brPcrPdpR<8>ifdjee\
+  kcg<2>l`km_mo`o<21>TBaSA`R9`<3>N5Yhiuhkuhmuhnu<13>TUZ
+  }
+
+frm:MandNewt12 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-1)*(z-b)
+j=c*z^d+g
+z=z-e*h/(f*j),
+.0000000000000000000000000000005 <= |h|
+}
