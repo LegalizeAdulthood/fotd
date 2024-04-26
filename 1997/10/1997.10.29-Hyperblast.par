@@ -1,0 +1,21 @@
+Hyperblast         { ; Fractal of the day, 29-10-97
+                     ; 2-1/2 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=RectXLow passes=1 center-mag=0/0/0.1386667
+  params=43/1.0099/43/1.0101/-1/2 float=y maxiter=512 bailout=100
+  inside=253 logmap=yes symmetry=origin periodicity=10
+  colors=000WJ6<3>OB6500A01E34G46<3>hE8pH9vJ9vMAvOA<2>vI6vG4tE3qD2sGA\
+  uJH<3>vUjvTg<9>GMG<15>alIkaPtRWvGbv6h<2>vAdsBc<3>`GZ<3>tDJvCF<2>vB3\
+  vG8vLDsQH<5>Fsh<6>n4v<4>srm<5>lkwkjxk_rkQlZps<5>lTmU4q<3>jMmv6l<7>v\
+  HlvIltKl<3>oPlNgT<5>jSjGee<7>gTkoCM<5>MJR<8>TYqTZtV`q<10>gvPhwMiwJj\
+  wHiuL<7>cHl<2>SAw<4>adcYSP<14>`a6<10>OqK<5>umC<10>dg7o_6vS5vL5sG8cC\
+  AO8C<2>gDSnFXvoFvIgvKl
+  }
+
+frm:RectXLow {; Jim Muth
+z=flip(real(pixel))+real(p3),
+c=flip(imag(pixel))+imag(p3),
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*((-z)^f))+c,
+|z| <=2500
+}

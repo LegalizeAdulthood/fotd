@@ -1,0 +1,22 @@
+fire-egg           { ; Fractal of the day, 12-12-97
+                     ; 5 min. on 486-100 -- 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-pm21 function=ident/flip/ident/flip
+  passes=t center-mag=-6.19615/9.76996e-015/0.9654831/0.7851/-90
+  params=45/45/3.16227766/0/0/0 float=y maxiter=1800 bailout=25
+  inside=253 logmap=yes symmetry=xaxis periodicity=10
+  colors=000G06O59Q0CS6BR4CV3AR27T15W03W03W02W00e02o02z02<4>`00`\
+  00iR3<3>ZL2ZJ2XI2ZH1bF1`E1hC1fB1d91g80e70c50f40d20b1cqPf<53>XE\
+  OkEO<4>iDMiCMkE4n73k12n97lGBeNG_UKJ`O<2>Eu`wgk<7>wOfvLh<6>B5q<\
+  7>lutJqNwjA<6>etr<3>hhfuQ8<4>rWO<5>PBH<2>MvrgwjwwcqkTe_IVO8myF\
+  <5>gUigPnhToiWpjZqkaq<4>wUM<2>wQ4<6>w4k<3>BXA<2>kP2<6>8S_<5>iM\
+  ZdVe_cl<2>Nd`YXchQeL9w<6>vNZbLjKKuaYrrkp<2>Vee<2>M4KgRN<4>imz8\
+  Kqw9huDYSAknLCkO2
+  }
+
+frm:multirot-pm21 {; Jim Muth, best=ifif, fiif, fifi, iffi
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
+z=(.1*(sqr(z)))+(10*(z^-2))+c,
+|z| <= 100  }

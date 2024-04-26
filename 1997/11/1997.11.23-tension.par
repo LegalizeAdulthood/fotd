@@ -1,0 +1,20 @@
+tension            { ; Fractal of the day, 23-11-97
+                     ; 2-1/2 min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=M-R-rotation passes=1
+  center-mag=-0.0947587/0.0110276/0.4482056/1.4415/-34.824/13.309
+  params=13/90/0/0.1/0.1/0 float=y maxiter=6000 bailout=100
+  inside=253 logmap=yes symmetry=none periodicity=10
+  colors=000<2>00093BD5FI5OJ4V<3>M4g<9>qIj<41>vvkwwlvvk<25>gXPi\
+  YN<23>HXlGXmEYo<36>PRZZKfgDno6w<46>wY5<8>LSq<37>rlnLGLFDAE9B
+  }
+
+frm:M-R-rotation {; Jim Muth
+; real(p1)=power of Z,  imag(p1)=angle of rotation
+; p2 and p3=rotation point and parallel planes
+a=real(p1), b=imag(p1)+.0000000000001,
+z=sin(b*.01745329251994)*flip(real(pixel))+p2,
+c=cos(b*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=z^a-(1.1*z)+c,
+|z| <=25
+}

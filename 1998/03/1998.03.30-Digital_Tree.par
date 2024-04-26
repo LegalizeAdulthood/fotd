@@ -1,0 +1,21 @@
+Digital_Tree       { ; Fractal of the day, 30-03-98  2/2
+                     ; 11min on 486-100 at 640x480
+  reset=1960 type=formula 
+  formulaname=ParabolicMiNa passes=t
+  center-mag=+1.56506125254761300/+0.73139064156474090/3290.\
+  003/2.0651/94.804/21.589 params=-1.15/0/0/0/0/0 float=y
+  maxiter=252 bailout=25 inside=253 logmap=yes symmetry=none
+  periodicity=10 colors=000Q_U<31>T`_T`TU`KVa4Wc5Wf5<19>WeA5\
+  4LWeB<2>WeCA4O00M57D65D6BH65OF8V<14>13M<8>I2w<3>EHG25ABDE\
+  <6>139<3>Znk<2>XVFXT4aT5fT6<2>sY7<29>g_Kg_Kf_Kf_Kf_L<31>U\
+  `ZU`ZR`_PZRNWNLYI<63>Q_U
+  }
+
+frm:ParabolicMiNa {; Jim Muth
+;note: formula appended with "a" to differentiate from 
+;formula of same name previously posted (see above)
+b=p1, z=imag(pixel)+p2,
+c=real(pixel)+p3:
+z=(-z)^(b)+c,
+|z| <= 16
+}

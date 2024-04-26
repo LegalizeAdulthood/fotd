@@ -1,0 +1,19 @@
+blumine            { ; Fractal of the day, 24-10-97
+                     ; 2-1/2 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=RectangularN passes=1
+  center-mag=-1.22125e-015/8.88178e-016/1.407848
+  params=0/-0.15/1.41421356238/0 float=y maxiter=300 bailout=100
+  inside=bof60 logmap=yes symmetry=origin periodicity=10
+  colors=000DQyERzD6GE7FF8GG9HF9IG8HG7HG7HF7JG8K<4>PDSQFUTGV<4>bMb`K`<42>x\
+  udxvexue<22>uYWtWVuYW<2>w_Xx`Xx`XxaY<5>xe_xe_xd_xd_xc_xc_<31>ONWNXZKe`Hn\
+  b<3>fZsmVwtRz<30>FrvDsuDru<14>DbpE`oE`n<12>W6EY3BZ3B<12>v4Ix4Ix4Jx4J<5>x\
+  AUxBWwCYvD_<11>iPw
+  }
+
+frm:RectangularN {; Jim Muth
+z=flip(real(pixel))+real(p1),
+c=flip(imag(pixel))+imag(p1):
+z=z^p2+c,
+|z| <= 16
+}

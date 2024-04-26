@@ -1,0 +1,22 @@
+Paragon            { ; Fractal of the day, 21-01-98
+                     ; par file, 15min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotTri passes=1
+  center-mag=+1.23524001898926900/+0.00905117766044097/347\
+  99.65 params=1/-1/0.1/10/-1.13272141606/0 float=y
+  maxiter=1200 bailout=16 inside=0 logmap=yes symmetry=none
+  periodicity=10 colors=000S98<2>W49<4>wgCwoCwvCwwDwwD<8>KwD\
+  <4>UoiVnoVpp<5>VwuVxuXuq<14>oH9<4>Pi1X9H<4>YBIR09O1AV3BR4C\
+  Y5DO6Eb8FTAGcCHXDIhFJaHJjHJjIJlJJtJJqKJsLJvLJwMJwNJwNJwPN<\
+  7>RZqN_uK`yHazEbzG`zIZu<7>UJDWH7XF3<12>oQW<6>hAQ<2>pJirMos\
+  Ll<10>wBRwBPuEN<13>_m3<11>Vmj<12>wuowvowvolu_YtLKt6<2>dgMj\
+  bSqZXwVawRf<5>waQwcNvdKufH<5>op1<9>kvI<4>uiJwgKwdK<2>wYKw_\
+  Jv`J<7>UlH<5>ZnJLJ6<3>RB8
+  }
+
+frm:MandelbrotTri {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(z*z*z)+(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

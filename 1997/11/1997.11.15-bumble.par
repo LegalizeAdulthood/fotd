@@ -1,0 +1,18 @@
+bumble             { ; Fractal of the day, 15-11-97
+                     ; 1 minute on a 486-100mhz, 640x480
+  reset=1960 type=formula formulaname=OblateMix
+  passes=t center-mag=-8.88178e-016/1.11022e-015/3.452436/0.5106
+  params=1.1/1/1/7/0/0 float=y maxiter=300 bailout=100 inside=253
+  logmap=yes symmetry=xyaxis periodicity=10
+  colors=000LHCLFBKBAKCA<17>rkA<16>H`e<8>lJSpHQsFPvDNvBM<21>v8R<2>v\
+  HV<14>GwlUqqfkv<7>dYa<5>dNr<9>chRcjPaiR<14>9cl<11>IPiMKXPFL<6>NJP\
+  A_dMJP<34>9_dZdr<29>A_d9_d9`0<25>9_F9oz9_GMJC
+  }
+
+frm:OblateMix {; Jim Muth
+z=real(pixel)+flip(real(p3)),
+c=flip(imag(pixel))+imag(p3),
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

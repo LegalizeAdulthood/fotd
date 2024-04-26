@@ -1,0 +1,21 @@
+zorro              { ; Fractal of the day, 13-10-97
+                     ; 2-1/2 minutes at 100mhz, 640x480
+  reset=1960 type=formula formulaname=OblateVB
+  center-mag=-0.00005845559173104/+0.00002785622125857/2.967131e+010/0.000\
+  1404/0.002/89.959 params=0/-1.739720077561/3/0 float=y maxiter=6000
+  bailout=100 inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000NRJSOFWLB`VYhRVpOT<5>lyq<2>vZy<4>mfA<2>ssM<6>bgn<4>6Nv<4>ajVgn\
+  QpjLygG<3>uvB<5>mXr<4>pfU<4>85p<5>Vt5<3>7mkmJD<5>5z_<6>_VrcRtj`rqipwro<6\
+  >ZRHETf<5>1IEekT<3>PutQfuRTu000<7>000E2E963Q7Lm7o<5>51_<5>6vnGzqQmt_ewSX\
+  fKRQDNAKA9`8Ch4DkI1<5>JGDB`F4uH<5>lKc<7>JtMo1`<5>Z8cNYgCwjFs`IoR<6>UtKZ3\
+  g<2>WRP<7>pKH<5>_R6YS5XPD<4>TCn<6>0yG<6>bEFkAYs7p<7>5o2<3>ewl<4>_Ks<5>1g\
+  d<3>JVO
+  }
+
+frm:OblateVB {; Jim Muth
+z=real(pixel)+flip(real(p1)),
+c=flip(imag(pixel))+imag(p1),
+a=sqr(p2):
+z=sqr(z)+c,
+|z| <= a
+}

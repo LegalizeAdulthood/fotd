@@ -1,0 +1,22 @@
+Toward_the_Unknown { ; Fractal of the day, 13-02-98
+                     ; par file, 25min, 100mhz, 640x480
+                     ; formulaname appended to "b"
+  reset=1960 type=formula 
+  formulaname=RectangularNb passes=1
+  center-mag=-0.00000008059530504/-0.00000007754853270/2.046\
+  196e+014/0.0285/-0.823/83.774 params=25000000/0/0.9999994/\
+  0/0.9999994/0 float=y maxiter=1200 bailout=25 inside=0
+  logmap=69 symmetry=origin periodicity=10
+  colors=000aYraYrQ_lTBqROnQ_lPljMyj<13>gpKyt5hpJbdHVpZ<9>6P\
+  8<8>FrS8xR<4>RrXOfUMWSpLPc8MH9N<17>fRVgRVgRV<20>gRVfQUgRV<\
+  17>iRiiRjjQi<135>aYr
+  }
+
+frm:RectangularNb {; formula, Jim Muth
+; formulaname appended to "b" to differentiate from
+; previously posted RectangularN formulas
+z=flip(real(pixel))+p2,
+c=flip(imag(pixel))+p3:
+z=z^p1+c,
+|z| <= 16
+}

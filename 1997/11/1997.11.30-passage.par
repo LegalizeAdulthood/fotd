@@ -1,0 +1,17 @@
+passage            { ; Fractal of the day, 30-11-97 (1/2)
+                     ; Passage to an infinite ocean -- 8 min
+  reset=1960 type=formula 
+  formulaname=contest4
+  passes=t center-mag=-0.445416/0.738969/23.31999/1/152.5
+  params=0.34/-0.5 float=y maxiter=9999 bailout=25 inside=253
+  logmap=yes symmetry=none periodicity=10
+  ranges=0/-1/75/126/158/200/252/318/400/504/635/800/2500/9999
+  colors=000K60iKFeWKU`OUbS<2>UjcUmgUqkUuoUwqUzt000<237>000V0j\
+  000000
+  }
+
+frm:contest4  {; Kerry Mitchell
+      ; slightly optimized version of Contest formula
+         z=p1, c=pixel:
+         z2=sqr(z), z=z*z2+c*(1+z-z2), |z| <= 4
+         }

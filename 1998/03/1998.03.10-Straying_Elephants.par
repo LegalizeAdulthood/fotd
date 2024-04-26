@@ -1,0 +1,24 @@
+Straying_Elephants { ; Fractal of the day, 10-03-98
+                     ; par file, 6min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZWa function=ident/flip passes=t
+  center-mag=+0.18650285264054990/-0.00844554592573631/447.0\
+  107/0.1267/2.088/71.347 params=45/90/0.27/0/0.27/0 float=y
+  maxiter=2400 bailout=25 inside=253 logmap=yes symmetry=none
+  periodicity=10 colors=000jWP<3>ydf<6>A4L<13>5Xr<3>8K4<4>FP\
+  KHQOGRR<8>2etIfJ<11>PHQQEROMN<2>Fi9<14>95z<2>eoc<7>BPM<12>\
+  lL_VBeD1k<12>epkhulhum<3>fvr6xHPVch0zZzR<9>ImRGkQGjQ<11>PU\
+  RQSSQST<12>SSgTRiTQi<9>`GhjYbuoW<11>WuWTvWTvX<14>HksBXn5I\
+  i<11>u8P<5>Euh<2>abs<6>q4I<5>hSPgJA<3>UL4XN80AMcRHgTL
+  }
+
+frm:multirot-XY-ZWa {; draws all 6 planes and many rotations
+; formulaname appended to "a" to differentiate from
+; previously posted multirot-XY-ZW formula
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

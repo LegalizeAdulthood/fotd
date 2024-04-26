@@ -1,0 +1,22 @@
+Fractal_Keyhole    { ; Fractal of the day, 29-01-98
+                     ; par file, 8min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=minN-XY-YZrot passes=1
+  center-mag=-0.522869/2.22045e-016/1.152613/1/-90
+  params=90/1.15/0/0/-1.1143/0 float=y maxiter=1200
+  bailout=25 inside=0 logmap=yes symmetry=none
+  periodicity=10 colors=000H6X<26>XReYSeZRg<21>OlBOm9Mn6<20>\
+  oX`pWaqU_sXc<24>8CH<7>JqVKvWNuU<4>apP<2>bwSbyT`wU<17>FUcET\
+  cFUb<14>I_R<4>2s6<17>5T0<23>HOsLJdPER<3>hdz<15>AMH<17>P6HP\
+  6HRIZTUp<6>6jy
+  }
+
+frm:minN-XY-YZrot {; Jim Muth, thanks to Benno
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*real(pixel)+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=(-z)^b+c,
+|z| <= 16
+}

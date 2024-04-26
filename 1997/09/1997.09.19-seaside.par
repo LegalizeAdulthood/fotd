@@ -1,0 +1,19 @@
+seaside  { ; Fractal of the day, 19-09-97
+           ; 26 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=XY-YZrotlow passes=1
+  center-mag=0.500772/-2.73739e-015/18.04148/0.4775
+  params=88/0/0/0/-0.77/0 float=y maxiter=2400 bailout=100 inside=0
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=0007JS6IRCJV<7>kLl<26>NJMQKP<47>KwjJxkKwj<73>bOVcNUbOV<31>vdBtaD<\
+  24>b5Ba3Ab6B<24>LpOOjM<3>PjN
+  }
+
+frm:XY-YZrotlow {; Jim Muth, thanks to Benno
+; p1 = rotation angle in degrees, p2 = parallel planes
+; p3 = point of rotation and parallel planes
+z=sin(p1*.01745329251994)*real(pixel)+p2,
+c=cos(p1*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 4
+}

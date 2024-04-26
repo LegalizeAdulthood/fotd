@@ -1,0 +1,20 @@
+Ice_coated_tree    { ; Fractal of the day, 13-01-98
+                     ;par file -- 14 min on 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multi1-5-XY-ZW function=ident/flip passes=1
+  center-mag=0.0194957/5.55112e-017/7.688/0.8202/-90
+  params=90/86/-0.55/0/-0.2/0 float=y maxiter=1200 bailout=25
+  inside=253 logmap=yes symmetry=none periodicity=10
+  colors=000Oet<54>OetOAZ<8>O1HO0FO0EO0D<4>O08O07O07O07<5>J0\
+  7I0WH0eG0oFPzEUz0zz0zzKzzSzzXzzZzz<3>ozzzzzzzzOet<153>Oet
+  }
+
+frm:multi1-5-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^1.5+c,
+|z| <= 36  
+}

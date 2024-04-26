@@ -1,0 +1,19 @@
+etheric            { ; Fractal of the day, 06-12-97
+                     ; 17 min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=ParabolicMiN passes=1
+  center-mag=3.19312/1.4893/0.1677373/7.352/-96.68/-18.157
+  params=0.5/0/1.1/0 float=y maxiter=1200 bailout=25
+  inside=bof60 symmetry=none periodicity=10
+  colors=000H9OKAVKCWKFa<15>UBw<14>d_peaofaodama`k__j<6>EMV<15\
+  >QvLQxLRyN<22>bzpxAUxEQ<5>pZ2<2>_KiaHwaccazK<3>`Hj<7>TJFTJCR\
+  PA<4>Io3Gt1Fy1<17>fWG<16>LQT<15>u64w52x41<10>7pQ<19>7za<16>7\
+  Md<10>Vw1Xz1<3>Wv1Wu1Vt2Vt3<8>Tl8xh1GQPHLT
+  }
+
+frm:ParabolicMiN {; Jim Muth
+z=imag(pixel)+flip(real(p1)),
+c=real(pixel)+flip(imag(p1)):
+z=(-z)^p2+c,
+|z| <= 16
+}

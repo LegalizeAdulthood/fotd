@@ -1,0 +1,17 @@
+pagoda             { ; Fractal of the day, 27-09-97
+                     ; 6 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=TowerMinExp03 passes=1
+  center-mag=-4.89913/0/0.1386667/1/90 params=-15/0/0.5/0/0/0 float=y
+  maxiter=500 bailout=100 inside=253 logmap=yes symmetry=xaxis
+  periodicity=10
+  colors=000OAEeAF<14>uANvANwCM<11>xYKxZKx`LxbMxdNxeNxgMxiOxkSxlSzmVnnF<3>\
+  WqA`jAdcA<5>x_8<25>`J3<19>NucNvdOtb<27>SH3SG2RH5<18>LHjLHlNIl<14>o`dqadq\
+  af<21>xnEF_b<3>1ie<2>tRtj8Q<4>7mdEV`KDY<17>jNR<6>eU_KjV<17>`aoaSbaIQO9D
+  }
+
+frm:TowerMinExp03 {; Jim Muth
+z=pixel, c=p2+(p3*pixel):
+z=z^(-z^(z^(-z+p1)))+c,
+|z| <= 100
+}

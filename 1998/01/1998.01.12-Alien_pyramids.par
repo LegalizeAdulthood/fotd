@@ -1,0 +1,26 @@
+Alien_pyramids     { ; Fractal of the day, 12-01-98
+                     ;parameter file--12-1/2 min on a 486-100
+  reset=1960 type=formula 
+  formulaname=N-XY-YZrotation passes=1
+  center-mag=-0.68610036069401660/+0.00011971694385697/288.7\
+  877/2.9925/-49.146/-40.726 params=90/1.5/0/0/-0.1947/0
+  float=y maxiter=1200 bailout=25 inside=253 logmap=yes
+  symmetry=none periodicity=10
+  colors=000F8I<17>EWHEXHFUL<7>N8nNBu<2>QEvRGt<3>VKsWLsXMtYN\
+  tZOt<5>dQudQuePv<2>gOxhNyiPyjPzjQz<3>aPr_UpYZnWPlUOjSOeQOb\
+  OO`<2>IMXG4W<5>H4QH4QH4RH4SH4TH4UH5V<5>HG`HIaHKaHMaHOa<7>H\
+  XcHelIii<4>IihRck_cdccYYcSbbTZ`T<3>aUT<2>ccTcbTQeTZcT_bUZb\
+  U_aVZaVUaWV`WWaX`bXabYacYYdYZdZAeZBe_Bf_Cg`<27>SYl<17>6jR5\
+  kQ5kP5lO5mN5mM5lN5kOZ`PWdQ5hR<22>5Mm5Mm5Ln5Lo5Lp<10>5Ly5Kz\
+  5Kz6Kz<10>BKzF4JF4JF4JF4JF6JF7I
+  }
+
+frm:N-XY-YZrotation {; Jim Muth, thanks to Benno
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*real(pixel)+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=z^b+c,
+|z| <= 16
+}

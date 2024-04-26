@@ -1,0 +1,20 @@
+necklace           { ; Fractal of the day, 09-12-97
+                     ; 50 secs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix passes=1
+  center-mag=-1.00008513302034500/+0.00000000000000000/1550.388
+  params=1/75/1/-75/1/0 float=y maxiter=500 bailout=25 inside=253
+  outside=imag logmap=yes symmetry=xaxis periodicity=10
+  colors=00000CC8cA8f88hOQk<5>RIm00C0GmpFCp0mkDmUhoWLzYczsar`esb\
+  _t<3>imx<9>`_IeX`jVs<14>HIP<4>fle0gW<7>ZFW<10>skzunzvqzqlx<6>J\
+  LI<13>J3yJ2zJ1z<5>USzWXyX`yZex`iwbnvcrvdjy<3>gHzeKzcMv<8>RfCcK\
+  zo`H<3>4KZ<9>qDw<7>Iwm<8>m6K<3>dOtbSz`WzX_zUby<6>6xH<14>XG`YDa\
+  `I_<7>wuQ<14>mZCmYCk`F<12>Qzq<9>amp<4>JhMdfJyeGzz0K8XH8Z
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

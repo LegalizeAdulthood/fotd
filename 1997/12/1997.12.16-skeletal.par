@@ -1,0 +1,23 @@
+skeletal           { ; Fractal of the day, 16-12-97
+                     ; 15 min, 640x480, 486-100mhz
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix passes=1
+  center-mag=-1.54260072884308200/-0.20357784848492260/20195.1\
+  5/1/180 params=2.4/-2/-1/-3/0.625/0 float=y maxiter=2400
+  bailout=25 inside=253 logmap=yes symmetry=xaxis periodicity=10
+  colors=000qFM<8>T`Z<5>zJHNCEhMFRFGjLHpQHfGIesJayJ<2>JecD_e7UkF\
+  PazrDVFXXGWYGV<3>UIRTIQUJPQJOMKN7PM7PL7TM7SM7RNbVSaUT`TT_RUYRU\
+  XVVWZVVYWUYWT`XS`XPcVNaTLaRJ`PH_NFaLFaJE`H<3>Be9Bf7Ae59d39d2Cd\
+  3Ee4Hf5<4>Td9WdAYeB`fCbfD<2>jkGllGmkJ<4>nhV<5>wwPLvY<21>wyPsu6\
+  ty9<5>wrLxvNqrj<6>cv_<5>uyQpkzimximydnvdnsVnp<4>rnbws_zsYzvXzt\
+  WzwVzuVywU<2>yqSxsRwsQxqRxtQxwPepPzrPNuv<14>tyTvyRzbh<2>zeezfd\
+  xgcuhcribsjapk`rl_<3>fpX<8>wyP7n6Dj8IkAOpCTqEYvGccIhiKnnMstOzn\
+  _zrZzqYzuXztWyxV<4>xrQxvPNeJ<10>eoMzqG0cmwrJttL
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

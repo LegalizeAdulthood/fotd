@@ -1,0 +1,17 @@
+ultralow           { ; Fractal of the day, 25-10-97
+                     ; 8 minutes at 100mhz, 640x480
+  reset=1960 type=formula formulaname=MytestAB
+  passes=1 center-mag=1.84667/-2.66454e-015/0.2495944/1.3376
+  params=1.0000009/0/1.0000009/0/495000/495000 float=y maxiter=1200
+  bailout=100 inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000SNkHEq75v<5>x70<7>KEs<4>B`P<6>8hF<2>GrN<18>1GF1EF2LB<2>3c0<23>\
+  zUn<29>7zJ<22>RfXSeYSeYSeY<30>RYRRSLRYR<26>RSLvqZ<33>`_PDRU<2>5Vo<4>kBDP\
+  6V32l<6>6Zp6bp9Zl<3>IM_
+  }
+
+frm:MytestAB {; Jim Muth
+z=c=pixel,
+a=real(p3), b=imag(p3):
+z=(a*(z^p1))+(b*((-z)^p2))+c,
+|z|<=100
+}

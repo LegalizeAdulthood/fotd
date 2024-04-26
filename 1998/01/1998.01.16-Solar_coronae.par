@@ -1,0 +1,22 @@
+Solar_coronae      { ; Fractal of the day, 16-01-98
+                     ; par file, runs in 12 min at 100mhz
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix passes=1
+  center-mag=0.0705921/0.0079142/11.22046/1/-25
+  params=0.7/1.1/-0.1/-4/-0.85474326/0 float=y maxiter=255
+  bailout=25 inside=bof60 logmap=yes symmetry=none
+  periodicity=10 colors=00017F<2>17FBBNKGSOLXTObYShPXnObtNgw\
+  MmzLsz<2>Itz<2>MozNmzPlxQvzRuzSqz<2>WgmVciW`eWZbWY`<4>aQPb\
+  PNaNM_KLXIKTHKREJ<2>G7HD7GF7FD7FH9G<5>btH<22>RffRfgPge<12>\
+  CkI<7>gjrkjwojzsjzujzudzu_z<4>s9gs7cq7bo7a<21>HbM<21>1Ud<4\
+  >1hL1kH1mF<15>KWS<2>IHuIDzKHz<7>WkeXncWjd<11>RBlOHp<2>GZzD\
+  dzBjzGkzLkx<6>snQunMsjR<6>NLxJIz<2>9Hzl7LhGXdShacs<3>eXveW\
+  vgdlilcktV<3>qRbpVl
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

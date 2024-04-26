@@ -1,0 +1,19 @@
+yzmidget           { ; Fractal of the day, 22-06-97
+                     ; 25 seconds at 100mhz, 640x480
+  reset=1960 type=formula formulaname=Man2-YZ
+  passes=1 center-mag=-1.80411e-016/1.19002e-015/38.39138/0.1482
+  params=0/-1.75 float=y maxiter=1200 bailout=100 inside=0 logmap=yes
+  symmetry=xyaxis periodicity=10
+  colors=000cob<3>nhydkqVniNQXG1KF8MEELCGO<5>1Sw<4>_mwZnrYnmYnh<7>eDTaRaZd\
+  jWqr<6>JfO<3>jaz<5>GDg<3>ajQfrMjlI<3>xP5<6>Ut4<2>1tpPWok8oWIaGSO<6>067<5\
+  >LbPOgRQdQ<5>ZOO<3>MJgJIlHQg<3>CqS<7>49fFVjQon<3>Qfr<7>KWQxJF<5>3VF<7>12\
+  80QH<5>z8C<6>TfF<3>Wuu4N1<3>0lnOWejFY<7>9EA<9>NqMOtNRkP<4>d4U<7>21x<13>u\
+  jT<4>ojVnjVkkW<11>CndMDJNITONbPSl<3>_6l<9>b6g
+  }
+
+frm:Man2-YZ {; Jim Muth
+z=real(pixel)+flip(real(p1)),
+c=flip(imag(pixel))+imag(p1):
+z=sqr(z)+c,
+|z| <= 36
+}

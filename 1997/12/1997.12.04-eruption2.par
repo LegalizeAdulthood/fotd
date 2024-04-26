@@ -1,0 +1,21 @@
+eruption2          { ; Fractal of the day, 04-12-97
+                     ; 45 seconds on a 486-DX4, 640x480
+  reset=1960 type=formula 
+  formulaname=contest4 passes=1
+  center-mag=-1.08023/-8.32667e-016/2.751998/1.1588/-90
+  params=-0.8/0 float=y maxiter=22 bailout=25 inside=bof60
+  outside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000zlNziFzgFzdFv_FtTFsMF<2>o6Fn1Fn1F<4>d05b06DXa<6>8H\
+  b<12>ZfH<12>4Iz<5>CLSDLNGKP<9>fH`hPYjXVW08a7FfOM8cASdKdOb<2>\
+  j`VhFC<2>kZP667<2>aXOU0xbFh1KcHR_XYW8RXMWVZ`U_LucSkgZaB00ODA\
+  _RK90Ah8J<4>t5C<5>nFnnGtlEo<4>e5R<14>Q2m<4>iUc<10>Q0f<4>H0g<\
+  5>L0SM1PN3MN5KM0GVeDqRW<3>HBbcEO<5>KBwd9JWRFNgC<4>a3jd0qf0w<\
+  7>B0j<2>V1U<4>zJ2OOi<6>L_RL`PM0hpR1<3>L6FH4GD2H<2>fFgMDV2CJ<\
+  4>4AA4A95BE<2>6BQ6BU5EU<4>3PUtB2mGCfKM`OWSPcJQkXOXiNI
+  }
+
+frm:contest4  {; Kerry Mitchell
+      ; slightly optimized version of Contest formula
+         z=p1, c=pixel:
+         z2=sqr(z), z=z*z2+c*(1+z-z2), |z| <= 4
+         }

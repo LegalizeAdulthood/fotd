@@ -1,0 +1,18 @@
+ogre               { ; Fractal of the day, 18-09-97
+                     ; 11 minutes at 100mhz, 640x480
+  reset=1960 type=formula formulaname=Parabolic
+  passes=t
+  center-mag=-0.75919624222308820/-0.41873127930543160/454.4571/0.07192/96\
+  .296/77.45 params=0/0.07000000000000001 float=y maxiter=5000
+  bailout=100 inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000`Xb<8>t5py1t<19>KB9IC7FB2<19>YDmZDoYBr<21>j`aka`md_<18>OAo<5>s\
+  wf<11>MdrOes<4>6Wn<19>Anm7ro<14>b9V<4>ULdbAB<3>Q6BK45<4>V5Z<9>p_GvdD<11>\
+  BO_7Na1Kd<20>mp2<10>kJnkGrl8y<8>kpZuwVkuXdzU<3>XemV`rVUw<2>TYuZ_`
+  }
+
+frm:Parabolic {; Jim Muth
+z=imag(pixel)+flip(real(p1)),
+c=real(pixel)+flip(imag(p1)):
+z=sqr(z)+c,
+|z| <= 36
+}

@@ -1,0 +1,23 @@
+Flight_of_the_Arc  { ; Fractal of the day, 26-02-98
+                     ; par file, 8min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multi20031a function=flip/ident
+  center-mag=-0.00338665081375334/-0.00003083373398939/97.71\
+  446/1/17.5 params=89/88/0.0002222/0.07461379999999999/-1.7\
+  43315/0.0001 float=y maxiter=1200 inside=253 logmap=yes
+  symmetry=none colors=000lyYlyXkzX<22>ytR<17>UxK<28>CCIBAIC\
+  8G<26>5Bp<6>NitPmtQks<24>hAe<13>TADSABQAA<4>J76<5>gTE<20>5\
+  YB<21>xLH<9>8Wl<9>dwD<4>3_v<14>Idxiwj<4>kxcA0Kky`ly_
+  }
+
+frm:multi20031a {; formula   draws many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+;note: formula appended with "a" to differentiate from 
+;formula of same name previously posted (see above)
+a=((real(p1))+(.000000000000000000001))*.01745329251994,
+b=((imag(p1))+(.000000000000000000001))*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^2.003+c,
+|z| <= 36  }

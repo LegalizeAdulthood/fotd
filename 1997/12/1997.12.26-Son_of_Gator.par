@@ -1,0 +1,23 @@
+Son_of_Gator       { ; Fractal of the day, 26-12-97
+                     ; 5-1/2 min, 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=OblateMix passes=1
+  center-mag=+0.70710701195559120/+0.00000000000000012/4536\
+  94.7/0.006128 params=0.5/-4/-2/-2/0/1.11333687 float=y
+  maxiter=3600 bailout=25 inside=0 logmap=yes symmetry=xaxis
+  periodicity=10
+  colors=000azb<3>TzfRWgSMp<2>JKaGKXEJU<7>6CA<9>YDe<5>Q0FP1HK1\
+  JK2KK2MP3O<2>P4S<5>p2dlQUirKmkJq`JuVJyPJvFOd5Oe7Pf8QgAQ<3>oG\
+  WqHYrJY<2>uN_uO_tNX<8>sJ8<9>30q<11>daT<3>Xcg<15>j0x<13>Nce<1\
+  5>ykeBnlQnndiprir<7>TfW<10>ivW<3>ffXfmXezX<8>`zY<9>Uz7<4>nzc\
+  <3>kzqkztlzr<8>pzeuzf<6>SzU_ztZzrZzpTzp<5>hzmVzOZzIbzC<9>jzZ\
+  <2>cza
+  }
+
+frm:OblateMix {; Jim Muth
+z=real(pixel)+flip(real(p3)),
+c=flip(imag(pixel))+imag(p3),
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

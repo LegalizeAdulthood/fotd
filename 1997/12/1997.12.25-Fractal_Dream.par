@@ -1,0 +1,21 @@
+Fractal_Dream      { ; Fractal of the day, 25-12-97
+                     ; 12 min, 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix passes=t
+  center-mag=1.19424/0.503149/53.14789
+  params=-1/-0.5/1/-5/1.666666666666667/0 float=y bailout=25
+  inside=bof60 logmap=yes symmetry=none periodicity=10
+  colors=000odt<3>wdtydtybn<6>yQErX7lb1<7>zNa<11>wBj<8>MWY<5>C\
+  FO<6>UHT<6>OjFOnDPkH<2>QcSTVcQ`WRY_RVcsYQ<10>TTeC40<8>QRb2vY\
+  LeJOZVy22mBGaKUV5F<5>SN_RQcPwt<6>RWghCx<14>SSg`k4<5>SVadpo<8\
+  >SVfmIT<7>TSeBay<10>QTgExR<4>PYdvkn<6>VVgrfv<8>TUg4Ap<6>PRgg\
+  vG<4>TYbAZN<8>QTdbyZ<5>SXeDccKYe4Cj<10>QSfcbg<2>UVf9XA<2>NUZ\
+  lbujasgdt<2>mdt
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

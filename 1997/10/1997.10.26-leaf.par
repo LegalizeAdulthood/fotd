@@ -1,0 +1,18 @@
+leaf               { ; Fractal of the day, 26-10-97
+                     ; 7 minutes at 100mhz, 640x480
+  reset=1960 type=formula formulaname=MytestAC
+  passes=1 center-mag=0.338294/6.10623e-016/9.556496
+  params=1/1.6/1/1.4/-0.15/0.01 float=y maxiter=1200 bailout=100
+  inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000MSK<5>MN7JL2<6>bZL<5>GTK8SMBRL<15>gfC<13>VbTVbUU`T<5>OSTSXW<3>\
+  CAK24C<13>n8fk6ln7jq8hKbFaOTs9f<7>_qvYvxTbjJBY<2>_YVdeUhmS<16>lgdjeaOzAi\
+  c_pP7<7>pJ8sK0<11>bEfcAj<9>Sme<5>HJMGJM<21>OTDTfK<3>XZNZWOYXN<12>Y`ELd2Y\
+  `EjXQzP`<2>n_`K5l<5>O5lP1m<20>LakKcn<12>MTM
+  }
+
+frm:MytestAC {; Jim Muth
+z=pixel, a=real(p1), b=imag(p1), d=real(p2),
+f=imag(p2), g=real(p3), h=imag(p3), c=g+(h*pixel):
+z=(a*(z^b))+(d*((-z)^f))+c,
+|z|<=2500
+}

@@ -1,0 +1,28 @@
+spiked             { ; Fractal of the day, 09-10-97
+                     ; 4-1/2 minutes at 100mhz, 640x480
+                     ; formulaname appended to "a"
+  reset=1960 type=formula 
+  formulaname=4drot-xz-xwa
+  center-mag=-1.78587167449139400/+0.00273165714210511/140.066/7.8058
+  params=2/45/1.333333333333333/0/0/0 float=y maxiter=6000 bailout=100
+  inside=0 logmap=yes symmetry=none periodicity=10
+  colors=000ZcH<6>rPK<11>MY1<13>Zyq<14>8Jj<15>zgL<4>lwM<13>HQt<10>KAu<4>rU\
+  O<7>8PZ<7>LQ6<3>vcv<11>nuBnv7lr9<10>WJM<15>qnJceLQYNzPeeSSE6qneX__OyOXFv\
+  YIlRKcLT8SQGNOOJbWr<2>QVPjGdaLWUQN4rTAjOGbJhi7<2>RYD1D3uKUiOPYSKHR`pWO<2\
+  >TVH_vU<2>PaIvWUiVPYVK2nI9gHG`GGNvJR`3wBDhDhFh`LZTQPnSxdThVUUspR<2>U_IU0\
+  gRBYOLO`niTdU4XyAWiGVUvWUcVMpls`cZ7fPF`KLGT<2>MSImOS<2>TUI59t<2>IQP1xmCi\
+  WwMHdRGxEMdNIxf0
+  }
+
+frm:4drot-xz-xwa {; Benno Schmid & Jim Muth
+; formulaname appended to "a" to differentiate from
+; previously posted 4drot-xz-xw formula
+; real(p1)=exponent of Z
+; imag(p1)=rotation angle in degrees
+; p2 and p3=parallel planes
+e=exp(flip(imag(p1)*.01745329251994)),
+z=e*imag(pixel)+p2,
+c=real(pixel)+p3:
+z=z^real(p1)+c,
+|z| <= 36
+}

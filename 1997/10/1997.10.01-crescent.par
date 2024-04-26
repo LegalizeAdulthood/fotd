@@ -1,0 +1,20 @@
+crescent           { ; Fractal of the day, 01-10-97
+                     ; 2 minutes, 486-DX4, 640x480
+  reset=1960 type=formula formulaname=Mytest07
+  passes=1 center-mag=-0.481828/0/0.7752948 params=1/0/1/1/0/-2
+  float=y maxiter=500 bailout=100 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=10 ranges=0/-9/25/-10/75/-20/500
+  colors=000D0DuSGpfIN_FISdWcg_eH<3>omJOlqOK3<5>okHjlt<3>roQUN9faEvy2<3>sq\
+  GuX2<4>slHz85<5>tiH6vM<2>gpJMet<3>mmQ6IB<5>lkI7S4O_9cgEuD0<6>skHAlBdaP<3\
+  >dMKo_Czm5<4>7LY<2>IMcLMeQKa<2>cFSxetWmZ3tDHrFUqGslHfpIZO`<5>pkLagXjkQkv\
+  K<3>rpJE_XM4pYKdh_UU5a<4>lbOpiLuZ3<4>smHCed<5>mnMOsc<4>noMfz0<3>qqGxKI<6\
+  >skJYP1<6>qlHpnbroT9aF<6>nnJPFa<3>mhMkJC<4>rjIEhk<6>noM97q<2>hdRXuq<5>po\
+  O5Ye<6>mmLKiGalI94H<4>lgJIr0SOn<6>plN2dM<6>mnJikl<3>qoPGx3<6>npHHVg<3>lk\
+  O
+  }
+
+frm:Mytest07  {; Jim Muth
+z=pixel, a=real(p2), b=imag(p2), c=b*(pixel):
+z=(((z^p1)*(z+a))^p3)^(-p3)+c,
+|z|<=100
+}

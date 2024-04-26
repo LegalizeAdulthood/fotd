@@ -1,0 +1,18 @@
+askew              { ; Fractal of the day, 28-11-97
+                     ; 28 minutes on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=flip/ident/ident/flip
+  passes=t
+  center-mag=-0.79286636219486690/+0.67782665591913170/372.6893
+  params=45/45/-0.5/0/0/0 float=y maxiter=32767 bailout=25
+  inside=253 logmap=yes symmetry=none periodicity=10
+  ranges=0/-1/160/200/400/800/1600/3200/6400/12800/32767
+  colors=000R49cRMUUG8`T8gY8lb8qg8vl8yq8yz849<240>849QOk849849
+  }
+
+frm:multirot-XY-ZW {; Jim Muth, best=ifif, fiif
+ a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+ z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+ c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
+  z=sqr(z)+c,
+   |z| <= 36  }

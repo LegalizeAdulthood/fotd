@@ -1,0 +1,20 @@
+Moire_Pattern      { ; Fractal of the day, 29-03-98
+                     ; 16min, MUST BE DRAWN AT 640x480x256
+  reset=1960 type=formula 
+  formulaname=RectangularNb passes=1 center-mag=+1.0148612179\
+  9394200/+1.99933374536925100/13.33333/511.68/90
+  params=-1/0/0/0/0/0 float=y maxiter=252 bailout=25
+  inside=253 logmap=yes symmetry=xaxis periodicity=10
+  colors=000V_DV_DV_DU`ITbNScSSdWSf_<14>BZiAYj7Yk<36>jYikYim\
+  XioWi<3>xTj<4>nXglYglYf<34>JVQIVPJWQ<35>24F24F36G<37>MiYNk\
+  YNnZ<2>Pw_Mzg<3>QnXRjUSiS<5>XZCYX9XYA<42>WZDWUDWZDV_D
+  }
+
+frm:RectangularNb {; formula, Jim Muth
+; formulaname appended to "b" to differentiate from
+; previously posted RectangularN formulas
+z=flip(real(pixel))+p2,
+c=flip(imag(pixel))+p3:
+z=z^p1+c,
+|z| <= 16
+}

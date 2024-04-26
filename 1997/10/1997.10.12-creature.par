@@ -1,0 +1,21 @@
+creature           { ; Fractal of the day, 12-10-97
+                     ; 28 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=EllipticVB passes=1
+  center-mag=-1.48314204529274600/+0.00000000000000000/7.28448e+007/2.3492\
+  /-90 params=0.75/0/4/0 float=y maxiter=6000 bailout=100 inside=0
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000VUX<4>UKkLg6<3>Ib4<7>Cu6<3>A7pMhV<2>LBZ<7>r7F<6>ixH<7>uvk<12>a\
+  `cvVK<2>XU1<13>Ol`Qtd<4>KQW<11>6jcBqRFxE<4>BfjAbq9Xz<7>DncDpaFo_<10>QdKN\
+  cWLcfEfw<10>wA4<5>oXoqXx<8>Zuj<5>srY<13>5SbW_82Rb7ZSBeI<3>CWcCTiBMr<2>E_\
+  hP7dT9dWCaZEYcGU<5>yU4<5>ggcmke<2>Sem9kw<2>hP_wHS<9>PMa00000000059a<2>Np\
+  l<10>Ym8Ym5Xj9<6>VWU
+  }
+
+frm:EllipticVB {; Jim Muth
+z=flip(imag(pixel))+real(p1),
+c=real(pixel)+flip(imag(p1)),
+a=sqr(p2):
+z=sqr(z)+c,
+|z| <= a
+}

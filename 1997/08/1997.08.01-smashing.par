@@ -1,0 +1,17 @@
+smashing           { ; Fractal of the day, 01-08-97
+                     ; 1-1/2 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=TowerMinExp04a function=floor/round/ceil/trunc passes=1
+  center-mag=20.7126/2.13163e-014/0.01676075 params=2/0/-2/0/0.1/0
+  float=y maxiter=400 bailout=100 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=10
+  colors=000hCInGVtKg<2>_bhKRp<4>A`S5ZK<4>ChR<4>MgJNgINgH<42>JgBJgBKhD<19>\
+  Oi_Ac2<6>Q61g8Qx9n<11>PdbNfbMec<14>Mbh<4>u35<3>2Sk<9>qWk<15>YpMvYo<2>16y\
+  <3>FYEId3NgF<3>crw<18>ftwftwesv<39>YohTGI<3>`8cO3yb6hw9`<7>b85
+  }
+
+frm:TowerMinExp04a {; Jim Muth
+z=pixel, c=p2+(p3*pixel):
+z=z^fn1(z^fn2(-z^fn3(z^fn4(-z+p1))))+c,
+|z| <= 100
+}

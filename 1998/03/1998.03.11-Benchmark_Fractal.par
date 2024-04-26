@@ -1,0 +1,20 @@
+Benchmark_Fractal  { ; Fractal of the day, 11-03-98
+                     ; 1-hr. exactly, 640x480, on a 486-100mhz
+                     ; formulaname appended to "a"
+  reset=1960 type=formula 
+  formulaname=OblateNa passes=1 center-mag=-0.649541609700549\
+  40/+0.14155075086513940/3671.16/0.2739/0/-74.682
+  params=1.09/0/0/0/0/0 float=y maxiter=3600 bailout=25
+  inside=253 logmap=147 symmetry=none periodicity=10
+  colors=000Ugg<4>Tgm_KE<17>DHWBGXCIY<20>ixsesp<47>xHjyGiwIj\
+  <45>ERnIQm<74>E9dD8cFBc<11>VdPXgNXgO<17>Ugf
+  }
+
+frm:OblateNa {; Jim Muth
+; formulaname appended to "a" to differentiate from
+; previously posted OblateN formula
+b=p1, z=real(pixel)+p2,
+c=flip(imag(pixel))+p3:
+z=z^b+c,
+|z| <= 16
+}

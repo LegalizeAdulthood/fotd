@@ -1,0 +1,18 @@
+abyss              { ; Fractal of the day, 25-09-97
+                     ; 32 min on 486-100mhz, 640x480
+  reset=1960 type=formula formulaname=JulibrotInvZ
+  passes=t
+  center-mag=-0.72336371421405670/+0.18592133824523710/720.8766
+  params=1.41421356238/0/0/0/1/0 float=y maxiter=25000 bailout=100
+  inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000Z3g<20>h9ni9nk7p<24>2jN<21>pO`0Na2Ma1Lb<2>0Lb4Lc0Lc<3>0Ld1Kd0K\
+  d<9>0JfhJg<6>dJhgKjdJhbJf0Id<13>0CF0BD2BB00A00A12B22B22C30C30D42D33E58Ez\
+  0E68F68F7AG<3>9CIgQI8EIBFJ<15>JHQJHQKIRKJS<24>XXdXXdWYe<19>7ir6ir7gq<16>\
+  LAeI9c<9>c2ne1of0r<8>h2dX2f<2>Y3g
+  }
+
+frm:JulibrotInvZ {; Jim Muth
+z=pixel, c=p2+(pixel*p3):
+z=(-z)^p1+c,
+|z| <= 100
+}

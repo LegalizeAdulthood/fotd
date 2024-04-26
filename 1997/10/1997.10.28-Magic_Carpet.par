@@ -1,0 +1,17 @@
+Magic_Carpet           { ; Fractal of the day, 28-10-97
+                         ; 4-1/2 minutes at 100mhz, 640x480
+  reset=1960 type=formula formulaname=MytestAC
+  passes=1 center-mag=-1.53562/5.68434e-014/0.02107858/1.2065/-90
+  params=4.5/0.75/4.5/0.75/-19.5/0.02 float=y maxiter=1500 bailout=100
+  inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=00028L28L<27>`7qb2p<6>ZVx<30>NobNobLqX<4>Cw7<15>T86<14>dWTdXUcWR<\
+  6>`RCXG6`RAc`EfkIhvJ<11>jtfjthkrg<21>lWdlVdkVe<8>nSb<24>Afj8gj4fl<16>roV\
+  <3>aLS<13>p0T<11>i7ZCFG<11>39L
+  }
+
+frm:MytestAC {; Jim Muth
+z=pixel, a=real(p1), b=imag(p1), d=real(p2),
+f=imag(p2), g=real(p3), h=imag(p3), c=g+(h*pixel):
+z=(a*(z^b))+(d*((-z)^f))+c,
+|z|<=2500
+}

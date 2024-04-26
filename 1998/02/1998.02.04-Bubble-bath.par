@@ -1,0 +1,22 @@
+Bubble-bath        { ; Fractal of the day, 04-02-98
+                     ; par file, 10min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyMidgets passes=t center-mag=-0.5525280270\
+  2898910/+0.00000000000000000/98.03922 params=0.3/-1.3/0.5/\
+  1.5 float=y maxiter=300 bailout=25 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=10 colors=000XT9KKFLGD<3>MCHZUZ\
+  <3>FAF000<2>000za9XkMQtbKSsRakYYcdSWkzOrzGyR9qzGiuMazSUvYM\
+  zczhi<6>zXAzW5zTE<3>zLjzKear`zKW<3>zKE<5>z5VYfYWn_Xj`Xe`Xo\
+  aXzaLzuMttOvtPxtTroWlkZzg<4>mzOqzRuzU0z0uzU5zw2z`0zE<11>Mz\
+  XO4zP4z<14>MXzMYzK_z<10>9uz8wb7ybs9S<4>poB<3>pES<5>9olCkkE\
+  gkndkz`k<7>z9k<2>zKX`NT<2>iUP<6>YPN<6>xFF<3>k4GWTl<12>YXbU\
+  UZKROQRVMYRIdNEzJJz4<3>CzDPhqLdgIiYEiO8eHAeMBkQCpUDlYFlbGh\
+  fHhjIinHcjGbfGfbF`ZEQV<6>Ap3<9>osy<8>dn3<5>YW8
+  }
+
+frm:CrazyMidgets   {; JM, draws very distorted midgets
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

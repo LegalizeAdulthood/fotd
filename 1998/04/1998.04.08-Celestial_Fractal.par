@@ -1,0 +1,19 @@
+Celestial_Fractal  { ; Fractal of the day, 08-04-98
+                     ; 1hr on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=t
+  center-mag=-0.00007659279463562/-0.00004910229645094/416\
+  6.667/1.4793/0/-36.692 params=45/90/0.765/-0.567/0.30025\
+  /-0.02526 float=y maxiter=18000 bailout=25 inside=12
+  logmap=32 symmetry=none periodicity=10
+  ranges=0/-1/425/500/600/800/1100/1500/2200/3300/6000/18000
+  colors=00000KPKUKHwKKxKNtKQuUTscWtmZrraumsz0Uu000<241>000
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

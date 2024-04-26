@@ -1,0 +1,21 @@
+volcagel           { ; Fractal of the day, 22-08-97
+                     ; 7 min on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=XY-XWrot-N passes=1
+  center-mag=0.779661/-3.9968e-015/0.3969568/1/-90
+  params=33/1.1/0/0/0/0 float=y maxiter=128 bailout=100 inside=bof60
+  logmap=yes symmetry=none periodicity=10
+  colors=000mtl<7>OalL_lK_m<22>4Ej3Dj1Ck<23>TFfUFfVGg<25>_Yv_Zw`Yz<17>QiIP\
+  jGNiF<22>hj3qu0<7>KFC<29>Wh_b_m<4>NxG<23>sLVtJWvJV<26>ZGgZGg_Hg<10>gPfhQ\
+  fiPg<8>gS_
+  }
+
+frm:XY-XWrot-N {; Jim Muth, thanks to Benno Schmid
+; real(p1) = rotation angle in degrees, imag(p1 = exponent of Z,
+; p2 = parallel planes,
+; p3 = point of rotation and parallel planes,
+z=sin(real(p1)*.01745329251994)*flip(imag(pixel))+p2,
+c=cos(real(p1)*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+z=(-z)^imag(p1)+c
+|z| <= 25
+}

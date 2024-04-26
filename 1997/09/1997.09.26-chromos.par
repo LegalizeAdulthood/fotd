@@ -1,0 +1,23 @@
+chromos            { ; Fractal of the day, 26-09-97
+                     ; 1-1/2 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyNewton
+  center-mag=-0.0378028/3.22e-006/0.6186712/1.1908/-90
+  params=0.57/1.1/1.1/0.07000000000000001/1/0.01 float=y maxiter=250
+  bailout=100 inside=bof60 logmap=yes symmetry=xaxis periodicity=10
+  colors=000izjRzcDvE6xF<5>fHvp9bz1K<10>V42T41S62<6>SI3SJ3UK5<12>iMLoGG<6>\
+  vzR<2>WT8bN3<2>K61HD9FKGEjkAYVEji6khEjhLjgEjfZifeielie<4>ZHr<3>oWkktN<5>\
+  y_f<7>yGk<6>1z1<3>_Ec<3>9aCHKEO2F<4>adU<7>MAE<3>US3<6>8Yz8CZ<6>Kv`<2>BsQ\
+  <5>JOJ<3>BMd<4>gqond`tSM<5>Sw3KaVDHv<6>WhaYk_Zja<5>bhg<4>Mob<6>PqNPqLSjS\
+  VcZXXeLIJ<2>8US<6>lWE<4>yoT<5>nfchng<5>S1Y<2>JxJ<5>5QU5cF5p1KbCZPN<6>h9g
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

@@ -1,0 +1,20 @@
+l_and_r            { ; Fractal of the day, 13-08-97
+                     ; 1-3/4 minutes at 100mhz, 640x480
+  reset=1960 type=formula formulaname=Mytest08
+  function=flip passes=t center-mag=0.100959/2.44249e-015/0.5053182
+  params=1/0/0/-1/-0.5/1 float=y maxiter=1200 bailout=100 inside=253
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000HABEB8GCCLCGMDDRLO<8>VVu<4>lXE<8>`lz<4>lWa<7>HgDDhABi7<2>BcJCa\
+  NC_QDYUDWY<5>GKtHIxHGz<9>QLzXVu<2>puW<15>ZyybsfenO<7>CpJ<9>bxpeysgzwjzzl\
+  zzoyz<3>ztnzskzojzki<6>pMetNgB5jBj5Bjjj55j5jjQ5jjjQQQQQzQzQQzzzQQzQzzzQz\
+  zzNTb<2>rdIzhBmiBZjBKkBBkBFjG<4>ueczeg<6>z6y<3>qqvozv<6>VzQSzMRsR<4>NBj<\
+  2>VutMzlDzd<5>DzyDzz<6>XmMWePWYRWQT<4>QkQ<7>tJ5cMZOOz<4>YCgZAdbEf<3>rRk<\
+  5>NPj<5>kwoozoCbt<5>dMx_Pv
+  }
+
+frm:Mytest08  {; Jim Muth
+z=fn1(pixel), a=real(p3),
+b=imag(p3), c=a+(b*pixel):
+z=(((z^p1)*z)^p2)^(-p2)+c,
+|z|<=100
+}

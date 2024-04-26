@@ -1,0 +1,22 @@
+staccato           { ; Fractal of the day, 27-10-97
+                     ; 1-1/2 hours at 100mhz, 640x480
+  reset=1960 type=formula formulaname=MytestAD
+  function=ident passes=1 center-mag=-27.1713/21.0764/2.936551/1/-75
+  params=4.5/0.652/4.5/0.6820000000000001/0/0 float=y maxiter=12000
+  bailout=100 inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000KOg<4>LQgn0OLQgMQgMRgCCOMRgMRgMSgC8ONSg88OzSgI9ONTg78RnBTPEUYH\
+  WeKXfFRfAOg5Og1OnTVnwPlsRdpScnObmObkOujO`hO`gO<5>k4Ot7Oi9OVBOPEOJBOEIOMN\
+  OTRO`WOg_QncY<6>4lW7gS9bO<2>HOOEAOKOOKSQ<2>Kal8__0YO1_O<4>KdOGYOCRO9LSnE\
+  bgSm3Fj<6>9tXIsRRrO_qOhpOnoOelOVjPKhZ9fhRLVWTU_`T<2>_memFhlFhlFhgFhgFhfQ\
+  rkFhaEh<2>`EhXEhSEhVEhdJwpEhVEhcEhUEhcEhUEhbLhTEhbEhTEhaEhSEhaEhSEh`EhRE\
+  h`Eh`Eh_EhQEh<53>DChCBiDCh<53>KOg
+  }
+
+frm:MytestAD {; Jim Muth
+; fn1=ident=mandelbrot, fn1=zero=julia
+; p3 = C-value of julia
+z=pixel, a=real(p1), b=imag(p1), d=real(p2),
+f=imag(p2), c=p3+fn1(pixel):
+z=(a*(z^b))+(d*((-z)^f))+c,
+|z|<=2500
+}

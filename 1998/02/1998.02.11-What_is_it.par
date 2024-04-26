@@ -1,0 +1,25 @@
+What_is_it         { ; Fractal of the day, 11-02-98
+                     ;parameter file, 1.5min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=N-XY-XWrotation
+  center-mag=-2.00587282987180900/+0.05727810298102198/12365\
+  94/0.1456/-172.872/78.661 params=90/-1000/0.998/0/0.998/0
+  float=y maxiter=256 inside=253 periodicity=0
+  colors=0007Qa<5>135lsWW`LGIA8Wc<5>145YqR<2>8D6kpDOQ6VNZFBH\
+  f1z8YZ<3>167trU<6>763QJS<3>535Vqg<4>597rDIu8Ax42<7>KAANh6<\
+  2>gMlmH_<6>rkw<4>Duo<5>XV3<6>2`K<7>gfoT1vfp`<7>wH9<6>5eg<5\
+  >jqaqsaz_1<7>FH9GC4H70DmZ<4>2858Ro<2>26Dn9E<5>712kNF<3>943\
+  WOk<5>436OSu<6>337VAeK6SA3EBM9<2>2523kSSYj<4>457fCk<3>8296\
+  fC4S82E4wEv<4>A29GyE<5>282ljJWVCGF60tO<4>094ev3<4>790F`eC1\
+  m<3>20Ab1N<5>503Uf_<5>465ga5<6>540swngkcX_UzYKBCA9Ug
+  }
+
+frm:N-XY-XWrotation {; Jim Muth, thanks to Benno Schmid
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*flip(imag(pixel))+p2,
+c=cos(a*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+z=z^b+c,
+|z| <= 16
+}

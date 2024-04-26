@@ -1,0 +1,19 @@
+spidery            { ; Fractal of the day, 06-08-97
+                     ; 2-1/2 MINUTES AT 100MHZ, 1024X768
+  reset=1960 type=formula formulaname=CrazyNewton
+  passes=1 center-mag=0/0/0.6666667 params=5/5/1/2/2.75/2 float=y
+  bailout=100 inside=bof60 logmap=yes symmetry=xyaxis periodicity=10
+  colors=000Vvi<5>avb<6>7gp<11>Z64<3>iLM<20>aWjaWkbVj<19>jBajAaiBb<18>_Jd<\
+  3>giWf3BgSLD3A<17>gmTHL2<10>biOTZr<8>B6PQNTccXtMF<5>wi7wm6vn9<17>kwl<21>\
+  ULf<4>djT<6>d33<19>uFD<8>ZlM<4>Me2<4>C65<11>gnD
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

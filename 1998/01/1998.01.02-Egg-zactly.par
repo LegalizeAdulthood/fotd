@@ -1,0 +1,18 @@
+Egg-zactly         { ; Fractal of the day, 02-01-98
+                     ; 7 min, on 486-100mhz, at 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=flip/ident/ident/flip
+  passes=1 center-mag=0.0344807/0.0152368/5.179092/1/-35
+  params=90/25/-0.2683/0.4287/-0.1565/0.6588000000000001 float=y
+  maxiter=1800 bailout=25 inside=253 logmap=yes symmetry=none
+  periodicity=10
+  colors=000CGo<19>a_cekA<38>EB4DA4C95<41>XN1XN1YM0<43>On`On`P\
+  m_<17>PbQPbQQaPRaP<32>wa8xa8y_7<11>toEtpErnG<29>EImDHnAFp
+  }
+
+frm:multirot-XY-ZW {; Jim Muth, best=ifif, fiif
+ a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+ z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+ c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
+  z=sqr(z)+c,
+   |z| <= 36  }

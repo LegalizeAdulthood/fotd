@@ -1,0 +1,20 @@
+Semaj_Trebla       { ; Fractal of the day, 04-04-98
+                     ; 30min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 passes=t
+  center-mag=-1.00137610849061500/+0.00000078739653370/1.9\
+  74217e+010 params=1/1000/-1/999.9993 float=y maxiter=6000
+  bailout=25 inside=0 logmap=yes symmetry=xaxis
+  periodicity=10 colors=0006YW<9>4XXnXRmYUmZXhJFVMTHOe<7>f\
+  f0<7>EWJxV4<4>qinplwmkp<6>_i4<2>LcKGbPDXXBSd9Nk<5>g5g<2>\
+  8Ov<3>u0j<7>n3i<3>aDV<2>lDf<3>9yn9pa9hPBb_CXjDRt<5>P3nR0\
+  nV4j<3>iIVlLSnSN<3>sq3wiJ<7>`76<7>Iqo<4>Ajj<2>pAo<2>3oYP\
+  eNjWD<4>OjC<5>NiD0UaNiD<93>7ZUP5LT5PX5S<4>AUW
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

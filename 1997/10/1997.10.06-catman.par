@@ -1,0 +1,22 @@
+catman             { ; Fractal of the day, 06-10-97
+                     ; a super quickie (7 seconds)
+  reset=1960 type=formula formulaname=Liar4
+  center-mag=0.707355/0.206681/1.985558/0.6311 params=2/1.5 float=y
+  maxiter=500 bailout=100 inside=0 logmap=yes symmetry=none
+  periodicity=10
+  colors=00000F85H77KD9NIBPPDSSFWVH`YJf<4>mTn<9>rr6rt2qbMpMd<6>cpDbt9_rD<8\
+  >Ifc<9>RaBRa9TZA<10>l9L<12>8k0<8>tyj<9>DpX<15>OeHHjIBoI<2>scbgtC<3>ICw<5\
+  >CYX<5>iYx<3>DVpCecCoS<3>NzJ<11>qXY<14>p9i<8>nhUnkTkeQ<4>aHFcn6<8>D`Y<9>\
+  Zl1<10>Inn<7>8KE<9>W5GeYTUgLJpE<3>73DDs3<6>m7G
+  }
+
+frm:Liar4 { ; by Chuck Ebbert.
+  ; X: X is as true as (p1+1) times Y
+  ; Y: Y is as true as X is false
+  ; Calculate new x and y values simultaneously.
+  ; Real part of p1 changes probability.  Use floating point.
+  ; y(n+1)=abs((1-x(n) )-y(n) ), x(n+1)=1-abs(y(n)-x(n) )
+  z = pixel, p = p1 + 1:
+   z = 1-abs(imag(z)*p-real(z))+flip(1-abs(1-real(z)-imag(z)))
+    |z| <= 1
+  }

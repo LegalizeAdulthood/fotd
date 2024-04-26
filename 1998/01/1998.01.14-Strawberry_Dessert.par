@@ -1,0 +1,19 @@
+Strawberry_Dessert { ; Fractal of the day, 14-01-98
+                     ; par file, 35min on 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix passes=t
+  center-mag=-1.97483018031073300/+0.00078711064279486/764592
+  params=1/0.4/1/-0.4/1/0 float=y maxiter=255 bailout=25
+  inside=bof61 logmap=yes symmetry=xaxis periodicity=0
+  colors=000DLJ<8>3LT5NU7OUfuG<4>jw9kx8my5<18>Eff8gf<7>gStlQ\
+  vrRy<16>O7TU6RL5P<3>E1I<5>T2La2MY2M<9>u3Q<25>0Q`<5>BidDzeE\
+  oeGrfHuf<17>LvIzvGLvF<5>Mv7<9>4w5<11>LAa<11>_pQrrF<2>3sj<1\
+  1>XfY<24>RRIRRIPTF<4>G`56nbFa3<5>geB<6>NNDKLDILF<2>FLI
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

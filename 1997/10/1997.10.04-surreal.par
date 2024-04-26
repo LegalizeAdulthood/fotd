@@ -1,0 +1,20 @@
+surreal            { ; Fractal of the day, 04-10-97
+                     ; 27 min at 100mhz, 640x480
+  reset=1960 type=formula formulaname=EllipticVB
+  passes=1
+  center-mag=-0.18267984648134070/+0.62298007824693890/64.0711/13.109
+  params=0/0.667/1/0 float=y maxiter=5000 bailout=100 inside=253
+  symmetry=xaxis periodicity=10
+  ranges=0/-1/250/-1/550/600/800/1100/1500/2000/2600/3500/5000
+  colors=000_FHF90MJNccK0`z0az<3>0kz0nz0rz_fm<13>Byv<7>79D<15>uoB<21>3IU<3\
+  1>jlJ<15>kKc<8>JmHCiB6f6<25>XDX<6>iMJRcq<7>hOMsTL<17>mPJUM2<6>Ee1<8>KxlK\
+  zqMxr<12>cZxdYxfUu<4>kBf<14>kk7km5ie8<2>dLFrzzQZWIed
+  }
+
+frm:EllipticVB {; Jim Muth
+z=flip(imag(pixel))+real(p1),
+c=real(pixel)+flip(imag(p1)),
+a=sqr(p2):
+z=sqr(z)+c,
+|z| <= a
+}

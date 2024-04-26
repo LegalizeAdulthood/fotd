@@ -1,0 +1,25 @@
+The_Yellow_Mask    { ; Fractal of the day, 19-02-98
+                     ; par file, 40min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=HyperBrot passes=t center-mag=-1.0733052683838\
+  3400/-0.00865318889748894/127690.4/1/-42.5 params=0/0/2/-0\
+  .84/0.01/1e-005 float=y maxiter=1500 bailout=25 inside=255
+  logmap=-136 symmetry=xaxis periodicity=0
+  colors=000PQC<7>VECWCCXCC<2>ZCCZCCZCCZCCZCE<18>bDdbDecCh<1\
+  7>aUDaVCbSCaUCaVC`WD`YF_ZI__KaaNdbPicSneUrfXuhZtjaojcikfik\
+  gijhjaqsQx<7>uGfuFduFbuD_<5>vUNvWLvWJxWDwWFvRHvRJ<2>tCPsCR\
+  rCT<7>mNgmOhlQg<22>joXjpXjpXjqXfnMdkC<14>DkCCkCCkC<3>CkCCk\
+  CCjCCiC<6>CfCCeCCeDCdE<10>CZQDZRDYTEYUEXVFXWFWXGWYGYZC`ZGd\
+  _FkcHkd<18>jGmlEmoCl<9>`HoZIoZIoYIoQCy<10>XDeYDcYDaZE`ZEZ_\
+  EX`FV`FUE0H
+  }
+
+frm:HyperBrot       {; Jim Muth
+a=real(p1), b=imag(p1),
+d=real(p2), h=imag(p2), f=p3:
+z=z+1,
+g=sqr(a)-sqr(b)+pixel,
+b=d*a*b+f,
+a=h*g,
+|a|+|b| <= 9
+}

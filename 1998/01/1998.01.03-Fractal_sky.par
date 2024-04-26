@@ -1,0 +1,22 @@
+Fractal_sky        { ; Fractal of the day, 03-01-98
+                     ; 25 min, on a 486-100mhz, at 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW
+  function=flip/ident/ident/flip passes=t
+  center-mag=+0.18914346499330510/+0.07854472744497826/220.917\
+  7/1/-145 params=49.5/49.5/-0.2683/0.4287/-0.1565/0.658800000\
+  0000001 float=y maxiter=32767 bailout=25 inside=253
+  logmap=yes symmetry=none periodicity=10
+  ranges=0/-1/100/120/150/225/325/475/675/1000/2000/5000/32767
+  colors=00005A05FM50YA00AUKAZPAcUAhaAmlArpAwzAzVAS<3>bAQdAQdA\
+  R<26>pALpALrAI<29>ZAh`Ah<25>KAhKAhLAi<17>_Av_AvZAt<4>YAmdAv<\
+  13>BAF3AD<27>qAC<23>tAktAlvAn<24>mAkoAxnAsmAomAk<17>uANvALuA\
+  MuAMH7WtAMtAM
+  }
+
+frm:multirot-XY-ZW {; Jim Muth, best=ifif, fiif
+ a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+ z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+ c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
+  z=sqr(z)+c,
+   |z| <= 36  }

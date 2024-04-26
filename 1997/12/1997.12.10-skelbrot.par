@@ -1,0 +1,27 @@
+skelbrot           { ; Fractal of the day, 10-12-97
+                     ; 15 min on 486-DX4, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix passes=1
+  center-mag=-39.8118/-5.13478e-015/35.82078
+  params=20/0.21/20/-0.21/1/0 float=y maxiter=1200 bailout=25
+  inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=I0IffIbVIZJHcNF`HGYCHvXehKT1gj`FtYB`vJlhDX1mh2ZcHLSwR\
+  EiHGBBcM9SkvKuFI`TaYIRsD0kB6c9Csrxk6_ioslu7bF9tyn<2>aKP1pQ<2\
+  >PIJeY6bR9`KCYDFTgGcZg`PZYGQL4tPOxTFbAHW<2>R9KGoCM`ERMGgfDaP\
+  F`AKZ9JX8IVpgW`ZWMQlNN<2>_BI9kNLRKeRPDLCKGEQBGtmHgSHbnH<2>XI\
+  HbvorMlfEXt3pk5dc6TjyjbYWtwY<2>aKLiIRdEN_AKRsjTb`VNRsZG<2>aE\
+  HMieRQTbrO<2>XJIS7IU7HoKueD`1oPHTLoVn48G<2>P7HmrGdVH4UqwYpmP\
+  ddGTT8nFyA<2>SKGc0v_4amrLgbLcSJ_HIm7kh9FD3qefM2cCemMkjH<2>OT\
+  V<3>kfu<2>lTYeRdZPjSOpMKYQFSTBMS5oU6cV7SI5yN6jS7WNy5SYBAVqIN\
+  dPFT1hJCWIMJHDgz_VeYJTkDF<2>_8HaxL<2>XKIKk0N`5QR9THDUwrVeeWO\
+  TBATM8NLa0RM9mUF<2>_CHkVUeNP`FLgAu<2>Z7Rvq0ma6dMC2OxHFbZzJ<2\
+  >WLHmXU<2>_DKOmTQbQSSNUHKYgOXPKJK3OF8SBDxUPiIL3fq<2>PGQnfWdP\
+  OdmBaZDZLFcRA`KDYDFMRr<2>UCQ942JSp2UQ<2>PCJjsJ
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

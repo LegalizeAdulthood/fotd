@@ -1,0 +1,17 @@
+bridge2            { ; Fractal of the day, 20-09-97
+                     ; 6 min. on 486-100mhz, 640x480
+  reset=1960 type=formula formulaname=Elliptic
+  passes=t center-mag=-0.759186/-0.0266642/1.212248/21.836
+  params=0.06/0.12 float=y maxiter=3600 bailout=100 inside=253
+  logmap=yes symmetry=none periodicity=10
+  colors=000WQ5<13>c99c89bA8<19>Ok5Nm5Ko2<12>tfawedzfg<35>_NR_NRZMS<25>IBk\
+  M6h<7>7Qq5Tr1Xt<19>r1g<42>oLooLopJs<23>nXDpUE<2>kb9je7jh3<15>hcKRc2Qc1Pe\
+  0<8>UV3H0LVS4WR4
+  }
+
+frm:Elliptic {; Jim Muth
+z=flip(imag(pixel))+real(p1),
+c=real(pixel)+flip(imag(p1)):
+z=sqr(z)+c,
+|z| <= 36
+}

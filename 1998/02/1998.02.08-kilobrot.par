@@ -1,0 +1,24 @@
+kilobrot           { ; Fractal of the day, 08-02-98
+                     ; par file, 1-1/2min, 100mhz, 640x480
+                     ; formulaname appended to "a"
+  reset=1960 type=formula 
+  formulaname=RectangularNa passes=1
+  center-mag=-5.6205e-016/7.84095e-016/8.202726/1.3928
+  params=0.993/0/0.993/0/1000/0 float=y maxiter=1200
+  bailout=25 inside=253 logmap=yes symmetry=origin
+  periodicity=10 colors=000000000UG5mJ6zX7zi8zz9zfAzpB7cC<3>\
+  8pG<6>nMs<9>UCw<5>Ke_ErW<6>URYR3IUDQWNYYXebdq<10>PeZHbb<10\
+  >poGspExsB<12>faFleC<14>EJR796<2>CIS29L<3>GPbCQnGRjJSfQUh<\
+  7>HSW5YM<2>LP_QMcUKi<8>bJZxT7<3>WGfPDoJBz<13>D8Z84T<10>_Pm\
+  aRoeUzcSpaRglYG<2>VMgVGq<10>8Xm2Wt<11>LgFSdEMgC1b6<3>MmDVm\
+  G<7>FsA8w4<8>oTm<4>TndKtd<9>hl`cOag``ejfjl`0czIyjat_
+  }
+
+frm:RectangularNa {; formula Jim Muth
+; formulaname appended to "a" to differentiate from
+; previously posted RectangularN formula
+z=flip(real(pixel))+p1,
+c=flip(imag(pixel))+p2:
+z=z^p3+c,
+|z| <= 16
+}

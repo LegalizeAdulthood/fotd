@@ -1,0 +1,18 @@
+S-curve            { ; Fractal of the day, 17-03-98
+                     ; 17min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 passes=t
+  center-mag=1.04674/1.27456/13.13577
+  params=0.5/1.4142/-1/-1.5 float=y maxiter=750 bailout=25
+  inside=0 logmap=yes symmetry=none periodicity=10
+  colors=000Afl<9>8eq8eq9mo<18>FCEFACE8EE6FE8GEAH<43>7Bx7By8\
+  Cx<62>daTdaTdaU<10>gcVQVM<2>MYKLYJJ`J<4>DcGCdFBgF<3>5cC7gK\
+  6eQ5bX4jb3ib6ib<24>x9p<43>5lI9jK<2>EgN
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

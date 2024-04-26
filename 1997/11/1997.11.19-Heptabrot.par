@@ -1,0 +1,19 @@
+Heptabrot          { ; Fractal of the day, 19-11-97
+                     ; 2 minutes on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=M-J-rotation passes=1
+  center-mag=-3.10862e-015/-1.33227e-015/0.4065041
+  params=-6/0/0/0/2.75/0 float=y maxiter=300 bailout=100
+  inside=253 logmap=yes symmetry=xaxis periodicity=10
+  colors=000S26<9>kN2mP2mR2mT1mV1lV1pW4jV7<5>aRO_QRZQUYPW<4>SMi\
+  <10>tnz<12>Uyr<3>5sW<11>_8sa5ub7p<9>fP6fQ2fU9<4>fibflhdme<14>\
+  Qn1<2>dPE<2>jdK<2>PKp<9>ON_QN`cJkSMa<6>bJj7QA<52>cJkYNe<14>cJ\
+  kP4g<42>WBieZCUUzaI9_A7
+  }
+
+frm:M-J-rotation {; Jim Muth
+; p1=power of Z,  p2=rotation point,  p3=rotation angle
+z=pixel, c=p2+(p3*pixel):
+z=z^p1-(1.1*z)+c,
+|z| <=25
+}

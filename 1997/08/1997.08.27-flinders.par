@@ -1,0 +1,15 @@
+flinders           { ; Fractal of the day, 27-08-97
+                     ; 6 min at 100mhz, 640x480
+  reset=1960 type=formula formulaname=JulibrotInvZ
+  passes=1 center-mag=1.80866/-1.11022e-016/6.848608/0.7829/90
+  params=1.25/0/3/0/0/0 float=y maxiter=1200 bailout=100 inside=0
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=00045b45cO5iG5uL5oQ5ec5pZ5eU5WW5P<3>L5K35J55I65JD5HI5GQ5F<3>o5B<2\
+  >45o<10>45u45u45u45u45u<46>45u45t45t45s45s<95>458458458458458<61>45b
+  }
+
+frm:JulibrotInvZ {; Jim Muth
+z=pixel, c=p2+(pixel*p3):
+z=(-z)^p1+c,
+|z| <= 100
+}

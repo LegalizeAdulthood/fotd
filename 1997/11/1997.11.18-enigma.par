@@ -1,0 +1,24 @@
+enigma             { ; Fractal of the day, 18-11-97
+                     ; 3-1/2 mins on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=M-O-rotation passes=1
+  center-mag=0.688487/8.60423e-016/23.74797
+  params=24.5/0/0.8764999999999999/0/0/0 float=y maxiter=1800
+  bailout=100 inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=0005w0Gm8F5u<5>D7w`6_x5CsI4<5>Diu<3>OSvgLrzEoxAz<4>_8\
+  B2T4<3>vxE<4>Nee<2>OIS<7>7rXFiQM`J<2>C7G<2>AZfAgoBfk<6>I`N<2\
+  >4qW<3>GdmIaqJZk<5>JNHJLCHKM<2>CKl<2>PrFYlYegp<6>STbQR`MNd<4\
+  >23v`xC<6>nUG<3>jPSjOUiLdhJo<6>B_n9SU7K9<5>UdH<6>MMw<7>Q8W<4\
+  >In1<6>C`YC_aAZZ<5>0ZM<5>_tD<2>ba7<5>FKi<2>6K5<5>Lsc<4>SJr<6\
+  >1gu<4>itYDff<6>UKDTBWT3n<4>4Mo<2>rNp<6>X__<5>naZ<10>8v2
+  }
+
+frm:M-O-rotation {; Jim Muth
+; real(p1)=power of Z,  imag(p1)=angle of rotation
+; p2=parallel planes,  p3=rotation point and parallel planes
+a=real(p1), b=imag(p1)+.0000000000001,
+z=sin(b*.01745329251994)*real(pixel)+p2,
+c=cos(b*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=Z^a-(1.1*z)+c,
+|z| <=25
+}

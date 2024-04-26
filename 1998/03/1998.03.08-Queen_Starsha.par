@@ -1,0 +1,19 @@
+Queen_Starsha      { ; Fractal of the day, 08-03-98
+                     ; par file, 2min, 100mhz, 640x480
+  reset=1960 type=formula formulaname=Ba\
+  ckwardBrot center-mag=-1.79584/-1.77636e-015/0.1900312/1/90
+  params=0.01/0/-4/0/0.5/0 float=y maxiter=1200 bailout=25
+  inside=bof61 logmap=yes symmetry=none periodicity=10
+  colors=000869818F47M7G<5>yOAzVEzZHzbLzeO<3>znaztQzzEzz2st1\
+  jj0af0Yd2Z`4dX6jT7<6>6OP<3>gwEhxEixE<3>hvHbgjhvH<43>bgj8N8\
+  <62>bgjU6c<47>bgjFXk<38>bgjEcn<8>Idm9BL
+  }
+
+frm:MandelbrotVBa {; Jim Muth
+; formulaname appended to "a" to differentiate from
+; previously posted MandelbrotVB formula
+z=p1, c=pixel+p3,
+a=sqr(p2):
+z=sqr(z)+c,
+|z| <= a
+}

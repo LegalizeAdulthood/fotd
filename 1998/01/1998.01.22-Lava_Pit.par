@@ -1,0 +1,19 @@
+Lava_Pit           { ; Fractal of the day, 22-01-98
+                     ;par file, 6min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix passes=1
+  center-mag=-0.35982581479213670/+0.11202686756830290/81.99\
+  643/1/175 params=0.5/-2/0.02/6/0/1.3034739141 float=y
+  maxiter=1200 bailout=25 inside=0 logmap=yes symmetry=xaxis
+  periodicity=10 colors=0006L7<2>6J65y55y55i54f44`43V41O30I3\
+  0F30E3zc4rZ5mQ6iG6dG7<2>UH9QIALIBAIC<50>b_mb_mcZm<13>fPhgA\
+  L<12>J9bKoQ<2>IJ`0Pq<12>HAdSTd<20>I9cn5M<75>I9c3y8<2>4yA4y\
+  B5xB5wC<24>B`P
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

@@ -1,0 +1,18 @@
+dance              { ; Fractal of the day, 02-10-97
+                     ; 20 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotVB passes=t
+  center-mag=-0.01025852895148646/+0.64367849686847740/110.171
+  params=0.63008/-0.163/1.09/0 float=y maxiter=20000 bailout=100
+  inside=253 logmap=yes symmetry=none periodicity=10
+  ranges=0/-1/125/200/300/500/800/1200/1700/2300/4000/20000
+  colors=000M35dFLUXW5ZZAccFhhKmm<3>czzcDc<19>jFnjFnjEm<59>jEWkDVjEW<73>ad\
+  WadWbeX<45>aWTaWTbYU<3>ceUcgUbhV<25>Plo0SwOlpNlq
+  }
+
+frm:MandelbrotVB {; Jim Muth
+z=p1, c=pixel,
+a=sqr(p2):
+z=sqr(z)+c,
+|z| <= a
+}

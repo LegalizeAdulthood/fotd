@@ -1,0 +1,26 @@
+forces             { ; Fractal of the day, 20-11-97
+                     ; 4-1/2 min on a 486-100mhz at 640x480
+  reset=1960 type=formula 
+  formulaname=M-P-rotation passes=t
+  center-mag=0.446472/1.29896/48.94611 params=-2/45/0/0/0/0
+  float=y maxiter=1200 bailout=100 inside=253 logmap=yes
+  symmetry=none periodicity=10
+  colors=000OJC<3>Q78Q47P15Q26L36L36L46J46L56O66N66P76N76P86O9\
+  7Q97PA7RA7QB7RC7RC7TD7SD7TE7SF7<2>UG8UH8UI8UI8UJ8<16>XT9aS8<\
+  10>FXB<2>dcVqc`<21>8t`6u`5v`5w`5w`5pc8ifCbi7ew<3>OP`S_WW`Q_X\
+  KcYFgZ9Hh_k_4jW5je5ij6ik6hk6hu7gl7<2>fl8eh8eh9dz9dd9ciAciAb`\
+  AbeBaoBajB<3>_lDZqDZlDYlEYzEXrEXrFWnFWsFViGVyG<4>SzISuIRqIRv\
+  JQvJRoKQlJQmJQnIQyIQkIQvHQwHQzH<2>QzFQwFQzFQyE<6>QzCQwBQzB<2\
+  >QzALz8<3>dzEorClzEizFizHhzGgxGgiG<27>RgFRgFSgESgESgE<27>NRj\
+  szkOPFOME
+  }
+
+frm:M-P-rotation {; Jim Muth
+; real(p1)=power of Z,  imag(p1)=angle of rotation
+; p2=parallel planes,  p3=rotation point and parallel planes
+a=real(p1), b=imag(p1)+.0000000000001,
+z=sin(b*.01745329251994)*imag(pixel)+p2,
+c=cos(b*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+z=z^a-(1.1*z)+c,
+|z| <=25
+}

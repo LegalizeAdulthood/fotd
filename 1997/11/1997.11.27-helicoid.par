@@ -1,0 +1,26 @@
+helicoid           { ; Fractal of the day, 27-11-97
+                     ; 5 min on a 496-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=XY-YZrotation passes=t
+  center-mag=-0.00000004083985223/-0.00000000610891071/3.64220\
+  5e+007/0.6045/-172.691/64.004
+  params=100/0/0.3847350213107/-0.1092374516426/0.384735021310\
+  7/-0.1092374516426 float=y maxiter=1200 bailout=100 inside=253
+  logmap=yes symmetry=none periodicity=10
+  colors=0009Rl<2>7Rq6Rr5Rs5Rt4Rt3Rt2Rt<13>ELtFLsGKsGKrE_CBeBE_\
+  CGVDIPEJJD<28>USJ0eA0aC1ZE<8>k6R<10>Z8GO9G<4>M9BMAAMA9MA8MA7M\
+  A6L94<30>`Gh`NjYSqUXtNZwO_zOZzPWzPVzQTyQTx<2>RSsSRqSRpTQo<17>\
+  _J_<9>5bc2dc0fc0hd0jd0mc<3>0kg0kh2ji<2>AfkCelFcmHanK_oMXoPVjR\
+  UiUWjWYlVZiZ`nbbrces<2>ektfmthpthttjwtkztkztixtgvsftqdqpbno<2\
+  0>QTNPSMPSL<15>CRghpzBRjARk
+  }
+
+frm:N-XY-YZrotation {; Jim Muth, thanks to Benno
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*real(pixel)+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=z^b+c,
+|z| <= 16
+}

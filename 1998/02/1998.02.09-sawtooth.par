@@ -1,0 +1,20 @@
+sawtooth           { ; Fractal of the day, 09-02-98
+                     ; par file, 10min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=EllipticN passes=1 center-mag=-0.0078075349533\
+  6471/+0.00154606674064699/92.9114/15.23 params=0.993/0/0/0\
+  .993/1000/0 float=y maxiter=255 bailout=25 inside=255
+  logmap=yes symmetry=none periodicity=10
+  colors=000WEOWAQX7SN3KS0RSCRWNgiZZZ_nzpzfipmpqpsm<7>oqK<13\
+  >LvOOzc<5>OzZOwYOwY<2>ogdxjf<9>kLm<12>_tO_vMYtN<13>IZY<9>x\
+  Tu<14>UXw<5>V`qV`qUbo<9>On`tXM<5>r3E<12>CkK<13>6uQ<8>4G_<4\
+  >h`f<4>faMfaIg`H<9>qZFrZFqYG<29>oGPoGPnHP<2>lKPJuOkLP<15>_\
+  `PTWE<2>VLK00M
+  }
+
+frm:EllipticN {; Jim Muth
+z=flip(imag(pixel))+p1,
+c=real(pixel)+p2:
+z=z^p3+c,
+|z| <= 16
+}

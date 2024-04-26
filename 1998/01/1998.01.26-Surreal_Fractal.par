@@ -1,0 +1,20 @@
+Surreal_Fractal    { ; Fractal of the day, 26-01-98
+                     ; par file, 9min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=TowerMinExp05 passes=1
+  center-mag=-4.44089e-016/-0.0250522/0.8130081
+  params=0/0/0/0/0/1 float=y maxiter=90 inside=bof60
+  logmap=yes symmetry=yaxis periodicity=0
+  colors=000REm<9>IFL<3>IGT<5>_HRbHRgHR<3>zHQ<4>eeUcjVaoW_tX\
+  YwXWfWUOVS6U<12>GbSGdSEaP<5>7N7GW5Fc5Ef5De5Dc5<6>8TLASG<2>\
+  GN5<2>LK5<2>HL5GL5EL7<4>8HM7HF6QI5QU<4>9iBAm7Aq5<12>`u5bc5\
+  dM7e4A<4>XR8<2>HSYCSe4Xh0`kCgEPaKaWQ<12>_oo_pqXno<13>4NW<1\
+  0>cER<3>aAMa9LbHJ<3>ekBer9doC<13>SIl<13>ElP<6>1jR0jR0iR<2>\
+  0iR3fQ<3>bXO<8>1rY<12>NVFhei<5>VIo
+  }
+
+frm:TowerMinExp05 {; Jim Muth
+z=pixel, c=p2+(p3*pixel):
+z=z^(-z^(z^(-z^(z^(-z+p1)))))+c,
+|z| <= 100
+}

@@ -1,0 +1,20 @@
+pollock            { ; Fractal of the day, 28-09-97
+                     ; 7 minutes at 100mhz, 1024x768
+  reset=1960 type=formula formulaname=Rectangular
+  passes=1 center-mag=-7.77156e-016/-2.05391e-015/1.369962/0.6701
+  params=0.42/0.33 float=y maxiter=500 bailout=100 inside=epsiloncross
+  logmap=yes symmetry=origin periodicity=10
+  colors=000Wgq00ZTal<4>LN_000HHVGETEBQzsfz0dD8O<6>ObZm``db_Xd_KhZ<6>q`dg9\
+  z<3>rVhu_dve_vjWgEJnRMucPvoSenU3yL<9>gYkHRiOSjYFK<12>BQiGBN<4>9Up8Yv4rN5\
+  l`6fn7`zHdvRhqQ_A`np<5>`hd`gb`fa`e`<12>`ZTUZE<8>mZugrnkhtklzmgznbz<2>rQu\
+  sLsv8y<7>nd_Dyz<9>Spf<9>OfiOeiPbe<2>NgqMhuNmzMkz<5>LaoL`mLZj<5>KPZCQW<10\
+  >XKYTDl<6>aQNcOH<12>Xa`XbaWed<4>UrqBkzFmz<4>Yvraxpgzqfzp<3>bwoavnatn<4>X\
+  olZrm<7>Tbl`pyZmvXjs
+  }
+
+frm:Rectangular {; Jim Muth
+z=flip(real(pixel))+real(p1),
+c=flip(imag(pixel))+imag(p1):
+z=sqr(z)+c,
+|z| <= 36
+}

@@ -1,0 +1,22 @@
+Pink_Midget        { ; Fractal of the day, 09-04-98
+                     ; 40min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 passes=t
+  center-mag=-0.00218445795124279/-0.23466738826017880/1.0\
+  17131e+011 params=4/3/2/1 float=y maxiter=6000 bailout=25
+  inside=0 logmap=123 symmetry=none periodicity=10
+  colors=00016727929A2CB<5>3LI3MJ4NL4OM4PN4QO4SP<4>5TV<4>P\
+  beUehYhl<2>lqupsxstxutyuqvuottlr<3>vgmwflxck<2>yXgzVfzUe\
+  <2>rUYoVVmUTjUQgTNeTL<3>VJATH8QG5OF3PE4QD5<5>ZJB_KC_LD`P\
+  E_TFbVFcXFeYFe_FV`F<2>VcFVcFTdEReDPfCOfB<2>Jl9Hm8Fp7<2>A\
+  u59w47w35w24v2KncQamVQxO9x<16>LpKFeOWV_bLia5o<11>hzq<6>D\
+  WV9WSEXZ<2>Qhq<7>U8YU4WT3U<14>M2FM2EN4F<2>P9FQGF<16>blFc\
+  nFcqF<7>Sym<18>xzk<15>Czy<7>SzxEzz0zz<2>1zz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

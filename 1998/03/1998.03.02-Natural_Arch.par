@@ -1,0 +1,25 @@
+Natural_Arch       { ; Fractal of the day, 02-03-98
+                     ; par file, 1-1/4hr, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=N-XY-YZrotation passes=t
+  center-mag=-0.00284139461609572/-0.00060282947368413/1781.\
+  787/0.1071 params=90/2.003/-1.7444/0/-1.7444/0 float=y
+  maxiter=2400 inside=253 logmap=35 symmetry=xaxis
+  periodicity=10 viewwindows=1/0.75/yes/0/0
+  colors=000ZAJ<8>QSSQUTRWURYVR_WTaXUbYTcYSdZRdZRd_<2>We`Xea\
+  Wea<21>FilEibDicCicKicCif8la4l_3mN1mH<9>HhWJgXKhYMg_Oh`Pgb\
+  RhcSgeUhfWggXhi<2>afmbfnbgqbit<9>oBo<4>Y6IV5BP31<5>aAPcBTd\
+  BV<4>hGbhHchHcfHTcHM<9>W7GZ1EW7GTDHQLITROW_UZhbbob<7>RsfQs\
+  fPsfNsfMtg<5>DwjCwjCxh<14>1ky<9>eX2<32>54B43B12D<7>B64C73C\
+  73D72<26>AYTKHWA_VA`W
+  }
+
+frm:N-XY-YZrotation {; Jim Muth, thanks to Benno
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*real(pixel)+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=z^b+c,
+|z| <= 16
+}

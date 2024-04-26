@@ -1,0 +1,22 @@
+blazing_fractal            { ; Fractal of the day, 11-10-97
+                             ; 1 minute at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=XY-XWrotation passes=t
+  center-mag=-1.44329e-015/0.0252404/1.839406
+  params=77/0/0/0/-0.121/0.75 float=y maxiter=1500 bailout=100
+  inside=253 logmap=yes symmetry=none periodicity=10
+  colors=000NI0M00<16>M00Y00i00tK0<7>x80x70x60y50z50<9>z40z40z50<8>zE0zF0y\
+  G0xH0<6>sO0rP0pV0rP0<20>ai0zD0<4>zI0zJ0yK0xK0<27>bh0ai0bj0<34>ai0zH0<22>\
+  zh0zH0<10>zg0zz0<35>bi0ai0cc0zH0zk0zk0zk0zf0zp0zp0zf0zf0zk0zp0zp0zf0zf0z\
+  X0zk0zp0
+  }
+
+frm:N-XY-XWrotation {; Jim Muth, thanks to Benno Schmid
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*flip(imag(pixel))+p2,
+c=cos(a*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+z=z^b+c,
+|z| <= 16
+}

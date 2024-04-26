@@ -1,0 +1,24 @@
+newtjuli           { ; Fractal of the day, 09-08-97
+                     ; 80 seconds at 100mhz, 640x480
+  reset=1960 type=formula formulaname=CrazyNewton
+  passes=1 center-mag=-1.49337/0/0.7473842 params=2/-2/2/3/2/3 float=y
+  bailout=100 inside=epsiloncross logmap=yes symmetry=xaxis
+  periodicity=0
+  colors=000pqNMpWIvWzegll3Z0gSK7PO7MS7IZ8F`8Ca8<4>PbN<3>IsRcuq<5>KwVzjQ<3\
+  >WsSOuSFtWGuUHvTHHM<4>HpR_tj<5>JwUQoZLsVilV<5>LvS1o59sHBKbDYZFjVWHx<5>Jq\
+  WkT9<4>MrPeLQTdRdAfTZZCSL<4>HrR_tu<5>JwWTBu4kE<3>FuQMgG<6>HuRwFUaaTDXq0d\
+  v<5>VdDXP1NOm<6>jexE_UbjoWngOs_jhQ`mRRrS6sx<3>FwYpqm<4>NvVYCj<2>RUbzSRNe\
+  ZLkWJqU9MD<2>FnP`8V<6>JqS57YZwrQwdl1P<2>PiSuWJ<2>RpQz9OnrDbtISvNAdS<2>Gs\
+  SaVZ<5>KsTbHU<5>KqSe1M<6>KpSlUqachRm_AfL<2>GsRd7FXPKPfO8Qt<5>FoZGsVKwV<5\
+  >HwSVWv<2>KpZfRdJvx<2>Hw_AZ3BGI<2>GlQfwe<2>NwVeCP<2>NkSfmOwpM
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

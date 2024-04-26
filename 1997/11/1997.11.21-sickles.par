@@ -1,0 +1,18 @@
+sickles            { ; Fractal of the day, 21-11-97
+                     ; 50 secs on a 486-100mhz at 640x480
+  reset=1960 type=formula 
+  formulaname=M-J-rotation passes=t
+  center-mag=+0.93772615591366490/+0.01297431829669346/401.89/1/10
+  params=1000/0/1/0/1.097/0 float=y maxiter=90 bailout=100 inside=0
+  logmap=yes symmetry=none periodicity=10
+  colors=000NVh<2>IXk0Cn<10>8MlM7R<21>oUc<8>yIF<12>iUP<22>jJ4w`M<5\
+  >s_Zs_`r`Y<10>ig1<10>28q<2>MwFNyGOzG<4>MsNIXkMrO<16>HYjMDY<4>HUi\
+  XY0<30>HXjoBf<7>KVkuDL<29>IXkzPU<9>LXjwFN<20>PUg
+  }
+
+frm:M-J-rotation {; Jim Muth
+; p1=power of Z,  p2=rotation point,  p3=rotation angle
+z=pixel, c=p2+(p3*pixel):
+z=z^p1-(1.1*z)+c,
+|z| <=25
+}

@@ -1,0 +1,19 @@
+firetree           { ; Fractal of the day, 04-11-97
+                     ; 4-1/2 min at 100mhz on a 486, 640x480
+  reset=1960 type=formula 
+  formulaname=RectangularN passes=t
+  center-mag=-0.89173878241352490/+0.02204914711029117/534614/0.\
+  0006657/-179.997/89.876 params=0/1/100/0 float=y maxiter=1218
+  bailout=4 inside=253 symmetry=none periodicity=10
+  colors=000oHw<2>kGqTbbUj_<4>GTNA4FB3G85F66D96EB6FD3F<27>cC7dC6\
+  fD6<3>lE5mE5nG4<3>tJ3uJ3vL2<2>zN1yO1<3>rP4pQ5oP5nQ6nQ7mR7lQ8kR\
+  9kR9<34>LoY<6>bEG<8>C58<23>AaT9cU9cU<38>EMIFLHFLI<19>YRl<11>W_\
+  `SJSO2I<21>mZvo`xo`xNfzjHsmHu
+  }
+
+frm:RectangularN {; Jim Muth
+z=flip(real(pixel))+real(p1),
+c=flip(imag(pixel))+imag(p1):
+z=z^p2+c,
+|z| <= 16
+}

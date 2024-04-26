@@ -1,0 +1,18 @@
+SpiralAntispiral   { ; Fractal of the day, 04-01-98
+                     ; 9 min on 486-100mhz at 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip/ident/flip
+  passes=t center-mag=0.140119/-0.0559419/3.485001
+  params=95/90/-0.5054/0/-0.7544999999999999/0.046 float=y
+  maxiter=2400 bailout=25 inside=253 logmap=yes symmetry=none
+  periodicity=10
+  colors=000vZR<2>vWQvVQtSN<3>oGCnD9nB6<103>A5IA5I94H<41>UR_US\
+  _TQ`<25>VkSVlSUmR<39>aAsa9tc7s<8>U8tsjVvmW<8>vbSUFrv`Sv_R
+  }
+
+frm:multirot-XY-ZW {; Jim Muth, best=ifif, fiif
+ a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+ z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+ c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
+  z=sqr(z)+c,
+   |z| <= 36  }

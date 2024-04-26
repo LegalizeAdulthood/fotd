@@ -1,0 +1,19 @@
+more_boring        { ; Fractal of the day, 05-11-97
+                     ; almost 2 hours at 100mhz on a 486, 640x480
+  reset=1960 type=formula formulaname=boring
+  passes=1
+  center-mag=+0.20105048243841260/+0.91562381066750610/289.8551
+  params=0/1.1/2.27/0 float=y maxiter=32767 bailout=100 inside=253
+  logmap=yes symmetry=none
+  ranges=0/-1/150/200/300/500/800/1200/2000/3000/5000/32767
+  colors=000`C0I80bWWc_VZbZWdbXggcjjhppruuzzzkOB<19>a95a95_B8<23\
+  >9us<27>7eH<24>wto<24>Q2d<22>lkC<9>ze8<2>bhg<15>L8Z<19>RBy<9>6\
+  cG<4>StD<2>UhGUeGUcI<20>U3fU2gW3hY3iKKP`4jb5j
+  }
+
+frm:boring {;Candidate for contest
+  ;p2 = bailout value
+    z=p1, c1=c2=c3=pixel, bailout=real(p2):
+      z=z^3-c1*z^2+c2*z+c3,
+  |z| <=bailout
+  }

@@ -1,0 +1,16 @@
+illusion           { ; Fractal of the day, 13-11-97
+                     ; 2-1/2 min on a 486-100mhz at 640x480
+  reset=1960 type=formula formulaname=MytestAG
+  passes=t center-mag=-0.505955/1.44329e-015/0.5487678
+  params=2.5/0.8 float=y bailout=100 inside=0 logmap=yes
+  symmetry=xaxis periodicity=10
+  colors=0PzIBLJBLLBMMDN<2>TFPVFQVGQWHSXHSZIT_JU_KUaKVhLW<13>sRbtR\
+  buQc<59>tUVtUVsVW<24>yGE<34>LoWKpWHrY<24>uV1<54>P7iO7jP5k<16>HPf
+  }
+
+frm:MytestAG {; Jim Muth
+z=c=pixel,
+a=flip(real(p1)), b=flip(imag(p1)):
+z=(z^a)^(-b)+c,
+|z|<=100
+}

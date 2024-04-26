@@ -1,0 +1,20 @@
+phosphenes         { ; Fractal of the day, 10-02-98
+                     ; par file, 40min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=N-XY-XWrotation passes=1
+  center-mag=-0.00000108883338219/+0.01224141799883222/13528\
+  5.7/0.04146/-90 params=94/1000/0.993/0.0015/-0.0078/0.993
+  float=y maxiter=1200 bailout=25 inside=0 logmap=yes
+  symmetry=none periodicity=10 colors=000LlQ<6>MoSQsn<28>VXs\
+  VXsWWr<58>r8Gu7H<68>8H57F4<84>LlQ
+  }
+
+frm:N-XY-XWrotation {; Jim Muth, thanks to Benno Schmid
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*flip(imag(pixel))+p2,
+c=cos(a*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+z=z^b+c,
+|z| <= 16
+}

@@ -1,0 +1,24 @@
+Tadpole            { ; Fractal of the day, 21-03-98
+                     ; approx. 90min at 100mhz
+  reset=1960 type=formula 
+  formulaname=minN-XY-YZrot passes=t
+  center-mag=2.16504/-0.353179/0.2770833/1/-7.499
+  params=42.5/1.1/0/0/1.3565/0 float=y maxiter=30000
+  bailout=25 inside=253 logmap=yes symmetry=none
+  periodicity=10 colors=0003AF08C<14>PAbQAcSDeUGfWJhYMi<2>cX\
+  qe`sgdxkhxigvherfbpeZo<2>aPe`MbZJ`<3>U9QT7OU9R<10>WPpWRrVT\
+  v<17>_PT_PSbNT<5>nBYs5_<5>bSR_RQXQO<2>OaKFcI<2>YeJcaJiaJoY\
+  JuTJsQMqTOpRQnUSmSUkVW<2>gObeWd<7>UFuWFx<19>51s<11>PBDRC9T\
+  D7<17>OC3OC3OD5<15>OEZOE`M9c<19>anLbpKdpD<6>Wzt<14>psJmpNk\
+  mQizbgzoezzczzfzzizzpzz<2>zzz<2>zzz0mzzzzzzz
+  }
+
+frm:minN-XY-YZrot {; Jim Muth, thanks to Benno
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*real(pixel)+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=(-z)^b+c,
+|z| <= 16
+}

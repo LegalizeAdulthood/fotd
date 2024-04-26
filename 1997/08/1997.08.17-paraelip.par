@@ -1,0 +1,23 @@
+paraelip           { ; Fractal of the day, 17-08-97
+                     ; 7 minutes on a 486-100mhz at 640x480
+  reset=1960 type=formula formulaname=4drot-xz-xw
+  passes=1
+  center-mag=-1.73201783551175700/-0.00000000000000081/155.4669/158.14
+  params=45/2/0/1.45e-005/0/0 float=y maxiter=1200 bailout=100
+  inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000WfSUiVSlXs5ns5os5p<3>D5c<7>t3b<13>vPCvQBuVFuZItcLwrYupWspU<13>\
+  DbaAaa8UV6MO4EISIOnMU<9>nYT<7>Syrbt5ljHu`S<8>Fco<12>Wc1<15>2kM<10>iRz<5>\
+  8bU<4>nr2<13>8eoPTleGj<16>_MA_M8`L8<18>jD8jD8kC9kCA<19>n6N<12>6pTjW8<21>\
+  WocWl_WiW
+  }
+
+frm:4drot-xz-xw {; Benno Schmid & Jim Muth
+; real(p1)=rotation angle in degrees
+; imag(p1)=exponent of Z
+; p2=parallel planes, p3=proportional extra term
+e=exp(flip(real(p1)*.01745329251994)),
+z=e*imag(pixel)+flip(real(p2)),
+c=real(pixel)+flip(imag(p2)):
+z=z^imag(p1)+(real(p3)*z^imag(p3))+c,
+|z| <= 36
+}

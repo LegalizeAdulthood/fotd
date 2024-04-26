@@ -1,0 +1,18 @@
+bizarre            { ; Fractal of the day, 29-12-97
+                     ; 3-1/2 min, 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotZC passes=1
+  center-mag=-0.0318217/2.22045e-016/1.008976/1/90
+  params=1/3/-2/1.333333333333333/0.81649658093/0 float=y
+  maxiter=3000 bailout=25 inside=0 logmap=yes symmetry=none
+  periodicity=10 colors=000h_BaTA<4>humstrplh<3>M17EII7YSFAYIQ\
+  PKeGMp8Nu7Nz7<3>Oz7Oz7QzG<2>Uze<5>Vz`dzUnzNezd<6>ezsezugzm<5\
+  >mz6<3>Yzi<6>SzVCzJSzV<78>BzGqzv<58>BzGbzZ<36>SzSizdrzg<6>8z\
+  5xzDpzC
+  }
+
+frm:MandelbrotZC {; Jim Muth
+z=p3, c=pixel:
+z=(real(p1)*(z^imag(p1)+c))+(real(p2)*(c^imag(p2)+z)),
+|z| <= 100
+}

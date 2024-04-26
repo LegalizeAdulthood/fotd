@@ -1,0 +1,20 @@
+julibrot           { ; Fractal of the day, 29-11-97
+                     ; 5 min on a 486DX4, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip/ident/flip
+  passes=1 center-mag=-2.22045e-016/4.44089e-016/0.85918
+  params=82/90/0/0/-0.75/0 float=y maxiter=25000 bailout=25
+  inside=253 logmap=yes symmetry=xaxis periodicity=10
+  colors=000000B0KD0JF1IH7H<2>NEEOGDRHCTIBUKAWLGYLMZIS`IYaHccC\
+  id7n<2>wDyzEzyDz<11>MAq<11>utk<2>sqhrqgppf<17>VYNUXMSXLRXJQW\
+  I<3>LVEKVDKVC<5>HWCHWCHVCHVCHWC<9>IUCITCIUCISCIVCISCIUC<3>JT\
+  CJSCJTCJSCJUCJRCJRCJTCJRCJSCJSCJSCLRENSGOSIPSQRSJRUKRVLSVM<7\
+  >VjU<35>JOCfa9<42>JOC9lr<31>HUNEfLkf5EhFEiC
+  }
+
+frm:multirot-XY-ZW {; Jim Muth, best=ifif, fiif
+ a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+ z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+ c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
+  z=sqr(z)+c,
+   |z| <= 36  }

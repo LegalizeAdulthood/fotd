@@ -1,0 +1,19 @@
+snoflake           { ; Fractal of the day, 21-08-97
+                     ; 1-1/4 min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MixMan3wayPro passes=1
+  center-mag=-4.44089e-016/2.22045e-016/0.8130081
+  params=1/7/0.005/-5/0.0001/-11 float=y maxiter=1200 bailout=100
+  inside=bof60 logmap=yes symmetry=xyaxis periodicity=10
+  colors=000bfmcflcglGTPIWPJZP<9>SiO<3>mL``hP<3>fkX<8>FOE<12>y8d<3>iw4tlG<\
+  3>14f<4>GlZ<10>`k4<4>Xl3<3>hBq<15>_1k<10>SeFbUj<9>hghtUR<2>kedehn<2>fhl8\
+  F_<4>GmkWUXkAJ<5>x3e<6>jNn<5>l`MbFg<2>c5fgInkUv<4>AOk<13>E3_<12>F4AF48H7\
+  B<3>PHKghfRKM<8>gffVay<5>fgj0P5<26>ghgYdq<9>bfm
+  }
+
+frm:MixMan3wayPro {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+z=(a*z^b)+(c*z^d)+(e*z^f)+g,
+|z| <= 100
+}

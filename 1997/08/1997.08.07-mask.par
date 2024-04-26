@@ -1,0 +1,24 @@
+mask               { ; Fractal of the day, 07-08-97
+                     ; 45 seconds at 100mhz, 640x480
+  reset=1960 type=formula formulaname=NewtTest03
+  passes=1 center-mag=8.88178e-016/-4.44089e-016/0.3177864
+  params=1/6/3/2.5/1/0.75 float=y maxiter=90 bailout=100 inside=bof60
+  logmap=yes symmetry=xyaxis periodicity=0
+  colors=000TLNSTMRaLPjK<5>QdiX`SdXA<2>lq8XtZGxy<2>gscOVALSBPVTACrXqHPuUSx\
+  hgd8<2>uDLYkPSiiUaD<2>00cYcA<2>EASdnE<2>hshWl4<2>6g7cjB<5>bRraNzcm4<4>el\
+  8Xg7<3>1JK`h4<6>E7B_hA<6>27oT`MINc69udi7<6>qIU`k7<3>N_Lgd6<3>y5GanA<5>Nz\
+  l09tdmA<2>hnSfk6<5>xUMZg9<3>FKT_l7AEY58b02h<3>ILm<5>9RuXSIQXZHZeWoC<2>7x\
+  `Wc1ci9<3>bTU<6>z3H<5>QPJQXTRebRnl<6>izMc6pWSYNmEOfUQZi<6>hx_EmPYhcrbs9b\
+  r<5>8Mu<7>lLt<4>eK9gIn<4>C9U<3>RMv<6>sFxZEyDDzGYrJriB4T<3>_o0<4>SHG<2>`f\
+  E<6>UOL
+  }
+
+frm:NewtTest03 {; Jim Muth, June 1997
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=(pixel):
+zx=(z^b)-a
+zy=(c*z)^d
+z=z-(k*zx/zy),
+|zx| >= f
+}

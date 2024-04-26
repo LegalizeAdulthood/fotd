@@ -1,0 +1,24 @@
+Rainbrot           { ; Fractal of the day, 05-02-98
+                     ; par file, 7min, 100mhz, 640x480
+                     ; formulaname appended to "a"
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZWa function=flip/ident
+  center-mag=-0.0933176/0.509995/0.9861933/1/125
+  params=82.5/90/-0.5/0/-0.75/0 float=y maxiter=120000
+  inside=0 logmap=yes symmetry=none periodicity=0
+  colors=000CbcDexDfyDgy<6>7VY6TU5QQ5NM4KI3KE2IA2HJ8IIDKJIMA\
+  NOCSQDXREaUG<2>pYKu_LzZMyXZyTkwPjuLjtCj<14>XNh<5>uR6<22>Vl\
+  _<18>SQCSPBTPC<31>gbggbhfbh<19>abluU`nXdg_hgxt<63>cinDLH<4\
+  >I82<4>2II<8>oMW<6>Abb<2>BbbablBbcCbc
+  }
+
+frm:multirot-XY-ZWa {; draws all 6 planes and many rotations
+; formulaname appended to "a" to differentiate from
+; previously posted multirot-XY-ZW formula
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

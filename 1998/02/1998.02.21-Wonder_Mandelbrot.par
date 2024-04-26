@@ -1,0 +1,24 @@
+Wonder_Mandelbrot  { ; Fractal of the day, 21-02-98
+                     ; par file, 15min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=HyperBrotII passes=1
+  center-mag=-0.788732/0/0.7183908
+  params=0/0/5.5/0.9/9.999999999999999e-021/0 float=y
+  maxiter=1024 bailout=25 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=0 colors=000000D6K<3>`Ej<2>IUY<\
+  7>dS`BUX<6>N4m<4>WgIXoCXcAXS8<7>tCu<5>9rj<4>u1u<6>pPRpSNnR\
+  P<2>kRVo8LhEZaKk<4>VtA<6>WZ1luo<4>yJruderyT<4>7TjTFqn2xWEJ\
+  <3>bp2<3>`qH<3>xbq<3>gQw<4>b4V<3>nkR<5>QKn<4>pbM<6>p44SnD<\
+  8>MoBMoBOiFbAdQdI<5>aBaxRb<10>c7dAKX<7>QCanXZpXWqWTu`T<3>i\
+  HMfCLeKO<4>`wY<9>toUwsX<6>pUESWB3X8<3>ZPCjDI<2>Xe4<3>XXjXV\
+  tYUoZTj_Se_S`<6>YmbYpbWnX<5>Of1<4>rEz<3>F5N
+  }
+
+frm:HyperBrotII     {; Jim Muth
+a=p1, b=0,0, d=real(p2),
+h=imag(p2), f=p3:
+g=sqr(a)-sqr(b)+pixel,
+b=d*a*b+f,
+a=h*g,
+|a|-|b| <= 9
+}

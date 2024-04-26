@@ -1,0 +1,27 @@
+The_Golden_Ratio   { ; Fractal of the day, 23-03-98
+                     ; 100sec at 640x480 on a 486-100mhz
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZWa function=ident/flip passes=t
+  center-mag=-0.00000000000000000/-0.00000000000000000/35823\
+  05/0.0003279/-0.008/-89.97 params=0/24.094842425/-1.618033\
+  854/0/-1/0 float=y maxiter=300 bailout=25 inside=bof61
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000KUF<3>6yQ<2>ODM<5>SKcSLeUFiV9l<6>1Op<2>Ew`i8D<3>\
+  wp4<3>jJ_gBfaFj<3>IRv<5>VmL<5>V`j<4>U7D<5>wra<5>MGkK8qI0w0\
+  CIAnG<2>AvJOXW<4>nfo<7>bI_ter<2>wZtxWuxUvxRw<4>yFz<2>a39h6\
+  5n91<3>j50j50k91<12>rv3ry3qv6<6>naLnZNpQBrH0<6>e7hJrj<2>gf\
+  T<4>k14<6>J`w<5>VzA<2>gqM`gj<3>IyyW2A<4>L3t<6>uc0<5>O2o<3>\
+  wdk<6>fv1<2>hfv<3>hKGhF6jNWkVt<3>nZs<2>pTNpRCoPF<9>iC`mqj<\
+  4>e_o<6>qM9kS8bD6Z96V66RE9NMC
+  }
+
+frm:multirot-XY-ZWa {; draws all 6 planes and many rotations
+; formulaname appended to "a" to differentiate from
+; previously posted multirot-XY-ZW formula
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

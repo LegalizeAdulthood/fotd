@@ -1,0 +1,24 @@
+Newton's_Eyes      { ; Fractal of the day, 25-02-98
+                     ; par file, 4-1/2min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyNewton passes=1
+  center-mag=3.55271e-015/-2.66454e-015/0.2830507
+  params=1e-005/3/0.75/2/3/1e-031 float=y maxiter=100
+  inside=bof61 outside=summ symmetry=xyaxis periodicity=0
+  colors=000OCJQCNugumXTeN0<3>H7A<4>Mom<3>o6Q<4>LPF<6>EFB<7>\
+  5Kg<3>t2p<5>yJluL`qNQnOF<5>fG8eF7eJFeMNePVeMVeKVeIV<14>FiF\
+  <2>_tQ<15>3Ho<10>D6BD68F7A<6>PDKQDLTHO<9>ntq<3>L6zKEwKLtU_\
+  a<5>daJ<4>A3T_EeyPq<2>wdc<5>0qM7hUE``Kbg6wb<7>kaY<3>2xO<2>\
+  cZk<7>_jSyA4ZSX8iy<7>xisXki6m_<3>V`2<3>rpEqbVpPjoBz<3>cmi<\
+  2>UVe<7>tMy<5>rEVrDQpESoFTnGVmGWjHZgH`aAy<12>FA3<2>MCF
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

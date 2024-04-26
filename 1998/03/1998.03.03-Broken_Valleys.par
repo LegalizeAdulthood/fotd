@@ -1,0 +1,23 @@
+Broken_Valleys     { ; Fractal of the day, 03-03-98
+                     ; par file, 35min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt09 passes=t
+  center-mag=0.45687/8.04912e-016/7.684822/1/90
+  params=1.9/0/0.98/0/9.999999999999999e-035/0 float=y
+  maxiter=600 inside=253 logmap=35 symmetry=xaxis
+  periodicity=0 colors=000I8FETG<4>89C27D76C<6>`57d56g53<14>\
+  m5Zq5c<3>b5VZ6TW8R<2>LEL<9>_V0<2>c_0d`0cZ0<5>ZQ0ZP0YN1XM2<\
+  10>P6CO5DN5E<3>K5IK5IM5F<3>R55S53R52<11>c51d51e61f71<7>nG0\
+  oH0pJ0qL0rN0sP0tR0wS0uS0<3>mP8kOAiPB<11>MSYKS_IT`GTa<4>7Ue\
+  <3>DWZ<4>KYaLZbNZbO_bP_c<11>eeXfeWheX<24>_eJ<3>reHreHmeHze\
+  0ze0zd0t_0sY0oZ0kV2jT3iP4<10>WFJVFKVFK<2>cRH<4>lALn7Mo5N<3\
+  >v5Q<8>h56zcze52d50
+  }
+
+frm:MandNewt09 {; formula, Jim Muth
+z=c=pixel:
+a=z^3+(c-1)*z-c
+b=p1*z^p2+c-1
+z=z-1*a/b
+p3 <= |a|
+}

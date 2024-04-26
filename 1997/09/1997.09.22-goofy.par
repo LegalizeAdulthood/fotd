@@ -1,0 +1,18 @@
+goofy              { ; Fractal of the day, 22-09-97
+                     ; 18 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Rectangular passes=1
+  center-mag=-0.26606345471306870/+0.01440434007303376/62.45385/1.3434/0/-\
+  9.037 params=0.5/-0.75 float=y maxiter=50000 bailout=100 inside=253
+  logmap=yes symmetry=none periodicity=10
+  colors=000gmV<3>mwc<30>vQLvPLuQM<17>lQclQdmPe<28>ZjO`kP<24>0iH<15>bjw<6>\
+  lYWkWTiTP<3>RDDN9AH75<27>p1dq1eq0b<4>u1udot<12>`nccvg<6>L4B<2>agc<23>PWd\
+  OWdPVf<22>AkI0mJAkH
+  }
+
+frm:Rectangular {; Jim Muth
+z=flip(real(pixel))+real(p1),
+c=flip(imag(pixel))+imag(p1):
+z=sqr(z)+c,
+|z| <= 36
+}

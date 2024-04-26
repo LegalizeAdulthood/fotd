@@ -1,0 +1,23 @@
+Mega-spiral        { ; Fractal of the day, 07-10-97
+                     ; A slow one!  1 hr, 25 min at 100mhz, 640x480
+                     ; formulaname appended to "a"
+  reset=1960 type=formula 
+  formulaname=MandelbrotVBa passes=1
+  center-mag=+0.00000000000000000/-0.00000000000000000/2307.413
+  params=0.07000000000000001/0.1/1.3/0/-0.417035/0.574546 float=y
+  maxiter=10000 bailout=100 inside=253 logmap=yes symmetry=none
+  periodicity=10
+  ranges=0/-2/1200/1300/1500/1800/2200/2700/3300/4000/10000
+  colors=000P00ZP0PN9JNC0MF<4>07UgSn<28>m6em5em5em5e<8>o5bo5bn5c<11>p5bp5b\
+  q6bq7b<35>vXavYaufb<8>w6_w5_<13>l5Xl6Xk6Xj7Xi8X<27>PMTONTNOTNPTMQT<6>IXT\
+  HYTG_R<34>LKpFLw9Nz3Oz<5>DRzERzGRyHSx<20>lZX<5>4ZN6XP7VRZWzASVBRX
+  }
+
+frm:MandelbrotVBa {; Jim Muth
+; formulaname appended to "a" to differentiate from
+; previously posted MandelbrotVB formula
+z=p1, c=pixel+p3,
+a=sqr(p2):
+z=sqr(z)+c,
+|z| <= a
+}

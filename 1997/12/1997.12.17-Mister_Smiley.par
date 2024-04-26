@@ -1,0 +1,23 @@
+Mister_Smiley      { ; Fractal of the day, 17-12-97
+                     ; 20 seconds to draw Mr. Smiley
+  reset=1960 type=formula 
+  formulaname=XY-XZrotation
+  center-mag=+0.00544536411829194/+0.00000000000000018/2397.053/\
+  0.01989/90 params=133/0/0/0.34452/-1.7545/0 float=y maxiter=100
+  bailout=25 inside=0 logmap=yes symmetry=none periodicity=10
+  colors=000nCs<8>xPbHg6PI2<12>0Bz7LrDQjHQjLRj<11>z6j<8>jnu<14>`\
+  E5`C2ZE1<2>TK0<2>69_<3>bF6uJD<4>ey6<4>3tw<3>B5F<6>FPY<2>Rd_<3>\
+  S6JZLYeZku9F<7>rxhqhNpU1<6>Iyk<4>a3O<2>WJQaEMg9J<3>7Ar<2>Gil<3\
+  >8F1D14<2>tnA1Cr<4>gvH<5>A8l<2>yoy__hAKT<4>BJPOMKBJP<15>GGBBO6\
+  <20>GGBt2L<22>HGBCio<10>DadeSm<4>lAu
+  }
+
+frm:N-XY-XZrotation {; formula, Jim Muth
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*imag(pixel)+p2,
+c=cos(a*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+z=z^b+c,
+|z| <= 16
+}

@@ -1,0 +1,24 @@
+Starship_Star      { ; Fractal of the day, 07-04-98
+                     ; 25min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multmin1-2-XY-ZW function=ident/flip passes=1
+  center-mag=+2.502402896625033/-0.0062502713987472/2185.792
+  params=0/0/1.333/0/0/0 float=y maxiter=252 bailout=25
+  inside=bof60 logmap=yes symmetry=xaxis periodicity=10
+  colors=000bvffvj<4>aDl`4lY6g<6>JGA<3>CA6114B96<5>110pCL<2\
+  >U6Czzzrzzozzlsz<3>`gzYdzVax<5>FJUCAPACK<2>235uhH<2>EB4m4\
+  IG0_<6>60F5HC<2>143yg7<9>540mue<7>564TvK<6>3727fR<12>031K\
+  gW<12>132DBV<13>002be7<8>340xLEGcP<13>121TGP<12>211S2m<9>\
+  204euR<8>452q_0<5>750vkMLym<3>4CA2aH<8>031LwGNIhNIm<3>dp7\
+  <5>Gc2QKFZ1S<3>Mcx<7>LtP<2>Zvb
+  }
+
+frm:multmin1-2-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real((p1)+.000000000000000000000000000001)*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=(-z)^1.2+c,
+|z| <= 36  }

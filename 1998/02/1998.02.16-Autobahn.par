@@ -1,0 +1,20 @@
+Autobahn           { ; Fractal of the day, 16-02-98
+                     ; par file, 45min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=t
+  center-mag=-0.50282124268088820/+0.65064133507077800/410.3\
+  07/0.4161/153.509/50.695 params=90/60/0/0/-0.1465/0 float=y
+  maxiter=50000 bailout=25 inside=253 logmap=yes
+  symmetry=yaxis periodicity=10 colors=000cNT<10>aAZIQY<6>SX\
+  _TY_VZZ<6>dfaegYgi`hja<12>nlTomSomSomS<24>mnVmnVmpX<2>wwcz\
+  zi<12>SVCQS9MP7JM4HL1FN2FQ4HT6<5>IkGNnHSqJVtLRrJJoGCkD<3>1\
+  Y24Y17X0<70>JiFKjGKjGLjGMjG<34>ioGjpFjoF<22>dRRIBKdPSdOT
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

@@ -1,0 +1,22 @@
+Zebra_Mandelbrot   { ; Fractal of the day, 23-02-98
+                     ; par file, 1-1/4hrs at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=HyperBrotIII passes=1
+  center-mag=-0.15306871747806670/+1.02985459657405600/22950\
+  9.7/1/-22.499 params=0/0/1e-048/1/9.881312916824931e-324/0
+  float=y maxiter=724 bailout=25 inside=0 logmap=yes
+  symmetry=xaxis periodicity=0
+  colors=000wzq<2>rzqq_q<11>_xo<5>yjv<23>OSz<11>FJb<5>cERdEP\
+  WDNRCLOBJNBHIAFD9D59B<20>yvk<17>05c<31>Mms<23>NcXNcXMdW<21\
+  >KdPKdPMeO<15>ql9hz7<3>Bz0<4>dzf<2>azj`zlYzc<16>_zmKz5<9>Z\
+  zitzSyzr
+  }
+
+frm:HyperBrotIII    {; Jim Muth
+a=p1, b=0,0, d=real(p2),
+h=imag(p2), f=p3:
+g=sqr(a)-sqr(b)+pixel,
+b=d*a*b+f,
+a=h*g,
+|a|*|b| <= 9
+}

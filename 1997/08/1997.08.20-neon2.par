@@ -1,0 +1,17 @@
+neon2              { ; Fractal of the day, 20-08-97
+                     ; 5 min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MixMan3wayPro passes=1 center-mag=-0.691226/0/0.8378746
+  params=0.01/-2/1/2/0.15/1 float=y maxiter=500 bailout=100 inside=0
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=p5XPEC<12>o5Rq5Sr7R<15>yPN<8>XsK<18>cOM<7>QxdqMO<2>hnv<14>D9R<5>l\
+  KeL2R<11>Hfh<13>7pi<23>vma<11>jhXjhXhfY<5>`Xa_WaZV`<19>WLMWLMVNM<12>NcM<\
+  22>sP_<6>oba<10>Cg`<7>kb7EH6<3>MFB
+  }
+
+frm:MixMan3wayPro {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+z=(a*z^b)+(c*z^d)+(e*z^f)+g,
+|z| <= 100
+}

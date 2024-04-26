@@ -1,0 +1,20 @@
+Million_Midget     { ; Fractal of the day, 24-01-98
+                     ; par file, 52min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyMidgets passes=1
+  center-mag=+2.09995315186346700/+0.00001132215041126/14127\
+  26 params=1/1000000/-1.1/1 float=y maxiter=1200 bailout=25
+  inside=250 logmap=yes symmetry=xaxis periodicity=0
+  colors=000bJb<11>ZLeF0HK8RF0DJ8S90IJ8S90DL8QC0DN8NE0DQ8LH0\
+  DS8IJ0DV8FM0DX8DWAQeCPbENjGMhILnKJoMIsOH<2>xUD<17>vlIvmJvm\
+  J<3>vkKuoKukLujLumLumLulMujMujMuhMuiNujNufNtgOtfO<5>tiPtjQ\
+  tkQtlQtmQ<53>ETsDTtCStBSt<3>8Qt7Qt5Pt<3>ARtBRtCRr<25>a_Pb_\
+  ObZM<24>o`co`do`do`eo`e<13>pZjs_k<17>nbpRMXmbp<3>lbq
+  }
+
+frm:CrazyMidgets   {; JM, draws very distorted midgets
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

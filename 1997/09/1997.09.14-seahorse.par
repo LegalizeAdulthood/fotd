@@ -1,0 +1,16 @@
+seahorse           { ; Fractal of the day, 14-09-97
+                     ; 30 mins at 100mhz, 640x480
+  reset=1960 type=formula formulaname=JulibrotInvZ
+  passes=1 center-mag=-0.339693/0.0486076/1.328656
+  params=1.1/0/-0.737/0.12/0.1/0 float=y maxiter=500 bailout=100
+  inside=bof61 logmap=yes symmetry=none periodicity=10
+  colors=000AUT<13>A89<21>54U<18>zb0<22>2EH<11>Wtx<12>qbs<9>Hp1<8>x2qj_q<3\
+  >qEXr9Sr8S<10>r5Sr5Sq6T<29>a9ta9tb8s<17>d8p<10>evZ<4>y8w<2>bLU<3>TL_RL`Q\
+  Na<19>AypAzp7Md8Pd8rd9qdHodFmdDkdCidBgd<6>AWU
+  }
+
+frm:JulibrotInvZ {; Jim Muth
+z=pixel, c=p2+(pixel*p3):
+z=(-z)^p1+c,
+|z| <= 100
+}

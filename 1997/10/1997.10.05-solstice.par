@@ -1,0 +1,23 @@
+solstice           { ; Fractal of the day, 05-10-97
+                     ; 1 minute at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyNewton passes=t
+  center-mag=-1.99656237466037900/+0.08411586996684531/4330.654/1/-84.999
+  params=2/-2/2/2/2/2 float=y maxiter=90 bailout=100 inside=bof60
+  logmap=yes symmetry=xaxis periodicity=0
+  colors=000051962<9>KGCHADIEELG5IHE<2>3Hb<2>N8Q<7>pydXlRD`EXRZoIr<6>l5r<2\
+  >KgU<4>iFQnAQrLPuVP<6>_tI<2>ooA<14>6h6<9>jih<4>nTinQimRh<12>bRa<6>9amRFd\
+  SFlTFs_JYfMDZWNRdW<2>Ej4NSd<6>5C7DPWLas<7>UBAi85x51<5>YhF<2>gto<4>5dG<4>\
+  mJRmZImnA<6>q7O3So2LZ2EI<2>WiT<5>n44<4>9Pi<5>ROtGRg5UV<7>z4f<6>sE6<5>83H\
+  <2>`7OFQC<6>KyF<2>Zb5<3>ZEp<2>`ie<4>xJT<7>MyU<2>rtM
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

@@ -1,0 +1,18 @@
+skyscape           { ; Fractal of the day, 03-10-97
+                     ; 8 minutes at 100mhz, 640x480
+  reset=1960 type=formula formulaname=OblateVB
+  passes=1
+  center-mag=-1.58489027912513300/+0.01512015871562687/137.8441/1.9206/-4.\
+  818/3.522 params=0/-1.36818/6/0 float=y maxiter=200000 bailout=100
+  inside=0 logmap=yes symmetry=xyaxis periodicity=10
+  colors=000e1T<25>j1Zj1Zk0Y<35>P5xO5yN4z<65>YvtYwtXxu<87>tHGtGGuFHtGG`2N<\
+  27>e1T
+  }
+
+frm:OblateVB {; Jim Muth
+z=real(pixel)+flip(real(p1)),
+c=flip(imag(pixel))+imag(p1),
+a=sqr(p2):
+z=sqr(z)+c,
+|z| <= a
+}

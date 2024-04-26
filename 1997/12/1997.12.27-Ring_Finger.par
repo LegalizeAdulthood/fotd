@@ -1,0 +1,22 @@
+Ring_Finger        { ; Fractal of the day, 27-12-97
+                     ; 5 min, 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multigator2 passes=1
+  center-mag=-0.00000000000000000/+0.00000019572025052/260\
+  162.6/0.008929 params=45/45/0.707106781/0/1.11333687/0
+  float=y maxiter=3600 bailout=25 inside=0 logmap=yes
+  symmetry=yaxis periodicity=10
+  colors=000iEC<3>gDF<13>frvfuwfxw<7>HTwVdvhpqippirpiqpinpjopj\
+  mpjhpjfpkbp<2>kcpZXd6AE<9>7qn<2>8ki9ig9he9gd9fbAe`Ad_AdYBdWB\
+  dWBdVBcVCcXCZYDV_DT`ERbEWcEWd<2>GRfQOe<2>RMcIMfAEi7Dl9AlBBl<\
+  13>ZPw<5>IvJ<5>vVa<7>FRA<12>hAk<14>FkG0Ks<14>YgX<12>k52<15>D\
+  GN<3>Kod<14>`Ht<7>oJ2<12>N6hL5kH4h<4>00W<6>BLUmF6<4>jEB
+  }
+
+frm:multigator2 {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=(.5*(z^-4))+(-2*(z^-2))+c,
+|z| <= 100  }

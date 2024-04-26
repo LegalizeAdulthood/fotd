@@ -1,0 +1,22 @@
+Platypus           { ; Fractal of the day, 03-04-98
+                     ; 18min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 passes=1
+  center-mag=-0.213822/0.728197/1.561719
+  params=0.133/3/-1.5/-1.5 float=y maxiter=12000 bailout=25
+  inside=253 logmap=4 symmetry=none periodicity=10
+  colors=000o3c<3>w3_<5>BQA<13>cxqeztirlljdobYl_UjYQ<2>sRF\
+  qOBtM7rK4pSDi_LYgU8naEiRJdG<14>muX<8>4iB<14>CTuCSxBVt<8>\
+  6oMDiPJdR<3>hb_nYapeW<3>tnAuu5<4>ejFblH_oJXmLUpNRnPOpRLn\
+  TIqVFoXCmY<11>9gzSiWij1dh2_p3<2>Lz6<3>1zAJz7_w4pz2<2>ee3\
+  bh3_f3Wi3Tg3Qf3<2>`kBcrDgeG<2>qxN<6>edicflbnoccfdhYdhPfm\
+  RfsRfxReqfesT<2>eeZ<2>efd9rL<23>dPfqYi<27>eOfBun<7>WZhc5\
+  ie4hg4g000k4em4d
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

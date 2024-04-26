@@ -1,0 +1,18 @@
+star               { ; Fractal of the day, 23-12-97
+                     ; 2-1/2 min, 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix
+  center-mag=-0.011607/0.0368128/1.767409/1/-17.5
+  params=0.03/6/0.005/-4/0.8027416000000001/0 float=y maxiter=500
+  bailout=25 inside=200 logmap=yes symmetry=xaxis periodicity=10
+  colors=000YMCqC1<18>RN1<12>kl3lm3lk4<9>lTAuoX<2>uqXuqXsnkrky<2\
+  >_XZ<45>O6nD6o26q<4>CjC<8>WeOZdQZdQ<44>gb8gb8gb9<27>_``Z_a__``\
+  __a_Z0AYc`X<5>iaQkbOkbO<35>bG3aF2aF3<7>YLB
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

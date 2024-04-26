@@ -1,0 +1,18 @@
+All_the_way_down   { ; Fractal of the day, 31-10-97
+                     ; 5-1/2 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=OblateXLow passes=t
+  center-mag=-14.2252/22.5752/3.903187/0.3174/14.625/-33.742
+  params=3700/0.9999/3700/0.9999/-57/-17 float=y maxiter=500
+  bailout=100 inside=0 logmap=yes symmetry=none periodicity=10
+  colors=000PcZ<16>jqw<11>IJW<17>`jr<28>q6Ar58q36<60>tHEtHEsIF\
+  <31>mSjmSknTm<62>cLHcLHbMI<3>aNJSXX<8>NbX
+  }
+
+frm:OblateXLow {; Jim Muth
+z=real(pixel)+flip(real(p3)),
+c=flip(imag(pixel))+imag(p3),
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*((-z)^f))+c,
+|z| <=2500
+}

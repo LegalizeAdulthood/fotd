@@ -1,0 +1,23 @@
+bridges            { ; Fractal of the day, 26-11-97
+                     ; 5 min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=N-XY-YZrotation passes=t
+  center-mag=+0.00000000000000000/+0.00000000000000013/424.857\
+  3/0.03041 params=90.2/1.999/0/0/-1.7586/0 float=y maxiter=1200
+  bailout=100 inside=253 logmap=yes symmetry=xaxis periodicity=10
+  colors=000gZu<6>NSWKSTJTW<6>H_k<3>ZNUbKPeHL<4>aGJ`GIZGI<15>HGB\
+  vq5<17>IIBVCC<9>HGBAgL<18>GHB6JC<3>EGB8Cj9DeADaKYBFXB<4>dLH<5>\
+  pKf<2>OyK<2>SMF<3>MpV<4>tMx<5>HJt<6>`4vuN8<5>1P4<7>V7Q<4>FQinY\
+  U<5>alem`nyPvdGuL7t<6>k8M<3>k_3<7>U1whFcwTL<4>dRt<3>E1A<2>F5FF\
+  6GEBJ<3>BTS<6>QfWGrN<4>2Lm7Rz<6>pRe<2>TjKyRZ<7>cC2Wrp<5>f`u
+  }
+
+frm:N-XY-YZrotation {; Jim Muth, thanks to Benno
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*real(pixel)+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=z^b+c,
+|z| <= 16
+}

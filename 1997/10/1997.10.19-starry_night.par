@@ -1,0 +1,28 @@
+starry_night       { ; Fractal of the day, 19-10-97
+                     ; 17 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=NewtonTest27 passes=1
+  center-mag=-0.432494/-5.10703e-015/0.9968102/1/-90
+  params=2/2.4/2/2/1/1e-015 float=y maxiter=90 bailout=100
+  inside=period logmap=yes symmetry=xaxis periodicity=10
+  colors=000UUa<2>KPRayeVn_O`UiUE<3>GEQ<2>qBTzBUsXPjrKR`Q8JW<4>snk<2>qG9<5\
+  >IHV<5>pG6<5>_nJAS4CKB<5>nN0<2>eCSb9``7iUAg<2>CJfDKjEKlELnFLoFLpDKnCJiBD\
+  c9CZ8BU7ARAEPCHOFLOPFBn`EYUJiWcIjUYCYPITWynznskejWXZRYD76JOuLa8DVEHOJLrK\
+  BeMGTNKSsCMcIcy0Wm8O`GyMrbNbz_5kWCWSIXIkPL_nO1YODXA3RFAMKHfKW<2>NNQ_BHj9\
+  GTxK<2>KXN8VsBTmDRdFPWVrYQgULYRuWO`SOkvq`jgRZYvynkqgag`RYUdOAo_EcWISSLVu\
+  mJhsIblIYdHTWDN0FO8GOGLI8JKEIMJFIh<2>HNTa7mWCfb_HhfQ<3>FV3wxszAdzMYvYRri\
+  KKYZeaMTVNQC3<2>JLJzhjvAchFYVKTQydNnZK`TkyCqyNgrOZhOQYOHGUHJSHMQntYbiUSZ\
+  Rikj_cbQWVofjc_bSUVBFR<2>GMOzyJnqLcgMSYNPF2MIAJLHQ`Czr0ng8YYGvysaidwyrqn\
+  rBdMDZNFTOtuKfiMUZNueng_eUUXJJ3lm`adWRWSs7jfDbUJVfydYlZP_TPr`eyGXmJP`Mw9\
+  9<2>RLLoUk<2>PPUWyCOgI
+  }
+
+frm:NewtonTest27 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=(pixel):
+zx=(z^b)-a
+zy=(c*z)^d
+z=z-(k*zx/zy),
+|zx| >= f
+}

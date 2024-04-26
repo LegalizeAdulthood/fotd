@@ -1,0 +1,17 @@
+stairway           { ; Fractal of the day, 04-08-97
+                     ; 2 minutes at 100mhz, 640x480
+  reset=1960 type=formula formulaname=Mystic
+  function=ident/asin passes=1
+  center-mag=-0.4235/1.11022e-016/3.205128/1/90 params=0.75/0/0/0/1/0
+  float=y maxiter=100 bailout=100 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=10
+  colors=00066j<32>E9EE9DFADGAD<31>lPKmPKnOL<21>q7Oq7Op9N<31>oi4oj4mi6<26>\
+  BKlAKm9Ln<37>4gs4gs5ft<33>bJtbJtaLr<9>acgbbjb`lb_naWq45q<5>65k
+  }
+
+frm:Mystic {; Jim Muth
+c=pixel, z=sqr(pixel)+(p1*(pixel)):
+z=sqr(sqr(z)+(p2*(c)))+(p3*(fn1(c)))
+c=fn2(c),
+LastSqr <= 100
+}

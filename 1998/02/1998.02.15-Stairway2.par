@@ -1,0 +1,19 @@
+Stairway2          { ; Fractal of the day, 15-02-98
+                     ; par file, 6min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=RectangularPM passes=1
+  center-mag=16.3433/-4.07679/0.9247703
+  params=0/10.85/700/0/1.001/0 float=y maxiter=1800
+  bailout=25 inside=253 logmap=yes symmetry=xyaxis
+  periodicity=10 colors=000bNV<5>VGPPCMPCMRDM<6>I6F<22>P6w<8\
+  >Q6oQ6nQ6o<11>R6zI6zL6zN6zP6z<12>qOzsPqwQzuQzxZzybzzfz<17>\
+  APz7Iz<10>Ajz<29>cIzdHzdHzdHz<26>6ez<2>LjzQksVmt_nubnuenv<\
+  2>aot_oz<20>9tz<13>SCzT9zWAz<9>tEzvEzzAz<8>qPzmWz<7>cOz
+  }
+
+frm:RectangularPM {; Jim Muth
+z=flip(real(pixel))+real(p1),
+c=flip(imag(pixel))+imag(p1):
+z=p2*(.5*((-z)^p3+z^p3))+c,
+|z| <= 250
+}

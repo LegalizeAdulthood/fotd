@@ -1,0 +1,19 @@
+The_Magic_Tower    { ; Fractal of the day, 22-12-97
+                     ; 20 min, 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt07 passes=1
+  center-mag=0.671719/5.55112e-016/3.450507/1/-90
+  params=1/0/0.5/0/2/0 float=y bailout=25 inside=bof60
+  logmap=yes symmetry=xaxis periodicity=0
+  colors=000tX_rX_pX`pW`mV`hU`dU`cT`_S`WR`UR`TQ`NQ`HQ`HQ`CP_BO\
+  Y6OX<15>0EF0EE1FG<37>HdwHdxIew<13>PerPerQesQesRfoRfq<10>XfmX\
+  fmYfnYgmXglYgk_gk<51>xiUyjTxiU<72>nEsnEsoFw<3>mEpOL_<8>IN_
+  }
+
+frm:MandNewt07 {; Jim Muth
+z=c=(pixel*p1):
+a=z^3+(c-p2)*z-c
+b=3*z^2+c-1
+z=z-p3*a/b
+.000000000000000000000000000001 <= |a|
+}

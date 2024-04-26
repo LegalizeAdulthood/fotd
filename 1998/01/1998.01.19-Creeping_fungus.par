@@ -1,0 +1,21 @@
+Creeping_fungus    { ; Fractal of the day, 19-01-98 
+                     ; par file, 23min on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix passes=1
+  center-mag=+0.71184127664421020/+0.01277836035677106/4300.\
+  938 params=-1/3/0.4/4/1.875/0 float=y maxiter=1200
+  bailout=25 inside=0 symmetry=xaxis periodicity=10
+  colors=000SfTLfZEfcUakiXs<4>1dn<7>zBX<5>JBv<11>EMv<5>caBga\
+  3<2>c`2b`2ab2<3>Yq2po2spQulNv_KwOH<11>hBWgAXgD_<7>g`q<10>6\
+  a_<9>bvb<5>XljXkkYmi<7>_w`bocdtefpgOsSNzR<12>dz_<8>Cz7HvB<\
+  8>tchjbkabzTbzKbz<5>Fiz<2>Wrz<12>4OzJWzYczAYu<7>TuuVxuWssX\
+  oqgkohfm<2>zUgzQezMc<6>zYlOZm<2>JcqjerzSsz8z<7>zUzz_zcjvej\
+  vdkt<2>bkl<2>al_<8>Xme<2>tos<5>qHsqCsoEp<2>iHg
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

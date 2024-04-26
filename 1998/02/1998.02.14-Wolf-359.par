@@ -1,0 +1,22 @@
+Wolf-359           { ; Fractal of the day, 14-02-98
+                     ; par file, 45min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=mult105-XY-ZW function=ident/flip passes=1
+  center-mag=1.90579/-4.88498e-015/0.5703302/1/-90
+  params=45/0/1.25/0/0/0 float=y maxiter=1200 bailout=25
+  inside=bof61 logmap=yes symmetry=none periodicity=10
+  colors=000eU0d90cT0bT0bT0aE0`S0_S0ZS0YE1XR1WR1VR1UE2TQ2TQ2\
+  SQ2RC3QP3PP3OP3N44M44L74K44<6>E26D76C67B67A07958B64B41B60B\
+  70<11>V60W61Y61_62`52<6>l56n47nD7n47<34>n4Ln3Mn4L<15>hHPgI\
+  PgKP<25>SrLRtKRtK<28>p_Oq_PqZPqYP<2>qWPqVQqWP<11>qNMpMMpLM\
+  oKLoKL<24>c0Ec4E<11>Lc1Jf0Ii0Gl0Fo0kW0kV0kV0jU0kV0<4>fU0
+  }
+
+frm:mult105-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=(-z)^1.05+c,
+|z| <= 36  }

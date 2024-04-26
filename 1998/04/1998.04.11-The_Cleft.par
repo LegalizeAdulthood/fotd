@@ -1,0 +1,16 @@
+The_Cleft          { ; Fractal of the day, 11-04-98
+                     ; 2-1/4hrs at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=ObliqueManPlus passes=t
+  center-mag=+1.18349484332722000/+0.40343550046074710/613.4\
+  825/1/-145 params=-1.618/0/-1/0/0.2/0 float=y maxiter=32767
+  bailout=25 inside=11 logmap=17 symmetry=none periodicity=10
+  ranges=0/-1/350/600/1200/2400/4800/8000/12000/32767
+  colors=000PFKA0AK0UZchchmhmrmrwtwzzzz000KUm000<242>000
+  }
+
+frm:ObliqueManPlus {;Jim Muth
+z=(p1+pixel), c=p2+(p3*pixel):
+z=sqr(z)+c,
+|z| <=100
+}

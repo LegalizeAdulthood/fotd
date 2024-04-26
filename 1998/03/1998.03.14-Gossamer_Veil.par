@@ -1,0 +1,24 @@
+Gossamer_Veil      { ; Fractal of the day, 14-03-98
+                     ; 2min on a 486-100mhz at 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyNewton passes=1
+  center-mag=-1.04361e-014/5.77316e-015/1.276519
+  params=-0.24/2.97/0.64/0.77/1.1/0 float=y maxiter=100
+  bailout=25 inside=bof61 logmap=yes symmetry=xyaxis
+  periodicity=10 colors=000OGQOGQzd0OGQ6BH<11>9mezzq9si9vkAz\
+  nSlbjYR<6>ORk<2>MhKzzAJaM<4>11WKBYZEamHf<15>E8e7TaG9c<8>ZK\
+  KaMHaPJ<6>_pcZtf_jZ<3>bLE<4>D5uKDi<6>YjL_oH_nH<12>RVRLbaFk\
+  l<13>fl0<11>9XqB25BVm<5>QIP<8>0K`4KZ<9>GV`<5>258<2>8O3BV1B\
+  X1<10>FwA<4>cGW_PR<12>qQTmPS<6>VJVWMU<10>2rKCmK<6>zZ7paA<1\
+  4>C_XG`Z
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

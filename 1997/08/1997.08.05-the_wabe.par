@@ -1,0 +1,21 @@
+the_wabe           { ; Fractal of the day, 05-08-97
+                     ; 10 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=SkewPlanesSqr passes=t
+  center-mag=+0.96349968208614570/-0.56409693375234290/98.39225/5.5624/178\
+  .911/-6.752 params=0/0.5/0.6/0 float=y maxiter=5000 bailout=100
+  inside=253 logmap=yes symmetry=none periodicity=10
+  ranges=0/-1/175/270/350/500/1000/1500/2600/3300/4000/5000
+  colors=000WWQFEF2e_2ia2lf2og2rg2pl2sq2yz4zz5AI<6>GGWHHYHGY<60>klZ<25>0dD\
+  <42>FYQFYQGZP<59>yyOyyOxxP<7>urSzzS<25>zzazzBzzCrrzzzCzzC
+  }
+
+frm:SkewPlanesSqr {; Jim Muth
+;p1=(0,0)=YW, (0,1)=XW, (1,0)=XZ, (1,1)=YZ
+a=real(p1), b=flip(cos(asin(real(p1)))), d=a+b,
+f=imag(p1), g=flip(cos(asin(imag(p1)))), h=f+g,
+z=real(pixel)+flip(real(p2)),
+c=flip(imag(pixel))+imag(p2):
+z=(d*(sqr(z)))+(h*c),
+|z| <= 36
+}

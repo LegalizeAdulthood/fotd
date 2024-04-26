@@ -1,0 +1,17 @@
+penguins           { ; Fractal of the day, 19-08-97
+                     ; 30 min on a 486-100mhz, 640x480
+  reset=1960 type=formula formulaname=XWplaneN
+  passes=1
+  center-mag=-1.77935020491222500/-0.00272411594182925/2.437763e+007/1.165\
+  8/-90 params=0.5/0/2.001/0 float=y maxiter=5000 bailout=100 inside=0
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000HPa<4>HN`kM_<12>iObiObhNa<54>A93<11>ro6<58>AAnAAnBBm<8>CGmC2mC\
+  0m<51>K0mK0mJ0l<39>H0b
+  }
+
+frm:XWplaneN {; Jim Muth
+z=flip(imag(pixel))+real(p1),
+c=real(pixel)+flip(imag(p1)):
+z=z^p2+c,
+|z| <= 36
+}

@@ -1,0 +1,23 @@
+gateway            { ; Fractal of the day, 12-09-97
+                     ; 21 minutes on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=XY-XZrotN passes=1
+  center-mag=-0.54671263666310790/+0.01776761102795224/185292.2/0.7283/102\
+  .346/76.407 params=85/1.9/0/0/0/0 float=y maxiter=160 bailout=100
+  inside=bof61 logmap=yes symmetry=none periodicity=10
+  colors=000d9QFuS<2>_KOIYwVLdsb1<2>nRAeWI<3>ec6tb3<7>lMEc8PkKF<4>fAMl_W<3\
+  >gDO285_gA<6>fCM541F57KKWY7IgYFfPIfGL0iKMXN<10>eANwZ3qQAkHHqKZ<13>f8N2bg\
+  <10>cAOpIx<3>hAUw0e<5>h7P512I49V6Gw_J<9>gANv4_<6>h8Oj`h<3>fDRIl5<5>cDLjj\
+  0<10>fBMQC4A4I9BjQ9ZY6H<4>e8MtaS<8>gBN2AW<2>X8P7dePOWMjAXRHaGg<9>f8O6xXJ\
+  fTVPQEktTSc2I5<13>d8MMVd<4>cBQmFH<2>g9Mygo<14>gAOBJk<5>b9QMPv<7>bBU
+  }
+
+frm:XY-XZrotN {; Jim Muth, thanks to Benno Schmid
+ ; real(p1) = rotation angle in degrees, imag(p1 = exponent of Z,
+ ; p2 = parallel planes,
+ ; p3 = point of rotation and parallel planes,
+  z=sin(real(p1)*.01745329251994)*imag(pixel)+p2,
+  c=cos(real(p1)*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+   z=z^imag(p1)+c
+    |z| <= 25
+  }

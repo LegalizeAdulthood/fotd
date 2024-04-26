@@ -1,0 +1,19 @@
+CrazyQuilt         { ; Fractal of the day, 30-10-97
+                     ; 1-1/4 minutes at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=JuliaXLow
+  center-mag=-6.39488e-014/7.10543e-014/0.0168233/1/-90
+  params=3700/0.9999/3700/0.9999/-37/10 float=y maxiter=1200
+  bailout=100 inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=00000R0XQjpP00e0e00eee00e0eeL0eeeLLLLLzLzLLzzzLLzLzzzL\
+  zzz000555<3>HHHKKKOOOSSSWWW___ccchhhmmmssszzz00z<3>z0z<3>z00<\
+  3>zz0<3>0z0<3>0zz0jznQp<26>WjeWjeVkdVkc<21>OpLOpLPnM<40>V6dV5\
+  dW6e<35>mKimKinMj<13>rmvrovpnu<21>RXu<7>obo<16>jnT
+  }
+
+frm:JuliaXLow {; Jim Muth
+z=pixel, a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), c=p3:
+z=(a*(z^b))+(d*((-z)^f))+c,
+|z|<=2500
+}

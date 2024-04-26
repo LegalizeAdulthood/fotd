@@ -1,0 +1,22 @@
+Flight_of_Fancy    { ; Fractal of the day, 13-03-98
+                     ; 9min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt08 passes=1
+  center-mag=16.2512/5.98638/0.1964093/1/59.999
+  params=0.01/0.26/3.13/0.79/0.5/0.5 float=y maxiter=200
+  bailout=25 inside=bof60 logmap=yes symmetry=none
+  periodicity=0 colors=0004lY3lZ7m4<21>Ne4Oh3<11>JF7I38I38C3\
+  6F37I38L89N8AQ8AT8B<2>e8Dj8Em8Fr8Gv8E<2>p8Jj8IgAHeDFdGGdIL\
+  cLR`OW_QYXSZVU`UWbRZdOae<6>DorEqqCrs<7>AjgAifBhi<21>8p94s1\
+  <18>Q`gR_iVYp<21>0i7<5>RgeTghVgjbbdgQciRb<20>PvNJzK<12>ajW\
+  cmKbiWafgwnQXav<5>omdroaxnY<6>gxdizdeye<7>CVi8Ri3Ho<8>AhPB\
+  kMEoE<10>5lW
+  }
+
+frm:MandNewt08 {; Jim Muth
+z=c=(pixel*p1):
+a=z^p2+(c-1)*z-c
+b=p3*z^2+c-1
+z=z-1*a/b
+.000000000000000000000000000001 <= |a|
+}

@@ -1,0 +1,21 @@
+Midget_in_Clover   { ; Fractal of the day, 03-02-98
+                     ; par file, 25min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyMidgets passes=1 center-mag=+2.1000729220\
+  2557900/-0.00000659756740806/1.11423e+010
+  params=1/-1000000/-1.1/1 float=y maxiter=2400 bailout=25
+  inside=0 logmap=yes symmetry=none periodicity=10
+  colors=000G9R<3>AJv<3>OgK<14>tOf<15>WhvpqC<8>HO0cEFz5TCQJv\
+  6R<13>FGCj`b<4>HJFK2v<13>CGEYimNVUYd`<10>DIDuNs<5>IHHuyW<1\
+  4>EIC6Mm9JUfsidqdao_<2>WfTUdRSaQ<7>DICh_z<5>RPYOfTLsPXzZYy\
+  WZkUVXRRSOSOMOJJOFHPJKQLNQKQROTWQWaSZgOagKdhNghLjiOmjZpjhs\
+  kpvkzx<9>hmLhlIifM<3>jJ_jEblGd<8>xVp<2>7s_<4>R2a<2>dxc<13>\
+  iUd<6>UbpScqRan<13>NMFMB8M12K4BI7J
+  }
+
+frm:CrazyMidgets   {; JM, draws very distorted midgets
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

@@ -1,0 +1,25 @@
+Close_but_no_cigar { ; Fractal of the day, 02-04-98
+                     ; 18min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multi20031a function=flip/ident passes=1
+  center-mag=0.0134848/0.00545805/51.77327/1/-52.499
+  params=92/91/0.000172/0.07431599999999999/-1.7434/0.00015
+  float=y maxiter=1200 bailout=25 inside=253 logmap=45
+  symmetry=none periodicity=10
+  colors=000A58<6>F5FG5GH6HI7I<2>KAILBILAI<8>S8IS8IT7JU7K<\
+  5>Y4NY4N_6P<20>uet<9>E4C<23>K`aKabJbc<29>Bvi<3>eGn<3>A2R\
+  <7>RXh<30>0uv<7>p8j<13>oG5<8>LSy<24>WXxWXxYZw<23>yvnAALw\
+  totqp
+  }
+
+frm:multi20031a {; formula   draws many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+;note: formula appended with "a" to differentiate from 
+;formula of same name previously posted (see above)
+a=((real(p1))+(.000000000000000000001))*.01745329251994,
+b=((imag(p1))+(.000000000000000000001))*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^2.003+c,
+|z| <= 36  }

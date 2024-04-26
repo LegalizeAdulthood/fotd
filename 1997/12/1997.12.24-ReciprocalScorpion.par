@@ -1,0 +1,20 @@
+ReciprocalScorpion { ; Fractal of the day, 24-12-97
+                     ; 10 min., 486DX4, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix passes=t
+  center-mag=-0.21501143283291340/+0.00396560991756500/7466.92\
+  8/1/77.499 params=1/6/-1/0.5/0.6364805/0 float=y maxiter=1200
+  bailout=25 inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=0002qf<2>2zk<5>I5J<10>4oJ<6>z0j<8>SGD<5>Qc4Qg3Qk3<12>\
+  g1W<8>p3bq4cq6c<7>iTYnQk<3>iBCg73gB7<8>nomZTkI5i<9>I6l<6>8TE\
+  6X86ZB5`F4bJ<7>3Of2Mi3eW5zI<3>IEQM1TO6T<8>hqTPrh<4>Otc<7>J8A\
+  <14>bcMceMdfL<13>jmD<7>MvK<10>WYSWWSXVU<10>gQlgQmiMolIqoEroF\
+  r<13>gbU<6>d7`<3>EFf_`RvwA<3>nv9
+  }
+
+frm:MandelbrotMix {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

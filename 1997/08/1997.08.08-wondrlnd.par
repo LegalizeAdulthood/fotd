@@ -1,0 +1,20 @@
+wondrlnd           { ; Fractal of the day, 08-08-97
+                     ; 15 min. on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=XY-YZrotation passes=t
+  center-mag=-0.42242344048955660/+0.33751214265683580/102.5822/0.4334/171\
+  .912/-34.906 params=70/0/0/0/0.5/0 float=y maxiter=5000 bailout=100
+  inside=253 logmap=yes symmetry=xaxis periodicity=0
+  ranges=0/-1/150/200/250/350/500/750/1050/1500/2000/3000/5000
+  colors=000KFFUSSP``PbbPddSggUkkUnnUqqZttcwwmzz000<238>000`Yq000000
+  }
+
+frm:N-XY-YZrotation {; Jim Muth, thanks to Benno
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*real(pixel)+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=z^b+c,
+|z| <= 16
+}

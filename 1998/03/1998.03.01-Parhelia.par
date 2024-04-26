@@ -1,0 +1,18 @@
+Parhelia           { ; Fractal of the day, 01-03-98
+                     ; par file, 24min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=TowerMinExp04a function=exp/conj/sinh/exp
+  passes=1 center-mag=-0.654088/0/0.6666667/1/-90
+  params=1/0/1/0/1/0 float=y maxiter=90 inside=bof60
+  symmetry=xaxis periodicity=0
+  colors=000CFgBEg9DbACRABRAAPA9M98B97B96dB5rB4z15C<44>QLtNK\
+  v<7>XOpZOobOn<5>zRjzYiqai<2>dTi`RiXQi<2>LOiHNiCOh<10>GLkGL\
+  kGLkGKkHJkHIl<4>IDlJCmJCmJCm<26>RArR0rQ9s<40>dRfeRfeSfeTe<\
+  4>g_dg`dfbefdf<23>YnuYnvZpw<36>HGh
+  }
+
+frm:TowerMinExp04a {; Jim Muth
+z=pixel, c=p2+(p3*pixel):
+z=z^fn1(z^fn2(-z^fn3(z^fn4(-z+p1))))+c,
+|z| <= 100
+}

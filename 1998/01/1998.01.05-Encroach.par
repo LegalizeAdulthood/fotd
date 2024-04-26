@@ -1,0 +1,16 @@
+Encroach           { ; Fractal of the day, 05-01-98
+                     ; 10-1/2 mins on a 486-100 at 640x480
+  reset=1960 type=formula 
+  formulaname=Mandelbrot2 passes=t
+  center-mag=-0.19775166483491000/+0.67874773918662150/12159.47\
+  /1/47.499 params=-0.5/0.03/0/0 float=y maxiter=32767
+  bailout=25 inside=253 logmap=yes symmetry=xaxis periodicity=10
+  ranges=0/-1/225/-2/325/1000/32767
+  colors=000F9AWEKlMrIDS0gwhmk060<244>060zzp060060
+  }
+
+frm:Mandelbrot2 {; Jim Muth
+z=p1, c=pixel+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

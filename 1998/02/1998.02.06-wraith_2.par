@@ -1,0 +1,20 @@
+wraith_2           { ; Fractal of the day, 06-02-98
+                     ; par file, 5min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=OblatePM center-mag=-2.61666/-1.46257/0.4213333
+  params=0/-2.92/5.75/0/0.75/0 float=y maxiter=255 bailout=25
+  inside=bof61 logmap=yes symmetry=origin periodicity=10
+  colors=000G6HH6IG3GH3IE5JG6I<4>EBFECEFDBECEEBHJAPJASJ9VJDT\
+  J7aICeIAiIAm<2>I8wI7zH5z<5>KFzKHyLIyLKxLMxMNw<5>OatOdtPfsP\
+  hsRit<5>K_qJZqIZpHYpGYoFXoDYr<14>RTFRTDQXL<3>MhpMkwLlx<23>\
+  Dry9tzDry<9>jbMrbK<6>KYD9U8<12>jpYmr_qt_<2>or`nqanoa<11>ga\
+  dxPS<2>ZfjoelRkp1ru<30>5al5al6bq6cv6dz9Sl9DY<12>RbjSdkSfk<\
+  34>idt
+  }
+
+frm:OblatePM {; formula Jim Muth
+z=real(pixel)+flip(real(p1)),
+c=flip(imag(pixel))+imag(p1):
+z=p2*(.5*((-z)^p3+z^p3))+c,
+|z| <= 250
+}

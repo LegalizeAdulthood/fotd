@@ -1,0 +1,23 @@
+The_Grail          { ; Fractal of the day, 17-11-97
+                     ; 1-1/2 min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=M-O-rotation passes=1
+  center-mag=-0.979578/-8.88178e-016/0.7997613/0.762/90
+  params=7/148/0/0/-0.912535/0 float=y maxiter=1200 bailout=100
+  inside=bof61 logmap=yes symmetry=none periodicity=10
+  colors=000GAEE12E12<5>XTGYV2ZWE_ZPea_ibdmbhrfzvizzhzxevvdst`\
+  ir`epVa<6>cUA<3>fqjfwshuq<9>wja<3>Qcz<15>VKv<3>Hh`<6>p`9<4>J\
+  ed<11>Yxe<12>PQM<3>CsR<13>SBkZT6<7>Sl_<2>mbS<3>ti7uj2uxq<2>H\
+  x6<8>GFo<10>UtP5Sp<2>eYi<10>SY8<14>zwL<5>vkcviftge<12>cMWbLW\
+  cMV<10>mXLmXLlaK<4>juH<3>3F0<10>aG6KNWJJQIEK
+  }
+
+frm:M-O-rotation {; Jim Muth
+; real(p1)=power of Z,  imag(p1)=angle of rotation
+; p2=parallel planes,  p3=rotation point and parallel planes
+a=real(p1), b=imag(p1)+.0000000000001,
+z=sin(b*.01745329251994)*real(pixel)+p2,
+c=cos(b*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=Z^a-(1.1*z)+c,
+|z| <=25
+}

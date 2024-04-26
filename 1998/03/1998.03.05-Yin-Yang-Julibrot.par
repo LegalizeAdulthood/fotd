@@ -1,0 +1,19 @@
+Yin-Yang-Julibrot  { ; Fractal of the day, 05-03-98
+                     ; par file, 52min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=t
+  center-mag=-0.50164729218592720/+0.03110005793190427/3426.\
+  686/1.3197/-179.962/28.312 params=16/23/0/0/-1.401155/0
+  float=y maxiter=16000 inside=253 logmap=38 symmetry=yaxis
+  periodicity=0 colors=0009C2<4>BG3CH4CI4DI5DJ5<40>ZfR_gRahS\
+  <3>hjUijUhjU<2>pj4ri5<51>QR8QR8RR9<49>sRbsRbrQc<59>o5wo5wm\
+  7x<19>SixRhwA5KRgvRfv
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

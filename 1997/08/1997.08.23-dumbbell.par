@@ -1,0 +1,23 @@
+dumbbell           { ; Fractal of the day, 23-08-97
+                     ; 1 minute or less
+  reset=1960 type=formula formulaname=BasicNewton
+  passes=t center-mag=2.25264e-013/4.66294e-015/0.6908814/1.3582
+  params=1.03/2/1.4/0.3/3/0.97 float=y maxiter=120 bailout=100
+  inside=0 logmap=yes symmetry=xyaxis periodicity=0
+  colors=00010F<12>hmx<10>PSFJsP<3>8Ek<7>MqiNviQrf<4>b`X<10>ZB9<4>Faq<14>c\
+  LidKifJj<13>y7p<3>UUK<14>gr5<6>YLE<15>Ac9<7>GRK<4>XaZ<7>tVyYmR<5>y1U<4>O\
+  an<10>Tr9<2>1_W<4>ORAFWMdmSOfV9048DE7POcik<2>Fb`XOk<2>DY`LAlEOdU01MDCEPN\
+  oF0ohCY10PaVG`X1Ys7Ta<2>7ZZWho<2>DbaOyCFlNWHchFa<6>Owg<2>hA1<5>ecid8zWGr\
+  ONkFUd47O3645MJNkwEFX<2>8WYT96INKYrcZuk
+  }
+
+frm:BasicNewton { ; Jim Muth
+; REDUNDANT -- STILL NEEDS WORK
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

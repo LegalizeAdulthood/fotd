@@ -1,0 +1,21 @@
+mcescher           { ; Fractal of the day, 11-11-97
+                     ; 4 min on a 100mhz 486 at 640x480
+  reset=1960 type=formula 
+  formulaname=Mytest12 passes=1
+  center-mag=-0.03262456078188639/-0.00000000000001064/102.0864
+  params=0.4/0.1/0/1.4142/1/0 float=y maxiter=500 bailout=100
+  inside=bof60 logmap=yes symmetry=xaxis periodicity=10
+  colors=000jHSYB`L5i<2>LUnLWnKZmtyF9XU<3>99D<3>XF1<5>3jl<2>mAS\
+  <3>FQb<2>i1Rc7ZYCf<3>m8Xe8cY8jUUiRoh<2>BFA<4>K5rL3zO6w<4>YHj<\
+  6>hFX<6>g3e<2>WDj<5>mUchK_cBW_2SU2UO2W<5>RuQenLthG<4>oImnNomR\
+  pvHV<4>_CW<5>7kW<2>t_C<2>XM_<4>wEO<7>78N<2>PCl<2>f1_<7>VoH<7>\
+  WNONabFop<5>Bvm<4>jcSjaIPRT4Gb<4>RQUaZXg_6nRIuJU<2>3An9cM<2>u\
+  1P<2>3o8<4>oWy<2>SWo<3>2sX<5>ehx<2>ocxdYoUTf<7>gSJnEAt01<6>1f\
+  2<3>MkM_fXcedfek<4>DRb<4>_Uo<3>q6M<3>wNI
+  }
+
+frm:Mytest12  {; Jim Muth
+z=c=pixel, a=real(p1), b=imag(p1):
+z=(a*((z^p2)^(-p2)))+(b*((z^p3)^(-p3)))+c,
+|z|<=100
+}

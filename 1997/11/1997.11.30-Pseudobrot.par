@@ -1,0 +1,24 @@
+Pseudobrot         { ; Fractal of the day, 30-11-97 (2/2)
+                     ; Very fast!!!
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip/ident/flip
+  passes=t center-mag=-0.63933/8.88178e-016/0.5450847
+  params=45/45/0/0/0/0 float=y maxiter=300 bailout=25 inside=0
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=00000e0e00eee00e0eeL0eeeLLLLLzLzLLzzzLLzLzzzLzzz00055\
+  5<3>HHHKKKOOOSSSWWW___ccchhhmmmssszzz00z<3>z0z<3>z00<3>zz0<3\
+  >0z0<3>0zz<2>0GzVVz<3>zVz<3>zVV<3>zzV<3>VzV<3>Vzz<2>Vbzhhz<3\
+  >zhz<3>zhh<3>zzh<3>hzh<3>hzz<2>hlz00S<3>S0S<3>S00<3>SS0<3>0S\
+  0<3>0SS<2>07SEES<3>SES<3>SEE<3>SSE<3>ESE<3>ESS<2>EHSKKS<2>QK\
+  SSKSSKQSKOSKMSKK<2>SQKSSKQSKOSKMSKKSK<2>KSQKSSKQSKOSKMS00G<3\
+  >G0G<3>G00<3>GG0<3>0G0<3>0GG<2>04G88G<2>E8GG8GG8EG8CG8AG88<2\
+  >GE8GG8EG8CG8AG88G8<2>8GE8GG8EG8CG8AGBBG<2>FBGGBGGBFGBDGBCGB\
+  B<2>GFBGGBFGBDGBCGBBGB<2>BGFBGGBFGBDGBCG000<3>000V0j000000
+  }
+
+frm:multirot-XY-ZW {; Jim Muth, best=ifif, fiif
+ a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+ z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+ c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
+  z=sqr(z)+c,
+   |z| <= 36  }

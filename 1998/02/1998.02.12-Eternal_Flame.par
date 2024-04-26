@@ -1,0 +1,24 @@
+Eternal_Flame      { ; Fractal of the day, 12-02-98
+                     ; par file, 4min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=N-XY-XZrotation passes=t
+  center-mag=0/0.0458893/3.841279/1.2525
+  params=88.25/-1000/0/0.9985/0/0.9985 float=y maxiter=255
+  inside=255 symmetry=yaxis periodicity=0
+  colors=000K00P00z00aQfzyRzzzmmznq4cj5Tw6<8>o`dTPd6Dd<5>_h\
+  3<11>bC5<6>MpC<6>3qIjzw<3>Y3uZ7sdga_Ar<9>feeghdjrr<3>glfO\
+  Ee<14>fic6Ew<9>dhdMXa<12>fjcYtY<14>gkc4fe<11>dkcFUN<10>ej\
+  bWYG<6>fj`SZk<9>fjcezzfrn7er<9>dkdEsX<2>`mbmm9<9>gka`CXdU\
+  `UVtZ`ncfhk4q<7>ggdnip<12>gkc_Sg<10>gjcAE2<2>_cVsBy<2>jbh\
+  LNZ
+  }
+
+frm:N-XY-XZrotation {; formula, Jim Muth
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*imag(pixel)+p2,
+c=cos(a*.01745329251994)*flip(imag(pixel))+real(pixel)+p3:
+z=z^b+c,
+|z| <= 16
+}

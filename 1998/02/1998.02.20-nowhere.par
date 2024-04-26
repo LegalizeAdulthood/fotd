@@ -1,0 +1,18 @@
+nowhere            { ; Fractal of the day, 20-02-98
+                     ; par file, 2-3/4hr, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Mandelbrot2 passes=t
+  center-mag=+0.35190326202638100/+0.09928885386921184/4378.\
+  941/1/159.999 params=0.6798999999999999/0.6798999999999999\
+  /0/0 float=y maxiter=32000 bailout=25 inside=253 logmap=yes
+  symmetry=none periodicity=0
+  ranges=0/-1/750/990/1200/1600/2000/2500/3500/5000/32000
+  colors=0000C00PUOYcObcOdhOhZOmcgrhuqhzppO00<240>O00ROUO00O\
+  00
+  }
+
+frm:Mandelbrot2 {; Jim Muth
+z=p1, c=pixel+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

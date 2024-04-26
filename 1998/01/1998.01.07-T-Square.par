@@ -1,0 +1,22 @@
+T-Square           { ; Fractal of the day, 07-01-98
+                     ;   18 min, RUN THIS ONE
+  reset=1960 type=formula 
+  formulaname=multi20031 function=ident/flip/ident/flip
+  passes=1 center-mag=-0.00074340650976431/-0.0000050295711159\
+  1/6608.512/1/-59.999 params=90/90/0.000193/0.07565/-1.74308/\
+  6.999999999999999e-005 float=y maxiter=3600 bailout=25
+  inside=0 logmap=yes symmetry=none periodicity=10
+  colors=000P_T<13>itDkuClvC<23>0Xi<25>unU<9>cQt<6>xsu<27>emze\
+  mzfky<4>hcmhbki`hjZf<4>qSVoRU<3>aRRZSRVSQSTQPVPNWOPXOSZNUZN<\
+  2>aeLgaKibKgbJdaJYaI<2>KYHFXGBVG6TG<7>8HC8FC8EC9DC9DC9CC9CC<\
+  24>1ax1bz1cz1dz4bz<2>AZxCYwEXu<4>ORo<4>G`xFbzDdzHbt<4>dSEiPC\
+  jOClNF<3>rH`<19>39f<7>DGY
+  }
+
+frm:multi20031 {; Jim Muth, best=ifif, fiif, fifi, iffi
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
+z=z^2.003+c,
+|z| <= 100  
+}

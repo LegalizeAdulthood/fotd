@@ -1,0 +1,22 @@
+seascape           { ; Fractal of the day, 06-11-97
+                     ; 12 minutes at 100mhz on an 80486, 640x480
+  reset=1960 type=formula 
+  formulaname=N-XY-YWrotation passes=t
+  center-mag=+0.00814069125866287/+0.00086361452086150/122.173/0.07264
+  params=90.90000000000001/2.2/0/0/-0.995/0.033 float=y maxiter=1800
+  bailout=100 inside=253 logmap=yes symmetry=none periodicity=10
+  colors=0007aT<8>8b`86a<2>85c99bA9aB9`BA_<3>E7WF6VG4UG2TH0SI0RJ\
+  1QJ0PK2OL5NL4M<58>MgnMgnLfm<46>BVC7TE<7>N_9P`8Ra8Tb8<2>Zd8<2>O\
+  iMKkRGmXDna9pf4pl<45>nrforforf<6>oreoreosf<26>o_X7`L<3>7`P0_z7\
+  aR7aS
+  }
+
+frm:N-XY-YWrotation {; Jim Muth, thanks to Benno Schmid
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*flip(real(pixel))+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=z^b+c,
+|z| <= 16
+}

@@ -1,0 +1,18 @@
+pattern            { ; Fractal of the day, 23-10-97
+                     ; 1-1/2 minutes at 100mhz, 640x480
+  reset=1960 type=formula formulaname=Mosaic
+  function=log/tan/ident/tan
+  center-mag=0.0256066/-1.69163/0.162973/1.0373 params=0.28/0.5
+  float=y maxiter=90 inside=bof60 logmap=yes
+  colors=000XaR<9>NIF<18>oyb<20>qC`qA`pBZ<22>dE4<11>viB<21>mL7mK7lK9<22>bK\
+  kPWrBfx<19>OWZ<15>WnC<15>VcwVczU`wUYuMSbMScMSc<3>ilVouV<8>kMImJG<9>UEMSD\
+  NSCO<16>PD8yWy<14>Fhq
+  }
+
+frm:Mosaic {; Jim M, thanks to someone unknown
+        ; p1=Mandelbrot set coordinates
+        ; try ident, cos, ident, cos
+z=c=p1+.05*(fn1(fn2(real(pixel)))+flip(fn3(fn4(imag(pixel))))):
+z=sqr(z)+c,
+|z| <= 100
+}

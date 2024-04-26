@@ -1,0 +1,23 @@
+The_form_of_fire   { ; Fractal of the day, 09-01-98
+                     ; 9 min on 486-100, this is the par file
+  reset=1960 type=formula 
+  formulaname=multi20032 passes=1
+  center-mag=-0.00076912460226464/+0.00011976587596084/311.989\
+  8/0.6423/-160.379/56.289 params=90/20/0.000193/0.07565/-1.74\
+  308/0 float=y maxiter=500 bailout=25 inside=253 logmap=yes
+  symmetry=none periodicity=10
+  colors=000XU`<29>VSXLIX<9>KHVKHVKHW<5>LHZLC_MD`MD`M8a<5>N8dO\
+  4eO5fO6fO2gO4gQ6hO8iNBiOBjQFkUKgUPbaUZlfU<2>yoG<9>qSCqPCpOB<\
+  4>lGAkEAiDA<7>W0A<4>d0Af0Ah0Bj0C<6>x0Kz0Lz1N<5>h5Ke6Kd7J<4>_\
+  BHZCG_CG<6>tICzJC<2>zLAzMAzNAzOAzPA<21>zjCzkDzjD<41>z3K<9>zh\
+  ezmEzq6zu8zzBzsFzlEzeIzZMzSHzSJzSK<13>zUGzhFzUFzUF
+  }
+
+frm:multi20032 {; Jim Muth   this is the formula
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=z^2.003+c,
+|z| <= 100  
+}

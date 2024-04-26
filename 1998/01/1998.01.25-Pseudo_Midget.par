@@ -1,0 +1,27 @@
+Pseudo_Midget      { ; Fractal of the day, 25-01-98
+                     ; par file, 48min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyMidgets
+  center-mag=-1.99999733478910800/+0.00000004620328019/9.203\
+  1e+008 params=1/0.075/1/-0.075 float=y maxiter=600
+  bailout=25 inside=bof61 logmap=yes symmetry=xaxis
+  periodicity=0 colors=000cca_ZfWVl000NTe<2>8X6<2>Nn1000Ut1<\
+  3>Zw4WUOax5000jrOZcfzhyYYWPfX7fJAbK000EWK<3>NILhcDFY6000Ui\
+  ApnBhtDzzEisPcmZYhh000npWiw3Zr5qmzDi7QhEahL000yhZza_qV`nO`\
+  jHazcadHZ000`TU<2>UjNSpLOqUKra000WmUihF<3>wm6re8000iQCeIE<\
+  3>Pl97Yj000MfY<4>vz3uv5000uo9<3>tbHmgRgk_000Vsq<5>oiD000uf\
+  0rgEohSmhd<2>fea000bc``b_Zb_<2>mQGjfs000l`e<3>pPG3UfCS`000\
+  TQQ`OLiNFT5X<2>kIF000Jid`YP6hm4jNEeKSdCUi6000_d6<2>jELmLGp\
+  RBmQS000oOM<2>qMDy`awYXvWS000sRJrOEf6wjCfnHQMdfU_Y000iQIlx\
+  n<4>p_P000qQFUwg<4>h_M000nQEzBQ<4>tIG000rLC6k7<4>iQA000aSE\
+  iPC2LJ<3>gMB000bC7gF8lJ9HZA<2>cRA000000sLpsLirLb000qMOqMH0\
+  00rdpqYa000V39fDAjjskfl000m__<2>pPGXMbNsAYgA0000Gc<4>hLFgy\
+  M000nZE7dHVVD
+  }
+
+frm:CrazyMidgets   {; JM, draws very distorted midgets
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

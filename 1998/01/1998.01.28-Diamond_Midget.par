@@ -1,0 +1,23 @@
+Diamond_Midget     { ; Fractal of the day, 28-01-98
+                     ; par file, 12min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotQud passes=t
+  center-mag=-0.66152497430709190/+0.00683849125600507/79415\
+  4.5/1/167.5 params=1/1/0.1/-1/-2.73130389/0 float=y
+  maxiter=512 bailout=16 inside=143 logmap=yes symmetry=xaxis
+  periodicity=10 colors=000KUQLhRFhMAhH<6>9hJ<3>ei4<2>XVCC9E\
+  <2>ICML8RREV<4>wfx<2>fre<3>z6X<4>1M8ehD<6>8i0<5>4qM4rP5sK<\
+  2>5s7<7>lSE<2>7t7O`6<2>AKB_XRyhe<6>zmR<3>5dX<5>2fp<3>AqY<3\
+  >ktxxim<6>doAbo5Yf5<3>EA5<7>rIB<6>G5DfoL<2>wDeZZlBss<2>TvK\
+  Yw8diA0KQpKE<3>uH_<3>lt4<4>bwhawpZvl<3>OvYMmHLd0<5>q9k<2>J\
+  QN<4>9_6<4>w3spOTjh2aPY<5>l84<3>PcSNqb<6>6E1<3>VU8<2>FJ8TX\
+  zRVvQUr94a64cGEaQO_<3>zID<4>bIXZI`TDOO8C<2>jSF<7>KR4<5>JI6\
+  UwOKuXAte8SM<2>HUP
+  }
+
+frm:MandelbrotQud {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=sqr(z)+(.2*(z*z*z))+(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

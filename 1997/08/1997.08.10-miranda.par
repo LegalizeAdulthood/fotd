@@ -1,0 +1,17 @@
+miranda            { ; Fractal of the day, 10-08-97
+                     ; 25 min. on a 486-100mhz, 640x480
+  reset=1960 type=formula formulaname=ManN-YW
+  passes=t
+  center-mag=-0.15465830123859140/-0.00347249203979191/1339.979/0.01381/-0\
+  .113/8.126 params=0/-0.195/1.5/0/1/0 float=y maxiter=1600
+  bailout=100 inside=253 logmap=yes symmetry=origin periodicity=0
+  colors=000MM0<34>bb0ccK<6>ffrggz<36>yyzzzzyyz<3>wwzvv0zw0zv0zu0zt0<8>pp0\
+  oo0oo0<103>000000000000000<39>KK0IIPLL0MM0
+  }
+
+frm:ManN-YW {
+z=real(p1)+flip(real(pixel)),
+c=imag(p1)+flip(imag(pixel)):
+z=z^p2+c,
+|z| <= 16
+}

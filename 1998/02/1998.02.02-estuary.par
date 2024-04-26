@@ -1,0 +1,22 @@
+estuary            { ; Fractal of the day, 02-02-98
+                     ; par file, 1-1/2hrs at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyMidgets passes=1 center-mag=-0.2965028939\
+  1370660/+0.02085511196913674/57739.65 params=2/-2/0.3/1
+  float=y maxiter=1500 bailout=25 inside=255 logmap=yes
+  symmetry=xaxis periodicity=10 colors=000ohrrntutvuvwuux<13\
+  >_Ay<3>oIosKmuMjuOhuQfuSduTbuU`<4>h_SeaRbbP_cNXdLVeKUeJ<6>\
+  CER<7>n_f<3>MGc<7>FbU<8>SFvPDXMC8<2>tq_uvhuvkuun<3>uczudwq\
+  dt<5>9eculWrjU<2>ZfRSbO<2>9TFP5FBMHCJINHKEELFBNGIO<3>K8Y<5\
+  >MX_N`_NdZ<2>OpYOtXOvXXsOdoFWvi<4>tvluvluvmuvm<7>u_mqbphes\
+  _gvRjyJlzSlz_lxglwoluult<2>udrtartZrsXqsUq<3>qKp<14>piC<8>\
+  NoF<13>W`BW_BV`IVaPVbV<8>DLU<8>ukLunK<3>uZRuVTtRUsNWrJYqGZ\
+  <2>tITuJRuKPuKO<4>uNFuRIqULlXO00f
+  }
+
+frm:CrazyMidgets   {; JM, draws very distorted midgets
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

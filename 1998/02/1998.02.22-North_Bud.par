@@ -1,0 +1,23 @@
+North_Bud          { ; Fractal of the day, 22-02-98
+                     ; par file, 12min, 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=HyperBrotVII passes=t
+  center-mag=-0.1212/0.768834/5.953582
+  params=2/1800/10/1/9.999999999999999e-041/0 float=y
+  maxiter=256 bailout=25 inside=0 logmap=yes symmetry=xaxis
+  periodicity=0 colors=000Baa<3>6WZ<23>EPt<3>XyI<2>GiC<7>sSE\
+  rORrKcrGo<6>g_e<5>5IS<4>KQUNRUQUS<5>feLbqaDMP<6>rxw<5>rEx<\
+  2>PAs<2>g02<3>w2Q<7>lBO<5>2Lx<3>dBz<3>xKk<7>ifQ<3>LumFxr6v\
+  T<5>uUq<4>zHnIp2<2>woy<2>OXS<6>WEBXC9`FD<2>kOPjOQjOQ<11>LG\
+  0eYPynl<4>TiQ<6>dPj<4>3ae<5>StZ<22>5dY5dY6b_<16>FIyCkl<6>F\
+  gdDecCcb
+  }
+
+frm:HyperBrotVII    {; Jim Muth, formula
+a=0,0, b=0,0, x=real(p1), y=imag(p1),
+d=real(p2), h=imag(p2), f=p3:
+g=a^x-b^y+pixel,
+b=d*a*b+f,
+a=h*g,
+|a|+|b| <= 9
+}

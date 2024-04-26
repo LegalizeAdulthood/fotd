@@ -1,0 +1,18 @@
+corona2            { ; Fractal of the day, 10-11-97
+                     ; 4 min 640x480 on a 486-100mhz
+  reset=1960 type=formula 
+  formulaname=MytestAE
+  function=cabs center-mag=0.23684/6.43929e-015/0.3105053
+  params=4/1.1/4/1.1/0/-0.3 float=y maxiter=1200 bailout=100
+  inside=253 logmap=yes symmetry=xaxis periodicity=10
+  colors=000Cla<3>EjaF9XDDXEE_CFb<2>66y<7>LAQ<2>n87<4>Mvasp`<6>\
+  poY<7>MGn<4>LWgLZfMZf<2>NYeeLTNYe<46>eLTjan<42>eLTd9d<34>eLTO\
+  K2<64>eLT8pc9obAnbwrcBmbBmb
+  }
+
+frm:MytestAE {; Jim Muth
+z=sqr(p3)+pixel, a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), c=fn1(pixel):
+z=(a*(z^b))+(d*((-z)^f))+c,
+|z|<=2500
+}

@@ -1,0 +1,22 @@
+triangle2           { ; Fractal of the day, 25-11-97
+                     ; 1 min on a 486-100mhz at 640x480
+  reset=1960 type=formula 
+  formulaname=VB-XY-YZrotation passes=t
+  center-mag=-0.00000000000018467/+0.00000000000000000/1.99540\
+  4e+012/0.7824 params=27.2/1.999999118/-1.99999911758728/0/-1\
+  .99999911758728/0 float=y maxiter=1200 bailout=100 inside=253
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000VYd<2>oxi<5>E5s<7>vMC<7>lWh<3>GITIcZKxc<2>y3M<6>t4\
+  GkWIcvK<2>QoEhZFHkADi8<4>dbH<3>hgdKF`HMd3Bd<7>k25<4>GcW<5>4w\
+  uxJmoYhgkc<3>ok4<3>LK`<159>Zl`0KpGF`OPb
+  }
+
+frm:VB-XY-YZrotation {; Jim Muth, thanks to Benno
+; real(p1)=rotation angle in degrees, imag(p1)=bailout
+; p2=parallel planes, p3=rotation point and parallel planes
+a=real(p1), b=sqr(imag(p1)),
+z=sin(a*.01745329251994)*real(pixel)+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= b
+}

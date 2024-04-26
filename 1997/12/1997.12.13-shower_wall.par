@@ -1,0 +1,25 @@
+shower_wall        { ; Fractal of the day, 13-12-97
+                     ; very fast!! 
+  reset=1960 type=formula 
+  formulaname=Mosaic function=ident/cos/ident/cos passes=1
+  center-mag=1.77636e-015/-1.77636e-015/0.1491251
+  params=-1.766/0 float=y maxiter=500 bailout=25 inside=253
+  logmap=yes symmetry=xyaxis periodicity=10
+  colors=000eUO<4>MYSSpxSpxSpxapxkpxtoD003003aPLVdNP`Q7I3DQGdI\
+  JUQO_W4<6>LYPi5a<5>MUTZvc<3>MbU`S7<3>MXOpgN<2>R_RPvWMkUUTJOW\
+  OkkE<4>N_QvWphXgWY_uOJaTOarISgNmAi<4>OUV5X6<5>HYPTSTOVS5sl<3\
+  >HaWQ49<2>KROsBE`NLKvMJsN<3>JaRSEu<6>KWVTnR<4>K_SC6`FGYHPVnq\
+  8N4aLEYKOVdvi<3>NbV0Zp0Rh<4>GXUbKNTRQUaK<5>KYRLid<4>J_UnoVs6\
+  JfGMVPP72WalynVtzEl<4>JpJ<2>wkJ<3>JPX<2>k1SiLfgcutlG<7>EGH<4\
+  >8ZZ<4>wotdUlN9e<5>JEOJELGRWEbeCnoAvy8sv<6>1Dd<3>nswdW`W8E<2\
+  >7gt<7>sfQ<2>mLIkeTivbfvcctd<5>PeiHXSNceMaaL`ZKZVLY71gX<2>9b\
+  UzviE_THZS
+  }
+
+frm:Mosaic {; Jim M, thanks to someone unknown
+        ; p1=Mandelbrot set coordinates
+        ; try ident, cos, ident, cos
+z=c=p1+.05*(fn1(fn2(real(pixel)))+flip(fn3(fn4(imag(pixel))))):
+z=sqr(z)+c,
+|z| <= 100
+}
