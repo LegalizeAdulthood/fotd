@@ -1,0 +1,29 @@
+Mandelbrot_Magma   { ; Fractal of the day, 06-06-00 Rating (6)
+                     ; time=0:01:26.95 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandNewt10 passes=1 center-mag=+0.423943\
+  92645180270/+0.34000203601263880/1719.094/1/74.999
+  params=-4.197/-1.062/-3.473/-0.627/0.403/0.397
+  float=y maxiter=100 bailout=25 inside=bof60
+  logmap=yes symmetry=none periodicity=0
+  colors=0003da<3>5RgRAA50000P6Qk<3>8Zk9`k9bk<3>Bkk<2>\
+  MXg<3>KENKAIK5DK18<3>g86mA6sC6xD6<3>tS9sWArZA<3>rnEr\
+  qEruFrxFrzItzKwzMzzO<4>zzYzz_<3>zzmwzp<3>cznZzmUzm<3\
+  >Aze5zc9zdGzfOzg<3>DzkBzl8zm6wn<3>HkdKhbMe`PeZ<3>_mQ\
+  aoNdqLgsJiuHUnBFh5<3>Rn3Uo3Xq2<3>hv1kw1lu5<3>rjKshNt\
+  fRucUvaY<3>dMn`IrXEvTBz<3>DNw9Qw5Tv1Vv<2>KZS<4>PgYQi\
+  ZRj`<3>VrdWteXufYwgZxh<3>doZemWgjU<3>kbKm`InZFoXD4Vb\
+  <3>RSaXRabQagQa<5>iSmjTojTq<3>kUx<4>lgxljxlmx<3>lwx<\
+  3>BK_2AUBNaK_iSlq<4>copeopgpp<2>nqppqppop<8>kUqkSqjQ\
+  q<3>iHq<3>cGnbGm`Gl<3>WGjVGiZHd<6>zO3LqdVRQd0C
+  }
+
+frm:MandNewt10 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-b)*z-g
+j=c*z^d+g
+z=z-e*h/j,
+f <= |h|
+}

@@ -1,0 +1,31 @@
+NorthEastSouthWest { ; Fractal of the day, 28-10-00 Rating (5)
+                     ; time=0:05:08.96 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=multirot-XY-ZW-min function=ident/flip
+  passes=1 center-mag=-1.07712932560607900/-0.00275300\
+  534013650/1.481368e+010/1/-87.5 params=0/0/5/0/0/0/0/0
+  float=y maxiter=1800 inside=0 logmap=128 periodicity=9
+  colors=000K0MK0O<3>S0VU1XW2YY3__3_a1Y<3>i0Xj0Xl0Xn0Xp\
+  AUqERrJOsMKtPFuO0tM0sM0rL0kL0dJ0ZI0TI0MG0GG0AF04D00D0\
+  0C00E00J30M60QA0UD0XI0_L0cP0gS0jX0o_0sc0vf4pcFj`PdY_`\
+  ViVSsPPzLO<3>zFTzDVzCV<2>z7bz6dz4ez3gz1jz0lz0oz0p<3>z\
+  0fz0cz0by0`y0`000700J00X00g00s00m00<3>X00S01O04J06F07\
+  A0A60C10D00G00I00J<2>00Q00S00T00X<2>00a00c00f00g00i00\
+  l00m00o00r00s00u00pF0lS0gf0cs0`i0f_ClPPrFax4oz9my<2>M\
+  ipQgmVfl<3>l``p_YuYXv_Tv_Qx_O<3>yaCzaAza7zc4zc1<2>zd0\
+  zd0xc0sc0ma3ia7d`A_`FV_IP_MLYPGYTAXX6X`0Vc0Vg0Vj0Qd0O\
+  _1LT4IP7FJAADD79G43J10M00S10X40`70fA0jC0oF0uI0yL0zM0z\
+  G0zC0zD0p93gCAYFJOIQFLY4Of0Qm0Tu0Xx4_zDazOdzXgzdgzmgz\
+  ogzogzpgzpgzrgzrgzsgzsgzugzugzvgzvgzxgz<3>zgzpgz_gzIg\
+  zJgzLgzLgzrgzrgzsgzsgzugzugzvgzvgzxgz<3>ygzzgzzgzzgzl\
+  gzlgzmgzmgzogzogz
+  }
+
+frm:multirot-XY-ZW-min {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=(-z)^(p2)+c,
+|z| <= 36  }

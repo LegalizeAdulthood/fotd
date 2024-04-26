@@ -1,0 +1,30 @@
+Silver_Pilgramage  { ; Fractal of the day, 14-04-00 Rating (7)
+                     ; time=0:04:32.92, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotBC passes=t
+  center-mag=0.784669/-0.335969/3.197277/1/117.5
+  params=1.33/0/-3/0 float=y maxiter=25000 inside=0
+  logmap=9 periodicity=10
+  colors=00075B93CC7FFAHHDJ<6>MYXM`ZNc`<2>PlfPohOmg<14\
+  >DWfDVfCUf<2>AQf9Pf7Pe<16>YDq_Dr`Cs<3>fAu<19>mdXmfWm\
+  gU<3>nmQonQpoQ<3>stQtuQuvQvwQvxQ<2>hlY<3>RmfNmhImkEm\
+  m7mw<3>HmSKmKIm5<3>XmV_m`YmRXnHVt5Wx7<19>`QV`OW`MY<3\
+  >aGa<3>THeRHfOIg<3>GIj<17>cOpePqfPq<2>jQrkQrmPt<24>S\
+  eJReIQfG<3>NhBVfFbdIpdL<3>SXLMVLOXN<9>Zfa`gbahd<2>dk\
+  hfmjeli<3>aih`ih`hgaihbjickjblkaml
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

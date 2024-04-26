@@ -1,0 +1,27 @@
+Technical_Minibrot { ; Fractal of the day, 22-06-00 Rating (4)
+                     ; time=0:04:00.04 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.59933441035997400/+2.18388143378946700\
+  /27692.56/1/42.499 params=1/1.1/-2/-2/0/0 float=y
+  maxiter=1200 inside=0 logmap=60 periodicity=10
+  colors=0000000008EK9FMAGQ<4>FL`FMbGNd<3>IRmISoHSmHRj\
+  GQgGOfGNaFMZFKUEHPEGK000D00D00E9E<3>AMO9PR8ST<2>6a`<\
+  3>PmjUplZshcschsZmpUrnPwnKwiK<2>wiKziKwiKwiKmjkckm<2\
+  >B`r6Xt0Vx<3>3Sn3Rl4Qi<2>6Ob1Sb<2>GGZ<9>AaL9dJ9fI<3>\
+  7nDc60`KI_aY<3>ZPZZMZYJZ<2>YAZX6T<3>ZAmZBrf1v<3>Bax4\
+  jx9gy<4>WUy`RzdPz<3>vEz<3>sIjrJfrKc<3>oOOyHN<3>OeFFk\
+  DDeJ<3>8Jf7ElADj<6>TAXWAVZ9T<3>h8M<3>c7Ub6Wa6Y`6__6`\
+  <3>QGTOIRMLP<3>DUHAZE<4>FNGGLGHIG<2>KBHL9HO3G<4>EMJC\
+  QJAUK<3>3gL<3>`mewqc<2>Ghv<7>EaoE`nE`n<3>DXj1quDXjOF\
+  pOD_L6E<3>VOWYS__Xdb`hfQpeOpdMoeLr<9>NJQ
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

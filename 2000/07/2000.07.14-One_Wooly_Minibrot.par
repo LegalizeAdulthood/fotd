@@ -1,0 +1,26 @@
+One_Wooly_Minibrot { ; Fractal of the day, 14-07-00 Rating (6)
+                     ; time=0:02:50.11 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-3.54842305346022500/-3.09497819370686700\
+  /73988.85/1/165 params=1/1.5/1/15/0.4/0 float=y
+  maxiter=400 inside=0 logmap=52 periodicity=10
+  colors=00064DCBG<3>20E35G3AH5FI<3>PYNUbOZgQclTmqKwuK\
+  wbKzjKbOWUDNKAAAAA_RYVVW<2>HwQJmPLcONZN<3>UNKWKJYHI<\
+  2>c8Fd6Fd9J<3>dHWdJbdLhdNmdPrdRzdTzdVzXRzPAIHA0DAI9k\
+  _5yq<8>TmuVkuYjv<3>gew<2>Tp7EqY0rw3Sz62z<8>41z41z41z\
+  <3>31z00z31z<5>20z10z10z<3>00z0Kz<2>0mzEqrDtmDth<26>\
+  BlbBlaBka<3>Bj`PkEQlC<3>KmBJmBHmA<3>CmA<2>GmvymX<3>w\
+  mRvmPvsOumMumLumK<8>bma`mcZme<3>Rmm<9>EmXDmWCmU<2>8m\
+  P7mO7mO7mORmK<4>emVhmXkmZ<3>wmf8mR<2>am1<2>Dmnhmlimk\
+  jmkjmk<5>nmcombpma<3>rmX`mPJmI<2>WmK<5>HmH
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

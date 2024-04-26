@@ -1,0 +1,31 @@
+Square-Root_of_Two { ; Fractal of the day, 16-04-00 Rating (5)
+                     ; time=0:06:18.94, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotBC passes=t
+  center-mag=-0.029545181/0.771836852/227204.5/1/34.999
+  params=1.4142/0/0/0 float=y maxiter=2000
+  bailout=25 inside=0 logmap=139 symmetry=none
+  periodicity=10 sound=off
+  colors=000JCSJCS<3>NK_OMaPOc<2>SUiTWjTYjR_jPakNbkKbm\
+  <7>LXcLWaLV`<3>MRWMPVMOUMMVMKS<3>MCNMALM9KM7JM4IN1GN\
+  0FN4ENDD<3>NA8N97N85<2>N52K40N51<3>W9BYAD`BGcCIfDKhE\
+  NlFP<3>uJZwKayLczLdzLezMdzNd<3>wPdvQduRd<8>pXcoXcoYc\
+  oZc<19>fkbelbelb<3>cobeqa<16>HKmGInEGo<3>99q<13>TCSU\
+  CQWCO<2>_CI`CH_BG<35>ij_ik_il`im`jnajoajobjobkoa<33>\
+  lo5lo4lo3lo2lo1<2>lo0loRloUloY
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

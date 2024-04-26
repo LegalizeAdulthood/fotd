@@ -1,0 +1,31 @@
+Breaking-up_Midget { ; Fractal of the day, 03-08-00 Rating (4)
+                     ; time=0:11:06.74 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-0.09561066091537362/+0.78473810657722410\
+  /352024.7/1/35 params=1.414213562373/0/0/0 float=y
+  maxiter=60000 inside=0 logmap=136 periodicity=10
+  colors=000WYl<3>RSoQRpPQp<21>DehCfhCgh<3>Aig<15>VEUW\
+  CUXAT<3>a3Q<11>iBCiBAjC9<2>lE6lE5kG4<22>jk1jl1jn1jo1\
+  jp1jr1jr1mm0<3>dU3aP4_K5YK5WK6TKCRKGPKKNKOLMS<2>SScU\
+  UfZVj<3>rTzwTzzSzwSztUoqVknXhkYdhYceZabZ`<3>URXSQWRO\
+  VTMU<2>ZLR<2>dWOfaNhcMjeLlgKniLomM<2>smOwmPzhPzfQzcR\
+  zaRx_SvYTwXU<3>vTYuSZuR_tS`tTatUb<23>XkYWlYVmX<3>RpX\
+  Nq_<3>ZuRavPdwNfxKiyI<3>uzAwz8vzA<6>rzIrzJqzK<3>ozOn\
+  zOozP<17>xzZ
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

@@ -1,0 +1,18 @@
+Mandelbrot_Arches1 { ; Fractal of the day, 18-02-01 Rating (7) (1/2)
+                     ; time=0:12:47.53 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandNewt12 passes=1 center-mag=0.576401/\
+  0.549019/5.615454 params=-2.11485/5.39629/1.36453/-5\
+  .27693/-1.42156/-3.25674 float=y maxiter=250
+  inside=bof60 logmap=yes periodicity=0
+  colors=@arches.map
+  }
+
+frm:MandNewt12 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-1)*(z-b)
+j=c*z^d+g
+z=z-e*h/(f*j),
+.0000000000000000000000000000005 <= |h|
+}

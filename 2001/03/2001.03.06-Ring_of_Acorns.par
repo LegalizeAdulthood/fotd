@@ -1,0 +1,33 @@
+Ring_of_Acorns     { ; Fractal of the day, 06-03-01 Rating (6)
+                     ; time=0:09:25.34 -- SF5 on P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.17836323637819480/+0.266988784076264\
+  00/1.262678e+007/1/-10 params=1/-1/-1/1/-0.01/10
+  float=y maxiter=1200 inside=0
+  logmap=135 periodicity=10
+  colors=0001DA3ID3KF2LF1MG1OH0PHQj8Ph8Mf8Lc8Ia8H_8F\
+  Y8cW8UK8AS87P85O83L82K8OW0QY0SY0UZ1VZ4W_8Z_D_aHaaL\
+  bbPcbUecYhcbiefjejlfomfsofwrbus_ruWovUlwPiyMfzKewM\
+  cvPbuSarV_pYZo_YlbWjeVifVhhYfhZehacibbieaif_jiZjjY\
+  jlWloVlpUlsSmuQmwPmyOmzKhyHbyDYwBSw7Mw4Hv1Cv07v2Bw\
+  4Fw7HyALyCPzFSzHWzK_zMbzPfzSjzVmzYrz_vzbyzezzhzzkz\
+  zfzzczz_zzYyzVvyQswOpuKmsHlrFioBfm8cl4ai2Zh0Wf0Uc0\
+  Qb0Pa0Sc0Uf0Vh0Wj0Zl0_o0ap0bs0cv0fw0hz0iz0jz0lz0jz\
+  0jz0jz0jz0jz0jz0jz0jz0jz0jz1jz1jzzzz0iz0ip0if0hZ0h\
+  P0hG0h80cA1aA3ZA5WA8UABQADOBGLFIIKLGPODUQBZNDcKFhI\
+  HmGJrELwANyAOyBMwBLwBKwCIvCHvCGvDFuUDucCumCumGZrDY\
+  wCYzBYz8Wz7Wb5W_4WY2VV1VS0VP0UM0UK0UH0UK0VL0VM0WO0\
+  WP0YQ0YS0ZV1ZW2_Y3_Z3a_4aa5bb5bc7cf8chAeiAejBflCfm\
+  ChoDhpFisGiuGjvHjwIlyIlzKmzLmzLmzLnzMozMpzNqzNrzOs\
+  zOtzPuzPvzQwzQxzRyzRzzSzzSzzTzzTzzUzzUzzVzzVzzWzzW\
+  zzXzzXzzYzzYzzZzzZzz_zz_z
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

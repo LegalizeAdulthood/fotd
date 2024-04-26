@@ -1,0 +1,28 @@
+Edge-on_Galaxy     { ; Fractal of the day, 12-04-00 Rating (7)
+                     ; time=0:32:02.82, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=mandelbrotmix4 function=recip passes=1
+  center-mag=-3.08437/8.85332/2.418791/1/80
+  params=1/-1/1/-1.1/0/0 float=y maxiter=6000
+  bailout=25 inside=bof61 logmap=87 periodicity=10
+  colors=0000z0<9>0z0<4>0z00z20z40z7<2>0zC0zG<3>0yO0yP\
+  0yR0yT0yX0yY0y`<3>0yg0yi0ym<3>0yt0yv0yw0zr0yy0Vz00z0\
+  Az0It0Pk0Xd0dV0kO0rE0y70z0<11>0z0<4>0z0000<40>000<4>\
+  00000200200400700700200400700700800800A00A00C00C00E0\
+  0E00G00G00I00I<2>00O40M70MA0KC0KG0II0IM0GO0GP0GT0EV0\
+  EY0C`0Cd0Ae0Ai08k08n07p07r27v74wA4zE2zI2zM0<2>zX0<2>\
+  zw0zz0zz0zz0zz2zz2zz4zz7IEkIGmIGmKGmKGmMImMImMImOImO\
+  KmOKnPKnPMnPMnRMnRMnROnTOnTOnVMpTOn<2>TPmTPmTRkTRkTT\
+  iTTiTTiTVgRVgRXe<3>RYdRYdR`bR`bRb`Rb`Pb`PdY<2>PeXPeX\
+  PgVPgVPiTPiTPiTOkROkROkROmP<2>OnOOnOOpMOpMOyCKy8Iy7E\
+  y4Cy28y07z02z0
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

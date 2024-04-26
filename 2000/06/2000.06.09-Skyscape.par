@@ -1,0 +1,27 @@
+Skyscape           { ; Fractal of the day, 09-06-00 Rating (6)
+                     ; time=0:07:21.49 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandNewt12 passes=1
+  center-mag=0.842403/5.75631/1.0045/1/-84.999
+  params=-0.045/-1.979/2.404/1.434/4.306/6.143
+  float=y maxiter=145 bailout=25 inside=bof61
+  logmap=yes symmetry=xaxis periodicity=0
+  colors=000ID4<4>ID4ID40DL0DN0BN<2>0BO0BO0BQ<3>0BR0BR\
+  0BT0BT0BT0BV0BV0BV0BX0BX09X09Y09Y09Y09_09_09_09a<3>0\
+  9b09b09d09d09d09f<3>08g08g08i<7>08i08i08i<2>08i08i06\
+  i08i<3>09i09i09i0Bi0Bi0Bi1Bi2Di2Di4Dk4Ek6Ek8Ek8Ek9Gk\
+  9GkBGlDGlDInEIpEIpGJqIJqIJsJJsJLwLLwNLwNLwONwONwQNwO\
+  LtQNw<3>QOwQOwROwRQw<3>RSwRSwTSwTTwTVw<2>TVwTYwVYwVY\
+  wX_wX_wY`wY`x_axabxbbxbcxdfxdfxffxfgxijxijxkkxkkxllx\
+  llxnlxnnx000<108>000
+  }
+
+frm:MandNewt12 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-1)*(z-b)
+j=c*z^d+g
+z=z-e*h/(f*j),
+.0000000000000000000000000000005 <= |h|
+}

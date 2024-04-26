@@ -1,0 +1,31 @@
+Boo                { ; Fractal of the day, 28-06-00 Rating (3)
+                     ; time=0:03:07.95 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotBC
+  center-mag=+0.93358079011394750/-0.93598144878806210\
+  /275.0502/1/-50 params=1.55/0/-7/0 float=y
+  maxiter=3600 inside=0 logmap=32 periodicity=10
+  colors=000gcmflk<2>cPgbHfc3e<3>WVeUaeSheQoe<8>YagZ_g\
+  _Zh<3>bTh<17>CAEA9C98A<3>344<3>9DKAGOCISDKWDO`<10>OC\
+  RPBQQAP<3>U6LQ1G<3>dHYhLamQd<3>eJecHebGf<3>V9fX6b<7>\
+  MBpKCqJCs<2>FExEEyBDg8DQ6D8<15>WGWYGYZGZ<3>eGdgDj<3>\
+  cNShRQ<3>_NMYMLWMK<2>QKH<4>GUC<2>AU95U5<9>JdNLePMfQN\
+  gSPhUQiWTjX<6>KpXJqXIrX<2>EuXDvXAuZ<16>MwIMwHNwG<2>P\
+  wDPwCOwD<8>FxMExNDyO<3>9yS7yQ<14>RzgSzhUzi<3>Zzn_zb<\
+  3>ezj
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

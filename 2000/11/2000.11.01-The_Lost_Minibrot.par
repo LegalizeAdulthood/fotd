@@ -1,0 +1,22 @@
+The_Lost_Minibrot  { ; Fractal of the day, 01-11-00 Rating (5)
+                     ; time=0:17:02.17 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.85728145477441900/-0.23424119516995760\
+  /5531863/1/162.499 params=1/-14/2.5/-1.45/0/0 float=y
+  maxiter=1800 inside=0 logmap=204 periodicity=10
+  colors=000X4A_5A_7A_8A<3>dEAfGAgHAhJAjIAlK9lL8lM7<9>\
+  RF2OE2MD1<2>GB0EB0DC1<32>7eK7fL6gL<3>6jN<13>bqfdrhgr\
+  i<2>ntnptoqqprtprjmrjjq`gq_dqUaqQ_<19>cmAco9bp8<3>`t\
+  3<39>OGKOFKOEL<2>NBMNAMOBN<9>ODXODYODZOE_OE`<9>ONiOO\
+  jOPk<2>OSnNTpOUn<3>OYjPZiP_hP`gPaf<3>_ebbfaeg`hi_<3>\
+  ttWwwVzzU<18>zzBzzAzz9<2>zz7zz6zz6zz6<3>zz7
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

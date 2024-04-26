@@ -1,0 +1,23 @@
+Hazy_Fractal_Scene { ; Fractal of the day, 27-06-00 Rating (4)
+                     ; time=0:12:51.87 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandNewt12 passes=1
+  center-mag=1.10629/-0.020641/67.92631
+  params=-8.41/-0.76/-5.58/5.05/-3.62/7.59 float=y
+  maxiter=250 bailout=25 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=0 sound=off
+  colors=000ckwbjyahx`hx_hxZfxYfx<3>UdwTcwScwRcv<2>Oav\
+  N`vM`vL`uK_uJ_uI_qHZu<5>BXtAWt9Xs<3>5Vs4Vs3Vq2Uq1Tr1\
+  Tp1To1So1Ro1Rm1Qm0Pm<2>2MmGLm2Km2JmGIm2Hm<2>3Dm3Fl<2\
+  >4Bl4Ek4Fj4Gi4FiEGhFFhFDh59h53hD2hC1h60e000<179>000
+  }
+
+frm:MandNewt12 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-1)*(z-b)
+j=c*z^d+g
+z=z-e*h/(f*j),
+.0000000000000000000000000000005 <= |h|
+}

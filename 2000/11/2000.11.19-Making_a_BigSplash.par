@@ -1,0 +1,35 @@
+Making_a_BigSplash { ; Fractal of the day, 19-11-00 Rating (5)
+                     ; time=0:04:34.40 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=+0.07741527538333934/-0.85262096757411960\
+  /76711.97/1/-117.499 params=1.618034/0/-2/0 float=y
+  maxiter=12000 inside=0 logmap=88 periodicity=10
+  colors=000GOAJPEKRIMUMPYQQ_UTaYVe`WhdZji`llappdstfux\
+  hvz<3>_ukauhZsdVo`RjYOdU<3>9KK5II26F02D040<3>0D00F00\
+  I20K35M4BO5IQ6KT6MV8PW9RZAU`BWcD_eEcfFfiGjkInnJoqI0o\
+  J<2>0fL0dM0`M0ZO2VP2TP3QQ4MR4KR5GT6EU6BU9JUBPUEWUGaU\
+  JiULoUQtVOuUMuTKuRJuRGvQFvPDvOBvOAxM<2>4xK3yJ0yI0yG0\
+  zE0yG0yI2xK3xL5vO6vP9uQAuTDtUEtWGsYIsZKq`LqaOpdPpeQp\
+  f<2>JnZGnWFlU<2>8kM5jK4jI2iF0iD0hA0h80e93d95c99aAD_A\
+  FZAJYBMWBPVBTTDWRDZQDaPEeMEhLEkKFoJFqIFsGI<2>uDMvDOx\
+  BQyARy9Uz8Vz8Wz6Z<2>z3cz2j<3>z4oz5pz5q<2>z6utAvkExcG\
+  yVKzMMzEQz4Uz<4>D_zE`zFazIczJdzKezLfzOhzPizQjzTkzUlz\
+  VnzWpzZqz_sz`tzcuz<3>Yzz<8>azzazzczz<3>dzzezzezzizz<\
+  4>RzzOzzKzz<3>6zz<3>4zz3zz3zz0zz3zz5zz9zzBzzEzzIzzKz\
+  zOzz<3>Zzzazzdzzfzz9zz8zz8zzAzzDzzEzz
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

@@ -1,0 +1,28 @@
+The_Elephants_Walk { ; Fractal of the day, 21-07-00 Rating (3)
+                     ; time=0:05:20.22 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  passes=1 center-mag=+0.3181278040886614/-0.013000620\
+  65059610/275.3077/0.04602/0.659/80.235
+  params=0/90/0/0/0.285/0 float=y maxiter=2500
+  inside=0 logmap=14 periodicity=0
+  colors=000YGU<3>`JXaKYbLZcM_dO`eRagUb<3>nfhpijrklsmm\
+  qli<2>hd_daX`YUYVRTSN<3>FGABD78A4571<3>PPNUTSYXX<3>M\
+  RRKQPHPOENMBML8RJ6TI7YH8cH9iHAmHDoG<4>RXEUTDXQD<3>gB\
+  B<7>VOVTQYRS_QTbOVdNWf<3>F_sD`vC`v<3>A_vA_vA_v<6>Ccs\
+  CcrCdr<2>DeqDfpGfkDfp<6>FimFjmFjl<3>Glk5hi<3>8Ta9P_9\
+  O_AN`<3>CXdDZeDafEcgFehKciPajU_mZYl<2>kSl<3>iKliIlhG\
+  lhElhClgBl<58>KfkKgkJhk<3>IjkHjnHkqGktGmwMmz<3>JmrIm\
+  pHmnGmlImj<3>HmaHm_HmYHmW<4>HmXHmXHmXHmYHmYHmY<2>HmZ\
+  HmZImZJm_<3>KmW
+  }
+
+frm:multirot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

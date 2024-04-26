@@ -1,0 +1,35 @@
+Dreaming           { ; Fractal of the day, 15-02-01 Rating (7)
+                     ; time=0:01:39.42 -- SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=+0.56328786228482250/-1.52723830718759500\
+  /10108.71/1/122.5 params=1.414213562373/0/-1.5/0
+  float=y maxiter=1200 inside=0 logmap=41 periodicity=10
+  colors=00096P07A07C0DJ0FO0IS0LX0M_0Pd0Si0Tr0Xv0Yzuuz\
+  mgzf`v_VsSOoMGlFAg73d00`00Y00`40a91cD4fI7gOCiSFjXIm<\
+  2>iSr`Xi<3>7mA0r10u01l0Ac0JV0SO0`F0i60r00p03<3>o1To1\
+  _m3f<2>l4yl4zl4zj9z<3>iQziVzg_z<2>flzfpzfszarzYrzTrz\
+  PpyLpvIpsGlrGgpGcoG`mGXlGSjGOiGLiFGgFCfF7dF4cF0a<2>F\
+  0_J0VO0QQ0MV0IY0Da09d14i30<2>s70gF0YL9OQJDXS<3>CaGCc\
+  DCdACf7Cg4Ci1Cj0Cj0Fg0Gd1Ia3L_4MX6OT9QQASOCTLDXIFYFI\
+  <2>c6Md4OgIIiVDjg7lu3gv4cx6_x6Xy7Sz7Oz9Lz9GzACzC9zC4\
+  zD0zD0zF0zF0zG0zG0zI<3>vzIzzIxzPlzX`zcPziLzlIzoFzpCz\
+  s7zv4zx1zz0zz0zz3zyAzsIzmPziPziPzjPzlPzmPzmPzoPzpPzp\
+  czPrz0mz01z6jz0<2>az1dz1gz1jz3<3>vz4yz4zz4zz6zz6zz6z\
+  zzzzz<12>zzPzzMzzJ<3>zz7zzzzzy<8>zz_zzXzzT<3>zzIzzFz\
+  zCzz9zz0<3>zz0zzzzzzzzi
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

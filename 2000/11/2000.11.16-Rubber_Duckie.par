@@ -1,0 +1,22 @@
+Rubber_Duckie      { ; Fractal of the day, 16-11-00 Rating (5)
+                     ; time=0:20:21.71 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=t
+  center-mag=-0.14339162803227790/+0.05074515329321132\
+  /217.5941/1/-52.499 params=1/2/100/0.01/-0.9/400
+  float=y maxiter=12000 inside=0 logmap=11 periodicity=9
+  colors=000JAQ<6>JBZKB`JBa<3>KCfKChLDi<17>HGpHGqGHq<2\
+  >GHrGHrHJs<35>KrvKsvKtv<3>Kxv<22>TQuUPuUNu<2>VJuVIuX\
+  Kt<9>mXtnZtp_t<3>vdt<17>ldtkdtkdt<2>idthdthbt<3>`RlZ\
+  OjS8`<9>NFgNFgMGh<2>LIjLIjNJi<12>_Ki`KiaKi<3>eKi<4>T\
+  `RRcOPgK<3>Ft5DwPIyUNzZ<4>kzhpzjuzl<3>qztpzvpzxozz<3\
+  0>Qzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

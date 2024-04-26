@@ -1,0 +1,34 @@
+Alien_Landscape    { ; Fractal of the day, 01-09-00 Rating (7)
+                     ; time=0:02:58:88 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 15
+  reset=2000 type=formula 
+  formulaname=SliceJB-new passes=t
+  center-mag=+0.035268348154282/+0.1503441749572727/22\
+  8.1255/1/10 params=0.499661/0.499125/0.497633/0.5018\
+  65/1.5/0/-0.188/0/0.2392/0.4909 float=y maxiter=1500
+  bailout=25 inside=0 logmap=23 periodicity=10
+  colors=000FAKFDNFAK<3>FBLFCLFCMFDN<3>FERFFSFHRFHSFIS\
+  FISFJTGJUHLUILUJMV2NV2MV2MV2NX<3>2OY2OY2QY<3>2RZ2R_2\
+  R_2S_2S_2Sa2Ua<3>2Vb2Vb2Xc<2>2Xc3Ue4Sf4Rg6Qg7Oi7Nj8M\
+  kAKkAJmBHnBFoDEoEDqEBrFAsH8sH7uI6vI3wJ2wK0yK0zM0z<2>\
+  O0zO0zN0z<2>M0rM0oK0mK0i<3>I0ZM0A<3>J0AI0AH0FG2D<3>C\
+  30<3>B40D60<3>D70D80D80D80DA0DA0DB2DB3DB4DD6DD6<2>DE\
+  ADFBDFBDFDDHEDHFDHF<2>DJJDJKDJKDKMDKNDKODMQDMQ<2>DNU\
+  DOVDOVDOXDQYDQZDR_DR_DRaDSbDScDScEUeFUeFUeHUe<3>JVeK\
+  VeKXeMXe<2>OYeOYeQYe<2>RZeSZeUZeUZeV_eV_eX_eX_eY_eZa\
+  eZae_ae_aeabe<2>cbecbeeceecefcegcegeeiee<2>jeekfemfe\
+  <3>ogeogeqgergeriesiesieuieuiermYqqRnuKmyEjz7iz0jz2j\
+  z2ky2kw2mu2mr2nq2nn2ok3oi3qg3qe3qb3ra3rZ3sX3sU3uS4uQ\
+  4vN4vM4wJ4wH4wE4yD4yA4z76z66z36z06<4>z06
+  }
+
+frm:SliceJB-new {; from John R. H. Goering, July 1999
+  pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+  b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+  cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+  sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+  s=v*sin(a), c=p+flip(q)+(p4), z=r+flip(s)+(p5):
+  z=z^(p3)+c
+  |z|<=9
+  }

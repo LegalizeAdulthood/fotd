@@ -1,0 +1,28 @@
+Seahorse_Valley    { ; Fractal of the day, 01-08-00 Rating (5)
+                     ; time=1:03:21.27 -- SF5 0n a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=SliceJB passes=1
+  center-mag=-0.00309701/-0.00597368/0.9861933/1/-35
+  params=0.4995/0.5/0.499/0.5/-0.75/0 float=y
+  maxiter=2000000 inside=0 logmap=yes periodicity=0
+  colors=000KSh<3>KbmKdnKgpKjqKlrKnsKovKptKorKopKnn<12\
+  >bdRccPebNfbLhaJi`HkZFmXEoVErTKuRQ<4>pHVoFWmDX<18>SB\
+  oRBpQBq<3>MBt<8>IV_IXYIZW<3>GfN<2>G`J6ZU8XSAWR<10>Ti\
+  DUjCWkB<2>`o7bp6bp6cq5<3>OY4KT4TP4VT3WT3VU3XV3ZV3YW3\
+  ZW3_W3`W1_X3<2>a_7aa9adAafC<3>bkIblJcmLcnMcpO<2>dtSd\
+  vUcxWdwV<7>k_NlXMmULnRK<2>oII<4>eNScOU<4>UTrSSwTQrTN\
+  m<2>UGZUDUUBRU9R<5>_CK`DJaDI<3>eFEfKJ<3>jK_kKclKd<3>\
+  pKhqKirKi<3>vMmwNnwNo<5>wQuwRvwRwwSxwSy<33>whz
+  }
+
+frm:SliceJB {; by John R. H. Goering, July 1999
+  pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+  b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+  cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+  sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+  s=v*sin(a), c=p+flip(q)+p3, z=r+flip(s):
+  z=z*z+c
+  |z|<=9
+  }

@@ -1,0 +1,37 @@
+Giant_Squid        { ; Fractal of the day, 06-10-00 Rating (6)
+                     ; time=0:06:47.60 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 14
+  reset=2000 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-0.93122846897796940/+0.08188815723776659\
+  /4.886406e+008/1/2.5 params=2.01/0/32/0 float=y
+  maxiter=1200 inside=0 logmap=228 periodicity=10
+  colors=000aZZaZZ<3>iffliinmmqqqssqssqutrwwrxxszzs<2>\
+  zzsstlmjhe`b_NWRCPK2LJ7HJCFJGEIJBGN8KT5RZ2Yd0ch0kg0s\
+  g2zh5zi9<2>zjHzhKsgMkfOdeS_eVVeXOeYJd`LdbLdeNej<2>Pg\
+  tQgpQhoPhmRhjRjhRjhSleSldTmcUobUo`Up_VrYVrWVuVWuTWxS\
+  WzRXzOXzNXzMYzJZzIZzG_zK_zN_zP<2>`rZaob`lc`he`ee`dj`\
+  am`_p`Yu_Wx`Uz_SzaKwaCpa5jb0dc0Zh0Vm0Vq0SpBZnLesInwG\
+  uzDwzByz9xzAwzBuzCt<2>sEoqFmpHmmIl<2>hKggLecMdbOdaPb\
+  _Pa<2>WTXVVWVVWSWaPXgNZmJatHbzFczCezGgzKhzOkzSkzXmw_\
+  mtbmqcmn<4>cmn<4>cmnckncep_`mRWjKRgITjHVlGWm<3>BatAc\
+  u9dw8gz7hz6kz5kz4mz3pz<3>0wz2uz3tz5tz6sz8sx9quArrCpn\
+  EplGpiIogKmdLkbNiaQgbTegUclWajX_hXYgYWe_UdZSb_QaaO`a\
+  MZbPZcRYcSYeVYgXXgZWhZVjaUjaSkcRmeQmgOniNpkMplMjhVee\
+  dcejZduUczSezRfz<3>KkmJljIohGpeGrcFt`EwZDxWBzU<3>7zK\
+  7zHJzGUzE<2>ZzPKzc<2>UzW
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

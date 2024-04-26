@@ -1,0 +1,32 @@
+Impossible_Fractal { ; Fractal of the day, 04-01-01 Rating (6)
+                     ; time=0:12:45.00 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=SliceJB-new function=ident passes=1
+  center-mag=-1.82146e-017/1.47451e-017/262.7154
+  params=0.49/0.49/0.49/0.49/2.00297/0/-1.7434/0/0.000\
+  216/0.074274 float=y maxiter=18000 inside=0 logmap=62
+  periodicity=10 colors=000H30<4>H30J30M30O33R6AUEHXMN\
+  ZXUaf_cnffvmiysmz8qz7us6ym4zf4z_7<2>yHByADw7Ew4F<2>u\
+  3Ju3Ks3M<2>r3QA2QD4R<2>H8VIAXKBYMDZNE_OFaQHbRIbUJeVK\
+  eXMgYNgZOk_QmbRqcSreUufVvgXvjYwkZwm_ynay<3>ufzvgzwiz\
+  yjz<3>zozzqzzrzzszzqz<15>zXzzVzzUz<2>yQzyOzwMy<2>vIy\
+  vHyvFwuEwuDwuBwsAv<3>r4vr3uq2uq0uq0uo0uo0s<3>n0sk0rj\
+  0qi0qg0of0ne0nc0mb0k<2>Z4jY6iX7gV7gU8fSAeQBeODcNEbME\
+  bKFaJHaII_HJZFKZEMYDMXBNXAOV8QU7RU6SS4SS3UU3VU3XU<3>\
+  2ZU2_U2aU0aU0bV0cV0cV0eV0fV0fV0gV0iV0iV0jV0kV0kX0mX0\
+  nX0nX0oX0qX<2>0sX0sX0uX0vY0vY0wY0yY<3>0zY0zY0zY0zY0z\
+  V3zU<2>JzQOzOSzN<3>mzIrzHvzFyzIzzKzzMzzNzzOzzOzzQzzR\
+  zzRzzSzzUzzUzzVzzX<3>yzZyz_wz_wzawzbwzbvzcvze<2>vzfq\
+  zkkzqfzvazz<5>bzybzybzwbzw
+  }
+
+frm:SliceJB-new {; from John R. H. Goering, July 1999
+  pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+  b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+  cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+  sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+  s=v*sin(a), c=p+flip(q)+(p4), z=r+flip(s)+(p5):
+  z=z^(p3)+c
+  |z|<=9
+  }

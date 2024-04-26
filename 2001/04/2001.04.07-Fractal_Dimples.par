@@ -1,0 +1,32 @@
+Fractal_Dimples    { ; Fractal of the day, 07-04-01 Rating (6)
+                     ; time=1:33:02.89--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-13.91207242091377000/+18.4986369015475\
+  7000/11315.38/1/165 params=0.5/2/1/-2/0/0 float=y
+  maxiter=25000 inside=0 logmap=420 periodicity=0
+  colors=000e8me7me7mf7nf7nf6nf6of6of6og4nf5of6of7of\
+  8of9ofAofBofCoeDpeEpeFpeGpeHpeIpeJpeKpdLqdMqdNqdOq\
+  dPqdQqdRqdSqcTrcUrcVrcWrcXrcYrcZrc_rb`sbasbbsbcsbd\
+  sbesbfsbgsahtaitajtaktaltamtantaou`pv`qv`rv`sv`tw`\
+  uw`vw`wxayy`xz`wz`wz_vz_uy_uxZtwZsuZssYrqYqoYqlXpk\
+  XpjXoiWniWnhWmgVlfVleVkdUjcUjcUibThaTh`Tg_TgZSfYSe\
+  XSeXRdWRcVRcUQbTQaSQaRP`RP_QP_POZOOZNOYMNXLNXKNWKM\
+  VJMVIMUHLTGLTFLSELSEKUFJVFIXFHYFGZFF`FFaFEbFDdFCeF\
+  BfGAhG9iG9jG8lG7mG6nG5pG4qG3sF4rG5qG6pG7oG7nG8mG9l\
+  GAkGAjGBiGChGDgGDfGEeGFdGGcGHbGHaGI`GJ_GKZGKYGLXGM\
+  WGNUGNSGQQGSOGUNGUMGULGUKJUHIUDIU6IU3HU3HU3HU3HU3G\
+  U3GU3GU3GU3FU3FU3FU3FU3EU3EU3EU3EV3DW3DX3DY3DZ3C_3\
+  C`3Ca3Cb3Bc3Bd3Be3Bf3Ag3Ah3Ai3Aj59k59l59m37n48o59p\
+  5Aq6Br5Cs5Ct6Du6Ev7Fw8Gx8Hy9HzDIzEJzFKzFLzGMzGMzHN\
+  zIOzJPzKQzKRzLRzMSzMTzNUzNVzOWzPWzPXzQYzQZzR_zT`zV\
+  azXbzZcz`ezbfzdgzfhzhizjj
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

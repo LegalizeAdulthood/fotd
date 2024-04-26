@@ -1,0 +1,26 @@
+ThisIsNot_A_Midget { ; Fractal of the day, 13-07-00 Rating (3)
+                     ; time=1:01:39.95--SF5 on a 486-66mhz
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=multirot-XZ-YW passes=1
+  center-mag=+0.00000014017740139/+0.00000000818683823\
+  /91390.37/0.9263/-169.71/82.281
+  params=84.124/-1.342/-1.2510561243/0.0133126434/-1.2\
+  510561243/0.0133126434 float=y maxiter=15000
+  inside=0 logmap=478 periodicity=10
+  colors=000goEfpDgn6<10>etbeueeuh<3>ewt<21>LLbKJaJH`<\
+  3>FAYHBb<3>C6KB5FA4A936<23>25A25A25A<2>15A15A246<3>1\
+  6E16G16I17K17M04P<7>2EK2FJ2GJ<3>3KG1IC<16>GadGbeHdg<\
+  3>LhnJkoGmoLioQenWcm<21>FIpEHpEGp<2>BDpBDpCFo<16>iib\
+  kkammaoo`qp_<2>uvYvxXwyVxrSylNzfJz`9<14>zYNzYOzYP<3>\
+  zYTzXY<3>z`GzZEz_DzaC<3>zo8zs7zv6<3>zuPztUztYztbzue<\
+  3>zyizzjzzkzzl<6>zzm
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

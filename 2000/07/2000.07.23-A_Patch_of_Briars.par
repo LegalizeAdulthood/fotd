@@ -1,0 +1,29 @@
+A_Patch_of_Briars  { ; Fractal of the day, 23-07-00 Rating (5)
+                     ; time=0:02:40.34 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.76022595650848300/+1.14392397091661000\
+  /4403963/1/119.999 params=1/1.5/1/-0.5/-1.8/0 float=y
+  maxiter=1400 inside=0 logmap=46 periodicity=10
+  colors=000dXpbXnfYqkYtn_xqazwbzzdzzdzzazwYxsVsnQnkLk\
+  <3>Y8RV2OR0JO0EL09I06N09<2>X0G_0Ib0Jf0Li0Ol4QsDRzJTz\
+  QX<2>ziazQYzEXqJViGTaDQ<2>DDL0DJ0DV0Df0Dp04z00z20z9B\
+  zIDzODzVDzaDz<2>pEzt6tz0px2kx8gxDbxI_xNVwRRwXNw_JwdE\
+  wiBtn6ts2tx0tz0<2>sz0sw0sp0si0sb0qX0<3>q60q00gE0<2>E\
+  q24z40z60z91zB<3>EzLIzOLzQOzTRzVOzR<2>JzNIzJGzI<2>Bz\
+  B9z98z86z64z46z26z18z1<16>9z09z09z1<4>9z19z19z69z1<3\
+  >9z29z29z29z29z29x2<3>9x29w29w49w49w49t4<3>9t49s49s4\
+  9s49s69q6<3>9q69p69pD9pJ9pQBqX9pb9pi9pp9pp9pp9pn9pn9\
+  pn9pl<3>9pk9pk9pi9pi9pg<3>9pf9pf9pd9pd9pd9pb<2>9pa9p\
+  a9p_9p_9p_9pY<3>9pX9pX9pV9pV9pV9pT9pT9pR<3>9pQ9pQ9pO\
+  <3>9pN9pN9pL9pL9pJ<3>9pI9pI9pG9pG9pG9pE9pE9pE
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

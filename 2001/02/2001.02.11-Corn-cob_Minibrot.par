@@ -1,0 +1,27 @@
+Corn-cob_Minibrot  { ; Fractal of the day, 11-02-01 Rating (5)
+                     ; time=0:01:47.27 -- SF5 on a P200
+                     ;  Version 2001 Patchlevel 5
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+9.4286289565161110/-5.0938442055086210/3\
+  .397323e+008/1/-47.5 params=0.3/-1.2/11/-3/-2400/487
+  float=y maxiter=1500 inside=0
+  outside=tdis logmap=yes periodicity=10
+  colors=000Eb6kqSeuN`xJ<7>UuTTuUSuV<3>PtZ<2>U6d<9>TAk\
+  TBkTBl<3>TCn<3>BgW7oSApO<3>LqB<8>GiCFhCFgC<2>DdCDdCB\
+  WI<2>57Y<3>7N_7R_7V_<3>8i`<4>AkRAkQAkO<2>BlIBlHEjJ<8\
+  >XZZZY``Xa<3>hShacVVnI<4>dL8fF6g95C7o<2>lq3<3>LbTE__\
+  7We0Tk<9>COKENHFNF<2>IL6JL4INEHPOGRY<5>QGRSEQUDP<2>Z\
+  7M_6LZBR<3>XVlX_q_`k<3>idPkdKleQ<3>nii<4>djgbkg`kg<3\
+  >Ukf<3>ROWRIUXPP<3>tp6yw2`q6<3>tE9x59t9B<3>gPIcTJ`XL\
+  <3>OlR<4>eQchMelHh<3>y0q<2>dvl<3>_egZaeYYdXUcWQb<5>O\
+  XTNYRMZQ<3>HbKUhUemb<8>Hc9
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

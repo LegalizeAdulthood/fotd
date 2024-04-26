@@ -1,0 +1,30 @@
+The_Cosmic_Mystery { ; Fractal of the day, 13-11-00 Rating (6)
+                     ; time=0:05:18.29 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.96820939344254350/+0.00080761418055334\
+  /7.534044e+010/1/80 params=1/-6.66/-1/-6.666/-20000/0
+  float=y maxiter=1200 inside=0 logmap=106 periodicity=9
+  colors=000M0FL0FL0GJ0IJ0JI0LI1M<3>C7SA9T9AV7CX6DY9G`\
+  AJc<3>MVoOYrQ`uTcxXfz_izzzz`lz`jz`ix`fs`dp`cl``g__d_\
+  Y`_VY_TT_SP_PM_OI_MFYQIXVLVYOTaQSdTSiXQm_PpaOudMxgLz\
+  jTzmgzVvyDzv0zs0zp0vm0oj1gg4`d6Tc9MaAIaDIdCGcFFcGDcI\
+  DaJCaMAaOA`P9`Q7`T6_V6_X4_Y3Y`3Ya1Yc0Xd0Xg0Xi0Vj0Vl0\
+  Vo0Tp0Tr0Or0Ts0Yu0av0gx0ly<2>0zz<2>1zz<2>9zyCzvFzsGz\
+  pJzm<2>QzdSzaVz_YzX_zT<3>izIlzFmzCpz9rz7oyCmxFjuJisM\
+  gpPdoTclXaj__gcYffVcjTamS_pPYuOVxMTzJQzIPzFMz<3>LSzM\
+  TzMVzOXzPXzQYzS_zT`zTazVczXdzYfz_fz`gz`iz<2>dmzfozfo\
+  z_pzSrzMsyFuv0vv9xsIypQzm`zl<2>zzdxzavz`uz_szXrzVpzT\
+  ozSmzPlzOizMgzLfzIdzGczFazD`zA_z9Yz7Yz4Xz6Vz7Tz7Sz9Q\
+  z9PzAOzAOzCMzDLzDJzFIzFGzGFzGDzIDzJCzJAzL9zL7zM6zM4z\
+  O4zO6zP<2>7zQ7zQ9zS<3>AzTAzTCzVCzVCzVDzXDzXCz_DzXDzT\
+  DzQFzPFzMFzJGzIGzFGzCIzAIz7Iz4Jz3Jz0Jz0Mz0Jz0Izg
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

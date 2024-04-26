@@ -1,0 +1,37 @@
+Three_Trees        { ; Fractal of the day, 08-11-00 Rating (5)
+                     ; time=0:00:26.42 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=t
+  center-mag=0.163588/-1.36873/6.622925/1/-142.5
+  params=1.618034/0/-1.618034/0 float=y maxiter=6000
+  inside=0 logmap=4 periodicity=10
+  colors=000F9gFIgFAjF3mO0pX7mcIllSisagzjfxVVuFLr0A70A\
+  A79CD9FJ7GP77OMDGo0M`IFsVJLILV4LdQp0Ml7IgDDcL9`Q4XX0\
+  Sc0OiXQzJOx6MszzOrySisV`m_SgaJadAXi1QlIOr9Mp0Lo0vfD0\
+  T7zz4zy3zx1sv<3>0QpzxmjmoTcoAToGLy4LssJzjLzcLzVLzOLz\
+  GLx7Lu0LrzXurVsiTs`SrSQrJPpAOp1MozzzLg_FcaA_d6Xg1Sj0\
+  Omz0rz0pp0pd1pS6oGCo4GoXGgJIj6Jm9zJ0d_joYJ_f__zLTz6P\
+  u0G00JL_TYSS`MQcGPfAOg4Mj0LmMjzFcy7Yv0Qrm0zL7v04009A\
+  <2>0Id03z06z07z0Ay0Cx0Fu0Gs0JpyCLaFVFIdz7`yAclCfYFgL\
+  Gj6JmMI0CJA1LVvvzPcul0zL3zQzxMzvIxuDrs9js4cr0Yp0Qo9m\
+  06i03d91`I0XQ0S_0Og4Fx1Gv0Iu0Is0Jr0LpVvzIiz4Xx0Px0Ou\
+  0Ms0Mr0LpOi4JdAFaGC_M7XS3TY0Qc0Oi60v04r0zm0zP0uX0ia0\
+  XiVzVu7iiAj_ClPFlDGm3Jog0XQ4c9DiPmdLifGfgCai9_j4Vl0S\
+  m0OoL_LFXQATV6S`1Pd0Mj00V06a0DiazVXzYQx`LrcFjd9cg3Yj\
+  0Qm0zo0so0go0XofL0XL7MLJCLT1LdIm0Cg07aD1XQ0QcT9iiFzS\
+  IzAJupP0cf0Ta0LYCATP1PalfF`aMPYTrJzuJz
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

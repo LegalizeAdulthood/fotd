@@ -1,0 +1,36 @@
+Sharks_Teeth       { ; Fractal of the day, 27-09-00 Rating (6)
+                     ; time=0:07:17.77 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=t
+  center-mag=+0.09815658914659789/-0.54402427192828640\
+  /5537386/1/97.5 params=1.5/0/-0.85/0 float=y
+  maxiter=32000 inside=0 logmap=133 periodicity=10
+  colors=000Hr6Ho6Gk8Gh8Gd8EaAEZAEUADSCDNC<2>CDD45C88D\
+  CAD<2>KEDNGDQJDTMDWNDZQDaUDeVDhX6gWDeSJdMPbHUaDZ`AdZ\
+  5iX2oZ0vX0sW0rU0oT1nS1kS1iQ2gP2eN2dM4aK4`K4XJ5WH5TG5\
+  SE6PD6N88ND6M<3>P5MT4MW4MZ4Ma2Md2Md0Pe1Ng2Mg4Mh5Ki8K\
+  iAJkCJkDHlEHnHGnJGoKEpMDpNDrQCrSCsTAuUAuW8vZ8w`6wa6y\
+  b5za1zb4yd5<2>uhAsiCrkDplE<3>krKisMhuN<2>dySbzTazUaz\
+  WbzUdyUewTgwThvSiuSkuQlsQnrPopPppNroNsnMunMvlKwkKwkK\
+  ykKkiHWhEHgC1a62d82g82h82k82l82o82r82s82vA2wA2zA<4>2\
+  zA2zA6zEAzHEzMHyPKuTPrWSo`UkbZhgadidanhZpkUunSwrNzuK\
+  zzCzwHzsMzoSskWng`gbe``iUWoNSsGNwAJz2Ez0Cz0Gz0Kz0Pz0\
+  Sz0Wz0`z0bz1gz2kz4oz5<2>zzADrzzzCzzDzzEzzGzzGzyHyvJy\
+  sJwpKwnMsu0voCwkMygWzaezXozQuzSz<2>yWzvWzuXzsZzp`zo`\
+  zlazkbzhdzgdzeezbgzahzZhzXizUkz<3>SlzMgzEazGbzGdzGdz\
+  GezGezGgz<3>HizHizHkzHkzKiz<3>QgzMrzJrzJvz
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

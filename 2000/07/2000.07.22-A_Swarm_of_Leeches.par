@@ -1,0 +1,25 @@
+A_Swarm_of_Leeches { ; Fractal of the day, 22-07-00 Rating (5)
+                     ; time=0:09:49.14 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.03234114002211268/+0.0758542959983652/\
+  1.416931e+008/1/-25 params=1/-1.4142/5/1.4142/-0.83/0
+  float=y maxiter=900 inside=0 logmap=106 periodicity=9
+  colors=000KXoKXo<3>HTgGSeFRdKQbPP`<3>h9Sj0P<3>oLSpQS\
+  rVT<2>uhVujVtkVrjSphQ<3>eXFcUC`RA<2>SJ0SI2SI3<10>DJG\
+  BJHAJI<3>5JM<8>bVWfWXjXYmZZ<2>zb`<18>RKsPJtNIu<3>GEx\
+  <3>KSbLWYMZSNbNNeI<2>cg`ihfpgn<12>amP`nN_nL<2>XpFWpD\
+  UsD<12>eNBfLBgIB<2>jBBk8Bj5A<14>kGOkHPkIQ<3>kKT<3>op\
+  PtyO<8>SrRPqSLpS<2>CnT9mT4nU<11>PjIRjHTiGViFWiEYhD<3\
+  >dj9fk8gk8<9>jpHjqIjqJ<3>ksMdtcZtc<3>dvcfwcgwbixa<3>\
+  ozSpzQozR<8>mzUGzd
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

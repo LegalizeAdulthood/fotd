@@ -1,0 +1,34 @@
+Zebra_Mandelbrot   { ; Fractal of the day, 19-02-01 Rating (3) 
+                     ; time=0:15:04.18 -- SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=+0.36678559341833930/+0.11807384741335470\
+  /350854.3/1/37.499 params=1.414213562373/0/24/0
+  float=y maxiter=12000 inside=0
+  outside=tdis periodicity=10
+  colors=000cHDYA9SWBNpD<2>qlq<3>PJLICDIJ_IPu<3>AHp8Fo\
+  6EnBKeFQX<3>QIoTGtVEx`Q_<3>hKZjJZeF`<3>P3hL0jV6adBUm\
+  GM<3>M9LF7L85L24Lmoa<3>fmdemdcmebme<3>WnRUoNSoKQoGPo\
+  D<3>sD3z41tEB<2>edc<3>KvTFzRMrNTkJRX_QJoeEj<3>sDBvD2\
+  sR9qcG<3>hBHirI<3>lpGlpGmpGmpG49P<3>N7ES7BX68a65e63<\
+  4>RBfPCm<3>HIZFKVDLS<3>BPYBQZAR`ASaASb<3>GgsHjwOet<2\
+  >eTkjabniU<3>bZM_WKXUJ<3>aVUcWXdWZeWafWc<3>kkdmodnsd\
+  owdpzdAq`pVB<3>tePuhTvkWwn_wpb<3>WXePTebeToqG<2>tIA<\
+  3>CZ61b5D_D<3>vPe<3>7T5<3>XbH`_j<3>mWPpVJsUEvT8yS3<2\
+  >1Sd<2>PcV<2>uZmqma<3>TqWMrVGsTAtS4uR<3>0J`0AbC8d<2>\
+  j2g<3>aK__PYYTWWYUUaTMgZElcHdYg_ZwdPpXLjPH
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

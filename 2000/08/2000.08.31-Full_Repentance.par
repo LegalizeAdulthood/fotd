@@ -1,0 +1,31 @@
+Full_Repentance    { ; Fractal of the day, 31-08-00 Rating (7)
+                     ; time=0:37:41.78 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 14
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-1.528451049282987/-2.380077835990013/4.9\
+  03816e+010/1/-6.977/-0.598 params=-1/-11/-11/-1.08/0\
+  /800 float=y maxiter=1500 inside=0 logmap=204
+  periodicity=10 colors=000LUhKVjKVkKWlIYnI_nI`oH`qHar\
+  HcsFduFewFewCdrAcn9aj<2>4_Y2_U1YP0WL0VH0VC0U70S20S00\
+  S1<3>US7`S9gSAnSCuNEzSFzSHzPFzMFyLFwIFsFFrEFoAFl9Fj6\
+  Eg2Ee1E<2>Y0EV0EU0E_0Cd2CjACnHChIEcKFYLHSLIMMKHOLAOL\
+  9MM<3>9MS9MU9MV6K`4He2Fj1Co09s07y04z01z00z69zIIzVRze\
+  YzgVzhUzjRzkPwlMsoKoqIlrFhsEeuAaw9_u7Ys7W<2>r6Sq6Rq4\
+  Po4Pn4On2Ml2L<2>k1Hj1Fj1Fe2Kc4M`6PW6UU7WR9_MAaKAeHCh\
+  CEk9Fn6Fr1Hu0Ix0Iz9HrLHkWFdgFWrEPzEIYee0zz4zz9zzEzzI\
+  xzLwz<2>Yqzaozdnz<2>qhyugyxeyYxn6zd4ze2zg1zh1zj0zk0z\
+  k<3>0zq0zr0zr6yuIrxVlyeezq`z<3>VPzPMyKKy<2>1Cx0Ew0Ew\
+  0Ew0Eu0Fu0Fu0Fs0Fs0FsAUeMeSYrEhz0`x7SqFLjMCcU4W_6VW6\
+  UU6SR6SO7RM7PK7PH7OE9MC9M99L69K29K17O06R04V04Y02a0\
+  <3>0n00r00u00y0<3>0z01z69zCHxHIsK<2>MgOOcPP_S<3>VIY\
+  <2>FRP9UM2WK0_H0OA0C6011MPS<2>MP`MPcMPdLReLSg
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

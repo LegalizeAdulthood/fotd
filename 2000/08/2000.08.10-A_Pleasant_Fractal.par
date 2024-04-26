@@ -1,0 +1,23 @@
+A_Pleasant_Fractal { ; Fractal of the day, 10-08-00 Rating (3)
+                     ; time=0:09:10.57 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 13
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+3.993309831890356/+1.652041488977905/100\
+  9212/1/-45 params=10.78/-1.1/0.98/-11/0/100 float=y
+  maxiter=1200 inside=0 logmap=145 periodicity=10
+  colors=000BXr5Yu<24>nhpohoqio<3>xjo<19>Q_PP_ONZM<2>I\
+  YIGXHGWH<24>7t47u37v3<3>6y1<7>NgJPeLRcN<3>ZWV_YW<16>\
+  UBNU9MU8M<3>T3K<3>kAcpBhuDmyEr<3>Zhd<13>PkYOkYNlX<3>\
+  LlWUU`bBd<9>PFWOGVNGU<3>IHR_AK<3>TAERADQAC<2>LA8aYBq\
+  tE<8>_vWYvYWw_<3>Owf<3>SqdTodUndUmc<7>`uaavabwacx`cy\
+  `<5>hzZizZjzZ<3>mzY<2>XzgjzT<3>ozSpzSqzS<8>Fzo
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

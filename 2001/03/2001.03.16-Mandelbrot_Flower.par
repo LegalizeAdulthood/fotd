@@ -1,0 +1,33 @@
+Mandelbrot_Flower  { ; Fractal of the day, 16-03-01 Rating (5)
+                     ; time=0:20:28.20--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.19045657767755550/+0.004482892438104\
+  19/2.112526e+009/1/142.499 params=-1/2/0.1/-1/0/0
+  float=y maxiter=2400 inside=0
+  logmap=-360 periodicity=10
+  colors=0000NT2KQ7INBGLGEIKBHOAET7BY6Aa27f16k02o00t\
+  00y00z00s1EkBYaLqVVzYYz``xccqdfkhidklZnoToqNstHvxB\
+  yz6zz0zzWzzczzUzz0fv0Tl0Ga02V04O06L07I07G09D0AA0B7\
+  0B41D12E06G07G09H0BI0DI0EH0LH0RH0YGFcG1qGHxBNz7Qz2\
+  Lz46n64k76h97dAQaBAZDBWBDTBGQBINBKKBNIBQLBRNGVKIWI\
+  LYHOZGRaDVcBYdA`f9zc0caGd`IfZLhYOiVRkTVkRZlQanOdoL\
+  hqKksIntHqtGtqHvoIvnKxlKxkLxiNyhNydOycQzaRz`RzZTzY\
+  VzWVzYTzZRz`RzaQzcOzdOzfNzhNziLzkKzlKznIzoHzqHzsGz\
+  sGzlKzfNv`QoVViOYcI`YDdR7hL1kH7hGBdEHaDzZBzWAzTAzQ\
+  DzOGzLIzKLzKOzNRzQVzTYzW`zZczafzdazfZzhWziTzkQzlNz\
+  nKzoHvqEqsDktAft7at4Yt2Rt0Nt0It0Et09t04t00t00t00t0\
+  0t00t00v00x00y00z00z00z01z04z16z49z7AzAGzGKzLQzQVz\
+  W`z`dzfkzlozqvzxzzzzzzzzzzzzyzsszhnzZhzOazGWz6Rz0T\
+  z1Tz6VzAVzEWzIWzNYzQYzVZzZZzc`zh`zl`zoYzkWzhTzdRz`\
+  QzYNzVLzQIzNHzKGzGDzDBzAAz7EzAHzDKzGNzHRzKVzNYzO`z\
+  RdzVhzWkzZnzaszcvzfyzizzk
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

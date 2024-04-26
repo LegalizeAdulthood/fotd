@@ -1,0 +1,37 @@
+Crown_of_Thorns    { ; Fractal of the day, 09-02-01 Rating (6)
+                     ; time=0:03:03.33 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=mandelbrotbc passes=1
+  center-mag=-0.0827557054067479/+1.545045515561042/18\
+  3767/1/107.498 params=1.414213562373/0/1.5/0 float=y
+  maxiter=1200 inside=0 logmap=75 periodicity=10
+  colors=0005GZ2G`q0nr0qr0rr0tr1wt4xt7ztAztDzvGz<2>vOz\
+  oTzjZtddkZjcToVOvMIzDCz5PmAaVDnCIz0Lj0IW0FI0C2080070\
+  480785A8CD8IG8OLA<2>dTAjWAo`CvcCzeCzhCzkCzcLqWTgOaZG\
+  hP7qF0z50z80zA0zD0xF0vG0rJ0oL0mO0jP0gQ0dT0aV0ZW0YP0J\
+  I04A00C00C20<2>CL0DR0DW0Da0Dg0Dm0Fr0Fx0Fz0Fz0Fz0Mz7T\
+  tG`jPg`WnQdvGmz5vz0zz1zz7zwDz<3>e`zaezYkzTqzPwzLzzGz\
+  zFzzDzwCwrArnAoj8me7ha5eY4cT4ZP2WL1TG0PC0M70J44I5AG5\
+  GF7MD7SC8YA8c8Ah7AOxVMtTLqSJnQJkPIhOGhMGjLFkJDmIDnGC\
+  oFAqDArC8tA7v87w8Dx7Iz7Mz5Sz5Wz4`z4ez2jz2nz1tz1xz0zz\
+  0xz5<3>gzOczTZzYVzaQzeOzjLzmIznGzoDzqCzr8zt7zv4zw1zx\
+  0zz<3>0zz0zz0zz0zz0zw1zq5zkCze<2>PzPTzJZzDcz7gz1kz0o\
+  z0vz0zz7<2>zzT<3>zzSzzSxzSwzStzSrzSozSnzSkzSjzSgzY\
+  <2>azj`znYzrWzwTzzSzzQzz`zwhzjrzYzzMhz`Qzm7zz<2>Wz\
+  zczzjzzrzzzzzzzzzzzxzxtzxozwmzwhzvdzv`ztYztOzQLzSG\
+  zTDzW8zY
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

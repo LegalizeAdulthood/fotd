@@ -1,0 +1,32 @@
+Fractal_Orchids    { ; Fractal of the day, 08-03-01 Rating (6)
+                     ; time=0:04:17.92 -- SF5 on P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=+4.10286840502174100/-0.036942999645177\
+  60/11526.9/1/-95 params=1/-13/20/-0.8/-0.965/1e+050
+  float=y maxiter=900 inside=bof61 periodicity=10
+  colors=000k0Ld0GZ0BS04N10G30B409808C07G05K04O33S51\
+  X90`C0dF0hH0lK0pN0sP1mL8hJDbGKYDP1LXN7bH4hC1o70u10\
+  z00z00z00z00z00z00z03z05z07e13F80HF4KL9NSDPZJSeNVl\
+  SYsX`zabzeF1F`wZZsVYoSXkOVfLTbHTZFSVBRR8PN4OJ1NF0L\
+  B0L70H90FC0BF08H04J01L00O00R00S00P01O1708BLDGKKKJP\
+  OGXTFaYDhbCmfBuk9zoJvsRswZpzhmzpkzyhzzezzfzzfzvfzs\
+  fzpfzlfzifzefybfzpFvXfuTfsRfmVkhZobbrZfvTkyOozKrz0\
+  VL7aNFfNOlNXrNdwNepNfkNheNiZNkTNlONmHNoCNp7Nr0NdRk\
+  dKieChe5hhRdkl`mkXokSpiPsiLuhJvhFyhBzf8zf4ze1ze0ze\
+  0f8hb9fZBfVCeSDeOFdKGdGHdDJb9Kb5La1Na0OaBNZLLYXLXf\
+  KTrJSzJRvPYXi0ae8faJlYTbhk`hiXhhThfPheNhbJhaGh`DhZ\
+  9hY7hV3hT0hS0hR0hP0hO0dL0aK4ZJ9XHDTGHPDLNCRKBVH9ZF\
+  8bB5h84l53p31u00k5GaBXSGlJLzNOwPRsSToVXkYYf``bbbZe\
+  eVhfRkiNmlJpoFsrBvs7yv3zy0zz0zz0zr0zf0zX5zL9zBDzGC\
+  zKBzO9yS8yY7ya5we4wi3wm3Of50a83`5G`3T`0f`0u`0z`0zZ\
+  0wY0rY1mX4hV7dV8z0bw0Yp0S
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,26 @@
+A_Thorny_Minibrot  { ; Fractal of the day, 14-12-00 Rating (5)
+                     ; time=0:00:26.47 -- SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=+1.36919600545343200/+0.37360798507764660\
+  /2337888/1/-127.499 params=1/-10/10/-2/0/900 float=y
+  maxiter=3000 inside=0 logmap=14 periodicity=10
+  colors=000EYe<3>8MP7JL5GH<2>174vKDTC6yex<3>gVfbSbZPY\
+  as7<3>av4aw3aw3Vm2Pd2Jc19c0Cc16c0`cZ<3>IcHDcD9c84c4Z\
+  cp<3>LcVHcQEcLAmF7mA3m5dmK<3>TmEQwC<3>Ew7Bw58w45z22z\
+  1fzr<2>AzDozA<6>Qz5Mz4Iz3<3>3z0yz_<7>SzGOzEKzC<3>4z2\
+  _zl<4>LzSIzOFzK<3>3z46zd3zKHz`<8>7zG6zD5zB<3>1z2Dzk<\
+  2>3zCTzV<4>GzIEzFCzC<2>4z52z21zJ<3>0zB0z90z7<2>0z1Yz\
+  k<3>BzG5z8mzU<3>PzFIzBCz76z3Kzy<3>CzbAzX9zS<3>1z5dzC\
+  <6>Kz6Hz5Ez4<3>2z0szL<5>UzBPz9Lz8<3>4z1wzR<3>UzDMzAF\
+  z67z3Uzi<7>EzLCzIAzF<3>2z3dzS<3>RzINzGKzE<2>Az7ezd<3\
+  >_zjZzkjzivzg<3>wz7<4>Lz`
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

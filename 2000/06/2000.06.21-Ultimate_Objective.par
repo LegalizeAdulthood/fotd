@@ -1,0 +1,25 @@
+Ultimate_Objective { ; Fractal of the day, 21-06-00 Rating (5)
+                     ; time=0:05:31.25 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=SliceJB2003-PT passes=t
+  center-mag=0.000726367/-0.00764189/55.68627/1/2.499
+  params=0.5169/0.2637/0.4979/0.4845/-1.7434/0 float=y
+  maxiter=6000 inside=0 logmap=52 periodicity=10
+  colors=000nZr<12>qctqcurdu<2>reureupdr<5>jadi`bh__<2\
+  >eZTdYReZQ<35>IIJIIIHHI<2>FGIFGIGHI<14>VWQWXQXYR<2>_\
+  `S`aTbdV<6>YULXTJXRI<3>ULCWO7<9>RDKRCMRBN<3>P7SO3U<3\
+  9>ehSeiSejS<2>gmSgnSjrT<19>R`OQ_OPZNOYNNXNMWNMXO<20>\
+  LUBLUBLUA<3>LU8jWhjUkjSmiPn<20>nYr
+  }
+
+frm:SliceJB2003-PT {;adapted from John Goering, July 1999
+  pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+  b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+  cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+  sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+  s=v*sin(a), c=p+flip(q)+p3, z=r+flip(s)+(.000216,.074279):
+  z=z^2.003+c
+  |z|<=9
+  }

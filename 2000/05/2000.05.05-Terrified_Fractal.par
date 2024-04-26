@@ -1,0 +1,29 @@
+Terrified_Fractal  { ; Fractal of the day, 05-05-00 Rating (4)
+                     ; time=0:06:15.40, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandNewt12 passes=1
+  center-mag=-0.135211/-0.00835673/0.07414007/1/-90
+  params=-1.109/-0.476/-0.686/-0.626/-0.102/-0.243
+  float=y maxiter=180 bailout=25 inside=bof60
+  logmap=yes symmetry=none periodicity=0
+  colors=000M7R<3>B`B8h75o33v0<3>Tp6Zo8dn9<3>dmIdmKdlN\
+  <3>dlV9UzdlX<3>ZMRYGQX9PR1I<3>j7eo9kz8u<3>_DaUFXNGS<\
+  2>4JETO_<8>dKJfJHgJF<3>lH7pD3<4>bVG`ZJYaL<2>QlTOoVNm\
+  Z<3>LgkLfnIgr<8>cRjePihNi<3>qFet7h<3>qYZqcXpjVppT<3>\
+  blNdvK<3>MJSIAUHGR<3>DbGChDDk8<3>9pI8rK7sM<2>4vT6sd8\
+  pp<9>6hX5gV5gT<3>5dMEXYNPi`9z<2>JYh9df<3>ReTVeQccN<3\
+  >NiNJkNFlNBnN6rO<3>7fK7dJ7aI7ZH7WG7UF<5>IZHJZHL_H<2>\
+  QaISbIVcF<8>K_eJ_hHZk<3>DYwFVz<3>6cx4ex2gx0ix<5>LhkO\
+  hiShg<3>dh_<3>HQkG2R<2>Yabchn<3>bwJbzC_xB<2>Tr8Ltw<3\
+  >FitLdiQ_ZglRVWP
+  }
+
+frm:MandNewt12 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-1)*(z-b)
+j=c*z^d+g
+z=z-e*h/(f*j),
+.0000000000000000000000000000005 <= |h|
+}

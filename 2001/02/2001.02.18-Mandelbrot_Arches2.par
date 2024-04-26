@@ -1,0 +1,25 @@
+Mandelbrot_Arches2 { ; Fractal of the day, 18-02-01 Rating (7) (2/2)
+                     ; time=0:12:47.53 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandNewt12 passes=1 center-mag=0.576401/\
+  0.549019/5.615454 params=-2.11485/5.39629/1.36453/-5\
+  .27693/-1.42156/-3.25674 float=y maxiter=250
+  inside=bof60 logmap=yes periodicity=0
+  colors=000QQkRRjRTjSPgTGW00HZBUVZh<3>ZbfZdf_ee<2>bhd\
+  fjfdke<11>MIVKGUJDT<3>C3P<8>H9UIAVIAW<3>KEYLFYLGZMHZ\
+  MH`<3>OKaPKbPLbQLcQLcPLdOMc<3>UPdWQdXRd<3>bYcdZce_c<\
+  3>kcbmdboebofb<3>ujawkaxla<9>omfnmflmg<16>UmoTmpSmpR\
+  mqQmq<2>NkuMksNjvMjuLjsLjqKirKimJijJihIhhHhd<2>Gg`Fg\
+  WFgUEfVDfUDfNCfLCfJBfH9fG<4>EfEEgEFgE<23>Zs8Zt8_t7`u\
+  7au7<2>bv7XrLRnZLjlHgy<28>4Vy4Vy4Vy<2>2Ty2Ty1Rz<3>2V\
+  x2Vw2Ww2Xw92t<18>PPk
+  }
+
+frm:MandNewt12 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-1)*(z-b)
+j=c*z^d+g
+z=z-e*h/(f*j),
+.0000000000000000000000000000005 <= |h|
+}

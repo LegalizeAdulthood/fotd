@@ -1,0 +1,29 @@
+Baubles_and_Beads  { ; Fractal of the day, 27-05-00 Rating (7)
+                     ; time=0:04:40.50 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+20827.97209153728/+7055.944158089405/693\
+  .4634/1/92.5 params=0.654/-0.4/-0.213/-4/0.201/0
+  float=y maxiter=1500 bailout=25 inside=0 logmap=67
+  symmetry=none periodicity=0
+  colors=000KVG0TG4PK7GKAHRD`OGsLQjRZrW<2>zqkxd_vSPFLN\
+  <3>A49906D7C<3>SV_V`eZfkalp<3>0IV<3>Z9Ff7CjJSnVfqfu<\
+  3>kopjqoisnhumaveVwY1ET<3>YGVeHVmHVued<3>BNe0Je6Ni<2\
+  >OXshJ8<3>Ug4Qm3Ms2Jy2<2>Me5N_6MZ8LYALYB<3>ThWVk`Wme\
+  <3>QcEPa7O_1<3>GQEEOHDMK<3>52`<3>Y5Zd6Yk6Ym2ak8_jEZo\
+  `d<3>wqgyuhzyhRd8<2>45d<3>SfVYpSbyQ<2>B4F<3>ngHwpHpm\
+  L<3>Ra_KZcEXfVUd<2>9E2NBx<3>eRrjVqnZosbnwfm<2>P3j<3>\
+  GCcDEaBG_9IY7KX5XK<2>v6_WId<2>IdM<2>5g3<3>QkGJlj<3>U\
+  pOWqJSrI<3>FvICwIWxZoyn<3>RzcLz`FzZ9zW3zU<3>4zh5zl5z\
+  o5zs5zv<3>4zb4zY9zX<3>SzU<2>NzhMzlIzf<2>9zR<3>FzDHzA\
+  Iz7MzPPzeszL<2>szezzV<2>fzI<4>ZzgfzOLzGEzG
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,25 @@
+A_Vanished_Tail    { ; Fractal of the day, 14-09-00 Rating (3)
+                     ; time=0:00:33.12 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 15
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=t
+  center-mag=-0.0504946/0.395721/60.77519/1/9.999
+  params=-1/-1.1/1/0.9/0.35/0 float=y maxiter=5000
+  inside=0 logmap=2 periodicity=10
+  colors=0008GD6CD59D<3>KQROUUSYXVa_<3>pku<3>_SjWOgRJd\
+  <3>B0V<3>WPN`VLe`JjfH<7>NWRKVSHUU<3>6PY<5>NTXQUXTVX<\
+  3>cXX<5>LYKHYIEYG<3>2Y8<3>ElIHpKKsM<9>CQVBNVBKW<3>88\
+  Z<8>INIJOGKQE<2>NV8OW7NZ7<3>KiAKkALiD<7>SZTSXVTWXUUZ\
+  VT`VSb<3>aQdcQdePe<3>kOfVvS<13>TecTddTbe<3>TZh<14>Yp\
+  `Zq`Zr_<3>_vZ<3>yGD<10>PDJLDJICK<3>5CL<8>EHJFHJGII<3\
+  >KJIMKJOLJ<14>o_Mq`MsaN<3>zeN<7>wXgwWjvVl<3>uRwFWC<2\
+  >AKD
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,36 @@
+Its_The_Pits       { ; Fractal of the day, 12-10-00 Rating (7)
+                     ; time=0:02:28.74 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-1.43935876863394000/+1.17860135751928400\
+  /101.2729/1/-99.999 params=1.195/0/53/0 float=y
+  maxiter=10000 inside=0 logmap=39 periodicity=10
+  colors=0005ie5if4fh2dk4ah4_e5Xb5T_5PX7MU7IS7GO8CL8AI\
+  87GBAEEBEGCEIEELGEMICPKCSLCTMCVOCYQB_SBaTBdUBeVBhYAj\
+  _Ak`AnaAobAk_8iX8fU8dS7`P7YM7VK5TH5PE5<2>H54L58<3>V5\
+  LY5O`5Qb5Te5Xh5_j5am5do5h<2>w5otBjsHfrMbpQYoVUn`QnbP\
+  mdMiXSePVaH`Y8dU0iQ0mU0jX0h_1fa4dd5ah8`jBYmEVoHUrISv\
+  LPxOOzQLzTIzUHzSLzPOzMSzLUyIXxG`wCbvAft7it5kpAm<3>aP\
+  nYTnUVnQ_n<3>Amo5po1soHiiO_bTPXVEQX8M_CL`HKaLIdPHeTG\
+  fXEi`BjdAmh8nk7oo5rs4sw2tz1sx7swB<2>srOspSsoVsn_skds\
+  jhsikshosessdwsbzsazodykfviirekmbmi_oeVr`TtXPwTMxPTy\
+  TYyVbyYhy`mzdrzfwzizzkxzh<3>izTfzPXzMOzLCzK2zI8zOCzS\
+  IzVMz_SzbVzf`zj<3>rzyvzzzzz<5>zzz<3>yzzyzzzzxzztzzr<\
+  3>zzezzazz_yzXxzTwzQvzOxzQzzTzzUzzXzz_zz`zzbzzezzf<2\
+  >zzm<3>zzCzz2zz0zzTzzwzzszzozzkzzh<3>zzUzzQzzOzzKzz_\
+  <3>zzbzzbzzdzze
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

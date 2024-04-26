@@ -1,0 +1,34 @@
+Unexpected_Fractal { ; Fractal of the day, 03-02-01 Rating (7)
+                     ; time=0:50:50.72 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1 center-mag=+0.6463\
+  5330784977680/-0.85505467314147980/923397/1/-19.999
+  params=1.5/0/6/0 float=y maxiter=75000
+  inside=0 logmap=1050 periodicity=10
+  colors=000PVuTTsWRr_PqcOpfNojKm<3>xEhq9mk6q<2>gAsfCs\
+  fDu<2>cHvaIwaJw`Lx<2>YPyYQzWRz<3>TWzVZzY_z_ay`cycdxe\
+  fwggwhhvkkumluposqprsqrvsqxupyvp<3>Tz6ZmAdaGjQKpEPu0\
+  Vv2U<3>xGUxJUyNUyPUyTUzWUz_UzaU<3>zpVzoUzoUwoTuoTroT\
+  omRlmRjmRfmQ<5>QlOOlOKkNIkNGkNCkL9kL6oJ7kL8hN9fPAdQC\
+  aTD_UEWWGUYHR_IP`JNcKKdLIeNKdNLcOOaOP`PQ_PTZQUYQWYRY\
+  WRZVT`UTaTUdRUeQYgKUfQ<3>KdkIdpGcvCZzDez<2>DzuDzsCzq\
+  <2>CojCdhC`fAYdAT`AOZ<2>A9O73NA3KE2JI3KK6LO7NR8OV9PY\
+  CQ`DRdERgERjGRmGRqGRuGRwHRzHR<3>zHQzHPzIP<4>zONzPNzQ\
+  L<6>zZJz_Iz`IzaJ<3>zfEzgDzhCzjA<3>zo7zp6zq5zr3zs3zu7\
+  zv9zwCzxGzyI<10>zzkzzmzzpzzs<2>zzzzzwzzszzqzzmzzk<3>\
+  zzZzzWzzTzzQzzWzzY<3>zzZzz_zz_zza<5>zzwzzv
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

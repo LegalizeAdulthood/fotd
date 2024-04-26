@@ -1,0 +1,23 @@
+Sunflower          { ; Fractal of the day, 09-11-00 Rating (4)
+                     ; time=0:09:37.21 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.72767006651009100/+0.39885761742574140\
+  /1.266804e+008/1/-105 params=10/-1.3/1/-13/-2/100
+  float=y maxiter=2400 inside=0 logmap=144 periodicity=9
+  colors=000bQR<9>hbihckidm<3>kit<13>RnnQnnOnm<3>Jol<3\
+  >FgaEeZDcXCaUB_R<3>7PH6ME5JB5I97L88M8AP8BQ8CT8EU7FX7\
+  HY7I`7<5>Qh6Sj5Tk5<2>Xp5Zq4_t4`v4by4cz4dz4ez6ey8<3>f\
+  nEfkFfjH<13>iMaiKcjJd<3>jCj<3>XQmTUnQXoN_o<25>OHDOGC\
+  OFA<3>OD5<2>D2t<17>RJxSKxSLy<3>VOy<6>IcWGeSEgN<3>7o7\
+  <3>VVV`P`fKf<2>x5w<3>3x_<23>BpPBpPBpO<2>CoNCoNFpO<3>\
+  NrOPsORtOTtOVuO<8>ivIkvHmvG<3>svE<2>tnJ
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

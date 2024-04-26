@@ -1,0 +1,27 @@
+A_Blue_Beauty      { ; Fractal of the day, 28-05-00 Rating (7)
+                     ; time=0:10:57.95 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+5.502844144327801/+0.6715408407749046/1.\
+  403758e+009/1/40/-0.001 params=1/-0.414/1/-4.14/0/0
+  float=y maxiter=1800 bailout=25 inside=0 logmap=208
+  symmetry=none periodicity=10
+  colors=000ZcoZdpZeqahu<3>RZfOWcMU_<2>ENPBKM6DG6FF3DB\
+  0A6<20>8Ee8Ef9Fh<2>AFmAFo9Go<14>GCtGCuHBu<3>IBv<3>SS\
+  pUXnW`m<3>eqglufryewwdzuc<3>nn`kl_hkZeiYbgX_dW<2>XXU\
+  WUTWUSVPRUMR<3>QDNPGLQLN<3>QPRQQTQRURSV<2>RXYRZ_Ra`<\
+  3>SmdSofSqg<3>Swk<3>3aG<2>XfOzhRzjUzkW<3>zjTziSwiSti\
+  RqiQmiQ<3>ehNchN`gM<3>PfJMfJJfI<3>BeF9eF7eE5eE<3>5OX\
+  5Ja5Fe<2>51u<10>55i55h56f56e56d57c<4>58h59i59j47k<6>\
+  7Hr7Is8Kt<3>9Px5Py<8>aRzeRziSz<3>wSz<3>vQzuQzuQz_Pza\
+  Nz<21>Zcz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

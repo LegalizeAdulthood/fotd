@@ -1,0 +1,27 @@
+Infinite_Diamonds  { ; Fractal of the day, 11-07-00 Rating (5)
+                     ; time=0:00:36.26 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=-0.03474520578034267/+0.08388234702240095\
+  /9.91477e+010/1/-112.5 params=1/-0.6/-1.2/1/0/0
+  float=y maxiter=1200 bailout=25 inside=0
+  logmap=16 symmetry=none periodicity=10
+  colors=000668064<3>6DG7FJ9HM<2>DMVENmGPmrRzrSzGcYFc_\
+  <3>BcN9bK8aH<2>5Z74Y45X8<2>7UK8aO<3>BdcCegCekDfoEgsE\
+  gv<7>PiqQipRip<3>Win<4>SjZRkWQkTQkQ<3>NnEMoBLp8Lq5Rr\
+  AWs4<3>qw4vx4wyOxzg<6>kznizogzp<3>`zt<3>eztfztgzt<9>\
+  izkjzjjzi<3>jzf<2>Zzo<3>bzpczqdzqezqfzqfzq<8>izeizci\
+  zb<3>jzY<3>XzMTzKQzH<3>Cz6<6>6zT5zW5zZ<3>2zj<4>jzWsz\
+  Urzv<7>vzovznwzn<2>xzkxzkwzh<3>wzYvzVvzT<2>vzLhzl_z`\
+  SzP<7>ZzF_zE`zC<3>cz8NzV7zp<3>3zj<3>LzbQz`UzZZzXbzW<\
+  6>`zd`ze`zg<2>`zj`zkZzf<3>TzQSzMRzI<5>JzhQzKJzGDzC
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

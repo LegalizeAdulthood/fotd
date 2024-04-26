@@ -1,0 +1,26 @@
+4D-05              { ; Fractal of the day, 05-12-00 Rating (n/a)(1/2)
+                     ; time=0:00:40.42 -- SF5 on a P200
+  reset=2000 type=formula 
+  formulaname=multirot-XY-ZW function=flip/ident
+  passes=t center-mag=-1.11022e-016/8.32667e-017/10.4\
+  1667 params=0/90/0.36775/0/0.281/0.531 float=y
+  maxiter=3600 inside=0 logmap=yes periodicity=10
+  colors=000BAABWfCAACVfDAAEVfEAAFUfFAAGUfGAAHUfHAAITf\
+  IAAJTfJAAKSfKAALSfLAAMSfNAANRgOAAORgPAAPQgQAAQQgRAAR\
+  QgSAASPgTAATPgUAAUOgV9AWOgW9AXOgX8AYNgY8AZNgZ8A_Mg_7\
+  A`Mg`7AaMga6AbLgb6AcLgc6AdMhd8AdNid9AdOjeAAeQjeCAeRk\
+  eEFeSlfGKfTmfJPfUnfLUgVngOZgWogRcgYpgShhZqhUjh_rhWlh\
+  `siZniasi`pibtibricujdtjev<6>kiykiykjz<11>nqznqznrz<\
+  4>nsznsznsz<31>vzzwzzwzz<2>xzzxzzvyztwzruz<3>jmwhkwf\
+  iw<2>`cxZbxXbyVbyTby<9>NbzMbzMbz<2>KbzJbzKdz<4>PnzQp\
+  zRrz<2>UxzVzzWzz<3>Zzz_zz_zz<5>_zz_zz`zz<35>Nzz
+  }
+
+frm:multirot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

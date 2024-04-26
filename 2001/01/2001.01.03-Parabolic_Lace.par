@@ -1,0 +1,22 @@
+Parabolic_Lace     { ; Fractal of the day, 03-01-01 Rating (7)
+                     ; time=0:14:03.39 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.43305938747111610/+0.02692426213655286\
+  /3.213848e+009/1/-32.499 params=100/1/1/-100/-1.011/0
+  float=y maxiter=1200 inside=0 logmap=197 periodicity=9
+  colors=000_MN<3>ZLKZLJZKJZKIZKHYJH<29>qbHqcHrdH<2>tf\
+  HugGtfH<5>gZHeXHcWH<2>YSHWRHVSG<12>NaDMbCLbC<3>JeB<6\
+  >EkXEk_Dlb<3>BomApm<3>7sp7tq6tr5us5vt4xu4wv<4>9xyAxy\
+  Bxz<10>LyzMyzNyz<2>QzzQzzSzw<2>VzmczhrzcwzbrzccpYTfS\
+  <3>J44<3>BUR9`W7fa5mg<40>HeLHdKHdK<3>IdI<28>copdpqep\
+  s<2>gqvgrwgqxgqy<22>gjz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

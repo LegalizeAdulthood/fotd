@@ -1,0 +1,31 @@
+Boiling_Cauldron   { ; Fractal of the day, 07-10-00 Rating (7)
+                     ; time=0:06:08.06 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.38580613488445680/+2.076060642776320/2\
+  .459343e+008/1/62.5 params=1/1.1/-1/-1.1/0/0 float=y
+  maxiter=750 inside=0 logmap=115 periodicity=10
+  colors=000RlzTkzWmzWizVezVdzV_zUZzUVzUUvTQsSOqRKmRIi\
+  QEgPCdP8`P5Z0ib0`V0RO0HG0AA222400800C00000N0IRHSjKiv\
+  NtzTzzSzzRzuOskOkbNd`PZ<2>VOOTNKRLERLBPK4NK0<3>FJ0GJ\
+  0EN0DR0BV09X08`07d07e05i03m02q00s00v00z00z00s02k44dE\
+  5XP8QZAMkDGvFAzH3zODzVKzaTzi_zogvspszvtzzqzzlzzizzZz\
+  pQzeHzS6zG0z20z00<2>z00z00x20v41u65uA9sDDqFGoGJoKNmM\
+  QkOTkPXbP_WPbPPgGOk7Nq0Mu0Mz0Mz0Oz0Qv0Ps0Ro0Tk6TiAVe\
+  DWbJWZMXVQXV<2>GVeCUi8Sm4Rq1Qv0Qz0Pz0Nz0Oz0Mz0Mz0Oz0\
+  Nz0Qz0Pz6Pz9RzFSvJSuMUqRUmVWkZXg`XddYcgYakZad__XXXUX\
+  WMXVHZV9ZV1`V0`V0bV0bV0Yb0Yg9YoHWuPXzYXzdWzkUzedzYju\
+  SsiKuYFuNHqIFkCGk6Gk0MkARkKWkTbkbhkilnorrxuszqszlqzf\
+  qzcpzYpzSozNozJozdpzvrzsszmpziqzcqxYtxUwxPzxJzwGzwAz\
+  w6zwCzfHzQLzANz0<3>pz0<2>uz0wz0wz0xz0zz0<2>zz0qz0gzE\
+  ZzTNzeCzo<2>Yzy<2>uzzuzzuzzszzszzszzszzqzzqzzHzyqzzq\
+  zzqzzNzmPzsRzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,30 @@
+Utter_Chaos        { ; Fractal of the day, 13-04-00 Rating (5)
+                     ; time=1:21:04.48, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-0.0437149579/0.1523876687/605.378/1/4.999
+  params=1.005/0/15.9/0 float=y maxiter=50000
+  bailout=25 inside=0 logmap=1063 periodicity=10
+  colors=000zZKscd<13>vgivgiwgi<2>whjwhjuii<10>gmbfnad\
+  n`co`bo_bp`<49>TMPTLPTLP<31>FCFECFEBE<4>CCFCCFCDFCDF\
+  BDFBEF<7>AGF9HF9HF<3>8IFKJF<3>KKFKKFMLFOLFQLF<4>QNGQ\
+  NGQNG<2>QOGQPGQPIPPK<2>AQQ8RS3RU<3>2Ra2Rc2Re2Rg<2>1R\
+  k0Rl1Rm1Rn1Ro<3>CRsFRtIRuKRv<3>IRz7Rz<3>8Rz8Rz8Rz8Rz\
+  8Rz<16>TTzUTzVTz<3>ZTz<4>MTzKTzIUz<2>AUz8Uz4Uz<6>CUz\
+  AUzAUzAUz
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

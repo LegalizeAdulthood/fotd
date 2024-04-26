@@ -1,0 +1,33 @@
+More_than_a_Midget { ; Fractal of the day, 04-07-00 Rating (4)
+                     ; time=0:02:50.98 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-1.05309114080759600/-0.00068667328146814\
+  /3.069438e+008/1/-92.5 params=2.006/0/233/0 float=y
+  maxiter=1000 inside=0 logmap=94 periodicity=10
+  colors=000JHsODoTEsTFuSNnMVeGbYAkP5qH9lEDfBGZ8KS5OH2\
+  RA0VI9_QIeXQkdZokfpfgvahqXimSjcNkYIlXDmX8nX4oY5mZ5lY\
+  6jX6iX6gY7f<3>V8`U9ZT9YS9XaRPthHzz9vwDstGnrK<5>ebcd_\
+  fbXj<3>YNwa6v<3>MPwIUxEYxAbx6fx<9>8VT8UQ8TN<3>8PB<3>\
+  Ycddgkjjr<8>_NtZKtYHu<3>U7u<3>Zjm_slVof<3>EcK<3>GfJG\
+  gJHhI<3>IjI<5>YPb`LecIi<3>m4v<8>ZWZYZWWaT<3>QmJ<5>Xd\
+  AZc8_a7<3>cX1<3>YNbXKkWIt<3>bgLdnCet4<3>iwIjxMjxP<3>\
+  jwN<3>XwUWwW<2>Zw`_wa`wbawcbwd<3>fwigwjhwk<9>rwmswnt\
+  wn<3>xwnywk<3>zwczw`zwZ<3>zwRzw`zwi<3>zwNzwHzwCzw6zw\
+  1<3>zwZ<5>zw`zwQzwOzwg
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

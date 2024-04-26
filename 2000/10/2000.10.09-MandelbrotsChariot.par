@@ -1,0 +1,28 @@
+MandelbrotsChariot { ; Fractal of the day, 09-10-00 Rating (6)
+                     ; time=0:01:07.12 -- SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.49964435592604780/+1.59518857437319200\
+  /1.75916e+011/1/-109.997/-0.004
+  params=-15/-1.5/-1.5/-15/0/525 float=y
+  maxiter=275 inside=0 logmap=19 periodicity=10
+  colors=000F0AF0AL0CK1EP2GU3IY4Ib5FgGFtPKzRKzSKziKzfK\
+  zrZzzczzWzrOzcGzU8zK1z60z00w23r56m79h7E<2>g8Sf8XhFP<\
+  2>o_2<3>hP6fM7dK8bH9aFA<3>mVgpZps_x<3>wgkxihykeymb<4\
+  >jwY<2>azW<3>bzsbzy_zw<3>Ozo<3>TziVzgWzfXzdYzc<3>LzL\
+  IzGFzCCz79z3<4>bz8<2>tzB<3>bzYYzcUziPzoLzt<3>jzhqzew\
+  zcszF<3>RzSKzVDzY5z05z05z05ze5z05zejz0jzejz0jzeQzLQz\
+  zQzLQzzzzLzzzzzLzzz5z0Az5<3>MzHPzKTzO<3>hzcmzhrzmxzs\
+  zzz5zz<2>ozzzzz<3>zz0<3>zz0oz0<2>5z0<3>5zz<2>5zz_zz<\
+  2>wzzzzz<3>zzV<3>zzVwzV<2>_zV<3>_zz<2>_zzmzz<2>zzzzz\
+  z<3>zzh<4>zzh<2>mzh<3>mzz<2>mzz5zS<3>XzS<3>Xz0<3>Xz0\
+  <3>5z0<3>5zS<2>5zSJzShzw<3>RzW
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

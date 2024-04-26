@@ -1,0 +1,29 @@
+Purplebrot         { ; Fractal of the day, 25-01-01 Rating (5)
+                     ; time=0:15:44.33 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-7.440977756776993/+10.4626220731752/7725\
+  03.5/1/-112.5 params=1.23/-0.98/-1.24/-0.89/-300/300
+  float=y maxiter=2100 inside=0 logmap=244 periodicity=10
+  colors=0003hH3hH3hH3hH3fH<3>3eI3eI3eI3eI3eI9bHM`HZYH\
+  <3>dXMeXOfXPhVP<3>mVUnVVuXXrVVoVVnVUkUUiUUhUTeTTdTTa\
+  TSZSSYSQVSQTQQSQPPQPMQQOQP<2>OQOPQOPQM<3>QQLQQLQQKQQ\
+  KQOIQLI<3>QeOQjPQmPQjQU`ZbPmYLhUIbQEYMBUH9PD4K93E336\
+  33943A63B73DA3EB3GD4HE6IG7LI9MKAOLAP<2>QETSGUTHXUHYV\
+  IZYK`<2>aOdZMhaOfbOedPdePbhQbiQajS`kSZnTZ<2>rUVlXbsU\
+  VkQPmMgVIAYLDgMGaPI<4>iXVkZYm``obbqderehuhjvimwjozmr\
+  znuzmzznzzowzqsxrovskuuhrvdqv`nqZ<4>aXZZSZXOZUKZSEZP\
+  AZM6ZI3fK3bK3ZK4XL9T<2>LKIMOEMQBMU7OY3O`3Od3Of3Pe3Qe\
+  3Se4<3>VdHVdKXdOYdQZdUZdX`bZabbbbebbhdbkebnbUudZr<2>\
+  hjminkiqk<2>jsjjsjjuj<3>kwjkwjkxikxikzi<3>qzirzisziu\
+  zivzhwzhzzfzzfzxezwezwdzvdzubzubzsbzrazrazu`zw`zzZ<3\
+  >zzXzzXzzY<3>zzXzzXzzXzz`<7>zz4zz3
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

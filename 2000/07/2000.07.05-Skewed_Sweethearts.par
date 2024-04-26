@@ -1,0 +1,30 @@
+Skewed_Sweethearts { ; Fractal of the day, 05-07-00 Rating (7)
+                     ; time=0:06:31.89 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.00005213775768595/+0.35587124080399530\
+  /2.951152e+007/1/5 params=1/-1/-1/1/0/0 float=y
+  maxiter=1400 inside=0 logmap=92 periodicity=10
+  colors=000r0V<2>r0Rr0Qr0Qr0Or0Nr2Mq2Kq3Jq4Jq6Iq6Hq7F\
+  q8EqAEqBDoBBoDAoE8oF7oH7<2>pJ3uK2zM0uM0pK2mJ4jI7<3>_\
+  BIYAKV8NS7QR3RR4RP6R<3>N8RNBRMASMDRKDSKERJFSJFRIHSIH\
+  RHITHIQFKQFJSELQELQDMQDMQBNQBNQAOQAOQ8PQ<2>7QQ6RR6RQ\
+  6TQ6TQ7U87z08z0Az0Aw0Bu0Br0Do0Dm0Ej2Eg3Fe3Fb4H_6<3>J\
+  QBJNDKKEKIEQKJUNNYQRaRVfUZjXbnZfr_jwbnzerzgvzizzjqyk\
+  iukaukbvmc<2>wngwoiyqk<3>zsqzsrzuszvzzuursmjreaqXUoO\
+  KnHDn8BmABmBAmDAkDAkE8kF8jH<3>6iK6iK4gM4gN4gO3fO3fQ2\
+  fR2fR2eS0eU0eV0cV0cX<2>0bZ0b_0aa0ab0ab0_c0_e0_f0Zf0Z\
+  g0Zi0_j<5>0Zi0Zi0Yi<2>0Yi0Yi2Yg<3>4Xg4Xg6Xg6Xg7Xg7Xg\
+  8Yg8ZgA_fBafBbfDcf<3>FifFjfHkf<3>JqeJreJseJseKsc<2>K\
+  scKscMsb<6>NsaNsaNsaOs_Os_Os_Os_QsZ<11>SsXSsXSsXUsV<\
+  2>UsVYsYVs_UsVSsQSsHssX
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

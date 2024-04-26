@@ -1,0 +1,31 @@
+The_Wheel_Invented { ; Fractal of the day, 25-10-00 Rating (7)
+                     ; time=0:23:03.02 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.96459253481997100/-0.84712989364400860\
+  /3.663697e+012/0.9999/-69.987/0.002 mathtolerance=/1
+  params=1.11/-11.1/11.1/-1.11/0/1000 float=y
+  maxiter=1500 inside=0 logmap=446 periodicity=10
+  colors=0000C00G10J60NA0PF0TJ0WN1_R1aU<4>0PO0NN0KL0HL\
+  <3>06G03F00D00D30GD0JK0KR0NX1Pb1Ri3To3Uu4Xz4_z6`z6bz\
+  6dz9fzCgzFjzGkyJnvLotOqsPspSuoUvlXyjYzi`zfbzedzg_q<2\
+  >oND<2>v`DydDziDzlDzqDzuDzuDzuDzuHuuKouNiuRbuTXuWRu_\
+  KuaDwd6te7peDlfHifLegRagUYi<3>jJjkHkkGlkFllDnlCnlAol\
+  9pn9pn7qn6qn4so3to1to0uo0uk4vi9v<3>_OvXSvUUwSYwPawNe\
+  wKgwHkwFowCqwbjsdajfUaNKP09C4FK9JRCNXGRbJUiNWk<2>XYs\
+  _Yua_ud_ufYuiXukXuoYus_uv`uz`o<3>zaRzYKzWDzS6zP1zL1z\
+  J1zG1zC3z93z43z14z04<2>z13zA1zJ0zS0z_0zf0zg0zi1zi3yj\
+  4vk6uk7sl9qnAonCnoDloFipHfqKbsN`tPYuRUvTSwWOyYLz_Jza\
+  FzdCzf9zgGuk<2>XUvbXui_s<2>zfkzgizffzddzaazY_zWXzSUz\
+  RUzOWzLW<2>zD_zA`z9`<3>zPOwTLuXHs`FpdCng7kk4in1bo0Yp\
+  0<2>Hw0Kz0<3>Uz0Xz0Yz0`z1bz3ez4gz4jz6lz7nz7pzGszOuzW\
+  vza<2>eze_zfUzfUz_TzRTzJ0z1
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,36 @@
+Dingbats           { ; Fractal of the day, 05-10-00 Rating (6)
+                     ; time=0:10:46.60 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-0.93122846901060440/+0.08188815727122345\
+  /1.535833e+009/1/-2.5 params=2.01/0/32/0 float=y
+  maxiter=1800 inside=0 logmap=251 periodicity=10
+  colors=00000`00`00a00c<2>14h42i71k90lB0nE0n<2>L0sN0t\
+  Q0tT0vV0xY0y`0za0za0va0sa1na6kaAfaEcaI`aOWaTTaYO<2>a\
+  kEaoBcqIcqOcsVcsacthctncvvcvzcxz<2>dyzdztfznfzhfz`hz\
+  VhzOhzIizDiz6iz0kz0<2>kz0ky0it0hn4fh9d`DcVHaSKYRKWVL\
+  QWNN`OHaQEcQAfO7kO1lO0oO0nO0lO0hQ1dRBcTIaVQ`WYZWdWYl\
+  VZtT`zRazQczOc<2>zKNtII<3>QD0IB0BA04A00B00B00D00D10E\
+  60E92GD4GG<2>97OA4RB1VD0W<2>H0dI0hK0iL0fL0dL0cL0aN0`\
+  N0ZN0WN0VO1T<3>O7NLARIBVHEZEGaDHdAKi9Ll6Oq4Qt1Rx0Vz0\
+  Wz0Yz1`z7atDdnIfhOh`VkV`lOfnIhiNhdQi`TiYWkTZkOalKdlH\
+  hnDkn9nn6qo4ss1vt0yv0zx0zy0yz0tz0oz0lz0hz0cz0`z0Wz0R\
+  z0Nz0Kz0Gz0Bz09z04z00z00z70zE0<2>yc0vi0tn0nk0hiAafIW\
+  dTQccK`lKZxLZzNYzOWzQWzRVzTVzVTzWTzYRzZRz`QzaQzcOzdO\
+  zfNzhNziLzkLznNzqNztNzxOzyOzzOzzOzzQz<3>zRzzRzzRzzTz\
+  <2>zTzzQzzOzzLzzKzzHzzGz<5>z2zz7zzozznz
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

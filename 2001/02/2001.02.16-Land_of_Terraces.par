@@ -1,0 +1,31 @@
+Land_of_Terraces   { ; Fractal of the day, 16-02-01 Rating (8)
+                     ; time=0:05:20.16 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=mandelbrotmix4 function=recip passes=1
+  center-mag=+0.356722643327391/-0.1068235836299646/3.\
+  375269e+012/1/-110.022/-0.002 params=0.2/2/-10/-1/0/0
+  float=y maxiter=1200 bailout=25 inside=0 outside=tdis
+  periodicity=10 colors=000zTzD0pJ0pP0pT0pZ3pdDphLpnTp\
+  r`pxjpzrpzzpzzpzzpzzhzz`<2>zbDzV5zP0tJ5nFDhBJb7RX3ZP\
+  0dJ0lD0t70z10z00z00z10z30z70v90rB0nF0hH0dJ0`N0XP0TR0\
+  PV0NX0LZ0J`0Hd0Ff0Dh0Bj09l09p09<3>x09z09z09<3>z09z09\
+  z09<2>z19z59v99pB9<3>`JHXLJVNLRPNNRNJTPFVRDXT<2>1bZ0\
+  d`0d`0Xf3Rl7LrBDxF7zJ1z<3>Z0zb0zv0zzNzzJtzFnzBfv7`r3\
+  Tl0Nh0Fd09Z01V00R00P00P00N00N00L00L01J03J05H07H09L0B\
+  P0BT0DX0DZ0Db0Ff0Fj0Fn0Hp0Ht0Hx0Jz0Jz1Jx7PrDTlHXfN``\
+  TfVXjPbnJhrDlv7rz1xz0zz<3>0zz0tt5nl9hdDbXJXPNRHRL9L0\
+  0P01R01V01X01`01b01d03h03j03n03p03r03f05H07K09Q19R79\
+  RD9PLBPRBNXBNbBTd7Zf5dh3jj0nj0tp0zr0zw0zm0w`0kQ0cI5_\
+  HBTFHU5NV5LS4JP9HM9HGEFDJDHPBHVBJ`9Jf7Ll5Lr5Nx3Nz1Pz\
+  0Pz0Rz9TzHTzPVzXVzdXzlXxtVpv<2>VZvVTvVLx<2>V3xV0xV0z\
+  <3>V0zV0z`0zd0zh1zlDzpRztdzxpzvjzvdzv`zvVztPztLztFzz\
+  PzzPzzRzzTz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

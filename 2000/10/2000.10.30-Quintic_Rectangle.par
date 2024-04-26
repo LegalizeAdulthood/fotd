@@ -1,0 +1,33 @@
+Quintic_Rectangle  { ; Fractal of the day, 30-10-00 Rating (4)
+                     ; time=0:04:44:04 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=multirot-XY-ZW-min function=flip/ident
+  passes=1 center-mag=-0.00000000001373210/+0.00000000\
+  000624286/6.317576e+009/0.5307/0/-72.66
+  params=0/90/5/0/-1.077129325606079/-0.00275300534013\
+  65/-1.077129325606079/-0.0027530053401365 float=y
+  maxiter=1800 inside=0 logmap=128 periodicity=10
+  colors=000cA_cA_cA_<3>cD_cD_aBY<3>iAXjAXlAXnAXpKUrOR\
+  tTOvWKxZFzY0xW0vW0tV0lV0dT0ZS0TS0MQ0GQ0AP04N00N00M00\
+  O00R30U60YA0aD0eI0hL0lP0qS0tX0y_0zc0zf4zcFt`PnY_jVid\
+  SsZPzVO<3>zPTzNVzMV<2>zHbzGdzEezDgzBjzAlzAozAp<3>zAf\
+  zAczAbyA`yA`0A07A0JA0XA0gA0sA0mA0<3>XA0SA1OA4JA6FA7A\
+  AA6AC1AD0AG0AI0AJ<2>0AQ0AS0AT0AX<2>0Aa0Ac0Af0Ag0Ai0A\
+  l0Am0Ao0Ar0As0Au0ApFAlSAgfAcsA`iAf_MlPZrFkx4yz9wy<2>\
+  MspQqmVpl<3>lj`piYugXviTviQxiO<3>ykCzkAzk7zm4zm1<2>z\
+  n0zn0xm0sm0mk3ik7djA_jFViIPiMLgPGgTAfX6f`0dc0dg0dj0_\
+  d0Y_1VT4SP7PJAKDDH9GE3JB0MA0SB0XE0`H0fK0jM0oP0uS0yV0\
+  zW0zQ0zM0zN0pJ3gMAYPJOSQFVY4Yf0_m0bu0fx4izDkzOnzXqzd\
+  qzmqzoqzoqzpqzpqzrqzrqzsqzsqzuqzuqzvqzvqzxqz<3>zqzpq\
+  z_qzIqzJqzLqzLqzrqzrqzsqzsqzuqzuqzvqzvqzxqz<3>yqzzqz\
+  zqzzqzlqzlqzmqzmqzoqz<2>oqz
+  }
+
+frm:multirot-XY-ZW-min {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=(-z)^(p2)+c,
+|z| <= 36  }

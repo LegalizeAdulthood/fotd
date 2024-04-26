@@ -1,0 +1,22 @@
+Surging_Water      { ; Fractal of the day, 04-09-00 Rating (6)
+                     ; time=0:10:05.60 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 15
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-4.68496/3.07608/31.97399/1/72.499
+  params=-1/-11/-11/-1.08/0/800 float=y maxiter=600
+  inside=253 logmap=86 periodicity=10
+  colors=000MPOMOOMNO<3>JHIIGHHEG<2>FACE9BF79<48>9QB9Q\
+  B9RB<2>9SB9SB7Q9<46>lrnmronsp<2>qusquspsr<32>TLfTKfS\
+  Je<3>PFdRCe<4>JJ`IK_GMZ<2>CQWARV7RV<27>hbAib9jc8<2>n\
+  d6od6oc7<18>bRSaRTaQU<3>ZNZMdM<8>MWNMVOMUO<3>MQO3cm2\
+  sp1sp
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

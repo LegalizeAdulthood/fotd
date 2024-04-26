@@ -1,0 +1,28 @@
+Mystical_Minibrot  { ; Fractal of the day, 01-02-01 Rating (5)
+                     ; time=0:20:12.36 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=+0.66189386170993060/+0.38792031175369780\
+  /1.293822e+009/1/84.999 params=2.5/0/0/0 float=y
+  maxiter=75000 inside=0 logmap=427 periodicity=10
+  colors=00051H52I<3>6BM6DN6FO7HP7JP<20>CfhChiCij<3>Dm\
+  n9lmDnnGon<3>Zsoctphupmvprwqwxqzyqwzq<2>hgi_`fVVcRPa\
+  IIZDCWA5T<42>9Yk9Zk9Zk<2>9`m9am8cl<24>VAvW8wX7w<2>_4\
+  x_3xZ5v<27>YoPYqOYsM<2>YxJZzJYzIXzI<9>ozHqzHszH<2>yz\
+  GzzGzzG<27>zzCzzCzzC<3>zzCzzDzzC<11>zz7zz7zz6<3>zz4z\
+  zDzzC<3>zzG
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

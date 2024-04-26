@@ -1,0 +1,24 @@
+The_Green_Goblet   { ; Fractal of the day, 29-10-00 Rating (5)
+                     ; time=0:16:29.36 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-2.09556/0.0139982/0.2675064/1/-90
+  params=1/0.75/1/1.25/-1.58/0 float=y
+  maxiter=1000 inside=zmag logmap=55 periodicity=10
+  colors=00000F<4>00F000<2>2003A1422<12>EQ2FS2GU2<3>Ja\
+  3Mb3Qd3<5>ao3cq3es3<2>ky3mz3mx4mw5<5>ao8_n8Yl9<2>ShA\
+  RgBRfB<6>RXFQWFQVG<3>PPIKOIKLJFLJFFKFCFFDHADIAEK5FL5\
+  GNAIOAIQKDUKFTFISAKR<15>hlBjnAlo9<3>tw5uz0<10>vjYvi`\
+  vgc<2>vclvboxdswfu<5>uTluRjtOhtMftKe<3>rAZr8Xs2Y<25>\
+  hfChhBgiA<2>fn7fo6gp4<9>daTd`WcZY<2>cVebTgcSjdUleWkf\
+  Ykg_nharhbwhcv<8>kdokdnkcm<3>mcjmcimchncgncghKs<3>hG\
+  umFy<17>MKeKKdJKc<3>DL_B0KA0K
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

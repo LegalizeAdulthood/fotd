@@ -1,0 +1,27 @@
+Worth_a_Diamond    { ; Fractal of the day, 26-04-00 Rating (5)
+                     ; time=0:01:06.19, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident
+  center-mag=+0.14392839195860990/+2.73449807098121600\
+  /16024.72/1/10 params=-1/1.2/1/-1.2/0/0 float=y
+  maxiter=1200 bailout=25 inside=0 logmap=22
+  symmetry=none periodicity=10
+  colors=000b6H<2>V6DT6CP6BM6AI69G68I89L99PA9VC9Y6AYDL\
+  cJKfOF<3>qXG<6>V_bS_eO_h<3>C`t<2>I_b<5>QXoRWqTWs<2>X\
+  UyYUzZTz_Tz<3>IQz<3>PTzRUzSUz<2>QezPdz<2>Ocz<5>bczdc\
+  zgcz<3>pcz<3>Kcz<3>HczGczFcz<3>HczHczIczIczJczJcz<3>\
+  CczBcz9cz<3>3cz<6>KczMczOczRczTczVcz<3>jczhczEcz9cz<\
+  3>IczKczNcz<3>Vez<4>LgzJhzHhz<3>Ajz<3>ClzDmzDmz<3>Fm\
+  zFmzFmzDmzBmz<2>smz<3>qmzqmzqmz<2>pmz<7>QmzMmzJmz<2>\
+  9mz6mz5mz<7>4mz4mz3mz<3>3mz<5>PmzTmzWmz<3>imz<5>cmz<\
+  3>_mz_mzRmz<6>`mzbmzcmz<3>hmz<3>Smz<7>Emzgmzdmz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,32 @@
+Horsehead_Minibrot { ; Fractal of the day, 27-02-01 Rating (5)
+                     ; time=1:03:33.62 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.49454306744455230/-0.04539518892114046\
+  /2933704/1/-92.499 params=-1/-1.23/-1/1.23/-0.25/0
+  float=y maxiter=10000 inside=0
+  logmap=-830 periodicity=10
+  colors=000mY6h_2h`0cb0Zd0Ud0Pf0Kg0Fg0Ai25k60k90mA0mD\
+  0nH0pI2pM6rP7rR9tVCvYDv_HxbIxfMygNzkPznTzpVztYzx_zyb\
+  zzdzzgzzfzzfzzfzzdzzdzydzxdzvbytbxpbxnbvm`tk`rg`rf`p\
+  d_nb_n`_uY_pWYkVYiTYgPYfNWfMWdKWbHWbFV`DV_CV_AVY7TW6\
+  TV4TV2TT0RR0QQ0PM0NI0KF0IC0HA0JA0JC0KC0KC0IC0IC0HC0F\
+  C0DC0DC0CC0AC09C09D07D06D04D04D02D20D20D40D40D60D70D\
+  70F90F90FA0FA0FC0FD0FD0FF0FF0FH0GH0HI0GK0JI0KI0LI0MI\
+  0NH0OH0PH0PH0PF0PF0PF0PF0PD0PD0PD0PD0PC0PC0PC0PC0PA0\
+  PA0PA0PA0P90P90P90P90P70P70P70P70P60P60P60P60P40P40P\
+  40P40P20P20P20P20P00P00R00T00V00W40Y70_A0`D0bH0dK0fP\
+  0gT0iW0k_0mb0nf0pi0rn0tr0vv0xy0yz2zz2zz2zz2zz2zz2zz2\
+  zz2zy2zy2zx2zv2zt2zr2zp2zn2zn2zm2zk2zi2zg2zf2zd2zd2z\
+  b2z`2z_2zY2zW2zV2zV2zT2zR2zP2zN2zM2zK2zK2zI2zH2zF2zD\
+  2zC0zA2zC4zC6zC6zD7zD9zD9zDAzFCzFDzFDzHFzHHzHHzHIzIK\
+  zIMzIMzKNzKPzKPzKRzMTzMVzMVzN2zK0zH0zF0zC0zA0z7
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,20 @@
+Black_and_White    { ; Fractal of the day, 08-01-01 Rating (4)
+                     ; time=0:59:31.06 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=t
+  center-mag=-12.2367/-11.4115/1.34604/1/-90
+  params=1/1/1/-1/-1.075/500000 float=y maxiter=2500
+  inside=zmag logmap=yes periodicity=10
+  colors=000ZCV<15>RHeQHfQHg<2>OIiOIiNJh<46>HoWHpWHqW<\
+  2>HsVHsVIrW<24>NemNdnOdo<3>ObqYKlg1h<35>PfcOgcOhc<3>\
+  Mlc<3>Yle`leclf<3>nlg<34>CEEBDEACD9BC8AB79A57B<28>Yo\
+  AZqA_rA<3>bxA<15>ggM
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

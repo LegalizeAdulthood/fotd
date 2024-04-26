@@ -1,0 +1,31 @@
+Fractal_Coral_Reef { ; Fractal of the day, 13-08-00 Rating (7)
+                     ; time=0:20:06.62 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 13
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.706024857266035/-2.508261897988575/2.3\
+  2331e+008/1/2.5 params=-1/-11/-11/-1.1/0/800 float=y
+  maxiter=2800 inside=0 logmap=392 periodicity=10
+  colors=0004er2eu0cw0cy0cz0cz0ay0Zv0Wr0Vo0Sl0Ph0Me0La\
+  0IZ1GW2DS2CP3AL47I44G53C71A705803A01A00B00B00A008007\
+  405A24F33K52P81WB<3>0rK0wM0zP0zQ0zS0zS2zS5zU8zU<3>Ls\
+  VPrWSpWWoWZmWblY<3>peZscZwb_za_z__zZ_zYYzWVzWUzVQzUP\
+  zUMzSLzSIzQHyPFyPDwOBwMAvM7vL5uL3uK2sI0sI0rH0sI0rH0z\
+  G0oG0uF0lF0lD0<2>hB2fB2fA3eA4c84b85a77a77a77p3Oz5Qz7\
+  Ip8GjBFeCC<3>KI3FK1AL0FQ5KVCPZI<2>ejajocpscvwczzcrQ1\
+  yYDzhMvb4ja7la8lWAm_BoMCoZDhGFpZGrYHsYIsWKuWL<3>wVQO\
+  04M05<2>L05L05K07K07K07I07<3>H08G08G0820FG08D02D00<3\
+  >D00D00D00D00D00A005002000000000000F00U00V20V30W41W7\
+  <2>2cC3fD2jC<2>5ZK7QM8QOAQQBQUCQWDQYFPV<2>FLOGKMGLKG\
+  MIGOGHPF<2>HU8IV5IW4IY2IZ1K_0Ka0Kb0<2>Mf0Mh1Oi3<3>Qo\
+  DQpGSrIMsOSuLWvI_wGeyDizBmz8sz5ozKlzL<2>bzS_zVYzWVzZ\
+  SzaPzbLzeIzfGziDzlBzm8zp
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,20 @@
+A_Ghostly_Specter  { ; Fractal of the day, 21-04-00 Rating (4)
+                     ; time=0:37:06.80, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.83681566175273090/-0.58535383767370750\
+  /3014.882/1/90 params=1/1.9/1/0.3/0/0 float=y
+  maxiter=18000 logmap=75 symmetry=none periodicity=10
+  colors=000ZAzB53cG3ZF3UE3R43O43L43K32J43U43Q43M43K53\
+  K53C53<164>ecFecFfcF<2>fdFfdFecE<57>viLviLwiLwiLwiLv\
+  jMwiLwiLB53B53
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

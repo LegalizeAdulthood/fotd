@@ -1,0 +1,37 @@
+Broken_Doughnut    { ; Fractal of the day, 17-02-01 Rating (6)
+                     ; time=0:10:03.36 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC
+  center-mag=-1.186109041897596/-0.4223498239916194/80\
+  27451/1/-32.499 params=1.414213562373/0/24/0 float=y
+  maxiter=12000 inside=0 logmap=616 periodicity=10
+  colors=000A0GL0LF0KG0TF0YC0cA1g73l64p36u17y03z07z4Az\
+  9Fz<3>QTzVXz__y<2>ljxpmxurvyuvzzzzxvxsjuoYplMmg9ic0f\
+  `0d_0c_0c_0a_4a_9`_D__J__OY_S<2>X_d_```aXacSddOffJgg\
+  F`g0iiApiPxjcziszjrzlpzmoyoovpmurlrsjpujmvilxgiyfgzf\
+  dzdczc`zaXzm_zalzJazSSz`Izg7zp0zx1zr4zm6zg9zcCz_DzTG\
+  yPIvJLuFOrAPp4Sm0Qm0Tl0Vl0Xl0Yj0_j0`j0aj1ci3di3fi4gi\
+  6ig6jg7lg9mg9<2>6Gu07z6GzJOpYXfocXvgIxjMydPz`SzVXzQ_\
+  zLazGdzAiz6lz0oz0rz1ox6lpAiiFfaLcVP`OTYG_VTe_NbSAZMC\
+  TGDPAFL4GG0IC0M90J90I90F90D90C90990790690390190<3>09\
+  609707109709D09J0AO0AT0A_0Ad0Ci1Co3Cu4Cy9IvCOsGTrJ_o\
+  OdmQjjXsdToi<3>IcuF`xDYzG`s<2>LiaMlXOoP<3>Tz1Vz0Yv1<\
+  2>cdIfiDglAjo6lr3mp7opCopGpoLpoProTsmYsmaumfumjaipJf\
+  v0cz4`u9_pDYjGXfLTa<2>XPO_SLaVJdXGg_FjaClcAof7ri6uj3\
+  xm1zp0zr0zu0zx0<2>zz0zx0zs0xm0ri0of0lc0f_0`T0VP0PL0J\
+  F0
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

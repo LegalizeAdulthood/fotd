@@ -1,0 +1,25 @@
+PartlyCurdled'brot { ; Fractal of the day, 05-02-01 Rating (4)
+                     ; time=0:11:29.20 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.75147211119564610/+1.48797426184523300\
+  /646684.1/1/-164.999 params=0.075/-10/0.75/-1/0/800
+  float=y maxiter=1800 inside=0 logmap=116 periodicity=10
+  colors=000edAdeBdUCccDc`EbeFakG<3>_pJZqKZrLYsMYtM<3>\
+  QoIOnHMmGKlFIkFZjEmiDchChgB8fA<2>3c8<2>4GW48b6Ba<4>D\
+  NXFQXGSW<3>MaSgdRPfmQjQRcQ<12>bKOcJOdHO<3>gCOnJIuPDv\
+  cEvcFvOG<10>vKQvKRvKS<3>vJV<3>TIeMIhFIj<12>9T`9U_8UZ\
+  <2>7XX7XX8YZ<3>CajCalE_m<14>gIniHnkGn<3>sBnzAy<2>mAU\
+  m7F<3>_GXXI`UKd<2>KQqDNx<3>TdlWhjaPE<10>WcOWdOVeP<3>\
+  TjTWnR<3>MbZK_`IXbFUdDSf<3>4Wn2Xp3Yq<14>DlvDmwEnw<2>\
+  GqxGrxJst<3>TwdWx`_yV<8>JzmHzoFzq<3>8zy<3>BzuCztDzsE\
+  zrEzrLzYSzE<3>RzI
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,33 @@
+A_Study_in_Lilac   { ; Fractal of the day, 21-03-01 Rating (6)
+                     ; time=0:05:39.77--SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.738877818822119/+1.111654875236485/9\
+  .192928e+007/1/15 params=1.5/2/-0.3/-1/-0.25/0
+  float=y maxiter=1200 inside=0
+  logmap=102 periodicity=10
+  colors=000afAbfAaeA`dA_cAZbAYaAX`AWZAVXAUVATTASRAR\
+  PAQOAPNAOMANKAMJALIAKIAJIAIIAcTzfYzkbznezsizxnzzzz\
+  zzzzpzzizv`zqRukGpe0i`0eh4npKxx_zznzzkzzhzzezzbvz_\
+  qzYkzVfzSbzPYzMTzKPzSVz_`xffqnmkvsezy_zzTzzQkzNHsK\
+  0kx0Sx0Qx0Qp0Qh0Qc0Q_0QV0QQ0QM0QH0QC0Q80Q30P04P0EN\
+  0EN0EM0EM0EM0ET0ET0ET0ET4ET9ETEHTJNTNSPSXKX`H_YCbX\
+  8eV3hT0kQ0nP0qN0sM0qN0qP0pQ0pS0nT0nT0mV0mX0kY0k_0i\
+  _0i`1hb3hc4fe6fe8NCESECVEB_G9bG8fG6iH4nH3qH3zGHzEV\
+  yGXnHXcJXTKXHMY6NY0PY0PYCbBbp0bq0cs0es0eu0fv0fv0hx\
+  0iy0iy0kz0kz0fu0bp0_k0Yh0Vf0Q`0Nb0Je0Gh0Bk06n03q60\
+  uE0xM0xT0y`9zh8yf8xe8ve6uc6sb6qb6q`4p_4n_4mY3kX3iX\
+  3hV3hT1fT1fS1hQ0iQ0kP0mN0nN0pM0qK0sK0uJ0vH0xH0yG0z\
+  E0zE0zC0zC0zB0z90z90z80z60z60z40z30z30z10z00z00z00\
+  z00z00z00z00z00z00z00z00z00z00z00z00z00z00z0Ez0Ez0\
+  Ez0Ez0EzVEzTEzQTzNQzKNzJKzGHzCEz9Bz68z44z11z00z00z\
+  00z00z00z0EzCEzBEzBEzBEz9
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

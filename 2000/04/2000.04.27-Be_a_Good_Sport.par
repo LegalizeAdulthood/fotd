@@ -1,0 +1,27 @@
+Be_a_Good_Sport    { ; Fractal of the day, 27-04-00 Rating (6)
+                     ; time=0:08:04.88 on a P200, SF5
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=-0.70258058382572460/+1.84578902125106600\
+  /1.159885e+011/1/-95.001/-0.006 params=-1/1.1/1/-1.1\
+  /-0.05/1000 float=y maxiter=1200 bailout=25 inside=0
+  logmap=142 symmetry=none periodicity=10
+  colors=000MAk<3>PAhQAgRAfSAeTAdUAc<3>ZAe_Af`AfaAf<5>\
+  gFfhGfiHf<3>mLfnMcoNZ<3>rbFrVAsK5PA4KA1oK2kY3ge4<3>T\
+  P6PK7LF8IC8KH7LN7NR6OX6Q`6Rf5ck5hp4hu4mz4mz5mz6hx7bu\
+  8Op8<3>HkCFjCEhD<2>9eF7dP5cZ1di<6>HZZJYYLXX<3>UUR`UP\
+  dTOiSNmZL<2>umH<2>zmDwmErcFmKGhJHdII<10>J7SH6TF5U<3>\
+  72X<11>WdcYgd_kd<3>gwf<3>UxmRxnOxp<3>Bxv<3>VgpZbncZm\
+  hVkmRjtMk<14>LZUJ_TG`R<3>7dN1fL<6>TWMXUM`TM<3>oNM<11\
+  >TYYRZZP__<3>HccFai<3>IiSJkOKmJLoFMs7<3>KwMKxQJyT<3>\
+  IzgHzjHznHzq<7>TzqVzqWzq<3>azqhzy<6>3zA
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

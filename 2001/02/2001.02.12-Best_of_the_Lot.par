@@ -1,0 +1,29 @@
+Best_of_the_Lot    { ; Fractal of the day, 12-02-01 Rating (8)
+                     ; time=0:07:46.00 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.03318084634771779/-0.20818825170544190\
+  /8.583598e+009/1/-122.5 params=1/-1/-0.1/1/-15/0
+  float=y maxiter=1600 inside=0
+  outside=tdis logmap=yes periodicity=10
+  colors=000WLgYIkZFo`Ct`8xZDvZIrZMqZPnZTkZYjZ`gYddYhc\
+  Ym`YoYYtWYxTYzS`zWcz`exd<3>qvvtvzwvzngqeTeZGVaOYcT`d\
+  ZceddjedmheqjetmgxngzqgzrhzvhzwhzoazjWzdQzYLwSFtM8zZ\
+  8z`Dw`Gq`Lm`OgaScaVZaYTaaPcdJchFckAcn`tzzzzWzm1wO4hL\
+  5VI7IF82CA0AT47kJ4zY1x`2va4qd5ne5jh7gj8dmA`nAYqCTrDQ\
+  vFOwFPvJQvMSvPSvSTvWVvZVvaWtdYtgZtkZtn`tqattatw`nv`h\
+  tZcrZYqYTqYOoWInWCmW7mQDkMJkGPkCVk5`k1ek<3>7JG8D7870\
+  A57C4DD2LD2QF1WG0cI0hI0nG2mG7kGCjFGjFLhFOgDSgDWeD`dC\
+  ddCgcCkaAoaAt`AxZAzZIeOPLCV01Y14Z27a4Ac5Dd7Fg8IhALkA\
+  OmCQnDSqFVrGYvI`wJcxJdxJcwLavMZtOYtOWrPVqQSoSQoSPnTM\
+  kYMmVLkWJ0Oz0Vw1ar7hnDhh<3>`htehwxhzwhzvgzveztczt`zv\
+  Yz<3>wMzwJzwGz<54>wGz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

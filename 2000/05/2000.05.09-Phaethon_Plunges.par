@@ -1,0 +1,26 @@
+Phaethon_Plunges   { ; Fractal of the day, 09-05-00 Rating (5)
+                     ; time=0:04:40.50, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+0.97561207791134350/+0.04095498269518449\
+  /11237.49/1/105 params=1/24/-1/12/0/0 float=y
+  maxiter=1200 bailout=25 inside=bof60 logmap=yes
+  symmetry=none periodicity=10
+  colors=000niD<9>maOm`Pm_Q<2>mXTmWUlXZmWVnUKmUKnTJ<2>\
+  oR8<6>dLBbKB`JC<3>WFDVEDUDETCE<3>M8FK0EH9GH5HG9GGCG0\
+  00GIG<3>FUFFXFE_FEbFEeFEhFCpB<4>MSVOOYQJa<3>X0p<9>f`\
+  OgcLhgI<3>lu7<21>ttGttGutH<2>vtIvtIxuH<14>XrJVrJTqJ<\
+  3>LqJNqN<3>Cr79r36r04r0<3>As0Bt1Ct3<17>ZxO_yP`yR<2>d\
+  zUezVezU<13>`zE_zD_zC_zBZzAZz9Xz6<12>nzOpzPqzQ<3>vzV\
+  <9>xzOxzOxzN<2>xzLxzLwzKvzK<9>pzIozInzH<2>lzHlzHnz9<\
+  2>nzC
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

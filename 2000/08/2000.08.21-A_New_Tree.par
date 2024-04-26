@@ -1,0 +1,33 @@
+A_New_Tree         { ; Fractal of the day, 21-08-00 Rating (6)
+                     ; time=0:12:53.96 -- SF5 on a p200
+                     ;  Version 2000 Patchlevel 14
+  reset=2000 type=formula 
+  formulaname=multirot-XY-ZW-new function=ident/flip
+  passes=t center-mag=0.00173908/0.00819013/6.296661/0\
+  .9405/22.5 params=89.77/90.53/1.5/0/0.2392/0.4909/-0\
+  .188/0 float=y maxiter=6000 inside=253 logmap=11
+  periodicity=10
+  colors=0000H0<3>0I00I00K00K00K00K00M00M00M00M00O00O0\
+  0O00O00Q0<3>0Q00T00T00T00T00V00V00V00V00X0<3>0Y00Y00\
+  Y00Y00_0<2>0V00T00T0<3>0K00K0<2>0F00D00D00B009007007\
+  0050230220300500700700900B00D00D00F00H00H00I00K00K00\
+  M00O00O00Q00U00W00X20Y30Z50_50`70a90bB0cB0dD0eF0fH0g\
+  H0hJ0iK0kL0mN0nP0nR0<2>rV0tX0tY0v_0x_0xa0zd0ze0ze0zg\
+  0zi0zl0zl0zn0zo0zq0zq0zt2zv2zx2zx3zz3zz3zz5zz5zz5zz7\
+  zz7zz7zzFztMznTze_<2>zMvzFzz9zz2zz0zz0zz0zx0xv0tn2ng\
+  3ge5df5eg7gh9ilBnpBouDqxFtyHxzHxzIxzKzzMxzMvzOtzQtzT\
+  qxToxVnvXnvXlvYit_itagqaeqddoedogaog_ni_nlYlnXlnVioV\
+  iqTitQgtOgvOexMezKdzKdzIdzHazFazF_zD_zBazD_zB<3>_zB_\
+  zBYz9<2>Yt9Yq9Yq9Yo9Xn7Xl7Xi7Xg7Xg7Xe7Vd5<2>VY5VY5VX\
+  5VV5TT3TQ3VO3XO3YM3_K3aI2dH2eF2gF2gD2gB2g92g70g90gB0\
+  gB0gB0gB0gD0gD0gD0gD0gF0gF0gF0gF0gH0gH0gH000YgH0gH0
+  }
+
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36  }

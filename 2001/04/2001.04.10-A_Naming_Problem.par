@@ -1,0 +1,32 @@
+A_Naming_Problem  { ; Fractal of the day, 10-04-01 Rating (4)
+                    ; time=0:08:53.78--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=0.0881747/0.0124835/0.4235847/1/-90
+  params=-0.075/2/10/-2.25/-0.88/1000000000 float=y
+  maxiter=3000 inside=0 logmap=7 periodicity=10
+  colors=000fQLeQLeQLeQMePMePMePMePMdPMdONdONdONdONd\
+  ONdNOcNOcNOcNOcMOcMOcMPcMPbMPbLPbLPbLPbLQbLQbKQaKQ\
+  aKQaKRaKRaJRaJRaJR`JR`IS`IS`IS`IS`IS`HT_HT_HT_HT_H\
+  T_GT_GU_GUZGUZGUZFUZFUZFVZFVZEVYEVYEVYEWYEWYDWYDWY\
+  DWXDWXDXXCXXCXXCXXCXWBWXCXXCXXCXXCXXDXXDXXDXXDXXDX\
+  XEXXEXXEXXEXXFYXFYXFYXFYXFYXGYXGYXGYXGYYGYYHYYHYYH\
+  YYHZYIZYIZYIZYIZYIZYJZYJZYJZYJZYJZYKZYKZYK_YK_YL_Y\
+  L_YL_ZL_ZL_ZM_ZM_ZM_ZM_ZN_ZN_ZN_ZN`ZN`ZO`ZO`ZO`ZO`\
+  ZO`ZP`ZP`ZP`ZP`ZQ`ZQ`_Qa_Qa_Qa_Ra_Ra_Ra_Ra_Ra_Sa_S\
+  a_Sa_Sa_Ta_Tb_Tb_Tb_Tb_Ub_Ub_Ub_Ub_Vb`Vb`Vb`Vb`Vb`\
+  Wc`Wc`Wc`Wc`Wc`Xc`Xc`Xc`Xc`Yc`Yc`Yc`Yc`Yc`Zd`Zd`Zd\
+  `ZdaZda_da_da_da_da`da`da`da`da`eaaeaaeaaeaaeabeab\
+  eabeabeabeaceaceacebcfbcfbdfbdfbdfbdfbefbefbefbefb\
+  efbffbffbfgbfgbfgbggbggbggbggbhgbhgchgchgchgcigcig\
+  cihcihcjhcjhcjhcjhcjhckhckhckhckhckhclhclicliclicm\
+  idmidmidmidmidnidnidnidni
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

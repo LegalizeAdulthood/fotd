@@ -1,0 +1,28 @@
+Bubbling_Misfit    { ; Fractal of the day, 23-05-00 Rating (6)
+                     ; time=0:10:01.76 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.09541430829565900/+0.00001537142778094\
+  /117561.4/1/-90 params=1/-1.4142/1/-14.142/0/0
+  float=y maxiter=1500 bailout=25 inside=0 logmap=121
+  symmetry=none periodicity=10
+  colors=000JDHJDI<3>VHKYIL`JL<2>iMNlNNoOQrPSuQU<7>xJj\
+  xImxHo<3>yEw<3>ZFcSGZLGUEGP8GL<6>BKUBLVBLW<3>CO`DOXD\
+  KTDFQEGREEKEESEKUFNXFPXFTX<3>FWWGWWGXVGXVGYV<3>H_QH`\
+  PHaO<2>HbKrcJmcImdJrQKrWLmWMkfNjaOcfPIgQ<10>Il`IlaIl\
+  b<3>InfIwgKrdMea<3>UOSWKPXGN<10>QcAPe9Pg8Oi7Ok6Nm5Mq\
+  4wz3Lw2Lz1Kw2Jt3Jq4<3>Gj7Fi8Fg9EfADdB<10>6cK5cL5cL<3\
+  >2cQ2cR1cS1cT0cU0cV<3>8cPAcNCcM<2>IcHccGmcEwcDwcBzcA\
+  zc8zh9zcAwcBwcC<3>LcG<3>FcJEcKCcL<3>7kP6mPAoXDqdFsq<\
+  4>KnTLmOMlJHi6<3>dpciqkjpi<24>tVEtUDuTC<2>vQ8vQ7wR8<\
+  2>zS8zTGzTGzTH
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

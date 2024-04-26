@@ -1,0 +1,26 @@
+The_Ultimate_Tree  { ; Fractal of the day, 20-08-00 Rating (7)
+                     ; time=0:02:00.30 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 14
+  reset=2000 type=formula 
+  formulaname=SliceJB-new-min passes=1 center-mag=0.18\
+  3845/0.0285631/2.806587/1.2255/90/-6.088
+  params=0.4502/0.4315/0.3702/0.3897/1.075/0/4/0/1.9/0
+  float=y maxiter=1500 inside=0 logmap=30 periodicity=9
+  colors=000H8A<2>M6AN6AO68<13>76K66K56L<3>16O<23>n3dp\
+  3er3f<3>z3h<3>sBOqDIpFDnH8mI3<25>mhTmiUmjV<3>mnZ<2>x\
+  oW<14>klajlaikb<3>fkcelddld<3>aneUo`MoW<17>IxLIxKIyJ\
+  <4>HzGHzGHzF<14>9zC8zC8zB<3>6zB<15>NzJOzKPzK<3>TzMVz\
+  K<8>PzaPzcOze<2>NzkMzmNzm<16>HzoHzoGzo<2>FzoFzoEzq<4\
+  >IzjJziKzh<3>NzcEzdBzj<2>GzY
+  }
+
+frm:SliceJB-new-min {; adapted from John R. H. Goering
+  pix=pixel, u=real(pix), v=imag(pix), a=pi*real(p1),
+  b=pi*imag(p1), g=pi*real(p2), d=pi*imag(p2), ca=cos(a),
+  cb=cos(b), sb=sin(b), cg=cos(g), sg=sin(g), cd=cos(d),
+  sd=sin(d), p=u*cg*cd-v*(ca*sb*sg*cd+ca*cb*sd),
+  q=u*cg*sd+v*(ca*cb*cd-ca*sb*sg*sd), r=u*sg+v*ca*sb*cg,
+  s=v*sin(a), c=p+flip(q)+(p4), z=r+flip(s)+(p5):
+  z=(-z)^(p3)+c
+  |z|<=100
+  }

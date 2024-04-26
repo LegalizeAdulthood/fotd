@@ -1,0 +1,36 @@
+Mandelbrot_Garden  { ; Fractal of the day, 06-02-01 Rating (7)
+                     ; time=0:29:01.69 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=-0.1694281645165105/+1.5429071620987/6.34\
+  9252e+007/1/-87.5 params=1.414213562373/0/0/0 float=y
+  maxiter=15000 inside=0 logmap=707 periodicity=10
+  colors=0001zi3zp4zv7zs<2>CyjDxgFvdGuaIu_JsXLrVMpSOpP\
+  PoMQmJSlGTlDVjAXi7Yg4_g3`d3ac3a`1c_1dX1dV1fT1gQ1gP0i\
+  M0jL0jI0lG0lF0iG1fG3<2>_G7XG9VG9SIAPICMIDLHFIGGFFIDE\
+  ICBKAAKA8K97K95K74K72K61K64K44K33K31K10K<4>00K00K00K\
+  <3>00K<2>01Z01c03d<3>04_CCcMIfYOigTldXic_fa`c`c`YdYX\
+  gVViSTlPQmMPpJOrGMuDLvAMx9Ox9Ox9Px9Px7Qx7Sx7Sx7Tx7Tx\
+  6Vx6Vx6Xx6Yx6Yx4_x4<2>`x4crDdmOfgYgcfj_plTzmPzoLz<2>\
+  pGzpPzpUzpZypUxrPsrKrrIprFor6ls4ju3ix1fy4d<3>zGYzJXz\
+  MVzLTyJSuIQrGQmFPiDOfCOaAMY9LV7LS6JP4IO3IL1GI0FG0FD0\
+  DA0C90C<3>Q06V04Y04a03f01j00o00s00y00<2>z00z30vD6lPC\
+  c_JTjPLuVDz`izizzpzvmsmjidg_adPcaFd`IfYJgVMiTOjQPlOS\
+  mMToJVpGYrF_sC`uAXvCSxCOyCLzDGzDCzD9zF4zF0zF<3>0zG0z\
+  L3zOCzQLzTTzY<2>szfrzgrzipzjpzjozlozmozmmzomzplzplzr\
+  lzsjzsjzuizvizvizxgzy<2>fzz0zP0zV0za
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

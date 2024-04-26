@@ -1,0 +1,21 @@
+Galactic_Minibrot  { ; Fractal of the day, 02-07-00 Rating (4)
+                     ; time=0:07:51.81 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.41583652310222700/-0.15553310911297980\
+  /13842.18/1/27.499 params=1/-1.25/1/-5.33/0/0 float=y
+  maxiter=1200 inside=0 logmap=54 periodicity=10
+  colors=000<16>000000000000000<3>300400501<2>82493584\
+  6<79>8Xu8Xv8Yv<2>8Zx8Zy7Yz<37>NksNlsOls<2>PmsPmsNnp<\
+  8>CqVBqSArQ<2>6sI5sG2vD<3>9rEBqECpEEoEGnF<6>RmGTmGVm\
+  GWmGYmG_mG_mI<5>cmAdm9em8em7fm6gm3<42>`mb
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

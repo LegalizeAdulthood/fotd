@@ -1,0 +1,26 @@
+Cobwebs            { ; Fractal of the day, 21-12-00 Rating (4)
+                     ; time=0:01:52.08 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+1.86091016607515800/-0.07077892494265253\
+  /5.488914e+008/1/72.5 params=-1/-6/1/4/-0.8/0 float=y
+  maxiter=225 inside=0 logmap=37 periodicity=10
+  colors=000ADCAEABF9N`i<3>G15<3>DQ4KW4<3>ws3zy3rs7<2>\
+  PaGJWJKRM<6>PEAPC8QB6<3>S40<2>4M2<2>evb<3>mriorjqql<\
+  2>wopvlovio<3>yZmzXmzUl<3>zJjzGjzEj<3>zGUzGQzGMzGI<3\
+  >zOXzP_zLVzSV<2>zKDzI8zD9z8Az4B<2>z8izAqzCx<3>zKxzMs\
+  zOn<3>wWVvYQu_L<3>pgSoiTokV<3>osaoucoveowfpxdpyb<7>p\
+  zQpzPpzN<3>pzHhz9<6>TzQRzTOzV<3>Gzc<8>9zP8zO7zM<3>5z\
+  G<7>WzIZzIazI<3>nzI<3>pz6pz3fzIXzXNzj<3>IztHzvazVuz4\
+  <9>uz2uz2uz2<3>uz2nz1kz2hz1<3>Jz0Cz06z0sz6<4>Gz18z0l\
+  zP<3>TzFOzCJzA<2>4z2TzN<3>HzDEzBBz9<2>2z2LzX<3>9zE6z\
+  93z4MzJ<3>FzD
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

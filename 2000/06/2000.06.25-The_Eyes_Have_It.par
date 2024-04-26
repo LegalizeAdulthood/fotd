@@ -1,0 +1,26 @@
+The_Eyes_Have_It   { ; Fractal of the day, 25-06-00 Rating (5)
+                     ; time=0:01:19.00 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip
+  center-mag=+1.77150124777589600/+0.01616668169494883\
+  /3.626405e+010/1/37.5 params=1/-2/1/-200/0/0 float=y
+  maxiter=1000 inside=0 logmap=42 periodicity=10
+  colors=000M7T<4>QBXRCYSDZTD_<2>WHb_Q``TZbWXrpVwyT<3>\
+  cKCAA8QB7_B6iB5<4>e6De5Ed4G<3>b0LZ2YV3iS4uQUxPczScv<\
+  3>`KgcFdeE`<3>nFN<3>MFmvlu<3>wkawkYxjT<3>xjA<2>ymX<3\
+  >ddQ_bOV`NQZLLXKB_H1bE<5>OlUSnXWpZ<3>jvh<3>`tTZsOF_b\
+  <3>GZi<2>v2M<5>WAKRCJNDJ<3>5II<3>9bo9gwDis<3>QodTq`W\
+  rY<9>dcbdace`c<3>hVeXS`<5>U__TaZTbZ<3>RgZjUA<3>h1uPL\
+  v5dw<9>FT_GRXHQV<3>KMM<3>_Ru<3>lhtomsrqsuvsxzstyt<4>\
+  czw_zxXzx<3>Jzz<3>azsezqjzp<2>wzk<3>gzdczb_z`Xz_<7>c\
+  zmdzndzp<2>gzugzvizn<2>ozUXzFTz7Qz0vzE<11>GzQ
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

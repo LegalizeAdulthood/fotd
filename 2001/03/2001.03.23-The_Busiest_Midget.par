@@ -1,0 +1,33 @@
+The_Busiest_Midget { ; Fractal of the day, 23-03-01 Rating (5)
+                     ; time=0:04:36.82--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.20557450556646010/+0.151897183583007\
+  80/95052.51/1/75 params=1/-1.15/-1/1.15/-0.15/800
+  float=y maxiter=800 inside=0
+  outside=tdis periodicity=10
+  colors=000DmwcwAdxBfxBgyChyCjyDkzDlzEmzEnyDnxDnxDn\
+  wDnvDnvDouCotCotCosCorCorCoqCppBppBpoBpoBpnBpmBpmB\
+  qlAqkAqkAqjAqiAqiAqhArg9rg9rf9re9re9rd9rd9oeBleDjf\
+  FgfHdfJbgL_gNYgPVhRShTQiVNiXKiZIj`FjbDjdFheGgeHffI\
+  efJdgKcgLbgMahN`hOZiPYiQXjRWjSVjTUkUTkVSlWRlgWzXQl\
+  NLZDFL1973A84A96AA7AA8ABABCBBCDBDEBEFBFHCFICGKCHLC\
+  HMCIODJPDKRDKSDLTDMVEMWENXEOZEO_EPaFQbFRcFReFSfFTh\
+  GTiGUjGVlGWmGWoHXpHYqHYsHZtH_uH_sKXrMVqPSoRQnUNmWL\
+  kWIlYJlZJm_Km`KmaKnbLncLndLofMogMohMpiNpjNqkOqlOqm\
+  OroPrpPrqPsrQssQstQtuRtvRtwRrwSpwSnwSlwSjwShwSfwSd\
+  wSbwS`wSZwSYwSWwTUwTSwTQwTOwTMwTKwTIwTGwTEwTCwTBwT\
+  AtU9qV9nW8kX8hY7eZ7b_6_`6Xa5Ub5Rc4Od4Le3If3Fg2Ch29\
+  i16j22n13k14i14g15e16c16a17_18Y18W19U1AS0AP0BN0CL0\
+  CJ0DH0EF0ED0FB0G90G70H50H31I42J42K53L53M64N64O65P7\
+  5Q76R86S87T87U98V98WA9XA9YAAZBA_BB`CBaCCbCDcDDdDEe\
+  EEfEFgFFhFGiFGjGHkGHlHImH
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

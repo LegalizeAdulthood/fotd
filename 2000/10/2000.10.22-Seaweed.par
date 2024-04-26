@@ -1,0 +1,27 @@
+Seaweed            { ; Fractal of the day, 22-10-00 Rating (5)
+                     ; time=0:16:48.54 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-1.29310692525035/-5.11258097558134/89623\
+  9.2/1/57.5 params=1/-11/11/-0.9/-1.1/2000 float=y
+  maxiter=1600 inside=atan logmap=yes periodicity=10
+  colors=000kD7hwG<3>iXcNNF<2>vUrhSq0000005Nn6Lo0008Hq\
+  <2>ABs<3>QcsPmaOwLUZVZBcVBbRCaNC`<3>18h<3>1P`1TZ1XX1\
+  `W<3>ZNRgKQoHPwEO<3>bBfYAjT9oO9s<3>bmA<3>8fN1eQDYR<2\
+  >iDU<3>R5PyS7c9z<3>PUdLZZHcUEhP<3>ewBkz8blJ<2>C8o<3>\
+  44CK0NKJA`YIqlPZ1MVGYSVhPrx3EM<2>l2P<3>s6Lu7Kv8JTqm<\
+  3>MShKLgJFfH8eG2d<3>7`c5ic3qc<3>jy6<3>gf`gbhfYpfUw<3\
+  >Y0k<3>fIsiMukRwmVyoZzKts<3>S`pUWoWRnYMmZIm<3>N`aKdZ\
+  HiWEmTBeY8Yb<3>VcP000feJkfG<2>cLW<3>oqzdj_hh`lgae9l<\
+  4>jEqj7qh9o<3>`GjcQieahhjfjsilzk<2>VeuPZxH`kAaZ3bN<3\
+  >LpQPtQTwRXzR<2>wza<3>NzFEzAGzDHzFJzHKzJ<3>HzA<3>Nz8\
+  Oz8Qz7Rz7Sz7<3>7zt<6>Wzxbzliz`hzW
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,33 @@
+Rainy_Evening      { ; Fractal of the day, 06-04-01 Rating (6)
+                     ; time=0:05:15.04--SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.12191239695861750/-0.037765464265300\
+  23/3.704671e+008/1/30 params=1/2/-25/-0.1/-0.7/0
+  float=y maxiter=1200 inside=0
+  logmap=91 periodicity=10
+  colors=000000G1AJ1JQ1SV3a`3je3ql3zxIpzXdvYllYr`_xQ\
+  _zF`z4`z6Vz7Pz9JxADrA9mDAoFApICrJCsMDuODvQFxSFyQDv\
+  QCsQApPAoP9lP7iO6fO6dO4aM3_M1XM1VL9YLF_LL`LScLYdJc\
+  fJjiJpjJvlJzm0Tz0Pz3Mz9IzGFzOAxT7v`4sg0pm0ou0lz0iz\
+  0g0zT0zI9z77v66s66o64l44g43d41a31Y30V30Q10O10L10L0\
+  0J00J0P66P9CQCGQFMQIQSLXSO`SQdTTjTXoT_uVayVdzVgzVj\
+  z_lzamzdmvgopjpjmpdpr_ssTvsOyuIzvCzv6zx0zy0zy0zz0x\
+  z0pz4iz9`zFTzJMzOFzS7zX6z`4yd4si3lm1fr1_v0Tz0Mz0Gz\
+  FYpVmYizFfzGczG`zGYzGVzGSzGPzIMzIJzIGzIDzICzIFzGIv\
+  GLsGOoGQlGTgGXdG_`GaYGdTGgQGjMGmJGpFGrCGoAJm9Mj7Pi\
+  6Sf4Td3Xa1_`0aY0dX0fV1cT4aS7`SA_QDYPGVOJTOLSMOQLQP\
+  JTMJXLI_JGaIFdGFfF4pP0z_0zi0zg0zf4zdAzcFzcLzaQz`Xz\
+  _azYfzYczX`zXYzXVzXSzXPzVMzVJzVGzVDzVAzVDzSGzQJzOM\
+  zMPzJSzIVzFYzD`zCcz9fz7iz4lz3oz0rz0uz0czXfzOizGlz7\
+  oz0lz0jz0iz0gz0fz0dz0cz0az0`z0_z0Yz0Xz0zz0yz0vz0sz\
+  0pz0mz0iz0dz0az0Yz0GzADz4
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

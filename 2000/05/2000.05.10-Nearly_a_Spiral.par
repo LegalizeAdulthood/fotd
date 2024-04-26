@@ -1,0 +1,25 @@
+Nearly_a_Spiral    { ; Fractal of the day, 10-05-00 Rating (4)
+                     ; time=0:39:13.40, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  passes=t center-mag=0.0822189/0.00488862/4.35325/0.5\
+  047 params=90.4306/89.7661/0.356087637/0.35143528\
+  2/-0.359311424/-0.601722338 float=y maxiter=60000
+  inside=0 periodicity=10
+  colors=00000kpU000koU000koU000lnU000lmU000lmU000llU0\
+  00lkU000lkUAAAmjUKFFmiUPKKmiUUPPmhUZUUmgUcUVmgUhUUmf\
+  TnUSneSnURneQnZPndOn<3>cLnbKnbKnbJoaIoaHo`Hn<3>VDeUD\
+  cTCaRB_RA_<3>UDfVDhWEjXFlXFn<16>VSkUSkUTk<2>UVkUWkTV\
+  i<46>WXvWXvWXv<2>WXwWXwYYy<48>HPhHPhHPhGPgGPgEOf<22>\
+  lepnfpofq<3>uir<29>oRx
+  }
+
+frm:multirot-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

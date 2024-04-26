@@ -1,0 +1,32 @@
+A_Somber_Scene     { ; Fractal of the day, 28-02-01 Rating (6)
+                     ; time=0:09:40.12 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.18703011513967910/+0.09717649261105442\
+  /2.484354e+009/1/-82.5 params=1/-0.9/-1/1.1/0/800
+  float=y maxiter=1200 inside=0 proximity=1
+  outside=fmod logmap=yes periodicity=10
+  colors=000zdWzfUzgTziTzkSzkSzlQznOzpOzqNzqNzwWzzexzg\
+  uvipsjlnliklefnaboZYqVVrSSrQUqQVoQWnQYlO_jO`iObgOdeO\
+  fdZiZgkWplTzpOzqLzsIztEzvIzwLzyOxySqzUjzYdz`ZzdSzgLz\
+  jFznFzqFzlGzgJzbNzYQzTVzQZzLazGdzBgz5jz3ezBazIXzOUzU\
+  OzbJziFyoFwunktz_rz`qzbqzbozdozfnzfnzglvglqijnkjikie\
+  licngZngVpeSpeaQSi5Cg5Cg6Cg9CgDCgGCeKCeNCeQCeUCeWCzV\
+  IzULzUOzYSz`TzfUziWznYzqZzv`uybnzeizgcziXzjSzlLznFzo\
+  FzqQzief`vITz5Lz5Oz5Sz5Uz5Wz5Zz6bz7ezBgzDjxEnvGqvKru\
+  LusNysPzz5jz5iz5gz5gz5ez5dz7dz9bzB`zE`zGZzIYzLYzNWzP\
+  WzNZzLbzKdzIgzGjzElzEozDrxBtx9wv7zu6zs5zs5zq6wq7oq9e\
+  qBYqBQn9Oj9Oi7Ne7Nc6Na6LZ5LX5LU5JQ5JO5IL5IH5IG5GF5GF\
+  5GF5JF6NF9QFBTFEWFIZFLbFNdFQgFUjFWnFYqF`tFdwFfyFduGd\
+  tJdqLdoOdlQbjUbgVbeZbb_b`afZaiYakYanWaqWasUcvTcyTczS\
+  czSczQczQdzSeyTetUgpWglWigYibZjY`lUblQbnLdnGepBgp7gn\
+  Qrlfzjwzjzzgzzdzzazz_wzXtzUpyzd3zg3zk3zn3zp3ziE
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

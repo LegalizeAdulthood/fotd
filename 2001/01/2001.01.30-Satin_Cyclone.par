@@ -1,0 +1,29 @@
+Satin_Cyclone      { ; Fractal of the day, 30-01-01 Rating (7)
+                     ; time=0:21:47.17 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-6.680805913828656/-8.301745475499704/562\
+  06.02/1/97.5 params=1/1/-0.13/-11/0/-60 float=y
+  maxiter=2400 inside=0 logmap=177 periodicity=0
+  colors=000wbZxdYzeXzfVweUqdSlbSG0NaaQX`QSZONYNIXNCXM\
+  7VK1UK0SJ0UK<2>0QI0OI1OI3NG5MG7KF9KFCJFEIEGGEIGEKFCN\
+  ECOCBRBBUBBV99Y89Z78a78d58e47h37i37<3>SOO<3>bMNeMNhK\
+  NiJMhJMhIMfGM<2>dENdENbCOaBOa9O`9Q`8QZ7QY7RY5RZ4RZ4R\
+  Y7SZ8T`9VbBXeCYfEZlF`mGapIbqJdtKeuMfxNhzOi<2>zSmzUnz\
+  UnzVp<3>z`qzaqzbs<3>zhtzitzjt<2>znuzpuzqw<3>zwxzxxzz\
+  yzyx<3>znwzlwziuzfuzeuzbty`vxYtxVswSsuQsuNqtMqsJqsGp\
+  qEppBpp8nn5nm3nm1n<3>n0mn0ln0ln0ln0jn0jn0jj0mf0nb3pZ\
+  7qV9tREuOGwKKxGOyCRz8Vz4Yz0bz0fz0hz3iw5jq7lm9nhCqb9u\
+  YEnZIi`MbaQYbSRdXOe`KfdIhhFijGjzIlsJmwKnzMuyNpuOlqQh\
+  zRdiS`eUXaXRYZN<2>XfBXi1Xl7<3>XwOXySYzXZzZ`z`<2>dzbe\
+  zbfzd<2>jzelzfmzh<3>szjtzjuzlwzlxzmyzp<2>zzhzzezzdzz\
+  a<2>zzVzzuzzuzzwzzw<16>zz`
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

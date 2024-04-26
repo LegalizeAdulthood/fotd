@@ -1,0 +1,30 @@
+Much_to_my_Chagrin { ; Fractal of the day, 13-10-00 Rating (4)
+                     ; time=0:08:30.26 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+89.198597213673/+301.3121194212447/3.363\
+  376e+007/1/90 params=11/-1.15/-1/-11.5/0/1000 float=y
+  maxiter=3200 inside=0 logmap=182 periodicity=10
+  colors=000fnzfjzdkzajzZfzWjzTZzQXzNPzMEx39n65395UB5U\
+  <2>J5pJXjmzzirzejzabzXUxTMxPDwznMzeUqXafNiWEpNm8np0j\
+  i9fcHbYP_TW<2>NBpR_iT3zR5z<3>M5zK5zR00Q00P08P0HN1QM3\
+  YM3fK5nzaavUflPjN5Bm00fH5_XEUlPNzXHzeEzPDv6zMbfXPEhB\
+  GbJHXQHRXJMcKDzzGzK9zP90N89N8JM6RM6_K5hK5pn01lzJfxR<\
+  2>QJpRtEQlN<3>KEpvzUnz_ipcbeiXTmQHr_0lR0qJzt5zi8ql9i\
+  mDapEUqHMtJjvKjz<4>KjzKjx6jT<3>GjmJjrzjlvjpbxtDxzExz\
+  GxzHxzHxzJxzKxxlxzaxp0x00xD1xP8xaExlJxhJx5<3>KxaKxiK\
+  xpzxQhxfhxzaxzWxzQxxJxvKxwKxwMxelxnfxq<2>Qxvzxjzxmvx\
+  nlxqbxrTxvzx0zx0wxBnxMhxW_xeRxnfxzWxzmx3ixBexJbxQYxX\
+  <2>NxqzxXvxbnxffxj_xnRxrzxq0zc<2>0zl5zm9zpDzrHzvXzTT\
+  zaQzhNzpzzErzQhzaWzljzB5zz8zz9zzBzzDzzGzzHzzJzxxzKzz\
+  zvzznzzfzz_zzRzzzzXtzfbznczmUzrzzMnzY_zjBz0Dz9<3>Jzm\
+  5z08z99zJDzREz_HzhJzpzz3qzNazexz0qz3jzGczR
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,36 @@
+Square_Root_of_Two { ; Fractal of the day, 27-11-00 Rating (5)
+                     ; time=0:11:47.44 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC passes=1
+  center-mag=+0.7234134339563163/-0.1756656620377885/6\
+  71159.7/1/-22.5 params=1.414213562373/0/-1234567890/0
+  float=y maxiter=50000 inside=0 periodicity=10
+  colors=0004Ag38k28n07r07v06y06z04z04zSBizHKzHI<2>zI8\
+  zNHzSOyYXwabaaE_bBZcAXe7Vf4Ug3Qf7NeAJeDHcH<2>7bOBaRF\
+  aUJ_XM_ZQZaUZcXYf_YicXkgXnjVqnVsrUvuUyySzzSzzSznIzZ7\
+  uJ0oK4j<2>KOYKVUMbOMiKMoHMvBMz7Mz3Nz8NrEOiJOaOQSU<2>\
+  R3gF2U30H84KD7OIASMDXRF_VIc_KgcOjiRn<2>vZzzazzczzfzz\
+  gzvgzogwigsbgoXij<3>6iVAgX<4>NfbQfcSfeVffYffaeg<2>ie\
+  kkemncnqcoscqvcrycrzeszeu<2>zfvzfwzgy<2>zgzzkyzoyzrw\
+  zvwzzwzzvzzvzzvzzszzqzznzzmzyjzvgzufzrczqaznZzmYzjVz\
+  iSzfRzeOzbMzaJzZIzYFzVDzVA<2>zUBvSBsSBoSBmRBiRBfRBbR\
+  BZQDXQDSQDQODMODJODFNDDND8ND07H6NDHaARo7ez0az4YwAVrF\
+  RkMOfRK_XIVaEOg<2>47w84yD2yH0yK0yO0zN0yN0vN0sN0qN0mN\
+  0jN0gN0eN0aN0ZN0X<2>N0NN0KN0IN0E<3>N03K07J3BI7EHAIFE\
+  KEHODJS<2>8Ua7Xe6ZgAagDbgFcgIfgMggOigRkgUmgYng_qgbrg\
+  esgbzigugenZkefqXnJFHIEJHENEDRDDUBBY8Ba7Ac
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

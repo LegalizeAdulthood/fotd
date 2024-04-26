@@ -1,0 +1,27 @@
+Undersea_World     { ; Fractal of the day, 31-07-00 Rating (5)
+                     ; time=0:30:39.40 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.05943680542175839/+1.33301484757948400\
+  /2.015923e+008/1/-125 params=1/-0.95/1/-2.95/0/0
+  float=y maxiter=3000 inside=0 logmap=656 periodicity=9
+  colors=000oidpmfppgdqZUqQWYcJqHKUwmwr<3>RStLKtGCt`Gn\
+  uKi<7>bRh`ShZTh<3>QWhXeVbnH<3>RWTORWMNZ<3>A4jwwm80lZ\
+  SVyrD<2>_Za<8>WZXWZWVZW<3>UZUJTL9ND<3>HDTJAXL8`N5dO3\
+  h<3>kFfyGi<3>XLYQMVDM`JNTOOMUPE`R1<3>TQMSQSQQX<2>LQk\
+  <3>0Hd<3>bUFlX9u_3SDCQYBMsA<5>WlGYjHZiI<3>edN<6>afB`\
+  fA`f8<3>Zf2<3>jPMmKRpGWsB`v7e<3>lDljFngGpeIrcJs<9>`Q\
+  l`Rk`Sj<3>_UhUYdO`aIok<2>IH9abWuwqsGF<2>C7M<3>PPFSUD\
+  VYC<3>fo5mv0<3>`jGYgKUdO<2>LW_PfvITc8J6<2>G7p<7>PSXQ\
+  VURXS<2>UdKVgIVlB<3>WcSX`XXZ`XXdZXg<8>LHpKGqIEr<2>E9\
+  uC7vA5y<3>D7sD7rG6p<2>P6j
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

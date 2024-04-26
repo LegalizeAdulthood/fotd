@@ -1,0 +1,31 @@
+Rhapsody_in_Blues  { ; Fractal of the day, 15-05-00 Rating (4)
+                     ; time=0:34:52.85, SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+1.16081437444318100/-0.29199831471349990\
+  /266820.4/1/149.999 params=-1/-2/-3/-4/0/0 float=y
+  maxiter=3600 bailout=25 inside=0 logmap=350
+  symmetry=none periodicity=10
+  colors=000cAVc3ae0hg0og0vc0ua0uY0uX0uT0uR0uN0uL0uH0u\
+  G0uC0uA0u<2>00u00u00u00u00s00u<2>00v01v13v38x6AxAExC\
+  GzEJzGLzHPzLRzNVzPXzR_zVazXezYgz_jzclzeozgqzhuzjvznz\
+  zozz<3>xzzzzzzzz<3>zzzzzzxzzvzxuzuszqqznozlozjozhozh\
+  ozgozeozcozcnxanv_nuYnuXnsXnqVnoTnnRnlRnjPnjNnhLngJn\
+  eJ<2>n_Eja0l_0n_6n_Eo_NoYVqYaqYjsYquXzsYzsYxq_vq_vqa\
+  uoasocqocqneonenngnlgllhjjhhjjhjjghlehlehncgnago_go_\
+  eqYeqXcsVcsVcuTauRavRavP_xN_xL_zLYzJYzHazN_zJYzHXvGX\
+  qEVlCThARc6RY3PT1NN0LH0PC0NA0L80L60J31H13H08G0AE0EE0\
+  GC0JA0LA0P80R61V63X36_18a1Ae0Cg0Ej0Gl0Go0Eo0Gq0Gq0Gq\
+  0Gq0Gs<2>0Gs0Gs0Gu<5>0Gv0Gv0Gv0Hx0Hx0Hx0Hx0Hz<6>0Hz0\
+  Hz0Hz<2>0Hz0Hz0Jz<10>0Jz0Jz0Jz<2>0Jz0Jz0Lz<4>0Lz0Lz0\
+  Lz<2>0Lz0Lz0Nz0Lz0Rz<2>0Xz0Yz0Yz<6>0Yz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

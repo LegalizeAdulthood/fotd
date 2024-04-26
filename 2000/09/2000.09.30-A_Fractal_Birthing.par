@@ -1,0 +1,35 @@
+A_Fractal_Birthing { ; Fractal of the day, 30-09-00 Rating (7)
+                     ; time=0:15:10.94 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotBC center-mag=+0.0809888879629\
+  3256/+9.393661595475319/101.5492/1/7.499
+  params=1.2/0/7.06/0 float=y maxiter=250000 inside=0
+  logmap=24 periodicity=10
+  colors=00090D70D<3>20J10L00M00O10P<2>90UC0VE2XH4ZL5`\
+  M6aM7cO9dOAePCgPDhREjREkRGmTHoTJpULrUMsWOuWPwWPwYUuY\
+  _uYdsYisYoqYuqYzqYysYyuYwwYwyYwyTzsOznJzgGzfDzdAzd9z\
+  b6zb4z`1z`0z_0z_0zY0zY0yW0wW0wW0uW0uW0sU0qU0qU0oU0oU\
+  0nT0lT0lT0iT0iT5gPAfMFfLKdHPbEUbDZ`Ac`9h_6mY4rY2wW0z\
+  W0wY0rY0mY0h_1<3>P`2L`2O`2R`2UcHXfK<4>kuKmwPmzLmzGgz\
+  C_z7Wz4Tz0Pz0Mz0Oz0Pz1<3>WzHYzM_zR`zW<3>gzqizwizzgzs\
+  gzngzgfzbfzYfzRdzMdzHdzDbz9bz4bz0`z0`z0`z0bz0bz2bz9b\
+  zGdzPXzY<2>ezy<2>nzPqzGtz6wz0zz0zz0zz0zz2zz6zzA<3>zz\
+  TzzYzzbzzW<2>zzDzz7zz2zz0<9>zz0zz0zz0<2>zz0zz0zz2<2>\
+  zzJ<3>zzlzzszzzzznzz`zzPzzEzz5zz0<13>zz0<3>zz0zz1zz5\
+  zz7zzCzzEzzJzzMzzRzzUzz_zzb<3>zzuzzzzzozzdzzUzzLzz7<\
+  5>zzL
+  }
+
+frm:MandelbrotBC   {; Z=Z^E+C  (formula by Andrew Coppin)
+  e=p1
+  p=real(p2)+PI
+  q=2*PI*trunc(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<100
+}

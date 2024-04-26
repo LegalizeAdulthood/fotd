@@ -1,0 +1,26 @@
+MandelbrotSpecimen { ; Fractal of the day, 16-01-01 Rating (7)
+                     ; time=0:01:23.77 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.413788574630565/+0.191409102126881/3.2\
+  20006e+011/1/-87.501/0.001 params=100/-1.4142/1/-141\
+  .42/-0.98/300 float=y maxiter=272 inside=0 logmap=18
+  symmetry=none periodicity=10
+  colors=000Cef<3>HTaIQ`05KKKZ05KMEXWVcirorzzzuwlgt<2>\
+  jHyj8zgAx<6>THjRIhOJf<2>IM`GN_FMY<6>BLPBLOALM<3>8LH8\
+  LQ7WS7YUD`W<2>ULa_KceLejMgiNi<3>fSteTweUz<2>cXz<3>N`\
+  zIazEbzAcz6dzXez<3>zhz<7>jhz<4>`hz<5>khzmhzohz<3>vhz\
+  <3>Ghz<5>UhzXhzZhz<3>ghz<3>0hz<6>HhzKhzMhz<3>Vhz<3>J\
+  hzHhzNhz<3>ghz<3>PhzLhzGhz<2>3hz<2>Khz<9>DhzChzBhz\
+  <3>9hz<7>ahzehzhhz<3>vhz<4>whzwhzwhz<3>whz<8>chzahzZ\
+  hz<3>Rhz<3>ehzhhzlhz<2>vhz<2>Fhz<3>`hzehzjhzFhzahzxh\
+  z<3>PhzHhzIhz<3>LhzMhzMhz<2>qhz<2>ihz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

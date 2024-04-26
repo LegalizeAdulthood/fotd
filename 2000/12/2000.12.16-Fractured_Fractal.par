@@ -1,0 +1,25 @@
+Fractured_Fractal  { ; Fractal of the day, 16-12-00 Rating (6)
+                     ; time=0:01:10.20 -- SF5 on a P200
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-1.35635474669948800/+0.33386541040661780\
+  /1.052043e+009/1/-119.999 params=6/-2/1/-8/-2/325
+  float=y maxiter=350 inside=0 logmap=19 periodicity=10
+  colors=000AAK<4>AAK<4>AAKcUKzAOzzzGzNzz0zc0zm0zm0LBI\
+  <3>OCEPCDQCCRCBfZL<7>YMFXLFWJE<2>TFCSDBPmk<11>RQOROM\
+  RMK<3>RECIbdJ_aKXZLWW<4>QoHRsEwwClwBawBcw1<8>Ww7Vw8V\
+  w8<3>RwBVwG<3>SwDSwCRwBGwk<2>PwKewV<7>YwKXwJWwH<3>Sw\
+  C4wD<3>EwCGwCIwB<2>PwBYwY<4>VwOUwMTwK<3>RwClwT<2>WwF\
+  CwN<3>OwD_ww<8>UwWUwTTwQ<3>RwERwW<3>RwLRwIRwGRwDpwS\
+  <3>WwEYwU<12>TwHTwGSwF<3>RwB6wx<6>Hw_IwWKwS<3>QwEJwL\
+  <9>OwFPwEPwD<3>RwB0wo9waIwO4wN<3>IwGLwEOwCSw0<3>Rw8R\
+  wAuwp<3>`wPWwIDwABwI9wP<2>AwR
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

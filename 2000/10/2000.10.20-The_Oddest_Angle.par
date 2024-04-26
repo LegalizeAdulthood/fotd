@@ -1,0 +1,32 @@
+The_Oddest_Angle   { ; Fractal of the day, 20-10-00 Rating (4)
+                     ; time=0:00:11.50 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=multesc4-XZ-YW passes=t center-mag=-0.00\
+  000000000271445/-0.00000000001024659/5.033505e+011/0\
+  .07201/106.91/-79.243 params=99.3/107.3/-1.999999117\
+  587294/0/-1.999999117587294/0 float=y maxiter=550
+  inside=0 outside=real logmap=36 periodicity=10
+  colors=000RYbXcY_jSZbJZXAUK0cMEgIRmFbqBomIUwSozkczzS\
+  nrNafIOUDBF87MH4OO2SX0Vc0Zk0as0cz8RvQFqNHoMUoJZnIMmF\
+  NmEOkBQkARj2F03H03I23I44J84KD4KF6MJ6NN6NQ7OU7QY7Q_8R\
+  c8SgYegXci<3>RaiQaiO_iN_iMZiKZiKYjJYjjN8qNA0zw_6izez\
+  0SkMKqiDvz4zgDkKKY0RJAZKKfKXmMfuMqzMoeKoJJo0J8z0Hz0N\
+  w4VrBamHggNobSvYZzSczQjzNqzMvvRw<3>akwXqwRvwMzw<2>2Z\
+  r0Qq0Ho0QfBZYKgOMaUMXYMRaNKf<2>N4rZDejJSvQFzX2gEifHc\
+  <3>fMJfNEeMEbKDaKD_JBSoaXrbZubbwcfzeizemzfozfgsb_cZU\
+  OXM8SF0QUAegQsuczDIE8JF6JF2KF0KF0MF0MF0MF0RSAVeJZrJX\
+  nJUkJSi<2>Q8II8XA8j38w4Hs4Oo4Vm6bi6if6qb6w_Ayc<2>Mzm\
+  QzqUzsXzv0UX6X_HYbHYbHXbFXcFXcFXcEVe<2>DVfDVfBUgBUgB\
+  UgAUiASiASi8Sj8SjzzHzzJzzKwzMuwNquQnsRjqSgnUcmVajYYi\
+  ZVf_RcaObbQzYNuV<2>JeNMfOOgQRiRSjR<2>_nVym8siAnfBjcB\
+  eaD_ZEXXEbaUifinky6_fESaMMYUFUa8Qg2M_MkHXS0e830z87zE\
+  EuIKnNRi
+  }
+
+frm:multesc4-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| < 4  }

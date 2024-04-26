@@ -1,0 +1,32 @@
+Flashy_Minibrot    { ; Fractal of the day, 05-08-00 Rating (6)
+                     ; time=0:11:20.44 -- SF5 on a P200
+                     ;  Version 2000 Patchlevel 9
+  reset=2000 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+8.152643939088213/+9.261915743925041/7.2\
+  37436e+008/1/-155 params=-11/-1.15/-1/-11/-1.975/0
+  float=y maxiter=1500 inside=0 logmap=246 periodicity=9
+  colors=000000000500A0KF0KK0UP3UU7ZZCZcGchLcmPhrVhwZr\
+  zdrzhvzbvzavrVreLfUFbH3_G7HFBPEFYCJeCNnBYoAfp9rr9qs7\
+  zu6uv4zx0zz4ty9ssCknHkhLddPaZVZUZXObSKhPFlNApK4pH1hQ\
+  PU_WFibOkYZnRipLus4srGrrSprdpuporo<2>kiZifUidO<2>eX9\
+  dU3bR0aR0<3>fL0hK0iJ2kH3kG4lF6rE7rCAzBBzACz9Es7Fl6Cf\
+  4Ba39X27R26L13G02B0060010721E23K37R3AY4Ed4Gk4Jr6Ny6P\
+  z7Uz7Xz7ZzAXzCUzFRzGOzJLyLJxOGvPEvSBuV9sY6rZ3pa1od0n\
+  f0lh0lf0if0he0ee0dd0ad1_d2Yb2Xb3Ua4Sa6Pa6OXAUSEZOGd<\
+  2>CRs9Vy4Zz0fz1az7YzEUzKOzRKzZGz<2>s3xz1xz0vx0vu0ur0\
+  uo0s<2>f0rd0ra0pZ0pe0xY0pP0kH0eA0Z20U00O00J60FA0BA00\
+  <4>A00A00K40FE1BL2<2>0i40r60z70z71zA<2>dzErvFzuGzvJu\
+  xLpxNkyPeyRazUXzXRzYNz_HzaCzd9zeBzdCvdFrdGsdJudKvdNx\
+  dOydRzdSzdVzd<2>_zdZza<2>VzYUzXSzURzSRzRPzPOzONzLLzK\
+  KzJJzHFzFJzGLzHPzHSzJXzKZzKbzLezLizNlzOpzOszPxzRzzRz\
+  zSzzV
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

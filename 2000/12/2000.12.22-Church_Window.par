@@ -1,0 +1,28 @@
+Church_Window      { ; Fractal of the day, 22-12-00 Rating (6)
+                     ; time=0:06:00.00 -- SF5 on a P200
+  reset=2001 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.50906377629614/+0.665496317395552/7.42\
+  1096e+007/1/-7.499 params=21/-1.21/1.2/-12.1/0/4900
+  float=y maxiter=1400 inside=0 logmap=82 periodicity=9
+  colors=000B00EB0D80D70D40D30D00D00A00<2>E00F00F00H22\
+  I32J33J43K63M74N74N86OA6QB6RB7RD7SE8UF8VF8VHAXIAYJBZ\
+  JBZKB_MDaNDbNEbOEcQEeQFfRFgSHgUHiUHjVIkXIkYJmYJnZJo_\
+  KoaKqaMrbMscMseNueNvfOwgOwiOyiQzjQzkRzmR<2>zuSzwMzuS\
+  zoYzgbyVgvNnuHsr8yo2zm0z<3>n0zn0zo2zo3zo3zo4zo6zo7zq\
+  8zqAzqBzqBz<4>rIzrJzrJz<3>sOzsQzsRzuSzuSz<2>uXzuYzvZ\
+  zv_zv_z<4>wfzwgzwgzwizyjz<3>yozzqzyoz<3>sjzrizqgz<2>\
+  mczkbzjbziazg_zgZz<3>bUzaSz_RzZQzYQz<4>RJzQIzQHzOFzN\
+  EzMDz<3>HFzFFzEHz<3>8Jz7Jz6Kz7Kz7Mz<3>7Oz8Oz8Qz<2>8R\
+  z8SzASzAUzAUzAVzAVzAXz<4>BZzB_zB_zDaz<3>DczDczEez<3>\
+  EgzEgzEiz<3>EkzEkzEmz<3>EozEozEqz<2>ErzEszEuz<2>EyzE\
+  zzEzz<10>DzzDzzDzzDzzDzzDzzBzz<3>BzzEzzEzz
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

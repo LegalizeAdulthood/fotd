@@ -1,0 +1,32 @@
+Will-o-the-Wisp    { ; Fractal of the day, 21-02-01 Rating (8)
+                     ; time=0:10:50.32 -- SF5 on a p200
+  reset=2001 type=formula 
+  formulaname=MandNewt11 passes=1
+  center-mag=0.365226/0.0638868/14.08371/1/180
+  params=-1.38/-0.99/-1.98/0.47/-0.48/3.46 float=y
+  maxiter=250 inside=bof60 logmap=yes periodicity=0
+  colors=000zzzzzzzzzzzzzzyzzxzzwzzvzyuzxtzvszurzsqzrp\
+  zqozoozmozkozjoxioxgoxfoueoucouaos_oqZoqXooWooUolTol\
+  RojQojOohNohMofKofIodHodGoaHoaEoaDo_DmYClYBkWBjWBhU9\
+  gU9eS9dS9aQ9_O8YO8WM8WM8UK8SK6SI6QI6OG6OE6ME6KD5KD5I\
+  B5GB5G95E93D83D83B6395395283263262252231131120110110\
+  1001000000000000000000000000000000000000000000000000\
+  000000000000000000000000000000100200300500600800900B\
+  00D00G00I00K00M00O00Q00S00U00W00Y00W00U00U00S10S10Q2\
+  0Q30O50O60M60M80K90KB0ID0ID0GE0EG0EI0DK0DK0BM0BO09Q0\
+  9S08U08U06W06Y05_05a03a02d02f01h01j00j00l00o00q00s00\
+  s00u00x00z00z00z00z00z00x00u00s01q02o05l06j08f0Bd0Da\
+  0G_1IY2MW2OU3SS5UQ5WQ8UQ9SQBOQDMQEKQIIQKGQMDQOBQQ9QU\
+  8QW5QY3Q_2Qa1Qf0Qh0Qj0Ql0Qo0Wl0_j0fh1jf3od5ua8z_BzYE\
+  zWIzUKzYQz_UzdYzfaxjfuljsooossluxhzzfzzdzz_zzYzzUzzS\
+  zzQzzMzzKzzIzzEzzDxzBsz9oz6lz5hz3dz2_z0Wz0Sz0Oz
+  }
+
+frm:MandNewt11 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-b)*z-f
+j=c*z^d+g
+z=z-e*h/j,
+.0000000000000000000000000000005 <= |h|
+}
