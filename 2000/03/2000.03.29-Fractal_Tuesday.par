@@ -19,3 +19,10 @@ Fractal_Tuesday    { ; Fractal of the day, 29-03-00 Rating (5)
   fDuf<3>My_OzYQzW<3>YzP_zOazMczKezJ<2>ZzQXzSVzT<2>_zW
   }
 
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -18,3 +18,10 @@ Joyful             { ; Fractal of the day, 26-12-99
   zN<3>pzB<4>dz6bz5`z5<3>Sz1EzHEzG
   }
 
+frm:MandelbrotMix4 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}
