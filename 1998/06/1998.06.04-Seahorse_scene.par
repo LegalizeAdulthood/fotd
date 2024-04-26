@@ -1,0 +1,18 @@
+Seahorse_scene     { ; Fractal of the day, 04-06-98
+                     ; 3min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Oblate passes=1
+  center-mag=-0.494523/-1.52656e-016/5.277016/0.7996
+  params=0/0/-0.755/0 float=y maxiter=272 bailout=25
+  inside=bof61 logmap=16 symmetry=xaxis periodicity=10
+  colors=000000SQ5TQ5_8I<6>T1BS1AT2B<55>ltppvu<18>RiTQhSQ\
+  iPPiQ<10>LUWLTWKRXKPY<9>GAbG9bHAa<30>cI_dI_cHZ<49>r_fxc\
+  k<25>HC8FB6C84<22>QN5000RO5
+  }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

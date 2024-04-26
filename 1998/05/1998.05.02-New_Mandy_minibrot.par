@@ -1,0 +1,23 @@
+New_Mandy_minibrot { ; Fractal of the day, 02-05-98
+                     ; 3min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=HyperBrotI
+  center-mag=+2.07805614947238000/-0.00000000000000/1572.412
+  params=0.25/0/2/0.3/0.04/0 float=y maxiter=1200 bailout=25
+  inside=0 logmap=yes symmetry=xaxis periodicity=0
+  colors=000IcKPbOVaR<7>hxg<10>EYI<7>TvAUyAXtE<12>v0q<10>VX\
+  c<8>D49<6>P8BR8BU9CX9CUHPVQVVUdTYnKVm<3>HLjHMjGLiFIhFIhJO\
+  fNTaQWXTfSNlNHmJJnR<3>Qau<9>alK<8>XtvXtzVprUmjSibRfVRfV<1\
+  8>oQ9wp0gXNSEh<7>Kqe<5>viG<4>lSo<7>Y4I<7>oll<2>vJS<2>QNo<\
+  5>T7b<7>4ed4nb4w`ehI<2>wAO<4>omkntokkbicQgWD<6>ruXidO`PF<\
+  3>WRJRWB<3>dCch7jn0w<16>aHQ5fDCdH
+  }
+
+frm:HyperBrotI      {; Jim Muth
+a=p1, b=0,0, d=real(p2),
+h=imag(p2), f=p3:
+g=sqr(a)-sqr(b)+pixel,
+b=d*a*b+f,
+a=h*g,
+|a|+|b| <= 9
+}

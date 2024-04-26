@@ -1,0 +1,21 @@
+Mandelbrot_Aura    { ; Fractal of the day, 04-10-98
+                     ; 1-1/2min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Mandel_4-D passes=t
+  center-mag=-0.542047/2.22045e-016/0.8503401
+  params=0/0/-3/-3/0.001/0 float=y maxiter=1200 bailout=25
+  inside=0 logmap=yes symmetry=none periodicity=0
+  colors=000H9r<15>nLNpLLqMK<18>sU6sU6qS9<20>C3r9EX6PCHeW\
+  Run<9>oU0cB`<10>Gf`<10>HC7<3>9bt<14>1mR1mQ2jR<16>9DY<6>\
+  hNT<17>O1g<4>VXA<5>9O4<13>4SQ<7>eq6xmJ<7>zbA<21>7ER<15>\
+  S8MbIU<10>CIDHOHMTK
+  }
+
+frm:Mandel_4-D {; 4-D Mandelbrot, 8-D Julibrot
+a=(p1), b=(0,0), d=p2+2:
+z=z+1
+f=sqr(a)-sqr(b)+pixel
+b=d*a*b+p3
+a=f
+|a|+|b| <16
+}

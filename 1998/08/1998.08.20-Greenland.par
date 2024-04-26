@@ -1,0 +1,19 @@
+Greenland          { ; Fractal of the day, 20-08-98
+                     ; 30min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=-0.10173425928508370/+1.04361438620747100/10\
+  92.896 params=0.5/2/0.1/-2/0/0 float=y maxiter=1200
+  bailout=25 inside=0 logmap=43 symmetry=none
+  periodicity=0 colors=000Fim<22>F66F44G21<42>63w<33>hce\
+  <22>UdhTdhUcg<19>NtwNuxMvz<34>`m0<9>Ozr<11>_Hgh8e<2>N\
+  Oj<7>h8x<35>BcB
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

@@ -1,0 +1,18 @@
+Vision_of_Hades    { ; Fractal of the day, 23-06-98
+                     ; 6min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Elliptic passes=t center-mag=+0.00151372602\
+  012175/+0.00075615433186245/4001.313/0.2732/-90.986/10.\
+  379 params=-0.5923/0.62097/-0.5923/0.62097 float=y
+  maxiter=1200 bailout=25 inside=255 logmap=59
+  symmetry=none periodicity=10 colors=000jCp<4>l9tm8un7w<\
+  52>gGIgGHhFI<45>BwCAxC9zA<23>UZlUYmTXl<36>A6JA6JB7K<52>\
+  L_fL`fKYi<9>NsGNuDMz5<2>PrMeIi<7>iDo
+  }
+
+frm:Elliptic {; Jim Muth  imag(z),real(c)
+z=flip(imag(pixel))+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

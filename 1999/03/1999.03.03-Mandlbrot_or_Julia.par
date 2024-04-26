@@ -1,0 +1,25 @@
+Mandlbrot_or_Julia { ; Fractal of the day, 03-03-99
+                     ; 5sec on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  center-mag=-0.553341/0/0.4976526
+  params=-45/45/0/0/0/0 float=y maxiter=240 bailout=25
+  inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000DLA<5>8mGCpH<2>OxRRzZSwfSulTsrTqz<2>VjzVh\
+  zXdz<5>cHzdDzgEz<5>sGzN2z5`z<5>RWz<2>wtz<4>Pjz<3>9z\
+  z<4>uiz<5>DDz<5>Edz<7>bBzl_zuxz<3>35z<2>etz<3>hcz\
+  <7>7ozoaz<2>23z<6>D0zE0zH6z<2>OLz<2>9xz<3>a1z<2>y2z\
+  <6>8kz<2>LOzadzqtz6Mz<2>mVzjfzhrz<7>uqz<3>VMzHcz4uz\
+  <4>5Dz<2>x0z<7>A7z<7>PNz<3>1kz<3>YIz`Iz<3>MkzJrzHNz\
+  <6>xLz<4>8szk6z<6>dBzdBzeBz<9>kAzlAznAzmAzmAznAzgMz\
+  <16>lEzFWzEQz
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

@@ -1,0 +1,18 @@
+Laser_beam         { ; Fractal of the day, 02-06-98
+                     ; 55min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Oblate passes=1
+  center-mag=-0.20938473512953440/+0.83787021685574700/75\
+  .22426/2.9067/52.056/14.635 params=0/0/-0.1099/0 float=y
+  maxiter=32767 bailout=25 inside=9 logmap=yes
+  symmetry=yaxis periodicity=10
+  ranges=0/-1/150/200/300/500/850/1500/32767
+  colors=000cKP68ASSSRZ`Vbe_gjospzzzBMi000<244>000
+  }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

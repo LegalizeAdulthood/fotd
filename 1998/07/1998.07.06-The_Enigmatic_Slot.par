@@ -1,0 +1,21 @@
+The_Enigmatic_Slot { ; Fractal of the day, 06-07-98
+                     ; 2-3/4hrs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=mult2-003-XY-ZW function=ident/flip passes=1
+  center-mag=+0.00398399038398587/-0.00000565321790541/14\
+  9.2266/1/29.999 params=91.95886104922636/90.28827784051\
+  028/0.0001715/0.0738739/-1.7435/0 float=y maxiter=18000
+  bailout=25 inside=0 logmap=65 symmetry=none
+  periodicity=10 colors=000E9f<27>K7XK7XJ5W<76>NikNikMjl<\
+  46>GvyAyz<18>khv<42>9wG8wF6yB<22>HncIih<8>FwX
+  }
+
+frm:mult2-003-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real((p1)+10^-100)*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^2.003+c,
+|z| <= 36  }

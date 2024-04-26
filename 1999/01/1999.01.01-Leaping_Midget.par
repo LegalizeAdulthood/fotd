@@ -1,0 +1,24 @@
+Leaping_Midget     { ; Fractal of the day, 01-01-99
+                     ; 2-1/2min on 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  center-mag=+0.00000004192927498/-0.00000008579725119\
+  /1.906241e+007/0.3446/-109.723/76.064 params=24/172/\
+  -0.101140333686/0.9563109751160001/-0.101140333686/0\
+  .9563109751160001 float=y maxiter=1200 bailout=25
+  inside=0 logmap=94 symmetry=none periodicity=10
+  colors=000X3v<18>Q2`<10>f36g34h55<22>snK<13>H1c<5>fqO\
+  <11>1RC<18>uHb<11>8dOAeLBfJ<3>7jJAkH7lJ<2>4oJYpd<6>7w\
+  L_xcUy_<3>9zMiza<4>BzMSzBkzgezb<5>9zLyzi<3>FzOdzVMzP6\
+  zI<5>4zJoz8<11>7zJdzI<5>9zJyzh<8>9zLOzW<5>6zKrzQ<14>7\
+  zJ4zQ<9>4zJwzh<8>SzUFzUBzV7zV<3>YzyXzw
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

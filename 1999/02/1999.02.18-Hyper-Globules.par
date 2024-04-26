@@ -1,0 +1,21 @@
+Hyper-Globules     { ; Fractal of the day, 18-02-99
+                     ; 12min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt04 passes=1
+  center-mag=-0.419352/0.970658/4.219409
+  params=-3.055/0.823/-5.158/2.2883/-1.9503/2.6326
+  float=y maxiter=255 bailout=25 inside=bof60
+  logmap=yes symmetry=none periodicity=10
+  colors=000zpMwpLpoKknIfmH<2>ZjDWiCVhBTgA<4>Rb3Tb2Ra\
+  1Ra0<22>UKC<2>QIERHERHFSGFRCBS24R00zvr<4>vqmuplsnk\
+  <39>9BE8AD5AC<9>D5EE5EF3F<36>0S50S51T4<36>A\
+  r1As18t0<34>ccFdcFcbE<26>ipP
+  }
+
+frm:MandNewt04 {; Jim Muth
+z=c=pixel:
+a=z^3+(c-1)*z-c
+b=p1*z^2+c-1
+z=z-p2*a/b
+p3 <= |a|
+}

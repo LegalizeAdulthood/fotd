@@ -1,0 +1,23 @@
+Apricot_Windmill   { ; Fractal of the day, 03-08-98
+                     ; 45min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=+0.97453385764079300/+0.01018273439499916/4.\
+  27094e+010/1/-7.499 params=-1/2/-0.19/3/0/0 float=y
+  maxiter=2100 bailout=25 inside=0 logmap=164
+  symmetry=xaxis periodicity=10
+  colors=000I_ZK__<5>WqeYwi<14>NAA<16>uC3xK3zR4zY5yc0uc6p\
+  `BlYHgVObSWZPeUMpSGyQJrPLkONbRNZNPB<2>EJ9BH86C6<13>QmUa\
+  Wd<2>dXdeXddZc<12>Ts`Ou_<8>yod<18>jubiubiubiub<6>WoIUnF\
+  QqA<18>qCe<10>NkaKnaJs`<19>CHaCFa9Ab<6>QY_SZ_U__Q`cWa_<\
+  3>se1<5>dkSdlV<12>Fy`Dz`Bza9za8za<5>izFezJazM<13>DzlCzW\
+  EzXGzY
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

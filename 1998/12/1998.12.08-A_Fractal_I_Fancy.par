@@ -1,0 +1,25 @@
+A_Fractal_I_Fancy  { ; Fractal of the day, 08-12-98
+                     ; 2hrs,50min on 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix7a passes=1 center-mag=+1.21\
+  894490250607000/+0.03577771930998778/8.034135e+007
+  params=1/2.95/-1/3.05/10/0 float=y maxiter=12000
+  bailout=25 inside=0 logmap=555 symmetry=xaxis
+  periodicity=10 colors=000A9b<2>A9XA9VA9UA9T<6>A9L<2>A\
+  APAARA9SA9TA9XAA`A5dD1g<15>Kht<6>slj<17>7Vo5Up2Tp0Sp0\
+  Rp8Wq<2>aht<17>gpI<10>JR_HP`FLbDIcAB`81Y<5>CAXDCWDEWE\
+  GWEIWFKWFLWGOVHPVHRVISV<2>JZVNZbR`jUbqTdpTdoTeoTgn<2>\
+  SimSilSilSikSikSijSijOabKRWHLPDII97B604<6>uA_<12>f_ce\
+  `cbb_<4>OlKLnHIoEFpBCq8<8>SyCTzCVzDXzD<10>nzH<11>Az16\
+  z03z00z02z0<15>XzR<13>1zCJzQUzU_zZezhczhczfbzd
+  }
+
+frm:MandelbrotMix7a {; Jim Muth
+; "a" suffix added by L.StClair 9/1/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| <= l
+}

@@ -1,0 +1,23 @@
+Not_Quite_Perfect  { ; Fractal of the day, 13-03-99
+                     ; 45min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=Mystic2 function=cosh passes=1
+  center-mag=-0.754127/-0.313246/4.919224/1/67.5
+  params=3.1685/3.9986/4.0752/1.8238/2.6051/-0.7138
+  float=y maxiter=300 bailout=25 inside=bof60
+  logmap=yes symmetry=xaxis periodicity=0
+  colors=000Jb`<3>EQSDNQBLPAIM<2>7BK<3>FLCHNAJO8<2>PS\
+  2RT0UW3<2>`cCbfEdjH<2>kuQmxSnvQ<4>rjHshFtgD<4>x_4xZ\
+  3wY6<10>wPZ<12>mqTmsTkrQ<9>Yo2Xo0YhA<3>ZLlZFu`Dq<5>\
+  g7X<6>uud<20>Ndj<15>OMjIqD<15>ghzpyB<12>zrT<20>PQhO\
+  PhOMg<3>OBd<5>8XY<23>LgD<15>48w<8>MFcLfTKdS
+  }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100
+}

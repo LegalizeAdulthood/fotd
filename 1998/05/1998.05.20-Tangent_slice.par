@@ -1,0 +1,20 @@
+Tangent_slice      { ; Fractal of the day, 20-05-98
+                     ; 40min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=1
+  center-mag=-9.99201e-016/0.000660481/38.97277/0.04007
+  params=36/0/0/0/-0.48172/0.53174 float=y maxiter=12000
+  bailout=25 inside=0 logmap=7 symmetry=yaxis
+  periodicity=10 colors=000a6Ma7N<4>YDPXEPXFPWHPWIQVJQ<28\
+  >DuX9xa<3>MrJ<44>iq9jq9ir7<35>panpaosds<16>`LYZKWYJVWIU\
+  VHTTGR<4>MALL9KL8IJ7HH6GF5F<3>C6HC6ID6I<7>N7MO7MO7N<24>\
+  S9ZS9ZU6Y<25>4`ZF`XK`W3aZ<19>NBt
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

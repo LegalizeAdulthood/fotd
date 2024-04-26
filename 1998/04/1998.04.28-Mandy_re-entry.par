@@ -1,0 +1,24 @@
+Mandy_re-entry     { ; Fractal of the day, 28-04-98
+                     ; 10seconds at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  center-mag=-0.773923/-3.55271e-015/0.605581/1.3982
+  params=43/11/0/0/0/0 float=y maxiter=256 bailout=25
+  inside=0 logmap=yes symmetry=xaxis periodicity=10
+  colors=000Tfr00J<4>04O<2>r4MuXFwx9ATfGdUMpIWnFdmDbpQ`sb\
+  Zun<5>DqH<7>T6h<3>np5<2>DTn<6>nMs<5>Eez<6>wQZ<2>2lH<3>x\
+  pz<2>fvThfijRzgLJ<6>Fao<2>oJT<7>qsQ<7>GNtRZYaiB<2>Zb8eT\
+  IlJR<5>87o<2>IVPUSI<4>1MZ<3>04dmRj<19>21efTj<3>ZNiSSt<7\
+  >r_jVJq73w<4>kvv<5>jzdjzbknU<2>nF3<7>V2ebNZjgT<4>UIS<7>\
+  mCs<5>MOJ<4>kr0<7>1JBGSDU`F<5>WnM32eOaRGPW8C`op_<11>44e\
+  uWB<6>74bLjr
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

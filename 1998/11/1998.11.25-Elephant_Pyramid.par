@@ -1,0 +1,21 @@
+Elephant_Pyramid   { ; Fractal of the day, 25-11-98
+                     ; 6min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=1
+  center-mag=-0.00000037711582541/+0.000000008141459\
+  65/3856244/0.1057/0/-88.832 params=-159/-138/0.270\
+  9953247446/-0.0050402424603/0.2709953247446/-0.005\
+  0402424603 float=y maxiter=2400 inside=0 logmap=164
+  logmode=fly colors=0005I6<18>5Jo5Jq7In<24>t21<15>D\
+  FeDEf0Ak<4>zMU<7>XfSUiSQmSMqU<3>PZMQUKROH<30>O_YO`\
+  YO`_<8>NdlNdmMel<8>UZhVYhWXgWWfXWeYVc<13>iKdiKdjLc\
+  <43>lRalRamQb<31>ZcQZcQ_bR<13>XcK
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

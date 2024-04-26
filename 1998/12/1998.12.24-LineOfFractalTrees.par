@@ -1,0 +1,23 @@
+LineOfFractalTrees { ; Fractal of the day, 24-12-98
+                     ; 33min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix7a passes=1
+  center-mag=0.419405/-0.958246/4.219409/1/47.499
+  params=1/0.5/-1/0.5001/11000/0 float=y maxiter=540
+  bailout=25 inside=253 logmap=19 symmetry=xaxis
+  periodicity=10 colors=000G92GF7G83GB4GA3<28>W_O<10>6Z\
+  h4ZgM_bP`VRaO<4>MgdMhgKfc<8>8R94O5<18>rrOutPyvN<21>Iq\
+  z<14>wlH<14>uqruqtvrxuqvtptsor<5>yufzvdzwbzx`zyZ<3>zz\
+  Rzz4zzPzzr<4>zzXzzI<4>zzg<2>zzFzzJzz4<15>zzTzzezzs\
+  <27>zzGzzFzzF<12>zzCzzCzzA<10>zzTzzBcFhzzfzza
+  }
+
+frm:MandelbrotMix7a {; Jim Muth
+; "a" suffix added by L.StClair 9/1/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| <= l
+}

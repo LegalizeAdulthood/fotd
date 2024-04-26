@@ -1,0 +1,22 @@
+Fuzzy_Fractal      { ; Fractal of the day, 23-04-98
+                     ; unbearably slow, 12hrs at 100mhz
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 passes=t
+  center-mag=-0.43726177694700770/-0.01310161401160095/1.\
+  939593e+008/1/-127.5 params=0.03/3/-1/-1 float=y
+  maxiter=36000 bailout=25 inside=0 logmap=1519
+  symmetry=none periodicity=10
+  colors=000njLqfKtcK<13>64G<9>j9t<3>x2UChk<21>T9mQ6s<14>\
+  wdxz0w<14>GVH<15>sym<2>VGl<9>fur<5>C5x<8>r7uSUo<7>F7h<1\
+  0>vOf<3>`mrWouRkdzlewmatjYqgF<5>aPJqLKlIMgGOlDQlBSfETjB\
+  UV8VABW98X<3>6H`5Ja4Nb3Qc2Vd2Xd1Wb1Wa1d`<9>1aQ<3>lca<9>\
+  q6b<5>r5z<4>H_zArz3uz6zx<6>MzlOzkPzj<12>Uzb<3>1zzhz\
+  MhzMkzL
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

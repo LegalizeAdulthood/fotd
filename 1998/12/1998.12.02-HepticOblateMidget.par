@@ -1,0 +1,31 @@
+HepticOblateMidget { ; Fractal of the day, 02-12-98
+                     ; 75min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot07-XY-ZW function=ident/flip
+  passes=1 center-mag=+0.40569818482113700/+0.6636445\
+  7177911840/1.887752e+009/0.0834/178.607/-88.034
+  params=0/90/0/0/0.31925/0 float=y maxiter=10000
+  bailout=25 inside=0 logmap=250 symmetry=none
+  periodicity=10 colors=000lUklUinUinUipUgpUgqUgqUesUes\
+  UepUdoUbnU`mUZjUZiUXgUVeUTdUT`URZUPXUNVUNRULPUJNUHLUH\
+  JUGGUEEUCCUCAPA8P84P62P60P40P20P0<4>0P00K0<9>0K00F0\
+  <5>0F0000000200200420620840A60A60C80E80GA0GA0HC0JC0LE\
+  0NG0NG0PH0RH0TJ0TJ0VL0XL0ZN0ZN0VV8TbVRiqPqzRszRszTszT\
+  uzVuzVuzVvzXvzXvzZxzZxzZxz`zz`zxbzxbzvbzvdzudzuezsezs\
+  ezqgzogzoizmizmkzkkzkkzimzimzgozgozeozeqzdqzdszbszbsz\
+  `uz`uzZvzZvzXvzXuzZuzZuz`uz`uz`uzbuzbuzbuzduzduzdszes\
+  zeszeszgszgszgsziszisziszkszkqzkqzmqzmqzmqzoqzoqzoqzq\
+  qzqqzqqzsozsozsozuoxuoxuoxvoxvovvovxovxovxmsumqqmomkm\
+  ikigkgdie`idXibTgZRgXNgVJeTGeRCeNAdL6dJ2dH0bG0bC0bA0`\
+  80`60`40gE0oL0uV0zb0zi0ze0<20>z20z00z00<6>z00z0cz0cn0\
+  _j0cj2gdAneAqgAsg8ui8vi6zk6zk4zm4zm2zo2z
+  }
+
+frm:multirot07-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z*(sqr(z)*sqr(sqr(z)))+c,
+|z| <= 36  }

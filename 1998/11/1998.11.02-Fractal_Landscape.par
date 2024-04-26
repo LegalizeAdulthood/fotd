@@ -1,0 +1,29 @@
+Fractal_Landscape  { ; Fractal of the day, 02-11-98
+                     ; 12min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=OblateN passes=1 center-mag=-0.021638813712\
+  52786/+0.00680555055323246/231.7069/0.202/4.105/63.193
+  params=2.003/0/0.000185/0.0739678/-1.7434/0 float=y
+  maxiter=15000 bailout=25 inside=253 logmap=32
+  symmetry=origin periodicity=10
+  colors=0000oz0qz0qz0sz0tz0uz<4>0sz0sz0qz0qz0qz0oz0oz0mz\
+  <3>0lz0lz0jz0jz0hz0hz0hy0fy0fx0fv0dv0dt0ct0cs0cq0aq0ao0\
+  am0Zm0Zl0Yl0Yj0Yh0Wh0Wf0Wd0Ud0Uc0Sc0Sa0SZ0QZ0QY0QW0OW0O\
+  U0MU0MS1LQ1JQ1IP1JN2GN2GL2HJ2HL1IN1HP1GQ1GS0HU0GW0FY0FZ\
+  0Fa0Fc0Dc0Dd0Df0Dh0Bj0Bl0Bm0Bo09q09s09t09t07v07x07y05z0\
+  5z05z05z03z03z03z03z01z<10>00z00z01z13z33z55z77z97zB9zD\
+  BzFBzHDzJFzLFzNHzNJzPJzQLzSNzUNzWPzYQzZQzaSzcUzdUzfWzhY\
+  zjYyjZxlaxmavoctqdtsdstfsvhqxhoyjozlmzllzmlzojzshzqjzoj\
+  zolzmlzmmylmxlovjovhqthqsfsqfsodtmdtlcvjcvjaxhZxfZydYyc\
+  YzaWzZWzYUzWWzYUzZUzZUzaUzaUzcUzdUzdUzfUzfUzhUzjUzjUzlU\
+  zlUzmUzoUzoUzqUzqUzsUztUztUzvUzvUzxUz<2>zUzzUzzUzzUzzUz\
+  <5>zUzzUzzSzzQzzQzzPzzNzzNzzLzzJzzJzzHzzFzzFzzDzzBzzBzz\
+  9zz7zz7zz5zz3zy3zy1z<2>x0zx0zv0zv0zv0zt0zt0zv0zruzt0zs0z
+  }
+
+frm:OblateN {; Jim Muth
+b=p1, z=real(pixel)+p2,
+c=flip(imag(pixel))+p3:
+z=z^(b)+c,
+|z| <= 16
+}

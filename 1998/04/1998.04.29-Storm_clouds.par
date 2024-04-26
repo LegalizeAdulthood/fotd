@@ -1,0 +1,22 @@
+Storm_clouds       { ; Fractal of the day, 29-04-98
+                     ; 70min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 passes=t
+  center-mag=-1.63400662922001600/-0.30163749764577770/42\
+  02339/1/180 params=1.631336405529954/0.7106540116580706\
+  /-0.3385723441267128/3.409710989715262 float=y
+  maxiter=5000 bailout=25 inside=0 logmap=190
+  symmetry=none periodicity=10 colors=00080M<10>E5XE6YD6Z\
+  E7_F7`<5>HAfLBfQFiXIl`MnePqiTskWvmYxnZxo_x<2>l`xlaxjbxj\
+  bxicxjdy<11>_am_alX_j<8>DMX7JY<11>g_Aj`8lbC<13>zqu<12>H\
+  f9GbLP`QOXRNUTMTULTVKNX<2>IL`HFaG9c<6>94m83n74u<14>C2FD\
+  1CC2D<44>2jS2kS0lR<44>qiSriSriSsiSsiSznS<4>w`UwZUwWVvTW\
+  <3>yO_zN`zMazLb
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

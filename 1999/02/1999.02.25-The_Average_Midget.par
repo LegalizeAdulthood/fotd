@@ -1,0 +1,30 @@
+The_Average_Midget { ; Fractal of the day, 25-02-99
+                     ; 20min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4a function=recip passes=1
+  center-mag=-1.93572181132254400/+0.68717477469760650\
+  /580495.2/1/49.999 params=0.08/3/-0.8/-2/2/0 float=y
+  maxiter=1200 bailout=25 inside=0
+  logmap=53 symmetry=none periodicity=10
+  colors=000`6q`5s<5>q7lt7kx7j3oT<4>2CR9IOGQMNYKUkI_zG`\
+  aN<3>a2m<6>vh5<6>XiN<4>mkUxk`_Bb<3>uE8<3>DKB<2>eDx<2>\
+  LGG<3>TZi8FbdwibnlaeoRwaZsyFeFNbSU_dwnf0MDSf8<2>ZZfUX\
+  fYXl`cB<2>`Yg3H7FNNQSbG6nRKpoXggXl58QvLHnPUgTeDi_<2>V\
+  _mxM6pQMhUaoNYjRdeUk`N2`RK`U`KfNTab73XMIgw8_qFdkKheMm\
+  TO3JQV<2>XWluYMjWaFYEN_SUadNcAYdvfeunfu<2>XihqjbCk1\
+  <2>bnEaoHapK<2>5sT<3>ow5bxQXyZ<2>Fzx<2>jzEkzGkzIkzJ\
+  <2>izd_zadz7<2>dzD9zQ<3>hz0lz4pz7<2>2zY8zUEzR<2>czfRz\
+  s<2>IzAJzLKzVBzY3z`<3>Tz`<3>Szz<2>bzM<2>HzDozn<3>2zk6\
+  zf9za3zJ5zM4zvJzjXzZ_zm<3>OzF<2>gzXmzbrz7<2>BzfGz`KzV\
+  VzTdzS<2>hzdXzlLzs<3>nz1SzC6zN<2>pzq<3>Wz9vziwzkxzn
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

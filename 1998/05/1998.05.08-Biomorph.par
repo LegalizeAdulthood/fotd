@@ -1,0 +1,24 @@
+Biomorph           { ; Fractal of the day, 08-05-98
+                     ; 5min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=t
+  center-mag=+0.86351044600939010/-0.00063602426931107/32\
+  22558/1/97.499 params=1/100/1e-005/-100/0.1/0 float=y
+  maxiter=1200 bailout=25 inside=0 logmap=18 symmetry=none
+  periodicity=10 colors=000827324<2>JCAmGBYEDdHFjLGoJIwKK\
+  `MLQK`RM`UNaWSe<5>`OiaSjbRk<6>`Tf`ge`Zd`Zc_Zc<3>_d`bbbe\
+  cdgaejcglaio`j<2>vkoqojlse<2>ZoRVnMQnHMmC<2>ZeL`bMaaNcb\
+  OdbPfiQghR<5>pkXqfYrfYpiVnfT<3>hpLaXS<3>D_qGamJ`jM`f<2>\
+  UZXWYTZYQaYM<4>nZ5<5>nV3<2>QrQ<12>cX2<12>Uq4JzW<7>jzKmy\
+  IqzHtzFwzEWtY4zp<10>Wyi<14>4gc<10>PpyQpzTow<6>iibfndcsf\
+  `thYtjVulUtjUsh<4>RwaRx_QzY<5>NzPNzONzONzPNzPazrNzP<16>\
+  QzV7zK3zI0zH<4>kzo<3>9zZ<3>NzcKzFEzB
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

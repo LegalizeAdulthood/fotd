@@ -1,0 +1,25 @@
+Corralled_Minibrot { ; Fractal of the day, 03-02-99
+                     ; 3-1/3hrs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4a function=recip passes=t
+  center-mag=+0.27923001424951640/-0.15879222552521260\
+  /1.026844e+008/1/154.999 params=0.05/3/-1.5/-2/0/0
+  float=y maxiter=15000 bailout=25 inside=0 logmap=575
+  symmetry=none periodicity=10
+  colors=000GO6GN7<10>NYGKZHH_HEgICoI<12>PXCQWCRTB<15>\
+  OpIOqILsE<7>eqdhqgmtn<14>HF4<12>UdNVfOVgR<12>dm5<7>D\
+  3Y<12>UOQWPQZRP<4>iZMtbOo_MgYLaWJXUISSGMPFGND<3>0F82\
+  PIkYorftsoxy`kfMh755<22>fn_<8>rGgsChu8j<6>qDZpEXpFX\
+  <9>kMajIb<2>iTchSd<2>gaefdffhfelg<11>_mm_mmZmmZmmYmm\
+  <21>NmmWmmWRmWQm
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

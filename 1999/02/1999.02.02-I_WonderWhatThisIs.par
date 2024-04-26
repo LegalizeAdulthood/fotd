@@ -1,0 +1,24 @@
+I_WonderWhatThisIs { ; Fractal of the day, 02-02-99
+                     ; 10min on a 486-100, 640x480
+  reset=1961 type=formula 
+  formulaname=MandelbrotMix5a center-mag=-0.15079124\
+  190555470/-0.21853871365918690/1788.918/1/-54.999
+  params=-1/1.11/1/-1.11/0/-2 float=y maxiter=3000
+  bailout=25 inside=0 logmap=20 symmetry=none
+  periodicity=10 colors=000TJzTJz<14>0A7<10>vlL<7>4\
+  h1OVr<15>xXQwUPwSPwaPvfPvdPvbPudOubOu`OtgOtROthOq\
+  WTnXXlbaihegnicsg`reYqdVqb<4>FmV<2>6zQ<6>doz<6>Da\
+  z<3>mJz<3>Xfz<10>agzagzagzahzbhz<7>cjzcjzbiz<6>Xc\
+  z<5>Dfz<12>ADz<5>RMzTNzXOz<6>uVz<13>Bcz<4>QVz<3>Q\
+  3z<13>YFz<3>m9z<15>zqz<10>UVz<2>Ylz<6>dDzOQz<5>Ycz
+  }
+
+frm:MandelbrotMix5a {; Jim Muth
+; "a" suffix added by L.StClair 3/3/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+1, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c^l,
+|z| < 100
+}

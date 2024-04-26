@@ -1,0 +1,29 @@
+A_Smeared_Square   { ; Fractal of the day, 06-01-99
+                     ; 1hr on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5a passes=1 center-mag=+0.486\
+  95920622722630/+0.00562619715267266/1510756/1/-35
+  params=0.01/100/-1.1/1/0.001/-2 float=y maxiter=3000
+  bailout=25 inside=0 logmap=137
+  symmetry=xaxis periodicity=10
+  colors=000J9AI9BI9CG9DE9EE9FD8GB8H98I98J88K68L66M56N4\
+  6O4BO2BO0GO0BO2DR4ER4ER5GR5IR6IR8JR8JS9KS9LSBKSBKSDLS\
+  ELSENSGNUGOUIRUIRUJSULSULUUNWUNWWOYWOZWRZWS`WS`WUbWUd\
+  WWdYWeYYeYZgYZiY`iY`kYbmYbmZdoZeoZepZgrZgqZisZgtZiqZi\
+  mWilSkiOkhLkgIkfEmgBmf8mg4mf0og0<3>md0ld0kb0jb0kd0<5>\
+  qe0re0ue0ue0ue0ue0ug0ug0ug0ug0wg0wg0wi0<3>wi0wi0wk0\
+  <3>xk0xk0xm0xm0xm0zm0zm0zm0zo0<6>zp0zp0zr0zr0zr0zu0zu\
+  0zu0zw0<3>zx0zx0zz0<21>zz0zz0zx0zw0zu0zr0<7>zd0zb1z`3\
+  <4>zSDzRFzOHzNJ<8>z8Tz6Uz5Vz4Wz2Xz0Y<24>z0vz0wz0wz0w\
+  <24>z0w
+  }
+
+frm:MandelbrotMix5a {; Jim Muth
+; "a" suffix added by L.StClair 3/3/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+1, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c^l,
+|z| < 100
+}

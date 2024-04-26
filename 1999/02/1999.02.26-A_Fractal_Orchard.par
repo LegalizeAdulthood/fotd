@@ -1,0 +1,27 @@
+A_Fractal_Orchard  { ; Fractal of the day, 26-02-99
+                     ; 1/2hr on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4a function=ident passes=1
+  center-mag=+1.37965506012733400/+0.00013289366118996\
+  /1.646902e+012/1.0001/15.008/-0.013
+  params=-1/0.4/1/0.404/370/0 float=y maxiter=1600
+  bailout=25 inside=0 logmap=96 symmetry=xaxis
+  periodicity=10 colors=000GRX<17>Gmi<18>4E7<10>zadzcd\
+  ze`zg_xhYxkWwnVwmTvpSvZQ<10>rW8rW7pX9<22>Tbf<4>dVmbM\
+  fePhhSj3QC<4>dVe94hMDiZMjx3_<2>nOhmuUloYloakidkih9ld\
+  JnfTqhbrjsuz<4>lvm6vu<5>exlexy<5>kym2zF<4>dzfwzO<6>l\
+  zhxzLqzZLziUzjbzk8zj<6>fzk8zm<2>azkKzU<5>dzghzimzE\
+  <6>kzgXzL<6>jzh3zYIzbXzgVzn<6>izkkzp<4>kzkjzZ4zCQzUD\
+  z`<6>gzjbza<6>jzjdz32zYPzdVzdczhGzC<6>gzgPza<2>fzi\
+  GzVGzWGzX
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

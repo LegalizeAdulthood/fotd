@@ -1,0 +1,20 @@
+Sand_Burrs         { ; Fractal of the day, 29-09-98
+                     ; 10min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=1 center-mag=-0.00000\
+  097907089548/+0.00000001915838835/600311.8/0.07949/-6.1\
+  72/68.478 params=-75/6.3/-0.9907351756/0.25124457135/-0\
+  .9907351756/0.25124457135 float=y maxiter=3600 bailout=25
+  inside=0 logmap=245 symmetry=none periodicity=10
+  colors=000BRY<13>2`U1aU0bV<27>9KP9JP8HQ<18>RcDfaF<2>KfC\
+  7n9<6>l7Nv0Q<24>F1LD1LA0K<55>rRPsPQ<57>Ry7Ry7Qx6<16>Os6\
+  OsAOsGOsKOtOOtQOuT<2>OuYPuZPuZ<3>PuY
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

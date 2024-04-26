@@ -1,0 +1,21 @@
+Rings_of_Saturn    { ; Fractal of the day, 24-06-98
+                     ; 8min on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Elliptic passes=t center-mag=-0.00079\
+  9617/-0.0255648/21.85017/1.0388/105.645/-1.267
+  params=-1.3121/0.05916/-1.3121/0.05916 float=y
+  maxiter=24000 bailout=25 inside=253 logmap=50
+  symmetry=none periodicity=10
+  colors=000B1FD3K<3>LAPNCQPDQRFRTHPUJP<3>cQOfSOgTN<3>mWJ\
+  oXIrYHt_GwaFycEzeCzdD<4>s_Fr_Fr_G<45>SYYRYYSZX<3>QYZQYZ\
+  QZZP__<10>MYbLXcLXcLWcLWd<3>JVeJVeJUfITfITfITgHSg<48>2H\
+  w2Hw3Iw<28>VWwWXvVWw<19>DXxCXxBXw<19>C_yC`yC`yCayCay<3>\
+  CczCdzCezCfzCgzCiz0FPCmzCpz
+  }
+
+frm:Elliptic {; Jim Muth  imag(z),real(c)
+z=flip(imag(pixel))+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

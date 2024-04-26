@@ -1,0 +1,20 @@
+Three-way_Stretch  { ; Fractal of the day, 22-11-98
+                     ; 12min on a 486-100mhz at 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW
+  center-mag=0/0/6.104167e+011/0.06805/-164.26/58.212
+  params=55/48/-0.30459817152723/0.6253291403887981/-0.3\
+  0459817152723/0.6253291403887981 float=y maxiter=16000
+  bailout=25 inside=0 logmap=260 symmetry=none
+  periodicity=10 colors=000ATp<12>CXpDXpDYpDZp<2>DZpE_p\
+  E_pE`pE`p<34>JhpKipJho<53>459459568<73>eU2eU2dV1<53>\
+  kl7klH<6>lnE
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

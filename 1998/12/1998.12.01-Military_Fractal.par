@@ -1,0 +1,23 @@
+Military_Fractal   { ; Fractal of the day, 01-12-98
+                     ; 20min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot05-XZ-YW passes=1 center-mag=+0.\
+  00001581435933467/+0.00000168349702804/2.329959e+013\
+  /0.01237/-5.868/89.829 params=168.966/-3.873/0.77969\
+  1485891/0.290109303949/0.779691485891/0.290109303049
+  float=y maxiter=3600 bailout=25 inside=255 logmap=342
+  symmetry=none periodicity=10
+  colors=00046J86J<6>78M68N78N<2>98PA8PA8PB8PB8O<35>X8K\
+  Y8KX7L<25>o9Bp9Br99<15>_9aZ9cW7f<23>uY2<39>sN5sN5rO6\
+  <39>buBbuCavCavCawCawCbxCcxC<2>fzIgzKhzMizOjzQ<8>szft\
+  zZuzRvzE<2>yzUzzUzzZzzFzzFzzHzzFzz9zzAzzCzz9zz6\
+  <5>zzG0UZ
+  }
+
+frm:multirot05-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=z*(sqr(sqr(z)))+c,
+|z| <= 36  }

@@ -1,0 +1,28 @@
+Peppermint_Sticks  { ; Fractal of the day, 20-03-99
+                     ; 8min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  center-mag=-0.463483/0.0211921/6.656812/1/59.999
+  params=-87/-108/-0.3739432966093936/-0.564378795739\
+  616/-0.9050874355296488/0.07889034699545275 float=y
+  maxiter=32767 bailout=25 inside=255 logmap=yes
+  symmetry=none periodicity=10
+  colors=000HAKEOnCOn9AK7On8AK9NmAAKBMmCAKDMmDAKELlFA\
+  KGKlIAKIKlJAKJJlKAKLJkKAKNIkKAKPHkKAKQHkKAKSGjKAKUG\
+  jKAKVFjKAKXEjKAKZEiKAK`DiKAKaCiKAKcCiKAKeBhKAKfBhKA\
+  KhAhKAKj9hK9Kl9gK8Km8gK8Ko8gK7Kq7gK7Kr6fK6Kt6fK5Kv5\
+  fK5Kw5fK6Kv7hK8Kv9iKAKvBjKCKvDkKEKuFlKGKuHmPIKuJnUK\
+  KuLoXLKtMpZNKtOq`PKtQrbRKtSscTKsUteVKsWugXKsYviZKs_\
+  wk`Ks`xmaKratoaKraqqaKranraKrakrbKrbhrbPrberbUrbbrb\
+  Zrb_rbcrcX<14>rdArd9sc8<54>uN5uN5uN6<13>vTKwUF<24>w\
+  UawUbwUd<5>wUo<12>wUnZUc
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

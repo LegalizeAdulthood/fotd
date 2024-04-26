@@ -1,0 +1,22 @@
+Mister_Softee      { ; Fractal of the day, 18-11-98
+                     ; 18min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1 center-mag=+11.843\
+  34373170531000/-11.84334373142441000/1.355822e+007/1/-\
+  134.999 params=1/-3/-1.1/1/0/1000 float=y maxiter=1500
+  bailout=25 inside=0 logmap=49 symmetry=none
+  periodicity=10 colors=000g4H<25>DSw<14>oqKrsHssD<21>ty`\
+  <19>SjFRiEOjB<15>`eRaeS`cQ<9>ajZak_aj`ak`aja<3>akealea\
+  kf<2>amianj`pk<2>bljcjjdjjdhjegjfejfej<11>nLjoNjoRjpUj\
+  fYjWajYci_fh`sg<10>rY_tWZvV_<28>sLVwBZsLVoURkYOgaK`ZAb\
+  ZE<3>fgRgeUhdYid`jbck_glXjnWo<10>kVhnUn<10>`_K__HXYD\
+  <4>dfLfcMlcAjdCi`EhaF
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

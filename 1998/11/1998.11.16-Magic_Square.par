@@ -1,0 +1,22 @@
+Magic_Square       { ; Fractal of the day, 16-11-98
+                     ; 1 hour on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotQud passes=1 center-mag=-1.6206\
+  3573174479300/+0.00013747247356994/1.185136e+012/1/-5\
+  7.504/0.003 params=1/-1/-0.1/-2/0.20365026321/0 float=y
+  maxiter=1200 bailout=25 inside=0 logmap=210
+  symmetry=xaxis periodicity=10
+  colors=0005Lj<11>d`fnqivLd<3>ZEmXAu<5>HQQ<11>QNXQNXTKW\
+  <4>d7Vk3T<10>0Pg<10>IaSJbRJhP<11>4N4DLJLJYWHl<6>DOjWyb\
+  BPj<5>2UF8FOD1X<11>neJuiG<13>9bV6bW2cU<7>AWqBVsAXt<10>\
+  3rw<3>_PgYW3gIc<3>`Gs<5>wwg<5>glVV8M<2>aASXwo<4>xkV<4>\
+  8pC<3>JtKMtMPsO<6>fe`hc_jaZ<7>wtR<2>e5QqMK<4>NkQ<5>pkr\
+  <3>RFK<3>FopRUrb8t<6>P`cNdaJjQ<7>7_c6Sg
+  }
+
+frm:MandelbrotQud {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=sqr(z)+(.2*(z*z*z))+(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

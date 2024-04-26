@@ -1,0 +1,19 @@
+Grand_Convergence  { ; Fractal of the day, 07-06-98
+                     ; 1hr on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Oblate passes=1 center-mag=-0.00110562/-0.0\
+  286782/19.58072 params=-0.5/0/-0.751/0 float=y
+  maxiter=20000 bailout=25 inside=0 logmap=325
+  symmetry=xaxis periodicity=10
+  colors=000Y55_55Y55<68>Y55Z55Y55<52>Z55Z5GZ5FZ5F<2>X5EW\
+  5EV3E<4>R2EQ2EP3E<5>M8DL8DJ8D<3>F8DE9DD9DCADBACA9B<25>L\
+  HYMIZMI_NJ`NLa<6>QUgRVhRVi<2>SWlTXmTWm<4>VRrWQsWRt<26>J\
+  qzJrzHrz<5>LrxLrwMswMtv<6>Qxs
+  }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

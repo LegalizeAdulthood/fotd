@@ -1,0 +1,25 @@
+Emerald_Lightning  { ; Fractal of the day, 01-02-99
+                     ; 8-1/2min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5a center-mag=+0.052265288497\
+  60387/-0.10648829885999410/2.704731e+009/1/-102.499
+  params=-1/1.11/1/-1.11/0/-2 float=y maxiter=1500
+  bailout=25 inside=0 logmap=22 symmetry=none
+  periodicity=10
+  colors=000053053<5>0H33J48L6CN7<5>bvF`vDhuBfu9nu7ru5w\
+  q8wnBwkEzgH<2>zYPzVSxSV<2>oIb<4>w2p<5>xLpxOpwNm<2>yMg\
+  zMezMczMa<10>zJFzJDzG1<5>zCIzCLzDO<9>zNn<7>zVX<7>zbhz\
+  cjzckzcm<4>zct<18>zcB<10>zcGzcGzcF<18>zc4zc4zc5<12>zc\
+  FzcGzdGzeH<6>zlMzmMzmNzmN<17>zmWzma<3>zmc<6>zm9zmBzms\
+  zms<5>zm3<3>zmC<6>zm1<4>zmQzmUzmX<8>zmozmnzmS
+  }
+
+frm:MandelbrotMix5a {; Jim Muth
+; "a" suffix added by L.StClair 3/3/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+1, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c^l,
+|z| < 100
+}

@@ -1,0 +1,21 @@
+Complex_Spiral     { ; Fractal of the day, 19-10-98
+                     ; 7min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=minN-XY-YWrot center-mag=-1.894691813718932\
+  00/+1.09905869209024700/7633.286/0.1107
+  params=90/-1.9/0/0/0.82/0 float=y maxiter=500 bailout=25
+  inside=0 logmap=80 symmetry=none periodicity=10
+  colors=000225126<3>02A02B12C<2>41F51G62H<31>jCl<19>QDa\
+  <25>VxV<8>_kP`jO`iOahNbgN<38>u7E`2J<12>i3ai3bh4b<42>3Z\
+  b<19>ozu<19>RiL<8>c`ZL5dL5dJ4bI4`
+  }
+
+frm:minN-XY-YWrot {; Jim Muth  M to R rotation
+; real(p1)=rotation angle in degrees, imag(p1)=power of Z
+; p2 and p3 rotation point and parallel planes
+a=real(p1), b=imag(p1),
+z=sin(a*.01745329251994)*flip(real(pixel))+p2,
+c=cos(a*.01745329251994)*real(pixel)+flip(imag(pixel))+p3:
+z=(-z)^b+c,
+|z| <= 16
+}

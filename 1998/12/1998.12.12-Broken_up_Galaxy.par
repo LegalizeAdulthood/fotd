@@ -1,0 +1,22 @@
+Broken_up_Galaxy   { ; Fractal of the day, 12-12-98
+                     ; 7min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=mult2-5-XZ-YW
+  center-mag=0/0/393354.6/0.7631/0/-84.966 params=-38\
+  /-17/0.37685493212/-0.01812809027/0.37685493212/-0.01\
+  812809027 float=y maxiter=1200 bailout=25 inside=0
+  logmap=73 symmetry=none periodicity=10
+  colors=00000V00X<4>00p50t64x<4>4Fe3Ia3K_2MX2OQ2OO8NMD\
+  LLMIKSFJVCIYAI<15>zb6<9>R3iO0mM2e<5>ED0<6>SWM<10>tHL\
+  <9>4JJ<9>hIi<7>j_3<2>GJm2Rh<3>Oaw<13>Z4x<11>jCEkCBlEE\
+  <13>lWhXZO<2>2V53YB4`H<12>St8<9>4Ab<2>I4p<10>vdl<7>Xo\
+  a<7>jZx<5>I`h<10>1HJ<4>sPA<11>BWdMZbgbumZwrWxLk5IgCGdJ
+  }
+
+frm:mult2-5-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=z^2.5+c,
+|z| <= 36  }

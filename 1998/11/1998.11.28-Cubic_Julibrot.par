@@ -1,0 +1,25 @@
+Cubic_Julibrot     { ; Fractal of the day, 28-11-98
+                     ; 32min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multicub-XZ-YW passes=1 center-mag=-0.00\
+  000044556564525/+0.00000000030271725/2.245236e+011/\
+  0.0039/0/89.47 params=165.4866176335948/32.756736960\
+  96683/0.4041347665257/0.0040261526109/0.40413476652\
+  57/0.0040261526109 float=y maxiter=50000 bailout=25
+  inside=0 logmap=600 symmetry=none periodicity=10
+  colors=000bAL<13>KAT<17>5A9<21>`fMbhK<11>RfcQfeRei\
+  <14>8sD0v7<3>QlKWjNdlS<7>MLEKIDJJE<17>EPOELOELKEGFF\
+  FIFGGGLNGNVHPb<3>JPlJPoINr<20>SooPrkSpoQsv<4>n_gvRj\
+  rXeoa`qfWzlRzqMzzFzvHzsIzoKylLxiNzeOzbQz`Rq_RxXPaVO\
+  <9>t7C<2>mDFjFGhIHfLIdNJaQK_TLYXMVaMThN<3>KoRIhSFkT\
+  DnUBqV7tZ9tVBuRDuNEtKGtGIvCJx9JzI<20>nzAwz4<6>4zgRz\
+  XhzJ<2>dzLZzZ
+  }
+
+frm:multicub-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=z*z*z+c,
+|z| <= 36  }

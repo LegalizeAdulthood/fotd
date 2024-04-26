@@ -1,0 +1,18 @@
+Octopus_Garden     { ; Fractal of the day, 03-06-98
+                     ; 5min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Oblate passes=t center-mag=-0.0000001637504\
+  4389/-0.00000000183656108/1173363/0.05161/1.848/87.509
+  params=0.270964889/0.005133586/0.270964889/0.005133586
+  float=y maxiter=3600 bailout=25 inside=0 logmap=108
+  symmetry=none periodicity=10 colors=000MC9<24>Czf<26>22\
+  K<4>S21<12>LFqOFmSFiF6a<33>o6Zq3_<20>jlSqvW<6>896<17>Ua\
+  x<9>_Hs<42>rg8rg7sfA<13>sVcsVerUf<20>_KitGIuGH<4>N97
+  }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

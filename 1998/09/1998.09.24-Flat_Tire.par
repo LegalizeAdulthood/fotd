@@ -1,0 +1,20 @@
+Flat_Tire          { ; Fractal of the day, 24-09-98
+                     ; 2-1/2min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip passes=t
+  center-mag=-0.217844/0.531755/6.426852
+  params=82/90/0/0/-0.755/0 float=y maxiter=12000
+  bailout=25 inside=0 logmap=4 symmetry=none
+  periodicity=10 colors=000L_i<10>QUqQUqRVp<33>xrixriwqh\
+  <41>ubKubKs_QrXVpU`oRe<10>PqqNsrMqp<34>7E4290<20>VZIFW5\
+  W_IrgX<6>cYQcUQ<27>OuPNvPMxQ<21>VjKTlL<23>iZH
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

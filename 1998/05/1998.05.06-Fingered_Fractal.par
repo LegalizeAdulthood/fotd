@@ -1,0 +1,22 @@
+Fingered_Fractal   { ; Fractal of the day, 06-05-98
+                     ; 25min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5
+  center-mag=-0.04404695113607916/+0.00000003541802588/4.\
+  625416e+013/1.0001 params=0.2/2/0.6/-2 float=y
+  maxiter=4800 bailout=25 inside=0 logmap=99
+  symmetry=xaxis periodicity=10 colors=000zwtxvqysouqmqok\
+  nkijggfdeeacbZa`W_ZTYVQWUNUSKSRHQOENMBFK8CH59B269000100\
+  10010022124327O3HP3IQ3I<4>W5PX5QX5S<6>c7`c7bd8ae8c<2>h9\
+  ai9`h8`<9>jEMjFLkFL<15>mODmODnNG<10>qDgkHYhLPkPRoSTjVUh\
+  XWiYWiaVjcVjeUfgUfhTgjTblTaiUIgVIeWIcX<6>HbcHhd<4>GbiGa\
+  jD_j<8>_br<26>ElpElpFko<9>MfjNfjOgi<9>VqdVrdWscWtcWuc<3\
+  >WycWzcWzcXzb<14>YzaYzaZzc<30>Sz1<5>Oz3dzVfzbhzj
+  }
+
+frm:MandelbrotMix5 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, c=pixel/(a*d):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

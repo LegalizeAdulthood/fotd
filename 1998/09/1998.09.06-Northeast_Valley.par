@@ -1,0 +1,18 @@
+Northeast_Valley   { ; Fractal of the day, 06-09-98
+                     ; 75min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=1
+  center-mag=-8.88178e-016/-0.0420082/10.93333/0.1037
+  params=-45/87.5/0/0/0.25/0.5 float=y maxiter=360000
+  bailout=25 inside=253 logmap=5 symmetry=yaxis
+  periodicity=10 colors=000Jin<55>8GA8F95E8<74>sUItUIvTG\
+  <48>BdoBdoCen<45>goZhoZgp`<16>hmQIgmIhmIhm
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

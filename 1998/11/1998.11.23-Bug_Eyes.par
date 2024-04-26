@@ -1,0 +1,21 @@
+Bug_Eyes           { ; Fractal of the day, 23-11-98
+                     ; 36min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt02 passes=1
+  center-mag=0.0655178/-6.66134e-016/0.9861933/1/-90
+  params=-4.815/0/-0.731/0/0.137/0 float=y maxiter=160
+  bailout=25 inside=bof60 logmap=yes
+  symmetry=xaxis periodicity=0
+  colors=000LOn<6>nSLrSHwTB<22>iNckOf<22>O9IN8HM8GL8F\
+  <10>B74<17>ZeK<5>BsE4vA<9>amd<4>rWHcXAPX3<16>CTt<3>\
+  tLDxHC<4>uu7<10>09F<9>FJq<10>S6e<11>8yO<11>bFB<6>95\
+  e<6>`zY<10>VXi<13>N_EN_COYB<11>XL6<5>aSK
+  }
+
+frm:MandNewt02 {; Jim Muth
+z=c=pixel:
+a=z^p1+(c-1)*z-c
+b=3*z^p2+c-1
+z=z-p3*a/b
+.000000000000000000000000000001 <= |a|
+}

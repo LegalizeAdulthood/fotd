@@ -1,0 +1,22 @@
+Fractal_Cyclone    { ; Fractal of the day, 21-01-99 
+                     ; 40min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  passes=1 center-mag=+0.51586780604208450/+0.6\
+  7497136509486230/297.4475/1.3754/58.93/18.669
+  params=-153.654/56.389/0/0/-0.18/0 float=y
+  maxiter=32767 bailout=25 inside=253 logmap=8
+  symmetry=xaxis periodicity=10 ranges=0/-1/500/\
+  507/520/540/570/620/700/800/1000/1500/32767
+  colors=000A00UPZKRf<3>cfz<2>rrqwvnzzk000<238>0\
+  00UPr000000
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

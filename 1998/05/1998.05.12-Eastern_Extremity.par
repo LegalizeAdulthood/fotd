@@ -1,0 +1,22 @@
+Eastern_Extremity  { ; Fractal of the day, 12-05-98
+                     ; 20seconds at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  center-mag=-0.00000000000000003/+0.00000000483963508/7.4\
+  31394e+013/1.141e-007 params=0/90/0/0/0.471185334902531/\
+  0.3541498265 float=y maxiter=250 bailout=25 inside=0
+  logmap=25 symmetry=yaxis periodicity=10
+  colors=000Ta`<10>DQ8L8L<9>d4nf4qf4s`6jU5aN6TG6J<3>240<7>\
+  2zD<5>rQp<14>2t7<2>XZ`<14>8q6<21>vI4<20>FLADLA9CL<3>vdc<\
+  6>ykN<7>TgR`Ogg4x<7>JJICO5GLDDN8HbV<14>AO4zBe<20>CO46vO<\
+  15>AQ4y1y<13>DN6zEr<14>DO6H2S<7>AM5YehWceVbb
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

@@ -1,0 +1,25 @@
+Herringbone_Midget { ; Fractal of the day, 12-01-99
+                     ; 7min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5a
+  center-mag=-0.86780182101902750/0/1.190875e+012/1/180
+  params=0.7/77.7/-0.7/77.77/8000/0 float=y maxiter=600
+  bailout=25 inside=0 logmap=36 symmetry=xaxis
+  periodicity=10 colors=000667<3>QBU<5>non<2>fRddJac8M\
+  <5>DA7<6>cVb<7>g7MoPf<6>sbU<2>KW6<7>pyM<3>M0A<6>_7t\
+  <5>fxZ<3>grZgqZiraksdltg877<5>dQq<10>6ik<13>C6eyHD\
+  <4>zHR<7>zLFzLEzKK<7>zCx<7>zabzdUzYXzUV<5>zUE<2>z75\
+  <3>z9p<5>zdl<7>zJrzHrzGs<7>z8s<11>zTo<4>zEYzCVz8bz4j\
+  z1r<7>zhTzaY<7>zbm<10>zmH<5>z5XzPczgjzUqzUtzevz\
+  VxzLz<3>zNZ<3>zEY
+  }
+
+frm:MandelbrotMix5a {; Jim Muth
+; "a" suffix added by L.StClair 3/3/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+1, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c^l,
+|z| < 100
+}

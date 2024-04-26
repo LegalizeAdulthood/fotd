@@ -1,0 +1,25 @@
+Peek-A-Boo         { ; Fractal of the day, 19-03-99
+                     ; 4-1/2hr on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=mult2-003-XY-ZW function=flip/ident
+  center-mag=+0.02502451862720592/-0.00276863172707696\
+  /366626.3/0.5892/-45.175/71.564
+  params=90.005576/90.003647/0/0/-1.74350803/0 float=y
+  maxiter=36000 bailout=25 inside=0 logmap=1281
+  symmetry=none periodicity=10
+  colors=00049Q49Q<2>7CXIDZOE`PFbTGdaFagE_kImhLzdSxXZw\
+  SeuHhtJjr<16>_XO<9>HGt<18>qYA<9>_s7<14>Bme<11>L8JL5I\
+  K6J<19>AJMAJMBML<7>BdL<2>cva<14>TmbTmbRnbku6<26>mHK\
+  <18>B1h<2>yTp<17>jNQjNPiON<12>ZU1ZU0_V3<11>gYV_fP\
+  <3>SmN
+  }
+
+frm:mult2-003-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real((p1)+10^-100)*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^2.003+c,
+|z| <= 36  }

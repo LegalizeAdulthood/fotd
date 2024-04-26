@@ -1,0 +1,28 @@
+Circus_Hill        { ; Fractal of the day, 31-01-99 
+                     ; 45min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyNewton passes=1
+  center-mag=0.551947/1.44329e-015/1.368032/1/90
+  params=2.492966246528519/1.247428052613911/1.322405\
+  92669454/0.08798104800561546/-1.521220282601398/-0.\
+  1595957823419904 float=y maxiter=250 bailout=25
+  inside=bof60 logmap=yes symmetry=xaxis periodicity=0
+  colors=000nnCjqCNo9<4>Io6<3>Az0CWOD2k<4>cvCXII<6>UI\
+  BzIA64D7kz8`C<11>ITBISBJQAKOALLAMFAVll<3>FaWIXeAVT3\
+  TH3Pb<5>QwA<6>J6s0uW<7>pYp<4>iSShRNfOO<6>V9Q<6>vS4\
+  <6>LD0<3>hnY<7>_Q2QJ3HD4<3>sPCkRPdS`aynfypjyr<5>wLH\
+  <6>Bq5<4>rmb<3>RzE<7>0sk<4>xa_<2>D3VFHbHVj<4>58OTMy\
+  OIeKFM<7>Rz1<2>ney<6>izk<2>CsH<5>07J7THEmG<3>ADvQZV\
+  et4<4>xwP<5>lrc<3>spl<4>YgH<4>PC0_L2kU5bfFTsQ<2>HK1\
+  <7>BHuOSf`bS
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

@@ -1,0 +1,22 @@
+Ant_Ring           { ; Fractal of the day, 23-10-98
+                     ; 33min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1 center-mag=-0.90140\
+  112024865680/+0.01530383800871116/1.010106e+010/1/-97\
+  .499 params=1/2/-0.2/3/0/0 float=y maxiter=1800
+  bailout=25 inside=0 logmap=104 symmetry=xaxis
+  periodicity=10 colors=000B7U<13>PLuRMrTNp<9>ioVjrSltQnv\
+  OoxM<13>LCA<5>ZMG`OHdQI<2>nVLnUK<2>jTHiSGgSFeRE<2>dQBcP\
+  AaJ7cP9dUAeZCie9<12>BOqOM59Nt<5>YRSeSL<8>AOf9Sc9Wa8ZZ8c\
+  X7gU7lS8sO7qQ6oR<4>4_Z3X_3Va<4>0Kh0Ii1Ge<8>176G5SV4l<5>\
+  LFLEGD<4>dGU<7>Nul<5>Qmy<8>GdmFclCfl<7>RPdSNcVPe<10>vjy\
+  <3>UUl<9>pJfTSp6`y<20>mZqoZqs_s<14>QNS<3>TOPH`hAgo
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

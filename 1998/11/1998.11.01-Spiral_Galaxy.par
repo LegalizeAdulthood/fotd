@@ -1,0 +1,18 @@
+Spiral_Galaxy      { ; Fractal of the day, 01-11-98
+                     ; 50min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Rectangular passes=1 center-mag=+0.46843376\
+  655869000/-0.10127326625551590/2503.906/2.9606/-18\
+  0/-20.472 params=1/0/-0.77/0 float=y maxiter=32767
+  bailout=4 inside=253 logmap=yes symmetry=none
+  periodicity=10 ranges=0/-1/860/865/875/890/910/940/9\
+  90/1040/1500/2500/32767 colors=000A00ePZKMp<2>ZVpcYph`q\
+  mcrrfswiwzzz000<238>000UFh000000
+  }
+
+frm:Rectangular {; Jim Muth  imag(z),imag(c)
+z=flip(real(pixel))+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

@@ -1,0 +1,26 @@
+East_Valley_Midget { ; Fractal of the day, 19-01-99 
+                     ; 2-1/3hr on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5a passes=t
+  center-mag=-1.87668996727010500/-0.00519794999715250\
+  /2.747748e+010 params=0.065/3/-1/-3/0/0 float=y
+  maxiter=6000 bailout=25 inside=0 logmap=408
+  symmetry=none periodicity=10
+  colors=000030<4>0800901A02B1<4>7G68H7BH8<6>VHHYHIZHJ\
+  _HJhQXqZirjf<3>rbWr`TtZQuXOuVLvTIvTFwVDxYGyYJy`Ly_O\
+  <2>zTVuUYvY`vabvceveg<3>wjqwknwlk<3>wm_wmUzjY<2>zmgz\
+  mjzlpikm<6>agW_fTZfQYfO<3>ThDPhCShBVhB<2>bvA<15>tqv\
+  <10>dmpcmpbjn<8>UQdSNcPL`<3>ECPGDR<2>PE`SEcVFe<12>hK\
+  tiKuhJs<16>UGSTGQSHORINQJLPKL<19>ZcCZdCZeCZfCVg9<17>\
+  DyACzABzAAzA9zA8zA6z7<18>Xzq<10>Pzc
+  }
+
+frm:MandelbrotMix5a {; Jim Muth
+; "a" suffix added by L.StClair 3/3/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+1, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c^l,
+|z| < 100
+}

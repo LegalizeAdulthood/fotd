@@ -1,0 +1,23 @@
+Rectangular_Midge2 { ; Fractal of the day, 16-06-98
+                     ; 18min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Rectangular passes=1 center-mag=+0.00000000\
+  000007561/-0.00000000000000422/6.779609e+011/0.138/-1.1\
+  08/32.376 params=-0.1609376731501589/1.036674456591959/\
+  -0.1609376731501589/1.036674456591959 float=y
+  maxiter=5200 inside=0 logmap=599
+  colors=000ICT<13>WRt<6>FglDikBij<9>BRYBPXBMW<9>B2K<13>G\
+  t5Dx0<13>hmnjmqknm<13>on5on2mi3<7>YE7WA7W46<18>MbGPjE<4\
+  >BFN<3>ZSJaTGdVIWQJMLLAHLDGMFGMJGMNFN<3>eEOiEOlEO<3>vDP\
+  xOPyPOzRNwTMuSMsQLnQKgNKaPJVQI<2>QUGPWFNYFM_EKbDIdDHgCF\
+  hBEiB<5>NlIYhJchKjkLknMqrNstOtuPuuQwxRxvSyvTztUzsVzsWzp\
+  VwlUthT<2>jaR<2>mWOmUOlWP<17>Vn`XmZYmX<14>sfk<13>WSyVRz\
+  TQzRPz
+  }
+
+frm:Rectangular {; Jim Muth  imag(z),imag(c)
+z=flip(real(pixel))+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

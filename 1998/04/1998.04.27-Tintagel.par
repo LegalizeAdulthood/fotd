@@ -1,0 +1,23 @@
+Tintagel           { ; Fractal of the day, 27-04-98
+                     ; 2-3/4hrs at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt11 passes=1 center-mag=0.123944/3.46\
+  945e-017/26.88172/1/-90 params=3.729934080019532/-2.1151\
+  9974364452/3.437139500106815/2.216750083925901/0.8542207\
+  098605304/3.40912350840785 float=y maxiter=3600
+  bailout=25 inside=0 logmap=41 symmetry=none periodicity=0
+  colors=0006LL<2>3CE<4>D7qF7yFBv<12>FsW<3>rUAO_v8cN<2>MI9\
+  <4>ayE<5>I5v<12>meE<2>baQ<9>6jG<8>xe8<3>QFi<2>QDfVBcw3T_\
+  9a<3>s3UWKk<8>v3Ue3to2eS4D_2m<4>t2VTpQ<6>t8SYBzk6hs4d<5>\
+  x2TKtu<14>v5TrQw<4>w6XaZT<11>w4Si_0<14>x4R8rQ<14>u5SuX0<\
+  13>x4RWfS<2>qCS`hp<11>w5T_ei<13>w4TqP2<6>uCGAXU<2>7ON
+  }
+
+frm:MandNewt11 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-b)*z-f
+j=c*z^d+g
+z=z-e*h/j,
+.0000000000000000000000000000005 <= |h|
+}

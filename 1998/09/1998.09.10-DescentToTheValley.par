@@ -1,0 +1,23 @@
+DescentToTheValley { ; Fractal of the day, 10-09-98
+                     ; 32min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=1
+  center-mag=-6.10623e-016/-7.24247e-017/27.91019/0.20\
+  96/-5.68/-72.852 params=-8.4/28.4/0/0/-0.11085/0.88231
+  float=y maxiter=64000 bailout=25 inside=0 logmap=10
+  symmetry=yaxis periodicity=10
+  colors=000FB7cFMEA8bFNEA9bFODA9aFPD9A`EPC9B`EQC9C_ERB9C\
+  _DSB8DZDSA8EZDT98FYDU97FYCV87GXCV87HXCW77IWBX76IUBYBBKU\
+  BYBBMSBZAAOSA_AAPPA`9AROA`8ATL9a89VK9b79WH9cH9YG7aH8YH9\
+  bH9ZHAcHAZHBdHB_HCdHC`HDeHD`HEfHEaHFf<40>H_tCcs<24>o8zq\
+  7zr6zt4zu3zw2zx1z<19>X6pY4o<31>LKsLLsLLsKMtKMuJNvJNwJOx\
+  IOzIPzGRz<13>c0z<40>ZEz
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

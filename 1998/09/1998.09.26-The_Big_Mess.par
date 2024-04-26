@@ -1,0 +1,20 @@
+The_Big_Mess       { ; Fractal of the day, 26-09-98
+                     ; 15min on a 486-100mhz, 640x480
+  reset=1961 type=formula 
+  formulaname=multirot-XZ-YW passes=t
+  center-mag=-2.04546660596812600/-0.84152851026945270/38\
+  7.8648/2.2923/0/9.09 params=45/45/0.4001892147587512/0.\
+  6882229071932127/0.9091769157994324/0.03323465681936094
+  float=y maxiter=32767 bailout=25 inside=253 logmap=yes
+  symmetry=none periodicity=10
+  ranges=0/-1/200/205/220/240/270/325/425/580/850/1600/32767
+  colors=000A00UPZKRk<2>Zbz<3>rrzwvzzzz000<238>000fQz000000
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

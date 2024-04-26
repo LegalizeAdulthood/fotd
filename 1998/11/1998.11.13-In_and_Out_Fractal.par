@@ -1,0 +1,18 @@
+In_and_Out_Fractal { ; Fractal of the day, 13-11-98
+                     ; 50min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=-0.936101/6.66134e-016/2.194073/1/90
+  params=0.04/3/3/-1/0/0 float=y maxiter=32767 bailout=25
+  inside=253 logmap=3 symmetry=xaxis periodicity=10
+  ranges=0/-1/27/30/35/45/70/110/170/250/400/600/32767
+  colors=000A00UPZRSqPVz<5>rrzwvzzzz000<238>000UAc000000
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

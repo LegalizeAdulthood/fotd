@@ -1,0 +1,24 @@
+The_Eyes_Have_It   { ; Fractal of the day, 28-08-98
+                     ; 3-1/2 min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=t
+  center-mag=-0.01628275788601415/-2.86453604373369500/63\
+  67.611/1/-137.5 params=1/3/-1/-3/0/0 float=y
+  maxiter=1200 bailout=25 inside=0 logmap=10 symmetry=none
+  periodicity=10 colors=000PjxUipPjxPjx34O<2>XYT5ZdObZ7z`\
+  <5>`hVjjQOFs<2>a__NX0<5>ceQcrQz7ooPd7U9<3>P`KLomRqoXspo\
+  FI<2>7Rf<3>ZkU<6>olo<6>w4E<7>v08<3>h1tOBm4Lf<4>Db9JYVOU\
+  pLX7<4>zVP<7>JQg<3>MOz<3>nks<3>vJU<5>6NM<6>xLW<3>apUckU\
+  h5ugIkfVb1j2<3>YfPcvj<3>eiXbWhda`xbyqdnkecI`3<6>bfRWnF\
+  <6>dgTGPH<6>bdTPSs<2>ac_ZJIbVOv0L<3>lPRirc<4>usK2At<2>C\
+  C2<2>kbK<5>rbk<6>SNP<5>NxZEmg6co<4>sv_<5>PgmM_`JSOHLC\
+  <3>DRJ<3>6zU<5>9WeVLepAe<2>NBz5lkb`TBkh<4>`fW
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

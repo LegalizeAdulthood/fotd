@@ -1,0 +1,25 @@
+SasqatchFootprints { ; Fractal of the day, 19-02-99
+                     ; 3-1/2min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4a function=recip passes=1
+  center-mag=-0.25531339798316750/+0.00735699424502647\
+  /301.6591/1/-177.499 params=0.4/2/-0.01/-50/0/0
+  float=y maxiter=1200 bailout=25 inside=0
+  logmap=yes symmetry=none periodicity=10
+  colors=000802802903<2>E06I07J08O09R0A<3>j4Eo5Fr4Ft4F\
+  wIFzOFzTF<2>zlSzfQylO<4>vhGuhEuiDtlBsu9sv8juMaw_Tym\
+  <8>`rA`r6br5<10>xu3zu3zu3<5>nvblvhhva<3>TvEPw8Mv2<7>\
+  9wh<12>DwJDwHDwGEwF<2>EwF<10>Bwu<7>9wI<5>Vwj<4>BwC\
+  <2>9wC9wCAwDBwECwEUwRDwF<17>UwRzwS<2>zwRzwRywRxwR\
+  <40>UwRywg<14>WwSYwG<25>VwNowf<2>dwX
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

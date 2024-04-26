@@ -1,0 +1,23 @@
+Peacock_eyes       { ; Fractal of the day, 10-05-98
+                     ; 13min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=t
+  center-mag=-5.84443/1.02002e-015/54.82023
+  params=3/0.5/3/-0.5/0/0 float=y maxiter=1024 bailout=25
+  inside=bof60 logmap=yes symmetry=xaxis periodicity=10
+  colors=000U3`U3d<4>jmwAAK<4>AAKs_ujLz<5>unG<4>SbUYhOcmJ\
+  <6>Oe6<3>GIfFDoFPiF`cFlY<3>FXBcD3<6>oOmpPssLpuInxFlxCju\
+  Dh<5>SJ_OJZLMlIOz<4>_ppbuogjd<3>x30<5>x6RsCS<4>JeUFkVFp\
+  VnRY<2>UAQ<2>JW0GSD<3>FFy<3>FXuFatHetLijPm`OfLO_6xD6<2>\
+  wE2<2>R`1WdI_gYiA2<2>HQaFVmNUc`UU<6>kTU<7>QCz<4>wUzTTN<\
+  4>q_o<3>ItWFxRdlxdeXd_6rbMxdaF`Z<3>rNjxKmtOj<4>HcYFfWF`\
+  TGVR<2>NDKPIRQNYRRd<4>hOl<13>cPnLRxcPn<41>PRvT4TU4X
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

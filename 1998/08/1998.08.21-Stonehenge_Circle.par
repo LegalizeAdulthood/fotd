@@ -1,0 +1,21 @@
+Stonehenge_Circle  { ; Fractal of the day, 21-08-98
+                     ; 10min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=-54.92248108272240000/+0.000000000000030\
+  65/7.166256e+009 params=0.02/2/10/-1/0/1000000 float=y
+  maxiter=1800 bailout=25 inside=0 logmap=41
+  symmetry=xaxis periodicity=0
+  colors=000wdYuhXshX<3>knWfqWao_XlWSdTNXPIPMFHI89F22C\
+  <10>oZCtaCza1<4>rlo<7>d2sjMtkMuhNwgLugKsfOqfMojLmjPkiOi\
+  iMgrQe<4>phW<10>kVA<7>vSC<39>c2e<24>Iv9Ix8Jv7<29>cB3cA3\
+  eD5<13>xgWyiXxhW<36>aZQ`ZQ`ZQ`ZQ<20>YWIerY
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

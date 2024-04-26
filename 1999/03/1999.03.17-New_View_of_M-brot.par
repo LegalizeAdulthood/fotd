@@ -1,0 +1,22 @@
+New_View_of_M-brot { ; Fractal of the day, 17-03-99
+                     ; 45sec on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=flip/ident
+  passes=1 center-mag=-0.81172/1.9984e-015/0.668623/\
+  1.1637 params=83/10/0/0.3/0/0 float=y maxiter=3600
+  bailout=25 inside=0 logmap=yes symmetry=xaxis
+  periodicity=10 colors=0009DU3BU<9>nGasHbxGd<19>kY9\
+  kY8iZ9<6>`dAR_V<9>2Rz<2>XKqfInrDn<13>Wf9Uh6Ri3<18>\
+  lvIqxG<12>EdVAbU<21>WorXpsYqs<17>UpzUpzVlw<11>bDRb\
+  APaCR<13>WQpWRrYOy<8>KqG<13>WCp_8w<8>5HG<8>FlBGoBG\
+  tA<9>OfCPeCRfA<15>AFT
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

@@ -1,0 +1,31 @@
+HerringboneFractal { ; Fractal of the day, 09-12-98
+                     ; 25min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix7a passes=1 center-mag=+4.681\
+  16329017693600/+0.28683485136808030/87.17949
+  params=1/-0.5/-1/-0.499/5000/0 float=y maxiter=1200
+  bailout=25 inside=0 logmap=22 symmetry=none
+  periodicity=10 colors=000qXvqZvr`vtavtcvvev<5>vqvvrvvv\
+  v<21>vvvvvvvtvvrtvqrvorvmqvkoviovgmvekvckvaiv`gvZgvXev\
+  VcvTcvRavP`vN`vLZvJXvHXvFVvDTvCTvARv8Pv6Pv4Nv2Lt0Lt0Jt\
+  0Ht0Hr0Fr0Dr0Dq0Cq0Aq0Aq08o06o06o04o02m02m00m00m00k00k\
+  02i02i04g04g06e08e08c06c06a06a06`06`06Z06Z06X06X06V06V\
+  06V06T06T06R06R06P06P06N06N06L06L26J26J46H66H66F86F86D\
+  A6DC6DC6CD6CD6AF6AH68H68J66J66L64N64N62P62P60R60T60T60\
+  V60V60X60X60V60V60V60V60T60T60T62T62R62R62R64R64R64P66\
+  P66P66P66N68N68N68N68N66L66L66L66L66J6<2>6J66J66H64H64\
+  H64H64F6<2>4F64F64D64D64D62D6<3>2C62C62A6<2>2A62A60880\
+  86086086066<2>066066046040040040020<2>020020000<2>0000\
+  06<8>006606<4>q06v06<3>v06v06v26v46v86vA6rC6qF6iJ6kL6k\
+  N6mP6oR6oT6
+  }
+
+frm:MandelbrotMix7a {; Jim Muth
+; "a" suffix added by L.StClair 9/1/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| <= l
+}

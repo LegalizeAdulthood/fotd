@@ -1,0 +1,26 @@
+Yves_Tanguy_Scene  { ; Fractal of the day, 02-10-98
+                     ; 17min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Mystic2 function=cos passes=1
+  center-mag=-0.00038928625978193/-0.99981904133611540/31\
+  25.781 params=-0.6325571459089938/-2.773491622669149/-0\
+  .01712088381603443/0.9163792840357677/2.897091586046937\
+  /2.448469496749779 float=y maxiter=90 bailout=25
+  inside=bof61 logmap=yes symmetry=none periodicity=0
+  colors=000GQdWTVWXaW`hMNWWgvYPV_ip<2>elgzp0000OWFEN2YN9\
+  bRFfVMkZSobWtabp_Y`XWYQSWJOgRZRTGPGG<3>ItGqPS<4>z6R<6>M\
+  Cf<3>Ycn_io`dma_lbVk<2>izcagPUQA<3>G`w<2>vNq<5>mCghB`dA\
+  VCTL<5>IWQ<5>dk2<7>DKW<3>DKbCPhBUm<10>BQxBQyARu<8>2VQ\
+  <10>y_F<7>rOorNspLq<10>b3Z<3>4Zk<5>xMN<11>R6wP5zOAw<9>M\
+  rXMvVOuT<8>YqD<13>Cwh<12>MohMohNle<6>PSL<3>5zDWZ9<5>t9y\
+  <2>eSikUkqWllLogBqBdrEXk
+  }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100
+}

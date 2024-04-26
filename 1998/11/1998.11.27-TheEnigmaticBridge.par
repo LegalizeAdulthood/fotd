@@ -1,0 +1,32 @@
+TheEnigmaticBridge { ; Fractal of the day, 27-11-98
+                     ; 1hr on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=mult2-003-XZ-YW passes=t
+  center-mag=+0.00974868201760989/+0.02270256306688429/9\
+  0.20536/1/180 params=-137/174/-1.754/0/-1.754/0 float=y
+  maxiter=750000 bailout=25 inside=255 logmap=7
+  symmetry=none periodicity=10
+  colors=000z4Gz0Lv0Os0Us0Xp0bn0dn0kk0nh0sh0vd0zb0ze0zd0\
+  z<2>X0zU0vO0sL0pI0kG4hC6d96_49X0CU0CR0GL0GI0IG0LC0L60O\
+  40R00R00U00U00X00_00_00b00b00d0<7>0d00h0<5>0h04h46h49k\
+  6Ck6Gk9IkCLkCOkGRkGUkIXkL_nLbnOdnOknRnnUpnUsnXvnXzn_zp\
+  bzpbzpdzpdzphzpkzpkzpnzpnzpkzsnzpkzpkzpkznk<2>znkzkk\
+  <2>zkkzhkzhkzhkzdkzdkzdkzdkzbk<2>zbkz_k<2>z_kzXkzXkzXk\
+  zUk<2>zUkzRk<2>zRkzOkzOkzOkzLpzOnzOkzRhzRhzUdzUbzXbzX_\
+  z_Xz_XzbUzbRzdOzdOzhLzhIzkIzkGznCznCzp9zp6zp6zn9znCzkG\
+  zkIzhLzhOzdRzdUzbUzbXzb_z_bz_dzXhzXkzUnzUnzRpzRszOvzOz\
+  zOzzLzzLzzIzzIzzGzzGzzCzzCzz9zz9zz9zz6zz6zz4zz4zz0z<3>\
+  z0zz6zzGzzOzzXzzbzzkzzszzzvzzpzzhzzbzzXzzOzzIzzCzzIzzL\
+  zzRzzUzz_zzbzzhzzkzzk<2>zzszzvzzzzzzzzzzzszznzzkzzdzz_\
+  zzXzzRzzLzzGzzCzz6zz0zz0zv0<3>zk0zh0zd0zb0z_0zY0zY0<2>\
+  zd0P0P
+  cyclerange=1/254
+  }
+
+frm:mult2-003-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=z^2.003+c,
+|z| <= 36  }

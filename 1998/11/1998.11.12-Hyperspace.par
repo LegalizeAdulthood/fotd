@@ -1,0 +1,22 @@
+Hyperspace         { ; Fractal of the day, 12-11-98
+                     ; 15min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt08 passes=1
+  center-mag=0.071897/0.53047/4.901961/1/-165
+  params=-1.71/-1.87/2.95/-0.19/1.38/-1.02 float=y
+  maxiter=95 bailout=25 inside=bof60 logmap=yes
+  symmetry=none periodicity=0
+  colors=000YaV<19>JI8IH7HG6HE5EC5nNr<14>_8oZ7oY4oX1o\
+  <16>`WVc0Tc0Sa0Sb0Q<9>T0FS0ER0E<4>M0BL1BK0A<2>H09G4\
+  8F08E07D07C36B26A05Aj5<24>tiM<10>akx<15>nMjoKinLh<19>\
+  QZR<12>zwN<24>onionipnj<3>rmkrmkqkj<23>YOYYNYWOX<9>H\
+  PW`e_<2>YbW
+  }
+
+frm:MandNewt08 {; Jim Muth
+z=c=(pixel*p1):
+a=z^p2+(c-1)*z-c
+b=p3*z^2+c-1
+z=z-1*a/b
+.000000000000000000000000000001 <= |a|
+}

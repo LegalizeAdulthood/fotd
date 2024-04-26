@@ -1,0 +1,30 @@
+Cosmic_Tango       { ; Fractal of the day, 03-04-99
+                     ; 1hr on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=mult1-5-XY-ZW function=ident/flip
+  passes=t center-mag=+0.19134514680269200/+0.0217109\
+  6061941653/65151.12 params=0/0/0/0/0/0 float=y
+  maxiter=50000 bailout=25 inside=0
+  logmap=221 symmetry=none periodicity=10
+  colors=000znMznMzmMzjOziOzfQzfQzdQzbTz_TzZTzW7zU0zS\
+  0zQ0zQ0zQ0zQ0<2>zW0zZ0y_0yb0yd0wf0wi0vj0vm0vn0sq0sr\
+  0rt0rr0or0oq2oq2nq2nn2kn2km5km5im5ij5gj7gi7gi7di7df\
+  7cfAcdA`dA`dA`bAZbDZ_DX_DX_DXZFVZFVWFTWFTWFTUHQUHQS\
+  HOSHOSKMQKMQKMOKKOKKOMHLMHLMHJMFJOFJODHODHODFOAFQAF\
+  Q7CQ7CQ5BT7BQ79Q78Q77O<2>77OA7MA7MA7MA7K<2>A7KD7HD7\
+  HD7HD7HD7FD7FD7FF7D<2>F7DFBA<2>FKAQWD`dFndDkbHi_KiZ\
+  OgWTdUXdS`cSd`Qi`UnZUrXUvXSyVSzTSzTQzQQzOQzOOzMOzKO\
+  zKLzHLzFLzFJzDJzAJzAHz7Hz5Hz5Fz5Fz7HzAFz<6>QFzTCz\
+  <3>`CzcCzdCzgCziCzkAznAzoAzrAzsAzsAzvAzvAzw8zw8\
+  zy8z<5>z8zz5z<6>z5zz2z<53>z1zz1zz2z<5>z2z
+  }
+
+frm:mult1-5-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^1.5+c,
+|z| <= 36  }

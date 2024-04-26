@@ -1,0 +1,19 @@
+Evaporation_basin  { ; Fractal of the day, 13-04-98
+                     ; 3.5hrs at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 passes=t
+  center-mag=-1.67363/-1.08721/6.484262/1/-127.5
+  params=0.14/2.28/-1.53/-1.73 float=y maxiter=50000
+  bailout=25 inside=0 logmap=yes symmetry=none
+  periodicity=10 colors=000ziY<6>zeTzdSxeR<7>ihLgiKehK<1\
+  0>VbBUaAVb9<12>OQGOPGNQG<2>MTILVILUJKTJKXKJ`KJbLIcL<3>\
+  G_NFWJG_N<4>IVe<3>Jjs<5>McHNbBMb4<35>WaYWaYVbZ<15>LodK\
+  pdHrc<37>uLq<44>ctscusdwtcuscsz<24>X8zX7zY9z<3>`Ez
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

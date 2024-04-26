@@ -1,0 +1,18 @@
+Half_a_Siegel_Disk { ; Fractal of the day, 05-07-98
+                     ; 2-1/2hrs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Oblate passes=1 center-mag=0/0/565846.3/0.1\
+  349/0/-82.371 params=0.1805876574/0.5579482146/0.180587\
+  6574/0.5579482146 float=y maxiter=120000 bailout=25
+  inside=0 logmap=1004 symmetry=none periodicity=10
+  colors=000RXb<46>MNSMNSLMRLMQ<35>BA8BA7A95<68>bfecgecjf\
+  djgchfchfchfbff<8>`df`df_bf_bf_af_afZ_fZ_fZZfZZfYXf<70>\
+  FEc
+  }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

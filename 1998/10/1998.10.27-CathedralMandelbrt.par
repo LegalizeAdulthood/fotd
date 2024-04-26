@@ -1,0 +1,21 @@
+CathedralMandelbrt { ; Fractal of the day, 27-10-98
+                     ; 1min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=-RectPMnew
+  passes=1 center-mag=-8.88178e-016/6.10623e-016/1.041667
+  params=3.5/1.1/0/0/-0.023/0 float=y maxiter=255
+  bailout=25 inside=epsiloncross logmap=yes
+  symmetry=xyaxis periodicity=10
+  colors=000RBG_CIPELPGNOHQ0A0MKV<11>DcxDdzFbu<5>PTWfMcqT\
+  `hPZiRXoSV<6>taFueDvgBwk9zv7mLk<11>jgE<3>Azd<10>DsZDsZG\
+  qW<8>_d9ab6d`2<23>LslLsmKtqIttFvx<18>oam<15>DkK<22>LgWL\
+  gWMhVBgi<18>85L83KA7L<9>PeSQhTPiW<10>`x5ay3ay4<34>NrhS9D
+  }
+
+frm:-RectPMnew {; Jim Muth
+z=flip(real(pixel))+p2,
+c=flip(imag(pixel))+p3,
+a=real(p1), b=imag(p1):
+z=a*((-z)^b+z^b)+c,
+|z| <= 250
+}

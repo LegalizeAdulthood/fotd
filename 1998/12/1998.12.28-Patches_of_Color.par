@@ -1,0 +1,25 @@
+Patches_of_Color   { ; Fractal of the day, 28-12-98
+                     ; 4-3/4hrs on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix7a passes=1 center-mag=+3.1\
+  4648308901950900/+0.00959892079798546/7327538/1/-120
+  params=0.998/1.275/-1.002/1.273/500/500 float=y
+  maxiter=45000 bailout=25 inside=0 logmap=825
+  symmetry=xaxis periodicity=10
+  colors=000bSY<19>iJA<7>96O<13>C80<16>IKEIKEKLG<16>g\
+  VXiWYlWZ<4>xZcz_dz_ez`fz`g<4>va`ua_uaZuaY<22>ra5ra4\
+  o`6<10>R`POeRbiTefUZcVV`VLZWMWW<2>NPYNNYNMXOKVOITOH\
+  QPFPPDMPCN<4>NDdNDgNDiOEhOEh<27>nRZoRZpQ_<4>kLdjKei\
+  KfhKg<6>aKn`Ko_LpZMqYNrXOsWPtXQu<2>WTxWUyWUzWUz<17>\
+  VUzVPzVUz<12>VUzaUzaUzbUz
+  }
+
+frm:MandelbrotMix7a {; Jim Muth
+; "a" suffix added by L.StClair 9/1/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| <= l
+}

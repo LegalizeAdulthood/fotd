@@ -1,0 +1,22 @@
+FractalFireTongues { ; Fractal of the day, 05-08-98
+                     ; 23min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=+1.96184460697426400/-0.02162713186614343/45\
+  545.85 params=0.7/36/-1/-0.7/0/0 float=y maxiter=3600
+  bailout=25 inside=0 logmap=38 symmetry=none
+  periodicity=10 colors=000<19>000398688<9>mR4qT3tV3wX3xZ\
+  2<10>xj5xk5wk5<10>nu7skIxaT<2>x8y<18>xlownnwpnvrmvtm<6>\
+  jUmqLjw9exDh<7>Xfz<2>oTT<4>lSp<3>jQ`jQXkPJiPDhO7gO2<4>b\
+  YnVnY<5>gxPiyOjzT<2>mze<10>IzFFzDBz6<6>Nzc<9>EzNHzXKzeB\
+  zjMznXzrfzvrzd<14>MzZSzTKzZ<8>vzNxzLxzKxzJxzKxzLxzU<9>x\
+  znxzt<6>xzXwzUuzQtzNszK<13>LzGFzC<8>jzf
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

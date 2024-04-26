@@ -1,0 +1,20 @@
+Giant_Spider       { ; Fractal of the day, 14-05-98
+                     ; 16min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5
+  center-mag=-1.43178831464098100/+0.00000475730332480/2.\
+  000046e+010/1/-85 params=0.36/1.62/1.94/-0.69 float=y
+  maxiter=1200 bailout=25 inside=0 logmap=66 symmetry=xaxis
+  periodicity=10 colors=000FUs<3>`hwekwkqwqww<10>6aO<6>n56\
+  <12>rgOriPuaFwU5<15>ADT<6>JKMKLMKTN<2>KpOKxOMuN<13>mRM<1\
+  0>ZK8<14>wbt<9>oUrtioxylufssPy<5>lYTkZOhYN<7>QRN<10>9qY<\
+  14>GWlGVmFXk<13>AlN<11>oyLfdMYKM<3>kIGkIH<6>gVU4yZ<23>UO\
+  O<13>99U<3>yzgsvbmrZ
+  }
+
+frm:MandelbrotMix5 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, c=pixel/(a*d):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

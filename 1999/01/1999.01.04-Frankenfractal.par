@@ -1,0 +1,25 @@
+Frankenfractal     { ; Fractal of the day, 04-01-99
+                     ; 80secs on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5a
+  center-mag=-1.77636e-015/4.44089e-016/0.248414
+  params=1/-1.5/-1/-1.505/1000/-4 float=y maxiter=1200
+  bailout=25 inside=0 logmap=yes symmetry=xaxis
+  periodicity=10 colors=000aPUfKTOWU55U<7>6CJ6DS6EQ6F\
+  c6FbeJqe9nf0pl6svBuvkxrzzzzxzzuzzwzzuzzsaxqXzoWzmWz\
+  fVxdVzbUz`UsZTtXTqVSrTSsS<8>JHCIDBFLE<4>5vR<11>YjB\
+  <15>9Pm<2>AfqAdiAbb<2>wWUiGgX0t<4>rfQ<11>Ve_Te_Qf_\
+  <3>Eg`<6>6LR<9>ofJ<8>0xn<4>i6G<6>y8w<14>bM0<3>5r5\
+  <6>4iY4ha5eV<2>6_COre<6>Agc9fc8c`<12>010lp9WZ6GH3ZN\
+  q<5>537Y1V<34>D0B
+  }
+
+frm:MandelbrotMix5a {; Jim Muth
+; "a" suffix added by L.StClair 3/3/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+1, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c^l,
+|z| < 100
+}

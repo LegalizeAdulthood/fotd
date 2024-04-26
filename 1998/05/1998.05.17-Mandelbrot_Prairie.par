@@ -1,0 +1,20 @@
+Mandelbrot_Prairie { ; Fractal of the day, 17-05-98
+                     ; 5hrs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt04 passes=1
+  center-mag=3.62584/1.65191/5.673257/1/-60
+  params=1.723975341044343/1.525635547959838/0.9073915829\
+  950865/1.496063112277596/1.745246742149114/-0.199819940\
+  7940916 float=y maxiter=120000 bailout=25 inside=0
+  logmap=8 symmetry=none periodicity=10
+  colors=000jD6jY5iZ5<24>qM0qM0pN1<47>mU2mU2nV1<43>JA2JA2\
+  IB6<13>CPtCPwDQv<54>fwqkyv<25>8kJ6jH2lR<2>5rG2sC<24>KlH
+  }
+
+frm:MandNewt04 {; Jim Muth
+z=c=pixel:
+a=z^3+(c-1)*z-c
+b=p1*z^2+c-1
+z=z-p2*a/b
+p3 <= |a|
+}

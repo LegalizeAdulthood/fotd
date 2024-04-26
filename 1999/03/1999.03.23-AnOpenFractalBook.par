@@ -1,0 +1,32 @@
+AnOpenFractalBook  { ; Fractal of the day, 23-03-99
+                     ; 45min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=mult2-003-XY-ZW function=flip/ident
+  passes=1 center-mag=-0.00993433967021114/+0.00038116\
+  581456392/212.6174/1/-60
+  params=93.11/91.12/0.0001907/0.0854/-1.743505/0
+  float=y maxiter=18000 bailout=25 inside=bof61
+  logmap=67 symmetry=xaxis periodicity=10
+  colors=00011A<10>11K44L77M88N88NAANAANCANCANCANFANFC\
+  NFCNHCNHCNJCPJCQJCSLFULFWLFWNFUNFUPFUPFUPHSQHSQHSQHS\
+  SHQSHQUJQUJQUJPWJPWJPWJPYJNYLN_LN_LN_LL`LL`LL`LLbNJb\
+  NJdNJdNJdNHeNHePHePHhPF<2>iPFiPCkQCkQCkQClQAlQAnQAnQ\
+  AnS8pS8<2>qS7qS7sU7sU7sU4tU4tU4tU4vU1vW1wW1wW1wW0yW0\
+  yW0wU0yW0<3>yW1yW1yY4zY4zY4zY7zY7zY7zY7z_8z_8z_8z_Az\
+  _Az_Az`Cz`Cz`Cz`Fz`Fz`Fz`FzbHzbHzbHzbJzbJzbJzdLzdLzd\
+  LzdLzdNzdNzdNzeP<4>zeQzhSzhSzhSzhSzhUzhUzhUziWziWziW\
+  ziYziYziYzk_<4>zk`zk`zlbzlbzlbzldzldzldzkbzldzleznez\
+  nhznizpizpkzqkzqlzqnzsnzspztpztqztszvszvtzwtzwvzwwzy\
+  wzyy<37>zzzzzzzzyzzyzzwzzvzzvzztzytzyszyqzyqzwpzwpzw\
+  nzwnzvlzvkzvkzviztizthztezteysdysdzsezwf
+  }
+
+frm:mult2-003-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real((p1)+10^-100)*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^2.003+c,
+|z| <= 36  }

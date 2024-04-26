@@ -1,0 +1,23 @@
+Fractal_Mosaic     { ; Fractal of the day, 01-06-98
+                     ; 15min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6
+  center-mag=+0.58913768215978200/-0.00000000000513234/2.\
+  475535e+008 params=1/-2/-1e-005/-500/0/-96 float=y
+  maxiter=800 bailout=25 inside=0 logmap=114 symmetry=none
+  periodicity=0 colors=000MO4EZK6iZCcWHTU78R00PMKOHLNCSM7\
+  TM<2>ChP<5>v4x<4>KKi<7>5pb<2>KdyZRsmDm<3>DYZ<7>B0N<6>On\
+  JWcZbTmOUt<7>FcPEdLDeJ<14>4g2<2>Snf<5>lDb<9>o2P<12>VeN<\
+  12>nmcfidZkeRme<4>UmjVrkVvl<12>Vr6Mz7Ez86z8SzQlqgfmcah_\
+  <3>GiKEmLDlLCoLBpL<3>6nLClKIjKOmKTpK<10>3mP<3>UwV<9>Ugx\
+  <10>YqfYreZtcZvbZx`Zz_<8>XzEXzCVzD<12>FzOJz8<2>qzs<6>Sz\
+  UfzS_zKTzC
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

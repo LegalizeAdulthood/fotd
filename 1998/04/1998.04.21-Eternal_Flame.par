@@ -1,0 +1,28 @@
+Eternal_Flame      { ; Fractal of the day, 21-04-98
+                     ; 15min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Mystic2 function=cos passes=t
+  center-mag=-0.0270812/6.38378e-016/10.7284/0.9632/-90
+  params=1.947074943922239/2.311372960982085/-0.174153635\
+  8989226/0.5842508754997404/-0.8224759762108219/1.835318\
+  069627979 float=y maxiter=95 bailout=25 inside=bof61
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000LXc<5>T3mr6ic8ey4_f1Uz0Oi0It0Dc1BlAASI8677F_5\
+  9g4<3>HjIzpMLkPR0S<3>p1Iv4Gz8OnCW000fKjlNqj_Ad`A_aAVbA<\
+  4>A`RPYWbW`<2>`5k_0n_0q`0j`0d00Pa0Sb0Mb0GX1I<3>DXQ8LS3k\
+  UHGIcF6099Z3C00FV0I00LV0O06HZGTzwwqVJzzPWQMiuk5ZrOvz3Wm\
+  zzz3ToLap3Qq3Vq4Iq4Jq53r67r60r70r80s<5>X0R<2>k0ZW0pY6l<\
+  3>df`<5>Q7iO2jN6g<5>NPQBZ1<6>aRN<2>UTImPV<18>V8mR8T<2>M\
+  25X0Xg0x<4>H0pJ3qM7sPCu<4>D6gA4dAAb<4>6cQ<4>pTLdIcS6w<4\
+  >IEuFGtDGoAGj7Ge<7>gIt<4>p`vb2M<7>_83X67U4BR1G<3>D0Y<7>\
+  c0B_0IV4Q<3>D_s<7>7cC<4>Zh5Jaa
+  }
+
+frm:Mystic2 {; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100
+}

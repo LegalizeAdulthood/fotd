@@ -1,0 +1,18 @@
+Three_Galaxies     { ; Fractal of the day, 13-06-98
+                     ; 17min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Parabolic passes=1 center-mag=-0.0018574072\
+  5383412/+0.07215383460977294/41406.38/0.02651/-86.036/8\
+  8.58 params=-0.5/0.05/-0.752/0.05 float=y maxiter=12000
+  bailout=25 inside=0 logmap=362 symmetry=none 
+  periodicity=10 colors=000XcD<2>Xf3Xg0Yf1<33>ZDCZCCXBA<4\
+  2>qQUqQUpOW<37>zi7<35>8CB6BB3C3<11>D7nB4t<10>QZhRagScfU\
+  ed<11>ltH<2>oXKpPLoQK<21>Zk0<17>QOAZWc<6>XbG
+  }
+
+frm:Parabolic {; Jim Muth  real(z),real(c)
+z=imag(pixel)+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

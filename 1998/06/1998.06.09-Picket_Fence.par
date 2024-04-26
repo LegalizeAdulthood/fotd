@@ -1,0 +1,19 @@
+Picket_Fence { ; Fractal of the day, 09-06-98 
+               ; 4-1/2hours on a 486-100mhz, 640x480
+reset=1960 type=formula 
+formulaname=Parabolic passes=1 center-mag=-0.0000069502\
+4382539/-0.00000000000000355/1.921515/-2.0985e+005
+params=0/0/0.250077832/1.126e-006 float=y maxiter=100000
+bailout=25 inside=0 logmap=450 symmetry=xaxis
+periodicity=10 colors=000r`I<32>pdJpdJocK<46>qhIqhIphI<\
+2>mhIlhIliIliI<20>lkIlkIkkIjkI<4>ekIdkIbjJajK`iKfiLgiMf\
+hMdhNigO<5>geRleSkdTkdTmdUocVscVtcW<8>q_a<4>RYd<2>MXfLX\
+gLWg<10>HSnHSoITp<80>HFd
+}
+
+frm:Parabolic {; Jim Muth  real(z),real(c)
+z=imag(pixel)+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

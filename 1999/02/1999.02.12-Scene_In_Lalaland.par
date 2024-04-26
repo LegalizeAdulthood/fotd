@@ -1,0 +1,33 @@
+Scene_In_Lalaland  { ; Fractal of the day, 12-02-99
+                     ; 35min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4a function=recip passes=1
+  center-mag=-1.12347212219652500/+0.00003373232143120\
+  /3.929661e+009/1/45 params=0.01/100/-0.01/100.001/51\
+  110000/0 float=y maxiter=1600 bailout=25 inside=0
+  logmap=94 symmetry=none periodicity=10
+  colors=00000D00D00J00V00d00k10s20u40z68t8Ii9NfBQbBVa\
+  DYYEaXEfQGiLIlEIq9Jt2Jx0Vn6nYDzQ_zQVzBQz8Nq9IdDDVG80\
+  I40OE0VO0_Y0fg0lp0qz0xz0zz0zz0nz0Vz09z10z40z<2>91zB2\
+  wD6p<2>IDXJORLYLNiEOs8Qz1Rx0Tn2Tk8TfDVdJVdOVdTVXYXVd\
+  XNiXNnXNsYLzYLzYLzYLz_Rz_Xz_az_fzakzapzatzazzazzksxs\
+  gdzXLzN1zQ6zR9zTDzVGzXLzYOz_RzaVzd_sgd<2>6qs9xbDzNEz\
+  6Bz48z44z42z40z40x20w20t20s20q2<2>0lI0kN0iR1gX4fa6ff\
+  9dkBbpEatG_zJYzLXzOVzQVzOYzOazObzOfz<3>OpzNszNwzNxzN\
+  zz<3>NzzQzzTtzXzz<2>fzXilNllDpd2sf0nfBilRdlg_bxVTzdR\
+  znQzxQzzOzzOzzRzzVzzXzt_zpbzidzdgz_kzTlzOpzJszDtx8xw\
+  2zw0xx0zz<2>0zz0zz0zx0zw0zt0zs0znzzkzxfzzz<5>zzzzzqz\
+  zizxaztTzsJzpBzn2zl0ziBzfQzbfzatzsqzzpzzkzzgzzbzz_zx\
+  VztRzqNzpJzlEzkBzg6zd2zb0z_0zb0z_0zX8zTEzVNzUTzRdzBp\
+  zIzzQzzXz<2>zfzzitzknznfzq_ztTzxNzzGzsLznOzgTzbXzYazRd
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

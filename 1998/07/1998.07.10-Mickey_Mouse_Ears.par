@@ -1,0 +1,23 @@
+Mickey_Mouse_Ears { ; Fractal of the day, 10-07-98
+                    ; 90min on a 486-100mhz, 640x480
+reset=1960 type=formula 
+formulaname=MandelbrotMix6 passes=1 center-mag=-0.41728\
+061127637880/+0.43439459924476250/1.336982e+010
+params=1/0.98/1/-0.98/0/0 float=y maxiter=40000
+bailout=25 inside=0 logmap=267 symmetry=none
+periodicity=10 colors=000NSMKUMIWMFTC<2>Iee<3>iIJw4D<4>\
+TgH<6>WGtWDyVFv5fR5eQ5eP50G<12>1lVCw6<3>GdGG`IHYM<5>NJi\
+OSmP`qPetDiqCom<2>BMaBDZDEW<6>LEE<5>z7B<9>xi1xl1uj4<11>\
+OSa<6>Z8s<5>bE`bEYdLW<4>npN<9>zsN<2>Cc`<6>obY<12>HjP`kV\
+el`WmD<4>mrk<6>myY<4>_zN<3>fzYhz`izbjze<6>ozzozz<4>Kzg8\
+z`Ezc8z3<10>8zZMzS<20>8z`NzbIzaDz`fzz<2>`zuMzh<3>KzkmzI\
+<9>PzL
+}
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

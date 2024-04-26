@@ -1,0 +1,25 @@
+My_Fractal_Garden  { ; Fractal of the day, 21-12-98
+                     ; 35min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot06-XZ-YW passes=t
+  center-mag=0/0/1.892844e+008/0.5224/-57.065/64.385
+  params=62/22/-1.109763050693/0/-1.109763050693/0
+  float=y maxiter=36000 bailout=25 inside=255 logmap=400
+  symmetry=none periodicity=10
+  colors=000NAA<11>NAANAENAF<9>NAGNAGNAINAJ<29>NAKNAKNAJ\
+  <4>NAINAINAG<7>NAENAENAC<7>NAANAANA8<2>NA7NA7N87N77O75\
+  O55O45O44O24O04Q02O04O24O24N44N54N54M74M84M84MA5KA5KB5\
+  KC5JC5JE5JE5IE5IE5IE7IF7GF7<3>FH7FI7EJ5FK7FK7GK7GL7IL7\
+  <3>KM7KM7MN7<4>OR8OS8QT8QU8RU8RU8SW8<2>TX8TX8UXAUYAWYA\
+  <5>Z_AZ_A_aA_aAZbB_aA_aAaaAaaAaaFbaJbaNc_Rc_Uc_Y<6>fZu\
+  <4>hYuhYujYu<16>pWupWuqUuqUuqUusUu<2>sUusTuuTu<5>wSuwS\
+  z<5>zRzzRzzRzzRzzRz<6>zQzzQzzOzzQz<9>zUzcmz
+  }
+
+frm:multirot06-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)*sqr(sqr(z))+c,
+|z| <= 36  }

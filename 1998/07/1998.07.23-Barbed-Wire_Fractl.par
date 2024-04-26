@@ -1,0 +1,24 @@
+Barbed-Wire_Fractl { ; Fractal of the day, 23-07-98
+                     ; 4min on a 486-100mhz, 640x480
+reset=1960 type=formula 
+formulaname=multirot-XY-ZW function=ident/flip passes=1
+center-mag=+0.00000000064494154/+0.00000000045917278/5\
+.510048e+009/0.1328/143.72/-57.643 params=-16.5/192/-0.\
+5622039950491428/0.642815610326366/-0.5622039950491428\
+/0.642815610326366 float=y maxiter=6000 bailout=25
+inside=0 logmap=250 symmetry=none periodicity=10
+colors=000B6H<16>5Fn1Fr5Gn<8>blLfpIlrC<13>KwiIwkFyp<7>\
+JjTJiRIgQ<17>A8JA6J83H<18>hPfjRk<11>dL9dK6cL4<20>vB1<3\
+>pRl<3>_qR<4>XyPXzPZwR<7>g`fhYhhUk<7>kfckhbkhbkib<5>7\
+ox<3>Dk`AjS<6>Wpr<8>cycczbdz`ez_<11>nzH<5>bzEazD`zE<18>\
+MzSLzTJzV<7>VzMXzdYyc_zbDzg<3>Czp
+}
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

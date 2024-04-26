@@ -1,0 +1,25 @@
+StrawberryShrtcake { ; Fractal of the day, 10-02-99
+                     ; 1hr on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4a function=recip passes=1
+  center-mag=-0.68059806343076910/+0.001216028596433\
+  67/2.690565e+009/1/99.999 params=0.1/5/-5/0.5/-1.5/0
+  float=y maxiter=2000 bailout=25 inside=0 logmap=225
+  symmetry=none periodicity=10
+  colors=000JMKOLKLLK<3>IIKHIKFHK<5>8DK7CK6DI<7>4D8DF\
+  5MG3<6>kDaoCXsCSoDHkEBgFGe5L<7>rpr<15>k0WnGdkMlaKfV\
+  9aMBZACX<12>iQ3<9>Ro7<8>OUhOSlPQj<6>SGbSFaQDZNCVJBP\
+  DGGEFIFCJGBKHqL<8>PcV<13>7ud<11>9gd<3>`a_<7>Oe5<10>\
+  rAw<12>XVrWSrUUsTVt<3>UNxUMyUJzUGz<21>UwzUuzUtz<2>U\
+  vzUwzUwzUwz<23>Uwz
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

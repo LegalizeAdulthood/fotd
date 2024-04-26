@@ -1,0 +1,17 @@
+Full_Fractal_Moon  { ; Fractal of the day, 29-03-99
+                     ; 80min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=EllipticMiN center-mag=0/0/5.536927/1393.8
+  params=-1.5/0/1.57915555/-1.14721592/1.57915555/-1.14\
+  721592 float=y maxiter=30000 bailout=16 inside=255
+  logmap=32 symmetry=none periodicity=10
+  colors=000666FJI<109>64A64A759<83>`q9ar9as9at9bu9<3>\
+  cy9cz9bzA<46>UyE
+  }
+
+frm:EllipticMiN {; Jim Muth
+b=p1, z=flip(imag(pixel))+p2,
+c=real(pixel)+p3:
+z=(-z)^(b)+c,
+|z| <= 16
+}

@@ -1,0 +1,18 @@
+Tortured_Fractal   { ; Fractal of the day, 26-06-98
+                     ; 12min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Elliptic center-mag=-0.21256031233443300/+0\
+  .51359005869092620/96.08856/0.6564/90.513/48.973
+  params=-0.5907101657155065/0/0/0.7893734550004577
+  float=y maxiter=32767 bailout=25 inside=13 logmap=yes
+  symmetry=none periodicity=10
+  ranges=0/-1/90/99/110/135/185/250/500/800/1500/3000/32767
+  colors=000KAF`MPUWZ<5>0qq<2>0zzUzz000<240>000
+  }
+
+frm:Elliptic {; Jim Muth  imag(z),real(c)
+z=flip(imag(pixel))+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

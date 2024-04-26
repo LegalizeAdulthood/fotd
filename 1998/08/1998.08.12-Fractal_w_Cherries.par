@@ -1,0 +1,21 @@
+Fractal_w_Cherries { ; Fractal of the day, 12-08-98
+                     ; 45min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=+1.17972975503023300/+0.03442774734394653/22\
+  60250/1/-87.499 params=-0.4/2/0.4/-2/0/0 float=y
+  maxiter=1800 bailout=25 inside=0 logmap=112 symmetry=none
+  periodicity=10 colors=000XwQ<7>1op<13>Smw<2>tWjsfOrq1<11\
+  >DF4<8>tI0<12>4Xs<14>KMI<2>oib<14>0ll<12>ZfZ`fYabU<4>cO\
+  E<5>MFpJEvIIp<8>9q8<2>W3h<11>rRGj_n<3>MsL<4>Vr7<13>Tsz<\
+  7>qv9<6>s_ungWjn6<10>5V5<10>l5tmjN<5>nQSnNSmOR<21>WdA<9\
+  >klZfsOevLeyJ`xN
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

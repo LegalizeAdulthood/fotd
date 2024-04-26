@@ -1,0 +1,19 @@
+Daliesque_Fractal  { ; Fractal of the day, 24-07-98
+                     ; 13min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=RectangularMiN passes=1
+  center-mag=1.27948/0.189526/15.45208/1.5464/0/-12.042
+  params=1.46/0/0/0/0.77/0 float=y maxiter=1500
+  bailout=25 inside=253 logmap=11 symmetry=origin
+  periodicity=10 colors=000m_J<14>XMNWLNXMP<7>O79N57K23<1\
+  5>lCLnDMpCM<35>VRQVRQTOV<6>F8v<44>DbVDcUEgT<10>98b<18>k\
+  VU<42>MAb<3>TJRVJPXJMYKJ_JGaKDbHB<10>_M9_I9MKSSJ_OLSLJF\
+  IM2bHYbHZaLZ<4>`I_`M_`M_`LQ`LWdKXcJXWK_`MXdLY
+  }
+
+frm:RectangularMiN {; Jim Muth
+b=p1, z=flip(real(pixel))+p2,
+c=flip(imag(pixel))+p3:
+z=(-z)^(b)+c,
+|z| <= 16
+}

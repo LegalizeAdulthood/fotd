@@ -1,0 +1,21 @@
+Sea_Anemone        { ; Fractal of the day, 30-06-98
+                     ; 80min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=+0.13025795495897130/+0.38767051909173410/1.\
+  952525e+007/1/-55 params=0.333/2/-0.5/-2/0/0 float=y
+  maxiter=3600 bailout=25 inside=0
+  logmap=229 symmetry=none periodicity=10
+  colors=000_2J<5>R5PP6QO7RM8SL9TIAU<3>OEYQEZRF_SF`UGa<3>\
+  ZIe`IgaHg<7>mDjnDjnFp<5>q4Ir2Ct16<28>B1G<29>OAOL2J<6>ao\
+  m<3>IC`LAZO9XQ5Z<16>Xh0<25>e`YjpT<2>X6j<21>vqd<29>rIBuG\
+  8<11>MMRJNTFMV<7>LTQLTQNVR<12>_hc
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

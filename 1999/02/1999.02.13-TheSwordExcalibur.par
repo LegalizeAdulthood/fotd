@@ -1,0 +1,25 @@
+TheSwordExcalibur  { ; Fractal of the day, 13-02-99
+                     ; 45sec on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4a function=recip passes=t
+  center-mag=-10.3892/-0.189279/0.1551253/1/-35
+  params=-1/1.097/1/1.09777/-4000/0 float=y maxiter=255
+  bailout=25 inside=0 logmap=yes symmetry=none
+  periodicity=10 colors=000C8FCDKD9PEFUFBYGCbCCg86l41p\
+  77rJCsPIu<2>jYyqezskmzm`vuWsxSozOlyJ<2>bz7kzKtzW<4>`\
+  zv<3>zzU<4>Kz_CzO5zDDzEKzE<5>mzO<7>jzB<2>PzW<3>hzKXz\
+  L<11>Vzb<5>Dzl<13>dzx<14>Gzy<6>ezy<14>QzY<13>lzH<5>G\
+  z7<8>NzoNztPzo<7>`zKYzG<7>Yz0<5>CzH9zJ4zT0zafzdkzkgz\
+  TczA<6>uz5gz8VzB6zD<2>TzS<7>wzr<6>fzV9zn<6>Azt<5>Dz9\
+  <6>HzvXzglzU<5>xzzZzX
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

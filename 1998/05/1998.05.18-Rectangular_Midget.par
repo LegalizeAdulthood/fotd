@@ -1,0 +1,22 @@
+Rectangular_Midget { ; Fractal of the day, 18-05-98
+                     ; 10min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=flip/ident passes=1
+  center-mag=+0.00000000000000000/+0.00000000000000000/3.\
+  037307e+007/0.03296/-0.003/-89.549
+  params=0/90/-1.7498441022/0/-1.7498441022/0
+  float=y maxiter=12000 bailout=25 inside=0 symmetry=none
+  periodicity=10
+  colors=000N_Y<52>kLNkLNjMM<45>4cJ3cJ1bC<6>Aft<16>_oGaoE\
+  apB<43>gOFgNFhNEgNFdJF<2>I6GFAF<11>buAcxAcx9<20>cx4<12>\
+  gksgjwfiv<20>cgnM`YN`Y
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

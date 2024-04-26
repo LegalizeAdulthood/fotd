@@ -1,0 +1,25 @@
+Inside_the_Tenstar { ; Fractal of the day, 22-09-98
+                     ; 15min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip passes=1
+  center-mag=-0.00000177931630776/+0.00000013404197419/20\
+  6289.3 params=90.00001481139562/89.99994965590381/0/0/\
+  0.3349575066515285/0.046732666062027 float=y
+  maxiter=1200 bailout=25 inside=0 logmap=536
+  symmetry=none periodicity=10
+  colors=000QHPjojkpkmamnqnWKWprqqdrsst`MauuvvfxwvydOfwuy\
+  wfyvuyYI`uuxufxtux`NdsuxsfwruwZNcquwqfwpuvXNbouvoevntuV\
+  MamtumeultuTM`kttketkttWRejtsiesitsURdhtsgergsrWTefsref\
+  qesqZXfdsqchqcsp__hbspakpasp_gj`so_mo_sodhrbstapr`tq_kl\
+  ZsnYqlWrjVngUrgTrfSqdRnaQqa<11>CmJBmH9nH<71>dB8dB8eC9\
+  <58>sQHsQHrRI<16>vNEvNExLG<4>wNEwNEwNEwNE
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

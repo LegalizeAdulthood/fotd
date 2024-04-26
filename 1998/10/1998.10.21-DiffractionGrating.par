@@ -1,0 +1,19 @@
+DiffractionGrating { ; Fractal of the day, 21-10-98
+                     ; 6-1/2hrs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=RectangularMix passes=1
+  center-mag=0.796052/0.0722238/14.73537/1/49.999
+  params=1/2/0.2/3/0/-4.10404 float=y maxiter=32767
+  bailout=25 inside=253 logmap=11 symmetry=origin
+  periodicity=10 ranges=0/-1/250/255/265/280/300/350/450/\
+  650/950/1600/32767 colors=00000KUKcPOfKQiFSl0Uo<3>0az0c\
+  z0ez000<238>000ZZw000000
+  }
+
+frm:RectangularMix {; Jim Muth
+z=flip(real(pixel))+real(p3),
+c=flip(imag(pixel))+imag(p3),
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

@@ -1,0 +1,23 @@
+MandelbrtFirestorm { ; Fractal of the day, 25-09-98
+                     ; 28secs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip passes=1
+  center-mag=-0.614069/-4.44089e-016/0.4593294
+  params=45/-45/0/0/0/0 float=y maxiter=1200 bailout=25
+  inside=0 outside=atan logmap=yes
+  symmetry=xaxis periodicity=10
+  colors=000zrt<3>vnpvmoumnulmull<2>tjisjisjhsjhsig<66>_X\
+  BZWA_XB<27>GJ5FI5EH5DG5DF4CE4BE4AC4<10>261583884B96E97H\
+  B9KBAMDC<4>`FJbGLfGM<4>zJU<3>kJQhJPdJOaJNZIM<3>OIIMIHJH\
+  GGGFDEDDEDDCDECE<3>FCCGC6GCGHCCHCCHCDICDIDF<7>LHMMI\
+  MMINNIN<38>aJcbKdaJc<22>OJX
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

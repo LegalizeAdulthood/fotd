@@ -1,0 +1,19 @@
+Blister-pack_brot  { ; Fractal of the day, 05-05-98
+                     ; 30min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5 passes=t
+  center-mag=1.28035/0.72885/47.5369/1/-64.999
+  params=-0.725/-3.559/-0.928/1.088 float=y maxiter=7200
+  bailout=25 inside=0 logmap=26 symmetry=xaxis
+  periodicity=10 colors=000zz`zzazzb<5>zz0zzFzyczxgzwp<4>\
+  zrczqfyph<5>vjVviSvhQvgNvfL<2>veE<27>ZOKYNKYNKXNLWNLVNL\
+  ULLVKNUKLTIJSIHRIG<2>OBBNC9MD7L56<2>I01<23>nAK<47>QLUTP\
+  O<10>D6t<62>CeR<14>76`<7>KEYHPW<2>MF_
+  }
+
+frm:MandelbrotMix5 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, c=pixel/(a*d):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

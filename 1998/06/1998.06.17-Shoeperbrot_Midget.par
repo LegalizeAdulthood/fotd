@@ -1,0 +1,19 @@
+Shoeperbrot_Midget { ; Fractal of the day, 17-06-98
+                     ; 45secs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Rectangular center-mag=0/-0.000000174260765\
+  11/519433.9/0.001325 params=0/0/-1.74389115/-0.0057461264
+  float=y maxiter=1200 inside=0 logmap=51 symmetry=yaxis
+  colors=00058e<6>Ius<8>wtg<10>0PD<10>RkLZzD<4>g5g<12>GOd\
+  <5>W9PT9XQ9dN9k<14>GqDGtBHrD<10>QeZQd_Tgd<4>gsz<5>F0x<4\
+  >BPl<3>YI8<13>dds<6>Dgt<10>D16<6>80T80W95U<6>F_KFcJI`H<\
+  10>h75<14>Gok<4>z`k<15>Luu<12>QTM<4>9y7<2>AAjio_<3>AUnP\
+  GXc3G<7>ihy_boHqJCwF9eO7PX
+  }
+
+frm:Rectangular {; Jim Muth  imag(z),imag(c)
+z=flip(real(pixel))+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

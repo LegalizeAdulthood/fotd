@@ -1,0 +1,26 @@
+Ocean_of_Teardrops { ; Fractal of the day, 20-12-98
+                     ; 55min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix7a passes=1 center-mag=+7.92\
+  1742856192896/+0.3253259557674616/1602862/1/-114.999
+  params=-1/-0.55/1/-0.65/100/0 float=y maxiter=5000
+  bailout=25 inside=0 logmap=176 symmetry=xaxis
+  periodicity=10 colors=0000uvUr`vpG<5>aTJ<5>Pd_Uz_NeS\
+  GLPA1H95J99L<2>8LZ8Pb7Tf7Xj7`m7do<7>5mb5i`4o_4gY4sX4\
+  kV4wU<3>Nz_SzaXyb<3>ouhtxmssisoezqNsiY<5>rSBrP8pOD\
+  <5>fIadHeaFk<3>hGfiGemMcrRbuWaz``zaWz`_zZbybfv`iqdmn\
+  bpjathdwggz<11>RnQQzNPoKWiJbcIkbI<7>WDDUACQ6E<10>d92\
+  <11>Aiu<5>CVwCTwDRv<4>EFqECoFApF7pF5kF3kI5mK6nM7nP8k\
+  R9n<12>tMLyKF<3>nWUlZXi`Z<9>QjpOkrKlt<12>Zym_zl`zlaz\
+  k<14>qzdmzgjzjkzn<12>6zc<9>4zb
+  }
+
+frm:MandelbrotMix7a {; Jim Muth
+; "a" suffix added by L.StClair 9/1/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| <= l
+}

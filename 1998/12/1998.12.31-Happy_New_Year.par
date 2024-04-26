@@ -1,0 +1,34 @@
+Happy_New_Year     { ; Fractal of the day, 31-12-98
+                     ; 4-1/2hr on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix7a passes=1
+  center-mag=-0.27079874054616540/+0.36014196341808110\
+  /4.903311e+008/1/-174.999 params=1/-1.618/-1/-1.619/\
+  1000/0 float=y maxiter=24000 bailout=25 inside=0
+  logmap=668 symmetry=xaxis periodicity=10
+  colors=000HBMZ3F5qIOfJeXJZcPgYNoSLRrw<2>oVTqWcV8OiGL\
+  iMYnNTsNO0bpUV_w0dw9UuZvwcSwYPwSMb7YiDTpIOWR9XAEDHL\
+  <2>lMJEay2gv<2>iSTOoCe`G5reOgYWIGeFdrJzOox<2>nUTzlYJ\
+  dUXZQjTMMsiZh`kYSEW_`RRUP1wW6hTAwQFzTs<2>wOSJlxXcjjV\
+  XOexVOV<2>pNMJD`cISu3JxBm<2>wKQWMUeNQnNMMkR<2>nTLh0x\
+  pAc`SMlPK4s`iZJM9e<2>nKOHcLbVKO5MeEKJ9y<2>mKTYFU<2>q\
+  LLGCoaIZe77nFDDS0t5ix84wC8wGCwKGu_uvVhwRWaBalHSr8qtD\
+  evIUlURpROtPLvsK`EVlJPtlIibJ0YFKUHcQI3eL<2>iRJ60nXBZ\
+  T7MgOe96HnjxqdmsZczgTkV5<2>tPGfhkYjqPlw<2>KkpB`j3QeQ\
+  27SfcchkoirzzzfaoOUe5MXKW_YdaddXvdQjdSqdNzdArdyudced\
+  fZddkeUbfgihZpjRml8<2>upHBqxOrm_scktTvuxwvjwwX8xzQyk\
+  fzXkzHqzIYzhfz_ozRDzA9zeZzUqzZszTuzOAz`uzgvzVbzqizep\
+  zU1zPJzQczMSzfgzVXzN2zLDzBTzEhzHrzmtzbvzTrzXtzSvzNKz\
+  tYzgjzV1zmwz7wzDPz4`z9lzEqzVszRuzNczzpz5bzyhz\
+  nmzcrzTzzG
+  }
+
+frm:MandelbrotMix7a {; Jim Muth
+; "a" suffix added by L.StClair 9/1/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| <= l
+}

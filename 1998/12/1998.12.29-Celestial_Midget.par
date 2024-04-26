@@ -1,0 +1,28 @@
+Celestial_Midget   { ; Fractal of the day, 29-12-98
+                     ; 2-1/2hr on 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix7a passes=1
+  center-mag=+0.09165816355988156/-0.14337973096377420\
+  /340319.4/1/112.499 params=1/-0.99/-1/-1.005/100/0
+  float=y maxiter=12000 bailout=25 inside=0 logmap=375
+  symmetry=xaxis periodicity=10
+  colors=66666666666966E66I66I66OLBN66X66X<2>66j66e66p\
+  66t<2>66t0Qz66t<49>66t96t96t96tE6tE6tE6tI6tI6tI6tO6t\
+  O6tO6tS6tS6tS6tX6tX6tX6t`6t`6t`6te6te6te6tj6tj6tj6tp\
+  6tp6tp6tt6t<26>t6tz6tt6tt6tt6tzd0p_2e6tX6tS6tI6t96t6\
+  6t<6>66t66p66p6Qz66t66`66`66X66S66O66I66N66I<3>66I66\
+  N<2>66N66Q66Q<4>66W66X66X66`<6>66`69`69`6Ee6Ee6Ie6Ie\
+  6Oe6Oe6Se6Se6Xe6Xe6`j6`j6ej6ej6jj6jj6pj6pj6tj6tp<4>6\
+  tp6tj<4>6tj6te<4>6te6t`<4>6t`6tX<2>6tX9tX9tXEtSEtSIt\
+  SItSItSOtOOtOStOStOStOXtOXtI`tI`tI`tIetIetIjtEjtE
+  }
+
+frm:MandelbrotMix7a {; Jim Muth
+; "a" suffix added by L.StClair 9/1/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| <= l
+}

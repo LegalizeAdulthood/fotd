@@ -1,0 +1,19 @@
+Hip-Hop            { ; Fractal of the day, 15-08-98
+                     ; 20min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1 center-mag=+0.04751\
+  562904580946/-2.71012191641801500/19334.37
+  params=1/-1/-1/1/0/0 float=y maxiter=1200 bailout=25
+  inside=0 logmap=30 symmetry=yaxis periodicity=0
+  colors=000aqBbsBbtB<21>xw6xw6wt5<2>vn3vl3uj4<15>uJJ<9>A\
+  Ui<3>8Uh8Uh6Tg<86>ojhsil<47>BqCAqB8sC<44>MYAMYAMX9NX8<4\
+  >RaA
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

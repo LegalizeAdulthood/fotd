@@ -1,0 +1,18 @@
+Fractal_Land       { ; Fractal of the day, 12-06-98
+                     ; 20min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Parabolic passes=t
+  center-mag=0.354379/0.57659/37.06861/1.666/-90
+  params=0/1/0/-0.1 float=y maxiter=32767 bailout=25
+  inside=13 logmap=yes symmetry=none periodicity=10
+  ranges=0/-1/100/105/110/120/140/180/250/500/1000/25\
+  00/32767 colors=000F00ZPKUUZKXUK_PPbPUePZhUckZhnhhr\
+  rmzzPUm000<240>000
+  }
+
+frm:Parabolic {; Jim Muth  real(z),real(c)
+z=imag(pixel)+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

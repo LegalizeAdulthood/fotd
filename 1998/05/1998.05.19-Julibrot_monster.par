@@ -1,0 +1,22 @@
+Julibrot_monster   { ; Fractal of the day, 19-05-98
+                     ; 2min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  center-mag=0.0061619/2.22045e-016/1.191532/1/90
+  params=88.75/91.25/0/0/0.29/0 float=y maxiter=1200
+  bailout=25 inside=0 symmetry=xaxis periodicity=10
+  colors=000691<12>0J3<10>SoZ<13>zAw<7>iWF<2>K7zWMWf`2sn1\
+  <12>yKZ<8>hE5gE2dC4<6>R2GTwI<14>xZN<9>gfr<11>ybF<10>`l0\
+  <6>`eY<2>QwzMgvJTr<12>`4g<11>T4C<13>MCdMCfKEd<11>7aJ6cI\
+  6`B6Y4dgnjUb<4>delJkpQioXhnXS2<4>bef3Du<2>V`o5D7<4>ZbgG\
+  So<4>_en7rO<5>_hkRlvWjs_hpRfrWgp_goCxO<6>`ikgtl
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

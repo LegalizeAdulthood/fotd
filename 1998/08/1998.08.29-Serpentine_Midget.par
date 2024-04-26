@@ -1,0 +1,24 @@
+Serpentine_Midget  { ; Fractal of the day, 29-08-98
+                     ; 1-1/2 hrs. on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=+1.07255060134944200/+0.18865918927487090/45\
+  239.37/1/-164.999 params=0.02/13/0.1/-11/0/0 float=y
+  maxiter=3600 bailout=25 inside=0 logmap=157
+  symmetry=none periodicity=10
+  colors=000C8GEAH<2>LEONFQOGT<3>TLYUNUVPUWRUXU_XXdXZd<2>\
+  XbfXcfXcf<8>XfsXftXgt<3>XhvXhvYjx<25>QSdQRcQSbQSb<6>OaX\
+  ObXNcWNdVNcUMbTMaT<5>LSOKQNKQN<22>E95E95GA7<15>eENgFOiF\
+  PkFQnFRqGSsGTvGUyFUyGV<3>wJVvKVvLVvLV<9>tGWtGWtGWtGWsGW\
+  <4>qGXqGXpGXoGXoGXoGXoGXmGX<2>mGYlGYlGYkGYkGY<8>aGZ_GZ_\
+  GZ<3>_HZZHZ_HZ_HZ_H_`H__H_<5>bH_cH_dH_eH_fH`fH`<8>dHhdH\
+  idHk<7>bHrbHsbHq<11>`Hq`HqaHp<3>aFxaFzaFz<2>bFz
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

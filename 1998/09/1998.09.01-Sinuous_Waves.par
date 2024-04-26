@@ -1,0 +1,29 @@
+Sinuous_Waves      { ; Fractal of the day, 01-09-98
+                     ; 80min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=t
+  center-mag=+0.12129071280977710/-0.00024929229929066/58\
+  1.7723/0.02869/0.673/86.843 params=99.5/67.3/0/0/0.4027\
+  15/0.339336 float=y maxiter=16000 bailout=25 inside=250
+  logmap=153 symmetry=yaxis periodicity=10
+  colors=000UMf<23>eYreYreYreYreYrdXrdXrcXq<3>dWrdWpdWpdW\
+  pdWpdUpdUpdUpbUp<3>bUpbUpbSp<6>bSp_Sp_Qp_Qp_Qn<4>_Qn_Qn\
+  _On_On_On_OnYOn<3>YOnYLn<6>YLnYLn_Jp_JrbHrbHtdHtdFveFve\
+  DxgDzgDzjBzjBzl9zl9zn9zn7zp7zp4zr4zr4zt3zt3zu4zt3zp1zl1\
+  zg0ze0zb0vY0tU0pQ0lO0gJ0eF0bB0Y70W40S10O00J00H00D009007\
+  003000<5>001001003<2>00400700700900900900B00B00D00D00F0\
+  0F00H00H00J00J00L00L00O00O00O00Q00Q00S00S00U10U10W10W30\
+  Y30Y40_40_40_70b70b90d90d90eB0eB0gD0gD1jD1jF1lF1lH3nH3n\
+  H3nJ4pJ4pL4rL4rL7tO7tO7vO7vQ9xQ9xS9zSBzSBzUBzUBzWDzWDzW\
+  DzYDzYFz_Fz_Fz_HzbHzbHzdHzdJzdJzeJzeJzgLzgLzgLzjOzjOzlO\
+  zlOzlQznQznQzrQznQz<2>gQzeQzdQz<3>WQzUQzQSzSQz<6>SQzSQz\
+  UQzUQzUQz
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

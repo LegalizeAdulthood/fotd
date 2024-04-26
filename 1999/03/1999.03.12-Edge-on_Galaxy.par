@@ -1,0 +1,30 @@
+Edge-on_Galaxy     { ; Fractal of the day, 12-03-99
+                     ; 8min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multmin3-5-XZ-YW passes=1
+  center-mag=+0.01050165443622975/+0.00097963198354035\
+  /204.5845/0.04123 params=90/-10/0.03907/-0.28621/0.8\
+  042/0 float=y maxiter=1200 bailout=25 inside=0
+  logmap=16 symmetry=none periodicity=10
+  colors=000RAW<13>EAJD9JB9J89I6BI4BI1BG0BG0BG0BE0BE0B\
+  D0BE0BE0BE0BG0BG0BG0BI<4>0BJ0BJ0BL0BL0BL0BL0BN<4>1BO\
+  1BO2BQ2BQ2BQ4BR4BR4BR6BT6BT6BT6BT8BV8BV8BV9BX9BX9BX9\
+  BXBBYBBYBBYDB_DB_DB_DB_E9aE9aE9aG9bG9bG9bI9dI9dI9dI9\
+  dJ9fJ9fJ9fL9gL9gL9gL9gN9iN9iN9iO9kO9kO9kO9kQ9lQ9lQ9l\
+  R9nR9nR9nT9pT9pT9pT9pV9qV9qV9qX9s<4>Y9tY9t_9w_9w_9wY\
+  Dt_9w_8xa6za4za1zb0zb0za0z<2>b0zb0zd0z<2>d0zd0zf1z\
+  <2>f2zf2zg4zg4zg4zg6zi6zi8zi8zi8zi9zk9zkBzkBzkDz<2>l\
+  EzlEzlGxnGxnGxnIxnIxnJxpJxpJxpLwpLwpNw<2>qOwqOwsQwsQ\
+  tsQtsRtsRttTttTttVttVttVswXs<2>wYsxYsx_sx_sxaqxaqzaq\
+  zbqzbqzdqzdqzdqzfp<2>zgpzgpzipzipzkpzknzlnzlnzlnznnz\
+  nnzpnzpnzplzqlzqlzsl<3>ztlzwk<2>zxkzxkzzkzzkzzkzxl\
+  <2>zwlzwlzwnzwnzxpzzqzzszztzzwzzxzzz<7>zzz
+  }
+
+frm:multmin3-5-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=(-z)^3.5+c,
+|z| < 36  }

@@ -1,0 +1,21 @@
+Elliptic_Octagon   { ; Fractal of the day, 25-06-98
+                     ; 4min on a 486-100mhz
+  reset=1960 type=formula 
+  formulaname=Elliptic passes=t center-mag=-0.00000002501\
+  988054/+0.00000146643763159/4.98998e+009/0.4775/68.411/\
+  -72.253 params=0.343812034026/-0.056030250511/0.3438120\
+  34026/-0.056030250511 float=y maxiter=500 bailout=25
+  inside=0 logmap=150 symmetry=none periodicity=10
+  colors=0008MS<3>1Q6<3>BMX<15>hgv<8>COb8M`2L`<12>`JM`IK<\
+  4>gKLuQF<2>K9V<6>hkhkqjpxj<10>Vjl9gsUillik<5>pnGpnBomA<\
+  8>gd9<11>tMd<14>jDhjDhkFe<7>lUQlVOjWM<10>_W4PVUFUs<11>m\
+  ok<5>x4a<11>Y5RZ1P<10>3hf<11>JNvGNx<12>wAo<5>L2B<13>AwH\
+  <3>GO7M`i<3>PXmVeo<2>FHm<2>9LX
+  }
+
+frm:Elliptic {; Jim Muth  imag(z),real(c)
+z=flip(imag(pixel))+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

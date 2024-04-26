@@ -1,0 +1,19 @@
+The_Great_Bud      { ; Fractal of the day, 20-11-98
+                     ; 80min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt01
+  center-mag=1.92507/0.425969/2.73224/1/22.5
+  params=3.7/-0.8/0.8/1.9/1.6/-0.3 float=y
+  maxiter=5000 bailout=25 inside=253 logmap=yes
+  symmetry=none periodicity=0 ranges=0/-1/100/105/1\
+  15/140/185/260/500/850/1300/2500/5000
+  colors=000M00eR`zj0zz0UZz<4>rrzwvzzzz000<241>000
+  }
+
+frm:MandNewt01 {; Jim Muth
+z=c=pixel:
+a=z^3+(c-1)*z-(p1*c)
+b=3*z^2+(p2*c-1)
+z=z-p3*a/b
+.00005 <= |a|
+}

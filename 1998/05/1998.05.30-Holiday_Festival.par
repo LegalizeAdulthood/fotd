@@ -1,0 +1,19 @@
+Holiday_Festival   { ; Fractal of the day, 30-05-98
+                     ; 15min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=+0.13442649195367910/+0.00000000000/3260.948
+  params=1/50/-1.05/1/0/0 float=y maxiter=1200 bailout=25
+  inside=0 logmap=73 symmetry=xaxis periodicity=10
+  colors=000AM7<13>9M89M86J7<34>trJusJxuI<23>EmeDmfDlg<41\
+  >DUs9Vw<15>uN4<9>YDQL5GWCSfJbtQp<15>1PD<17>0Ty<20>U`hWZ\
+  j<33>KuEKvDLwB<9>IsK
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

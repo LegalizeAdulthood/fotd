@@ -1,0 +1,23 @@
+Oblate_Complex     { ; Fractal of the day, 21-09-98
+                     ; 3min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW
+  center-mag=+0.00033276281246370/-0.00006703164057093/6.\
+  119796e+008/0.003848/179.937/-89.901 params=90.44901882\
+  992035/0.0488601336710715/0/0/-0.1010963638456222/0.956\
+  2865108091414 float=y maxiter=450 bailout=25 inside=0
+  logmap=143 symmetry=yaxis periodicity=10
+  colors=000LIM<3>PaVcRDbSFaTHaUEZWBZX9WZ9<2>Lh9Lj1<4>Apa\
+  <14>SA3T81WB3<10>yZN<21>_3Yh3Z<5>lALmBJnDE<14>c2s<8>_Ep\
+  _FpYFo<11>nIqoIqoIqpIq<15>cXvbYz<15>cWBcW8fQ4<3>Vk5Sp5N\
+  y2<10>gOP<21>M9jF2o<2>ZL`<3>Dtd8rY4pR<6>NuJknb<7>2T\
+  q<4>8jL<3>FSmGOtJTo<6>cvIfzEgvI<7>jZg<5>JDJ
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

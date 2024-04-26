@@ -1,0 +1,24 @@
+Tracks_of_Critters { ; Fractal of the day, 10-08-98
+                     ; 4min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6
+  center-mag=+0.03148755497948397/+0.02394452695118233/70\
+  2.4477/1/-42.5 params=0.01/2/-0.03/-2/0/0 float=y
+  maxiter=500 bailout=25 inside=0 logmap=12 symmetry=none
+  periodicity=10 colors=000009<4>00Ezzc00K00O<2>20_30c50g\
+  <3>D0w<7>T0sV0sX1sZ2r`3rb4r<13>YKEUHGREH<6>PKT<4>lkn<7>\
+  3n33zU3zi9zgEzeJz_<6>5zB4zU3zl<5>fzv<6>dzo7zP<4>5zm<7>x\
+  zR<3>HzItzD<5>UzIMzMFzQCz7<2>Fz2Gz1Fz3zz4Dz5Dz6<2>OzI<2\
+  >7zv<7>izd<3>oz7<7>EzHSzTdzc<4>uzC<6>TzjIzk8zk7zY6zK<5>\
+  RzHpzQ<2>lz29zN<3>2z2<4>jzd<3>Jzt<2>czX<5>9zHPzi<4>NzW<\
+  5>ezE<7>0zU<2>Xz6<2>VzQVzWSzX<2>KzZazXrzWOz32z8<4>zz_hz\
+  LRz6`zKizYjze<2>lzd
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

@@ -1,0 +1,21 @@
+Obscured_Radical   { ; Fractal of the day, 07-12-98
+                     ; 25min on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=ident/flip
+  passes=t center-mag=-1.56858310350634000/+0.152260\
+  83477533180/460.2684/1/79.999 params=61/61/0/0/0/0
+  float=y maxiter=32767 bailout=25 inside=253
+  logmap=48 symmetry=xaxis periodicity=10
+  ranges=0/-1/600/615/635/665/700/750/900/1200/1800/35\
+  00/32767 colors=000A50UUZKQRPUVUTZZXbcWf<2>rhrwlv\
+  zuz050<238>050UGm050050
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

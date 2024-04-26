@@ -1,0 +1,19 @@
+The_Fractal_Garden { ; Fractal of the day, 14-08-98
+                     ; 40min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=t
+  center-mag=+0.02846364113656116/-0.01580888638697905/1.\
+  182292e+009 params=1/-1/0.001/-100/0/0 float=y
+  maxiter=1500 bailout=25 inside=0 logmap=148 symmetry=none
+  periodicity=10 colors=000fHe<5>cO_IWK<6>QyO<11>94E<7>Tg\
+  g<7>3PU<3>kSx<14>vXjvXjuYg<14>h_2jdMlhe<9>I4k<15>lA4<5>\
+  f1x<6>EVl<7>Uz5<4>K`BJWCJXD<30>VjJQb_<85>VjJgEgfGf
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

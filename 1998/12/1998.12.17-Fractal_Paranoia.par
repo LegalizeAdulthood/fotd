@@ -1,0 +1,20 @@
+Fractal_Paranoia   { ; Fractal of the day, 17-12-98
+                     ; 6min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=--MandelPMnew center-mag=+0.041857987059\
+  62106/-1.18436065492030100/233.4021/1/77.5
+  params=0/-1.5/1/0/0/0 float=y maxiter=1000 bailout=25
+  inside=0 logmap=36 symmetry=xaxis periodicity=10
+  colors=00047Q<12>HKbILcHNd<10>0`qVih<4>vss<22>`V7`U5a\
+  S6<11>hAIi9Jj9I<26>Q7fKPMFf1<24>cIIdHJfIH<6>TEQVIJXMC\
+  ZN4<22>XmJdw5<2>IYh<36>NDnNCnOApNCnNDmNlGNnHNFl<25>Nn\
+  JXCn<13>NmKpfi<3>jhc
+  }
+
+frm:--MandelPMnew {; Jim Muth
+z=p2+10^(-100),
+c=pixel+(p3)
+a=real(p1)+1, b=imag(p1):
+z=a*(z^b-(-z)^b)+c,
+|z| <= 250
+}

@@ -1,0 +1,23 @@
+Double_Minus_Brot  { ; Fractal of the day, 26-07-98
+                     ; 16min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6
+  center-mag=-0.07637175133484095/+0.00442110269753733/65\
+  0496.8/1/10 params=0.03/-100/3/-1/0/-91.6 float=y
+  maxiter=1200 bailout=25 inside=0 logmap=52 symmetry=none
+  periodicity=10 colors=000e7U<2>d39d23b65<5>XUF<2>goe<6>\
+  Bfv<7>3AB<2>wjW<5>mOUlLUhRQ<5>Nz6xbCZXHARL<5>hKJ<6>BjV<\
+  6>EemMilTmk_qj<4>zAO<7>zAS3cX<7>8MhM`Z_nQ<4>2uuBoYJiA<2\
+  >tAWKX3<5>f4ii0pk0h<5>t01<5>JH6LZ8MoA8eW<4>DCPQHRaMT<4>\
+  ONI<2>GDw<2>S`u<4>Da9Aa09gV9my<7>StJ<4>xst<4>ubwu_ws`o<\
+  4>laHkaAleB<2>moEmrElkJ<5>g7j<7>e9g<6>64_<3>TuC<7>ZVY<3\
+  >o4V<4>iJ8<6>msl<6>8Et<7>gZFf9fe8_
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

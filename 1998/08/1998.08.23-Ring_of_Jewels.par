@@ -1,0 +1,22 @@
+Ring_of_Jewels     { ; Fractal of the day, 23-08-98
+                     ; 35min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6
+  center-mag=-10.70330552231361000/+0.05641659932887866/4\
+  901584/1/-130 params=10/-0.01/0.1/-10/0/-97 float=y
+  maxiter=3600 bailout=25 inside=0 logmap=158
+  symmetry=none periodicity=10
+  colors=000P9LQ9KhD3<5>SB2<9>BlG<3>OmJ<16>dZ4eZ4dW8<11>`\
+  8o<7>yVg<6>ysR<10>wY5wW3tU5<20>23Y<3>4_G4gC3fE<16>2YZ2Y\
+  _3Va<10>E3s<10>FDcQ8U_4L<5>SdI<4>WcjgQ_<5>j5M<11>1bN\
+  <10>xWXyXVzYTxZRw`P<3>LdIGeGBgFEfGGgGIhH<4>SiJUiJWjJYk\
+  K<3>eoLLpF0q9<6>QxoPym<12>JzTJzSLzT<6>WzWXzWYzVKzPLzNNzM
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

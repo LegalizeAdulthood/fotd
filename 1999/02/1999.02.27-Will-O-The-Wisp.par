@@ -1,0 +1,31 @@
+Will-O-The-Wisp    { ; Fractal of the day, 27-02-99
+                     ; 1-1/2hr on a 486-100, 640x480
+                     ;  Version 1961 Patchlevel 40
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4a function=ident passes=1
+  center-mag=-0.53092468977491340/+0.26030501171169840\
+  /1.155157e+008/1/-162.499 params=-1/1.01/1/1.001/100/0
+  float=y maxiter=5000 bailout=25 inside=0
+  logmap=340 symmetry=xaxis periodicity=10
+  colors=00004G02E<3>014011000<10>00001002202604B06E06J\
+  08N08R09V0B_0Bb0Dg0Ek0Ep0Gs0Ix0Iz0Jz<4>0Iz1Iw4It8GqBG\
+  pDGnGGkJGiNGfOEdREaVE_YEX_EVbETfDQ<3>qDGtDEwDDxEBxGBz\
+  IBzIBzJBzLBzNBzNBzOBzQBzQ9zR9zT9zV9zV9zX9zY9z_9z_9za9\
+  zb8zb8zd8zf8zg8zg8zi8zk8zl8zl8zn6zp6zp6zq6zs6zt6zt6zw\
+  6zx6zx6zqEzkLzdRxY_qRflLlgGsbNn_Ti<2>NlVJsQGzNIxLJwLL\
+  tLNsJ<3>TlIVkIXiGYgG_fGadEbdE<2>g_DiYDkXBlVBnTBpR9qQ9\
+  sO9tN8wL8xL8zJ6zI6zG6zE4zD4zB4z92<3>z21z11z11<12>z0Nz\
+  0Ox0Qw0Rw0Tt0V<2>p0_n0an0bl0dk0fi0fi0gg0if0kf0l<3>_0s\
+  80t90wB0xD0z<2>I0zN0zR0z<3>k0zp0zt0zz0z<3>z0zz4zzDz\
+  <9>ziz<31>ziz
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,21 @@
+Odd_Color          { ; Fractal of the day, 10-10-98
+                     ; 40min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1 center-mag=+1.0365\
+  1835240828900/+0.03270929345144750/1.312612e+010/1/-12\
+  .499 params=1/-100/0.121/-200/0/0 float=y maxiter=1500
+  bailout=25 inside=0 logmap=96 symmetry=none
+  periodicity=10 colors=000ZMB<4>hH6<9>F999A8<7>Y5C`4Ce0A\
+  <14>QubLnUGhL5o8<2>NENM0Y<4>o63<9>Uim<21>vLb<17>kQCnP6\
+  <6>UVd<7>mdW<17>YVrTSy<6>viM<24>WvtVvuSwv<2>WvvXuvYsv\
+  <2>alv<6>hkvjkvklvlmvmsv<3>qwvmxqjym<7>JzHGz9<11>GziGzl\
+  Izm<12>XzzNzmDz`<10>8zQ8zP9zQ<2>AzRTzEVzDXzC
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

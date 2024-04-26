@@ -1,0 +1,21 @@
+The_Eyes_Have_It_2 { ; Fractal of the day, 16-12-98
+                     ; 33min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelPMnew passes=1 center-mag=-4.741\
+  1959657624600/+0.02396874755165622/353.8635/1/-152.5
+  params=2/0.7/0/0/0/0 float=y bailout=25 inside=bof60
+  logmap=yes symmetry=xaxis periodicity=10
+  colors=000NWk<3>MWn<10>jaWlbUnbU<2>maSl`Sk_RjZRiYQ\
+  <26>M9DL8CM7B<11>LCGLCGLDGLEHLEHLFHLFILHILHI<3>LKKL\
+  LKMMLNNL<17>ddReeSffRhgRehQ<3>OPO<23>YOEYNDYOE<23>Y\
+  WOYWOXVP<23>KKWJDb<3>NaC<34>TV5TV5W_O`hg<8>EHZBEY7D\
+  T<3>AA_UW_<12>OWj
+  }
+
+frm:--MandelPMnew {; Jim Muth
+z=p2+10^(-100),
+c=pixel+(p3)
+a=real(p1)+1, b=imag(p1):
+z=a*(z^b-(-z)^b)+c,
+|z| <= 250
+}

@@ -1,0 +1,24 @@
+Widgets            { ; Fractal of the day, 30-04-98
+                     ; 5min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt10 passes=t
+  center-mag=-3.60393/3.14453/3.066667/1/-22.5
+  params=2.866719946897794/2.524882122257149/1.6414666432\
+  69143/-0.844254509109775/0.1715464491714225/2.181995223\
+  853267 float=y maxiter=95 bailout=25 inside=bof61
+  logmap=8 symmetry=xaxis periodicity=0
+  colors=000378854<9>2Qz<4>NaM<8>sRC<9>c670HS<12>LqF<2>Hh\
+  Y<10>QgtQgvQdv<7>QBr<2>fXdMRB<2>E10<6>o`wYaz<15>O57G549\
+  51<15>c5N<9>934XL1MEPC7l<6>Z9Wa9UcCW<8>nag<10>UE_<11>_4\
+  i_4ib8feBchEa<10>kuRgfUcSX_EZ<6>NpD<6>UW2i7C<7>4Mn<10>F\
+  Z8G_5Ja9<13>pvs<6>KbhUHLOEHJBC
+  }
+
+frm:MandNewt10 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-b)*z-g
+j=c*z^d+g
+z=z-e*h/j,
+f <= |h|
+}

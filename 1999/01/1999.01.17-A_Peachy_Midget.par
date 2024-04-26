@@ -1,0 +1,30 @@
+A_Peachy_Midget    { ; Fractal of the day, 17-01-99 
+                     ; 15min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5a
+  center-mag=+1.62057067265616300/-1.69984506048373500\
+  /1.938192e+010/1/-167.499 params=0.003/4/-1/-3/0/-2
+  float=y maxiter=12000 bailout=25
+  inside=0 logmap=41 symmetry=none periodicity=10
+  colors=00000P00N00U00a00k00r00y00p00j00c00Y00U00PhHz\
+  zYHzRKzaNzrRzaUzNYzNazRdzDKz00z0Nz0Hz0Rz00z0z<2>z0zu\
+  0yd0dR0KA00000AH0NY6akHnzUyzduzkrnrndykRzhDzh3zK0z00\
+  z00z00y<3>00zYHzzrzzyz<3>zzzzzryzYrzDkz0<2>Rz0Hz0Az0\
+  3r00a00N00600000000300A06D0DH0KN0RR0aUAhaHndNuhUzuHz\
+  z6zz0<4>zz0rz0dz0Rz0Hz03z00z0<3>0z06z0Hz0Uz6dzHrzRzz\
+  Y<2>zz3zz0<33>zy0yy0zy0zyNzyyzyzzyzzykryRUy36z00z0\
+  <15>0z06zK0zD0z60z0<18>0z0Dz0Rz0hz0uz0zzzzzznzzYzzDz\
+  z0zz<3>0zz0zu0zr0zn0zh0zd0za6zYHzRUzNdzKnzDzzA<2>zz0\
+  zz0rz0hz0Yz0<2>3z00zN0zz0zz<2>KzzUzzazzhzrnzkyzazzUz\
+  zKzzDzz3zz0zz00zD0zD
+  }
+
+frm:MandelbrotMix5a {; Jim Muth
+; "a" suffix added by L.StClair 3/3/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+1, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c^l,
+|z| < 100
+}

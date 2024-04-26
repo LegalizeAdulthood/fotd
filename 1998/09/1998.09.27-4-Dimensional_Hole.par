@@ -1,0 +1,22 @@
+4-Dimensional_Hole { ; Fractal of the day, 27-09-98
+                     ; 6min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=1
+  center-mag=-0.00000084289171359/+0.00000168786760473/13\
+  9868.7/0.9044/-102.042/12.042params=-50/-35/-0.568079\
+  12/0.54554552/-0.56807912/0.54554552 float=y
+  maxiter=5000 bailout=25 inside=0 logmap=90 symmetry=none
+  periodicity=10 colors=000SDgO8g<14>lblndlnej<15>smssmsr\
+  lq<19>`cM<16>QQQ<2>ONMNMLOLHNKMNLRMPWMY`LceTilPhjLhi<2>\
+  9gS5gM0iH<21>MLBNJ6<19>JMjJMlHLp<18>rNW<16>iJkiJljLn\
+  <12>gDc<7>eTXgV_<9>Un9Tp6Qr1<5>_yE`zGbzI<7>nzYuzm<3>jzM\
+  gzFfz1<9>ezWqzP<11>Uzf
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

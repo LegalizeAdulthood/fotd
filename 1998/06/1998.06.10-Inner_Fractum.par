@@ -1,0 +1,19 @@
+Inner_Fractum      { ; Fractal of the day, 10-06-98
+                     ; 10min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Parabolic passes=1 center-mag=+0.0010700851\
+  3888444/-0.00184936263939397/1.641368e+007/2.1671/-139.\
+  718/35.966 params=-0.2721/0.84205/-0.2721/0.84205 float=y
+  maxiter=36000 bailout=25 inside=0 logmap=74 symmetry=none
+  periodicity=10 colors=00080B<17>106105015025025<14>gAAj\
+  AAnA9<50>LAOKAOI9M<49>wJwuKu<3>yNmzNkzOizPg<16>zZBz_9zY\
+  4<4>zfMygQwiU<4>hrkesjbtiZuiXvh<2>XyfXzfXzeXzd<14>XzWXz\
+  WXzX<8>XzeXzfYzgZzh<16>ozypzzqzzrzz<6>yzzzzzzzzzzz<3>zzz
+  }
+
+frm:Parabolic {; Jim Muth  real(z),real(c)
+z=imag(pixel)+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

@@ -1,0 +1,20 @@
+Blue_Tulip         { ; Fractal of the day, 03-11-98
+                     ; 17min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=-MandelPMnew passes=t
+  center-mag=-1.73404/-1.00614e-016/56.79961/1/-90
+  params=1/0.1/0/0/0/0 float=y maxiter=95 bailout=25
+  inside=bof61 logmap=yes symmetry=xaxis periodicity=10
+  colors=000JlB<4>MjGAEdOjIPiJAEdQiLRhMAEdShO<17>eaeAEd\
+  hbefafAEdd_fc_gAEdaYg<25>8Fn7En5Fo<33>KDIKDHM8D<6>Acc\
+  Eyl9gf<45>AdK6cM<5>SiFWjEYlD<16>igD<8>RM5PK4OG0<18>Kl\
+  y<25>q`i<13>dgX
+  }
+
+frm:--MandelPMnew {; Jim Muth
+z=p2+10^(-100),
+c=pixel+(p3)
+a=real(p1)+1, b=imag(p1):
+z=a*(z^b-(-z)^b)+c,
+|z| <= 250
+}

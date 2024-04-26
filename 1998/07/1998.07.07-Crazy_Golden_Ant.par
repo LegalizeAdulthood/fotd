@@ -1,0 +1,19 @@
+Crazy_Golden_Ant { ; Fractal of the day, 07-07-98
+                   ; 2-1/2hrs on a 486-100mhz, 640x480
+reset=1960 type=formula 
+formulaname=MandelbrotMiN
+center-mag=-0.31136239107253550/+0.85382146892199450/21\
+1001.4/1/-122.499 params=1.618034/0/0/0/0/0 float=y
+maxiter=42000 bailout=25 inside=0
+logmap=558 symmetry=xaxis periodicity=0
+colors=000U3S<9>cDRdEXeFbfGg<21>l3t<20>2lp<16>6HJ<14>op\
+6<13>5Ux<3>Xnn<20>eF2eE0gJ3<3>nZFobHo`K<6>oOZoM`mL`<7>V\
+EZTDZTGV<2>SOJ<9>RjLRlLSlJ<3>SlBlqpUmF<13>mxwakq<20>nxz\
+ys8<21>nxxjtz<10>nxzrsz<2>uyzuzzvzzwzzxzz
+}
+
+frm:MandelbrotMiN {; Jim Muth
+b=p1, z=p2, c=p3+pixel:
+z=(-z)^(b)+c,
+|z| <= 16
+}

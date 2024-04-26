@@ -1,0 +1,22 @@
+Mandelbrot_Pie     { ; Fractal of the day, 09-11-98
+                     ; 70min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt04 passes=1
+  center-mag=1.50378/-0.305209/1.024287/1/67.5
+  params=0.666/1.526/0.798/0.134/0.034/1.025 float=y
+  maxiter=120000 bailout=25 inside=0 logmap=yes
+  symmetry=none periodicity=10
+  colors=000hmk<16>OF_<15>KSfJTgKSf<18>WPRXPQ_SObWMe_Jh\
+  cGmgD<19>md_md`nfd<15>gM2gL0hK1<15>tIDuIEvGD<16>naUpc\
+  T<18>KWo<10>VViWVhWVhWVhT7`<4>Z6hY1h_6ic8idAiZAmMBqBB\
+  u0Bx<3>j8e<3>XfD<20>llamlbnkb<14>euimvw<2>SsIKu2<6>Od\
+  GYsm<6>ismksmnvn<2>jok
+  }
+
+frm:MandNewt04 {; Jim Muth
+z=c=pixel:
+a=z^3+(c-1)*z-c
+b=p1*z^2+c-1
+z=z-p2*a/b
+p3 <= |a|
+}

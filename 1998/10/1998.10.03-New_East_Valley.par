@@ -1,0 +1,19 @@
+New_East_Valley    { ; Fractal of the day, 03-10-98
+                     ; 15min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Mandel_4-D passes=t
+  center-mag=0.258141/2.77556e-017/49.73873/1/-90
+  params=0/0/0.5/0/1e-010/0 float=y maxiter=1200
+  bailout=25 inside=255 logmap=18 symmetry=xaxis
+  periodicity=0 colors=000QTU<30>KUcKUcJTb<45>DGHDGHEFG\
+  <97>8gQ8gQ8hP<5>8iJ8iI7hH<2>4gE4fE4fF5eF<58>amS
+  }
+
+frm:Mandel_4-D {; 4-D Mandelbrot, 8-D Julibrot
+a=(p1), b=(0,0), d=p2+2:
+z=z+1
+f=sqr(a)-sqr(b)+pixel
+b=d*a*b+p3
+a=f
+|a|+|b| <16
+}

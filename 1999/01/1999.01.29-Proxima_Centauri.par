@@ -1,0 +1,26 @@
+Proxima_Centauri   { ; Fractal of the day, 29-01-99 
+                     ; 10min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyNewton passes=1
+  center-mag=-0.597116/0.84829/0.4732087 params=-3.100\
+  814844203009/5.641254921109653/-0.7136875514999848/-\
+  2.667577135532701/2.164992217780084/5.109509567552721
+  float=y maxiter=60 bailout=25 inside=bof61 logmap=yes
+  symmetry=none periodicity=0
+  colors=000L3Q<2>6gw<4>NTiRQfUOcYM`<3>jDPmBMnDJ<5>sJ1\
+  <6>AvG<4>eM2_HNfKEmN5<11>ClU`k6<8>U`5EKY<4>HLpHLsKMq\
+  <14>yOS<9>CYI<9>Rhi<9>Uau<12>WRhTMG<3>UQ8<6>pnJ<13>g\
+  orgotemq<13>QNJ<12>CDv<12>g`b<6>_pA<3>S3nCLb8trYdXwP\
+  Bxfg<2>`gs_V_ZJHdc`jwt<9>H4Q<3>Zw5<6>9wC<8>twI<2>htY\
+  `9U<2>P4R
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

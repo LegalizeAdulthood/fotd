@@ -1,0 +1,20 @@
+Surreal_Network    { ; Fractal of the day, 28-10-98
+                     ; 50min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=-EllipPMnew passes=1
+  center-mag=+0.02360313801436014/+0.01427653727829874/46\
+  28.555/1/84.999 params=3.5/1.1/0/0/-0.023/-0.227 float=y
+  maxiter=255 bailout=25 inside=bof60 logmap=yes
+  symmetry=none periodicity=10
+  colors=000cUmMci<24>4Aq<7>OkoNns<9>gwKiwHjvI<27>mkimki\
+  njjnjjnij<37>qTkqTkpUj<31>dqGdqGcrH<21>XrYMhNWr_Wr_\
+  <34>KHOKGOLIN<38>UuH
+  }
+
+frm:-EllipPMnew {; Jim Muth
+z=flip(imag(pixel))+p2,
+c=real(pixel)+p3
+a=real(p1), b=imag(p1):
+z=a*((-z)^b+z^b)+c,
+|z| <= 250
+}

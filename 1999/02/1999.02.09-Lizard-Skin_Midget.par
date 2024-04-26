@@ -1,0 +1,25 @@
+Lizard-Skin_Midget { ; Fractal of the day, 09-02-99
+                     ; 35min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4a function=recip passes=1
+  center-mag=-2.59271855224522800/-0.29152006580314850\
+  /8.39566e+011/1/139.988/0.012 params=-0.2/-3/0.003/4\
+  /0/0 float=y maxiter=1800 bailout=25
+  inside=0 logmap=118 symmetry=none periodicity=10
+  colors=000LPT<2>1Sc<9>TknWmoZnp`oq<7>vwy<9>MB6<9>SYF\
+  T_GTaGUdHVhIXkJYnKaqL`uLbqN_nPZkRYiTXfV<5>YRfTSfTW_6\
+  YX<2>Cc`EeaFfbHgc<12>dttfuuhwx<15>akVajTblR<3>ZgUZfV\
+  YdWXbW<5>TR_SPTSNTzsT<3>ztSztSxuSvuStuSrvR<35>Fgg<7>\
+  VckXckZdl<12>xbgzagzaf<9>z`cz_`<10>zgz<9>zWizUj<22>z\
+  fKz_5zZ5<4>zaP
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

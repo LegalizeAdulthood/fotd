@@ -1,0 +1,18 @@
+Valley_Eruption    { ; Fractal of the day, 14-06-98
+                     ; 7min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Parabolic passes=1 center-mag=+0.0031526183\
+  1353955/+0.05017195367762136/356.5062/0.1008/90
+  params=0/0/-0.11044761/0.8822759999999999 float=y
+  maxiter=6000 bailout=25 inside=0 logmap=35 symmetry=none
+  periodicity=10 colors=000fMe<10>aMdaMd`Mc`Mb<24>OJPNIOO\
+  JP<40>Att9uuAss<37>IsXJsWJsWJrW<56>E3CD2BD2C<25>XSgYTi\
+  XSg<41>Zee
+  }
+
+frm:Parabolic {; Jim Muth  real(z),real(c)
+z=imag(pixel)+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

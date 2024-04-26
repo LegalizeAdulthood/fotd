@@ -1,0 +1,21 @@
+The_Dagger_of_Doom { ; Fractal of the day, 22-02-99
+                     ; 36min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot03-XY-ZW function=ident/flip
+  passes=t center-mag=0.190909/1.10038/7.819346/1/37.499
+  params=86.33/86.33/0/0/0/0.7 float=y maxiter=120000
+  bailout=25 inside=255 logmap=yes symmetry=none
+  periodicity=10 colors=000D47C57FA8<2>IDBJEDLHE<5>VVKW\
+  XLXXM<4>VZRVZSWYT<6>UZ_UZ`T__<30>MbLMbLKdM<47>p97p86p\
+  97<17>pQ9pR9pT9<7>phAqjArjA<5>ymBzmBzmB<3>zmDzlEzmE\
+  <76>zmvzmwzmwzmw<14>zmwP0U
+  }
+
+frm:multirot03-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z*z*z+c,
+|z| <= 36  }

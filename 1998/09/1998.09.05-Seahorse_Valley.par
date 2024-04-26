@@ -1,0 +1,20 @@
+Seahorse_Valley    { ; Fractal of the day, 05-09-98
+                     ; 5min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XY-ZW function=flip/ident passes=t
+  center-mag=-1.33227e-015/-0.807933/1.825758/1/-100
+  params=86/86/0/0/-0.76/0 float=y maxiter=5000
+  bailout=25 inside=253 logmap=yes symmetry=xaxis
+  periodicity=10
+  ranges=0/-1/76/86/96/106/150/250/500/800/1200/1800/5000
+  colors=000K00UPcKRF<6>rrmwvmzzz000<238>000UXz000000
+  }
+
+frm:multirot-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=sqr(z)+c,
+|z| <= 36  }

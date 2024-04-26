@@ -1,0 +1,25 @@
+Undersea_Fractal   { ; Fractal of the day, 11-01-99
+                     ; 2hours on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5a passes=1
+  center-mag=+0.40267735687130260/+0.04015233763617491\
+  /4.403398e+007/1/95 params=-1/-9.999/1/-10/5000/-1.2
+  float=y maxiter=5000 bailout=25 inside=0 logmap=216
+  symmetry=xaxis periodicity=10
+  colors=000SsP<12>eoQz20hoQ<7>tmQulQwlPylOzkM<3>zbK<2>\
+  yiOxkPwlRvlSulU<4>olVcO0mlW<4>klY0fajlZjlZzb1zqGil_\
+  <6>flbkbzelc<49>OkuOkuNjt<24>J`nJ_nJ_mJ_l<3>IYhIYgIXf\
+  IWe<10>GLVGKUFJUFIU<7>EAUE9UE8TD7S<5>C1MC0LC0KC0K<13>\
+  A0K90KA0K<2>C0KC0KD0LE0M<6>I0TI0UJ0UJ0U<19>V0UV0K<14>\
+  c0K
+  }
+
+frm:MandelbrotMix5a {; Jim Muth
+; "a" suffix added by L.StClair 3/3/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+1, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c^l,
+|z| < 100
+}

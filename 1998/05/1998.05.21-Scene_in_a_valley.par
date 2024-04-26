@@ -1,0 +1,21 @@
+Scene_in_a_valley  { ; Fractal of the day, 21-05-98
+                     ; 2-3/4hrs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=t
+  center-mag=-0.88405207296400700/+0.00147031649214070/73\
+  .10978/0.1152 params=30/0/0/0/-1.125/0.2165 float=y
+  maxiter=18000 bailout=25 inside=0 logmap=36
+  symmetry=yaxis periodicity=10
+  colors=000PBP<25>SBTSBTRCSQCSQCS<4>NCONCNMCNMCNLCNLCOKC\
+  O<4>ICUHCTHCTGCUFBU<11>GIgGJhGKh<19>HVjHWjIWjJXkKXkKYk<\
+  12>Zdl_el_fkaelbel<3>cdlacm<13>a_oa_o`Zo_Zo<6>TXpSXpSWq\
+  SWq<40>eJweJwfKx<72>EFS
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

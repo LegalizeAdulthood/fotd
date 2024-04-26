@@ -1,0 +1,22 @@
+Boiling_Mandelbrot { ; Fractal of the day, 19-07-98
+                     ; 20min on a 100mhz, 640x480
+reset=1960 type=formula 
+formulaname=MandelbrotMix6 passes=1
+center-mag=-0.50590043481853360/+1.56618133049557300/11\
+73.425/1/54.999 params=-2/-3/-3/-2/0/2400 float=y
+maxiter=800 bailout=25 inside=bof60 logmap=9
+symmetry=none periodicity=10 colors=000TdmTdnTdpUgxUfzV\
+htVhuiivWjxWkyWmpUiy<2>QbyP`xOYxMVx<10>81v<4>67_58V59P4\
+AK4BE0093DF<2>3FW3F`2Ge2Hj2Hn2Is2Iw<18>je7<14>Pm`OmaNl_\
+<14>NY6NY4MZ6<14>HcNHcOIdN<19>ap6ap6`lA<9>SAc<15>mbm<19\
+>PXi<6>fHPhFMiCK<20>kX9kXKkX9<2>aXE`XFhVDk_Kmc3`hOZmN<2\
+2>`qK`qK`qLarMarN
+}
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

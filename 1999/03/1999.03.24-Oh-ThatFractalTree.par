@@ -1,0 +1,22 @@
+Oh-ThatFractalTree { ; Fractal of the day, 24-03-99
+                     ; 3-1/2min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multmin1-5-XY-ZW function=flip/ident
+  passes=1 center-mag=-0.111406/-0.929928/34.99564/1/-80
+  params=90.2108/89.2092/0/0/-1.137527/-0.003304 float=y
+  maxiter=12000 bailout=25 inside=0 logmap=27
+  symmetry=none periodicity=10
+  colors=0006BE<5>58C58C7AD<22>UrZWt_VsZ<45>MW2<2>VU0YU\
+  0`V2<4>oZ9r_Bs_C<4>xcKydLzgN<7>iNI<2>UGHKDG<4>81E<21>\
+  NV2<19>2Tv<62>UZNUZNWYQ<14>lVs<7>ZLpXKpVJq<6>UKx
+  }
+
+frm:multmin1-5-XY-ZW {; draws 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=(-z)^1.5+c,
+|z| <= 36  }

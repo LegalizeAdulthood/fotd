@@ -1,0 +1,26 @@
+Curdled_Doughnut   { ; Fractal of the day, 22-01-99 
+                     ; 3-3/4hr on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5a passes=1
+  center-mag=+0.368753275665356/+0.7569376196017291/98\
+  09339/1/-117.5 params=-0.5/1.75/-0.8/-3/0/0 float=y
+  maxiter=12000 bailout=25 inside=0 logmap=470
+  symmetry=xaxis periodicity=10
+  colors=000jKh<9>sK_tKSuKMvKN<3>wKQwKV<11>wKOwLTwMXw7\
+  `<16>wkTwmTwnU<9>wo`woavobuob<2>roeqoeqofqogqog<17>H\
+  hS<5>IMJzxI<7>zp7zo6zn5zm4zk3zi2zg2ze1zc0xa0wY0<2>rS\
+  0kQ0jN0cL0bI0WG0<4>O60N50L50K50M52NAEOEPOHO<6>ORO<4>\
+  OYlOZmO_w<4>Oew<2>OpwOtwOvwOjw<2>OOwOCwOAwO5w<3>O5wO\
+  6wO8wOEwOUwOcwOnwOzwOzwOzwOuwOtwOqwOmw<16>OZwOZwO_w\
+  <13>OiwOiwOhw<2>Ogw<2>Oow<29>Oow
+  }
+
+frm:MandelbrotMix5a {; Jim Muth
+; "a" suffix added by L.StClair 3/3/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+1, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c^l,
+|z| < 100
+}

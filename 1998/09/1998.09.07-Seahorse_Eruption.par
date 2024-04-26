@@ -1,0 +1,19 @@
+Seahorse_Eruption  { ; Fractal of the day, 07-09-98
+                     ; 2min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=t
+  center-mag=0.168437/-0.786027/3.887877/1/-90
+  params=0/90/0.9/0/0/0.18 float=y maxiter=32767
+  bailout=25 inside=253 logmap=4 symmetry=xaxis
+  periodicity=10 ranges=0/-1/40/45/55/75/105/150/300/50\
+  0/1000/3000/32767 colors=000K00UPbQUGRXKUZO<2>hmbprhw\
+  uozxqzzz000<238>000UXy000000
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

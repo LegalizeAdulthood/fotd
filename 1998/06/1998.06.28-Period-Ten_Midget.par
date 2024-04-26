@@ -1,0 +1,21 @@
+Period-Ten_Midget  { ; Fractal of the day, 28-06-98
+                     ; 8-1/2min on a 486-100mhz, 640x480
+  reset=1961 type=formula 
+  formulaname=Elliptic passes=1 center-mag=-0.00000000652\
+  908738/+0.00000011326078376/1210623/0.1561/-87.48/-68.3\
+  88 params=0.334997695/0.04683865838/0.334997695/0.04683\
+  865838 float=y maxiter=3600 bailout=25 inside=0
+  logmap=230 symmetry=none periodicity=10
+  colors=000a8k<13>f8Yf8Ye9X<12>bHUaIUaHU<2>`GT`GT`HS_IS_\
+  IR_HQ_GPZEO`BN`8L<28>_GM_GMYGK<19>tGmuGnvIo<21>ylsymswn\
+  q<13>ZtcXtbUxc<14>s8MfGS<15>IXGGYFG`C<13>EMmELpDIt<25>J\
+  oSJpRLoQ<10>bdJccJdbHbcJebGgaEj`Boi2l_9lSE<8>`HVPQf<5>9\
+  Qh_7o<2>a8l
+  }
+
+frm:Elliptic {; Jim Muth  imag(z),real(c)
+z=flip(imag(pixel))+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

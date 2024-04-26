@@ -1,0 +1,28 @@
+The_Next_View      { ; Fractal of the day, 28-03-99
+                     ; 1hr on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=RectangularMiN passes=t
+  center-mag=-0.02424908108058854/+0.00000175965279970\
+  /3734.103/0.001234/0/-89.955 params=-1.5/0/1.579155\
+  55/-1.14721592/1.57915555/-1.14721592 float=y
+  maxiter=30000 bailout=16 inside=255 logmap=33
+  symmetry=none periodicity=10
+  colors=000I00o0Xr0Zq0Xo0X<3>m0Wm0Vk0Vj0Vj0Vi0Ti0Th0T\
+  h0Sf0Sf0Se0Sd0Qd0Qb0Qb0Pa0Pa0P_0P_0OZ0OX0OX0MW0MG02U\
+  0MN0BT0LT0LS0JQ0JQ0JP0JP0IN0IN0IM0GM0GL0GJ0GJ0FI0FI0\
+  FG0DG0DF0DD0BF0D<6>G0DG0DI0DN0DI0F<4>J0FJ0FL0F<3>M0G\
+  M0GM2G<4>N3GN3GN5GP5GP5I<2>Q6IQ6IQ8IQ8IQ8IS8ISAI<4>T\
+  BJTBJTDJUDJUDJUDJUFJUFJWFJWGLWGLWGLXGLXILXILXILXJLZJ\
+  LZJLZJLZLM<3>_MM_MMaMMaOMaOMaOMaPMbPObPObPObQOdQOdQO\
+  dQOdSO<4>eTPfTPfVPfVPfVPfWPhWP<3>hXPiXQiZQiZQiZQjZQk\
+  _Qk_Qk_QlaQmaQnaQoaSpbSqbSrbSrdS<5>ueSveSvgT<2>xgTxg\
+  TygV<13>zgXzgXzgZ<8>zh_zh_zha<8>zhbzhbzhd<8>zhezhezi\
+  g<4>zihzihzki<5>zrqztrzutzwuzxw<2>zzzehm
+  }
+
+frm:RectangularMiN {; Jim Muth
+b=p1, z=flip(real(pixel))+p2,
+c=flip(imag(pixel))+p3:
+z=(-z)^(b)+c,
+|z| <= 16
+}

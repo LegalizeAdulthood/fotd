@@ -1,0 +1,24 @@
+Halloween_Hole     { ; Fractal of the day, 31-10-98
+                     ; 5-1/2hrs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=mult1-5-XY-ZW function=ident/flip
+  center-mag=-0.00047781888071819/+0.000492914075931\
+  88/6.331467e+008/0.9434/-63.45/19.607
+  params=113/132/0.045712/0.503111/0.045712/0.503111
+  float=y maxiter=120000 bailout=4 inside=0 logmap=193
+  symmetry=none periodicity=10
+  colors=000YWu<21>ClA<3>IaDKUELRFMKFORG<6>Y8LZ5M`1L<24>\
+  _WTZVU<10>fhN<10>pXdqWfrUi<18>peNofMngM<14>cuJcuJbvK\
+  <28>AvP6xRAvPDuO<3>PyKSzJVzHYzG<5>ozA<9>Xzfizh<2>4zi\
+  <15>Szg<12>8zm7zm4zn<21>kzmmzmnzlozk<11>uza
+  }
+
+frm:mult1-5-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^1.5+c,
+|z| <= 36  }

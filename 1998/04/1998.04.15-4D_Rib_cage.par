@@ -1,0 +1,21 @@
+4D_Rib_cage        { ; Fractal of the day, 15-04-98
+                     ; 30min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 passes=1
+  center-mag=+0.26276668278628550/+2.41317784836057400/11\
+  7.5989/1/-134.999 params=6.7/-1.2/-1.7/-8.2 float=y
+  maxiter=1800 bailout=25 inside=0 logmap=4 symmetry=none
+  periodicity=10 colors=000P6kQ3qQBe<7>famZUe<5>DM6<9>pXpi\
+  Vj<6>MO`<10>qUGtVEuWG<2>y_OwYK<9>rb3egarb4<8>jkKeiN<4>7k\
+  yJki<6>0tfEqlPpq_owQpq<11>kiumhvmes<7>hISgFOhIQ<5>gC9fB6\
+  dD6<12>Fj1CV44L6HqTCU4<9>HD0NF8<4>vHjfNX<3>Ao76gP2ZgCk9<\
+  6>QJQ3igONP<7>RDkSGd<12>u8GsXXutl<9>KSAMTE<9>03G<10>if9X\
+  XB<5>3JEUPItVN3IF<13>11aEOJ
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

@@ -1,0 +1,21 @@
+Oblate_Inferno     { ; Fractal of the day, 06-06-98
+                     ; 25min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Oblate passes=t center-mag=+0.2932311752034\
+  2800/-0.00732292959234564/20770.13/0.03329/-179.452/83.\
+  967 params=0/0/0.277/0 float=y maxiter=80000 bailout=25
+  inside=0 logmap=74 symmetry=xyaxis periodicity=10
+  colors=000006<12>00C00C10D20D30E40E<11>GBJH0K<18>80S80S\
+  71T72T73U<9>7DP7EP7EP7EO<2>7EN7FN7FM7GM7GL<2>7HK7HK7GJ<\
+  5>7GH1HK3HJ4II6JH7IH9JG<2>DIEEHDGFC<15>a91c90d80e80g80h\
+  70i70i60i40j30j30l20m30n40m60<8>mA0mB0nB0oC0pD0qF0rG0qG\
+  0<3>qD0qC0qD0qC0qD0qD0qE0<3>qC0qB0qC0<6>pF0pG0pI0<6>pS0\
+  pU0qV0rW0<6>yb3zb4za4<3>za6za7zb7zc8<21>zyJzzKzzM<36>zz7
+  }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

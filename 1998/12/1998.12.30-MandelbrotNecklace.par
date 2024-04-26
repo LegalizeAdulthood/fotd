@@ -1,0 +1,26 @@
+MandelbrotNecklace { ; Fractal of the day, 30-12-98
+                     ; 39min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix7a passes=1 center-mag=-0.600\
+  82430338989270/-0.42436405476238610/1.973555e+009/1/145
+  params=0.005/10/-1/-2/0/0 float=y maxiter=6000
+  bailout=25 inside=0 logmap=98 symmetry=none
+  periodicity=10 colors=00064IMNX75M86O<5>k4o<2>Vrt<4>i\
+  n2<5>AHU76H5BOCJQJORQRSWXT<3>vlY<4>hlSkmcmnn<6>GoxFis\
+  Ednx6F981XOHsbXbQfMDojRT<3>HVe<4>rAv<6>Qu5<6>2rm<3>Ud\
+  E<2>oqH<5>vxt<4>Xfp<2>QLT<5>uNr<5>LFU<31>`RTWbT<2>M`l\
+  B_S1Z7<4>d8pf3tZKiLUD48F<2>D3kG2vH5u<5>LKpmAlc9VV8D9X\
+  P<7>kvPlwemxdnyc<4>szcWzcZzc<7>Vzc<2>Fzc<10>EzcYzcqzc\
+  <2>xzc<2>bzc<5>Mzc<5>RzcezctzcAzc<2>OzcSzcWzc_zcczc\
+  <2>ozc<4>RzcWzcUzc
+  }
+
+frm:MandelbrotMix7a {; Jim Muth
+; "a" suffix added by L.StClair 9/1/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel:
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| <= l
+}

@@ -1,0 +1,21 @@
+Crescents          { ; Fractal of the day, 07-05-98
+                     ; 10min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix5 passes=1
+  center-mag=-0.00138600286065729/+0.00037445787050105/644252
+  params=0.01/100/1/-1 float=y maxiter=600 bailout=25
+  inside=0 logmap=26 symmetry=xaxis periodicity=10
+  colors=000J1YJ4_L7aOAcPDgRFjSIi<3>`TqbWrcZseatfduigwkky<3>\
+  uzzsuyqqxpmunirmeojakjZihWggTdfQb<4>aBMa8J_AD_CL<3>`KPaMRb\
+  OR<4>cYSc_SbaS<7>aqTasTcoS<12>v0N<14>wgowipvjq<19>ruyrvyry\
+  y<6>jzoiznhzk<22>cz0hzImzZ<7>NzW<8>nzA<13>uzWozUkzTgzSdzRZ\
+  zSJzT<2>gzV<4>mzOnzNozLpzJ<8>xz3xz2wz3<8>tz3<5>Kzu<4>WzhYz\
+  f_zcaz`czYezV<9>yz2<7>9zk<2>7zlMzdMzf
+  }
+
+frm:MandelbrotMix5 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, c=pixel/(a*d):
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

@@ -1,0 +1,21 @@
+Impact             { ; Fractal of the day, 11-04-99
+                     ; 10min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=1
+  center-mag=+0.00015228023848360/+0.000883496063\
+  55551/45.86667/49.211/-180/17.684
+  params=48.3/-71.23/0/-1.09/0.0592963/0.6432423
+  float=y maxiter=32767 bailout=25 inside=253
+  logmap=50 symmetry=none periodicity=10
+  ranges=0/-2/145/148/154/165/180/215/245/300/400\
+  /700/32767 colors=000F00URZORhPVm<3>hjumntrrswv\
+  qzzp000<238>000kVz000000
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

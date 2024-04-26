@@ -1,0 +1,20 @@
+Salt_and_Pepper    { ; Fractal of the day, 19-08-98
+                     ; agonizingly slow, 7hrs at 100mhz
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1 center-mag=-0.74675\
+  000805278000/+0.00001291171498659/3.875969e+009
+  params=0.1/-6/-0.1/-7/0/99990000 float=y maxiter=12000
+  bailout=25 inside=bof61 logmap=971 symmetry=xaxis
+  periodicity=10 colors=000Kdc<18>RnSRnSQkT<15>ICgHAhE7j<\
+  20>zDE<31>8F7<9>EFPEFQGHP<9>WXFXYEWXD<24>PS0KdcSV4<10>w\
+  th<15>QpkKddMol<9>1mm3llKdc7kj<5>HhfJgeKdcMfd<10>\
+  daX<3>hC8<8>kPNkQPkRQlTR<16>rjXNSe<3>FYk<10>Kcd
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

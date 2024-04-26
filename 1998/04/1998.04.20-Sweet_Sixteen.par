@@ -1,0 +1,24 @@
+Sweet_Sixteen      { ; Fractal of the day, 20-04-98
+                     ; 75secs at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=IfElse03 function=cotan/cotan center-mag=-0.\
+  265745/-0.147713/0.5698925 params=1.6/1/0.8/0.8/1.8/0.9
+  float=y maxiter=95 bailout=25 inside=bof60 logmap=yes
+  symmetry=none periodicity=0
+  colors=0000000000GKbKB3AKyU0O815P1zW17b28i29p2Rr3az3fz3k\
+  z4<4>zz5<6>zz7zz7zz8zz9<3>zzCzzNuzXuzXvzYuzZrzZ<6>uzc<3>\
+  Ezc<8>EzfPzU_zH<5>szL<5>ezO<15>qzg<3>Wz_RHY<2>BHTRgy<6>0\
+  FW<3>vJL<8>N2SBf9<11>TrO<3>Qgx<6>icOkcJldH<7>tg9tg8v_F<2\
+  >zEY<11>Ghz<13>elg<3>Fth<14>F7S<6>L0kL0mM1j<11>V8Ii16RgU\
+  <6>Fxa<6>Exc<3>Zgj<4>InlEpl8ST<2>7VT
+  }
+
+frm:IfElse03 {; Jim Muth
+z=y=pixel, a=real(p1), b=imag(p1),
+c=p2+(p3*pixel), w=0:
+IF(w), z=fn1(real(y))+fn2(imag(y)), w=0
+ELSE, z=(y*a), w=w+1,
+ENDIF,
+z=z^b+c, y=z,
+|z| <= 100 
+}

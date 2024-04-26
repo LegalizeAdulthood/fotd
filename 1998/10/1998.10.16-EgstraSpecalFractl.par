@@ -1,0 +1,22 @@
+EgstraSpecalFractl { ; Fractal of the day, 16-10-98
+                     ; 90secs on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Mandel_4-Ddr
+  center-mag=-0.00560195/2.77556e-016/4.943838
+  params=0/0/0/-11/0.001/0 float=y maxiter=1200 bailout=25
+  inside=0 logmap=yes symmetry=none periodicity=0
+  colors=000YMV<4>a7ig6q<6>40N<11>pOLqPLsPLtQL<8>t8R<2>b_\
+  GXhDQt5<6>Yc_<14>yj1SUf<10>NDCNC9L96<7>UIDF0IVJDia8A3Xx\
+  t3<5>zSa<11>NHR<2>rSM<8>b`Vsq9jiLaaWZYm<10>BJD<4>MCXOB`\
+  T0d<7>IabKiY<7>9Un8Sp5Ru<13>WDQ`AH<4>HKm9Lu<12>mOepOduL\
+  e<6>kcTOu0_mEjeSwU`<7>omsqxx<9>hJihFhiKi<5>jiovpq<3>Bgj\
+  xoIUjW0ei<4>5UeUTPVYI<2>YPS
+  }
+
+frm:Mandel_4-Ddr {; 4-D Mandelbrot, 8-D Julibrot
+a=(p1), b=(0,0), d=p2+2:
+f=sqr(a)-sqr(b)+pixel
+b=d*a*b+p3
+a=f
+|b|/|a| <16
+}

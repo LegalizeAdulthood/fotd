@@ -1,0 +1,19 @@
+What__me_worry     { ; Fractal of the day, 08-06-98 (1/2)
+                     ; 16min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Oblate passes=1 center-mag=-0.0004620053298\
+  1806/+0.00000000000000000/2003365/0.3559/-90
+  params=-1.9854075/0/-1.9854075/0 float=y maxiter=3600
+  bailout=25 inside=0 logmap=26 symmetry=xaxis
+  periodicity=10 colors=000pLI<2>nOLnOMlPL<13>W`H<6>gwF<8\
+  >kk9<23>ySiuK_rDQo6H<3>hbdlakoaq<2>G1R<8>Uvx<10>ctd<6>O\
+  tW<2>kjU`EM<11>oun<21>vvR<2>CYe<20>WhE<22>8GM<3>PiV<12>\
+  GLs<11>nil<9>TnA<7>6`_<21>rWdrJFqKH
+  }
+
+frm:Oblate {; Jim Muth  real(z),imag(c)
+z=real(pixel)+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

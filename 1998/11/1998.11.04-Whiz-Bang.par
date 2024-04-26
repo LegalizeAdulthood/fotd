@@ -1,0 +1,21 @@
+Whiz-Bang          { ; Fractal of the day, 04-11-98
+                     ; 4-3/4min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotQud
+  center-mag=+0.15937992039687130/0/4104595
+  params=1e-022/100/1e-022/-100/0.63129423997/0 float=y
+  maxiter=1200 bailout=4 inside=0 logmap=32 symmetry=xaxis
+  periodicity=10 colors=0005GV3AV24X38Z<3>6KVLYZ_kapzdqjh\
+  <2>z6t<5>rfrmenicjd_f`WbXX_dU1hLukcq<5>waW<5>Qsq<2>_9I\
+  <3>leX<6>mCCm8AoBH<6>wUz<6>5Xy<4>mg5<6>zL5<2>j3N<7>xks\
+  <2>vVI<5>_xT<7>BoN<6>`WR<4>Ot_<3>OMoaRnnVn<5>LU6<6>ekU\
+  <15>iqTirNiqT<2>jrTjrTksTktT<4>lyTfzO<2>YzQ<6>kzTfzK\
+  <24>lzTyzhxz5<30>lzTNzU<3>gzTmzg<6>lzb6zQ
+  }
+
+frm:MandelbrotQud {; Jim Muth
+z=p3, c=pixel,
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+z=sqr(z)+(.2*(z*z*z))+(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

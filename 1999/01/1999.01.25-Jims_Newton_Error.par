@@ -1,0 +1,25 @@
+Jims_Newton_Error  { ; Fractal of the day, 25-01-99 
+                     ; 4min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=CrazyNewton passes=1
+  center-mag=0.789773/0.663088/9.847856 params=1.306108\
+  279671621/2.002204962309641/1.965124973296304/1.89284\
+  1883602405/-3.994819483016449/0.1973250526444288
+  float=y maxiter=100 bailout=25 inside=253 logmap=yes
+  symmetry=xaxis periodicity=0
+  colors=000Kz234h00e00002Me00p0evmn<11>kFz1AEus0<3>hLA\
+  eDC`JG<7>0xd<12>`hc2S3<11>tcj<6>CQ6<4>kSF<6>Inl<10>XY\
+  OYXMXZL<12>OpF<9>jbJ<10>JwEOQ`<12>58t<9>AIhAJgBLeBNc\
+  <6>C`QCaPAWT<2>7Ga<11>7Ma<4>xll<15>Pg`<9>5wu<5>VwYAmF\
+  5BU<8>HYN<12>FDQ<11>W13Xz2xvefGW
+  }
+
+frm:CrazyNewton { ; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+z=pixel:
+zx=z^b
+zy=c*(zx*z)
+z=(d*zy+a)/(k*zx),
+f<=|zy-a|
+}

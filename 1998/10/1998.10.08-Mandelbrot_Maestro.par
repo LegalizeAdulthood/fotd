@@ -1,0 +1,24 @@
+Mandelbrot_Maestro { ; Fractal of the day, 08-10-98
+                     ; 1-1/2min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Mandel_4-D
+  center-mag=-1.75909/0.00219158/69.70197
+  params=0/0/0/1.137/0.001/0
+  float=y maxiter=1200 bailout=25 inside=0
+  logmap=yes symmetry=none periodicity=0
+  colors=000KYN<8>1u43n7029<3>06H47H<4>TEOYAPbGQg7RlISmCT\
+  nPUoIVpVWpOXq`YrPZsc_oNzsb_lHgkaekJckZakL_kWYkNXkYVkPTk\
+  VRkRP<3>kVIkWGlYH<12>hD0<7>4p0<13>l7y<3>DRq0_r<7>VA_Z7Y\
+  b1X<13>R_MRaMPcO<6>EpWHxa<2>BhZ4f`<12>u9N<2>lTCi_9dd3\
+  <12>sg_<15>a38<10>SgUNoMJwF<14>ZaV_`W`ZZ<9>bPx<3>lxe<6>\
+  ZrmYrnWpl<9>L``<2>GlZKcQNVIfJHy7HdALKDOVLY<3>NWQ
+  }
+
+frm:Mandel_4-D {; 4-D Mandelbrot, 8-D Julibrot
+a=(p1), b=(0,0), d=p2+2:
+z=z+1
+f=sqr(a)-sqr(b)+pixel
+b=d*a*b+p3
+a=f
+|a|+|b| <16
+}

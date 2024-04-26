@@ -1,0 +1,31 @@
+A_Fractal_Conch    { ; Fractal of the day, 08-03-99
+                     ; 4hrs on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=HyperBrotI passes=1
+  center-mag=+0.14040845488529820/+0.00000136213711807\
+  /4.774252e+008/1/22.499 params=0/0/10/1/9.9999999999\
+  99999e-021/0 float=y maxiter=75000 bailout=25
+  inside=0 logmap=566 symmetry=none periodicity=0
+  colors=000OZoZ`uP_qKapGalDaiC`iCZiAXhAWhAUh8Sd8Rc6P`\
+  6OZ6MX5JU5HS3GP3DO3CM5DO6GP8HS8JUAKWCMZCO`DPbGRdGShH\
+  UkJWnKXqKZtMZuO`wObyPczRdzRfzShzUizWkzWlzXnzZpzZqz`r\
+  zbtzbtzcqzdnzflzhizhhzidzkczl`zlXznWzpSzqRzqOzrMztJz\
+  uGzuDzwAzy8zz5zz0zz3zy6zwAzt8zuDzuHzuKzwPzwSzwWzw`zy\
+  czyfwyktynqzqlztizyfzzbzzZzzWzzR<4>zz8Zzb3qz5pz6nz6n\
+  z8lz8lzAkzAizCizChzDhzDfzGfzHdzHczJczJbzKbzK`zMZzMZz\
+  OXzOXzPWzPWzOZzO`zObzOcz<2>OhzOizOlzOnz<4>OuzOwzMzyM\
+  zwMztMzrMzqMzpMzl<2>MzhMzfMzc<2>MzZMzXOzc<3>OyuOtzOp\
+  z<6>OHzfJzyJzzJqzJczHf<7>zGz<6>zGzwDzuDztDzqDzpDzlDz\
+  kDziDzkGzlHznHzpJzqJzrKztKzuMzwMzyOzzPzzPzzRzzRzzSzz\
+  SzzUzzUzzWzzXzzXzzZzzZzz`zz`zzbzzXzzbzzdz\
+  <6>zzz<19>zzz
+  }
+
+frm:HyperBrotI      {; Jim Muth
+a=p1, b=0,0, d=real(p2),
+h=imag(p2), f=p3:
+g=sqr(a)-sqr(b)+pixel,
+b=d*a*b+f,
+a=h*g,
+|a|+|b| <= 9
+}

@@ -1,0 +1,22 @@
+The_Nameless_One { ; Fractal of the day, 09-07-98
+                   ; 80min on a 486-100mhz, 640x480
+reset=1960 type=formula 
+formulaname=MandelbrotMix6 passes=t
+center-mag=+2.09557857043679400/+0.00029943272944585/1.\
+857576e+007 params=1/5000/-1.1/1/0/0 float=y
+maxiter=5000 bailout=25 inside=0 logmap=200
+symmetry=xaxis periodicity=10
+colors=000jDR<12>lEGlEGjHF<15>RpA<2>uNU<5>yRRzSQzSQzTP<\
+2>zVOzVOzUN<18>hKLgKLeJK<20>L9IK89<26>RAMRAMRAMRAMSAN<2\
+4>YBYYBZYBZZBZ`B_aB_bB`cB`<3>dBbkA_hQ`eVab_bGi6Q_NNOJOA\
+K<44>XBXXBYXBYXBZXB_<14>_Bn_Fo<9>_Dy_Dz_Dz_Dz_Dz_Cz\
+<7>oDz
+}
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

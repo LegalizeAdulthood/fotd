@@ -1,0 +1,24 @@
+Cubic_Goldenrod    { ; Fractal of the day, 30-11-98
+                     ; 30min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multicub-XZ-YW passes=1
+  center-mag=+0.00000253140352076/+0.000000003027987\
+  68/1.998003e+011/0.06684/0/-86.646 params=70/100/0\
+  .598864649362/0.268473796163/0.598864649362/0.2684\
+  73796163 float=y maxiter=36000 bailout=25 inside=0
+  logmap=600 symmetry=none periodicity=10
+  colors=000F7Z<7>NFeOGfPHh<3>TLoUMpWNp<34>VppXsr<18>\
+  CBK<14>H8dH8eJAd<18>jjbllbnnapparra<2>zxazya<2>zu`z\
+  t`xs_<5>glZbkZYkbWjZXkWblSioQ<3>djMciLbfK<2>__HZYGY\
+  UFWRE<3>XPGYOGYPG<5>ZXIZYI_YI<2>_ZJ<2>j_Km`Kp`Ks`Ku\
+  aL<2>ybMzbMzbM<16>zhQzhRziRzjRzkRzlRzm0<11>zy7zz7zz\
+  8zz8<11>zzFzzLzzN<15>zzczzdzzd<10>zzd
+  }
+
+frm:multicub-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=z*z*z+c,
+|z| <= 36  }

@@ -1,0 +1,19 @@
+Mandelbrot_Inferno { ; Fractal of the day, 25-04-98
+                     ; 13min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix4 passes=t
+  center-mag=-1.81493/5.55112e-017/4.059214/1/-90
+  params=1/0.5/1/-0.5 float=y maxiter=1448 bailout=25
+  inside=bof61 logmap=yes symmetry=xaxis periodicity=10
+  colors=000B1D011<12>`2B<13>KFi<20>Mlv5ix<16>Tni<3>9zn<1\
+  8>usN<13>gmSfmSckT<4>PdV<4>JaK<5>a5U<2>MuT<6>A83B95CA7O\
+  RF<5>F45K6EP8NTAV<11>zh3ed_<12>urj<3>tg1<3>Gfm<6>sjv<13\
+  >EhACh7Bf8<19>45S44S67Q<22>oy3<7>kiI
+  }
+
+frm:MandelbrotMix4 {; Jim Muth
+c=pixel, a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= 100
+}

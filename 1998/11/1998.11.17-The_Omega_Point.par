@@ -1,0 +1,21 @@
+The_Omega_Point    { ; Fractal of the day, 17-11-98
+                     ; 80min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt10 passes=1
+  center-mag=-0.735227/1.28731/1.153329/1/-75
+  params=3.524/1.979/-3.263/1.769/0.733/0.736 float=y
+  maxiter=12000 bailout=25 inside=0 logmap=yes
+  symmetry=xaxis periodicity=0
+  colors=000A8L<2>97O87PA9R87P71O64N53M42L35P74TB3XF6W\
+  Ec_DgZ<10>1TN<19>jBclBcmCd<36>pMnpMnqLm<46>sLNsLMrKL\
+  <63>tjU<5>Qo8Lp4Fo0<37>cvMcwMdwNexOexO<2>hyQ
+  }
+
+frm:MandNewt10 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-b)*z-g
+j=c*z^d+g
+z=z-e*h/j,
+f <= |h|
+}

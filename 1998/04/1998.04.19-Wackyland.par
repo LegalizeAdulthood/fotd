@@ -1,0 +1,21 @@
+Wackyland          { ; Fractal of the day, 19-04-98
+                     ; 21min at 100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt12 passes=1
+  center-mag=1.50237/-0.0678262/38.8943/1/-105
+  params=-2.06/4.81/-3.31/-0.91/1/1 float=y maxiter=95
+  bailout=25 inside=bof61 logmap=yes symmetry=xaxis
+  periodicity=0 colors=000TpvTlv<11>TlvTbu<8>TUtTTtSSsSSr\
+  <27>FHIEGGGJF<11>jr3<9>`eM_ZO<6>TPaBT0<8>Tb0Q5p<2>R2x<7\
+  >`aGbfAbdC<12>kDk<15>fac<14>M8dK6eL6e<4>_2`<6>e_n<11>nu\
+  _<7>uTo<4>FaQ<29>Ba5Aa4Ca7<14>nbw<13>oe_
+  }
+
+frm:MandNewt12 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-1)*(z-b)
+j=c*z^d+g
+z=z-e*h/(f*j),
+.0000000000000000000000000000005 <= |h|
+}

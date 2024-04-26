@@ -1,0 +1,24 @@
+HexagonalMandelbrt { ; Fractal of the day, 05-12-98
+                     ; 140secs on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot06-XZ-YW passes=1
+  center-mag=+0.00000000000001525/+0.00000000000001469\
+  /5.347778e+012/0.3251/-33.038/78.765 params=156/-31\
+  /0.7547130223832474/0.6665764746073155/0.75471302238\
+  32474/0.6665764746073155 float=y maxiter=3600
+  bailout=25 inside=0 logmap=41 symmetry=none
+  periodicity=10 colors=000M28<5>S8GO9HL4I<11>3y5<5>Wa\
+  T<10>46ZfSj<12>qbx<13>5pn<14>vpb<6>Tw6Vx8WyA<9>fzTgz\
+  Ufzv<14>6zI<3>4zC0z24zB3zA3z8azO<3>cz_<2>QziFzd4z_\
+  <8>yzo<8>gz4<13>NzMMzNKzNJzN<8>SzI<7>3zX<7>Ozm<14>xz\
+  9<8>vzj<10>MzH<5>szq<8>bzPfzMjzOnzPmzRrzSvzTwzBwz3sz\
+  5oz6
+  }
+
+frm:multirot06-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)*sqr(sqr(z))+c,
+|z| <= 36  }

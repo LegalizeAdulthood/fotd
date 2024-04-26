@@ -1,0 +1,19 @@
+TheUgliest_Fractal { ; Fractal of the day, 03-07-98
+                     ; 20min on a 486-100, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 center-mag=+1.00128361442807\
+  900/+0.00000985768885177/263496.4
+  params=1/-47/-1/-95/0/0 float=y maxiter=1200 bailout=25
+  inside=0 logmap=23 symmetry=xaxis periodicity=10
+  colors=000yDO<24>y`Fy`Fw_G<35>ISQHSQETP<24>oST<29>C1A<1\
+  3>jVa<13>Mkm<3>4qk<16>XEQYBVY9_Rux<11>LJ1ZQJiXJ<11>khDk\
+  hDifF<15>PLWNKXMLY<8>AUg9VhAWi<15>CkyClzCmzDnz<5>Itz
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

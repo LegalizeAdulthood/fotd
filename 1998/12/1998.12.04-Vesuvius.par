@@ -1,0 +1,30 @@
+Vesuvius           { ; Fractal of the day, 04-12-98
+                     ; 3hrs on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=multirot04-XZ-YW passes=t
+  center-mag=-0.74803479317832130/-0.17884743913683/1313\
+  328/0.001231/-0.001/-87.795 params=-30/-30/0/0/0.4/0.682
+  float=y maxiter=125000 bailout=25 inside=255 logmap=258
+  symmetry=xaxis periodicity=10
+  colors=000xqxxqxxpxwpxupxunxsnxsnxrmxrmxpmxplxolxnlwnjw\
+  ljuljujhsjhrihrigpggpfgofendendelbdjbdjadiabi`bgZbfZ`fX\
+  `dX`dV_bV_aU_aUZ`SZ`QZZQXXPXXPXVNVVNVUMVSMTSKTQMVSKTQKT\
+  QKTPKTPKSNKSNKSMKSMKSKKQKKQIKQIKQHKOHKOFIOFIOEIOEINBINB\
+  INAINAIN8IL8IL6IL6IL4<3>HK2HK2HI2HI2HI2HI2HG2<6>HF2HF2F\
+  D2HF2IF2IF2KF2KF2MF2MG2NG2NG2PG2QG2QG3SI4SI6UI6UI8VIAVI\
+  AXKBZKEZKF`KF`KHaKIaLKbLKbLMdLNfLNfLPgNQgNSiNSiNUjNVjNV\
+  lOXnOZnO`oO`oOapObpQdrQdrQfsQguQguQiwSjwSlxSlxSnxSoxQnx\
+  So<4>wSpwSpuSruSrsSr<2>rSsrSspSupSuoSuoSuoSwnSwnSwlSxlS\
+  xlSxjSx<2>iSxiSxgSxgSxfSxfSxdSxdSxdSxbSx<4>`Tx`TxZUxZUx\
+  XVxXVxXWxVWx<2>UYxUYxSZxSZxQZxQ_xPaxQ`xQaxQaxS_xS_xS_xU\
+  Yx<3>VXxVXxXXxXVxXVxZVxZUxZUx`Ux`Sx`SxaSxaSxaQx<2>bPxbP\
+  xdPxdNxdNxfNx<3>gMxgJxiJx<3>jIxjIxlGxlGxlGxxhx
+  }
+
+frm:multirot04-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(sqr(z))+c,
+|z| <= 36  }

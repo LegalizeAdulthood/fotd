@@ -1,0 +1,21 @@
+All_Axes_Imaginary { ; Fractal of the day, 20-06-98
+                     ; 33min on 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Rectangular passes=1
+  center-mag=+0.00000000322454071/-0.00000000025508514/2.\
+  437793e+008/0.163/-173.78/83.478 params=0.360197048069/\
+  0.641365157422/0.360197048069/0.641365157422
+  float=y maxiter=25000 bailout=25 inside=0 logmap=485
+  symmetry=none periodicity=10
+  colors=000rNj<5>lHdjGciFchFc<14>T7aS6aS1_<7>KYjJakKbi<2\
+  2>LkM<17>xEe<20>WCKVCJVAL<7>RJ4RK2SM4<22>kmg<9>_D9<17>A\
+  FM<4>p6p<22>aAdd4j<8>Jq0<14>SZ6SY6R`A<10>Qzn<22>3hU2hU3\
+  iT4iT4iS
+  }
+
+frm:Rectangular {; Jim Muth  imag(z),imag(c)
+z=flip(real(pixel))+p1,
+c=flip(imag(pixel))+p2:
+z=sqr(z)+c,
+|z| <= 16
+}

@@ -1,0 +1,23 @@
+Eidolon            { ; Fractal of the day, 23-05-98
+                     ; 11min on a 486-100, 640x480
+  reset=1961 type=formula 
+  formulaname=mult1-5-XY-ZW function=flip/ident passes=1
+  center-mag=0.0258163/0.262713/1.192738/1/-90
+  params=93.04600000000001/89.21599999999999/0/0/-0.2/0
+  float=y maxiter=1200 bailout=25 inside=0 logmap=yes
+  symmetry=xaxis periodicity=10
+  colors=000OAHM9IK8JI5H<27>UaoUbpTbp<13>UkrUlrVnt<25>JFG\
+  JEFKFE<25>NP6NP6OO4<22>Fib<3>Yaf<18>_Jy_Iz_Hz_Gz<3>_Cz`\
+  Az_Cz<19>JlzInzHnzGozFozInz<4>6dz0ez<12>f2z<31>XMz_UzaX\
+  z`WzcVzeVz<3>jXzkXzkXzlZz_ZzYZz<3>QWz
+  }
+
+frm:mult1-5-XY-ZW {; draws all 6 planes and many rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=(real(p1)+10^(-100))*.01745329251994,
+b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p3:
+z=z^1.5+c,
+|z| <= 36  }

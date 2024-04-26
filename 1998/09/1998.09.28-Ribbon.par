@@ -1,0 +1,21 @@
+Ribbon             { ; Fractal of the day, 28-09-98
+                     ; 5 long hours! -- download advised
+  reset=1960 type=formula 
+  formulaname=multirot-XZ-YW passes=1 center-mag=-0.00854\
+  738319328549/+0.00074977811760389/89769.97/0.2704/114.6\
+  94/-77.78 params=74.7422711874752/12.85164952543718/1.7\
+  53011568346202/0/-1.749011380352184/0 float=y
+  maxiter=120000 bailout=25 inside=0 logmap=28
+  symmetry=none periodicity=10
+  colors=000ncE<6>lhG2JG<28>4kT4lU4lU4lU<35>leh<39>e5y\
+  <16>Zi7Zk4Yo0<39>u4av3bu0`<9>yFsyHuxJw<12>yBtzAv<32>\
+  sP9xL1sP8<15>nbD
+  }
+
+frm:multirot-XZ-YW {; Jim Muth
+; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
+e=exp(flip(real(p1*.01745329251994))),
+f=exp(flip(imag(p1*.01745329251994))),
+z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
+z=sqr(z)+c,
+|z| <= 36  }

@@ -1,0 +1,21 @@
+Newton's_Apple     { ; Fractal of the day, 01-10-98
+                     ; 50min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandNewt10 passes=1
+  center-mag=-0.438185/4.44089e-016/0.8503401/1/90
+  params=1.345/2.291/-2.332/-1.319/-1.312/1e-030 float=y
+  maxiter=500 bailout=25 inside=0 logmap=22 symmetry=xaxis
+  periodicity=0 colors=000FF7<11>nQP<6>Oss<6>t2y<18>eLgdM\
+  fdMfdMfdMfdLeE8Z<2>F9aF9aGAbGAbGBc<43>YUvYUvXSr<16>X34\
+  <25>QVZQW_RV`<14>VP`VO`VO`VO`WN`WN`<11>ZI`<2>nG`s\
+  G`zPT<11>bH_`G``9hXFl8Fl<51>TGc
+  }
+
+frm:MandNewt10 {; Jim Muth
+z=g=pixel, a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), e=real(p3), f=imag(p3):
+h=z^a+(g-b)*z-g
+j=c*z^d+g
+z=z-e*h/j,
+f <= |h|
+}

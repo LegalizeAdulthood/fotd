@@ -1,0 +1,22 @@
+Twisted_Minibrot   { ; Fractal of the day, 01-08-98
+                     ; 38min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=MandelbrotMix6 passes=1
+  center-mag=-0.86625196605624970/-0.08683561058458822/1.\
+  252109e+012/1.0001 params=1/100/2/2/0/0 float=y
+  maxiter=5000 bailout=25 inside=0 logmap=133
+  symmetry=none periodicity=10 colors=00000A<6>06H07I18J2\
+  9K<2>5CL6DL7FK<12>JdIJfIIhL<2>FnUEpWFmV<14>IEG<11>Pxi<1\
+  5>2St<20>HqSHrRGpS<16>3PS<20>tfA<4>qcBqbBqaBp`Cp_C<15>g\
+  NFO5O<8>UBLVBLWCM<7>_KU_LU`MT<9>eWUeXY<3>g`g<2>ic`idYje\
+  UjfU<4>mgHmhPnhSnhS<2>piIpj9qjAqjBrjUrkUskEsk0<11>yo6zp\
+  UzpUzqU<2>zrUzrUzsUztUzuUzvUzwUzwU<3>zzU
+  }
+
+frm:MandelbrotMix6 {; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=pixel*k:
+z=(a*(z^b))+(d*(z^f))+c,
+|z| <= l
+}

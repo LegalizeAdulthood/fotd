@@ -1,0 +1,23 @@
+JustAnotherMidget  { ; Fractal of the day, 15-02-99
+                     ; 8min on a 486-100, 640x480
+  reset=1961 type=formula 
+  formulaname=MandelbrotMix4a function=recip passes=1
+  center-mag=-2.64984326158055700/-3.22302202409334800\
+  /55112.01/1/-94.999 params=0.1/11/-2/-2/-0.8/0
+  float=y maxiter=12000 bailout=25 inside=0
+  logmap=23 symmetry=none periodicity=10
+  colors=00073F<8>97F97WHPzPexWqzTlnRHgPF_MFTK0LIBEHMG\
+  GRIFXKEdLDkNCtPBzRBySMvPXsYfqSYmWPn_Goc<5>OlUPkSQiQR\
+  iOTgMUgLVeJWcHYbF_aD<2>a_8<2>kY3nY7qXBrXE<2>lVZeVedU\
+  leUs<29>cUxcUxcUz<113>cVzcVzcUz<42>cUz
+  }
+
+frm:MandelbrotMix4a {; Jim Muth
+; "a" suffix added by L.StClair 3/6/99
+; to differentiate this version from the one previously posted
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2), g=1/f,
+h=1/d, j=1/(f-b), z=(-a*b*g*h)^j, k=real(p3)+1,
+l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

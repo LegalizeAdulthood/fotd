@@ -1,0 +1,18 @@
+What_is_This_Thing { ; Fractal of the day, 27-06-98
+                     ; 25min on a 486-100mhz, 640x480
+  reset=1960 type=formula 
+  formulaname=Elliptic passes=1 center-mag=0.00443099/0.0\
+  129856/8.929856/0.2053/-84.439/73.207
+  params=0/0/-0.129764/0.649564 float=y maxiter=12000
+  bailout=25 inside=0 logmap=10 symmetry=none
+  periodicity=10 colors=000dLO<7>dEGcAI<9>ef2ei1dh2<41>NI\
+  3NH3MG2<43>SrcSsdRue<47>h7`h6`g4a<49>o7Co7Cn8D<28>aWMdW\
+  Z<10>dMP
+  }
+
+frm:Elliptic {; Jim Muth  imag(z),real(c)
+z=flip(imag(pixel))+p1,
+c=real(pixel)+p2:
+z=sqr(z)+c,
+|z| <= 16
+}
