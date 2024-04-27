@@ -9,6 +9,13 @@ to render the associated fractal image.
 Most of the PAR files have already been rendered as high-resolution 1600x1200 images
 at the link above.
 
+# Grouped by Volume
+
+Les St. Clair grouped together all the Fractal of the Day par files
+and formulas and grouped them by volume, one volume per year.  These
+are more convenient for browsing/loading the entire collection.  These
+parameter and formula files are in the grouped directory.
+
 # Contributing Missing Dates
 
 If you have PAR files for dates not represented here (2003 through 2016 are
