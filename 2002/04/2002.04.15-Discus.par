@@ -1,0 +1,34 @@
+Discus { ; FOTD -- April 15, 2002 (Rating 6)
+ ; time=0:06:01.03--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+228.9267420799002/+28.2204563662475/1.\
+  774846e+009/1/22.533825173915968/-0.05346987079465\
+  01886 params=0.1/-9/1/-0.9/0/0 float=y maxiter=1000
+  inside=0 periodicity=10 mathtolerance=/1
+  colors=000euHbu1_z4Yz6Uz9SzCPzEMzEUz4_z0gz0mz0zzHz\
+  zUzxezppzjzzezzYzzSzzMzz0pz01z00z00r00U014EK0U_0jp\
+  HzezzYbr_1S_01_0MK0g40z00z00z00z_0zb1zb9reHbePKgU4\
+  gYH__USbgKbuEMzU9zg0zx0zz9zxbzmzzbzx0zrEjp1Mj00g00\
+  b00_0zK006040HM0be0zu0zr0zr0zz00z00z00z00z01z04z09\
+  z0Cz0Hz0Kz0Pz0Sz0Yz0_z0bz0gz0jz0pz0rz0xz0zz0zz0rz0\
+  gr0Yb0MM0C60100000400C40K60S90bE0jH6rKEzPMzSUzUbz_\
+  jzbrzezz_uzYpzSjzPezK_zHUzESzMPzUez_KzgHzmEjuC_zCP\
+  z4bz0pz0zz0zz0zz0z0zz0Pz00z00z00z90zH0zS0z_0zj0zr0\
+  zz0zz0zz0zz0zz0zz1zz1zp4z_4zK6r46j09_09S0EP0KP0PP0\
+  UM0YM0bM0gM0mK0rK0uK0zK0zH0zH0zH0zH1zM4zP4zS6zY9z_\
+  9zbCzeEzjEzmHzpKzuKzxMzzMzzUzx_zrezmmzgrzbxzYzzSzz\
+  MzzHzzCzz6zzEzzKzzSzzYrzemzjeur_pxSjzMezH_zPUzUPz_\
+  KzeEzm9zr4zx0xz0uz0rz0pz0mz0jz0gz0ez0bz0_z0bz0ez0g\
+  z0jz0mz0px0rr0uj0xb1zU4zP9zHEz9Hz1Mz0Pz1Uz4Yz9bzCe\
+  uEjrKmmMrgumzpuzmuzjumguY
+}
+
+frm:MandelbrotMix4 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

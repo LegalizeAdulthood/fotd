@@ -1,0 +1,34 @@
+Jelly-Bean_Fantasy { ; FOTD -- April 26, 2003 (Rating 6)
+ ; time=0:23:06.60--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-0.94249648630458650/-0.211984547670434\
+  70/3398605/1/115.000001038892464/-1.11471021949083\
+  315e-006 params=-3.7/-1/-1.6/-2/-0.4/240 float=y
+  maxiter=8500 inside=0 logmap=335 periodicity=10
+  colors=000VJ0H20G00G00G00aO0E00C00i00E00G00G00G02H\
+  35H57J99JCCJGELJGLMJMOLMRMMVQOZROaVOdXQfZQiaRmcRpd\
+  RshTwiTykVznVzpVzrXzuXzwXzyZzwZzw_zw_zwazwazwazucz\
+  uczudzudzudyufysfwshushsshrsipsiprknrkmrkkrmirmhrn\
+  frnfppdppcppapr_prZpsZnsXnsVnuTnuRnwQnwQmwOmyMmyLm\
+  zJmzHmzHmsGpmGrfGs_GuTGwMGzGGz9Gz2Gz0Gz2Jy9MrEQiLT\
+  cQXVX_OacGhf9mi0sm0zm0yn0wn0wn0un0un0sp3sp9rpCppGp\
+  pJnrMnrQmrVmrZkraksdishhskhspfssfuwduzduzcuzcuzarz\
+  apzanz_mz_kz_hy_fwZduZcsZarX_pXXmXVkXTiVRhVQfVOdTL\
+  cTJaTH_TGZREXRCVR9RQ7QQ5OQ3MQ2LO0JO0HO0GM0EM0CM0AH\
+  07M09R09V0A_0Ac0Ch0Cm2Ep5Eu7GyAGzCHzHCzEHzCMzARz9X\
+  z7az5fz3kz2pz0uz5rz9nzCmzHizLfzOdzTazVZzXXzZTz_Qza\
+  OzcQzdRzfTzhVziXziZzk_zkazmczmdznfznhzpizpkzrmzrnz\
+  spzsrzuszuuzwwzwyzyzzyzzzzzzzzzszzhzzZzzOzzJzzGzzC\
+  zz7zz3zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0yz0yz0yz0wz\
+  0wz0wz0uz0uz0uz0sz0sz0sz0
+}
+
+frm:MandelbrotMix4 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

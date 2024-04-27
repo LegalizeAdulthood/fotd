@@ -1,0 +1,35 @@
+Sausages { ; FOTD -- May 27, 2002 (Rating 6)
+ ; time=0:13:41.80--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix3 function=recip passes=1
+  center-mag=-3.70474245107962100/+0.657760841842085\
+  30/3.069827e+010/1/120.005849754697749/0.010984664\
+  4080361863 params=4/-1.2/-2/-2/1.5/-2.8/-0.8/-6/0.\
+  9900694240234/0 float=y maxiter=1000 inside=0
+  outside=tdis symmetry=none periodicity=10
+  colors=0000Ug0Ue0Ue0Ud2Ud2Ua2Ua2Ua2U_4U_4UY4UY4UW4\
+  UW4UU7UU7US7US7UQ7UQ7UN9UN9UN9UL9UL9UJCUJCUHCUHCUE\
+  CUECUCEUCEU9EU9EU7EU7EU7HY9J_9Ja9Ld9Ng9Ni9QlCSnCSq\
+  CUsCWuCWwCYzE_zE_zEazEdzEdzEezHgzHgzHizHlzHlzHizEi\
+  zEizEizEizEizCizCizCizCgzCgz9gz9gz9gz9gz9gz7gy7gw7\
+  gw7eu7es4eq4eo4eo4en4el2ei2eg2dg2de2dd2da0d_0d_0dY\
+  0dW0dU0dU0aS0aQ0aN0aL0aL0aJ0aH0aE0aC0_C0_90Z70Y40X\
+  20W20W00U00T00Q00R00R20R70RE0TJ0VQ0XV0ZZ0_c0_h0_o0\
+  au0_s0Ys0Yq0Wq0Wo0Uo0Un0Sn0Sl0Ql2Qi2Ni2Li2Lg4Jg4Je\
+  4He4Hd4Ed7Ea7Ca7C_79_79Y97Y94Y94W92WC2UC0UC0SC0SC0\
+  QE0QE0NE0NE0NE0QH0QH2QH4QH7QH9SHESHHSHJSHLSHNUHQUH\
+  UUHWUHYUH_WHaWHdWHgWHiWHlYHnYHoYHqYHuYHw_Hy_Hz_Hz_\
+  Hz_HzaHzaHzaHzaHzaHzaHzdJzdLzeNzeQzgSzgUzgWziYzi_z\
+  lazlazldynewngwoiuolsqnqqoqqqossnssluuluwiuygwzewz\
+  eyzdyzazzazz_zzYzzWzzWzzUzzSzzQzzQzzNzzLzzNzzLzzLz\
+  zJzzJzzJzzHzzHzz0Ui0Ui0Ug
+}
+
+frm:MandelbrotMix3 {
+; Jim Muth
+z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
+d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
+j=real(p4), k=imag(p4), l=imag(p5)+100:
+z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
+|z| <=l
+}

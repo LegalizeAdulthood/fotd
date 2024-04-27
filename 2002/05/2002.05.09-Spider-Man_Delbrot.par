@@ -1,0 +1,33 @@
+Spider-Man_Delbrot { ; FOTD -- May 09, 2002 (Rating 7)
+ ; time=0:18:52.84--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=ident passes=1
+  center-mag=+2.010171243979102/+0.1046890830356033/\
+  106079.2/1/167.5/2.3982375016440294e-008 params=-1\
+  /1/-1/-1/0/525 float=y maxiter=1400 inside=0
+  outside=summ colors=000GFZUqhRnYQlOOjFNh5SZ0Qa0Nd0\
+  0RJ0QM0OO0NQ0NS0MV0KX0JZ0Ia0Gb0Fe0Eh0Ci1Bl19n18p17\
+  s17t08s08q08p08n08m08l08j08i08h09h09f09e09d09b09a0\
+  9`09Z09Y09X0BX0BV0BU0BS0BR0BQ0BO0BN0BM0BM3EO7GRBJU\
+  FKXKNZOQaSRdXUfaXieYli`nmbqqdssiism`sqRqmOpiNneMma\
+  KlYJjVIiRGhNFfJEeFCdCBeJ9fO8hU7hZ5id4ji3ln1lt1iu0h\
+  u0fw0ew0dx0bx0ax0`y0Zy0Yz0Xz0Vz0Uz0Sz0Rz0Qz0Nz0Mz0\
+  Kz0Jz0Iz0Gz0Fz0Ez0Cz0Bz09z08z07z05z04z03z05z18z49w\
+  7Cs9EmBGiEIdGK`JMVMORNQMQSISUCVX8YY4ZZ8aZCd`Fe`Jha\
+  MiaQlbSmbXpdZqdbtdeuIXl0Nb0Md0Kd0Kd0Jd0Jd0Id0Id0Gd\
+  0Gd0Fd0Fd0Ee0Ce0Ce0Be0Be09e09e08e08e07e07e08b08a09\
+  `09Z3BY4BX7CV8CU9ESCEREFQGFOIGNKGMMGKNIJQIIRJGUJFV\
+  KEYKCZMB`M9bN8dN7fO5hO4jQ3lQ1mQ0nS1pV1qY1s`3tb3ue3\
+  wh4xj4ym4zp5zs5zu5zx7zz7zz7zz8zz8zz8zzEzzIzzMzyQzw\
+  UztYyqaxnewliuimtfqsduqayp`zpaqpbfpbXpdMpdBtbGwaMy\
+  `Rz`VzZ`zYezYilXSQVB3U0Qe39Z0Gb0YZdRbI
+}
+
+frm:MandelbrotMix4 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

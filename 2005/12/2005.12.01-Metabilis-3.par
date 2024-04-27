@@ -1,0 +1,34 @@
+Metabilis-3 { ; FOTD -- December 01, 2005 (Rating 5)
+ ; time=0:11:34.15--SF5 on a P200
+  reset=2004 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+0.64171460189384810/-1.553682238057576\
+  00/4574071/1/72.5000005174516673/1.830898137891723\
+  29e-007 params=-2/-1.4142/-0.2/-14.142/0/0 float=y
+  maxiter=1000 inside=255 outside=tdis periodicity=10
+  colors=000hiLjmHlqDnuAloCkiEjcGhYIgSKfNMhQQjTUlVXm\
+  Y`o_cqbgrdjsbcsaXs`Qs_JsZCsY6ZNxmcCfhF_mHTrJNwLOyJ\
+  PzHRzEa_fZRdWIbN8UYLdgYnqjxiktalqVmmNnjGogIjeKfdMb\
+  cNZbPV`RR_TNZUJYTSZS__Rh`QpaPybPzcdcE_eDVgCQiCLkBH\
+  mBBN2KPDSQN_SXgTfoVpwWzvUYvT6xdDyoKzsQnsPclO`fNEfS\
+  MfXUfaaffefkkfpoftsisvlrzqrteq000000000000000000Kp\
+  cInbHlaFjaEh`Df`YuAciBhZBHAe0cwAZtKVrTQpbMnkIloSks\
+  XkpZnnSqkHti7wc8rZ8mU9iO9dJA_EAWOJXYSXg`YqiYzrYwof\
+  ulosjxpismhnkgihfdfe_cdVadQXeOSfMNfKIgIDhG8hEKoFWv\
+  GgzGjqOlfVnXbpMirCprHkrMgrQcrVZr_VrcRmfRhiRclRZnRU\
+  qRPtRKwRGyRHkTHZUIMWI9XFEPDIHBMADJEFHIHEMJCQL9UN7Y\
+  L8ZK9_JA_IUzGczFUzEDbDDbBBb9Ab79b58b37b98WE8QQORab\
+  SmqTloSkmSjkRijRhhQgfQfeQ`dPVcOPbOJbNDaN7`M2`MEdTP\
+  g_QebRddRcfSbhT`kT_mUZoUYqRalOehLidJl_GpWDtSBwOIqV\
+  Pl`WfgbamiWtpRzqQrrPjsPcsNhrKLqNNpRQoUSnYVm`XldZkg\
+  ajkcinfhrhhujfviaYWdaSPKP 
+}
+
+frm:MandelbrotMix4 {
+; Jim Muth
+  a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+  g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+  k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+  z=k*((a*(z^b))+(d*(z^f)))+c,
+  |z| < l 
+}

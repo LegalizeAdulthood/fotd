@@ -1,0 +1,35 @@
+Fractal_Wilderness { ; FOTD -- August 05, 2003 (Rating 5)
+ ; time=0:04:23.48--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=Mystic2 function=cotan passes=1
+  center-mag=-0.06074811025606387/-0.993573573575838\
+  00/1425.244/1/-25/1.08651629360245749e-011
+  params=3.4/6/-9/3.8/6.1/-2.4 float=y maxiter=95
+  inside=bof61 logmap=yes periodicity=0
+  colors=000mfWqqQrpZsogtnpumxmkueirYgpQemIcjAbhJU`S\
+  QT`QLRHDcI5cTBobHnlNnvTiwYewaawefwbkq_piXuaUyVRj8w\
+  iAuiBtiCriDqiEoiFncOiZWeUdaPlYKtULuSMvRNvQOwOPwNQw\
+  LRwKSwJTwHUwGVwEWwDXwCYwAZw9_w7`w6aw5dwAfwFhvKkrPm\
+  oUolZrhctehvbmx_qvZptYprXpqWpoVpmUpkTpjSphRpfQpeQp\
+  PJpcPpaOp_NpZMpXLpVKpTJpSIpQHpOGpAahB_iCYjDXjEVkFU\
+  kGSlHRlIPmJNnKMnLKoMJoNHpwhltfmrdmobmm`njZnhXneVnc\
+  To`RoZPoWNoULpRJpPHpxwNruSmnWgg_b`dXUhSNlDPWFN`HLd\
+  JJhLHlBKoEJpGIpJHpLGpHw_It`IraIobJmcJjdJheKefKcgKa\
+  hLZiLXjLUkMSlMPmMNnNKoNIpwCOuDQsDRrDSpDToDVmDWlEXj\
+  EYiEZgE`fEadEbbFcaFd_FfZFgXFhWFiUGjTGlRGmQGnOGo8hg\
+  9fhAehBciBbiCajD_jDZjEXkFWkGVlGTlHSmIRmIPmJOnKMnLL\
+  oLKoMIpNHpD`8FWHHSQJOZLKg7pE9lIBhMCdQEaUFYYHUaJReK\
+  NiMJmGwWHuXHsYHqZIo_Im`IkaJibJgcJedKceKafK_gLYhLWi\
+  LUjMSkMQlMOmNMnNKoNIp8JCAIGBIKDIOEHRFHVHHZIHbJGeLG\
+  iMGmtqprnpplpnjplhpjfphdp 
+}
+
+frm:Mystic2 {
+; Jim Muth
+a=real(p1), b=imag(p1), c=real(p2),
+d=imag(p2), k=real(p3), f=imag(p3),
+g=pixel, z=(pixel)^a+(b*(pixel))^c:
+z=(fn1(z)+(d*(g)))^k+(f*(cos(g)))
+g=sqr(g),
+LastSqr <= 100
+}

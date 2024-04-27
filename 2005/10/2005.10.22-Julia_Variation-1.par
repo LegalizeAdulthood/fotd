@@ -1,0 +1,36 @@
+Julia_Variation-1 {; FOTD -- October 22, 2005 (Not an FOTD)
+ ; time=0:02:34.18--SF5 on a P200
+  reset=2004 type=formula 
+  formulaname=JuliaBC passes=1 center-mag=0.0738128/\
+  -0.0496634/1.036244 params=1.1/0/100/0/0.206/0/0/0
+  float=y maxiter=2600 inside=255
+  logmap=15 periodicity=10
+  colors=000EF8GC6I94J72L67N6CP6HR6LT6QU6VW6_Y6c_6ha\
+  6mc6rd6ue8sfAqgBohDmiEkiGijHgkJelKcmMaoN_nSYnXWnaU\
+  oeSojQooOosMlrKirIfrKdqMaqNZqPXpRUpTRpVPpWNkVMfUKa\
+  TJXSHSRGNQEIPDDPFPCIRDLSENUEQVFSXFVYGX_G_`HabHdcIf\
+  eIifJkhJniKpkKslLunLxoMzpMskOlfQfaS_XUUTVWSUXRTYQS\
+  ZQR`PQaOPbOOcNNeMMfLLgLKhKJjJIkJHlIGmHFnHFlJHjKIhL\
+  KgMLeNMcOObPP`QRZRSXSTWTVUUWSVXRWZPX_NYaLZbK_cI`eG\
+  afFbgI_`LYVOWPRTJURDXP7ZN1YX2Yf2Xp3Xz3Ww7WuAVrDVpG\
+  UnJUkMTiPTfSSdVSbYR_`RYcQVfQTiPRlPOoOMrOKuPLsQMrQN\
+  qROpSPoSQnTQmURlUSkVTjWUhWVgXWfYWeYXdZYc_Zb__a```a\
+  a_aaZ`aU_aQZaMYaI`bGcbFfcDicClcBod9rd8ud7p_6kV6fR6\
+  aM5XI5SD5O95NC7ME9MGBLICLKEKNGKPHJRJITLIVMHYOH_QGa\
+  RGcTFeVFgWQiQ_jKjlEtm9oj8kg7fe6bb5Y`5UY4PW3LT2HR2J\
+  S3LT4MU5OV6QV7RW8TX9VYAWZBYZC__D``EbaFdbGebGcdEaeC\
+  `gBZh9Yj7Wk6Vm4Tn2So1Pl3Ni4Lf5Jc7H`8FY9RQCaJEmBHx4\
+  Jp9HiDFPVKQSIQPGRNESMCJWN 
+}
+
+frm:JuliaBC {
+ ; Formula by Andrew Coppin
+  e=p1, p=real(p2)+PI, q=2*PI*floor(p/(2*PI)),
+  r=real(p2)-q, C=p3, Z=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|< p4+100 
+}

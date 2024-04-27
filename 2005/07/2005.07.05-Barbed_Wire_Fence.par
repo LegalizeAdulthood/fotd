@@ -1,0 +1,34 @@
+Barbed_Wire_Fence { ; FOTD -- July 05, 2005 (Rating 6)
+ ; time=0:02:18.85--SF5 on a P200
+  reset=2004 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+2.61889569074713700/+0.000085722271613\
+  62/4790189/1/-10/-1.09451677256233726e-007
+  params=1/-2/-1.02/-3/0/0 float=y maxiter=500
+  inside=0 logmap=38 periodicity=10
+  colors=000000000000000000ktxOQfSXiOTfLPdIMbFI`CEY9\
+  BW67U33Ss83l76f69`5BV4EO3GI2JC1L60OU6PP5QL4QH3QC2Q\
+  81Q40QgmCbmEZmFUmHzmIzmJzmLzmMzmO42PU0SUXRKMRABQ7F\
+  Z6DY6CX5BX5AW49V48V37U36T25T24S13R12R01Qsihg_dXR`M\
+  IXB9TOL4KI5GF6BB7788359AJBHWDNhEKdDI`DGYCEUCCRBANB\
+  8KB7LI7MO7MU6N`6Nf6Ol6Or8Po9PlAQiBQfCQcDR`FRYGSVHS\
+  SISPJTMKTJLTGI_RFeaCll9rvJkTTd0NmVHvxFolDi`BbP9XDM\
+  UCYRBjOAvLAuNFtPJsROrTSqVWpX`oZdn_hoVfpQeqLcrGbsB`\
+  t7_USk3lvHgkUcagZStVIpSMlQPhOTdLW`J_YHbTDWPAQL7JH4\
+  DD3FA2IKKKScgNbiIakHefGhbGlYFoUEsPEvLBtX8rh5qtBmsH\
+  jsMgrSdrXaqbZqgWqIznOuiTqdYm_bhVgdQl`MeZO_XQTVSNTU\
+  GRWAPYdnjageZa`WWWUQRRKMOEHM8CLFGKMKJTOJ_SIfWHm_Hs\
+  cEliCeoGdpKdqNcrRcsVctYbuabvdbwhcwmdwqewsZpuTjvNcx\
+  HYyBSyLWyV_ydcyngywjtshoogjkeegdaccX_aSW`NSZJOYEKX\
+  9GV4CU08T0DW0HZ0La0Qd0Ug0Yj0am3bl5bk7bj9biBbhDbgFb\
+  fHbe33R78S56R45R34R22Q11Q 
+}
+
+frm:MandelbrotMix4 {
+; Jim Muth
+  a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+  g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+  k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+  z=k*((a*(z^b))+(d*(z^f)))+c,
+  |z| < l 
+}

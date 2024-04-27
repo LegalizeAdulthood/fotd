@@ -1,0 +1,40 @@
+Scherzo { ; FOTD -- April 24, 2002 (Rating 8)
+ ; time=0:04:43.20--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=recip passes=1
+  center-mag=-0.21378685445671390/-0.076303594971113\
+  36/337296.3/1/-162.5/-1.8837750803690767e-010
+  params=1.73205/0/30.69/0 float=y maxiter=1800
+  inside=0 logmap=130 symmetry=none periodicity=10
+  colors=000L00P30S60V70_A0aD0dF0gG3jGCmILpISrI`uJix\
+  JpzLyzLzzLzxazpszizzdzz`zzXzzUzzOymJxcFuZAsW6rJ1oM\
+  0mP0lS0jT1c`DYfPQm`LslDzx7zz1zy1yo1ld1`X1OM1CC1031\
+  0970FC9LILQMVXSfaUpfUzcUpZUgUUaPUWKTQFSKASE0QQ0QQ0\
+  QQ0PQ0PP0PP0OP0OP0OO0MO0MO0MO0LM0LM0LM0LM9WgCeuYTi\
+  TKmO7p03z9FzOPzc_zrizofzldzjazg`zfYzcXz`Tz_SzXPzVO\
+  z_SxaXud`ridolijomgsrdvvayz_ssVomSjgPfaMaXJYQGSJDO\
+  DAJ77F14A01600400400400300300300100100100000000000\
+  00000000000000000000000000000000000000000000000000\
+  0000000000000000000000000000000000000TzDSyCSxCSxCQ\
+  vCQvAQuAPsAPsAPrAOr9Op9Op9Mo9Mm9Mm7Ll7Ll9LjAJjCJiD\
+  JgFIgGIfIIfJGdLGdMGcOFaPFaQF`SD`TD_VDYXCYYCX_CX`AV\
+  aCVcETdHSfJSgMQiOQjRPlTPmVOoWMpYMrZLs_Lu`JvaJxbIyc\
+  GzdGzeFzfFzgDzhDziCzjAzkAzl9zn9zp7zq6zr6zt4zz4zz3z\
+  z3zz1zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
+  zz0zz0zz0zz0zz0zz0zz0zz0z
+
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+f=p1, a=imag(p2)+100
+p=real(p2)+PI
+q=2*PI*fn1(p/(2*PI))
+r=real(p2)-q
+Z=C=Pixel:
+Z=log(Z)
+IF(imag(Z)>r)
+Z=Z+flip(2*PI)
+ENDIF
+Z=exp(f*(Z+flip(q)))+C
+|Z|
+}

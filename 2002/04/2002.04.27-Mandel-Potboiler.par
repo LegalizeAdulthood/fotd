@@ -1,0 +1,35 @@
+Mandel-Potboiler { ; FOTD -- April 27, 2002 (Rating 5)
+ ; time=0:06:40.62--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=+7.67992477588323/-1.18115358183837/156\
+  42.22/1/-87.5/-2.9822114222533003e-010 params=5/-1\
+  .321/0.5/-13.21/-1.454/525/0/0 float=y maxiter=1200
+  inside=0 logmap=120 periodicity=10
+  colors=0005zU5z95yH5xN5wU5t_5rf5pl5lh5jf5fc5c_5_Y5\
+  YV5US5RO5NM5LJ5IHzzJxxIwtIurItmIsjIrgIocHm_HlYHkUH\
+  jQHhNHjLJkILlGNmDOoARpNSr5VxVWtG_udcucfwmjwzlxujyu\
+  gyrfzoczkbzh_zdYzbWzZUzWSzSQzQOzONuONpNMkNMfMLaMLW\
+  LJSLJNJIIJIDIH8IH2HG0HG0HG0GH2EI6DJCCJGCLJAMO9MS8N\
+  W6O_6Ob5Sc4Wd4_f2cg1gh1kj0ok0sf2lb4gY5bU8YO9SLANHD\
+  ICED8G82I20J00L00M05M6ANDGNJJNQHWMEdJDmGAwD9zADzEH\
+  yHLwJNtMRpQVmSZkVahYddahbcl_foYhsUlwRozOrzMtwJtrHt\
+  lEtfCta9tW6tdCsmHswMrzQrrRrcSrQUrDUr6_f1dW4fS5gQ6h\
+  N9hLAjICkGElDGlAHm8Jo5Lp2Mp0Or0Qs0Rs0Yj1baAhSJmJSt\
+  Aay1hp9agHVZONQVHHb98j20p09h2Hb8OVEWOJdIOlAVt4_z0d\
+  w0gs2ho4jk6lf8mbAoZCrVEsQGtMIwIJxEMvANr9Jm9Hm9Em9C\
+  m99m8cz8cz8cz8cz8czCczE1mH5mJ8mNCzQEzSHzVLzZNzaRzc\
+  UzfWzhUzkSzlRzoQzrOzsNzuLzwJzyIzzHzzGzzEzzDzxGzoIz\
+  gJzZMzQOzIQzIOzGMzLlzJjzHhzGfzEdzCbzAaz9Zz6Yz5Vz4U\
+  z5Uz5Uz6Uz6Uz1Uz2Uz2Uz4Uz
+
+}
+
+frm:MandelbrotMix2 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

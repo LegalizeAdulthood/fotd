@@ -1,0 +1,34 @@
+A_Delicate_Vision { ; FOTD -- April 05, 2003 (Rating 6)
+ ; time=0:15:01.33--SF5 on a p200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=-10.76988543003492/-1.604913088734675/5\
+  726949/1/-97.5/-1.44472357743730129e-007 params=-1\
+  /-1/-0.1/-10/0/1e+100/0/0 float=y
+  maxiter=1200 inside=bof61 periodicity=10
+  colors=000T4BTBZTHMTMSTSXTXdTbiTgnTmtQvwTpyVkyXey`\
+  `zbXzdSzgMziHzkBzm7zt4zz0zz0z0z00z04z0By0Ir0Oi0T`0\
+  `S0eK0kB0r00w00z00z00z00z00z00y20y70yB0yD0wS4veFtt\
+  QrzZvzTyvOzpKzmFzg9zb4zX0zT0zO0zI0zF0zI0zM0zO0zS0z\
+  V0zX0z`0zd0ze0zi0zm0zn0rr0iv7`yHSzQIzZ9zg0zn9ztHzy\
+  MrzTmzZhzdAziAzjAzvBzzBzzBzsDzzFzzFvzHnzIgzI`zKTzM\
+  MzMFzO7zQ0zQ0zS0zS0Se90td0MS00F20B409707904B40D90F\
+  D0HH0II0HF0HD0HB0F90F70F40F20D00D00D00B00B00B00B00\
+  F02Z00Z00Z00b02e07i7DmHHpQMrZQvgVypZzydzzgzzmzzpzz\
+  rzzrzzrzwrzprzktzdtzXtzQtzItzDvz4vz0vz0vz0vz0vz0wz\
+  0wz0wz0wy0wv0wr0yn0yk0yg0yd0y`0yZ0zV0zS0zO0zK0zH0z\
+  D0z90z40z00z00z00z00z00z00w24r7BmDHgIKbOQVSVQXZKbd\
+  Fgi9gr0km2mi4ne7pb9tZBvVDwSFyOHzKIzHKzDMz7Iz9Oz9Sz\
+  9Vz9Zz9bz9ez9iz9mzBpzBtzBwzBzzBzzBzzBzzDzzBzz9zy9z\
+  w7zv4yt4vr2rr0np0kn0em0bk0Zi0Vg0Se0Me0Id0Fb0B`07Z0\
+  0X00V00T00S00T00T00T00T02
+}
+
+frm:MandelbrotMix2 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

@@ -1,0 +1,34 @@
+Frenetic { ; FOTD -- April 30, 2002 (Rating 7)
+ ; time=0:05:57.34--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=-0.30415843043600430/+0.176317849078791\
+  20/72998.29/1/-67.4999999992991775/-1.078220374095\
+  55094e-009 params=-1/-1/-1/1/0/0/-2/0 float=y
+  maxiter=1200 inside=0 outside=tdis periodicity=10
+  colors=000NchLciLckLclKenKepIerIetHfuHfwHfxFfzFhzE\
+  hzEhzEhzHezKczNbzQZzTYzWWzZTxbRweQwhNukLtnKtrHruFp\
+  wEpkKhbQbTWWIbO9hI1nC0z30x50u70t80p80n90kB2iC3fC5e\
+  E8bF9`HBYHCWIFTKHRLIOLLNNNKOOIQRFQTERVBTW9TVBRVCRV\
+  EQVFQVHQTIOTIOTKOTLNTNNRONRQLRQLRRKRTKQVKQWIQYIQYI\
+  QZHO`HObHOcFOeFLl9NhCOeFQbIQYLRVOTRRTOVVKYWH`WEcYB\
+  fZ7iZ3l`1pb0tb0wc0ze0zh0ze0zc0zb0zZ0zY0zW0zT0zR0zQ\
+  2zO3zL5zK8zI9zFCzEEzCHzBIz8Lz7Nz5Qz2Rz1Tz0Wz0Yz0`z\
+  0bz0ez0fz0iz0kz0lz0iw0hr1el7chBbcHZZLYVRWQYTLbRHhO\
+  ClN8tL3xI0zH0zB0zE0zF0zH0zI0zL0zN0zO0zQ0zT0zV0zW0z\
+  Y1z`2zb3zc3ze5zh7zi7zk8zl9zpBzrBztCzuEzzCzwEztEzpE\
+  zlEziEzhFzeFzbFzZFzWFzTFzRHzOHzLHzIHzFHzEIzBIz8Iz5\
+  Iz2Iz0Iz0Kz0Kz0Kz0Kz0Kz0Kz0Nz0Oz0Qz0Rz0Vw0Wt1Yp2Zn\
+  3`e9YWEVOIRFNO8RL0WI0l90fC0`F0VI0OL0KO0ER28V32Y30`\
+  50Z50Z70Y70Y71Y81W82W82V93V95VB5TB7TB7RC8RC9RC9QEB\
+  QEBOECOFEOFENHFNHFLHHLIIL
+}
+
+frm:MandelbrotMix2 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

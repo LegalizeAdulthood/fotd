@@ -1,0 +1,39 @@
+A_Broken_Minibrot { ; FOTD -- May 06, 2002 (Rating 5)
+ ; time=0:14:36.56--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotBC1 function=floor passes=1
+  center-mag=+0.00817267703828271/+0.240493666992600\
+  80/1.818109e+011/1/114.999944662658265/-1.10636886\
+  913803578e-005 params=1.8/0/28.7/0 float=y
+  maxiter=4500 inside=0 logmap=366 symmetry=none
+  colors=0009F04D06F07F09F09G0AG0CG0DI0DI0FI0GJ0IJ0I\
+  J0JL0LL0LL0MM0OM0PM0PO0SO0VO0VP0WP0XP0XQ0YR0YS0ZS0\
+  ZS0ZS0YT0ZS0ZT1XV4VX7TYAQ_DP`GOaJLcMJdPIfSGhVDj_Cl\
+  aAmd7og6pj4rm1sp0us0vv0xy0yz0zz0zz0zz0zz0zx0zu0zr0\
+  zo1zl3zi4zfAzXGzOMzFSy6Yu0cr0do0fm0gl0gj0ii0jg0jf0\
+  ld0mc0ma0o_0pY0pX0rV0sT0sS1uQ3vP3xO4xM4yL6zI6zG7zF\
+  7zD9zC9zAAz9Az7Cz6Cz4Dz0Cz3Dz6Dz9FzCFxFGuIGrLIoOIl\
+  QJiTJYSMaTLfVJjVIoXGsYGxYFz_Dz`Czg6zc9z`CzYDzVGzSI\
+  zPLzMMzJPzGSyDTyAXx7Yv4`u1as0dz0gs0fg0dY1cM4aA6fC7\
+  cC7aD9`D9YFAXFAVGCSGCQICPIDMJDLJFJLFILGFMGDMGCOI9O\
+  I7PJ6PJ3QL1QL0QL0OJ7LIGIGPGGgDFvADz3Cz6Dz9DzCDvDDo\
+  GDlJDgLDcOD`QFXTFTTFPTFLTFITFDTFATF6TF3YTSacu_foXi\
+  jTlfQo`OrXLuSIvOJvPJvPLvPLvQMvQMvQOxQOySPzSPzSQzTQ\
+  zTSzTSzVTzVTzVVzXVzXXzXXzYYzYYzY_z__z_`z_azY`z_`z_\
+  `z``z``za`za`za`zc`zc`zd`zd`zd`zf`zf`zg`zgMzJMzOLz\
+  QLzTLzXJz_JzcIzfGz4Dz3Cz1
+}
+
+frm:MandelbrotBC1   { ; by several Fractint users
+f=p1, a=imag(p2)+100
+p=real(p2)+PI
+q=2*PI*fn1(p/(2*PI))
+r=real(p2)-q
+Z=C=Pixel:
+Z=log(Z)
+IF(imag(Z)>r)
+Z=Z+flip(2*PI)
+ENDIF
+Z=exp(f*(Z+flip(q)))+C
+|Z|
+}

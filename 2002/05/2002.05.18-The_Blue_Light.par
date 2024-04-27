@@ -1,0 +1,35 @@
+The_Blue_Light { ; FOTD -- May 18, 2002 (Rating 6)
+ ; time=0:00:20.43--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix2 function=recip passes=b
+  center-mag=-0.28394429430300750/-1.090882416624821\
+  00/2939.972/1/57.4999999999925038/2.42871001088218\
+  463e-011 params=1/-6/6/-1.6/0/525/0/0 float=y
+  maxiter=265 inside=255 logmap=8 periodicity=10
+  colors=00000000000002606H0AT0Ad08o08sUQzGTzRbzdkzq\
+  vzzzzzzzzzzzzzzszzdzzPxzAuz0qz0mb0z80zEku4zu0zs0zs\
+  8sdVLPdPPmRPuVPzXPzZPvgTioVXvXJz`6zb0zd0zV0zL0zC2z\
+  24z0Az6GqHLZTPHd`EXkAPv6Hz4CuNHidNXvTLzXRzLXzAbz0g\
+  z0kz0gz0ds6`iJX`XTTiH`L8e00k0Es0Rx2dzGqzTszbuqivgs\
+  xXzzNzzEzz4zzNzzdzzuzzzzzzzzzzzzzzzzzqzzkzzmzzozzq\
+  zzszzvzozzbzzPzzCzz0zzAzzJzqTzbbzNkz8Azd0zz2zxVzov\
+  zggzkVzoHzs2zv0zz0zz0zm0z`0zN0z82z06z0Ez0Jz4PzGXzP\
+  bz`gzkmzuxz0sz0oz0zzzzzzzzuszkizbbzTizEqz0xz0Nz40z\
+  P0zT0zV6zZCz`JzbPzeXzgbzigzdmz`szVxzRzzNzzHzzEzzAz\
+  z6zz2zz0zz0zz0zz0zz0zz0zz0zz00zP0zZ6zeGzmPzuXzzZzv\
+  Zzq`zm`zgbzdbzZbzV0z00z40zH0zV0zg0zu0zk0zb0zT0zJ0z\
+  A0zL0zX0zg0zs0zz0zz0zzzzzzzzzzzzzzzzzzzzzzzzzzzzxz\
+  zzxzzqzzizzbzzVzzNzzJzgGz8Cz0Jz0Rz0Zz0ez0mz0uz0zz0\
+  xzCxzTxzixzxgzbTzHEz00z00z00z00z00z00z00z00z00z00z\
+  o0z00zooz0ozooz0ozoCzC000
+
+}
+
+frm:MandelbrotMix2 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

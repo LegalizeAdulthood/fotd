@@ -1,0 +1,34 @@
+Iterative_Blues { ; FOTD -- August 01, 2006 (Rating 7)
+ ; time=0:09:03.38--SF5 on a P200
+  reset=2004 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=+3.90926221344914200/-0.000896083401516\
+  61/203745.3/1/-45/1.64728598817109884e-009
+  params=1/-1.4/0.14/-7.4/0/0 float=y maxiter=1200
+  inside=0 outside=tdis periodicity=10
+  colors=000MRcOOfPLhRIjSFmUCoV9qW7sMZpDymIscNmUSgLX\
+  aB`W2XhsLsMJhNHYNGVLFRJDNGCJE1nA2jB3gB4cB5`B6XB7UC\
+  8QC9NCAJCEk6Dh7Df7Dc8Da8CZ9CX9CUACSABPBBNBBKCBICDh\
+  dUfBRbCP_CMWCKTCIQCFMCDJCYJYTITOHPKHKFGG1Vx5Qg8LSD\
+  slCoiClfCicCf`CcYC`VBYTBVQBSNBPKBMHBJECzXBuUBpSBkQ\
+  BgOBbMBYKBUIBPGBKEzv3jSigRfdQcaP`ZOYWNVTMTQLQNKNKJ\
+  KHIHEHEIPaHNYGMVFLSEKPDJLCIIBHFI2iH3fH4dG5aG6_F7XF\
+  8VE9TEAQDBODCLCDJCEGBFE2SKUZ0SX1RW2QV3PU3OT4MR5LQ6\
+  KP6JO7IN8GL9FK9EJADIBiHCi`JmaFrcBvd7xp1qo6koAenF_n\
+  JTmNNmSHlWBl_QYUcJOq4Jn9GkEDiJBfO8dT6aY3_a1PREEGR3\
+  6bCCcLIdUNebTfkZgscgiz0kx5mvAotFqrKspPuoUtgQt`MtUI\
+  sMFsFBs87s14UpIVqHWqGWqFXqEYrDYrCZrBZrBblBefBh`BkV\
+  BnPBqKBpJBoICoHCnGCmFDmEDlDDkCEkBEjAFi9Fi8Fh7Gg6Gg\
+  5Gd6Fa7F_8FBJCX9EVAESBEQBDNCDLDDIECGFCDGCATtBSqBRn\
+  BQkBPhBOeBNbBL_BKXBJUBIRBHOmbJi`If_IcYH`XHZVGHVDLW\
+  CPWCTWBXWBVVGTULRTQPSVNR_ 
+}
+
+frm:MandelbrotMix4 {
+; Jim Muth
+  a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+  g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+  k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+  z=k*((a*(z^b))+(d*(z^f)))+c,
+  |z| < l 
+}

@@ -1,0 +1,35 @@
+Ensign { ; FOTD -- April 18, 2002 (Rating 7)
+ ; time=0:04:42.81--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix4 function=recip passes=1
+  center-mag=-2.53422952923341000/-2.428182368486123\
+  00/5.617065e+007/1/62.5/1.20480510572285038e-006
+  params=-5/-1.1/-8/-11/0/0 float=y maxiter=900
+  inside=0 logmap=88 periodicity=15
+  colors=00070E80EA0EB0ED0EE0EG0EH0EJ0EK0EM0EN0EP0EQ\
+  0ES0EV1EY4E_7JbAMeDQfGViJYlMbnPeoTfoXfq`hqchqhirki\
+  rokrrkvvrzzrzzzzzzzzzzzzlzrezuXzxPtzGoz8kz1fz0ez0e\
+  z0Tz0Jq18e10THzzNznSz`XzPbzBfz0kz0cz2XlJQY_oqbzzez\
+  zczxbzr`zl`wf_t`YoVXlPXiJVeDTb7S_1SS0`M0hG0o80x20z\
+  00zzz0zz0zz0zz0xz0tz0qz0nz0kz0hz0YuTPrzNtzNuuNwrMx\
+  nMzkMzfKzbKz_KzVJzSJzNJzJHzGHzBHz8XAzVDqTGcSJQ7T`0\
+  ck0Tf8JcJ8`P5iT4q_2xc1zh0zT8rEGY0PD0X00_00b02e08h0\
+  Ek0Jn0Pq0Vt0_w0ez0iz0`z5TzBMzHEzN7zT0z_0ze7nTKbJYS\
+  8kG0x50oB2fHGYNTQSfPVhNXhMYhK_iJ`iHciGeiEfkDhkBikB\
+  kkGihJifNieQicTibYi``i_ciYhiXkiVniToeQq`PrXMrSKtPJ\
+  uKGuGEwBDx7Az58z77z84zA2zB1zD2zE2zH4zK4zN5zQ5zT7zX\
+  7z_8zb8zeAzhAzkAwnBtqBqtBnwBkzDhzDezDczDYzMXz`XzBP\
+  zHHzNAzS2zY0zc0zhVznQzhKzPQzKVzH`zDez8kz4oz1uz0zz0\
+  zz0zz0wz0iz1Yz8KzH7zP0zX0zS0zN0zK0zG0zD0z80z40z10z\
+  00z00z00z02z0Bz0Kz2Tz8bzE
+
+}
+
+frm:MandelbrotMix4 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}

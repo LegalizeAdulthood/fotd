@@ -1,0 +1,35 @@
+Mandelia { ; FOTD -- May 15, 2002 (Rating 6)
+ ; time=0:25:37.91--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=multirot-XY-ZW-new function=flip/ident
+  passes=t center-mag=3.19189e-016/6.66134e-016/0.99\
+  3388/1/55/3.88578058618804789e-016 params=89/89.99\
+  /2/0/0/0/-0.75/0 float=y maxiter=75000 logmap=yes
+  inside=0 periodicity=15 colors=000N7PL8SL9SKGSJ9TI\
+  CUHDVGEWEFXCGYAH_8L_6P_4Wa2_a0ca0ha0nc3tc9ycDzcFzf\
+  HzfJzfLzfNzfPzfRzfUzfWzfUz_UzUUzNRzHRzBRz5_z0fv0mn\
+  0tf0zY0zR0zJ0zD0zH0tL0fN0RR1FWB3YJ7cFBjBDn9Hv5Jz3N\
+  z0Pz0Uz0Wz0Yz0Yz5YzB_zJ_yP_tWrnBzj0zh0zz0zz0zz0zz3\
+  zv7zrBzmFzhJzcNz_RzWWzR_zNczJfzHhzHhzHhzHhzHjzHjzH\
+  jyHjvHmtHmrHmnHmmDjjBhj7fh5ch3af0_f0_c0Ya0Wa0U_0R_\
+  0PY0NY0Nj5YyUhzttzzzzzyzzrzzjzzcvzYrzRmzchzlcyjlwj\
+  tvjyumzsnzqrznrzktzitzfvycvtaymayh_za_zY_z__aa_Hc_\
+  0f_0hY0jW0mU0nT0rS9tRJvQUyPPzOLzRHzUDzXBz_7vb3re0n\
+  h0jk0fn0cq0_t0Ww0Uz0Nz0Hy0Dv07t01r00n00m00j00h00f0\
+  0c00a00_00YLYWzWUyURrRPmWPhYPc_P_aPWfRUhRPjRLmRHrU\
+  FtUBvU7yU3zU1nW3fY3YY3P_3Ha39a3J_FUYPcWanUmyRyfYvR\
+  cvBjt0rt0yr0zr0nh0ea1gUBhNNhHYc9jU3vK0zA9z0Jz0Uz3c\
+  zDnz9mz5mtAmjHmaLmWOjNRjFUj9Xj1_j0bh0eh0hh0kh0nh0q\
+  j0tm0wn0zr0zt0zv0zy0zz0zz0zz0zz0zz0zt0zm0zf3zf3zf
+}
+
+frm:multirot-XY-ZW-new {
+; draws 6 planes and rotations
+;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
+;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
+a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
+z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
+c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
+z=z^(p2)+c,
+|z| <= 36
+}

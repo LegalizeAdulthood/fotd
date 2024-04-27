@@ -1,0 +1,33 @@
+EightGoldKeyholes { ; FOTD -- May 03, 2002 (Rating 6)
+ ; time=0:09:07.33--SF5 on a P200
+  reset=2002 type=formula 
+  formulaname=MandelbrotMix2 function=recip passes=1
+  center-mag=+428.8990414983479/-46.07822226439/272/\
+  1/-15/-6.55149697686985277e-009 params=6/-1.1/1/-1\
+  1.1/0/525/0/0 float=y maxiter=1500 inside=0
+  logmap=149 periodicity=0 colors=00000l00m00n01o02p\
+  03q04r05s06t07u08v09w0Ax09y07z05x05z03u03x03r03q01\
+  m01j01f01d00a00Y10U10Q10N30J30F30D3095055015007007\
+  00700700B00F30H70LB0PF0QL0UP3YS5ZW7cZBfdDhhFllJooL\
+  qpNrqLsqLtqLuqLvqLwqLwqLwoLwoLwoLroLroLmoLmoLmmLmm\
+  LmmLmmLimLimLfmLijNjhPlfQmdQoaSqZUsYUtWWvUYyQYzPZz\
+  NazLazJczFdzDdzBfz9hz7hzBjzFlzHmyLovPqsQqoUslYthZv\
+  dcxafyYhyUlzQozNqzJtzFxzByzDzzDzzDzzDzyDzvDztFzsFz\
+  qFzmFzlFzjFzhDzjBzlBzl9zm9ym7vo7sq5oq5ls3hs3dt1av1\
+  Yv0Ux0Qx0Ny0Jy0Fy0By07y09v0Bs0Do0Fl0Hh0Jd0Ja0LY0NU\
+  0PQ0QN0SJ0UF0UB1YF1aP3dY5hf7loFoxNszUvzayzhzzfzzdz\
+  zdzzczzazzazzYzzUzzQzzPzzLzyHzyFzxBzx7zv5zv7zo9zhB\
+  taDmUFfNHaFJc7Ld0Nf0Ph0Pj0Sl0dm0fq0ht0jq0lo0mm0oj0\
+  qh0sf0tc0ta0vZ0xY0yY0zY0zY5zYFzYJzYNzYQzYUzYYzYazY\
+  dzYhzYlzYozYszYvzYyzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzz\
+  YzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYz
+}
+
+frm:MandelbrotMix2 {
+; Jim Muth
+a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
+g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
+k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
+z=k*((a*(z^b))+(d*(z^f)))+c,
+|z| < l
+}
