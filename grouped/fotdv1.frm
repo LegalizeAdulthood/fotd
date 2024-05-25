@@ -410,7 +410,7 @@ z=sqr(z)+c,
 }
 
 MandelbrotMiN {; formula -- Jim Muth
-z=p1+10^-100, c=p2+pixel:
+z=p1+10^(-100), c=p2+pixel:
 z=(-z)^p3+c,
 |z| <= 16
 }
@@ -436,7 +436,7 @@ z=z^(b)+c,
 }
 
 MandelbrotPM {; formula Jim Muth
-z=p1+10^-100, c=pixel:
+z=p1+10^(-100), c=pixel:
 z=p2*(.5*((-z)^p3+z^p3))+c,
 |z| <= 250
 }
@@ -712,14 +712,14 @@ multigator2 {; Jim Muth
 e=exp(flip(real(p1*.01745329251994))),
 f=exp(flip(imag(p1*.01745329251994))),
 z=f*real(pixel)+p2, c=e*imag(pixel)+p3:
-z=(.5*(z^-4))+(-2*(z^-2))+c,
+z=(.5*(z^(-4)))+(-2*(z^(-2)))+c,
 |z| <= 100  }
 
 multirot-pm21 {; Jim Muth, best=ifif, fiif, fifi, iffi
 a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
 z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p2,
 c=cos(b)*fn3(real(pixel))+cos(a)*fn4(imag(pixel))+p3:
-z=(.1*(sqr(z)))+(10*(z^-2))+c,
+z=(.1*(sqr(z)))+(10*(z^(-2)))+c,
 |z| <= 100  }
 
 multirot-XY-ZW {; Jim Muth, best=ifif, fiif
