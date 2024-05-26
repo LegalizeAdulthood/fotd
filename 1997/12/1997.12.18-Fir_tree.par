@@ -1,7 +1,7 @@
 Fir_tree           { ; Fractal of the day, 18-12-97
                      ; 23 minutes at 100mhz on a 486 at 640x480
-  reset=1960 type=formula formulaname=Obl\
-  ateMix passes=1 center-mag=4.11082/5.9952e-015/0.4177428/9.249\
+  reset=1960 type=formula formulaname=OblateMix
+  passes=1 center-mag=4.11082/5.9952e-015/0.4177428/9.249\
   6/90 params=1/1.1/1/-1.1/0/-1.3699 float=y maxiter=5000
   bailout=25 inside=253 logmap=yes symmetry=xaxis periodicity=10
   colors=000NGeOGe0Fe0Gc0Cb<2>0Fc0Gc0Hb<4>0LaIMa<3>OP`PQ`QS`<6>_\
@@ -11,3 +11,10 @@ Fir_tree           { ; Fractal of the day, 18-12-97
   Seu<4>SbwRawR_v<14>GLgFKfGLg<9>LHfME_MHfNGf
   }
 
+frm:OblateMix {; Jim Muth
+  z=real(pixel)+flip(real(p3)),
+  c=flip(imag(pixel))+imag(p3),
+  a=real(p1), b=imag(p1), d=real(p2), f=imag(p2):
+  z=(a*(z^b))+(d*(z^f))+c,
+  |z| <= 100
+}
