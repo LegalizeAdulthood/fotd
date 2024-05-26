@@ -11,3 +11,15 @@ overlap            { ; Fractal of the day, 15-10-97
   OpNPYBl<21>`KD`KCbNB<10>rl6Owssn6<9>`mP<12>dHQSe7<7>z97<2>t7A
   }
 
+frm:HyperMandel {; Chris Green.
+  ; A four dimensional version of the mandelbrot set.
+  ; Use P1 to select which two-dimensional plane of the
+  ; four dimensional set you wish to examine.
+  ; Use floating point.
+  a=(0,0),b=(0,0):
+  z=z+1
+  anew=sqr(a)-sqr(b)+pixel
+  b=2.0*a*b+p1
+  a=anew
+  |a|+|b| <= 4
+}

@@ -156,6 +156,19 @@ z=z-e*h/j,
 f <= |h|
 }
 
+frm:HyperMandel {; Chris Green.
+  ; A four dimensional version of the mandelbrot set.
+  ; Use P1 to select which two-dimensional plane of the
+  ; four dimensional set you wish to examine.
+  ; Use floating point.
+  a=(0,0),b=(0,0):
+  z=z+1
+  anew=sqr(a)-sqr(b)+pixel
+  b=2.0*a*b+p1
+  a=anew
+  |a|+|b| <= 4
+}
+
 gothic {; Jim Muth
 ; A variation of Chris Green's HyperMandel
 a=(p1),b=(0,0):
