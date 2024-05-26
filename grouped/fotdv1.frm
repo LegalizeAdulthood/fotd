@@ -266,6 +266,12 @@ JimsComMandJ {; Jim Muth
    |z| <=100
   }
 
+JimsCompMand3 {; Jim Muth
+  z=c=pixel:
+  z=z^p1*(c^p2)+c,
+  |z| <= p3+100
+}
+
 JuliaMiN {; formula, Jim Muth
 b=p1, z=pixel+p2, c=p3:
 z=(-z)^b+c,
