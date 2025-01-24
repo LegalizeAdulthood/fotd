@@ -6,6 +6,8 @@ $num_entries = sizeof($entries);
 
 function entry($i)
 {
+    global $entries;
+
     $entry = $entries[$i];
 
     $fields = explode('|', $entry);
