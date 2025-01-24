@@ -17,16 +17,17 @@ function get_entry($index)
     $title = preg_replace('/.*\/[0-9.]*-(.*)\.par/', '$1', $par);
     $title = str_replace('_', ' ', $title);
     $date = preg_replace('/.*\/([0-9.]*)-[^\/]*/', '$1', $par);
-    return [$index, $title, $par, $image, $thumb];
+    return [$index, $date, $title, $par, $image, $thumb];
 }
 
 function html_entry($entry)
 {
     $index = $entry[0];
-    $title = $entry[1];
-    $par = $entry[2];
-    $image = $entry[3];
-    $thumb = $entry[4];
+    $date = $entry[1];
+    $title = $entry[2];
+    $par = $entry[3];
+    $image = $entry[4];
+    $thumb = $entry[5];
     $url = $_SERVER['SCRIPT_NAME'] . '?id=' . $index;
 
     printf("<!-- %s -->\n" .
@@ -49,6 +50,33 @@ function json_entry($entry)
     print(json_encode($entry));
 }
 
+function markdown_entry($entry)
+{
+    header('Content-Type: text/markdown');
+    $base = 'https://user.xmission.com/~legalize/fractals/fotd/';
+    $fotd = $base . 'index.html';
+    $entry[2] = $base . '/' . $entry[2];
+    $entry[3] = $base . '/' . $entry[3];
+    $entry[4] = $base . '/' . $entry[4];
+
+    $index = $entry[0];
+    $date = $entry[1];
+    $title = $entry[2];
+    $par = $entry[3];
+    $image = $entry[4];
+    $thumb = $entry[5];
+    $url = $_SERVER['SCRIPT_NAME'] . '?id=' . $index;
+
+    printf("<!-- %s -->\n" .
+        "[![FOTD %s](%s)](%s)]<br/>\n" .
+        "[Fractal of the Day](%s), %s<br/>\n" .
+        "%s ([parameter file](%s))<br/>\n",
+        $url,
+        $date, $thumb, $image,
+        $fotd, $date,
+        $title, $par);
+}
+
 function main($info, $get)
 {
     global $num_entries;
@@ -64,6 +92,8 @@ function main($info, $get)
     $entry = get_entry($index);
     if ($info == '/json') {
         json_entry($entry);
+    } else if ($info == '/md') {
+        markdown_entry($entry);
     } else {
         html_entry($entry);
     }
