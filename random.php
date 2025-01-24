@@ -10,7 +10,7 @@ function get_entry($index)
 {
     global $entries, $base, $site;
 
-    $entry = $entries[$index];
+    $entry = trim($entries[$index]);
 
     $fields = explode('|', $entry);
 
@@ -38,7 +38,7 @@ function html_entry($entry)
 
     printf("<!-- %s -->\n" .
         "<a href=\"%s\"><img src=\"%s\"></a><br/>\n" .
-        "<a href=\"%s\">Fractal of the Day</a>, %s\n<br/>" .
+        "<a href=\"%s\">Fractal of the Day</a>, %s<br/>\n" .
         "%s (<a href=\"%s\">parameter file</a>)\n", 
         $url,
         $image, $thumb,
