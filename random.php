@@ -55,6 +55,9 @@ function main($info, $get)
 
     if (array_key_exists('id', $get)) {
         $index = $get['id'];
+        if ($index < 0 || $index >= $num_entries) {
+            $index = rand(0, $num_entries);
+        }
     } else {
         $index = rand(0, $num_entries);
     }
