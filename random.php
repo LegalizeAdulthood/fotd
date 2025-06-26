@@ -67,7 +67,7 @@ function markdown_entry($entry)
     $url = $entry[6];
 
     printf("<!-- %s -->\n" .
-        "[![FOTD %s](%s)](%s)]<br/>\n" .
+        "[![FOTD %s](%s)](%s)<br/>\n" .
         "[Fractal of the Day](%s), %s<br/>\n" .
         "%s ([parameter file](%s))<br/>\n",
         $url,
