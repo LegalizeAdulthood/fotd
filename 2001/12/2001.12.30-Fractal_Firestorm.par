@@ -1,6 +1,60 @@
-Fractal_Firestorm { ; FOTD -- December 30, 2001 (Rating 6)
- ; time=0:59:59:98--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Sun, 30 Dec 2001 05:37:54 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 30-12-01 (Fractal Firestorm [6])
+;       Id: <d8.113eced4.29600210@aol.com>
+; ---------
+; 
+; FOTD -- December 30, 2001 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'm feeling a bit out-of-sorts this evening, so I'll cut the 
+; discussion short.
+; 
+; The broad fiery arms surrounding the midget in today's image 
+; inspired the name "Fractal Firestorm".  The formula behind the 
+; image combines various portions of 1/Z and Z^(-13), then turns 
+; the inside-out parent fractal rightside-out by adding 1/C 
+; instead of C.
+; 
+; The scene, which features a dark-red disk edged with yellow and 
+; a midget that needs a few more iterations, is located in a 
+; valley of its parent fractal.
+; 
+; I have rated the image a conservative 6, though it is perilously 
+; close to a rating of 7.  The parameter file renders the image in 
+; 2/100 second less than 1 minute on my machine.  On a state-of-
+; the-art unit, it will render in far less time.
+; 
+; Those who dislike rendering may download the pre-rendered GIF 
+; image from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather today here at Fractal Central was mostly 
+; cloudy, with a few flurries of snow in the afternoon.  It was 
+; the first snow of the season, and not at all welcomed by the 
+; fractal cats, who spent the day by the radiators, hiding from 
+; the 36F 2C temperatures outdoors.
+; 
+; I'm now going to spend the little that remains of the evening 
+; watching a junky old sci-fi movie.  The next fractal will arrive 
+; in 24 or 36 hours, depending on how I feel.  Until then, take 
+; care, and be true to your fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Fractal_Firestorm  { ; time=0:59:59:98--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix4 function=recip passes=1
   center-mag=+3.95134602533411200/+0.590810624500440\
   80/5.034085e+007/1/35/-1.31155947789840521e-007
@@ -21,8 +75,7 @@ Fractal_Firestorm { ; FOTD -- December 30, 2001 (Rating 6)
   rihtihtiiuhiwhkxhkxflzflzekzcizbhz`fz_ezYczXbzT`zT\
   _zT_zV`zVazVbzVczXdzXezXfzXgzYizYkzYnzYqz_tz_wz_zz\
   _zz`zz`zz`zzDzzDzzBzzBzzBzzBzzBzzMzzVzzXzzYzz_
-
-}
+  }
 
 frm:MandelbrotMix4 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
@@ -31,3 +84,5 @@ k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

@@ -1,6 +1,69 @@
-Festive_Holiday { ; FOTD -- December 28, 2001 (Rating 6)
- ; time=0:04:99.99--SF5 0n a P200
-  reset=2002 type=formula 
+;     Date: Fri, 28 Dec 2001 05:54:03 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 28-12-01 (Festive Holiday [6])
+;       Id: <14.20012cd5.295d62f6@aol.com>
+; ---------
+; 
+; FOTD -- December 28, 2001 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal image has more colors than one can shake an 
+; iteration at.  In fact, it is so colorful that, at this festive 
+; time of year, I had no choice but to name it "Festive_Holiday".  
+; The colors actually are a bit overpowering, and for this reason 
+; I could rate the image no higher than a 6.
+; 
+; The image was created by that overworked but not overvalued 
+; formula, MandelbrotMix4, which today combines two negative 
+; powers of Z and turns the resulting inside-out image right-side-
+; out by adding 1/C instead of C.
+; 
+; To achieve the brilliantly colored effect, I colored the outside 
+; with the <tdis> option.  Curiously enough, the width of the 
+; brilliant yellow band immediately surrounding the midget can be 
+; controlled by adjusting the maxiter of the image.  The greater 
+; the maxiter, the narrower the band.
+; 
+; The render time of the parameter file falls 1/100 second short 
+; of 5 minutes on my struggling, out-of-shape P200 machine.  On a 
+; well-tuned machine with washboard abs and bulging biceps, it 
+; should finish in less than 2 minutes.  The alternate choice is 
+; to download the completed GIF image from the W.W.Web at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Thursday here at HQ was once again just 
+; about what would be expected at this time of year -- brisk 
+; breezes and a temperature that barely reached freezing.  This 
+; meant that the fractal cats could not venture outdoors in 
+; comfort.  When the fractal cats want to go outdoors and cannot 
+; do so in comfort, they become quite irritable.  No surprise then 
+; that the normally friendly brothers got into a heated argument 
+; that ended with them rolling on the floor, fighting.  When they 
+; settled their dispute, I treated them to left-over turkey, and 
+; peace prevailed for the rest of the day.  The only damage is a 
+; nick on Thomas's ear and a couple scratches on Tippy's head.
+; 
+; It's now time to shut down fractal HQ and call it a night.  The 
+; cats are still at peace, and a small snack will keep them that 
+; way for the rest of the night.  Until next FOTD, which will 
+; happen in about 24 hours from now, take care, and be prepared 
+; for philosophical pondering.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Festive_Holiday    { ; time=0:04:99.99--SF5 0n a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix4 function=recip passes=1
   center-mag=+1.64306827113377100/+0.752710917997295\
   30/536805.2/1/-60/-2.13414834415726062e-010
@@ -21,8 +84,7 @@ Festive_Holiday { ; FOTD -- December 28, 2001 (Rating 6)
   8_f7bh7ei7gj7eg7de7cb7b`7aZ7`W7_U7ZR7YP7XN8VO9UOAT\
   OBSPBRPCQPDPQEOQFNQFMQnQ9USH9TOOBmPIoQOpRUqS`rTfsU\
   ltVruXjtZbt`WsbOsdGrf9rWBcLDPKIPJMPIQPHUPGYPFaP
-
-}
+  }
 
 frm:MandelbrotMix4 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
@@ -31,3 +93,5 @@ k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

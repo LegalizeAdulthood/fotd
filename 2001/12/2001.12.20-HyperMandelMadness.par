@@ -1,6 +1,96 @@
-HyperMandelMadness { ; FOTD -- December 20, 2001 (Rating 5)
- ; time=0:00:12.14--SF5 on a p200
-  reset=2002 type=formula 
+;     Date: Thu, 20 Dec 2001 15:41:41 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 20-12-01 (HyperMandel Madness [5])
+;       Id: <24.1e536d5c.2953608e@aol.com>
+; ---------
+; 
+; FOTD -- December 20, 2001 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; On Tuesday, Jon K. posted a letter to the Fractint list, 
+; commenting on the FOTD of December 17, which is a scene in the 
+; hypercomplex Mandelbrot set.  In the letter he asked whether an 
+; easy way exists to find the locations of the top layer and 
+; bottom layer in the hypercomplex set.  This question is more 
+; complex than it seems.
+; 
+; To start, the appearance of different layers in the FOTD of 
+; December 17 is an illusion.  The hypercomplex M-set is 
+; 4-dimensional indeed, but only a single 2-dimensional slice of 
+; it can ever be displayed by the hypercomplex formula.  (The 
+; julibrot formula can display 3-dimensional slices.)
+; 
+; What is happening in the 12-17 image is that the hypercomplex 
+; figure has been sliced in an area where different parts of it 
+; are merging, actually trying to occupy the same points of 
+; hyperspace, with the higher-iteration features being obliterated 
+; by the lower-iteration features.  In the 12-17 image, we are not 
+; looking through an eroded Mandelbrot shaped hole at features 
+; that lie on the other side, we are seeing all that remains of 
+; the higher-iteration features, the rest having been obliterated 
+; by the surrounding low-iteration stuff.
+; 
+; Jon asked whether I know of an easy way to find scenes such as 
+; 12-17's.  The answer is no.  Both 'layers' move in an 
+; unpredictable manner as the parameters are changed.  The only 
+; way I know to find such scenes is to track them down by trial 
+; and error bracketing and to fine-tune the image with the 
+; Fractint evolver.
+; 
+; As I noted in the 12-17 discussion, the hypercomplex formula of 
+; Fractint does not draw all possible slices of the hypercomplex 
+; Mandelbrot set.  The formula I wrote for today's image draws 
+; more, though not all slices.  Today's formula has a drawback 
+; however in that the periodicity must be shut off in order for it 
+; to work correctly.
+; 
+; The p3 parameter of today's HyperMandelbrot formula works the 
+; same as the cj and ck parameters of the hypercomplex formula.  
+; (I have no idea what the unused parameters of the hypercomplex 
+; formula are eventually supposed to be used for.)  The p1 
+; parameter of today's HyperMandelbrot formula works roughly the 
+; same as varying the initial Z parameters of the Mandelbrot set.  
+; The p2 parameter does strange things indeed, things that are 
+; almost unbelievable.  Since it alters the effect of the other 
+; parameters, it is changed only at the risk of the user.  
+; Enjoying risk, I set it to 0.5 for today's image, and when I set 
+; p3 to 0.008, just look at what it did to our Mandelbrot set.
+; 
+; I named today's image "HyperMandel Madness" as a poetic 
+; description, and rated it at an average 5.  With a running time 
+; of 12 seconds, today's parameter file is virtually instantaneous.
+; 
+; As always, the completed GIF image is also available at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; With a little more sun and a little less wind, the fractal 
+; weather Wednesday was somewhat improved over the day before, but 
+; the dynamic duo still would have preferred a temperature of 77F 
+; 25C rather than the 54F 12C that actually happened.  They were 
+; in a surly mood until the sound of some stray cats fighting 
+; somewhere in the brush sent them dashing to their lookout shelf 
+; by the window, where they spent more than an hour.  Then, when 
+; their evening mealtime arrived, they completely forgot their 
+; troubles.
+; 
+; It's now time to accomplish something a bit more practical.  
+; Until next time, take care, and don't get hyper.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+HyperMandelMadness { ; time=0:00:12.14--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=HyperMandelbrot center-mag=-0.546672/1\
   .33227e-015/0.9318636 params=0/0/0.5/0/0.008/0
   float=y maxiter=480 inside=0
@@ -21,14 +111,14 @@ HyperMandelMadness { ; FOTD -- December 20, 2001 (Rating 5)
   u`zw`zy`zz`zz_zz_zzZzzZzzWzzTzzQzzNzzKzzHzzEzzBzz8\
   zz5zz2zz0zzBzzLzzVzzdzzbzz`zzZzzXzzVzzUzzSzzQzzOzz\
   MzzLzzFzzPzzQzzRzzSzzTzzU
+  }
 
-}
-
-frm:HyperMandelbrot {
-; periodicity must be turned off
+frm:HyperMandelbrot {; periodicity must be turned off
 a=(p1),b=(0,0):
 q=sqr(a)-sqr(b)+pixel,
 b=(p2+2)*a*b+p3,
 a=q,
 |a|+|b| <= 100
 }
+
+; END 20.0 PAR-FORMULA FILE==================================
