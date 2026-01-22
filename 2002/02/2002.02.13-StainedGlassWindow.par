@@ -1,6 +1,63 @@
-StainedGlassWindow { ; FOTD -- February 13, 2002 (Rating 9)
- ; time=0:00:11.27--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Wed, 13 Feb 2002 15:29:29 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 13-02-02 (Stained Glass Window [9])
+;       Id: <1.5.4.16.20020213102600.0ea7b48e@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 13, 2002 (Rating 9)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The FOTD CD is progressing nicely.  Of the 70 or so odd months 
+; of FOTD's that will be on the disk, 3 months are already 
+; finished.  At this rate, if nothing goes wrong, (which probably 
+; will happen), I could have the disk ready before the end of the 
+; year.
+; 
+; Today's image is an old one, which I created back in 1997.  
+; Looking at it, with its warmly glowing effect of being 
+; illuminated from within, I wonder how much, if at all, my images 
+; have improved in the past five years, especially since I became 
+; obsessed with an endless series of Mandelbrot midgets.
+; 
+; I have named the image "Stained Glass Window" for its effect of 
+; sunlight streaming through a church window at sunset.  I rated 
+; the image a 9 because it is worth that lofty rating.
+; 
+; The render time of 11 seconds is a great demonstration that good 
+; fractals need not take a long time to render.  It will take 
+; several times that long to go online and download the completed 
+; image from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Tuesday here at Fractal Central was 
+; uneventful, though the cats, who were dis-satisfied, must have 
+; considered uneventful weather too harsh.  The hazy sun, moderate 
+; winds, and temperature of 52F 11C kept them confined to the 
+; porch, waiting for the sun, which at this time of year almost 
+; but not quite tops the holly trees around midday.  An afternoon 
+; dish of tuna eased their discomfort.
+; 
+; My discomfort will be eased when the day's work is finished and 
+; the FOTD CD is ready.  It will take about 5 hours to finish the 
+; day's work, and closer to 500 hours to finish the CD, but the 
+; only way to finish is to start.  So until next FOTD, take care, 
+; and be patient.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+StainedGlassWindow { ; time=0:00:11.27--SF5 on a P200
+  reset=2002 type=formula formulafile=jim.frm 
   formulaname=Mytest08c function=cotan passes=1
   center-mag=0/1.55431e-015/0.6577505 params=2/0/0/1\
   /0/2 float=y maxiter=500 bailout=100 inside=bof60
@@ -21,13 +78,13 @@ StainedGlassWindow { ; FOTD -- February 13, 2002 (Rating 9)
   00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00\
   Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q00Q0\
   0Q00Q00Q00Q00Q00Q00Q00Q00
+  }
 
-}
-
-frm:Mytest08c {
-; Jim Muth
+frm:Mytest08c  {; Jim Muth
 z=fn1(pixel), a=real(p3),
 b=imag(p3), c=a+(b*pixel):
 z=(((z^p1)*z)^p2)^(-p2)+c,
 |z|<=100
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

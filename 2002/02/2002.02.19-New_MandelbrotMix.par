@@ -1,7 +1,69 @@
-New_MandelbrotMix { ; FOTD -- February 19, 2002 (Rating 5)
- ; time=0:07:34.40--SF5 on a P200
-  reset=2002 type=formula 
-  formulaname=MandelbrotMix3FirstOne passes=1 center-mag=-3.\
+;     Date: Tue, 19 Feb 2002 16:19:46 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 19-02-02 (New MandelbrotMix [5])
+;       Id: <18d.3914dba.29a3c20d@aol.com>
+; ---------
+; 
+; FOTD -- February 19, 2002 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Three days have passed since the FOTD last appeared.  In that 
+; time, I have been working on the upcoming FOTD CD, which is now 
+; about 18 percent complete.  (The inevitable unexpected problems 
+; have not yet appeared, so the disk might actually be closer to 
+; 10 percent complete.)
+; 
+; In addition to the CD, I have been working on a MandelbrotMix3 
+; formula, which instead of mixing 2 powers of Z, as the M-Mix4 
+; formula does, mixes 4 powers of Z.  As of this time, I have done 
+; very little work with this new formula, but I have done enough 
+; to realize that it has much potential.
+; 
+; I have named today's image "New MandelbrotMix" because it marks 
+; the first appearance of the new formula, unfinished as the 
+; formula is, and it also introduces the next class of fractals, 
+; which, mixing 4 powers of Z instead of 2, will presumably have 
+; more variety.
+; 
+; These new fractals will often have several critical starting 
+; points.  At this time however, the different critical points 
+; must be calculated and entered manually.  I have not yet figured 
+; how to get the formula to automatically calculate the multiple 
+; critical starting points and initialize Z to these values.
+; 
+; Today's image rates an average 5, making it a bit slow when 
+; rendered from the parameter file.  The better way of viewing the 
+; image is to download it from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Monday was fair enough for the cats to spend 
+; several hours on the porch watching the robins feast on the 
+; holly berries.  The sun peeked above the holly trees just enough 
+; to give them a few spots of midday warmth to chase.  The 
+; temperature of 46F 8C was a bit chilly however, especially when 
+; the sun dipped behind the trees again, sending the dynamic duo 
+; scurrying for their warm beds indoors.
+; 
+; I see that the morning is growing short, and I've got lots to do 
+; before the day ends.  Until next time, take care, and fractal 
+; dreams.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+New_MandelbrotMix  { ; time=0:07:34.40--SF5 on a P200
+  reset=2002 type=formula formulafile=slices.frm
+  formulaname=MandelbrotMix3 passes=1 center-mag=-3.\
   19726650875016000/+0.01482207270577980/1226631
   params=0.1/2/0.03/3/3/-1/-1/-2/-3.31805269233/0
   float=y maxiter=2400 inside=0 logmap=56
@@ -21,14 +83,14 @@ New_MandelbrotMix { ; FOTD -- February 19, 2002 (Rating 5)
   dDAfEBgEChEDjFEkFFlFHgIJbLLYONUROPUQKXSG_UBbW6eX2h\
   Z6e_9baD`bGYdKWeNTgRQhUOjYLk`JmdGngEPEWNMdMUmL`vPY\
   qSWlVUgZSbaPZVOjYRk`UkbYl
+  }
 
-}
-
-frm:MandelbrotMix3FirstOne {
-; Jim Muth
+frm:MandelbrotMix3    {; Jim Muth
 z=p5, c=pixel,
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=real(p3), h=imag(p3), j=real(p4), k=imag(p4):
 z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
 |z| <= 100
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

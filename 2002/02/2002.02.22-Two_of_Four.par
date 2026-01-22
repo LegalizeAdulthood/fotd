@@ -1,6 +1,71 @@
-Two_of_Four { ; FOTD -- February 22, 2002 (Rating 4)
- ; time=0:06:48.97--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Fri, 22 Feb 2002 15:39:03 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 22-02-02 (2-of-4 [4])
+;       Id: <1.5.4.16.20020222103314.0ef7cd56@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 22, 2002 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The CD is progressing on schedule, with (so far) only minor 
+; problems.  If things continue this way, the disk will be ready 
+; by this Summer, Winter, wet season, or dry season, depending on 
+; the climate where this letter is being read
+; 
+; I named today's image 2-of-4, not because it reminds me of a 
+; Star-Trek episode, but because it is the second FOTD created 
+; with my new experimental formula, which mixes four powers of Z.  
+; The formula has been changed since I used it for the most recent 
+; FOTD, but the parameter files that were written using the first 
+; version of the formula will also work with the present version, 
+; (if the function is set to <ident>), so I did not change the 
+; formula name.
+; 
+; Today's image rates only a 4.  But this does not make the 
+; formula a failure.  Rather, it is a sign that I have not yet 
+; become familiar with the things that might be possible when four 
+; powers of Z, some negative, some positive, are combined in a 
+; single iteration.
+; 
+; To be honest, today's image resembles many images that I have 
+; passed over while using the M-Mix4 formula.  I suspect that 
+; adding ever more powers of Z in a single iteration will soon 
+; result in diminishing returns, much as raising the exponent does 
+; in a formula such as Z^100+C.  But I'll give my new formula a 
+; fair trial before consigning it to the graveyard of forgotten 
+; formulas.  (Formulae for the over-educated.)
+; 
+; The six-minute render time is bearable.  Downloading the 
+; completed image is even more bearable.  And the image can be 
+; downloaded from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Thursday was ideal for man and cats alike -- 
+; warm sun, mild breezes, and a spring-like temperature of 66F 
+; 19C.  Now that the midday sun has cleared the holly trees, the 
+; porch was ideal for Thomas and Tippy, who passed the afternoon 
+; there, sunning themselves and watching the robins.
+; 
+; As for me, it's back to work and back to the FOTD CD, which is 
+; now 14 percent completed.  Until next FOTD, take care, and 
+; things can only get better.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Two_of_Four        { ; time=0:06:48.97--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix3 function=recip passes=1
   center-mag=-1.61207585715358800/+0.192309337238596\
   40/4.616693e+008/1/-92.5/-0.000123449397862948618
@@ -22,14 +87,13 @@ Two_of_Four { ; FOTD -- February 22, 2002 (Rating 4)
   zPrzM`zBOzSXzQdzOmzMozvrzbjzUjz0pzAqz4rz8szCtzGmzV\
   `zqkz`RzgfzWJzdWzYhzR7zCXzGGzGUzIgzJwzRvzPvzNuzLUz\
   rgz`pzrrzisz`tzSNz1EzQEzU
+  }
 
-}
-
-frm:MandelbrotMix3 {
-; Jim Muth
+frm:MandelbrotMix3 {; Jim Muth
 z=real(p5), c=fn1(pixel), a=real(p1), b=imag(p1),
 d=real(p2), f=imag(p2), g=real(p3), h=imag(p3),
 j=real(p4), k=imag(p4), l=imag(p5)+100:
 z=(a*(z^b))+(d*(z^f))+(g*(z^h))+(j*(z^k))+c,
-|z| <=l
-}
+|z| <=l }
+
+; END 20.0 PAR-FORMULA FILE==================================

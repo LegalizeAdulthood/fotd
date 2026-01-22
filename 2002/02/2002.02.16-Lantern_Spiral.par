@@ -1,6 +1,71 @@
-Lantern_Spiral { ; FOTD -- February 16, 2002 (Rating 8)
- ; time=0:03:14.16--SF5 on a P200
-  reset=1960 type=formula 
+;     Date: Sat, 16 Feb 2002 16:04:01 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 16-02-02 (Lantern Spiral [8])
+;       Id: <1.5.4.16.20020216105609.55672f3a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- February 16, 2002 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Yes, I realize that three days have passed since the last FOTD.  
+; The FOTD CD is coming on schedule, (8 months are ready, 63 
+; months remain to be done, and the colors of many of the old 
+; images need to be brightened.), but the CD is taking so much of 
+; my spare time that I have little time remaining for new FOTD's.  
+; The FOTD is not in danger of going the way of the dodo however, 
+; and when the CD is ready, the new FOTD's will once again appear 
+; on a daily basis.  After all, what would the philofractal list 
+; be without a new FOTD every day?  It certainly is not a UF or 
+; FractalTalk list.
+; 
+; Today's formula, NewtonTest27, is an old one that has lain idle 
+; for several years.  It represents an early effort on my part to 
+; do something unusual with Newton's fractals.  Nothing much ever 
+; came of the effort, for shortly after writing today's formula, I 
+; got involved in the four-dimensional Julibrot figure and midgets 
+; in 2-part formulae, and soon forgot my Newton's efforts.
+; 
+; But as today's 8-rated FOTD shows, some of these old Newton's 
+; formulae can create very interesting images.  Studying today's 
+; image, I first noticed the prominent spiral in the upper left, 
+; then my eye was caught by the lantern-like figures rising from 
+; the lower right corner and merging into the spiral.  I named the 
+; picture "Lantern Spiral".
+; 
+; With a rating of 8, the 3-minute render time of the parameter 
+; file is quite reasonable.  But it is not absolutely reasonable.  
+; Those who demand the ultimate in reason will find the image 
+; posted in all its illumined glory to Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and to Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Friday here at Fractal Central was fair 
+; enough.  The comfort of hazy sun and a temperature of 52F 11C 
+; was tempered by a chilly wind that kept the fractal cats 
+; confined to the porch.  From the porch, they kept a watchful eye 
+; on a flock of robins that descended at midday to feast on the 
+; holly berries.  Tippy chattered wishfully for a robin to stray 
+; within pouncing range, but the wise birds never came within 
+; several meters of his eagerly waiting claws.
+; 
+; As for myself, it's a Saturday morning and I've got 61 months of 
+; FOTD's yet to prepare for transfer to CD.  So until the next 
+; FOTD appears in a couple days, take care, and keep the faith.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Lantern_Spiral     { ; time=0:03:14.16--SF5 on a P200
+  reset=1960 type=formula formulafile=allinone.frm
   formulaname=NewtonTest27 passes=1 center-mag=-1.11\
   79/-0.409735/3.174717/1/-90/-1.23373533611470521e-\
   014 params=2/2.4/2/2/1/1e-015 float=y maxiter=90
@@ -20,11 +85,9 @@ Lantern_Spiral { ; FOTD -- February 16, 2002 (Rating 8)
   TADQAIOxz_fpTQ`PpsragfOXVylrgafQTV17P4AO6FM9ILzzDx\
   zGgmIQ_JM70IC0DGAOc3zz0xm0__9zzzdpizzzzxz1iI4`J7SL\
   zzFlpIT`JzjxmajTTYDD0uvcdiXPXQz0rl4fTDVlzi_u`MaSMz\
-  cjz9YvDMcIz00u44dAAPGGyTslQj_PaMMTXz3LmC
-}
+  cjz9YvDMcIz00u44dAAPGGyTslQj_PaMMTXz3LmC }
 
-frm:NewtonTest27 {
-; Jim Muth
+frm:NewtonTest27 {; Jim Muth
 a=real(p1), b=imag(p1), c=real(p2),
 d=imag(p2), k=real(p3), f=imag(p3),
 z=(pixel):
@@ -33,3 +96,5 @@ zy=(c*z)^d
 z=z-(k*zx/zy),
 |zx| >= f
 }
+
+; END 20.0 PAR-FORMULA FILE==================================
