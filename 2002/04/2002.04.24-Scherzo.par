@@ -1,6 +1,75 @@
-Scherzo { ; FOTD -- April 24, 2002 (Rating 8)
- ; time=0:04:43.20--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Wed, 24 Apr 2002 04:13:40 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 24-04-02 (Scherzo [8])
+;       Id: <a5.26a08ff0.29f78acc@aol.com>
+; ---------
+; 
+; FOTD -- April 24, 2002 (Rating 8)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal is a picture of a midget in the Z^sqrt(3)+C 
+; fractal, a fractal that is infinite both in surface extent and 
+; in its depth.  The particular midget in today's image is located 
+; in a cut-off fragment of a spiral elephant-trunk located in the 
+; East Valley area of the parent fractal, which is shaped 
+; surprisingly like the classic M-set.
+; 
+; This midget is one of the more interesting ones I have found in 
+; the range between the linear non-fractal Z+C and the ultimate 
+; fractal Z^2+C.  The MandelbrotBC1 formula is a great help in 
+; getting the most out of fractals in this range.  If the image on 
+; one level of the logarithmic spiral shows little of interest, 
+; I merely go up to the next level by adjusting the real(p2) 
+; parameter.
+; 
+; I named the image "Scherzo", a word that describes a lively and 
+; humorous musical composition.  It was the first word that came 
+; to mind, and has little to do with the actual appearance of the 
+; fractal.  Because it is perhaps the most satisfactory midget I 
+; have yet found in these under Z^2 fractals, I rated it a lofty 
+; 8, a rating that might be a bit liberal.
+; 
+; An extra feature of the image is that it renders from the 
+; parameter file in under 5 minutes.  But 5 minutes can seem an 
+; awfully long time when one is waiting for a fractal to finish 
+; and other things need to be done.  Relief for impatience is at 
+; hand in the form of the completed GIF image, which is available 
+; on the W.W.Web at Paul's site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Tuesday here at Fractal Central was brisk 
+; and breezy, with a temperature of 55F 13C.  But a strong sun 
+; peeking between the clouds gave enough warmth on the porch to 
+; keep the fractal cats happy for over an hour.
+; 
+; My happiness did not arrive until I had most of the day's work 
+; behind me.  And then I was happy.  I'll be even happier when 
+; today's work is behind me.  But the greatest happiness of all 
+; will come when the FOTD CD is finished and if it proves to be a 
+; success.  I'm currently involved in re-writing many of the short 
+; stories I have written over the past 20 years.  When reading my 
+; own writing some 10 to 20 years after I wrote it, I sometimes 
+; wonder how I could have written something so trite, and then 
+; there are the all-too-few times when I wonder how I could have 
+; written something so good.  Regardless, the next ongoing FOTD 
+; will appear on April 27th.  Until then, take care, and hold your 
+; breath.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Scherzo            { ; time=0:04:43.20--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotBC1 function=recip passes=1
   center-mag=-0.21378685445671390/-0.076303594971113\
   36/337296.3/1/-162.5/-1.8837750803690767e-010
@@ -22,19 +91,20 @@ Scherzo { ; FOTD -- April 24, 2002 (Rating 8)
   GzdGzeFzfFzgDzhDziCzjAzkAzl9zn9zp7zq6zr6zt4zz4zz3z\
   z3zz1zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0zz0\
   zz0zz0zz0zz0zz0zz0zz0zz0z
-
-}
+  }
 
 frm:MandelbrotBC1   { ; by several Fractint users
-f=p1, a=imag(p2)+100
-p=real(p2)+PI
-q=2*PI*fn1(p/(2*PI))
-r=real(p2)-q
-Z=C=Pixel:
-Z=log(Z)
-IF(imag(Z)>r)
-Z=Z+flip(2*PI)
-ENDIF
-Z=exp(f*(Z+flip(q)))+C
-|Z|
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

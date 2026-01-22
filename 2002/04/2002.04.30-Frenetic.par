@@ -1,6 +1,72 @@
-Frenetic { ; FOTD -- April 30, 2002 (Rating 7)
- ; time=0:05:57.34--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Tue, 30 Apr 2002 04:48:03 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 30-04-02 (Frenetic [7])
+;       Id: <1.5.4.16.20020430004737.29f7573a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 30, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I'm actually nearing the point where I'll be able to say that 
+; the completion of the FOTD CD is within sight.  My original hope 
+; was to have the disc ready for distribution sometime this 
+; summer.  Considering the way things are going, I may actually 
+; make it and be back to an FOTD every day sooner than expected.
+; 
+; Today's image illustrates a lively scene in the fractal that 
+; results when the rather confusing formula -1(Z)-(1/Z)-(1/C) is 
+; iterated.  In this case, the M-Mix2 formula, with its adjustable 
+; starting value of Z, draws the critical plane that the M-Mix4 
+; formulas misses -- not that it makes much difference in the 
+; final appearance of the parent fractal.
+; 
+; Being colored with the outside=tdis option, today's image is 
+; more than lively, it is downright "Frenetic", and that's what I 
+; named it.  The sharply defined, almost sinister features and 
+; almost too-brilliant colors earned the image a rating of an 
+; above-average 7.  Had it not been for the area immediately 
+; surrounding the midget, which seems to have run out of detail, 
+; the image might have rated an 8.  The <tdis> algorithm often 
+; does this when applied to the outside areas of fractals close to 
+; high-iteration midgets.  There is probably a way to work around 
+; it, though I have not yet looked for such a work-around.
+; 
+; The render time from the parameter file of 6 minutes on a P200 
+; machine can be cut by over half by downloading the finished GIF 
+; image from Paul's site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Monday here at Fractal Central was cloudy, 
+; blustery and chilly, with a temperature of 57F 14C which, 
+; combined with the winds, made the porch a bit too cold for the 
+; intrepid duo of housecats, who spent the day by the radiator, 
+; wishing the heat would come on a bit more often.  A treat of 
+; mackerel kept them from becoming too testy.
+; 
+; As for me, I'm going to spend the rest of the evening dozing in 
+; front of the TV, which will be showing a junky old sci-fi or 
+; horror thriller, which I will dredge up from my vast collection 
+; and which has long since lost its thrill.  If I'm lucky I'll 
+; doze off fast; if I'm unlucky I'll get to watch the whole thing. 
+; Regardless, I'll return in three days with another thrilling 
+; chapter of the ongoing FOTD.  Until that wondrous time arrives, 
+; take care, and ponder the hidden meaning of fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Frenetic           { ; time=0:05:57.34--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix2 function=recip passes=1
   center-mag=-0.30415843043600430/+0.176317849078791\
   20/72998.29/1/-67.4999999992991775/-1.078220374095\
@@ -21,14 +87,14 @@ Frenetic { ; FOTD -- April 30, 2002 (Rating 7)
   Iz2Iz0Iz0Kz0Kz0Kz0Kz0Kz0Kz0Nz0Oz0Qz0Rz0Vw0Wt1Yp2Zn\
   3`e9YWEVOIRFNO8RL0WI0l90fC0`F0VI0OL0KO0ER28V32Y30`\
   50Z50Z70Y70Y71Y81W82W82V93V95VB5TB7TB7RC8RC9RC9QEB\
-  QEBOECOFEOFENHFNHFLHHLIIL
-}
+  QEBOECOFEOFENHFNHFLHHLIIL }
 
-frm:MandelbrotMix2 {
-; Jim Muth
+frm:MandelbrotMix2 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
 k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

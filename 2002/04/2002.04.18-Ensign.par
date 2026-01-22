@@ -1,6 +1,84 @@
-Ensign { ; FOTD -- April 18, 2002 (Rating 7)
- ; time=0:04:42.81--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Thu, 18 Apr 2002 13:31:56 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-04-02 (Ensign [7])
+;       Id: <1.5.4.16.20020418093120.391f8d0a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 18, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I named today's image "Ensign".  I had no real reason for giving 
+; it such a name -- with as much as I have to do, I simply could 
+; think of nothing better.  I rated it at a 7, which I believe is 
+; the highest rating to have been given a FOTD since I cut the 
+; FOTD schedule to one every 3 days.  (When the CD is ready, the 
+; FOTD will return to its normal every-day schedule.)
+; 
+; The parent fractal was created by the simple formula: 
+; -5(Z^(-1.1))-8(Z^(-11))+(1/C), a formula that creates a grossly 
+; oversized double-negative fractal.
+; 
+; As is the case with many of these oversized double-negative 
+; fractals, most of the interest lies relatively near the origin, 
+; where the fractal takes on a critical appearance.
+; 
+; Most of today's parent fractal appears to be a non-critical area 
+; where midgets are unlikely to be found, but there is the usual 
+; small area of interest near the origin.  The point I chose to 
+; check for midgets lies at the end of a filament extending from a 
+; mandel-shaped bud.
+; 
+; Of course, in fractals the filaments have no end.  No matter how 
+; close the zoom-in point lies to the 'end' of a filament, by the 
+; time a midget is reached, the image has been magnified so much 
+; that a near infinity of even smaller midgets can be seen lying 
+; farther out on the filament.  The trick lies in finding a midget 
+; that is close to but not beyond the limit of resolution.
+; 
+; As a matter of passing interest, starting with a bloated parent 
+; fractal thousands of times the size of the default screen does 
+; not give a greater range of sizes to explore.  The large size 
+; merely shifts the decimal point to the right without increasing 
+; the range of precision.
+; 
+; Today's render time of just under five minutes is worth the 
+; satisfaction of doing it for oneself.  Those who are already 
+; satisfied with themselves can find the rendered image posted to 
+; the two FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather here at Fractal Central Wednesday was 
+; ridiculously hot.  The blazing sun and incredible afternoon city 
+; temperature of 102F 39C made life on the porch far too 
+; uncomfortable for the cats, who passed the heat of the day lying 
+; under the air conditioner, trying to catch as much cool air as 
+; possible.
+; 
+; While the cats were trying to keep cool, I spent the day trying 
+; to get as much work done as possible so that I can advance the 
+; FOTD CD, which is progressing but still has a way to go.  (Those 
+; who claim that I will never finish the CD will be given ample 
+; chance to eat their words when the disk is ready.)  As for me, 
+; it's hot again today, the cats are already testy, and I've got a 
+; pile of work to get out of the way -- or at least to start.  So 
+; until next time, which will be on April 21, take care, and be 
+; where the action is, but don't become a casualty of the action.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Ensign             { ; time=0:04:42.81--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix4 function=recip passes=1
   center-mag=-2.53422952923341000/-2.428182368486123\
   00/5.617065e+007/1/62.5/1.20480510572285038e-006
@@ -22,14 +100,14 @@ Ensign { ; FOTD -- April 18, 2002 (Rating 7)
   zHHzNAzS2zY0zc0zhVznQzhKzPQzKVzH`zDez8kz4oz1uz0zz0\
   zz0zz0wz0iz1Yz8KzH7zP0zX0zS0zN0zK0zG0zD0z80z40z10z\
   00z00z00z02z0Bz0Kz2Tz8bzE
+  }
 
-}
-
-frm:MandelbrotMix4 {
-; Jim Muth
+frm:MandelbrotMix4 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
 k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

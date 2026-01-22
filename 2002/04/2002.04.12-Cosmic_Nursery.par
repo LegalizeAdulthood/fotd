@@ -1,6 +1,66 @@
-Cosmic_Nursery { ; FOTD -- April 12, 2002 (Rating 3)
- ; time=0:35:35.62--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Fri, 12 Apr 2002 14:18:35 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 04-12-02 (Cosmic Nursery [3])
+;       Id: <e.1d57a59e.29e84690@aol.com>
+; ---------
+; 
+; FOTD -- April 12, 2002 (Rating 3)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal shows what happens when a near-linear expression 
+; such as Z^1.009+C is iterated.  As can be seen from the image, 
+; not too much actually does happen, other than a scattering of 
+; fragments that barely present a theme.
+; 
+; After standing back from the screen, trying to recall what it is 
+; that the image reminds me of, I remembered the famous picture of 
+; the dust pillars of a stellar nursery which was taken by the 
+; space telescope.  I quickly decided on the name "Cosmic 
+; Nursery".  The image could equally represent the last rays of 
+; the setting sun striking the snow-capped peaks of a mountain 
+; range to the east.  In this case, I would have named the image 
+; something like "Mysterious Mountains".
+; 
+; But names cannot make an image, and today's image has little 
+; other than its name going for it.  As a result, I could rate the 
+; result of today's brief effort no higher than a 3.
+; 
+; The wannabe great image can be viewed by running the attached 
+; parameter file, which will take 1/2 hour, or by visiting one of 
+; the FOTD web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; and downloading the finished image from there.
+; 
+; The fractal weather Thursday was quite pleasant, with warm sun, 
+; gentle breezes, and a temperature of 64F 18C.  These are cat-
+; pleasing conditions.  The cats showed their pleasure by sleeping 
+; most of the afternoon.  Like all cats, the older they get, the 
+; less they romp and the more they sleep.
+; 
+; As for me, I'm entering a critical phase of the FOTD CD 
+; preparation.  As Murphy's law would dictate, the more critical 
+; the phase of preparation, the greater the amount of other things 
+; to be done.  And I'm still keeping the ongoing FOTD's coming on 
+; schedule, appearing every day of the month evenly divisible by 
+; 3.  The next FOTD will appear April 15.  Until then, take care, 
+; and don't be distracted.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Cosmic_Nursery     { ; time=0:35:35.62--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotBC1 function=floor passes=1
   center-mag=-8.63091810918206500/-4.757995359907572\
   00/239.0022/1/177.5/7.32838095762744501e-012
@@ -20,19 +80,20 @@ Cosmic_Nursery { ; FOTD -- April 12, 2002 (Rating 3)
   HFXHFXHFXIFXIFXIFXIFXJFXJFXJFWJFWKFWKFWKFWLGWLGWLG\
   WLGWMGWMGVMGVMGVNGVNGVNGVNGVOGVOGVOHWPHXPHYPHZPH_Q\
   H_QH_QH_QH_RH_RH_RH_SH_SH_SH_SH_TH_TH_TH_TH_TH_UG_\
-  UG_UG_UG_UG_VG_VG_VG_VF_VF_WF_WF_WF_WF_WF_WF_
-}
+  UG_UG_UG_UG_VG_VG_VG_VF_VF_WF_WF_WF_WF_WF_WF_ }
 
 frm:MandelbrotBC1   { ; by several Fractint users
-f=p1, a=imag(p2)+100
-p=real(p2)+PI
-q=2*PI*fn1(p/(2*PI))
-r=real(p2)-q
-Z=C=Pixel:
-Z=log(Z)
-IF(imag(Z)>r)
-Z=Z+flip(2*PI)
-ENDIF
-Z=exp(f*(Z+flip(q)))+C
-|Z|
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

@@ -1,6 +1,64 @@
-Discus { ; FOTD -- April 15, 2002 (Rating 6)
- ; time=0:06:01.03--SF5 on a p200
-  reset=2002 type=formula 
+;     Date: Mon, 15 Apr 2002 14:05:00 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 15-04-02 (Discus [6])
+;       Id: <cd.1610f2c9.29ec37e2@aol.com>
+; ---------
+; 
+; FOTD -- April 15, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; If all goes well, before the day is finished, I will have 
+; finished re-rendering the last of the FOTD fractal images in SF6 
+; format.  This will complete the largest single project in the 
+; preparation of the FOTD CD.  Several more large tasks remain to 
+; be accomplished, but now that the major task is finished, it 
+; will be downhill the rest of the way.
+; 
+; Today's image, which was created by the workhorse MandelbrotMix4 
+; formula, is an exploration of the fractal that results when 0.1 
+; part of Z^(-9) is added to 1 part of Z^(-0.9), and the sum added 
+; to (1/C).
+; 
+; I named the image "Discus" when that word came to mind as I was 
+; studying it.  I rated the image a 6 when I left the room and 
+; returned a few minutes later to find it waiting on the screen.
+; 
+; The 6-minute render time is nominal, but even this can be 
+; bypassed by visiting one of the FOTD web sites and downloading 
+; the completed GIF image from there.  The web site URL's are:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Sunday was summer-like here at Fractal 
+; Central, with lots of sun and a temperature of 77F 25C.  A brief 
+; light shower around sunset did nothing to spoil the cats' day.  
+; Of course, by sunset the dynamic duo had already enjoyed a full 
+; day in the yard.  At one point, Tippy the tabby started feeling 
+; intrepid and ventured two doors up the hill.  The sound of a can 
+; of tuna being opened brought him hurrying back where he belongs. 
+; Thomas, the oversized yellow-orange one, kept a watchful eye on 
+; Tippy as Tippy ventured away, ready to leap to the defense if 
+; Tippy had gotten into trouble.  Luckily for Thomas, Tippy needed 
+; no help.
+; 
+; And if I don't get my day's work done, some unpleasant things 
+; are sure to happen.  Until next FOTD on April 18, take care, and 
+; whatever happened to catastrophe theory?
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Discus             { ; time=0:06:01.03--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix4 function=recip passes=1
   center-mag=+228.9267420799002/+28.2204563662475/1.\
   774846e+009/1/22.533825173915968/-0.05346987079465\
@@ -21,14 +79,14 @@ Discus { ; FOTD -- April 15, 2002 (Rating 6)
   MzzHzzCzz6zzEzzKzzSzzYrzemzjeur_pxSjzMezH_zPUzUPz_\
   KzeEzm9zr4zx0xz0uz0rz0pz0mz0jz0gz0ez0bz0_z0bz0ez0g\
   z0jz0mz0px0rr0uj0xb1zU4zP9zHEz9Hz1Mz0Pz1Uz4Yz9bzCe\
-  uEjrKmmMrgumzpuzmuzjumguY
-}
+  uEjrKmmMrgumzpuzmuzjumguY }
 
-frm:MandelbrotMix4 {
-; Jim Muth
+frm:MandelbrotMix4 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
 k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

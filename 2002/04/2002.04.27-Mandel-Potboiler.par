@@ -1,6 +1,73 @@
-Mandel-Potboiler { ; FOTD -- April 27, 2002 (Rating 5)
- ; time=0:06:40.62--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Sat, 27 Apr 2002 04:17:13 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 27-04-02 (Mandel Potboiler [5])
+;       Id: <1.5.4.16.20020427001640.0dc73e2a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- April 27, 2002 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image was created with the MandelbrotMix2 formula, which 
+; is a more versatile version of the workhorse MandelbrotMix4 
+; formula.  The new formula has a new variable p4 parameter, which 
+; offers control of the starting point of Z.  When p4 is set to 
+; 0,0, the new formula works exactly like the M-Mix4 formula, and 
+; has the same speed.
+; 
+; I added the new parameter because many of the expressions I have 
+; been calculating with the M-Mix4 formula have more than one 
+; critical point, and I wanted the ability to explore these other 
+; critical starting points.  So far, I have found little of 
+; interest in the other critical planes of the fractals I have 
+; explored, but the exploration has just begun, and some surprises 
+; are sure to appear.
+; 
+; Since the p4 parameter of today's image is 0,0, the image could 
+; just as easily have been drawn by the M-Mix4 formula, which may 
+; be headed for a long-overdue retirement.  I named the image 
+; "Mandel Potboiler" because, like a cheap romance novel, it is a 
+; rather pretentious image with a lot of surface sparkle but 
+; little depth.  The bubble-like features also helped inspire the 
+; name.  The surface sparkle gives the image a rating of an 
+; average 5; the lack of depth precludes a higher rating.
+; 
+; The render time is under 7 minutes -- a bit slow for such an 
+; average image.  But relief for impatience may be found on the 
+; web at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; where the pre-rendered GIF image will soon be posted.
+; 
+; The fractal weather Friday here at Fractal Central was near 
+; perfect, resulting in near perfect fractal cats.  With clear 
+; skies, warm sun, and a temperature of 66F 19C, the cats spent 
+; all afternoon on the porch.  Tippy even started to stalk a robin 
+; that ventured dangerously close, but the bird saw Tippy coming 
+; and flew away well before Tippy was within pouncing range.  
+; Thomas watched the whole affair with interest.
+; 
+; As for me, I've got work to do, both for money and for fun.  And 
+; there's also that grass which was trimmed only six days ago but 
+; already is waving in the breeze again.  And the FOTD CD also has 
+; a way to go yet.  So I guess it's time to say farewell until 
+; next time, which will be here in two wags of Thomas's tail.  
+; Until the tail wags, take care, and enjoy the illusion.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Mandel-Potboiler   { ; time=0:06:40.62--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix2 function=recip passes=1
   center-mag=+7.67992477588323/-1.18115358183837/156\
   42.22/1/-87.5/-2.9822114222533003e-010 params=5/-1\
@@ -22,14 +89,14 @@ Mandel-Potboiler { ; FOTD -- April 27, 2002 (Rating 5)
   UzfWzhUzkSzlRzoQzrOzsNzuLzwJzyIzzHzzGzzEzzDzxGzoIz\
   gJzZMzQOzIQzIOzGMzLlzJjzHhzGfzEdzCbzAaz9Zz6Yz5Vz4U\
   z5Uz5Uz6Uz6Uz1Uz2Uz2Uz4Uz
+  }
 
-}
-
-frm:MandelbrotMix2 {
-; Jim Muth
+frm:MandelbrotMix2 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
 k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================
