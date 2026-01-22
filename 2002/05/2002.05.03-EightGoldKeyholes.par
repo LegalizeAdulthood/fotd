@@ -1,6 +1,67 @@
-EightGoldKeyholes { ; FOTD -- May 03, 2002 (Rating 6)
- ; time=0:09:07.33--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Fri, 03 May 2002 14:03:18 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 03-05-02 (Eight Gold Keyholes [6])
+;       Id: <1.5.4.16.20020503100249.2b77342c@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 03, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal scene exists in an oversized parent fractal, way 
+; out on a filament that leads from a mandel-bud of the main bay 
+; and terminates in a ring-like feature.  Many filaments converge 
+; on this ring, but only the one that comes from the bud has 
+; midgets along it.
+; 
+; The terminal ring is mirrored in the eight rings, (I call them 
+; keyholes), that surround the midget in today's image.  The 
+; formula of the parent fractal is Z^(-11)+6Z^(-1.1)+(1/C).  This 
+; formula was iterated by the MandelbrotMix2 Fractint formula, 
+; which likely will replace the old M-Mix4 formula as my most 
+; often used formula.  The speed of the new formula is the same, 
+; and the new one is more versatile.
+; 
+; The blue-gold color scheme makes the image appear a bit better 
+; than its actual worth of average.  I therefore rated it at a 6, 
+; which is the least possible above-average rating for a FOTD 
+; fractal.
+; 
+; The 9-minute render time of the attached parameter file makes a 
+; download of the completed GIF image the marginally better 
+; choice.  That download can be found at Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Thursday started with a heavy thunder-storm, 
+; followed by sun from 10am to 3pm.  At 4pm, another heavy thunder-
+; storm, this one with golf-ball-sized hail, passed over.  Between 
+; storms it was warm and humid, with a temperature around 80F 27C. 
+; The fractal cats found enough time during the midday sunny 
+; period to romp in the yard, but when the hailstones started 
+; clattering, they dashed for cover and didn't come out for nearly 
+; an hour.
+; 
+; As for myself, I've got work waiting and not enough time in 
+; which to do it.  The best way I know of solving the problem is 
+; to get started, so that's what I'm about to do.  And that FOTD 
+; CD, which has been languishing of late, still has a considerable 
+; amount of work to be done.  The next FOTD will appear May 6.  
+; Until then, take care, and be philosophical.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+EightGoldKeyholes  { ; time=0:09:07.33--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix2 function=recip passes=1
   center-mag=+428.8990414983479/-46.07822226439/272/\
   1/-15/-6.55149697686985277e-009 params=6/-1.1/1/-1\
@@ -20,14 +81,13 @@ EightGoldKeyholes { ; FOTD -- May 03, 2002 (Rating 6)
   taDmUFfNHaFJc7Ld0Nf0Ph0Pj0Sl0dm0fq0ht0jq0lo0mm0oj0\
   qh0sf0tc0ta0vZ0xY0yY0zY0zY5zYFzYJzYNzYQzYUzYYzYazY\
   dzYhzYlzYozYszYvzYyzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzz\
-  YzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYz
-}
+  YzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYzzYz }
 
-frm:MandelbrotMix2 {
-; Jim Muth
+frm:MandelbrotMix2 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
 k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
-|z| < l
-}
+|z| < l }
+
+; END 20.0 PAR-FORMULA FILE==================================

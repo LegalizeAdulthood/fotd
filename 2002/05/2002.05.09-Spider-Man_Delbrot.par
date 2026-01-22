@@ -1,6 +1,80 @@
-Spider-Man_Delbrot { ; FOTD -- May 09, 2002 (Rating 7)
- ; time=0:18:52.84--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Thu, 09 May 2002 12:42:01 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 09-05-02 (Spider-Man Delbrot [7])
+;       Id: <1.5.4.16.20020509084122.2b77bd8a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 09, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's fractal has been created by iterating the deceptively 
+; simple fractal formula -1(Z)-(1/Z)+C, an expression that at 
+; first glance would appear to result in no fractal at all when 
+; iterated.  But things are not always as they appear in the world 
+; of fractals, and today's image is a perfect example of the 
+; ability of fractals to create something from nothing.
+; 
+; I named today's image "Spider-Man Delbrot".  The spider-web 
+; effect around the central midget inspired the name.  The new 
+; Spider-Man movie likely played a part also.  I decided to give 
+; the image a rating of an above-average 7.  Whether this rating 
+; is deserved is up to the individual to decide.
+; 
+; In this particular image I departed from the usual FOTD equal-
+; iteration-band outside-coloring algorithm and tried the 
+; alternate outside=summ.  The result was not much of an 
+; improvement, but the improvement was enough to cause me to 
+; temporarily change my usual coloring method.
+; 
+; The parameter file renders in 19 minutes on a quaint old P200 
+; machine.  The image file downloads from Paul's site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; in far less time.
+; 
+; The news for those waiting with bated breath for the FOTD CD to 
+; appear is good and bad.  The good news is that the CD is making 
+; progress; the bad news is that I continue to find new things 
+; that need to be done to make the disk easy to use.  The latest 
+; task is to change the names of the fractal image files from 
+; their present cryptic 8-letter DOS names to names which are the 
+; dates on which the images appeared.  I can either change the 
+; names of the image files or place every day's discussion and 
+; image in a separate directory (folder).  Right now, the files 
+; are organized into monthly directories.  Whatever I do, the time 
+; required will be several additional days.  Take a couple dozen 
+; of these unanticipated 7-day tasks and it's easy to see why the 
+; CD is taking so long.
+; 
+; The fractal weather Wednesday started sunny and mild, but as the 
+; afternoon progressed, the clouds moved in.  The temperature of 
+; 70F 21C must have been just what the cats ordered, because they 
+; spent most all day romping in the yard.  Tippy set the day's 
+; high point when he showed up at the door with a sparrow in his 
+; mouth.  This was the first bird he has caught in over a year.  
+; There's life in the old ex-tomcat yet.  Now if Thomas can only 
+; catch something other than a ray of sunlight. . . .
+; 
+; As for me, I've got work to do, both for money and in the 
+; preparation of the FOTD CD.  The time will never be better to 
+; get started, so until next FOTD on May 12, take care and be 
+; happy.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Spider-Man_Delbrot { ; time=0:18:52.84--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix4 function=ident passes=1
   center-mag=+2.010171243979102/+0.1046890830356033/\
   106079.2/1/167.5/2.3982375016440294e-008 params=-1\
@@ -20,14 +94,13 @@ Spider-Man_Delbrot { ; FOTD -- May 09, 2002 (Rating 7)
   KEYKCZMB`M9bN8dN7fO5hO4jQ3lQ1mQ0nS1pV1qY1s`3tb3ue3\
   wh4xj4ym4zp5zs5zu5zx7zz7zz7zz8zz8zz8zzEzzIzzMzyQzw\
   UztYyqaxnewliuimtfqsduqayp`zpaqpbfpbXpdMpdBtbGwaMy\
-  `Rz`VzZ`zYezYilXSQVB3U0Qe39Z0Gb0YZdRbI
-}
+  `Rz`VzZ`zYezYilXSQVB3U0Qe39Z0Gb0YZdRbI }
 
-frm:MandelbrotMix4 {
-; Jim Muth
+frm:MandelbrotMix4 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=1/f, h=1/d, j=1/(f-b), z=(-a*b*g*h)^j,
 k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
-|z| < l
-}
+|z| < l }
+
+; END 20.0 PAR-FORMULA FILE==================================

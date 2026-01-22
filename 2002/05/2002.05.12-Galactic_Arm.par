@@ -1,6 +1,82 @@
-Galactic_Arm { ; FOTD -- May 12, 2002 (Rating 7)
- ; time=1:10:15.64--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Sun, 12 May 2002 14:42:38 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 12-05-02 (Galactic Arm [7])
+;       Id: <1.5.4.16.20020512104200.0de72cd8@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 12, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; With today's image we embark on a trip to interstellar space.  
+; It's enjoyable to be able to do this on a computer, since the 
+; way man is going, no one will ever be able to do it in person.  
+; (We won't lack the know-how; we'll lack the resources.)  Our 
+; trip takes us to an arm of the local galaxy -- let's call it the 
+; Orion arm -- from where we see ourselves surrounded by clouds of 
+; nebular gas and nascent stars.
+; 
+; All around us is a vast emptiness.  Yet the emptiness is not the 
+; nothingness that it first appears to be, (vacuum energy?), for 
+; on this trip we have been given additional senses.  We have the 
+; senses to perceive magnetic fields as well as gravitational 
+; fields.  Since these new perceptions would likely appear to us 
+; in a manner we cannot now imagine, I have translated them into 
+; vision, which we can imagine.  So, in my fancy, today's image, 
+; dark and somber as it is, shows the star-lanes and energy fields 
+; of a very densely populated area of our Milky-Way Galaxy.  With 
+; this in mind, I named the picture "Galactic Arm".  The rating 
+; of a 7 is optional.
+; 
+; Actually, the image is one of an 'evaporated' midget, which has 
+; ceased to exist, but whose ghost has been revealed by illumina-
+; ting it with the ghost-busting <bof60> inside fill.  (A <fmod> 
+; fill would also have worked.)  The very simple fractal formula 
+; Z-(1/Z)+(1/C) created the original midget, which I killed when 
+; I raised the escape radius to one-googol plus one-hundred.  (The 
+; one-hundred is built into the M-Mix2 formula, though it has no 
+; effect on the final result.)
+; 
+; The bad feature of images such as today's, which consist totally 
+; of trapped inside points, is their slowness.  Today's image 
+; requires over an hour to render on my tired old P200 machine.  
+; It will render faster on a state-of-the-art screamer, but the 
+; easiest way to see the image is to let Paul and Scott do the 
+; rendering and download the completed image from either of their 
+; web sites.
+; 
+; Paul's site is at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Scott's is at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather, (Is there any other kind?), Saturday here 
+; at fractal central was ideal.  What could be better than a temp-
+; erature of 73F, unless it was a temperature of 22.75C?  The cats 
+; spent the entire afternoon in the sun of the yard, frolicking 
+; like tired kittens.  And no, Tippy did not catch any more 
+; sparrows.
+; 
+; As for myself, it's Sunday, it's Mother's day, and I'm going to 
+; treat myself to a well-deserved rest from work on both the CD 
+; and the stuff that I expect to bring profit.  But I still might 
+; sneak in a fractal or two when the obligatory social activity 
+; has been accomplished.  Regardless, until next time, take care, 
+; and try to decide whether fractals are really real or are real 
+; merely because we decide they are.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Galactic_Arm       { ; time=1:10:15.64--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix2 function=recip passes=1
   center-mag=-1.65751903104643300/+1.790625615929802\
   00/100087.5/1/-152.5/-3.13505964244509272e-009
@@ -21,14 +97,14 @@ Galactic_Arm { ; FOTD -- May 12, 2002 (Rating 7)
   k00k00k00k00k00k00f00a00X00T00O00J00F00A0050010070\
   0C00H00M00R00W00a00f00k00p00u00z00t00o00j00e00_00V\
   00Q00L00G00F00F00F00E00E00E00I00L00O00R00V00Y00`00\
-  c00g00j00m00p00s00`00J00M
-}
+  c00g00j00m00p00s00`00J00M }
 
-frm:MandelbrotMix2 {
-; Jim Muth
+frm:MandelbrotMix2 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
 k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

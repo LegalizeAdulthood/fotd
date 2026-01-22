@@ -1,6 +1,64 @@
-A_Broken_Minibrot { ; FOTD -- May 06, 2002 (Rating 5)
- ; time=0:14:36.56--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Mon, 06 May 2002 02:51:00 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 06-05-02 (A Broken Minibrot [5])
+;       Id: <1.5.4.16.20020505225032.2ac75b32@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 06, 2002 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The parent fractal of today's image was created by the iterated 
+; formula Z^(1.8)+C, and is shaped like a rotated and perturbed 
+; version of the classic M-set.  The image is located in a broken 
+; elephant trunk of the fractured East Valley area of the parent.
+; 
+; I named the image "A Broken Minibrot" because of the spirals 
+; which are so obviously broken.  The image is of average quality 
+; and rates an average rating of 5.  The breaks in image 
+; continuity are unavoidable with fractional exponents of Z, and 
+; are caused by the multi-valued nature of the complex log 
+; function.  But the same multi-valued nature is not all bad, 
+; since it makes the resulting fractals infinite both on the 
+; surface as well as in their depth.
+; 
+; The 14-minute render time can be reduced to a minute or two by 
+; going online and downloading the finished image from Paul's web 
+; site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Though I took the day off on Sunday, the FOTD CD is progressing. 
+; A midsummer completion still looks likely, and anything worth 
+; having is worth waiting for.
+; 
+; The all-important fractal weather Sunday here at Fractal Central 
+; was just what the fractal cats ordered.  Well, maybe they didn't 
+; order it, but they certainly did enjoy it.  Warm sun, light 
+; winds and a temperature of 68F 20C made conditions ideal for man 
+; and cat alike.  Both the dynamic duo and myself spent a good 
+; part of the afternoon in the yard, the only diversion being when 
+; Tippy started rolling in the emerging catnip patch.
+; 
+; Since all good things must eventually end, this day is just 
+; about on its last lap.  It's near late-news time and I can't end 
+; the day without knowing the latest bit of bad news.  So until 
+; next time on May 9, take care, and let's get some fractal into 
+; that fractal philosophy.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+A_Broken_Minibrot  { ; time=0:14:36.56--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotBC1 function=floor passes=1
   center-mag=+0.00817267703828271/+0.240493666992600\
   80/1.818109e+011/1/114.999944662658265/-1.10636886\
@@ -21,19 +79,19 @@ A_Broken_Minibrot { ; FOTD -- May 06, 2002 (Rating 5)
   jTlfQo`OrXLuSIvOJvPJvPLvPLvQMvQMvQOxQOySPzSPzSQzTQ\
   zTSzTSzVTzVTzVVzXVzXXzXXzYYzYYzY_z__z_`z_azY`z_`z_\
   `z``z``za`za`za`zc`zc`zd`zd`zd`zf`zf`zg`zgMzJMzOLz\
-  QLzTLzXJz_JzcIzfGz4Dz3Cz1
-}
+  QLzTLzXJz_JzcIzfGz4Dz3Cz1 }
 
 frm:MandelbrotBC1   { ; by several Fractint users
-f=p1, a=imag(p2)+100
-p=real(p2)+PI
-q=2*PI*fn1(p/(2*PI))
-r=real(p2)-q
-Z=C=Pixel:
-Z=log(Z)
-IF(imag(Z)>r)
-Z=Z+flip(2*PI)
-ENDIF
-Z=exp(f*(Z+flip(q)))+C
-|Z|
-}
+  e=p1, a=imag(p2)+100
+  p=real(p2)+PI
+  q=2*PI*fn1(p/(2*PI))
+  r=real(p2)-q
+  Z=C=Pixel:
+    Z=log(Z)
+    IF(imag(Z)>r)
+      Z=Z+flip(2*PI)
+    ENDIF
+    Z=exp(e*(Z+flip(q)))+C
+  |Z|<a }
+
+; END 20.0 PAR-FORMULA FILE==================================

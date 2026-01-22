@@ -1,6 +1,88 @@
-HexagonsAndCircles { ; FOTD -- May 24, 2002 (Rating 7)
- ; time=0:00:05.55--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Fri, 24 May 2002 15:00:24 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 24-05-02 (Hexagons and Circles [7])
+;       Id: <1.5.4.16.20020524110011.2b17bd58@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 24, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; To begin, I will answer a few questions about the FOTD CD that 
+; must be causing unlimited concern to the members of the list. :-)
+; 
+; Q -- When will the CD be ready?
+; A -- Before the end of (northern hemisphere) summer if all goes 
+; well.
+; 
+; Q -- Will there be a charge for the disk?
+; A -- Yes -- blank disks are not free.
+; 
+; Q -- How much will the charge be?
+; A -- I haven't decided.
+; 
+; Q -- Will the disk have a graphic-user-interface?
+; A -- At this point, no.
+; 
+; Q -- What kind of indexing will the disk have?
+; A -- That depends on how much time I have to work on it.
+; 
+; Q -- Will the Fractint program be included on the disk?
+; A -- Probably not.  The notice that the program may not be sold 
+; is still at the bottom of the Fractint opening credits screen.  
+; And those who would want the disk will probably have a more 
+; recent version of the program by the time they receive the disk. 
+; Finally, those who have recently discovered fractals have 
+; probably done so with one of the Windows programs, and would 
+; have little interest in a DOS program.  The disk is intended to 
+; be a convenience rather than a commercial success.
+; 
+; Q -- Are the above answers fixed in stone?
+; A -- No!
+; 
+; As for today's image, I must confess a bit of thievery.
+; 
+; I found today's fractal image while noodling with a formula 
+; named Klein_tri_lattice that was posted recently to the Fractint 
+; list.  I have no time to check through my old mail to see who 
+; wrote the original formula, but I give thanks regardless.
+; 
+; Since the formula has no changeable parameters, what I have done 
+; basically amounts to tweaking someone else's fractal.  Normally 
+; I never tweak the images of other fractalists, but today's tweak 
+; makes such a striking image that I could not keep it to myself.
+; 
+; I named the image "Hexagons and Circles".  I gave it this name 
+; because the densest packing of circles in a plane is in the 
+; shape of a hexagonal grid.  The rating of 7 seems appropriate.
+; 
+; With a run-time of under five seconds on most machines, today's 
+; parameter file is one of the all-time fastest.  The completed 
+; GIF image will still be available for quick download on Paul's 
+; web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and on Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; With total sun and a temperature of 77F 25C, the fractal weather 
+; Thursday was ideal for man and cats alike.  The man spent the 
+; day working; the cats spent the day resting and having fun.
+; 
+; Today promises to be a repeat, so I'd best get busy with the 
+; work.  Until Monday the 27th, take care, and see you then.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+HexagonsAndCircles { ; time=0:00:05.55--SF5 on a P200
+  reset=2002 type=formula formulafile=kleintri.frm
   formulaname=Klein_tri_lattice passes=1
   center-mag=-0.00254816/0.00115498/0.5537159
   float=y maxiter=1023 inside=255 proximity=40
@@ -21,6 +103,41 @@ HexagonsAndCircles { ; FOTD -- May 24, 2002 (Rating 7)
   cLQ`JSXI0uI1pG6mG9iGDfGIcGL_GPXGJCLLFJMIJOLIPOIQQG\
   zCxzFpxIioLagOV_QOzYGzXGzXGuVGoVGiVGcTGYTGPGzQLpQO\
   dSQSI9Xmvzgszcpz_msVjmPgf
+  }
 
-}
+frm:Klein_tri_lattice(XYAXIS){
+ang=pi/3
+r=1/2
+rr=r*r
+z=pixel
+t1=sin(ang)
+t2=tan(ang)
+t3=exp(flip(ang))
+:
+inside=0
+m = round(imag(z)/t1)
+n = round(real(z)-imag(z)/t2)
+c0=n+m*t3
+c1=n+(m-1)*t3
+c2=n+(m+1)*t3
+c3=(n-1)+m*t3
+c4=(n+1)+m*t3
+if(|z-c0|<rr)
+         z=r*conj(r/(z-c0))+c0
+         inside=1
+elseif(|z-c1|<rr)
+         z=r*conj(r/(z-c1))+c1
+         inside=1
+elseif(|z-c2|<rr)
+         z=r*conj(r/(z-c2))+c2
+         inside=1
+elseif(|z-c3|<rr)
+         z=r*conj(r/(z-c3))+c3
+         inside=1
+elseif(|z-c4|<rr)
+         z=r*conj(r/(z-c4))+c4
+         inside=1
+endif
+inside}
 
+; END 20.0 PAR-FORMULA FILE==================================

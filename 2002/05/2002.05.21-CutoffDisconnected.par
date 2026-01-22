@@ -1,6 +1,86 @@
-CutoffDisconnected { ; FOTD -- May 21, 2002 (Rating 6)
- ; time=0:22:23.97--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Tue, 21 May 2002 14:43:57 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 21-05-02 (Cutoff Disconnected [6])
+;       Id: <1.5.4.16.20020521104330.0db72210@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 21, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Do not give up hope.  The FOTD CD is past the halfway point, and 
+; sometime this summer the 1,700 or so fractal images and 
+; discussions will be available for distribution.  Even better 
+; news is that, when the CD is completed, the ongoing FOTD will 
+; return to the daily schedule, while hopefully increasing in 
+; quality.
+; 
+; The midget at the center of today's image, which exists in the 
+; fractal created by the formula (Z^3)+0.4(Z^5)+C, is located in 
+; the suburbs of a larger midget in a cut-off feature deep in an 
+; un-named valley of its bloated parent fractal.  Since the 
+; feature in which today's midget lies is cut off from the main 
+; body of the fractal, the midget itself is cut off from its 
+; surroundings.
+; 
+; I needed to include the <mathtolerance=/1> entry in the 
+; parameter file because of the magnitude of the image, which, at 
+; close to 9*10^12, is in the borderline range where strange 
+; things begin to happen.
+; 
+; In fact, strange things are already happening.  The pattern 
+; surrounding the midget is infinitely disconnected.  Regardless 
+; of how close to the actual shore-line of the midget a particular 
+; feature lies, that feature will be disconnected from the main 
+; body of the midget.  The situation is somewhat similar to that 
+; of the Newton's images, where the areas leading to different 
+; roots lie adjacent to each other with no space between them, yet 
+; at no point do they actually touch.  The boundaries between the 
+; basins are fractal in nature.
+; 
+; I have named today's image "Cutoff Disconnected", a redundant 
+; name that emphasizes the nature of the midget at the center.  I 
+; rated it a 6, a rating I have been using quite a lot since 
+; cutting the frequency of the FOTD's by 2/3.  The image is nice, 
+; it is interesting, it is curious, but such words really mean 
+; nothing.  IMO, today's image is worth no more than the present 
+; rating.
+; 
+; With a render time in the vicinity of 20 minutes, the parameter 
+; file of today's image is a bit of a drag to run.  Wise 
+; fractalists, (that is everyone), will let Paul and Scott do the 
+; rendering, and download the completed GIF image from one of 
+; their web sites.
+; 
+; Paul's site is at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; Scott's is at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Monday here at Fractal Central was mostly 
+; sunny, but with occasional cloudy periods.  The chilly 
+; temperature of 59F 15C combined with the breaks in the periods 
+; of sun kept the dynamic duo of fractal cats dashing in and out 
+; all afternoon.
+; 
+; As for myself, I've got to dash off to finish some important 
+; work so that I can get back to the fun work on that FOTD CD, 
+; which despite fears is progressing just a bit behind schedule.  
+; I shall return on the 24th with another fractal to amaze and 
+; delight even the mathematically challenged.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+CutoffDisconnected { ; time=0:22:23.97--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix2 function=ident passes=1
   center-mag=+0.09846970716854085/-0.977478678397672\
   90/8.71082e+012/1/-144.990106256018947/-0.00765988\
@@ -21,14 +101,14 @@ CutoffDisconnected { ; FOTD -- May 21, 2002 (Rating 6)
   KZXIYWFXVDWUBVT9US7TR5SQANNEILJDIN9GO7BR8CU9DXAE_A\
   FbBGeCHhCHkDInEJqEKtFLwGMzIMwKLuMKrOKpQJnSJkUIiWHf\
   YHd_GbaG_cFYeEVgETiDRkDTmHUmKWmNXmQYmT_mX`m_bmbcme\
-  dmhbmgamf`me_mdZmcYmbWmaVm`Um_TmZSmYRmYMmQ
-}
+  dmhbmgamf`me_mdZmcYmbWmaVm`Um_TmZSmYRmYMmQ }
 
-frm:MandelbrotMix2 {
-; Jim Muth
+frm:MandelbrotMix2 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
 k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

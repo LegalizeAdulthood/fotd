@@ -1,6 +1,100 @@
-Mandelia { ; FOTD -- May 15, 2002 (Rating 6)
- ; time=0:25:37.91--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Wed, 15 May 2002 14:49:50 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 15-05-02 (Mandelia [6])
+;       Id: <1.5.4.16.20020515104928.2c7fed98@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 15, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; As has been obvious for some time, I am fascinated by things 
+; that cannot be comprehended by the human mind.  When these 
+; things are irrational, some on the philofractal list feel that 
+; I am indulging in fantasy, but none can dispute that the 
+; Mandelbrot set and its associated Julia sets comprise a single 
+; four-dimensional object that in a sense most certainly does 
+; exist, yet cannot be comprehended by the human mind.  This 
+; 4-dimensional object is sometimes called the Julibrot figure.
+; 
+; Depending on the direction and location in which this 4-D figure 
+; is sliced, either Julia sets or perturbed Mandelbrot sets will 
+; appear.  But in addition to producing Julia and Mandelbrot sets, 
+; the Julibrot can be sliced in other directions which produce 
+; hybrid sets that are neither Julia nor Mandelbrot sets, but 
+; combine the features of both.  Today's image is one of these 
+; hybrid sets.
+; 
+; I could have named the image "Julibrot", but that word has 
+; become hackneyed, so I named the image "Mandelia", a name which 
+; combines the names of both families of sets and also has a nice 
+; sound to it.  I rated the image a 6.
+; 
+; To produce today's image, I began with the Julia set of Seahorse 
+; Valley, which normally appears as a chain of empty bays, but 
+; I did not slice the Julibrot in exactly the Julia direction.  
+; Instead, I double rotated the slice 1/100 degree and 1 degree 
+; from the Julia direction.  This tiny rotation produces a 
+; tremendous difference in the resulting image.  (Curiously, the 
+; values of the rotation are quite critical this close to the 
+; Julia direction.)
+; 
+; The overall shape of the fractal is that of the Julia set of 
+; Seahorse Valley.  But the chain of bays is no longer empty.  
+; Instead of a dull, blank inside, we see an inside filled with 
+; detail quite unlike any normally seen in Julia or Mandelbrot 
+; sets.  The valley itself appears at the exact center of the 
+; image, and the great spirals that lie in the area are also in 
+; evidence, appearing where the many unadorned valleys of the pure 
+; Julia set would normally lie.
+; 
+; I have tilted the image to give it a more dynamic feeling, and 
+; colored it with the basic equal-iteration-band method.  I used 
+; the basic coloring method to assure that the unusual effects in 
+; the image are actually a part of the fractal and not a result of 
+; a fancy coloring system that distorts and sometimes totally 
+; hides the original fractal.
+; 
+; Due to the unusually high maxiter and the periodicity setting of 
+; 15, both of which are necessary, the parameter file is a rather 
+; slow one, taking 25 minutes on my machine.  But Paul and Scott 
+; are here to save such frustration, and will soon have the 
+; completed GIF image file posted to their web sites at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; and at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; from where it may be downloaded with ease.
+; 
+; The fractal weather Tuesday was chilly (64F 18C) and very windy, 
+; with heavy threatening clouds that finally released a damaging 
+; rain squall at 7pm.  When the squall passed, a glorious double 
+; rainbow appeared.  (All rainbows are double, but the second bow, 
+; which lies outside the main bow, is usually too faint to be 
+; seen.)  Then the sun set peacefully.  The dynamic duo, who were 
+; still shell-shocked from the hailstorms of Sunday and Monday, 
+; dashed for cover when the wind started roaring and things 
+; started flying around again, and didn't reappear for several 
+; hours.
+; 
+; Due to a power failure Sunday evening, I am a bit behind on the 
+; FOTD CD.  But a half-hour extra work today will make up the 
+; shortfall.  And it's now time to get busy.  Until next time, 
+; take care, and it all depends on which direction you view your 
+; fractals.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Mandelia           { ; time=0:25:37.91--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=multirot-XY-ZW-new function=flip/ident
   passes=t center-mag=3.19189e-016/6.66134e-016/0.99\
   3388/1/55/3.88578058618804789e-016 params=89/89.99\
@@ -20,16 +114,15 @@ Mandelia { ; FOTD -- May 15, 2002 (Rating 6)
   FtUBvU7yU3zU1nW3fY3YY3P_3Ha39a3J_FUYPcWanUmyRyfYvR\
   cvBjt0rt0yr0zr0nh0ea1gUBhNNhHYc9jU3vK0zA9z0Jz0Uz3c\
   zDnz9mz5mtAmjHmaLmWOjNRjFUj9Xj1_j0bh0eh0hh0kh0nh0q\
-  j0tm0wn0zr0zt0zv0zy0zz0zz0zz0zz0zz0zt0zm0zf3zf3zf
-}
+  j0tm0wn0zr0zt0zv0zy0zz0zz0zz0zz0zz0zt0zm0zf3zf3zf }
 
-frm:multirot-XY-ZW-new {
-; draws 6 planes and rotations
+frm:multirot-XY-ZW-new {; draws 6 planes and rotations
 ;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
 ;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
 a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
 z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
 c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
 z=z^(p2)+c,
-|z| <= 36
-}
+|z| <= 36  }
+
+; END 20.0 PAR-FORMULA FILE==================================

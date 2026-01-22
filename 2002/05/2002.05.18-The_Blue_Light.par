@@ -1,6 +1,73 @@
-The_Blue_Light { ; FOTD -- May 18, 2002 (Rating 6)
- ; time=0:00:20.43--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Sat, 18 May 2002 16:15:07 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 18-05-02 (The Blue Light [6])
+;       Id: <1.5.4.16.20020518121450.0da72eea@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- May 18, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; The FOTD CD progresses, the rain falls, it's Preakness festival 
+; Saturday here in Fractal Land, and all else is well.
+; (A Preakness is a horse race that tries to be another Kentucky 
+; Derby!)
+; 
+; But the FOTD is about fractals, not horses.
+; 
+; Today's image is a flowery affair which I found in the fractal 
+; that results when the formula Z^(-6)+6Z^(-1.6)+(1/C) is iterated.
+; 
+; This parent fractal is an indescribable affair, with bays of all 
+; shapes and sizes, and lots of places that might harbor 
+; interesting scenes.  (I leave it to the math experts to figure 
+; what all those bays represent.)  Today's minibrot is located 
+; near the southern edge of the largest bay, actually in an area 
+; that at first glance appears to hold little promise.
+; 
+; The area appears so hopeless in fact that I almost passed it by. 
+; Only an area of vague symmetry drew me to investigate further.  
+; And when I did investigate, I was glad that I had not passed by.
+; 
+; I named the picture "The Blue Light".  There is no obvious 
+; reason why I chose this name; I simply like its sound.  I rated 
+; the image at a 6 because there is really nothing exceptional 
+; about it.
+; 
+; Perhaps the best feature of today's image is its speed, 
+; rendering from the parameter file as it does in well under one 
+; minute.  As always, those who would rather download than render 
+; may pick up the pre-rendered GIF image from Paul's web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from Scott's site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Friday here at Fractal Central was near 
+; perfect, especially for the cats who wanted to be comfortable 
+; outdoors.  Generous sun and a temperature of 81F 27C kept them 
+; happy in the yard all afternoon.  Thinking he was once again a 
+; kitten, Tippy scampered up a holly tree, but the bird he was 
+; chasing flew away long before he reached the branch where the 
+; bird had perched.  A heavy rain shower passed over in the 
+; evening, but by that time the dynamic duo had settled for the 
+; night in their favorite indoor spots.
+; 
+; This morning the rain is continuing, and there's much work to do 
+; and only limited time in which to do it.  So until Tuesday the 
+; 21st of May, take care, and search for truth.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+The_Blue_Light     { ; time=0:00:20.43--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix2 function=recip passes=b
   center-mag=-0.28394429430300750/-1.090882416624821\
   00/2939.972/1/57.4999999999925038/2.42871001088218\
@@ -22,14 +89,14 @@ The_Blue_Light { ; FOTD -- May 18, 2002 (Rating 6)
   zzxzzqzzizzbzzVzzNzzJzgGz8Cz0Jz0Rz0Zz0ez0mz0uz0zz0\
   xzCxzTxzixzxgzbTzHEz00z00z00z00z00z00z00z00z00z00z\
   o0z00zooz0ozooz0ozoCzC000
+  }
 
-}
-
-frm:MandelbrotMix2 {
-; Jim Muth
+frm:MandelbrotMix2 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
 g=1/f, h=1/d, j=1/(f-b), z=(((-a*b*g*h)^j)+(p4)),
 k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================
