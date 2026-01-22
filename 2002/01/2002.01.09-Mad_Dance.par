@@ -1,6 +1,68 @@
-Mad_Dance { ; FOTD -- January 09, 2002 (Rating 7)
- ; time=0:03:47.07--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Wed, 09 Jan 2002 15:03:22 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 09-01-02 (Mad Dance [7])
+;       Id: <22.21bd914f.296db5a9@aol.com>
+; ---------
+; 
+; FOTD -- January 09, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, with its tortured, writhing arms, reminds me of a 
+; wild dance.  I named it "Mad Dance".  The image is a scene in a 
+; perturbed part of the hypercomplex Mandelbrot set.  Since the 
+; hypercomplex set itself is a four-dimensional thing, when we 
+; perturb the starting point, we are actually drawing a slice 
+; through the eight-dimensional hypercomplex Julibrot figure.
+; 
+; I have done little exploring in this fractal, so the things I 
+; find in it are usually as much a surprise to me as they are to 
+; the viewer.  Much of the hypercomplex M-set is identical to the 
+; classic M-set, but some of it is entirely different.  Today's 
+; image pictures some of the different parts.
+; 
+; The twisted arms of today's image are like the hairline tendrils 
+; that appear just behind the valleys of perturbed classic M-sets. 
+; These twisted arms appear only in the perturbed hypercomplex 
+; M-sets.  The ghostly blue feature partially hidden in the 
+; background is a part of the Hypercomplex set that I have so far 
+; been unable to find directly, though admittedly I have spent 
+; little time searching for it.
+; 
+; Despite, or perhaps because of, the writhing arms, the image is 
+; striking -- a feature which earns it its rating of 7.  The 
+; render time of just under 4 minutes is bearable, though a better 
+; way of viewing the image is to visit one of the following two 
+; web sites:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; If the first site has not yet been updated, try the second.
+; 
+; The fractal weather today here at Fractal Central was sunny but 
+; chilly.  The temperature of 38F 3C limited the cats to only a 
+; brief outing on the porch.  It's probably a good thing they were 
+; outside only briefly, because the neighborhood bully tomcat was 
+; in the area, and if Tippy had met him, a fight would certainly 
+; have broken out.
+; 
+; I see that it's now time for a day's work followed by some deep 
+; but unimportant pondering, and finally by a trip to fractal-
+; land.  I'll return in 24 hours with the continuing saga of my 
+; fractal adventures.  Until then, take care, and the world will 
+; not end until the last fractal has been found.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Mad_Dance          { ; time=0:03:47.07--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=hypermandelbrot passes=b
   center-mag=+0.1014957900912339/+0.007786208818525/\
   120.4113/1/170/6.39974184757363673e-014 params=0.7\
@@ -22,14 +84,15 @@ Mad_Dance { ; FOTD -- January 09, 2002 (Rating 7)
   fzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfz\
   KfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKfzKf\
   zKfzKfzKfzKfzKfzKfzKfz030
+  }
 
-}
-
-frm:HyperMandelbrot {
-; periodicity must be turned off
+frm:HyperMandelbrot {; periodicity must be turned off
 a=(p1),b=(0,0):
 q=sqr(a)-sqr(b)+pixel,
 b=(p2+2)*a*b+p3,
 a=q,
 |a|+|b| <= 100
 }
+
+; END 20.0 PAR-FORMULA FILE==================================
+

@@ -1,6 +1,74 @@
-The-Fly { ; FOTD -- January 25, 2002 (Rating 6)
- ; time=0:00:53.60--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Fri, 25 Jan 2002 14:18:49 +0000
+;     From: Jim Muth <jamth@mindspring.com>
+;  Subject: [Fractint] FOTD 25-01-02 (The Fly [6])
+;       Id: <1.5.4.16.20020125091137.0eb7116a@pop.mindspring.com>
+; ---------
+; 
+; FOTD -- January 25, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image reminds me of a fly's head with its bug-eyes 
+; staring straight at the viewer.  As a rule, I don't care much 
+; for those "Hello Earthling", or in this case, "Hello Human", 
+; types of fractals, but today I'll make an exception.
+; 
+; The object at the center of today's image is a view in the 
+; Rectangular direction of a tiny midget far out on the negative 
+; stem of the Mandelbrot set.  Due to the intense colors, it rates 
+; a 6.  Without the colors, which are created with the <tdis> 
+; option, it would rate no higher than a 4.
+; 
+; Part of the impact of the image is a result of the 22 scale-like 
+; arms radiating from the fly's head.  Yes, I realize that in the 
+; Mandelbrot set and its Julia sets, the number of features around 
+; midgets is always in the 8,16,32... series, but today's image is 
+; neither a Mandelbrot nor a Julia image.
+; 
+; The 32 arms are there, surrounding the midget as always, but 
+; when the 4-D object is sliced at today's particular point and 
+; orientation, the slice misses some of the arms.  Hints and 
+; fragments of the missing arms are visible around the border of 
+; the image and beyond.
+; 
+; Not being in a particularly creative mood, I gave today's 
+; picture the most simple name possible.  I named it "The Fly".  
+; And it just happens that the original "The Fly" film is one of 
+; my favorite old junkers.  (It actually is quite a good film as 
+; films of that era go.  The second sequel, "The Curse of the 
+; Fly", is the junker.)
+; 
+; Lack of time is no excuse for failure to view today's image.  
+; The parameter file renders in only 53 seconds on my tired old 
+; machine.  And the completed image is also available at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Thursday here at Fractal Central began with 
+; a downpour at dawn, which tapered to a gentle rain by 11am and 
+; ended entirely by 1pm, leaving the area socked in with heavy 
+; clouds and soggy grass for the afternoon.  Two bad days in a row 
+; left the cats quite irritated, so irritated in fact that later 
+; in the afternoon one of them missed the litter pan.  More tuna 
+; put them in a better mood, but they still would have preferred a 
+; romp in the yard.
+; 
+; And I would prefer to have the day's work behind me rather than 
+; in front of me.  A few hours' labor will cure that problem 
+; however.  So until tomorrow, same time same place, take care, 
+; and some things come and some things go, but fractals go on 
+; forever.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+The-Fly            { ; time=0:00:53.60--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=multirot-XY-ZW-VE function=flip/ident
   center-mag=0/0/1.449372e+013/0.1452/-60.8632988255\
   442058/-75.7841297145378263 params=0/90/2/0/-1.999\
@@ -21,16 +89,15 @@ The-Fly { ; FOTD -- January 25, 2002 (Rating 6)
   1Mr5Yh8h`DtQGzGJz7FzACzC7vF4oG0hJ0cL0WO0QP0TF0V51W\
   04Y0QW8jVVzTotZkjdg`hcdkYgmSknMnoGqrAvt4xv0zw0qj5g\
   YJYLVO7gD0rI7oLJmPVjSggWrdZzaazZdzWgxVjoTmhSo`QrSP\
-  vLOrTLoaJmjIkrGteAzT4zG0zL4zO8vSFqVJmYO000
-}
+  vLOrTLoaJmjIkrGteAzT4zG0zL4zO8vSFqVJmYO000  }
 
-frm:multirot-XY-ZW-VE {
-; draws 6 planes and rotations
+frm:multirot-XY-ZW-VE {; draws 6 planes and rotations
 ;when fn1-2=i,f, then p1 0,0=M, 0,90=O, 90,0=E, 90,90=J
 ;when fn1-2=f,i, then p1 0,0=M, 0,90=R, 90,0=P, 90,90=J
 a=real(p1)*.01745329251994, b=imag(p1)*.01745329251994,
 z=sin(b)*fn1(real(pixel))+sin(a)*fn2(imag(pixel))+p3,
 c=cos(b)*real(pixel)+cos(a)*flip(imag(pixel))+p4:
 z=z^(p2)+c,
-|z| <= sqr(p5)
-}
+|z| <= sqr(p5)  }
+
+; END 20.0 PAR-FORMULA FILE==================================

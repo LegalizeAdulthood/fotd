@@ -1,6 +1,70 @@
-Near_Escape { ; FOTD -- January 23, 2002 (Rating 6)
- ; time=0:09:46.91--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Wed, 23 Jan 2002 14:52:20 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 23-01-02 (Near Escape [6])
+;       Id: <18f.2392b3b.2980281d@aol.com>
+; ---------
+; 
+; FOTD -- January 23, 2002 (Rating 6)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image, which is a further development of the theme of 
+; yesterday's image, features the MandelbrotVE (variable escape) 
+; formula.  This formula draws the classic Mandelbrot set, the 
+; only added feature being that the escape radius can be set to 
+; fractional values.  The advantage of setting the escape radius 
+; to fractional values is that any midget can be taken and held on 
+; the screen while the escape radius is reduced to the point where 
+; the midget is swallowed up.
+; 
+; Fractals with positive exponents undergo very little change once 
+; the escape radius, or bailout, increases beyond the value where 
+; all points escape.  In the case of the M-set, this radius is 2.  
+; But decreasing the bailout below that point progressively cuts 
+; off more of the fractal, until finally, nothing but a small 
+; featureless circle remains.
+; 
+; As the bailout is reduced, a given feature such as a midget 
+; remains unchanged at first, but immediately before it is 
+; obliterated, the feature undergoes ever more extreme distortion. 
+; This distortion, rendered with the <fmod> option, is the basis 
+; of today's image.
+; 
+; I named the image "Near Escape" because the scene lies very near 
+; the reduced escape radius.  And I rated it a 6 because in my 
+; opinion it is not quite up to the level of yesterday's image.
+; 
+; The render time of 9 minutes is acceptable for patient 
+; fractalists, but a bit slow for those with other tasks to do.  
+; Rendering relief may be found by letting Scott do the rendering 
+; and picking up the finished image from his web site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; Paul's site remains un-updated.
+; 
+; The fractal weather Tuesday was ideal for the middle of winter.  
+; Warm sun and a temperature of 52F 11C melted the remaining snow 
+; in the yard, and the near calm winds allowed the fractal cats a 
+; full afternoon romp.  Their only complaint was about the wet 
+; ground and the holly trees, which shade the porch end of the 
+; yard when the sun is low in the winter sky.
+; 
+; This morning it is raining, and the day will be far less 
+; pleasant.  Without doubt the cats will be far less happy.  But 
+; that's another story, which I'll tell tomorrow.  Until then, 
+; take care, and be good but still have fun.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Near_Escape        { ; time=0:09:46.91--SF5 on a P200
+  reset=2002 type=formula formulafile=slices.frm
   formulaname=MandelbrotVE passes=1 center-mag=-0.74\
   585681784166100/+0.11537642028318990/1.955035e+007\
   /1/-62.5/2.27705782472609197e-007 params=0/0/0/0/1\
@@ -20,13 +84,13 @@ Near_Escape { ; FOTD -- January 23, 2002 (Rating 6)
   Vt9Us9Tr8Sq8Rq7Pp6Oo6Nn5Mm5Ll4Kk3Il4Jk5Kk6Lk6Mj7Nj\
   8Oj9Oj9PiAQiBRiBShCThDThEUhEVgFWgGXgGYfHZfIZfJ_fJ`\
   eKaeLbeLcdMcdNddOedOfcPgcQhcQibRibSjbTkbTlaUmaVnaV\
-  naWn`Xn_YnZciuFTeCTb9T`CRbEPdGNfILhLJj
-}
+  naWn`Xn_YnZciuFTeCTb9T`CRbEPdGNfILhLJj }
 
-frm:MandelbrotVE {; Jim M.  (variable escape radius)
-; Jim Muth  real(c),imag(c)
+frm:MandelbrotVE {; Jim Muth  real(c),imag(c)
 z=p1, c=pixel+p2,
 b=sqr(real(p3)):
 z=sqr(z)+c,
 |z| <= b
 }
+
+; END 20.0 PAR-FORMULA FILE==================================

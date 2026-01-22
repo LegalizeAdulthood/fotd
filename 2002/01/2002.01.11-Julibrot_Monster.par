@@ -1,6 +1,73 @@
-Julibrot_Monster { ; FOTD -- January 11, 2002 (Rating 5)
- ; time=0:09:17.61--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Fri, 11 Jan 2002 15:56:29 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 11-01-02 (Julibrot Monster [5])
+;       Id: <f4.14eb99f0.29706525@aol.com>
+; ---------
+; 
+; FOTD -- January 11, 2002 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image is a picture of a quadratic Mandelbrot midget.  
+; But it does not look like a Mandelbrot midget.  It looks like a 
+; fragment of a horizontal slit.  It looks like a horizontal slit 
+; because that's what it is.
+; 
+; Mandelbrot midgets are actually holes in the four-dimensional 
+; Julibrot figure, sliced in a particular direction.  The holes 
+; are nowhere near hyperspherical.  They are flat spaces with two 
+; extended dimensions (in the Z plane) and two contracted dimen-
+; sions (in the C plane).  These flat spaces are not unbroken, but 
+; are largely filled-in with low-iteration features.  They are 
+; like places where midgets are possible if the low-iteration 
+; stuff can only be held at bay.
+; 
+; Since the holes are actually four-dimensional, they can be 
+; sliced in many directions.  When they are sliced in the 
+; contracted Mandelbrot or extended Julia directions, the slice is 
+; a nice small Mandelbrot midget or much larger mini-Julia set 
+; that fits nicely on the screen.  But when the holes are sliced 
+; in odd directions, as is the case in today's image, the slice 
+; will contain both extended and contracted features, and will 
+; usually appear stretched, requiring anti-stretching and skewing 
+; to counter the distortion.  In today's image, the stretching and 
+; skewing are only moderate, but some odd-angle images must be 
+; stretched by a factor in the thousands.
+; 
+; More on the Julibrot and fourth dimension in general in upcoming 
+; FOTD's.
+; 
+; I named today's image "Julibrot Monster" because of its vague 
+; resemblance to a monster's face.  I rated it at a 5.
+; 
+; The 9-minute render time is a bit slow, but the finished image 
+; may be downloaded from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The lack of sun Thursday here at Fractal central made the 
+; temperature of 57F 14C feel colder than it actually was, and 
+; prevented the fractal cats from fully enjoying their afternoon 
+; romp in the yard.  But it was still the best day they have had 
+; in more than a week, which made them very enjoyable cats.
+; 
+; It's now time for the real work to get started here at F.C.  
+; Until next FOTD, take care, and don't get mired in a state of 
+; fractal indeterminacy.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Julibrot_Monster   { ; time=0:09:17.61--SF5 on a P200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=multirot-XZ-YW-new passes=1
   center-mag=+0.00000000128389097/-0.000000000542546\
   13/1.435616e+008/0.9341/-179.455993649140652/-68.7\
@@ -22,8 +89,7 @@ Julibrot_Monster { ; FOTD -- January 11, 2002 (Rating 5)
   GuOHuOItOKsOMsOOrOQqNSqNUpNWoNYoN_nN`mOamPblQckRdk\
   SejTfiUghVhhWigXjfYkfZle_md`ndaocbpbcqbcracs`ct`cu\
   _cvZcwZcwYcwXcwXcwVcwUcwTcwScwRcwQcwOcwNcwMcwLcwKc\
-  wKcwKcwKcwKcwKcwKcwKcwKcw
-}
+  wKcwKcwKcwKcwKcwKcwKcwKcw }
 
 frm:multirot-XZ-YW-new {; Jim Muth
 ; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
@@ -32,3 +98,6 @@ f=exp(flip(imag(p1*.01745329251994))),
 z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
 z=z^(p2)+c,
 |z| <= 36  }
+
+; END 20.0 PAR-FORMULA FILE==================================
+

@@ -1,6 +1,85 @@
-A_New_Scene { ; FOTD -- January 12, 2002 (Rating 7)
- ; time=0:01:15.63--SF5 on a p200
-  reset=2002 type=formula 
+;     Date: Sat, 12 Jan 2002 15:23:18 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 12-01-02 (A New Scene [7])
+;       Id: <11c.a982393.2971aebd@aol.com>
+; ---------
+; 
+; FOTD -- January 12, 2002 (Rating 7)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Today's image pictures a slice through the open area located at 
+; -1.99909595 on the negative stem of the Mandelbrot set.  It also 
+; pictures a slice through the Julia sets of this hole, though the 
+; scene bears little resemblance to either a M-set or a J-set.  
+; because the image is a new aspect of an old thing, I have named 
+; it "A New Scene".
+; 
+; The image in fact is what I call a Rectangular set.  It is a 
+; slice through the same -1.99909595 hole, but instead of being 
+; sliced in the real(c),imag(c) direction, which gives Mandelbrot 
+; sets, or the real(z),imag(z) direction, which gives Julia sets, 
+; the hole has been sliced in the imag(c),imag(z) direction, which 
+; gives Rectangular sets.  I named the fractals that result when 
+; the Julibrot is sliced in this direction "Rectangular" because 
+; as today's image shows, they are filled with holes that are 
+; shaped like rectangles.  
+; 
+; Today's image is quite different from either a Mandelbrot or 
+; Julia fractal, both of which are instantly recognized by fractal 
+; explorers, but like its better known cousins, it is also 
+; instantly recognizable, at least by myself, as a Rectangular 
+; fractal.
+; 
+; Like Julia sets, which in the Z^2+C fractal are symmetrical 
+; around the origin, the Rectangular sets also display symmetry 
+; around the origin.  But unlike Julia or Mandelbrot sets, the 
+; Rectangular sets are inherently distorted, and must be 
+; undistorted before they can be fully realized.  In today's 
+; image, this undistorting takes the form of rotation, stretching 
+; and skewing.
+; 
+; There are three more perpendicular directions in the Julibrot, 
+; in which this particular hole can be sliced at today's point.  
+; I will show these three additional aspects, which I have named 
+; Oblate, Parabolic and Elliptic, in the next three FOTD's.
+; 
+; Because today's image takes a familiar old object and makes 
+; something totally new of it, I have given it a rating of 7.  An 
+; extra benefit is the lightning speed of the parameter file, 
+; which renders in a matter of seconds.  For those who cannot run 
+; the parameter file, the finished image may be available on 
+; Paul's FOTD web site at:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; But Paul's site has not been updated recently.  If the image is 
+; not yet on Paul's site, try Scott's FOTD site at:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The Friday weather here at Fractal Central started with a shower 
+; of rain, then cleared, but turned blustery and colder in the 
+; afternoon.  The fractal cats don't like rain, they don't like 
+; wind, and they don't like cold.  As a result, they were unhappy 
+; fractal cats until I opened the traditional can of tuna for 
+; them.  (Sometimes I wonder if the cats just pretend to be 
+; unhappy to manipulate me into giving them tuna instead of cat 
+; food!)
+; 
+; It's now time to do some week-end odd jobs that need to be done. 
+; Until next FOTD, take care, and be yourself.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+A_New_Scene        { ; time=0:01:15.63--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=multirot-XZ-YW-new passes=1
   center-mag=0/0/2.176732e+007/0.3076/-47.2379488575\
   538815/60.6611623140979432 params=90/90/2/0/-1.999\
@@ -20,8 +99,7 @@ A_New_Scene { ; FOTD -- January 12, 2002 (Rating 7)
   LDyDIz6Oz0SuAVpJXlSYf`_ai`Yradsdlsgssjzvmzzpzzszzo\
   uzjjzf`zaQzYGzVPz_Xzcczgjzjdzg_zfTzcOzaIz_CzYJzXPz\
   XVzV`zVgzVmzTszTyzTzzYzzazzfzzjzzozzszzzzzzzzzzzzz\
-  zzzzzzzziziIzO0z1czVczMczDzz4zzGvzS
-}
+  zzzzzzzziziIzO0z1czVczMczDzz4zzGvzS }
 
 frm:multirot-XZ-YW-new {; Jim Muth
 ; 0,0=para, 90,0=obl, 0,90=elip, 90,90=rect
@@ -30,3 +108,6 @@ f=exp(flip(imag(p1*.01745329251994))),
 z=f*real(pixel)+p3, c=e*imag(pixel)+p4:
 z=z^(p2)+c,
 |z| <= 36  }
+
+; END 20.0 PAR-FORMULA FILE==================================
+

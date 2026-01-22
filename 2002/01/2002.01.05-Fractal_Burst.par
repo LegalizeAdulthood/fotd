@@ -1,6 +1,68 @@
-Fractal_Burst { ; FOTD -- January 05, 2002 (Rating 5)
- ; time=0:03:18.28--SF5 on a p200
-  reset=2002 type=formula 
+;     Date: Sat, 05 Jan 2002 05:00:23 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 05-01-02 (Fractal Burst [5])
+;       Id: <16c.6acfd2e.2967e261@aol.com>
+; ---------
+; 
+; FOTD -- January 05, 2002 (Rating 5)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; Having replaced the dead fan in the Fractal computer with a 
+; workable fan from an unused machine, I once again have Fractal 
+; Central up and running.  As a test of the new unit, I set the 
+; faithful 200mhz machine, which I rescued from oblivion, to the 
+; task of finding another fractal, a task which it has always 
+; accomplished admirably.  After I allowed 2 hours for any 
+; potential problems to show up, the machine performed perfectly 
+; with its new fan, and coughed up today's image.
+; 
+; The image was designed to be no more than a test, but when I saw 
+; the result, I decided that with its rating of 5, the image was 
+; good enough to be christened FOTD for January 5.
+; 
+; The image is a scene in the Mandeloid that results when 0.3 
+; parts of Z^(-8) are subtracted from Z^(-4) before adding 1/C.  
+; The midget in the image is located in the outskirts of a larger 
+; midget, which in turn is located some distance inland of the 
+; main bay of the grossly oversized parent.  The outzoom to the 
+; parent is quite an interesting trip.  Change the passes to 1 and 
+; the logmap to 0 and have a go at it.
+; 
+; With a render time of 3 minutes, running the parameter file is 
+; almost as convenient as downloading the completed image from:
+; 
+;           <http://home.att.net/~Paul.N.Lee/FotD/FotD.html>
+; 
+; or from:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; But give Paul and Scott a chance to get their sites updated 
+; before going for the image.
+; 
+; The Fractal Central weather Friday was sunny but breezy and 
+; cold.  The high temperature of 38F 3C was a bit too chilly for 
+; the cats, who spent the day watching me struggle with the 
+; fractal computer, while intermittently asking for food.
+; 
+; It's now almost midnight, time to shut down the fractal shoppe, 
+; call it a night, and settle down to watch one of those 
+; gloriously bad old sci-fi movies from the 1950's.  Maybe I'll 
+; choose "Them", the movie about the giant ants.  That one is 
+; actually a bit above average, and it's much fun to doze off 
+; while watching it.  Until tomorrow at around this same time, 
+; take care, and keep the sunny side up.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+Fractal_Burst      { ; time=0:03:18.28--SF5 on a p200
+  reset=2002 type=formula formulafile=allinone.frm
   formulaname=MandelbrotMix4 function=recip passes=1
   center-mag=+23.7128849777565/+26.99522223844535/1.\
   200758e+008/1/-159.999981173185887/-1.539999451616\
@@ -21,8 +83,7 @@ Fractal_Burst { ; FOTD -- January 05, 2002 (Rating 5)
   OzzozzYzzAzzDzzFzzzzznzzbzzRzz0zz0zz0zz8zz3zzAzzDz\
   zFzzgzz_zzUzzNzzIzzHzzHzzSzz0zz6zzBzz0zzVzzRzzNzzJ\
   zzzzz7zzBzzEzz2zzzzzjzzVzzuzzfzzUzz0zzezzXzzOzzvzz\
-  gzzUzz0zz2zz7zzDzz_zzUzzN
-}
+  gzzUzz0zz2zz7zzDzz_zzUzzN }
 
 frm:MandelbrotMix4 {; Jim Muth
 a=real(p1), b=imag(p1), d=real(p2), f=imag(p2),
@@ -31,3 +92,6 @@ k=real(p3)+1, l=imag(p3)+100, c=fn1(pixel):
 z=k*((a*(z^b))+(d*(z^f)))+c,
 |z| < l
 }
+
+; END 20.0 PAR-FORMULA FILE==================================
+

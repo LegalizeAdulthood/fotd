@@ -1,6 +1,73 @@
-A_New_Angle { ; FOTD -- January 24, 2002 (Rating 4)
- ; time=0:08:56.74--SF5 on a P200
-  reset=2002 type=formula 
+;     Date: Thu, 24 Jan 2002 15:40:58 +0000
+;     From: JimMuth@aol.com
+;  Subject: [Fractint] FOTD 24-01-02 (A New Angle [4])
+;       Id: <145.8523157.298184f4@aol.com>
+; ---------
+; 
+; FOTD -- January 24, 2002 (Rating 4)
+; 
+; Fractal visionaries and enthusiasts:
+; 
+; I am usually annoyed by unwanted e-mail, and delete it without 
+; reading, but this morning I found a very unusual letter.  I only 
+; skimmed the letter, but from what I could tell, it purported to 
+; be from someone who had made a big mistake in the past and 
+; wanted to know whether I knew some method by which they might 
+; travel backward in time to correct their mistake.
+; 
+; On the surface, the letter appeared like any other letter 
+; designed to sell something, but this one included no web 
+; address.  It had only an e-mail return address, and a line 
+; telling me to reply only if I actually know how to travel in 
+; time.  This line actually had me considering replying for a few 
+; minutes.  Then I decided that the letter was simply a more 
+; clever way than usual to try to sell me something, and sent it 
+; to the trash can.
+; 
+; I rather liked yesterday's Mandelbrot image.  So today I 
+; actually did do a bit of time travelling.  I went back in time 
+; 24 hours to see how yesterday's image would appear when sliced 
+; in the Oblate direction, which is defined by real(z),imag(c).
+; 
+; I kept the same color palette so that the features would appear 
+; in the same colors.  Of course, the usual amount of stretching 
+; and skewing was needed to properly reveal the scene.  And when 
+; revealed, the scene proved to be one of gross distortion.  The 
+; same elements are there, this can be verified by counting.  But 
+; they are distorted, twisted and torn beyond recognition.
+; 
+; Such an image is not the most attractive, which is why I could 
+; rate today's effort no higher than a 4.  And even the 4 rating 
+; is liberal.  I named the picture "A New Angle" for obvious 
+; reasons.
+; 
+; The render time of almost 9 minutes is a bit much for the 
+; below-average image.  The wise will download the finished GIF 
+; image from the internet at the following web address:
+; 
+;           <http://sdboyd.dyndns.org/~sdboyd/fotd/index.html>
+; 
+; The fractal weather Wednesday featured rain in the morning and 
+; clouds in the afternoon.  The sun finally appeared shortly 
+; before sunset, but by then it was too late -- the fractal cats 
+; were unhappy.  With no sun and a noticeable breeze, the 
+; temperature of 52F 11C had been too cool to give them comfort 
+; outdoors.  I was once again forced to open the tuna.
+; 
+; And speaking of opening things, I'll open the fractal program 
+; again before long, and find a new and better image for tomorrow. 
+; Until then, take care, and fractals multiply like rabbits.
+; 
+; 
+; Jim Muth
+; jamth@mindspring.com
+; jimmuth@aol.com
+; 
+; 
+; START 20.0 PAR-FORMULA FILE================================
+
+A_New_Angle        { ; time=0:08:56.74--SF5 on a P200
+  reset=2002 type=formula formulafile=slices.frm
   formulaname=OblateVE passes=1 center-mag=-0.000000\
   23399262228/+0.00000004341194985/2661102/2.7656/-1\
   0.8536192381310066/-68.8634948510254787 params=-0.\
@@ -21,14 +88,14 @@ A_New_Angle { ; FOTD -- January 24, 2002 (Rating 4)
   Vt9Us9Tr8Sq8Rq7Pp6Oo6Nn5Mm5Ll4Kk3Il4Jk5Kk6Lk6Mj7Nj\
   8Oj9Oj9PiAQiBRiBShCThDThEUhEVgFWgGXgGYfHZfIZfJ_fJ`\
   eKaeLbeLcdMcdNddOedOfcPgcQhcQibRibSjbTkbTlaUmaVnaV\
-  naWn`Xn_YnZciuFTeCTb9T`CRbEPdGNfILhLJj
-}
+  naWn`Xn_YnZciuFTeCTb9T`CRbEPdGNfILhLJj }
 
-frm:OblateVE {
-; Jim Muth  real(z),imag(c)
+frm:OblateVE {; Jim Muth  real(z),imag(c)
 z=real(pixel)+p1,
 c=flip(imag(pixel))+p2,
 b=sqr(real(p3)):
 z=sqr(z)+c,
 |z| <= b
 }
+
+; END 20.0 PAR-FORMULA FILE==================================
