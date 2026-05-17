@@ -252,6 +252,18 @@ ENDIF
    |z| <= 100 
 }
 
+JimsCompMand {; Jim Muth
+  z=c=pixel:
+  z=z^p1*(c^(p2-1))+c,
+  |z| <= p3+100
+}
+
+JimsCompMand2 {; Jim Muth
+  z=c=pixel:
+  z=(-z)^p1*(c^p2)+c,
+  |z| <= p3+100
+}
+
 JimsComMand2J {; Jim Muth
 z=c=pixel,
 a=real(p1), b=imag(p1):
